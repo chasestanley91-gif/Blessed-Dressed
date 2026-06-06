@@ -1,7 +1,17 @@
+# Heavy dev-only directories — not needed for the production build
 factory-screenshots
-public
 node_modules
-*.mjs
 DESIGN-IS-2026-06-05
 plans
 visual-qa
+
+# One-off dev/scrape scripts — exclude from the Vercel upload…
+*.mjs
+# …but KEEP build-critical config files (they are also .mjs).
+# Without postcss.config.mjs, Tailwind v4's `@import "tailwindcss"` is never
+# processed → no CSS is generated and the build fails.
+!postcss.config.mjs
+!eslint.config.mjs
+
+# NOTE: do NOT ignore `public/` — it holds logo.png and /images/** used
+# across Nav, Footer, builders, fabrics, and product galleries.
