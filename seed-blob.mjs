@@ -47,7 +47,7 @@ async function uploadFile(filename) {
 
   const body = readFileSync(localPath, "utf8");
   await put(`data/${filename}.json`, body, {
-    access: "public",
+    access: "private",
     addRandomSuffix: false,
     token: TOKEN,
     contentType: "application/json",
