@@ -35,7 +35,9 @@ yarn-error.log*
 !.env.example
 
 # Runtime data-store (JSON files written by admin) — data lives in Vercel Blob on prod
-/data-store/
+# Ignore runtime-written data files but keep option definitions (static config with descriptions/images)
+/data-store/*.json
+/data-store/image-overrides.json
 
 # vercel
 .vercel
@@ -46,3 +48,5 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+.vercel
