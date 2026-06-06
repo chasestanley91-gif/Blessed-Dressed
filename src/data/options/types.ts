@@ -4,6 +4,7 @@ export type DesignOption = {
   description: string;
   priceAdj?: number;
   image?: string;
+  images?: string[];
 };
 
 export type DesignField = {

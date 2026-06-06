@@ -142,10 +142,12 @@ function StepBadge({ n, label, active, done }: { n: number; label: string; activ
   );
 }
 
-function OptionCard({ id, label, description, priceAdj, image, selected, onClick, onExpand }: {
+function OptionCard({ id, label, description, priceAdj, image, images, selected, onClick, onExpand }: {
   id?: string; label: string; description: string; priceAdj?: number;
-  image?: string; selected: boolean; onClick: () => void; onExpand?: () => void;
+  image?: string; images?: string[]; selected: boolean; onClick: () => void; onExpand?: () => void;
 }) {
+  const hasPhoto = !!images?.length;
+  const thumb = images?.[0] ?? image;
   return (
     <button
       id={id}
@@ -153,12 +155,27 @@ function OptionCard({ id, label, description, priceAdj, image, selected, onClick
       onClick={onClick}
       className={`group rounded-[1rem] border text-left transition-[border-color,background] duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold active:scale-[0.98] ${selected ? "border-gold bg-[#122742]" : "border-border-accent bg-surface-strong hover:border-gold/40"}`}
     >
-      {image && (
+      {thumb && (
         <div
           className="relative w-full overflow-hidden rounded-t-[calc(1rem-1px)] bg-white"
           onDoubleClick={(e) => { e.stopPropagation(); onExpand?.(); }}
         >
-          <img src={image} alt={label} className="h-20 w-full object-contain bg-white transition-[height] duration-300 ease-out group-hover:h-40" />
+          <img
+            src={thumb}
+            alt={label}
+            className={`h-20 w-full ${hasPhoto ? "object-cover" : "object-contain"} bg-white transition-[height] duration-300 ease-out group-hover:h-40`}
+            onError={(e) => {
+              const el = e.currentTarget;
+              // Real photo failed → fall back to the tech-pack drawing; if that also fails, hide.
+              if (image && el.src !== image && !el.src.endsWith(image)) {
+                el.classList.remove("object-cover");
+                el.classList.add("object-contain");
+                el.src = image;
+              } else {
+                el.style.display = "none";
+              }
+            }}
+          />
           {onExpand && (
             <div
               role="button"
@@ -193,12 +210,21 @@ function OptionCard({ id, label, description, priceAdj, image, selected, onClick
   );
 }
 
-function ImageLightbox({ src, label, onClose }: { src: string; label: string; onClose: () => void }) {
+function ImageLightbox({ images, label, description, onClose }: { images: string[]; label: string; description: string; onClose: () => void }) {
+  const [active, setActive] = useState(0);
+  const count = images.length;
+
   useEffect(() => {
-    const handler = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+      else if (e.key === "ArrowRight" && count > 1) setActive((a) => (a + 1) % count);
+      else if (e.key === "ArrowLeft" && count > 1) setActive((a) => (a - 1 + count) % count);
+    };
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
-  }, [onClose]);
+  }, [onClose, count]);
+
+  const safe = Math.min(active, Math.max(count - 1, 0));
 
   return (
     <div
@@ -206,13 +232,65 @@ function ImageLightbox({ src, label, onClose }: { src: string; label: string; on
       onClick={onClose}
     >
       <div
-        className="relative max-h-[90vh] max-w-4xl overflow-hidden rounded-2xl bg-white shadow-2xl"
+        className="relative flex max-h-[92vh] w-full max-w-4xl flex-col overflow-hidden rounded-2xl bg-white shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
-        <img src={src} alt={label} className="block max-h-[85vh] w-auto max-w-full object-contain" />
-        <div className="absolute bottom-0 left-0 right-0 bg-black/60 px-4 py-2 backdrop-blur-sm">
-          <p className="font-sans text-sm font-semibold text-white">{label}</p>
+        <div className="relative bg-white">
+          <img
+            src={images[safe]}
+            alt={count > 1 ? `${label} — photo ${safe + 1}` : label}
+            className="block max-h-[68vh] w-full object-contain"
+            onError={(e) => { e.currentTarget.style.opacity = "0.15"; }}
+          />
+          {count > 1 && (
+            <>
+              <button
+                type="button"
+                aria-label="Previous photo"
+                onClick={() => setActive((a) => (a - 1 + count) % count)}
+                className="absolute left-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-black/45 text-white backdrop-blur-sm transition-colors hover:bg-black/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+              >
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                  <path d="M9 2L4 7l5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </button>
+              <button
+                type="button"
+                aria-label="Next photo"
+                onClick={() => setActive((a) => (a + 1) % count)}
+                className="absolute right-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-black/45 text-white backdrop-blur-sm transition-colors hover:bg-black/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+              >
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                  <path d="M5 2l5 5-5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </button>
+              <div className="absolute bottom-3 right-3 rounded-full bg-black/55 px-2.5 py-1 font-sans text-[10px] text-white backdrop-blur-sm">
+                {safe + 1} / {count}
+              </div>
+            </>
+          )}
         </div>
+
+        <div className="border-t border-black/10 bg-white px-4 py-3">
+          <p className="font-display text-sm font-semibold text-background">{label}</p>
+          {description && <p className="font-sans mt-1 text-xs leading-[1.6] text-black/60">{description}</p>}
+          {count > 1 && (
+            <div className="mt-3 flex gap-2 overflow-x-auto pb-1">
+              {images.map((src, i) => (
+                <button
+                  key={i}
+                  type="button"
+                  aria-label={`View photo ${i + 1}`}
+                  onClick={() => setActive(i)}
+                  className={`h-14 w-14 shrink-0 overflow-hidden rounded-lg border transition-colors ${safe === i ? "border-gold shadow-[0_0_0_1px_#D4AF37]" : "border-black/15 opacity-60 hover:opacity-100 hover:border-gold/50"}`}
+                >
+                  <img src={src} alt="" className="h-full w-full object-cover" onError={(e) => { e.currentTarget.parentElement!.style.display = "none"; }} />
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
+
         <button
           type="button"
           onClick={onClose}
@@ -243,8 +321,7 @@ function DesignStep({ productSlug, selections, onSelect, config: liveConfig, qui
   const config = liveConfig ?? allProductDesigns[productSlug];
   const [sectionIdx, setSectionIdx] = useState(0);
   const [showAdvanced, setShowAdvanced] = useState(false);
-  const [lightboxSrc, setLightboxSrc] = useState<string | null>(null);
-  const [lightboxLabel, setLightboxLabel] = useState("");
+  const [lightbox, setLightbox] = useState<{ images: string[]; label: string; description: string } | null>(null);
 
   // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => { setSectionIdx(0); setShowAdvanced(false); }, [productSlug, config]);
@@ -361,9 +438,14 @@ function DesignStep({ productSlug, selections, onSelect, config: liveConfig, qui
                     description={opt.description}
                     priceAdj={opt.priceAdj}
                     image={opt.image}
+                    images={opt.images}
                     selected={current === opt.id}
                     onClick={() => onSelect(field.id, opt.id)}
-                    onExpand={opt.image ? () => { setLightboxSrc(opt.image!); setLightboxLabel(opt.label); } : undefined}
+                    onExpand={(opt.images?.length || opt.image) ? () => setLightbox({
+                      images: opt.images?.length ? opt.images : (opt.image ? [opt.image] : []),
+                      label: opt.label,
+                      description: opt.description,
+                    }) : undefined}
                   />
                 ))}
               </div>
@@ -386,8 +468,8 @@ function DesignStep({ productSlug, selections, onSelect, config: liveConfig, qui
         </button>
       )}
 
-      {lightboxSrc && (
-        <ImageLightbox src={lightboxSrc} label={lightboxLabel} onClose={() => setLightboxSrc(null)} />
+      {lightbox && (
+        <ImageLightbox images={lightbox.images} label={lightbox.label} description={lightbox.description} onClose={() => setLightbox(null)} />
       )}
     </div>
   );
