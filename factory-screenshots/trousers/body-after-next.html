@@ -1,0 +1,30 @@
+
+<div class="layui-nav hDFlex">
+    <div class="layui-logo">
+        <a href="/eis/index"><img style="height:47px;" src="/eis/ui/images/new/generalHomeLogo.png" alt="logo"><h1></h1></a>
+    </div>
+    <div class="hFlex" style="padding: 0 20px;color: rgba(255, 255, 255, 0.9);"></div>
+<div style="height: 60px!important;display:flex;align-items:center;">
+        <span data-i18n="local" data-text="common_20">Welcome</span>, <span id="username" style="margin-left: 10px">DUSTIN CHA</span>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span id="balance">balance : 90.17</span>
+        <div class="hTopMenuIcon">
+            <img title="个人资料" onclick="location.hash='#'" src="/eis/ui/images/new/per.png" alt="">
+            <img title="个人资料" onclick="location.hash='#'" src="/eis/ui/images/new/per2.png" alt="">
+        </div>
+        <div class="hTopMenuIcon" onclick="sessionStorage.setItem('isHt', false);location.href = '/eis/logout'">
+            <img title="Logout" onclick="sessionStorage.setItem('isHt', false);location.href = '/eis/logout'" src="/eis/ui/images/new/out.png" alt="">
+            <img title="Logout" onclick="sessionStorage.setItem('isHt', false);location.href = '/eis/logout'" src="/eis/ui/images/new/out2.png" alt="">
+        </div>
+    </div>
+<span class="layui-nav-bar"></span></div>
+<div class="j-body-container hAbroadOrders3 layui-form" style="height:calc( 100% - 70px )">
+    <div class="layui-tab" lay-filter="orderTab" id="hLeftBox">
+		<div class="hToggleCart" onclick="App.toggleCart()">
+			<img class="hCartA" src="/eis/ui/images/new/cart3.png" alt="">
+			<img class="hCartB" src="/eis/ui/images/new/cart4.png" alt="">
+		</div>
+        <ul class="layui-tab-title" id="orderTab" style="overflow-x: auto;overflow-y: hidden;">  <li style="z-index:98;" id="orderTab_0" class="layui-this">  <img onclick="appfunctions.delCategory(0);" src="/eis/ui/images/new/del.png" alt="">  </li>   <span class="layui-tab-add " onclick="App.addCategory(this)"> <img style="width:24px;margin-left:0;" src="/eis/ui/images/new/add.png"> </span> </ul>
+        <div class="layui-tab-content">
+            <div class="layui-tab-item layui-show">
+                <div style="width:100%;height:100%;display:flex;flex-direction: column;">
+                    <div class="hStepBox" id="step">  <div class="hFlex hDFlex"> <div class="hStepList hActive" style="cursor:pointer" onclick="App.selectBack(1)"> <span>1</span> <span data-i18n="local" data-text="step_fabric">Please select the Fabric</span> </div> <div class="hLine "></div> <div class="hStepList " style="" onclick=""> <span>2</span> <span data-i18n="local" data-text="step_pattern">Please select the Pattern No</span> </div> <div class="hLine "></div> <div class="hStepList " style="" onclick=""> <span>3</span> <span data-i18n="local" data-text="step_design">Design details&amp;Measure</span> </div> </div>   <div title="" class="hDFlex hRemarkBtn " id="" onclick="appfunctions.showTestpAndUrgentPanel(this)"> <span data-i18n="local" data-text="eis_

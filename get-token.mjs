@@ -1,0 +1,10 @@
+﻿import puppeteer from "puppeteer-core";
+const browser = await puppeteer.launch({ executablePath: "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe", headless: true, args: ["--no-sandbox"] });
+let token = null;
+const page = await browser.newPage();
+page.on("response", async res => { if (res.url().includes("/oauth/token") && !token) { try { const j = await res.json(); if (j?.data?.access_token) token = j.data.access_token; } catch(_) {} } });
+await page.goto("https://www.kutetailor.net/system/login", { waitUntil: "networkidle2" });
+await page.type("#username", "LABDP"); await page.type("#password", "Badslag91"); await page.keyboard.press("Enter");
+await page.waitForNavigation({ timeout: 15000 }).catch(()=>{});
+await new Promise(r=>setTimeout(r,500)); await browser.close();
+console.log(token);
