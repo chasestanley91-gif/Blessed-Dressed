@@ -1,5 +1,7 @@
 # Heavy dev-only directories — not needed for the production build
 factory-screenshots
+# dev-only scraping reference images (gitignored, ~8k files / 95MB) — not served in the app
+public/images/factory
 node_modules
 DESIGN-IS-2026-06-05
 plans

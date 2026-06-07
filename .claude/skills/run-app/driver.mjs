@@ -23,8 +23,8 @@ import http from 'http';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const BASE = 'http://localhost:3000';
-const EDGE = 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe';
-const SHOTS_DIR = 'C:\\Users\\ChaseStanley\\Downloads\\files\\temporary screenshots';
+const EDGE = String.raw`C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe`;
+const SHOTS_DIR = String.raw`C:\Users\ChaseStanley\Downloads\files\temporary screenshots`;
 
 // ── Key pages to check in smoke mode ─────────────────────────────
 const SMOKE_URLS = [
@@ -72,8 +72,8 @@ async function shot(page, url, label) {
 async function launchBrowser() {
   return puppeteer.launch({
     executablePath: EDGE,
-    headless: false,
-    args: ['--headless=chrome', '--no-sandbox', '--disable-setuid-sandbox', '--disable-gpu'],
+    headless: true,
+    args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage'],
   });
 }
 

@@ -110,24 +110,22 @@ Press Ctrl-C to stop. Not useful headless — use the driver instead.
   The slug comes from `data-store/options/` filenames (suit-2pc.json, suit-3pc.json, shirt.json, sport-coat.json).
 - **Admin pages 307-redirect** until authenticated. Screenshot `/admin/login` to get the
   password gate; the gate itself is a single password field (not a username/email form).
-- **Suit builder Step 4 (Design)** shows "No design options available for this product" —
-  this is a known content gap, not a driver error.
 - **`next.config.ts` changes** require a full server restart (`Ctrl-C` then `npm run dev`).
   All other changes hot-reload automatically.
 - **TypeScript errors** show as a Next.js error overlay — the page renders but has a red
   banner. Run `npx tsc --noEmit 2>&1 | head -30` to see the actual error.
-  The project uses `src/types/three.d.ts` with `declare module "three"` (no body), making
-  `THREE.*` typed as `any` — use `useRef<any>(null!)` for Three.js refs, never `THREE.Mesh` etc.
 - **6 × HTTP 401 in the browser console** on public pages — auth-protected API endpoints
   fire unconditionally; these are logged but don't break rendering.
+- **Driver requires `headless: true`** (not `headless: false` + `--headless=chrome`). The
+  mixed-mode launch fails with "Code: 0" on this machine. The driver is already fixed.
 
 ---
 
 ## Troubleshooting
 
-**`Error: Failed to launch the browser process`**
-→ Check Edge is installed at the expected path. Run:
-`Test-Path "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"`
+**`Error: Failed to launch the browser process` / `Code: 0`**
+→ Most likely the headless mode flag. The driver must use `headless: true` (not `false`). Check driver.mjs.
+→ Also verify Edge is installed: `Test-Path "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"`
 
 **`Server not running. Start it first.`**
 → `npm run dev` in the project root, wait ~8 seconds for "Ready" message, then retry.

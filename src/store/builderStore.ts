@@ -33,6 +33,9 @@ export type BuilderState = {
   /* Style quiz answers: key → answer (e.g. lapelFamily → "notch") */
   styleQuiz: Record<string, string>;
 
+  /* Fabric discovery quiz answers: key → answer (e.g. occasion → "business") */
+  discoveryQuiz: Record<string, string>;
+
   price: number;
 
   /* Actions */
@@ -51,6 +54,8 @@ export type BuilderState = {
   setStyleQuiz: (key: string, value: string) => void;
   clearStyleQuizKey: (key: string) => void;
   clearStyleQuiz: () => void;
+  setDiscoveryQuiz: (key: string, value: string) => void;
+  clearDiscoveryQuiz: () => void;
   hydrateState: (partial: {
     fabric?: string;
     fabricPremium?: boolean;
@@ -62,6 +67,7 @@ export type BuilderState = {
     wearingHabit?: string;
     postureAdjustments?: Record<string, string>;
     styleQuiz?: Record<string, string>;
+    discoveryQuiz?: Record<string, string>;
     monograms?: Monogram[];
   }) => void;
   recalculatePrice: () => void;
@@ -125,6 +131,7 @@ export const useBuilderStore = create<BuilderState>((set) => ({
   wearingHabit: "",
   postureAdjustments: {},
   styleQuiz: {},
+  discoveryQuiz: {},
   price: basePrices.shirt + 150,
 
   setProduct: (product) =>
@@ -203,6 +210,11 @@ export const useBuilderStore = create<BuilderState>((set) => ({
 
   clearStyleQuiz: () => set({ styleQuiz: {} }),
 
+  setDiscoveryQuiz: (key, value) =>
+    set((state) => ({ discoveryQuiz: { ...state.discoveryQuiz, [key]: value } })),
+
+  clearDiscoveryQuiz: () => set({ discoveryQuiz: {} }),
+
   hydrateState: (partial) =>
     set((state) => {
       const next = { ...state, ...partial };
@@ -236,6 +248,7 @@ export const useBuilderStore = create<BuilderState>((set) => ({
       wearingHabit: "",
       postureAdjustments: {},
       styleQuiz: {},
+      discoveryQuiz: {},
       price: basePrices.shirt + 150,
     }),
 }));

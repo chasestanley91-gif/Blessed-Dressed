@@ -1,6 +1,7 @@
 ﻿"use client";
 
 import { useBuilderStore } from "@/store/builderStore";
+import { getDNAEntries } from "@/lib/styleDNA";
 
 // ─── Question definitions ────────────────────────────────────────────────────
 
@@ -16,6 +17,47 @@ type Question = {
   question: string;
   options: QuizOption[];
 };
+
+// ── Shared style consultation questions (appended to product-specific ones) ──
+
+const JACKET_STYLE_QUESTIONS: Question[] = [
+  {
+    key: "shoulderStyle",
+    question: "How should your jacket sit on your shoulders?",
+    options: [
+      { value: "natural",     label: "Soft & Natural",       description: "Follows your shoulder's curve — Italian softness.", icon: "〜" },
+      { value: "continental", label: "Continental Roll",      description: "Slight roll at the sleeve head — refined Italian style.", icon: "◒" },
+      { value: "structured",  label: "Structured & Defined",  description: "Sharp British shoulder — authority and presence.", icon: "⊓" },
+      { value: "neapolitan",  label: "Neapolitan",            description: "Hand-sewn shirred sleeve — the pinnacle of craft.", icon: "✦" },
+    ],
+  },
+  {
+    key: "ventStyle",
+    question: "How do you move throughout your day?",
+    options: [
+      { value: "active",   label: "Active & Moving",    description: "Double vents — freedom of movement, easy sitting.", icon: "↔" },
+      { value: "standing", label: "Mostly Standing",    description: "No vent — clean drape, classic silhouette.", icon: "▕" },
+      { value: "seated",   label: "Frequent Sitting",   description: "Side vents — comfort without compromising the line.", icon: "⌐" },
+    ],
+  },
+  {
+    key: "pocketStyle",
+    question: "How polished should the jacket appear?",
+    options: [
+      { value: "relaxed", label: "Relaxed",  description: "Flap pockets — natural and approachable.", icon: "◻" },
+      { value: "formal",  label: "Formal",   description: "Jetted pockets — clean, minimal, ceremonial.", icon: "—" },
+    ],
+  },
+  {
+    key: "liningStyle",
+    question: "How personal should this garment feel inside?",
+    options: [
+      { value: "classic",   label: "Classic",    description: "Half lining — traditional craftsmanship.", icon: "○" },
+      { value: "statement", label: "Statement",  description: "Full lining — a signature interior that only you see.", icon: "◉" },
+      { value: "minimal",   label: "Minimal",    description: "Quarter lining — lightweight and modern.", icon: "◌" },
+    ],
+  },
+];
 
 const SUIT_QUESTIONS: Question[] = [
   {
@@ -46,6 +88,7 @@ const SUIT_QUESTIONS: Question[] = [
       { value: "casual", label: "Smart Casual", description: "Weekends, dinners, relaxed occasions.", icon: "◇" },
     ],
   },
+  ...JACKET_STYLE_QUESTIONS,
 ];
 
 const SHIRT_QUESTIONS: Question[] = [
@@ -101,6 +144,7 @@ const SPORT_COAT_QUESTIONS: Question[] = [
       { value: "casual", label: "Casual", description: "Jeans, chinos — weekend and leisure wear.", icon: "◇" },
     ],
   },
+  ...JACKET_STYLE_QUESTIONS,
 ];
 
 const QUESTIONS_BY_PRODUCT: Record<string, Question[]> = {
@@ -209,37 +253,57 @@ export default function StyleQuizStep({
         );
       })}
 
-      {/* Action buttons */}
-      <div className="flex items-center gap-4 pt-2">
-        <button
-          type="button"
-          onClick={onComplete}
-          disabled={!allAnswered}
-          className={`rounded-full px-8 py-3 font-sans text-sm font-semibold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold ${
-            allAnswered
-              ? "bg-gold text-background hover:opacity-90 active:scale-[0.98]"
-              : "cursor-not-allowed bg-gold/30 text-background/50"
-          }`}
-        >
-          Continue to Design
-          <svg className="ml-2 inline-block" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
-            <path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </button>
+      {/* Style DNA summary card — shown when all questions answered */}
+      {allAnswered && (() => {
+        const entries = getDNAEntries(styleQuiz);
+        return entries.length > 0 ? (
+          <div className="rounded-2xl border border-gold/30 bg-gold/5 px-6 py-5 space-y-4">
+            <p className="font-sans text-[10px] uppercase tracking-[0.25em] text-gold">Your Style DNA</p>
+            <div className="grid grid-cols-2 gap-x-6 gap-y-2 sm:grid-cols-3">
+              {entries.map(({ section, value }) => (
+                <div key={section}>
+                  <p className="font-sans text-[9px] uppercase tracking-[0.2em] text-slate">{section}</p>
+                  <p className="font-sans text-sm font-semibold text-foreground">{value}</p>
+                </div>
+              ))}
+            </div>
+            <button
+              type="button"
+              onClick={onComplete}
+              className="w-full rounded-full bg-gold px-8 py-3 font-sans text-sm font-semibold text-background transition-opacity hover:opacity-90 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+            >
+              Build My Garment →
+            </button>
+          </div>
+        ) : null;
+      })()}
 
-        <button
-          type="button"
-          onClick={handleSkipAll}
-          className="font-sans text-sm text-slate transition-colors hover:text-muted-dark focus-visible:outline-none"
-        >
-          Show all options →
-        </button>
-      </div>
+      {/* Action buttons — shown while not all answered */}
+      {!allAnswered && (
+        <div className="flex items-center gap-4 pt-2">
+          <button
+            type="button"
+            onClick={onComplete}
+            disabled
+            className="cursor-not-allowed rounded-full bg-gold/30 px-8 py-3 font-sans text-sm font-semibold text-background/50"
+          >
+            Continue to Design
+          </button>
+
+          <button
+            type="button"
+            onClick={handleSkipAll}
+            className="font-sans text-sm text-slate transition-colors hover:text-muted-dark focus-visible:outline-none"
+          >
+            Show all options →
+          </button>
+        </div>
+      )}
 
       {/* Progress indicator */}
       {answeredCount > 0 && !allAnswered && (
         <p className="font-sans text-xs text-dim">
-          {answeredCount} of {questions.length} answered — answer all questions to continue
+          {answeredCount} of {questions.length} answered — answer all questions to unlock your Style DNA
         </p>
       )}
     </div>

@@ -39,19 +39,32 @@ export const builderProducts = [
 ];
 
 /* ─── Fabrics ──────────────────────────────────────────────────── */
-export const fabrics = [
-  { id: "navy-herringbone", label: "Navy Herringbone", detail: "150s Super Wool — deep navy with herringbone weave.", premium: true },
-  { id: "charcoal-wool", label: "Charcoal Flannel", detail: "Heavyweight 14oz flannel — structured and warm.", premium: true },
-  { id: "black-barathea", label: "Black Barathea", detail: "Classic barathea weave — formal and refined.", premium: true },
-  { id: "royal-blue-twill", label: "Royal Blue Twill", detail: "Diagonal twill weave — rich depth of color.", premium: true },
-  { id: "winter-tweed", label: "Winter Tweed", detail: "Harris or Donegal tweed — country house heritage.", premium: true },
-  { id: "ivory-silk", label: "Ivory Silk Blend", detail: "Silk-wool blend — supreme drape for formal occasions.", premium: true },
-  { id: "cream-linen", label: "Cream Irish Linen", detail: "Breathable natural linen — warm weather tailoring.", premium: false },
-  { id: "mid-grey-flannel", label: "Mid Grey Flannel", detail: "Classic mid-grey flannel — the office standard.", premium: false },
-  { id: "slate-serge", label: "Slate Serge", detail: "Durable serge twill — crisp silhouette.", premium: false },
-  { id: "white-oxford", label: "White Royal Oxford", detail: "Classic Oxford weave — the dress shirt benchmark.", premium: false },
-  { id: "sky-poplin", label: "Sky Blue Poplin", detail: "Fine Egyptian cotton poplin — crisp and cool.", premium: false },
-  { id: "pinstripe-navy", label: "Navy Pinstripe", detail: "Classic chalk pinstripe on deep navy ground.", premium: true },
+export type Fabric = {
+  id: string;
+  label: string;
+  detail: string;
+  premium: boolean;
+  image?: string;
+  color?: string[];
+  pattern?: string;
+  weight?: "light" | "medium" | "heavy";
+  season?: string[];
+  occasion?: string[];
+};
+
+export const fabrics: Fabric[] = [
+  { id: "navy-herringbone", label: "Navy Herringbone", detail: "150s Super Wool — deep navy with herringbone weave.", premium: true, color: ["navy"], pattern: "herringbone", weight: "heavy", season: ["fall", "winter"], occasion: ["business", "formal"] },
+  { id: "charcoal-wool", label: "Charcoal Flannel", detail: "Heavyweight 14oz flannel — structured and warm.", premium: true, color: ["charcoal"], pattern: "solid", weight: "heavy", season: ["fall", "winter"], occasion: ["business", "formal"] },
+  { id: "black-barathea", label: "Black Barathea", detail: "Classic barathea weave — formal and refined.", premium: true, color: ["black"], pattern: "solid", weight: "medium", season: ["fall", "winter"], occasion: ["formal", "wedding"] },
+  { id: "royal-blue-twill", label: "Royal Blue Twill", detail: "Diagonal twill weave — rich depth of color.", premium: true, color: ["blue"], pattern: "solid", weight: "medium", season: ["fall", "winter"], occasion: ["business", "casual"] },
+  { id: "winter-tweed", label: "Winter Tweed", detail: "Harris or Donegal tweed — country house heritage.", premium: true, color: ["brown"], pattern: "tweed", weight: "heavy", season: ["fall", "winter"], occasion: ["casual", "business"] },
+  { id: "ivory-silk", label: "Ivory Silk Blend", detail: "Silk-wool blend — supreme drape for formal occasions.", premium: true, color: ["cream"], pattern: "solid", weight: "light", season: ["spring", "summer"], occasion: ["wedding", "formal"] },
+  { id: "cream-linen", label: "Cream Irish Linen", detail: "Breathable natural linen — warm weather tailoring.", premium: false, color: ["cream", "beige"], pattern: "linen-texture", weight: "light", season: ["spring", "summer"], occasion: ["casual", "business"] },
+  { id: "mid-grey-flannel", label: "Mid Grey Flannel", detail: "Classic mid-grey flannel — the office standard.", premium: false, color: ["grey"], pattern: "solid", weight: "heavy", season: ["fall", "winter"], occasion: ["business"] },
+  { id: "slate-serge", label: "Slate Serge", detail: "Durable serge twill — crisp silhouette.", premium: false, color: ["grey"], pattern: "solid", weight: "medium", season: ["fall", "winter"], occasion: ["business"] },
+  { id: "white-oxford", label: "White Royal Oxford", detail: "Classic Oxford weave — the dress shirt benchmark.", premium: false, color: ["white"], pattern: "solid", weight: "medium", season: ["spring", "summer"], occasion: ["business", "casual"] },
+  { id: "sky-poplin", label: "Sky Blue Poplin", detail: "Fine Egyptian cotton poplin — crisp and cool.", premium: false, color: ["blue"], pattern: "solid", weight: "light", season: ["spring", "summer"], occasion: ["business", "casual"] },
+  { id: "pinstripe-navy", label: "Navy Pinstripe", detail: "Classic chalk pinstripe on deep navy ground.", premium: true, color: ["navy"], pattern: "pinstripe", weight: "medium", season: ["fall", "winter"], occasion: ["business", "formal"] },
 ];
 
 /* ─── Monogram fonts ──────────────────────────────────────────── */

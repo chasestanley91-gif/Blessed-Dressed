@@ -24,8 +24,10 @@ import type { ProductDesignConfig } from "@/data/options/types";
 import { useBuilderStore } from "@/store/builderStore";
 import { useCart } from "@/context/CartContext";
 import StyleQuizStep from "@/components/builder/StyleQuizStep";
+import FabricDiscovery from "@/components/builder/FabricDiscovery";
 import MeasuringGuide from "@/components/MeasuringGuide";
 import type { DesignOption } from "@/data/options/types";
+import { filterFabrics, applyStyleDNA } from "@/lib/styleDNA";
 
 interface BuilderPageProps {
   params: Promise<{ product: string }>;
@@ -65,6 +67,33 @@ function filterOptions(
     if (quiz.cuffFamily === "french") return options.filter((o) => o.id.includes("french") || o.id.includes("double"));
     if (quiz.cuffFamily === "button") return options.filter((o) => !o.id.includes("french") && !o.id.includes("double"));
   }
+  // Shoulder style
+  if (fieldId === "sleeve-head" && quiz.shoulderStyle) {
+    const map: Record<string, string[]> = {
+      natural:     ["sleeve-natural"],
+      continental: ["sleeve-con-rollino"],
+      structured:  ["sleeve-regular"],
+      neapolitan:  ["sleeve-neapolitan"],
+    };
+    const allowed = map[quiz.shoulderStyle];
+    if (allowed) return options.filter((o) => allowed.includes(o.id));
+  }
+  // Vent style
+  if (fieldId === "back-vent-style" && quiz.ventStyle) {
+    if (quiz.ventStyle === "standing") return options.filter((o) => o.id === "bv-none" || o.id === "bv-center");
+    if (quiz.ventStyle === "active" || quiz.ventStyle === "seated") return options.filter((o) => o.id.startsWith("bv-side"));
+  }
+  // Pocket style
+  if (fieldId === "lower-pocket" && quiz.pocketStyle) {
+    if (quiz.pocketStyle === "formal") return options.filter((o) => o.id.includes("jetted"));
+    if (quiz.pocketStyle === "relaxed" || quiz.pocketStyle === "business") return options.filter((o) => o.id.includes("flap"));
+  }
+  // Lining coverage
+  if (fieldId === "lining-coverage" && quiz.liningStyle) {
+    const map: Record<string, string> = { classic: "lc-half", statement: "lc-full", minimal: "lc-quarter" };
+    const target = map[quiz.liningStyle];
+    if (target) return options.filter((o) => o.id === target);
+  }
   return options;
 }
 
@@ -81,6 +110,7 @@ type ShareState = {
   wearingHabit: string;
   postureAdjustments: Record<string, string>;
   styleQuiz: Record<string, string>;
+  discoveryQuiz: Record<string, string>;
   monograms: Array<{ text: string; font: string; threadColor: string; placement: string; size: string }>;
   activeStep: number;
 };
@@ -97,6 +127,7 @@ function encodeShare(s: ShareState): string {
     wh: s.wearingHabit || undefined,
     pa: Object.keys(s.postureAdjustments).length ? s.postureAdjustments : undefined,
     sq: Object.keys(s.styleQuiz).length ? s.styleQuiz : undefined,
+    dq: Object.keys(s.discoveryQuiz).length ? s.discoveryQuiz : undefined,
     mo: s.monograms.filter(m => m.text).map(m => [m.text, m.font, m.threadColor, m.placement, m.size]),
     s: s.activeStep > 2 ? s.activeStep : undefined,
   };
@@ -121,6 +152,7 @@ function decodeShare(encoded: string): Partial<ShareState> | null {
       wearingHabit: (d.wh as string) ?? "",
       postureAdjustments: (d.pa as Record<string, string>) ?? {},
       styleQuiz: (d.sq as Record<string, string>) ?? {},
+      discoveryQuiz: (d.dq as Record<string, string>) ?? {},
       monograms: mo.length
         ? mo.map(([text, font, threadColor, placement, size]) => ({ text, font, threadColor, placement, size }))
         : undefined,
@@ -1032,7 +1064,7 @@ function MeasurementsStep({ productSlug }: { productSlug: string }) {
           )}
           {finishedFields.length > 0 && (
             <div>
-              <p className="font-sans mb-4 text-xs uppercase tracking-[0.3em] text-gold">Finished Measurements (optional)</p>
+              <p className="font-sans mb-4 text-xs uppercase tracking-[0.3em] text-gold">Garment Dimensions (optional)</p>
               <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {finishedFields.map((field) => (
                   <label key={field.key} className="block space-y-2">
@@ -1091,7 +1123,7 @@ function PostureStep() {
 
 /* ─── Main page ──────────────────────────────────────────────── */
 
-type AdminFabric = { id: string; label: string; detail: string; premium: boolean; collection?: string; photoImage?: string; codeImage?: string; image?: string };
+type AdminFabric = { id: string; label: string; detail: string; premium: boolean; collection?: string; photoImage?: string; codeImage?: string; image?: string; color?: string[]; pattern?: string; weight?: "light" | "medium" | "heavy"; season?: string[]; occasion?: string[] };
 
 export default function BuilderProductPage({ params }: BuilderPageProps) {
   const { product: productSlug } = use(params);
@@ -1104,6 +1136,7 @@ export default function BuilderProductPage({ params }: BuilderPageProps) {
   const [fabricsLoading, setFabricsLoading] = useState(true);
   const [fabricsError, setFabricsError] = useState(false);
   const [optionsError, setOptionsError] = useState(false);
+  const [discoverySkipped, setDiscoverySkipped] = useState(false);
 
   const fetchFabrics = useCallback(() => {
     setFabricsLoading(true);
@@ -1119,6 +1152,11 @@ export default function BuilderProductPage({ params }: BuilderPageProps) {
           detail: f.detail,
           premium: f.premium,
           image: f.photoImage ?? f.codeImage ?? f.image ?? undefined,
+          color: f.color,
+          pattern: f.pattern,
+          weight: f.weight,
+          season: f.season,
+          occasion: f.occasion,
         })));
       })
       .catch(() => { setFabricsLoading(false); setFabricsError(true); });
@@ -1160,10 +1198,12 @@ export default function BuilderProductPage({ params }: BuilderPageProps) {
     wearingHabit,
     postureAdjustments,
     styleQuiz,
+    discoveryQuiz,
     price,
     setProduct,
     setFabric,
     setDesignSelection,
+    clearDiscoveryQuiz,
     hydrateState,
   } = useBuilderStore();
 
@@ -1186,6 +1226,7 @@ export default function BuilderProductPage({ params }: BuilderPageProps) {
       wearingHabit: decoded.wearingHabit,
       postureAdjustments: decoded.postureAdjustments,
       styleQuiz: decoded.styleQuiz,
+      discoveryQuiz: decoded.discoveryQuiz,
       monograms: decoded.monograms,
     });
     if (decoded.activeStep && decoded.activeStep > 2) {
@@ -1211,6 +1252,7 @@ export default function BuilderProductPage({ params }: BuilderPageProps) {
       wearingHabit,
       postureAdjustments: postureAdjustments ?? {},
       styleQuiz: styleQuiz ?? {},
+      discoveryQuiz: discoveryQuiz ?? {},
       monograms,
       activeStep,
     });
@@ -1221,7 +1263,7 @@ export default function BuilderProductPage({ params }: BuilderPageProps) {
     });
   }, [fabric, fabricPremium, designSelections, measureMode, standardSize,
       customMeasurements, chestAllowance, wearingHabit, postureAdjustments,
-      styleQuiz, monograms, activeStep, productSlug]);
+      styleQuiz, discoveryQuiz, monograms, activeStep, productSlug]);
 
   useEffect(() => {
     if (productSlug && productSlug !== selectedProduct) {
@@ -1248,6 +1290,13 @@ export default function BuilderProductPage({ params }: BuilderPageProps) {
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  // Filtered fabrics based on discovery quiz answers
+  const discoveryComplete = Object.keys(discoveryQuiz).length >= 4 || discoverySkipped;
+  const displayFabrics = useMemo(
+    () => filterFabrics(activeFabrics, discoverySkipped ? {} : discoveryQuiz),
+    [activeFabrics, discoveryQuiz, discoverySkipped]
+  );
 
   const { addItem } = useCart();
   const [cartAdded, setCartAdded] = useState(false);
@@ -1316,8 +1365,43 @@ export default function BuilderProductPage({ params }: BuilderPageProps) {
 
     /* Step 2 — Fabric */
     if (activeStep === 2) {
+      // Show discovery wizard until 4 questions answered or skipped
+      if (!discoveryComplete) {
+        return (
+          <FabricDiscovery
+            onComplete={() => setDiscoverySkipped(false)}
+          />
+        );
+      }
+
+      const showingAll = displayFabrics.length === activeFabrics.length;
+
       return (
         <div className="space-y-4">
+          {/* Discovery profile bar */}
+          {!showingAll && (
+            <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-gold/20 bg-gold/5 px-4 py-3">
+              <p className="font-sans text-xs text-slate">
+                <span className="font-semibold text-foreground">{displayFabrics.length}</span> of {activeFabrics.length} fabrics match your profile
+              </p>
+              <div className="flex items-center gap-4">
+                <button
+                  type="button"
+                  onClick={() => { clearDiscoveryQuiz(); setDiscoverySkipped(false); }}
+                  className="font-sans text-xs text-gold underline hover:no-underline focus-visible:outline-none"
+                >
+                  Edit preferences
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setDiscoverySkipped(true)}
+                  className="font-sans text-xs text-slate hover:text-muted-dark focus-visible:outline-none"
+                >
+                  Show all →
+                </button>
+              </div>
+            </div>
+          )}
           {fabricsLoading && (
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
               {Array.from({ length: 6 }).map((_, i) => (
@@ -1338,7 +1422,7 @@ export default function BuilderProductPage({ params }: BuilderPageProps) {
             </div>
           )}
           {!fabricsLoading && <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-          {activeFabrics.map((f) => (
+          {displayFabrics.map((f) => (
             <button
               key={f.id}
               type="button"
@@ -1382,7 +1466,10 @@ export default function BuilderProductPage({ params }: BuilderPageProps) {
       return (
         <StyleQuizStep
           productSlug={productSlug}
-          onComplete={() => setActiveStep(4)}
+          onComplete={() => {
+            applyStyleDNA(styleQuiz, designSelections, setDesignSelection);
+            setActiveStep(4);
+          }}
         />
       );
     }
@@ -1736,10 +1823,13 @@ export default function BuilderProductPage({ params }: BuilderPageProps) {
                           <div className="flex items-start justify-between gap-2">
                             <span className="font-sans text-sm font-medium text-foreground">{f.label}</span>
                             {f.premium && (
-                              <span className="shrink-0 font-sans text-[9px] uppercase tracking-[0.15em] text-gold border border-gold/30 rounded-full px-2 py-0.5">Premium</span>
+                              <span title="Super 120–150s Italian mill wool — superior drape and softness" className="shrink-0 font-sans text-[9px] uppercase tracking-[0.15em] text-gold border border-gold/30 rounded-full px-2 py-0.5 cursor-help">Premium</span>
                             )}
                           </div>
                           <p className="font-sans text-[11px] text-slate mt-0.5 line-clamp-1">{f.detail}</p>
+                          {f.premium && (
+                            <p className="font-sans text-[10px] text-[#6A7A8C] mt-0.5">Super 120–150s Italian wool · +$150</p>
+                          )}
                         </div>
                       );
                     })()}
