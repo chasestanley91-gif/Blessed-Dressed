@@ -26,76 +26,14 @@ import { useCart } from "@/context/CartContext";
 import StyleQuizStep from "@/components/builder/StyleQuizStep";
 import FabricDiscovery from "@/components/builder/FabricDiscovery";
 import MeasuringGuide from "@/components/MeasuringGuide";
-import type { DesignOption } from "@/data/options/types";
-import { filterFabrics, applyStyleDNA } from "@/lib/styleDNA";
+import { rankFabrics } from "@/lib/styleDNA";
+import { rankOptions, getDNAEntries, applyDesignDNA } from "@/lib/quizEngine";
 
 interface BuilderPageProps {
   params: Promise<{ product: string }>;
 }
 
 const STEPS = ["Product", "Fabric", "Style", "Design", "Monogram", "Measurements", "Posture", "Review"] as const;
-
-// ─── Filter options based on style quiz answers ───────────────────────────────
-function filterOptions(
-  fieldId: string,
-  options: DesignOption[],
-  quiz: Record<string, string>
-): DesignOption[] {
-  if (fieldId === "lapel-style" && quiz.lapelFamily && quiz.lapelFamily !== "all") {
-    if (quiz.lapelFamily === "notch") return options.filter((o) => o.id.startsWith("lapel-notch"));
-    if (quiz.lapelFamily === "peak")  return options.filter((o) => o.id.startsWith("lapel-peak"));
-    if (quiz.lapelFamily === "shawl") return options.filter((o) => o.id.startsWith("lapel-shawl"));
-  }
-  if (fieldId === "button-config" && quiz.breasting && quiz.breasting !== "all") {
-    if (quiz.breasting === "single") return options.filter((o) => o.id.startsWith("sb-"));
-    if (quiz.breasting === "double") return options.filter((o) => o.id.startsWith("db-"));
-  }
-  if (fieldId === "canvas" && quiz.formality) {
-    const formal  = ["full-canvas", "half-canvas", "light-half-canvas"];
-    const casual  = ["fused", "ultra-thin-half", "quarter-canvas", "light-half-canvas"];
-    if (quiz.formality === "formal")  return options.filter((o) => formal.includes(o.id));
-    if (quiz.formality === "casual")  return options.filter((o) => casual.includes(o.id));
-  }
-  // Shirt collar (field id is "lapel" in the collar section)
-  if (fieldId === "lapel" && quiz.collarFamily && quiz.collarFamily !== "all") {
-    if (quiz.collarFamily === "point")   return options.filter((o) => o.id.includes("-point-") || o.id.startsWith("collar-long-point"));
-    if (quiz.collarFamily === "cutaway") return options.filter((o) => o.id.includes("cutaway"));
-    if (quiz.collarFamily === "casual")  return options.filter((o) => o.id.includes("button-down") || o.id.includes("cuban") || o.id.includes("mandarin") || o.id.includes("frog"));
-  }
-  // Shirt cuff (field id contains "cuff")
-  if (fieldId.includes("cuff") && quiz.cuffFamily && quiz.cuffFamily !== "all") {
-    if (quiz.cuffFamily === "french") return options.filter((o) => o.id.includes("french") || o.id.includes("double"));
-    if (quiz.cuffFamily === "button") return options.filter((o) => !o.id.includes("french") && !o.id.includes("double"));
-  }
-  // Shoulder style
-  if (fieldId === "sleeve-head" && quiz.shoulderStyle) {
-    const map: Record<string, string[]> = {
-      natural:     ["sleeve-natural"],
-      continental: ["sleeve-con-rollino"],
-      structured:  ["sleeve-regular"],
-      neapolitan:  ["sleeve-neapolitan"],
-    };
-    const allowed = map[quiz.shoulderStyle];
-    if (allowed) return options.filter((o) => allowed.includes(o.id));
-  }
-  // Vent style
-  if (fieldId === "back-vent-style" && quiz.ventStyle) {
-    if (quiz.ventStyle === "standing") return options.filter((o) => o.id === "bv-none" || o.id === "bv-center");
-    if (quiz.ventStyle === "active" || quiz.ventStyle === "seated") return options.filter((o) => o.id.startsWith("bv-side"));
-  }
-  // Pocket style
-  if (fieldId === "lower-pocket" && quiz.pocketStyle) {
-    if (quiz.pocketStyle === "formal") return options.filter((o) => o.id.includes("jetted"));
-    if (quiz.pocketStyle === "relaxed" || quiz.pocketStyle === "business") return options.filter((o) => o.id.includes("flap"));
-  }
-  // Lining coverage
-  if (fieldId === "lining-coverage" && quiz.liningStyle) {
-    const map: Record<string, string> = { classic: "lc-half", statement: "lc-full", minimal: "lc-quarter" };
-    const target = map[quiz.liningStyle];
-    if (target) return options.filter((o) => o.id === target);
-  }
-  return options;
-}
 
 // ─── Share encode / decode ────────────────────────────────────────────────────
 
@@ -155,7 +93,7 @@ function decodeShare(encoded: string): Partial<ShareState> | null {
       discoveryQuiz: (d.dq as Record<string, string>) ?? {},
       monograms: mo.length
         ? mo.map(([text, font, threadColor, placement, size]) => ({ text, font, threadColor, placement, size }))
-        : undefined,
+        : [],
       activeStep: (d.s as number) ?? 2,
     };
   } catch { return null; }
@@ -174,12 +112,14 @@ function StepBadge({ n, label, active, done }: { n: number; label: string; activ
   );
 }
 
-function OptionCard({ id, label, description, priceAdj, image, images, selected, onClick, onExpand }: {
+function OptionCard({ id, label, description, priceAdj, image, images, aiImage, realImage, selected, onClick, onExpand }: {
   id?: string; label: string; description: string; priceAdj?: number;
-  image?: string; images?: string[]; selected: boolean; onClick: () => void; onExpand?: () => void;
+  image?: string; images?: string[]; aiImage?: string; realImage?: string; selected: boolean; onClick: () => void; onExpand?: () => void;
 }) {
-  const hasPhoto = !!images?.length;
-  const thumb = images?.[0] ?? image;
+  // Thumbnail preference: real photo > AI render > extra photos > illustration drawing.
+  const photo = realImage ?? aiImage ?? images?.[0];
+  const hasPhoto = !!photo;
+  const thumb = photo ?? image;
   return (
     <button
       id={id}
@@ -242,9 +182,9 @@ function OptionCard({ id, label, description, priceAdj, image, images, selected,
   );
 }
 
-function ImageLightbox({ images, label, description, onClose }: { images: string[]; label: string; description: string; onClose: () => void }) {
+function ImageLightbox({ items, label, description, onClose }: { items: { url: string; role?: string }[]; label: string; description: string; onClose: () => void }) {
   const [active, setActive] = useState(0);
-  const count = images.length;
+  const count = items.length;
 
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
@@ -269,11 +209,16 @@ function ImageLightbox({ images, label, description, onClose }: { images: string
       >
         <div className="relative bg-white">
           <img
-            src={images[safe]}
-            alt={count > 1 ? `${label} — photo ${safe + 1}` : label}
+            src={items[safe]?.url}
+            alt={items[safe]?.role ? `${label} — ${items[safe].role}` : label}
             className="block max-h-[68vh] w-full object-contain"
             onError={(e) => { e.currentTarget.style.opacity = "0.15"; }}
           />
+          {items[safe]?.role && (
+            <div className="absolute left-3 top-3 rounded-full bg-black/55 px-3 py-1 font-sans text-[10px] uppercase tracking-[0.15em] text-white backdrop-blur-sm">
+              {items[safe].role}
+            </div>
+          )}
           {count > 1 && (
             <>
               <button
@@ -308,15 +253,18 @@ function ImageLightbox({ images, label, description, onClose }: { images: string
           {description && <p className="font-sans mt-1 text-xs leading-[1.6] text-black/60">{description}</p>}
           {count > 1 && (
             <div className="mt-3 flex gap-2 overflow-x-auto pb-1">
-              {images.map((src, i) => (
+              {items.map((it, i) => (
                 <button
                   key={i}
                   type="button"
-                  aria-label={`View photo ${i + 1}`}
+                  aria-label={it.role ? `View ${it.role}` : `View photo ${i + 1}`}
                   onClick={() => setActive(i)}
-                  className={`h-14 w-14 shrink-0 overflow-hidden rounded-lg border transition-colors ${safe === i ? "border-gold shadow-[0_0_0_1px_#D4AF37]" : "border-black/15 opacity-60 hover:opacity-100 hover:border-gold/50"}`}
+                  className="shrink-0 text-center"
                 >
-                  <img src={src} alt="" className="h-full w-full object-cover" onError={(e) => { e.currentTarget.parentElement!.style.display = "none"; }} />
+                  <div className={`h-14 w-14 overflow-hidden rounded-lg border transition-colors ${safe === i ? "border-gold shadow-[0_0_0_1px_#D4AF37]" : "border-black/15 opacity-60 hover:opacity-100 hover:border-gold/50"}`}>
+                    <img src={it.url} alt="" className="h-full w-full object-cover" onError={(e) => { e.currentTarget.parentElement!.parentElement!.style.display = "none"; }} />
+                  </div>
+                  {it.role && <span className="font-sans mt-0.5 block text-[8px] uppercase tracking-wide text-black/50">{it.role}</span>}
                 </button>
               ))}
             </div>
@@ -353,7 +301,25 @@ function DesignStep({ productSlug, selections, onSelect, config: liveConfig, qui
   const config = liveConfig ?? allProductDesigns[productSlug];
   const [sectionIdx, setSectionIdx] = useState(0);
   const [showAdvanced, setShowAdvanced] = useState(false);
-  const [lightbox, setLightbox] = useState<{ images: string[]; label: string; description: string } | null>(null);
+  const [expandedFields, setExpandedFields] = useState<Set<string>>(new Set());
+  const [collapsedFields, setCollapsedFields] = useState<Set<string>>(new Set());
+  const [lightbox, setLightbox] = useState<{ items: { url: string; role?: string }[]; label: string; description: string } | null>(null);
+
+  const toggleExpanded = (fieldId: string) =>
+    setExpandedFields((prev) => {
+      const next = new Set(prev);
+      if (next.has(fieldId)) next.delete(fieldId);
+      else next.add(fieldId);
+      return next;
+    });
+
+  const toggleCollapsed = (fieldId: string) =>
+    setCollapsedFields((prev) => {
+      const next = new Set(prev);
+      if (next.has(fieldId)) next.delete(fieldId);
+      else next.add(fieldId);
+      return next;
+    });
 
   // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => { setSectionIdx(0); setShowAdvanced(false); }, [productSlug, config]);
@@ -368,17 +334,8 @@ function DesignStep({ productSlug, selections, onSelect, config: liveConfig, qui
   const visibleFields = section.fields.filter(f => !f.advanced || showAdvanced);
   const advancedCount = section.fields.filter(f => f.advanced).length;
 
-  // Human-readable chip labels for quiz answers
-  const CHIP_LABELS: Record<string, Record<string, string>> = {
-    lapelFamily:  { notch: "Notch Lapel", peak: "Peak Lapel", shawl: "Shawl Lapel" },
-    breasting:    { single: "Single Breasted", double: "Double Breasted" },
-    formality:    { formal: "Formal", business: "Business", casual: "Smart Casual" },
-    collarFamily: { point: "Classic Point Collar", cutaway: "Spread & Cutaway", casual: "Casual Collar" },
-    cuffFamily:   { french: "French Cuff", button: "Button Cuff" },
-    pleatFamily:  { flat: "Flat Front", single: "Single Pleat", double: "Double Pleat" },
-  };
-
-  const activeFilters = Object.entries(quiz).filter(([, v]) => v && v !== "all");
+  // Active style-quiz answers as human-readable chips (engine-derived).
+  const activeFilters = getDNAEntries(config, quiz);
 
   return (
     <div className="space-y-5">
@@ -389,29 +346,26 @@ function DesignStep({ productSlug, selections, onSelect, config: liveConfig, qui
           </p>
         </div>
       )}
-      {/* Active filter chips */}
+      {/* Active style-quiz chips — these prioritise (never hide) matching options */}
       {activeFilters.length > 0 && (
         <div className="flex flex-wrap items-center gap-2">
-          <span className="font-sans text-[10px] uppercase tracking-[0.2em] text-slate">Filtered:</span>
-          {activeFilters.map(([key, value]) => {
-            const label = CHIP_LABELS[key]?.[value] ?? value;
-            return (
-              <span
-                key={key}
-                className="inline-flex items-center gap-1.5 rounded-full border border-gold/40 bg-gold/10 px-3 py-1 font-sans text-[11px] text-gold"
+          <span className="font-sans text-[10px] uppercase tracking-[0.2em] text-slate">Prioritising:</span>
+          {activeFilters.map(({ key, value }) => (
+            <span
+              key={key}
+              className="inline-flex items-center gap-1.5 rounded-full border border-gold/40 bg-gold/10 px-3 py-1 font-sans text-[11px] text-gold"
+            >
+              {value}
+              <button
+                type="button"
+                onClick={() => clearStyleQuizKey(key)}
+                className="ml-0.5 flex h-3.5 w-3.5 items-center justify-center rounded-full bg-gold/20 text-gold hover:bg-gold/40 transition-colors focus-visible:outline-none"
+                aria-label={`Remove ${value} preference`}
               >
-                {label}
-                <button
-                  type="button"
-                  onClick={() => clearStyleQuizKey(key)}
-                  className="ml-0.5 flex h-3.5 w-3.5 items-center justify-center rounded-full bg-gold/20 text-gold hover:bg-gold/40 transition-colors focus-visible:outline-none"
-                  aria-label={`Remove ${label} filter`}
-                >
-                  ×
-                </button>
-              </span>
-            );
-          })}
+                ×
+              </button>
+            </span>
+          ))}
           <button
             type="button"
             onClick={onEditQuiz}
@@ -446,41 +400,80 @@ function DesignStep({ productSlug, selections, onSelect, config: liveConfig, qui
         )}
         {visibleFields.map((field) => {
           const current = selections[field.id] ?? field.defaultValue;
-          const displayOptions = filterOptions(field.id, field.options, quiz);
-          const isFiltered = displayOptions.length < field.options.length;
+          // Soft relevance ranking: best matches first, nothing removed.
+          const { ranked, bestCount, filtered } = rankOptions(field, quiz[field.id]);
+          const expanded = expandedFields.has(field.id);
+          const collapsible = filtered && bestCount < ranked.length;
+          const shown = collapsible && !expanded ? ranked.slice(0, bestCount) : ranked;
+          const hiddenCount = ranked.length - shown.length;
+          const isCollapsed = collapsedFields.has(field.id);
           return (
             <div key={field.id}>
-              <div className="mb-3 flex items-center justify-between">
+              <button
+                type="button"
+                onClick={() => toggleCollapsed(field.id)}
+                className="mb-3 flex w-full items-center justify-between gap-3 text-left focus-visible:outline-none"
+              >
                 <div className="flex items-center gap-2">
                   <p className="font-display text-base font-semibold text-foreground">{field.label}</p>
-                  {isFiltered && (
+                  {collapsible && !expanded && !isCollapsed && (
                     <span className="font-sans rounded-full border border-gold/30 bg-gold/10 px-2 py-0.5 text-[9px] uppercase tracking-[0.15em] text-gold">
-                      {displayOptions.length} of {field.options.length}
+                      Top {bestCount} {bestCount === 1 ? "match" : "matches"}
                     </span>
                   )}
                 </div>
-                {field.hint && <p className="font-sans text-xs text-muted-dark">{field.hint}</p>}
-              </div>
-              <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-                {displayOptions.map((opt) => (
-                  <OptionCard
-                    key={opt.id}
-                    id={opt.id}
-                    label={opt.label}
-                    description={opt.description}
-                    priceAdj={opt.priceAdj}
-                    image={opt.image}
-                    images={opt.images}
-                    selected={current === opt.id}
-                    onClick={() => onSelect(field.id, opt.id)}
-                    onExpand={(opt.images?.length || opt.image) ? () => setLightbox({
-                      images: opt.images?.length ? opt.images : (opt.image ? [opt.image] : []),
-                      label: opt.label,
-                      description: opt.description,
-                    }) : undefined}
-                  />
-                ))}
-              </div>
+                <div className="flex shrink-0 items-center gap-2">
+                  {field.hint && <p className="font-sans text-xs text-muted-dark">{field.hint}</p>}
+                  <svg
+                    width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"
+                    className={`text-slate transition-transform duration-200 ${isCollapsed ? "-rotate-90" : "rotate-0"}`}
+                  >
+                    <path d="M2.5 5l4.5 4.5L11.5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </div>
+              </button>
+              {!isCollapsed && (
+                <>
+                  <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                    {shown.map((opt) => (
+                      <OptionCard
+                        key={opt.id}
+                        id={opt.id}
+                        label={opt.label}
+                        description={opt.description}
+                        priceAdj={opt.priceAdj}
+                        image={opt.image}
+                        images={opt.images}
+                        aiImage={opt.aiImage}
+                        realImage={opt.realImage}
+                        selected={current === opt.id}
+                        onClick={() => onSelect(field.id, opt.id)}
+                        onExpand={(opt.image || opt.aiImage || opt.realImage || opt.images?.length) ? () => setLightbox({
+                          items: [
+                            ...(opt.image ? [{ url: opt.image, role: "Illustration" }] : []),
+                            ...(opt.aiImage ? [{ url: opt.aiImage, role: "AI render" }] : []),
+                            ...(opt.realImage ? [{ url: opt.realImage, role: "Real photo" }] : []),
+                            ...(opt.images ?? []).map((u) => ({ url: u, role: "Photo" })),
+                          ],
+                          label: opt.label,
+                          description: opt.description,
+                        }) : undefined}
+                      />
+                    ))}
+                  </div>
+                  {collapsible && (
+                    <button
+                      type="button"
+                      onClick={() => toggleExpanded(field.id)}
+                      className="font-sans mt-3 text-xs text-slate underline underline-offset-2 transition-colors hover:text-gold focus-visible:outline-none"
+                    >
+                      {expanded
+                        ? "Show best matches only"
+                        : `Show all ${ranked.length} options${hiddenCount ? ` (+${hiddenCount})` : ""}`}
+                    </button>
+                  )}
+                </>
+              )}
             </div>
           );
         })}
@@ -501,7 +494,7 @@ function DesignStep({ productSlug, selections, onSelect, config: liveConfig, qui
       )}
 
       {lightbox && (
-        <ImageLightbox images={lightbox.images} label={lightbox.label} description={lightbox.description} onClose={() => setLightbox(null)} />
+        <ImageLightbox items={lightbox.items} label={lightbox.label} description={lightbox.description} onClose={() => setLightbox(null)} />
       )}
     </div>
   );
@@ -1123,7 +1116,7 @@ function PostureStep() {
 
 /* ─── Main page ──────────────────────────────────────────────── */
 
-type AdminFabric = { id: string; label: string; detail: string; premium: boolean; collection?: string; photoImage?: string; codeImage?: string; image?: string; color?: string[]; pattern?: string; weight?: "light" | "medium" | "heavy"; season?: string[]; occasion?: string[] };
+type AdminFabric = { id: string; label: string; detail: string; premium: boolean; collection?: string; photoImage?: string; codeImage?: string; image?: string; color?: string[]; pattern?: string; weight?: "light" | "medium" | "heavy"; finish?: "crisp" | "soft" | "luxurious" | "textured"; season?: string[]; occasion?: string[] };
 
 export default function BuilderProductPage({ params }: BuilderPageProps) {
   const { product: productSlug } = use(params);
@@ -1136,7 +1129,8 @@ export default function BuilderProductPage({ params }: BuilderPageProps) {
   const [fabricsLoading, setFabricsLoading] = useState(true);
   const [fabricsError, setFabricsError] = useState(false);
   const [optionsError, setOptionsError] = useState(false);
-  const [discoverySkipped, setDiscoverySkipped] = useState(false);
+  const [discoveryDone, setDiscoveryDone] = useState(false);
+  const [fabricsExpanded, setFabricsExpanded] = useState(false);
 
   const fetchFabrics = useCallback(() => {
     setFabricsLoading(true);
@@ -1155,6 +1149,7 @@ export default function BuilderProductPage({ params }: BuilderPageProps) {
           color: f.color,
           pattern: f.pattern,
           weight: f.weight,
+          finish: f.finish,
           season: f.season,
           occasion: f.occasion,
         })));
@@ -1168,7 +1163,9 @@ export default function BuilderProductPage({ params }: BuilderPageProps) {
 
   useEffect(() => {
     setOptionsError(false);
-    fetch(`/api/admin/builder-options/${productSlug}`)
+    // Public, ungated options endpoint — serves the live config (with quiz
+    // metadata) to customers. The admin endpoint is auth-gated (401 for guests).
+    fetch(`/api/options/${productSlug}`)
       .then((r) => { if (!r.ok) throw new Error("not found"); return r.json(); })
       .then((data: ProductDesignConfig) => {
         if (data && Array.isArray(data.sections)) setLiveConfig(data);
@@ -1292,10 +1289,10 @@ export default function BuilderProductPage({ params }: BuilderPageProps) {
   }, []);
 
   // Filtered fabrics based on discovery quiz answers
-  const discoveryComplete = Object.keys(discoveryQuiz).length >= 4 || discoverySkipped;
-  const displayFabrics = useMemo(
-    () => filterFabrics(activeFabrics, discoverySkipped ? {} : discoveryQuiz),
-    [activeFabrics, discoveryQuiz, discoverySkipped]
+  const discoveryComplete = discoveryDone;
+  const fabricRanking = useMemo(
+    () => rankFabrics(activeFabrics, discoveryQuiz),
+    [activeFabrics, discoveryQuiz]
   );
 
   const { addItem } = useCart();
@@ -1365,39 +1362,40 @@ export default function BuilderProductPage({ params }: BuilderPageProps) {
 
     /* Step 2 — Fabric */
     if (activeStep === 2) {
-      // Show discovery wizard until 4 questions answered or skipped
+      // Show the discovery funnel until the customer answers it or skips.
       if (!discoveryComplete) {
         return (
           <FabricDiscovery
-            onComplete={() => setDiscoverySkipped(false)}
+            onComplete={() => { setDiscoveryDone(true); setFabricsExpanded(false); }}
           />
         );
       }
 
-      const showingAll = displayFabrics.length === activeFabrics.length;
+      const { ranked, bestCount, filtered } = fabricRanking;
+      const displayFabrics = filtered && !fabricsExpanded ? ranked.slice(0, bestCount) : ranked;
 
       return (
         <div className="space-y-4">
           {/* Discovery profile bar */}
-          {!showingAll && (
+          {filtered && (
             <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-gold/20 bg-gold/5 px-4 py-3">
               <p className="font-sans text-xs text-slate">
-                <span className="font-semibold text-foreground">{displayFabrics.length}</span> of {activeFabrics.length} fabrics match your profile
+                <span className="font-semibold text-foreground">{bestCount}</span> of {activeFabrics.length} fabrics best match your profile
               </p>
               <div className="flex items-center gap-4">
                 <button
                   type="button"
-                  onClick={() => { clearDiscoveryQuiz(); setDiscoverySkipped(false); }}
+                  onClick={() => { clearDiscoveryQuiz(); setDiscoveryDone(false); setFabricsExpanded(false); }}
                   className="font-sans text-xs text-gold underline hover:no-underline focus-visible:outline-none"
                 >
                   Edit preferences
                 </button>
                 <button
                   type="button"
-                  onClick={() => setDiscoverySkipped(true)}
+                  onClick={() => setFabricsExpanded((v) => !v)}
                   className="font-sans text-xs text-slate hover:text-muted-dark focus-visible:outline-none"
                 >
-                  Show all →
+                  {fabricsExpanded ? "Show matches only" : "Show all →"}
                 </button>
               </div>
             </div>
@@ -1463,11 +1461,12 @@ export default function BuilderProductPage({ params }: BuilderPageProps) {
 
     /* Step 3 — Style Quiz */
     if (activeStep === 3) {
+      const quizConfig = liveConfig ?? allProductDesigns[productSlug] ?? null;
       return (
         <StyleQuizStep
-          productSlug={productSlug}
+          config={quizConfig}
           onComplete={() => {
-            applyStyleDNA(styleQuiz, designSelections, setDesignSelection);
+            applyDesignDNA(quizConfig, styleQuiz, designSelections, setDesignSelection);
             setActiveStep(4);
           }}
         />

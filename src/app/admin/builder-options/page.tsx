@@ -1,7 +1,7 @@
 ﻿"use client";
 
 import { useEffect, useRef, useState } from "react";
-import type { ProductDesignConfig, DesignField, DesignOption } from "@/data/options/types";
+import type { ProductDesignConfig, DesignField, DesignOption, FieldQuiz, QuizAnswer } from "@/data/options/types";
 
 const PRODUCTS = [
   { id: "suit-2pc", label: "Suit (2pc)" },
@@ -19,53 +19,76 @@ function OptionRow({
   sectionIdx: number; fieldIdx: number; optIdx: number;
   onChange: (si: number, fi: number, oi: number, patch: Partial<DesignOption>) => void;
   onDelete: (si: number, fi: number, oi: number) => void;
-  onImageUpload: (si: number, fi: number, oi: number, file: File) => Promise<void>;
+  onImageUpload: (si: number, fi: number, oi: number, file: File, field: "image" | "aiImage" | "realImage") => Promise<void>;
 }) {
   const fileRef = useRef<HTMLInputElement>(null);
+  const pendingField = useRef<"image" | "aiImage" | "realImage">("image");
   const [uploading, setUploading] = useState(false);
 
   async function handleFile(e: React.ChangeEvent<HTMLInputElement>) {
     const file = e.target.files?.[0];
     if (!file) return;
     setUploading(true);
-    await onImageUpload(sectionIdx, fieldIdx, optIdx, file);
+    await onImageUpload(sectionIdx, fieldIdx, optIdx, file, pendingField.current);
     setUploading(false);
     if (fileRef.current) fileRef.current.value = "";
+  }
+  function pick(field: "image" | "aiImage" | "realImage") {
+    pendingField.current = field;
+    fileRef.current?.click();
   }
 
   const inp = "rounded-md border border-border-accent bg-surface-deep px-2 py-1 font-sans text-xs text-foreground outline-none focus:border-gold transition-colors";
 
   return (
-    <div className="grid grid-cols-[80px_1fr_2fr_70px_auto_auto] gap-2 items-center py-2 border-b border-surface-strong last:border-0">
-      {/* Image */}
-      <div className="flex flex-col items-center gap-1">
-        <div className="h-[52px] w-[70px] rounded bg-white overflow-hidden">
-          {opt.image ? <img src={opt.image} alt={opt.label} className="h-full w-full object-contain" /> : <div className="h-full w-full bg-border-accent" />}
+    <div className="py-2 border-b border-surface-strong last:border-0">
+      <div className="grid grid-cols-[210px_1fr_2fr_70px_auto_auto] gap-2 items-center">
+        {/* Images: Illustration / AI render / Real photo */}
+        <div className="flex items-start gap-1.5">
+          <input ref={fileRef} type="file" accept="image/*" title="Upload option image" className="hidden" onChange={handleFile} />
+          {([["image", "Illus.", opt.image], ["aiImage", "AI", opt.aiImage], ["realImage", "Real", opt.realImage]] as const).map(([field, lbl, src]) => (
+            <div key={field} className="flex flex-col items-center gap-0.5">
+              <div className="h-[44px] w-[58px] rounded bg-white overflow-hidden border border-border-accent">
+                {src ? <img src={src} alt={lbl} className="h-full w-full object-contain" /> : <div className="h-full w-full bg-border-accent" />}
+              </div>
+              <button type="button" onClick={() => pick(field)} disabled={uploading}
+                className="font-sans text-[8px] text-slate hover:text-gold transition-colors disabled:opacity-40">
+                {uploading ? "…" : lbl}
+              </button>
+            </div>
+          ))}
         </div>
-        <input ref={fileRef} type="file" accept="image/*" title="Upload option image" className="hidden" onChange={handleFile} />
-        <button type="button" onClick={() => fileRef.current?.click()} disabled={uploading}
-          className="font-sans text-[9px] text-slate hover:text-gold transition-colors disabled:opacity-40">
-          {uploading ? "…" : opt.image ? "Replace" : "+ Image"}
-        </button>
+        {/* Label */}
+        <input className={inp + " w-full"} value={opt.label} title="Option label"
+          onChange={(e) => onChange(sectionIdx, fieldIdx, optIdx, { label: e.target.value })} />
+        {/* Description */}
+        <input className={inp + " w-full"} value={opt.description} title="Option description"
+          onChange={(e) => onChange(sectionIdx, fieldIdx, optIdx, { description: e.target.value })} />
+        {/* Price adj */}
+        <input type="number" className={inp + " w-full"} title="Price adjustment"
+          value={opt.priceAdj ?? ""} placeholder="±$"
+          onChange={(e) => {
+            const v = e.target.value === "" ? undefined : parseFloat(e.target.value);
+            onChange(sectionIdx, fieldIdx, optIdx, { priceAdj: v });
+          }} />
+        {/* ID (read-only) */}
+        <span className="font-mono text-[9px] text-dim truncate max-w-[80px]" title={opt.id}>{opt.id}</span>
+        {/* Delete */}
+        <button type="button" onClick={() => onDelete(sectionIdx, fieldIdx, optIdx)}
+          className="font-sans text-xs text-dim hover:text-[#EF4444] transition-colors px-1">×</button>
       </div>
-      {/* Label */}
-      <input className={inp + " w-full"} value={opt.label} title="Option label"
-        onChange={(e) => onChange(sectionIdx, fieldIdx, optIdx, { label: e.target.value })} />
-      {/* Description */}
-      <input className={inp + " w-full"} value={opt.description} title="Option description"
-        onChange={(e) => onChange(sectionIdx, fieldIdx, optIdx, { description: e.target.value })} />
-      {/* Price adj */}
-      <input type="number" className={inp + " w-full"} title="Price adjustment"
-        value={opt.priceAdj ?? ""} placeholder="±$"
-        onChange={(e) => {
-          const v = e.target.value === "" ? undefined : parseFloat(e.target.value);
-          onChange(sectionIdx, fieldIdx, optIdx, { priceAdj: v });
-        }} />
-      {/* ID (read-only) */}
-      <span className="font-mono text-[9px] text-dim truncate max-w-[80px]" title={opt.id}>{opt.id}</span>
-      {/* Delete */}
-      <button type="button" onClick={() => onDelete(sectionIdx, fieldIdx, optIdx)}
-        className="font-sans text-xs text-dim hover:text-[#EF4444] transition-colors px-1">×</button>
+      {/* Quiz clustering metadata */}
+      <div className="mt-1.5 flex items-center gap-2 pl-[88px]">
+        <span className="font-sans text-[9px] uppercase tracking-[0.15em] text-dim shrink-0">Group</span>
+        <input className={inp + " w-28"} value={opt.group ?? ""} title="Cluster group" placeholder="e.g. notch"
+          onChange={(e) => onChange(sectionIdx, fieldIdx, optIdx, { group: e.target.value.trim() || undefined })} />
+        <span className="font-sans text-[9px] uppercase tracking-[0.15em] text-dim shrink-0">Tags</span>
+        <input className={inp + " flex-1"} value={(opt.tags ?? []).join(", ")} title="Tags (comma-separated)" placeholder="formal, italian"
+          onChange={(e) => {
+            const tags = e.target.value.split(",").map((t) => t.trim()).filter(Boolean);
+            onChange(sectionIdx, fieldIdx, optIdx, { tags: tags.length ? tags : undefined });
+          }} />
+      </div>
     </div>
   );
 }
@@ -80,11 +103,27 @@ function FieldCard({
   onOptionChange: (si: number, fi: number, oi: number, patch: Partial<DesignOption>) => void;
   onOptionDelete: (si: number, fi: number, oi: number) => void;
   onAddOption: (si: number, fi: number) => void;
-  onImageUpload: (si: number, fi: number, oi: number, file: File) => Promise<void>;
+  onImageUpload: (si: number, fi: number, oi: number, file: File, field: "image" | "aiImage" | "realImage") => Promise<void>;
   onDeleteField: (si: number, fi: number) => void;
 }) {
   const [open, setOpen] = useState(false);
   const inp = "rounded-md border border-border-accent bg-surface-deep px-2 py-1 font-sans text-xs text-foreground outline-none focus:border-gold transition-colors";
+
+  // ── Discovery-question editor helpers ──
+  const quiz = field.quiz;
+  const groups = Array.from(new Set(field.options.map((o) => o.group).filter(Boolean))) as string[];
+  const setQuiz = (next: FieldQuiz | undefined) => onFieldChange(sectionIdx, fieldIdx, { quiz: next });
+  const updateAnswer = (ai: number, patch: Partial<QuizAnswer>) => {
+    if (!quiz) return;
+    setQuiz({ ...quiz, answers: quiz.answers.map((a, i) => (i === ai ? { ...a, ...patch } : a)) });
+  };
+  const addAnswer = () => {
+    const base = quiz ?? { question: "Which option do you prefer?", answers: [] };
+    setQuiz({ ...base, answers: [...base.answers, { id: `ans-${Date.now()}`, label: "New answer", matchGroups: [] }] });
+  };
+  const removeAnswer = (ai: number) => quiz && setQuiz({ ...quiz, answers: quiz.answers.filter((_, i) => i !== ai) });
+  const csv = (v?: string[]) => (v ?? []).join(", ");
+  const toArr = (s: string) => { const a = s.split(",").map((x) => x.trim()).filter(Boolean); return a.length ? a : undefined; };
 
   return (
     <div className="rounded-xl border border-border-accent bg-background mb-3">
@@ -124,6 +163,72 @@ function FieldCard({
                 <span className="font-sans text-xs text-muted-dark">Advanced field</span>
               </label>
             </div>
+          </div>
+
+          {/* Discovery question editor */}
+          <div className="mb-4 rounded-lg border border-gold/20 bg-gold/5 p-3">
+            <div className="flex items-center justify-between">
+              <p className="font-sans text-[11px] uppercase tracking-[0.2em] text-gold">Discovery Question</p>
+              {quiz ? (
+                <button type="button" onClick={() => setQuiz(undefined)} className="font-sans text-[10px] text-dim hover:text-[#EF4444] transition-colors">Remove question</button>
+              ) : (
+                <button type="button" onClick={() => setQuiz({ question: "Which option do you prefer?", answers: [] })} className="font-sans text-[10px] text-gold hover:underline">+ Add question</button>
+              )}
+            </div>
+
+            {!quiz && (
+              <p className="font-sans text-[10px] text-slate mt-1">
+                {field.options.length >= 5
+                  ? "This category has 5+ options — add a question so customers can filter by family."
+                  : "Optional. Discovery questions auto-show only when a category has 5+ options."}
+              </p>
+            )}
+
+            {quiz && (
+              <div className="mt-2 space-y-3">
+                <div>
+                  <p className="font-sans text-[10px] text-slate mb-1">Question text</p>
+                  <input className={inp + " w-full"} value={quiz.question} title="Question text"
+                    placeholder="e.g. Which lapel shape appeals to you most?"
+                    onChange={(e) => setQuiz({ ...quiz, question: e.target.value })} />
+                </div>
+
+                {groups.length > 0 && (
+                  <p className="font-sans text-[10px] text-slate">
+                    Groups in this category:{" "}
+                    {groups.map((g) => (
+                      <span key={g} className="font-mono text-[9px] text-gold bg-gold/10 rounded px-1 py-0.5 mr-1">{g}</span>
+                    ))}
+                  </p>
+                )}
+
+                {quiz.answers.map((a, ai) => (
+                  <div key={a.id} className="rounded-md border border-border-accent bg-surface-deep p-2 space-y-1.5">
+                    <div className="grid grid-cols-[1fr_1fr_1fr_auto] gap-2 items-center">
+                      <input className={inp} value={a.label} title="Answer label" placeholder="Label"
+                        onChange={(e) => updateAnswer(ai, { label: e.target.value })} />
+                      <input className={inp} value={csv(a.matchGroups)} title="Match groups (score 100)" placeholder="match groups"
+                        onChange={(e) => updateAnswer(ai, { matchGroups: toArr(e.target.value) })} />
+                      <input className={inp} value={csv(a.matchTags)} title="Match tags (score 60)" placeholder="match tags"
+                        onChange={(e) => updateAnswer(ai, { matchTags: toArr(e.target.value) })} />
+                      <button type="button" onClick={() => removeAnswer(ai)} title="Remove answer"
+                        className="font-sans text-xs text-dim hover:text-[#EF4444] transition-colors px-1">×</button>
+                    </div>
+                    <div className="grid grid-cols-[2fr_1fr] gap-2">
+                      <input className={inp} value={a.description ?? ""} title="Answer description" placeholder="Short consultant copy (optional)"
+                        onChange={(e) => updateAnswer(ai, { description: e.target.value || undefined })} />
+                      <input className={inp} value={a.image ?? ""} title="Answer image URL" placeholder="/images/… (optional, shows a visual card)"
+                        onChange={(e) => updateAnswer(ai, { image: e.target.value || undefined })} />
+                    </div>
+                  </div>
+                ))}
+
+                <button type="button" onClick={addAnswer}
+                  className="w-full rounded-lg border border-dashed border-border-accent hover:border-gold/40 px-3 py-1.5 font-sans text-[11px] text-muted-dark hover:text-gold transition-colors">
+                  + Add answer
+                </button>
+              </div>
+            )}
           </div>
 
           {/* Column headers */}
@@ -244,15 +349,16 @@ export default function BuilderOptionsAdmin() {
     });
   }
 
-  async function uploadImage(si: number, fi: number, oi: number, file: File) {
+  async function uploadImage(si: number, fi: number, oi: number, file: File, field: "image" | "aiImage" | "realImage" = "image") {
     const opt = config!.sections[si].fields[fi].options[oi];
-    const folder = opt.id.split("-")[0];
+    // image (illustration) keeps its category folder; AI/real go to /images/ai|real.
+    const folder = field === "aiImage" ? "ai" : field === "realImage" ? "real" : opt.id.split("-")[0];
     const fname = `${opt.id}-${file.name}`;
     const fd = new FormData();
     fd.append("file", file);
     fd.append("imagePath", `${folder}/${fname}`);
     const res = await fetch("/api/admin/upload-image", { method: "POST", body: fd });
-    if (res.ok) updateOption(si, fi, oi, { image: `/images/${folder}/${fname}` });
+    if (res.ok) updateOption(si, fi, oi, { [field]: `/images/${folder}/${fname}` });
   }
 
   async function saveSection(si: number) {

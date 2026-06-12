@@ -1,67 +1,10 @@
 "use client";
 
 import { useBuilderStore } from "@/store/builderStore";
+import { fabricQuiz } from "@/data/builder";
 
-type DiscoveryOption = {
-  value: string;
-  label: string;
-  description: string;
-  icon: string;
-};
-
-type DiscoveryQuestion = {
-  key: string;
-  question: string;
-  options: DiscoveryOption[];
-};
-
-const DISCOVERY_QUESTIONS: DiscoveryQuestion[] = [
-  {
-    key: "occasion",
-    question: "What will you primarily wear this for?",
-    options: [
-      { value: "formal",   label: "Formal & Black Tie",  description: "Galas, weddings, evenings — luxury construction.", icon: "✦" },
-      { value: "wedding",  label: "Wedding",              description: "Your day, your statement — timeless and elevated.", icon: "◈" },
-      { value: "business", label: "Work & Business",      description: "Office, meetings, everyday professional.", icon: "◉" },
-      { value: "casual",   label: "Smart Casual",         description: "Dinners, weekends, relaxed occasions.", icon: "◇" },
-      { value: "travel",   label: "Travel",               description: "Packs well, recovers fast, looks sharp.", icon: "◎" },
-      { value: "any",      label: "Various Occasions",    description: "Show me fabrics that work anywhere.", icon: "⊞" },
-    ],
-  },
-  {
-    key: "color",
-    question: "What color speaks to you?",
-    options: [
-      { value: "navy",     label: "Navy",     description: "Deep, confident, endlessly versatile.", icon: "◼" },
-      { value: "grey",     label: "Grey",     description: "Refined and understated — the boardroom standard.", icon: "◻" },
-      { value: "charcoal", label: "Charcoal", description: "Dark authority — between black and grey.", icon: "▪" },
-      { value: "black",    label: "Black",    description: "Uncompromising formality.", icon: "◆" },
-      { value: "brown",    label: "Brown / Earth", description: "Warm tones — casual richness.", icon: "◈" },
-      { value: "cream",    label: "Cream / Ivory", description: "Light, warm, summer-ready.", icon: "○" },
-      { value: "any",      label: "Open to anything", description: "Show me the full range.", icon: "⊞" },
-    ],
-  },
-  {
-    key: "weight",
-    question: "How should it feel to wear?",
-    options: [
-      { value: "light",  label: "Light & Breathable", description: "Under 200gm — summer suiting and travel.", icon: "〜" },
-      { value: "medium", label: "Year-Round",          description: "200–260gm — the versatile everyday weight.", icon: "◒" },
-      { value: "heavy",  label: "Warm & Structured",  description: "260gm+ — autumn and winter tailoring.", icon: "⊓" },
-      { value: "any",    label: "No preference",       description: "Show me all weights.", icon: "⊞" },
-    ],
-  },
-  {
-    key: "priority",
-    question: "What matters most to you?",
-    options: [
-      { value: "luxury",       label: "Maximum Luxury",      description: "Premium mill wool — superior drape and softness.", icon: "✦" },
-      { value: "breathability",label: "Breathability",        description: "Natural fibers that move air — linen and light weaves.", icon: "◌" },
-      { value: "durability",   label: "Durability",           description: "Hard-wearing weaves that hold their shape.", icon: "◈" },
-      { value: "any",          label: "Classic all-rounder",  description: "Show me everything — I'll decide from the cards.", icon: "⊞" },
-    ],
-  },
-];
+// Fabric discovery funnel — Color → Pattern → Weight → Finish → best matches.
+// Questions come from the data-driven `fabricQuiz` config, not hardcoded here.
 
 export default function FabricDiscovery({
   onComplete,
@@ -72,12 +15,8 @@ export default function FabricDiscovery({
 
   function handleSelect(key: string, value: string) {
     setDiscoveryQuiz(key, value);
-    // Auto-advance after last question
-    const allKeys = DISCOVERY_QUESTIONS.map((q) => q.key);
-    const newAnswers = { ...discoveryQuiz, [key]: value };
-    if (allKeys.every((k) => newAnswers[k])) {
-      onComplete();
-    }
+    const next = { ...discoveryQuiz, [key]: value };
+    if (fabricQuiz.every((q) => next[q.key])) onComplete();
   }
 
   function handleSkip() {
@@ -85,7 +24,7 @@ export default function FabricDiscovery({
     onComplete();
   }
 
-  const answeredCount = DISCOVERY_QUESTIONS.filter((q) => discoveryQuiz[q.key]).length;
+  const answeredCount = fabricQuiz.filter((q) => discoveryQuiz[q.key]).length;
 
   return (
     <div className="space-y-8">
@@ -93,17 +32,17 @@ export default function FabricDiscovery({
       <div>
         <p className="font-sans text-xs uppercase tracking-[0.3em] text-gold">Fabric Consultation</p>
         <h2 className="font-display mt-2 text-2xl font-semibold tracking-[-0.02em] text-foreground">
-          Let's find your fabric
+          Let&apos;s find your fabric
         </h2>
         <p className="font-sans mt-1 text-sm leading-[1.7] text-muted-dark">
-          Four quick questions — we'll narrow the selection to fabrics that match your style, occasion, and preference.
+          A few quick questions — we&apos;ll surface the fabrics that match your color, pattern, weight, and feel first. You can always browse the full library.
         </p>
       </div>
 
       {/* Questions */}
-      {DISCOVERY_QUESTIONS.map((q, qi) => {
+      {fabricQuiz.map((q, qi) => {
         const selected = discoveryQuiz[q.key];
-        const isActive = qi === 0 || DISCOVERY_QUESTIONS.slice(0, qi).every((prev) => discoveryQuiz[prev.key]);
+        const isActive = qi === 0 || fabricQuiz.slice(0, qi).every((prev) => discoveryQuiz[prev.key]);
 
         return (
           <div
@@ -112,27 +51,27 @@ export default function FabricDiscovery({
           >
             <p className="font-display mb-4 text-lg font-medium text-foreground">
               <span className="mr-2 font-sans text-[10px] uppercase tracking-[0.2em] text-slate">
-                {qi + 1} of {DISCOVERY_QUESTIONS.length}
+                {qi + 1} of {fabricQuiz.length}
               </span>
               {q.question}
             </p>
 
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              {q.options.map((opt) => {
-                const isSelected = selected === opt.value;
+              {q.answers.map((opt) => {
+                const isSelected = selected === opt.id;
                 return (
                   <button
-                    key={opt.value}
+                    key={opt.id}
                     type="button"
-                    onClick={() => handleSelect(q.key, opt.value)}
+                    onClick={() => handleSelect(q.key, opt.id)}
                     className={`group relative rounded-2xl border p-5 text-left transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold active:scale-[0.98] ${
                       isSelected
                         ? "border-gold bg-[#122742] shadow-[0_0_0_1px_#D4AF37]"
                         : "border-border-accent bg-surface-strong hover:border-gold/40 hover:bg-[#0B2035]"
                     }`}
                   >
-                    <span className={`mb-3 block font-sans text-2xl ${isSelected ? "text-gold" : "text-dim"}`}>
-                      {opt.icon}
+                    <span className={`mb-3 flex h-9 w-9 items-center justify-center rounded-full font-display text-base ${isSelected ? "bg-gold text-background" : "bg-[#0B2035] text-dim"}`}>
+                      {opt.label.charAt(0)}
                     </span>
                     <p className={`font-sans text-sm font-semibold ${isSelected ? "text-gold" : "text-foreground"}`}>
                       {opt.label}
@@ -164,9 +103,9 @@ export default function FabricDiscovery({
         </button>
       </div>
 
-      {answeredCount > 0 && answeredCount < DISCOVERY_QUESTIONS.length && (
+      {answeredCount > 0 && answeredCount < fabricQuiz.length && (
         <p className="font-sans text-xs text-dim">
-          {answeredCount} of {DISCOVERY_QUESTIONS.length} answered — we'll filter as you go
+          {answeredCount} of {fabricQuiz.length} answered — we&apos;ll rank as you go
         </p>
       )}
     </div>

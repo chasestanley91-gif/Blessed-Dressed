@@ -48,23 +48,85 @@ export type Fabric = {
   color?: string[];
   pattern?: string;
   weight?: "light" | "medium" | "heavy";
+  finish?: "crisp" | "soft" | "luxurious" | "textured";
   season?: string[];
   occasion?: string[];
 };
 
 export const fabrics: Fabric[] = [
-  { id: "navy-herringbone", label: "Navy Herringbone", detail: "150s Super Wool — deep navy with herringbone weave.", premium: true, color: ["navy"], pattern: "herringbone", weight: "heavy", season: ["fall", "winter"], occasion: ["business", "formal"] },
-  { id: "charcoal-wool", label: "Charcoal Flannel", detail: "Heavyweight 14oz flannel — structured and warm.", premium: true, color: ["charcoal"], pattern: "solid", weight: "heavy", season: ["fall", "winter"], occasion: ["business", "formal"] },
-  { id: "black-barathea", label: "Black Barathea", detail: "Classic barathea weave — formal and refined.", premium: true, color: ["black"], pattern: "solid", weight: "medium", season: ["fall", "winter"], occasion: ["formal", "wedding"] },
-  { id: "royal-blue-twill", label: "Royal Blue Twill", detail: "Diagonal twill weave — rich depth of color.", premium: true, color: ["blue"], pattern: "solid", weight: "medium", season: ["fall", "winter"], occasion: ["business", "casual"] },
-  { id: "winter-tweed", label: "Winter Tweed", detail: "Harris or Donegal tweed — country house heritage.", premium: true, color: ["brown"], pattern: "tweed", weight: "heavy", season: ["fall", "winter"], occasion: ["casual", "business"] },
-  { id: "ivory-silk", label: "Ivory Silk Blend", detail: "Silk-wool blend — supreme drape for formal occasions.", premium: true, color: ["cream"], pattern: "solid", weight: "light", season: ["spring", "summer"], occasion: ["wedding", "formal"] },
-  { id: "cream-linen", label: "Cream Irish Linen", detail: "Breathable natural linen — warm weather tailoring.", premium: false, color: ["cream", "beige"], pattern: "linen-texture", weight: "light", season: ["spring", "summer"], occasion: ["casual", "business"] },
-  { id: "mid-grey-flannel", label: "Mid Grey Flannel", detail: "Classic mid-grey flannel — the office standard.", premium: false, color: ["grey"], pattern: "solid", weight: "heavy", season: ["fall", "winter"], occasion: ["business"] },
-  { id: "slate-serge", label: "Slate Serge", detail: "Durable serge twill — crisp silhouette.", premium: false, color: ["grey"], pattern: "solid", weight: "medium", season: ["fall", "winter"], occasion: ["business"] },
-  { id: "white-oxford", label: "White Royal Oxford", detail: "Classic Oxford weave — the dress shirt benchmark.", premium: false, color: ["white"], pattern: "solid", weight: "medium", season: ["spring", "summer"], occasion: ["business", "casual"] },
-  { id: "sky-poplin", label: "Sky Blue Poplin", detail: "Fine Egyptian cotton poplin — crisp and cool.", premium: false, color: ["blue"], pattern: "solid", weight: "light", season: ["spring", "summer"], occasion: ["business", "casual"] },
-  { id: "pinstripe-navy", label: "Navy Pinstripe", detail: "Classic chalk pinstripe on deep navy ground.", premium: true, color: ["navy"], pattern: "pinstripe", weight: "medium", season: ["fall", "winter"], occasion: ["business", "formal"] },
+  { id: "navy-herringbone", label: "Navy Herringbone", detail: "150s Super Wool — deep navy with herringbone weave.", premium: true, color: ["navy"], pattern: "herringbone", weight: "heavy", finish: "textured", season: ["fall", "winter"], occasion: ["business", "formal"] },
+  { id: "charcoal-wool", label: "Charcoal Flannel", detail: "Heavyweight 14oz flannel — structured and warm.", premium: true, color: ["charcoal"], pattern: "solid", weight: "heavy", finish: "soft", season: ["fall", "winter"], occasion: ["business", "formal"] },
+  { id: "black-barathea", label: "Black Barathea", detail: "Classic barathea weave — formal and refined.", premium: true, color: ["black"], pattern: "solid", weight: "medium", finish: "crisp", season: ["fall", "winter"], occasion: ["formal", "wedding"] },
+  { id: "royal-blue-twill", label: "Royal Blue Twill", detail: "Diagonal twill weave — rich depth of color.", premium: true, color: ["blue"], pattern: "solid", weight: "medium", finish: "crisp", season: ["fall", "winter"], occasion: ["business", "casual"] },
+  { id: "winter-tweed", label: "Winter Tweed", detail: "Harris or Donegal tweed — country house heritage.", premium: true, color: ["brown"], pattern: "tweed", weight: "heavy", finish: "textured", season: ["fall", "winter"], occasion: ["casual", "business"] },
+  { id: "ivory-silk", label: "Ivory Silk Blend", detail: "Silk-wool blend — supreme drape for formal occasions.", premium: true, color: ["cream"], pattern: "solid", weight: "light", finish: "luxurious", season: ["spring", "summer"], occasion: ["wedding", "formal"] },
+  { id: "cream-linen", label: "Cream Irish Linen", detail: "Breathable natural linen — warm weather tailoring.", premium: false, color: ["cream", "beige"], pattern: "linen-texture", weight: "light", finish: "textured", season: ["spring", "summer"], occasion: ["casual", "business"] },
+  { id: "mid-grey-flannel", label: "Mid Grey Flannel", detail: "Classic mid-grey flannel — the office standard.", premium: false, color: ["grey"], pattern: "solid", weight: "heavy", finish: "soft", season: ["fall", "winter"], occasion: ["business"] },
+  { id: "slate-serge", label: "Slate Serge", detail: "Durable serge twill — crisp silhouette.", premium: false, color: ["grey"], pattern: "solid", weight: "medium", finish: "crisp", season: ["fall", "winter"], occasion: ["business"] },
+  { id: "white-oxford", label: "White Royal Oxford", detail: "Classic Oxford weave — the dress shirt benchmark.", premium: false, color: ["white"], pattern: "solid", weight: "medium", finish: "crisp", season: ["spring", "summer"], occasion: ["business", "casual"] },
+  { id: "sky-poplin", label: "Sky Blue Poplin", detail: "Fine Egyptian cotton poplin — crisp and cool.", premium: false, color: ["blue"], pattern: "solid", weight: "light", finish: "crisp", season: ["spring", "summer"], occasion: ["business", "casual"] },
+  { id: "pinstripe-navy", label: "Navy Pinstripe", detail: "Classic chalk pinstripe on deep navy ground.", premium: true, color: ["navy"], pattern: "pinstripe", weight: "medium", finish: "luxurious", season: ["fall", "winter"], occasion: ["business", "formal"] },
+];
+
+/* ─── Fabric discovery quiz (data-driven, 5-step funnel) ──────────
+   Color → Pattern → Weight → Finish → best matches. Each answer `id`
+   maps to a fabric tag value; "any" applies no filter. Soft-ranked by
+   rankFabrics() so nothing is hidden — best matches simply surface first. */
+export type FabricQuizStep = {
+  key: "color" | "pattern" | "weight" | "finish";
+  question: string;
+  answers: { id: string; label: string; description: string }[];
+};
+
+export const fabricQuiz: FabricQuizStep[] = [
+  {
+    key: "color",
+    question: "What color fabric are you looking for?",
+    answers: [
+      { id: "navy", label: "Navy", description: "Deep, confident, endlessly versatile." },
+      { id: "grey", label: "Grey", description: "Refined and understated — the boardroom standard." },
+      { id: "charcoal", label: "Charcoal", description: "Dark authority — between black and grey." },
+      { id: "black", label: "Black", description: "Uncompromising formality." },
+      { id: "blue", label: "Blue", description: "Rich, expressive, modern." },
+      { id: "brown", label: "Brown / Earth", description: "Warm tones — casual richness." },
+      { id: "cream", label: "Cream / Ivory", description: "Light, warm, summer-ready." },
+      { id: "white", label: "White", description: "Crisp and clean — the dress-shirt benchmark." },
+      { id: "any", label: "Open to anything", description: "Show me the full range." },
+    ],
+  },
+  {
+    key: "pattern",
+    question: "What pattern do you prefer?",
+    answers: [
+      { id: "solid", label: "Solid", description: "Clean and versatile — works with everything." },
+      { id: "pinstripe", label: "Striped", description: "Pinstripe and chalk stripe — sharp and formal." },
+      { id: "herringbone", label: "Herringbone", description: "A subtle V-weave with depth and texture." },
+      { id: "tweed", label: "Tweed", description: "Rugged country heritage — rich and tactile." },
+      { id: "linen-texture", label: "Textured", description: "Natural slub and weave — relaxed character." },
+      { id: "any", label: "No preference", description: "Show me every pattern." },
+    ],
+  },
+  {
+    key: "weight",
+    question: "When will you wear it most?",
+    answers: [
+      { id: "light", label: "Warm Weather", description: "Light & breathable — summer and travel." },
+      { id: "medium", label: "Year-Round", description: "The versatile everyday weight." },
+      { id: "heavy", label: "Cold Weather", description: "Warm & structured — autumn and winter." },
+      { id: "any", label: "No preference", description: "Show me all weights." },
+    ],
+  },
+  {
+    key: "finish",
+    question: "What feel do you prefer?",
+    answers: [
+      { id: "crisp", label: "Crisp", description: "Smooth and sharp — holds a clean line." },
+      { id: "soft", label: "Soft", description: "Brushed and cosy — flannel-like comfort." },
+      { id: "luxurious", label: "Luxurious", description: "Fluid drape with a refined hand." },
+      { id: "textured", label: "Textured", description: "Tactile surface with visible character." },
+      { id: "any", label: "No preference", description: "I'll decide from the cards." },
+    ],
+  },
 ];
 
 /* ─── Monogram fonts ──────────────────────────────────────────── */

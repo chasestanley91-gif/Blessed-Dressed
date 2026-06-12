@@ -3,7 +3,7 @@ import { loadDataAsync, saveDataAsync } from "@/lib/admin-data";
 import { fabrics } from "@/data/builder";
 import { revalidatePath } from "next/cache";
 
-type Fabric = { id: string; label: string; detail: string; premium: boolean; collection?: string; photoImage?: string; codeImage?: string; image?: string };
+type Fabric = { id: string; label: string; detail: string; premium: boolean; collection?: string; photoImage?: string; codeImage?: string; image?: string; color?: string[]; pattern?: string; weight?: "light" | "medium" | "heavy"; finish?: "crisp" | "soft" | "luxurious" | "textured"; season?: string[]; occasion?: string[] };
 
 async function getAll(): Promise<Fabric[]> {
   return loadDataAsync("fabrics", fabrics);

@@ -12,24 +12,6 @@ function makeToken(): string {
   return Buffer.from(`${payload}:${sig}`).toString("base64url");
 }
 
-function verifyToken(token: string): boolean {
-  try {
-    const decoded = Buffer.from(token, "base64url").toString("utf8");
-    const lastColon = decoded.lastIndexOf(":");
-    const payload = decoded.slice(0, lastColon);
-    const sig = decoded.slice(lastColon + 1);
-    const expected = createHmac("sha256", SECRET).update(payload).digest("hex");
-    return sig === expected && payload.startsWith("blessed_admin:");
-  } catch {
-    return false;
-  }
-}
-
-export function isAuthed(req: NextRequest): boolean {
-  const token = req.cookies.get(COOKIE)?.value;
-  return !!token && verifyToken(token);
-}
-
 export async function POST(req: NextRequest) {
   const { password } = await req.json();
   if (password !== PASSWORD) {

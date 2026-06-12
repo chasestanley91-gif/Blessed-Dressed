@@ -11,6 +11,13 @@ type Fabric = {
   photoImage?: string;
   codeImage?: string;
   image?: string;
+  // Discovery-quiz tags
+  color?: string[];
+  pattern?: string;
+  weight?: "light" | "medium" | "heavy";
+  finish?: "crisp" | "soft" | "luxurious" | "textured";
+  season?: string[];
+  occasion?: string[];
 };
 
 const EMPTY: Omit<Fabric, "id"> = { label: "", detail: "", premium: false, collection: "", photoImage: "", codeImage: "" };
@@ -113,6 +120,62 @@ function FabricForm({
         <input type="checkbox" id="premium-chk" checked={form.premium} onChange={(e) => setForm((f) => ({ ...f, premium: e.target.checked }))} className="accent-gold w-4 h-4" />
         <label htmlFor="premium-chk" className="font-sans text-sm text-foreground cursor-pointer">Premium (+$150)</label>
       </div>
+
+      {/* Discovery-quiz tags — power the fabric finder (color → pattern → weight → finish) */}
+      <fieldset className="rounded-xl border border-border-accent p-4">
+        <legend className="px-2 font-sans text-[11px] uppercase tracking-[0.2em] text-gold">Discovery Tags</legend>
+        <div className="grid gap-4 sm:grid-cols-2">
+          <div>
+            <label className={lbl}>Colors (comma-separated)</label>
+            <input
+              className={inp}
+              value={(form.color ?? []).join(", ")}
+              onChange={(e) =>
+                setForm((f) => ({ ...f, color: e.target.value.split(",").map((c) => c.trim().toLowerCase()).filter(Boolean) }))
+              }
+              placeholder="navy, blue"
+            />
+          </div>
+          <div>
+            <label className={lbl}>Pattern</label>
+            <input
+              className={inp}
+              value={form.pattern ?? ""}
+              onChange={(e) => setForm((f) => ({ ...f, pattern: e.target.value.trim().toLowerCase() || undefined }))}
+              placeholder="solid, herringbone, pinstripe, tweed…"
+            />
+          </div>
+          <div>
+            <label className={lbl}>Weight</label>
+            <select
+              className={inp}
+              title="Fabric weight"
+              value={form.weight ?? ""}
+              onChange={(e) => setForm((f) => ({ ...f, weight: (e.target.value || undefined) as Fabric["weight"] }))}
+            >
+              <option value="">—</option>
+              <option value="light">Light</option>
+              <option value="medium">Medium</option>
+              <option value="heavy">Heavy</option>
+            </select>
+          </div>
+          <div>
+            <label className={lbl}>Finish</label>
+            <select
+              className={inp}
+              title="Fabric finish"
+              value={form.finish ?? ""}
+              onChange={(e) => setForm((f) => ({ ...f, finish: (e.target.value || undefined) as Fabric["finish"] }))}
+            >
+              <option value="">—</option>
+              <option value="crisp">Crisp</option>
+              <option value="soft">Soft</option>
+              <option value="luxurious">Luxurious</option>
+              <option value="textured">Textured</option>
+            </select>
+          </div>
+        </div>
+      </fieldset>
 
       <div className="grid gap-4 sm:grid-cols-2">
         <ImageSlot

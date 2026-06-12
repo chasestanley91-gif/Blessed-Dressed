@@ -14,50 +14,61 @@ export type TaggedFabric = {
   color?: string[];
   pattern?: string;
   weight?: "light" | "medium" | "heavy";
+  finish?: "crisp" | "soft" | "luxurious" | "textured";
   season?: string[];
   occasion?: string[];
 };
 
-// ── Fabric filter ──────────────────────────────────────────────────
+// ── Fabric ranking (soft) ──────────────────────────────────────────
+// Mirrors the craft quiz engine: every fabric is kept and reordered by how
+// many active discovery criteria it matches. `bestCount` is the size of the
+// top-scoring tier, used to surface "best matches" with a "show all" reveal.
 
+export type RankedFabrics = {
+  ranked: TaggedFabric[];
+  bestCount: number;
+  filtered: boolean;
+};
+
+export function rankFabrics(
+  fabrics: TaggedFabric[],
+  dq: Record<string, string>
+): RankedFabrics {
+  const active = Object.entries(dq).filter(([, v]) => v && v !== "any");
+  if (active.length === 0) {
+    return { ranked: fabrics, bestCount: fabrics.length, filtered: false };
+  }
+
+  const score = (f: TaggedFabric): number => {
+    let s = 0;
+    if (dq.color && dq.color !== "any" && f.color?.includes(dq.color)) s++;
+    if (dq.pattern && dq.pattern !== "any" && f.pattern === dq.pattern) s++;
+    if (dq.weight && dq.weight !== "any" && f.weight === dq.weight) s++;
+    if (dq.finish && dq.finish !== "any" && f.finish === dq.finish) s++;
+    if (dq.occasion && dq.occasion !== "any" && f.occasion?.includes(dq.occasion)) s++;
+    if (dq.priority === "luxury" && f.premium) s++;
+    return s;
+  };
+
+  const scored = fabrics.map((f, i) => ({ f, s: score(f), i }));
+  scored.sort((a, b) => b.s - a.s || a.i - b.i);
+
+  const maxScore = scored.length ? scored[0].s : 0;
+  const bestCount = maxScore > 0 ? scored.filter((x) => x.s === maxScore).length : scored.length;
+
+  return {
+    ranked: scored.map((x) => x.f),
+    bestCount,
+    filtered: maxScore > 0 && bestCount < fabrics.length,
+  };
+}
+
+/** Back-compat helper: returns only the ranked order (best matches first). */
 export function filterFabrics(
   fabrics: TaggedFabric[],
   dq: Record<string, string>
 ): TaggedFabric[] {
-  if (Object.keys(dq).length === 0) return fabrics;
-
-  const passes = (f: TaggedFabric) => {
-    if (dq.weight && dq.weight !== "any" && f.weight && f.weight !== dq.weight) return false;
-    if (dq.occasion && dq.occasion !== "any" && f.occasion && !f.occasion.includes(dq.occasion)) return false;
-    if (dq.color && dq.color !== "any" && f.color && !f.color.includes(dq.color)) return false;
-    if (dq.pattern && dq.pattern !== "any" && f.pattern && f.pattern !== dq.pattern) return false;
-    if (dq.priority === "luxury" && !f.premium) return false;
-    return true;
-  };
-
-  // Try full filter first
-  const strict = fabrics.filter(passes);
-  if (strict.length > 0) return strict;
-
-  // Graceful fallback: relax filters one at a time (priority → pattern → color → weight)
-  const relaxed = (omitKeys: string[]) =>
-    fabrics.filter((f) => {
-      const reduced = Object.fromEntries(
-        Object.entries(dq).filter(([k]) => !omitKeys.includes(k))
-      );
-      if (Object.keys(reduced).length === 0) return true;
-      return passes({ ...f, ...Object.fromEntries(omitKeys.map((k) => [k, undefined])) });
-    });
-
-  const fallback1 = relaxed(["priority"]);
-  if (fallback1.length > 0) return fallback1;
-  const fallback2 = relaxed(["priority", "pattern"]);
-  if (fallback2.length > 0) return fallback2;
-  const fallback3 = relaxed(["priority", "pattern", "color"]);
-  if (fallback3.length > 0) return fallback3;
-
-  // Return all fabrics rather than empty
-  return fabrics;
+  return rankFabrics(fabrics, dq).ranked;
 }
 
 // ── Style DNA auto-population map ────────────────────────────────
