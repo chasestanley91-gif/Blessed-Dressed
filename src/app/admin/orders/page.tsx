@@ -167,7 +167,8 @@ export default function AdminOrders() {
               </div>
               {expanded === order.id && (
                 <div className="px-6 pb-4 border-t border-border-accent bg-surface-deep">
-                  <table className="w-full mt-3">
+                  <div className="overflow-x-auto">
+                  <table className="w-full mt-3 min-w-[520px]">
                     <thead>
                       <tr>
                         {["Item", "Type", "Qty", "Price"].map((h) => (
@@ -186,6 +187,7 @@ export default function AdminOrders() {
                       ))}
                     </tbody>
                   </table>
+                  </div>
                   <p className="font-sans text-xs text-muted-dark mt-2">{order.email}</p>
                 </div>
               )}

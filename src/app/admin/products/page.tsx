@@ -461,7 +461,11 @@ export default function AdminProducts() {
         {/* ── LIST VIEW ──────────────────────────────────────────── */}
         {view === "list" && (
           <div className="rounded-2xl border border-border-accent bg-surface-strong overflow-hidden">
-            <table className="w-full">
+            {/* overflow-x-auto, not overflow-hidden: hidden CLIPS the right-hand
+                columns at narrow widths and offers no way to scroll to them, so
+                Stock and the row actions were unreachable on a phone. */}
+            <div className="overflow-x-auto">
+            <table className="w-full min-w-[640px]">
               <thead>
                 <tr className="border-b border-border-accent">
                   {["Images", "Name", "Price", "Tag", "Stock", ""].map((h) => (
@@ -508,6 +512,7 @@ export default function AdminProducts() {
                 ))}
               </tbody>
             </table>
+            </div>
           </div>
         )}
       </div>
