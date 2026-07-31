@@ -1,0 +1,75 @@
+{
+ "report": "Ladder-monotonicity QA of decoration-stitching TOP rungs (measured, not eyeballed)",
+ "date": "2026-07-28",
+ "method": "pixel measurement of stitch-to-edge gap normalised by button diameter; 12-15 sample points per run; visual overlay confirmation",
+ "ladder_collar": {
+  "ratios_measured": {
+   "0.1": 0.312,
+   "0.3": 0.404,
+   "0.5": 0.316,
+   "0.6": 0.476
+  },
+  "targets": {
+   "0.1": 0.1,
+   "0.3": 0.3,
+   "0.5": 0.5,
+   "0.6": 0.6
+  },
+  "monotonic": false,
+  "verdict": "FAIL",
+  "problem": "0.5cm rung INVERTED - measures 0.316, below the 0.3cm rung and within noise of 0.1cm (17.3px vs 16.9px, visually identical). Whole ladder compressed: span 0.31-0.48 instead of 0.10-0.60."
+ },
+ "ladder_cuff": {
+  "ratios_measured": {
+   "0.1": 0.233,
+   "0.3": 0.353,
+   "0.5": 0.555,
+   "0.6": 0.362
+  },
+  "targets": {
+   "0.1": 0.1,
+   "0.3": 0.3,
+   "0.5": 0.5,
+   "0.6": 0.6
+  },
+  "monotonic": false,
+  "verdict": "FAIL",
+  "problem": "0.6cm rung COLLAPSES to 0.362 - narrower than 0.5cm and indistinguishable from 0.3cm."
+ },
+ "per_image": {
+  "stitch-01-top-v2": {
+   "verdict": "FAIL",
+   "why": "0.31 measured vs 0.10 target (3.1x too wide)"
+  },
+  "stitch-03-top-v2": {
+   "verdict": "FAIL",
+   "why": "0.40 vs 0.30; ALSO rendered on diagonal twill not plain poplin - breaks controlled comparison; blobby irregular dashes"
+  },
+  "stitch-05-top-v2": {
+   "verdict": "FAIL",
+   "why": "0.32 vs 0.50 (0.63x); visually IDENTICAL to the 0.1cm rung - the two options mis-sell each other"
+  },
+  "stitch-06-top-v2": {
+   "verdict": "FAIL",
+   "why": "TWO buttons visible (spec locks exactly ONE collar-stand button); 0.48 vs 0.60; framing breaks scale match with siblings"
+  },
+  "cstitch-01-top": {
+   "verdict": "FAIL",
+   "why": "0.23 vs 0.10 (2.3x too wide); stitch pitch 0.33cm (~7.7 SPI) is pick-stitch territory, spec locks continuous machine lockstitch"
+  },
+  "cstitch-03-top": {
+   "verdict": "PASS-provisional",
+   "why": "strongest of the eight: 0.35 vs 0.30 target, single row, even lockstitch ~14.7 SPI, clean, neutral, no annotations"
+  },
+  "cstitch-05-top": {
+   "verdict": "FAIL-soft",
+   "why": "gap good (0.56 vs 0.50) BUT offset not constant around the closure corner (55px hem vs 35px corner, 36% variance) against a spec requiring constant distance; faintest stitch row of the eight; mild creasing"
+  },
+  "cstitch-06-top": {
+   "verdict": "FAIL",
+   "why": "0.36 vs 0.60 (0.60x) and NARROWER than the 0.5cm rung it must exceed"
+  }
+ },
+ "root_cause": "At full-garment framing a 1-5mm offset is ~1-6% of image width - below what the image model resolves. Precise cm values, ratio anchors and comparative language in the prompt did NOT overcome it. This is the physics limit the skill documents: models render proportions, not measured dimensions.",
+ "decision": "7 of 8 rejected and deleted. Do NOT ship a non-monotonic measured ladder - it would mis-sell options a customer pays for. Re-shoot strategy: EXTREME MACRO framing (~3cm of finished edge fills frame) so 1mm becomes ~3% of frame width and 5mm ~17%; all rungs on identical plain poplin, identical crop scale, identical button in frame as the scale reference."
+}

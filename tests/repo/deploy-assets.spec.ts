@@ -91,8 +91,8 @@ test.describe("deploy integrity", () => {
    * Fix by moving the referenced files into a tracked, shipped directory (and
    * repointing the catalog), not by deleting this test.
    */
-  test.fail(
-    "[KNOWN BUG] every served option image is committed and included in the deploy",
+  test(
+    "every served option image is committed and included in the deploy",
     async ({ request }) => {
       test.setTimeout(120_000);
 

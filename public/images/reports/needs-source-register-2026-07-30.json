@@ -1,0 +1,2638 @@
+{
+  "generatedAt": "2026-07-30T23:02:47.818Z",
+  "generatedBy": "session 2026-07-30 B",
+  "finding": "NEEDS_SOURCE — craft options that cannot be generated faithfully because the authoritative drawing does not exist or is provably wrong.",
+  "principle": "Tech packs are law. Where no drawing exists, the option is NOT generated and NOT guessed. Each entry below names exactly what must be supplied.",
+  "summary": {
+    "noBlueprintRows": 162,
+    "noBlueprintDistinctDrawingsNeeded": 91,
+    "fieldsAffected": 31,
+    "amfStitchingOptions": 6,
+    "mislabeledCollarDrawings": 5
+  },
+  "categories": {
+    "A_no_illustration_at_all": {
+      "count": 91,
+      "description": "In-scope option rows with illustration=null. 162 rows collapse to these distinct identities (keyed part|field|option|label).",
+      "byField": {
+        "bar-tack": {
+          "identities": 1,
+          "rows": 3,
+          "options": [
+            {
+              "option": "bartack-none",
+              "label": "No Bar Tacks",
+              "part": "fin-stitch",
+              "products": [
+                "suit-2pc",
+                "suit-3pc",
+                "trousers"
+              ],
+              "rows": 3
+            }
+          ]
+        },
+        "belt-loops": {
+          "identities": 2,
+          "rows": 3,
+          "options": [
+            {
+              "option": "loops-5",
+              "label": "5 Loops",
+              "part": "jacket-detail",
+              "products": [
+                "suit-2pc",
+                "suit-3pc"
+              ],
+              "rows": 2
+            },
+            {
+              "option": "loops-5",
+              "label": "5 Loops",
+              "part": "trouser-belt-loops",
+              "products": [
+                "trousers"
+              ],
+              "rows": 1
+            }
+          ]
+        },
+        "buttonhole-type-trouser": {
+          "identities": 2,
+          "rows": 6,
+          "options": [
+            {
+              "option": "tbh-hand",
+              "label": "Hand-Worked",
+              "part": "fin-buttonhole",
+              "products": [
+                "suit-2pc",
+                "suit-3pc",
+                "trousers"
+              ],
+              "rows": 3
+            },
+            {
+              "option": "tbh-machine",
+              "label": "Machine Stitched",
+              "part": "fin-buttonhole",
+              "products": [
+                "suit-2pc",
+                "suit-3pc",
+                "trousers"
+              ],
+              "rows": 3
+            }
+          ]
+        },
+        "buttonhole-type-vest": {
+          "identities": 4,
+          "rows": 4,
+          "options": [
+            {
+              "option": "vest-bh-round",
+              "label": "Handmade Round Buttonholes",
+              "part": "fin-buttonhole",
+              "products": [
+                "suit-3pc"
+              ],
+              "rows": 1
+            },
+            {
+              "option": "vest-bh-round",
+              "label": "Handmade Round Buttonholes",
+              "part": "vest-buttonhole",
+              "products": [
+                "vest"
+              ],
+              "rows": 1
+            },
+            {
+              "option": "vest-bh-machine",
+              "label": "Machine Stitched",
+              "part": "fin-buttonhole",
+              "products": [
+                "suit-3pc"
+              ],
+              "rows": 1
+            },
+            {
+              "option": "vest-bh-machine",
+              "label": "Machine Stitched",
+              "part": "vest-buttonhole",
+              "products": [
+                "vest"
+              ],
+              "rows": 1
+            }
+          ]
+        },
+        "canvas": {
+          "identities": 1,
+          "rows": 3,
+          "options": [
+            {
+              "option": "ultra-thin-half",
+              "label": "Ultra-thin Half Canvas",
+              "part": "jacket-canvas",
+              "products": [
+                "sport-coat",
+                "suit-2pc",
+                "suit-3pc"
+              ],
+              "rows": 3
+            }
+          ]
+        },
+        "center-crease": {
+          "identities": 3,
+          "rows": 9,
+          "options": [
+            {
+              "option": "crease-fused",
+              "label": "Fused Crease (Permanent)",
+              "part": "fin-adjust",
+              "products": [
+                "suit-2pc",
+                "suit-3pc",
+                "trousers"
+              ],
+              "rows": 3
+            },
+            {
+              "option": "crease-none",
+              "label": "No Crease",
+              "part": "fin-adjust",
+              "products": [
+                "suit-2pc",
+                "suit-3pc",
+                "trousers"
+              ],
+              "rows": 3
+            },
+            {
+              "option": "crease-pressed",
+              "label": "Pressed Crease (Standard)",
+              "part": "fin-adjust",
+              "products": [
+                "suit-2pc",
+                "suit-3pc",
+                "trousers"
+              ],
+              "rows": 3
+            }
+          ]
+        },
+        "center-seam": {
+          "identities": 4,
+          "rows": 6,
+          "options": [
+            {
+              "option": "seam-flat-fell",
+              "label": "Flat-Fell Seam",
+              "part": "jacket-detail",
+              "products": [
+                "suit-2pc",
+                "suit-3pc"
+              ],
+              "rows": 2
+            },
+            {
+              "option": "seam-flat-fell",
+              "label": "Flat-Fell Seam",
+              "part": "trouser-back",
+              "products": [
+                "trousers"
+              ],
+              "rows": 1
+            },
+            {
+              "option": "seam-open",
+              "label": "Open Seam",
+              "part": "jacket-detail",
+              "products": [
+                "suit-2pc",
+                "suit-3pc"
+              ],
+              "rows": 2
+            },
+            {
+              "option": "seam-open",
+              "label": "Open Seam",
+              "part": "trouser-back",
+              "products": [
+                "trousers"
+              ],
+              "rows": 1
+            }
+          ]
+        },
+        "collar_stand_height": {
+          "identities": 1,
+          "rows": 1,
+          "options": [
+            {
+              "option": "csh-35",
+              "label": "3.5 cm Standard",
+              "part": "shirt-collar-stand",
+              "products": [
+                "shirt"
+              ],
+              "rows": 1
+            }
+          ]
+        },
+        "collar-interlining": {
+          "identities": 2,
+          "rows": 6,
+          "options": [
+            {
+              "option": "ci-no-linen",
+              "label": "No Linen",
+              "part": "fin-lining",
+              "products": [
+                "sport-coat",
+                "suit-2pc",
+                "suit-3pc"
+              ],
+              "rows": 3
+            },
+            {
+              "option": "ci-regular",
+              "label": "Regular (with Linen)",
+              "part": "fin-lining",
+              "products": [
+                "sport-coat",
+                "suit-2pc",
+                "suit-3pc"
+              ],
+              "rows": 3
+            }
+          ]
+        },
+        "contrast_color_position": {
+          "identities": 1,
+          "rows": 1,
+          "options": [
+            {
+              "option": "contrast-none",
+              "label": "No Contrast",
+              "part": "fin-contrast",
+              "products": [
+                "shirt"
+              ],
+              "rows": 1
+            }
+          ]
+        },
+        "contrast-lapel-collar": {
+          "identities": 1,
+          "rows": 2,
+          "options": [
+            {
+              "option": "vest-contrast-lapel-none",
+              "label": "None",
+              "part": "fin-contrast",
+              "products": [
+                "suit-3pc",
+                "vest"
+              ],
+              "rows": 2
+            }
+          ]
+        },
+        "contrast-pocket-vest": {
+          "identities": 2,
+          "rows": 2,
+          "options": [
+            {
+              "option": "vest-contrast-pocket-none",
+              "label": "None",
+              "part": "fin-contrast",
+              "products": [
+                "suit-3pc"
+              ],
+              "rows": 1
+            },
+            {
+              "option": "vest-contrast-pocket-none",
+              "label": "None",
+              "part": "vest-pocket",
+              "products": [
+                "vest"
+              ],
+              "rows": 1
+            }
+          ]
+        },
+        "contrast-positions": {
+          "identities": 1,
+          "rows": 3,
+          "options": [
+            {
+              "option": "trouser-contrast-none",
+              "label": "No Contrast",
+              "part": "fin-contrast",
+              "products": [
+                "suit-2pc",
+                "suit-3pc",
+                "trousers"
+              ],
+              "rows": 3
+            }
+          ]
+        },
+        "cuff-button-spacing": {
+          "identities": 1,
+          "rows": 3,
+          "options": [
+            {
+              "option": "bs-no-kiss",
+              "label": "No Kissing (Standard)",
+              "part": "jacket-sleeve",
+              "products": [
+                "sport-coat",
+                "suit-2pc",
+                "suit-3pc"
+              ],
+              "rows": 3
+            }
+          ]
+        },
+        "elbow-patch": {
+          "identities": 1,
+          "rows": 3,
+          "options": [
+            {
+              "option": "ep-none",
+              "label": "None",
+              "part": "fin-patch",
+              "products": [
+                "sport-coat",
+                "suit-2pc",
+                "suit-3pc"
+              ],
+              "rows": 3
+            }
+          ]
+        },
+        "fitting-adjustment-vest": {
+          "identities": 3,
+          "rows": 6,
+          "options": [
+            {
+              "option": "vest-fit-arm-hole-1cm",
+              "label": "-1.0 cm Arm Hole",
+              "part": "fin-adjust",
+              "products": [
+                "suit-3pc",
+                "vest"
+              ],
+              "rows": 2
+            },
+            {
+              "option": "vest-fit-stomach-dart",
+              "label": "Deep Stomach Dart",
+              "part": "fin-adjust",
+              "products": [
+                "suit-3pc",
+                "vest"
+              ],
+              "rows": 2
+            },
+            {
+              "option": "vest-fit-standard",
+              "label": "Standard",
+              "part": "fin-adjust",
+              "products": [
+                "suit-3pc",
+                "vest"
+              ],
+              "rows": 2
+            }
+          ]
+        },
+        "folded-collar-craft": {
+          "identities": 2,
+          "rows": 6,
+          "options": [
+            {
+              "option": "fcc-normal",
+              "label": "Normal",
+              "part": "fin-interlining",
+              "products": [
+                "sport-coat",
+                "suit-2pc",
+                "suit-3pc"
+              ],
+              "rows": 3
+            },
+            {
+              "option": "fcc-turnback",
+              "label": "Turn Back at the End",
+              "part": "fin-interlining",
+              "products": [
+                "sport-coat",
+                "suit-2pc",
+                "suit-3pc"
+              ],
+              "rows": 3
+            }
+          ]
+        },
+        "hem-style": {
+          "identities": 4,
+          "rows": 6,
+          "options": [
+            {
+              "option": "hem-fringe",
+              "label": "Fringe Edge",
+              "part": "jacket-detail",
+              "products": [
+                "suit-2pc",
+                "suit-3pc"
+              ],
+              "rows": 2
+            },
+            {
+              "option": "hem-fringe",
+              "label": "Fringe Edge",
+              "part": "trouser-hem",
+              "products": [
+                "trousers"
+              ],
+              "rows": 1
+            },
+            {
+              "option": "hem-unfinished",
+              "label": "Unfinished (Raw Edge)",
+              "part": "jacket-detail",
+              "products": [
+                "suit-2pc",
+                "suit-3pc"
+              ],
+              "rows": 2
+            },
+            {
+              "option": "hem-unfinished",
+              "label": "Unfinished (Raw Edge)",
+              "part": "trouser-hem",
+              "products": [
+                "trousers"
+              ],
+              "rows": 1
+            }
+          ]
+        },
+        "label-placement": {
+          "identities": 2,
+          "rows": 6,
+          "options": [
+            {
+              "option": "label-care-only",
+              "label": "Care Label Only",
+              "part": "fin-label",
+              "products": [
+                "suit-2pc",
+                "suit-3pc",
+                "trousers"
+              ],
+              "rows": 3
+            },
+            {
+              "option": "label-waistband",
+              "label": "Inside Waistband",
+              "part": "fin-label",
+              "products": [
+                "suit-2pc",
+                "suit-3pc",
+                "trousers"
+              ],
+              "rows": 3
+            }
+          ]
+        },
+        "lapel-style": {
+          "identities": 1,
+          "rows": 1,
+          "options": [
+            {
+              "option": "opt-1779526586804",
+              "label": "E peak",
+              "part": "jacket-lapel",
+              "products": [
+                "suit-2pc"
+              ],
+              "rows": 1
+            }
+          ]
+        },
+        "lapel-width": {
+          "identities": 6,
+          "rows": 6,
+          "options": [
+            {
+              "option": "vest-lapel-narrow",
+              "label": "Narrow 6 cm",
+              "part": "jacket-detail",
+              "products": [
+                "suit-3pc"
+              ],
+              "rows": 1
+            },
+            {
+              "option": "vest-lapel-narrow",
+              "label": "Narrow 6 cm",
+              "part": "vest-lapel",
+              "products": [
+                "vest"
+              ],
+              "rows": 1
+            },
+            {
+              "option": "vest-lapel-standard",
+              "label": "Standard 7.5 cm",
+              "part": "jacket-detail",
+              "products": [
+                "suit-3pc"
+              ],
+              "rows": 1
+            },
+            {
+              "option": "vest-lapel-standard",
+              "label": "Standard 7.5 cm",
+              "part": "vest-lapel",
+              "products": [
+                "vest"
+              ],
+              "rows": 1
+            },
+            {
+              "option": "vest-lapel-wide",
+              "label": "Wide 9 cm",
+              "part": "jacket-detail",
+              "products": [
+                "suit-3pc"
+              ],
+              "rows": 1
+            },
+            {
+              "option": "vest-lapel-wide",
+              "label": "Wide 9 cm",
+              "part": "vest-lapel",
+              "products": [
+                "vest"
+              ],
+              "rows": 1
+            }
+          ]
+        },
+        "leg-shape": {
+          "identities": 8,
+          "rows": 12,
+          "options": [
+            {
+              "option": "leg-slim",
+              "label": "Slim",
+              "part": "jacket-detail",
+              "products": [
+                "suit-2pc",
+                "suit-3pc"
+              ],
+              "rows": 2
+            },
+            {
+              "option": "leg-slim",
+              "label": "Slim",
+              "part": "trouser-leg",
+              "products": [
+                "trousers"
+              ],
+              "rows": 1
+            },
+            {
+              "option": "leg-straight",
+              "label": "Straight Cut",
+              "part": "jacket-detail",
+              "products": [
+                "suit-2pc",
+                "suit-3pc"
+              ],
+              "rows": 2
+            },
+            {
+              "option": "leg-straight",
+              "label": "Straight Cut",
+              "part": "trouser-leg",
+              "products": [
+                "trousers"
+              ],
+              "rows": 1
+            },
+            {
+              "option": "leg-tapered",
+              "label": "Tapered",
+              "part": "jacket-detail",
+              "products": [
+                "suit-2pc",
+                "suit-3pc"
+              ],
+              "rows": 2
+            },
+            {
+              "option": "leg-tapered",
+              "label": "Tapered",
+              "part": "trouser-leg",
+              "products": [
+                "trousers"
+              ],
+              "rows": 1
+            },
+            {
+              "option": "leg-wide",
+              "label": "Wide Leg",
+              "part": "jacket-detail",
+              "products": [
+                "suit-2pc",
+                "suit-3pc"
+              ],
+              "rows": 2
+            },
+            {
+              "option": "leg-wide",
+              "label": "Wide Leg",
+              "part": "trouser-leg",
+              "products": [
+                "trousers"
+              ],
+              "rows": 1
+            }
+          ]
+        },
+        "pocket-depth": {
+          "identities": 3,
+          "rows": 9,
+          "options": [
+            {
+              "option": "pocket-deep",
+              "label": "Deep (26 cm)",
+              "part": "fin-adjust",
+              "products": [
+                "suit-2pc",
+                "suit-3pc",
+                "trousers"
+              ],
+              "rows": 3
+            },
+            {
+              "option": "pocket-shallow",
+              "label": "Shallow (20 cm)",
+              "part": "fin-adjust",
+              "products": [
+                "suit-2pc",
+                "suit-3pc",
+                "trousers"
+              ],
+              "rows": 3
+            },
+            {
+              "option": "pocket-standard",
+              "label": "Standard (23 cm)",
+              "part": "fin-adjust",
+              "products": [
+                "suit-2pc",
+                "suit-3pc",
+                "trousers"
+              ],
+              "rows": 3
+            }
+          ]
+        },
+        "vest-extras": {
+          "identities": 2,
+          "rows": 4,
+          "options": [
+            {
+              "option": "vest-extra-none",
+              "label": "None",
+              "part": "fin-adjust",
+              "products": [
+                "suit-3pc",
+                "vest"
+              ],
+              "rows": 2
+            },
+            {
+              "option": "vest-extra-pad-buttons",
+              "label": "Placket with Pad Buttons",
+              "part": "fin-adjust",
+              "products": [
+                "suit-3pc",
+                "vest"
+              ],
+              "rows": 2
+            }
+          ]
+        },
+        "vest-label-placement": {
+          "identities": 2,
+          "rows": 4,
+          "options": [
+            {
+              "option": "vest-label-inner",
+              "label": "Inner Breast Pocket Area",
+              "part": "fin-label",
+              "products": [
+                "suit-3pc",
+                "vest"
+              ],
+              "rows": 2
+            },
+            {
+              "option": "vest-label-seam",
+              "label": "Side Seam",
+              "part": "fin-label",
+              "products": [
+                "suit-3pc",
+                "vest"
+              ],
+              "rows": 2
+            }
+          ]
+        },
+        "vest-piping": {
+          "identities": 1,
+          "rows": 2,
+          "options": [
+            {
+              "option": "vest-piping-none",
+              "label": "No Piping",
+              "part": "fin-piping",
+              "products": [
+                "suit-3pc",
+                "vest"
+              ],
+              "rows": 2
+            }
+          ]
+        },
+        "waist-detail": {
+          "identities": 2,
+          "rows": 3,
+          "options": [
+            {
+              "option": "waist-detail-none",
+              "label": "No Back Detail",
+              "part": "jacket-detail",
+              "products": [
+                "suit-2pc",
+                "suit-3pc"
+              ],
+              "rows": 2
+            },
+            {
+              "option": "waist-detail-none",
+              "label": "No Back Detail",
+              "part": "trouser-adjuster",
+              "products": [
+                "trousers"
+              ],
+              "rows": 1
+            }
+          ]
+        },
+        "waistband-back-seam": {
+          "identities": 2,
+          "rows": 3,
+          "options": [
+            {
+              "option": "back-seam-standard",
+              "label": "With Bartack (Standard)",
+              "part": "fin-stitch",
+              "products": [
+                "suit-2pc",
+                "suit-3pc"
+              ],
+              "rows": 2
+            },
+            {
+              "option": "back-seam-standard",
+              "label": "With Bartack (Standard)",
+              "part": "trouser-waistband",
+              "products": [
+                "trousers"
+              ],
+              "rows": 1
+            }
+          ]
+        },
+        "waistband-canvas": {
+          "identities": 8,
+          "rows": 12,
+          "options": [
+            {
+              "option": "canvas-full",
+              "label": "Full Canvas",
+              "part": "fin-canvas",
+              "products": [
+                "suit-2pc",
+                "suit-3pc"
+              ],
+              "rows": 2
+            },
+            {
+              "option": "canvas-full",
+              "label": "Full Canvas",
+              "part": "trouser-waistband",
+              "products": [
+                "trousers"
+              ],
+              "rows": 1
+            },
+            {
+              "option": "canvas-fused",
+              "label": "Fused (Standard)",
+              "part": "fin-canvas",
+              "products": [
+                "suit-2pc",
+                "suit-3pc"
+              ],
+              "rows": 2
+            },
+            {
+              "option": "canvas-fused",
+              "label": "Fused (Standard)",
+              "part": "trouser-waistband",
+              "products": [
+                "trousers"
+              ],
+              "rows": 1
+            },
+            {
+              "option": "canvas-half",
+              "label": "Half Canvas",
+              "part": "fin-canvas",
+              "products": [
+                "suit-2pc",
+                "suit-3pc"
+              ],
+              "rows": 2
+            },
+            {
+              "option": "canvas-half",
+              "label": "Half Canvas",
+              "part": "trouser-waistband",
+              "products": [
+                "trousers"
+              ],
+              "rows": 1
+            },
+            {
+              "option": "canvas-single",
+              "label": "Single Layer",
+              "part": "fin-canvas",
+              "products": [
+                "suit-2pc",
+                "suit-3pc"
+              ],
+              "rows": 2
+            },
+            {
+              "option": "canvas-single",
+              "label": "Single Layer",
+              "part": "trouser-waistband",
+              "products": [
+                "trousers"
+              ],
+              "rows": 1
+            }
+          ]
+        },
+        "waistband-style": {
+          "identities": 8,
+          "rows": 12,
+          "options": [
+            {
+              "option": "waist-double",
+              "label": "Double Waistband",
+              "part": "jacket-detail",
+              "products": [
+                "suit-2pc",
+                "suit-3pc"
+              ],
+              "rows": 2
+            },
+            {
+              "option": "waist-double",
+              "label": "Double Waistband",
+              "part": "trouser-waistband",
+              "products": [
+                "trousers"
+              ],
+              "rows": 1
+            },
+            {
+              "option": "waist-elasticated",
+              "label": "Elasticated Insert",
+              "part": "jacket-detail",
+              "products": [
+                "suit-2pc",
+                "suit-3pc"
+              ],
+              "rows": 2
+            },
+            {
+              "option": "waist-elasticated",
+              "label": "Elasticated Insert",
+              "part": "trouser-waistband",
+              "products": [
+                "trousers"
+              ],
+              "rows": 1
+            },
+            {
+              "option": "waist-extended-tab",
+              "label": "Extended Tab Waistband",
+              "part": "jacket-detail",
+              "products": [
+                "suit-2pc",
+                "suit-3pc"
+              ],
+              "rows": 2
+            },
+            {
+              "option": "waist-extended-tab",
+              "label": "Extended Tab Waistband",
+              "part": "trouser-waistband",
+              "products": [
+                "trousers"
+              ],
+              "rows": 1
+            },
+            {
+              "option": "waist-no-band",
+              "label": "Trouser Waist (No Band)",
+              "part": "jacket-detail",
+              "products": [
+                "suit-2pc",
+                "suit-3pc"
+              ],
+              "rows": 2
+            },
+            {
+              "option": "waist-no-band",
+              "label": "Trouser Waist (No Band)",
+              "part": "trouser-waistband",
+              "products": [
+                "trousers"
+              ],
+              "rows": 1
+            }
+          ]
+        },
+        "waistband-width": {
+          "identities": 10,
+          "rows": 15,
+          "options": [
+            {
+              "option": "wband-35",
+              "label": "3.5 cm",
+              "part": "jacket-detail",
+              "products": [
+                "suit-2pc",
+                "suit-3pc"
+              ],
+              "rows": 2
+            },
+            {
+              "option": "wband-35",
+              "label": "3.5 cm",
+              "part": "trouser-waistband-width",
+              "products": [
+                "trousers"
+              ],
+              "rows": 1
+            },
+            {
+              "option": "wband-38",
+              "label": "3.8 cm",
+              "part": "jacket-detail",
+              "products": [
+                "suit-2pc",
+                "suit-3pc"
+              ],
+              "rows": 2
+            },
+            {
+              "option": "wband-38",
+              "label": "3.8 cm",
+              "part": "trouser-waistband-width",
+              "products": [
+                "trousers"
+              ],
+              "rows": 1
+            },
+            {
+              "option": "wband-40",
+              "label": "4.0 cm",
+              "part": "jacket-detail",
+              "products": [
+                "suit-2pc",
+                "suit-3pc"
+              ],
+              "rows": 2
+            },
+            {
+              "option": "wband-40",
+              "label": "4.0 cm",
+              "part": "trouser-waistband-width",
+              "products": [
+                "trousers"
+              ],
+              "rows": 1
+            },
+            {
+              "option": "wband-45",
+              "label": "4.5 cm",
+              "part": "jacket-detail",
+              "products": [
+                "suit-2pc",
+                "suit-3pc"
+              ],
+              "rows": 2
+            },
+            {
+              "option": "wband-45",
+              "label": "4.5 cm",
+              "part": "trouser-waistband-width",
+              "products": [
+                "trousers"
+              ],
+              "rows": 1
+            },
+            {
+              "option": "wband-50",
+              "label": "5.0 cm",
+              "part": "jacket-detail",
+              "products": [
+                "suit-2pc",
+                "suit-3pc"
+              ],
+              "rows": 2
+            },
+            {
+              "option": "wband-50",
+              "label": "5.0 cm",
+              "part": "trouser-waistband-width",
+              "products": [
+                "trousers"
+              ],
+              "rows": 1
+            }
+          ]
+        }
+      }
+    },
+    "B_amf_stitching_no_authentic_artwork": {
+      "count": 6,
+      "description": "The catalog sells AMF (hand-picked) stitching as distinct from machine TOP stitching, but no authentic AMF drawing exists anywhere in the repo.",
+      "evidence_verified_2026_07_30": "md5 of public/images/decoration_stitching_on_cuff/: machine-01cm-amf == machine-01cm-top (9a634c7a8120); machine-03cm-amf == machine-03cm-top (550a2d999842); machine-05cm-amf == machine-05cm-top (e0700432aa6a). Every -amf file is a byte-identical copy of its same-cm -top file.",
+      "required": "Supplier line drawings showing genuine AMF/pick stitching (visibly hand-worked, irregular pick spacing) at 0.1 / 0.3 / 0.5 / 0.6 cm, distinct from machine top stitching.",
+      "until_then": "These options must NOT be generated. An AMF photo derived from a TOP drawing would be a fabricated distinction sold to a customer."
+    },
+    "C_collar_stitching_filenames_misdescribe_contents": {
+      "count": 5,
+      "description": "In public/images/decoration_stitching_on_collar/ the filenames do not match what the drawings actually depict. Binding by filename yields the wrong drawing.",
+      "evidence_verified_2026_07_30": {
+        "duplicate_pairs": [
+          "machine-01cm-top-stitching.jpg == machine-03cm-top-stitching.jpg (8e910bc6bbdd)",
+          "machine-05cm-top-stitching.jpg == machine-06cm-top-stitching.jpg (7a75c65c1f4f)"
+        ],
+        "true_mapping_by_annotation": {
+          "0.1cm": "machine-03cm-amf-stitching.jpg (87c5f5a36fc7)",
+          "0.3cm": "machine-01cm-top-stitching.jpg (8e910bc6bbdd)",
+          "0.5cm": "machine-05cm-top-stitching.jpg (7a75c65c1f4f)",
+          "0.6cm": "machine-01cm-amf-stitching.jpg (901d09a415a8)"
+        },
+        "stray": "machine-05cm-amf-stitching.jpg (debee267582e) carries NO callout and shows a bright-red zigzag edge stitch — likely belongs to the zigzag collar option, not this ladder."
+      },
+      "action_already_taken": "The 8 TOP options were bound by ANNOTATION (blueprint law over filename). The 6 AMF options were routed to needs-source.",
+      "required": "A human decision to RENAME the files on disk to match their annotated contents. Not done autonomously because renaming supplier assets is a destructive, human-owned call."
+    },
+    "D_loops_5": {
+      "count": 1,
+      "description": "belt-loops / loops-5 (\"5 Loops\") has no blueprint and currently displays the 7-loop photo. This is the SHIPPED_IMAGE_REUSED blocking finding.",
+      "required": "A supplier drawing showing a 5-loop belt-loop layout.",
+      "until_then": "Do not guess a loop count. Route to needs-source."
+    }
+  },
+  "identities": [
+    {
+      "key": "fin-stitch|bar-tack|bartack-none|no bar tacks",
+      "part": "fin-stitch",
+      "field": "bar-tack",
+      "fieldLabel": "bar-tack",
+      "option": "bartack-none",
+      "label": "No Bar Tacks",
+      "rows": 3,
+      "products": [
+        "suit-2pc",
+        "suit-3pc",
+        "trousers"
+      ],
+      "addrs": [
+        "suit-2pc > Trousers-pleats-structure > bar-tack > bartack-none",
+        "suit-3pc > Trousers-pleats-structure > bar-tack > bartack-none",
+        "trousers > pleats-structure > bar-tack > bartack-none"
+      ]
+    },
+    {
+      "key": "jacket-detail|belt-loops|loops-5|5 loops",
+      "part": "jacket-detail",
+      "field": "belt-loops",
+      "fieldLabel": "belt-loops",
+      "option": "loops-5",
+      "label": "5 Loops",
+      "rows": 2,
+      "products": [
+        "suit-2pc",
+        "suit-3pc"
+      ],
+      "addrs": [
+        "suit-2pc > Trousers-waistband > belt-loops > loops-5",
+        "suit-3pc > Trousers-waistband > belt-loops > loops-5"
+      ]
+    },
+    {
+      "key": "trouser-belt-loops|belt-loops|loops-5|5 loops",
+      "part": "trouser-belt-loops",
+      "field": "belt-loops",
+      "fieldLabel": "belt-loops",
+      "option": "loops-5",
+      "label": "5 Loops",
+      "rows": 1,
+      "products": [
+        "trousers"
+      ],
+      "addrs": [
+        "trousers > waistband > belt-loops > loops-5"
+      ]
+    },
+    {
+      "key": "fin-buttonhole|buttonhole-type-trouser|tbh-hand|hand-worked",
+      "part": "fin-buttonhole",
+      "field": "buttonhole-type-trouser",
+      "fieldLabel": "buttonhole-type-trouser",
+      "option": "tbh-hand",
+      "label": "Hand-Worked",
+      "rows": 3,
+      "products": [
+        "suit-2pc",
+        "suit-3pc",
+        "trousers"
+      ],
+      "addrs": [
+        "suit-2pc > Trousers-details-contrast > buttonhole-type-trouser > tbh-hand",
+        "suit-3pc > Trousers-details-contrast > buttonhole-type-trouser > tbh-hand",
+        "trousers > details-contrast > buttonhole-type-trouser > tbh-hand"
+      ]
+    },
+    {
+      "key": "fin-buttonhole|buttonhole-type-trouser|tbh-machine|machine stitched",
+      "part": "fin-buttonhole",
+      "field": "buttonhole-type-trouser",
+      "fieldLabel": "buttonhole-type-trouser",
+      "option": "tbh-machine",
+      "label": "Machine Stitched",
+      "rows": 3,
+      "products": [
+        "suit-2pc",
+        "suit-3pc",
+        "trousers"
+      ],
+      "addrs": [
+        "suit-2pc > Trousers-details-contrast > buttonhole-type-trouser > tbh-machine",
+        "suit-3pc > Trousers-details-contrast > buttonhole-type-trouser > tbh-machine",
+        "trousers > details-contrast > buttonhole-type-trouser > tbh-machine"
+      ]
+    },
+    {
+      "key": "fin-buttonhole|buttonhole-type-vest|vest-bh-round|handmade round buttonholes",
+      "part": "fin-buttonhole",
+      "field": "buttonhole-type-vest",
+      "fieldLabel": "buttonhole-type-vest",
+      "option": "vest-bh-round",
+      "label": "Handmade Round Buttonholes",
+      "rows": 1,
+      "products": [
+        "suit-3pc"
+      ],
+      "addrs": [
+        "suit-3pc > Vest-front-style > buttonhole-type-vest > vest-bh-round"
+      ]
+    },
+    {
+      "key": "vest-buttonhole|buttonhole-type-vest|vest-bh-round|handmade round buttonholes",
+      "part": "vest-buttonhole",
+      "field": "buttonhole-type-vest",
+      "fieldLabel": "buttonhole-type-vest",
+      "option": "vest-bh-round",
+      "label": "Handmade Round Buttonholes",
+      "rows": 1,
+      "products": [
+        "vest"
+      ],
+      "addrs": [
+        "vest > front-style > buttonhole-type-vest > vest-bh-round"
+      ]
+    },
+    {
+      "key": "fin-buttonhole|buttonhole-type-vest|vest-bh-machine|machine stitched",
+      "part": "fin-buttonhole",
+      "field": "buttonhole-type-vest",
+      "fieldLabel": "buttonhole-type-vest",
+      "option": "vest-bh-machine",
+      "label": "Machine Stitched",
+      "rows": 1,
+      "products": [
+        "suit-3pc"
+      ],
+      "addrs": [
+        "suit-3pc > Vest-front-style > buttonhole-type-vest > vest-bh-machine"
+      ]
+    },
+    {
+      "key": "vest-buttonhole|buttonhole-type-vest|vest-bh-machine|machine stitched",
+      "part": "vest-buttonhole",
+      "field": "buttonhole-type-vest",
+      "fieldLabel": "buttonhole-type-vest",
+      "option": "vest-bh-machine",
+      "label": "Machine Stitched",
+      "rows": 1,
+      "products": [
+        "vest"
+      ],
+      "addrs": [
+        "vest > front-style > buttonhole-type-vest > vest-bh-machine"
+      ]
+    },
+    {
+      "key": "jacket-canvas|canvas|ultra-thin-half|ultra-thin half canvas",
+      "part": "jacket-canvas",
+      "field": "canvas",
+      "fieldLabel": "canvas",
+      "option": "ultra-thin-half",
+      "label": "Ultra-thin Half Canvas",
+      "rows": 3,
+      "products": [
+        "sport-coat",
+        "suit-2pc",
+        "suit-3pc"
+      ],
+      "addrs": [
+        "sport-coat > shoulder-structure > canvas > ultra-thin-half",
+        "suit-2pc > shoulder-structure > canvas > ultra-thin-half",
+        "suit-3pc > shoulder-structure > canvas > ultra-thin-half"
+      ]
+    },
+    {
+      "key": "fin-adjust|center-crease|crease-fused|fused crease (permanent)",
+      "part": "fin-adjust",
+      "field": "center-crease",
+      "fieldLabel": "center-crease",
+      "option": "crease-fused",
+      "label": "Fused Crease (Permanent)",
+      "rows": 3,
+      "products": [
+        "suit-2pc",
+        "suit-3pc",
+        "trousers"
+      ],
+      "addrs": [
+        "suit-2pc > Trousers-pleats-structure > center-crease > crease-fused",
+        "suit-3pc > Trousers-pleats-structure > center-crease > crease-fused",
+        "trousers > pleats-structure > center-crease > crease-fused"
+      ]
+    },
+    {
+      "key": "fin-adjust|center-crease|crease-none|no crease",
+      "part": "fin-adjust",
+      "field": "center-crease",
+      "fieldLabel": "center-crease",
+      "option": "crease-none",
+      "label": "No Crease",
+      "rows": 3,
+      "products": [
+        "suit-2pc",
+        "suit-3pc",
+        "trousers"
+      ],
+      "addrs": [
+        "suit-2pc > Trousers-pleats-structure > center-crease > crease-none",
+        "suit-3pc > Trousers-pleats-structure > center-crease > crease-none",
+        "trousers > pleats-structure > center-crease > crease-none"
+      ]
+    },
+    {
+      "key": "fin-adjust|center-crease|crease-pressed|pressed crease (standard)",
+      "part": "fin-adjust",
+      "field": "center-crease",
+      "fieldLabel": "center-crease",
+      "option": "crease-pressed",
+      "label": "Pressed Crease (Standard)",
+      "rows": 3,
+      "products": [
+        "suit-2pc",
+        "suit-3pc",
+        "trousers"
+      ],
+      "addrs": [
+        "suit-2pc > Trousers-pleats-structure > center-crease > crease-pressed",
+        "suit-3pc > Trousers-pleats-structure > center-crease > crease-pressed",
+        "trousers > pleats-structure > center-crease > crease-pressed"
+      ]
+    },
+    {
+      "key": "jacket-detail|center-seam|seam-flat-fell|flat-fell seam",
+      "part": "jacket-detail",
+      "field": "center-seam",
+      "fieldLabel": "center-seam",
+      "option": "seam-flat-fell",
+      "label": "Flat-Fell Seam",
+      "rows": 2,
+      "products": [
+        "suit-2pc",
+        "suit-3pc"
+      ],
+      "addrs": [
+        "suit-2pc > Trousers-back > center-seam > seam-flat-fell",
+        "suit-3pc > Trousers-back > center-seam > seam-flat-fell"
+      ]
+    },
+    {
+      "key": "trouser-back|center-seam|seam-flat-fell|flat-fell seam",
+      "part": "trouser-back",
+      "field": "center-seam",
+      "fieldLabel": "center-seam",
+      "option": "seam-flat-fell",
+      "label": "Flat-Fell Seam",
+      "rows": 1,
+      "products": [
+        "trousers"
+      ],
+      "addrs": [
+        "trousers > back > center-seam > seam-flat-fell"
+      ]
+    },
+    {
+      "key": "jacket-detail|center-seam|seam-open|open seam",
+      "part": "jacket-detail",
+      "field": "center-seam",
+      "fieldLabel": "center-seam",
+      "option": "seam-open",
+      "label": "Open Seam",
+      "rows": 2,
+      "products": [
+        "suit-2pc",
+        "suit-3pc"
+      ],
+      "addrs": [
+        "suit-2pc > Trousers-back > center-seam > seam-open",
+        "suit-3pc > Trousers-back > center-seam > seam-open"
+      ]
+    },
+    {
+      "key": "trouser-back|center-seam|seam-open|open seam",
+      "part": "trouser-back",
+      "field": "center-seam",
+      "fieldLabel": "center-seam",
+      "option": "seam-open",
+      "label": "Open Seam",
+      "rows": 1,
+      "products": [
+        "trousers"
+      ],
+      "addrs": [
+        "trousers > back > center-seam > seam-open"
+      ]
+    },
+    {
+      "key": "shirt-collar-stand|collar_stand_height|csh-35|3.5 cm standard",
+      "part": "shirt-collar-stand",
+      "field": "collar_stand_height",
+      "fieldLabel": "collar_stand_height",
+      "option": "csh-35",
+      "label": "3.5 cm Standard",
+      "rows": 1,
+      "products": [
+        "shirt"
+      ],
+      "addrs": [
+        "shirt > collar > collar_stand_height > csh-35"
+      ]
+    },
+    {
+      "key": "fin-lining|collar-interlining|ci-no-linen|no linen",
+      "part": "fin-lining",
+      "field": "collar-interlining",
+      "fieldLabel": "collar-interlining",
+      "option": "ci-no-linen",
+      "label": "No Linen",
+      "rows": 3,
+      "products": [
+        "sport-coat",
+        "suit-2pc",
+        "suit-3pc"
+      ],
+      "addrs": [
+        "sport-coat > lapel > collar-interlining > ci-no-linen",
+        "suit-2pc > lapel > collar-interlining > ci-no-linen",
+        "suit-3pc > lapel > collar-interlining > ci-no-linen"
+      ]
+    },
+    {
+      "key": "fin-lining|collar-interlining|ci-regular|regular (with linen)",
+      "part": "fin-lining",
+      "field": "collar-interlining",
+      "fieldLabel": "collar-interlining",
+      "option": "ci-regular",
+      "label": "Regular (with Linen)",
+      "rows": 3,
+      "products": [
+        "sport-coat",
+        "suit-2pc",
+        "suit-3pc"
+      ],
+      "addrs": [
+        "sport-coat > lapel > collar-interlining > ci-regular",
+        "suit-2pc > lapel > collar-interlining > ci-regular",
+        "suit-3pc > lapel > collar-interlining > ci-regular"
+      ]
+    },
+    {
+      "key": "fin-contrast|contrast_color_position|contrast-none|no contrast",
+      "part": "fin-contrast",
+      "field": "contrast_color_position",
+      "fieldLabel": "contrast_color_position",
+      "option": "contrast-none",
+      "label": "No Contrast",
+      "rows": 1,
+      "products": [
+        "shirt"
+      ],
+      "addrs": [
+        "shirt > details-contrast > contrast_color_position > contrast-none"
+      ]
+    },
+    {
+      "key": "fin-contrast|contrast-lapel-collar|vest-contrast-lapel-none|none",
+      "part": "fin-contrast",
+      "field": "contrast-lapel-collar",
+      "fieldLabel": "contrast-lapel-collar",
+      "option": "vest-contrast-lapel-none",
+      "label": "None",
+      "rows": 2,
+      "products": [
+        "suit-3pc",
+        "vest"
+      ],
+      "addrs": [
+        "suit-3pc > Vest-contrast-vest > contrast-lapel-collar > vest-contrast-lapel-none",
+        "vest > contrast-vest > contrast-lapel-collar > vest-contrast-lapel-none"
+      ]
+    },
+    {
+      "key": "fin-contrast|contrast-pocket-vest|vest-contrast-pocket-none|none",
+      "part": "fin-contrast",
+      "field": "contrast-pocket-vest",
+      "fieldLabel": "contrast-pocket-vest",
+      "option": "vest-contrast-pocket-none",
+      "label": "None",
+      "rows": 1,
+      "products": [
+        "suit-3pc"
+      ],
+      "addrs": [
+        "suit-3pc > Vest-contrast-vest > contrast-pocket-vest > vest-contrast-pocket-none"
+      ]
+    },
+    {
+      "key": "vest-pocket|contrast-pocket-vest|vest-contrast-pocket-none|none",
+      "part": "vest-pocket",
+      "field": "contrast-pocket-vest",
+      "fieldLabel": "contrast-pocket-vest",
+      "option": "vest-contrast-pocket-none",
+      "label": "None",
+      "rows": 1,
+      "products": [
+        "vest"
+      ],
+      "addrs": [
+        "vest > contrast-vest > contrast-pocket-vest > vest-contrast-pocket-none"
+      ]
+    },
+    {
+      "key": "fin-contrast|contrast-positions|trouser-contrast-none|no contrast",
+      "part": "fin-contrast",
+      "field": "contrast-positions",
+      "fieldLabel": "contrast-positions",
+      "option": "trouser-contrast-none",
+      "label": "No Contrast",
+      "rows": 3,
+      "products": [
+        "suit-2pc",
+        "suit-3pc",
+        "trousers"
+      ],
+      "addrs": [
+        "suit-2pc > Trousers-details-contrast > contrast-positions > trouser-contrast-none",
+        "suit-3pc > Trousers-details-contrast > contrast-positions > trouser-contrast-none",
+        "trousers > details-contrast > contrast-positions > trouser-contrast-none"
+      ]
+    },
+    {
+      "key": "jacket-sleeve|cuff-button-spacing|bs-no-kiss|no kissing (standard)",
+      "part": "jacket-sleeve",
+      "field": "cuff-button-spacing",
+      "fieldLabel": "cuff-button-spacing",
+      "option": "bs-no-kiss",
+      "label": "No Kissing (Standard)",
+      "rows": 3,
+      "products": [
+        "sport-coat",
+        "suit-2pc",
+        "suit-3pc"
+      ],
+      "addrs": [
+        "sport-coat > sleeves-cuffs > cuff-button-spacing > bs-no-kiss",
+        "suit-2pc > sleeves-cuffs > cuff-button-spacing > bs-no-kiss",
+        "suit-3pc > sleeves-cuffs > cuff-button-spacing > bs-no-kiss"
+      ]
+    },
+    {
+      "key": "fin-patch|elbow-patch|ep-none|none",
+      "part": "fin-patch",
+      "field": "elbow-patch",
+      "fieldLabel": "elbow-patch",
+      "option": "ep-none",
+      "label": "None",
+      "rows": 3,
+      "products": [
+        "sport-coat",
+        "suit-2pc",
+        "suit-3pc"
+      ],
+      "addrs": [
+        "sport-coat > back-vents > elbow-patch > ep-none",
+        "suit-2pc > back-vents > elbow-patch > ep-none",
+        "suit-3pc > back-vents > elbow-patch > ep-none"
+      ]
+    },
+    {
+      "key": "fin-adjust|fitting-adjustment-vest|vest-fit-arm-hole-1cm|-1.0 cm arm hole",
+      "part": "fin-adjust",
+      "field": "fitting-adjustment-vest",
+      "fieldLabel": "fitting-adjustment-vest",
+      "option": "vest-fit-arm-hole-1cm",
+      "label": "-1.0 cm Arm Hole",
+      "rows": 2,
+      "products": [
+        "suit-3pc",
+        "vest"
+      ],
+      "addrs": [
+        "suit-3pc > Vest-fitting-vest > fitting-adjustment-vest > vest-fit-arm-hole-1cm",
+        "vest > fitting-vest > fitting-adjustment-vest > vest-fit-arm-hole-1cm"
+      ]
+    },
+    {
+      "key": "fin-adjust|fitting-adjustment-vest|vest-fit-stomach-dart|deep stomach dart",
+      "part": "fin-adjust",
+      "field": "fitting-adjustment-vest",
+      "fieldLabel": "fitting-adjustment-vest",
+      "option": "vest-fit-stomach-dart",
+      "label": "Deep Stomach Dart",
+      "rows": 2,
+      "products": [
+        "suit-3pc",
+        "vest"
+      ],
+      "addrs": [
+        "suit-3pc > Vest-fitting-vest > fitting-adjustment-vest > vest-fit-stomach-dart",
+        "vest > fitting-vest > fitting-adjustment-vest > vest-fit-stomach-dart"
+      ]
+    },
+    {
+      "key": "fin-adjust|fitting-adjustment-vest|vest-fit-standard|standard",
+      "part": "fin-adjust",
+      "field": "fitting-adjustment-vest",
+      "fieldLabel": "fitting-adjustment-vest",
+      "option": "vest-fit-standard",
+      "label": "Standard",
+      "rows": 2,
+      "products": [
+        "suit-3pc",
+        "vest"
+      ],
+      "addrs": [
+        "suit-3pc > Vest-fitting-vest > fitting-adjustment-vest > vest-fit-standard",
+        "vest > fitting-vest > fitting-adjustment-vest > vest-fit-standard"
+      ]
+    },
+    {
+      "key": "fin-interlining|folded-collar-craft|fcc-normal|normal",
+      "part": "fin-interlining",
+      "field": "folded-collar-craft",
+      "fieldLabel": "folded-collar-craft",
+      "option": "fcc-normal",
+      "label": "Normal",
+      "rows": 3,
+      "products": [
+        "sport-coat",
+        "suit-2pc",
+        "suit-3pc"
+      ],
+      "addrs": [
+        "sport-coat > lapel > folded-collar-craft > fcc-normal",
+        "suit-2pc > lapel > folded-collar-craft > fcc-normal",
+        "suit-3pc > lapel > folded-collar-craft > fcc-normal"
+      ]
+    },
+    {
+      "key": "fin-interlining|folded-collar-craft|fcc-turnback|turn back at the end",
+      "part": "fin-interlining",
+      "field": "folded-collar-craft",
+      "fieldLabel": "folded-collar-craft",
+      "option": "fcc-turnback",
+      "label": "Turn Back at the End",
+      "rows": 3,
+      "products": [
+        "sport-coat",
+        "suit-2pc",
+        "suit-3pc"
+      ],
+      "addrs": [
+        "sport-coat > lapel > folded-collar-craft > fcc-turnback",
+        "suit-2pc > lapel > folded-collar-craft > fcc-turnback",
+        "suit-3pc > lapel > folded-collar-craft > fcc-turnback"
+      ]
+    },
+    {
+      "key": "jacket-detail|hem-style|hem-fringe|fringe edge",
+      "part": "jacket-detail",
+      "field": "hem-style",
+      "fieldLabel": "hem-style",
+      "option": "hem-fringe",
+      "label": "Fringe Edge",
+      "rows": 2,
+      "products": [
+        "suit-2pc",
+        "suit-3pc"
+      ],
+      "addrs": [
+        "suit-2pc > Trousers-bottom-hem > hem-style > hem-fringe",
+        "suit-3pc > Trousers-bottom-hem > hem-style > hem-fringe"
+      ]
+    },
+    {
+      "key": "trouser-hem|hem-style|hem-fringe|fringe edge",
+      "part": "trouser-hem",
+      "field": "hem-style",
+      "fieldLabel": "hem-style",
+      "option": "hem-fringe",
+      "label": "Fringe Edge",
+      "rows": 1,
+      "products": [
+        "trousers"
+      ],
+      "addrs": [
+        "trousers > bottom-hem > hem-style > hem-fringe"
+      ]
+    },
+    {
+      "key": "jacket-detail|hem-style|hem-unfinished|unfinished (raw edge)",
+      "part": "jacket-detail",
+      "field": "hem-style",
+      "fieldLabel": "hem-style",
+      "option": "hem-unfinished",
+      "label": "Unfinished (Raw Edge)",
+      "rows": 2,
+      "products": [
+        "suit-2pc",
+        "suit-3pc"
+      ],
+      "addrs": [
+        "suit-2pc > Trousers-bottom-hem > hem-style > hem-unfinished",
+        "suit-3pc > Trousers-bottom-hem > hem-style > hem-unfinished"
+      ]
+    },
+    {
+      "key": "trouser-hem|hem-style|hem-unfinished|unfinished (raw edge)",
+      "part": "trouser-hem",
+      "field": "hem-style",
+      "fieldLabel": "hem-style",
+      "option": "hem-unfinished",
+      "label": "Unfinished (Raw Edge)",
+      "rows": 1,
+      "products": [
+        "trousers"
+      ],
+      "addrs": [
+        "trousers > bottom-hem > hem-style > hem-unfinished"
+      ]
+    },
+    {
+      "key": "fin-label|label-placement|label-care-only|care label only",
+      "part": "fin-label",
+      "field": "label-placement",
+      "fieldLabel": "label-placement",
+      "option": "label-care-only",
+      "label": "Care Label Only",
+      "rows": 3,
+      "products": [
+        "suit-2pc",
+        "suit-3pc",
+        "trousers"
+      ],
+      "addrs": [
+        "suit-2pc > Trousers-lining-internal > label-placement > label-care-only",
+        "suit-3pc > Trousers-lining-internal > label-placement > label-care-only",
+        "trousers > lining-internal > label-placement > label-care-only"
+      ]
+    },
+    {
+      "key": "fin-label|label-placement|label-waistband|inside waistband",
+      "part": "fin-label",
+      "field": "label-placement",
+      "fieldLabel": "label-placement",
+      "option": "label-waistband",
+      "label": "Inside Waistband",
+      "rows": 3,
+      "products": [
+        "suit-2pc",
+        "suit-3pc",
+        "trousers"
+      ],
+      "addrs": [
+        "suit-2pc > Trousers-lining-internal > label-placement > label-waistband",
+        "suit-3pc > Trousers-lining-internal > label-placement > label-waistband",
+        "trousers > lining-internal > label-placement > label-waistband"
+      ]
+    },
+    {
+      "key": "jacket-lapel|lapel-style|opt-1779526586804|e peak",
+      "part": "jacket-lapel",
+      "field": "lapel-style",
+      "fieldLabel": "lapel-style",
+      "option": "opt-1779526586804",
+      "label": "E peak",
+      "rows": 1,
+      "products": [
+        "suit-2pc"
+      ],
+      "addrs": [
+        "suit-2pc > lapel > lapel-style > opt-1779526586804"
+      ]
+    },
+    {
+      "key": "jacket-detail|lapel-width|vest-lapel-narrow|narrow 6 cm",
+      "part": "jacket-detail",
+      "field": "lapel-width",
+      "fieldLabel": "lapel-width",
+      "option": "vest-lapel-narrow",
+      "label": "Narrow 6 cm",
+      "rows": 1,
+      "products": [
+        "suit-3pc"
+      ],
+      "addrs": [
+        "suit-3pc > Vest-lapel-neckline > lapel-width > vest-lapel-narrow"
+      ]
+    },
+    {
+      "key": "vest-lapel|lapel-width|vest-lapel-narrow|narrow 6 cm",
+      "part": "vest-lapel",
+      "field": "lapel-width",
+      "fieldLabel": "lapel-width",
+      "option": "vest-lapel-narrow",
+      "label": "Narrow 6 cm",
+      "rows": 1,
+      "products": [
+        "vest"
+      ],
+      "addrs": [
+        "vest > lapel-neckline > lapel-width > vest-lapel-narrow"
+      ]
+    },
+    {
+      "key": "jacket-detail|lapel-width|vest-lapel-standard|standard 7.5 cm",
+      "part": "jacket-detail",
+      "field": "lapel-width",
+      "fieldLabel": "lapel-width",
+      "option": "vest-lapel-standard",
+      "label": "Standard 7.5 cm",
+      "rows": 1,
+      "products": [
+        "suit-3pc"
+      ],
+      "addrs": [
+        "suit-3pc > Vest-lapel-neckline > lapel-width > vest-lapel-standard"
+      ]
+    },
+    {
+      "key": "vest-lapel|lapel-width|vest-lapel-standard|standard 7.5 cm",
+      "part": "vest-lapel",
+      "field": "lapel-width",
+      "fieldLabel": "lapel-width",
+      "option": "vest-lapel-standard",
+      "label": "Standard 7.5 cm",
+      "rows": 1,
+      "products": [
+        "vest"
+      ],
+      "addrs": [
+        "vest > lapel-neckline > lapel-width > vest-lapel-standard"
+      ]
+    },
+    {
+      "key": "jacket-detail|lapel-width|vest-lapel-wide|wide 9 cm",
+      "part": "jacket-detail",
+      "field": "lapel-width",
+      "fieldLabel": "lapel-width",
+      "option": "vest-lapel-wide",
+      "label": "Wide 9 cm",
+      "rows": 1,
+      "products": [
+        "suit-3pc"
+      ],
+      "addrs": [
+        "suit-3pc > Vest-lapel-neckline > lapel-width > vest-lapel-wide"
+      ]
+    },
+    {
+      "key": "vest-lapel|lapel-width|vest-lapel-wide|wide 9 cm",
+      "part": "vest-lapel",
+      "field": "lapel-width",
+      "fieldLabel": "lapel-width",
+      "option": "vest-lapel-wide",
+      "label": "Wide 9 cm",
+      "rows": 1,
+      "products": [
+        "vest"
+      ],
+      "addrs": [
+        "vest > lapel-neckline > lapel-width > vest-lapel-wide"
+      ]
+    },
+    {
+      "key": "jacket-detail|leg-shape|leg-slim|slim",
+      "part": "jacket-detail",
+      "field": "leg-shape",
+      "fieldLabel": "leg-shape",
+      "option": "leg-slim",
+      "label": "Slim",
+      "rows": 2,
+      "products": [
+        "suit-2pc",
+        "suit-3pc"
+      ],
+      "addrs": [
+        "suit-2pc > Trousers-bottom-hem > leg-shape > leg-slim",
+        "suit-3pc > Trousers-bottom-hem > leg-shape > leg-slim"
+      ]
+    },
+    {
+      "key": "trouser-leg|leg-shape|leg-slim|slim",
+      "part": "trouser-leg",
+      "field": "leg-shape",
+      "fieldLabel": "leg-shape",
+      "option": "leg-slim",
+      "label": "Slim",
+      "rows": 1,
+      "products": [
+        "trousers"
+      ],
+      "addrs": [
+        "trousers > bottom-hem > leg-shape > leg-slim"
+      ]
+    },
+    {
+      "key": "jacket-detail|leg-shape|leg-straight|straight cut",
+      "part": "jacket-detail",
+      "field": "leg-shape",
+      "fieldLabel": "leg-shape",
+      "option": "leg-straight",
+      "label": "Straight Cut",
+      "rows": 2,
+      "products": [
+        "suit-2pc",
+        "suit-3pc"
+      ],
+      "addrs": [
+        "suit-2pc > Trousers-bottom-hem > leg-shape > leg-straight",
+        "suit-3pc > Trousers-bottom-hem > leg-shape > leg-straight"
+      ]
+    },
+    {
+      "key": "trouser-leg|leg-shape|leg-straight|straight cut",
+      "part": "trouser-leg",
+      "field": "leg-shape",
+      "fieldLabel": "leg-shape",
+      "option": "leg-straight",
+      "label": "Straight Cut",
+      "rows": 1,
+      "products": [
+        "trousers"
+      ],
+      "addrs": [
+        "trousers > bottom-hem > leg-shape > leg-straight"
+      ]
+    },
+    {
+      "key": "jacket-detail|leg-shape|leg-tapered|tapered",
+      "part": "jacket-detail",
+      "field": "leg-shape",
+      "fieldLabel": "leg-shape",
+      "option": "leg-tapered",
+      "label": "Tapered",
+      "rows": 2,
+      "products": [
+        "suit-2pc",
+        "suit-3pc"
+      ],
+      "addrs": [
+        "suit-2pc > Trousers-bottom-hem > leg-shape > leg-tapered",
+        "suit-3pc > Trousers-bottom-hem > leg-shape > leg-tapered"
+      ]
+    },
+    {
+      "key": "trouser-leg|leg-shape|leg-tapered|tapered",
+      "part": "trouser-leg",
+      "field": "leg-shape",
+      "fieldLabel": "leg-shape",
+      "option": "leg-tapered",
+      "label": "Tapered",
+      "rows": 1,
+      "products": [
+        "trousers"
+      ],
+      "addrs": [
+        "trousers > bottom-hem > leg-shape > leg-tapered"
+      ]
+    },
+    {
+      "key": "jacket-detail|leg-shape|leg-wide|wide leg",
+      "part": "jacket-detail",
+      "field": "leg-shape",
+      "fieldLabel": "leg-shape",
+      "option": "leg-wide",
+      "label": "Wide Leg",
+      "rows": 2,
+      "products": [
+        "suit-2pc",
+        "suit-3pc"
+      ],
+      "addrs": [
+        "suit-2pc > Trousers-bottom-hem > leg-shape > leg-wide",
+        "suit-3pc > Trousers-bottom-hem > leg-shape > leg-wide"
+      ]
+    },
+    {
+      "key": "trouser-leg|leg-shape|leg-wide|wide leg",
+      "part": "trouser-leg",
+      "field": "leg-shape",
+      "fieldLabel": "leg-shape",
+      "option": "leg-wide",
+      "label": "Wide Leg",
+      "rows": 1,
+      "products": [
+        "trousers"
+      ],
+      "addrs": [
+        "trousers > bottom-hem > leg-shape > leg-wide"
+      ]
+    },
+    {
+      "key": "fin-adjust|pocket-depth|pocket-deep|deep (26 cm)",
+      "part": "fin-adjust",
+      "field": "pocket-depth",
+      "fieldLabel": "pocket-depth",
+      "option": "pocket-deep",
+      "label": "Deep (26 cm)",
+      "rows": 3,
+      "products": [
+        "suit-2pc",
+        "suit-3pc",
+        "trousers"
+      ],
+      "addrs": [
+        "suit-2pc > Trousers-front-pockets > pocket-depth > pocket-deep",
+        "suit-3pc > Trousers-front-pockets > pocket-depth > pocket-deep",
+        "trousers > front-pockets > pocket-depth > pocket-deep"
+      ]
+    },
+    {
+      "key": "fin-adjust|pocket-depth|pocket-shallow|shallow (20 cm)",
+      "part": "fin-adjust",
+      "field": "pocket-depth",
+      "fieldLabel": "pocket-depth",
+      "option": "pocket-shallow",
+      "label": "Shallow (20 cm)",
+      "rows": 3,
+      "products": [
+        "suit-2pc",
+        "suit-3pc",
+        "trousers"
+      ],
+      "addrs": [
+        "suit-2pc > Trousers-front-pockets > pocket-depth > pocket-shallow",
+        "suit-3pc > Trousers-front-pockets > pocket-depth > pocket-shallow",
+        "trousers > front-pockets > pocket-depth > pocket-shallow"
+      ]
+    },
+    {
+      "key": "fin-adjust|pocket-depth|pocket-standard|standard (23 cm)",
+      "part": "fin-adjust",
+      "field": "pocket-depth",
+      "fieldLabel": "pocket-depth",
+      "option": "pocket-standard",
+      "label": "Standard (23 cm)",
+      "rows": 3,
+      "products": [
+        "suit-2pc",
+        "suit-3pc",
+        "trousers"
+      ],
+      "addrs": [
+        "suit-2pc > Trousers-front-pockets > pocket-depth > pocket-standard",
+        "suit-3pc > Trousers-front-pockets > pocket-depth > pocket-standard",
+        "trousers > front-pockets > pocket-depth > pocket-standard"
+      ]
+    },
+    {
+      "key": "fin-adjust|vest-extras|vest-extra-none|none",
+      "part": "fin-adjust",
+      "field": "vest-extras",
+      "fieldLabel": "vest-extras",
+      "option": "vest-extra-none",
+      "label": "None",
+      "rows": 2,
+      "products": [
+        "suit-3pc",
+        "vest"
+      ],
+      "addrs": [
+        "suit-3pc > Vest-fitting-vest > vest-extras > vest-extra-none",
+        "vest > fitting-vest > vest-extras > vest-extra-none"
+      ]
+    },
+    {
+      "key": "fin-adjust|vest-extras|vest-extra-pad-buttons|placket with pad buttons",
+      "part": "fin-adjust",
+      "field": "vest-extras",
+      "fieldLabel": "vest-extras",
+      "option": "vest-extra-pad-buttons",
+      "label": "Placket with Pad Buttons",
+      "rows": 2,
+      "products": [
+        "suit-3pc",
+        "vest"
+      ],
+      "addrs": [
+        "suit-3pc > Vest-fitting-vest > vest-extras > vest-extra-pad-buttons",
+        "vest > fitting-vest > vest-extras > vest-extra-pad-buttons"
+      ]
+    },
+    {
+      "key": "fin-label|vest-label-placement|vest-label-inner|inner breast pocket area",
+      "part": "fin-label",
+      "field": "vest-label-placement",
+      "fieldLabel": "vest-label-placement",
+      "option": "vest-label-inner",
+      "label": "Inner Breast Pocket Area",
+      "rows": 2,
+      "products": [
+        "suit-3pc",
+        "vest"
+      ],
+      "addrs": [
+        "suit-3pc > Vest-lining-vest > vest-label-placement > vest-label-inner",
+        "vest > lining-vest > vest-label-placement > vest-label-inner"
+      ]
+    },
+    {
+      "key": "fin-label|vest-label-placement|vest-label-seam|side seam",
+      "part": "fin-label",
+      "field": "vest-label-placement",
+      "fieldLabel": "vest-label-placement",
+      "option": "vest-label-seam",
+      "label": "Side Seam",
+      "rows": 2,
+      "products": [
+        "suit-3pc",
+        "vest"
+      ],
+      "addrs": [
+        "suit-3pc > Vest-lining-vest > vest-label-placement > vest-label-seam",
+        "vest > lining-vest > vest-label-placement > vest-label-seam"
+      ]
+    },
+    {
+      "key": "fin-piping|vest-piping|vest-piping-none|no piping",
+      "part": "fin-piping",
+      "field": "vest-piping",
+      "fieldLabel": "vest-piping",
+      "option": "vest-piping-none",
+      "label": "No Piping",
+      "rows": 2,
+      "products": [
+        "suit-3pc",
+        "vest"
+      ],
+      "addrs": [
+        "suit-3pc > Vest-lining-vest > vest-piping > vest-piping-none",
+        "vest > lining-vest > vest-piping > vest-piping-none"
+      ]
+    },
+    {
+      "key": "jacket-detail|waist-detail|waist-detail-none|no back detail",
+      "part": "jacket-detail",
+      "field": "waist-detail",
+      "fieldLabel": "waist-detail",
+      "option": "waist-detail-none",
+      "label": "No Back Detail",
+      "rows": 2,
+      "products": [
+        "suit-2pc",
+        "suit-3pc"
+      ],
+      "addrs": [
+        "suit-2pc > Trousers-waistband > waist-detail > waist-detail-none",
+        "suit-3pc > Trousers-waistband > waist-detail > waist-detail-none"
+      ]
+    },
+    {
+      "key": "trouser-adjuster|waist-detail|waist-detail-none|no back detail",
+      "part": "trouser-adjuster",
+      "field": "waist-detail",
+      "fieldLabel": "waist-detail",
+      "option": "waist-detail-none",
+      "label": "No Back Detail",
+      "rows": 1,
+      "products": [
+        "trousers"
+      ],
+      "addrs": [
+        "trousers > waistband > waist-detail > waist-detail-none"
+      ]
+    },
+    {
+      "key": "fin-stitch|waistband-back-seam|back-seam-standard|with bartack (standard)",
+      "part": "fin-stitch",
+      "field": "waistband-back-seam",
+      "fieldLabel": "waistband-back-seam",
+      "option": "back-seam-standard",
+      "label": "With Bartack (Standard)",
+      "rows": 2,
+      "products": [
+        "suit-2pc",
+        "suit-3pc"
+      ],
+      "addrs": [
+        "suit-2pc > Trousers-extras > waistband-back-seam > back-seam-standard",
+        "suit-3pc > Trousers-extras > waistband-back-seam > back-seam-standard"
+      ]
+    },
+    {
+      "key": "trouser-waistband|waistband-back-seam|back-seam-standard|with bartack (standard)",
+      "part": "trouser-waistband",
+      "field": "waistband-back-seam",
+      "fieldLabel": "waistband-back-seam",
+      "option": "back-seam-standard",
+      "label": "With Bartack (Standard)",
+      "rows": 1,
+      "products": [
+        "trousers"
+      ],
+      "addrs": [
+        "trousers > extras > waistband-back-seam > back-seam-standard"
+      ]
+    },
+    {
+      "key": "fin-canvas|waistband-canvas|canvas-full|full canvas",
+      "part": "fin-canvas",
+      "field": "waistband-canvas",
+      "fieldLabel": "waistband-canvas",
+      "option": "canvas-full",
+      "label": "Full Canvas",
+      "rows": 2,
+      "products": [
+        "suit-2pc",
+        "suit-3pc"
+      ],
+      "addrs": [
+        "suit-2pc > Trousers-extras > waistband-canvas > canvas-full",
+        "suit-3pc > Trousers-extras > waistband-canvas > canvas-full"
+      ]
+    },
+    {
+      "key": "trouser-waistband|waistband-canvas|canvas-full|full canvas",
+      "part": "trouser-waistband",
+      "field": "waistband-canvas",
+      "fieldLabel": "waistband-canvas",
+      "option": "canvas-full",
+      "label": "Full Canvas",
+      "rows": 1,
+      "products": [
+        "trousers"
+      ],
+      "addrs": [
+        "trousers > extras > waistband-canvas > canvas-full"
+      ]
+    },
+    {
+      "key": "fin-canvas|waistband-canvas|canvas-fused|fused (standard)",
+      "part": "fin-canvas",
+      "field": "waistband-canvas",
+      "fieldLabel": "waistband-canvas",
+      "option": "canvas-fused",
+      "label": "Fused (Standard)",
+      "rows": 2,
+      "products": [
+        "suit-2pc",
+        "suit-3pc"
+      ],
+      "addrs": [
+        "suit-2pc > Trousers-extras > waistband-canvas > canvas-fused",
+        "suit-3pc > Trousers-extras > waistband-canvas > canvas-fused"
+      ]
+    },
+    {
+      "key": "trouser-waistband|waistband-canvas|canvas-fused|fused (standard)",
+      "part": "trouser-waistband",
+      "field": "waistband-canvas",
+      "fieldLabel": "waistband-canvas",
+      "option": "canvas-fused",
+      "label": "Fused (Standard)",
+      "rows": 1,
+      "products": [
+        "trousers"
+      ],
+      "addrs": [
+        "trousers > extras > waistband-canvas > canvas-fused"
+      ]
+    },
+    {
+      "key": "fin-canvas|waistband-canvas|canvas-half|half canvas",
+      "part": "fin-canvas",
+      "field": "waistband-canvas",
+      "fieldLabel": "waistband-canvas",
+      "option": "canvas-half",
+      "label": "Half Canvas",
+      "rows": 2,
+      "products": [
+        "suit-2pc",
+        "suit-3pc"
+      ],
+      "addrs": [
+        "suit-2pc > Trousers-extras > waistband-canvas > canvas-half",
+        "suit-3pc > Trousers-extras > waistband-canvas > canvas-half"
+      ]
+    },
+    {
+      "key": "trouser-waistband|waistband-canvas|canvas-half|half canvas",
+      "part": "trouser-waistband",
+      "field": "waistband-canvas",
+      "fieldLabel": "waistband-canvas",
+      "option": "canvas-half",
+      "label": "Half Canvas",
+      "rows": 1,
+      "products": [
+        "trousers"
+      ],
+      "addrs": [
+        "trousers > extras > waistband-canvas > canvas-half"
+      ]
+    },
+    {
+      "key": "fin-canvas|waistband-canvas|canvas-single|single layer",
+      "part": "fin-canvas",
+      "field": "waistband-canvas",
+      "fieldLabel": "waistband-canvas",
+      "option": "canvas-single",
+      "label": "Single Layer",
+      "rows": 2,
+      "products": [
+        "suit-2pc",
+        "suit-3pc"
+      ],
+      "addrs": [
+        "suit-2pc > Trousers-extras > waistband-canvas > canvas-single",
+        "suit-3pc > Trousers-extras > waistband-canvas > canvas-single"
+      ]
+    },
+    {
+      "key": "trouser-waistband|waistband-canvas|canvas-single|single layer",
+      "part": "trouser-waistband",
+      "field": "waistband-canvas",
+      "fieldLabel": "waistband-canvas",
+      "option": "canvas-single",
+      "label": "Single Layer",
+      "rows": 1,
+      "products": [
+        "trousers"
+      ],
+      "addrs": [
+        "trousers > extras > waistband-canvas > canvas-single"
+      ]
+    },
+    {
+      "key": "jacket-detail|waistband-style|waist-double|double waistband",
+      "part": "jacket-detail",
+      "field": "waistband-style",
+      "fieldLabel": "waistband-style",
+      "option": "waist-double",
+      "label": "Double Waistband",
+      "rows": 2,
+      "products": [
+        "suit-2pc",
+        "suit-3pc"
+      ],
+      "addrs": [
+        "suit-2pc > Trousers-waistband > waistband-style > waist-double",
+        "suit-3pc > Trousers-waistband > waistband-style > waist-double"
+      ]
+    },
+    {
+      "key": "trouser-waistband|waistband-style|waist-double|double waistband",
+      "part": "trouser-waistband",
+      "field": "waistband-style",
+      "fieldLabel": "waistband-style",
+      "option": "waist-double",
+      "label": "Double Waistband",
+      "rows": 1,
+      "products": [
+        "trousers"
+      ],
+      "addrs": [
+        "trousers > waistband > waistband-style > waist-double"
+      ]
+    },
+    {
+      "key": "jacket-detail|waistband-style|waist-elasticated|elasticated insert",
+      "part": "jacket-detail",
+      "field": "waistband-style",
+      "fieldLabel": "waistband-style",
+      "option": "waist-elasticated",
+      "label": "Elasticated Insert",
+      "rows": 2,
+      "products": [
+        "suit-2pc",
+        "suit-3pc"
+      ],
+      "addrs": [
+        "suit-2pc > Trousers-waistband > waistband-style > waist-elasticated",
+        "suit-3pc > Trousers-waistband > waistband-style > waist-elasticated"
+      ]
+    },
+    {
+      "key": "trouser-waistband|waistband-style|waist-elasticated|elasticated insert",
+      "part": "trouser-waistband",
+      "field": "waistband-style",
+      "fieldLabel": "waistband-style",
+      "option": "waist-elasticated",
+      "label": "Elasticated Insert",
+      "rows": 1,
+      "products": [
+        "trousers"
+      ],
+      "addrs": [
+        "trousers > waistband > waistband-style > waist-elasticated"
+      ]
+    },
+    {
+      "key": "jacket-detail|waistband-style|waist-extended-tab|extended tab waistband",
+      "part": "jacket-detail",
+      "field": "waistband-style",
+      "fieldLabel": "waistband-style",
+      "option": "waist-extended-tab",
+      "label": "Extended Tab Waistband",
+      "rows": 2,
+      "products": [
+        "suit-2pc",
+        "suit-3pc"
+      ],
+      "addrs": [
+        "suit-2pc > Trousers-waistband > waistband-style > waist-extended-tab",
+        "suit-3pc > Trousers-waistband > waistband-style > waist-extended-tab"
+      ]
+    },
+    {
+      "key": "trouser-waistband|waistband-style|waist-extended-tab|extended tab waistband",
+      "part": "trouser-waistband",
+      "field": "waistband-style",
+      "fieldLabel": "waistband-style",
+      "option": "waist-extended-tab",
+      "label": "Extended Tab Waistband",
+      "rows": 1,
+      "products": [
+        "trousers"
+      ],
+      "addrs": [
+        "trousers > waistband > waistband-style > waist-extended-tab"
+      ]
+    },
+    {
+      "key": "jacket-detail|waistband-style|waist-no-band|trouser waist (no band)",
+      "part": "jacket-detail",
+      "field": "waistband-style",
+      "fieldLabel": "waistband-style",
+      "option": "waist-no-band",
+      "label": "Trouser Waist (No Band)",
+      "rows": 2,
+      "products": [
+        "suit-2pc",
+        "suit-3pc"
+      ],
+      "addrs": [
+        "suit-2pc > Trousers-waistband > waistband-style > waist-no-band",
+        "suit-3pc > Trousers-waistband > waistband-style > waist-no-band"
+      ]
+    },
+    {
+      "key": "trouser-waistband|waistband-style|waist-no-band|trouser waist (no band)",
+      "part": "trouser-waistband",
+      "field": "waistband-style",
+      "fieldLabel": "waistband-style",
+      "option": "waist-no-band",
+      "label": "Trouser Waist (No Band)",
+      "rows": 1,
+      "products": [
+        "trousers"
+      ],
+      "addrs": [
+        "trousers > waistband > waistband-style > waist-no-band"
+      ]
+    },
+    {
+      "key": "jacket-detail|waistband-width|wband-35|3.5 cm",
+      "part": "jacket-detail",
+      "field": "waistband-width",
+      "fieldLabel": "waistband-width",
+      "option": "wband-35",
+      "label": "3.5 cm",
+      "rows": 2,
+      "products": [
+        "suit-2pc",
+        "suit-3pc"
+      ],
+      "addrs": [
+        "suit-2pc > Trousers-waistband > waistband-width > wband-35",
+        "suit-3pc > Trousers-waistband > waistband-width > wband-35"
+      ]
+    },
+    {
+      "key": "trouser-waistband-width|waistband-width|wband-35|3.5 cm",
+      "part": "trouser-waistband-width",
+      "field": "waistband-width",
+      "fieldLabel": "waistband-width",
+      "option": "wband-35",
+      "label": "3.5 cm",
+      "rows": 1,
+      "products": [
+        "trousers"
+      ],
+      "addrs": [
+        "trousers > waistband > waistband-width > wband-35"
+      ]
+    },
+    {
+      "key": "jacket-detail|waistband-width|wband-38|3.8 cm",
+      "part": "jacket-detail",
+      "field": "waistband-width",
+      "fieldLabel": "waistband-width",
+      "option": "wband-38",
+      "label": "3.8 cm",
+      "rows": 2,
+      "products": [
+        "suit-2pc",
+        "suit-3pc"
+      ],
+      "addrs": [
+        "suit-2pc > Trousers-waistband > waistband-width > wband-38",
+        "suit-3pc > Trousers-waistband > waistband-width > wband-38"
+      ]
+    },
+    {
+      "key": "trouser-waistband-width|waistband-width|wband-38|3.8 cm",
+      "part": "trouser-waistband-width",
+      "field": "waistband-width",
+      "fieldLabel": "waistband-width",
+      "option": "wband-38",
+      "label": "3.8 cm",
+      "rows": 1,
+      "products": [
+        "trousers"
+      ],
+      "addrs": [
+        "trousers > waistband > waistband-width > wband-38"
+      ]
+    },
+    {
+      "key": "jacket-detail|waistband-width|wband-40|4.0 cm",
+      "part": "jacket-detail",
+      "field": "waistband-width",
+      "fieldLabel": "waistband-width",
+      "option": "wband-40",
+      "label": "4.0 cm",
+      "rows": 2,
+      "products": [
+        "suit-2pc",
+        "suit-3pc"
+      ],
+      "addrs": [
+        "suit-2pc > Trousers-waistband > waistband-width > wband-40",
+        "suit-3pc > Trousers-waistband > waistband-width > wband-40"
+      ]
+    },
+    {
+      "key": "trouser-waistband-width|waistband-width|wband-40|4.0 cm",
+      "part": "trouser-waistband-width",
+      "field": "waistband-width",
+      "fieldLabel": "waistband-width",
+      "option": "wband-40",
+      "label": "4.0 cm",
+      "rows": 1,
+      "products": [
+        "trousers"
+      ],
+      "addrs": [
+        "trousers > waistband > waistband-width > wband-40"
+      ]
+    },
+    {
+      "key": "jacket-detail|waistband-width|wband-45|4.5 cm",
+      "part": "jacket-detail",
+      "field": "waistband-width",
+      "fieldLabel": "waistband-width",
+      "option": "wband-45",
+      "label": "4.5 cm",
+      "rows": 2,
+      "products": [
+        "suit-2pc",
+        "suit-3pc"
+      ],
+      "addrs": [
+        "suit-2pc > Trousers-waistband > waistband-width > wband-45",
+        "suit-3pc > Trousers-waistband > waistband-width > wband-45"
+      ]
+    },
+    {
+      "key": "trouser-waistband-width|waistband-width|wband-45|4.5 cm",
+      "part": "trouser-waistband-width",
+      "field": "waistband-width",
+      "fieldLabel": "waistband-width",
+      "option": "wband-45",
+      "label": "4.5 cm",
+      "rows": 1,
+      "products": [
+        "trousers"
+      ],
+      "addrs": [
+        "trousers > waistband > waistband-width > wband-45"
+      ]
+    },
+    {
+      "key": "jacket-detail|waistband-width|wband-50|5.0 cm",
+      "part": "jacket-detail",
+      "field": "waistband-width",
+      "fieldLabel": "waistband-width",
+      "option": "wband-50",
+      "label": "5.0 cm",
+      "rows": 2,
+      "products": [
+        "suit-2pc",
+        "suit-3pc"
+      ],
+      "addrs": [
+        "suit-2pc > Trousers-waistband > waistband-width > wband-50",
+        "suit-3pc > Trousers-waistband > waistband-width > wband-50"
+      ]
+    },
+    {
+      "key": "trouser-waistband-width|waistband-width|wband-50|5.0 cm",
+      "part": "trouser-waistband-width",
+      "field": "waistband-width",
+      "fieldLabel": "waistband-width",
+      "option": "wband-50",
+      "label": "5.0 cm",
+      "rows": 1,
+      "products": [
+        "trousers"
+      ],
+      "addrs": [
+        "trousers > waistband > waistband-width > wband-50"
+      ]
+    }
+  ]
+}

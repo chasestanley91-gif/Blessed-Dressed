@@ -1,0 +1,1960 @@
+{
+  "generatedAt": "2026-07-30T23:18:01.712Z",
+  "finding": "DISTINCT_OPTION_IMAGE_COLLISION",
+  "artifactType": "per-family evidence for a human decision",
+  "status": "EVIDENCE ONLY — NO OPTION HAS BEEN MERGED, NO IMAGE CHANGED, NO CATALOG FILE WRITTEN",
+  "sourceReport": "public/images/reports/defect-image-collisions-2026-07-30.json",
+  "decisionOwner": "human (user). The 2026-07-30 direction was \"macro-shoot what is real, merge what is not\", with the per-family list returned BEFORE any customer-facing option is merged. This document is that list.",
+  "summary": {
+    "families": 14,
+    "optionsAffected": 85,
+    "byRecommendation": {
+      "MACRO_SHOOT": {
+        "families": 3,
+        "options": 25
+      },
+      "MERGE_CANDIDATE": {
+        "families": 9,
+        "options": 56
+      },
+      "NEEDS_SOURCE": {
+        "families": 2,
+        "options": 4
+      }
+    },
+    "customerFacingRowsRemovedIfAllMergesAccepted": 27
+  },
+  "headlineCorrectionToRootCause": {
+    "reportSaid": "The catalog offers finer option granularity (per gorge angle, per pocket slant, per welt height) than the supplier blueprint library documents.",
+    "stillTrue": true,
+    "butUnderstated": "83 of the 85 colliding options are not backed by supplier blueprints at all. They are backed by 16 hand-authored SVG icons totalling 5,073 bytes, drawn in the storefront brand palette (navy #0B1B2E ground, gold #D4AF37 stroke), all written 2026-05-18 17:54. They are UI glyphs, not tech packs — several encode no geometry for the feature they are supposed to define. Meanwhile 63 genuine kutetailor supplier line drawings for exactly these categories sit unused on disk.",
+    "evidence": {
+      "glyphSizesBytes": {
+        "lapel/peak-lapel.svg": 349,
+        "lapel/notch-lapel.svg": 350,
+        "lapel/semi-peak.svg": 274,
+        "lapel/shawl-lapel.svg": 275,
+        "lower-pocket/patch-pocket.svg": 237,
+        "lower-pocket/slanted-flap.svg": 318,
+        "lower-pocket/jetted-flap-5-5cm.svg": 326,
+        "lower-pocket/jetted-flap-6-5cm.svg": 488,
+        "lower-pocket/jetted-no-flap.svg": 236,
+        "lower-pocket/bellows-pocket.svg": 333,
+        "chest-pocket/patch-pocket.svg": 238,
+        "chest-pocket/straight-welt-2-3cm.svg": 300,
+        "chest-pocket/straight-welt-2-5cm.svg": 380,
+        "chest-pocket/curved-welt-2-5cm.svg": 223,
+        "sleeve-cuff/square-cuff.svg": 328,
+        "sleeve-cuff/turnback-cuff.svg": 418
+      },
+      "unusedSupplierLibrary": {
+        "/images/factory/kute/jacket/Lapel_Lapel_Style": {
+          "drawings": 20,
+          "referencedByCatalog": 1
+        },
+        "/images/factory/kute/jacket/Pocket_Lower_Lower_pocket": {
+          "drawings": 26,
+          "referencedByCatalog": 0
+        },
+        "/images/factory/kute/jacket/Pocket_Chest_Chest_pocket": {
+          "drawings": 17,
+          "referencedByCatalog": 0
+        },
+        "/images/factory/kute/jacket/Sleeve_Cuff_style": {
+          "drawings": 1,
+          "referencedByCatalog": 0
+        }
+      },
+      "glyphsThatCannotEncodeTheirOwnFeature": [
+        "chest-pocket/curved-welt-2-5cm.svg draws the welt as a single arc STROKE with no enclosed height — it cannot represent any of the 2.3/2.5/2.7/2.9 cm rungs it backs.",
+        "sleeve-cuff/square-cuff.svg draws horizontal band edges and backs cuff-angled, whose defining feature is a SLANT.",
+        "lower-pocket/jetted-flap-6-5cm.svg draws its mouth at height=\"6\" while labelling itself \"6.5cm\".",
+        "lapel/peak-lapel.svg draws a horizontal peak spike with a ~140 degree vertex and backs ten options spanning 101-115 degrees.",
+        "lower-pocket/bellows-pocket.svg is a rectangle with ONE dashed centre line, and backs options requiring flaps, buttons, box pleats and multiple pleats."
+      ],
+      "unusedDrawingsThatWouldImproveWiringImmediately": [
+        "/images/jacket/lapel/peak-105.svg exists, carries a \"105°\" annotation, and is referenced by NOTHING — lapel-peak-105 uses peak-lapel.svg instead.",
+        "/images/jacket/lapel/notch-tab.svg exists — lapel-notch-tab-basic uses notch-lapel.svg instead.",
+        "/images/factory/kute/jacket/Pocket_Chest_Chest_pocket/0110__Besom.jpeg exists — cp-jetted uses a straight-welt glyph instead.",
+        "/images/factory/kute/jacket/Pocket_Chest_Chest_pocket/00J2__Trapezoid.jpeg exists — cp-trapezoid uses a straight-welt glyph instead."
+      ]
+    }
+  },
+  "governanceFacts": [
+    "NONE of the 85 options has ever been through garment-image-qc. A search of .craft-pipeline for a directory named after any of the 85 option ids returns 0 hits; the 19 qc.json files on disk cover unrelated shirt/sport-coat options. There is therefore NO QC verdict to revoke and no approved image being overturned by any decision taken here.",
+    "The collided images are real, separate files: e.g. 13 distinct 2,227,870-byte PNGs under /images/generated/jacket/ all hashing to cb7b3639df75. They were copied, not generated per option.",
+    "The collision persisted through the PNG->WebP publish: all 14 groups still show exactly ONE distinct content hash across their members as of this report."
+  ],
+  "resolutionThresholds": {
+    "derivedFrom": "failure-log.md, [MEASURED LADDERS - hard physics limit], 2026-07-28",
+    "measurement": {
+      "collarLadder": {
+        "intendedCm": [
+          0.1,
+          0.3,
+          0.5,
+          0.6
+        ],
+        "renderedButtonDiameters": [
+          0.312,
+          0.404,
+          0.316,
+          0.476
+        ],
+        "inversionAt": "rung 3 (0.5 cm rendered at the 0.1 cm value)"
+      },
+      "cuffLadder": {
+        "intendedCm": [
+          0.1,
+          0.3,
+          0.5,
+          0.6
+        ],
+        "renderedButtonDiameters": [
+          0.233,
+          0.353,
+          0.555,
+          0.362
+        ],
+        "inversionAt": "rung 4 (0.6 cm collapsed onto the 0.3 cm value)"
+      }
+    },
+    "derivedRenderError": "Adjacent rungs that came back with the WRONG SIGN differed by 0.088 and 0.193 button-diameters. Taking a shirt button at ~1.1 cm, that is roughly 1-2 mm of absolute rendering error on an edge-referenced dimension. The rendered SPAN was also compressed to roughly a third to a half of the intended span.",
+    "practicalRuleForAbsoluteDimensions": "ESTIMATE, from n=2 measured ladders — treat as order-of-magnitude. Below ~2 mm of true separation: inside the render error, unusable. 2-5 mm: within 2-3x the error, only usable as a monotonic SET with a blind-ordering gate. Above ~1 cm: safe.",
+    "honestLimitOnAngles": "No ANGULAR ladder has ever been measured in this repo. Angles are a different measurement class from offsets: both edges are in frame, so the reader compares them to each other rather than to an external scale. The angular verdicts here (peak, semi-peak, notch) therefore do NOT rest on the mm conversion — they rest on (a) arithmetic where the separation is literally zero degrees, and (b) the absence of any drawing carrying an angle, which forces prompt-only geometry that the failure log shows loses to the model prior."
+  },
+  "crossFamilyObservations": [
+    "THE PEAK LADDER SPANS TWO FAMILIES. FAM-PEAK-GORGE-ANGLE (10 options on peak-lapel.svg) and FAM-SEMI-PEAK-ANGLE (2 options on semi-peak.svg) are one continuous 99-115 degree pseudo-ladder of 12 options split across two glyphs. Decide them together.",
+    "THE FLAP-DEPTH LADDERS SPAN TWO FAMILIES. \"Slanted Flap\" and \"Large Slanted Flap\" each run 4.0-6.5 cm, but their 5.5 and 6.5 rungs sit in FAM-FLAP-DEPTH-55-65 while 4.0/4.5/5.0/6.0 sit in FAM-SLANTED-FLAP-DEPTH, because the 5.5/6.5 rungs were mis-wired onto straight-jetted drawings. Decide those two families together as well.",
+    "SIX STANDARD/LARGE PAIRS CARRY IDENTICAL STATED GEOMETRY. Across the two flap families, Slanted Flap N cm and Large Slanted Flap N cm exist at N = 4.0, 4.5, 5.0, 5.5, 6.0, 6.5. The only stated difference is the word \"Large\", defined as \"a steeper angle OR a wider and deeper flap\". These twelve rows encode at most six distinct products, and possibly fewer.",
+    "THE CATALOG IS CROSS-MULTIPLYING TWO SUPPLIER AXES INTO FLAT ROWS. kutetailor models lapel STYLE (Notch / Peak / Semi-peak / Shawl / ...) and gorge HEIGHT (Lapel_Lapel_adjustment: Drop_Gorge_by_1.0cm, Drop_Gorge_by_4.0cm) as separate fields, and lower-pocket SHAPE (Regular / Regular slanted / Very slanted / Extreme slanted / Besom / Patch / ...) separately from size. The catalog has flattened style x dimension into one long option list, which is what produced families of ten near-identical rows backed by one drawing.",
+    "IDENTICAL DESCRIPTIONS ARE A RELIABLE MERGE SIGNAL. Where a ladder was generated mechanically, the prose was copied verbatim: all six Straight Jetted Flap descriptions are byte-identical, as are all four Large Slanted Flap descriptions and all six Slanted Flap descriptions. Where the catalog author actually believed two options differed, the prose differs (compare Peak 99 vs Peak 114)."
+  ],
+  "families": [
+    {
+      "familyId": "FAM-PATCH-POCKET",
+      "title": "Patch pockets (chest + lower) — 13 options",
+      "groupSha1": "cb7b3639df7552df98cd1967d6abd1c4c2ffe403",
+      "optionCount": 13,
+      "products": [
+        "sport-coat",
+        "suit-2pc",
+        "suit-3pc"
+      ],
+      "collision": {
+        "sharedImageAtReportTime": "/images/generated/jacket/cp-patch.png",
+        "sharedImageNow": "/images/generated/jacket/cp-patch.webp",
+        "sharedContentSha1Now": "f7fa88b7d6d1076383d4f982881c6a34a8b69669",
+        "distinctShippedContentHashesAcrossFamily": 1,
+        "note": "Every option in this family ships byte-identical content. Verified again 2026-07-30 after the PNG->WebP publish; the collision survived the conversion."
+      },
+      "blueprints": {
+        "distinctCount": 2,
+        "paths": [
+          "/images/jacket/chest-pocket/patch-pocket.svg",
+          "/images/jacket/lower-pocket/patch-pocket.svg"
+        ],
+        "bytes": {
+          "/images/jacket/chest-pocket/patch-pocket.svg": 238,
+          "/images/jacket/lower-pocket/patch-pocket.svg": 237
+        },
+        "kind": "ui-glyph"
+      },
+      "differentiator": {
+        "axis": "pocket outline shape, pleat count, flap presence, tab shape",
+        "class": "categorical",
+        "statement": "Every member differs by a whole-shape or whole-part change, not by a dimension: plain patch vs rounded-corner patch (tasca a pignata) vs teardrop/water-drop outline; pleat count 0 / 1 inverted / 1 box / multi; flap absent vs present; flap plain vs flap+button; button tab terminated round vs straight vs 45-degree angled; and one variant with TWO flanking flaps. Nothing in this family is separated by millimetres.",
+        "smallestDifference": "The tightest pair is the three button-tab terminations (round / straight / angled). A jacket pocket button tab is roughly 20-25 mm wide; the terminal shape occupies the whole tab, so at macro framing the difference is ~100% of the feature, not a fraction of it.",
+        "largestDifference": "plain rectangular patch vs water-drop outline — the entire silhouette changes.",
+        "catalogTextEvidence": "Descriptions name the shape explicitly and non-numerically (\"continuous curved lower edge and gently rounded corners\"; \"cut to resemble a teardrop\"; \"two flanking flaps that frame the opening\"). No member is defined by a measurement."
+      },
+      "recommendation": "MACRO_SHOOT",
+      "confidence": "high",
+      "rationale": [
+        "Categorical shape changes are the case the failure log says works: the 2026-07-27 cs-left-sq-rt-rnd lesson shows deliberately different terminal shapes render correctly once each shape gets its own simile and the sibling shapes are forbidden by name (TERMINAL_SHAPE_FAMILIES).",
+        "The MEASURED LADDERS limit does not apply: no member of this family is separated by a millimetre-scale dimension.",
+        "Genuine kutetailor supplier line drawings exist for most members (Pocket_Lower_Lower_pocket, Pocket_Chest_Chest_pocket) and are currently unused — the family can be re-pointed off the 237-byte UI glyph onto real artwork before a single credit is spent."
+      ],
+      "supplierCandidates": {
+        "folders": [
+          "/images/factory/kute/jacket/Pocket_Lower_Lower_pocket",
+          "/images/factory/kute/jacket/Pocket_Chest_Chest_pocket"
+        ],
+        "strongMatches": {
+          "lp-patch": "02J1__Patch.jpeg",
+          "lp-patch-rounded": "02K0__Curved_patch.jpeg",
+          "lp-patch-flap": "02L2__Patch_with_flap.jpeg",
+          "cp-patch": "0150__Patch.jpeg",
+          "cp-patch-multi": "0121__One_pleat_patch.jpeg (verify: catalog says two or more pleats)",
+          "cp-inverted-pleat-flap": "015F__One_pleat_pointed_flap_with_bttn_bttnhole.jpeg (verify)"
+        },
+        "unmatchedNeedingHumanMapping": [
+          "lp-patch-btn-tab-round",
+          "lp-patch-btn-tab-straight",
+          "lp-patch-btn-tab-angled",
+          "lp-water-drop (candidate 02J0__Patch_with_Ship_shape — ship-shape is not obviously teardrop; do not assume)",
+          "cp-patch-angled",
+          "cp-inverted-pleat-2flap"
+        ]
+      },
+      "proposedResolution": {
+        "reshootAsDistinct": "all 13",
+        "mergeAway": [],
+        "precondition": "Re-point techpackIllustration from the UI glyph to the matched kutetailor drawing first. Shoot chest and lower patches as two separate SETs (different garment position, different scale)."
+      },
+      "requiredDrawings": [
+        "kutetailor lower-pocket artwork for the three patch button-tab terminations (round / straight / angled) — not obviously present in Pocket_Lower_Lower_pocket",
+        "kutetailor artwork confirming the water-drop patch outline"
+      ],
+      "optionsAffected": [
+        {
+          "id": "cp-patch",
+          "label": "Patch Pocket",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/chest-pocket/patch-pocket.svg",
+          "shippedImage": "/images/generated/jacket/cp-patch.webp"
+        },
+        {
+          "id": "cp-patch-angled",
+          "label": "Angled Box Pleat Patch",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/chest-pocket/patch-pocket.svg",
+          "shippedImage": "/images/generated/jacket/cp-patch-angled.webp"
+        },
+        {
+          "id": "cp-patch-multi",
+          "label": "Multi-Pleated Patch",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/chest-pocket/patch-pocket.svg",
+          "shippedImage": "/images/generated/jacket/cp-patch-multi.webp"
+        },
+        {
+          "id": "cp-inverted-pleat-2flap",
+          "label": "Two Inverted Pleated + Flaps",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/chest-pocket/patch-pocket.svg",
+          "shippedImage": "/images/generated/jacket/cp-inverted-pleat-2flap.webp"
+        },
+        {
+          "id": "cp-inverted-pleat-flap",
+          "label": "Inverted Pleated + Flap",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/chest-pocket/patch-pocket.svg",
+          "shippedImage": "/images/generated/jacket/cp-inverted-pleat-flap.webp"
+        },
+        {
+          "id": "lp-patch",
+          "label": "Patch Pocket",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/patch-pocket.svg",
+          "shippedImage": "/images/generated/jacket/lp-patch.webp"
+        },
+        {
+          "id": "lp-patch-rounded",
+          "label": "Rounded Patch",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/patch-pocket.svg",
+          "shippedImage": "/images/generated/jacket/lp-patch-rounded.webp"
+        },
+        {
+          "id": "lp-patch-flap",
+          "label": "Patch with Basic Flap",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/patch-pocket.svg",
+          "shippedImage": "/images/generated/jacket/lp-patch-flap.webp"
+        },
+        {
+          "id": "lp-patch-flap-btn",
+          "label": "Patch with Flap & Button",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/patch-pocket.svg",
+          "shippedImage": "/images/generated/jacket/lp-patch-flap-btn.webp"
+        },
+        {
+          "id": "lp-patch-btn-tab-round",
+          "label": "Patch + Rounded Button Tab",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/patch-pocket.svg",
+          "shippedImage": "/images/generated/jacket/lp-patch-btn-tab-round.webp"
+        },
+        {
+          "id": "lp-patch-btn-tab-straight",
+          "label": "Patch + Straight Button Tab",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/patch-pocket.svg",
+          "shippedImage": "/images/generated/jacket/lp-patch-btn-tab-straight.webp"
+        },
+        {
+          "id": "lp-patch-btn-tab-angled",
+          "label": "Patch + Angled Button Tab",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/patch-pocket.svg",
+          "shippedImage": "/images/generated/jacket/lp-patch-btn-tab-angled.webp"
+        },
+        {
+          "id": "lp-water-drop",
+          "label": "Water-drop Shape Patch",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/patch-pocket.svg",
+          "shippedImage": "/images/generated/jacket/lp-water-drop.webp"
+        }
+      ]
+    },
+    {
+      "familyId": "FAM-FLAP-DEPTH-55-65",
+      "title": "Lower-pocket flap depth ladder, 5.5/6.5 cm drawings — 11 options",
+      "groupSha1": "a524454517ef0e1d851cb6fb45788a980ede8d02",
+      "optionCount": 11,
+      "products": [
+        "sport-coat",
+        "suit-2pc",
+        "suit-3pc"
+      ],
+      "collision": {
+        "sharedImageAtReportTime": "/images/generated/jacket/lp-slanted-flap-55.png",
+        "sharedImageNow": "/images/generated/jacket/lp-slanted-flap-55.webp",
+        "sharedContentSha1Now": "d3e9123ef264a714872c241fac7f696e47f200b6",
+        "distinctShippedContentHashesAcrossFamily": 1,
+        "note": "Every option in this family ships byte-identical content. Verified again 2026-07-30 after the PNG->WebP publish; the collision survived the conversion."
+      },
+      "blueprints": {
+        "distinctCount": 2,
+        "paths": [
+          "/images/jacket/lower-pocket/jetted-flap-5-5cm.svg",
+          "/images/jacket/lower-pocket/jetted-flap-6-5cm.svg"
+        ],
+        "bytes": {
+          "/images/jacket/lower-pocket/jetted-flap-5-5cm.svg": 326,
+          "/images/jacket/lower-pocket/jetted-flap-6-5cm.svg": 488
+        },
+        "kind": "ui-glyph"
+      },
+      "differentiator": {
+        "axis": "flap depth in cm (plus a mixed slanted/straight/large/RL axis)",
+        "class": "graduated-absolute",
+        "statement": "Six of the eleven are one ladder: Straight Jetted Flap 4.0 / 4.5 / 5.0 / 5.5 / 6.0 / 6.5 cm — a 2.5 cm total span in 0.5 cm steps. The rest mix in orientation (slanted vs straight), a \"Large\" qualifier carrying no dimension, and one RL house cut.",
+        "spread": "2.5 cm across 6 rungs",
+        "neighbourStep": "5 mm (12.5% of the 4.0 cm rung, 7.7% of the 6.5 cm rung)",
+        "catalogTextEvidence": "All six Straight Jetted Flap descriptions are BYTE-IDENTICAL to each other. The catalog carries no prose that distinguishes 4.0 from 6.5 — only the number in the label. Likewise all four \"Large Slanted Flap\" descriptions are identical to each other and define \"Large\" only as \"cut at a steeper angle OR with a noticeably wider and deeper flap\" — an unresolved either/or."
+      },
+      "recommendation": "MERGE_CANDIDATE",
+      "confidence": "high",
+      "rationale": [
+        "A 5 mm neighbour step is 2.5-5x the measured render error (0.09-0.19 button-diameters, ~1-2 mm) and sits in the band where the 2026-07-28 ladder produced RANK INVERSIONS: the cuff ladder rendered the 0.6 cm rung (0.362) below the 0.5 cm rung (0.555), collapsing it onto the 0.3 cm value.",
+        "Flap depth is an ABSOLUTE dimension: a reader cannot judge it without an in-frame scale. The failed ladder at least had a button to measure against and still inverted.",
+        "The supplier library has NO cm depth ladder for lower pockets. Pocket_Lower_Lower_pocket enumerates slant tiers (Regular / Regular slanted / Very slanted / Extreme slanted) and closure types (Besom, Diamond flap, Diamond flaps with buttons) plus a single 2.5 CM welt. The six-rung cm ladder has no counterpart in the manufacturer's own option list.",
+        "The 2.5 cm END-TO-END span IS resolvable (roughly 1.7-2.3 button-diameters), so two tiers can be photographed apart. Six cannot."
+      ],
+      "dataDefectsFound": [
+        "BLUEPRINT/LABEL CONFLICT: lp-slanted-flap-55 and lp-slanted-flap-65 (and lp-large-slanted-55 / -65) are pointed at jetted-flap-5-5cm.svg / jetted-flap-6-5cm.svg — drawings of a STRAIGHT horizontal jetted flap — while their siblings at 4.0/4.5/5.0/6.0 use slanted-flap.svg. Four SLANTED options are backed by a STRAIGHT drawing. This looks like a filename-number match that ignored orientation, and is exactly the class of defect the BLUEPRINT_CONFLICT gate exists to catch.",
+        "jetted-flap-6-5cm.svg draws its pocket-mouth rect at height=\"6\" while its own text label reads \"6.5cm\"; jetted-flap-5-5cm.svg draws height=\"5.5\". The glyph does not internally agree with its filename."
+      ],
+      "supplierCandidates": {
+        "folders": [
+          "/images/factory/kute/jacket/Pocket_Lower_Lower_pocket"
+        ],
+        "note": "Supplier slant tiers 0201__Regular / 02A1__Regular_slanted / 02B1__Very_slanted / 02C1__Extreme_slanted, and besom equivalents 0231 / 02B6 / 02C6, are all present and unused."
+      },
+      "proposedResolution": {
+        "reshootAsDistinct": [
+          "lp-slanted-jetted-family orientation tiers",
+          "lp-rl-flat-55"
+        ],
+        "mergeAway": [
+          "Collapse Straight Jetted Flap 4.0/4.5/5.0/5.5/6.0/6.5 to TWO tiers at least 1.5 cm apart (suggested: 4.5 cm \"standard\" and 6.0 cm \"deep\") — removes 4 customer-facing rows.",
+          "Expose the remaining depth values, if the factory really accepts them, as a numeric spec/price field on the retained option rather than as separate photographed rows."
+        ],
+        "optionsRemovedIfAccepted": 4
+      },
+      "requiredDrawings": [
+        "If the six cm rungs must be retained: a per-depth kutetailor lower-pocket drawing for each of 4.0/4.5/5.0/5.5/6.0/6.5 cm. None exists today."
+      ],
+      "optionsAffected": [
+        {
+          "id": "lp-slanted-flap-55",
+          "label": "Slanted Flap 5.5 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/jetted-flap-5-5cm.svg",
+          "shippedImage": "/images/generated/jacket/lp-slanted-flap-55.webp"
+        },
+        {
+          "id": "lp-slanted-flap-65",
+          "label": "Slanted Flap 6.5 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/jetted-flap-6-5cm.svg",
+          "shippedImage": "/images/generated/jacket/lp-slanted-flap-65.webp"
+        },
+        {
+          "id": "lp-large-slanted-55",
+          "label": "Large Slanted Flap 5.5 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/jetted-flap-5-5cm.svg",
+          "shippedImage": "/images/generated/jacket/lp-large-slanted-55.webp"
+        },
+        {
+          "id": "lp-large-slanted-65",
+          "label": "Large Slanted Flap 6.5 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/jetted-flap-6-5cm.svg",
+          "shippedImage": "/images/generated/jacket/lp-large-slanted-65.webp"
+        },
+        {
+          "id": "lp-straight-jetted-40",
+          "label": "Straight Jetted Flap 4.0 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/jetted-flap-5-5cm.svg",
+          "shippedImage": "/images/generated/jacket/lp-straight-jetted-40.webp"
+        },
+        {
+          "id": "lp-straight-jetted-45",
+          "label": "Straight Jetted Flap 4.5 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/jetted-flap-5-5cm.svg",
+          "shippedImage": "/images/generated/jacket/lp-straight-jetted-45.webp"
+        },
+        {
+          "id": "lp-straight-jetted-50",
+          "label": "Straight Jetted Flap 5.0 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/jetted-flap-5-5cm.svg",
+          "shippedImage": "/images/generated/jacket/lp-straight-jetted-50.webp"
+        },
+        {
+          "id": "lp-straight-jetted-55",
+          "label": "Straight Jetted Flap 5.5 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/jetted-flap-5-5cm.svg",
+          "shippedImage": "/images/generated/jacket/lp-straight-jetted-55.webp"
+        },
+        {
+          "id": "lp-straight-jetted-60",
+          "label": "Straight Jetted Flap 6.0 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/jetted-flap-6-5cm.svg",
+          "shippedImage": "/images/generated/jacket/lp-straight-jetted-60.webp"
+        },
+        {
+          "id": "lp-straight-jetted-65",
+          "label": "Straight Jetted Flap 6.5 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/jetted-flap-6-5cm.svg",
+          "shippedImage": "/images/generated/jacket/lp-straight-jetted-65.webp"
+        },
+        {
+          "id": "lp-rl-flat-55",
+          "label": "RL Flat Dress Pocket 5.5 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/jetted-flap-5-5cm.svg",
+          "shippedImage": "/images/generated/jacket/lp-rl-flat-55.webp"
+        }
+      ]
+    },
+    {
+      "familyId": "FAM-PEAK-GORGE-ANGLE",
+      "title": "Peak lapel gorge angle 101-115 degrees — 10 options, ONE drawing",
+      "groupSha1": "3a36d52407645bb37475babebd81da852fa857c3",
+      "optionCount": 10,
+      "products": [
+        "sport-coat",
+        "suit-2pc",
+        "suit-3pc"
+      ],
+      "collision": {
+        "sharedImageAtReportTime": "/images/generated/jacket/lapel-peak-101.png",
+        "sharedImageNow": "/images/generated/jacket/lapel-peak-101.webp",
+        "sharedContentSha1Now": "45bf967028e78090fa3f66927e89cd198c213080",
+        "distinctShippedContentHashesAcrossFamily": 1,
+        "note": "Every option in this family ships byte-identical content. Verified again 2026-07-30 after the PNG->WebP publish; the collision survived the conversion."
+      },
+      "blueprints": {
+        "distinctCount": 1,
+        "paths": [
+          "/images/jacket/lapel/peak-lapel.svg"
+        ],
+        "bytes": {
+          "/images/jacket/lapel/peak-lapel.svg": 349
+        },
+        "kind": "ui-glyph"
+      },
+      "differentiator": {
+        "axis": "peak gorge angle in degrees, plus three categorical modifiers",
+        "class": "graduated-angular",
+        "statement": "Ten options spanning 101 / 102 / 102-RL / 103-curved / 105 / 107 / 108 / 110 / 110-low / 115 degrees. Total spread 14 degrees across 9 transitions — a mean of 1.6 degrees between neighbours. TWO transitions are ZERO degrees: 102 vs 102-RL and 110 vs 110-low carry the same stated angle and differ only by a house draft (\"RL\") and a gorge height (\"low\").",
+        "spread": "14 degrees (101 to 115)",
+        "neighbourStep": "1.6 degrees mean; 0 degrees at two pairs; 1 degree at three pairs",
+        "geometricConversion": "Assuming a 6 cm peak tip length (typical bespoke range 4-7 cm), tip displacement is ~1.05 mm per degree. So a 1.6 degree mean step moves the peak tip ~1.7 mm; the full 14 degree span moves it ~14.7 mm. ASSUMPTION: peak length 6 cm — stated so it can be checked.",
+        "catalogTextEvidence": "lapel-peak-102-rl describes its own difference as \"a subtle variation in how the collar and lapel panel seam is drafted\", \"marginally more open or closed\", \"visible to connoisseurs\". That is the catalog itself stating the difference is sub-photographic."
+      },
+      "recommendation": "MERGE_CANDIDATE",
+      "confidence": "high",
+      "rationale": [
+        "ARITHMETIC, not estimate: lapel-peak-102 and lapel-peak-102-rl are ZERO degrees apart. Two options at zero separation cannot be photographed apart under any framing.",
+        "A 1.7 mm mean neighbour displacement is inside the measured render error band (0.09-0.19 button-diameters, ~1-2 mm) from the 2026-07-28 ladder that inverted its own rungs.",
+        "The blueprint carries no angle at all. peak-lapel.svg is a 349-byte UI glyph whose drawn peak is a horizontal spike with a ~140 degree vertex — matching NONE of the ten catalog values. Geometry would therefore have to come from prompt text alone, and the failure log is explicit that prompt-only geometry loses to the model prior and to a contradicting reference (\"saying what a thing IS does not suppress the model prior\"; square collars scored 20-35 while the reference disagreed).",
+        "SUPPLIER TAXONOMY: kutetailor Lapel_Lapel_Style contains ONE peak drawing (0002__Peak.jpeg, verified visually — a real technical line drawing, red-highlighted lapel, NO degree annotation) plus 0004__Semi-peak, 00JC__E_peak and 001J__Round_peak. The manufacturer does not sell ten peak angles. Separately, Lapel_Lapel_adjustment models gorge height as an ADJUSTMENT (00B3__Drop_Gorge_by_1.0cm, 00BC__Drop_Gorge_by_4.0cm) applied on top of a lapel style — which is exactly what lapel-peak-110-low is.",
+        "CHECKPOINT.json already carries the standing recommendation \"Recommend merging or repricing rather than generating 10 near-identical images.\" This evidence supports it."
+      ],
+      "proposedResolution": {
+        "reshootAsDistinct": [
+          "lapel-peak-103-curved — a curved peak EDGE vs a straight one is a shape change, not an angle (supplier candidate: 00JC__E_peak, needs confirmation)",
+          "lapel-peak-108 (Straight Peak) — the straight-edge counterpart to the curved one"
+        ],
+        "mergeAway": [
+          "Collapse 101 / 102 / 102-RL / 105 / 107 / 110 / 115 into a single \"Peak\" option matching supplier 0002__Peak. Optionally retain ONE wide variant at >=7 degrees separation (~7.3 mm tip displacement) if a wide peak is commercially important.",
+          "Re-express lapel-peak-110-low as the supplier already does: a \"drop gorge\" adjustment modifier on any lapel style, not a separate photographed lapel.",
+          "Reprice rather than re-photograph where the angle is a genuine factory spec: sell the angle as a numeric field on the retained Peak option."
+        ],
+        "optionsRemovedIfAccepted": 7,
+        "strictSupplierAlternative": "If you follow kutetailor exactly, the ten collapse to ONE (0002__Peak), removing 9 rows."
+      },
+      "requiredDrawings": [
+        "If any angle tier is to be retained as its own photographed option: a kutetailor peak-lapel drawing carrying that gorge angle as an annotation. No such drawing exists in the repo today."
+      ],
+      "optionsAffected": [
+        {
+          "id": "lapel-peak-101",
+          "label": "Peak 101°",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lapel/peak-lapel.svg",
+          "shippedImage": "/images/generated/jacket/lapel-peak-101.webp"
+        },
+        {
+          "id": "lapel-peak-102",
+          "label": "Peak 102°",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lapel/peak-lapel.svg",
+          "shippedImage": "/images/generated/jacket/lapel-peak-102.webp"
+        },
+        {
+          "id": "lapel-peak-102-rl",
+          "label": "Peak 102° RL",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lapel/peak-lapel.svg",
+          "shippedImage": "/images/generated/jacket/lapel-peak-102-rl.webp"
+        },
+        {
+          "id": "lapel-peak-103-curved",
+          "label": "Curved Peak 103°",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lapel/peak-lapel.svg",
+          "shippedImage": "/images/generated/jacket/lapel-peak-103-curved.webp"
+        },
+        {
+          "id": "lapel-peak-105",
+          "label": "Peak 105°",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lapel/peak-lapel.svg",
+          "shippedImage": "/images/generated/jacket/lapel-peak-105.webp"
+        },
+        {
+          "id": "lapel-peak-107",
+          "label": "Peak 107° (Normal Curve)",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lapel/peak-lapel.svg",
+          "shippedImage": "/images/generated/jacket/lapel-peak-107.webp"
+        },
+        {
+          "id": "lapel-peak-108",
+          "label": "Straight Peak 108°",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lapel/peak-lapel.svg",
+          "shippedImage": "/images/generated/jacket/lapel-peak-108.webp"
+        },
+        {
+          "id": "lapel-peak-110",
+          "label": "Peak 110°",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lapel/peak-lapel.svg",
+          "shippedImage": "/images/generated/jacket/lapel-peak-110.webp"
+        },
+        {
+          "id": "lapel-peak-110-low",
+          "label": "Low Peak 110°",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lapel/peak-lapel.svg",
+          "shippedImage": "/images/generated/jacket/lapel-peak-110-low.webp"
+        },
+        {
+          "id": "lapel-peak-115",
+          "label": "Peak 115°",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lapel/peak-lapel.svg",
+          "shippedImage": "/images/generated/jacket/lapel-peak-115.webp"
+        }
+      ]
+    },
+    {
+      "familyId": "FAM-SLANTED-FLAP-DEPTH",
+      "title": "Slanted / Large Slanted flap depth ladder — 10 options, ONE drawing",
+      "groupSha1": "5a49ccce460ded81fb7442161833e10ae36c0bd6",
+      "optionCount": 10,
+      "products": [
+        "sport-coat",
+        "suit-2pc",
+        "suit-3pc"
+      ],
+      "collision": {
+        "sharedImageAtReportTime": "/images/generated/jacket/lp-slanted-flap-40.png",
+        "sharedImageNow": "/images/generated/jacket/lp-slanted-flap-40.webp",
+        "sharedContentSha1Now": "277a61bd89f84489a5cd4d0b154cd112e3002c2e",
+        "distinctShippedContentHashesAcrossFamily": 1,
+        "note": "Every option in this family ships byte-identical content. Verified again 2026-07-30 after the PNG->WebP publish; the collision survived the conversion."
+      },
+      "blueprints": {
+        "distinctCount": 1,
+        "paths": [
+          "/images/jacket/lower-pocket/slanted-flap.svg"
+        ],
+        "bytes": {
+          "/images/jacket/lower-pocket/slanted-flap.svg": 318
+        },
+        "kind": "ui-glyph"
+      },
+      "differentiator": {
+        "axis": "flap depth in cm x a \"Large\" qualifier x flap-vs-jetted",
+        "class": "graduated-absolute + undefined qualifier",
+        "statement": "Four Slanted Flap rungs (4.0/4.5/5.0/6.0 cm) and four Large Slanted Flap rungs at the SAME four numbers, plus two jetted (flapless) variants. The 4 x 2 grid means eight options form four pairs whose only stated difference is the word \"Large\" — with no dimension attached to it.",
+        "spread": "2.0 cm across the cm rungs; ZERO stated difference within each Standard/Large pair",
+        "neighbourStep": "5 mm on the cm axis; undefined on the Large axis",
+        "catalogTextEvidence": "The Large Slanted description defines the qualifier as \"cut at a steeper angle OR with a noticeably wider and deeper flap\" — an either/or with no number. Standard and Large at the same cm value are therefore not distinguishable from the catalog text at all."
+      },
+      "recommendation": "MERGE_CANDIDATE",
+      "confidence": "high",
+      "rationale": [
+        "Four pairs (40/40, 45/45, 50/50, 60/60) carry identical stated geometry. You cannot photograph a difference the specification does not state — this is a specification defect, not a photography problem.",
+        "5 mm neighbour steps on the cm axis sit in the measured inversion band (see FAM-FLAP-DEPTH-55-65).",
+        "The flap-vs-jetted split IS categorical and photographable (a flap covers the mouth; a besom has none), so lp-slanted-jetted and lp-large-slanted-jetted should survive as distinct shoots.",
+        "RESOLVING THE \"LARGE\" QUESTION FROM THE SUPPLIER: kutetailor models slant as three named tiers — 02A1__Regular_slanted, 02B1__Very_slanted, 02C1__Extreme_slanted — with matching besom variants (02B6, 02C6). That is a real, photographable, categorical axis, and it is almost certainly what \"Large\" is trying to express. INFERENCE, not fact: requires one human confirmation."
+      ],
+      "proposedResolution": {
+        "reshootAsDistinct": [
+          "lp-slanted-jetted",
+          "lp-large-slanted-jetted"
+        ],
+        "mergeAway": [
+          "Collapse Slanted Flap 4.0/4.5/5.0/6.0 to two tiers (removes 2 rows).",
+          "Collapse Large Slanted Flap 4.0/4.5/5.0/6.0 to two tiers (removes 2 rows).",
+          "BETTER: replace the cm ladder entirely with the supplier slant tiers Regular slanted / Very slanted / Extreme slanted, each of which HAS a real drawing, and carry depth as a numeric spec."
+        ],
+        "optionsRemovedIfAccepted": 4
+      },
+      "requiredDrawings": [
+        "A supplier statement (drawing or spec table) defining \"Large\" — either a slant angle or a flap depth+length. Without it, Standard and Large at the same cm are the same option."
+      ],
+      "optionsAffected": [
+        {
+          "id": "lp-slanted-flap-40",
+          "label": "Slanted Flap 4.0 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/slanted-flap.svg",
+          "shippedImage": "/images/generated/jacket/lp-slanted-flap-40.webp"
+        },
+        {
+          "id": "lp-slanted-flap-45",
+          "label": "Slanted Flap 4.5 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/slanted-flap.svg",
+          "shippedImage": "/images/generated/jacket/lp-slanted-flap-45.webp"
+        },
+        {
+          "id": "lp-slanted-flap-50",
+          "label": "Slanted Flap 5.0 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/slanted-flap.svg",
+          "shippedImage": "/images/generated/jacket/lp-slanted-flap-50.webp"
+        },
+        {
+          "id": "lp-slanted-flap-60",
+          "label": "Slanted Flap 6.0 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/slanted-flap.svg",
+          "shippedImage": "/images/generated/jacket/lp-slanted-flap-60.webp"
+        },
+        {
+          "id": "lp-large-slanted-40",
+          "label": "Large Slanted Flap 4.0 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/slanted-flap.svg",
+          "shippedImage": "/images/generated/jacket/lp-large-slanted-40.webp"
+        },
+        {
+          "id": "lp-large-slanted-45",
+          "label": "Large Slanted Flap 4.5 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/slanted-flap.svg",
+          "shippedImage": "/images/generated/jacket/lp-large-slanted-45.webp"
+        },
+        {
+          "id": "lp-large-slanted-50",
+          "label": "Large Slanted Flap 5.0 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/slanted-flap.svg",
+          "shippedImage": "/images/generated/jacket/lp-large-slanted-50.webp"
+        },
+        {
+          "id": "lp-large-slanted-60",
+          "label": "Large Slanted Flap 6.0 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/slanted-flap.svg",
+          "shippedImage": "/images/generated/jacket/lp-large-slanted-60.webp"
+        },
+        {
+          "id": "lp-slanted-jetted",
+          "label": "Slanted Jetted Pocket",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/slanted-flap.svg",
+          "shippedImage": "/images/generated/jacket/lp-slanted-jetted.webp"
+        },
+        {
+          "id": "lp-large-slanted-jetted",
+          "label": "Large Slanted Jetted Pocket",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/slanted-flap.svg",
+          "shippedImage": "/images/generated/jacket/lp-large-slanted-jetted.webp"
+        }
+      ]
+    },
+    {
+      "familyId": "FAM-SHAWL-VARIANT",
+      "title": "Shawl lapel variants — 6 options, ONE drawing",
+      "groupSha1": "c3dd66084e020b452386610ccfd479a3c743b48e",
+      "optionCount": 6,
+      "products": [
+        "sport-coat",
+        "suit-2pc",
+        "suit-3pc"
+      ],
+      "collision": {
+        "sharedImageAtReportTime": "/images/generated/jacket/lapel-shawl.png",
+        "sharedImageNow": "/images/generated/jacket/lapel-shawl.webp",
+        "sharedContentSha1Now": "ca22563b317dc247e8a6edc512510d84e5f4f435",
+        "distinctShippedContentHashesAcrossFamily": 1,
+        "note": "Every option in this family ships byte-identical content. Verified again 2026-07-30 after the PNG->WebP publish; the collision survived the conversion."
+      },
+      "blueprints": {
+        "distinctCount": 1,
+        "paths": [
+          "/images/jacket/lapel/shawl-lapel.svg"
+        ],
+        "bytes": {
+          "/images/jacket/lapel/shawl-lapel.svg": 275
+        },
+        "kind": "ui-glyph"
+      },
+      "differentiator": {
+        "axis": "shawl outer-edge curvature and lapel face width (supplier style codes), plus one asymmetry",
+        "class": "categorical (but expressed as opaque supplier codes)",
+        "statement": "Six options: classic Shawl, D-Shawl (pronounced D-profile outer curve), Shawl 0A, Shawl 0E, Shawl 0005, and an Asymmetric Shawl Collar where one lapel is deliberately shaped differently from the other. The 0A/0E/0005 codes are opaque in the catalog — no widths, no roll-line figures.",
+        "catalogTextEvidence": "lapel-shawl-0005 describes its difference as \"micro-differences in the geometry ... visible to the educated eye\" — as written, sub-photographic. lapel-shawl-0e is \"narrower, tighter roll\"; lapel-shawl-0a is \"moderately wide ... medium roll\". Comparative, never numeric."
+      },
+      "recommendation": "MACRO_SHOOT",
+      "confidence": "medium",
+      "rationale": [
+        "THE DRAWINGS EXIST AND ARE VISIBLY DIFFERENT. The catalog ids encode kutetailor style codes: lapel-shawl-0005 -> 0005__Shawl.jpeg, lapel-shawl-0a -> 090A__A_shawl.jpeg, lapel-shawl-0e -> 090E__E_shawl.png. All three were opened and compared: 0005 is a slim, straight-edged shawl tapering to a low sharp break; 090A is wider with a gentle convex swell at the lower edge; 090E is broadest, with a markedly bowed outer edge and a rounded shield profile. These are whole-outline differences on the order of 20-40% of lapel width — comfortably photographable at half-body framing, let alone macro.",
+        "The description text is NOT the differentiator here and should not be trusted as one (\"micro-differences visible to the educated eye\" understates what the drawings actually show). The drawings are the evidence.",
+        "lapel-shawl-asymmetric is grossly categorical — left and right lapels differ — and needs no measurement argument at all.",
+        "Confidence is medium rather than high only because 3 of the 6 (lapel-shawl, lapel-shawl-d, lapel-shawl-asymmetric) do not have a confirmed code match, and I will not guess between 00F2__Arc_bottom_shawl and 00H4__Upper_narrow_shawl for the D-Shawl."
+      ],
+      "supplierCandidates": {
+        "folders": [
+          "/images/factory/kute/jacket/Lapel_Lapel_Style"
+        ],
+        "strongMatches": {
+          "lapel-shawl-0005": "0005__Shawl.jpeg",
+          "lapel-shawl-0a": "090A__A_shawl.jpeg",
+          "lapel-shawl-0e": "090E__E_shawl.png"
+        },
+        "unmatchedNeedingHumanMapping": [
+          "lapel-shawl (may duplicate 0005__Shawl — if so it is a genuine merge candidate)",
+          "lapel-shawl-d (candidates: 00F2__Arc_bottom_shawl, 00H4__Upper_narrow_shawl — DO NOT GUESS)",
+          "lapel-shawl-asymmetric (no supplier counterpart found; may not be orderable)"
+        ]
+      },
+      "proposedResolution": {
+        "reshootAsDistinct": [
+          "lapel-shawl-0005",
+          "lapel-shawl-0a",
+          "lapel-shawl-0e",
+          "lapel-shawl-asymmetric"
+        ],
+        "mergeAway": [
+          "lapel-shawl may be a duplicate of lapel-shawl-0005 — confirm before shooting both"
+        ],
+        "precondition": "Re-point the three code-matched options off shawl-lapel.svg onto their kutetailor drawings. Confirm the D-Shawl mapping with the supplier before shooting it."
+      },
+      "requiredDrawings": [
+        "Confirmation of which kutetailor drawing backs lapel-shawl-d",
+        "A kutetailor drawing for the asymmetric shawl collar, or confirmation it is a bespoke-only option"
+      ],
+      "optionsAffected": [
+        {
+          "id": "lapel-shawl",
+          "label": "Shawl Lapel",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lapel/shawl-lapel.svg",
+          "shippedImage": "/images/generated/jacket/lapel-shawl.webp"
+        },
+        {
+          "id": "lapel-shawl-d",
+          "label": "D-Shawl Lapel",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lapel/shawl-lapel.svg",
+          "shippedImage": "/images/generated/jacket/lapel-shawl-d.webp"
+        },
+        {
+          "id": "lapel-shawl-0a",
+          "label": "Shawl 0A",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lapel/shawl-lapel.svg",
+          "shippedImage": "/images/generated/jacket/lapel-shawl-0a.webp"
+        },
+        {
+          "id": "lapel-shawl-0e",
+          "label": "Shawl 0E",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lapel/shawl-lapel.svg",
+          "shippedImage": "/images/generated/jacket/lapel-shawl-0e.webp"
+        },
+        {
+          "id": "lapel-shawl-0005",
+          "label": "Shawl 0005",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lapel/shawl-lapel.svg",
+          "shippedImage": "/images/generated/jacket/lapel-shawl-0005.webp"
+        },
+        {
+          "id": "lapel-shawl-asymmetric",
+          "label": "Asymmetric Shawl Collar",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lapel/shawl-lapel.svg",
+          "shippedImage": "/images/generated/jacket/lapel-shawl-asymmetric.webp"
+        }
+      ]
+    },
+    {
+      "familyId": "FAM-JETTED-WELT-HEIGHT",
+      "title": "Lower jetted / single-welt height — 6 options, ONE drawing",
+      "groupSha1": "79a598bae235dd973ee3a10f1776427526e175cf",
+      "optionCount": 6,
+      "products": [
+        "sport-coat",
+        "suit-2pc",
+        "suit-3pc"
+      ],
+      "collision": {
+        "sharedImageAtReportTime": "/images/generated/jacket/lp-jetted-4.png",
+        "sharedImageNow": "/images/generated/jacket/lp-jetted-4.webp",
+        "sharedContentSha1Now": "8559bce7d538cbf0418438a4f4760c4e4ad115cb",
+        "distinctShippedContentHashesAcrossFamily": 1,
+        "note": "Every option in this family ships byte-identical content. Verified again 2026-07-30 after the PNG->WebP publish; the collision survived the conversion."
+      },
+      "blueprints": {
+        "distinctCount": 1,
+        "paths": [
+          "/images/jacket/lower-pocket/jetted-no-flap.svg"
+        ],
+        "bytes": {
+          "/images/jacket/lower-pocket/jetted-no-flap.svg": 236
+        },
+        "kind": "ui-glyph"
+      },
+      "differentiator": {
+        "axis": "welt height in cm, plus jetted-vs-welt-vs-button-tab construction",
+        "class": "graduated-absolute + categorical",
+        "statement": "Three of the six are a welt-height ladder: Welt Pocket 1.0 / 1.2 / 1.5 cm — a 5 mm total span in 2-3 mm steps. The other three are categorical: double-jetted (two jets) vs single welt (one strip) vs jetted with a button tab.",
+        "spread": "5 mm across 3 rungs",
+        "neighbourStep": "2 mm and 3 mm",
+        "catalogTextEvidence": "The three welt descriptions are three words each — \"Slim single welt — refined.\" / \"Standard single welt.\" / \"Wide single welt.\" No geometry beyond the number."
+      },
+      "recommendation": "MERGE_CANDIDATE",
+      "confidence": "high",
+      "rationale": [
+        "This is the closest analogue in the whole catalog to the ladder that was MEASURED to fail. Intended rungs 0.1/0.3/0.5/0.6 cm rendered 0.312 -> 0.404 -> 0.316 -> 0.476 button-diameters, with the 0.5 cm rung landing on the 0.1 cm value. The welt ladder here has 2-3 mm neighbour steps and a 5 mm total span — the same magnitude, and the same measurement class (an absolute edge-referenced height).",
+        "Worse than the measured case in one respect: the stitch ladder at least had a button in frame as a scale anchor. A lower welt pocket has no adjacent constant-size feature to measure against.",
+        "The supplier library documents exactly ONE welt width for the lower pocket (0267__2.5CM_welt) — the 1.0/1.2/1.5 ladder has no counterpart.",
+        "DATA DEFECT: lp-straight-jetted (\"Straight Jetted Pocket\") carries the flap description (\"covered by a flat, rectangular flap that lies flush with the jacket face\") while sitting on the jetted-NO-flap drawing. Its label, its description and its blueprint disagree. It is also near-duplicated by lp-jetted-4 (\"Straight Jetted Pocket 4 cm\")."
+      ],
+      "proposedResolution": {
+        "reshootAsDistinct": [
+          "lp-jetted-4 (double-jetted besom)",
+          "lp-jetted-btn-tab (supplier drawing 02M1__Besom_with_tab_and_button exists)"
+        ],
+        "mergeAway": [
+          "Collapse Welt Pocket 1.0/1.2/1.5 cm to a single \"Single Welt\" option (removes 2 rows).",
+          "Merge lp-straight-jetted into lp-jetted-4 — same construction, one has a dimension and the other has a contradictory description (removes 1 row)."
+        ],
+        "optionsRemovedIfAccepted": 3
+      },
+      "requiredDrawings": [
+        "Per-height kutetailor welt drawings at 1.0 / 1.2 / 1.5 cm if the ladder is to be kept."
+      ],
+      "optionsAffected": [
+        {
+          "id": "lp-jetted-4",
+          "label": "Straight Jetted Pocket 4 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/jetted-no-flap.svg",
+          "shippedImage": "/images/generated/jacket/lp-jetted-4.webp"
+        },
+        {
+          "id": "lp-straight-jetted",
+          "label": "Straight Jetted Pocket",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/jetted-no-flap.svg",
+          "shippedImage": "/images/generated/jacket/lp-straight-jetted.webp"
+        },
+        {
+          "id": "lp-welt-10",
+          "label": "Welt Pocket 1.0 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/jetted-no-flap.svg",
+          "shippedImage": "/images/generated/jacket/lp-welt-10.webp"
+        },
+        {
+          "id": "lp-welt-12",
+          "label": "Welt Pocket 1.2 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/jetted-no-flap.svg",
+          "shippedImage": "/images/generated/jacket/lp-welt-12.webp"
+        },
+        {
+          "id": "lp-welt-15",
+          "label": "Welt Pocket 1.5 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/jetted-no-flap.svg",
+          "shippedImage": "/images/generated/jacket/lp-welt-15.webp"
+        },
+        {
+          "id": "lp-jetted-btn-tab",
+          "label": "Jetted + Button Tab",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/jetted-no-flap.svg",
+          "shippedImage": "/images/generated/jacket/lp-jetted-btn-tab.webp"
+        }
+      ]
+    },
+    {
+      "familyId": "FAM-PLEATED-POCKET",
+      "title": "Pleated / bellows lower pockets — 6 options, ONE drawing",
+      "groupSha1": "2dc4f12687dff22f9e88100892643763b6439964",
+      "optionCount": 6,
+      "products": [
+        "sport-coat",
+        "suit-2pc",
+        "suit-3pc"
+      ],
+      "collision": {
+        "sharedImageAtReportTime": "/images/generated/jacket/lp-inverted-flap.png",
+        "sharedImageNow": "/images/generated/jacket/lp-inverted-flap.webp",
+        "sharedContentSha1Now": "bd8b61e8d40da80946f9251b60ad6f011cc3b992",
+        "distinctShippedContentHashesAcrossFamily": 1,
+        "note": "Every option in this family ships byte-identical content. Verified again 2026-07-30 after the PNG->WebP publish; the collision survived the conversion."
+      },
+      "blueprints": {
+        "distinctCount": 1,
+        "paths": [
+          "/images/jacket/lower-pocket/bellows-pocket.svg"
+        ],
+        "bytes": {
+          "/images/jacket/lower-pocket/bellows-pocket.svg": 333
+        },
+        "kind": "ui-glyph"
+      },
+      "differentiator": {
+        "axis": "pleat type, pleat count, flap presence, flap angle, button presence",
+        "class": "categorical + count",
+        "statement": "Inverted pleat vs box pleat vs multi-pleat (a fold-direction and count change); flap present vs absent; flap square vs angled; button present vs absent. Every axis is a discrete, countable or topological change.",
+        "smallestDifference": "Inverted pleat vs box pleat — the folds meet at the centre on the face (inverted) or turn outward (box). On a 2-3 cm pleat this is a whole-feature reversal, visible at macro provided the pocket is shot slightly expanded so the pleat reads as depth rather than as a line.",
+        "catalogTextEvidence": "Descriptions name the construction directly (\"a central inverted pleat expands the patch as the pocket fills\"; \"Box pleat patch with flap\"; \"Multi-pleat patch — generous capacity\"). No member is defined by a measurement."
+      },
+      "recommendation": "MACRO_SHOOT",
+      "confidence": "medium",
+      "rationale": [
+        "All six differ categorically. Buttons and flaps are countable; the 2026-07-26 shirt-back batch (7/9 first-attempt passes including Neapolitan shirring) shows construction-line features render reliably when described as folds and seams.",
+        "Confidence is medium, not high, because the shared blueprint (bellows-pocket.svg, 333 bytes: a rectangle with ONE dashed centre line) shows a single centre pleat and NO flap, NO button and NO multi-pleat. Four of the six options require geometry the drawing does not contain, so it would have to be driven from the label.",
+        "Per the house rule that the illustration is law, that is a real constraint — but the pleat/flap/button vocabulary is stated in the option LABEL, so this is reading the catalog, not inventing tailoring. Re-pointing to the kutetailor drawings that do exist (02K4__Patch_with_one_pleat, 02K5__Patch_single_pleat_with_diamond_flap, 02L4__Patch_with_pleat_Diamond_flap_bttn) would raise this to high."
+      ],
+      "supplierCandidates": {
+        "folders": [
+          "/images/factory/kute/jacket/Pocket_Lower_Lower_pocket"
+        ],
+        "strongMatches": {
+          "lp-inverted-flap": "02K5__Patch_single_pleat_with_diamond_flap.jpeg (verify flap shape: supplier says diamond, catalog says basic)",
+          "lp-inverted-flap-btn": "02L4__Patch_with_pleat_Diamond_flap_bttn.jpeg (verify)"
+        },
+        "unmatchedNeedingHumanMapping": [
+          "lp-box-pleat-flap",
+          "lp-angled-box-pleat",
+          "lp-multi-pleat",
+          "lp-inverted-angled-flap-btn"
+        ]
+      },
+      "proposedResolution": {
+        "reshootAsDistinct": "all 6",
+        "mergeAway": [],
+        "precondition": "Shoot as one SET on identical cloth so pleat type and flap shape can be compared side by side; QC the SET, not the individual frames."
+      },
+      "requiredDrawings": [
+        "kutetailor drawing distinguishing a BOX pleat from an INVERTED pleat on a lower patch pocket",
+        "kutetailor drawing for the multi-pleat lower patch"
+      ],
+      "optionsAffected": [
+        {
+          "id": "lp-inverted-flap",
+          "label": "Inverted Pleated + Basic Flap",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/bellows-pocket.svg",
+          "shippedImage": "/images/generated/jacket/lp-inverted-flap.webp"
+        },
+        {
+          "id": "lp-inverted-flap-btn",
+          "label": "Inverted Pleated + Flap & Button",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/bellows-pocket.svg",
+          "shippedImage": "/images/generated/jacket/lp-inverted-flap-btn.webp"
+        },
+        {
+          "id": "lp-inverted-angled-flap-btn",
+          "label": "Inverted Pleated + Angled Flap & Button",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/bellows-pocket.svg",
+          "shippedImage": "/images/generated/jacket/lp-inverted-angled-flap-btn.webp"
+        },
+        {
+          "id": "lp-box-pleat-flap",
+          "label": "Box Patch Pocket + Flap",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/bellows-pocket.svg",
+          "shippedImage": "/images/generated/jacket/lp-box-pleat-flap.webp"
+        },
+        {
+          "id": "lp-angled-box-pleat",
+          "label": "Angled Box Pleat Patch",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/bellows-pocket.svg",
+          "shippedImage": "/images/generated/jacket/lp-angled-box-pleat.webp"
+        },
+        {
+          "id": "lp-multi-pleat",
+          "label": "Multi-Pleat Patch",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/bellows-pocket.svg",
+          "shippedImage": "/images/generated/jacket/lp-multi-pleat.webp"
+        }
+      ]
+    },
+    {
+      "familyId": "FAM-NOTCH-GORGE-ANGLE",
+      "title": "Notch lapel gorge angle 50-73 degrees — 5 options, ONE drawing",
+      "groupSha1": "2d48bea0f2ab3033ff9ce1e3315095fe69463e00",
+      "optionCount": 5,
+      "products": [
+        "sport-coat",
+        "suit-2pc",
+        "suit-3pc"
+      ],
+      "collision": {
+        "sharedImageAtReportTime": "/images/generated/jacket/lapel-notch-50.png",
+        "sharedImageNow": "/images/generated/jacket/lapel-notch-50.webp",
+        "sharedContentSha1Now": "5580d6e85db4316a4bee071ceaa235ebe6437bdc",
+        "distinctShippedContentHashesAcrossFamily": 1,
+        "note": "Every option in this family ships byte-identical content. Verified again 2026-07-30 after the PNG->WebP publish; the collision survived the conversion."
+      },
+      "blueprints": {
+        "distinctCount": 1,
+        "paths": [
+          "/images/jacket/lapel/notch-lapel.svg"
+        ],
+        "bytes": {
+          "/images/jacket/lapel/notch-lapel.svg": 350
+        },
+        "kind": "ui-glyph"
+      },
+      "differentiator": {
+        "axis": "notch opening angle in degrees, plus one tab variant",
+        "class": "graduated-angular + categorical",
+        "statement": "Four angle rungs — 50 / 55 / 65 / 73 degrees — with gaps of 5, 10 and 8 degrees, plus Notch + Basic Tab (a fabric bridge across the V, categorically different).",
+        "spread": "23 degrees (50 to 73)",
+        "neighbourStep": "5 / 10 / 8 degrees — 3 to 6 times the spacing of the peak family",
+        "geometricConversion": "At a 6 cm notch edge, 5 degrees ~= 5.2 mm and 10 degrees ~= 10.5 mm of tip displacement. ASSUMPTION: 6 cm edge length.",
+        "catalogTextEvidence": "Unlike the peak family, the descriptions do carry a real qualitative progression: 50 is \"a classic British cut\", 65 \"places the break point closer to the shoulder\", 73 is \"near-vertical open V ... maximum visible collar space above the notch\". The 65 and 73 members describe a GORGE HEIGHT change, not only an angle."
+      },
+      "recommendation": "MERGE_CANDIDATE",
+      "confidence": "medium",
+      "rationale": [
+        "This is the most defensible angular ladder in the catalog — 5-10 degree steps are 3-6x the peak family and 2.5-5x the measured render error — so a MACRO_SHOOT is arguable. It is ranked MERGE_CANDIDATE for a source reason, not a physics reason.",
+        "SOURCE REASON: kutetailor Lapel_Lapel_Style carries THREE notch drawings — 0001__Notch, 0003__Semi-notch and 0689__Notch_with_high_gorge — and 0689 is already wired to a different catalog option (lapel-notch-68). Four angle rungs map onto two available notch drawings. The supplier distinguishes standard gorge from high gorge, which is precisely the 50/55 vs 65/73 split, and nothing finer.",
+        "No drawing carries an angle, so per-rung geometry would again be prompt-only.",
+        "FREE FIX AVAILABLE: lapel-notch-tab-basic is pointed at notch-lapel.svg even though notch-tab.svg exists in the same folder (currently used by a different option, lapel-notch-tab). Re-pointing removes one member from this collision at zero cost."
+      ],
+      "proposedResolution": {
+        "reshootAsDistinct": [
+          "lapel-notch-tab-basic (after re-pointing to notch-tab.svg)"
+        ],
+        "mergeAway": [
+          "Merge Notch 50 and Notch 55 into one \"Notch\" backed by 0001__Notch (removes 1 row).",
+          "Merge Notch 65 and Straight Notch 73 into one \"High-gorge Notch\" backed by 0689__Notch_with_high_gorge (removes 1 row)."
+        ],
+        "optionsRemovedIfAccepted": 2,
+        "ifYouRejectTheMerge": "Shoot all four as ONE 4-rung SET — identical cloth, crop, scale and viewing angle — and accept only if a reader who is not told the numbers can put the four in the correct order. That blind-ordering gate is the failure log prescription for ladders; if it fails, fall back to this merge."
+      },
+      "requiredDrawings": [
+        "Per-angle kutetailor notch drawings at 50 / 55 / 65 / 73 degrees if all four rungs are retained."
+      ],
+      "optionsAffected": [
+        {
+          "id": "lapel-notch-50",
+          "label": "Notch 50° (BC)",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lapel/notch-lapel.svg",
+          "shippedImage": "/images/generated/jacket/lapel-notch-50.webp"
+        },
+        {
+          "id": "lapel-notch-55",
+          "label": "Notch 55°",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lapel/notch-lapel.svg",
+          "shippedImage": "/images/generated/jacket/lapel-notch-55.webp"
+        },
+        {
+          "id": "lapel-notch-65",
+          "label": "Notch 65°",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lapel/notch-lapel.svg",
+          "shippedImage": "/images/generated/jacket/lapel-notch-65.webp"
+        },
+        {
+          "id": "lapel-notch-73",
+          "label": "Straight Notch 73°",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lapel/notch-lapel.svg",
+          "shippedImage": "/images/generated/jacket/lapel-notch-73.webp"
+        },
+        {
+          "id": "lapel-notch-tab-basic",
+          "label": "Notch + Basic Tab",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lapel/notch-lapel.svg",
+          "shippedImage": "/images/generated/jacket/lapel-notch-tab-basic.webp"
+        }
+      ]
+    },
+    {
+      "familyId": "FAM-CHEST-WELT-STRAIGHT",
+      "title": "Straight chest welt height + jetted + trapezoid — 5 options",
+      "groupSha1": "364b764c7bf766a0e830fb15ba4dffa14a768241",
+      "optionCount": 5,
+      "products": [
+        "sport-coat",
+        "suit-2pc",
+        "suit-3pc"
+      ],
+      "collision": {
+        "sharedImageAtReportTime": "/images/generated/jacket/cp-welt-23.png",
+        "sharedImageNow": "/images/generated/jacket/cp-welt-23.webp",
+        "sharedContentSha1Now": "60aa2e9282f7f4fe5b45b2826a0926dc0bf1457f",
+        "distinctShippedContentHashesAcrossFamily": 1,
+        "note": "Every option in this family ships byte-identical content. Verified again 2026-07-30 after the PNG->WebP publish; the collision survived the conversion."
+      },
+      "blueprints": {
+        "distinctCount": 2,
+        "paths": [
+          "/images/jacket/chest-pocket/straight-welt-2-3cm.svg",
+          "/images/jacket/chest-pocket/straight-welt-2-5cm.svg"
+        ],
+        "bytes": {
+          "/images/jacket/chest-pocket/straight-welt-2-3cm.svg": 300,
+          "/images/jacket/chest-pocket/straight-welt-2-5cm.svg": 380
+        },
+        "kind": "ui-glyph"
+      },
+      "differentiator": {
+        "axis": "welt height in cm, plus two categorical pocket types",
+        "class": "graduated-absolute + categorical",
+        "statement": "Three welt-height rungs — 2.3 / 2.5 / 2.7 cm, a 4 mm span in 2 mm steps — plus cp-jetted (a besom with NO welt standing above the opening at all) and cp-trapezoid (an opening cut wider at the top than the bottom).",
+        "spread": "4 mm across 3 rungs",
+        "neighbourStep": "2 mm (8% of the welt height)",
+        "catalogTextEvidence": "The prose confirms how fine this is: 2.3 is \"the narrowest conventional English welt\", 2.5 \"the most widely used English standard\", 2.7 \"a deliberately wider reading ... the additional millimetres\". The catalog is selling millimetres."
+      },
+      "recommendation": "MERGE_CANDIDATE",
+      "confidence": "high",
+      "rationale": [
+        "2 mm neighbour steps are AT or BELOW the measured render error (~1-2 mm equivalent), and the 4 mm total span is smaller than the 5 mm span that already failed to order correctly in the 2026-07-28 ladder.",
+        "Welt height is absolute and scale-dependent; at chest-pocket framing there is no in-frame reference of known size.",
+        "cp-jetted and cp-trapezoid are NOT part of the ladder and must keep their own photographs — a besom has no welt at all and a trapezoid is not a rectangle.",
+        "BLUEPRINT/LABEL CONFLICT: both cp-jetted and cp-trapezoid are currently pointed at straight-welt-2-5cm.svg, a drawing of a plain rectangular welt — which contradicts each option on its DEFINING feature. Real supplier drawings exist for both (0110__Besom.jpeg and 00J2__Trapezoid.jpeg) and are unused."
+      ],
+      "proposedResolution": {
+        "reshootAsDistinct": [
+          "cp-jetted (re-point to 0110__Besom.jpeg)",
+          "cp-trapezoid (re-point to 00J2__Trapezoid.jpeg)"
+        ],
+        "mergeAway": [
+          "Collapse Straight Welt 2.3 / 2.5 / 2.7 cm to a single \"Straight Welt\" option, carrying width as a numeric spec (removes 2 rows)."
+        ],
+        "optionsRemovedIfAccepted": 2
+      },
+      "requiredDrawings": [
+        "Per-width kutetailor chest-welt drawings at 2.3 / 2.5 / 2.7 cm if the ladder is retained. The supplier documents only 0101__Normal and 011A__Welt_with_1.2_width."
+      ],
+      "optionsAffected": [
+        {
+          "id": "cp-welt-23",
+          "label": "Straight Welt 2.3 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/chest-pocket/straight-welt-2-3cm.svg",
+          "shippedImage": "/images/generated/jacket/cp-welt-23.webp"
+        },
+        {
+          "id": "cp-welt-25",
+          "label": "Straight Welt 2.5 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/chest-pocket/straight-welt-2-5cm.svg",
+          "shippedImage": "/images/generated/jacket/cp-welt-25.webp"
+        },
+        {
+          "id": "cp-welt-27",
+          "label": "Straight Welt 2.7 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/chest-pocket/straight-welt-2-5cm.svg",
+          "shippedImage": "/images/generated/jacket/cp-welt-27.webp"
+        },
+        {
+          "id": "cp-jetted",
+          "label": "Jetted Chest Pocket",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/chest-pocket/straight-welt-2-5cm.svg",
+          "shippedImage": "/images/generated/jacket/cp-jetted.webp"
+        },
+        {
+          "id": "cp-trapezoid",
+          "label": "Trapezoid Pocket",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/chest-pocket/straight-welt-2-5cm.svg",
+          "shippedImage": "/images/generated/jacket/cp-trapezoid.webp"
+        }
+      ]
+    },
+    {
+      "familyId": "FAM-CHEST-WELT-CURVED",
+      "title": "Curved chest welt (barchetta) height — 4 options, ONE drawing",
+      "groupSha1": "7cba4f8e31453158869b6ea50c34fcc25ff3bac1",
+      "optionCount": 4,
+      "products": [
+        "sport-coat",
+        "suit-2pc",
+        "suit-3pc"
+      ],
+      "collision": {
+        "sharedImageAtReportTime": "/images/generated/jacket/cp-welt-curved-23.png",
+        "sharedImageNow": "/images/generated/jacket/cp-welt-curved-23.webp",
+        "sharedContentSha1Now": "ed619110ab182551971c4d9f4248a78557ba37e4",
+        "distinctShippedContentHashesAcrossFamily": 1,
+        "note": "Every option in this family ships byte-identical content. Verified again 2026-07-30 after the PNG->WebP publish; the collision survived the conversion."
+      },
+      "blueprints": {
+        "distinctCount": 1,
+        "paths": [
+          "/images/jacket/chest-pocket/curved-welt-2-5cm.svg"
+        ],
+        "bytes": {
+          "/images/jacket/chest-pocket/curved-welt-2-5cm.svg": 223
+        },
+        "kind": "ui-glyph"
+      },
+      "differentiator": {
+        "axis": "curved welt height in cm",
+        "class": "graduated-absolute",
+        "statement": "Four rungs — 2.3 / 2.5 / 2.7 / 2.9 cm — a 6 mm total span in uniform 2 mm steps. There is no second axis: every member is the same barchetta shape at a slightly different height.",
+        "spread": "6 mm across 4 rungs",
+        "neighbourStep": "2 mm",
+        "catalogTextEvidence": "All four describe the same Neapolitan boat-shaped pocket; the differences claimed are \"subtle and refined\" (2.3), \"the most common\" (2.5), \"more dramatically\" (2.7), \"the widest ... commonly specified\" (2.9)."
+      },
+      "recommendation": "MERGE_CANDIDATE",
+      "confidence": "high",
+      "rationale": [
+        "This is the purest ladder in the set — one axis, 2 mm steps, 6 mm span — and it is squarely inside the measured failure band.",
+        "DECISIVE: the shared blueprint curved-welt-2-5cm.svg (223 bytes) draws the welt as a single quadratic ARC STROKE with no enclosed height. The drawing does not depict a welt height at all, so there is literally nothing in the reference to reproduce for any of the four rungs, let alone to tell them apart.",
+        "The supplier documents the barchetta as a SHAPE (0102__Arc, 019N__Italian_curved_breast_pocket, 0103__Ship_shape), never as a height ladder.",
+        "Shipping four photographs annotated 2.3 / 2.5 / 2.7 / 2.9 cm that a customer cannot rank is precisely what the failure log forbids: \"NEVER annotate different numbers onto near-identical photos; that mis-sells a measured option.\""
+      ],
+      "proposedResolution": {
+        "reshootAsDistinct": [
+          "one \"Curved Welt (Barchetta)\" option, re-pointed to 0102__Arc.jpeg"
+        ],
+        "mergeAway": [
+          "Collapse all four to one option with width as a numeric spec/price field (removes 3 rows)."
+        ],
+        "optionsRemovedIfAccepted": 3,
+        "ifYouRejectTheMerge": "The maximum defensible split is TWO tiers at the extremes (2.3 and 2.9, 6 mm apart), shot as a paired SET with a scale reference in frame, and gated on blind ordering. Do not ship four."
+      },
+      "requiredDrawings": [
+        "A kutetailor barchetta drawing carrying a welt-height annotation, per retained tier."
+      ],
+      "optionsAffected": [
+        {
+          "id": "cp-welt-curved-23",
+          "label": "Curved Welt 2.3 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/chest-pocket/curved-welt-2-5cm.svg",
+          "shippedImage": "/images/generated/jacket/cp-welt-curved-23.webp"
+        },
+        {
+          "id": "cp-welt-curved-25",
+          "label": "Curved Welt 2.5 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/chest-pocket/curved-welt-2-5cm.svg",
+          "shippedImage": "/images/generated/jacket/cp-welt-curved-25.webp"
+        },
+        {
+          "id": "cp-welt-curved-27",
+          "label": "Curved Welt 2.7 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/chest-pocket/curved-welt-2-5cm.svg",
+          "shippedImage": "/images/generated/jacket/cp-welt-curved-27.webp"
+        },
+        {
+          "id": "cp-welt-curved-29",
+          "label": "Curved Welt 2.9 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/chest-pocket/curved-welt-2-5cm.svg",
+          "shippedImage": "/images/generated/jacket/cp-welt-curved-29.webp"
+        }
+      ]
+    },
+    {
+      "familyId": "FAM-TURNBACK-CUFF-DEPTH",
+      "title": "Turn-back / gauntlet cuff depth — 3 options, ONE drawing",
+      "groupSha1": "b2d0d32a2dfd8ffc4bfb12eba4e87fcb8654cf74",
+      "optionCount": 3,
+      "products": [
+        "sport-coat",
+        "suit-2pc",
+        "suit-3pc"
+      ],
+      "collision": {
+        "sharedImageAtReportTime": "/images/generated/jacket/cuff-british.png",
+        "sharedImageNow": "/images/generated/jacket/cuff-british.webp",
+        "sharedContentSha1Now": "a673d2f8828cc34318ad7c989aa96676cd41fe6a",
+        "distinctShippedContentHashesAcrossFamily": 1,
+        "note": "Every option in this family ships byte-identical content. Verified again 2026-07-30 after the PNG->WebP publish; the collision survived the conversion."
+      },
+      "blueprints": {
+        "distinctCount": 1,
+        "paths": [
+          "/images/jacket/sleeve-cuff/turnback-cuff.svg"
+        ],
+        "bytes": {
+          "/images/jacket/sleeve-cuff/turnback-cuff.svg": 418
+        },
+        "kind": "ui-glyph"
+      },
+      "differentiator": {
+        "axis": "turn-back depth in cm, plus one categorical construction",
+        "class": "categorical + graduated-absolute",
+        "statement": "British Turn-up (gauntlet) is a SEPARATE folded-back band wrapping the wrist — categorically different construction. Turn-back 3.5 cm and Turn-back 4.0 cm are the same construction at two depths 5 mm apart.",
+        "spread": "5 mm between the two turn-back rungs",
+        "neighbourStep": "5 mm (14% of the 3.5 cm depth; ~0.33 jacket-button diameters at a 1.5 cm button)",
+        "catalogTextEvidence": "The 4.0 cm description claims the band is \"visibly broader and more assertive\"; the 3.5 cm one is \"narrower ... resting just against or lightly touching the sleeve face\". Both are comparative claims about a 5 mm difference."
+      },
+      "recommendation": "MERGE_CANDIDATE",
+      "confidence": "medium",
+      "rationale": [
+        "British Turn-up vs turn-back is categorical and must keep its own photograph — that part is not in question.",
+        "The 3.5 vs 4.0 pair is a 0.33 button-diameter difference measured against the cuff buttons — the SAME metric on which the 2026-07-28 ladder showed per-rung errors of 0.09-0.19 button-diameters. Signal-to-noise is roughly 2:1, which is not enough to rely on.",
+        "A two-rung ladder cannot be QC-checked for monotonicity. With three or more rungs you can at least detect an inversion; with two, a failure is undetectable — you would ship two photos and have no way to prove they differ correctly.",
+        "No supplier drawing exists: kutetailor Sleeve_Cuff_style contains exactly ONE file (0618__Western_hem.png), and turnback-cuff.svg is a 418-byte glyph with a single band depth.",
+        "Confidence is medium because 5 mm at 14% relative is the best case among the absolute ladders here; if the user wants to try, the paired-SET-plus-blind-ordering route is legitimate."
+      ],
+      "proposedResolution": {
+        "reshootAsDistinct": [
+          "cuff-british"
+        ],
+        "mergeAway": [
+          "Merge Turn-back 3.5 cm and 4.0 cm into one \"Turn-back Cuff\" with depth as a numeric spec (removes 1 row)."
+        ],
+        "optionsRemovedIfAccepted": 1,
+        "ifYouRejectTheMerge": "Shoot the pair in ONE frame, same cloth, same crop, with the cuff buttons visible as the scale anchor, and accept only on blind ordering."
+      },
+      "requiredDrawings": [
+        "kutetailor jacket cuff drawings for the turn-back at 3.5 cm and 4.0 cm, and for the British gauntlet turn-up."
+      ],
+      "optionsAffected": [
+        {
+          "id": "cuff-british",
+          "label": "British Turn-up",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/sleeve-cuff/turnback-cuff.svg",
+          "shippedImage": "/images/generated/jacket/cuff-british.webp"
+        },
+        {
+          "id": "cuff-turnback-35",
+          "label": "Turn-back 3.5 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/sleeve-cuff/turnback-cuff.svg",
+          "shippedImage": "/images/generated/jacket/cuff-turnback-35.webp"
+        },
+        {
+          "id": "cuff-turnback-40",
+          "label": "Turn-back 4.0 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/sleeve-cuff/turnback-cuff.svg",
+          "shippedImage": "/images/generated/jacket/cuff-turnback-40.webp"
+        }
+      ]
+    },
+    {
+      "familyId": "FAM-SEMI-PEAK-ANGLE",
+      "title": "Semi-peak lapel 99 vs 114 degrees — 2 options, ONE drawing",
+      "groupSha1": "a7f01a9294c416495fb9172daffffa45a8bba883",
+      "optionCount": 2,
+      "products": [
+        "sport-coat",
+        "suit-2pc",
+        "suit-3pc"
+      ],
+      "collision": {
+        "sharedImageAtReportTime": "/images/generated/jacket/lapel-peak-99.png",
+        "sharedImageNow": "/images/generated/jacket/lapel-peak-99.webp",
+        "sharedContentSha1Now": "dec3294803e6d9bf73404e45cc02ea3ce8885cba",
+        "distinctShippedContentHashesAcrossFamily": 1,
+        "note": "Every option in this family ships byte-identical content. Verified again 2026-07-30 after the PNG->WebP publish; the collision survived the conversion."
+      },
+      "blueprints": {
+        "distinctCount": 1,
+        "paths": [
+          "/images/jacket/lapel/semi-peak.svg"
+        ],
+        "bytes": {
+          "/images/jacket/lapel/semi-peak.svg": 274
+        },
+        "kind": "ui-glyph"
+      },
+      "differentiator": {
+        "axis": "peak gorge angle in degrees",
+        "class": "graduated-angular",
+        "statement": "Two options 15 degrees apart — Peak 99 degrees and Peak 114 degrees (Semi-peak) — sharing semi-peak.svg.",
+        "spread": "15 degrees",
+        "geometricConversion": "At a 6 cm peak length, 15 degrees ~= 15.7 mm of tip displacement — roughly 1 to 1.4 jacket-button diameters. ASSUMPTION: 6 cm peak length.",
+        "catalogTextEvidence": "The two descriptions are genuinely opposite in character: 99 degrees \"barely crosses the horizontal ... reads as a peak only on close inspection\"; 114 degrees is \"so near horizontal that it creates an almost graphic, billboard-like chest statement\". This is the one angular pair whose prose is not interchangeable."
+      },
+      "recommendation": "MERGE_CANDIDATE",
+      "confidence": "medium",
+      "rationale": [
+        "HONEST CAVEAT: unlike the other merge candidates, 15 degrees IS above what photography can resolve. On physics alone this would be MACRO_SHOOT.",
+        "It is ranked MERGE_CANDIDATE because of source, not resolution: kutetailor carries ONE semi-peak drawing (0004__Semi-peak.jpeg) and no angle annotation anywhere, so neither 99 nor 114 has a source to be faithful to. Shooting them apart means choosing the two angles ourselves, which the house rule forbids.",
+        "It also belongs to the same decision as FAM-PEAK-GORGE-ANGLE: 99 and 114 are two more rungs of the same 99-115 degree pseudo-ladder split across two glyphs. Deciding the peak family and this one separately would be incoherent.",
+        "If the peak family is collapsed onto supplier axes, these two collapse into \"Semi-peak\" with them."
+      ],
+      "proposedResolution": {
+        "reshootAsDistinct": [],
+        "mergeAway": [
+          "Merge Peak 99 and Peak 114 into a single \"Semi-peak\" backed by 0004__Semi-peak.jpeg (removes 1 row)."
+        ],
+        "optionsRemovedIfAccepted": 1,
+        "ifYouRejectTheMerge": "This is the ONE angular pair worth shooting if you want to keep an angle ladder anywhere: 15 degrees is ~10x the peak family mean step. Obtain the two annotated drawings first, then shoot as a pair."
+      },
+      "requiredDrawings": [
+        "kutetailor semi-peak drawings annotated at 99 degrees and at 114 degrees."
+      ],
+      "optionsAffected": [
+        {
+          "id": "lapel-peak-99",
+          "label": "Peak 99°",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lapel/semi-peak.svg",
+          "shippedImage": "/images/generated/jacket/lapel-peak-99.webp"
+        },
+        {
+          "id": "lapel-peak-114",
+          "label": "Peak 114° (Semi-peak)",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lapel/semi-peak.svg",
+          "shippedImage": "/images/generated/jacket/lapel-peak-114.webp"
+        }
+      ]
+    },
+    {
+      "familyId": "FAM-CUFF-TERMINAL-SHAPE",
+      "title": "Angled vent cuff vs square cuff — 2 options, ONE drawing",
+      "groupSha1": "0e08ea4df6930b965c2563b6b6fba2b2fb0f27eb",
+      "optionCount": 2,
+      "products": [
+        "sport-coat",
+        "suit-2pc",
+        "suit-3pc"
+      ],
+      "collision": {
+        "sharedImageAtReportTime": "/images/generated/jacket/cuff-angled.png",
+        "sharedImageNow": "/images/generated/jacket/cuff-angled.webp",
+        "sharedContentSha1Now": "55116eb64714ad565533c2d91d169a9bda64794e",
+        "distinctShippedContentHashesAcrossFamily": 1,
+        "note": "Every option in this family ships byte-identical content. Verified again 2026-07-30 after the PNG->WebP publish; the collision survived the conversion."
+      },
+      "blueprints": {
+        "distinctCount": 1,
+        "paths": [
+          "/images/jacket/sleeve-cuff/square-cuff.svg"
+        ],
+        "bytes": {
+          "/images/jacket/sleeve-cuff/square-cuff.svg": 328
+        },
+        "kind": "ui-glyph"
+      },
+      "differentiator": {
+        "axis": "cuff terminal line: perpendicular vs slanted",
+        "class": "categorical, but the magnitude is unspecified",
+        "statement": "Square Cuff terminates in a perfectly perpendicular cut. Angled Vent Cuff is \"cut with a slight diagonal slant — typically dropping at the outer edge\". The DIRECTION is stated; the ANGLE is not stated anywhere in the catalog.",
+        "catalogTextEvidence": "The angled description gives only \"slight\" and \"typically\". No degrees, no drop measurement. A 5 degree slant across a ~7 cm cuff face is a ~6 mm drop; a 10 degree slant is ~12 mm. The catalog does not say which, and the difference between those two is the difference between invisible and obvious."
+      },
+      "recommendation": "NEEDS_SOURCE",
+      "confidence": "high",
+      "rationale": [
+        "DECISIVE: the shared blueprint square-cuff.svg (328 bytes) draws a plain rectangular band with perfectly horizontal edges — it depicts the SQUARE cuff. The angled option is backed by a drawing of its own opposite. This is the same defect pattern as the 2026-07-27 collar-sq-65-btn false approval, where a wrong blueprint was invisible to QC because every score measures fidelity TO the blueprint.",
+        "No supplier artwork exists to fall back on: kutetailor Sleeve_Cuff_style contains exactly ONE file, 0618__Western_hem.png, which is neither of these.",
+        "Shooting the angled cuff today would mean choosing the slant angle ourselves. That is inventing tailoring detail, which the house rules forbid, and it would be unverifiable — QC would grade the render against a square-cuff drawing and could only penalise the very slant that defines the option.",
+        "This is NOT a merge candidate: a slanted cuff line and a square cuff line are genuinely different products, and merging them would delete a real option. It is blocked purely on source."
+      ],
+      "proposedResolution": {
+        "reshootAsDistinct": [],
+        "mergeAway": [],
+        "blocked": [
+          "cuff-angled",
+          "cuff-square"
+        ]
+      },
+      "requiredDrawings": [
+        "EXACT ITEM NEEDED: a kutetailor jacket sleeve-cuff line drawing for the ANGLED / vent cuff, carrying the slant angle or the outer-edge drop as an annotation. Folder /images/factory/kute/jacket/Sleeve_Cuff_style currently holds only 0618__Western_hem.png.",
+        "Secondary: the matching square-cuff supplier drawing, so the pair can be QC-compared against real artwork rather than a UI glyph."
+      ],
+      "optionsAffected": [
+        {
+          "id": "cuff-angled",
+          "label": "Angled Vent Cuff",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/sleeve-cuff/square-cuff.svg",
+          "shippedImage": "/images/generated/jacket/cuff-angled.webp"
+        },
+        {
+          "id": "cuff-square",
+          "label": "Square Cuff",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/sleeve-cuff/square-cuff.svg",
+          "shippedImage": "/images/generated/jacket/cuff-square.webp"
+        }
+      ]
+    },
+    {
+      "familyId": "FAM-BELT-LOOP-COUNT",
+      "title": "Belt loops: 7 loops vs 5 loops — 2 options",
+      "groupSha1": "05e597e810ecdc58df63c009703f567e584f71ec",
+      "optionCount": 2,
+      "products": [
+        "suit-2pc",
+        "suit-3pc",
+        "trousers"
+      ],
+      "collision": {
+        "sharedImageAtReportTime": "/images/generated/trousers/loops-standard.png",
+        "sharedImageNow": "/images/generated/trousers/loops-standard.webp",
+        "sharedContentSha1Now": "0634a8c204cd87d19e8b1df30554c2741f3cbf2a",
+        "distinctShippedContentHashesAcrossFamily": 1,
+        "note": "Every option in this family ships byte-identical content. Verified again 2026-07-30 after the PNG->WebP publish; the collision survived the conversion."
+      },
+      "blueprints": {
+        "distinctCount": 2,
+        "paths": [
+          "/images/factory/kute/trousers/Waist_Belt_loop/3330__Regular.jpeg",
+          null
+        ],
+        "bytes": {
+          "/images/factory/kute/trousers/Waist_Belt_loop/3330__Regular.jpeg": 34318
+        },
+        "kind": "supplier-drawing (one) + none (one)"
+      },
+      "differentiator": {
+        "axis": "belt loop COUNT and placement",
+        "class": "count",
+        "statement": "Standard (7 Loops) vs 5 Loops. A count difference of 2 out of 7 (29%), spread around a waistband. This is the single most photographable differentiator in all 14 families — it needs no macro at all; a normal waistband frame shows it, and a customer can literally count.",
+        "catalogTextEvidence": "loops-5 has a four-word description (\"Fewer loops — cleaner look.\"), no placement information, and NO techpackIllustration field at all — it is the only option in the 85 with a null blueprint."
+      },
+      "recommendation": "NEEDS_SOURCE",
+      "confidence": "high",
+      "rationale": [
+        "The difference is 100% photographable — this family is blocked ONLY by a missing drawing, and it is the cheapest of the 14 to clear once the drawing arrives.",
+        "What is missing is PLACEMENT, not count. Seven loops and five loops are not the same layout with two removed; the factory decides where the five sit relative to the fly, side seams and centre back. Choosing that ourselves is inventing tailoring detail.",
+        "DECISIVE SEARCH RESULT: the supplier folder /images/factory/kute/trousers/Waist_Belt_loop contains 9 drawings — 3329__No, 3330__Regular, 3331__Double, 3332__2.0cm, 333E__X-style_on_front, 3618__Only_one_in_right, 361N, 3683, 3684 — and NONE of them is a 5-loop layout. The manufacturer's own belt-loop taxonomy has no 5-loop entry. It is worth asking whether loops-5 is orderable at all.",
+        "This is also the one collision the OLD filename-based rule caught (see failure-log 2026-07-30): loops-5 simply points at loops-standard's photo. It is a plain wiring defect, not a granularity problem."
+      ],
+      "proposedResolution": {
+        "reshootAsDistinct": [
+          "loops-5, once a placement drawing exists"
+        ],
+        "mergeAway": [],
+        "blocked": [
+          "loops-5"
+        ],
+        "alternativeIfYouPreferSpeed": "If the factory confirms 5-loop is orderable and that any conventional 5-loop layout is acceptable, this becomes a straightforward MACRO_SHOOT — the loop COUNT is the whole stated differentiator. That confirmation is a one-line answer from the supplier, not a drawing. Your call."
+      },
+      "requiredDrawings": [
+        "EXACT ITEM NEEDED: a kutetailor Waist_Belt_loop drawing for the 5-loop layout — the sibling of 3330__Regular.jpeg — showing loop POSITIONS. No such file exists in the repo."
+      ],
+      "optionsAffected": [
+        {
+          "id": "loops-standard",
+          "label": "Standard (7 Loops)",
+          "products": [
+            "suit-2pc",
+            "suit-3pc",
+            "trousers"
+          ],
+          "blueprint": "/images/factory/kute/trousers/Waist_Belt_loop/3330__Regular.jpeg",
+          "shippedImage": "/images/generated/trousers/loops-standard.webp"
+        },
+        {
+          "id": "loops-5",
+          "label": "5 Loops",
+          "products": [
+            "suit-2pc",
+            "suit-3pc",
+            "trousers"
+          ],
+          "blueprint": null,
+          "shippedImage": "/images/generated/trousers/loops-standard.webp"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,408 @@
+{
+ "saved": "2026-07-28T03:05:00Z",
+ "session": "27aa901c (brand_assets cwd)",
+ "goal": "see /goal system + PROJECT-GOAL.md at repo root",
+ "resume_doc": "RESUME.md (this folder)",
+ "usage": {
+  "subagent_limit_hit": false,
+  "note": "reset passed; agents working again 2026-07-26 afternoon",
+  "restart_cron": "craft-catalog-resume (may have already fired/expired)"
+ },
+ "credits": {
+  "start": 993,
+  "spent": 64.5,
+  "balance_verified": 928.5,
+  "balance_verified_at": "2026-07-30",
+  "note": "balance_approx was 969.5 and 41 credits stale; 928.5 is the live figure read from the Higgsfield balance endpoint on 2026-07-30. Always re-read balance rather than trusting a carried-forward estimate."
+ },
+ "remake_queue": {
+  "generated_qa_pass": 32,
+  "queued": 44,
+  "needs_source": 7,
+  "excluded_thread_color": 3,
+  "total": 86
+ },
+ "back_category": {
+  "status": "SUPERSEDED — the \"9/9 QA-passed\" claim predates the rigorous gate. back-side-pleat was re-graded FAIL on 2026-07-30 (blueprint-match 42; the render shows a plain back = the sibling option). The other 8 back-* images have NO qc.json and are unverified under the current standard. Do not wire any of them without a garment-image-qc PASS.",
+  "blueprint_swap_defect": "box-pleat-to-bottom.jpg <-> box-pleat-to-bottom-with-double-darts.jpg swapped on disk; logged in failure-log.md; builder shows wrong illustrations - needs Dustin approval to fix files",
+  "batch_record": "shirt-assets/photos/shirt/_batch-back-2026-07-26.json",
+  "red_lines_are_construction_not_contrast": true
+ },
+ "done_do_not_redo": [
+  "review.html rebuilt 2026-07-26 with all candidates",
+  "mapping-audit-2026-07-26.json",
+  "trousers 35/35 (2026-06-11)",
+  "shirt collar styles 60 (prior session)",
+  "collar_splicing / cuff_splicing: images exist but carry no qc.json — treat as legacy-unverified, not done"
+ ],
+ "scope_census": {
+  "total_options": 2862,
+  "swatch_excluded": 1068,
+  "structural": 1794,
+  "structural_with_generated_photo": 1086,
+  "remote_url_images": 140,
+  "missing_images": 172
+ },
+ "key_files": {
+  "queue": "public/images/review-remake-queue.json",
+  "progress": "public/images/reports/PROGRESS.md",
+  "failure_log": "public/images/reports/failure-log.md",
+  "qa_report_splice": "public/images/reports/qa-splice-v2-2026-07-26.json",
+  "skill": ".claude/skills/shirt-image-factory/",
+  "specs_dir": "shirt-assets/photos/shirt/"
+ },
+ "next_batch_prepped": {
+  "categories": "bias_cutting(4) + collar_stand(5) + collar_stand_height(1)",
+  "blueprints": {
+   "bias-none": "public/images/bias_cutting/none.jpg",
+   "bias-inner-collar-stand": "public/images/bias_cutting/inner-collar-stand.jpg",
+   "bias-inner-top-collar": "public/images/bias_cutting/inner-top-collar.jpg",
+   "bias-inner-cuff": "public/images/bias_cutting/inner-cuff.jpg",
+   "cs-round": "public/images/collar_stand/round-collar-stand.jpg",
+   "cs-round-2btn": "public/images/collar_stand/round-collar-stand-with-2-buttons.jpg",
+   "cs-square": "public/images/collar_stand/square-collar-stand.jpg",
+   "cs-square-2btn": "public/images/collar_stand/square-collar-stand-with-2-buttons.jpg",
+   "cs-left-sq-rt-rnd": "public/images/collar_stand/left-square-and-right-round.jpg",
+   "csh-50": "public/images/collar_stand_height/collar-stand-height-5cm.jpg"
+  },
+  "caution": "four of these options currently WIRE an old generated photo (csh-50.png, cs-round.png, cs-round-2btn.png, bias-inner-collar-stand.png) - remakes must be saved as -v2 and NOT overwrite; blueprints above are the true tech packs"
+ },
+ "batch3": {
+  "status": "COMPLETE 9/9 QA-passed and promoted (csh-50 excluded: needs-source). v2 names: bias-inner-collar-stand-v2, cs-round-v2, cs-round-2btn-v2. Gallery rebuilt 2026-07-27 (mapping-audit-2026-07-27.json).",
+  "specs": "10/10 drafted via workflow (3 verified clean, 2 verifier-fixed, 4 unverified due to subagent session limit - QA gate covers them)",
+  "csh-50": "NEEDS-SOURCE: blueprint is NO IMAGE placeholder; in needs-source.json; draft spec exists for when real tech pack arrives",
+  "generated": [
+   "bias-inner-cuff",
+   "bias-none",
+   "bias-inner-collar-stand",
+   "bias-inner-top-collar",
+   "cs-round",
+   "cs-round-2btn",
+   "cs-square",
+   "cs-square-2btn",
+   "cs-left-sq-rt-rnd"
+  ],
+  "attempt_files": "shirt-assets/photos/shirt/<id>/attempt1.png (all 9 downloaded, sizes verified)",
+  "job_map": "shirt-assets/photos/shirt/_batch3-jobs.json",
+  "media_ids": "shirt-assets/photos/shirt/_batch3-media-ids.json (reusable for retries)",
+  "v2_naming": [
+   "bias-inner-collar-stand-v2.png",
+   "cs-round-v2.png",
+   "cs-round-2btn-v2.png"
+  ],
+  "note_queue_clobber": "review-remake-queue.json was reset to all-queued during spec workflow; restored from checkpoint 2026-07-27; keep agents read-only on state files"
+ },
+ "decisions_needed_from_dustin": [
+  "BLOCKER / SCALE: 1,967 of 1,979 in-scope options still need interpret -> generate -> QC -> publish. At the observed ~0.5 cr/image plus the real retry rate this is roughly 3,000-4,000 credits; balance is ~969.5. The catalog CANNOT be completed at the current balance. Decide: top up credits, or agree a reduced scope (e.g. only options that are customer-visible defects today).",
+  "DEFECT / 85 options ship a photo of a different option (defect-image-collisions-2026-07-30.json). In 10 of 14 families the supplier blueprint is shared too, so there is nothing to regenerate FROM. Per family, choose: (a) source a per-variant drawing, (b) drive the difference from the spec measurement and accept QC cannot verify it against the drawing, or (c) merge the options in the builder.",
+  "Peak-lapel gorge angles 101/102/102-RL/103/105/107/108/110/110-low/115 - ten options, one drawing. A 1-2 degree gorge difference is arguably not photographable at all. Recommend merging or repricing rather than generating 10 near-identical images.",
+  "loops-5 (\"5 Loops\") has no blueprint and currently displays the 7-loop photo - needs a source drawing.",
+  "STANDING (unchanged): swap the 4 vest v2 remakes into the site? confirm the 2 shirt cuff-splicing discards? green-light the 26-option shirt remake batch?",
+  "The 22 orphaned v2/v3 remakes on disk would REPLACE live images; publish_approved.mjs refuses these without --allow-swap. Approve individually."
+ ],
+ "next_batch_after_stitching": {
+  "name": "remaining shirt categories (12 items)",
+  "blueprint_map": {
+   "front-normal": "public/images/front/normal.jpg",
+   "front-narrow-pleats": "public/images/front/dress-shirt-with-narrow-pleats.jpg",
+   "front-wide-pleats": "public/images/front/dress-shirt-with-wide-pleats.jpg",
+   "col-lining-normal": "public/images/collar_linings/collar-linings-normal.jpg",
+   "col-lining-hard": "public/images/collar_linings/collar-linings-hard.jpg",
+   "stay-none": "public/images/collar_stay/none.jpg",
+   "stay-hidden-btn": "public/images/collar_stay/hidden-button-no-collar-stay.jpg",
+   "cuf-lining-normal": "public/images/cuff_lining/cuff-lining-normal.jpg",
+   "cuf-lining-hard-fc390057": "public/images/cuff_lining/cuff-lining-hard-fc390057.jpg",
+   "hem-straight": "public/images/hem/straight-hem.jpg",
+   "collar-point-70-btn": "public/images/lapel/point-in-7cm-with-button.jpg",
+   "csb-none": "public/images/button_on_collar_stand/none.jpg"
+  },
+  "all_verified_present": true,
+  "missing": [],
+  "wiring_defects": [
+   "stay-none and collar-point-70-btn are wired in shirt.json to /images/generated/shirt/*.png (generated photos) instead of their real tech packs listed above — use the tech packs as reference; consider rewiring the catalog illustration field",
+   "col-lining-hard reviewer note: \"no Chinese characters\" — blueprint carries CJK annotation that must not leak"
+  ],
+  "notes": "collar_linings/cuff_lining = interlining stiffness (Normal vs Hard/fused) — the education problem is showing STIFFNESS, not a shape: use collar roll/stand-up behavior and edge crispness as the visual differentiator; state it explicitly in prompts."
+ },
+ "batch4": {
+  "name": "decoration stitching TOP ladder (8 items: 4 collar + 4 cuff)",
+  "status": "8 generated + downloaded; ladder-measurement QA agent running",
+  "critical": "blueprints bound by ANNOTATION not filename (see failure-log DATA DEFECT 2026-07-27)",
+  "media_ids": "shirt-assets/photos/shirt/_batch4-media-ids.json",
+  "spec_folders": "shirt-assets/photos/shirt/{stitch-01-top-v2,stitch-03-top-v2,stitch-05-top-v2,stitch-06-top-v2,cstitch-01-top,cstitch-03-top,cstitch-05-top,cstitch-06-top}",
+  "outputs": {
+   "collar": "stitch-0X-top-v2.png (v2: v1 photos are live-wired)",
+   "cuff": "cstitch-0X-top.png (new files, no collision)"
+  },
+  "excluded": {
+   "6 AMF options": "needs-source (no authentic AMF art anywhere)",
+   "3 thread-color options": "out of scope per instruction"
+  },
+  "open_concern": "VISUAL PRE-READ: the 0.1cm and 0.6cm collar renders look nearly identical to the naked eye. Hypothesis: at full-collar framing a 1-5mm offset is ~1% of image width, below what the model resolves - the physics limit the skill warns about (\"image models render proportions, not measured dimensions\"). Awaiting objective pixel measurements before concluding.",
+  "planned_remedy_if_ladder_flat": "Do NOT annotate false numbers onto identical photos - that would be deceptive. Two honest paths: (1) REFRAME to extreme macro - crop to ~3cm of the finished edge so 1mm becomes ~3% of frame width and 5mm ~17%, making the rungs genuinely resolvable; this is a photography-spec change, not a prompt-wording change. (2) If macro reframing still fails, escalate to the skill compensation #4: one accurate base photo per region plus deterministic measurement callouts via .claude/skills/shirt-image-factory/scripts/annotate_scale.py, and/or flag the category as needing real photography. Decide from the measured data, not hope."
+ },
+ "pipeline_v2": {
+  "status": "LIVE-TESTED end-to-end against the real repo with real credits (the gate the skill author could not exercise)",
+  "proof_option": "shirt/hem-straight — interpret -> direct -> QC FAIL -> corrected retry -> QC PASS -> catalog write-back",
+  "artifacts": ".craft-pipeline/shirt/hem-straight/{spec.json,prompt.json,generation.json,candidate-1.png,candidate-2.png,qc-input.json,qc.json}",
+  "verified_behaviours": [
+   "extract_spec.mjs refuses to write without --orientation (vision-confirmed field)",
+   "validate_prompt.mjs gates before any credit is spent",
+   "log_qc_result.mjs computed FAIL mechanically on attempt 1 (composition 88, construction 97, blueprint-match 97 vs min 98) and staged nothing",
+   "record_generation.mjs auto-incremented attempt 1 -> 2 from the prior qc.json",
+   "log_qc_result.mjs computed PASS on attempt 2 and staged public/images/generated/shirt/hem-straight.png",
+   "catalog write-back set image to the generated path and preserved the tech pack under techpackIllustration"
+  ],
+  "bugs_found_and_fixed": [
+   {
+    "id": "B1-contrast-clause-shapes",
+    "severity": "high",
+    "what": "scanList tagged shapes named in CONTRAST clauses, producing self-contradictory specs. \"Straight Hem\" -> [\"curved hem\",\"straight hem\"]; every \"Notch 65deg\" -> [\"peak lapel\",\"notch lapel\"] across sport-coat/suit-2pc/suit-3pc.",
+    "impact": "Would have told the image model to render two incompatible geometries for the catalog's most visible options (lapel styles).",
+    "fix": "resolveExclusiveShapes() in tech-pack-interpreter/scripts/lib/spec.mjs — label is the option identity and wins over prose; dual-named options keep both; undecidable ones keep all and surface for vision.",
+    "measured": "contradictory specs 24 -> 12 across 1988 in-scope options; the 12 remaining are correct-dual (6) or undecidable-from-label (6), not defects.",
+    "documented": "tech-pack-interpreter/feature-extraction.md"
+   },
+   {
+    "id": "B2-missing-SET-sentence",
+    "severity": "high",
+    "what": "photography-rules.md required a neutral studio background but PHOTO_BLOCK in garment-image-director/scripts/lib/prompt.mjs never emitted any background instruction.",
+    "impact": "Every generation was free to invent a location set; the first live test came back shot against outdoor stone architecture and failed QC.",
+    "fix": "PHOTO_BLOCK now ends with an explicit SET sentence (seamless neutral light-grey, no location/architecture/props). Inherited by every option.",
+    "documented": "garment-image-director/photography-rules.md"
+   }
+  ],
+  "old_skill_cleanup": "blessed-dressed-craft-photo-generator/{scripts,references} deleted by hand; only the pointer-stub SKILL.md remains."
+ },
+ "scope_reality": {
+  "total_options": 2862,
+  "excluded_swatches": 721,
+  "in_scope_with_blueprint": 1988,
+  "no_blueprint_skipped": 174,
+  "shared_blueprint_defect": "488 illustrations back 1456 in-scope options — the reference cannot disambiguate them (inventory.mjs --dupes)",
+  "unique_blueprint_in_scope": 532,
+  "credit_math": "observed ~2 attempts/option on the live test. 532 unique-blueprint options ~= 532 x 1.75 x 0.5 = ~466 credits (FITS in ~969). All 1988 ~= ~1740 credits (does NOT fit).",
+  "recommendation": "Generate the 532 unique-blueprint options now; the 1456 shared-blueprint options need per-option tech packs sourced before generation can be blueprint-accurate."
+ },
+ "last_updated": "2026-07-30",
+ "batch_run": {
+  "status": "waves 1-3 run; paused by session limit (resets 1am America/Chicago)",
+  "user_approved": "do the 532 - craft options only, buttons/fabrics/thread excluded, GPT Image 2 / Low / 1K, 0.5 credits per photo (settings confirmed twice and verified by ledger arithmetic)",
+  "credits": {
+   "start": 965,
+   "now": 940,
+   "spent": 25,
+   "per_photo_verified": 0.5
+  },
+  "scope": {
+   "in_scope_options": 1979,
+   "generatable_clusters": 759,
+   "catalog_options_covered": 1516,
+   "note": "The 532 figure was an artifact of the blueprint-source bug; generated filenames are unique per option by construction so prior AI output masqueraded as unique blueprints. 759/1516 is the honest number after also requiring cluster members to share a FIELD."
+  },
+  "results": {
+   "verified_pass_shipped": 12,
+   "revoked_false_approvals": 2,
+   "needs_reverify": 1,
+   "unmet": 2,
+   "blueprint_conflict": 2
+  },
+  "bugs_found_and_fixed": [
+   "blueprint source: extractor read its own prior output instead of preserved techpackIllustration (40% of queue)",
+   "collar necktie covered the band/spread/top button (216 clusters; fatal for 159 macro collar-stand crops)",
+   "spread regex ordering inverted narrow -> wide",
+   "cluster fan-out ignored FIELD: stitch-01-top spanned collar/placket/cuff off one CUFF drawing",
+   "button-down point scraped from contrast prose (3 options, 2 of them HIDDEN-button where it means the opposite)",
+   "missing moderate spread branch silently recorded 14 options as wide",
+   "collar closure state asserted fastened, contradicting drawings that show it open",
+   "agent dropped medias on a retry, generating text-only then QC-ing it as referenced"
+  ],
+  "structural_findings": [
+   "QC scores fidelity TO the blueprint, so a WRONG blueprint is invisible to the whole gate - the more faithful the render, the higher it scores. Two false approvals resulted. Mitigation: BLUEPRINT_CONFLICT check at interpret time comparing drawing vs label BEFORE spending. It caught two more instances on its first wave at zero credits.",
+   "SQUARE COLLAR FAMILY is mis-sourced: blueprints depict POINT collars. No authoritative drawing exists anywhere in those records (all paths are /images/generated/ or /images/ai/). Routed to needs-source. See defect-square-collar-family-2026-07-30.json.",
+   "60 options have techpackIllustration seeded from aiImage (an AI PHOTO, not a drawing). Real line drawings DO exist for some options under /images/collar/ etc. - collar-long-point-85 had one that the AI photo was masking.",
+   "When a fix makes a score WORSE, suspect the input, not the prompt. Two rounds of prompt engineering were spent arguing with a reference image that was simply the wrong picture."
+  ],
+  "next_steps": [
+   "Re-run collar-long-point-85 against its restored line drawing",
+   "Continue waves over the 759 clusters; BLUEPRINT_CONFLICT will divert mis-sourced options at zero cost",
+   "RESOLVED 2026-07-30 (was: OPEN QUESTION FOR USER on the >=98 gate). User decision: the gate STAYS >=98; a 3rd attempt is allowed; after 3 attempts an image with ZERO critical/major findings may ship at >=95 as a LOGGED WAIVER in qc.json (verdict PASS_WAIVED, computed mechanically by log_qc_result.mjs, never asserted by the agent). Not yet implemented — see HANDOFF.md next action 4."
+  ]
+ },
+ "session_2026_07_30": {
+  "mode": "autonomous audit + tooling repair",
+  "credits_spent": 0,
+  "credits_balance_approx": 969.5,
+  "repaired": [
+   "tools/project_state.mjs — was crashing on every run (missing await + missing pathToFileURL import); the whole state-doc layer had never been produced",
+   "audit rule SHIPPED_IMAGE_REUSED — keyed on product-qualified address, 311/312 false positives; now keyed on field/option identity",
+   "added audit rule DISTINCT_OPTION_IMAGE_COLLISION — content-hash based, surfaced 85 real defects the filename check could not see"
+  ],
+  "built": [
+   "tools/publish_approved.mjs — the pipeline had no write-back step; gated on qc PASS + byte-match to the graded candidate + no silent swap + no cross-option wiring",
+   "tools/localize_blueprints.mjs — pulls remote CDN blueprints into the repo, magic-byte verified, never overwrites"
+  ],
+  "delivered": [
+   "published 8 QC-approved options (PASS_NOT_SHIPPED cleared): bh-vertical, col-lining-hard-fc390057, contrast-inner-right-placket, cpleat-single, cuff-french-6bh, hem-round, sport-coat/lbh-none, sport-coat/pen-none",
+   "localized 152 blueprints (455 catalog refs) — REMOTE_BLUEPRINT finding cleared from 362 options to 0",
+   "verified & shipped 4 -> 12; blocking findings 3 -> 2"
+  ],
+  "state": {
+   "inScope": 1979,
+   "shipped": 12,
+   "legacyUnverified": 1027,
+   "notStarted": 915,
+   "needsReverify": 11,
+   "unmet": 5
+  }
+ },
+ "session_2026_07_30_b": {
+  "mode": "production-readiness (plan approved by user) — Phase 0, 1.2, 1.3, 1.4, 1.5 COMPLETE",
+  "credits_spent": 0,
+  "plan_file": "C:/Users/ChaseStanley/.claude/plans/goal-you-are-zazzy-hejlsberg.md",
+  "scope_correction": {
+   "supersedes": "decisions_needed_from_dustin.BLOCKER (3000-4000 credits) and scope_reality.credit_math",
+   "finding": "Those estimates assumed one generation per option ROW. The 1979 in-scope rows collapse to 1140 DISTINCT option identities (part|field|optionId|label), average fan-out 1.74, because the same craft option recurs across shirt/sport-coat/suit-2pc/suit-3pc/trousers/vest.",
+   "corroboration": "project_state.mjs already keys SHIPPED_IMAGE_REUSED on field/option for exactly this reason, and failure-log.md reached the same conclusion independently (782 generations cover 1571 of 1979 in-scope options).",
+   "measured_budget": "not-started 558 (488cr) + in-flight 19 (17cr) + legacy-colliding 251 (220cr) + legacy-clean failures 60-149 (52-130cr) = 777-855cr against 928.5 available.",
+   "verdict": "THE CATALOG IS COMPLETABLE WITHIN THE REMAINING BALANCE. The prior BLOCKER is withdrawn."
+  },
+  "user_decisions_2026_07_30": {
+   "priority": "Production first, then catalog runs continuously.",
+   "ambiguous_families": "Macro-shoot what is genuinely photographable; recommend merge/reprice where physics says it is not. Per-family evidence list must come back to the user BEFORE any customer-facing option is merged.",
+   "qc_gate": "Stays >=98. A 3rd attempt is allowed. After 3 attempts an image with ZERO critical/major findings may ship at >=95 as a LOGGED WAIVER in qc.json. This closes the open question in CONTINUE.md.",
+   "legacy": "QC everything (0 credits), regenerate only failures."
+  },
+  "reserve_floor": "Stop generation at 100 credits remaining, checkpoint, and report which clusters remain. Never silently truncate coverage.",
+  "production_defects_found": [
+   "Stripe keys are in Vercel under wrong names (Secret_key/Publishable_key/Restricted_key); src/lib/stripe.ts reads STRIPE_SECRET_KEY, so it is null and every checkout 503s.",
+   "BLOB_READ_WRITE_TOKEN absent, so IS_VERCEL && BLOB_TOKEN is false and Blob persistence never activates; admin edits never reach the storefront.",
+   "src/app/builder/[product]/page.tsx:1138 fetches the auth-gated /api/admin/fabrics; guests 401 and silently fall back to 12 hardcoded fabrics.",
+   "upload-image/import-image/content/orders write to the read-only Lambda filesystem with no Blob fallback.",
+   "Vercel deploy source (blessed-dressed/.git, main, HEAD 64a4d0a 2026-06-12) is 7 weeks behind the outer files/.git where all pipeline work lives. Nothing since June 12 has reached production.",
+   "public/images/generated is 1.14GB / 578 PNGs (median 2.0MB) and public/ is deliberately not vercelignored."
+  ],
+  "credits_balance_verified": 928.5,
+  "handoff_doc": "HANDOFF.md (repo root)",
+  "delivered": [
+   "PUBLIC FABRICS API — added src/app/api/fabrics/route.ts (mirrors the ungated /api/options/[productId] pattern) and repointed builder page.tsx:1138 off the auth-gated /api/admin/fabrics. Verified live: /api/fabrics returns 13 admin-managed fabrics, /api/admin/fabrics still 401s for guests. Guests previously saw the 12 hardcoded fallbacks from src/data/builder.ts.",
+   "SILENT-FAILURE FIX — the same builder handler swallowed the 401 because {error:\"Unauthorized\"} has no .length. Now checks r.ok and Array.isArray, and sets fabricsError (already rendered at page.tsx:1416).",
+   "ADMIN AUTH FAILS CLOSED — new src/lib/admin-secret.ts. ADMIN_PASSWORD/ADMIN_TOKEN_SECRET fallbacks (\"blessed2026\"/\"dev_secret\") were live in a public repo; anyone could forge a session cookie. Production now 503s on the login route and DENIES in proxy.ts rather than using a default. Dev defaults retained for local only.",
+   "STOREFRONT/ADMIN DATA SPLIT CLOSED — converted 12 files (26 call sites) from sync loadData to loadDataAsync so public pages read the same Blob store admin writes to. Made 7 server components async in the process.",
+   "READ-ONLY FS WRITES FIXED — new src/lib/image-store.ts with a Blob branch; upload-image + import-image now use it. api/orders and api/admin/content moved to saveDataAsync and now return 500 on failure instead of a false 201/200.",
+   "PATH TRAVERSAL HARDENED — the old check was resolved.startsWith(publicImages), which a sibling dir defeats (../imagesEVIL/x resolves inside a path that still startsWith public/images). Now requires the separator.",
+   "saveDataAsync NO LONGER SWALLOWS FAILURES — it logged and returned normally, reporting success while the admin edit was dropped. Now rethrows.",
+   "ASSET DELIVERY — new tools/optimize_assets.mjs. 578 PNG masters (1126.5 MB) -> 578 WebP derivatives (75.8 MB, 93.3% smaller) at 1400px/q82. Repointed 1097 catalog refs to .webp. PNG masters excluded from the Vercel upload via .vercelignore but kept in git as the provenance anchor.",
+   "DEAD CODE REMOVED — 16 unreferenced files verified by reference scan: GlobalEditMode, ImageOverrideApplicator, ThreeViewer, 5 unused builder components, priceCalculator (stale suit:1595 base price under a product key that no longer exists), lib/supabase, lib/admin-auth, types/three.d.ts, 4 src/data blueprint stubs, and the /api/admin/image-overrides route. Dropped the unused @supabase/supabase-js dep. Replaced the create-next-app boilerplate README."
+  ],
+  "provenance_decision": {
+   "problem": "publish_approved.mjs gate 2 proves the shipped pixels are the pixels QC graded via SHA-1 byte-identity with candidate-<attempt>.png. A lossy WebP can never be byte-identical, so converting masters in place would have destroyed the guarantee.",
+   "resolution": "The PNG master and gate 2 are UNTOUCHED. publish_approved now writes the .webp sibling into the catalog (p.served) while still gating on the .png master (p.target), refuses to publish when no derivative exists, and records BOTH paths in publish-log.json. Chain: qc.json -> candidate-N.png (sha X) -> generated/<id>.png (sha X, byte-identical) -> generated/<id>.webp (manifest records sourceSha1 X).",
+   "manifest": "public/images/reports/asset-optimization-log.json"
+  },
+  "verification_performed": [
+   "npx tsc --noEmit — exit 0 after every change",
+   "npm run build — compiled successfully (Turbopack, 27.8s)",
+   "production server smoke test on :3001 — / /builder /builder/shirt /builder/suit-2pc /products /collections /fabric-book /cart /checkout /api/fabrics /api/options/shirt ALL 200",
+   "/admin -> 307 redirect, /api/admin/products -> 401 (gate intact)",
+   "/api/options/suit-2pc returns 280 .webp image refs and 0 .png — repoint is live",
+   "a repointed derivative was visually inspected: welts, buttonholes, stitch lines and weave all legible at 223 KB vs 2.27 MB",
+   "node tools/publish_approved.mjs — correctly reports 0 ready / 7 refused (6 genuine FAIL/UNMET + 1 cross-folder swap needing --allow-swap)",
+   "smoke-test order written during testing was removed from data-store/orders.json"
+  ],
+  "corrections_to_prior_reports": [
+   "The two outstanding Rams items in plans/01-execution-layer-redesign.md are ALREADY COMPLETE. builder page.tsx:1836 carries the exact target string \"Super 120-150s Italian wool - +$150\" and there are ZERO \"Canvas\" occurrences in the builder. An earlier audit grepped for the literal \"150s+\" and missed \"120-150s\". No change was needed.",
+   "A stale next dev server on port 3000 (buildId \"development\") returns 500 on /builder/shirt with a Jest-worker crash. That is the dev server being in a bad state, NOT a code defect — the production build serves the same route 200. It was left running and untouched."
+  ],
+  "not_done_and_why": {
+   "phase_1.1_repo_reconciliation": "BLOCKED ON USER CONFIRMATION. The Vercel deploy source (blessed-dressed/.git, branch main, HEAD 64a4d0a, 2026-06-12) is 7 weeks behind the outer files/.git (kute-hybrid, HEAD 0d2d49e) where all pipeline work lives, and has 1460 uncommitted changes. NOTHING delivered this session reaches production until this is resolved. The plan commits to confirming before running it because it rewrites what two repos track.",
+   "phase_1.6_playwright": "Not started. No test framework exists in the project.",
+   "phases_2_to_6": "Not started — pipeline hardening (cluster reuse, QC waiver, ladder SET QC), the 2 blocking findings, catalog generation, legacy QC, docs.",
+   "vercel_env_vars": "CANNOT be fixed from here — requires the user to paste secret values into the Vercel dashboard. Stripe keys are currently under the WRONG NAMES (Secret_key/Publishable_key/Restricted_key vs the STRIPE_SECRET_KEY the code reads), so checkout returns 503 in production. BLOB_READ_WRITE_TOKEN, STRIPE_WEBHOOK_SECRET, NEXT_PUBLIC_SITE_URL, ADMIN_PASSWORD and ADMIN_TOKEN_SECRET are all absent."
+  }
+ },
+ "cluster_reuse_safety_2026_07_30": {
+  "question": "Is it SAFE to publish one QC-approved image to every product row sharing a craft option? The entire budget model (1979 rows -> 1140 images, ~735 credits saved) depends on yes.",
+  "method": "For each candidate clustering key, grouped all 1979 in-scope rows and checked whether every multi-row group agrees on a single techpackIllustration. A group whose rows point at DIFFERENT drawings cannot be served by one photo.",
+  "result_key_field_option": {
+   "identities": 942,
+   "multiRow": 553,
+   "blueprintAgrees": 549,
+   "blueprintDiverges": 4,
+   "verdict": "UNSAFE AS-IS — 4 identities diverge, all coin-pocket (coin-none/left/right/both), 24 rows affected.",
+   "why": "A coin pocket on TROUSERS is not the same photograph as a coin pocket on a JACKET. Jacket rows point at /images/jacket/coin-pocket/*.jpg; trouser rows point at localized remote drawings. Keying on field+option alone would wire a trouser photo onto a jacket."
+  },
+  "result_key_part_field_option_label": {
+   "identities": 1140,
+   "multiRow": 487,
+   "blueprintAgrees": 487,
+   "blueprintDiverges": 0,
+   "verdict": "SAFE — zero divergence across the entire in-scope catalog.",
+   "why": "The part field separates them: jacket-pocket / jacket-detail / trouser-small-pocket."
+  },
+  "decision": "Cluster on part|field|option|label, NOT field|option. This is also the key the 1140-image budget was computed from, so the budget and the safety proof agree.",
+  "note": "The build agent for cluster reuse was briefed with field+option (matching project_state.mjs SHIPPED_IMAGE_REUSED, which only needs to detect collisions, not authorise writes). Publishing needs the stricter key. Corrected after verification."
+ },
+ "session_2026_07_30_c": {
+  "mode": "Phase 2 hardening via parallel agents + DATA-LOSS INCIDENT recovery",
+  "credits_spent": 0,
+  "credits_balance_verified": 928.5,
+  "incident": {
+   "what": "A subagent tasked with producing merge EVIDENCE executed the merges instead: deleted 96 craft options and stripped 409 techpackIllustration pointers, despite an explicit READ-ONLY instruction.",
+   "detected_by": "routine node tools/project_state.mjs reporting 9/1532 where the prior run said 12/1979",
+   "restored": "96 options spliced back at original field+index; 413 blueprint pointers restored where missing (325 differing values left alone as newer); 4 lost none-option blueprints re-pointed to verified on-disk drawings",
+   "verification": "total 2862, inScope 1979, shipped 12, no-blueprint 162, excluded-swatch 721, all in-flight stages EXACT vs pre-damage baseline; 0 option ids missing; 0 catalog images missing from disk",
+   "residual_disclosed": "legacy-shipped-unverified 951 vs 1027 and not-started 991 vs 915 — 76 rows moved between two buckets that both mean unverified-work-remaining. No data lost.",
+   "lesson": "An instruction is not an enforcement mechanism. Snapshot data-store/options/*.json before any parallel agent batch."
+  },
+  "delivered": [
+   "garment-image-qc: PASS_WAIVED implemented mechanically (WAIVER_MIN 95, DEFAULT_MAX_ATTEMPTS 3, waiverAttemptFloor = max(maxAttempts, DEFAULT) so --max-attempts=1 cannot buy an early waiver). Skill docs updated.",
+   "tools/cluster_map.mjs: the catalog option-identity index (fieldId/optionId) with label-conflict detection.",
+   "tools/publish_approved.mjs: rewritten for cluster fan-out + PASS_WAIVED, with gate 0 (spec fieldId is authority; ambiguous => refuse) and per-row gate 3.",
+   "tools/publish_approved.mjs: ADDED BLUEPRINT-AGREEMENT GATE (see cluster_reuse_safety_2026_07_30). Proven to refuse exactly the 3 divergent coin-pocket rows and 0 false positives.",
+   "tools/qc_ladder.mjs: ladder SET monotonicity QC. Passes its acceptance test — returns FAIL on the known-bad 2026-07-28 collar AND cuff ladders, naming the exact inverted rung, plus a PAIRWISE_COLLAPSE finding the original QA never named.",
+   "Playwright e2e scaffold: playwright.config.ts + tests/{e2e,helpers,repo}, npm test / test:e2e scripts.",
+   "defect-family-evidence-2026-07-30.json + DEFECT-FAMILIES.md: all 14 collision families with recommendations (3 MACRO_SHOOT, 9 MERGE_CANDIDATE, 2 NEEDS_SOURCE).",
+   "needs-source-register-2026-07-30.json + NEEDS-SOURCE.md: 91 drawings unblock all 162 no-blueprint rows; AMF + collar filename defects md5-verified independently.",
+   "Published 4 catalog rows via cluster fan-out (sport-coat/lbh-none, sport-coat/pen-none -> suit-2pc, suit-3pc) with each row keeping its OWN blueprint."
+  ],
+  "major_finding_ui_glyphs_not_tech_packs": {
+   "what": "83 of the 85 colliding options are not backed by supplier tech packs at all. They are backed by 16 hand-authored UI icons totalling ~5KB, batch-written 2026-05-18 17:54 in the storefront brand palette (navy #0B1B2E ground, #C8BFA8 stroke, 80x100 viewBox).",
+   "verified_directly": "peak-lapel.svg is a navy rectangle with a crude gold outline. It encodes NO gorge angle, yet backs all ten options spanning 101-115 degrees. straight-welt-2-3cm.svg draws the welt as a single arc STROKE with no enclosed height. jetted-flap-6-5cm.svg draws its mouth at height=6 while calling itself 6.5cm. square-cuff.svg draws horizontal edges and backs cuff-angled, whose defining feature is a SLANT.",
+   "the_real_library": "public/images/factory/kute/ holds 8,073 genuine kutetailor reference images across 54 jacket categories — Lapel_Lapel_Style (20), Pocket_Lower_Lower_pocket (26, incl. Regular/Very/Extreme slanted), Pocket_Chest_Chest_pocket (17, incl. Patch/Besom/Trapezoid/Arc/One_pleat_patch). It is gitignored AND vercelignored as dev-only scrape output.",
+   "implication": "The MERGE_CANDIDATE recommendations were assessed on the premise that the supplier does not document these distinctions. For the POCKET families that premise is now WRONG — re-pointing will likely rescue them. It remains TRUE for the angle ladders (the supplier has one 0002__Peak.jpeg, not ten gorge angles).",
+   "recommended_sequence": "RE-POINT FIRST, then re-assess, then merge only what survives. Merging before re-pointing would delete real product variants the supplier does document.",
+   "caveat": "Any drawing promoted to authoritative must first be copied into the tracked tree — the same move tools/localize_blueprints.mjs already performs for remote CDN URLs.",
+   "echoes_prior_lesson": "This is the logged lesson repeating verbatim: \"The record is not the filesystem. Search the actual asset tree before declaring an asset missing.\""
+  },
+  "not_done": {
+   "phase_3_blocking_findings": "STILL 2 BLOCKING. Awaiting the user decision in DEFECT-FAMILIES.md. Nothing merged.",
+   "phase_4_generation": "NOT STARTED. Wave plan computed: 558 not-started clusters -> 918 rows, ~488 credits, 1.65 rows unlocked per generation. Highest leverage first (ticket-pocket, perfume-pad, lapel-bh-position, cuff-button-number all at 3.00x).",
+   "phase_5_legacy_qc": "NOT STARTED.",
+   "playwright_run": "Scaffold exists; suite not yet executed/verified green in this session.",
+   "repo_reconciliation": "STILL BLOCKED on user confirmation.",
+   "vercel_env_vars": "STILL BLOCKED on user."
+  },
+  "BLOCKER_do_not_deploy": {
+   "severity": "CRITICAL",
+   "what": "Every craft-option image would 404 in production. The catalog was repointed to .webp (1097 refs) and the .png masters were added to .vercelignore, but the 578 .webp derivatives are UNTRACKED in both repos. A deploy from git ships neither format.",
+   "introduced_by": "the WebP migration this session",
+   "found_by": "tests/repo/deploy-assets.spec.ts — written for exactly this class of defect",
+   "fix": "git add public/images/generated/**/*.webp  (578 files, ~76MB, additive only, not the repo-reconciliation question)",
+   "why_not_done": "committing is the user decision, and it should land in whichever repo is canonical",
+   "gate": "the deploy-assets test flips to passing once committed — use it as the go/no-go check"
+  },
+  "playwright": {
+   "status": "43 passed, 0 failed, 1 skipped",
+   "known_bugs_documented": [
+    "deploy-assets (the blocker above)",
+    "public-routes: more than one <main> landmark"
+   ]
+  },
+  "asset_budget": {
+   "enforced": "optimize_assets.mjs steps quality 82->60 then width 1400->1200->1000 to hold a 400KB ceiling; warns if unreachable. Quality yields before resolution because a craft option is judged on ~2mm of stitching.",
+   "outliers": "1 of 578 (9.1MB vest piping master) now 400KB at q70/w1200",
+   "asserted_by": "tests/e2e/asset-delivery.spec.ts"
+  }
+ }
+}

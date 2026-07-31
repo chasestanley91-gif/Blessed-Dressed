@@ -1,0 +1,154 @@
+{
+  "publishes": [
+    {
+      "at": "2026-07-30T18:25:21.736Z",
+      "by": "tools/publish_approved.mjs",
+      "count": 8,
+      "options": [
+        {
+          "product": "shirt",
+          "option": "bh-vertical",
+          "image": "/images/generated/shirt/bh-vertical.png",
+          "previous": "/images/placket_buttonhole_direction/vertical-buttonholes.jpg",
+          "preservedBlueprint": "/images/placket_buttonhole_direction/vertical-buttonholes.jpg",
+          "qcAttempt": 2,
+          "qcScoreMin": 98
+        },
+        {
+          "product": "shirt",
+          "option": "col-lining-hard-fc390057",
+          "image": "/images/generated/shirt/col-lining-hard-fc390057.png",
+          "previous": "/images/collar_linings/collar-linings-hard-fc390057.jpg",
+          "preservedBlueprint": "/images/collar_linings/collar-linings-hard-fc390057.jpg",
+          "qcAttempt": 1,
+          "qcScoreMin": 98
+        },
+        {
+          "product": "shirt",
+          "option": "contrast-inner-right-placket",
+          "image": "/images/generated/shirt/contrast-inner-right-placket.png",
+          "previous": "/images/contrast_color_position/inner-right-placket.jpg",
+          "preservedBlueprint": "/images/contrast_color_position/inner-right-placket.jpg",
+          "qcAttempt": 2,
+          "qcScoreMin": 98
+        },
+        {
+          "product": "shirt",
+          "option": "cpleat-single",
+          "image": "/images/generated/shirt/cpleat-single.png",
+          "previous": "/images/cuff_pleat/single-pleat.jpg",
+          "preservedBlueprint": "/images/cuff_pleat/single-pleat.jpg",
+          "qcAttempt": 1,
+          "qcScoreMin": 98
+        },
+        {
+          "product": "shirt",
+          "option": "cuff-french-6bh",
+          "image": "/images/generated/shirt/cuff-french-6bh.png",
+          "previous": "/images/cuff/french-cuff-with-6-buttonholes.jpg",
+          "preservedBlueprint": "/images/cuff/french-cuff-with-6-buttonholes.jpg",
+          "qcAttempt": 2,
+          "qcScoreMin": 98
+        },
+        {
+          "product": "shirt",
+          "option": "hem-round",
+          "image": "/images/generated/shirt/hem-round.png",
+          "previous": "/images/hem/round-hem.jpg",
+          "preservedBlueprint": "/images/hem/round-hem.jpg",
+          "qcAttempt": 1,
+          "qcScoreMin": 98
+        },
+        {
+          "product": "sport-coat",
+          "option": "lbh-none",
+          "image": "/images/generated/sport-coat/lbh-none.png",
+          "previous": "/images/jacket/lapel-bh-style/none.svg",
+          "preservedBlueprint": "/images/jacket/lapel-bh-style/none.svg",
+          "qcAttempt": 1,
+          "qcScoreMin": 98
+        },
+        {
+          "product": "sport-coat",
+          "option": "pen-none",
+          "image": "/images/generated/sport-coat/pen-none.png",
+          "previous": "/images/jacket/pen-pocket/none.jpg",
+          "preservedBlueprint": "/images/jacket/pen-pocket/none.jpg",
+          "qcAttempt": 2,
+          "qcScoreMin": 98
+        }
+      ]
+    },
+    {
+      "at": "2026-07-31T00:04:55.999Z",
+      "by": "tools/publish_approved.mjs",
+      "count": 2,
+      "rowCount": 4,
+      "fanout": true,
+      "options": [
+        {
+          "product": "sport-coat",
+          "option": "lbh-none",
+          "field": "lapel-bh-style",
+          "identity": "lapel-bh-style/lbh-none",
+          "image": "/images/generated/sport-coat/lbh-none.webp",
+          "master": "/images/generated/sport-coat/lbh-none.png",
+          "previous": null,
+          "preservedBlueprint": null,
+          "verdict": "PASS",
+          "waived": false,
+          "qcAttempt": 1,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 98,
+          "rows": [
+            {
+              "product": "suit-2pc",
+              "section": "lapel",
+              "field": "lapel-bh-style",
+              "previous": "/images/jacket/lapel-bh-style/none.svg",
+              "preservedBlueprint": "/images/jacket/lapel-bh-style/none.svg"
+            },
+            {
+              "product": "suit-3pc",
+              "section": "lapel",
+              "field": "lapel-bh-style",
+              "previous": "/images/jacket/lapel-bh-style/none.svg",
+              "preservedBlueprint": "/images/jacket/lapel-bh-style/none.svg"
+            }
+          ]
+        },
+        {
+          "product": "sport-coat",
+          "option": "pen-none",
+          "field": "pen-pocket",
+          "identity": "pen-pocket/pen-none",
+          "image": "/images/generated/sport-coat/pen-none.webp",
+          "master": "/images/generated/sport-coat/pen-none.png",
+          "previous": null,
+          "preservedBlueprint": null,
+          "verdict": "PASS",
+          "waived": false,
+          "qcAttempt": 2,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 98,
+          "rows": [
+            {
+              "product": "suit-2pc",
+              "section": "interior",
+              "field": "pen-pocket",
+              "previous": "/images/jacket/pen-pocket/none.jpg",
+              "preservedBlueprint": "/images/jacket/pen-pocket/none.jpg"
+            },
+            {
+              "product": "suit-3pc",
+              "section": "interior",
+              "field": "pen-pocket",
+              "previous": "/images/jacket/pen-pocket/none.jpg",
+              "preservedBlueprint": "/images/jacket/pen-pocket/none.jpg"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

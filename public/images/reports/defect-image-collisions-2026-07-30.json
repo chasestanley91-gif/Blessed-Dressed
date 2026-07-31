@@ -1,0 +1,1034 @@
+{
+  "generatedAt": "2026-07-30T18:31:23.305Z",
+  "finding": "DISTINCT_OPTION_IMAGE_COLLISION",
+  "summary": {
+    "groups": 14,
+    "optionsAffected": 85,
+    "groupsWhereBlueprintAlsoShared": 10
+  },
+  "rootCause": "The catalog offers finer option granularity (per gorge angle, per pocket slant, per welt height) than the supplier blueprint library documents. One drawing backs the whole family, so a per-blueprint generation pass produced one photo for the family. Regenerating from the same shared drawing reproduces the same image; the differentiator must come from the option spec, or a per-variant drawing must be sourced.",
+  "groups": [
+    {
+      "sha1": "cb7b3639df7552df98cd1967d6abd1c4c2ffe403",
+      "optionCount": 13,
+      "sharedImage": "/images/generated/jacket/cp-patch.png",
+      "distinctBlueprints": 2,
+      "blueprints": [
+        "/images/jacket/chest-pocket/patch-pocket.svg",
+        "/images/jacket/lower-pocket/patch-pocket.svg"
+      ],
+      "differentiator": "chest-pocket",
+      "options": [
+        {
+          "id": "cp-patch",
+          "label": "Patch Pocket",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/chest-pocket/patch-pocket.svg"
+        },
+        {
+          "id": "cp-patch-angled",
+          "label": "Angled Box Pleat Patch",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/chest-pocket/patch-pocket.svg"
+        },
+        {
+          "id": "cp-patch-multi",
+          "label": "Multi-Pleated Patch",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/chest-pocket/patch-pocket.svg"
+        },
+        {
+          "id": "cp-inverted-pleat-2flap",
+          "label": "Two Inverted Pleated + Flaps",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/chest-pocket/patch-pocket.svg"
+        },
+        {
+          "id": "cp-inverted-pleat-flap",
+          "label": "Inverted Pleated + Flap",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/chest-pocket/patch-pocket.svg"
+        },
+        {
+          "id": "lp-patch",
+          "label": "Patch Pocket",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/patch-pocket.svg"
+        },
+        {
+          "id": "lp-patch-rounded",
+          "label": "Rounded Patch",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/patch-pocket.svg"
+        },
+        {
+          "id": "lp-patch-flap",
+          "label": "Patch with Basic Flap",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/patch-pocket.svg"
+        },
+        {
+          "id": "lp-patch-flap-btn",
+          "label": "Patch with Flap & Button",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/patch-pocket.svg"
+        },
+        {
+          "id": "lp-patch-btn-tab-round",
+          "label": "Patch + Rounded Button Tab",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/patch-pocket.svg"
+        },
+        {
+          "id": "lp-patch-btn-tab-straight",
+          "label": "Patch + Straight Button Tab",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/patch-pocket.svg"
+        },
+        {
+          "id": "lp-patch-btn-tab-angled",
+          "label": "Patch + Angled Button Tab",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/patch-pocket.svg"
+        },
+        {
+          "id": "lp-water-drop",
+          "label": "Water-drop Shape Patch",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/patch-pocket.svg"
+        }
+      ]
+    },
+    {
+      "sha1": "a524454517ef0e1d851cb6fb45788a980ede8d02",
+      "optionCount": 11,
+      "sharedImage": "/images/generated/jacket/lp-slanted-flap-55.png",
+      "distinctBlueprints": 2,
+      "blueprints": [
+        "/images/jacket/lower-pocket/jetted-flap-5-5cm.svg",
+        "/images/jacket/lower-pocket/jetted-flap-6-5cm.svg"
+      ],
+      "differentiator": "lower-pocket",
+      "options": [
+        {
+          "id": "lp-slanted-flap-55",
+          "label": "Slanted Flap 5.5 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/jetted-flap-5-5cm.svg"
+        },
+        {
+          "id": "lp-slanted-flap-65",
+          "label": "Slanted Flap 6.5 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/jetted-flap-6-5cm.svg"
+        },
+        {
+          "id": "lp-large-slanted-55",
+          "label": "Large Slanted Flap 5.5 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/jetted-flap-5-5cm.svg"
+        },
+        {
+          "id": "lp-large-slanted-65",
+          "label": "Large Slanted Flap 6.5 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/jetted-flap-6-5cm.svg"
+        },
+        {
+          "id": "lp-straight-jetted-40",
+          "label": "Straight Jetted Flap 4.0 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/jetted-flap-5-5cm.svg"
+        },
+        {
+          "id": "lp-straight-jetted-45",
+          "label": "Straight Jetted Flap 4.5 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/jetted-flap-5-5cm.svg"
+        },
+        {
+          "id": "lp-straight-jetted-50",
+          "label": "Straight Jetted Flap 5.0 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/jetted-flap-5-5cm.svg"
+        },
+        {
+          "id": "lp-straight-jetted-55",
+          "label": "Straight Jetted Flap 5.5 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/jetted-flap-5-5cm.svg"
+        },
+        {
+          "id": "lp-straight-jetted-60",
+          "label": "Straight Jetted Flap 6.0 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/jetted-flap-6-5cm.svg"
+        },
+        {
+          "id": "lp-straight-jetted-65",
+          "label": "Straight Jetted Flap 6.5 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/jetted-flap-6-5cm.svg"
+        },
+        {
+          "id": "lp-rl-flat-55",
+          "label": "RL Flat Dress Pocket 5.5 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/jetted-flap-5-5cm.svg"
+        }
+      ]
+    },
+    {
+      "sha1": "3a36d52407645bb37475babebd81da852fa857c3",
+      "optionCount": 10,
+      "sharedImage": "/images/generated/jacket/lapel-peak-101.png",
+      "distinctBlueprints": 1,
+      "blueprints": [
+        "/images/jacket/lapel/peak-lapel.svg"
+      ],
+      "differentiator": "lapel-style",
+      "options": [
+        {
+          "id": "lapel-peak-101",
+          "label": "Peak 101°",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lapel/peak-lapel.svg"
+        },
+        {
+          "id": "lapel-peak-102",
+          "label": "Peak 102°",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lapel/peak-lapel.svg"
+        },
+        {
+          "id": "lapel-peak-102-rl",
+          "label": "Peak 102° RL",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lapel/peak-lapel.svg"
+        },
+        {
+          "id": "lapel-peak-103-curved",
+          "label": "Curved Peak 103°",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lapel/peak-lapel.svg"
+        },
+        {
+          "id": "lapel-peak-105",
+          "label": "Peak 105°",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lapel/peak-lapel.svg"
+        },
+        {
+          "id": "lapel-peak-107",
+          "label": "Peak 107° (Normal Curve)",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lapel/peak-lapel.svg"
+        },
+        {
+          "id": "lapel-peak-108",
+          "label": "Straight Peak 108°",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lapel/peak-lapel.svg"
+        },
+        {
+          "id": "lapel-peak-110",
+          "label": "Peak 110°",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lapel/peak-lapel.svg"
+        },
+        {
+          "id": "lapel-peak-110-low",
+          "label": "Low Peak 110°",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lapel/peak-lapel.svg"
+        },
+        {
+          "id": "lapel-peak-115",
+          "label": "Peak 115°",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lapel/peak-lapel.svg"
+        }
+      ]
+    },
+    {
+      "sha1": "5a49ccce460ded81fb7442161833e10ae36c0bd6",
+      "optionCount": 10,
+      "sharedImage": "/images/generated/jacket/lp-slanted-flap-40.png",
+      "distinctBlueprints": 1,
+      "blueprints": [
+        "/images/jacket/lower-pocket/slanted-flap.svg"
+      ],
+      "differentiator": "lower-pocket",
+      "options": [
+        {
+          "id": "lp-slanted-flap-40",
+          "label": "Slanted Flap 4.0 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/slanted-flap.svg"
+        },
+        {
+          "id": "lp-slanted-flap-45",
+          "label": "Slanted Flap 4.5 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/slanted-flap.svg"
+        },
+        {
+          "id": "lp-slanted-flap-50",
+          "label": "Slanted Flap 5.0 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/slanted-flap.svg"
+        },
+        {
+          "id": "lp-slanted-flap-60",
+          "label": "Slanted Flap 6.0 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/slanted-flap.svg"
+        },
+        {
+          "id": "lp-large-slanted-40",
+          "label": "Large Slanted Flap 4.0 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/slanted-flap.svg"
+        },
+        {
+          "id": "lp-large-slanted-45",
+          "label": "Large Slanted Flap 4.5 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/slanted-flap.svg"
+        },
+        {
+          "id": "lp-large-slanted-50",
+          "label": "Large Slanted Flap 5.0 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/slanted-flap.svg"
+        },
+        {
+          "id": "lp-large-slanted-60",
+          "label": "Large Slanted Flap 6.0 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/slanted-flap.svg"
+        },
+        {
+          "id": "lp-slanted-jetted",
+          "label": "Slanted Jetted Pocket",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/slanted-flap.svg"
+        },
+        {
+          "id": "lp-large-slanted-jetted",
+          "label": "Large Slanted Jetted Pocket",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/slanted-flap.svg"
+        }
+      ]
+    },
+    {
+      "sha1": "c3dd66084e020b452386610ccfd479a3c743b48e",
+      "optionCount": 6,
+      "sharedImage": "/images/generated/jacket/lapel-shawl.png",
+      "distinctBlueprints": 1,
+      "blueprints": [
+        "/images/jacket/lapel/shawl-lapel.svg"
+      ],
+      "differentiator": "lapel-style",
+      "options": [
+        {
+          "id": "lapel-shawl",
+          "label": "Shawl Lapel",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lapel/shawl-lapel.svg"
+        },
+        {
+          "id": "lapel-shawl-d",
+          "label": "D-Shawl Lapel",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lapel/shawl-lapel.svg"
+        },
+        {
+          "id": "lapel-shawl-0a",
+          "label": "Shawl 0A",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lapel/shawl-lapel.svg"
+        },
+        {
+          "id": "lapel-shawl-0e",
+          "label": "Shawl 0E",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lapel/shawl-lapel.svg"
+        },
+        {
+          "id": "lapel-shawl-0005",
+          "label": "Shawl 0005",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lapel/shawl-lapel.svg"
+        },
+        {
+          "id": "lapel-shawl-asymmetric",
+          "label": "Asymmetric Shawl Collar",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lapel/shawl-lapel.svg"
+        }
+      ]
+    },
+    {
+      "sha1": "79a598bae235dd973ee3a10f1776427526e175cf",
+      "optionCount": 6,
+      "sharedImage": "/images/generated/jacket/lp-jetted-4.png",
+      "distinctBlueprints": 1,
+      "blueprints": [
+        "/images/jacket/lower-pocket/jetted-no-flap.svg"
+      ],
+      "differentiator": "lower-pocket",
+      "options": [
+        {
+          "id": "lp-jetted-4",
+          "label": "Straight Jetted Pocket 4 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/jetted-no-flap.svg"
+        },
+        {
+          "id": "lp-straight-jetted",
+          "label": "Straight Jetted Pocket",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/jetted-no-flap.svg"
+        },
+        {
+          "id": "lp-welt-10",
+          "label": "Welt Pocket 1.0 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/jetted-no-flap.svg"
+        },
+        {
+          "id": "lp-welt-12",
+          "label": "Welt Pocket 1.2 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/jetted-no-flap.svg"
+        },
+        {
+          "id": "lp-welt-15",
+          "label": "Welt Pocket 1.5 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/jetted-no-flap.svg"
+        },
+        {
+          "id": "lp-jetted-btn-tab",
+          "label": "Jetted + Button Tab",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/jetted-no-flap.svg"
+        }
+      ]
+    },
+    {
+      "sha1": "2dc4f12687dff22f9e88100892643763b6439964",
+      "optionCount": 6,
+      "sharedImage": "/images/generated/jacket/lp-inverted-flap.png",
+      "distinctBlueprints": 1,
+      "blueprints": [
+        "/images/jacket/lower-pocket/bellows-pocket.svg"
+      ],
+      "differentiator": "lower-pocket",
+      "options": [
+        {
+          "id": "lp-inverted-flap",
+          "label": "Inverted Pleated + Basic Flap",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/bellows-pocket.svg"
+        },
+        {
+          "id": "lp-inverted-flap-btn",
+          "label": "Inverted Pleated + Flap & Button",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/bellows-pocket.svg"
+        },
+        {
+          "id": "lp-inverted-angled-flap-btn",
+          "label": "Inverted Pleated + Angled Flap & Button",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/bellows-pocket.svg"
+        },
+        {
+          "id": "lp-box-pleat-flap",
+          "label": "Box Patch Pocket + Flap",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/bellows-pocket.svg"
+        },
+        {
+          "id": "lp-angled-box-pleat",
+          "label": "Angled Box Pleat Patch",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/bellows-pocket.svg"
+        },
+        {
+          "id": "lp-multi-pleat",
+          "label": "Multi-Pleat Patch",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lower-pocket/bellows-pocket.svg"
+        }
+      ]
+    },
+    {
+      "sha1": "2d48bea0f2ab3033ff9ce1e3315095fe69463e00",
+      "optionCount": 5,
+      "sharedImage": "/images/generated/jacket/lapel-notch-50.png",
+      "distinctBlueprints": 1,
+      "blueprints": [
+        "/images/jacket/lapel/notch-lapel.svg"
+      ],
+      "differentiator": "lapel-style",
+      "options": [
+        {
+          "id": "lapel-notch-50",
+          "label": "Notch 50° (BC)",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lapel/notch-lapel.svg"
+        },
+        {
+          "id": "lapel-notch-55",
+          "label": "Notch 55°",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lapel/notch-lapel.svg"
+        },
+        {
+          "id": "lapel-notch-65",
+          "label": "Notch 65°",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lapel/notch-lapel.svg"
+        },
+        {
+          "id": "lapel-notch-73",
+          "label": "Straight Notch 73°",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lapel/notch-lapel.svg"
+        },
+        {
+          "id": "lapel-notch-tab-basic",
+          "label": "Notch + Basic Tab",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lapel/notch-lapel.svg"
+        }
+      ]
+    },
+    {
+      "sha1": "364b764c7bf766a0e830fb15ba4dffa14a768241",
+      "optionCount": 5,
+      "sharedImage": "/images/generated/jacket/cp-welt-23.png",
+      "distinctBlueprints": 2,
+      "blueprints": [
+        "/images/jacket/chest-pocket/straight-welt-2-3cm.svg",
+        "/images/jacket/chest-pocket/straight-welt-2-5cm.svg"
+      ],
+      "differentiator": "chest-pocket",
+      "options": [
+        {
+          "id": "cp-welt-23",
+          "label": "Straight Welt 2.3 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/chest-pocket/straight-welt-2-3cm.svg"
+        },
+        {
+          "id": "cp-welt-25",
+          "label": "Straight Welt 2.5 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/chest-pocket/straight-welt-2-5cm.svg"
+        },
+        {
+          "id": "cp-welt-27",
+          "label": "Straight Welt 2.7 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/chest-pocket/straight-welt-2-5cm.svg"
+        },
+        {
+          "id": "cp-jetted",
+          "label": "Jetted Chest Pocket",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/chest-pocket/straight-welt-2-5cm.svg"
+        },
+        {
+          "id": "cp-trapezoid",
+          "label": "Trapezoid Pocket",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/chest-pocket/straight-welt-2-5cm.svg"
+        }
+      ]
+    },
+    {
+      "sha1": "7cba4f8e31453158869b6ea50c34fcc25ff3bac1",
+      "optionCount": 4,
+      "sharedImage": "/images/generated/jacket/cp-welt-curved-23.png",
+      "distinctBlueprints": 1,
+      "blueprints": [
+        "/images/jacket/chest-pocket/curved-welt-2-5cm.svg"
+      ],
+      "differentiator": "chest-pocket",
+      "options": [
+        {
+          "id": "cp-welt-curved-23",
+          "label": "Curved Welt 2.3 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/chest-pocket/curved-welt-2-5cm.svg"
+        },
+        {
+          "id": "cp-welt-curved-25",
+          "label": "Curved Welt 2.5 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/chest-pocket/curved-welt-2-5cm.svg"
+        },
+        {
+          "id": "cp-welt-curved-27",
+          "label": "Curved Welt 2.7 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/chest-pocket/curved-welt-2-5cm.svg"
+        },
+        {
+          "id": "cp-welt-curved-29",
+          "label": "Curved Welt 2.9 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/chest-pocket/curved-welt-2-5cm.svg"
+        }
+      ]
+    },
+    {
+      "sha1": "b2d0d32a2dfd8ffc4bfb12eba4e87fcb8654cf74",
+      "optionCount": 3,
+      "sharedImage": "/images/generated/jacket/cuff-british.png",
+      "distinctBlueprints": 1,
+      "blueprints": [
+        "/images/jacket/sleeve-cuff/turnback-cuff.svg"
+      ],
+      "differentiator": "cuff-style",
+      "options": [
+        {
+          "id": "cuff-british",
+          "label": "British Turn-up",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/sleeve-cuff/turnback-cuff.svg"
+        },
+        {
+          "id": "cuff-turnback-35",
+          "label": "Turn-back 3.5 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/sleeve-cuff/turnback-cuff.svg"
+        },
+        {
+          "id": "cuff-turnback-40",
+          "label": "Turn-back 4.0 cm",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/sleeve-cuff/turnback-cuff.svg"
+        }
+      ]
+    },
+    {
+      "sha1": "a7f01a9294c416495fb9172daffffa45a8bba883",
+      "optionCount": 2,
+      "sharedImage": "/images/generated/jacket/lapel-peak-99.png",
+      "distinctBlueprints": 1,
+      "blueprints": [
+        "/images/jacket/lapel/semi-peak.svg"
+      ],
+      "differentiator": "lapel-style",
+      "options": [
+        {
+          "id": "lapel-peak-99",
+          "label": "Peak 99°",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lapel/semi-peak.svg"
+        },
+        {
+          "id": "lapel-peak-114",
+          "label": "Peak 114° (Semi-peak)",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/lapel/semi-peak.svg"
+        }
+      ]
+    },
+    {
+      "sha1": "0e08ea4df6930b965c2563b6b6fba2b2fb0f27eb",
+      "optionCount": 2,
+      "sharedImage": "/images/generated/jacket/cuff-angled.png",
+      "distinctBlueprints": 1,
+      "blueprints": [
+        "/images/jacket/sleeve-cuff/square-cuff.svg"
+      ],
+      "differentiator": "cuff-style",
+      "options": [
+        {
+          "id": "cuff-angled",
+          "label": "Angled Vent Cuff",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/sleeve-cuff/square-cuff.svg"
+        },
+        {
+          "id": "cuff-square",
+          "label": "Square Cuff",
+          "products": [
+            "sport-coat",
+            "suit-2pc",
+            "suit-3pc"
+          ],
+          "blueprint": "/images/jacket/sleeve-cuff/square-cuff.svg"
+        }
+      ]
+    },
+    {
+      "sha1": "05e597e810ecdc58df63c009703f567e584f71ec",
+      "optionCount": 2,
+      "sharedImage": "/images/generated/trousers/loops-standard.png",
+      "distinctBlueprints": 2,
+      "blueprints": [
+        "/images/factory/kute/trousers/Waist_Belt_loop/3330__Regular.jpeg",
+        null
+      ],
+      "differentiator": "belt-loops",
+      "options": [
+        {
+          "id": "loops-standard",
+          "label": "Standard (7 Loops)",
+          "products": [
+            "suit-2pc",
+            "suit-3pc",
+            "trousers"
+          ],
+          "blueprint": "/images/factory/kute/trousers/Waist_Belt_loop/3330__Regular.jpeg"
+        },
+        {
+          "id": "loops-5",
+          "label": "5 Loops",
+          "products": [
+            "suit-2pc",
+            "suit-3pc",
+            "trousers"
+          ],
+          "blueprint": null
+        }
+      ]
+    }
+  ]
+}

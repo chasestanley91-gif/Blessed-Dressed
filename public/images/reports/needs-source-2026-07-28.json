@@ -1,0 +1,2145 @@
+{
+  "generatedAt": null,
+  "summary": {
+    "sharedGenericDrawing": {
+      "drawings": 52,
+      "options": 463
+    },
+    "techPackLost": 9,
+    "noIllustration": 153
+  },
+  "note": "Many of the group-A families are MEASURED LADDERS (e.g. peak lapel 10.1/10.2/10.3/10.5/10.7/10.8/11.0 cm all share peak-lapel.svg; slanted flap pockets 40/45/50/55/60 mm share slanted-flap.svg). Even with one drawing per option, mm-scale differences do not survive image generation at full-garment framing - they need extreme-macro framing and must be QC'd as a monotonic set. See failure-log.md, MEASURED LADDERS.",
+  "sharedGenericDrawing": [
+    {
+      "illustration": "/images/decoration_stitching_on_collar/none.jpg",
+      "optionCount": 4,
+      "distinctOptionIds": [
+        "stitch-none",
+        "shl-stitch-none"
+      ],
+      "addrs": [
+        "shirt > collar > decoration_stitching_on_collar > stitch-none",
+        "shirt > placket > decoration_stitching_on_placket > stitch-none",
+        "shirt > shoulder > decoration_stitching_on_shoulder > shl-stitch-none",
+        "shirt > cuffs > decoration_stitching_on_cuff > stitch-none"
+      ],
+      "reason": "One generic category drawing is the only reference for several genuinely different options. \"The drawing is law\" cannot disambiguate them, so any generation would be a guess dressed up as a spec.",
+      "fix": "Supply one tech pack per option."
+    },
+    {
+      "illustration": "/images/decoration_stitching_on_cuff/machine-01cm-top-stitching.jpg",
+      "optionCount": 3,
+      "distinctOptionIds": [
+        "stitch-01-top"
+      ],
+      "addrs": [
+        "shirt > collar > decoration_stitching_on_collar > stitch-01-top",
+        "shirt > placket > decoration_stitching_on_placket > stitch-01-top",
+        "shirt > cuffs > decoration_stitching_on_cuff > stitch-01-top"
+      ],
+      "reason": "One generic category drawing is the only reference for several genuinely different options. \"The drawing is law\" cannot disambiguate them, so any generation would be a guess dressed up as a spec.",
+      "fix": "Supply one tech pack per option."
+    },
+    {
+      "illustration": "/images/decoration_stitching_on_cuff/machine-03cm-top-stitching.jpg",
+      "optionCount": 3,
+      "distinctOptionIds": [
+        "stitch-03-top"
+      ],
+      "addrs": [
+        "shirt > collar > decoration_stitching_on_collar > stitch-03-top",
+        "shirt > placket > decoration_stitching_on_placket > stitch-03-top",
+        "shirt > cuffs > decoration_stitching_on_cuff > stitch-03-top"
+      ],
+      "reason": "One generic category drawing is the only reference for several genuinely different options. \"The drawing is law\" cannot disambiguate them, so any generation would be a guess dressed up as a spec.",
+      "fix": "Supply one tech pack per option."
+    },
+    {
+      "illustration": "/images/decoration_stitching_on_cuff/machine-05cm-top-stitching.jpg",
+      "optionCount": 3,
+      "distinctOptionIds": [
+        "stitch-05-top"
+      ],
+      "addrs": [
+        "shirt > collar > decoration_stitching_on_collar > stitch-05-top",
+        "shirt > placket > decoration_stitching_on_placket > stitch-05-top",
+        "shirt > cuffs > decoration_stitching_on_cuff > stitch-05-top"
+      ],
+      "reason": "One generic category drawing is the only reference for several genuinely different options. \"The drawing is law\" cannot disambiguate them, so any generation would be a guess dressed up as a spec.",
+      "fix": "Supply one tech pack per option."
+    },
+    {
+      "illustration": "/images/decoration_stitching_on_cuff/machine-06cm-top-stitching.jpg",
+      "optionCount": 2,
+      "distinctOptionIds": [
+        "stitch-06-top"
+      ],
+      "addrs": [
+        "shirt > collar > decoration_stitching_on_collar > stitch-06-top",
+        "shirt > cuffs > decoration_stitching_on_cuff > stitch-06-top"
+      ],
+      "reason": "One generic category drawing is the only reference for several genuinely different options. \"The drawing is law\" cannot disambiguate them, so any generation would be a guess dressed up as a spec.",
+      "fix": "Supply one tech pack per option."
+    },
+    {
+      "illustration": "/images/decoration_stitching_on_cuff/machine-01cm-amf-stitching.jpg",
+      "optionCount": 2,
+      "distinctOptionIds": [
+        "stitch-01-amf"
+      ],
+      "addrs": [
+        "shirt > collar > decoration_stitching_on_collar > stitch-01-amf",
+        "shirt > cuffs > decoration_stitching_on_cuff > stitch-01-amf"
+      ],
+      "reason": "One generic category drawing is the only reference for several genuinely different options. \"The drawing is law\" cannot disambiguate them, so any generation would be a guess dressed up as a spec.",
+      "fix": "Supply one tech pack per option."
+    },
+    {
+      "illustration": "/images/decoration_stitching_on_cuff/machine-03cm-amf-stitching.jpg",
+      "optionCount": 2,
+      "distinctOptionIds": [
+        "stitch-03-amf"
+      ],
+      "addrs": [
+        "shirt > collar > decoration_stitching_on_collar > stitch-03-amf",
+        "shirt > cuffs > decoration_stitching_on_cuff > stitch-03-amf"
+      ],
+      "reason": "One generic category drawing is the only reference for several genuinely different options. \"The drawing is law\" cannot disambiguate them, so any generation would be a guess dressed up as a spec.",
+      "fix": "Supply one tech pack per option."
+    },
+    {
+      "illustration": "/images/decoration_stitching_on_cuff/machine-05cm-amf-stitching.jpg",
+      "optionCount": 2,
+      "distinctOptionIds": [
+        "stitch-05-amf"
+      ],
+      "addrs": [
+        "shirt > collar > decoration_stitching_on_collar > stitch-05-amf",
+        "shirt > cuffs > decoration_stitching_on_cuff > stitch-05-amf"
+      ],
+      "reason": "One generic category drawing is the only reference for several genuinely different options. \"The drawing is law\" cannot disambiguate them, so any generation would be a guess dressed up as a spec.",
+      "fix": "Supply one tech pack per option."
+    },
+    {
+      "illustration": "/images/collar_splicing/lower-part-of-top-collar.jpg",
+      "optionCount": 2,
+      "distinctOptionIds": [
+        "splice-lower-top-collar"
+      ],
+      "addrs": [
+        "shirt > collar > collar_splicing > splice-lower-top-collar",
+        "shirt > placket > placket_splicing > splice-lower-top-collar"
+      ],
+      "reason": "One generic category drawing is the only reference for several genuinely different options. \"The drawing is law\" cannot disambiguate them, so any generation would be a guess dressed up as a spec.",
+      "fix": "Supply one tech pack per option."
+    },
+    {
+      "illustration": "/images/collar_splicing/upper-part-of-top-collar.jpg",
+      "optionCount": 2,
+      "distinctOptionIds": [
+        "splice-upper-top-collar"
+      ],
+      "addrs": [
+        "shirt > collar > collar_splicing > splice-upper-top-collar",
+        "shirt > placket > placket_splicing > splice-upper-top-collar"
+      ],
+      "reason": "One generic category drawing is the only reference for several genuinely different options. \"The drawing is law\" cannot disambiguate them, so any generation would be a guess dressed up as a spec.",
+      "fix": "Supply one tech pack per option."
+    },
+    {
+      "illustration": "/images/collar_splicing/strip-in-middle-top-collar.jpg",
+      "optionCount": 2,
+      "distinctOptionIds": [
+        "splice-strip-mid-collar"
+      ],
+      "addrs": [
+        "shirt > collar > collar_splicing > splice-strip-mid-collar",
+        "shirt > placket > placket_splicing > splice-strip-mid-collar"
+      ],
+      "reason": "One generic category drawing is the only reference for several genuinely different options. \"The drawing is law\" cannot disambiguate them, so any generation would be a guess dressed up as a spec.",
+      "fix": "Supply one tech pack per option."
+    },
+    {
+      "illustration": "/images/collar_splicing/collar-point-opening-edge.jpg",
+      "optionCount": 2,
+      "distinctOptionIds": [
+        "splice-point-opening"
+      ],
+      "addrs": [
+        "shirt > collar > collar_splicing > splice-point-opening",
+        "shirt > placket > placket_splicing > splice-point-opening"
+      ],
+      "reason": "One generic category drawing is the only reference for several genuinely different options. \"The drawing is law\" cannot disambiguate them, so any generation would be a guess dressed up as a spec.",
+      "fix": "Supply one tech pack per option."
+    },
+    {
+      "illustration": "/images/collar_splicing/4cm-to-collar-point-opening-edge.jpg",
+      "optionCount": 2,
+      "distinctOptionIds": [
+        "splice-4cm-from-point"
+      ],
+      "addrs": [
+        "shirt > collar > collar_splicing > splice-4cm-from-point",
+        "shirt > placket > placket_splicing > splice-4cm-from-point"
+      ],
+      "reason": "One generic category drawing is the only reference for several genuinely different options. \"The drawing is law\" cannot disambiguate them, so any generation would be a guess dressed up as a spec.",
+      "fix": "Supply one tech pack per option."
+    },
+    {
+      "illustration": "/images/collar_splicing/15cm-to-collar-point-opening-edge.jpg",
+      "optionCount": 2,
+      "distinctOptionIds": [
+        "splice-15cm-from-point"
+      ],
+      "addrs": [
+        "shirt > collar > collar_splicing > splice-15cm-from-point",
+        "shirt > placket > placket_splicing > splice-15cm-from-point"
+      ],
+      "reason": "One generic category drawing is the only reference for several genuinely different options. \"The drawing is law\" cannot disambiguate them, so any generation would be a guess dressed up as a spec.",
+      "fix": "Supply one tech pack per option."
+    },
+    {
+      "illustration": "/images/collar_splicing/single-left-placket-edge.jpg",
+      "optionCount": 2,
+      "distinctOptionIds": [
+        "splice-single-left-placket"
+      ],
+      "addrs": [
+        "shirt > collar > collar_splicing > splice-single-left-placket",
+        "shirt > placket > placket_splicing > splice-single-left-placket"
+      ],
+      "reason": "One generic category drawing is the only reference for several genuinely different options. \"The drawing is law\" cannot disambiguate them, so any generation would be a guess dressed up as a spec.",
+      "fix": "Supply one tech pack per option."
+    },
+    {
+      "illustration": "/images/collar_splicing/double-left-placket-edges.jpg",
+      "optionCount": 2,
+      "distinctOptionIds": [
+        "splice-double-left-placket"
+      ],
+      "addrs": [
+        "shirt > collar > collar_splicing > splice-double-left-placket",
+        "shirt > placket > placket_splicing > splice-double-left-placket"
+      ],
+      "reason": "One generic category drawing is the only reference for several genuinely different options. \"The drawing is law\" cannot disambiguate them, so any generation would be a guess dressed up as a spec.",
+      "fix": "Supply one tech pack per option."
+    },
+    {
+      "illustration": "/images/collar_splicing/top-collar-edge.jpg",
+      "optionCount": 2,
+      "distinctOptionIds": [
+        "splice-top-collar-edge"
+      ],
+      "addrs": [
+        "shirt > collar > collar_splicing > splice-top-collar-edge",
+        "shirt > placket > placket_splicing > splice-top-collar-edge"
+      ],
+      "reason": "One generic category drawing is the only reference for several genuinely different options. \"The drawing is law\" cannot disambiguate them, so any generation would be a guess dressed up as a spec.",
+      "fix": "Supply one tech pack per option."
+    },
+    {
+      "illustration": "/images/collar_splicing/triangle-collar-point.jpg",
+      "optionCount": 2,
+      "distinctOptionIds": [
+        "splice-triangle-point"
+      ],
+      "addrs": [
+        "shirt > collar > collar_splicing > splice-triangle-point",
+        "shirt > placket > placket_splicing > splice-triangle-point"
+      ],
+      "reason": "One generic category drawing is the only reference for several genuinely different options. \"The drawing is law\" cannot disambiguate them, so any generation would be a guess dressed up as a spec.",
+      "fix": "Supply one tech pack per option."
+    },
+    {
+      "illustration": "/images/collar_splicing/upper-sleeve-cuff.jpg",
+      "optionCount": 2,
+      "distinctOptionIds": [
+        "splice-upper-cuff"
+      ],
+      "addrs": [
+        "shirt > collar > collar_splicing > splice-upper-cuff",
+        "shirt > placket > placket_splicing > splice-upper-cuff"
+      ],
+      "reason": "One generic category drawing is the only reference for several genuinely different options. \"The drawing is law\" cannot disambiguate them, so any generation would be a guess dressed up as a spec.",
+      "fix": "Supply one tech pack per option."
+    },
+    {
+      "illustration": "/images/collar_splicing/lower-sleeve-cuff.jpg",
+      "optionCount": 2,
+      "distinctOptionIds": [
+        "splice-lower-cuff"
+      ],
+      "addrs": [
+        "shirt > collar > collar_splicing > splice-lower-cuff",
+        "shirt > placket > placket_splicing > splice-lower-cuff"
+      ],
+      "reason": "One generic category drawing is the only reference for several genuinely different options. \"The drawing is law\" cannot disambiguate them, so any generation would be a guess dressed up as a spec.",
+      "fix": "Supply one tech pack per option."
+    },
+    {
+      "illustration": "/images/collar_splicing/cuff-edge.jpg",
+      "optionCount": 2,
+      "distinctOptionIds": [
+        "splice-cuff-edge"
+      ],
+      "addrs": [
+        "shirt > collar > collar_splicing > splice-cuff-edge",
+        "shirt > placket > placket_splicing > splice-cuff-edge"
+      ],
+      "reason": "One generic category drawing is the only reference for several genuinely different options. \"The drawing is law\" cannot disambiguate them, so any generation would be a guess dressed up as a spec.",
+      "fix": "Supply one tech pack per option."
+    },
+    {
+      "illustration": "/images/collar_splicing/strip-in-middle-cuff.jpg",
+      "optionCount": 2,
+      "distinctOptionIds": [
+        "splice-strip-mid-cuff"
+      ],
+      "addrs": [
+        "shirt > collar > collar_splicing > splice-strip-mid-cuff",
+        "shirt > placket > placket_splicing > splice-strip-mid-cuff"
+      ],
+      "reason": "One generic category drawing is the only reference for several genuinely different options. \"The drawing is law\" cannot disambiguate them, so any generation would be a guess dressed up as a spec.",
+      "fix": "Supply one tech pack per option."
+    },
+    {
+      "illustration": "/images/factory/kute/jacket/style_shoulder_shoulder_pad/060k__regular.jpeg",
+      "optionCount": 12,
+      "distinctOptionIds": [
+        "pad-01",
+        "pad-03",
+        "pad-05-soft",
+        "pad-05-structured"
+      ],
+      "addrs": [
+        "sport-coat > shoulder-structure > shoulder-pad > pad-01",
+        "sport-coat > shoulder-structure > shoulder-pad > pad-03",
+        "sport-coat > shoulder-structure > shoulder-pad > pad-05-soft",
+        "sport-coat > shoulder-structure > shoulder-pad > pad-05-structured",
+        "suit-2pc > shoulder-structure > shoulder-pad > pad-01",
+        "suit-2pc > shoulder-structure > shoulder-pad > pad-03",
+        "suit-2pc > shoulder-structure > shoulder-pad > pad-05-soft",
+        "suit-2pc > shoulder-structure > shoulder-pad > pad-05-structured",
+        "suit-3pc > shoulder-structure > shoulder-pad > pad-01",
+        "suit-3pc > shoulder-structure > shoulder-pad > pad-03",
+        "suit-3pc > shoulder-structure > shoulder-pad > pad-05-soft",
+        "suit-3pc > shoulder-structure > shoulder-pad > pad-05-structured"
+      ],
+      "reason": "One generic category drawing is the only reference for several genuinely different options. \"The drawing is law\" cannot disambiguate them, so any generation would be a guess dressed up as a spec.",
+      "fix": "Supply one tech pack per option."
+    },
+    {
+      "illustration": "/images/jacket/lapel/notch-lapel.svg",
+      "optionCount": 15,
+      "distinctOptionIds": [
+        "lapel-notch-50",
+        "lapel-notch-55",
+        "lapel-notch-65",
+        "lapel-notch-73",
+        "lapel-notch-tab-basic"
+      ],
+      "addrs": [
+        "sport-coat > lapel > lapel-style > lapel-notch-50",
+        "sport-coat > lapel > lapel-style > lapel-notch-55",
+        "sport-coat > lapel > lapel-style > lapel-notch-65",
+        "sport-coat > lapel > lapel-style > lapel-notch-73",
+        "sport-coat > lapel > lapel-style > lapel-notch-tab-basic",
+        "suit-2pc > lapel > lapel-style > lapel-notch-50",
+        "suit-2pc > lapel > lapel-style > lapel-notch-55",
+        "suit-2pc > lapel > lapel-style > lapel-notch-65",
+        "suit-2pc > lapel > lapel-style > lapel-notch-73",
+        "suit-2pc > lapel > lapel-style > lapel-notch-tab-basic",
+        "suit-3pc > lapel > lapel-style > lapel-notch-50",
+        "suit-3pc > lapel > lapel-style > lapel-notch-55",
+        "suit-3pc > lapel > lapel-style > lapel-notch-65",
+        "suit-3pc > lapel > lapel-style > lapel-notch-73",
+        "suit-3pc > lapel > lapel-style > lapel-notch-tab-basic"
+      ],
+      "reason": "One generic category drawing is the only reference for several genuinely different options. \"The drawing is law\" cannot disambiguate them, so any generation would be a guess dressed up as a spec.",
+      "fix": "Supply one tech pack per option."
+    },
+    {
+      "illustration": "/images/jacket/lapel/semi-peak.svg",
+      "optionCount": 6,
+      "distinctOptionIds": [
+        "lapel-peak-99",
+        "lapel-peak-114"
+      ],
+      "addrs": [
+        "sport-coat > lapel > lapel-style > lapel-peak-99",
+        "sport-coat > lapel > lapel-style > lapel-peak-114",
+        "suit-2pc > lapel > lapel-style > lapel-peak-99",
+        "suit-2pc > lapel > lapel-style > lapel-peak-114",
+        "suit-3pc > lapel > lapel-style > lapel-peak-99",
+        "suit-3pc > lapel > lapel-style > lapel-peak-114"
+      ],
+      "reason": "One generic category drawing is the only reference for several genuinely different options. \"The drawing is law\" cannot disambiguate them, so any generation would be a guess dressed up as a spec.",
+      "fix": "Supply one tech pack per option."
+    },
+    {
+      "illustration": "/images/jacket/lapel/peak-lapel.svg",
+      "optionCount": 30,
+      "distinctOptionIds": [
+        "lapel-peak-101",
+        "lapel-peak-102",
+        "lapel-peak-102-rl",
+        "lapel-peak-103-curved",
+        "lapel-peak-105",
+        "lapel-peak-107",
+        "lapel-peak-108",
+        "lapel-peak-110"
+      ],
+      "addrs": [
+        "sport-coat > lapel > lapel-style > lapel-peak-101",
+        "sport-coat > lapel > lapel-style > lapel-peak-102",
+        "sport-coat > lapel > lapel-style > lapel-peak-102-rl",
+        "sport-coat > lapel > lapel-style > lapel-peak-103-curved",
+        "sport-coat > lapel > lapel-style > lapel-peak-105",
+        "sport-coat > lapel > lapel-style > lapel-peak-107",
+        "sport-coat > lapel > lapel-style > lapel-peak-108",
+        "sport-coat > lapel > lapel-style > lapel-peak-110",
+        "sport-coat > lapel > lapel-style > lapel-peak-110-low",
+        "sport-coat > lapel > lapel-style > lapel-peak-115",
+        "suit-2pc > lapel > lapel-style > lapel-peak-101",
+        "suit-2pc > lapel > lapel-style > lapel-peak-102",
+        "suit-2pc > lapel > lapel-style > lapel-peak-102-rl",
+        "suit-2pc > lapel > lapel-style > lapel-peak-103-curved",
+        "suit-2pc > lapel > lapel-style > lapel-peak-105",
+        "suit-2pc > lapel > lapel-style > lapel-peak-107",
+        "suit-2pc > lapel > lapel-style > lapel-peak-108",
+        "suit-2pc > lapel > lapel-style > lapel-peak-110",
+        "suit-2pc > lapel > lapel-style > lapel-peak-110-low",
+        "suit-2pc > lapel > lapel-style > lapel-peak-115",
+        "suit-3pc > lapel > lapel-style > lapel-peak-101",
+        "suit-3pc > lapel > lapel-style > lapel-peak-102",
+        "suit-3pc > lapel > lapel-style > lapel-peak-102-rl",
+        "suit-3pc > lapel > lapel-style > lapel-peak-103-curved",
+        "suit-3pc > lapel > lapel-style > lapel-peak-105",
+        "suit-3pc > lapel > lapel-style > lapel-peak-107",
+        "suit-3pc > lapel > lapel-style > lapel-peak-108",
+        "suit-3pc > lapel > lapel-style > lapel-peak-110",
+        "suit-3pc > lapel > lapel-style > lapel-peak-110-low",
+        "suit-3pc > lapel > lapel-style > lapel-peak-115"
+      ],
+      "reason": "One generic category drawing is the only reference for several genuinely different options. \"The drawing is law\" cannot disambiguate them, so any generation would be a guess dressed up as a spec.",
+      "fix": "Supply one tech pack per option."
+    },
+    {
+      "illustration": "/images/jacket/lapel/shawl-lapel.svg",
+      "optionCount": 15,
+      "distinctOptionIds": [
+        "lapel-shawl-d",
+        "lapel-shawl-0a",
+        "lapel-shawl-0e",
+        "lapel-shawl-0005",
+        "lapel-shawl-asymmetric"
+      ],
+      "addrs": [
+        "sport-coat > lapel > lapel-style > lapel-shawl-d",
+        "sport-coat > lapel > lapel-style > lapel-shawl-0a",
+        "sport-coat > lapel > lapel-style > lapel-shawl-0e",
+        "sport-coat > lapel > lapel-style > lapel-shawl-0005",
+        "sport-coat > lapel > lapel-style > lapel-shawl-asymmetric",
+        "suit-2pc > lapel > lapel-style > lapel-shawl-d",
+        "suit-2pc > lapel > lapel-style > lapel-shawl-0a",
+        "suit-2pc > lapel > lapel-style > lapel-shawl-0e",
+        "suit-2pc > lapel > lapel-style > lapel-shawl-0005",
+        "suit-2pc > lapel > lapel-style > lapel-shawl-asymmetric",
+        "suit-3pc > lapel > lapel-style > lapel-shawl-d",
+        "suit-3pc > lapel > lapel-style > lapel-shawl-0a",
+        "suit-3pc > lapel > lapel-style > lapel-shawl-0e",
+        "suit-3pc > lapel > lapel-style > lapel-shawl-0005",
+        "suit-3pc > lapel > lapel-style > lapel-shawl-asymmetric"
+      ],
+      "reason": "One generic category drawing is the only reference for several genuinely different options. \"The drawing is law\" cannot disambiguate them, so any generation would be a guess dressed up as a spec.",
+      "fix": "Supply one tech pack per option."
+    },
+    {
+      "illustration": "/images/jacket/lapel-bh-style/real-m.svg",
+      "optionCount": 12,
+      "distinctOptionIds": [
+        "lbh-real",
+        "lbh-005-hand",
+        "lbh-006-hand",
+        "lbh-pinpoint"
+      ],
+      "addrs": [
+        "sport-coat > lapel > lapel-bh-style > lbh-real",
+        "sport-coat > lapel > lapel-bh-style > lbh-005-hand",
+        "sport-coat > lapel > lapel-bh-style > lbh-006-hand",
+        "sport-coat > lapel > lapel-bh-style > lbh-pinpoint",
+        "suit-2pc > lapel > lapel-bh-style > lbh-real",
+        "suit-2pc > lapel > lapel-bh-style > lbh-005-hand",
+        "suit-2pc > lapel > lapel-bh-style > lbh-006-hand",
+        "suit-2pc > lapel > lapel-bh-style > lbh-pinpoint",
+        "suit-3pc > lapel > lapel-bh-style > lbh-real",
+        "suit-3pc > lapel > lapel-bh-style > lbh-005-hand",
+        "suit-3pc > lapel > lapel-bh-style > lbh-006-hand",
+        "suit-3pc > lapel > lapel-bh-style > lbh-pinpoint"
+      ],
+      "reason": "One generic category drawing is the only reference for several genuinely different options. \"The drawing is law\" cannot disambiguate them, so any generation would be a guess dressed up as a spec.",
+      "fix": "Supply one tech pack per option."
+    },
+    {
+      "illustration": "/images/jacket/lapel-bh-style/fake-round.svg",
+      "optionCount": 6,
+      "distinctOptionIds": [
+        "lbh-fake-round",
+        "lbh-fake-square"
+      ],
+      "addrs": [
+        "sport-coat > lapel > lapel-bh-style > lbh-fake-round",
+        "sport-coat > lapel > lapel-bh-style > lbh-fake-square",
+        "suit-2pc > lapel > lapel-bh-style > lbh-fake-round",
+        "suit-2pc > lapel > lapel-bh-style > lbh-fake-square",
+        "suit-3pc > lapel > lapel-bh-style > lbh-fake-round",
+        "suit-3pc > lapel > lapel-bh-style > lbh-fake-square"
+      ],
+      "reason": "One generic category drawing is the only reference for several genuinely different options. \"The drawing is law\" cannot disambiguate them, so any generation would be a guess dressed up as a spec.",
+      "fix": "Supply one tech pack per option."
+    },
+    {
+      "illustration": "/images/jacket/lapel-bh-style/milanese-2cm.svg",
+      "optionCount": 18,
+      "distinctOptionIds": [
+        "lbh-milanese-curved",
+        "lbh-milanese-20",
+        "lbh-milanese-23",
+        "lbh-milanese-25",
+        "lbh-arc-double",
+        "lbh-no1-tc-arc"
+      ],
+      "addrs": [
+        "sport-coat > lapel > lapel-bh-style > lbh-milanese-curved",
+        "sport-coat > lapel > lapel-bh-style > lbh-milanese-20",
+        "sport-coat > lapel > lapel-bh-style > lbh-milanese-23",
+        "sport-coat > lapel > lapel-bh-style > lbh-milanese-25",
+        "sport-coat > lapel > lapel-bh-style > lbh-arc-double",
+        "sport-coat > lapel > lapel-bh-style > lbh-no1-tc-arc",
+        "suit-2pc > lapel > lapel-bh-style > lbh-milanese-curved",
+        "suit-2pc > lapel > lapel-bh-style > lbh-milanese-20",
+        "suit-2pc > lapel > lapel-bh-style > lbh-milanese-23",
+        "suit-2pc > lapel > lapel-bh-style > lbh-milanese-25",
+        "suit-2pc > lapel > lapel-bh-style > lbh-arc-double",
+        "suit-2pc > lapel > lapel-bh-style > lbh-no1-tc-arc",
+        "suit-3pc > lapel > lapel-bh-style > lbh-milanese-curved",
+        "suit-3pc > lapel > lapel-bh-style > lbh-milanese-20",
+        "suit-3pc > lapel > lapel-bh-style > lbh-milanese-23",
+        "suit-3pc > lapel > lapel-bh-style > lbh-milanese-25",
+        "suit-3pc > lapel > lapel-bh-style > lbh-arc-double",
+        "suit-3pc > lapel > lapel-bh-style > lbh-no1-tc-arc"
+      ],
+      "reason": "One generic category drawing is the only reference for several genuinely different options. \"The drawing is law\" cannot disambiguate them, so any generation would be a guess dressed up as a spec.",
+      "fix": "Supply one tech pack per option."
+    },
+    {
+      "illustration": "/images/jacket/lapel-bh-style/rome-2-3cm.svg",
+      "optionCount": 18,
+      "distinctOptionIds": [
+        "lbh-rome-18",
+        "lbh-rome-18m",
+        "lbh-rome-23m",
+        "lbh-008-hand",
+        "lbh-no1-dc-straight",
+        "lbh-no1-dc-half"
+      ],
+      "addrs": [
+        "sport-coat > lapel > lapel-bh-style > lbh-rome-18",
+        "sport-coat > lapel > lapel-bh-style > lbh-rome-18m",
+        "sport-coat > lapel > lapel-bh-style > lbh-rome-23m",
+        "sport-coat > lapel > lapel-bh-style > lbh-008-hand",
+        "sport-coat > lapel > lapel-bh-style > lbh-no1-dc-straight",
+        "sport-coat > lapel > lapel-bh-style > lbh-no1-dc-half",
+        "suit-2pc > lapel > lapel-bh-style > lbh-rome-18",
+        "suit-2pc > lapel > lapel-bh-style > lbh-rome-18m",
+        "suit-2pc > lapel > lapel-bh-style > lbh-rome-23m",
+        "suit-2pc > lapel > lapel-bh-style > lbh-008-hand",
+        "suit-2pc > lapel > lapel-bh-style > lbh-no1-dc-straight",
+        "suit-2pc > lapel > lapel-bh-style > lbh-no1-dc-half",
+        "suit-3pc > lapel > lapel-bh-style > lbh-rome-18",
+        "suit-3pc > lapel > lapel-bh-style > lbh-rome-18m",
+        "suit-3pc > lapel > lapel-bh-style > lbh-rome-23m",
+        "suit-3pc > lapel > lapel-bh-style > lbh-008-hand",
+        "suit-3pc > lapel > lapel-bh-style > lbh-no1-dc-straight",
+        "suit-3pc > lapel > lapel-bh-style > lbh-no1-dc-half"
+      ],
+      "reason": "One generic category drawing is the only reference for several genuinely different options. \"The drawing is law\" cannot disambiguate them, so any generation would be a guess dressed up as a spec.",
+      "fix": "Supply one tech pack per option."
+    },
+    {
+      "illustration": "/images/jacket/lapel-bh-pos/both-sides.svg",
+      "optionCount": 12,
+      "distinctOptionIds": [
+        "lbp-both",
+        "lbp-both-double",
+        "lbp-3l-2r",
+        "lbp-3l-1r"
+      ],
+      "addrs": [
+        "sport-coat > lapel > lapel-bh-position > lbp-both",
+        "sport-coat > lapel > lapel-bh-position > lbp-both-double",
+        "sport-coat > lapel > lapel-bh-position > lbp-3l-2r",
+        "sport-coat > lapel > lapel-bh-position > lbp-3l-1r",
+        "suit-2pc > lapel > lapel-bh-position > lbp-both",
+        "suit-2pc > lapel > lapel-bh-position > lbp-both-double",
+        "suit-2pc > lapel > lapel-bh-position > lbp-3l-2r",
+        "suit-2pc > lapel > lapel-bh-position > lbp-3l-1r",
+        "suit-3pc > lapel > lapel-bh-position > lbp-both",
+        "suit-3pc > lapel > lapel-bh-position > lbp-both-double",
+        "suit-3pc > lapel > lapel-bh-position > lbp-3l-2r",
+        "suit-3pc > lapel > lapel-bh-position > lbp-3l-1r"
+      ],
+      "reason": "One generic category drawing is the only reference for several genuinely different options. \"The drawing is law\" cannot disambiguate them, so any generation would be a guess dressed up as a spec.",
+      "fix": "Supply one tech pack per option."
+    },
+    {
+      "illustration": "/images/jacket/columbia-piping/none.jpg",
+      "optionCount": 6,
+      "distinctOptionIds": [
+        "cp-none"
+      ],
+      "addrs": [
+        "sport-coat > suit-pockets > chest-pocket > cp-none",
+        "sport-coat > suit-details > columbia-piping > cp-none",
+        "suit-2pc > suit-pockets > chest-pocket > cp-none",
+        "suit-2pc > suit-details > columbia-piping > cp-none",
+        "suit-3pc > suit-pockets > chest-pocket > cp-none",
+        "suit-3pc > suit-details > columbia-piping > cp-none"
+      ],
+      "reason": "One generic category drawing is the only reference for several genuinely different options. \"The drawing is law\" cannot disambiguate them, so any generation would be a guess dressed up as a spec.",
+      "fix": "Supply one tech pack per option."
+    },
+    {
+      "illustration": "/images/jacket/chest-pocket/straight-welt-2-5cm.svg",
+      "optionCount": 12,
+      "distinctOptionIds": [
+        "cp-welt-25",
+        "cp-welt-27",
+        "cp-jetted",
+        "cp-trapezoid"
+      ],
+      "addrs": [
+        "sport-coat > suit-pockets > chest-pocket > cp-welt-25",
+        "sport-coat > suit-pockets > chest-pocket > cp-welt-27",
+        "sport-coat > suit-pockets > chest-pocket > cp-jetted",
+        "sport-coat > suit-pockets > chest-pocket > cp-trapezoid",
+        "suit-2pc > suit-pockets > chest-pocket > cp-welt-25",
+        "suit-2pc > suit-pockets > chest-pocket > cp-welt-27",
+        "suit-2pc > suit-pockets > chest-pocket > cp-jetted",
+        "suit-2pc > suit-pockets > chest-pocket > cp-trapezoid",
+        "suit-3pc > suit-pockets > chest-pocket > cp-welt-25",
+        "suit-3pc > suit-pockets > chest-pocket > cp-welt-27",
+        "suit-3pc > suit-pockets > chest-pocket > cp-jetted",
+        "suit-3pc > suit-pockets > chest-pocket > cp-trapezoid"
+      ],
+      "reason": "One generic category drawing is the only reference for several genuinely different options. \"The drawing is law\" cannot disambiguate them, so any generation would be a guess dressed up as a spec.",
+      "fix": "Supply one tech pack per option."
+    },
+    {
+      "illustration": "/images/jacket/chest-pocket/curved-welt-2-5cm.svg",
+      "optionCount": 12,
+      "distinctOptionIds": [
+        "cp-welt-curved-23",
+        "cp-welt-curved-25",
+        "cp-welt-curved-27",
+        "cp-welt-curved-29"
+      ],
+      "addrs": [
+        "sport-coat > suit-pockets > chest-pocket > cp-welt-curved-23",
+        "sport-coat > suit-pockets > chest-pocket > cp-welt-curved-25",
+        "sport-coat > suit-pockets > chest-pocket > cp-welt-curved-27",
+        "sport-coat > suit-pockets > chest-pocket > cp-welt-curved-29",
+        "suit-2pc > suit-pockets > chest-pocket > cp-welt-curved-23",
+        "suit-2pc > suit-pockets > chest-pocket > cp-welt-curved-25",
+        "suit-2pc > suit-pockets > chest-pocket > cp-welt-curved-27",
+        "suit-2pc > suit-pockets > chest-pocket > cp-welt-curved-29",
+        "suit-3pc > suit-pockets > chest-pocket > cp-welt-curved-23",
+        "suit-3pc > suit-pockets > chest-pocket > cp-welt-curved-25",
+        "suit-3pc > suit-pockets > chest-pocket > cp-welt-curved-27",
+        "suit-3pc > suit-pockets > chest-pocket > cp-welt-curved-29"
+      ],
+      "reason": "One generic category drawing is the only reference for several genuinely different options. \"The drawing is law\" cannot disambiguate them, so any generation would be a guess dressed up as a spec.",
+      "fix": "Supply one tech pack per option."
+    },
+    {
+      "illustration": "/images/jacket/chest-pocket/patch-pocket.svg",
+      "optionCount": 12,
+      "distinctOptionIds": [
+        "cp-patch-angled",
+        "cp-patch-multi",
+        "cp-inverted-pleat-2flap",
+        "cp-inverted-pleat-flap"
+      ],
+      "addrs": [
+        "sport-coat > suit-pockets > chest-pocket > cp-patch-angled",
+        "sport-coat > suit-pockets > chest-pocket > cp-patch-multi",
+        "sport-coat > suit-pockets > chest-pocket > cp-inverted-pleat-2flap",
+        "sport-coat > suit-pockets > chest-pocket > cp-inverted-pleat-flap",
+        "suit-2pc > suit-pockets > chest-pocket > cp-patch-angled",
+        "suit-2pc > suit-pockets > chest-pocket > cp-patch-multi",
+        "suit-2pc > suit-pockets > chest-pocket > cp-inverted-pleat-2flap",
+        "suit-2pc > suit-pockets > chest-pocket > cp-inverted-pleat-flap",
+        "suit-3pc > suit-pockets > chest-pocket > cp-patch-angled",
+        "suit-3pc > suit-pockets > chest-pocket > cp-patch-multi",
+        "suit-3pc > suit-pockets > chest-pocket > cp-inverted-pleat-2flap",
+        "suit-3pc > suit-pockets > chest-pocket > cp-inverted-pleat-flap"
+      ],
+      "reason": "One generic category drawing is the only reference for several genuinely different options. \"The drawing is law\" cannot disambiguate them, so any generation would be a guess dressed up as a spec.",
+      "fix": "Supply one tech pack per option."
+    },
+    {
+      "illustration": "/images/jacket/chest-pocket/boat-pocket.svg",
+      "optionCount": 6,
+      "distinctOptionIds": [
+        "cp-boat-28",
+        "cp-boat-30"
+      ],
+      "addrs": [
+        "sport-coat > suit-pockets > chest-pocket > cp-boat-28",
+        "sport-coat > suit-pockets > chest-pocket > cp-boat-30",
+        "suit-2pc > suit-pockets > chest-pocket > cp-boat-28",
+        "suit-2pc > suit-pockets > chest-pocket > cp-boat-30",
+        "suit-3pc > suit-pockets > chest-pocket > cp-boat-28",
+        "suit-3pc > suit-pockets > chest-pocket > cp-boat-30"
+      ],
+      "reason": "One generic category drawing is the only reference for several genuinely different options. \"The drawing is law\" cannot disambiguate them, so any generation would be a guess dressed up as a spec.",
+      "fix": "Supply one tech pack per option."
+    },
+    {
+      "illustration": "/images/jacket/lower-pocket/slanted-flap.svg",
+      "optionCount": 30,
+      "distinctOptionIds": [
+        "lp-slanted-flap-40",
+        "lp-slanted-flap-45",
+        "lp-slanted-flap-50",
+        "lp-slanted-flap-60",
+        "lp-large-slanted-40",
+        "lp-large-slanted-45",
+        "lp-large-slanted-50",
+        "lp-large-slanted-60"
+      ],
+      "addrs": [
+        "sport-coat > suit-pockets > lower-pocket > lp-slanted-flap-40",
+        "sport-coat > suit-pockets > lower-pocket > lp-slanted-flap-45",
+        "sport-coat > suit-pockets > lower-pocket > lp-slanted-flap-50",
+        "sport-coat > suit-pockets > lower-pocket > lp-slanted-flap-60",
+        "sport-coat > suit-pockets > lower-pocket > lp-large-slanted-40",
+        "sport-coat > suit-pockets > lower-pocket > lp-large-slanted-45",
+        "sport-coat > suit-pockets > lower-pocket > lp-large-slanted-50",
+        "sport-coat > suit-pockets > lower-pocket > lp-large-slanted-60",
+        "sport-coat > suit-pockets > lower-pocket > lp-slanted-jetted",
+        "sport-coat > suit-pockets > lower-pocket > lp-large-slanted-jetted",
+        "suit-2pc > suit-pockets > lower-pocket > lp-slanted-flap-40",
+        "suit-2pc > suit-pockets > lower-pocket > lp-slanted-flap-45",
+        "suit-2pc > suit-pockets > lower-pocket > lp-slanted-flap-50",
+        "suit-2pc > suit-pockets > lower-pocket > lp-slanted-flap-60",
+        "suit-2pc > suit-pockets > lower-pocket > lp-large-slanted-40",
+        "suit-2pc > suit-pockets > lower-pocket > lp-large-slanted-45",
+        "suit-2pc > suit-pockets > lower-pocket > lp-large-slanted-50",
+        "suit-2pc > suit-pockets > lower-pocket > lp-large-slanted-60",
+        "suit-2pc > suit-pockets > lower-pocket > lp-slanted-jetted",
+        "suit-2pc > suit-pockets > lower-pocket > lp-large-slanted-jetted",
+        "suit-3pc > suit-pockets > lower-pocket > lp-slanted-flap-40",
+        "suit-3pc > suit-pockets > lower-pocket > lp-slanted-flap-45",
+        "suit-3pc > suit-pockets > lower-pocket > lp-slanted-flap-50",
+        "suit-3pc > suit-pockets > lower-pocket > lp-slanted-flap-60",
+        "suit-3pc > suit-pockets > lower-pocket > lp-large-slanted-40",
+        "suit-3pc > suit-pockets > lower-pocket > lp-large-slanted-45",
+        "suit-3pc > suit-pockets > lower-pocket > lp-large-slanted-50",
+        "suit-3pc > suit-pockets > lower-pocket > lp-large-slanted-60",
+        "suit-3pc > suit-pockets > lower-pocket > lp-slanted-jetted",
+        "suit-3pc > suit-pockets > lower-pocket > lp-large-slanted-jetted"
+      ],
+      "reason": "One generic category drawing is the only reference for several genuinely different options. \"The drawing is law\" cannot disambiguate them, so any generation would be a guess dressed up as a spec.",
+      "fix": "Supply one tech pack per option."
+    },
+    {
+      "illustration": "/images/jacket/lower-pocket/jetted-flap-5-5cm.svg",
+      "optionCount": 21,
+      "distinctOptionIds": [
+        "lp-slanted-flap-55",
+        "lp-large-slanted-55",
+        "lp-straight-jetted-40",
+        "lp-straight-jetted-45",
+        "lp-straight-jetted-50",
+        "lp-straight-jetted-55",
+        "lp-rl-flat-55"
+      ],
+      "addrs": [
+        "sport-coat > suit-pockets > lower-pocket > lp-slanted-flap-55",
+        "sport-coat > suit-pockets > lower-pocket > lp-large-slanted-55",
+        "sport-coat > suit-pockets > lower-pocket > lp-straight-jetted-40",
+        "sport-coat > suit-pockets > lower-pocket > lp-straight-jetted-45",
+        "sport-coat > suit-pockets > lower-pocket > lp-straight-jetted-50",
+        "sport-coat > suit-pockets > lower-pocket > lp-straight-jetted-55",
+        "sport-coat > suit-pockets > lower-pocket > lp-rl-flat-55",
+        "suit-2pc > suit-pockets > lower-pocket > lp-slanted-flap-55",
+        "suit-2pc > suit-pockets > lower-pocket > lp-large-slanted-55",
+        "suit-2pc > suit-pockets > lower-pocket > lp-straight-jetted-40",
+        "suit-2pc > suit-pockets > lower-pocket > lp-straight-jetted-45",
+        "suit-2pc > suit-pockets > lower-pocket > lp-straight-jetted-50",
+        "suit-2pc > suit-pockets > lower-pocket > lp-straight-jetted-55",
+        "suit-2pc > suit-pockets > lower-pocket > lp-rl-flat-55",
+        "suit-3pc > suit-pockets > lower-pocket > lp-slanted-flap-55",
+        "suit-3pc > suit-pockets > lower-pocket > lp-large-slanted-55",
+        "suit-3pc > suit-pockets > lower-pocket > lp-straight-jetted-40",
+        "suit-3pc > suit-pockets > lower-pocket > lp-straight-jetted-45",
+        "suit-3pc > suit-pockets > lower-pocket > lp-straight-jetted-50",
+        "suit-3pc > suit-pockets > lower-pocket > lp-straight-jetted-55",
+        "suit-3pc > suit-pockets > lower-pocket > lp-rl-flat-55"
+      ],
+      "reason": "One generic category drawing is the only reference for several genuinely different options. \"The drawing is law\" cannot disambiguate them, so any generation would be a guess dressed up as a spec.",
+      "fix": "Supply one tech pack per option."
+    },
+    {
+      "illustration": "/images/jacket/lower-pocket/jetted-flap-6-5cm.svg",
+      "optionCount": 12,
+      "distinctOptionIds": [
+        "lp-slanted-flap-65",
+        "lp-large-slanted-65",
+        "lp-straight-jetted-60",
+        "lp-straight-jetted-65"
+      ],
+      "addrs": [
+        "sport-coat > suit-pockets > lower-pocket > lp-slanted-flap-65",
+        "sport-coat > suit-pockets > lower-pocket > lp-large-slanted-65",
+        "sport-coat > suit-pockets > lower-pocket > lp-straight-jetted-60",
+        "sport-coat > suit-pockets > lower-pocket > lp-straight-jetted-65",
+        "suit-2pc > suit-pockets > lower-pocket > lp-slanted-flap-65",
+        "suit-2pc > suit-pockets > lower-pocket > lp-large-slanted-65",
+        "suit-2pc > suit-pockets > lower-pocket > lp-straight-jetted-60",
+        "suit-2pc > suit-pockets > lower-pocket > lp-straight-jetted-65",
+        "suit-3pc > suit-pockets > lower-pocket > lp-slanted-flap-65",
+        "suit-3pc > suit-pockets > lower-pocket > lp-large-slanted-65",
+        "suit-3pc > suit-pockets > lower-pocket > lp-straight-jetted-60",
+        "suit-3pc > suit-pockets > lower-pocket > lp-straight-jetted-65"
+      ],
+      "reason": "One generic category drawing is the only reference for several genuinely different options. \"The drawing is law\" cannot disambiguate them, so any generation would be a guess dressed up as a spec.",
+      "fix": "Supply one tech pack per option."
+    },
+    {
+      "illustration": "/images/jacket/lower-pocket/jetted-no-flap.svg",
+      "optionCount": 18,
+      "distinctOptionIds": [
+        "lp-jetted-4",
+        "lp-straight-jetted",
+        "lp-welt-10",
+        "lp-welt-12",
+        "lp-welt-15",
+        "lp-jetted-btn-tab"
+      ],
+      "addrs": [
+        "sport-coat > suit-pockets > lower-pocket > lp-jetted-4",
+        "sport-coat > suit-pockets > lower-pocket > lp-straight-jetted",
+        "sport-coat > suit-pockets > lower-pocket > lp-welt-10",
+        "sport-coat > suit-pockets > lower-pocket > lp-welt-12",
+        "sport-coat > suit-pockets > lower-pocket > lp-welt-15",
+        "sport-coat > suit-pockets > lower-pocket > lp-jetted-btn-tab",
+        "suit-2pc > suit-pockets > lower-pocket > lp-jetted-4",
+        "suit-2pc > suit-pockets > lower-pocket > lp-straight-jetted",
+        "suit-2pc > suit-pockets > lower-pocket > lp-welt-10",
+        "suit-2pc > suit-pockets > lower-pocket > lp-welt-12",
+        "suit-2pc > suit-pockets > lower-pocket > lp-welt-15",
+        "suit-2pc > suit-pockets > lower-pocket > lp-jetted-btn-tab",
+        "suit-3pc > suit-pockets > lower-pocket > lp-jetted-4",
+        "suit-3pc > suit-pockets > lower-pocket > lp-straight-jetted",
+        "suit-3pc > suit-pockets > lower-pocket > lp-welt-10",
+        "suit-3pc > suit-pockets > lower-pocket > lp-welt-12",
+        "suit-3pc > suit-pockets > lower-pocket > lp-welt-15",
+        "suit-3pc > suit-pockets > lower-pocket > lp-jetted-btn-tab"
+      ],
+      "reason": "One generic category drawing is the only reference for several genuinely different options. \"The drawing is law\" cannot disambiguate them, so any generation would be a guess dressed up as a spec.",
+      "fix": "Supply one tech pack per option."
+    },
+    {
+      "illustration": "/images/jacket/lower-pocket/patch-pocket.svg",
+      "optionCount": 24,
+      "distinctOptionIds": [
+        "lp-patch",
+        "lp-patch-rounded",
+        "lp-patch-flap",
+        "lp-patch-flap-btn",
+        "lp-patch-btn-tab-round",
+        "lp-patch-btn-tab-straight",
+        "lp-patch-btn-tab-angled",
+        "lp-water-drop"
+      ],
+      "addrs": [
+        "sport-coat > suit-pockets > lower-pocket > lp-patch",
+        "sport-coat > suit-pockets > lower-pocket > lp-patch-rounded",
+        "sport-coat > suit-pockets > lower-pocket > lp-patch-flap",
+        "sport-coat > suit-pockets > lower-pocket > lp-patch-flap-btn",
+        "sport-coat > suit-pockets > lower-pocket > lp-patch-btn-tab-round",
+        "sport-coat > suit-pockets > lower-pocket > lp-patch-btn-tab-straight",
+        "sport-coat > suit-pockets > lower-pocket > lp-patch-btn-tab-angled",
+        "sport-coat > suit-pockets > lower-pocket > lp-water-drop",
+        "suit-2pc > suit-pockets > lower-pocket > lp-patch",
+        "suit-2pc > suit-pockets > lower-pocket > lp-patch-rounded",
+        "suit-2pc > suit-pockets > lower-pocket > lp-patch-flap",
+        "suit-2pc > suit-pockets > lower-pocket > lp-patch-flap-btn",
+        "suit-2pc > suit-pockets > lower-pocket > lp-patch-btn-tab-round",
+        "suit-2pc > suit-pockets > lower-pocket > lp-patch-btn-tab-straight",
+        "suit-2pc > suit-pockets > lower-pocket > lp-patch-btn-tab-angled",
+        "suit-2pc > suit-pockets > lower-pocket > lp-water-drop",
+        "suit-3pc > suit-pockets > lower-pocket > lp-patch",
+        "suit-3pc > suit-pockets > lower-pocket > lp-patch-rounded",
+        "suit-3pc > suit-pockets > lower-pocket > lp-patch-flap",
+        "suit-3pc > suit-pockets > lower-pocket > lp-patch-flap-btn",
+        "suit-3pc > suit-pockets > lower-pocket > lp-patch-btn-tab-round",
+        "suit-3pc > suit-pockets > lower-pocket > lp-patch-btn-tab-straight",
+        "suit-3pc > suit-pockets > lower-pocket > lp-patch-btn-tab-angled",
+        "suit-3pc > suit-pockets > lower-pocket > lp-water-drop"
+      ],
+      "reason": "One generic category drawing is the only reference for several genuinely different options. \"The drawing is law\" cannot disambiguate them, so any generation would be a guess dressed up as a spec.",
+      "fix": "Supply one tech pack per option."
+    },
+    {
+      "illustration": "/images/jacket/lower-pocket/bellows-pocket.svg",
+      "optionCount": 18,
+      "distinctOptionIds": [
+        "lp-inverted-flap",
+        "lp-inverted-flap-btn",
+        "lp-inverted-angled-flap-btn",
+        "lp-box-pleat-flap",
+        "lp-angled-box-pleat",
+        "lp-multi-pleat"
+      ],
+      "addrs": [
+        "sport-coat > suit-pockets > lower-pocket > lp-inverted-flap",
+        "sport-coat > suit-pockets > lower-pocket > lp-inverted-flap-btn",
+        "sport-coat > suit-pockets > lower-pocket > lp-inverted-angled-flap-btn",
+        "sport-coat > suit-pockets > lower-pocket > lp-box-pleat-flap",
+        "sport-coat > suit-pockets > lower-pocket > lp-angled-box-pleat",
+        "sport-coat > suit-pockets > lower-pocket > lp-multi-pleat",
+        "suit-2pc > suit-pockets > lower-pocket > lp-inverted-flap",
+        "suit-2pc > suit-pockets > lower-pocket > lp-inverted-flap-btn",
+        "suit-2pc > suit-pockets > lower-pocket > lp-inverted-angled-flap-btn",
+        "suit-2pc > suit-pockets > lower-pocket > lp-box-pleat-flap",
+        "suit-2pc > suit-pockets > lower-pocket > lp-angled-box-pleat",
+        "suit-2pc > suit-pockets > lower-pocket > lp-multi-pleat",
+        "suit-3pc > suit-pockets > lower-pocket > lp-inverted-flap",
+        "suit-3pc > suit-pockets > lower-pocket > lp-inverted-flap-btn",
+        "suit-3pc > suit-pockets > lower-pocket > lp-inverted-angled-flap-btn",
+        "suit-3pc > suit-pockets > lower-pocket > lp-box-pleat-flap",
+        "suit-3pc > suit-pockets > lower-pocket > lp-angled-box-pleat",
+        "suit-3pc > suit-pockets > lower-pocket > lp-multi-pleat"
+      ],
+      "reason": "One generic category drawing is the only reference for several genuinely different options. \"The drawing is law\" cannot disambiguate them, so any generation would be a guess dressed up as a spec.",
+      "fix": "Supply one tech pack per option."
+    },
+    {
+      "illustration": "/images/jacket/ticket-pocket/jetted.jpg",
+      "optionCount": 12,
+      "distinctOptionIds": [
+        "tp-jetted",
+        "tp-card-italian",
+        "tp-card-formal",
+        "tp-rl-card"
+      ],
+      "addrs": [
+        "sport-coat > suit-pockets > ticket-pocket > tp-jetted",
+        "sport-coat > suit-pockets > ticket-pocket > tp-card-italian",
+        "sport-coat > suit-pockets > ticket-pocket > tp-card-formal",
+        "sport-coat > suit-pockets > ticket-pocket > tp-rl-card",
+        "suit-2pc > suit-pockets > ticket-pocket > tp-jetted",
+        "suit-2pc > suit-pockets > ticket-pocket > tp-card-italian",
+        "suit-2pc > suit-pockets > ticket-pocket > tp-card-formal",
+        "suit-2pc > suit-pockets > ticket-pocket > tp-rl-card",
+        "suit-3pc > suit-pockets > ticket-pocket > tp-jetted",
+        "suit-3pc > suit-pockets > ticket-pocket > tp-card-italian",
+        "suit-3pc > suit-pockets > ticket-pocket > tp-card-formal",
+        "suit-3pc > suit-pockets > ticket-pocket > tp-rl-card"
+      ],
+      "reason": "One generic category drawing is the only reference for several genuinely different options. \"The drawing is law\" cannot disambiguate them, so any generation would be a guess dressed up as a spec.",
+      "fix": "Supply one tech pack per option."
+    },
+    {
+      "illustration": "/images/jacket/sleeve-cuff/turnback-cuff.svg",
+      "optionCount": 9,
+      "distinctOptionIds": [
+        "cuff-british",
+        "cuff-turnback-35",
+        "cuff-turnback-40"
+      ],
+      "addrs": [
+        "sport-coat > sleeves-cuffs > cuff-style > cuff-british",
+        "sport-coat > sleeves-cuffs > cuff-style > cuff-turnback-35",
+        "sport-coat > sleeves-cuffs > cuff-style > cuff-turnback-40",
+        "suit-2pc > sleeves-cuffs > cuff-style > cuff-british",
+        "suit-2pc > sleeves-cuffs > cuff-style > cuff-turnback-35",
+        "suit-2pc > sleeves-cuffs > cuff-style > cuff-turnback-40",
+        "suit-3pc > sleeves-cuffs > cuff-style > cuff-british",
+        "suit-3pc > sleeves-cuffs > cuff-style > cuff-turnback-35",
+        "suit-3pc > sleeves-cuffs > cuff-style > cuff-turnback-40"
+      ],
+      "reason": "One generic category drawing is the only reference for several genuinely different options. \"The drawing is law\" cannot disambiguate them, so any generation would be a guess dressed up as a spec.",
+      "fix": "Supply one tech pack per option."
+    },
+    {
+      "illustration": "/images/jacket/cuff-btn-num/two-buttons.svg",
+      "optionCount": 9,
+      "distinctOptionIds": [
+        "cb-none",
+        "cb-1",
+        "cb-2"
+      ],
+      "addrs": [
+        "sport-coat > sleeves-cuffs > cuff-button-number > cb-none",
+        "sport-coat > sleeves-cuffs > cuff-button-number > cb-1",
+        "sport-coat > sleeves-cuffs > cuff-button-number > cb-2",
+        "suit-2pc > sleeves-cuffs > cuff-button-number > cb-none",
+        "suit-2pc > sleeves-cuffs > cuff-button-number > cb-1",
+        "suit-2pc > sleeves-cuffs > cuff-button-number > cb-2",
+        "suit-3pc > sleeves-cuffs > cuff-button-number > cb-none",
+        "suit-3pc > sleeves-cuffs > cuff-button-number > cb-1",
+        "suit-3pc > sleeves-cuffs > cuff-button-number > cb-2"
+      ],
+      "reason": "One generic category drawing is the only reference for several genuinely different options. \"The drawing is law\" cannot disambiguate them, so any generation would be a guess dressed up as a spec.",
+      "fix": "Supply one tech pack per option."
+    },
+    {
+      "illustration": "/images/jacket/cuff-btn-num/five-buttons.svg",
+      "optionCount": 6,
+      "distinctOptionIds": [
+        "cb-5",
+        "cb-6"
+      ],
+      "addrs": [
+        "sport-coat > sleeves-cuffs > cuff-button-number > cb-5",
+        "sport-coat > sleeves-cuffs > cuff-button-number > cb-6",
+        "suit-2pc > sleeves-cuffs > cuff-button-number > cb-5",
+        "suit-2pc > sleeves-cuffs > cuff-button-number > cb-6",
+        "suit-3pc > sleeves-cuffs > cuff-button-number > cb-5",
+        "suit-3pc > sleeves-cuffs > cuff-button-number > cb-6"
+      ],
+      "reason": "One generic category drawing is the only reference for several genuinely different options. \"The drawing is law\" cannot disambiguate them, so any generation would be a guess dressed up as a spec.",
+      "fix": "Supply one tech pack per option."
+    },
+    {
+      "illustration": "/images/jacket/lining/half-lining.jpg",
+      "optionCount": 33,
+      "distinctOptionIds": [
+        "lc-half",
+        "lc-quarter",
+        "hls-standard",
+        "hls-small-cutaway",
+        "hls-half",
+        "hls-third-cutaway",
+        "hls-third",
+        "hls-quarter-cutaway"
+      ],
+      "addrs": [
+        "sport-coat > suit-lining > lining-coverage > lc-half",
+        "sport-coat > suit-lining > lining-coverage > lc-quarter",
+        "sport-coat > suit-lining > half-lining-shape > hls-standard",
+        "sport-coat > suit-lining > half-lining-shape > hls-small-cutaway",
+        "sport-coat > suit-lining > half-lining-shape > hls-half",
+        "sport-coat > suit-lining > half-lining-shape > hls-third-cutaway",
+        "sport-coat > suit-lining > half-lining-shape > hls-third",
+        "sport-coat > suit-lining > half-lining-shape > hls-quarter-cutaway",
+        "sport-coat > suit-lining > half-lining-craft > hlc-binding",
+        "sport-coat > suit-lining > half-lining-craft > hlc-french",
+        "sport-coat > suit-lining > half-lining-craft > hlc-joining",
+        "suit-2pc > suit-lining > lining-coverage > lc-half",
+        "suit-2pc > suit-lining > lining-coverage > lc-quarter",
+        "suit-2pc > suit-lining > half-lining-shape > hls-standard",
+        "suit-2pc > suit-lining > half-lining-shape > hls-small-cutaway",
+        "suit-2pc > suit-lining > half-lining-shape > hls-half",
+        "suit-2pc > suit-lining > half-lining-shape > hls-third-cutaway",
+        "suit-2pc > suit-lining > half-lining-shape > hls-third",
+        "suit-2pc > suit-lining > half-lining-shape > hls-quarter-cutaway",
+        "suit-2pc > suit-lining > half-lining-craft > hlc-binding",
+        "suit-2pc > suit-lining > half-lining-craft > hlc-french",
+        "suit-2pc > suit-lining > half-lining-craft > hlc-joining",
+        "suit-3pc > suit-lining > lining-coverage > lc-half",
+        "suit-3pc > suit-lining > lining-coverage > lc-quarter",
+        "suit-3pc > suit-lining > half-lining-shape > hls-standard",
+        "suit-3pc > suit-lining > half-lining-shape > hls-small-cutaway",
+        "suit-3pc > suit-lining > half-lining-shape > hls-half",
+        "suit-3pc > suit-lining > half-lining-shape > hls-third-cutaway",
+        "suit-3pc > suit-lining > half-lining-shape > hls-third",
+        "suit-3pc > suit-lining > half-lining-shape > hls-quarter-cutaway",
+        "suit-3pc > suit-lining > half-lining-craft > hlc-binding",
+        "suit-3pc > suit-lining > half-lining-craft > hlc-french",
+        "suit-3pc > suit-lining > half-lining-craft > hlc-joining"
+      ],
+      "reason": "One generic category drawing is the only reference for several genuinely different options. \"The drawing is law\" cannot disambiguate them, so any generation would be a guess dressed up as a spec.",
+      "fix": "Supply one tech pack per option."
+    },
+    {
+      "illustration": "/images/factory/kute/jacket/lining_body_lining_regular_lining/0711__match_fabric.webp",
+      "optionCount": 12,
+      "distinctOptionIds": [
+        "bl-matching",
+        "bl-black",
+        "bl-cream",
+        "bl-charcoal"
+      ],
+      "addrs": [
+        "sport-coat > suit-lining > lining-color > bl-matching",
+        "sport-coat > suit-lining > lining-color > bl-black",
+        "sport-coat > suit-lining > lining-color > bl-cream",
+        "sport-coat > suit-lining > lining-color > bl-charcoal",
+        "suit-2pc > suit-lining > lining-color > bl-matching",
+        "suit-2pc > suit-lining > lining-color > bl-black",
+        "suit-2pc > suit-lining > lining-color > bl-cream",
+        "suit-2pc > suit-lining > lining-color > bl-charcoal",
+        "suit-3pc > suit-lining > lining-color > bl-matching",
+        "suit-3pc > suit-lining > lining-color > bl-black",
+        "suit-3pc > suit-lining > lining-color > bl-cream",
+        "suit-3pc > suit-lining > lining-color > bl-charcoal"
+      ],
+      "reason": "One generic category drawing is the only reference for several genuinely different options. \"The drawing is law\" cannot disambiguate them, so any generation would be a guess dressed up as a spec.",
+      "fix": "Supply one tech pack per option."
+    },
+    {
+      "illustration": "/images/factory/kute/trousers/bttn_thread_stitching_front_pocket_style/31a6__no_top_stitch_hidden_stitch.jpeg",
+      "optionCount": 6,
+      "distinctOptionIds": [
+        "pocket-stitch-none",
+        "fly-stitch-none"
+      ],
+      "addrs": [
+        "suit-2pc > Trousers-front-pockets > pocket-stitching > pocket-stitch-none",
+        "suit-2pc > Trousers-pleats-structure > fly-stitching > fly-stitch-none",
+        "suit-3pc > Trousers-front-pockets > pocket-stitching > pocket-stitch-none",
+        "suit-3pc > Trousers-pleats-structure > fly-stitching > fly-stitch-none",
+        "trousers > front-pockets > pocket-stitching > pocket-stitch-none",
+        "trousers > pleats-structure > fly-stitching > fly-stitch-none"
+      ],
+      "reason": "One generic category drawing is the only reference for several genuinely different options. \"The drawing is law\" cannot disambiguate them, so any generation would be a guess dressed up as a spec.",
+      "fix": "Supply one tech pack per option."
+    },
+    {
+      "illustration": "/images/factory/kute/trousers/bttn_thread_stitching_front_pocket_style/31a3__0.6cm_top_stitch.jpeg",
+      "optionCount": 6,
+      "distinctOptionIds": [
+        "pocket-stitch-06",
+        "fly-stitch-curved"
+      ],
+      "addrs": [
+        "suit-2pc > Trousers-front-pockets > pocket-stitching > pocket-stitch-06",
+        "suit-2pc > Trousers-pleats-structure > fly-stitching > fly-stitch-curved",
+        "suit-3pc > Trousers-front-pockets > pocket-stitching > pocket-stitch-06",
+        "suit-3pc > Trousers-pleats-structure > fly-stitching > fly-stitch-curved",
+        "trousers > front-pockets > pocket-stitching > pocket-stitch-06",
+        "trousers > pleats-structure > fly-stitching > fly-stitch-curved"
+      ],
+      "reason": "One generic category drawing is the only reference for several genuinely different options. \"The drawing is law\" cannot disambiguate them, so any generation would be a guess dressed up as a spec.",
+      "fix": "Supply one tech pack per option."
+    },
+    {
+      "illustration": "/images/factory/kute/trousers/style_pleat_style_pleat_style/302l__no_pleat_no_dart.jpeg",
+      "optionCount": 6,
+      "distinctOptionIds": [
+        "flat-front",
+        "darts-none"
+      ],
+      "addrs": [
+        "suit-2pc > Trousers-pleats-structure > pleat-style > flat-front",
+        "suit-2pc > Trousers-back > back-darts > darts-none",
+        "suit-3pc > Trousers-pleats-structure > pleat-style > flat-front",
+        "suit-3pc > Trousers-back > back-darts > darts-none",
+        "trousers > pleats-structure > pleat-style > flat-front",
+        "trousers > back > back-darts > darts-none"
+      ],
+      "reason": "One generic category drawing is the only reference for several genuinely different options. \"The drawing is law\" cannot disambiguate them, so any generation would be a guess dressed up as a spec.",
+      "fix": "Supply one tech pack per option."
+    }
+  ],
+  "techPackLost": [
+    {
+      "addr": "suit-2pc > Trousers-waistband > waistband-width > wband-45",
+      "productId": "suit-2pc",
+      "optionId": "wband-45",
+      "liveImage": "/images/generated/trousers/wband-45.png",
+      "reason": "The catalog `image` points at a previously generated photo and no `techpackIllustration` was preserved, so the original drawing is gone.",
+      "fix": "Restore the original tech pack, or re-export it from the supplier pack."
+    },
+    {
+      "addr": "suit-2pc > Trousers-waistband > waistband-width > wband-50",
+      "productId": "suit-2pc",
+      "optionId": "wband-50",
+      "liveImage": "/images/generated/trousers/wband-50.png",
+      "reason": "The catalog `image` points at a previously generated photo and no `techpackIllustration` was preserved, so the original drawing is gone.",
+      "fix": "Restore the original tech pack, or re-export it from the supplier pack."
+    },
+    {
+      "addr": "suit-2pc > Trousers-waistband > belt-loops > loops-5",
+      "productId": "suit-2pc",
+      "optionId": "loops-5",
+      "liveImage": "/images/generated/trousers/loops-standard.png",
+      "reason": "The catalog `image` points at a previously generated photo and no `techpackIllustration` was preserved, so the original drawing is gone.",
+      "fix": "Restore the original tech pack, or re-export it from the supplier pack."
+    },
+    {
+      "addr": "suit-3pc > Trousers-waistband > waistband-width > wband-45",
+      "productId": "suit-3pc",
+      "optionId": "wband-45",
+      "liveImage": "/images/generated/trousers/wband-45.png",
+      "reason": "The catalog `image` points at a previously generated photo and no `techpackIllustration` was preserved, so the original drawing is gone.",
+      "fix": "Restore the original tech pack, or re-export it from the supplier pack."
+    },
+    {
+      "addr": "suit-3pc > Trousers-waistband > waistband-width > wband-50",
+      "productId": "suit-3pc",
+      "optionId": "wband-50",
+      "liveImage": "/images/generated/trousers/wband-50.png",
+      "reason": "The catalog `image` points at a previously generated photo and no `techpackIllustration` was preserved, so the original drawing is gone.",
+      "fix": "Restore the original tech pack, or re-export it from the supplier pack."
+    },
+    {
+      "addr": "suit-3pc > Trousers-waistband > belt-loops > loops-5",
+      "productId": "suit-3pc",
+      "optionId": "loops-5",
+      "liveImage": "/images/generated/trousers/loops-standard.png",
+      "reason": "The catalog `image` points at a previously generated photo and no `techpackIllustration` was preserved, so the original drawing is gone.",
+      "fix": "Restore the original tech pack, or re-export it from the supplier pack."
+    },
+    {
+      "addr": "trousers > waistband > waistband-width > wband-45",
+      "productId": "trousers",
+      "optionId": "wband-45",
+      "liveImage": "/images/generated/trousers/wband-45.png",
+      "reason": "The catalog `image` points at a previously generated photo and no `techpackIllustration` was preserved, so the original drawing is gone.",
+      "fix": "Restore the original tech pack, or re-export it from the supplier pack."
+    },
+    {
+      "addr": "trousers > waistband > waistband-width > wband-50",
+      "productId": "trousers",
+      "optionId": "wband-50",
+      "liveImage": "/images/generated/trousers/wband-50.png",
+      "reason": "The catalog `image` points at a previously generated photo and no `techpackIllustration` was preserved, so the original drawing is gone.",
+      "fix": "Restore the original tech pack, or re-export it from the supplier pack."
+    },
+    {
+      "addr": "trousers > waistband > belt-loops > loops-5",
+      "productId": "trousers",
+      "optionId": "loops-5",
+      "liveImage": "/images/generated/trousers/loops-standard.png",
+      "reason": "The catalog `image` points at a previously generated photo and no `techpackIllustration` was preserved, so the original drawing is gone.",
+      "fix": "Restore the original tech pack, or re-export it from the supplier pack."
+    }
+  ],
+  "noIllustration": [
+    {
+      "addr": "shirt > collar > collar_stand_height > csh-35",
+      "label": "3.5 cm Standard",
+      "part": "shirt-collar-stand",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "shirt > details-contrast > contrast_color_position > contrast-none",
+      "label": "No Contrast",
+      "part": "fin-contrast",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "sport-coat > shoulder-structure > canvas > ultra-thin-half",
+      "label": "Ultra-thin Half Canvas",
+      "part": "jacket-canvas",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "sport-coat > lapel > collar-interlining > ci-regular",
+      "label": "Regular (with Linen)",
+      "part": "fin-lining",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "sport-coat > lapel > collar-interlining > ci-no-linen",
+      "label": "No Linen",
+      "part": "fin-lining",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "sport-coat > lapel > folded-collar-craft > fcc-normal",
+      "label": "Normal",
+      "part": "fin-interlining",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "sport-coat > lapel > folded-collar-craft > fcc-turnback",
+      "label": "Turn Back at the End",
+      "part": "fin-interlining",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "sport-coat > sleeves-cuffs > cuff-button-spacing > bs-no-kiss",
+      "label": "No Kissing (Standard)",
+      "part": "jacket-sleeve",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "sport-coat > back-vents > elbow-patch > ep-none",
+      "label": "None",
+      "part": "fin-patch",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-2pc > shoulder-structure > canvas > ultra-thin-half",
+      "label": "Ultra-thin Half Canvas",
+      "part": "jacket-canvas",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-2pc > lapel > lapel-style > opt-1779526586804",
+      "label": "E peak",
+      "part": "jacket-lapel",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-2pc > lapel > collar-interlining > ci-regular",
+      "label": "Regular (with Linen)",
+      "part": "fin-lining",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-2pc > lapel > collar-interlining > ci-no-linen",
+      "label": "No Linen",
+      "part": "fin-lining",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-2pc > lapel > folded-collar-craft > fcc-normal",
+      "label": "Normal",
+      "part": "fin-interlining",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-2pc > lapel > folded-collar-craft > fcc-turnback",
+      "label": "Turn Back at the End",
+      "part": "fin-interlining",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-2pc > sleeves-cuffs > cuff-button-spacing > bs-no-kiss",
+      "label": "No Kissing (Standard)",
+      "part": "jacket-sleeve",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-2pc > back-vents > elbow-patch > ep-none",
+      "label": "None",
+      "part": "fin-patch",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-2pc > Trousers-front-pockets > pocket-depth > pocket-shallow",
+      "label": "Shallow (20 cm)",
+      "part": "fin-adjust",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-2pc > Trousers-front-pockets > pocket-depth > pocket-standard",
+      "label": "Standard (23 cm)",
+      "part": "fin-adjust",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-2pc > Trousers-front-pockets > pocket-depth > pocket-deep",
+      "label": "Deep (26 cm)",
+      "part": "fin-adjust",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-2pc > Trousers-waistband > waistband-style > waist-extended-tab",
+      "label": "Extended Tab Waistband",
+      "part": "jacket-detail",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-2pc > Trousers-waistband > waistband-style > waist-elasticated",
+      "label": "Elasticated Insert",
+      "part": "jacket-detail",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-2pc > Trousers-waistband > waistband-style > waist-double",
+      "label": "Double Waistband",
+      "part": "jacket-detail",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-2pc > Trousers-waistband > waistband-style > waist-no-band",
+      "label": "Trouser Waist (No Band)",
+      "part": "jacket-detail",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-2pc > Trousers-waistband > waistband-width > wband-35",
+      "label": "3.5 cm",
+      "part": "jacket-detail",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-2pc > Trousers-waistband > waistband-width > wband-38",
+      "label": "3.8 cm",
+      "part": "jacket-detail",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-2pc > Trousers-waistband > waistband-width > wband-40",
+      "label": "4.0 cm",
+      "part": "jacket-detail",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-2pc > Trousers-waistband > waist-detail > waist-detail-none",
+      "label": "No Back Detail",
+      "part": "jacket-detail",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-2pc > Trousers-pleats-structure > bar-tack > bartack-none",
+      "label": "No Bar Tacks",
+      "part": "fin-stitch",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-2pc > Trousers-pleats-structure > center-crease > crease-pressed",
+      "label": "Pressed Crease (Standard)",
+      "part": "fin-adjust",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-2pc > Trousers-pleats-structure > center-crease > crease-none",
+      "label": "No Crease",
+      "part": "fin-adjust",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-2pc > Trousers-pleats-structure > center-crease > crease-fused",
+      "label": "Fused Crease (Permanent)",
+      "part": "fin-adjust",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-2pc > Trousers-back > center-seam > seam-open",
+      "label": "Open Seam",
+      "part": "jacket-detail",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-2pc > Trousers-back > center-seam > seam-flat-fell",
+      "label": "Flat-Fell Seam",
+      "part": "jacket-detail",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-2pc > Trousers-bottom-hem > hem-style > hem-fringe",
+      "label": "Fringe Edge",
+      "part": "jacket-detail",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-2pc > Trousers-bottom-hem > hem-style > hem-unfinished",
+      "label": "Unfinished (Raw Edge)",
+      "part": "jacket-detail",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-2pc > Trousers-bottom-hem > leg-shape > leg-tapered",
+      "label": "Tapered",
+      "part": "jacket-detail",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-2pc > Trousers-bottom-hem > leg-shape > leg-straight",
+      "label": "Straight Cut",
+      "part": "jacket-detail",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-2pc > Trousers-bottom-hem > leg-shape > leg-wide",
+      "label": "Wide Leg",
+      "part": "jacket-detail",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-2pc > Trousers-bottom-hem > leg-shape > leg-slim",
+      "label": "Slim",
+      "part": "jacket-detail",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-2pc > Trousers-lining-internal > label-placement > label-waistband",
+      "label": "Inside Waistband",
+      "part": "fin-label",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-2pc > Trousers-lining-internal > label-placement > label-care-only",
+      "label": "Care Label Only",
+      "part": "fin-label",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-2pc > Trousers-details-contrast > contrast-positions > trouser-contrast-none",
+      "label": "No Contrast",
+      "part": "fin-contrast",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-2pc > Trousers-details-contrast > buttonhole-type-trouser > tbh-machine",
+      "label": "Machine Stitched",
+      "part": "fin-buttonhole",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-2pc > Trousers-details-contrast > buttonhole-type-trouser > tbh-hand",
+      "label": "Hand-Worked",
+      "part": "fin-buttonhole",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-2pc > Trousers-extras > waistband-canvas > canvas-fused",
+      "label": "Fused (Standard)",
+      "part": "fin-canvas",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-2pc > Trousers-extras > waistband-canvas > canvas-full",
+      "label": "Full Canvas",
+      "part": "fin-canvas",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-2pc > Trousers-extras > waistband-canvas > canvas-half",
+      "label": "Half Canvas",
+      "part": "fin-canvas",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-2pc > Trousers-extras > waistband-canvas > canvas-single",
+      "label": "Single Layer",
+      "part": "fin-canvas",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-2pc > Trousers-extras > waistband-back-seam > back-seam-standard",
+      "label": "With Bartack (Standard)",
+      "part": "fin-stitch",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-3pc > shoulder-structure > canvas > ultra-thin-half",
+      "label": "Ultra-thin Half Canvas",
+      "part": "jacket-canvas",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-3pc > lapel > collar-interlining > ci-regular",
+      "label": "Regular (with Linen)",
+      "part": "fin-lining",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-3pc > lapel > collar-interlining > ci-no-linen",
+      "label": "No Linen",
+      "part": "fin-lining",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-3pc > lapel > folded-collar-craft > fcc-normal",
+      "label": "Normal",
+      "part": "fin-interlining",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-3pc > lapel > folded-collar-craft > fcc-turnback",
+      "label": "Turn Back at the End",
+      "part": "fin-interlining",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-3pc > sleeves-cuffs > cuff-button-spacing > bs-no-kiss",
+      "label": "No Kissing (Standard)",
+      "part": "jacket-sleeve",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-3pc > back-vents > elbow-patch > ep-none",
+      "label": "None",
+      "part": "fin-patch",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-3pc > Vest-front-style > buttonhole-type-vest > vest-bh-machine",
+      "label": "Machine Stitched",
+      "part": "fin-buttonhole",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-3pc > Vest-front-style > buttonhole-type-vest > vest-bh-round",
+      "label": "Handmade Round Buttonholes",
+      "part": "fin-buttonhole",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-3pc > Vest-lapel-neckline > lapel-width > vest-lapel-narrow",
+      "label": "Narrow 6 cm",
+      "part": "jacket-detail",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-3pc > Vest-lapel-neckline > lapel-width > vest-lapel-standard",
+      "label": "Standard 7.5 cm",
+      "part": "jacket-detail",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-3pc > Vest-lapel-neckline > lapel-width > vest-lapel-wide",
+      "label": "Wide 9 cm",
+      "part": "jacket-detail",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-3pc > Vest-contrast-vest > contrast-lapel-collar > vest-contrast-lapel-none",
+      "label": "None",
+      "part": "fin-contrast",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-3pc > Vest-contrast-vest > contrast-pocket-vest > vest-contrast-pocket-none",
+      "label": "None",
+      "part": "fin-contrast",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-3pc > Vest-lining-vest > vest-piping > vest-piping-none",
+      "label": "No Piping",
+      "part": "fin-piping",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-3pc > Vest-lining-vest > vest-label-placement > vest-label-inner",
+      "label": "Inner Breast Pocket Area",
+      "part": "fin-label",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-3pc > Vest-lining-vest > vest-label-placement > vest-label-seam",
+      "label": "Side Seam",
+      "part": "fin-label",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-3pc > Vest-fitting-vest > fitting-adjustment-vest > vest-fit-standard",
+      "label": "Standard",
+      "part": "fin-adjust",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-3pc > Vest-fitting-vest > fitting-adjustment-vest > vest-fit-arm-hole-1cm",
+      "label": "-1.0 cm Arm Hole",
+      "part": "fin-adjust",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-3pc > Vest-fitting-vest > fitting-adjustment-vest > vest-fit-stomach-dart",
+      "label": "Deep Stomach Dart",
+      "part": "fin-adjust",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-3pc > Vest-fitting-vest > vest-extras > vest-extra-none",
+      "label": "None",
+      "part": "fin-adjust",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-3pc > Vest-fitting-vest > vest-extras > vest-extra-pad-buttons",
+      "label": "Placket with Pad Buttons",
+      "part": "fin-adjust",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-3pc > Trousers-front-pockets > pocket-depth > pocket-shallow",
+      "label": "Shallow (20 cm)",
+      "part": "fin-adjust",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-3pc > Trousers-front-pockets > pocket-depth > pocket-standard",
+      "label": "Standard (23 cm)",
+      "part": "fin-adjust",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-3pc > Trousers-front-pockets > pocket-depth > pocket-deep",
+      "label": "Deep (26 cm)",
+      "part": "fin-adjust",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-3pc > Trousers-waistband > waistband-style > waist-extended-tab",
+      "label": "Extended Tab Waistband",
+      "part": "jacket-detail",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-3pc > Trousers-waistband > waistband-style > waist-elasticated",
+      "label": "Elasticated Insert",
+      "part": "jacket-detail",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-3pc > Trousers-waistband > waistband-style > waist-double",
+      "label": "Double Waistband",
+      "part": "jacket-detail",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-3pc > Trousers-waistband > waistband-style > waist-no-band",
+      "label": "Trouser Waist (No Band)",
+      "part": "jacket-detail",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-3pc > Trousers-waistband > waistband-width > wband-35",
+      "label": "3.5 cm",
+      "part": "jacket-detail",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-3pc > Trousers-waistband > waistband-width > wband-38",
+      "label": "3.8 cm",
+      "part": "jacket-detail",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-3pc > Trousers-waistband > waistband-width > wband-40",
+      "label": "4.0 cm",
+      "part": "jacket-detail",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-3pc > Trousers-waistband > waist-detail > waist-detail-none",
+      "label": "No Back Detail",
+      "part": "jacket-detail",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-3pc > Trousers-pleats-structure > bar-tack > bartack-none",
+      "label": "No Bar Tacks",
+      "part": "fin-stitch",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-3pc > Trousers-pleats-structure > center-crease > crease-pressed",
+      "label": "Pressed Crease (Standard)",
+      "part": "fin-adjust",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-3pc > Trousers-pleats-structure > center-crease > crease-none",
+      "label": "No Crease",
+      "part": "fin-adjust",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-3pc > Trousers-pleats-structure > center-crease > crease-fused",
+      "label": "Fused Crease (Permanent)",
+      "part": "fin-adjust",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-3pc > Trousers-back > center-seam > seam-open",
+      "label": "Open Seam",
+      "part": "jacket-detail",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-3pc > Trousers-back > center-seam > seam-flat-fell",
+      "label": "Flat-Fell Seam",
+      "part": "jacket-detail",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-3pc > Trousers-bottom-hem > hem-style > hem-fringe",
+      "label": "Fringe Edge",
+      "part": "jacket-detail",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-3pc > Trousers-bottom-hem > hem-style > hem-unfinished",
+      "label": "Unfinished (Raw Edge)",
+      "part": "jacket-detail",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-3pc > Trousers-bottom-hem > leg-shape > leg-tapered",
+      "label": "Tapered",
+      "part": "jacket-detail",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-3pc > Trousers-bottom-hem > leg-shape > leg-straight",
+      "label": "Straight Cut",
+      "part": "jacket-detail",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-3pc > Trousers-bottom-hem > leg-shape > leg-wide",
+      "label": "Wide Leg",
+      "part": "jacket-detail",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-3pc > Trousers-bottom-hem > leg-shape > leg-slim",
+      "label": "Slim",
+      "part": "jacket-detail",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-3pc > Trousers-lining-internal > label-placement > label-waistband",
+      "label": "Inside Waistband",
+      "part": "fin-label",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-3pc > Trousers-lining-internal > label-placement > label-care-only",
+      "label": "Care Label Only",
+      "part": "fin-label",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-3pc > Trousers-details-contrast > contrast-positions > trouser-contrast-none",
+      "label": "No Contrast",
+      "part": "fin-contrast",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-3pc > Trousers-details-contrast > buttonhole-type-trouser > tbh-machine",
+      "label": "Machine Stitched",
+      "part": "fin-buttonhole",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-3pc > Trousers-details-contrast > buttonhole-type-trouser > tbh-hand",
+      "label": "Hand-Worked",
+      "part": "fin-buttonhole",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-3pc > Trousers-extras > waistband-canvas > canvas-fused",
+      "label": "Fused (Standard)",
+      "part": "fin-canvas",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-3pc > Trousers-extras > waistband-canvas > canvas-full",
+      "label": "Full Canvas",
+      "part": "fin-canvas",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-3pc > Trousers-extras > waistband-canvas > canvas-half",
+      "label": "Half Canvas",
+      "part": "fin-canvas",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-3pc > Trousers-extras > waistband-canvas > canvas-single",
+      "label": "Single Layer",
+      "part": "fin-canvas",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "suit-3pc > Trousers-extras > waistband-back-seam > back-seam-standard",
+      "label": "With Bartack (Standard)",
+      "part": "fin-stitch",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "trousers > front-pockets > pocket-depth > pocket-shallow",
+      "label": "Shallow (20 cm)",
+      "part": "fin-adjust",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "trousers > front-pockets > pocket-depth > pocket-standard",
+      "label": "Standard (23 cm)",
+      "part": "fin-adjust",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "trousers > front-pockets > pocket-depth > pocket-deep",
+      "label": "Deep (26 cm)",
+      "part": "fin-adjust",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "trousers > waistband > waistband-style > waist-extended-tab",
+      "label": "Extended Tab Waistband",
+      "part": "trouser-waistband",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "trousers > waistband > waistband-style > waist-elasticated",
+      "label": "Elasticated Insert",
+      "part": "trouser-waistband",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "trousers > waistband > waistband-style > waist-double",
+      "label": "Double Waistband",
+      "part": "trouser-waistband",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "trousers > waistband > waistband-style > waist-no-band",
+      "label": "Trouser Waist (No Band)",
+      "part": "trouser-waistband",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "trousers > waistband > waistband-width > wband-35",
+      "label": "3.5 cm",
+      "part": "trouser-waistband-width",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "trousers > waistband > waistband-width > wband-38",
+      "label": "3.8 cm",
+      "part": "trouser-waistband-width",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "trousers > waistband > waistband-width > wband-40",
+      "label": "4.0 cm",
+      "part": "trouser-waistband-width",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "trousers > waistband > waist-detail > waist-detail-none",
+      "label": "No Back Detail",
+      "part": "trouser-adjuster",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "trousers > pleats-structure > bar-tack > bartack-none",
+      "label": "No Bar Tacks",
+      "part": "fin-stitch",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "trousers > pleats-structure > center-crease > crease-pressed",
+      "label": "Pressed Crease (Standard)",
+      "part": "fin-adjust",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "trousers > pleats-structure > center-crease > crease-none",
+      "label": "No Crease",
+      "part": "fin-adjust",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "trousers > pleats-structure > center-crease > crease-fused",
+      "label": "Fused Crease (Permanent)",
+      "part": "fin-adjust",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "trousers > back > center-seam > seam-open",
+      "label": "Open Seam",
+      "part": "trouser-back",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "trousers > back > center-seam > seam-flat-fell",
+      "label": "Flat-Fell Seam",
+      "part": "trouser-back",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "trousers > bottom-hem > hem-style > hem-fringe",
+      "label": "Fringe Edge",
+      "part": "trouser-hem",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "trousers > bottom-hem > hem-style > hem-unfinished",
+      "label": "Unfinished (Raw Edge)",
+      "part": "trouser-hem",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "trousers > bottom-hem > leg-shape > leg-tapered",
+      "label": "Tapered",
+      "part": "trouser-leg",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "trousers > bottom-hem > leg-shape > leg-straight",
+      "label": "Straight Cut",
+      "part": "trouser-leg",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "trousers > bottom-hem > leg-shape > leg-wide",
+      "label": "Wide Leg",
+      "part": "trouser-leg",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "trousers > bottom-hem > leg-shape > leg-slim",
+      "label": "Slim",
+      "part": "trouser-leg",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "trousers > lining-internal > label-placement > label-waistband",
+      "label": "Inside Waistband",
+      "part": "fin-label",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "trousers > lining-internal > label-placement > label-care-only",
+      "label": "Care Label Only",
+      "part": "fin-label",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "trousers > details-contrast > contrast-positions > trouser-contrast-none",
+      "label": "No Contrast",
+      "part": "fin-contrast",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "trousers > details-contrast > buttonhole-type-trouser > tbh-machine",
+      "label": "Machine Stitched",
+      "part": "fin-buttonhole",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "trousers > details-contrast > buttonhole-type-trouser > tbh-hand",
+      "label": "Hand-Worked",
+      "part": "fin-buttonhole",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "trousers > extras > waistband-canvas > canvas-fused",
+      "label": "Fused (Standard)",
+      "part": "trouser-waistband",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "trousers > extras > waistband-canvas > canvas-full",
+      "label": "Full Canvas",
+      "part": "trouser-waistband",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "trousers > extras > waistband-canvas > canvas-half",
+      "label": "Half Canvas",
+      "part": "trouser-waistband",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "trousers > extras > waistband-canvas > canvas-single",
+      "label": "Single Layer",
+      "part": "trouser-waistband",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "trousers > extras > waistband-back-seam > back-seam-standard",
+      "label": "With Bartack (Standard)",
+      "part": "trouser-waistband",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "vest > front-style > buttonhole-type-vest > vest-bh-machine",
+      "label": "Machine Stitched",
+      "part": "vest-buttonhole",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "vest > front-style > buttonhole-type-vest > vest-bh-round",
+      "label": "Handmade Round Buttonholes",
+      "part": "vest-buttonhole",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "vest > lapel-neckline > lapel-width > vest-lapel-narrow",
+      "label": "Narrow 6 cm",
+      "part": "vest-lapel",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "vest > lapel-neckline > lapel-width > vest-lapel-standard",
+      "label": "Standard 7.5 cm",
+      "part": "vest-lapel",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "vest > lapel-neckline > lapel-width > vest-lapel-wide",
+      "label": "Wide 9 cm",
+      "part": "vest-lapel",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "vest > contrast-vest > contrast-lapel-collar > vest-contrast-lapel-none",
+      "label": "None",
+      "part": "fin-contrast",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "vest > contrast-vest > contrast-pocket-vest > vest-contrast-pocket-none",
+      "label": "None",
+      "part": "vest-pocket",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "vest > lining-vest > vest-piping > vest-piping-none",
+      "label": "No Piping",
+      "part": "fin-piping",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "vest > lining-vest > vest-label-placement > vest-label-inner",
+      "label": "Inner Breast Pocket Area",
+      "part": "fin-label",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "vest > lining-vest > vest-label-placement > vest-label-seam",
+      "label": "Side Seam",
+      "part": "fin-label",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "vest > fitting-vest > fitting-adjustment-vest > vest-fit-standard",
+      "label": "Standard",
+      "part": "fin-adjust",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "vest > fitting-vest > fitting-adjustment-vest > vest-fit-arm-hole-1cm",
+      "label": "-1.0 cm Arm Hole",
+      "part": "fin-adjust",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "vest > fitting-vest > fitting-adjustment-vest > vest-fit-stomach-dart",
+      "label": "Deep Stomach Dart",
+      "part": "fin-adjust",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "vest > fitting-vest > vest-extras > vest-extra-none",
+      "label": "None",
+      "part": "fin-adjust",
+      "reason": "No illustration of any kind in the catalog record."
+    },
+    {
+      "addr": "vest > fitting-vest > vest-extras > vest-extra-pad-buttons",
+      "label": "Placket with Pad Buttons",
+      "part": "fin-adjust",
+      "reason": "No illustration of any kind in the catalog record."
+    }
+  ],
+  "noIllustrationTruncated": 0
+}

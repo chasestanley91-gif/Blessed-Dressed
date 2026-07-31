@@ -1,0 +1,64 @@
+{
+  "defect": "SQUARE COLLAR FAMILY — blueprints depict POINT collars",
+  "discoveredAt": "2026-07-30",
+  "summary": "Options whose label and description specify a squared-off collar termination are backed by reference images showing sharp acute POINT tips. Because every QC score measures fidelity TO the blueprint, faithful renders of these wrong drawings score 98+ and PASS — two did, and both have been revoked.",
+  "confirmedWrong": [
+    {
+      "option": "collar-sq-65-btn",
+      "label": "Square 6.5 cm with Button",
+      "blueprint": "/images/ai/collar-sq-65-btn.png",
+      "verdict": "PASS REVOKED",
+      "evidence": "sharp acute point tips, verified visually"
+    },
+    {
+      "option": "collar-small-sq-50",
+      "label": "Small Square 5.0 cm",
+      "blueprint": "/images/ai/collar-small-sq-50.png",
+      "verdict": "PASS REVOKED",
+      "evidence": "sharp pointed tips on long leaves, verified visually"
+    },
+    {
+      "option": "collar-small-sq-50-btn",
+      "label": "Small Square 5.0 cm with Button",
+      "blueprint": "/images/ai/collar-small-sq-50-btn.png",
+      "verdict": "BLUEPRINT_CONFLICT (0 credits spent)",
+      "evidence": "acute apex, edge-stitch meets in a V, leaves far longer than 5.0 cm"
+    },
+    {
+      "option": "collar-small-sq-50-zigzag",
+      "label": "Small Square 5.0 cm Zigzag",
+      "blueprint": "/images/ai/collar-small-sq-50-zigzag.png",
+      "verdict": "BLUEPRINT_CONFLICT (0 credits spent)",
+      "evidence": "single sharp acute point at 5x zoom; only the zigzag topstitch matches"
+    }
+  ],
+  "confirmedCorrect": [
+    {
+      "option": "collar-sq-65",
+      "label": "Square 6.5 cm",
+      "blueprint": "/images/ai/collar-sq-65.png",
+      "evidence": "genuine flat squared-off terminal edge — proves the catalog CAN represent square ends, so the others are mis-sourced files, not a terminology difference"
+    }
+  ],
+  "notYetInspected": [
+    "collar-squared-stand",
+    "collar-sq-stand-no-btn",
+    "cs-square",
+    "cs-square-2btn",
+    "cs-left-sq-rt-rnd"
+  ],
+  "fix": "Supply correct square-tip tech packs for the four confirmed-wrong options, then regenerate. Until then they stay in needs-source.",
+  "correctionToEarlierDiagnosis": "An earlier hypothesis blamed a presentation mismatch (garment-only reference vs a worn-on-model prompt) for the square-tip failures. That was WRONG for this family: the references themselves show point collars, so the model was reproducing them faithfully. The garment-only presentation change remains justified on its own merits (it removes the face/jaw intrusion QC flagged repeatedly) but it was not the cause here.",
+  "RESOLVED": {
+    "at": "2026-07-30 (later same day)",
+    "correction": "This report originally concluded that NO authoritative drawing existed for the square family. That was WRONG. A dedicated supplier tech-pack library exists at /images/techpacks/** (485 line drawings, byte-identical mirrors of /images/lapel/ etc.), and it contains square-in-65cm.jpg, square-in-65cm-with-button.jpg, small-square-in-5cm.jpg and small-square-in-5cm-with-button.jpg. The catalog was simply pointing techpackIllustration at each option aiImage (an AI PHOTO) instead of at the drawing.",
+    "action": "Re-pointed 51 of the 55 AI-photo-blueprinted options at their real tech-pack drawing (exact token-set match, 0 ambiguous, all 51 verified to exist on disk). The square family can now be regenerated against authoritative geometry.",
+    "stillManual": [
+      "collar-round-point-70",
+      "collar-small-sq-50-zigzag",
+      "collar-sq-stand-no-btn",
+      "collar-frog-mandarin"
+    ],
+    "stillManualReason": "Near-miss filenames (e.g. \"Square Stand (No Button)\" vs square-stand-collar-without-button.jpg). Left unmatched deliberately rather than guessed - picking the wrong drawing is the exact failure this exercise exists to prevent."
+  }
+}

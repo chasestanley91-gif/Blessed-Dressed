@@ -1,0 +1,19 @@
+{
+  "report": "QA of 10 collar_splicing v2 remakes generated 2026-07-25",
+  "date": "2026-07-26",
+  "method": "per-feature pass/fail vision comparison vs tech-pack blueprint (skill qa-and-retry.md checklist), two independent QA subagents (5 pairs each)",
+  "results": [
+    {"id": "splice-none", "file": "generated/shirt/splice-none-v2.png", "verdict": "PASS", "summary": "no contrast anywhere, clean collar, no text, no artifacts"},
+    {"id": "splice-strip-mid-collar", "file": "generated/shirt/splice-strip-mid-collar-v2.png", "verdict": "PASS", "summary": "two mirrored 1cm mid-leaf strips as drawn; Chinese annotations did not leak"},
+    {"id": "splice-4cm-from-point", "file": "generated/shirt/splice-4cm-from-point-v2.png", "verdict": "FAIL", "failed_checks": ["counts: placket topstitch rows and lower placket button missing", "construction: rendered plain covered French front instead of drawn stitched button placket"], "correction": "Front placket error: the photo omits the centre button placket entirely, showing a plain covered French front with no stitch rows or lower button; regenerate with the visible centre-front placket carrying its two parallel vertical topstitch rows and pearl placket button below the collar band, while keeping the two 1.0 cm contrast strips positioned 4 cm from each collar point opening edge exactly as now.", "action": "retry as splice-4cm-from-point-v3"},
+    {"id": "splice-15cm-from-point", "file": "generated/shirt/splice-15cm-from-point-v2.png", "verdict": "PASS", "summary": "strips hug opening edge at ~1.5cm, visibly closer than 4cm sibling; no leaked annotations"},
+    {"id": "splice-single-left-placket", "file": "generated/shirt/splice-single-left-placket-v2.png", "verdict": "PASS", "summary": "single ~1cm strip flush on viewer-left placket edge as drawn"},
+    {"id": "splice-top-collar-edge", "file": "generated/shirt/splice-top-collar-edge-v2.png", "verdict": "PASS", "summary": "0.6cm trim follows full outer collar perimeter as drawn; no leaked annotation"},
+    {"id": "splice-upper-cuff", "file": "generated/shirt/splice-upper-cuff-v2.png", "verdict": "PASS", "summary": "contrast left of button seam matching red region; stitching as drawn"},
+    {"id": "splice-lower-cuff", "file": "generated/shirt/splice-lower-cuff-v2.png", "verdict": "FAIL", "failed_checks": ["counts/construction/nothing-extra: extraneous horizontal seam crosses the white button-side panel and dead-ends at the splice seam; blueprint draws that panel uninterrupted"], "correction": "Lower Sleeve Cuff splice: the white (button-side) section of the cuff shows an extraneous horizontal seam line running from the cuff's left edge to the splice seam about a third of the way down; the blueprint draws that section as one uninterrupted plain panel, so remove the horizontal seam entirely and render the white section as a single continuous piece of fabric whose only seams are the vertical splice seam beside the button and the edge topstitching along the cuff's top and bottom edges.", "action": "retry as splice-lower-cuff-v3"},
+    {"id": "splice-cuff-edge", "file": "generated/shirt/splice-cuff-edge-v2.png", "verdict": "PASS", "summary": "0.6cm bound edge with mitred V at overlap exactly as drawn Y path; annotation did not leak"},
+    {"id": "splice-strip-mid-cuff", "file": "generated/shirt/splice-strip-mid-cuff-v2.png", "verdict": "PASS", "summary": "single full-height centered strip with button centered on it as drawn"}
+  ],
+  "tally": {"pass": 8, "fail": 2},
+  "next": "8 passes await Dustin's Accept in review.html (approval gate for swapping v2 over v1); 2 retries queued as v3 with correction lines"
+}
