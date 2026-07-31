@@ -10,10 +10,10 @@
  },
  "credits": {
   "start": 993,
-  "spent": 64.5,
-  "balance_verified": 928.5,
-  "balance_verified_at": "2026-07-30",
-  "note": "balance_approx was 969.5 and 41 credits stale; 928.5 is the live figure read from the Higgsfield balance endpoint on 2026-07-30. Always re-read balance rather than trusting a carried-forward estimate."
+  "spent": 104,
+  "balance_verified": 889.5,
+  "balance_verified_at": "2026-07-31",
+  "note": "Read from the Higgsfield balance endpoint AND cross-checked against the transaction ledger. Every generation transaction is exactly -0.5 credits. Four subagents independently reported 2.9/3.3/4.75/~6.5x per image; all four measured a SHARED balance while siblings spent against it concurrently. Never infer unit cost from a balance delta."
  },
  "remake_queue": {
   "generated_qa_pass": 32,
@@ -184,7 +184,7 @@
   "credit_math": "observed ~2 attempts/option on the live test. 532 unique-blueprint options ~= 532 x 1.75 x 0.5 = ~466 credits (FITS in ~969). All 1988 ~= ~1740 credits (does NOT fit).",
   "recommendation": "Generate the 532 unique-blueprint options now; the 1456 shared-blueprint options need per-option tech packs sourced before generation can be blueprint-accurate."
  },
- "last_updated": "2026-07-30",
+ "last_updated": "2026-07-31",
  "batch_run": {
   "status": "waves 1-3 run; paused by session limit (resets 1am America/Chicago)",
   "user_approved": "do the 532 - craft options only, buttons/fabrics/thread excluded, GPT Image 2 / Low / 1K, 0.5 credits per photo (settings confirmed twice and verified by ledger arithmetic)",
@@ -443,5 +443,38 @@
   "tests": "53 passed, 0 failed, 1 skipped (Stripe paid path, pending keys). Both former test.fail() known-bug annotations are gone — replaced by real passing assertions.",
   "still_blocked_on_user": "Vercel env vars — Stripe keys are under the wrong names (Secret_key vs STRIPE_SECRET_KEY), so checkout 503s in production regardless of code. BLOB_READ_WRITE_TOKEN, STRIPE_WEBHOOK_SECRET, NEXT_PUBLIC_SITE_URL, ADMIN_PASSWORD, ADMIN_TOKEN_SECRET all absent.",
   "next": "Phase 3 remaining app defects (order correctness incl. the measurement-unit gap, ~30 unchecked fetches, mobile 375px, next/image migration, sitemap/robots/metadata), Phase 4 qc_ladder defects, Phase 6 the ~860 craft descriptions."
+ },
+ "session_2026_07_31": {
+  "mode": "Stage A pipeline safety, Stage A2 blueprint re-point, Stage B generation wave 1, Stage C app work",
+  "credits_spent_this_session": 39,
+  "shipped": 63,
+  "inScope": 1747,
+  "total": 2862,
+  "delivered": [
+   "qc_ladder.mjs: four defects closed (option-id broadcast could reach PASS on fabricated numbers; unsigned MEASURE_TOKEN fabricated a critical on chest-dart across 3 products; no measurement-file/family binding; no upper bound on span fidelity so an OVER-EXPANDED ladder passed silently). Self-test 6 -> 28 cases.",
+   "project_state.mjs: PNG masters with a .webp sibling are provenance anchors, not orphans. 688 -> 220 orphans + 468 anchors.",
+   "repoint_supplier_blueprints.mjs + blueprint_contact_sheet.mjs: 237 of 474 glyph-backed options moved onto genuine supplier drawings. cb-none and cb-1 had both been illustrated with TWO buttons.",
+   "blueprint_triage.mjs: decides from the PIXELS whether a catalog blueprint is a technical drawing. Caught /images/jacket/underarm-shield/*.jpg as crops of BUTTON PHOTOGRAPHS before any credit was spent on the highest-leverage cluster in the queue.",
+   "wave_queue.mjs: outstanding work grouped on the proven part|field|option|label key, ordered by rows unlocked, gated on the triage verdict.",
+   "Generation wave 1: 52 new QC-approved images published across 109 catalog rows. Shipped 12 -> 63.",
+   "spec.mjs: garmentNoun and resolvePart now key on SECTION, not product. 578 rows were being described as a suit jacket while a trouser or waistcoat drawing was attached.",
+   "prompt.mjs: COLOUR IN THE DRAWING IS NOTATION clause. Red highlights were rendering as red cloth.",
+   "publish_approved.mjs: searches both the part-derived and product-derived staging folders; 12 approved images had been refused as not-on-disk while on disk.",
+   "App: measurement unit recorded end-to-end (a 41cm and a 41in chest were byte-identical orders); real 404s replacing soft 200s; error boundary; robots.ts; sitemap.ts; canonicals; noindex on cart/checkout."
+  ],
+  "blocked_on_user": [
+   "Vercel env vars — Stripe keys under the wrong names, so checkout 503s in production regardless of code.",
+   "4 rows would replace a live customer-facing photo (publish_approved --allow-swap) — needs a human ruling.",
+   "DEFECT-FAMILIES.md re-assessment: which unphotographable ladders to merge or reprice."
+  ],
+  "needs_source_added": [
+   "back-darts (3 products) — drawing is a trouser FRONT: fly, belt loops, slant pockets",
+   "fly-stitching (2 products) — red marks lie on the side-pocket openings; the fly is unmarked",
+   "hem-cuff-32 / hem-single-turnup — labelled turn-up, drawn with no turn-up band",
+   "vest-chest-both-besom-flap / vest-lower-slant-flap — labelled with flap, drawn without",
+   "back-left-welt — labelled single left, drawn with both welts",
+   "413 UNVERIFIED_BLUEPRINT clusters — 240px UI thumbnails that cannot be verified from pixels",
+   "23 NOT_A_DRAWING clusters — blank frames, swatch cards, button photos"
+  ]
  }
 }

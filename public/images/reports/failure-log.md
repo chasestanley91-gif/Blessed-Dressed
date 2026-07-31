@@ -563,3 +563,115 @@ Both candidates were 3/4 detail crops — an orientation in which the annotated 
 | Date | Batch | Model | Images | Credits | Balance after |
 |---|---|---|---|---|---|
 | 2026-07-31 | session D — QC of 5 awaiting-verdict options | — | 0 | 0 | **928.5 (unchanged)** |
+
+---
+
+## 2026-07-31 — five defects that would each have shipped confidently wrong images
+
+### 1. A blueprint that is a photograph of a button (CRITICAL; cost: 0, caught before spending)
+
+`wave_queue.mjs` ranked `perfume-pad` first: 8 clusters, 24 catalog rows, the
+highest-leverage work in the catalog. Its blueprints are
+`/images/jacket/underarm-shield/*.jpg`, and they are not underarm shields. They
+are 1.5–4.5 KB crops of BUTTON PHOTOGRAPHS — a grey disc with a red X, a two-hole
+button, a partial button rim.
+
+Nothing downstream could have caught it. **`garment-image-qc` scores fidelity TO
+the blueprint, so a render faithful to a picture of a button scores HIGH.**
+`repoint_supplier_blueprints.mjs` could not catch it either: these are JPEGs, not
+brand-palette SVGs, and their filenames are perfectly plausible.
+
+A 24-file sample, one per directory, showed the whole small-blueprint tier is
+contaminated: horn-button product photos under `chest-dart`, photographs of fabric
+bolts under `facing-style`, thread colour cards under `half-lining-craft`, a
+fabric label under `ticket-pocket`, blank frames under `sleeve-vent` and
+`inner-ticket-pocket`. Several genuine drawings are also filed under the WRONG
+field — `columbia-piping` holds a LOWER POCKET drawing captioned "Regular Slanted
+Flap in 4.5cm"; `external-decoration` holds a sheet of LAPEL drawings;
+`contrast-position/chest-pocket.jpg` is a canvas/chest-piece drawing.
+
+**Lesson: a correct filename is not evidence.** `tools/blueprint_triage.mjs` now
+decides from the pixels, and `wave_queue.mjs` will not queue anything it cannot
+verify. Effect: 614 clusters "generatable" → 170 verified, 444 sent for a source
+ruling. That is not lost ambition; those 444 were about to be generated from
+pictures of buttons and swatches of cloth.
+
+**Calibration lesson, recorded because it nearly went the other way:** the first
+threshold set FAILED — every button crop cleared it and came back LINE_DRAWING.
+The signal that actually separates the populations is CANVAS: every genuine
+supplier drawing here is authored at 1200×1200, every button crop is 240×200, and
+the distribution is sharply bimodal with only 21 files anywhere in between.
+Thresholds fitted by eye against one population prove nothing. `--calibrate`
+prints both populations so the numbers can be argued with.
+
+### 2. A suit is not one garment (578 catalog rows)
+
+`spec.mjs` keyed `garmentNoun` and `resolvePart` on `productId`, so every trouser
+and waistcoat option filed under `suit-2pc` / `suit-3pc` was described to the
+image model as "a premium navy bespoke suit jacket" and classified
+`jacket-detail` — while a trouser or waistcoat drawing was attached as the
+geometry reference. The prompt contradicted its own reference image on the most
+basic fact in it.
+
+Three generation agents observed the blueprint usually overriding the wording and
+reported the defect harmless. A fourth refused to spend credits on 33 clusters
+rather than generate from a self-contradictory prompt. **The fourth was right:
+"usually" is not a gate, and the contradiction was costing retries.** Both now key
+on the section prefix (`Trousers-*`, `Vest-*`), which is what the catalog itself
+uses to say which garment a field belongs to.
+
+### 3. Red in a drawing is notation, not cloth
+
+The prompt already listed "red or coloured guide marks" among the annotations to
+ignore. The model traced them as garment colour anyway: `lbp-both` came back with
+two fire-engine-red lapel buttonholes resembling applied plastic tags.
+
+**Naming the marks was not enough — the prompt had to say what they MEAN.** The
+added clause states that a highlighted region marks WHERE the option sits, that
+shading marks the EXTENT of a panel, and that both must render in the garment's
+own cloth. Fixed in one retry, and later batches saw no red bleed at all.
+
+The same convention applies to flat grey shading: `vest-lining-artistic` first
+rendered a plain grey lining because the drawing shades the lining zone to mark
+coverage, not colour. Diagonal hatching is likewise a lining-fill convention and
+must not become striped fabric.
+
+### 4. Two scripts derived one path differently (12 approved images refused)
+
+`log_qc_result.mjs` stages under the PRODUCT id (`suit-3pc/`);
+`publish_approved.mjs` computed the path from `GENERATED_FOLDER`, which maps the
+suit products onto `jacket/`. Every waistcoat and trouser option inside a suit
+product staged to one path and was looked for at another, so 12 genuinely
+QC-approved images were refused as "not on disk" while sitting on disk. The
+publisher now searches both. Safe, because the folder is only a lookup: gate 2
+still requires SHA-1 byte-identity with the exact candidate QC graded.
+
+### 5. Four agents independently mis-derived the credit cost
+
+They reported per-image costs of 2.9, 3.3, 4.75 and about 6.5× the true figure.
+All four measured a shared account balance while sibling agents spent against it
+concurrently, and attributed the whole delta to their own images. **The ledger
+settles it: all 78 transactions read exactly −0.5.** Believing any of the four
+would have halved planned coverage. Never infer a unit cost from a balance delta
+on a shared account — read the transactions.
+
+### Also: an unsigned regex fabricated a critical
+
+`qc_ladder.mjs`'s `MEASURE_TOKEN` had no sign group, so `chest-dart`'s "-2 cm" and
+"+2 cm" both parsed to 20 mm — the same declared value — and the tool raised a
+fabricated `COLLAPSED_DECLARATION` against a perfectly well-formed family, on
+three products. Suppression taken OUT of the chest is not suppression put IN; the
+sign is the option.
+
+But `+` is not always a sign: "Double (0.15 + 0.6 cm)" uses it as a binary
+operator between two stitch rows, while "Round Hem +0.6 cm" uses it as a unary
+sign. Both are real labels here. The rule that separates them — glued to the
+preceding word means hyphen; preceded by a digit means operator; otherwise sign —
+is documented at the regex and verified against all 35 signed labels in the live
+catalog.
+
+### And the one that keeps recurring: backticks in the Bash tool
+
+Writing this very entry through a bash heredoc ate every code span again and
+executed the contents as commands. It is at least the third time. **Write prose
+with the Write tool and append with node; never through a shell heredoc.**
