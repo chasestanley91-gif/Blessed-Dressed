@@ -1,0 +1,1595 @@
+{
+  "at": "2026-07-31T04:09:11.353Z",
+  "by": "tools/repoint_supplier_blueprints.mjs",
+  "rule": "A re-point is applied only from the decisions file, only to an option whose current blueprint is a brand glyph, and only from a magic-byte-verified source. The previous glyph is preserved in glyphIllustration.",
+  "copied": 21,
+  "reused": 42,
+  "repointed": 63,
+  "missing": [],
+  "skipped": [
+    {
+      "key": "sport-coat|lapel-style|lapel-notch-45",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|lapel-style|lapel-notch-50",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|lapel-style|lapel-notch-55",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|lapel-style|lapel-notch-65",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|lapel-style|lapel-notch-73",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|lapel-style|lapel-peak-99",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|lapel-style|lapel-peak-101",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|lapel-style|lapel-peak-102",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|lapel-style|lapel-peak-102-rl",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|lapel-style|lapel-peak-103-curved",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|lapel-style|lapel-peak-105",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|lapel-style|lapel-peak-107",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|lapel-style|lapel-peak-108",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|lapel-style|lapel-peak-110",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|lapel-style|lapel-peak-110-low",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|lapel-style|lapel-peak-114",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|lapel-style|lapel-peak-115",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|lapel-style|lapel-peak-120-curved",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|lapel-style|lapel-shawl",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|lapel-style|lapel-shawl-0a",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|lapel-style|lapel-shawl-0e",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|lapel-style|lapel-shawl-0005",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|lapel-style|lapel-fishtail",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|lapel-bh-position|lbp-left",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|lapel-bh-position|lbp-left-double",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|lapel-bh-position|lbp-both",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|lapel-bh-position|lbp-3l-2r",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|lapel-bh-position|lbp-3l-1r",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|chest-pocket|cp-welt-23",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|chest-pocket|cp-welt-25",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|chest-pocket|cp-welt-27",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|chest-pocket|cp-welt-curved-23",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|chest-pocket|cp-welt-curved-25",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|chest-pocket|cp-welt-curved-27",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|chest-pocket|cp-welt-curved-29",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|chest-pocket|cp-jetted",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|chest-pocket|cp-patch",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|chest-pocket|cp-boat-28",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|chest-pocket|cp-boat-30",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|chest-pocket|cp-trapezoid",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|lower-pocket|lp-slanted-flap-40",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|lower-pocket|lp-slanted-flap-45",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|lower-pocket|lp-slanted-flap-50",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|lower-pocket|lp-slanted-flap-55",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|lower-pocket|lp-slanted-flap-60",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|lower-pocket|lp-slanted-flap-65",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|lower-pocket|lp-straight-jetted-40",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|lower-pocket|lp-straight-jetted-45",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|lower-pocket|lp-straight-jetted-50",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|lower-pocket|lp-straight-jetted-55",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|lower-pocket|lp-straight-jetted-60",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|lower-pocket|lp-straight-jetted-65",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|lower-pocket|lp-jetted-4",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|lower-pocket|lp-straight-jetted",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|lower-pocket|lp-patch",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|lower-pocket|lp-patch-rounded",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|lower-pocket|lp-patch-flap",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "sport-coat|lower-pocket|lp-jetted-btn-tab",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|lapel-style|lapel-notch-45",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|lapel-style|lapel-notch-50",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|lapel-style|lapel-notch-55",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|lapel-style|lapel-notch-65",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|lapel-style|lapel-notch-73",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|lapel-style|lapel-peak-99",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|lapel-style|lapel-peak-101",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|lapel-style|lapel-peak-102",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|lapel-style|lapel-peak-102-rl",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|lapel-style|lapel-peak-103-curved",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|lapel-style|lapel-peak-105",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|lapel-style|lapel-peak-107",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|lapel-style|lapel-peak-108",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|lapel-style|lapel-peak-110",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|lapel-style|lapel-peak-110-low",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|lapel-style|lapel-peak-114",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|lapel-style|lapel-peak-115",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|lapel-style|lapel-peak-120-curved",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|lapel-style|lapel-shawl",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|lapel-style|lapel-shawl-0a",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|lapel-style|lapel-shawl-0e",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|lapel-style|lapel-shawl-0005",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|lapel-style|lapel-fishtail",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|lapel-style|opt-1779526586804",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|lapel-bh-position|lbp-left",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|lapel-bh-position|lbp-left-double",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|lapel-bh-position|lbp-both",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|lapel-bh-position|lbp-3l-2r",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|lapel-bh-position|lbp-3l-1r",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|chest-pocket|cp-welt-23",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|chest-pocket|cp-welt-25",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|chest-pocket|cp-welt-27",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|chest-pocket|cp-welt-curved-23",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|chest-pocket|cp-welt-curved-25",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|chest-pocket|cp-welt-curved-27",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|chest-pocket|cp-welt-curved-29",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|chest-pocket|cp-jetted",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|chest-pocket|cp-patch",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|chest-pocket|cp-boat-28",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|chest-pocket|cp-boat-30",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|chest-pocket|cp-trapezoid",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|lower-pocket|lp-slanted-flap-40",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|lower-pocket|lp-slanted-flap-45",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|lower-pocket|lp-slanted-flap-50",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|lower-pocket|lp-slanted-flap-55",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|lower-pocket|lp-slanted-flap-60",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|lower-pocket|lp-slanted-flap-65",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|lower-pocket|lp-straight-jetted-40",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|lower-pocket|lp-straight-jetted-45",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|lower-pocket|lp-straight-jetted-50",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|lower-pocket|lp-straight-jetted-55",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|lower-pocket|lp-straight-jetted-60",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|lower-pocket|lp-straight-jetted-65",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|lower-pocket|lp-jetted-4",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|lower-pocket|lp-straight-jetted",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|lower-pocket|lp-patch",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|lower-pocket|lp-patch-rounded",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|lower-pocket|lp-patch-flap",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-2pc|lower-pocket|lp-jetted-btn-tab",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|lapel-style|lapel-notch-45",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|lapel-style|lapel-notch-50",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|lapel-style|lapel-notch-55",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|lapel-style|lapel-notch-65",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|lapel-style|lapel-notch-73",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|lapel-style|lapel-peak-99",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|lapel-style|lapel-peak-101",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|lapel-style|lapel-peak-102",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|lapel-style|lapel-peak-102-rl",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|lapel-style|lapel-peak-103-curved",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|lapel-style|lapel-peak-105",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|lapel-style|lapel-peak-107",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|lapel-style|lapel-peak-108",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|lapel-style|lapel-peak-110",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|lapel-style|lapel-peak-110-low",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|lapel-style|lapel-peak-114",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|lapel-style|lapel-peak-115",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|lapel-style|lapel-peak-120-curved",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|lapel-style|lapel-shawl",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|lapel-style|lapel-shawl-0a",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|lapel-style|lapel-shawl-0e",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|lapel-style|lapel-shawl-0005",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|lapel-style|lapel-fishtail",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|lapel-bh-position|lbp-left",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|lapel-bh-position|lbp-left-double",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|lapel-bh-position|lbp-both",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|lapel-bh-position|lbp-3l-2r",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|lapel-bh-position|lbp-3l-1r",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|chest-pocket|cp-welt-23",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|chest-pocket|cp-welt-25",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|chest-pocket|cp-welt-27",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|chest-pocket|cp-welt-curved-23",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|chest-pocket|cp-welt-curved-25",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|chest-pocket|cp-welt-curved-27",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|chest-pocket|cp-welt-curved-29",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|chest-pocket|cp-jetted",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|chest-pocket|cp-patch",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|chest-pocket|cp-boat-28",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|chest-pocket|cp-boat-30",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|chest-pocket|cp-trapezoid",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|lower-pocket|lp-slanted-flap-40",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|lower-pocket|lp-slanted-flap-45",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|lower-pocket|lp-slanted-flap-50",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|lower-pocket|lp-slanted-flap-55",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|lower-pocket|lp-slanted-flap-60",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|lower-pocket|lp-slanted-flap-65",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|lower-pocket|lp-straight-jetted-40",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|lower-pocket|lp-straight-jetted-45",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|lower-pocket|lp-straight-jetted-50",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|lower-pocket|lp-straight-jetted-55",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|lower-pocket|lp-straight-jetted-60",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|lower-pocket|lp-straight-jetted-65",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|lower-pocket|lp-jetted-4",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|lower-pocket|lp-straight-jetted",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|lower-pocket|lp-patch",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|lower-pocket|lp-patch-rounded",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|lower-pocket|lp-patch-flap",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    },
+    {
+      "key": "suit-3pc|lower-pocket|lp-jetted-btn-tab",
+      "reason": "not currently glyph-backed — already repointed, or the option no longer exists"
+    }
+  ],
+  "entries": [
+    {
+      "key": "sport-coat|lapel-bh-style|lbh-005-hand",
+      "product": "sport-coat",
+      "field": "lapel-bh-style",
+      "option": "lbh-005-hand",
+      "label": "Handmade Lapel Buttonhole",
+      "from": "/images/jacket/lapel-bh-style/real-m.svg",
+      "source": "public/images/factory/kute/jacket/Lapel_Handmade_lapel_buttonhole/064Q__Handmade_lapel_buttonhole.jpg",
+      "to": "/images/blueprints/supplier/b851d6364229__064Q__Handmade_lapel_buttonhole.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Lapel_Handmade_lapel_buttonhole: supplier \"Handmade lapel buttonhole\"",
+      "bytes": 82919,
+      "kind": "jpg"
+    },
+    {
+      "key": "sport-coat|lapel-bh-style|lbh-006-hand",
+      "product": "sport-coat",
+      "field": "lapel-bh-style",
+      "option": "lbh-006-hand",
+      "label": "Handmade Knot, No Seal",
+      "from": "/images/jacket/lapel-bh-style/real-m.svg",
+      "source": "public/images/factory/kute/jacket/Lapel_Handmade_lapel_buttonhole/035C__Handmade_bttnhole_with_knot_but_no_seal.png",
+      "to": "/images/blueprints/supplier/d4719ac11935__035C__Handmade_bttnhole_with_knot_but_no_seal.png",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Lapel_Handmade_lapel_buttonhole: supplier \"Handmade bttnhole with knot but no seal\"",
+      "bytes": 229633,
+      "kind": "png"
+    },
+    {
+      "key": "sport-coat|lapel-bh-style|lbh-pinpoint",
+      "product": "sport-coat",
+      "field": "lapel-bh-style",
+      "option": "lbh-pinpoint",
+      "label": "Handmade Straight",
+      "from": "/images/jacket/lapel-bh-style/real-m.svg",
+      "source": "public/images/factory/kute/jacket/Lapel_Handmade_lapel_buttonhole/00ED__Handmade_straight_lapel_buttonhole.jpg",
+      "to": "/images/blueprints/supplier/368d0bf51259__00ED__Handmade_straight_lapel_buttonhole.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Lapel_Handmade_lapel_buttonhole: supplier \"Handmade straight lapel buttonhole\"",
+      "bytes": 39966,
+      "kind": "jpg"
+    },
+    {
+      "key": "sport-coat|lapel-bh-style|lbh-017-hand",
+      "product": "sport-coat",
+      "field": "lapel-bh-style",
+      "option": "lbh-017-hand",
+      "label": "Round Head, Small Hole",
+      "from": "/images/jacket/lapel-bh-style/eyelet.svg",
+      "source": "public/images/factory/kute/jacket/Lapel_Handmade_lapel_buttonhole/00EC__Handmade_lapel_buttonhole_Round_head_lapel_buttonhole_small_size_hole.jpg",
+      "to": "/images/blueprints/supplier/27237af58b3c__00EC__Handmade_lapel_buttonhole_Round_head_lapel_buttonhole_.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Lapel_Handmade_lapel_buttonhole: supplier \"Round head lapel buttonhole small size hole\"",
+      "bytes": 36112,
+      "kind": "jpg"
+    },
+    {
+      "key": "sport-coat|lapel-bh-style|lbh-smoking-pipe",
+      "product": "sport-coat",
+      "field": "lapel-bh-style",
+      "option": "lbh-smoking-pipe",
+      "label": "Barge Head Keyhole",
+      "from": "/images/jacket/lapel-bh-style/smoking-pipe.svg",
+      "source": "public/images/factory/kute/jacket/Lapel_Handmade_lapel_buttonhole/00EF__Barge_head_manual_keyhole_round_head_without_sealing_water_drop_shape_standing_collar_without_barge_head_eye_style_ignore_this_description.jpg",
+      "to": "/images/blueprints/supplier/52a51791a929__00EF__Barge_head_manual_keyhole_round_head_without_sealing_w.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Lapel_Handmade_lapel_buttonhole: supplier \"Barge head manual keyhole, round head without sealing\"",
+      "bytes": 32231,
+      "kind": "jpg"
+    },
+    {
+      "key": "sport-coat|lapel-bh-style|lbh-lumi",
+      "product": "sport-coat",
+      "field": "lapel-bh-style",
+      "option": "lbh-lumi",
+      "label": "Arc Upwards",
+      "from": "/images/jacket/lapel-bh-style/lumi.svg",
+      "source": "public/images/factory/kute/jacket/Lapel_Handmade_lapel_buttonhole/055F__Arc_upwards_Handmade_Only.jpg",
+      "to": "/images/blueprints/supplier/54c5667bf68e__055F__Arc_upwards_Handmade_Only.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Lapel_Handmade_lapel_buttonhole: supplier \"Arc upwards\"",
+      "bytes": 120627,
+      "kind": "jpg"
+    },
+    {
+      "key": "sport-coat|lapel-bh-style|lbh-milanese-curved",
+      "product": "sport-coat",
+      "field": "lapel-bh-style",
+      "option": "lbh-milanese-curved",
+      "label": "Arc Slight Downwards",
+      "from": "/images/jacket/lapel-bh-style/milanese-2cm.svg",
+      "source": "public/images/factory/kute/jacket/Lapel_Handmade_lapel_buttonhole/06EG__Arc_slight_downwards_Handmade_Only.jpg",
+      "to": "/images/blueprints/supplier/43375234ca09__06EG__Arc_slight_downwards_Handmade_Only.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Lapel_Handmade_lapel_buttonhole: supplier \"Arc slight downwards\"",
+      "bytes": 94818,
+      "kind": "jpg"
+    },
+    {
+      "key": "sport-coat|lapel-bh-style|lbh-milanese-20",
+      "product": "sport-coat",
+      "field": "lapel-bh-style",
+      "option": "lbh-milanese-20",
+      "label": "Arc Triple-Color",
+      "from": "/images/jacket/lapel-bh-style/milanese-2cm.svg",
+      "source": "public/images/factory/kute/jacket/Lapel_Handmade_lapel_buttonhole/055U__Triple_color_arc_handmade_only_appoint_color_order_1-2-3.jpg",
+      "to": "/images/blueprints/supplier/0939eb8f539f__055U__Triple_color_arc_handmade_only_appoint_color_order_1-2.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Lapel_Handmade_lapel_buttonhole: supplier \"Triple color arc\"",
+      "bytes": 114925,
+      "kind": "jpg"
+    },
+    {
+      "key": "sport-coat|lapel-bh-style|lbh-milanese-23",
+      "product": "sport-coat",
+      "field": "lapel-bh-style",
+      "option": "lbh-milanese-23",
+      "label": "Arc Triple-Color Upwards",
+      "from": "/images/jacket/lapel-bh-style/milanese-2cm.svg",
+      "source": "public/images/factory/kute/jacket/Lapel_Handmade_lapel_buttonhole/055J__Triple_color_arc_upwardswards_handmade_only_appoint_color_order_1-2-3.jpg",
+      "to": "/images/blueprints/supplier/299c65473f47__055J__Triple_color_arc_upwardswards_handmade_only_appoint_co.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Lapel_Handmade_lapel_buttonhole: supplier \"Triple color arc upwards\"",
+      "bytes": 83773,
+      "kind": "jpg"
+    },
+    {
+      "key": "sport-coat|lapel-bh-style|lbh-milanese-25",
+      "product": "sport-coat",
+      "field": "lapel-bh-style",
+      "option": "lbh-milanese-25",
+      "label": "Arc Triple-Color Downwards",
+      "from": "/images/jacket/lapel-bh-style/milanese-2cm.svg",
+      "source": "public/images/factory/kute/jacket/Lapel_Handmade_lapel_buttonhole/06EJ__Triple_color_arc_downwards_handmade_only_appoint_color_order_1-2-3.jpg",
+      "to": "/images/blueprints/supplier/f229e25092e8__06EJ__Triple_color_arc_downwards_handmade_only_appoint_color.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Lapel_Handmade_lapel_buttonhole: supplier \"Triple color arc downwards\"",
+      "bytes": 100149,
+      "kind": "jpg"
+    },
+    {
+      "key": "sport-coat|lapel-bh-style|lbh-arc-double",
+      "product": "sport-coat",
+      "field": "lapel-bh-style",
+      "option": "lbh-arc-double",
+      "label": "Arc Double-Color",
+      "from": "/images/jacket/lapel-bh-style/milanese-2cm.svg",
+      "source": "public/images/factory/kute/jacket/Lapel_Handmade_lapel_buttonhole/055H__Double_color_arc_Handmade_only_appoint_color_order_1-3.jpg",
+      "to": "/images/blueprints/supplier/cb00502491f7__055H__Double_color_arc_Handmade_only_appoint_color_order_1-3.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Lapel_Handmade_lapel_buttonhole: supplier \"Double color arc\"",
+      "bytes": 72309,
+      "kind": "jpg"
+    },
+    {
+      "key": "sport-coat|lapel-bh-style|lbh-rome-18",
+      "product": "sport-coat",
+      "field": "lapel-bh-style",
+      "option": "lbh-rome-18",
+      "label": "Triple-Color Straight",
+      "from": "/images/jacket/lapel-bh-style/rome-2-3cm.svg",
+      "source": "public/images/factory/kute/jacket/Lapel_Handmade_lapel_buttonhole/055V__Triple_color_straight_handmade_only_appoint_color_order_1-2-3.jpg",
+      "to": "/images/blueprints/supplier/be4eecb2eeff__055V__Triple_color_straight_handmade_only_appoint_color_orde.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Lapel_Handmade_lapel_buttonhole: supplier \"Triple color straight\"",
+      "bytes": 113209,
+      "kind": "jpg"
+    },
+    {
+      "key": "sport-coat|lapel-bh-style|lbh-no1-dc-straight",
+      "product": "sport-coat",
+      "field": "lapel-bh-style",
+      "option": "lbh-no1-dc-straight",
+      "label": "No.1 Double-Color Straight",
+      "from": "/images/jacket/lapel-bh-style/rome-2-3cm.svg",
+      "source": "public/images/factory/kute/jacket/Lapel_Handmade_lapel_buttonhole/055R__No.1_Double_color_handmade_straight_lapel_buttonhole_Handmade_only_appoint_color_order_1-2.jpg",
+      "to": "/images/blueprints/supplier/e346a69313a8__055R__No.1_Double_color_handmade_straight_lapel_buttonhole_H.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Lapel_Handmade_lapel_buttonhole: supplier \"No.1 Double color handmade straight lapel buttonhole\"",
+      "bytes": 92000,
+      "kind": "jpg"
+    },
+    {
+      "key": "sport-coat|lapel-bh-style|lbh-no1-tc-arc",
+      "product": "sport-coat",
+      "field": "lapel-bh-style",
+      "option": "lbh-no1-tc-arc",
+      "label": "No.1 Triple-Color Arc",
+      "from": "/images/jacket/lapel-bh-style/milanese-2cm.svg",
+      "source": "public/images/factory/kute/jacket/Lapel_Handmade_lapel_buttonhole/055Y__No.1_Triple_color_arc_lapel_buttonhole_Handmade_Only_appoint_color_order_1-2-3.jpg",
+      "to": "/images/blueprints/supplier/a1cc16870a6b__055Y__No.1_Triple_color_arc_lapel_buttonhole_Handmade_Only_a.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Lapel_Handmade_lapel_buttonhole: supplier \"No.1 Triple color arc lapel buttonhole\"",
+      "bytes": 86182,
+      "kind": "jpg"
+    },
+    {
+      "key": "sport-coat|cuff-button-number|cb-none",
+      "product": "sport-coat",
+      "field": "cuff-button-number",
+      "option": "cb-none",
+      "label": "None",
+      "from": "/images/jacket/cuff-btn-num/two-buttons.svg",
+      "source": "public/images/factory/kute/jacket/Sleeve_Sleeve_bttn/0626__No.jpeg",
+      "to": "/images/blueprints/supplier/2115e257c4a1__0626__No.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Sleeve_Sleeve_bttn: supplier \"No\" — a bare cuff with no buttons",
+      "bytes": 19658,
+      "kind": "jpg"
+    },
+    {
+      "key": "sport-coat|cuff-button-number|cb-1",
+      "product": "sport-coat",
+      "field": "cuff-button-number",
+      "option": "cb-1",
+      "label": "1 Button",
+      "from": "/images/jacket/cuff-btn-num/two-buttons.svg",
+      "source": "public/images/factory/kute/jacket/Sleeve_Sleeve_bttn/0623__1_button_32L.jpeg",
+      "to": "/images/blueprints/supplier/71e4a88d0f42__0623__1_button_32L.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Sleeve_Sleeve_bttn: supplier \"1 button 32L\"",
+      "bytes": 22284,
+      "kind": "jpg"
+    },
+    {
+      "key": "sport-coat|cuff-button-number|cb-2",
+      "product": "sport-coat",
+      "field": "cuff-button-number",
+      "option": "cb-2",
+      "label": "2 Buttons",
+      "from": "/images/jacket/cuff-btn-num/two-buttons.svg",
+      "source": "public/images/factory/kute/jacket/Sleeve_Sleeve_bttn/0629__2_flat.jpeg",
+      "to": "/images/blueprints/supplier/36f9c9757607__0629__2_flat.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Sleeve_Sleeve_bttn: supplier \"2 flat\"; label says only \"2 Buttons\", so the flat (spaced) layout, not kissing",
+      "bytes": 21401,
+      "kind": "jpg"
+    },
+    {
+      "key": "sport-coat|cuff-button-number|cb-3",
+      "product": "sport-coat",
+      "field": "cuff-button-number",
+      "option": "cb-3",
+      "label": "3 Buttons",
+      "from": "/images/jacket/cuff-btn-num/three-buttons.svg",
+      "source": "public/images/factory/kute/jacket/Sleeve_Sleeve_bttn/0624__3_flat.jpeg",
+      "to": "/images/blueprints/supplier/394fbc5e5ce3__0624__3_flat.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Sleeve_Sleeve_bttn: supplier \"3 flat\"",
+      "bytes": 23039,
+      "kind": "jpg"
+    },
+    {
+      "key": "sport-coat|cuff-button-number|cb-4",
+      "product": "sport-coat",
+      "field": "cuff-button-number",
+      "option": "cb-4",
+      "label": "4 Buttons",
+      "from": "/images/jacket/cuff-btn-num/four-buttons.svg",
+      "source": "public/images/factory/kute/jacket/Sleeve_Sleeve_bttn/0621__4_flat.jpeg",
+      "to": "/images/blueprints/supplier/362519787419__0621__4_flat.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Sleeve_Sleeve_bttn: supplier \"4 flat\"",
+      "bytes": 23779,
+      "kind": "jpg"
+    },
+    {
+      "key": "sport-coat|cuff-button-number|cb-5",
+      "product": "sport-coat",
+      "field": "cuff-button-number",
+      "option": "cb-5",
+      "label": "5 Buttons",
+      "from": "/images/jacket/cuff-btn-num/five-buttons.svg",
+      "source": "public/images/factory/kute/jacket/Sleeve_Sleeve_bttn/0627__5_flat.jpeg",
+      "to": "/images/blueprints/supplier/91d5e77db9c2__0627__5_flat.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Sleeve_Sleeve_bttn: supplier \"5 flat\"",
+      "bytes": 24310,
+      "kind": "jpg"
+    },
+    {
+      "key": "sport-coat|cuff-button-number|cb-6",
+      "product": "sport-coat",
+      "field": "cuff-button-number",
+      "option": "cb-6",
+      "label": "6 Buttons",
+      "from": "/images/jacket/cuff-btn-num/five-buttons.svg",
+      "source": "public/images/factory/kute/jacket/Sleeve_Sleeve_bttn/06X1__6_flat.jpeg",
+      "to": "/images/blueprints/supplier/c356ed45a535__06X1__6_flat.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Sleeve_Sleeve_bttn: supplier \"6 flat\"",
+      "bytes": 25824,
+      "kind": "jpg"
+    },
+    {
+      "key": "suit-2pc|lapel-bh-style|lbh-005-hand",
+      "product": "suit-2pc",
+      "field": "lapel-bh-style",
+      "option": "lbh-005-hand",
+      "label": "Handmade Lapel Buttonhole",
+      "from": "/images/jacket/lapel-bh-style/real-m.svg",
+      "source": "public/images/factory/kute/jacket/Lapel_Handmade_lapel_buttonhole/064Q__Handmade_lapel_buttonhole.jpg",
+      "to": "/images/blueprints/supplier/b851d6364229__064Q__Handmade_lapel_buttonhole.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Lapel_Handmade_lapel_buttonhole: supplier \"Handmade lapel buttonhole\"",
+      "bytes": 82919,
+      "kind": "jpg"
+    },
+    {
+      "key": "suit-2pc|lapel-bh-style|lbh-006-hand",
+      "product": "suit-2pc",
+      "field": "lapel-bh-style",
+      "option": "lbh-006-hand",
+      "label": "Handmade Knot, No Seal",
+      "from": "/images/jacket/lapel-bh-style/real-m.svg",
+      "source": "public/images/factory/kute/jacket/Lapel_Handmade_lapel_buttonhole/035C__Handmade_bttnhole_with_knot_but_no_seal.png",
+      "to": "/images/blueprints/supplier/d4719ac11935__035C__Handmade_bttnhole_with_knot_but_no_seal.png",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Lapel_Handmade_lapel_buttonhole: supplier \"Handmade bttnhole with knot but no seal\"",
+      "bytes": 229633,
+      "kind": "png"
+    },
+    {
+      "key": "suit-2pc|lapel-bh-style|lbh-pinpoint",
+      "product": "suit-2pc",
+      "field": "lapel-bh-style",
+      "option": "lbh-pinpoint",
+      "label": "Handmade Straight",
+      "from": "/images/jacket/lapel-bh-style/real-m.svg",
+      "source": "public/images/factory/kute/jacket/Lapel_Handmade_lapel_buttonhole/00ED__Handmade_straight_lapel_buttonhole.jpg",
+      "to": "/images/blueprints/supplier/368d0bf51259__00ED__Handmade_straight_lapel_buttonhole.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Lapel_Handmade_lapel_buttonhole: supplier \"Handmade straight lapel buttonhole\"",
+      "bytes": 39966,
+      "kind": "jpg"
+    },
+    {
+      "key": "suit-2pc|lapel-bh-style|lbh-017-hand",
+      "product": "suit-2pc",
+      "field": "lapel-bh-style",
+      "option": "lbh-017-hand",
+      "label": "Round Head, Small Hole",
+      "from": "/images/jacket/lapel-bh-style/eyelet.svg",
+      "source": "public/images/factory/kute/jacket/Lapel_Handmade_lapel_buttonhole/00EC__Handmade_lapel_buttonhole_Round_head_lapel_buttonhole_small_size_hole.jpg",
+      "to": "/images/blueprints/supplier/27237af58b3c__00EC__Handmade_lapel_buttonhole_Round_head_lapel_buttonhole_.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Lapel_Handmade_lapel_buttonhole: supplier \"Round head lapel buttonhole small size hole\"",
+      "bytes": 36112,
+      "kind": "jpg"
+    },
+    {
+      "key": "suit-2pc|lapel-bh-style|lbh-smoking-pipe",
+      "product": "suit-2pc",
+      "field": "lapel-bh-style",
+      "option": "lbh-smoking-pipe",
+      "label": "Barge Head Keyhole",
+      "from": "/images/jacket/lapel-bh-style/smoking-pipe.svg",
+      "source": "public/images/factory/kute/jacket/Lapel_Handmade_lapel_buttonhole/00EF__Barge_head_manual_keyhole_round_head_without_sealing_water_drop_shape_standing_collar_without_barge_head_eye_style_ignore_this_description.jpg",
+      "to": "/images/blueprints/supplier/52a51791a929__00EF__Barge_head_manual_keyhole_round_head_without_sealing_w.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Lapel_Handmade_lapel_buttonhole: supplier \"Barge head manual keyhole, round head without sealing\"",
+      "bytes": 32231,
+      "kind": "jpg"
+    },
+    {
+      "key": "suit-2pc|lapel-bh-style|lbh-lumi",
+      "product": "suit-2pc",
+      "field": "lapel-bh-style",
+      "option": "lbh-lumi",
+      "label": "Arc Upwards",
+      "from": "/images/jacket/lapel-bh-style/lumi.svg",
+      "source": "public/images/factory/kute/jacket/Lapel_Handmade_lapel_buttonhole/055F__Arc_upwards_Handmade_Only.jpg",
+      "to": "/images/blueprints/supplier/54c5667bf68e__055F__Arc_upwards_Handmade_Only.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Lapel_Handmade_lapel_buttonhole: supplier \"Arc upwards\"",
+      "bytes": 120627,
+      "kind": "jpg"
+    },
+    {
+      "key": "suit-2pc|lapel-bh-style|lbh-milanese-curved",
+      "product": "suit-2pc",
+      "field": "lapel-bh-style",
+      "option": "lbh-milanese-curved",
+      "label": "Arc Slight Downwards",
+      "from": "/images/jacket/lapel-bh-style/milanese-2cm.svg",
+      "source": "public/images/factory/kute/jacket/Lapel_Handmade_lapel_buttonhole/06EG__Arc_slight_downwards_Handmade_Only.jpg",
+      "to": "/images/blueprints/supplier/43375234ca09__06EG__Arc_slight_downwards_Handmade_Only.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Lapel_Handmade_lapel_buttonhole: supplier \"Arc slight downwards\"",
+      "bytes": 94818,
+      "kind": "jpg"
+    },
+    {
+      "key": "suit-2pc|lapel-bh-style|lbh-milanese-20",
+      "product": "suit-2pc",
+      "field": "lapel-bh-style",
+      "option": "lbh-milanese-20",
+      "label": "Arc Triple-Color",
+      "from": "/images/jacket/lapel-bh-style/milanese-2cm.svg",
+      "source": "public/images/factory/kute/jacket/Lapel_Handmade_lapel_buttonhole/055U__Triple_color_arc_handmade_only_appoint_color_order_1-2-3.jpg",
+      "to": "/images/blueprints/supplier/0939eb8f539f__055U__Triple_color_arc_handmade_only_appoint_color_order_1-2.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Lapel_Handmade_lapel_buttonhole: supplier \"Triple color arc\"",
+      "bytes": 114925,
+      "kind": "jpg"
+    },
+    {
+      "key": "suit-2pc|lapel-bh-style|lbh-milanese-23",
+      "product": "suit-2pc",
+      "field": "lapel-bh-style",
+      "option": "lbh-milanese-23",
+      "label": "Arc Triple-Color Upwards",
+      "from": "/images/jacket/lapel-bh-style/milanese-2cm.svg",
+      "source": "public/images/factory/kute/jacket/Lapel_Handmade_lapel_buttonhole/055J__Triple_color_arc_upwardswards_handmade_only_appoint_color_order_1-2-3.jpg",
+      "to": "/images/blueprints/supplier/299c65473f47__055J__Triple_color_arc_upwardswards_handmade_only_appoint_co.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Lapel_Handmade_lapel_buttonhole: supplier \"Triple color arc upwards\"",
+      "bytes": 83773,
+      "kind": "jpg"
+    },
+    {
+      "key": "suit-2pc|lapel-bh-style|lbh-milanese-25",
+      "product": "suit-2pc",
+      "field": "lapel-bh-style",
+      "option": "lbh-milanese-25",
+      "label": "Arc Triple-Color Downwards",
+      "from": "/images/jacket/lapel-bh-style/milanese-2cm.svg",
+      "source": "public/images/factory/kute/jacket/Lapel_Handmade_lapel_buttonhole/06EJ__Triple_color_arc_downwards_handmade_only_appoint_color_order_1-2-3.jpg",
+      "to": "/images/blueprints/supplier/f229e25092e8__06EJ__Triple_color_arc_downwards_handmade_only_appoint_color.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Lapel_Handmade_lapel_buttonhole: supplier \"Triple color arc downwards\"",
+      "bytes": 100149,
+      "kind": "jpg"
+    },
+    {
+      "key": "suit-2pc|lapel-bh-style|lbh-arc-double",
+      "product": "suit-2pc",
+      "field": "lapel-bh-style",
+      "option": "lbh-arc-double",
+      "label": "Arc Double-Color",
+      "from": "/images/jacket/lapel-bh-style/milanese-2cm.svg",
+      "source": "public/images/factory/kute/jacket/Lapel_Handmade_lapel_buttonhole/055H__Double_color_arc_Handmade_only_appoint_color_order_1-3.jpg",
+      "to": "/images/blueprints/supplier/cb00502491f7__055H__Double_color_arc_Handmade_only_appoint_color_order_1-3.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Lapel_Handmade_lapel_buttonhole: supplier \"Double color arc\"",
+      "bytes": 72309,
+      "kind": "jpg"
+    },
+    {
+      "key": "suit-2pc|lapel-bh-style|lbh-rome-18",
+      "product": "suit-2pc",
+      "field": "lapel-bh-style",
+      "option": "lbh-rome-18",
+      "label": "Triple-Color Straight",
+      "from": "/images/jacket/lapel-bh-style/rome-2-3cm.svg",
+      "source": "public/images/factory/kute/jacket/Lapel_Handmade_lapel_buttonhole/055V__Triple_color_straight_handmade_only_appoint_color_order_1-2-3.jpg",
+      "to": "/images/blueprints/supplier/be4eecb2eeff__055V__Triple_color_straight_handmade_only_appoint_color_orde.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Lapel_Handmade_lapel_buttonhole: supplier \"Triple color straight\"",
+      "bytes": 113209,
+      "kind": "jpg"
+    },
+    {
+      "key": "suit-2pc|lapel-bh-style|lbh-no1-dc-straight",
+      "product": "suit-2pc",
+      "field": "lapel-bh-style",
+      "option": "lbh-no1-dc-straight",
+      "label": "No.1 Double-Color Straight",
+      "from": "/images/jacket/lapel-bh-style/rome-2-3cm.svg",
+      "source": "public/images/factory/kute/jacket/Lapel_Handmade_lapel_buttonhole/055R__No.1_Double_color_handmade_straight_lapel_buttonhole_Handmade_only_appoint_color_order_1-2.jpg",
+      "to": "/images/blueprints/supplier/e346a69313a8__055R__No.1_Double_color_handmade_straight_lapel_buttonhole_H.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Lapel_Handmade_lapel_buttonhole: supplier \"No.1 Double color handmade straight lapel buttonhole\"",
+      "bytes": 92000,
+      "kind": "jpg"
+    },
+    {
+      "key": "suit-2pc|lapel-bh-style|lbh-no1-tc-arc",
+      "product": "suit-2pc",
+      "field": "lapel-bh-style",
+      "option": "lbh-no1-tc-arc",
+      "label": "No.1 Triple-Color Arc",
+      "from": "/images/jacket/lapel-bh-style/milanese-2cm.svg",
+      "source": "public/images/factory/kute/jacket/Lapel_Handmade_lapel_buttonhole/055Y__No.1_Triple_color_arc_lapel_buttonhole_Handmade_Only_appoint_color_order_1-2-3.jpg",
+      "to": "/images/blueprints/supplier/a1cc16870a6b__055Y__No.1_Triple_color_arc_lapel_buttonhole_Handmade_Only_a.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Lapel_Handmade_lapel_buttonhole: supplier \"No.1 Triple color arc lapel buttonhole\"",
+      "bytes": 86182,
+      "kind": "jpg"
+    },
+    {
+      "key": "suit-2pc|cuff-button-number|cb-none",
+      "product": "suit-2pc",
+      "field": "cuff-button-number",
+      "option": "cb-none",
+      "label": "None",
+      "from": "/images/jacket/cuff-btn-num/two-buttons.svg",
+      "source": "public/images/factory/kute/jacket/Sleeve_Sleeve_bttn/0626__No.jpeg",
+      "to": "/images/blueprints/supplier/2115e257c4a1__0626__No.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Sleeve_Sleeve_bttn: supplier \"No\" — a bare cuff with no buttons",
+      "bytes": 19658,
+      "kind": "jpg"
+    },
+    {
+      "key": "suit-2pc|cuff-button-number|cb-1",
+      "product": "suit-2pc",
+      "field": "cuff-button-number",
+      "option": "cb-1",
+      "label": "1 Button",
+      "from": "/images/jacket/cuff-btn-num/two-buttons.svg",
+      "source": "public/images/factory/kute/jacket/Sleeve_Sleeve_bttn/0623__1_button_32L.jpeg",
+      "to": "/images/blueprints/supplier/71e4a88d0f42__0623__1_button_32L.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Sleeve_Sleeve_bttn: supplier \"1 button 32L\"",
+      "bytes": 22284,
+      "kind": "jpg"
+    },
+    {
+      "key": "suit-2pc|cuff-button-number|cb-2",
+      "product": "suit-2pc",
+      "field": "cuff-button-number",
+      "option": "cb-2",
+      "label": "2 Buttons",
+      "from": "/images/jacket/cuff-btn-num/two-buttons.svg",
+      "source": "public/images/factory/kute/jacket/Sleeve_Sleeve_bttn/0629__2_flat.jpeg",
+      "to": "/images/blueprints/supplier/36f9c9757607__0629__2_flat.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Sleeve_Sleeve_bttn: supplier \"2 flat\"; label says only \"2 Buttons\", so the flat (spaced) layout, not kissing",
+      "bytes": 21401,
+      "kind": "jpg"
+    },
+    {
+      "key": "suit-2pc|cuff-button-number|cb-3",
+      "product": "suit-2pc",
+      "field": "cuff-button-number",
+      "option": "cb-3",
+      "label": "3 Buttons",
+      "from": "/images/jacket/cuff-btn-num/three-buttons.svg",
+      "source": "public/images/factory/kute/jacket/Sleeve_Sleeve_bttn/0624__3_flat.jpeg",
+      "to": "/images/blueprints/supplier/394fbc5e5ce3__0624__3_flat.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Sleeve_Sleeve_bttn: supplier \"3 flat\"",
+      "bytes": 23039,
+      "kind": "jpg"
+    },
+    {
+      "key": "suit-2pc|cuff-button-number|cb-4",
+      "product": "suit-2pc",
+      "field": "cuff-button-number",
+      "option": "cb-4",
+      "label": "4 Buttons",
+      "from": "/images/jacket/cuff-btn-num/four-buttons.svg",
+      "source": "public/images/factory/kute/jacket/Sleeve_Sleeve_bttn/0621__4_flat.jpeg",
+      "to": "/images/blueprints/supplier/362519787419__0621__4_flat.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Sleeve_Sleeve_bttn: supplier \"4 flat\"",
+      "bytes": 23779,
+      "kind": "jpg"
+    },
+    {
+      "key": "suit-2pc|cuff-button-number|cb-5",
+      "product": "suit-2pc",
+      "field": "cuff-button-number",
+      "option": "cb-5",
+      "label": "5 Buttons",
+      "from": "/images/jacket/cuff-btn-num/five-buttons.svg",
+      "source": "public/images/factory/kute/jacket/Sleeve_Sleeve_bttn/0627__5_flat.jpeg",
+      "to": "/images/blueprints/supplier/91d5e77db9c2__0627__5_flat.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Sleeve_Sleeve_bttn: supplier \"5 flat\"",
+      "bytes": 24310,
+      "kind": "jpg"
+    },
+    {
+      "key": "suit-2pc|cuff-button-number|cb-6",
+      "product": "suit-2pc",
+      "field": "cuff-button-number",
+      "option": "cb-6",
+      "label": "6 Buttons",
+      "from": "/images/jacket/cuff-btn-num/five-buttons.svg",
+      "source": "public/images/factory/kute/jacket/Sleeve_Sleeve_bttn/06X1__6_flat.jpeg",
+      "to": "/images/blueprints/supplier/c356ed45a535__06X1__6_flat.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Sleeve_Sleeve_bttn: supplier \"6 flat\"",
+      "bytes": 25824,
+      "kind": "jpg"
+    },
+    {
+      "key": "suit-3pc|lapel-bh-style|lbh-005-hand",
+      "product": "suit-3pc",
+      "field": "lapel-bh-style",
+      "option": "lbh-005-hand",
+      "label": "Handmade Lapel Buttonhole",
+      "from": "/images/jacket/lapel-bh-style/real-m.svg",
+      "source": "public/images/factory/kute/jacket/Lapel_Handmade_lapel_buttonhole/064Q__Handmade_lapel_buttonhole.jpg",
+      "to": "/images/blueprints/supplier/b851d6364229__064Q__Handmade_lapel_buttonhole.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Lapel_Handmade_lapel_buttonhole: supplier \"Handmade lapel buttonhole\"",
+      "bytes": 82919,
+      "kind": "jpg"
+    },
+    {
+      "key": "suit-3pc|lapel-bh-style|lbh-006-hand",
+      "product": "suit-3pc",
+      "field": "lapel-bh-style",
+      "option": "lbh-006-hand",
+      "label": "Handmade Knot, No Seal",
+      "from": "/images/jacket/lapel-bh-style/real-m.svg",
+      "source": "public/images/factory/kute/jacket/Lapel_Handmade_lapel_buttonhole/035C__Handmade_bttnhole_with_knot_but_no_seal.png",
+      "to": "/images/blueprints/supplier/d4719ac11935__035C__Handmade_bttnhole_with_knot_but_no_seal.png",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Lapel_Handmade_lapel_buttonhole: supplier \"Handmade bttnhole with knot but no seal\"",
+      "bytes": 229633,
+      "kind": "png"
+    },
+    {
+      "key": "suit-3pc|lapel-bh-style|lbh-pinpoint",
+      "product": "suit-3pc",
+      "field": "lapel-bh-style",
+      "option": "lbh-pinpoint",
+      "label": "Handmade Straight",
+      "from": "/images/jacket/lapel-bh-style/real-m.svg",
+      "source": "public/images/factory/kute/jacket/Lapel_Handmade_lapel_buttonhole/00ED__Handmade_straight_lapel_buttonhole.jpg",
+      "to": "/images/blueprints/supplier/368d0bf51259__00ED__Handmade_straight_lapel_buttonhole.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Lapel_Handmade_lapel_buttonhole: supplier \"Handmade straight lapel buttonhole\"",
+      "bytes": 39966,
+      "kind": "jpg"
+    },
+    {
+      "key": "suit-3pc|lapel-bh-style|lbh-017-hand",
+      "product": "suit-3pc",
+      "field": "lapel-bh-style",
+      "option": "lbh-017-hand",
+      "label": "Round Head, Small Hole",
+      "from": "/images/jacket/lapel-bh-style/eyelet.svg",
+      "source": "public/images/factory/kute/jacket/Lapel_Handmade_lapel_buttonhole/00EC__Handmade_lapel_buttonhole_Round_head_lapel_buttonhole_small_size_hole.jpg",
+      "to": "/images/blueprints/supplier/27237af58b3c__00EC__Handmade_lapel_buttonhole_Round_head_lapel_buttonhole_.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Lapel_Handmade_lapel_buttonhole: supplier \"Round head lapel buttonhole small size hole\"",
+      "bytes": 36112,
+      "kind": "jpg"
+    },
+    {
+      "key": "suit-3pc|lapel-bh-style|lbh-smoking-pipe",
+      "product": "suit-3pc",
+      "field": "lapel-bh-style",
+      "option": "lbh-smoking-pipe",
+      "label": "Barge Head Keyhole",
+      "from": "/images/jacket/lapel-bh-style/smoking-pipe.svg",
+      "source": "public/images/factory/kute/jacket/Lapel_Handmade_lapel_buttonhole/00EF__Barge_head_manual_keyhole_round_head_without_sealing_water_drop_shape_standing_collar_without_barge_head_eye_style_ignore_this_description.jpg",
+      "to": "/images/blueprints/supplier/52a51791a929__00EF__Barge_head_manual_keyhole_round_head_without_sealing_w.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Lapel_Handmade_lapel_buttonhole: supplier \"Barge head manual keyhole, round head without sealing\"",
+      "bytes": 32231,
+      "kind": "jpg"
+    },
+    {
+      "key": "suit-3pc|lapel-bh-style|lbh-lumi",
+      "product": "suit-3pc",
+      "field": "lapel-bh-style",
+      "option": "lbh-lumi",
+      "label": "Arc Upwards",
+      "from": "/images/jacket/lapel-bh-style/lumi.svg",
+      "source": "public/images/factory/kute/jacket/Lapel_Handmade_lapel_buttonhole/055F__Arc_upwards_Handmade_Only.jpg",
+      "to": "/images/blueprints/supplier/54c5667bf68e__055F__Arc_upwards_Handmade_Only.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Lapel_Handmade_lapel_buttonhole: supplier \"Arc upwards\"",
+      "bytes": 120627,
+      "kind": "jpg"
+    },
+    {
+      "key": "suit-3pc|lapel-bh-style|lbh-milanese-curved",
+      "product": "suit-3pc",
+      "field": "lapel-bh-style",
+      "option": "lbh-milanese-curved",
+      "label": "Arc Slight Downwards",
+      "from": "/images/jacket/lapel-bh-style/milanese-2cm.svg",
+      "source": "public/images/factory/kute/jacket/Lapel_Handmade_lapel_buttonhole/06EG__Arc_slight_downwards_Handmade_Only.jpg",
+      "to": "/images/blueprints/supplier/43375234ca09__06EG__Arc_slight_downwards_Handmade_Only.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Lapel_Handmade_lapel_buttonhole: supplier \"Arc slight downwards\"",
+      "bytes": 94818,
+      "kind": "jpg"
+    },
+    {
+      "key": "suit-3pc|lapel-bh-style|lbh-milanese-20",
+      "product": "suit-3pc",
+      "field": "lapel-bh-style",
+      "option": "lbh-milanese-20",
+      "label": "Arc Triple-Color",
+      "from": "/images/jacket/lapel-bh-style/milanese-2cm.svg",
+      "source": "public/images/factory/kute/jacket/Lapel_Handmade_lapel_buttonhole/055U__Triple_color_arc_handmade_only_appoint_color_order_1-2-3.jpg",
+      "to": "/images/blueprints/supplier/0939eb8f539f__055U__Triple_color_arc_handmade_only_appoint_color_order_1-2.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Lapel_Handmade_lapel_buttonhole: supplier \"Triple color arc\"",
+      "bytes": 114925,
+      "kind": "jpg"
+    },
+    {
+      "key": "suit-3pc|lapel-bh-style|lbh-milanese-23",
+      "product": "suit-3pc",
+      "field": "lapel-bh-style",
+      "option": "lbh-milanese-23",
+      "label": "Arc Triple-Color Upwards",
+      "from": "/images/jacket/lapel-bh-style/milanese-2cm.svg",
+      "source": "public/images/factory/kute/jacket/Lapel_Handmade_lapel_buttonhole/055J__Triple_color_arc_upwardswards_handmade_only_appoint_color_order_1-2-3.jpg",
+      "to": "/images/blueprints/supplier/299c65473f47__055J__Triple_color_arc_upwardswards_handmade_only_appoint_co.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Lapel_Handmade_lapel_buttonhole: supplier \"Triple color arc upwards\"",
+      "bytes": 83773,
+      "kind": "jpg"
+    },
+    {
+      "key": "suit-3pc|lapel-bh-style|lbh-milanese-25",
+      "product": "suit-3pc",
+      "field": "lapel-bh-style",
+      "option": "lbh-milanese-25",
+      "label": "Arc Triple-Color Downwards",
+      "from": "/images/jacket/lapel-bh-style/milanese-2cm.svg",
+      "source": "public/images/factory/kute/jacket/Lapel_Handmade_lapel_buttonhole/06EJ__Triple_color_arc_downwards_handmade_only_appoint_color_order_1-2-3.jpg",
+      "to": "/images/blueprints/supplier/f229e25092e8__06EJ__Triple_color_arc_downwards_handmade_only_appoint_color.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Lapel_Handmade_lapel_buttonhole: supplier \"Triple color arc downwards\"",
+      "bytes": 100149,
+      "kind": "jpg"
+    },
+    {
+      "key": "suit-3pc|lapel-bh-style|lbh-arc-double",
+      "product": "suit-3pc",
+      "field": "lapel-bh-style",
+      "option": "lbh-arc-double",
+      "label": "Arc Double-Color",
+      "from": "/images/jacket/lapel-bh-style/milanese-2cm.svg",
+      "source": "public/images/factory/kute/jacket/Lapel_Handmade_lapel_buttonhole/055H__Double_color_arc_Handmade_only_appoint_color_order_1-3.jpg",
+      "to": "/images/blueprints/supplier/cb00502491f7__055H__Double_color_arc_Handmade_only_appoint_color_order_1-3.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Lapel_Handmade_lapel_buttonhole: supplier \"Double color arc\"",
+      "bytes": 72309,
+      "kind": "jpg"
+    },
+    {
+      "key": "suit-3pc|lapel-bh-style|lbh-rome-18",
+      "product": "suit-3pc",
+      "field": "lapel-bh-style",
+      "option": "lbh-rome-18",
+      "label": "Triple-Color Straight",
+      "from": "/images/jacket/lapel-bh-style/rome-2-3cm.svg",
+      "source": "public/images/factory/kute/jacket/Lapel_Handmade_lapel_buttonhole/055V__Triple_color_straight_handmade_only_appoint_color_order_1-2-3.jpg",
+      "to": "/images/blueprints/supplier/be4eecb2eeff__055V__Triple_color_straight_handmade_only_appoint_color_orde.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Lapel_Handmade_lapel_buttonhole: supplier \"Triple color straight\"",
+      "bytes": 113209,
+      "kind": "jpg"
+    },
+    {
+      "key": "suit-3pc|lapel-bh-style|lbh-no1-dc-straight",
+      "product": "suit-3pc",
+      "field": "lapel-bh-style",
+      "option": "lbh-no1-dc-straight",
+      "label": "No.1 Double-Color Straight",
+      "from": "/images/jacket/lapel-bh-style/rome-2-3cm.svg",
+      "source": "public/images/factory/kute/jacket/Lapel_Handmade_lapel_buttonhole/055R__No.1_Double_color_handmade_straight_lapel_buttonhole_Handmade_only_appoint_color_order_1-2.jpg",
+      "to": "/images/blueprints/supplier/e346a69313a8__055R__No.1_Double_color_handmade_straight_lapel_buttonhole_H.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Lapel_Handmade_lapel_buttonhole: supplier \"No.1 Double color handmade straight lapel buttonhole\"",
+      "bytes": 92000,
+      "kind": "jpg"
+    },
+    {
+      "key": "suit-3pc|lapel-bh-style|lbh-no1-tc-arc",
+      "product": "suit-3pc",
+      "field": "lapel-bh-style",
+      "option": "lbh-no1-tc-arc",
+      "label": "No.1 Triple-Color Arc",
+      "from": "/images/jacket/lapel-bh-style/milanese-2cm.svg",
+      "source": "public/images/factory/kute/jacket/Lapel_Handmade_lapel_buttonhole/055Y__No.1_Triple_color_arc_lapel_buttonhole_Handmade_Only_appoint_color_order_1-2-3.jpg",
+      "to": "/images/blueprints/supplier/a1cc16870a6b__055Y__No.1_Triple_color_arc_lapel_buttonhole_Handmade_Only_a.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Lapel_Handmade_lapel_buttonhole: supplier \"No.1 Triple color arc lapel buttonhole\"",
+      "bytes": 86182,
+      "kind": "jpg"
+    },
+    {
+      "key": "suit-3pc|cuff-button-number|cb-none",
+      "product": "suit-3pc",
+      "field": "cuff-button-number",
+      "option": "cb-none",
+      "label": "None",
+      "from": "/images/jacket/cuff-btn-num/two-buttons.svg",
+      "source": "public/images/factory/kute/jacket/Sleeve_Sleeve_bttn/0626__No.jpeg",
+      "to": "/images/blueprints/supplier/2115e257c4a1__0626__No.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Sleeve_Sleeve_bttn: supplier \"No\" — a bare cuff with no buttons",
+      "bytes": 19658,
+      "kind": "jpg"
+    },
+    {
+      "key": "suit-3pc|cuff-button-number|cb-1",
+      "product": "suit-3pc",
+      "field": "cuff-button-number",
+      "option": "cb-1",
+      "label": "1 Button",
+      "from": "/images/jacket/cuff-btn-num/two-buttons.svg",
+      "source": "public/images/factory/kute/jacket/Sleeve_Sleeve_bttn/0623__1_button_32L.jpeg",
+      "to": "/images/blueprints/supplier/71e4a88d0f42__0623__1_button_32L.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Sleeve_Sleeve_bttn: supplier \"1 button 32L\"",
+      "bytes": 22284,
+      "kind": "jpg"
+    },
+    {
+      "key": "suit-3pc|cuff-button-number|cb-2",
+      "product": "suit-3pc",
+      "field": "cuff-button-number",
+      "option": "cb-2",
+      "label": "2 Buttons",
+      "from": "/images/jacket/cuff-btn-num/two-buttons.svg",
+      "source": "public/images/factory/kute/jacket/Sleeve_Sleeve_bttn/0629__2_flat.jpeg",
+      "to": "/images/blueprints/supplier/36f9c9757607__0629__2_flat.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Sleeve_Sleeve_bttn: supplier \"2 flat\"; label says only \"2 Buttons\", so the flat (spaced) layout, not kissing",
+      "bytes": 21401,
+      "kind": "jpg"
+    },
+    {
+      "key": "suit-3pc|cuff-button-number|cb-3",
+      "product": "suit-3pc",
+      "field": "cuff-button-number",
+      "option": "cb-3",
+      "label": "3 Buttons",
+      "from": "/images/jacket/cuff-btn-num/three-buttons.svg",
+      "source": "public/images/factory/kute/jacket/Sleeve_Sleeve_bttn/0624__3_flat.jpeg",
+      "to": "/images/blueprints/supplier/394fbc5e5ce3__0624__3_flat.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Sleeve_Sleeve_bttn: supplier \"3 flat\"",
+      "bytes": 23039,
+      "kind": "jpg"
+    },
+    {
+      "key": "suit-3pc|cuff-button-number|cb-4",
+      "product": "suit-3pc",
+      "field": "cuff-button-number",
+      "option": "cb-4",
+      "label": "4 Buttons",
+      "from": "/images/jacket/cuff-btn-num/four-buttons.svg",
+      "source": "public/images/factory/kute/jacket/Sleeve_Sleeve_bttn/0621__4_flat.jpeg",
+      "to": "/images/blueprints/supplier/362519787419__0621__4_flat.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Sleeve_Sleeve_bttn: supplier \"4 flat\"",
+      "bytes": 23779,
+      "kind": "jpg"
+    },
+    {
+      "key": "suit-3pc|cuff-button-number|cb-5",
+      "product": "suit-3pc",
+      "field": "cuff-button-number",
+      "option": "cb-5",
+      "label": "5 Buttons",
+      "from": "/images/jacket/cuff-btn-num/five-buttons.svg",
+      "source": "public/images/factory/kute/jacket/Sleeve_Sleeve_bttn/0627__5_flat.jpeg",
+      "to": "/images/blueprints/supplier/91d5e77db9c2__0627__5_flat.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Sleeve_Sleeve_bttn: supplier \"5 flat\"",
+      "bytes": 24310,
+      "kind": "jpg"
+    },
+    {
+      "key": "suit-3pc|cuff-button-number|cb-6",
+      "product": "suit-3pc",
+      "field": "cuff-button-number",
+      "option": "cb-6",
+      "label": "6 Buttons",
+      "from": "/images/jacket/cuff-btn-num/five-buttons.svg",
+      "source": "public/images/factory/kute/jacket/Sleeve_Sleeve_bttn/06X1__6_flat.jpeg",
+      "to": "/images/blueprints/supplier/c356ed45a535__06X1__6_flat.jpg",
+      "matchedBy": "reviewed-vision",
+      "evidence": "contact sheet kute/jacket/Sleeve_Sleeve_bttn: supplier \"6 flat\"",
+      "bytes": 25824,
+      "kind": "jpg"
+    }
+  ]
+}

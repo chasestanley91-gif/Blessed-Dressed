@@ -1,7 +1,66 @@
-# DEFECTchest-pocket/straight-welt-2-3cm.svg FAMILIES — decision document
+# DEFECT FAMILIES — decision document
 
-_Generated 2026-07-30. Machine-readable companion:
-`public/images/reports/defect-family-evidence-2026-07-30.json`._
+_Generated 2026-07-30, re-assessed 2026-07-31 after the supplier re-point. Machine-readable
+companions: `public/images/reports/defect-family-evidence-2026-07-30.json` (original evidence),
+`public/images/reports/repoint-supplier-log.json` (what was re-pointed),
+`public/images/reports/repoint-supplier-proposal.json` (what still needs a ruling)._
+
+---
+
+## RE-ASSESSMENT, 2026-07-31 — read this first, it supersedes several recommendations below
+
+The re-point predicted in the warning below has now been carried out. **237 of the 474 glyph-backed
+options now sit on genuine supplier technical drawings**, promoted into the tracked tree at
+`public/images/blueprints/supplier/` by `tools/repoint_supplier_blueprints.mjs`. Catalog integrity
+held exactly: 2,862 options before and after.
+
+The premise behind the `MERGE_CANDIDATE` recommendations was that *the supplier does not document
+these distinctions*. Having now looked at the drawings on contact sheets
+(`public/images/reports/contact-sheets/`), that premise splits cleanly in two.
+
+### Where the premise was WRONG — do not merge these
+
+| family | what the supplier actually documents |
+|---|---|
+| **lower pocket slant** | Four distinct drawings: `0201 Regular` (horizontal), `02A1 Regular slanted`, `02B1 Very slanted`, `02C1 Extreme slanted`. The slant grades are unmistakably different pictures. |
+| **lower pocket body** | `02J1 Patch`, `02K0 Curved patch`, `02L2 Patch with flap`, `0231 Besom`, `02M1 Besom with tab and button` — each its own drawing. |
+| **chest pocket** | `0101 Normal` (straight welt), `0102 Arc` (curved welt), `0103 Ship shape` (boat), `00J2 Trapezoid`, `0110 Besom`, `0150 Patch` — six genuinely distinct shapes. |
+| **lapel buttonhole position** | A complete set: `0541` left, `0543` both, `0545` left-double, `0549` three-left/two-right, `054Y` three-left/one-right. Every configuration the catalog sells is drawn. |
+| **cuff button count** | Every count from 1 to 6, in flat and kissing layouts. |
+
+**`cuff-button-number` deserves singling out.** `cb-none` ("None") and `cb-1` ("1 Button") were both
+illustrated by `two-buttons.svg` — the catalog was showing customers *two* buttons for an option
+meaning *no* buttons. That is now fixed from the supplier's own drawings, and it was never a merge
+question at all.
+
+### Where the premise HOLDS — these still need your ruling
+
+Re-pointing does not resolve these, and no amount of further searching will, because the supplier
+library genuinely does not contain the distinction:
+
+| family | rows | why it is still unresolved |
+|---|---|---|
+| **peak gorge-angle ladder** | 11 | The supplier has exactly one `0002__Peak.jpeg`. All eleven options from 99° to 120° now point at a *real peak lapel drawing* instead of a navy rectangle — a strict improvement — but one drawing still cannot separate 101° from 102°. |
+| **notch gorge-angle ladder** | 4 | One `0001__Notch.jpeg` behind 50°/55°/65°/73°. |
+| **flap-depth ladders** | 18 | `Slanted Flap` and `Straight Jetted Flap` each run 4.0→6.5 cm off one drawing per shape. The supplier documents the *shape*, never the depth rung. |
+| **welt-depth ladders** | 9 | Chest welts at 2.3/2.5/2.7/2.9 cm; lower welts at 1.0/1.2/1.5 cm against a single `0267 2.5CM welt`. Pointing a 1.0 cm option at a drawing captioned 2.5 cm would assert a measurement the drawing contradicts, so it was NOT done. |
+| **lapel-width ladder** | 51 | 17 widths, 4.5→12.5 cm. There is no lapel-width category in the supplier library at all. |
+| **"Large Slanted" vs "Slanted"** | 18 | The catalog sells both as separate families, each with its own 4.0–6.5 cm ladder, but no label says what "Large" varies. The supplier documents slant *grade*, not size. **This one needs a supplier answer, not a photograph.** |
+| **AMF stitching** | 6 | md5-proved: every `-amf` file is byte-identical to its `-top` sibling. No authentic AMF artwork exists anywhere in the tree. |
+| **Fake buttonholes** | 6 | `lbh-fake-round`, `lbh-fake-square`. The supplier documents no fake buttonhole. |
+| **"Double-Color Straight A / B"** | 6 | Supplier `055S` and `055T` are BOTH captioned "Double color straight". Nothing distinguishes A from B, so neither was assigned — a coin toss here would be indistinguishable from evidence. |
+
+### The measured limit still stands
+
+For the ladders above, re-pointing changes nothing about the physics already measured on
+2026-07-28: at full-garment framing the collar stitch ladder came back **0.312 → 0.404 → 0.316 →
+0.476**, with the 0.5 cm rung *inverted* and sitting 0.004 from the 0.1 cm rung. The honest remedies
+are unchanged — macro re-shoot where the difference is resolvable, and a merge/reprice
+recommendation where it is not. **Never annotate different numbers onto near-identical photos.**
+
+_Original 2026-07-30 assessment follows. Where it conflicts with the table above, the table wins._
+
+---
 
 > **Nothing has been changed.** No option has been merged, no image replaced, no catalog row
 > edited. This document exists so you can decide. Every recommendation below is individually
@@ -34,7 +93,7 @@ That is a navy rectangle with a crude gold outline. It encodes **no gorge angle 
 it is the reference against which ten options at 101°–115° were to be judged. Other examples,
 verified on disk:
 
-- `` draws the welt as a single arc **stroke with no enclosed
+- `chest-pocket/straight-welt-2-3cm.svg` draws the welt as a single arc **stroke with no enclosed
   height** — it cannot represent any of the 2.3 / 2.5 / 2.7 / 2.9 cm rungs it backs.
 - `lower-pocket/jetted-flap-6-5cm.svg` draws its mouth at `height="6"` while calling itself 6.5 cm.
 - `sleeve-cuff/square-cuff.svg` draws horizontal band edges and backs `cuff-angled`, whose entire
