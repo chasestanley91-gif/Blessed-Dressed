@@ -81,6 +81,13 @@
  *   node tools/qc_ladder.mjs --measurements=<file> --ladder=ladder_cuff
  *       Grade measurements alone, with no catalog join (rungs come from `targets`).
  *
+ *   A measurement file SHOULD say which family it measured, so it can never be
+ *   applied to another one:
+ *       { "scope": { "product": "sport-coat", "field": "chest-dart" },
+ *         "values": { "cd-minus-2": 0.25, ... } }
+ *   Without a scope the file is joined only when the run resolves exactly one
+ *   ladder. See joinPolicyFor().
+ *
  *   node tools/qc_ladder.mjs --options=a,b,c --product=shirt --measure=auto \
  *                            --roi=0.30,0.35,0.40,0.30
  *       Experimental automatic measurement over an explicit fractional ROI.
@@ -103,6 +110,13 @@
  *   --direction=asc|desc       expected measured direction vs declared (default asc)
  *   --min-sep=<n>              minimum adjacent separation, ratio units (default 0.05)
  *   --min-span-fidelity=<n>    advisory compression floor (default 0.5)
+ *   --max-span-fidelity=<n>    advisory EXAGGERATION ceiling (default 2.0). The
+ *                              band is deliberately reciprocal: a ladder must be
+ *                              within a factor of two of the truth in EITHER
+ *                              direction. Showing more difference than the
+ *                              measurements contain mis-sells the rungs exactly
+ *                              as badly as showing less, and is harder to spot
+ *                              because the result looks convincing.
  *   --min-confidence=<n>       auto-measurement gate (default 0.6)
  *   --roi=x,y,w,h              fractional ROI for auto measurement
  *   --bands=<n>                auto-measurement sample bands (default 8)
@@ -158,6 +172,9 @@ const REMEDIES = [
 const THRESHOLDS = {
   minSeparation: num(args['min-sep'], 0.05),
   minSpanFidelity: num(args['min-span-fidelity'], 0.5),
+  // The reciprocal of minSpanFidelity, deliberately: the honest band is "within a
+  // factor of two of the truth, in EITHER direction". See EXAGGERATED_LADDER.
+  maxSpanFidelity: num(args['max-span-fidelity'], 2.0),
   minConfidence: num(args['min-confidence'], 0.6),
   bands: Math.max(2, Math.round(num(args.bands, 8))),
 };
@@ -207,9 +224,43 @@ const SEPARATION_JUSTIFICATION = [
 //        note — an option meaning "this feature is not applied" is not the
 //        bottom rung of a measured scale, and folding it in would fabricate a
 //        0.0 rung nobody sells.
+//    (g) SIGN IS PART OF THE MEASUREMENT. `chest-dart` sells "-2 cm", "-3 cm",
+//        "+2 cm" and "+3 cm" on sport-coat, suit-2pc and suit-3pc. A regex with
+//        no sign group reads all four as 20/30 mm, so "-2 cm" and "+2 cm" become
+//        the SAME declared value and the tool fabricates a COLLAPSED_DECLARATION
+//        critical against a family that is perfectly well formed. Suppression
+//        taken OUT of the chest is not suppression put IN; the sign is the
+//        option.
+//
+//        But `+`/`-` is not always a sign. "Double (0.15 + 0.6 cm)" and
+//        "0.1 + 0.7 cm Double Topstitch" use `+` as a BINARY OPERATOR joining
+//        two stitch rows, and "Round Hem +0.6 cm" uses it as a unary sign. Both
+//        are real labels in this catalog. The rule that separates them, and the
+//        reason it is written down:
+//
+//          - glued to the preceding word (no space, e.g. "Cut-2 cm")  -> hyphen
+//          - preceded, skipping spaces, by a DIGIT ("0.15 + 0.6 cm")  -> operator
+//          - otherwise (string start, or after a letter/bracket)      -> SIGN
+//
+//        Verified against all 35 signed labels in the live catalog.
 // ---------------------------------------------------------------------------
-const MEASURE_TOKEN = /(\d+(?:[.,]\d+)?)\s*(cm|mm|°|degrees?|deg)(?![a-z0-9])/gi;
+const MEASURE_TOKEN = /([+-]?)\s*(\d+(?:[.,]\d+)?)\s*(cm|mm|°|degrees?|deg)(?![a-z0-9])/gi;
 const NONE_LABEL = /^(none|no\b.*|without\b.*|n\/a)$/i;
+
+/**
+ * Decide whether a captured `+`/`-` is a unary SIGN (returns -1 or +1) or merely
+ * punctuation/arithmetic that must be ignored (returns +1). See rule (g) above.
+ */
+function signOf(text, matchIndex, signChar) {
+  if (signChar !== '-' && signChar !== '+') return 1;
+  let i = matchIndex - 1;
+  // Glued to the preceding token: a hyphen inside a compound, never a minus.
+  if (i >= 0 && !/[\s([/,]/.test(text[i])) return 1;
+  while (i >= 0 && /\s/.test(text[i])) i -= 1;
+  // A digit on the left makes this an operator between two numbers, not a sign.
+  if (i >= 0 && /\d/.test(text[i])) return 1;
+  return signChar === '-' ? -1 : 1;
+}
 
 function canonUnit(raw) {
   const u = String(raw).toLowerCase();
@@ -242,14 +293,19 @@ function parseMeasuredLabel(label) {
     };
   }
 
-  const [full, numText, unitText] = hits[0];
+  const [full, signText, numText, unitText] = hits[0];
   const { unit, factor } = canonUnit(unitText);
-  const value = parseFloat(numText.replace(',', '.')) * factor;
+  const sign = signOf(text, hits[0].index, signText);
+  const magnitude = parseFloat(numText.replace(',', '.'));
+  const value = sign * magnitude * factor;
   return {
     kind: 'measured',
-    declared: Math.round(value * 1000) / 1000, // canonical: mm or deg
+    declared: Math.round(value * 1000) / 1000 + 0, // canonical mm or deg; +0 normalises -0
     unit,
-    rawNumber: String(parseFloat(numText.replace(',', '.'))), // "0.1" — the ingest join key
+    sign,
+    // The ingest join key. Signed, because a measurement file describing
+    // `chest-dart` must be able to distinguish the -2 cm rung from the +2 cm one.
+    rawNumber: String(sign * magnitude),
     displayed: full.trim(),
     family: familyKey(text.replace(full, ' ')),
   };
@@ -426,7 +482,64 @@ function loadMeasurements(file, ladderKey) {
     // How the file identifies its rungs. A declared-value-keyed file cannot say
     // WHICH family it measured — see the broadcast hazard note below.
     keying: numericKeys && namedKeys ? 'mixed' : numericKeys ? 'declared' : 'option',
+    // What the file CLAIMS it measured, if anything. The block wins over the
+    // root so one file can carry several scoped ladders.
+    scope: readScope(block) || readScope(raw),
   };
+}
+
+// A measurement file may declare the family it belongs to, either as
+// `{ scope: { product, field, family } }` or as bare product/field/family keys.
+// Any subset is accepted; only the fields present are checked.
+function readScope(node) {
+  if (!node || typeof node !== 'object') return null;
+  const src = node.scope && typeof node.scope === 'object' ? node.scope : node;
+  const pick = (k) => (typeof src[k] === 'string' && src[k].trim() ? src[k].trim() : null);
+  const scope = { product: pick('product'), field: pick('field'), family: pick('family') };
+  return scope.product || scope.field || scope.family ? scope : null;
+}
+
+// ---------------------------------------------------------------------------
+// THE JOIN-POLICY DECISION, isolated as a PURE function so --self-test can prove
+// it. This is the gate that stands between "a measurement" and "a number that
+// looks like a measurement".
+//
+// THE OPTION-ID BROADCAST HAZARD (the sibling of the declared-key hazard below,
+// and the more dangerous of the two because nothing about it looked suspicious).
+//
+// The declared-key guard withheld numeric joins when a run resolved several
+// families, but option-id joins were exempt — `byOption` applied unconditionally.
+// Option ids are NOT unique across this catalog: 789 of them recur, and
+// `cd-minus-2` exists identically under sport-coat, suit-2pc AND suit-3pc. So
+//   node tools/qc_ladder.mjs --options=cd-minus-2,cd-plus-2 --measurements=f.json
+// resolved THREE ladders and handed all three the same numbers. Two of those
+// three verdicts were computed from measurements that were never taken — and
+// because no error was raised, they could reach PASS. A ladder that passes on
+// fabricated numbers is strictly worse than one that fails, because it ships.
+//
+// So the rule is now keying-independent: a measurement file is applied to a
+// ladder only when it is UNAMBIGUOUSLY BOUND to it, which means either
+//   (a) the file DECLARES its scope and this ladder matches it, or
+//   (b) the run resolved exactly one ladder, so there is nothing to confuse it with.
+// Otherwise the numbers are withheld and the verdict cannot exceed INCONCLUSIVE.
+// Disambiguate with --product / --field / --family, or add a scope to the file.
+function joinPolicyFor(ladder, scope, ladderCount) {
+  if (scope) {
+    const mismatched = [];
+    if (scope.product && ladder.product && scope.product !== ladder.product) {
+      mismatched.push(`product "${scope.product}" != "${ladder.product}"`);
+    }
+    if (scope.field && ladder.field && scope.field !== ladder.field) {
+      mismatched.push(`field "${scope.field}" != "${ladder.field}"`);
+    }
+    if (scope.family && ladder.family && !String(ladder.family).includes(scope.family.toLowerCase())) {
+      mismatched.push(`family "${scope.family}" not found in "${ladder.family}"`);
+    }
+    if (mismatched.length) return { allow: false, boundBy: 'scope-mismatch', mismatched };
+    return { allow: true, boundBy: 'declared-scope', mismatched: [] };
+  }
+  if (ladderCount === 1) return { allow: true, boundBy: 'sole-resolved-ladder', mismatched: [] };
+  return { allow: false, boundBy: 'unbound-and-ambiguous', mismatched: [] };
 }
 
 // THE DECLARED-KEY BROADCAST HAZARD — found by running this tool on real data,
@@ -446,18 +559,31 @@ function loadMeasurements(file, ladderKey) {
 // family. Otherwise the numeric join is withheld, the rungs stay honestly
 // unmeasured, and the ladder is blocked with AMBIGUOUS_MEASUREMENT_JOIN.
 // Disambiguate with --family=<substring>.
-function attachIngested(ladder, ingest, allowDeclaredJoin) {
-  if (!allowDeclaredJoin && ingest.keying !== 'option') {
+function attachIngested(ladder, ingest, ladderCount) {
+  const policy = joinPolicyFor(ladder, ingest.scope, ladderCount);
+  ladder.joinPolicy = { ...policy, file: ingest.file, ladderKey: ingest.ladderKey, keying: ingest.keying };
+
+  if (!policy.allow) {
     ladder.ambiguousJoin = {
       file: ingest.file,
       ladderKey: ingest.ladderKey,
       keying: ingest.keying,
+      boundBy: policy.boundBy,
+      mismatched: policy.mismatched,
     };
   }
+
+  const withheld =
+    policy.boundBy === 'scope-mismatch'
+      ? `${ingest.file} declares that it measured a DIFFERENT family (${policy.mismatched.join('; ')}). Applying it here would attribute one family's measurements to another.`
+      : `${ingest.file} does not declare which family it measured and this run resolved ${ladderCount} ladders — joining would hand this rung another family's numbers. Re-run with --product/--field/--family, or add a "scope" to the file.`;
+
   for (const r of ladder.rungs) {
-    const byOption = ingest.map.get(r.option);
+    const byOption = policy.allow ? ingest.map.get(r.option) : undefined;
     const byDeclared =
-      allowDeclaredJoin && r.rawNumber ? ingest.map.get(String(parseFloat(r.rawNumber))) : undefined;
+      policy.allow && ingest.keying !== 'option' && r.rawNumber
+        ? ingest.map.get(String(parseFloat(r.rawNumber)))
+        : undefined;
     const hit = byOption ?? byDeclared;
     r.measurementJoin = byOption ? 'option-id' : byDeclared ? 'declared-value' : null;
     if (hit) {
@@ -470,9 +596,9 @@ function attachIngested(ladder, ingest, allowDeclaredJoin) {
     } else {
       r.measured = null;
       r.measurementSource = 'operator-supplied';
-      r.unmeasuredReason = ladder.ambiguousJoin
-        ? `${ingest.file} is keyed by declared value, not option id, and this run resolved more than one family — joining on the number alone would hand this rung another family's measurement. Re-run with --family=<substring> to grade one family at a time.`
-        : `no entry in ${ingest.file} for option "${r.option}" or declared "${r.rawNumber}"`;
+      r.unmeasuredReason = policy.allow
+        ? `no entry in ${ingest.file} for option "${r.option}" or declared "${r.rawNumber}"`
+        : withheld;
     }
   }
 }
@@ -940,24 +1066,59 @@ function computeLadder(ladder, opts) {
   // default because the measurement's normalisation constant is unknown, so a
   // span ratio can be depressed by a constant offset rather than by the render.
   let spanFidelity = null;
+  let spanFidelityNote = null;
   if (series.length >= 2) {
-    const dSpan = series[series.length - 1].declared - series[0].declared;
-    const mSpan = series[series.length - 1].measured - series[0].measured;
-    const dRatio = series[0].declared !== 0 ? series[series.length - 1].declared / series[0].declared : null;
-    const mRatio = series[0].measured !== 0 ? series[series.length - 1].measured / series[0].measured : null;
-    spanFidelity = dRatio && mRatio ? Math.round((mRatio / dRatio) * 1000) / 1000 : null;
-    if (spanFidelity !== null && spanFidelity < opts.minSpanFidelity) {
-      add(opts.strictFidelity ? 'critical' : 'advisory', 'COMPRESSED_LADDER',
-        `declared span ${series[0].declared}->${series[series.length - 1].declared} is ${dRatio.toFixed(2)}x but measured span ${series[0].measured}->${series[series.length - 1].measured} is only ${mRatio.toFixed(2)}x (fidelity ${spanFidelity}) — the ladder is compressed${opts.strictFidelity ? '' : ' [advisory: the normalisation constant is unknown]'}`);
+    const lo = series[0];
+    const hi = series[series.length - 1];
+    const dSpan = hi.declared - lo.declared;
+    const mSpan = hi.measured - lo.measured;
+
+    // A span RATIO only means anything on a scale that runs from an origin in one
+    // direction. `chest-dart` runs -3, -2, +2, +3 cm: its declared ratio is
+    // 30/-30 = -1, and dividing two sign-crossing ratios yields a confident,
+    // meaningless number. A signed or zero-crossing family is still graded for
+    // monotonicity and separation — it simply has no compression ratio to report.
+    const positiveScale = series.every((r) => r.declared > 0) && series.every((r) => r.measured > 0);
+    if (!positiveScale) {
+      spanFidelityNote =
+        'not computed: this family crosses zero or carries signed rungs, so a span RATIO has no meaning. Monotonicity and separation are still enforced.';
+    } else {
+      const dRatio = hi.declared / lo.declared;
+      const mRatio = hi.measured / lo.measured;
+      spanFidelity = Math.round((mRatio / dRatio) * 1000) / 1000;
+      const detail = `declared span ${lo.declared}->${hi.declared} is ${dRatio.toFixed(2)}x but measured span ${lo.measured}->${hi.measured} is ${mRatio.toFixed(2)}x (fidelity ${spanFidelity})`;
+      const severity = opts.strictFidelity ? 'critical' : 'advisory';
+      const caveat = opts.strictFidelity ? '' : ' [advisory: the normalisation constant is unknown]';
+
+      if (spanFidelity < opts.minSpanFidelity) {
+        add(severity, 'COMPRESSED_LADDER',
+          `${detail} — the ladder is COMPRESSED: it shows the customer less difference than they are paying for${caveat}`);
+      } else if (spanFidelity > opts.maxSpanFidelity) {
+        // The missing half of the test. A ladder can misrepresent its measurements
+        // by EXAGGERATING them just as easily as by compressing them, and the
+        // exaggerated case is the one that looks great in review — the rungs are
+        // monotonic, well separated and obviously distinct. A 0.1->0.6 cm topstitch
+        // rendered as though it ran 0.1->3.0 cm passes every other check in this
+        // tool while selling a difference six times larger than the one that
+        // exists. With no upper bound it passed SILENTLY.
+        add(severity, 'EXAGGERATED_LADDER',
+          `${detail} — the ladder is EXAGGERATED: it shows the customer MORE difference than the measurements contain, which mis-sells the rungs exactly as badly as compressing them${caveat}`);
+      }
     }
     ladder.declaredSpan = Math.round(dSpan * 1000) / 1000;
     ladder.measuredSpan = Math.round(mSpan * 10000) / 10000;
   }
+  ladder.spanFidelityNote = spanFidelityNote;
 
   // Auto-measurement asymmetry: uncalibrated instruments may block, never approve.
   if (ladder.ambiguousJoin) {
-    add('blocking-unknown', 'AMBIGUOUS_MEASUREMENT_JOIN',
-      `${ladder.ambiguousJoin.file} is keyed by ${ladder.ambiguousJoin.keying} value and this run resolved more than one family in the same field — the numeric join was WITHHELD rather than broadcast, because handing this family another family's numbers would fabricate a measurement. Re-run with --family=<substring>.`);
+    if (ladder.ambiguousJoin.boundBy === 'scope-mismatch') {
+      add('blocking-unknown', 'MEASUREMENT_SCOPE_MISMATCH',
+        `${ladder.ambiguousJoin.file} declares that it measured a different family (${(ladder.ambiguousJoin.mismatched || []).join('; ')}) — the join was REFUSED. A measurement belongs to the family it was taken from and to no other.`);
+    } else {
+      add('blocking-unknown', 'AMBIGUOUS_MEASUREMENT_JOIN',
+        `${ladder.ambiguousJoin.file} (keyed by ${ladder.ambiguousJoin.keying}) does not declare which family it measured, and this run resolved more than one — the join was WITHHELD rather than broadcast, because handing this family another family's numbers would fabricate a measurement. Option ids are NOT unique across this catalog (789 recur), so an option-id join is exposed to this exactly as a declared-value join is. Re-run with --product/--field/--family, or add a "scope" to the file.`);
+    }
   }
 
   const usedAuto = ladder.rungs.some((r) => r.measurementSource === 'auto-experimental');
@@ -997,7 +1158,7 @@ function computeLadder(ladder, opts) {
 //    The known-FAIL 2026-07-28 collar and cuff data MUST come back FAIL.
 // ---------------------------------------------------------------------------
 function selfTest() {
-  const opts = { direction: 'asc', minSeparation: 0.05, minSpanFidelity: 0.5, strictFidelity: false, trustAuto: false };
+  const opts = { direction: 'asc', minSeparation: 0.05, minSpanFidelity: 0.5, maxSpanFidelity: 2.0, strictFidelity: false, trustAuto: false };
   const build = (name, ratios) => ({
     id: name, product: null, section: null, field: null, family: name, excluded: [],
     rungs: Object.entries(ratios).map(([d, v]) => ({
@@ -1017,20 +1178,96 @@ function selfTest() {
     { name: 'synthetic clean monotonic ladder', ladder: build('clean', { '0.1': 0.10, '0.3': 0.30, '0.5': 0.50, '0.6': 0.60 }), expect: 'PASS' },
     { name: 'synthetic monotonic but collapsed rungs', ladder: build('tight', { '0.1': 0.300, '0.3': 0.310, '0.5': 0.320, '0.6': 0.330 }), expect: 'FAIL', expectCodes: ['INSUFFICIENT_SEPARATION'] },
     { name: 'synthetic fully inverted ladder', ladder: build('inverted', { '0.1': 0.60, '0.3': 0.50, '0.5': 0.30, '0.6': 0.10 }), expect: 'FAIL', expectCodes: ['NON_MONOTONIC'] },
-    { name: 'declared-key broadcast is withheld, not fabricated', ladder: { id: 'amb', product: 'shirt', family: 'machine amf stitching', excluded: [], ambiguousJoin: { file: 'x.json', keying: 'declared' }, rungs: [{ option: 'a', declared: 1, unit: 'mm', measured: null, measurementSource: 'operator-supplied', unmeasuredReason: 'withheld' }, { option: 'b', declared: 3, unit: 'mm', measured: null, measurementSource: 'operator-supplied', unmeasuredReason: 'withheld' }] }, expect: 'INCONCLUSIVE', expectCodes: ['AMBIGUOUS_MEASUREMENT_JOIN'] },
+    { name: 'declared-key broadcast is withheld, not fabricated', ladder: { id: 'amb', product: 'shirt', family: 'machine amf stitching', excluded: [], ambiguousJoin: { file: 'x.json', keying: 'declared', boundBy: 'unbound-and-ambiguous', mismatched: [] }, rungs: [{ option: 'a', declared: 1, unit: 'mm', measured: null, measurementSource: 'operator-supplied', unmeasuredReason: 'withheld' }, { option: 'b', declared: 3, unit: 'mm', measured: null, measurementSource: 'operator-supplied', unmeasuredReason: 'withheld' }] }, expect: 'INCONCLUSIVE', expectCodes: ['AMBIGUOUS_MEASUREMENT_JOIN'] },
+
+    // ---- REGRESSION: an OVER-EXPANDED ladder used to pass silently -----------
+    // Monotonic, well separated, every rung distinct — and selling six times the
+    // difference the measurements contain. Only the upper fidelity bound sees it.
+    { name: 'over-expanded ladder is caught (was silent)', ladder: build('exaggerated', { '0.1': 0.10, '0.3': 0.90, '0.5': 1.80, '0.6': 3.00 }), expect: 'FAIL', expectCodes: ['EXAGGERATED_LADDER'], strict: true },
+    { name: 'over-expanded ladder is advisory by default, not fatal', ladder: build('exaggerated', { '0.1': 0.10, '0.3': 0.90, '0.5': 1.80, '0.6': 3.00 }), expect: 'PASS', expectCodes: ['EXAGGERATED_LADDER'] },
+
+    // ---- REGRESSION: a signed family is no longer given a meaningless ratio ---
+    // chest-dart runs -3/-2/+2/+3 cm. Its declared ratio is 30/-30 = -1.
+    {
+      name: 'signed family reports no span ratio rather than a meaningless one',
+      ladder: {
+        id: 'cd', product: 'sport-coat', field: 'chest-dart', family: 'chest dart', excluded: [],
+        rungs: [
+          { option: 'cd-minus-3', declared: -30, unit: 'mm', measured: 0.10, measurementSource: 'operator-supplied' },
+          { option: 'cd-minus-2', declared: -20, unit: 'mm', measured: 0.25, measurementSource: 'operator-supplied' },
+          { option: 'cd-plus-2', declared: 20, unit: 'mm', measured: 0.45, measurementSource: 'operator-supplied' },
+          { option: 'cd-plus-3', declared: 30, unit: 'mm', measured: 0.62, measurementSource: 'operator-supplied' },
+        ],
+      },
+      expect: 'PASS',
+      check: (r) => r.spanFidelity === null && typeof r.spanFidelityNote === 'string',
+      checkName: 'spanFidelity withheld with a note',
+    },
+  ];
+
+  // ---- LABEL PARSING, including the sign group ------------------------------
+  // Every string below is a REAL label from data-store/options.
+  const parseCases = [
+    { label: '-2 cm', declared: -20, why: 'chest-dart: suppression taken OUT is not suppression put IN' },
+    { label: '+2 cm', declared: 20, why: 'the sibling of the above; these two must not collide' },
+    { label: '-3 cm', declared: -30 },
+    { label: '+0.1 cm (Both Sides)', declared: 1, why: 'shoulder-pad, sign followed by a parenthetical' },
+    { label: 'Round Hem +0.6 cm', declared: 6, why: 'unary sign after a word' },
+    { label: 'Double (0.15 + 0.6 cm)', declared: 6, why: 'the + is a BINARY OPERATOR between two stitch rows, not a sign' },
+    { label: '0.1 + 0.7 cm Double Topstitch', declared: 7, why: 'same: a digit on the left makes it an operator' },
+    { label: '0.1 cm', declared: 1 },
+    { label: '90°', declared: 90 },
+    { label: '0,6 cm', declared: 6, why: 'decimal comma' },
+    { label: 'Machine', declared: null, kind: 'unmeasured', why: 'bare word, no measurement' },
+    { label: '3 Button', declared: null, kind: 'unmeasured', why: 'bare digit with no unit is never a measurement' },
+    { label: 'None', declared: null, kind: 'categorical-none', why: 'absence is not the bottom rung of a scale' },
+    { label: 'Square 6.5 cm and 5 cm', declared: null, kind: 'ambiguous', why: 'two unit-qualified numbers: refuse to guess the axis' },
+  ];
+
+  // ---- JOIN POLICY: the option-id broadcast hazard --------------------------
+  const sportCoat = { product: 'sport-coat', field: 'chest-dart', family: 'chest dart' };
+  const suit2 = { product: 'suit-2pc', field: 'chest-dart', family: 'chest dart' };
+  const policyCases = [
+    { name: 'unscoped file + one resolved ladder joins', ladder: sportCoat, scope: null, count: 1, allow: true },
+    { name: 'unscoped file + three resolved ladders is WITHHELD (the broadcast bug)', ladder: sportCoat, scope: null, count: 3, allow: false },
+    { name: 'scoped file joins the family it names, even among many', ladder: sportCoat, scope: { product: 'sport-coat', field: 'chest-dart', family: null }, count: 3, allow: true },
+    { name: 'scoped file is REFUSED on a family it does not name', ladder: suit2, scope: { product: 'sport-coat', field: 'chest-dart', family: null }, count: 3, allow: false },
+    { name: 'scope mismatch is reported as a mismatch, not as ambiguity', ladder: suit2, scope: { product: 'sport-coat', field: null, family: null }, count: 1, allow: false, boundBy: 'scope-mismatch' },
   ];
 
   let failures = 0;
   console.log('qc_ladder --self-test — proving the verdict logic against known ground truth\n');
+
+  console.log('  LABEL PARSING (the measured value, and its sign)');
+  for (const c of parseCases) {
+    const p = parseMeasuredLabel(c.label);
+    const wantKind = c.kind || 'measured';
+    const ok = p.kind === wantKind && (wantKind !== 'measured' || p.declared === c.declared);
+    if (!ok) failures += 1;
+    console.log(`    ${ok ? 'ok  ' : 'FAIL'}  "${c.label}" -> ${p.kind}${p.kind === 'measured' ? ` ${p.declared} ${p.unit}` : ''}${ok ? '' : `   EXPECTED ${wantKind} ${c.declared ?? ''}`}`);
+    if (c.why) console.log(`            ${c.why}`);
+  }
+
+  console.log('\n  MEASUREMENT JOIN POLICY (a measurement belongs to the family it came from)');
+  for (const c of policyCases) {
+    const r = joinPolicyFor(c.ladder, c.scope, c.count);
+    const ok = r.allow === c.allow && (!c.boundBy || r.boundBy === c.boundBy);
+    if (!ok) failures += 1;
+    console.log(`    ${ok ? 'ok  ' : 'FAIL'}  ${c.name}`);
+    console.log(`            allow=${r.allow} boundBy=${r.boundBy}${ok ? '' : `   EXPECTED allow=${c.allow}${c.boundBy ? ` boundBy=${c.boundBy}` : ''}`}`);
+  }
+
+  console.log('\n  SET VERDICTS');
   for (const c of cases) {
-    const r = computeLadder(c.ladder, opts);
+    const useOpts = c.strict ? { ...opts, strictFidelity: true } : opts;
+    const r = computeLadder(JSON.parse(JSON.stringify(c.ladder)), useOpts);
     const codes = r.errors.map((e) => e.code);
     const want = c.expectCodes || [];
-    const ok = r.verdict === c.expect && want.every((w) => codes.includes(w));
+    const extra = c.check ? c.check(r) : true;
+    const ok = r.verdict === c.expect && want.every((w) => codes.includes(w)) && extra;
     if (!ok) failures += 1;
-    console.log(`  ${ok ? 'ok  ' : 'FAIL'}  ${c.name}`);
-    console.log(`        expected ${c.expect}${want.length ? ` + ${want.join(' + ')}` : ''}, got ${r.verdict} [${codes.join(', ') || 'no errors'}]`);
-    if (r.problem) console.log(`        ${r.problem.split(' | ')[0]}`);
+    console.log(`    ${ok ? 'ok  ' : 'FAIL'}  ${c.name}`);
+    console.log(`            expected ${c.expect}${want.length ? ` + ${want.join(' + ')}` : ''}${c.checkName ? ` + ${c.checkName}` : ''}, got ${r.verdict} [${codes.join(', ') || 'no errors'}]${c.check && !extra ? '  <- extra check FAILED' : ''}`);
   }
   console.log(`\n${failures ? `${failures} self-test case(s) FAILED — the verdict logic is wrong.` : 'All self-test cases passed.'}`);
   return failures === 0;
@@ -1154,9 +1391,10 @@ async function main() {
     }
 
     if (mode === 'ingest') {
-      // A declared-value-keyed measurement file may only be joined when this run
-      // resolved exactly one family — see the broadcast hazard above.
-      if (ladder.catalogJoined) attachIngested(ladder, ingest, ladders.length === 1);
+      // A measurement file may only be joined when it is unambiguously bound to
+      // this ladder — by a declared scope, or by being the only ladder resolved.
+      // See joinPolicyFor() and the option-id broadcast hazard above.
+      if (ladder.catalogJoined) attachIngested(ladder, ingest, ladders.length);
     } else if (mode === 'auto') {
       for (const r of ladder.rungs) {
         r.measurementSource = 'auto-experimental';
@@ -1193,6 +1431,7 @@ async function main() {
     direction: args.direction === 'desc' ? 'desc' : 'asc',
     minSeparation: THRESHOLDS.minSeparation,
     minSpanFidelity: THRESHOLDS.minSpanFidelity,
+    maxSpanFidelity: THRESHOLDS.maxSpanFidelity,
     strictFidelity: !!args['strict-fidelity'],
     trustAuto: !!args['trust-auto'],
   };
@@ -1221,6 +1460,9 @@ async function main() {
       file: ingest ? ingest.file : null,
       ladderKey: ingest ? ingest.ladderKey : null,
       keying: ingest ? ingest.keying : null,
+      scope: ingest ? ingest.scope : null,
+      joinRule:
+        'A measurement is applied to a ladder ONLY when it is unambiguously bound to it: either the file declares a scope this ladder matches, or the run resolved exactly one ladder. Option ids are not unique across this catalog (789 recur), so an option-id join is exposed to cross-family broadcast exactly as a declared-value join is, and is gated identically.',
       method: ingest ? ingest.method : mode === 'auto' ? 'edge-normal intensity profile; see measureEdgeOffset() in tools/qc_ladder.mjs' : null,
       limitations:
         mode === 'auto'
@@ -1241,6 +1483,9 @@ async function main() {
       'Ids and supplier filenames drop the decimal point (0.6 cm -> "06"/stitch-06-top; "Square 6.5 cm" -> square-in-65cm but "Small Square 5.0 cm" -> small-square-in-5cm), which is unrecoverable without knowing the convention per file.',
       'A number counts only when immediately followed by a unit token (cm | mm | ° | deg | degree(s)). Bare digits are ignored.',
       'cm and mm canonicalise to MILLIMETRES; degrees stay degrees. Decimal commas are normalised.',
+      'SIGN IS PART OF THE MEASUREMENT: chest-dart sells -2/-3/+2/+3 cm, and reading those as unsigned magnitudes makes "-2 cm" and "+2 cm" the SAME declared value, fabricating a COLLAPSED_DECLARATION against a well-formed family.',
+      'A +/- is a SIGN only when it is not glued to the preceding word (a hyphen) and is not preceded by a digit (a binary operator, as in "Double (0.15 + 0.6 cm)" and "0.1 + 0.7 cm Double Topstitch" — both real labels).',
+      'A span RATIO is reported only for a family whose declared and measured values are all strictly positive. A signed or zero-crossing family (chest-dart: -3 -> +3) has no meaningful compression ratio, so none is reported; monotonicity and separation still apply.',
       'Two or more unit-qualified numbers in one label is AMBIGUOUS — the tool refuses to guess and blocks the verdict.',
       '"None" is a CATEGORICAL absence, not the bottom rung of a measured scale; it is excluded with a note rather than folded in as 0.',
       'One catalog field is partitioned into families by the label with its measured token removed, so a TOP ladder and an AMF ladder in the same field are graded separately.',
@@ -1280,6 +1525,8 @@ async function main() {
       declaredSpan: l.declaredSpan ?? null,
       measuredSpan: l.measuredSpan ?? null,
       spanFidelity: l.spanFidelity,
+      spanFidelityNote: l.spanFidelityNote ?? null,
+      joinPolicy: l.joinPolicy ?? null,
       firstBreak: l.firstBreak,
       errors: l.errors,
       verdict: l.verdict,

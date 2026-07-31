@@ -347,10 +347,46 @@ if (orphanPipeline.length) {
 }
 
 // Warning: generated file on disk that no option points at.
+//
+// A PNG MASTER IS NOT AN ORPHAN WHEN ITS .webp SIBLING IS WIRED.
+// ---------------------------------------------------------------
+// Since the WebP migration the catalog serves `<id>.webp`, so a naive "is this
+// exact path referenced?" test reported all 578 PNG masters as unreferenced —
+// 688 orphan warnings, the overwhelming majority of which were the single most
+// important file in the provenance chain telling us it was junk. The masters are
+// deliberately retained: publish_approved.mjs gate 2 proves the shipped pixels
+// are the pixels QC graded by SHA-1 byte-identity against candidate-<attempt>.png,
+// and a lossy derivative can never be byte-identical. The chain is
+//
+//   qc.json (attempt N) -> candidate-N.png (sha X)
+//                       -> generated/<id>.png  (sha X, byte-identical, the anchor)
+//                       -> generated/<id>.webp (derived; manifest records sourceSha1 X)
+//
+// So a file is wired if EITHER it is referenced directly, or its counterpart in
+// the pair is. Deleting a "orphan" master on this report's say-so would have
+// silently destroyed the guarantee while every test still passed.
 const wired = new Set([...shippedUse.keys()]);
-const orphanFiles = [...generated.keys()].filter((p) => !wired.has(p));
+const counterpartOf = (p) =>
+  /\.png$/i.test(p) ? p.replace(/\.png$/i, '.webp') : /\.webp$/i.test(p) ? p.replace(/\.webp$/i, '.png') : null;
+
+const provenanceAnchors = [];
+const orphanFiles = [];
+for (const p of generated.keys()) {
+  if (wired.has(p)) continue;
+  const sibling = counterpartOf(p);
+  if (sibling && wired.has(sibling)) {
+    provenanceAnchors.push(`${p}  (anchor for the served ${sibling})`);
+    continue;
+  }
+  orphanFiles.push(p);
+}
 if (orphanFiles.length) {
-  add('warning', 'ORPHAN_IMAGE_FILE', 'Generated image on disk is not referenced by any catalog option.', orphanFiles);
+  add('warning', 'ORPHAN_IMAGE_FILE', 'Generated image on disk is not referenced by any catalog option, and has no wired .png/.webp counterpart.', orphanFiles);
+}
+if (provenanceAnchors.length) {
+  add('info', 'PROVENANCE_ANCHOR',
+    'Unreferenced by the catalog BY DESIGN: the QC-graded master behind a served derivative. Required by publish_approved.mjs gate 2 — do not delete.',
+    provenanceAnchors);
 }
 
 // Warning: in-scope option whose blueprint is a remote URL — cannot be attached
