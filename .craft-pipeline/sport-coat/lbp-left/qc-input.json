@@ -1,46 +1,46 @@
 {
- "scores": {
-  "shape": 98,
-  "geometry": 98,
-  "dimensions": 96,
-  "angles": 98,
-  "construction": 98,
-  "placement": 98,
-  "symmetry": 98,
-  "composition": 96,
-  "blueprint-match": 97
- },
- "errors": [
-  {
-   "severity": "minor",
-   "category": "composition",
-   "description": "The buttonhole is worked in tonal navy on navy hopsack and, at the 1k/low generation tier, reads as a very low-contrast slit. It is correct and correctly placed, but a viewer needs a moment rather than an instant to spot it.",
-   "expected": "craft option identifiable within one second",
-   "actual": "both lapels dominate the frame and the buttonhole is present, correctly placed, with the opposite lapel correctly bare, but tonal-on-tonal contrast at low resolution softens it",
-   "assessment": "Tonal thread is CORRECT tailoring and is what the drawing implies; the softness is a resolution artefact of the low/1k tier, not a construction or geometry deviation. Rendering it in a contrasting colour would be an error, not an improvement.",
-   "correction": "No geometry change required. At a higher quality tier the stitch definition would resolve fully."
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 99,
+    "placement": 98,
+    "symmetry": 98,
+    "composition": 97,
+    "blueprint-match": 97
   },
-  {
-   "severity": "minor",
-   "category": "blueprint-match",
-   "description": "The blueprint is a flat schematic with the lapels drawn symmetrically open; the render is a worn garment with natural lapel roll and drape, so the lapel edges curve slightly rather than running perfectly straight.",
-   "expected": "lapel geometry as drawn",
-   "actual": "lapel shape and gorge match the drawing; edges show natural roll from being worn",
-   "assessment": "Sanctioned by the prompt, which specifies the garment worn on a male model. Natural lapel roll is authentic tailoring behaviour, not a deviation from the drawn geometry.",
-   "correction": "None required."
-  }
- ],
- "lockedFeatures": [
-  "exactly ONE buttonhole in total across the entire garment, on the lapel that appears on the RIGHT of frame",
-  "the frame-LEFT lapel is completely bare - no buttonhole - and is visible in frame to prove it",
-  "BOTH lapels in frame simultaneously so the one-versus-none contrast is verifiable",
-  "buttonhole worked in TONAL NAVY silk gimp matching the cloth - never red, never a contrast colour",
-  "true hand-worked buttonhole: cut slit with open aperture, fine dense oversewn stitching, bar-tacked ends, flush with the lapel",
-  "notch lapel with the drawn gorge and notch geometry - not peak, not shawl",
-  "front face of the garment, straight-on",
-  "textured navy wool/hopsack with visible weave",
-  "no necktie or accessory crossing the jacket opening",
-  "zero text, numerals, dimension or leader lines, arrows, callouts, coloured guide marks or labels anywhere in frame"
- ],
- "notes": "Attempt 2, candidate-2.png, vs /images/blueprints/supplier/9e99ee8084ba__0541__Left_bttn_hole.jpg. The attempt-1 composition failure is fully corrected: both lapels are now in frame, straight-on, together filling the great majority of the picture. ADVERSARIAL COUNT CHECK: the frame-right lapel carries exactly ONE worked buttonhole; the frame-left lapel carries NONE - the only mark on the left lapel is the collar/lapel NOTCH, confirmed by position (it sits at the gorge, mirroring the notch on the right lapel, well above the buttonhole height). Total buttonhole count is exactly one, matching the drawing. Orientation front, correct. Lapel style notch, matching the drawing. HOSTILE CHECKS CLEAN: no red or coloured thread anywhere - the red position mark in the drawing did NOT bleed into the cloth; no numerals, units, arrows, leader lines, callouts, ruler ticks or labels anywhere in frame; no watermark; plain neutral grey studio sweep with no location, props or scenery; no second buttonhole invented on the opposite lapel; no button-stance, pocket or vent geometry borrowed from a neighbouring option. Only two Minor observations remain, both resolution/staging artefacts rather than geometry deviations."
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "A single small orange-tan speck appears on the SHIRT collar at roughly x=508, y=296 of 880x1168. It reads as a contrast-thread buttonhole on the shirt collar band. It is not on the jacket, not on either lapel, and cannot be confused with the lapel buttonhole, but the prompt asks for zero coloured marks anywhere in frame.",
+      "expected": "no coloured mark of any kind anywhere in the frame",
+      "actual": "one small orange-tan speck on the white shirt collar, several hundred pixels away from the lapel buttonhole",
+      "assessment": "Not the red position mark from the drawing bleeding through - that mark sits on the frame-right LAPEL in the blueprint, and the lapel buttonhole in the render is correctly tonal navy. This is an unrelated shirt-collar detail. Tiny, off-subject, and it creates no ambiguity about the craft option.",
+      "correction": "Retry budget spent; no further attempt owed."
+    },
+    {
+      "severity": "minor",
+      "category": "blueprint-match",
+      "description": "The blueprint draws the lapels as a very deep, narrow, closed V converging almost to a point low on the chest. The render, being a worn garment with an open shirt collar and no tie, shows a shallower and more open V with more shirt visible between the lapel edges.",
+      "expected": "lapel opening as drawn",
+      "actual": "notch geometry, gorge and lapel width all match the drawing; the V between the two lapel edges is more open than the flat schematic shows",
+      "assessment": "Sanctioned by the prompt, which specifies the garment worn on a male model, and by the option itself, which requires the buttonhole visible and unobstructed. A flat schematic cannot be reproduced literally on a body without falsifying how the cloth drapes.",
+      "correction": "None required."
+    }
+  ],
+  "lockedFeatures": [
+    "exactly ONE buttonhole in total across the entire garment, on the lapel that appears on the RIGHT of frame",
+    "the frame-LEFT lapel is completely bare - no buttonhole - and is fully visible in frame to prove it",
+    "BOTH lapels in frame simultaneously so the one-versus-none contrast is verifiable",
+    "buttonhole worked in TONAL NAVY silk gimp matching the cloth - never red, never a contrast colour",
+    "true hand-worked buttonhole: cut slit with an open aperture, fine dense oversewn stitching, flush with the lapel",
+    "notch lapel with the drawn gorge and notch geometry - not peak, not shawl",
+    "front face of the garment, straight-on",
+    "textured navy wool/hopsack with visible weave",
+    "no necktie or accessory crossing the jacket opening",
+    "seamless neutral light-grey studio sweep"
+  ],
+  "notes": "ATTEMPT 3 (final) - adversarial re-read of candidate-3.png against /images/blueprints/supplier/9e99ee8084ba__0541__Left_bttn_hole.jpg.\n\nWHAT THE DRAWING SHOWS, READ DIRECTLY: a jacket front upper - collar band, collar, and two notch lapels forming a long narrow V down the chest. On the lapel that appears on the RIGHT of the frame there is one small red mark, high on the lapel and close to its outer edge, marking the buttonhole position. The lapel that appears on the LEFT of the frame carries NO mark of any kind. Total marked buttonholes: exactly one.\n\nADVERSARIAL COUNT CHECK ON THE RENDER: the frame-right lapel carries exactly ONE worked buttonhole, a clean cut slit with dense tonal oversewing, sitting high on the lapel near its outer edge. I searched the frame-left lapel specifically for a mirrored buttonhole and there is none - the only feature on it is the collar/lapel notch at the gorge, confirmed as a notch and not a buttonhole by its position (it mirrors the notch on the right lapel, far above the buttonhole height) and by its shape. Total buttonhole count in the render: exactly one, on the correct lapel. That is the whole meaning of the option and it is right.\n\nTHE ATTEMPT-3 CORRECTION WORKED. Attempt 2's only substantive complaint was that the tonal-on-tonal buttonhole read softly at 1k. The raking side light asked for in the attempt-3 correction resolved it: the slit now shows a distinct open aperture with the gimp standing in visible relief against the hopsack, identifiable within a second. Crucially the thread stayed TONAL NAVY - the correction did not tempt the generator into a contrast colour, which would have been a real error rather than an improvement.\n\nHOSTILE CHECKS CLEAN: no red or coloured thread on either lapel; the red position mark in the drawing did NOT bleed into the cloth; no second buttonhole invented on the opposite lapel; lapel style is notch as drawn, not peak and not shawl; no necktie added; no numerals, units, arrows, leader lines, callouts, ruler ticks or labels; no watermark; plain neutral grey sweep with no location, props or scenery; no button-stance, pocket or vent geometry borrowed from a neighbouring option.\n\nOnly two minor observations remain, one a tiny off-subject shirt-collar speck and one the inherent flat-schematic-versus-worn-garment difference. Retry budget genuinely spent at attempt 3 of 3 with zero critical or major findings."
 }

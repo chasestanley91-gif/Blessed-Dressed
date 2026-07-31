@@ -1,0 +1,45 @@
+{
+  "addr": "suit-2pc > ext-pointed",
+  "productId": "suit-2pc",
+  "optionId": "ext-pointed",
+  "attempt": 2,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 99,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 98,
+    "placement": 98,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "The frame extends further down the trouser front than instructed — the slant pocket seam runs to the bottom edge instead of the bottom edge sitting level with the pocket's top opening — so roughly the lower half of the picture is plain cloth. The tab still spans about 44% of the frame width, is the only hardware in frame and is unmistakable in well under a second.",
+      "expected": "Bottom edge of frame level with the top opening of the front pocket.",
+      "actual": "Bottom edge roughly two waistband-heights below that line.",
+      "correction": "Cosmetic only; no regeneration warranted. A future crop could raise the bottom edge."
+    },
+    {
+      "severity": "minor",
+      "category": "construction",
+      "description": "The closure is shown in a flat display state rather than mechanically engaged: the tab lies flat along the band with its button and hook exposed, and the band's buttonhole sits clear of the button rather than fastened over it. Recorded deliberately rather than corrected — see notes.",
+      "expected": "Per the built prompt: closure FULLY FASTENED. Per the illustration: tab swung open and extended with its hardware exposed.",
+      "actual": "Tab flat along the band with the rounded end, button, hook-bar and the band's buttonhole all fully visible and none of them engaged.",
+      "correction": "No correction issued. The drawing governs and the drawing shows the tab unfastened precisely so the tab outline and hardware are visible; a genuinely fastened tab would be hidden under the opposite forepart and the option could not be seen at all."
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "notes": "Attempt 2. Attempt 1 was rejected Critical for rendering a POINTED tab end, which is the neighbouring catalog option ext-straight 'Sharp, Hook & Button'; the correction fixed it with no other regression. Attempt 2's tab now ends in a clean semicircular arc whose radius equals half the tab width — unmistakably ROUND, with no point, corner, chamfer or square anywhere — matching both the illustration and the option's real label 'Round, Hook & Button'. OPTION-ID vs LABEL TRAP, recorded: the option id string is 'ext-pointed' but the label, description and drawing all specify a ROUNDED tab, and the catalog carries ext-straight (Sharp/pointed) and ext-curved (Square) as separate options, so the id is misleading and the drawing plus label govern. Hardware is exactly one button and one metal hook-bar on the tab with the worked buttonhole on the band, matching the four marks in the drawing (button plus buttonhole on the band, button plus hole on the tab). FASTENED-vs-OPEN CONFLICT, logged as instructed: the built prompt orders the closure FULLY FASTENED while the illustration draws the tab swung open and extended. Resolved in favour of the drawing, as directed — a truly fastened extension tab passes under the opposite forepart and becomes invisible, which would hide the craft option entirely; the flat display state keeps the rounded end and all hardware readable and is what the drawing's open state exists to achieve. Red in the drawing was correctly read as position notation and rendered in the garment's own charcoal cloth; no red, no annotation and no text anywhere in the frame.",
+  "checkedAt": "2026-07-31T21:09:30.014Z"
+}

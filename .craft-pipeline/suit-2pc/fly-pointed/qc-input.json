@@ -1,0 +1,40 @@
+{
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 98,
+    "placement": 99,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "The tailored point at the top of the fly is rendered as a topstitched apex in cloth of the same colour, so it is subtle — legible on inspection but not as instantly striking as the rounded hook of the sibling option. Nothing is hidden or wrong; the contrast is simply low.",
+      "expected": "the point reading within one second",
+      "actual": "the point reads clearly on inspection; tonal-on-tonal reduces its immediate punch",
+      "correction": "acceptable; if re-shot, raking side light across the fly would lift the apex"
+    },
+    {
+      "severity": "minor",
+      "category": "construction",
+      "description": "The surface above the waistband is a smooth pale expanse with no collar, placket or seam detail, so it reads as a dress-form torso rather than a shirt. It sits entirely outside the fly region and does not touch the craft option.",
+      "expected": "a tucked shirt above the waistband",
+      "actual": "featureless pale torso above the waistband; ambiguous between a plain shirt and a form",
+      "correction": "acceptable; it is outside the option area and does not obscure anything"
+    }
+  ],
+  "lockedFeatures": [
+    "orientation: detail — trouser front, waistband to the bottom of the fly, fly CLOSED and pressed flat",
+    "the top of the fly finishing in a single tailored POINT: one apex with two straight edges meeting beneath the waistband closure",
+    "the shape is ANGULAR — explicitly not the rounded hook of the fish-claw sibling and not a square end",
+    "below the point, the fly edge falling away in a long smooth curve to the crotch",
+    "waistband fastened with its button and buttonhole; belt loops as drawn",
+    "tonal charcoal cloth, seamless neutral background, zero annotation"
+  ],
+  "notes": "ADVERSARIAL READ vs /images/blueprints/remote/da407a0ce211__3406.jpg.\n\nWHAT THE DRAWING SPECIFIES: the trouser front with the fly closed. The red line runs along the top edge of the waistband, then turns down at the fly and follows the fly edge, with the turn happening at a distinct angular step rather than a curve — the 'pointed' finish where the fly meets the waistband.\n\nDISCRIMINATION CHECK AGAINST THE SIBLING. 'Fish-Claw Fly' (3402) was generated in the same run from the same trouser template, so I cropped both renders and compared them side by side at 3x. This one shows the fly's topstitched edge rising to an ANGULAR apex under the waistband; the sibling shows a large rounded lobe curling over the waistband. Two clearly different geometries, which is exactly what these two assets have to deliver.\n\nATTEMPTED REJECTIONS THAT FAILED:\n(1) Did it render the sibling's rounded claw by mistake? No — the apex is angular, formed by two straight runs of edge stitching meeting.\n(2) Square-ended fly, the default finish? No — the edge rises to a peak rather than stopping square.\n(3) Fly open? No — closed and pressed, as drawn.\n(4) Annotation traced from the red line along the waistband? No — no red, no line along the waistband top, no numbers.\n(5) Wrong face or region? Trouser front, waistband and fly. Correct.\n\nTwo minor findings, logged above. No critical or major findings."
+}

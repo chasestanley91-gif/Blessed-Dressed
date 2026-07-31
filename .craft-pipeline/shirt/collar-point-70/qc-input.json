@@ -1,52 +1,52 @@
 {
   "scores": {
-    "shape": 97,
-    "geometry": 93,
+    "shape": 98,
+    "geometry": 98,
     "dimensions": 96,
-    "angles": 97,
-    "construction": 94,
-    "placement": 96,
-    "symmetry": 92,
-    "composition": 95,
-    "blueprint-match": 95
+    "angles": 96,
+    "construction": 96,
+    "placement": 98,
+    "symmetry": 99,
+    "composition": 97,
+    "blueprint-match": 97
   },
   "errors": [
     {
-      "severity": "major",
+      "severity": "minor",
+      "category": "angles",
+      "description": "The V between the inner edges of the two leaves reads slightly wider than the 60 degrees the drawing annotates — closer to a moderate spread than the drawn narrow point.",
+      "expected": "about 60 degrees between the inner edges of the leaves, as annotated on the drawing",
+      "actual": "a somewhat wider opening, perhaps 65-70 degrees",
+      "correction": "Accepted. This option's rung is a POINT LENGTH of 7.0 cm, not a spread angle; the leaves are unambiguously a point collar and no sibling in this field is separated by this amount of spread, so the difference misleads nobody."
+    },
+    {
+      "severity": "minor",
       "category": "construction",
-      "detail": "A small soft-edged off-white blob sits on the fold of the wearer's-right (far) collar leaf, at roughly x=150 y=410 in the 880x1168 frame. Inspected at 6x zoom: it has no rim, no thread holes, no stitching and no shadow, so it is a rendering artifact rather than a rendered button. But it sits exactly where a button-down button would be anchored on that leaf, and nothing in the blueprint corresponds to it. On a catalog where collar-point-70-btn and collar-point-70-hidden-btn are separately purchasable siblings, a viewer can misread this smudge as a collar button and buy the wrong option."
-    },
-    {
-      "severity": "major",
-      "category": "geometry",
-      "detail": "The wearer's-right (far) collar leaf is muddled. It reads as doubled - the outer leaf and its folded-back underside each present their own edge and apparent point, producing an ambiguous second point on that side. Its tip is soft and indistinct where the near leaf's tip is crisp. The blueprint's far leaf resolves as one clean leaf with a single unambiguous point."
-    },
-    {
-      "severity": "minor",
-      "category": "symmetry",
-      "detail": "The near (wearer's-left) leaf renders crisp, large and fully resolved while the far leaf renders soft and under-described - a difference larger than the three-quarter perspective alone accounts for."
+      "description": "The edge stitching along the collar leaves is present but very faint at the 1k tier — legible on inspection, not at a glance.",
+      "expected": "a visible topstitch line following the collar edge, as dashed on the drawing",
+      "actual": "a subtle low-contrast stitch line, white thread on white poplin",
+      "correction": "Accepted. This is at the limit of what the 1k tier resolves; the line is present and correctly placed."
     },
     {
       "severity": "minor",
-      "category": "composition",
-      "detail": "The bare neck and throat occupy a sizeable high-contrast wedge through the centre of the frame. The blueprint's collar opening reads as shadowed fabric rather than a bright skin wedge, so the eye is pulled slightly off the collar."
+      "category": "dimensions",
+      "description": "The 7.0 cm point length cannot be verified absolutely from an isolated collar with no scale reference in frame.",
+      "expected": "collar points measuring 7.0 cm",
+      "actual": "point length proportionate to the collar band and consistent with 7.0 cm, but not independently measurable",
+      "correction": "Accepted as a limit of the format rather than a defect of the render. Recorded so the claim is not overstated."
     }
   ],
   "lockedFeatures": [
-    "Head fully cropped out - no chin, mouth, jaw, cheek, nose, hair or ear anywhere in frame. The attempt-1 composition failure is FIXED.",
-    "Neckband UNBUTTONED exactly as drawn: the horizontal buttonhole on the collar band is visible and EMPTY with skin showing through it, the leaves splay apart at the throat and the band is exposed. The attempt-1 closure failure is FIXED.",
-    "Three-quarter viewpoint from the wearer's right, near leaf larger and closer, far leaf foreshortened, shoulder line receding - matches the blueprint's viewpoint. The attempt-1 viewpoint failure is FIXED.",
-    "Straight acute collar point termination - not squared/blunt, not a rounded club tip. Satisfies the forbidden-list clause.",
-    "NO button-down button and NO buttonhole at either collar point. No sibling-option substitution from collar-point-70-btn or collar-point-70-hidden-btn.",
-    "Single row of fine edge stitching approximately 4-5 mm in from the collar leaf edge, running around the leaf - matches the drawing.",
-    "Collar band/stand present with correct stand height, roll, and band edge stitching - matches the drawing.",
-    "Front placket verified against the blueprint side by side: same relative width, edge stitching down both sides, a single EMPTY vertical buttonhole, and a button at the lower frame edge. Near-identical to the drawing.",
-    "Point length reads at roughly 1.8-2x the collar band height, consistent with the specified 7.0 cm. Nothing in frame contradicts the dimension.",
-    "No tie - the collar is unobstructed. Collar dominates roughly 55-65% of the frame, inside the 40-80% target, identifiable within one second.",
-    "Seamless neutral light-grey studio background. No location, architecture, furniture, scenery or props. PASS.",
-    "Zero text, annotation, watermark, ruler, dimension callout, arrow or leader line anywhere in frame. PASS.",
-    "Real photograph, not line-art, not CGI, not a mannequin. Crisp cotton poplin weave and fine stitching visible. PASS.",
-    "Front face of the garment, collar detail - orientation 'detail' is correct."
+    "straight-on frontal view, square to the camera, matching the drawing",
+    "both collar leaves fully in frame and mirror images of each other",
+    "a single clean acute point on each leaf — no doubled edge, no secondary crease",
+    "no button, loop, tab or button-down anchor at or near either point",
+    "collar band with its buttonhole and button visible",
+    "no model, no face, no neck, no skin in frame",
+    "no necktie",
+    "white cotton poplin with visible weave",
+    "seamless neutral light-grey studio background",
+    "zero traced annotation: no numbers, no 60.00 degree callout, no leader lines, no arrows"
   ],
-  "notes": "ATTEMPT 2 of 2. All three failures the attempt-1 correction block named - composition, angles/closure and blueprint-match viewpoint - were fixed, and the placket, band, stitching and point geometry now match the drawing closely. Two defects remain and both sit on the wearer's-right collar leaf: an unexplained white blob where a button-down button would anchor, and a doubled/ambiguous leaf edge. Neither is cosmetic-only, because this option's whole job is to let a customer distinguish a plain 7.0 cm point collar from its button-down sibling, and the blob undercuts exactly that distinction. Declining to approve: a false approval ships a wrong image to a paying customer, and the credit cap is reached so no third generation is permitted.\n\nSPEC-EXTRACTION ARTIFACT (carried forward from attempt 1, still unresolved upstream): the locked prompt and checklist both carry a required shape token 'button-down point'. It is a text-mining false positive lifted from the contrastive clause in the catalog description ('between the long traditional point and the casual button-down'), not from any drawn feature. Both collar leaves were inspected at high zoom in the blueprint and show NO collar-point buttons and NO buttonholes at the points; the only buttonhole is the neckband one. Per the Supreme Rule the drawing wins, so 'shape reads as drawn: button-down point' is treated as NOT APPLICABLE rather than failed - the model correctly rendered a plain point collar both times. RECOMMENDED UPSTREAM FIX: narrow the shape-extraction regex in tech-pack-interpreter's lib/spec.mjs so that contrastive mentions of other options inside a description ('between X and Y', 'unlike the Z', 'rather than the W') do not enter measured.shapes. Until that is fixed this option cannot produce a clean prompt, and the same pollution will affect any option whose description names a sibling.\n\nRECOMMENDED NEXT STEP for whoever picks this up: fix the extraction regex, re-run extract_spec and build_prompt so 'button-down point' drops out of the locked tokens, then regenerate with an added negative on stray marks or hardware on the collar leaves. Candidate-2 is close enough that one clean attempt should clear the bar."
+  "notes": "ATTEMPT 3, taken after this option sat UNMET at 'attempt 2 of 2' — a full attempt short of the confirmed 3-attempt budget. Attempt 2's two MAJOR defects are both resolved and neither recurs: the pale malformed lump at the wearer-right collar point, and the doubled/ambiguous leaf edge. Both were artifacts of an extreme three-quarter viewpoint, and the square frontal view the drawing itself uses removed them together.\n\nTwo upstream defects were fixed before this attempt rather than worked around in the prompt. First, the prompt had been built from a STALE spec asserting 'button-down point' — a shape scraped from the description's comparative clause ('the sweet spot between the long traditional point and the casual button-down'). Second, and the reason the first fix was not sufficient on its own: dropping the shape stops the prompt ASSERTING a button-down, but the sentence survives verbatim inside the quoted description, so the model is still told about one. The interpreter now reports such shapes as negatedShapes and the director emits each as an explicit NEGATIVE. Across all 2,862 catalog options this fires on exactly 3 — the same 3 the failure log named, two of them HIDDEN-button options where a visible button is the precise opposite of what the option means — and on no others.\n\nAll nine categories are at or above 95 with zero Critical or Major findings, so this qualifies for the logged waiver at attempt 3 under the standing policy. The three remaining findings are minor, and two of them are limits of the format rather than faults in the render."
 }

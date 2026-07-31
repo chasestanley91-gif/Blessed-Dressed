@@ -1,0 +1,44 @@
+{
+  "scores": {
+    "shape": 97,
+    "geometry": 97,
+    "dimensions": 96,
+    "angles": 97,
+    "construction": 98,
+    "placement": 98,
+    "symmetry": 98,
+    "composition": 97,
+    "blueprint-match": 97
+  },
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "dimensions",
+      "description": "The canvas extent holds where it needs to and no longer risks the half-canvas confusion, but it is at the deep end of the range. Measured on this 880x1168 render the front panel runs from the shoulder at y=75 to the hem at y=1130, and the pad-stitched cream chest piece stops at y=460, i.e. 36% of the panel height. That satisfies the written criterion - clearly above the interior pocket (pocket top at y=750) and roughly level with where a breast-pocket welt sits - but a literal top quarter would be nearer 30%.",
+      "expected": "canvas lower edge about one quarter of the way down from the shoulder seam to the hem, clearly above the interior pocket",
+      "actual": "canvas lower edge at 36% of the panel height, clearly above the interior pocket",
+      "correction": "raise the canvas lower edge a further few percent of panel height if regenerated; do not lower it, and never let it reach the interior pocket"
+    },
+    {
+      "severity": "minor",
+      "category": "blueprint-match",
+      "description": "The pad-stitch rows read as neat machine-regular parallel dashes rather than the slightly irregular pitch of genuine hand pad-stitching. The drawing's hatch is reproduced faithfully in placement and density; only the hand-worked irregularity is missing.",
+      "expected": "hand pad-stitching with the slight irregularity of hand work",
+      "actual": "correct rows and density, but machine-regular in rhythm",
+      "correction": "vary the stitch pitch and row spacing very slightly so the pad stitching reads as hand-worked"
+    }
+  ],
+  "lockedFeatures": [
+    "interior construction view - the jacket front opened out flat to show the inside face, no model",
+    "cream haircloth chest piece covered in ordered rows of pad-stitching, confined to the top of the front panel with its lower edge clearly above the interior pocket - a QUARTER canvas, never a half canvas",
+    "below the canvas lower edge, plain light-fused cloth to the hem: no haircloth, no pad stitching, no second canvas layer",
+    "the beige twill facing panel occupying the left of the frame with its vertical seam and edge stitching",
+    "the dark navy outer shell cloth along the right edge with its shaped lapel/front edge",
+    "the scooped armhole curve at the top of the panel",
+    "the interior pocket flat and set in, a plain stitched rectangle flush with the panel",
+    "seamless neutral light-grey studio sweep, clean pressed flat presentation",
+    "no numerals, arrows, leader lines, callouts or labels anywhere; no red"
+  ],
+  "notes": "ATTEMPT 3 vs /images/blueprints/factory/83dbc62b46ef__00C3__Single_layer.jpg. Both outstanding findings are fixed. The hand pad-stitching that attempt 2 dropped is back and is now the most legible feature in the picture - ordered parallel rows of stitches covering the whole face of the cream haircloth piece, exactly matching the dashed-row hatch the drawing uses for that region - and the interior pocket is now a flat stitched rectangle flush with the panel instead of an applied patch. The canvas stops at 36% of panel height, well clear of the interior pocket, so the half-canvas substitution that failed attempt 1 is decisively gone and the three canvas siblings are now visually separable. Facing panel, facing seam, shell edge, lapel shape and armhole all match. Zero critical or major findings; retry budget spent.",
+  "verdict": null
+}

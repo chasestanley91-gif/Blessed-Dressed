@@ -1,0 +1,42 @@
+{
+  "scores": {
+    "shape": 98,
+    "geometry": 99,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 98,
+    "placement": 98,
+    "symmetry": 99,
+    "composition": 98,
+    "blueprint-match": 99
+  },
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "The arms, the trousers below the hem and a sliver of the model's neck are in frame; the FRAMING LOCK asked for all three to be cropped out.",
+      "expected": "no arms, no trousers below the hem, no chin, mouth, face or hair",
+      "actual": "white shirt sleeves flank the waistcoat, white trousers show below the hem, and a small patch of neck shows at the top centre; no chin, mouth or hair",
+      "correction": "Bring the left and right edges in to just outside the side seams, raise the bottom edge to just below the hem, and drop the top edge to the shoulder line."
+    },
+    {
+      "severity": "minor",
+      "category": "placement",
+      "description": "The lower welt pockets sit at almost the same height as the bottom button row rather than clearly between the middle and bottom rows as drawn.",
+      "expected": "welts between the middle and bottom button rows",
+      "actual": "welts level with the bottom button row, still below the middle row",
+      "correction": "Raise each welt so it sits midway between the middle and bottom button rows."
+    }
+  ],
+  "lockedFeatures": [
+    "exactly SIX buttons, TWO vertical columns of THREE, at three matched heights - all six complete and countable in frame",
+    "columns converge downward: the top row is set noticeably wider apart than the middle and bottom rows, exactly as drawn",
+    "DOUBLE-BREASTED front with the overlapping edge crossing the body diagonally from the neckline down to the inner button column, then running vertically to the hem",
+    "middle row carries the working buttonholes",
+    "two horizontal lower welt pockets, one per front, mirrored and level",
+    "exact left-right symmetry of the button grid",
+    "navy wool waistcoat over a plain white shirt, plain neutral grey background",
+    "zero red rings or marks, no leader lines, no numerals, no text anywhere in frame"
+  ],
+  "notes": "Drawing: waistcoat front with SIX red button rings in TWO columns of THREE at three heights, the top row set wider apart than the middle and bottom rows; a double-breasted edge crossing diagonally from the neck down to the inner column then dropping vertically; two lower welt pockets. Candidate: six buttons, two columns of three, counted individually - 2 at the upper row, 2 at the middle row, 2 at the lower row. Column convergence reproduces the drawing's wider top row. Clear diagonal DB wrap, not single-breasted, not four, not eight, not two columns of two. Both lower welts present and mirrored. All six buttons are complete and countable at a glance, which is the whole test for this option. No red rings, no annotation, no numerals, no text."
+}

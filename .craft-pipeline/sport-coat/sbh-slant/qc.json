@@ -1,0 +1,78 @@
+{
+  "addr": "sport-coat > sbh-slant",
+  "productId": "sport-coat",
+  "optionId": "sbh-slant",
+  "attempt": 3,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 98,
+    "geometry": 99,
+    "dimensions": 98,
+    "angles": 99,
+    "construction": 98,
+    "placement": 98,
+    "symmetry": 99,
+    "composition": 96,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "composition"
+  ],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "The horizontal crop-in asked for at attempt 3 did not happen - the frame is essentially unchanged from attempt 2. On this 880x1168 render the left ~20% is still empty grey sweep and the sleeve still runs off the right edge with roughly half the frame as featureless navy cloth, so the four buttonholes (x 255-380, y 280-830) occupy about 6% of the frame area against the 40-80% dominance target. The option is nonetheless identifiable in well under a second and nothing competes with it: no hand, no wrist, no opposite sleeve, no jacket body.",
+      "expected": "a thin grey margin at the vent edge and about two buttonhole-lengths of plain sleeve to the right, so the buttonhole column dominates by area",
+      "actual": "about 20% empty sweep on the left and about half the frame plain sleeve on the right; buttonhole run about 6% of frame area",
+      "correction": "crop in horizontally to roughly half the current frame width, keeping the vertical framing and all four buttonholes plus the turned-back vent corner complete"
+    },
+    {
+      "severity": "minor",
+      "category": "construction",
+      "description": "The worked buttonholes read slightly more as raised stitched bars than as the open worked slits of attempt 2 - the slit opening inside each buttonhole is less clearly dark and open at this render resolution.",
+      "expected": "four hand-worked buttonholes each with a clearly open slit inside the self-coloured stitching",
+      "actual": "correct hand-worked stitching, but the slit openings read slightly closed",
+      "correction": "open the slit inside each worked buttonhole so a dark opening is visible within the self-coloured stitching"
+    }
+  ],
+  "verdict": "PASS_WAIVED",
+  "waiver": {
+    "granted": true,
+    "reason": "minor-only at attempt 3 of 3: retry budget exhausted with zero critical/major findings and every category >= 95",
+    "waiverMin": 95,
+    "scoreMin": 98,
+    "belowScoreMin": [
+      {
+        "category": "composition",
+        "score": 96,
+        "shortfall": 2
+      }
+    ],
+    "minorErrors": [
+      {
+        "category": "composition",
+        "description": "The horizontal crop-in asked for at attempt 3 did not happen - the frame is essentially unchanged from attempt 2. On this 880x1168 render the left ~20% is still empty grey sweep and the sleeve still runs off the right edge with roughly half the frame as featureless navy cloth, so the four buttonholes (x 255-380, y 280-830) occupy about 6% of the frame area against the 40-80% dominance target. The option is nonetheless identifiable in well under a second and nothing competes with it: no hand, no wrist, no opposite sleeve, no jacket body.",
+        "expected": "a thin grey margin at the vent edge and about two buttonhole-lengths of plain sleeve to the right, so the buttonhole column dominates by area",
+        "actual": "about 20% empty sweep on the left and about half the frame plain sleeve on the right; buttonhole run about 6% of frame area"
+      },
+      {
+        "category": "construction",
+        "description": "The worked buttonholes read slightly more as raised stitched bars than as the open worked slits of attempt 2 - the slit opening inside each buttonhole is less clearly dark and open at this render resolution.",
+        "expected": "four hand-worked buttonholes each with a clearly open slit inside the self-coloured stitching",
+        "actual": "correct hand-worked stitching, but the slit openings read slightly closed"
+      }
+    ],
+    "attempt": 3,
+    "maxAttempts": 3,
+    "waiverAttemptFloor": 3,
+    "authority": "user decision 2026-07-30: QC gate stays >=98; a 3rd attempt is allowed; after 3 attempts an image with ZERO critical/major findings may ship at >=95 as a LOGGED WAIVER in qc.json",
+    "grantedAt": "2026-07-31T21:05:40.314Z"
+  },
+  "correction": null,
+  "notes": "ATTEMPT 3 vs /images/blueprints/factory/fdbc0cbb0bb5__AAAN__Normal_slanted.jpg. Geometry holds perfectly for the third time: exactly four buttonholes, no fifth, no buttons, single column on the vent edge, slant measured at about 52 degrees against about 51 degrees in the drawing, even spacing, and the turned-back triangular vent corner that the drawing shows at the base of the run. Both remaining findings are Minor and neither touches construction accuracy. The model would not tighten the horizontal crop despite an explicit, quantified instruction to do so - it is anchored to the illustration's own aspect and framing via the blueprint reference image, which is the same reason no other option in this batch moved its crop far either. Retry budget spent with zero critical/major findings.",
+  "checkedAt": "2026-07-31T21:05:40.316Z"
+}

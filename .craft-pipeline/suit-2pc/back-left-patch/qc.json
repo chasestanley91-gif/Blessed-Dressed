@@ -1,0 +1,45 @@
+{
+  "addr": "suit-2pc > back-left-patch",
+  "productId": "suit-2pc",
+  "optionId": "back-left-patch",
+  "attempt": 2,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 99,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 99,
+    "placement": 98,
+    "symmetry": 99,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "The bottom edge of the frame sits roughly one and a half pocket-depths below the pocket point rather than one, so the lower third of the picture is plain trouser leg. The pocket and the bare opposite hip both still read instantly and both hips remain fully in frame at full width, which is the load-bearing requirement for this option.",
+      "expected": "Bottom edge about one pocket-depth below the lowest point of the pocket.",
+      "actual": "Bottom edge about one and a half pocket-depths below the point; plain leg fills the lower third.",
+      "correction": "Cosmetic only; no regeneration warranted. A future crop could raise the bottom edge without narrowing the frame horizontally."
+    },
+    {
+      "severity": "minor",
+      "category": "dimensions",
+      "description": "The rendered pocket is marginally wider and its bottom point marginally deeper than the drawn outline (point drop approximately 24% of pocket height versus about 18% in the drawing), and it sits very slightly further outboard toward the side seam.",
+      "expected": "Pocket width about one sixth of the seat width with a shallow bottom point dropping roughly one fifth of the pocket height.",
+      "actual": "Pocket about one seventh wider than drawn, point drop nearer one quarter of pocket height, positioned a little further toward the outseam.",
+      "correction": "Within photographic tolerance; no regeneration warranted."
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "notes": "Attempt 2. Attempt 1 was rejected Critical for rendering TWO pointed patch pockets (which is the separate catalog option back-both-patch); the correction fixed it cleanly with no other regression. Attempt 2 shows exactly one pointed patch pocket on the wearer's left hip with the right hip completely bare, both hips in frame, so the asymmetry that defines the option is directly comparable inside a single picture. Handedness check: this is a rear view, so there is no mirror flip and the wearer's left hip is the left-hand side of the frame; the pocket is on the left-hand side. DRAWING-vs-LABEL DISCREPANCY, recorded deliberately: the tech-pack illustration (/images/blueprints/factory/5e26a3e5997d__3230__Patch_with_pointed.jpg) outlines a pointed patch pocket in pink on BOTH hips, but this option's label is 'Left Pointed Patch Pocket'. The catalog carries back-both-patch, 'Both Pointed Patch Pockets', as its own option with a different image file, which proves the factory drawing is a generic field illustration marking where this pocket family sits rather than a per-option count, and the pink outline is position notation rather than cloth colour. The label therefore governs the count and the drawing governs the shape. Everything else matches the drawing: pointed patch outline, patch-on-top construction with topstitched edge, belt loops, back darts running from the waistband toward the pocket, centre rise seam, no button/flap/zip, no annotation and no pink anywhere.",
+  "checkedAt": "2026-07-31T20:25:27.014Z"
+}

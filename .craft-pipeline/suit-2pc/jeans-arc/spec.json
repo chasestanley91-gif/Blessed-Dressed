@@ -1,0 +1,50 @@
+{
+  "schema": "garment-spec/v1",
+  "addr": "suit-2pc > Trousers-front-pockets > front-pocket-style > jeans-arc",
+  "productId": "suit-2pc",
+  "sectionId": "Trousers-front-pockets",
+  "fieldId": "front-pocket-style",
+  "optionId": "jeans-arc",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\suit-2pc.json",
+  "source": "json",
+  "label": "Arc Jeans Pocket",
+  "description": "The arc (curved) jeans pocket is the slash-style five-pocket opening, sweeping in a smooth curve from the waistband down to the side seam. The rounded mouth gives easier hand access than the squared version and softens the front line slightly while keeping the casual denim character. It is the most common front pocket on modern jeans and casual cotton trousers.",
+  "fieldLabel": "Front Pocket Style",
+  "sectionLabel": "Trousers — Front & Pockets",
+  "part": "trouser-detail",
+  "garment": {
+    "noun": "pair of bespoke wool tailored trousers",
+    "fabric": "fine wool trouser cloth with visible weave"
+  },
+  "view": {
+    "orientation": "three-quarter-front",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": false,
+  "measured": {
+    "dimensions": [],
+    "angles": [],
+    "counts": [],
+    "shapes": [
+      "on-seam (side-seam) pocket",
+      "arc buttonhole"
+    ],
+    "spread": [],
+    "flags": []
+  },
+  "illustration": {
+    "path": "/images/blueprints/remote/3c70f95c470f__3135.jpg",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\remote\\3c70f95c470f__3135.jpg",
+    "exists": true,
+    "remote": false
+  },
+  "forbidden": [
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-07-31T18:55:03.734Z"
+}

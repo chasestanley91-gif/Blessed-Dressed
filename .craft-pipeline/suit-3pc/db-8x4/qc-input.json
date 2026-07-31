@@ -1,0 +1,41 @@
+{
+  "scores": {
+    "shape": 99,
+    "geometry": 99,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 98,
+    "placement": 99,
+    "symmetry": 99,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "construction",
+      "description": "Secondary (non-showcased) feature style differs from the drawing: the two lower pockets are rendered as jetted pockets WITH flaps, whereas the tech pack draws them as plain besom/welt openings with no flap. The showcased feature (button stance) is unaffected.",
+      "expected": "Two plain besom/welt lower pockets, no flaps, as drawn.",
+      "actual": "Two lower pockets with flaps.",
+      "correction": "If regenerated, specify plain besom/welt lower pockets with no flap while preserving the exact 8-button, 4-row, 2-column double-breasted stance."
+    },
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "Styling additions not in the drawing: a knitted tie is worn, and both shirt sleeves and the model's hands (in the trouser pockets) occupy roughly a third of the frame. Neither obscures any button, and the full front is needed so all eight buttons can be counted.",
+      "expected": "Nothing competing with the button stance.",
+      "actual": "Tie at the top of the opening; white shirt sleeves and hands at the frame edges.",
+      "correction": "If regenerated, drop the tie and bring the left/right frame edges in to the waistcoat's side seams, without cropping either button column."
+    }
+  ],
+  "lockedFeatures": [
+    "double-breasted waistcoat front with EXACTLY eight buttons in two columns of four (4 rows x 2 columns)",
+    "even vertical spacing of the four rows; both columns fully in frame with clear margin",
+    "wearer's left front lapping over the wearer's right, front edge just outboard of the left button column",
+    "peak lapels, straight hem",
+    "solid navy worsted cloth, dark horn buttons, seamless light-grey studio background",
+    "front view, worn on a male model",
+    "no red, no annotation, no text anywhere in the frame"
+  ],
+  "notes": "Button count verified by direct count against the drawing's eight red position markers: the photograph shows four buttons in the wearer's-right column and four in the wearer's-left column, evenly spaced, all eight fully inside the frame — exactly 4 rows x 2 columns. Wrap direction, double-breasted overlap, peak lapel and straight hem all match the drawing. Red ring markers in the drawing correctly interpreted as button positions: buttons are dark horn, no red cloth or red buttons anywhere. Two minor deviations logged above (flapped rather than besom lower pockets; tie and sleeves in frame); neither touches the showcased button stance and neither is a wrong count, wrong side, wrong face or missing feature."
+}

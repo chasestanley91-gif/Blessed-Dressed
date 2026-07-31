@@ -1,0 +1,34 @@
+{
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 99,
+    "placement": 98,
+    "symmetry": 99,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "dimensions",
+      "description": "The flap hangs a little deeper relative to its width than the red position marker in the drawing implies (roughly 0.6 of its width against about 0.45 in the marker).",
+      "expected": "A deep rectangular ticket pocket, depth roughly 0.45 of its width.",
+      "actual": "Depth roughly 0.6 of its width once the besom welt strip above the flap is included.",
+      "correction": "None required - the extra depth comes from the besom welt strip sitting above the flap, which is exactly what this option adds, and it is what makes the option legibly different from the shallow plain-welt sibling."
+    }
+  ],
+  "lockedFeatures": [
+    "three-quarter angled front view of the waistcoat with the button placket at the right of frame and the front panel receding to the left",
+    "one single ticket pocket at mid-panel, no second pocket",
+    "besom / jetted welt strip clearly visible along the top of the pocket, with a separate flap hanging below it",
+    "flap with square top corners and rounded lower corners",
+    "pocket set roughly level with the third button of the row, well inboard of the side seam",
+    "plain navy fine wool suiting, no red or highlighter colour anywhere",
+    "seamless plain neutral light-grey studio background",
+    "no annotation, numbers, arrows or dimension lines"
+  ],
+  "notes": "Attempt 1 is accurate. The pocket reads unambiguously as a besom WITH a flap: the jetted welt strip is visible as a distinct piped edge above the flap, and the flap itself hangs deep below it with rounded lower corners. The red rectangle in the tech pack was correctly treated as a position marker - no red cloth appears. Orientation (three-quarter front), pocket side, height and inboard placement all match the drawing, and the pocket dominates the frame and is sharp and unobstructed."
+}

@@ -1,0 +1,51 @@
+{
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 97,
+    "angles": 98,
+    "construction": 97,
+    "placement": 98,
+    "symmetry": 99,
+    "composition": 89,
+    "blueprint-match": 96
+  },
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "The button count is legible but does not dominate the frame, and two distractions share the picture. On this 880x1168 render the five-button run occupies roughly 90x330 px, about 3% of the frame area, far under the 40-80% dominance target. The model's bare hand and wrist fill the bottom ~20% of the frame, and a second mass of jacket cloth (the body panel with a visible flap/welt pocket) fills the right ~28%. Both pull the eye off the cuff.",
+      "expected": "the run of five kissing cuff buttons dominating the frame, nothing else in shot but that one cuff and the grey sweep",
+      "actual": "the button run occupies about 3% of the frame; a bare hand and the jacket body with its own pocket share the picture",
+      "correction": "TIGHTEN ONTO THE CUFF BUTTON RUN. Bottom edge of the picture: the jacket cuff edge itself, including only the thin sliver of shirt cuff that shows below it - no hand, no fingers, no wrist skin. Top edge: about two button-diameters of plain sleeve above the topmost button. Left edge: just outside the sleeve's vent edge so a thin margin of grey background shows. Right edge: about three button-diameters of plain sleeve to the right of the button column - and NOTHING beyond it: the jacket body panel and its pocket must be entirely out of frame. Nothing in the picture but this one cuff and the plain grey sweep. All FIVE buttons complete and in frame."
+    },
+    {
+      "severity": "minor",
+      "category": "blueprint-match",
+      "description": "The drawing places the button column directly on a drawn vertical sleeve-vent line that runs the full height of the sleeve down to the cuff edge. The render shows a plain unbroken sleeve face with no visible vent seam beneath or beside the buttons.",
+      "expected": "the sleeve vent seam visible as a line running down through the button column to the cuff edge, as drawn",
+      "actual": "no vent seam anywhere; buttons sit on plain cloth",
+      "correction": "show the sleeve vent seam running vertically through the button column down to the cuff edge, exactly as the drawing's vertical line does"
+    },
+    {
+      "severity": "minor",
+      "category": "dimensions",
+      "description": "The gap between the lowest button and the cuff edge is slightly compressed relative to the drawing. In the drawing the column ends about 0.45 sleeve-widths above the cuff edge; in the render it is about 0.33 sleeve-widths.",
+      "expected": "lowest button set back from the cuff edge by roughly half the visible sleeve width, as drawn",
+      "actual": "lowest button sits about a third of a sleeve width above the cuff edge",
+      "correction": "raise the whole button column very slightly so the lowest button clears the cuff edge by about half the visible sleeve width"
+    }
+  ],
+  "lockedFeatures": [
+    "exactly FIVE buttons in a single column - do not add or remove one",
+    "buttons kissing/stacked so their edges just overlap, exactly as the drawing stacks them",
+    "buttons set on the sleeve vent edge, evenly spaced, column parallel to the vent",
+    "real four-hole horn buttons in the garment's own tone, self-coloured thread shanks",
+    "detail view of the jacket cuff, outer face, exactly as drawn",
+    "textured brown/taupe wool hopsack with visible weave, light blue shirt cuff showing below",
+    "seamless neutral light-grey studio sweep",
+    "zero numerals, arrows, leader lines, callouts, coloured guide marks or labels; no red anywhere"
+  ],
+  "notes": "ATTEMPT 1 vs /images/blueprints/supplier/91d5e77db9c2__0627__5_flat.jpg. Button COUNT is exactly right first time: five buttons, no sixth partially cropped, none hidden - confirmed against the blueprint's red marker column which encodes five. Stacking (kissing), column placement on the vent edge, spacing and the deliberate absence of any other cuff feature are all correct, and no red leaked from the drawing into the cloth. All three findings are Minor and none touches construction: the frame is loose and shares the picture with a hand and a second garment mass, and the drawn vent seam is missing.",
+  "verdict": null
+}

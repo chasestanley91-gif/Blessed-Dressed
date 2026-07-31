@@ -1,0 +1,37 @@
+{
+  "addr": "suit-3pc > vest-lower-patch",
+  "productId": "suit-3pc",
+  "optionId": "vest-lower-patch",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 99,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 99,
+    "placement": 99,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "angles",
+      "description": "The top mouth edges of both patch pockets sit a degree or two off horizontal where the drawing shows them dead level.",
+      "expected": "Pocket mouth edges drawn perfectly horizontal on the flat technical drawing.",
+      "actual": "Each pocket mouth tips very slightly, the frame-left one dipping toward the centre front, consistent with cloth draping over a worn body rather than a construction difference.",
+      "correction": "None required - this is worn-garment drape, not a geometry deviation; the applied patch construction, rounded lower corners and waist placement all read correctly."
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "notes": "Attempt 1 is accurate. Both lower patch pockets are present as a matched pair, applied on the outside of the garment with visible edge stitching and rounded bottom corners, exactly as outlined in red on the tech pack - and no red cloth leaked into the render. Front orientation, V-neck, five-position button row and double-pointed hem all match. The pair reads unambiguously within a second and neither pocket is cropped or obstructed; the necktie sits well clear of the subject.",
+  "checkedAt": "2026-07-31T20:33:41.657Z"
+}

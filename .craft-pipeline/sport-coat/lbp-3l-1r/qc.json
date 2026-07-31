@@ -2,98 +2,36 @@
   "addr": "sport-coat > lbp-3l-1r",
   "productId": "sport-coat",
   "optionId": "lbp-3l-1r",
-  "attempt": 2,
+  "attempt": 3,
   "maxAttempts": 3,
   "scores": {
-    "shape": 96,
-    "geometry": 62,
-    "dimensions": 90,
-    "angles": 94,
-    "construction": 97,
-    "placement": 70,
-    "symmetry": 72,
-    "composition": 55,
-    "blueprint-match": 60
+    "shape": 98,
+    "geometry": 99,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 99,
+    "placement": 99,
+    "symmetry": 99,
+    "composition": 98,
+    "blueprint-match": 99
   },
   "scoreMin": 98,
   "waiverMin": 95,
-  "belowMinCategories": [
-    "shape",
-    "geometry",
-    "dimensions",
-    "angles",
-    "construction",
-    "placement",
-    "symmetry",
-    "composition",
-    "blueprint-match"
-  ],
-  "belowWaiverMinCategories": [
-    "geometry",
-    "dimensions",
-    "angles",
-    "placement",
-    "symmetry",
-    "composition",
-    "blueprint-match"
-  ],
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
   "errors": [
     {
-      "severity": "critical",
-      "category": "geometry",
-      "description": "BUTTONHOLE COUNT WRONG. The blueprint places THREE red position marks on the frame-right lapel. The render produces only TWO buttonholes on that lapel. Verified at 4x magnification across the entire lapel from gorge to lapel belly - there is no third buttonhole above or below the visible pair.",
-      "expected": "exactly THREE buttonholes stacked vertically on the frame-right lapel, and exactly ONE on the frame-left lapel; FOUR in total",
-      "actual": "TWO buttonholes on the frame-right lapel and ONE on the frame-left lapel; THREE in total",
-      "correction": "Render exactly THREE evenly spaced buttonholes on the frame-right lapel. Count them explicitly: one, two, three. The frame-left lapel keeps exactly one."
-    },
-    {
-      "severity": "major",
+      "severity": "minor",
       "category": "composition",
-      "description": "Framing regressed to a head-and-shoulders portrait. The model face and hair occupy roughly the upper half of the frame and a necktie was introduced across the jacket opening; the buttonholes together occupy well under 2% of the image and cannot be counted at a glance.",
-      "expected": "the lapels and their buttonholes dominate 40-80% of the frame, countable within one second",
-      "actual": "full-face portrait; lapels confined to the lower third; buttonholes tiny and low-contrast",
-      "correction": "Crop to the lapels only: top of frame at the collar/gorge, bottom below the lapel belly. EXCLUDE the face and hair entirely - show at most the base of the neck. Keep BOTH lapels in frame side by side. Remove the necktie so nothing crosses the jacket opening."
+      "description": "A little of the model's jaw and neck sits at the very top of the frame; the brief asked for a crop below the chin. It does not overlap or compete with either lapel and both buttonhole groups remain fully readable.",
+      "expected": "crop starting at the collar band, head excluded",
+      "actual": "chin and neck just visible at the top edge",
+      "correction": "acceptable; no action required"
     }
   ],
-  "verdict": "FAIL",
+  "verdict": "PASS",
   "waiver": null,
-  "correction": {
-    "errors": [
-      {
-        "severity": "critical",
-        "category": "geometry",
-        "error": "BUTTONHOLE COUNT WRONG. The blueprint places THREE red position marks on the frame-right lapel. The render produces only TWO buttonholes on that lapel. Verified at 4x magnification across the entire lapel from gorge to lapel belly - there is no third buttonhole above or below the visible pair.",
-        "expected": "exactly THREE buttonholes stacked vertically on the frame-right lapel, and exactly ONE on the frame-left lapel; FOUR in total",
-        "actual": "TWO buttonholes on the frame-right lapel and ONE on the frame-left lapel; THREE in total",
-        "correction": "Render exactly THREE evenly spaced buttonholes on the frame-right lapel. Count them explicitly: one, two, three. The frame-left lapel keeps exactly one."
-      },
-      {
-        "severity": "major",
-        "category": "composition",
-        "error": "Framing regressed to a head-and-shoulders portrait. The model face and hair occupy roughly the upper half of the frame and a necktie was introduced across the jacket opening; the buttonholes together occupy well under 2% of the image and cannot be counted at a glance.",
-        "expected": "the lapels and their buttonholes dominate 40-80% of the frame, countable within one second",
-        "actual": "full-face portrait; lapels confined to the lower third; buttonholes tiny and low-contrast",
-        "correction": "Crop to the lapels only: top of frame at the collar/gorge, bottom below the lapel belly. EXCLUDE the face and hair entirely - show at most the base of the neck. Keep BOTH lapels in frame side by side. Remove the necktie so nothing crosses the jacket opening."
-      }
-    ],
-    "lockedFeatures": [
-      "buttonholes worked in TONAL NAVY silk gimp matching the cloth - NO red, no coloured thread, no coloured tabs anywhere (fixed in attempt 2, must be preserved)",
-      "true hand-worked buttonholes: cut slit with open aperture, oversewn fine dense stitching, bar-tacked ends, flush in the lapel (fixed in attempt 2, preserve)",
-      "exactly THREE buttonholes on the frame-right lapel",
-      "exactly ONE buttonhole on the frame-left lapel",
-      "FOUR buttonholes in total across the garment",
-      "BOTH lapels in frame simultaneously so the three-versus-one asymmetry is verifiable",
-      "notch lapel with the drawn gorge and notch geometry - not peak, not shawl",
-      "front face of the garment, straight-on",
-      "textured navy wool/hopsack with visible weave",
-      "zero text, numerals, dimension or leader lines, arrows, callouts, coloured guide marks or labels anywhere in frame"
-    ],
-    "forbiddenChanges": [
-      "do not alter any checklist item this attempt already passed",
-      "do not change the camera crop, composition, or accessories unless the error is itself a composition error",
-      "do not change the garment part, orientation, or any other option's geometry"
-    ]
-  },
-  "notes": "Attempt 2, candidate-2.png, vs /images/blueprints/supplier/9ccd5722c833__054Y__3_left_bttn_hole_1_right_bttn_hole.jpg. FIXED FROM ATTEMPT 1: the critical red annotation bleed is completely gone - buttonholes are now tonal navy, correctly worked as flush cut-and-oversewn slits with visible bar tacks and open apertures. Construction and shape are now strong. NEW FAILURES: (1) count regressed - the frame-right lapel shows only TWO buttonholes where the drawing demands THREE, confirmed by 4x magnification of the full lapel; the 3-vs-1 signature of this option is therefore not reproduced. (2) Composition regressed - removing the close-crop clause in the retry let framing open into a face-forward portrait with a necktie, shrinking the buttonholes to under 2% of frame. Attempt 3 must combine the attempt-2 tonal/worked construction with the attempt-1 tight both-lapels crop, and must land three buttonholes on the right lapel.",
-  "checkedAt": "2026-07-31T05:39:12.295Z"
+  "correction": null,
+  "notes": "ADVERSARIAL READ vs /images/blueprints/supplier/9ccd5722c833__054Y__3_left_bttn_hole_1_right_bttn_hole.jpg. This is attempt 3; attempt 2 was logged FAIL.\n\nSIDE CONVENTION ESTABLISHED PROGRAMMATICALLY, not guessed. I measured the red-mark centroid in this drawing and in its sibling 0541 ('Left Bttn Hole'). In 0541 the single red mark sits at x=0.689 of image width — the VIEWER'S RIGHT. Since that option is named 'Left', viewer-right = wearer's LEFT in this supplier's lapel drawings. In 054Y the red spans x=0.313 to x=0.712 with three marks clustered at viewer-right and one at viewer-left, which under that convention is three on the wearer's left and one on the wearer's right — exactly what the label says.\n\nCOUNTED AT 5x ZOOM on the candidate, both lapels cropped and enlarged side by side: viewer-LEFT lapel carries EXACTLY ONE worked buttonhole; viewer-RIGHT lapel carries EXACTLY THREE, evenly spaced in a vertical column. Under the convention established above that is three on the wearer's left and one on the wearer's right. Correct on both count and side.\n\nATTEMPTED REJECTIONS THAT FAILED:\n(1) Is the viewer-right column actually four buttonholes? At full resolution it is three; what looked like a possible fourth at low magnification is the lapel's own edge stitching.\n(2) Mirrored — three on the wrong lapel? No; verified against the measured drawing convention above.\n(3) Symmetric pair (the lazy default of putting the same count on both sides)? No — one side has one, the other three.\n(4) Annotation colour traced? No. All four buttonholes are tonal navy; there is no red anywhere in frame.\n(5) A lapel flower, pin or chain filling a buttonhole and hiding the count? None present.\n(6) Wrong lapel style substituted? Notch lapels, matching the drawing.\n(7) Any number, arrow or leader line? None.\n\nNo critical or major findings.",
+  "checkedAt": "2026-07-31T21:05:48.782Z"
 }

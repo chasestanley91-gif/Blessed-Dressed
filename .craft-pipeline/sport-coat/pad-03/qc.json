@@ -1,0 +1,120 @@
+{
+  "addr": "sport-coat > pad-03",
+  "productId": "sport-coat",
+  "optionId": "pad-03",
+  "attempt": 3,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 97,
+    "geometry": 96,
+    "dimensions": 96,
+    "angles": 97,
+    "construction": 96,
+    "placement": 97,
+    "symmetry": 98,
+    "composition": 95,
+    "blueprint-match": 96
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "The blocking failure of attempts 1 and 2 is FIXED: measured on this 880x1168 render, the wearer's right shoulder end point sits at x=55 (6% of frame width) and the left shoulder end point at x=832 (95%), both with plain grey background outside them, and both sleeve heads are fully inside the frame. The camera did move back. Residual looseness only: the model's whole head occupies the top ~40% of the frame so the collar sits at ~45% height rather than in the upper third, and the bottom edge runs well below the chest welt pocket instead of level with it. Neither hides the shoulder line, but the frame is looser than the boundaries stated in the attempt-3 correction.",
+      "expected": "collar in the upper third with a hand's width of grey above it; bottom edge level with the chest welt pocket; shoulder ends at ~12% and ~88% of frame width",
+      "actual": "collar at ~45% height with the full head above it; bottom edge at mid-torso, ~35% of the frame below the welt pocket; shoulder ends at 6% and 95%",
+      "correction": "if regenerated, raise the bottom edge to the chest welt pocket and crop the head at the chin so the shoulder band occupies more of the frame; widen the side margins so each shoulder end sits about 12% in from its edge"
+    },
+    {
+      "severity": "minor",
+      "category": "blueprint-match",
+      "description": "The shoulder now reads as lightly but genuinely structured - a clean gentle horizontal projection from neck point to shoulder end with a soft transition into the sleeve and no hard ridge, which is the correct expression of a 3 mm pad. At 1k low-quality resolution the difference from a fully unpadded shoulder is legible but subtle; a higher-resolution render would separate the two siblings more decisively.",
+      "expected": "a shoulder line unmistakably firmer and flatter than the unpadded sibling option",
+      "actual": "correctly firmer and flatter, but the margin is subtle at this render resolution",
+      "correction": "render at higher resolution so the pad's lift at the shoulder end is unambiguous"
+    }
+  ],
+  "verdict": "PASS_WAIVED",
+  "waiver": {
+    "granted": true,
+    "reason": "minor-only at attempt 3 of 3: retry budget exhausted with zero critical/major findings and every category >= 95",
+    "waiverMin": 95,
+    "scoreMin": 98,
+    "belowScoreMin": [
+      {
+        "category": "shape",
+        "score": 97,
+        "shortfall": 1
+      },
+      {
+        "category": "geometry",
+        "score": 96,
+        "shortfall": 2
+      },
+      {
+        "category": "dimensions",
+        "score": 96,
+        "shortfall": 2
+      },
+      {
+        "category": "angles",
+        "score": 97,
+        "shortfall": 1
+      },
+      {
+        "category": "construction",
+        "score": 96,
+        "shortfall": 2
+      },
+      {
+        "category": "placement",
+        "score": 97,
+        "shortfall": 1
+      },
+      {
+        "category": "composition",
+        "score": 95,
+        "shortfall": 3
+      },
+      {
+        "category": "blueprint-match",
+        "score": 96,
+        "shortfall": 2
+      }
+    ],
+    "minorErrors": [
+      {
+        "category": "composition",
+        "description": "The blocking failure of attempts 1 and 2 is FIXED: measured on this 880x1168 render, the wearer's right shoulder end point sits at x=55 (6% of frame width) and the left shoulder end point at x=832 (95%), both with plain grey background outside them, and both sleeve heads are fully inside the frame. The camera did move back. Residual looseness only: the model's whole head occupies the top ~40% of the frame so the collar sits at ~45% height rather than in the upper third, and the bottom edge runs well below the chest welt pocket instead of level with it. Neither hides the shoulder line, but the frame is looser than the boundaries stated in the attempt-3 correction.",
+        "expected": "collar in the upper third with a hand's width of grey above it; bottom edge level with the chest welt pocket; shoulder ends at ~12% and ~88% of frame width",
+        "actual": "collar at ~45% height with the full head above it; bottom edge at mid-torso, ~35% of the frame below the welt pocket; shoulder ends at 6% and 95%"
+      },
+      {
+        "category": "blueprint-match",
+        "description": "The shoulder now reads as lightly but genuinely structured - a clean gentle horizontal projection from neck point to shoulder end with a soft transition into the sleeve and no hard ridge, which is the correct expression of a 3 mm pad. At 1k low-quality resolution the difference from a fully unpadded shoulder is legible but subtle; a higher-resolution render would separate the two siblings more decisively.",
+        "expected": "a shoulder line unmistakably firmer and flatter than the unpadded sibling option",
+        "actual": "correctly firmer and flatter, but the margin is subtle at this render resolution"
+      }
+    ],
+    "attempt": 3,
+    "maxAttempts": 3,
+    "waiverAttemptFloor": 3,
+    "authority": "user decision 2026-07-30: QC gate stays >=98; a 3rd attempt is allowed; after 3 attempts an image with ZERO critical/major findings may ship at >=95 as a LOGGED WAIVER in qc.json",
+    "grantedAt": "2026-07-31T20:05:38.731Z"
+  },
+  "correction": null,
+  "notes": "ATTEMPT 3 vs /images/blueprints/factory/9fd6de75414f__060K__Regular.jpg. The Major framing error that killed attempts 1 and 2 is resolved and verified by pixel measurement of the garment silhouette, not by eye: the jacket boundary turns from the steep shoulder diagonal to the near-vertical armhole at x~55/y~665 on the left and x~832/y~670 on the right, so both shoulder ends are genuinely inside the picture with clear sweep outside. Everything the drawing marks is reproduced - notch lapel and gorge, collar, lapel buttonhole, frame-right chest welt pocket, front face, both sides padded - and no red or annotation leaked from the drawing. Only two Minor findings remain, both about polish rather than construction. The systemic cause is confirmed: build_prompt's blanket 40-80% dominance / crop-away-surrounding-garment mandate is wrong for any option whose subject is a full-width line across the garment, and it only stopped fighting the option once the correction explicitly overrode it.",
+  "checkedAt": "2026-07-31T20:05:38.734Z"
+}

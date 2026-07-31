@@ -1,0 +1,42 @@
+{
+  "scores": {
+    "shape": 99,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 99,
+    "construction": 99,
+    "placement": 99,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 99
+  },
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "dimensions",
+      "description": "In the drawing the red bar is drawn very thin — roughly one eighth of its own length. In the render the stitched bar is proportionally taller, roughly one fifth of its length. The bar still reads unambiguously as a bar tack and the ratio is within what a real machine bar tack produces, but it is slightly heavier than drawn.",
+      "expected": "bar height about one eighth of its length",
+      "actual": "bar height about one fifth of its length",
+      "correction": "acceptable; no action required"
+    },
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "The bar tack itself occupies a small share of the frame (roughly 1% of image area, about 10% of image width). It is centred and is the only stitch feature present, so it reads within a second, but a tighter crop on the pocket-mouth end would present it more directly.",
+      "expected": "the bar tack region dominating the frame",
+      "actual": "macro of the pocket opening with the bar tack small but centred and unmistakable",
+      "correction": "acceptable; if re-shot, crop to the lower third of the pocket opening only"
+    }
+  ],
+  "lockedFeatures": [
+    "orientation: detail (trouser front pocket opening, macro)",
+    "the bar tack rendered as a single dense satin-stitch bar spanning the full width of the pocket-mouth end — the 'I' shape of the drawing",
+    "EXACTLY ONE bar tack in frame, at the closed lower end of the opening",
+    "the two vertical welt edges rising from each end of the bar, completing the capital-I geometry",
+    "tonal navy thread — the drawing's red is notation and was correctly NOT traced",
+    "long narrow vertical pocket opening as drawn, not a slanted or curved one",
+    "zero annotation: no numbers, arrows, leader lines, magnifier circles or text",
+    "navy twill trouser cloth with visible weave, seamless neutral grey studio background"
+  ],
+  "notes": "ADVERSARIAL READ vs /images/blueprints/factory/4d29fb809a0e__3191__Front_pocket_I_shape_bartack.png.\n\nWHAT THE DRAWING SPECIFIES: a long narrow VERTICAL pocket opening drawn as a slim rectangle, with a magnifier circle at its lower end and an enlarged detail circle beside it. The enlarged detail shows the two vertical edge lines of the opening descending and being joined at the bottom by a dense horizontal RED bar spanning the full width between them — the 'I shape bartack' the filename names. One bar tack, at the closed lower end.\n\nVERIFIED AT 4x ZOOM on the candidate: the bar is a genuine dense satin-stitch bar tack — individual tightly packed stitches with a clean rectangular outline — spanning the full width of the pocket mouth, with the two vertical welt edges rising from each end. The capital-I geometry of the drawing is reproduced exactly. Thread is tonal navy.\n\nATTEMPTED REJECTIONS THAT FAILED:\n(1) Is it a metal rivet or hardware rather than stitching? No — at zoom the individual stitch loops are resolvable; it is thread.\n(2) Did it trace the drawing's red? No — the bar is navy, the same colour family as the cloth. No red anywhere in the frame.\n(3) Is it a loose zigzag scatter rather than a solid bar? No — the stitches are packed edge to edge into one solid bar with square ends.\n(4) Wrong count — a second bar tack at the top end creating a different option? No. The opening's upper end runs into the waistband seam, exactly as the drawing shows it, and carries no second tack.\n(5) Wrong pocket geometry borrowed from a sibling option (slant, jeans, curved)? No — the opening is long, narrow and vertical, matching the drawn rectangle.\n(6) Wrong garment face? No — trouser front below the waistband, one belt loop visible, correct.\n(7) Any annotation traced — magnifier circles, numbers, arrows, callouts? None; the frame is clean cloth only.\n\nNo critical or major findings."
+}

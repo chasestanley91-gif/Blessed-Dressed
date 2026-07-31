@@ -1,0 +1,53 @@
+{
+  "addr": "suit-3pc > vest-chest-both-welt",
+  "productId": "suit-3pc",
+  "optionId": "vest-chest-both-welt",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 99,
+    "construction": 98,
+    "placement": 99,
+    "symmetry": 99,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "dimensions",
+      "description": "Each welt is somewhat longer relative to its front panel than in the drawing.",
+      "expected": "welt about a third to two fifths of the front panel width at that height",
+      "actual": "welt spans a little over half the front panel width at that height",
+      "correction": "Shorten each welt so it spans about two fifths of the distance from the armhole edge to the centre front."
+    },
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "The shirt sleeves and a sliver of the model's neck are in frame; the FRAMING LOCK asked for the arms and the face area to be cropped out.",
+      "expected": "no arms, no chin, mouth, face or hair",
+      "actual": "both shirt sleeves flank the waistcoat and a small patch of the underside of the neck shows at the top centre; no chin, mouth or hair",
+      "correction": "Tighten the left and right edges to just outside the armhole seams and drop the top edge to the shoulder seams."
+    },
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "Bottom edge runs far lower than the four-welt-heights the FRAMING LOCK named, though this follows from the same paragraph's wide-shot requirement.",
+      "expected": "bottom edge about four welt-heights below the welts",
+      "actual": "bottom edge at the fourth button, well below the welts; the extra cloth is plain and shows no lower pockets, consistent with the drawing",
+      "correction": "Optional: raise the bottom edge so the welts sit nearer the vertical centre of the frame."
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "notes": "Drawing: waistcoat front, deep V-neck, TWO red welt outlines at chest level - one per side, at identical height, mirrored, each tilted slightly up toward the armhole, sitting just below the V point and level with the top button; three buttons down the centre front; no lower pockets drawn. Candidate: exactly two welt breast pockets, one per chest, level with each other, mirrored, each a narrow closed self-cloth strip tilted up toward its armhole, set just below the V point and well above the waist, with the buttoned centre front running between them. Both welts fully in frame together, which is the whole point of this option. No flaps, no patch pockets, no lower pockets, none staggered, and no red or annotation of any kind. Distinguishable at a glance from a single-welt or no-breast-pocket sibling.",
+  "checkedAt": "2026-07-31T19:46:42.712Z"
+}

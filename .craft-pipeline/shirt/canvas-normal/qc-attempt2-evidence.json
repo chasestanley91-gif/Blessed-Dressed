@@ -1,0 +1,63 @@
+{
+  "addr": "shirt > canvas-normal",
+  "productId": "shirt",
+  "optionId": "canvas-normal",
+  "attempt": 2,
+  "scores": {
+    "shape": 96,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 96,
+    "construction": 90,
+    "placement": 98,
+    "symmetry": 97,
+    "composition": 98,
+    "blueprint-match": 94
+  },
+  "scoreMin": 98,
+  "belowMinCategories": [
+    "shape",
+    "angles",
+    "construction",
+    "symmetry",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "major",
+      "category": "construction",
+      "description": "At extreme magnification the two elements at the exact focal point of the frame are badly finished. (1) The neck button renders as a dished metallic chrome button with four bare holes and NO sewing thread at all, whereas the drawing clearly shows a pale nacreous mother-of-pearl button with dark thread crossing the holes. (2) The buttonhole immediately right of it is not a buttonhole: it is a smeared, whiskered, incoherent artifact with random dark blobs and no whipped edge stitching, no bar tacks and no clean cut line. This option's entire distinguishing detail is 'Standard precision construction throughout', so a frayed-looking buttonhole and a thread-less button at the focal point actively communicate the opposite of the craft tier being sold. Attempt 1 rendered both correctly (pale mother-of-pearl 4-hole button with dark navy thread, clean slit), so this is a regression, not a model limitation.",
+      "expected": "A pale mother-of-pearl 4-hole neck button sewn with visible dark thread, and a cleanly whipped buttonhole with tight satin-stitched edges and bar tacks, as drawn.",
+      "actual": "Metallic chrome dished button with bare thread-less holes; buttonhole rendered as a smeared frayed smudge with no stitch structure.",
+      "correction": "Render the neck button as pale nacreous mother-of-pearl sewn with visible dark thread through all four holes, and render the buttonhole as a crisp, tightly whipped satin-stitched slit with bar tacks at both ends - no fraying, no smearing, no metallic hardware."
+    },
+    {
+      "severity": "minor",
+      "category": "angles",
+      "description": "Measured stripe orientation (structure-tensor) now matches the drawing exactly on the bias-cut collar band (-26.4 deg vs -26.4 deg drawn) but drifts on the other two zones: shirt body -76.4 deg vs -83.3 deg drawn, and the opposing upper-left collar leaf +63.3 deg vs +54.6 deg drawn. Zone structure and senses are correct, no mirroring.",
+      "expected": "Band -26 deg, body near-vertical -83 deg, opposing collar leaf +55 deg from horizontal.",
+      "actual": "Band -26.4 deg (exact), body -76.4 deg (6.9 deg off), opposing leaf +63.3 deg (8.7 deg off).",
+      "correction": "Keep the band bias exactly as achieved; bring the body stripes closer to vertical (about -83 deg) and lay the opposing collar leaf's stripes shallower, near +55 deg."
+    },
+    {
+      "severity": "minor",
+      "category": "shape",
+      "description": "The buttonhole is not a coherent narrow slit shape; its outline dissolves into an irregular smudge, so its drawn shape and length cannot be read.",
+      "expected": "A clean narrow horizontal buttonhole slit of readable length immediately to the right of the neck button, as drawn.",
+      "actual": "Irregular smeared blob with no readable slit outline.",
+      "correction": "Render a crisp, readable horizontal buttonhole slit with defined ends."
+    },
+    {
+      "severity": "minor",
+      "category": "symmetry",
+      "description": "Faint crease and rumple streaks run across the collar band around the buttonhole, where the drawing shows a smooth, crisply pressed band.",
+      "expected": "Smooth, crisply pressed collar band with no crease streaks.",
+      "actual": "Faint whitish crease/rumple streaks across the band beside the buttonhole.",
+      "correction": "Press the collar band smooth; remove crease streaks beside the buttonhole."
+    }
+  ],
+  "verdict": "UNMET",
+  "correction": null,
+  "notes": "Attempt 2, gpt_image_2, blueprint media c1766829-e04d-4b82-8c8e-caf8b2f39cd2 confirmed attached in the submitted job params (reference_images populated). The attempt-1 blocking defect is fully fixed and objectively verified: skin coverage fell from 21.6% to 0.00%, and the crop now matches the drawing's magnification (dominant stripe period gives 20.5 stripes across the frame width vs 22.4 in the drawing, an 8% match, against 44.0 for the too-wide attempt 1). The bias-cut collar band's stripe angle now matches the drawing exactly at -26.4 deg, the crossed-collar-leaves-over-band arrangement matches the drawing, the band-to-body seam is cleanly edge-stitched with striping matched across it, orientation is the correct front-face detail, there is no generic-category or sibling-tier substitution, the background is a seamless neutral light-grey sliver with no location/architecture/furniture/props, and there is absolutely no text, number, unit, arrow, leader line, callout, ruler tick, label or watermark anywhere in frame. What blocks approval is a regression at the focal point: the neck button became metallic chrome with bare thread-less holes and the buttonhole degenerated into a smeared frayed artifact with no stitch structure - the opposite of the 'Standard precision construction throughout' this option exists to demonstrate. Attempt 1 got the button and buttonhole right but the framing wrong; attempt 2 got the framing right but the button and buttonhole wrong. Neither candidate is shippable as-is. The hard cap of 2 credit-spending generations is now reached, so no further generation was attempted. A future run should reuse attempt 2's macro framing and band-bias wording verbatim while adding attempt 1's explicit mother-of-pearl-button-with-dark-thread and whipped-buttonhole wording. Blueprint/text consistency gate was cleared before any spend: label 'Normal Craftsmanship' and description 'Standard precision construction throughout' name a quality tier with no geometric defining feature, the drawing shows clean precise standard shirt construction, and sibling files senior-craftsmanship.jpg and top-craftsmanship.jpg are distinct assets.",
+  "checkedAt": "2026-07-30T06:00:16.608Z"
+}

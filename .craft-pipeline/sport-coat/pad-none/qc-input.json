@@ -1,0 +1,60 @@
+{
+  "scores": {
+    "shape": 97,
+    "geometry": 97,
+    "dimensions": 96,
+    "angles": 98,
+    "construction": 93,
+    "placement": 97,
+    "symmetry": 95,
+    "composition": 92,
+    "blueprint-match": 96
+  },
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "The bottom edge of the picture sits far below where the framing lock put it. The chest welt pocket ends at roughly 58% of the image height and the frame continues for another 42%, showing the lapel V converging and the button area. That lower 40% of the picture carries no information about shoulder padding and dilutes the subject: the shoulder line and both sleeve heads occupy only about the upper third.",
+      "expected": "bottom edge of the picture level with the chest welt pocket, nothing below it, so the shoulder line and sleeve heads dominate the frame",
+      "actual": "frame runs on well past the welt pocket down to the button point; the shoulder line occupies only the upper third",
+      "correction": "bring the bottom edge of the picture up so it lands level with the lower edge of the chest welt pocket, with nothing of the jacket below that line"
+    },
+    {
+      "severity": "minor",
+      "category": "symmetry",
+      "description": "The two shoulder end points are not placed symmetrically and the frame-left one is almost clipped: the outer edge of the frame-left sleeve sits about 2% in from the left picture edge while the frame-right sleeve edge sits about 6% in from the right edge. The framing lock asked for 12% and 88%.",
+      "expected": "shoulder end points at about 12% and 88% of image width, with an equal clear margin of grey background outside each sleeve head",
+      "actual": "left sleeve edge roughly 2% from the frame edge, right sleeve edge roughly 6% - unequal, and the left margin is barely there",
+      "correction": "pull the camera back a little further so both sleeve heads sit well inside the picture with an equal grey margin outside each"
+    },
+    {
+      "severity": "minor",
+      "category": "construction",
+      "description": "Three lapel buttonhole slits were rendered where the drawing carries one. The frame-right lapel has TWO parallel keyhole slits stacked on it (one just under the notch, one lower on the lapel body), and the frame-left lapel carries a third.",
+      "expected": "a single lapel buttonhole on the frame-right lapel, as drawn, and none on the frame-left lapel",
+      "actual": "two stacked buttonhole slits on the frame-right lapel plus one on the frame-left lapel",
+      "correction": "exactly one lapel buttonhole, on the frame-right lapel only; the frame-left lapel is plain"
+    },
+    {
+      "severity": "minor",
+      "category": "dimensions",
+      "description": "The model's chin and the shadow under the lower lip are inside the frame; the lock asked for a crop at the jaw with no mouth.",
+      "expected": "top edge just above the collar, model cropped at the jaw - no mouth, no face, no hair",
+      "actual": "chin and the underside of the mouth are visible above the collar",
+      "correction": "drop the top edge slightly so it clears the collar but cuts the model at the jawline"
+    }
+  ],
+  "lockedFeatures": [
+    "BOTH shoulder end points, BOTH armhole seams and BOTH sleeve heads complete and inside the frame with grey background outside each - this is the fix that attempt 1 lacked and it must not regress",
+    "WIDE shot, camera back, not a close crop on the chest",
+    "the shoulder is unmistakably unpadded: one soft continuous slope from the neck point, collapsing into the sleeve head with no squaring, no built-up corner, no roped or raised sleeve head, no ridge at the sleeve join",
+    "shoulder seams running across the upper part of the frame",
+    "collar and both notch lapels with the drawn gorge and notch geometry",
+    "chest welt pocket on the frame-right side, as drawn",
+    "textured navy wool hopsack with visible basketweave",
+    "crisp white shirt, collar open, no necktie",
+    "seamless neutral light-grey studio sweep",
+    "zero numerals, arrows, leader lines, callouts, coloured guide marks or text anywhere in frame"
+  ],
+  "notes": "ATTEMPT 2 vs /images/blueprints/factory/d45437530f73__060J__No_pad.jpg.\n\nWHAT THE DRAWING SHOWS: jacket front upper body - collar, both notch lapels, BOTH complete shoulders running out to the shoulder points where the sleeves begin, both sleeves, chest welt pocket on the frame-right, cropped at about the first button, with NO red pad wedge on either shoulder.\n\nWHAT ATTEMPT 2 FIXED: all three Major errors from attempt 1 are gone. The camera moved back; both shoulder end points, both armhole seams and both sleeve heads are now inside the picture with grey background beyond each, verified by zooming both top corners. The shoulder itself now reads correctly unpadded - a soft continuous fall from the neck point, no squaring at the shoulder end, no rope and no ridge at the sleeve join - so it is now distinguishable from the padded sibling.\n\nWHAT IS STILL WRONG: only framing trim and one construction detail. The bottom edge overshoots the welt pocket by about 40% of the picture height, which pushes the subject up into the top third; the left sleeve edge is nearly clipped and the two margins are unequal; three lapel buttonholes were rendered where the drawing has one; the chin is in frame.\n\nROOT CAUSE: the 'MOVE THE CAMERA BACK' correction was obeyed for width but the bottom-edge and 12%/88% clauses of the same paragraph were not, so the model widened the shot by keeping more chest rather than by pulling back evenly. Attempt 3 should restate the bottom edge as a garment landmark and demand an equal grey margin on both sides, while explicitly freezing the shoulder framing that now works."
+}

@@ -1,0 +1,52 @@
+{
+  "scores": {
+    "shape": 84,
+    "geometry": 88,
+    "dimensions": 90,
+    "angles": 96,
+    "construction": 86,
+    "placement": 97,
+    "symmetry": 96,
+    "composition": 92,
+    "blueprint-match": 88
+  },
+  "errors": [
+    {
+      "severity": "major",
+      "category": "shape",
+      "description": "The coin pocket is still stitched closed on all four sides, so it reads as a sealed patch of cloth rather than a pocket. The illustration's outline is a U - bottom edge and two vertical sides only, with an OPEN top which is the entry. Three attempts have each produced a fully closed rectangle.",
+      "expected": "U outline: horizontal bottom edge, two short vertical sides, no stitching across the top; the top edge is the finished, faintly open coin-pocket entry.",
+      "actual": "A rectangle with an identical inset stitch line on all four edges, including the top.",
+      "correction": "Stitch only the bottom and the two sides. Leave the top edge as an open, lightly relaxed pocket mouth with a whisper of pocketing visible inside."
+    },
+    {
+      "severity": "minor",
+      "category": "dimensions",
+      "description": "The coin pocket grew from attempt 2 but is still slightly under-sized and the wrong aspect: it spans about 65% of the left pocket bag's width where the drawing shows about 75%, and it is a touch taller than wide where the drawing is about 1.3 times wider than tall.",
+      "expected": "About three quarters of the bag width, and clearly wider than tall.",
+      "actual": "About two thirds of the bag width, and slightly taller than wide.",
+      "correction": "Widen it and shorten its height so it is unmistakably a wide, shallow coin pocket."
+    },
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "The frame still carries a band of bare trouser leg below the pocket bags.",
+      "expected": "Bottom edge just below the lowest point of the pocket bags.",
+      "actual": "Leg continues to the bottom edge of the frame.",
+      "correction": "Crop the bottom edge just under the pocket bags."
+    }
+  ],
+  "lockedFeatures": [
+    "flat overhead interior construction view of the trouser front laid open, no model, no torso, no hands",
+    "both pocket bags fully in frame, one to the left and one to the right of the centre fly, so the left/right distinction reads",
+    "the coin pocket on the LEFT pocket bag only; the right pocket bag completely plain",
+    "the coin pocket low on the bag, its bottom edge just above the bag's curved lower edge",
+    "centre fly running vertically down the middle",
+    "waistband with belt loops",
+    "everything in one quiet mid-grey wool with visible weave; no contrast waistband or facing, no buttons or studs, no exterior flap pockets",
+    "plain seamless neutral light-grey background",
+    "no text, numbers, arrows or annotation anywhere in frame",
+    "no red or highlighter colour anywhere in the cloth"
+  ],
+  "notes": "Attempt 3 of 3. Face of the garment, both pocket bags, the left-side placement and the invented-detail problems are all fixed and stable. The one unresolved fault is that the model will not leave the top of the coin pocket open - it renders a closed four-sided patch every time, so the pocket has no entry. Retry budget spent; not eligible for the 95 waiver because a Major finding remains."
+}

@@ -1,0 +1,37 @@
+{
+  "addr": "sport-coat > cb-none",
+  "productId": "sport-coat",
+  "optionId": "cb-none",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 99,
+    "geometry": 99,
+    "dimensions": 98,
+    "angles": 99,
+    "construction": 99,
+    "placement": 99,
+    "symmetry": 99,
+    "composition": 98,
+    "blueprint-match": 100
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "The sleeve is presented unworn — the cuff opening is hollow and no wrist or hand is inside it. The drawing is itself an empty sleeve end, so this does not contradict the blueprint, and no mannequin form is visible.",
+      "expected": "cuff photographed on a model",
+      "actual": "sleeve photographed unworn, cuff opening hollow; no mannequin visible",
+      "correction": "acceptable; the absence reads unambiguously and the drawing is also an unworn sleeve"
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "notes": "ADVERSARIAL READ vs /images/blueprints/supplier/2115e257c4a1__0626__No.jpg.\n\nWHAT THE DRAWING SPECIFIES: the identical sleeve-end outline used across the whole cuff-button-number family, carrying NO red mark at all. The absence of any button symbol is the entire specification.\n\nThis is an absence option, so the burden inverts: I am not matching a feature, I am hunting for any feature that must not be there.\n\nATTEMPTED REJECTIONS THAT FAILED:\n(1) Did the model fall back on its prior and add the conventional four cuff buttons? No — the cuff is completely bare.\n(2) Is there ONE button hiding in shadow near the vent edge, which would silently turn this into the sibling cb-1? No. I traced the full length of the vent edge and the whole cuff face; there is no button, no buttonhole, no stud.\n(3) Non-functional decorative buttonholes with no buttons? No — no worked slits of any kind.\n(4) Any thread knot, press mark, weave irregularity or specular highlight that could read as a button at a glance? None. The only linear features present are the vent seam and the hem fold, both of which the drawing shows.\n(5) Wrong garment face substituted? No — sleeve end with vent seam and hem, matching the drawn outline.\n(6) Annotation traced? None: no red, no numbers, no marks.\n\nNo critical or major findings. This is an exact match to a drawing whose content is emptiness.",
+  "checkedAt": "2026-07-31T20:04:14.298Z"
+}

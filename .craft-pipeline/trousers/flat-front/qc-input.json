@@ -1,0 +1,44 @@
+{
+  "scores": {
+    "shape": 98,
+    "geometry": 96,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 97,
+    "placement": 98,
+    "symmetry": 99,
+    "composition": 97,
+    "blueprint-match": 96
+  },
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "blueprint-match",
+      "description": "The illustration shows a slant side-pocket opening on each hip, running from the waistband diagonally down and out to the side seam. The candidate's hips are completely blank - no pocket openings at all. The hips are inside the frame and clearly visible, so this is an absence, not a crop.",
+      "expected": "A slant pocket opening on each hip, mirrored, as drawn.",
+      "actual": "Both hips plain, no openings.",
+      "correction": "Add the two mirrored slant side-pocket openings exactly as drawn, running from just below the waistband diagonally down and outward to the side seam, finished with fine edge stitching."
+    },
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "About a tenth of the frame at the top is shirt and torso above the waistband, which adds nothing to a pleat-style option.",
+      "expected": "A sliver of tucked shirt above the waistband at most.",
+      "actual": "A wide band of shirt front and a shirt button in the top of the frame.",
+      "correction": "Bring the top edge of the frame down to about one waistband depth above the waistband."
+    }
+  ],
+  "lockedFeatures": [
+    "ABSOLUTELY NO pleats and NO darts anywhere below the waistband - the front panels smooth and completely unbroken from the waistband down",
+    "front view of worn trousers, both legs in frame and symmetric",
+    "waistband with belt loops",
+    "fly with its curved lower stitch line down the centre front, exactly as drawn",
+    "pressed crease starting around mid-thigh on each leg and running down, never reaching up to the waistband",
+    "plain hem, no turn-up and no cuff",
+    "fine charcoal wool trouser cloth with visible weave texture",
+    "plain seamless neutral light-grey studio background",
+    "no text, numbers, arrows or annotation anywhere in frame",
+    "no red or highlighter colour anywhere in the cloth"
+  ],
+  "notes": "Attempt 1 nails the option itself: the front is genuinely flat, with no pleat and no dart hallucinated in, and the fly, waistband and creases all match the drawing. The only real gap is that the two slant side pockets drawn on the hips were not rendered. That matters here beyond pedantry: every other option in the Pleat Style field is drawn with those pockets, so a pocketless photo risks reading as a pocket difference rather than a pleat difference."
+}

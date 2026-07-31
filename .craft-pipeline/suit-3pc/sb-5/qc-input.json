@@ -1,0 +1,35 @@
+{
+  "scores": {
+    "shape": 98,
+    "geometry": 99,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 98,
+    "placement": 99,
+    "symmetry": 99,
+    "composition": 98,
+    "blueprint-match": 99
+  },
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "Frame is wider than the FRAMING LOCK boundaries: the top edge sits well above the V point rather than just below it, and the arms, the trousers below the hem and a sliver of neck are all in frame.",
+      "expected": "top edge just below the point of the V opening; no arms, no trousers below the hem, no chin, mouth, face or hair",
+      "actual": "the whole V opening, shirt, tie and a patch of neck are above the top button; shirt sleeves flank the waistcoat and white trousers show below the hem points",
+      "correction": "Drop the top edge to just below the V point and bring the left, right and bottom edges in to just outside the side seams and just below the hem points."
+    }
+  ],
+  "lockedFeatures": [
+    "exactly FIVE buttons in ONE straight vertical row down the centre front - all five complete, unobscured and countable at a glance",
+    "SINGLE-BREASTED: the two front edges meet edge to edge with no overlap and no diagonal wrap",
+    "even vertical spacing between the five buttons, topmost sitting just below the point of the V opening",
+    "worked buttonholes beside each button",
+    "two horizontal lower welt pockets, one per front, mirrored and level, at about the height of the fourth button",
+    "pointed hem: both fronts come to points with a V notch between them at the centre",
+    "navy wool waistcoat over a plain white shirt, plain neutral grey background",
+    "the tie ends above the top button and hides nothing",
+    "zero red rings, dashes or marks, no leader lines, no numerals, no text anywhere in frame"
+  ],
+  "notes": "Drawing: ONE vertical centre-front row of FIVE red marks (four rings plus a lower dash), two lower welt pockets, pointed hem with a V notch between the two front points. Candidate: five buttons counted individually down a single centre-front row at y-positions that are evenly spaced; single-breasted with the fronts meeting edge to edge - not double-breasted and not two columns; not four, not six, not three. Both lower welts present, mirrored and level at about the fourth button. Hem is pointed on both fronts with the centre notch, matching the drawing. No red marks, no dash, no annotation, no numerals, no text. The tie sits above the top button and obscures nothing, so the count is unambiguous."
+}

@@ -1,0 +1,37 @@
+{
+  "addr": "suit-3pc > vest-ticket-besom-flap",
+  "productId": "suit-3pc",
+  "optionId": "vest-ticket-besom-flap",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 99,
+    "placement": 98,
+    "symmetry": 99,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "dimensions",
+      "description": "The flap hangs a little deeper relative to its width than the red position marker in the drawing implies (roughly 0.6 of its width against about 0.45 in the marker).",
+      "expected": "A deep rectangular ticket pocket, depth roughly 0.45 of its width.",
+      "actual": "Depth roughly 0.6 of its width once the besom welt strip above the flap is included.",
+      "correction": "None required - the extra depth comes from the besom welt strip sitting above the flap, which is exactly what this option adds, and it is what makes the option legibly different from the shallow plain-welt sibling."
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "notes": "Attempt 1 is accurate. The pocket reads unambiguously as a besom WITH a flap: the jetted welt strip is visible as a distinct piped edge above the flap, and the flap itself hangs deep below it with rounded lower corners. The red rectangle in the tech pack was correctly treated as a position marker - no red cloth appears. Orientation (three-quarter front), pocket side, height and inboard placement all match the drawing, and the pocket dominates the frame and is sharp and unobstructed.",
+  "checkedAt": "2026-07-31T21:02:40.578Z"
+}

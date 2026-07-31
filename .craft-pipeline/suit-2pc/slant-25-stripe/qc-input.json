@@ -1,0 +1,41 @@
+{
+  "scores": {
+    "shape": 99,
+    "geometry": 99,
+    "dimensions": 98,
+    "angles": 99,
+    "construction": 98,
+    "placement": 99,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 99
+  },
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "Frame runs down to mid-thigh, so roughly the lower half carries plain leg cloth and the piped opening occupies less than the 40-80% dominance target.",
+      "expected": "Pocket opening dominating 40-80% of frame.",
+      "actual": "Opening occupies a narrow band in the upper-centre-left; lower half is empty leg.",
+      "correction": "Bottom edge could sit about one opening-length below the bartack rather than at mid-thigh. The stripe is still fully sharp and unmistakable."
+    },
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "The model's hand and forearm intrude at the right edge of the frame.",
+      "expected": "No non-garment content competing with the detail.",
+      "actual": "Skin visible along the right edge at about hip height.",
+      "correction": "Crop the right edge inside the far hip, or move the hand out of frame."
+    }
+  ],
+  "lockedFeatures": [
+    "long, steep, near-vertical slant front pocket opening (about 10-12 degrees off vertical) starting at the waistband edge and running down to roughly a third of the hip depth, terminating in a bartack",
+    "genuine contrast stripe/piping in a natural ecru tailoring braid running the full length of the opening edge — NOT literal red",
+    "opening positioned just inboard of the front crease, top starting immediately beside a belt loop, exactly as marked in the drawing",
+    "plain besom on the far hip with the vertical seam running up to the waistband, as drawn",
+    "waistband with belt loops at the same spacing as the drawing",
+    "three-quarter front orientation, navy fine wool suiting, seamless neutral studio background",
+    "no annotation, numbers, arrows, leader lines or red marks anywhere in frame"
+  ],
+  "notes": "Illustration: trouser three-quarter front with belt-looped waistband, a plain besom on the far hip, and the subject marked as a long steeply-slanted (about 12 degrees off vertical) opening running from the waistband down to roughly a third of the hip depth, ending in a bartack, positioned just inboard of the front crease. The candidate matches this closely — measured start point, angle (about 10 degrees) and length (about 30% of frame height, vs about 31% in the drawing) all track the drawing. Because the option's own label names a stripe, a real contrast material is correct here: it is rendered as a fine ecru piping along the opening edge, not as literal red, so the annotation-colour rule is respected. Besom, belt loops and crease all reproduced as drawn. Two minor composition findings only; geometry is clean."
+}

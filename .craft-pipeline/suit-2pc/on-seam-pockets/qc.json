@@ -1,0 +1,37 @@
+{
+  "addr": "suit-2pc > on-seam-pockets",
+  "productId": "suit-2pc",
+  "optionId": "on-seam-pockets",
+  "attempt": 2,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 99,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 99,
+    "construction": 99,
+    "placement": 99,
+    "symmetry": 100,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "dimensions",
+      "description": "The opening runs a little longer relative to the tight frame than the geometry lock's literal wording ('about one fifth of the visible hip height'), though it matches the proportion actually drawn in the blueprint, where the red slit covers roughly half the drawn hip depth.",
+      "expected": "Opening length about one fifth of the visible hip height as worded in the lock.",
+      "actual": "Opening spans about 55 percent of the tightly cropped frame height, matching the drawn proportion rather than the worded one.",
+      "correction": "None needed; the blueprint is the authority and the drawn proportion is what was reproduced."
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "notes": "Blueprint: hip template with the side seam down the middle; red marks a vertical slit lying IN the seam, starting just under the waistband and stopping partway down. Attempt 2 fixed the attempt-1 failure. The opening is now unmistakable: a slightly parted seam bounded by two clearly visible horizontal bar tacks, with plain closed seam above and below, and the front panel entirely clean. Frame is now tight to the seam, the back besom pocket is cropped out and one complete belt loop sits at the top. Clearly distinguishable from the no-front-pockets sibling and from the slant and jeans-arc siblings.",
+  "checkedAt": "2026-07-31T20:31:04.204Z"
+}

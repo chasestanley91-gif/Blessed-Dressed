@@ -1686,6 +1686,1485 @@
           ]
         }
       ]
+    },
+    {
+      "at": "2026-07-31T18:41:30.535Z",
+      "by": "tools/publish_approved.mjs",
+      "count": 3,
+      "rowCount": 7,
+      "fanout": true,
+      "options": [
+        {
+          "product": "sport-coat",
+          "option": "lbp-left",
+          "field": "lapel-bh-position",
+          "identity": "lapel-bh-position/lbp-left",
+          "image": "/images/generated/sport-coat/lbp-left.webp",
+          "master": "/images/generated/sport-coat/lbp-left.png",
+          "previous": "/images/jacket/lapel-bh-pos/left.svg",
+          "preservedBlueprint": null,
+          "verdict": "PASS_WAIVED",
+          "waived": true,
+          "qcAttempt": 3,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 97,
+          "rows": [
+            {
+              "product": "sport-coat",
+              "section": "lapel",
+              "field": "lapel-bh-position",
+              "previous": "/images/jacket/lapel-bh-pos/left.svg",
+              "preservedBlueprint": null
+            },
+            {
+              "product": "suit-2pc",
+              "section": "lapel",
+              "field": "lapel-bh-position",
+              "previous": "/images/jacket/lapel-bh-pos/left.svg",
+              "preservedBlueprint": null
+            },
+            {
+              "product": "suit-3pc",
+              "section": "lapel",
+              "field": "lapel-bh-position",
+              "previous": "/images/jacket/lapel-bh-pos/left.svg",
+              "preservedBlueprint": null
+            }
+          ]
+        },
+        {
+          "product": "suit-2pc",
+          "option": "trouser-contrast-waist",
+          "field": "contrast-positions",
+          "identity": "contrast-positions/trouser-contrast-waist",
+          "image": "/images/generated/suit-2pc/trouser-contrast-waist.webp",
+          "master": "/images/generated/suit-2pc/trouser-contrast-waist.png",
+          "previous": "/images/blueprints/factory/b16ea7165058__33A2__Appointed_Waistband.jpg",
+          "preservedBlueprint": "/images/blueprints/factory/b16ea7165058__33A2__Appointed_Waistband.jpg",
+          "verdict": "PASS_WAIVED",
+          "waived": true,
+          "qcAttempt": 3,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 95,
+          "rows": [
+            {
+              "product": "suit-2pc",
+              "section": "Trousers-details-contrast",
+              "field": "contrast-positions",
+              "previous": "/images/blueprints/factory/b16ea7165058__33A2__Appointed_Waistband.jpg",
+              "preservedBlueprint": "/images/blueprints/factory/b16ea7165058__33A2__Appointed_Waistband.jpg"
+            },
+            {
+              "product": "suit-3pc",
+              "section": "Trousers-details-contrast",
+              "field": "contrast-positions",
+              "previous": "/images/blueprints/factory/b16ea7165058__33A2__Appointed_Waistband.jpg",
+              "preservedBlueprint": "/images/blueprints/factory/b16ea7165058__33A2__Appointed_Waistband.jpg"
+            },
+            {
+              "product": "trousers",
+              "section": "details-contrast",
+              "field": "contrast-positions",
+              "previous": "/images/blueprints/factory/b16ea7165058__33A2__Appointed_Waistband.jpg",
+              "preservedBlueprint": "/images/blueprints/factory/b16ea7165058__33A2__Appointed_Waistband.jpg"
+            }
+          ]
+        },
+        {
+          "product": "suit-3pc",
+          "option": "vest-chest-both-patch",
+          "field": "chest-pocket-vest",
+          "identity": "chest-pocket-vest/vest-chest-both-patch",
+          "image": "/images/generated/suit-3pc/vest-chest-both-patch.webp",
+          "master": "/images/generated/suit-3pc/vest-chest-both-patch.png",
+          "previous": "/images/options/vest/vest-chest-both-patch.jpg",
+          "preservedBlueprint": "/images/options/vest/vest-chest-both-patch.jpg",
+          "verdict": "PASS",
+          "waived": false,
+          "qcAttempt": 2,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 98,
+          "rows": [
+            {
+              "product": "suit-3pc",
+              "section": "Vest-pockets",
+              "field": "chest-pocket-vest",
+              "previous": "/images/options/vest/vest-chest-both-patch.jpg",
+              "preservedBlueprint": "/images/options/vest/vest-chest-both-patch.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "at": "2026-07-31T23:51:05.010Z",
+      "by": "tools/publish_approved.mjs",
+      "count": 43,
+      "rowCount": 90,
+      "fanout": true,
+      "options": [
+        {
+          "product": "sport-coat",
+          "option": "cb-1",
+          "field": "cuff-button-number",
+          "identity": "cuff-button-number/cb-1",
+          "image": "/images/generated/sport-coat/cb-1.webp",
+          "master": "/images/generated/sport-coat/cb-1.png",
+          "previous": "/images/jacket/cuff-btn-num/two-buttons.svg",
+          "preservedBlueprint": null,
+          "verdict": "PASS",
+          "waived": false,
+          "qcAttempt": 1,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 98,
+          "rows": [
+            {
+              "product": "sport-coat",
+              "section": "sleeves-cuffs",
+              "field": "cuff-button-number",
+              "previous": "/images/jacket/cuff-btn-num/two-buttons.svg",
+              "preservedBlueprint": null
+            },
+            {
+              "product": "suit-2pc",
+              "section": "sleeves-cuffs",
+              "field": "cuff-button-number",
+              "previous": "/images/jacket/cuff-btn-num/two-buttons.svg",
+              "preservedBlueprint": null
+            },
+            {
+              "product": "suit-3pc",
+              "section": "sleeves-cuffs",
+              "field": "cuff-button-number",
+              "previous": "/images/jacket/cuff-btn-num/two-buttons.svg",
+              "preservedBlueprint": null
+            }
+          ]
+        },
+        {
+          "product": "sport-coat",
+          "option": "cb-none",
+          "field": "cuff-button-number",
+          "identity": "cuff-button-number/cb-none",
+          "image": "/images/generated/sport-coat/cb-none.webp",
+          "master": "/images/generated/sport-coat/cb-none.png",
+          "previous": "/images/jacket/cuff-btn-num/two-buttons.svg",
+          "preservedBlueprint": null,
+          "verdict": "PASS",
+          "waived": false,
+          "qcAttempt": 1,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 98,
+          "rows": [
+            {
+              "product": "sport-coat",
+              "section": "sleeves-cuffs",
+              "field": "cuff-button-number",
+              "previous": "/images/jacket/cuff-btn-num/two-buttons.svg",
+              "preservedBlueprint": null
+            },
+            {
+              "product": "suit-2pc",
+              "section": "sleeves-cuffs",
+              "field": "cuff-button-number",
+              "previous": "/images/jacket/cuff-btn-num/two-buttons.svg",
+              "preservedBlueprint": null
+            },
+            {
+              "product": "suit-3pc",
+              "section": "sleeves-cuffs",
+              "field": "cuff-button-number",
+              "previous": "/images/jacket/cuff-btn-num/two-buttons.svg",
+              "preservedBlueprint": null
+            }
+          ]
+        },
+        {
+          "product": "sport-coat",
+          "option": "lbp-3l-1r",
+          "field": "lapel-bh-position",
+          "identity": "lapel-bh-position/lbp-3l-1r",
+          "image": "/images/generated/sport-coat/lbp-3l-1r.webp",
+          "master": "/images/generated/sport-coat/lbp-3l-1r.png",
+          "previous": "/images/jacket/lapel-bh-pos/both-sides.svg",
+          "preservedBlueprint": null,
+          "verdict": "PASS",
+          "waived": false,
+          "qcAttempt": 3,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 98,
+          "rows": [
+            {
+              "product": "sport-coat",
+              "section": "lapel",
+              "field": "lapel-bh-position",
+              "previous": "/images/jacket/lapel-bh-pos/both-sides.svg",
+              "preservedBlueprint": null
+            },
+            {
+              "product": "suit-2pc",
+              "section": "lapel",
+              "field": "lapel-bh-position",
+              "previous": "/images/jacket/lapel-bh-pos/both-sides.svg",
+              "preservedBlueprint": null
+            },
+            {
+              "product": "suit-3pc",
+              "section": "lapel",
+              "field": "lapel-bh-position",
+              "previous": "/images/jacket/lapel-bh-pos/both-sides.svg",
+              "preservedBlueprint": null
+            }
+          ]
+        },
+        {
+          "product": "sport-coat",
+          "option": "pad-03",
+          "field": "shoulder-pad",
+          "identity": "shoulder-pad/pad-03",
+          "image": "/images/generated/sport-coat/pad-03.webp",
+          "master": "/images/generated/sport-coat/pad-03.png",
+          "previous": "/images/blueprints/factory/9fd6de75414f__060K__Regular.jpg",
+          "preservedBlueprint": "/images/blueprints/factory/9fd6de75414f__060K__Regular.jpg",
+          "verdict": "PASS_WAIVED",
+          "waived": true,
+          "qcAttempt": 3,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 95,
+          "rows": [
+            {
+              "product": "sport-coat",
+              "section": "shoulder-structure",
+              "field": "shoulder-pad",
+              "previous": "/images/blueprints/factory/9fd6de75414f__060K__Regular.jpg",
+              "preservedBlueprint": "/images/blueprints/factory/9fd6de75414f__060K__Regular.jpg"
+            },
+            {
+              "product": "suit-2pc",
+              "section": "shoulder-structure",
+              "field": "shoulder-pad",
+              "previous": "/images/blueprints/factory/9fd6de75414f__060K__Regular.jpg",
+              "preservedBlueprint": "/images/blueprints/factory/9fd6de75414f__060K__Regular.jpg"
+            },
+            {
+              "product": "suit-3pc",
+              "section": "shoulder-structure",
+              "field": "shoulder-pad",
+              "previous": "/images/blueprints/factory/9fd6de75414f__060K__Regular.jpg",
+              "preservedBlueprint": "/images/blueprints/factory/9fd6de75414f__060K__Regular.jpg"
+            }
+          ]
+        },
+        {
+          "product": "sport-coat",
+          "option": "quarter-canvas",
+          "field": "canvas",
+          "identity": "canvas/quarter-canvas",
+          "image": "/images/generated/sport-coat/quarter-canvas.webp",
+          "master": "/images/generated/sport-coat/quarter-canvas.png",
+          "previous": "/images/blueprints/factory/83dbc62b46ef__00C3__Single_layer.jpg",
+          "preservedBlueprint": "/images/blueprints/factory/83dbc62b46ef__00C3__Single_layer.jpg",
+          "verdict": "PASS_WAIVED",
+          "waived": true,
+          "qcAttempt": 3,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 96,
+          "rows": [
+            {
+              "product": "sport-coat",
+              "section": "shoulder-structure",
+              "field": "canvas",
+              "previous": "/images/blueprints/factory/83dbc62b46ef__00C3__Single_layer.jpg",
+              "preservedBlueprint": "/images/blueprints/factory/83dbc62b46ef__00C3__Single_layer.jpg"
+            },
+            {
+              "product": "suit-2pc",
+              "section": "shoulder-structure",
+              "field": "canvas",
+              "previous": "/images/blueprints/factory/83dbc62b46ef__00C3__Single_layer.jpg",
+              "preservedBlueprint": "/images/blueprints/factory/83dbc62b46ef__00C3__Single_layer.jpg"
+            },
+            {
+              "product": "suit-3pc",
+              "section": "shoulder-structure",
+              "field": "canvas",
+              "previous": "/images/blueprints/factory/83dbc62b46ef__00C3__Single_layer.jpg",
+              "preservedBlueprint": "/images/blueprints/factory/83dbc62b46ef__00C3__Single_layer.jpg"
+            }
+          ]
+        },
+        {
+          "product": "sport-coat",
+          "option": "sbh-slant",
+          "field": "sleeve-buttonhole-dir",
+          "identity": "sleeve-buttonhole-dir/sbh-slant",
+          "image": "/images/generated/sport-coat/sbh-slant.webp",
+          "master": "/images/generated/sport-coat/sbh-slant.png",
+          "previous": "/images/blueprints/factory/fdbc0cbb0bb5__AAAN__Normal_slanted.jpg",
+          "preservedBlueprint": "/images/blueprints/factory/fdbc0cbb0bb5__AAAN__Normal_slanted.jpg",
+          "verdict": "PASS_WAIVED",
+          "waived": true,
+          "qcAttempt": 3,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 96,
+          "rows": [
+            {
+              "product": "sport-coat",
+              "section": "sleeves-cuffs",
+              "field": "sleeve-buttonhole-dir",
+              "previous": "/images/blueprints/factory/fdbc0cbb0bb5__AAAN__Normal_slanted.jpg",
+              "preservedBlueprint": "/images/blueprints/factory/fdbc0cbb0bb5__AAAN__Normal_slanted.jpg"
+            },
+            {
+              "product": "suit-2pc",
+              "section": "sleeves-cuffs",
+              "field": "sleeve-buttonhole-dir",
+              "previous": "/images/blueprints/factory/fdbc0cbb0bb5__AAAN__Normal_slanted.jpg",
+              "preservedBlueprint": "/images/blueprints/factory/fdbc0cbb0bb5__AAAN__Normal_slanted.jpg"
+            },
+            {
+              "product": "suit-3pc",
+              "section": "sleeves-cuffs",
+              "field": "sleeve-buttonhole-dir",
+              "previous": "/images/blueprints/factory/fdbc0cbb0bb5__AAAN__Normal_slanted.jpg",
+              "preservedBlueprint": "/images/blueprints/factory/fdbc0cbb0bb5__AAAN__Normal_slanted.jpg"
+            }
+          ]
+        },
+        {
+          "product": "suit-2pc",
+          "option": "adjuster-left",
+          "field": "metal-adjuster",
+          "identity": "metal-adjuster/adjuster-left",
+          "image": "/images/generated/suit-2pc/adjuster-left.webp",
+          "master": "/images/generated/suit-2pc/adjuster-left.png",
+          "previous": "/images/blueprints/factory/ffa914420c24__3351__Square_side_adjust_button.jpg",
+          "preservedBlueprint": null,
+          "verdict": "PASS",
+          "waived": false,
+          "qcAttempt": 2,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 98,
+          "rows": [
+            {
+              "product": "suit-2pc",
+              "section": "Trousers-waistband",
+              "field": "metal-adjuster",
+              "previous": "/images/blueprints/factory/ffa914420c24__3351__Square_side_adjust_button.jpg",
+              "preservedBlueprint": null
+            },
+            {
+              "product": "suit-3pc",
+              "section": "Trousers-waistband",
+              "field": "metal-adjuster",
+              "previous": "/images/blueprints/factory/ffa914420c24__3351__Square_side_adjust_button.jpg",
+              "preservedBlueprint": null
+            },
+            {
+              "product": "trousers",
+              "section": "waistband",
+              "field": "metal-adjuster",
+              "previous": "/images/blueprints/factory/ffa914420c24__3351__Square_side_adjust_button.jpg",
+              "preservedBlueprint": null
+            }
+          ]
+        },
+        {
+          "product": "suit-2pc",
+          "option": "back-both-jetted",
+          "field": "back-pocket-style",
+          "identity": "back-pocket-style/back-both-jetted",
+          "image": "/images/generated/suit-2pc/back-both-jetted.webp",
+          "master": "/images/generated/suit-2pc/back-both-jetted.png",
+          "previous": "/images/blueprints/factory/81163ff25606__3200__Double_besom.jpg",
+          "preservedBlueprint": "/images/blueprints/factory/81163ff25606__3200__Double_besom.jpg",
+          "verdict": "PASS",
+          "waived": false,
+          "qcAttempt": 1,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 98,
+          "rows": [
+            {
+              "product": "suit-2pc",
+              "section": "Trousers-back",
+              "field": "back-pocket-style",
+              "previous": "/images/blueprints/factory/81163ff25606__3200__Double_besom.jpg",
+              "preservedBlueprint": "/images/blueprints/factory/81163ff25606__3200__Double_besom.jpg"
+            },
+            {
+              "product": "suit-3pc",
+              "section": "Trousers-back",
+              "field": "back-pocket-style",
+              "previous": "/images/blueprints/factory/81163ff25606__3200__Double_besom.jpg",
+              "preservedBlueprint": "/images/blueprints/factory/81163ff25606__3200__Double_besom.jpg"
+            },
+            {
+              "product": "trousers",
+              "section": "back",
+              "field": "back-pocket-style",
+              "previous": "/images/blueprints/factory/81163ff25606__3200__Double_besom.jpg",
+              "preservedBlueprint": "/images/blueprints/factory/81163ff25606__3200__Double_besom.jpg"
+            }
+          ]
+        },
+        {
+          "product": "suit-2pc",
+          "option": "back-left-patch",
+          "field": "back-pocket-style",
+          "identity": "back-pocket-style/back-left-patch",
+          "image": "/images/generated/suit-2pc/back-left-patch.webp",
+          "master": "/images/generated/suit-2pc/back-left-patch.png",
+          "previous": "/images/blueprints/factory/5e26a3e5997d__3230__Patch_with_pointed.jpg",
+          "preservedBlueprint": "/images/blueprints/factory/5e26a3e5997d__3230__Patch_with_pointed.jpg",
+          "verdict": "PASS",
+          "waived": false,
+          "qcAttempt": 2,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 98,
+          "rows": [
+            {
+              "product": "suit-2pc",
+              "section": "Trousers-back",
+              "field": "back-pocket-style",
+              "previous": "/images/blueprints/factory/5e26a3e5997d__3230__Patch_with_pointed.jpg",
+              "preservedBlueprint": "/images/blueprints/factory/5e26a3e5997d__3230__Patch_with_pointed.jpg"
+            },
+            {
+              "product": "suit-3pc",
+              "section": "Trousers-back",
+              "field": "back-pocket-style",
+              "previous": "/images/blueprints/factory/5e26a3e5997d__3230__Patch_with_pointed.jpg",
+              "preservedBlueprint": "/images/blueprints/factory/5e26a3e5997d__3230__Patch_with_pointed.jpg"
+            },
+            {
+              "product": "trousers",
+              "section": "back",
+              "field": "back-pocket-style",
+              "previous": "/images/blueprints/factory/5e26a3e5997d__3230__Patch_with_pointed.jpg",
+              "preservedBlueprint": "/images/blueprints/factory/5e26a3e5997d__3230__Patch_with_pointed.jpg"
+            }
+          ]
+        },
+        {
+          "product": "suit-2pc",
+          "option": "bartack-standard",
+          "field": "bar-tack",
+          "identity": "bar-tack/bartack-standard",
+          "image": "/images/generated/suit-2pc/bartack-standard.webp",
+          "master": "/images/generated/suit-2pc/bartack-standard.png",
+          "previous": "/images/blueprints/factory/4d29fb809a0e__3191__Front_pocket_I_shape_bartack.png",
+          "preservedBlueprint": "/images/blueprints/factory/4d29fb809a0e__3191__Front_pocket_I_shape_bartack.png",
+          "verdict": "PASS",
+          "waived": false,
+          "qcAttempt": 1,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 98,
+          "rows": [
+            {
+              "product": "suit-2pc",
+              "section": "Trousers-pleats-structure",
+              "field": "bar-tack",
+              "previous": "/images/blueprints/factory/4d29fb809a0e__3191__Front_pocket_I_shape_bartack.png",
+              "preservedBlueprint": "/images/blueprints/factory/4d29fb809a0e__3191__Front_pocket_I_shape_bartack.png"
+            },
+            {
+              "product": "suit-3pc",
+              "section": "Trousers-pleats-structure",
+              "field": "bar-tack",
+              "previous": "/images/blueprints/factory/4d29fb809a0e__3191__Front_pocket_I_shape_bartack.png",
+              "preservedBlueprint": "/images/blueprints/factory/4d29fb809a0e__3191__Front_pocket_I_shape_bartack.png"
+            },
+            {
+              "product": "trousers",
+              "section": "pleats-structure",
+              "field": "bar-tack",
+              "previous": "/images/blueprints/factory/4d29fb809a0e__3191__Front_pocket_I_shape_bartack.png",
+              "preservedBlueprint": "/images/blueprints/factory/4d29fb809a0e__3191__Front_pocket_I_shape_bartack.png"
+            }
+          ]
+        },
+        {
+          "product": "suit-2pc",
+          "option": "ext-pointed",
+          "field": "waistband-extension",
+          "identity": "waistband-extension/ext-pointed",
+          "image": "/images/generated/suit-2pc/ext-pointed.webp",
+          "master": "/images/generated/suit-2pc/ext-pointed.png",
+          "previous": "/images/blueprints/factory/b14a71bdfdb9__3413__Round_hook_btn.jpg",
+          "preservedBlueprint": null,
+          "verdict": "PASS",
+          "waived": false,
+          "qcAttempt": 2,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 98,
+          "rows": [
+            {
+              "product": "suit-2pc",
+              "section": "Trousers-waistband",
+              "field": "waistband-extension",
+              "previous": "/images/blueprints/factory/b14a71bdfdb9__3413__Round_hook_btn.jpg",
+              "preservedBlueprint": null
+            },
+            {
+              "product": "suit-3pc",
+              "section": "Trousers-waistband",
+              "field": "waistband-extension",
+              "previous": "/images/blueprints/factory/b14a71bdfdb9__3413__Round_hook_btn.jpg",
+              "preservedBlueprint": null
+            },
+            {
+              "product": "trousers",
+              "section": "waistband",
+              "field": "waistband-extension",
+              "previous": "/images/blueprints/factory/b14a71bdfdb9__3413__Round_hook_btn.jpg",
+              "preservedBlueprint": null
+            }
+          ]
+        },
+        {
+          "product": "suit-2pc",
+          "option": "fly-fish-claw",
+          "field": "fly-style",
+          "identity": "fly-style/fly-fish-claw",
+          "image": "/images/generated/suit-2pc/fly-fish-claw.webp",
+          "master": "/images/generated/suit-2pc/fly-fish-claw.png",
+          "previous": "/images/blueprints/remote/0c07e29e9fc5__3402.jpg",
+          "preservedBlueprint": "/images/blueprints/remote/0c07e29e9fc5__3402.jpg",
+          "verdict": "PASS",
+          "waived": false,
+          "qcAttempt": 1,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 98,
+          "rows": [
+            {
+              "product": "suit-2pc",
+              "section": "Trousers-pleats-structure",
+              "field": "fly-style",
+              "previous": "/images/blueprints/remote/0c07e29e9fc5__3402.jpg",
+              "preservedBlueprint": "/images/blueprints/remote/0c07e29e9fc5__3402.jpg"
+            },
+            {
+              "product": "suit-3pc",
+              "section": "Trousers-pleats-structure",
+              "field": "fly-style",
+              "previous": "/images/blueprints/remote/0c07e29e9fc5__3402.jpg",
+              "preservedBlueprint": "/images/blueprints/remote/0c07e29e9fc5__3402.jpg"
+            }
+          ]
+        },
+        {
+          "product": "suit-2pc",
+          "option": "fly-metal-zip",
+          "field": "fly-style",
+          "identity": "fly-style/fly-metal-zip",
+          "image": "/images/generated/suit-2pc/fly-metal-zip.webp",
+          "master": "/images/generated/suit-2pc/fly-metal-zip.png",
+          "previous": "/images/blueprints/remote/bd442512a412__3421.jpg",
+          "preservedBlueprint": "/images/blueprints/remote/bd442512a412__3421.jpg",
+          "verdict": "PASS",
+          "waived": false,
+          "qcAttempt": 1,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 98,
+          "rows": [
+            {
+              "product": "suit-2pc",
+              "section": "Trousers-pleats-structure",
+              "field": "fly-style",
+              "previous": "/images/blueprints/remote/bd442512a412__3421.jpg",
+              "preservedBlueprint": "/images/blueprints/remote/bd442512a412__3421.jpg"
+            },
+            {
+              "product": "suit-3pc",
+              "section": "Trousers-pleats-structure",
+              "field": "fly-style",
+              "previous": "/images/blueprints/remote/bd442512a412__3421.jpg",
+              "preservedBlueprint": "/images/blueprints/remote/bd442512a412__3421.jpg"
+            }
+          ]
+        },
+        {
+          "product": "suit-2pc",
+          "option": "fly-pointed",
+          "field": "fly-style",
+          "identity": "fly-style/fly-pointed",
+          "image": "/images/generated/suit-2pc/fly-pointed.webp",
+          "master": "/images/generated/suit-2pc/fly-pointed.png",
+          "previous": "/images/blueprints/remote/da407a0ce211__3406.jpg",
+          "preservedBlueprint": "/images/blueprints/remote/da407a0ce211__3406.jpg",
+          "verdict": "PASS",
+          "waived": false,
+          "qcAttempt": 1,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 98,
+          "rows": [
+            {
+              "product": "suit-2pc",
+              "section": "Trousers-pleats-structure",
+              "field": "fly-style",
+              "previous": "/images/blueprints/remote/da407a0ce211__3406.jpg",
+              "preservedBlueprint": "/images/blueprints/remote/da407a0ce211__3406.jpg"
+            },
+            {
+              "product": "suit-3pc",
+              "section": "Trousers-pleats-structure",
+              "field": "fly-style",
+              "previous": "/images/blueprints/remote/da407a0ce211__3406.jpg",
+              "preservedBlueprint": "/images/blueprints/remote/da407a0ce211__3406.jpg"
+            }
+          ]
+        },
+        {
+          "product": "suit-2pc",
+          "option": "fly-zip",
+          "field": "fly-style",
+          "identity": "fly-style/fly-zip",
+          "image": "/images/generated/suit-2pc/fly-zip.webp",
+          "master": "/images/generated/suit-2pc/fly-zip.png",
+          "previous": "/images/blueprints/factory/99434c44259b__3420__Nylon.jpg",
+          "preservedBlueprint": "/images/blueprints/factory/99434c44259b__3420__Nylon.jpg",
+          "verdict": "PASS",
+          "waived": false,
+          "qcAttempt": 1,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 98,
+          "rows": [
+            {
+              "product": "suit-2pc",
+              "section": "Trousers-pleats-structure",
+              "field": "fly-style",
+              "previous": "/images/blueprints/factory/99434c44259b__3420__Nylon.jpg",
+              "preservedBlueprint": "/images/blueprints/factory/99434c44259b__3420__Nylon.jpg"
+            },
+            {
+              "product": "suit-3pc",
+              "section": "Trousers-pleats-structure",
+              "field": "fly-style",
+              "previous": "/images/blueprints/factory/99434c44259b__3420__Nylon.jpg",
+              "preservedBlueprint": "/images/blueprints/factory/99434c44259b__3420__Nylon.jpg"
+            },
+            {
+              "product": "trousers",
+              "section": "pleats-structure",
+              "field": "fly-style",
+              "previous": "/images/blueprints/factory/99434c44259b__3420__Nylon.jpg",
+              "preservedBlueprint": "/images/blueprints/factory/99434c44259b__3420__Nylon.jpg"
+            }
+          ]
+        },
+        {
+          "product": "suit-2pc",
+          "option": "hem-90",
+          "field": "hem-style",
+          "identity": "hem-style/hem-90",
+          "image": "/images/generated/suit-2pc/hem-90.webp",
+          "master": "/images/generated/suit-2pc/hem-90.png",
+          "previous": "/images/blueprints/remote/9e8b12a7ade9__360H.jpg",
+          "preservedBlueprint": "/images/blueprints/remote/9e8b12a7ade9__360H.jpg",
+          "verdict": "PASS",
+          "waived": false,
+          "qcAttempt": 1,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 98,
+          "rows": [
+            {
+              "product": "suit-2pc",
+              "section": "Trousers-bottom-hem",
+              "field": "hem-style",
+              "previous": "/images/blueprints/remote/9e8b12a7ade9__360H.jpg",
+              "preservedBlueprint": "/images/blueprints/remote/9e8b12a7ade9__360H.jpg"
+            },
+            {
+              "product": "suit-3pc",
+              "section": "Trousers-bottom-hem",
+              "field": "hem-style",
+              "previous": "/images/blueprints/remote/9e8b12a7ade9__360H.jpg",
+              "preservedBlueprint": "/images/blueprints/remote/9e8b12a7ade9__360H.jpg"
+            }
+          ]
+        },
+        {
+          "product": "suit-2pc",
+          "option": "hem-cuff-32",
+          "field": "hem-style",
+          "identity": "hem-style/hem-cuff-32",
+          "image": "/images/generated/suit-2pc/hem-cuff-32.webp",
+          "master": "/images/generated/suit-2pc/hem-cuff-32.png",
+          "previous": "/images/blueprints/remote/7eca44df7089__3602.jpg",
+          "preservedBlueprint": "/images/blueprints/remote/7eca44df7089__3602.jpg",
+          "verdict": "PASS",
+          "waived": false,
+          "qcAttempt": 1,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 98,
+          "rows": [
+            {
+              "product": "suit-2pc",
+              "section": "Trousers-bottom-hem",
+              "field": "hem-style",
+              "previous": "/images/blueprints/remote/7eca44df7089__3602.jpg",
+              "preservedBlueprint": "/images/blueprints/remote/7eca44df7089__3602.jpg"
+            },
+            {
+              "product": "suit-3pc",
+              "section": "Trousers-bottom-hem",
+              "field": "hem-style",
+              "previous": "/images/blueprints/remote/7eca44df7089__3602.jpg",
+              "preservedBlueprint": "/images/blueprints/remote/7eca44df7089__3602.jpg"
+            }
+          ]
+        },
+        {
+          "product": "suit-2pc",
+          "option": "hem-fixed-topstitch",
+          "field": "hem-style",
+          "identity": "hem-style/hem-fixed-topstitch",
+          "image": "/images/generated/suit-2pc/hem-fixed-topstitch.webp",
+          "master": "/images/generated/suit-2pc/hem-fixed-topstitch.png",
+          "previous": "/images/blueprints/remote/2298a47f90ea__166141804814147.jpg",
+          "preservedBlueprint": "/images/blueprints/remote/2298a47f90ea__166141804814147.jpg",
+          "verdict": "PASS",
+          "waived": false,
+          "qcAttempt": 2,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 98,
+          "rows": [
+            {
+              "product": "suit-2pc",
+              "section": "Trousers-bottom-hem",
+              "field": "hem-style",
+              "previous": "/images/blueprints/remote/2298a47f90ea__166141804814147.jpg",
+              "preservedBlueprint": "/images/blueprints/remote/2298a47f90ea__166141804814147.jpg"
+            },
+            {
+              "product": "suit-3pc",
+              "section": "Trousers-bottom-hem",
+              "field": "hem-style",
+              "previous": "/images/blueprints/remote/2298a47f90ea__166141804814147.jpg",
+              "preservedBlueprint": "/images/blueprints/remote/2298a47f90ea__166141804814147.jpg"
+            }
+          ]
+        },
+        {
+          "product": "suit-2pc",
+          "option": "hem-inner-fold-40",
+          "field": "hem-style",
+          "identity": "hem-style/hem-inner-fold-40",
+          "image": "/images/generated/suit-2pc/hem-inner-fold-40.webp",
+          "master": "/images/generated/suit-2pc/hem-inner-fold-40.png",
+          "previous": "/images/blueprints/remote/d4b184a45b4b__360K.jpg",
+          "preservedBlueprint": "/images/blueprints/remote/d4b184a45b4b__360K.jpg",
+          "verdict": "PASS",
+          "waived": false,
+          "qcAttempt": 1,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 98,
+          "rows": [
+            {
+              "product": "suit-2pc",
+              "section": "Trousers-bottom-hem",
+              "field": "hem-style",
+              "previous": "/images/blueprints/remote/d4b184a45b4b__360K.jpg",
+              "preservedBlueprint": "/images/blueprints/remote/d4b184a45b4b__360K.jpg"
+            },
+            {
+              "product": "suit-3pc",
+              "section": "Trousers-bottom-hem",
+              "field": "hem-style",
+              "previous": "/images/blueprints/remote/d4b184a45b4b__360K.jpg",
+              "preservedBlueprint": "/images/blueprints/remote/d4b184a45b4b__360K.jpg"
+            }
+          ]
+        },
+        {
+          "product": "suit-2pc",
+          "option": "hem-no-cuff",
+          "field": "hem-style",
+          "identity": "hem-style/hem-no-cuff",
+          "image": "/images/generated/suit-2pc/hem-no-cuff.webp",
+          "master": "/images/generated/suit-2pc/hem-no-cuff.png",
+          "previous": "/images/blueprints/factory/96e846dfee6b__3600__5.0cm.jpg",
+          "preservedBlueprint": "/images/blueprints/factory/96e846dfee6b__3600__5.0cm.jpg",
+          "verdict": "PASS",
+          "waived": false,
+          "qcAttempt": 1,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 98,
+          "rows": [
+            {
+              "product": "suit-2pc",
+              "section": "Trousers-bottom-hem",
+              "field": "hem-style",
+              "previous": "/images/blueprints/factory/96e846dfee6b__3600__5.0cm.jpg",
+              "preservedBlueprint": "/images/blueprints/factory/96e846dfee6b__3600__5.0cm.jpg"
+            },
+            {
+              "product": "suit-3pc",
+              "section": "Trousers-bottom-hem",
+              "field": "hem-style",
+              "previous": "/images/blueprints/factory/96e846dfee6b__3600__5.0cm.jpg",
+              "preservedBlueprint": "/images/blueprints/factory/96e846dfee6b__3600__5.0cm.jpg"
+            }
+          ]
+        },
+        {
+          "product": "suit-2pc",
+          "option": "jeans-arc",
+          "field": "front-pocket-style",
+          "identity": "front-pocket-style/jeans-arc",
+          "image": "/images/generated/suit-2pc/jeans-arc.webp",
+          "master": "/images/generated/suit-2pc/jeans-arc.png",
+          "previous": "/images/blueprints/remote/3c70f95c470f__3135.jpg",
+          "preservedBlueprint": "/images/blueprints/remote/3c70f95c470f__3135.jpg",
+          "verdict": "PASS",
+          "waived": false,
+          "qcAttempt": 2,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 98,
+          "rows": [
+            {
+              "product": "suit-2pc",
+              "section": "Trousers-front-pockets",
+              "field": "front-pocket-style",
+              "previous": "/images/blueprints/remote/3c70f95c470f__3135.jpg",
+              "preservedBlueprint": "/images/blueprints/remote/3c70f95c470f__3135.jpg"
+            },
+            {
+              "product": "suit-3pc",
+              "section": "Trousers-front-pockets",
+              "field": "front-pocket-style",
+              "previous": "/images/blueprints/remote/3c70f95c470f__3135.jpg",
+              "preservedBlueprint": "/images/blueprints/remote/3c70f95c470f__3135.jpg"
+            }
+          ]
+        },
+        {
+          "product": "suit-2pc",
+          "option": "jeans-round",
+          "field": "front-pocket-style",
+          "identity": "front-pocket-style/jeans-round",
+          "image": "/images/generated/suit-2pc/jeans-round.webp",
+          "master": "/images/generated/suit-2pc/jeans-round.png",
+          "previous": "/images/blueprints/remote/1e222211e243__3136.jpg",
+          "preservedBlueprint": "/images/blueprints/remote/1e222211e243__3136.jpg",
+          "verdict": "PASS",
+          "waived": false,
+          "qcAttempt": 1,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 98,
+          "rows": [
+            {
+              "product": "suit-2pc",
+              "section": "Trousers-front-pockets",
+              "field": "front-pocket-style",
+              "previous": "/images/blueprints/remote/1e222211e243__3136.jpg",
+              "preservedBlueprint": "/images/blueprints/remote/1e222211e243__3136.jpg"
+            },
+            {
+              "product": "suit-3pc",
+              "section": "Trousers-front-pockets",
+              "field": "front-pocket-style",
+              "previous": "/images/blueprints/remote/1e222211e243__3136.jpg",
+              "preservedBlueprint": "/images/blueprints/remote/1e222211e243__3136.jpg"
+            }
+          ]
+        },
+        {
+          "product": "suit-2pc",
+          "option": "on-seam-pockets",
+          "field": "front-pocket-style",
+          "identity": "front-pocket-style/on-seam-pockets",
+          "image": "/images/generated/suit-2pc/on-seam-pockets.webp",
+          "master": "/images/generated/suit-2pc/on-seam-pockets.png",
+          "previous": "/images/blueprints/factory/a1a8d4d2842a__3130__Sideseam.jpg",
+          "preservedBlueprint": "/images/blueprints/factory/a1a8d4d2842a__3130__Sideseam.jpg",
+          "verdict": "PASS",
+          "waived": false,
+          "qcAttempt": 2,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 98,
+          "rows": [
+            {
+              "product": "suit-2pc",
+              "section": "Trousers-front-pockets",
+              "field": "front-pocket-style",
+              "previous": "/images/blueprints/factory/a1a8d4d2842a__3130__Sideseam.jpg",
+              "preservedBlueprint": "/images/blueprints/factory/a1a8d4d2842a__3130__Sideseam.jpg"
+            },
+            {
+              "product": "suit-3pc",
+              "section": "Trousers-front-pockets",
+              "field": "front-pocket-style",
+              "previous": "/images/blueprints/factory/a1a8d4d2842a__3130__Sideseam.jpg",
+              "preservedBlueprint": "/images/blueprints/factory/a1a8d4d2842a__3130__Sideseam.jpg"
+            },
+            {
+              "product": "trousers",
+              "section": "front-pockets",
+              "field": "front-pocket-style",
+              "previous": "/images/blueprints/factory/a1a8d4d2842a__3130__Sideseam.jpg",
+              "preservedBlueprint": "/images/blueprints/factory/a1a8d4d2842a__3130__Sideseam.jpg"
+            }
+          ]
+        },
+        {
+          "product": "suit-2pc",
+          "option": "single-forward",
+          "field": "pleat-style",
+          "identity": "pleat-style/single-forward",
+          "image": "/images/generated/suit-2pc/single-forward.webp",
+          "master": "/images/generated/suit-2pc/single-forward.png",
+          "previous": "/images/blueprints/factory/768640315c4d__3022__Single_toward_fly.jpg",
+          "preservedBlueprint": "/images/blueprints/factory/768640315c4d__3022__Single_toward_fly.jpg",
+          "verdict": "PASS",
+          "waived": false,
+          "qcAttempt": 1,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 98,
+          "rows": [
+            {
+              "product": "suit-2pc",
+              "section": "Trousers-pleats-structure",
+              "field": "pleat-style",
+              "previous": "/images/blueprints/factory/768640315c4d__3022__Single_toward_fly.jpg",
+              "preservedBlueprint": "/images/blueprints/factory/768640315c4d__3022__Single_toward_fly.jpg"
+            },
+            {
+              "product": "suit-3pc",
+              "section": "Trousers-pleats-structure",
+              "field": "pleat-style",
+              "previous": "/images/blueprints/factory/768640315c4d__3022__Single_toward_fly.jpg",
+              "preservedBlueprint": "/images/blueprints/factory/768640315c4d__3022__Single_toward_fly.jpg"
+            },
+            {
+              "product": "trousers",
+              "section": "pleats-structure",
+              "field": "pleat-style",
+              "previous": "/images/blueprints/factory/768640315c4d__3022__Single_toward_fly.jpg",
+              "preservedBlueprint": "/images/blueprints/factory/768640315c4d__3022__Single_toward_fly.jpg"
+            }
+          ]
+        },
+        {
+          "product": "suit-2pc",
+          "option": "slant-25-stripe",
+          "field": "front-pocket-style",
+          "identity": "front-pocket-style/slant-25-stripe",
+          "image": "/images/generated/suit-2pc/slant-25-stripe.webp",
+          "master": "/images/generated/suit-2pc/slant-25-stripe.png",
+          "previous": "/images/blueprints/remote/90f739dcde96__3124.jpg",
+          "preservedBlueprint": "/images/blueprints/remote/90f739dcde96__3124.jpg",
+          "verdict": "PASS",
+          "waived": false,
+          "qcAttempt": 1,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 98,
+          "rows": [
+            {
+              "product": "suit-2pc",
+              "section": "Trousers-front-pockets",
+              "field": "front-pocket-style",
+              "previous": "/images/blueprints/remote/90f739dcde96__3124.jpg",
+              "preservedBlueprint": "/images/blueprints/remote/90f739dcde96__3124.jpg"
+            },
+            {
+              "product": "suit-3pc",
+              "section": "Trousers-front-pockets",
+              "field": "front-pocket-style",
+              "previous": "/images/blueprints/remote/90f739dcde96__3124.jpg",
+              "preservedBlueprint": "/images/blueprints/remote/90f739dcde96__3124.jpg"
+            },
+            {
+              "product": "trousers",
+              "section": "front-pockets",
+              "field": "front-pocket-style",
+              "previous": "/images/blueprints/remote/90f739dcde96__3124.jpg",
+              "preservedBlueprint": "/images/blueprints/remote/90f739dcde96__3124.jpg"
+            }
+          ]
+        },
+        {
+          "product": "suit-2pc",
+          "option": "watch-left",
+          "field": "watch-pocket",
+          "identity": "watch-pocket/watch-left",
+          "image": "/images/generated/suit-2pc/watch-left.webp",
+          "master": "/images/generated/suit-2pc/watch-left.png",
+          "previous": "/images/blueprints/factory/2a5f7a6c70e1__3171__Left_welt.jpg",
+          "preservedBlueprint": "/images/blueprints/factory/2a5f7a6c70e1__3171__Left_welt.jpg",
+          "verdict": "PASS",
+          "waived": false,
+          "qcAttempt": 2,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 98,
+          "rows": [
+            {
+              "product": "suit-2pc",
+              "section": "Trousers-front-pockets",
+              "field": "watch-pocket",
+              "previous": "/images/blueprints/factory/2a5f7a6c70e1__3171__Left_welt.jpg",
+              "preservedBlueprint": "/images/blueprints/factory/2a5f7a6c70e1__3171__Left_welt.jpg"
+            },
+            {
+              "product": "suit-3pc",
+              "section": "Trousers-front-pockets",
+              "field": "watch-pocket",
+              "previous": "/images/blueprints/factory/2a5f7a6c70e1__3171__Left_welt.jpg",
+              "preservedBlueprint": "/images/blueprints/factory/2a5f7a6c70e1__3171__Left_welt.jpg"
+            },
+            {
+              "product": "trousers",
+              "section": "front-pockets",
+              "field": "watch-pocket",
+              "previous": "/images/blueprints/factory/2a5f7a6c70e1__3171__Left_welt.jpg",
+              "preservedBlueprint": "/images/blueprints/factory/2a5f7a6c70e1__3171__Left_welt.jpg"
+            }
+          ]
+        },
+        {
+          "product": "suit-2pc",
+          "option": "watch-right",
+          "field": "watch-pocket",
+          "identity": "watch-pocket/watch-right",
+          "image": "/images/generated/suit-2pc/watch-right.webp",
+          "master": "/images/generated/suit-2pc/watch-right.png",
+          "previous": "/images/blueprints/factory/449292155f03__3180__Regular_right.jpg",
+          "preservedBlueprint": "/images/blueprints/factory/449292155f03__3180__Regular_right.jpg",
+          "verdict": "PASS",
+          "waived": false,
+          "qcAttempt": 2,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 98,
+          "rows": [
+            {
+              "product": "suit-2pc",
+              "section": "Trousers-front-pockets",
+              "field": "watch-pocket",
+              "previous": "/images/blueprints/factory/449292155f03__3180__Regular_right.jpg",
+              "preservedBlueprint": "/images/blueprints/factory/449292155f03__3180__Regular_right.jpg"
+            },
+            {
+              "product": "suit-3pc",
+              "section": "Trousers-front-pockets",
+              "field": "watch-pocket",
+              "previous": "/images/blueprints/factory/449292155f03__3180__Regular_right.jpg",
+              "preservedBlueprint": "/images/blueprints/factory/449292155f03__3180__Regular_right.jpg"
+            },
+            {
+              "product": "trousers",
+              "section": "front-pockets",
+              "field": "watch-pocket",
+              "previous": "/images/blueprints/factory/449292155f03__3180__Regular_right.jpg",
+              "preservedBlueprint": "/images/blueprints/factory/449292155f03__3180__Regular_right.jpg"
+            }
+          ]
+        },
+        {
+          "product": "suit-3pc",
+          "option": "db-8x4",
+          "field": "button-stance",
+          "identity": "button-stance/db-8x4",
+          "image": "/images/generated/suit-3pc/db-8x4.webp",
+          "master": "/images/generated/suit-3pc/db-8x4.png",
+          "previous": "/images/options/vest/db-8x4.jpg",
+          "preservedBlueprint": "/images/options/vest/db-8x4.jpg",
+          "verdict": "PASS",
+          "waived": false,
+          "qcAttempt": 1,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 98,
+          "rows": [
+            {
+              "product": "suit-3pc",
+              "section": "Vest-front-style",
+              "field": "button-stance",
+              "previous": "/images/options/vest/db-8x4.jpg",
+              "preservedBlueprint": "/images/options/vest/db-8x4.jpg"
+            }
+          ]
+        },
+        {
+          "product": "suit-3pc",
+          "option": "hem-single-turnup",
+          "field": "hem-style",
+          "identity": "hem-style/hem-single-turnup",
+          "image": "/images/generated/suit-3pc/hem-single-turnup.webp",
+          "master": "/images/generated/suit-3pc/hem-single-turnup.png",
+          "previous": "/images/blueprints/factory/30517f02c254__3604__4.4cm_cuff.jpg",
+          "preservedBlueprint": "/images/blueprints/factory/30517f02c254__3604__4.4cm_cuff.jpg",
+          "verdict": "PASS",
+          "waived": false,
+          "qcAttempt": 1,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 98,
+          "rows": [
+            {
+              "product": "suit-2pc",
+              "section": "Trousers-bottom-hem",
+              "field": "hem-style",
+              "previous": "/images/blueprints/factory/30517f02c254__3604__4.4cm_cuff.jpg",
+              "preservedBlueprint": "/images/blueprints/factory/30517f02c254__3604__4.4cm_cuff.jpg"
+            },
+            {
+              "product": "suit-3pc",
+              "section": "Trousers-bottom-hem",
+              "field": "hem-style",
+              "previous": "/images/blueprints/factory/30517f02c254__3604__4.4cm_cuff.jpg",
+              "preservedBlueprint": "/images/blueprints/factory/30517f02c254__3604__4.4cm_cuff.jpg"
+            },
+            {
+              "product": "trousers",
+              "section": "bottom-hem",
+              "field": "hem-style",
+              "previous": "/images/blueprints/factory/30517f02c254__3604__4.4cm_cuff.jpg",
+              "preservedBlueprint": "/images/blueprints/factory/30517f02c254__3604__4.4cm_cuff.jpg"
+            }
+          ]
+        },
+        {
+          "product": "suit-3pc",
+          "option": "sb-5",
+          "field": "button-stance",
+          "identity": "button-stance/sb-5",
+          "image": "/images/generated/suit-3pc/sb-5.webp",
+          "master": "/images/generated/suit-3pc/sb-5.png",
+          "previous": "/images/options/vest/sb-5.jpg",
+          "preservedBlueprint": "/images/options/vest/sb-5.jpg",
+          "verdict": "PASS",
+          "waived": false,
+          "qcAttempt": 1,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 98,
+          "rows": [
+            {
+              "product": "suit-3pc",
+              "section": "Vest-front-style",
+              "field": "button-stance",
+              "previous": "/images/options/vest/sb-5.jpg",
+              "preservedBlueprint": "/images/options/vest/sb-5.jpg"
+            }
+          ]
+        },
+        {
+          "product": "suit-3pc",
+          "option": "sb-6",
+          "field": "button-stance",
+          "identity": "button-stance/sb-6",
+          "image": "/images/generated/suit-3pc/sb-6.webp",
+          "master": "/images/generated/suit-3pc/sb-6.png",
+          "previous": "/images/options/vest/sb-6.jpg",
+          "preservedBlueprint": "/images/options/vest/sb-6.jpg",
+          "verdict": "PASS",
+          "waived": false,
+          "qcAttempt": 2,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 98,
+          "rows": [
+            {
+              "product": "suit-3pc",
+              "section": "Vest-front-style",
+              "field": "button-stance",
+              "previous": "/images/options/vest/sb-6.jpg",
+              "preservedBlueprint": "/images/options/vest/sb-6.jpg"
+            }
+          ]
+        },
+        {
+          "product": "suit-3pc",
+          "option": "v-neckline",
+          "field": "neckline-style",
+          "identity": "neckline-style/v-neckline",
+          "image": "/images/generated/suit-3pc/v-neckline.webp",
+          "master": "/images/generated/suit-3pc/v-neckline.png",
+          "previous": "/images/options/vest/v-neckline.jpg",
+          "preservedBlueprint": "/images/options/vest/v-neckline.jpg",
+          "verdict": "PASS",
+          "waived": false,
+          "qcAttempt": 1,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 98,
+          "rows": [
+            {
+              "product": "suit-3pc",
+              "section": "Vest-lapel-neckline",
+              "field": "neckline-style",
+              "previous": "/images/options/vest/v-neckline.jpg",
+              "preservedBlueprint": "/images/options/vest/v-neckline.jpg"
+            }
+          ]
+        },
+        {
+          "product": "suit-3pc",
+          "option": "vest-bottom-round",
+          "field": "bottom-shape-vest",
+          "identity": "bottom-shape-vest/vest-bottom-round",
+          "image": "/images/generated/suit-3pc/vest-bottom-round.webp",
+          "master": "/images/generated/suit-3pc/vest-bottom-round.png",
+          "previous": "/images/options/vest/vest-bottom-round.jpg",
+          "preservedBlueprint": "/images/options/vest/vest-bottom-round.jpg",
+          "verdict": "PASS",
+          "waived": false,
+          "qcAttempt": 1,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 98,
+          "rows": [
+            {
+              "product": "suit-3pc",
+              "section": "Vest-front-style",
+              "field": "bottom-shape-vest",
+              "previous": "/images/options/vest/vest-bottom-round.jpg",
+              "preservedBlueprint": "/images/options/vest/vest-bottom-round.jpg"
+            }
+          ]
+        },
+        {
+          "product": "suit-3pc",
+          "option": "vest-bottom-small",
+          "field": "bottom-shape-vest",
+          "identity": "bottom-shape-vest/vest-bottom-small",
+          "image": "/images/generated/suit-3pc/vest-bottom-small.webp",
+          "master": "/images/generated/suit-3pc/vest-bottom-small.png",
+          "previous": "/images/options/vest/vest-bottom-small.jpg",
+          "preservedBlueprint": "/images/options/vest/vest-bottom-small.jpg",
+          "verdict": "PASS",
+          "waived": false,
+          "qcAttempt": 2,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 98,
+          "rows": [
+            {
+              "product": "suit-3pc",
+              "section": "Vest-front-style",
+              "field": "bottom-shape-vest",
+              "previous": "/images/options/vest/vest-bottom-small.jpg",
+              "preservedBlueprint": "/images/options/vest/vest-bottom-small.jpg"
+            }
+          ]
+        },
+        {
+          "product": "suit-3pc",
+          "option": "vest-chest-both-besom-flap",
+          "field": "chest-pocket-vest",
+          "identity": "chest-pocket-vest/vest-chest-both-besom-flap",
+          "image": "/images/generated/suit-3pc/vest-chest-both-besom-flap.webp",
+          "master": "/images/generated/suit-3pc/vest-chest-both-besom-flap.png",
+          "previous": "/images/options/vest/vest-chest-both-besom-flap.jpg",
+          "preservedBlueprint": "/images/options/vest/vest-chest-both-besom-flap.jpg",
+          "verdict": "PASS",
+          "waived": false,
+          "qcAttempt": 2,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 98,
+          "rows": [
+            {
+              "product": "suit-3pc",
+              "section": "Vest-pockets",
+              "field": "chest-pocket-vest",
+              "previous": "/images/options/vest/vest-chest-both-besom-flap.jpg",
+              "preservedBlueprint": "/images/options/vest/vest-chest-both-besom-flap.jpg"
+            }
+          ]
+        },
+        {
+          "product": "suit-3pc",
+          "option": "vest-chest-both-welt",
+          "field": "chest-pocket-vest",
+          "identity": "chest-pocket-vest/vest-chest-both-welt",
+          "image": "/images/generated/suit-3pc/vest-chest-both-welt.webp",
+          "master": "/images/generated/suit-3pc/vest-chest-both-welt.png",
+          "previous": "/images/options/vest/vest-chest-both-welt.jpg",
+          "preservedBlueprint": "/images/options/vest/vest-chest-both-welt.jpg",
+          "verdict": "PASS",
+          "waived": false,
+          "qcAttempt": 1,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 98,
+          "rows": [
+            {
+              "product": "suit-3pc",
+              "section": "Vest-pockets",
+              "field": "chest-pocket-vest",
+              "previous": "/images/options/vest/vest-chest-both-welt.jpg",
+              "preservedBlueprint": "/images/options/vest/vest-chest-both-welt.jpg"
+            }
+          ]
+        },
+        {
+          "product": "suit-3pc",
+          "option": "vest-chest-left-patch",
+          "field": "chest-pocket-vest",
+          "identity": "chest-pocket-vest/vest-chest-left-patch",
+          "image": "/images/generated/suit-3pc/vest-chest-left-patch.webp",
+          "master": "/images/generated/suit-3pc/vest-chest-left-patch.png",
+          "previous": "/images/options/vest/vest-chest-left-patch.jpg",
+          "preservedBlueprint": "/images/options/vest/vest-chest-left-patch.jpg",
+          "verdict": "PASS",
+          "waived": false,
+          "qcAttempt": 2,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 98,
+          "rows": [
+            {
+              "product": "suit-3pc",
+              "section": "Vest-pockets",
+              "field": "chest-pocket-vest",
+              "previous": "/images/options/vest/vest-chest-left-patch.jpg",
+              "preservedBlueprint": "/images/options/vest/vest-chest-left-patch.jpg"
+            }
+          ]
+        },
+        {
+          "product": "suit-3pc",
+          "option": "vest-hole-real-straight-05",
+          "field": "lapel-hole-style",
+          "identity": "lapel-hole-style/vest-hole-real-straight-05",
+          "image": "/images/generated/suit-3pc/vest-hole-real-straight-05.webp",
+          "master": "/images/generated/suit-3pc/vest-hole-real-straight-05.png",
+          "previous": "/images/options/vest/vest-hole-real-straight-05.jpg",
+          "preservedBlueprint": null,
+          "verdict": "PASS",
+          "waived": false,
+          "qcAttempt": 1,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 98,
+          "rows": [
+            {
+              "product": "suit-3pc",
+              "section": "Vest-lapel-neckline",
+              "field": "lapel-hole-style",
+              "previous": "/images/options/vest/vest-hole-real-straight-05.jpg",
+              "preservedBlueprint": null
+            },
+            {
+              "product": "vest",
+              "section": "lapel-neckline",
+              "field": "lapel-hole-style",
+              "previous": "/images/options/vest/vest-hole-real-straight-05.jpg",
+              "preservedBlueprint": null
+            }
+          ]
+        },
+        {
+          "product": "suit-3pc",
+          "option": "vest-lower-jetted",
+          "field": "lower-pockets-vest",
+          "identity": "lower-pockets-vest/vest-lower-jetted",
+          "image": "/images/generated/suit-3pc/vest-lower-jetted.webp",
+          "master": "/images/generated/suit-3pc/vest-lower-jetted.png",
+          "previous": "/images/options/vest/vest-lower-jetted.jpg",
+          "preservedBlueprint": "/images/options/vest/vest-lower-jetted.jpg",
+          "verdict": "PASS",
+          "waived": false,
+          "qcAttempt": 1,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 98,
+          "rows": [
+            {
+              "product": "suit-3pc",
+              "section": "Vest-pockets",
+              "field": "lower-pockets-vest",
+              "previous": "/images/options/vest/vest-lower-jetted.jpg",
+              "preservedBlueprint": "/images/options/vest/vest-lower-jetted.jpg"
+            }
+          ]
+        },
+        {
+          "product": "suit-3pc",
+          "option": "vest-lower-patch",
+          "field": "lower-pockets-vest",
+          "identity": "lower-pockets-vest/vest-lower-patch",
+          "image": "/images/generated/suit-3pc/vest-lower-patch.webp",
+          "master": "/images/generated/suit-3pc/vest-lower-patch.png",
+          "previous": "/images/options/vest/vest-lower-patch.jpg",
+          "preservedBlueprint": "/images/options/vest/vest-lower-patch.jpg",
+          "verdict": "PASS",
+          "waived": false,
+          "qcAttempt": 1,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 98,
+          "rows": [
+            {
+              "product": "suit-3pc",
+              "section": "Vest-pockets",
+              "field": "lower-pockets-vest",
+              "previous": "/images/options/vest/vest-lower-patch.jpg",
+              "preservedBlueprint": "/images/options/vest/vest-lower-patch.jpg"
+            }
+          ]
+        },
+        {
+          "product": "suit-3pc",
+          "option": "vest-lower-slanted",
+          "field": "lower-pockets-vest",
+          "identity": "lower-pockets-vest/vest-lower-slanted",
+          "image": "/images/generated/suit-3pc/vest-lower-slanted.webp",
+          "master": "/images/generated/suit-3pc/vest-lower-slanted.png",
+          "previous": "/images/options/vest/vest-lower-slanted.jpg",
+          "preservedBlueprint": "/images/options/vest/vest-lower-slanted.jpg",
+          "verdict": "PASS",
+          "waived": false,
+          "qcAttempt": 1,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 98,
+          "rows": [
+            {
+              "product": "suit-3pc",
+              "section": "Vest-pockets",
+              "field": "lower-pockets-vest",
+              "previous": "/images/options/vest/vest-lower-slanted.jpg",
+              "preservedBlueprint": "/images/options/vest/vest-lower-slanted.jpg"
+            }
+          ]
+        },
+        {
+          "product": "suit-3pc",
+          "option": "vest-right-over-left",
+          "field": "placket-direction",
+          "identity": "placket-direction/vest-right-over-left",
+          "image": "/images/generated/suit-3pc/vest-right-over-left.webp",
+          "master": "/images/generated/suit-3pc/vest-right-over-left.png",
+          "previous": "/images/options/vest/vest-right-over-left.jpg",
+          "preservedBlueprint": "/images/options/vest/vest-right-over-left.jpg",
+          "verdict": "PASS",
+          "waived": false,
+          "qcAttempt": 3,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 98,
+          "rows": [
+            {
+              "product": "suit-3pc",
+              "section": "Vest-front-style",
+              "field": "placket-direction",
+              "previous": "/images/options/vest/vest-right-over-left.jpg",
+              "preservedBlueprint": "/images/options/vest/vest-right-over-left.jpg"
+            }
+          ]
+        },
+        {
+          "product": "suit-3pc",
+          "option": "vest-ticket-besom-flap",
+          "field": "ticket-pocket-vest",
+          "identity": "ticket-pocket-vest/vest-ticket-besom-flap",
+          "image": "/images/generated/suit-3pc/vest-ticket-besom-flap.webp",
+          "master": "/images/generated/suit-3pc/vest-ticket-besom-flap.png",
+          "previous": "/images/options/vest/vest-ticket-besom-flap.jpg",
+          "preservedBlueprint": "/images/options/vest/vest-ticket-besom-flap.jpg",
+          "verdict": "PASS",
+          "waived": false,
+          "qcAttempt": 1,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 98,
+          "rows": [
+            {
+              "product": "suit-3pc",
+              "section": "Vest-pockets",
+              "field": "ticket-pocket-vest",
+              "previous": "/images/options/vest/vest-ticket-besom-flap.jpg",
+              "preservedBlueprint": "/images/options/vest/vest-ticket-besom-flap.jpg"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

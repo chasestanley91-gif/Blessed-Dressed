@@ -1,0 +1,43 @@
+{
+  "scores": {
+    "shape": 99,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 99,
+    "construction": 99,
+    "placement": 99,
+    "symmetry": 99,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "dimensions",
+      "description": "The 5.0 cm hem allowance leaves no readable outward cue, so the hem depth cannot be judged from the photograph.",
+      "expected": "Per the drawing, the top of the inside allowance sits about one sixth of the leg width above the bottom edge, hinted at only by extra weight in the fall of the cloth.",
+      "actual": "The leg reads as one uniform surface down to the bottom edge; nothing marks where the allowance ends inside.",
+      "correction": "Inherent to the option and correct behaviour: on a blind-stitched plain hem the allowance is interior, and the drawing's red line is annotation that must NOT be rendered outside. Any visible line here would read as a cuff or a topstitch and would be a Critical/Major error."
+    },
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "The frame reaches roughly one and a half shoe-lengths above the hem rather than the intended one shoe-length, so the upper half of the frame is featureless leg.",
+      "expected": "Top edge of frame at mid-calf, about one shoe-length above the bottom edge of the trouser leg.",
+      "actual": "Top edge nearer knee height; the hem and shoe occupy the lower third of the frame.",
+      "correction": "Lower the top frame edge to mid-calf while keeping the full leg width, the whole shoe and a sliver of floor in frame; do not move the camera in laterally."
+    }
+  ],
+  "lockedFeatures": [
+    "PLAIN hem with NO turn-up and NO cuff - leg silhouette dead straight through the bottom edge, one flat continuous plane, no step, ledge, ridge or doubled thickness",
+    "NO topstitching, no stitch holes, no seam line and no horizontal line of any kind on the outside of the leg - blind-stitched invisible hem",
+    "single clean sharply pressed folded bottom edge as the only feature at the bottom of the leg",
+    "side-left view of the wearer's left leg, toe pointing to the image left",
+    "entire width of the leg opening and the whole shoe inside the frame with clear background either side; camera held BACK",
+    "sharp front crease running continuously down the leg to the bottom edge",
+    "charcoal fine wool trouser cloth with visible weave, black cap-toe oxford, sliver of floor under the sole",
+    "seamless neutral light-grey studio background, natural daylight studio lighting, medium-format look",
+    "knee, thigh, torso, hands and head cropped out; no red, no annotation, numbers or leader lines anywhere"
+  ],
+  "notes": "Attempt 1 PASSES. Verified at 4.5x magnification: the leg silhouette runs continuously to the bottom edge with no outward step, ledge or doubled thickness, so the turn-up/cuff substitution that this option is most vulnerable to did NOT occur; and there is no stitch row, seam line or horizontal line of any kind on the outside of the leg, so the blind-stitched plain hem reads correctly. Orientation is side-left with the toe to the image left. DUPLICATE-BLUEPRINT PROBLEM (recorded per instruction): this option's illustration, public/images/blueprints/factory/96e846dfee6b__3600__5.0cm.jpg, is BYTE-IDENTICAL (md5 fb4e87154519933c11faa6e02c991369) to public/images/blueprints/remote/2298a47f90ea__166141804814147.jpg, which backs suit-2pc/hem-fixed-topstitch (Fixed Bottom, 2.5 cm Topstitch). The drawing cannot tell the two options apart, so every distinguishing fact used here came from the catalog label alone: a plain 5.0 cm hem with NO topstitch, versus a fixed bottom with a VISIBLE 2.5 cm topstitch. That presence/absence of stitching is what makes the two rendered images visibly different, and it is the only thing that does - the blueprint should be re-sourced upstream. Second, weaker caveat: because a plain hem's allowance is entirely interior, this image is also near-indistinguishable from suit-2pc/hem-90 (Plain Hem 9.0 cm); those two options differ only in a dimension that cannot be photographed from outside the garment."
+}

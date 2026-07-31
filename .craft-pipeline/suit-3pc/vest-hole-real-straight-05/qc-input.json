@@ -1,0 +1,42 @@
+{
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 98,
+    "placement": 98,
+    "symmetry": 99,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "A thin sliver of the model's neck/jaw skin appears in the top-left corner; the FRAMING LOCK asked for the face area to be cropped out entirely.",
+      "expected": "no chin, mouth, face or hair anywhere in frame",
+      "actual": "a narrow band of neck skin above the shirt collar in the top-left corner; no chin, mouth or hair",
+      "correction": "Raise the crop's top edge no higher than the collar band so no skin enters the frame."
+    },
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "The buttonhole is slightly smaller in the frame than specified.",
+      "expected": "buttonhole occupies roughly a quarter of the picture width",
+      "actual": "occupies about one sixth of the picture width; individual purl stitches are still resolvable",
+      "correction": "Tighten in so the buttonhole spans about a quarter of the frame width."
+    }
+  ],
+  "lockedFeatures": [
+    "exactly ONE buttonhole on the lapel, on the frame-right lapel as drawn",
+    "straight buttonhole with a plain straight bar at each end - no keyhole eye",
+    "fine raised silk lips of equal width running each side of a cut-through slit, hand-worked purl stitches visible",
+    "buttonhole slanted about 20-30 degrees below horizontal, running down toward the lapel's outer edge, matching the red slash in the drawing",
+    "buttonhole set in the upper half of the lapel below the gorge notch",
+    "full lapel width in frame with plain shirt beyond, no tie, no flower, no lapel pin",
+    "navy wool with visible weave, plain neutral background",
+    "zero red or blue marks, no magnifier oval, no leader line, no numeral, no text anywhere in frame"
+  ],
+  "notes": "Drawing: lapel and collar front with shoulder/sleeve seams, one small red slash high on the frame-right lapel slanted roughly 30 degrees below horizontal, plus a red magnifier oval containing an enlarged red-and-blue buttonhole. The oval, the red and the blue are annotation only. Candidate: a single hand-worked straight buttonhole on the frame-right lapel, fine equal raised lips either side of a cut slit, plain bar at each end, no keyhole eye, no machine-flat look, no fake stitch line. Slant matches the drawing's slash rather than the prompt's looser 'parallel to the lapel edge' wording - the drawing wins and the drawing agrees with the render. No red, no blue, no magnifier oval, no annotation, no tie, no boutonniere. Framing shows the full lapel width with shirt beyond. Note for upstream: the option sits on waistcoat products but the source drawing itself carries jacket shoulder and sleevehead seams, so the jacket-style lapel in the render is faithful to the blueprint, not a substitution."
+}

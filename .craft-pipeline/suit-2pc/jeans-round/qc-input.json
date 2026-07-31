@@ -1,0 +1,41 @@
+{
+  "scores": {
+    "shape": 99,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 99,
+    "construction": 98,
+    "placement": 99,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "The frame runs down to mid-thigh, so the pocket opening occupies roughly a third of the frame rather than the 40-80% dominance target; a band of plain leg cloth carries no information.",
+      "expected": "Pocket opening dominating 40-80% of frame.",
+      "actual": "Opening spans about 36% of frame width in the upper-left; lower half of frame is plain leg.",
+      "correction": "Bottom edge could sit roughly a hand's width below the horizontal run of the pocket opening instead of at mid-thigh. The rounded corner is still fully sharp and unmistakable at this scale."
+    },
+    {
+      "severity": "minor",
+      "category": "construction",
+      "description": "The besom pocket drawn on the opposite hip is reproduced at nearly the same visual weight as the subject, so it mildly competes for attention.",
+      "expected": "Besom present as in the drawing but clearly secondary.",
+      "actual": "Besom rendered crisply and roughly level with the subject pocket.",
+      "correction": "Faithful to the blueprint (the besom IS in the drawing); could be softened by depth of field. Not a geometry error."
+    }
+  ],
+  "lockedFeatures": [
+    "J-shaped rounded 'jeans' scoop front pocket opening on the near hip: short vertical run off the waistband, smooth quarter-round corner, then a long horizontal run ending at the front crease",
+    "ROUND corner radius (not square, not diamond, not arc) — this is what separates this option from its siblings",
+    "opening on ONE hip only, with the plain besom reproduced on the opposite side exactly as drawn",
+    "waistband with belt loops across the top, matching loop spacing",
+    "three-quarter front orientation",
+    "charcoal fine wool suiting, seamless neutral studio background",
+    "no annotation, numbers, arrows or red marks anywhere in frame"
+  ],
+  "notes": "Illustration shows a trouser three-quarter front: waistband with belt loops, a red-outlined J-shaped opening on the near hip (short vertical drop off the waistband, rounded corner, long horizontal run inboard toward the crease), and a plain besom on the far hip. The candidate reproduces that geometry closely: the scoop opening starts under a belt loop at the waistband, drops, turns through a smooth round corner and runs horizontally to the crease, terminating at the same landmark as the drawing. The corner is genuinely ROUND, which is the distinguishing feature against the square/diamond/arc siblings. The besom on the opposite hip is present, matching the drawing. No red leaked into the cloth — the whole garment is charcoal wool; no annotations, numbers or leader lines anywhere. Two minor findings, both composition/emphasis, no geometry defects."
+}

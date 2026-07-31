@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-31T06:10:50.253Z",
+  "generatedAt": "2026-07-31T18:43:37.373Z",
   "by": "tools/wave_queue.mjs",
   "clusterKey": "part|field|option|label — proven zero blueprint divergence across the in-scope catalog",
   "stagesIncluded": [
@@ -10,22 +10,22 @@
     "spec-only"
   ],
   "generatable": {
-    "clusters": 99,
-    "rows": 190,
-    "rowsPerGeneration": 1.9191919191919191
+    "clusters": 98,
+    "rows": 185,
+    "rowsPerGeneration": 1.8877551020408163
   },
   "blocked": {
-    "clusters": 436,
-    "rows": 663,
+    "clusters": 437,
+    "rows": 664,
     "byReason": {
-      "UNVERIFIED_BLUEPRINT": 413,
+      "UNVERIFIED_BLUEPRINT": 414,
       "NOT_A_DRAWING": 23
     }
   },
   "budget": {
     "creditsPerImage": 0.5,
     "assumedAttempts": 1.75,
-    "estimatedCredits": 87
+    "estimatedCredits": 86
   },
   "queue": [
     {
@@ -44,7 +44,7 @@
         {
           "product": "suit-2pc",
           "addr": "suit-2pc > Trousers-details-contrast > contrast-positions > trouser-contrast-side",
-          "stage": "prompt-built"
+          "stage": "generated-awaiting-qc"
         },
         {
           "product": "suit-3pc",
@@ -65,45 +65,6 @@
         "verdict": "LINE_DRAWING",
         "canvas": "1200x1200",
         "edgeDensity": 0.0946
-      }
-    },
-    {
-      "key": "fin-contrast|contrast-positions|trouser-contrast-waist|Contrast Waistband",
-      "part": "fin-contrast",
-      "field": "contrast-positions",
-      "option": "trouser-contrast-waist",
-      "label": "Contrast Waistband",
-      "rowsUnlocked": 3,
-      "products": [
-        "suit-2pc",
-        "suit-3pc",
-        "trousers"
-      ],
-      "rows": [
-        {
-          "product": "suit-2pc",
-          "addr": "suit-2pc > Trousers-details-contrast > contrast-positions > trouser-contrast-waist",
-          "stage": "failed-retry-due"
-        },
-        {
-          "product": "suit-3pc",
-          "addr": "suit-3pc > Trousers-details-contrast > contrast-positions > trouser-contrast-waist",
-          "stage": "not-started"
-        },
-        {
-          "product": "trousers",
-          "addr": "trousers > details-contrast > contrast-positions > trouser-contrast-waist",
-          "stage": "not-started"
-        }
-      ],
-      "blueprint": "/images/blueprints/factory/b16ea7165058__33A2__Appointed_Waistband.jpg",
-      "blueprints": [
-        "/images/blueprints/factory/b16ea7165058__33A2__Appointed_Waistband.jpg"
-      ],
-      "triage": {
-        "verdict": "LINE_DRAWING",
-        "canvas": "1200x1200",
-        "edgeDensity": 0.1139
       }
     },
     {
@@ -380,45 +341,6 @@
       }
     },
     {
-      "key": "jacket-lapel-bh-position|lapel-bh-position|lbp-left|Left Lapel",
-      "part": "jacket-lapel-bh-position",
-      "field": "lapel-bh-position",
-      "option": "lbp-left",
-      "label": "Left Lapel",
-      "rowsUnlocked": 3,
-      "products": [
-        "sport-coat",
-        "suit-2pc",
-        "suit-3pc"
-      ],
-      "rows": [
-        {
-          "product": "sport-coat",
-          "addr": "sport-coat > lapel > lapel-bh-position > lbp-left",
-          "stage": "failed-retry-due"
-        },
-        {
-          "product": "suit-2pc",
-          "addr": "suit-2pc > lapel > lapel-bh-position > lbp-left",
-          "stage": "not-started"
-        },
-        {
-          "product": "suit-3pc",
-          "addr": "suit-3pc > lapel > lapel-bh-position > lbp-left",
-          "stage": "not-started"
-        }
-      ],
-      "blueprint": "/images/blueprints/supplier/9e99ee8084ba__0541__Left_bttn_hole.jpg",
-      "blueprints": [
-        "/images/blueprints/supplier/9e99ee8084ba__0541__Left_bttn_hole.jpg"
-      ],
-      "triage": {
-        "verdict": "LINE_DRAWING",
-        "canvas": "1200x1200",
-        "edgeDensity": 0.0979
-      }
-    },
-    {
       "key": "jacket-lapel|lapel-style|lapel-notch-68|Notch 68° (Curved Gorge)",
       "part": "jacket-lapel",
       "field": "lapel-style",
@@ -473,7 +395,7 @@
         {
           "product": "sport-coat",
           "addr": "sport-coat > shoulder-structure > shoulder-pad > pad-03",
-          "stage": "prompt-built"
+          "stage": "failed-retry-due"
         },
         {
           "product": "suit-2pc",
@@ -551,7 +473,7 @@
         {
           "product": "sport-coat",
           "addr": "sport-coat > shoulder-structure > shoulder-pad > pad-none",
-          "stage": "prompt-built"
+          "stage": "failed-retry-due"
         },
         {
           "product": "suit-2pc",
@@ -1058,7 +980,7 @@
         {
           "product": "suit-2pc",
           "addr": "suit-2pc > Trousers-waistband > waistband-extension > ext-pointed",
-          "stage": "not-started"
+          "stage": "prompt-built"
         },
         {
           "product": "suit-3pc",
@@ -1363,7 +1285,7 @@
         {
           "product": "suit-2pc",
           "addr": "suit-2pc > Trousers-front-pockets > coin-pocket > coin-both",
-          "stage": "not-started"
+          "stage": "prompt-built"
         },
         {
           "product": "suit-3pc",
@@ -1429,7 +1351,7 @@
         {
           "product": "suit-2pc",
           "addr": "suit-2pc > Trousers-front-pockets > coin-pocket > coin-right",
-          "stage": "not-started"
+          "stage": "prompt-built"
         },
         {
           "product": "suit-3pc",
@@ -1759,7 +1681,7 @@
         {
           "product": "suit-2pc",
           "addr": "suit-2pc > Trousers-pleats-structure > fly-style > fly-french",
-          "stage": "not-started"
+          "stage": "prompt-built"
         },
         {
           "product": "suit-3pc",
@@ -1825,7 +1747,7 @@
         {
           "product": "suit-2pc",
           "addr": "suit-2pc > Trousers-pleats-structure > fly-style > fly-pointed",
-          "stage": "not-started"
+          "stage": "prompt-built"
         },
         {
           "product": "suit-3pc",
@@ -1891,7 +1813,7 @@
         {
           "product": "suit-2pc",
           "addr": "suit-2pc > Trousers-bottom-hem > hem-style > hem-90",
-          "stage": "not-started"
+          "stage": "prompt-built"
         },
         {
           "product": "suit-3pc",
@@ -1957,7 +1879,7 @@
         {
           "product": "suit-2pc",
           "addr": "suit-2pc > Trousers-bottom-hem > hem-style > hem-cuff-38",
-          "stage": "not-started"
+          "stage": "prompt-built"
         },
         {
           "product": "suit-3pc",
@@ -2023,7 +1945,7 @@
         {
           "product": "suit-2pc",
           "addr": "suit-2pc > Trousers-bottom-hem > hem-style > hem-inner-fold-40",
-          "stage": "not-started"
+          "stage": "prompt-built"
         },
         {
           "product": "suit-3pc",
@@ -2089,7 +2011,7 @@
         {
           "product": "suit-2pc",
           "addr": "suit-2pc > Trousers-bottom-hem > hem-style > hem-no-cuff",
-          "stage": "not-started"
+          "stage": "prompt-built"
         },
         {
           "product": "suit-3pc",
@@ -2168,6 +2090,60 @@
       }
     },
     {
+      "key": "fin-contrast|contrast-positions|trouser-contrast-waist|Contrast Waistband",
+      "part": "fin-contrast",
+      "field": "contrast-positions",
+      "option": "trouser-contrast-waist",
+      "label": "Contrast Waistband",
+      "rowsUnlocked": 1,
+      "products": [
+        "suit-2pc"
+      ],
+      "rows": [
+        {
+          "product": "suit-2pc",
+          "addr": "suit-2pc > Trousers-details-contrast > contrast-positions > trouser-contrast-waist",
+          "stage": "generated-awaiting-qc"
+        }
+      ],
+      "blueprint": "/images/blueprints/factory/b16ea7165058__33A2__Appointed_Waistband.jpg",
+      "blueprints": [
+        "/images/blueprints/factory/b16ea7165058__33A2__Appointed_Waistband.jpg"
+      ],
+      "triage": {
+        "verdict": "LINE_DRAWING",
+        "canvas": "1200x1200",
+        "edgeDensity": 0.1139
+      }
+    },
+    {
+      "key": "jacket-lapel-bh-position|lapel-bh-position|lbp-left|Left Lapel",
+      "part": "jacket-lapel-bh-position",
+      "field": "lapel-bh-position",
+      "option": "lbp-left",
+      "label": "Left Lapel",
+      "rowsUnlocked": 1,
+      "products": [
+        "sport-coat"
+      ],
+      "rows": [
+        {
+          "product": "sport-coat",
+          "addr": "sport-coat > lapel > lapel-bh-position > lbp-left",
+          "stage": "generated-awaiting-qc"
+        }
+      ],
+      "blueprint": "/images/blueprints/supplier/9e99ee8084ba__0541__Left_bttn_hole.jpg",
+      "blueprints": [
+        "/images/blueprints/supplier/9e99ee8084ba__0541__Left_bttn_hole.jpg"
+      ],
+      "triage": {
+        "verdict": "LINE_DRAWING",
+        "canvas": "1200x1200",
+        "edgeDensity": 0.0979
+      }
+    },
+    {
       "key": "trouser-back-pocket|back-pocket-style|back-both-welt|Both Welt Pockets (Left Button)",
       "part": "trouser-back-pocket",
       "field": "back-pocket-style",
@@ -2208,7 +2184,7 @@
         {
           "product": "suit-3pc",
           "addr": "suit-3pc > Trousers-front-pockets > coin-pocket > coin-left",
-          "stage": "not-started"
+          "stage": "prompt-built"
         }
       ],
       "blueprint": "/images/blueprints/remote/099818025ae9__3531.jpg",
@@ -2316,7 +2292,7 @@
         {
           "product": "trousers",
           "addr": "trousers > front-pockets > front-pocket-style > slant-25-stripe",
-          "stage": "not-started"
+          "stage": "prompt-built"
         }
       ],
       "blueprint": "/images/blueprints/remote/90f739dcde96__3124.jpg",
@@ -2532,7 +2508,7 @@
         {
           "product": "suit-3pc",
           "addr": "suit-3pc > Vest-pockets > chest-pocket-vest > vest-chest-both-besom-flap",
-          "stage": "not-started"
+          "stage": "prompt-built"
         }
       ],
       "blueprint": "/images/options/vest/vest-chest-both-besom-flap.jpg",
@@ -2570,33 +2546,6 @@
         "verdict": "LINE_DRAWING",
         "canvas": "1200x1200",
         "edgeDensity": 0.1209
-      }
-    },
-    {
-      "key": "vest-chest-pocket|chest-pocket-vest|vest-chest-both-patch|Right & Left Patch",
-      "part": "vest-chest-pocket",
-      "field": "chest-pocket-vest",
-      "option": "vest-chest-both-patch",
-      "label": "Right & Left Patch",
-      "rowsUnlocked": 1,
-      "products": [
-        "suit-3pc"
-      ],
-      "rows": [
-        {
-          "product": "suit-3pc",
-          "addr": "suit-3pc > Vest-pockets > chest-pocket-vest > vest-chest-both-patch",
-          "stage": "failed-retry-due"
-        }
-      ],
-      "blueprint": "/images/options/vest/vest-chest-both-patch.jpg",
-      "blueprints": [
-        "/images/options/vest/vest-chest-both-patch.jpg"
-      ],
-      "triage": {
-        "verdict": "LINE_DRAWING",
-        "canvas": "1200x1200",
-        "edgeDensity": 0.1289
       }
     },
     {
@@ -2640,7 +2589,7 @@
         {
           "product": "suit-3pc",
           "addr": "suit-3pc > Vest-pockets > chest-pocket-vest > vest-chest-left-patch",
-          "stage": "not-started"
+          "stage": "prompt-built"
         }
       ],
       "blueprint": "/images/options/vest/vest-chest-left-patch.jpg",
@@ -3072,7 +3021,7 @@
         {
           "product": "suit-3pc",
           "addr": "suit-3pc > Vest-pockets > lower-pockets-vest > vest-lower-slant-flap",
-          "stage": "not-started"
+          "stage": "prompt-built"
         }
       ],
       "blueprint": "/images/options/vest/vest-lower-slant-flap.jpg",
@@ -3126,7 +3075,7 @@
         {
           "product": "suit-3pc",
           "addr": "suit-3pc > Vest-pockets > ticket-pocket-vest > vest-ticket-besom-flap",
-          "stage": "not-started"
+          "stage": "prompt-built"
         }
       ],
       "blueprint": "/images/options/vest/vest-ticket-besom-flap.jpg",
@@ -3180,7 +3129,7 @@
         {
           "product": "suit-3pc",
           "addr": "suit-3pc > Vest-pockets > ticket-pocket-vest > vest-ticket-left",
-          "stage": "not-started"
+          "stage": "prompt-built"
         }
       ],
       "blueprint": "/images/options/vest/vest-ticket-left.jpg",
@@ -3234,7 +3183,7 @@
         {
           "product": "suit-3pc",
           "addr": "suit-3pc > Vest-pockets > ticket-pocket-vest > vest-ticket-slant-besom",
-          "stage": "not-started"
+          "stage": "prompt-built"
         }
       ],
       "blueprint": "/images/options/vest/vest-ticket-slant-besom.jpg",
@@ -4089,7 +4038,7 @@
         {
           "product": "suit-2pc",
           "addr": "suit-2pc > suit-pockets > coin-pocket > coin-right",
-          "stage": "not-started"
+          "stage": "prompt-built"
         },
         {
           "product": "suit-3pc",
@@ -4128,7 +4077,7 @@
         {
           "product": "suit-2pc",
           "addr": "suit-2pc > suit-pockets > coin-pocket > coin-both",
-          "stage": "not-started"
+          "stage": "prompt-built"
         },
         {
           "product": "suit-3pc",
@@ -16349,6 +16298,33 @@
       "blueprint": "/images/jacket/coin-pocket/none.jpg",
       "blueprints": [
         "/images/jacket/coin-pocket/none.jpg"
+      ],
+      "blockedBy": "UNVERIFIED_BLUEPRINT",
+      "triage": [
+        "canvas 240x200 is a UI thumbnail, not an authored drawing (every genuine supplier drawing here is 1200x1200) — cannot be verified from pixels; needs a look"
+      ],
+      "why": "blueprint_triage could not verify this file from its pixels: canvas 240x200 is a UI thumbnail, not an authored drawing (every genuine supplier drawing here is 1200x1200) — cannot be verified from pixels; needs a look"
+    },
+    {
+      "key": "jacket-pocket|coin-pocket|coin-left|Left Side",
+      "part": "jacket-pocket",
+      "field": "coin-pocket",
+      "option": "coin-left",
+      "label": "Left Side",
+      "rowsUnlocked": 1,
+      "products": [
+        "suit-3pc"
+      ],
+      "rows": [
+        {
+          "product": "suit-3pc",
+          "addr": "suit-3pc > suit-pockets > coin-pocket > coin-left",
+          "stage": "prompt-built"
+        }
+      ],
+      "blueprint": "/images/jacket/coin-pocket/left.jpg",
+      "blueprints": [
+        "/images/jacket/coin-pocket/left.jpg"
       ],
       "blockedBy": "UNVERIFIED_BLUEPRINT",
       "triage": [

@@ -1,0 +1,45 @@
+{
+  "addr": "suit-2pc > hem-fixed-topstitch",
+  "productId": "suit-2pc",
+  "optionId": "hem-fixed-topstitch",
+  "attempt": 2,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 99,
+    "construction": 98,
+    "placement": 99,
+    "symmetry": 99,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "dimensions",
+      "description": "The topstitch row sits about one seventh of the leg width above the bottom edge, slightly deeper than a literal 2.5 cm setting would give on a typical leg opening (roughly 3 cm equivalent).",
+      "expected": "A shallow 2.5 cm topstitch setting.",
+      "actual": "Stitch row set at roughly 0.15 of the leg width above the bottom edge, i.e. about 3 cm on a ~20 cm leg opening.",
+      "correction": "None required: this matches the marked line position in the (shared) blueprint almost exactly, and the setting still reads unambiguously as a shallow topstitched fixed hem rather than a cuff. If tightened later, bring the row down by about a fifth."
+    },
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "The frame reaches roughly one and a half shoe-lengths above the hem rather than the intended one shoe-length, leaving the upper half of the frame as featureless leg.",
+      "expected": "Top edge of frame at mid-calf, about one shoe-length above the bottom edge of the trouser leg.",
+      "actual": "Top edge nearer knee height; the hem and shoe occupy the lower third of the frame.",
+      "correction": "Lower the top frame edge to mid-calf while keeping the full leg width, the whole shoe and a sliver of floor in frame; do not move the camera in laterally."
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "notes": "Attempt 2 PASSES after attempt 1 failed Critical by substituting a turn-up/cuff. Verified at 4.5x magnification: the horizontal line is now unmistakably a row of DISCRETE STITCHES with individual needle punctures, lying flat on a single continuous plane - the leg silhouette runs straight past it with no outward step, there is no rolled fold edge and no doubled thickness, and the front crease runs continuously through it to the bottom edge. Orientation corrected to side-left (toe to image left). DUPLICATE-BLUEPRINT PROBLEM (recorded per instruction): this option's illustration, public/images/blueprints/remote/2298a47f90ea__166141804814147.jpg, is BYTE-IDENTICAL (md5 fb4e87154519933c11faa6e02c991369) to public/images/blueprints/factory/96e846dfee6b__3600__5.0cm.jpg, which backs suit-2pc/hem-no-cuff (Plain Hem 5.0 cm). The drawing therefore cannot distinguish 'Fixed Bottom, 2.5 cm Topstitch' from 'Plain Hem 5.0 cm'; its red marker sits at about one sixth of the leg width, which fits the 5.0 cm option rather than the 2.5 cm one. Every distinguishing fact used here came from the catalog label alone - fixed bottom plus a VISIBLE topstitch, versus a blind-stitched plain hem with NO topstitch for hem-no-cuff - and that absence/presence of stitching is what makes the two rendered images visibly different. The blueprint needs re-sourcing upstream; until then QC of this pair cannot be blueprint-driven.",
+  "checkedAt": "2026-07-31T20:35:43.214Z"
+}

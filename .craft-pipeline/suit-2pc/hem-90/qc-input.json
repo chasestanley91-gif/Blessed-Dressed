@@ -1,0 +1,42 @@
+{
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 99,
+    "construction": 99,
+    "placement": 98,
+    "symmetry": 99,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "dimensions",
+      "description": "The deep 9.0 cm hem allowance leaves no readable outward cue, so the hem depth cannot be judged from the photograph.",
+      "expected": "Per the drawing, the top of the inside hem allowance sits a little under one third of the leg width above the bottom edge, hinted at by the extra weight and a barely perceptible pressed line.",
+      "actual": "The leg reads as one uniform surface down to the bottom edge; no pressed line or change in body marks where the allowance ends inside.",
+      "correction": "This is inherent to the option: on a plain hem the allowance is interior, and the drawing's red line is annotation that must NOT be rendered as an outside line. If regenerated, push only for a marginally heavier, denser fall of cloth in the bottom third of the leg - never a visible line, band or fold, which would read as a cuff and be a Critical error."
+    },
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "The frame reaches roughly one and a half shoe-lengths above the hem rather than the intended one shoe-length, so the top third of the frame is featureless leg.",
+      "expected": "Top edge of frame at mid-calf, about one shoe-length above the bottom edge of the trouser leg.",
+      "actual": "Top edge sits near knee height; the hem and shoe occupy the lower third of the frame.",
+      "correction": "Lower the top frame edge to mid-calf while keeping the full leg width, the whole shoe and a sliver of floor inside the frame; do not move the camera in laterally."
+    }
+  ],
+  "lockedFeatures": [
+    "PLAIN hem - no turn-up, no cuff, no folded band, no outside stitch line encircling the leg",
+    "single clean pressed bottom edge, allowance turned to the inside and blind-stitched",
+    "side-left view of the wearer's left leg, leg vertical and centred, toe pointing to the image left",
+    "entire width of the leg opening and the whole shoe inside the frame with clear background either side",
+    "camera held BACK for this full-width feature; knee, thigh, torso, hands and head cropped out",
+    "charcoal fine wool trouser cloth with visible weave, seamless neutral light-grey studio background, sliver of floor under the sole",
+    "black cap-toe oxford, trouser breaking softly onto the shoe",
+    "no red, no coloured band, no annotation, numbers or leader lines anywhere in the frame"
+  ],
+  "notes": "Attempt 1. The critical failure mode for this option - substituting a turn-up / cuff for a plain hem - was avoided cleanly: the outer leg is one continuous surface falling to a single pressed bottom edge, with no band, fold, ridge or outside stitching. Orientation is a true side-left view, the full leg width and whole shoe are in frame with a floor sliver, and no red or annotation leaked in from the drawing. The one unavoidable limitation is that a 9.0 cm plain hem allowance lives entirely inside the leg, so its depth is not photographically verifiable from the outside; the drawing conveys it only via a red position marker, which the annotation rule forbids rendering. Depth is therefore recorded as a Minor rather than driving a regeneration, because any attempt to make the allowance line visible on the outside would read as a cuff - the exact Critical error this option must avoid."
+}

@@ -1,0 +1,51 @@
+{
+  "scores": {
+    "shape": 95,
+    "geometry": 84,
+    "dimensions": 93,
+    "angles": 96,
+    "construction": 87,
+    "placement": 95,
+    "symmetry": 94,
+    "composition": 96,
+    "blueprint-match": 85
+  },
+  "errors": [
+    {
+      "severity": "major",
+      "category": "geometry",
+      "description": "Still only ONE row of thread. An intensity profile taken perpendicular to the pocket mouth resolves three parallel features: a soft shadow band beyond the opening, a crisp solid dark line (the folded pocket edge itself), and - set back from that fold by a distance consistent with the specified inner row - a single broken, dashed line that is unmistakably stitching. The inner row is now correctly placed. What is missing is the OUTER row: nothing rides the folded edge. The fold's own shadow is a crease, not thread, so the picture still gives the customer only one countable line of stitches.",
+      "expected": "two lines that both read as thread - one riding the folded edge, one set back from it",
+      "actual": "one thread line set back from the fold; the fold edge itself is bare, so only one stitch row can be counted",
+      "correction": "add the outer row: a visible line of stitches running along the very top of the folded edge, close enough to graze it, distinct from the fold's shadow and made of the same fine even thread as the inner row"
+    },
+    {
+      "severity": "minor",
+      "category": "construction",
+      "description": "With only the inner row present the picture could be read as a single-topstitch pocket sewn at a wider setting rather than as a double-topstitched one, which is the neighbouring option's construction.",
+      "expected": "a construction that can only be read as double topstitching",
+      "actual": "readable as a single row set back from the edge",
+      "correction": "covered by the geometry correction - two thread lines, both visible"
+    },
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "The bottom edge of the picture sits almost on the lower corner of the pocket mouth rather than about one pocket-mouth length below it, so the run of stitching is cut off right at the end of the opening.",
+      "expected": "bottom edge about one pocket-mouth length below the lower corner of the opening",
+      "actual": "bottom edge lands within a hand's width of the lower corner",
+      "correction": "leave a little more cloth below the bottom corner of the pocket opening"
+    }
+  ],
+  "lockedFeatures": [
+    "the top edge of the picture now sits above the waistband with the full waistband depth and one complete belt loop inside the frame - this was fixed on attempt 2 and must not regress",
+    "the inner stitch row is now correctly set back from the folded edge by the specified distance - keep it exactly where it is",
+    "one front hip of navy fine-wool tailored trousers, worn, photographed straight on",
+    "the slanted pocket mouth running diagonally across roughly two thirds of the picture diagonal from the waistband down to the side seam",
+    "tonal thread matching the cloth, fine and machine-regular, no contrast and no orange and no jeans-style heavy topstitch",
+    "no rivets and no decorative bar-tacks beyond what is drawn",
+    "the fly, the opposite hip, the crotch, the torso above the waistband and both hands all cropped out",
+    "seamless plain neutral light-grey studio background",
+    "zero numerals, arrows, leader lines, callouts, coloured guide marks or text anywhere in frame"
+  ],
+  "notes": "ATTEMPT 2 vs /images/blueprints/factory/79a074c919dd__31A9__With_0.1_0.7_top_stitching.jpg.\n\nWHAT ATTEMPT 2 FIXED: the framing correction landed - the waistband top and a complete belt loop are now inside the frame - and the single stitch row that attempt 1 had glued to the fold has moved to the correct inner setting. Measured with a perpendicular intensity profile, the thread line now sits about 26 pixels off the fold in an 880-pixel-wide frame, which is the right proportion for the inner row.\n\nWHAT IS STILL WRONG: there is one thread line, not two. The outer row that should ride the folded edge was not rendered at all - the model appears to be treating the fold's own shadow as though it were that row. From a customer's point of view the picture is still a single-topstitched pocket.\n\nROOT CAUSE: the prompt describes the outer row as sitting 'almost on' the fold, which the model resolves as 'merged with the fold' and therefore renders as nothing. Attempt 3 must say the fold edge is NOT a stitch row and that a separate line of stitches must be visible on top of it."
+}

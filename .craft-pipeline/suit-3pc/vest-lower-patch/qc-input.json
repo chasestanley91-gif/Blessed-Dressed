@@ -1,0 +1,34 @@
+{
+  "scores": {
+    "shape": 99,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 99,
+    "placement": 99,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "angles",
+      "description": "The top mouth edges of both patch pockets sit a degree or two off horizontal where the drawing shows them dead level.",
+      "expected": "Pocket mouth edges drawn perfectly horizontal on the flat technical drawing.",
+      "actual": "Each pocket mouth tips very slightly, the frame-left one dipping toward the centre front, consistent with cloth draping over a worn body rather than a construction difference.",
+      "correction": "None required - this is worn-garment drape, not a geometry deviation; the applied patch construction, rounded lower corners and waist placement all read correctly."
+    }
+  ],
+  "lockedFeatures": [
+    "two applied patch pockets, one on each lower front panel, both fully inside the frame",
+    "square-cornered pocket mouth with rounded lower corners on both pockets",
+    "pockets at waist level, straddling the front dart line",
+    "no flap, no welt, no jetting on either pocket",
+    "full front view of the waistcoat, V-neck and pointed hem both visible",
+    "brown/grey tweed-textured wool, no red or highlighter colour anywhere",
+    "seamless plain neutral light-grey studio background",
+    "no annotation, numbers, arrows or dimension lines"
+  ],
+  "notes": "Attempt 1 is accurate. Both lower patch pockets are present as a matched pair, applied on the outside of the garment with visible edge stitching and rounded bottom corners, exactly as outlined in red on the tech pack - and no red cloth leaked into the render. Front orientation, V-neck, five-position button row and double-pointed hem all match. The pair reads unambiguously within a second and neither pocket is cropped or obstructed; the necktie sits well clear of the subject."
+}

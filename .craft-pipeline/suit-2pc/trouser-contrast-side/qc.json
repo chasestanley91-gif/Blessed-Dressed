@@ -1,0 +1,127 @@
+{
+  "addr": "suit-2pc > trouser-contrast-side",
+  "productId": "suit-2pc",
+  "optionId": "trouser-contrast-side",
+  "attempt": 2,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 97,
+    "geometry": 97,
+    "dimensions": 96,
+    "angles": 98,
+    "construction": 97,
+    "placement": 98,
+    "symmetry": 98,
+    "composition": 96,
+    "blueprint-match": 96
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "construction",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "dimensions",
+      "description": "The braid is now very close to specification - the Major width error from attempt 1 is essentially fixed. Measured from the pixel profile of this 880x1168 render: at y=500 the visible leg spans x=351 to x=541 (191 px) and the satin band runs x=440 to x=452 (about 13 px), i.e. 6.8% of the leg width; at y=800 the leg is 153 px and the band about 12 px, 7.8%. That is down from about 11% at attempt 1, and it now reads unmistakably as a narrow evening braid rather than a broad ceremonial stripe. It is still roughly 1.4x the specified one twentieth (5%).",
+      "expected": "satin braid about one twentieth (5%) of the visible leg width at mid-thigh, no wider than the pressed front crease beside it",
+      "actual": "about 7% of the visible leg width - correct in character, still about a third wider than specified",
+      "correction": "narrow the braid by about a third again, to about one twentieth (5%) of the visible leg width at mid-thigh and no wider than the pressed front crease line. Keep it a single continuous band on the outseam - do not split it, do not add piping."
+    },
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "The attempt-1 intrusion is fixed - the jacket hem is gone and the picture starts at the waistband. In its place a new foreign element appeared at the other end: a pair of black oxford shoes and the model's foot now occupy the bottom ~13% of the frame. The drawing shows the trouser alone, and the prompt's set clause forbids props. A thin sliver of light shirt cloth also shows at the very top edge above the waistband.",
+      "expected": "trouser only from the top of the waistband to the hem, against the plain sweep, nothing else in frame",
+      "actual": "black oxford shoes and a foot at the bottom of the frame, and a sliver of shirt above the waistband at the top",
+      "correction": "bottom edge of the picture just below the trouser hem - no shoes, no feet, no ankles. Top edge exactly at the top of the waistband - no shirt, no jacket, no skin. Trouser and grey sweep only."
+    },
+    {
+      "severity": "minor",
+      "category": "blueprint-match",
+      "description": "The satin/matte material contrast is present and legible but restrained at this render resolution; the braid reads mainly as a sheen line rather than as an obviously different cloth from the matte worsted around it.",
+      "expected": "satin sheen against matte worsted so the two materials are instantly distinguishable",
+      "actual": "distinguishable, but the sheen differential is subtle",
+      "correction": "raise the satin's specular sheen so the braid clearly reads as a different, glossier material against the matte worsted, without widening it"
+    }
+  ],
+  "verdict": "FAIL",
+  "waiver": null,
+  "correction": {
+    "errors": [
+      {
+        "severity": "minor",
+        "category": "shape",
+        "error": "score-card category \"shape\" scored 97 (< 98)",
+        "expected": ">= 98",
+        "actual": "97",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"shape\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "geometry",
+        "error": "score-card category \"geometry\" scored 97 (< 98)",
+        "expected": ">= 98",
+        "actual": "97",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"geometry\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "dimensions",
+        "error": "score-card category \"dimensions\" scored 96 (< 98)",
+        "expected": ">= 98",
+        "actual": "96",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"dimensions\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "construction",
+        "error": "score-card category \"construction\" scored 97 (< 98)",
+        "expected": ">= 98",
+        "actual": "97",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"construction\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "composition",
+        "error": "score-card category \"composition\" scored 96 (< 98)",
+        "expected": ">= 98",
+        "actual": "96",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"composition\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "blueprint-match",
+        "error": "score-card category \"blueprint-match\" scored 96 (< 98)",
+        "expected": ">= 98",
+        "actual": "96",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"blueprint-match\" and regenerate."
+      }
+    ],
+    "lockedFeatures": [
+      "side view of the trouser, outseam facing the camera, exactly as drawn",
+      "a SINGLE narrow satin braid on the outseam - not two parallel braids, not a braid with piping either side",
+      "the braid running the full length of the outseam from the bottom edge of the waistband to the hem, unbroken, with a crisp seam join on each edge",
+      "the welt back pocket with its button at the upper rear",
+      "the front pocket opening at the upper front",
+      "the waistband with its belt loops as drawn",
+      "plain hem - no turn-up, no cuff",
+      "charcoal/black formal worsted, matte, with visible weave",
+      "seamless neutral light-grey studio sweep, no props, no annotations, no red guide marks"
+    ],
+    "forbiddenChanges": [
+      "do not alter any checklist item this attempt already passed",
+      "do not change the camera crop, composition, or accessories unless the error is itself a composition error",
+      "do not change the garment part, orientation, or any other option's geometry"
+    ]
+  },
+  "notes": "ATTEMPT 2 vs /images/blueprints/factory/5252459c3a51__3382__Side_seam_with_fabric_1.2cm_width_.jpg. The Major from attempt 1 is resolved: the braid went from about 11% of leg width to about 7%, verified by pixel profile at two heights, and now reads as the narrow evening braid the tech pack names rather than a military stripe. Single braid, unbroken waistband to hem, on the outseam, with the back welt pocket and button and the front pocket opening all correctly placed. Everything remaining is Minor. Note the recurring pattern across this batch: correcting one region reliably introduces a new foreign element elsewhere in the frame - here the jacket hem left the top and shoes arrived at the bottom - so attempt 3 must name both edges of the frame explicitly rather than only the one that was wrong last time.",
+  "checkedAt": "2026-07-31T20:55:17.413Z"
+}

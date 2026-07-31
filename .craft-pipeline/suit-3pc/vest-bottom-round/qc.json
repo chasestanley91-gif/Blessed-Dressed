@@ -1,0 +1,53 @@
+{
+  "addr": "suit-3pc > vest-bottom-round",
+  "productId": "suit-3pc",
+  "optionId": "vest-bottom-round",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 99,
+    "construction": 98,
+    "placement": 98,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "dimensions",
+      "description": "The corner radius is more generous than in the drawing, so the bottom reads as one long sweep rather than a rounded corner joined by a gentler hem.",
+      "expected": "radius roughly a quarter to a third of the front panel width, with the hem between the two corners comparatively gentle",
+      "actual": "radius closer to half the front panel width; the whole lower edge is one continuous arc",
+      "correction": "Tighten each corner radius to about a third of the front panel width and flatten the hem between the two corners."
+    },
+    {
+      "severity": "minor",
+      "category": "shape",
+      "description": "The shallow softly-rounded notch where the two curved fronts meet at the centre front is not clearly resolvable.",
+      "expected": "the two rounded fronts meet at the centre front with a shallow soft notch between them, as drawn",
+      "actual": "the two fronts read as one continuous curve across the centre; no spike, but no visible notch either",
+      "correction": "Separate the two front edges slightly at the centre so a shallow rounded notch shows between the rounded corners."
+    },
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "Top edge sits higher than the FRAMING LOCK specified, including some plain chest above the lower welts.",
+      "expected": "top edge just above the lower welt pockets",
+      "actual": "about a button-spacing of plain chest above the welts; no neckline, shoulders, face, arms or trousers in frame",
+      "correction": "Drop the top edge to just above the lower welt pockets."
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "notes": "Drawing: close view of the waistcoat lower front - two lower welt pockets one per side, two buttons plus a lower mark on the centre front, and a hem whose two front corners are ROUNDED, each sweeping in a smooth curve with a small notch where the two fronts meet at the centre. Candidate: both bottom corners in frame together, both unmistakably rounded with no point and no square cut, hem rising gently toward each side seam, exact mirror symmetry, two level lower welts and centre-front buttons present as drawn. No red, no annotation, no numerals, no text. Cannot be confused with the pointed or straight-hem siblings - the absence of any point is immediate.",
+  "checkedAt": "2026-07-31T19:56:38.441Z"
+}

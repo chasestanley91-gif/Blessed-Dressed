@@ -1,0 +1,37 @@
+{
+  "addr": "suit-2pc > back-both-jetted",
+  "productId": "suit-2pc",
+  "optionId": "back-both-jetted",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 99,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 99,
+    "construction": 99,
+    "placement": 98,
+    "symmetry": 99,
+    "composition": 98,
+    "blueprint-match": 99
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "dimensions",
+      "description": "In the drawing each pocket's length is about half the width of its back panel and it sits roughly one seventh of the back-panel height below the waistband. In the render the pockets are marginally shorter (about 45% of the half-panel) and sit slightly lower, roughly two pocket-heights below the waistband seam.",
+      "expected": "pocket length about half the back-panel width, set close under the waistband",
+      "actual": "pocket length about 45% of the half-panel, set slightly lower",
+      "correction": "acceptable; within normal tailoring variation and it does not change what the option is"
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "notes": "ADVERSARIAL READ vs /images/blueprints/factory/81163ff25606__3200__Double_besom.jpg.\n\nWHAT THE DRAWING SPECIFIES: a trouser BACK — waistband with belt loops, centre-back seam, and two red horizontal pocket marks, one per side, each with a short vertical dart line running up from the pocket's inner end to the waistband. No flap symbol and no button symbol on either.\n\nVERIFIED AT 3x ZOOM: each pocket is unmistakably a DOUBLE besom — two separate narrow welts, upper and lower, of equal depth, meeting along the centre of the opening, both crisply pressed. This was the one thing worth measuring rather than eyeballing, because the neighbouring option on the same field ('Left Welt with Button') is a SINGLE welt, and a single-welt render would have been a Critical substitution. It is not single.\n\nATTEMPTED REJECTIONS THAT FAILED:\n(1) Single welt borrowed from the sibling option? No — two welts, confirmed at zoom.\n(2) A button or buttonhole on either pocket, which would make it the welt-with-button sibling? No — neither pocket carries a button, buttonhole or tab.\n(3) A flap tucked inside or above the opening? No — the openings are clean jetted slits with nothing hanging over them.\n(4) One pocket only, which would make it a left- or right-side option? No — two pockets, both fully in frame, level and symmetric.\n(5) Darts missing? No — a vertical dart seam runs from the waistband down to the inner end of each pocket, as drawn.\n(6) Wrong face — trouser front standing in for the back? No: centre-back seam present, no fly, no front crease at the top, belt loops positioned as on a back view. This is the back.\n(7) Annotation traced? No red, no numbers, no arrows anywhere.\n\nNo critical or major findings.",
+  "checkedAt": "2026-07-31T20:04:14.756Z"
+}

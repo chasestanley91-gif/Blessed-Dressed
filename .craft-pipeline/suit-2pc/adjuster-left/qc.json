@@ -1,0 +1,37 @@
+{
+  "addr": "suit-2pc > adjuster-left",
+  "productId": "suit-2pc",
+  "optionId": "adjuster-left",
+  "attempt": 2,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 99,
+    "geometry": 99,
+    "dimensions": 98,
+    "angles": 99,
+    "construction": 99,
+    "placement": 99,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 99
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "Roughly the lower third of the frame is plain unmarked trouser front below the jetted hip pocket, which adds nothing to the option and is mild dead space. It does not obscure or compete with the adjuster.",
+      "expected": "Bottom edge of frame a little below the jetted hip-pocket mouth.",
+      "actual": "Bottom edge of frame roughly one further waistband-height below the hip-pocket mouth, leaving a band of plain cloth.",
+      "correction": "Cosmetic only; no regeneration warranted. A future crop could raise the bottom edge to just under the hip-pocket mouth."
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "notes": "Attempt 2. Attempt 1 was rejected for frame dominance only; the framing correction worked without regressing any geometry. Blueprint fidelity remains exact: three-quarter front trouser waist; ONE square button-tab adjuster on the waistband at the side, fully fastened, with exactly ONE button at the forward end and a squared keeper strap running back, reproducing the drawing's left-to-right arrangement (front pleats -> side adjuster -> jetted hip pocket). The red band in the illustration is position notation and is correctly rendered in the garment's own navy cloth; no red, no annotation, no text anywhere. Attempt 2 removed the shirt, the thigh, the knee, the leg and any pose from frame and brought the camera in; the tab now spans about 44% of the frame width and is the only detail in the upper half, so the option is identifiable in well under a second. Composition is scored against the intent of the 40-60% dominance target rather than a literal area percentage: a side adjuster sits on the waistband, which is a full-width line across the garment, and magnifying a thin tab to 40-60% of frame AREA would destroy the waistband context that makes it legible as a side adjuster rather than a belt loop or pocket tab. Catalog copy says 'Square button adjusters on both sides' while the option id is adjuster-left; a three-quarter front view can only show one side and the drawing highlights one side, so the single visible adjuster is faithful and no fault is recorded.",
+  "checkedAt": "2026-07-31T20:13:34.065Z"
+}

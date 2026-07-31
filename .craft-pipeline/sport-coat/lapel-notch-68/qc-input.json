@@ -1,0 +1,61 @@
+{
+  "scores": {
+    "shape": 74,
+    "geometry": 70,
+    "dimensions": 90,
+    "angles": 72,
+    "construction": 95,
+    "placement": 94,
+    "symmetry": 94,
+    "composition": 90,
+    "blueprint-match": 70
+  },
+  "errors": [
+    {
+      "severity": "major",
+      "category": "geometry",
+      "description": "The notch is unchanged from attempt 1. Traced at high magnification on the frame-right notch, the collar tip is still a hard sharp corner, the slot between collar tip and lapel is still a wide open wedge, and the gorge seam still runs dead straight from the notch up to the neck with no perceptible bow. None of the three shape corrections landed.",
+      "expected": "rounded hooking collar tip, narrow slot, visibly bowed gorge seam",
+      "actual": "sharp pointed collar tip, wide open wedge, ruler-straight gorge",
+      "correction": "make the collar tip finish in a small rounded curve like the end of a thumb rather than a point; make the gap between collar tip and lapel a narrow slit only a little wider than the cloth is thick; and bend the gorge seam into a shallow arc that is obviously not a straight line"
+    },
+    {
+      "severity": "major",
+      "category": "angles",
+      "description": "The V of the notch measures close to a right angle at its apex on both sides - wider even than the straight-notch sibling that sits next to this option in the same menu, and far wider than the tight notch the drawing shows.",
+      "expected": "a notch apex clearly tighter than a right angle and clearly tighter than the straight-notch sibling",
+      "actual": "an apex of roughly a right angle on both sides",
+      "correction": "close the notch down so the two edges lie much nearer to parallel: the wedge should look like a narrow slit cut into the edge, not an open mouth"
+    },
+    {
+      "severity": "major",
+      "category": "blueprint-match",
+      "description": "Because neither the notch shape nor the gorge curvature changed, the render still carries no feature that separates it from the other notch options on the same field. It remains a generic notch lapel.",
+      "expected": "a lapel a customer could pick out of the notch family by its curved gorge alone",
+      "actual": "a generic notch lapel indistinguishable from its neighbours",
+      "correction": "covered by the geometry and angle corrections"
+    },
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "The frame improved - the chest welt pocket is gone and the lapels now fill a proper share of the picture - but the jacket still runs off both side edges with no grey margin beside either lapel, and the model's chin is still above the collar.",
+      "expected": "left and right edges just outside each lapel's outer edge with a sliver of grey beyond; no chin in frame",
+      "actual": "jacket bleeds off both side edges; chin still visible",
+      "correction": "trim the side edges in a little further and drop the top edge to the base of the neck"
+    }
+  ],
+  "lockedFeatures": [
+    "the chest welt pocket is now correctly out of frame - keep it out",
+    "the lapels now fill a proper share of the picture - do not zoom back out",
+    "both lapels and the full collar in frame together, mirrored, straight on and dead level",
+    "no necktie and no pocket square, the white shirt collar showing plainly inside the V with the top shirt button open",
+    "the lapels tapering to a long deep V that converges low in the picture",
+    "the gorge high on the chest",
+    "one hand-worked keyhole buttonhole on the frame-right lapel only",
+    "fine tonal edge stitching along the lapel edge",
+    "textured navy wool hopsack",
+    "seamless neutral light-grey studio sweep",
+    "zero numerals, arrows, leader lines, angle callouts, coloured guide marks or text anywhere in frame"
+  ],
+  "notes": "ATTEMPT 2 vs /images/blueprints/factory/877a05ce586e__0689__Notch_with_high_gorge.jpg.\n\nWHAT ATTEMPT 2 FIXED: composition only. The chest welt pocket is out of frame and the two lapels now occupy a proper share of the picture rather than a third of it.\n\nWHAT IS STILL WRONG: every shape instruction was ignored. The collar tip is still a sharp spike where the drawing shows a small rounded hook; the notch slot is still a wide open wedge measuring near a right angle where the drawing shows a narrow slit; and the gorge seam is still a straight ruled line where the drawing bows it. This is the same generic notch lapel as attempt 1.\n\nROOT CAUSE: shape language buried in a long correction paragraph is losing to the model's very strong prior for 'notch lapel'. Attempt 3 must lead with the shape in the plainest possible physical terms - a rounded tip, a slit not a wedge, an arc not a line - and repeat it, rather than arguing about degrees."
+}

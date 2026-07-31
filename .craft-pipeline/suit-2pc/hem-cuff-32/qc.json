@@ -1,0 +1,37 @@
+{
+  "addr": "suit-2pc > hem-cuff-32",
+  "productId": "suit-2pc",
+  "optionId": "hem-cuff-32",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 99,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 99,
+    "construction": 99,
+    "placement": 99,
+    "symmetry": 98,
+    "composition": 99,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "dimensions",
+      "description": "Measured against the drawing: in blueprint 3602 the cuff fold line sits 53 px above the hem across a 330 px leg span, a depth-to-leg-width ratio of 0.161. In the render the same ratio is roughly 0.25, so the band is about one and a half times deeper than drawn. It still reads as the NARROW cuff of the pair: the 4.4 cm sibling renders at roughly 0.33, and the rendered ratio between the two (1.32) closely tracks the drawn ratio between them (0.203/0.161 = 1.26), so the two options remain correctly ordered and clearly distinguishable.",
+      "expected": "cuff depth about 0.16 of the leg width, as measured off blueprint 3602",
+      "actual": "cuff depth about 0.25 of the leg width",
+      "correction": "systematic across both cuff options and the sibling ordering is preserved; if re-shot, state the depth as a fraction of the visible leg width at the hem rather than in centimetres"
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "notes": "ADVERSARIAL READ vs /images/blueprints/remote/7eca44df7089__3602.jpg.\n\nWHAT THE DRAWING SPECIFIES: a side view of the trouser with a horizontal red line across the leg near the hem. I measured it rather than eyeballing it: the red line sits at row 1095, the hem bottom at row 1148, across a leg span of about 330 px — so the drawn cuff depth is 53/330 = 0.161 of the leg width, and critically the line is LEVEL, parallel to the hem.\n\nATTEMPTED REJECTIONS THAT FAILED:\n(1) A plain blind-stitched hem with no turn-up, borrowed from the inner-fold sibling? No — there is a clear folded-back band with two distinct fold lines, closed all the way round.\n(2) A SLANTED hem, which is the geometry of the 4.0 cm inner-edge-fold sibling? No — the cuff's lower edge and top edge are both level and parallel to the floor. This was worth checking because the slanted sibling was generated in the same run.\n(3) Wrong leg or a second leg competing for attention? The second leg is present only at the frame edge, out of focus and cropped, as briefed.\n(4) Annotation traced — a red line across the hem? None; the cuff is tonal charcoal throughout.\n(5) Depth drift making it indistinguishable from the 4.4 cm sibling? Measured: this one renders at about 0.25 and the sibling at about 0.33 of leg width. They are separated by the right amount and in the right direction.\n\nOne minor dimensional finding, logged above. No critical or major findings.",
+  "checkedAt": "2026-07-31T21:05:49.203Z"
+}

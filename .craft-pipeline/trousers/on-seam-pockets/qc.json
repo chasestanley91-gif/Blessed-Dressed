@@ -1,0 +1,100 @@
+{
+  "addr": "trousers > on-seam-pockets",
+  "productId": "trousers",
+  "optionId": "on-seam-pockets",
+  "attempt": 3,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 97,
+    "geometry": 96,
+    "dimensions": 96,
+    "angles": 98,
+    "construction": 98,
+    "placement": 96,
+    "symmetry": 97,
+    "composition": 95,
+    "blueprint-match": 96
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "The opening now dominates and is instantly readable, but the side seam carrying it sits at about 62% of frame width rather than on the vertical centre-line, so a little more empty thigh cloth remains on the left than on the right.",
+      "expected": "Side seam on the vertical centre-line at about 50% of frame width.",
+      "actual": "Side seam at about 62% of frame width.",
+      "correction": "Shift the camera a touch so the seam falls on the centre-line."
+    }
+  ],
+  "verdict": "PASS_WAIVED",
+  "waiver": {
+    "granted": true,
+    "reason": "minor-only at attempt 3 of 3: retry budget exhausted with zero critical/major findings and every category >= 95",
+    "waiverMin": 95,
+    "scoreMin": 98,
+    "belowScoreMin": [
+      {
+        "category": "shape",
+        "score": 97,
+        "shortfall": 1
+      },
+      {
+        "category": "geometry",
+        "score": 96,
+        "shortfall": 2
+      },
+      {
+        "category": "dimensions",
+        "score": 96,
+        "shortfall": 2
+      },
+      {
+        "category": "placement",
+        "score": 96,
+        "shortfall": 2
+      },
+      {
+        "category": "symmetry",
+        "score": 97,
+        "shortfall": 1
+      },
+      {
+        "category": "composition",
+        "score": 95,
+        "shortfall": 3
+      },
+      {
+        "category": "blueprint-match",
+        "score": 96,
+        "shortfall": 2
+      }
+    ],
+    "minorErrors": [
+      {
+        "category": "composition",
+        "description": "The opening now dominates and is instantly readable, but the side seam carrying it sits at about 62% of frame width rather than on the vertical centre-line, so a little more empty thigh cloth remains on the left than on the right.",
+        "expected": "Side seam on the vertical centre-line at about 50% of frame width.",
+        "actual": "Side seam at about 62% of frame width."
+      }
+    ],
+    "attempt": 3,
+    "maxAttempts": 3,
+    "waiverAttemptFloor": 3,
+    "authority": "user decision 2026-07-30: QC gate stays >=98; a 3rd attempt is allowed; after 3 attempts an image with ZERO critical/major findings may ship at >=95 as a LOGGED WAIVER in qc.json",
+    "grantedAt": "2026-07-31T21:13:36.836Z"
+  },
+  "correction": null,
+  "notes": "Attempt 3 of 3, retry budget spent. The on-seam entry is correct and legible: near-vertical, set into the side seam, terminated by a bar tack at each end, the front of the trouser left entirely clean so the option cannot be confused with a slant. The small horizontal besom visible on the outer hip is present in the illustration too, so it is blueprint-faithful rather than an invention. Only a framing nicety remains, and it is minor.",
+  "checkedAt": "2026-07-31T21:13:36.837Z"
+}

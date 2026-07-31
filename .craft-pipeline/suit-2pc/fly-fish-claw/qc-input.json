@@ -1,0 +1,32 @@
+{
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 99,
+    "placement": 99,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "dimensions",
+      "description": "The hooked tongue at the top of the fly is rendered somewhat larger than the drawn hook — it reads at roughly half the waistband depth in height and rather wider, where the drawing suggests about a third. The shape character (rounded hook, not a point or a square) is correct.",
+      "expected": "hooked tongue about one third of the waistband depth",
+      "actual": "hooked tongue about half the waistband depth and proportionally wider",
+      "correction": "acceptable; the shape is unambiguous and the oversize helps rather than hinders legibility"
+    }
+  ],
+  "lockedFeatures": [
+    "orientation: detail — trouser front, waistband to the bottom of the fly, fly CLOSED and pressed flat",
+    "the top of the fly shaped as a FISH CLAW: a rounded hooked tongue that laps up onto the waistband and curves back down",
+    "the shape is a ROUNDED HOOK — explicitly not a square end and not a sharp point (that is the sibling option)",
+    "fly edge running down in the usual long curve below the hook",
+    "belt loops and closed waistband as drawn; buttonhole in the waistband",
+    "tonal charcoal cloth, seamless neutral background, zero annotation"
+  ],
+  "notes": "ADVERSARIAL READ vs /images/blueprints/remote/0c07e29e9fc5__3402.jpg.\n\nWHAT THE DRAWING SPECIFIES: the trouser front with the fly closed, and a red mark drawn ONLY at the very top of the fly where it meets the waistband — a small curled hook shape, like a claw, that rises onto the waistband and turns back down. The rest of the fly is unmarked.\n\nDISCRIMINATION CHECK AGAINST THE SIBLING. The neighbouring option on the same field, 'Pointed Fly' (3406), was generated in the same run, so I cropped both renders and put them side by side at 3x. This one shows a large ROUNDED lobe curling over the waistband; the sibling shows an angular apex with two straight edges meeting. They are unmistakably different shapes, which is the whole purpose of these two assets.\n\nATTEMPTED REJECTIONS THAT FAILED:\n(1) Square-ended fly top, the default? No — the top is a pronounced curve.\n(2) The sibling's sharp point? No — there is no apex anywhere on the tongue; it is a continuous rounded curve.\n(3) Fly open, which belongs to the zip-fly blueprint rather than this one? No — the fly is closed and pressed, as drawn.\n(4) Annotation traced? No red anywhere; the hook is cloth with edge stitching.\n(5) Wrong face or wrong region? Trouser front, waistband and fly, correct.\n(6) Belt loops missing or invented? Two belt loops present, matching the drawing.\n\nNo critical or major findings."
+}

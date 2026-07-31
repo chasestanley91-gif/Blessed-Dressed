@@ -1,0 +1,50 @@
+{
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 99,
+    "construction": 98,
+    "placement": 99,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "The fly assembly (zip chain, opened facing, waistband extension) occupies roughly a third of the frame rather than the 40-80% dominance target; the crop is a touch loose at the sides and bottom.",
+      "expected": "Fly Style dominating 40-80% of the frame.",
+      "actual": "Fly assembly reads unmistakably within a second but covers closer to 30-35% of the frame; some plain thigh cloth at the bottom is dead space.",
+      "correction": "If regenerated, raise the bottom frame edge to roughly one waistband-height below the bottom of the fly opening while keeping both hip side-seams inside the frame."
+    },
+    {
+      "severity": "minor",
+      "category": "construction",
+      "description": "The J-shaped fly topstitch on the left fly is only faintly readable; the drawing shows the curved fly edge as a distinct doubled stitch line.",
+      "expected": "A clearly visible curved (J) fly topstitch running down the left fly and hooking under the bottom of the fly opening, matching the doubled curved line in the drawing.",
+      "actual": "The curved fly edge is present as a pressed edge/crease, but the topstitch itself is very low contrast against the charcoal cloth.",
+      "correction": "Render the J-shaped fly topstitch as a crisp single row of matched-thread machine stitching with visible needle punctures along the curved left-fly edge."
+    },
+    {
+      "severity": "minor",
+      "category": "geometry",
+      "description": "The opened fly facing sweeps out slightly less far toward the hip than in the drawing.",
+      "expected": "Per the drawing, the folded-back facing and waistband extension sweep diagonally out almost to the right hip line.",
+      "actual": "The folded-back facing reaches only about two thirds of the way out to the right hip.",
+      "correction": "Open the fly facing wider so its folded edge and the waistband extension tab reach the right hip line, as drawn."
+    }
+  ],
+  "lockedFeatures": [
+    "fly undone and swung open exactly as drawn, folded facing sweeping diagonally to the image right",
+    "genuine METAL zipper - individual faceted antique-brass teeth with a metal slider and pull, both chains visible, no nylon coil and no button fly",
+    "front orientation of the trousers, centre-front fly running vertically down the middle of the frame",
+    "waistband extension tab with buttonhole/button visible at the upper right",
+    "belt loops and forward pleats as drawn",
+    "charcoal fine wool trouser cloth, seamless neutral light-grey studio background",
+    "no red, no annotation, no numbers or leader lines anywhere in the frame",
+    "natural daylight studio lighting, medium-format look, shirt tucked, no jacket"
+  ],
+  "notes": "Attempt 1. The defining fact of this option - METAL zip teeth rather than nylon coil - is rendered unmistakably: individual stamped antique-brass teeth with hard specular highlights, a substantial metal slider and pull. The fly is shown undone with the facing swung open to the image right and the waistband extension folded back, matching the drawing's state rather than the far commoner closed-fly substitution. Zipper mechanics are physically coherent (slider parked at the bottom of the left chain, right chain riding up the folded facing). No red leaked in from the drawing's position markers, and there is no annotation, numbering or leader line anywhere. One ambiguity worth recording: on the waistband closure the candidate places the button on the left waistband and the buttonholes on the folded extension tab; the line drawing is too coarse at that scale to confirm which way round it is, and the waistband closure is not the showcased option, so it is not scored as an error."
+}

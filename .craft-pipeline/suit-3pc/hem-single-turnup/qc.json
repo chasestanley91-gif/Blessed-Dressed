@@ -1,0 +1,37 @@
+{
+  "addr": "suit-3pc > hem-single-turnup",
+  "productId": "suit-3pc",
+  "optionId": "hem-single-turnup",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 99,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 99,
+    "construction": 99,
+    "placement": 99,
+    "symmetry": 98,
+    "composition": 99,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "dimensions",
+      "description": "Measured against the drawing: in blueprint 3604 the cuff fold line sits 67 px above the hem across a 330 px leg span, a depth-to-leg-width ratio of 0.203. In the render the same ratio is roughly 0.33, about one and a half times deeper than drawn. The overshoot is the same systematic factor seen on the 3.2 cm sibling, and the two remain correctly ordered: 0.33 here against 0.25 there, matching the drawn 0.203 against 0.161.",
+      "expected": "cuff depth about 0.20 of the leg width, as measured off blueprint 3604",
+      "actual": "cuff depth about 0.33 of the leg width",
+      "correction": "systematic across both cuff options and the sibling ordering is preserved; if re-shot, state the depth as a fraction of the visible leg width at the hem rather than in centimetres"
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "notes": "ADVERSARIAL READ vs /images/blueprints/factory/30517f02c254__3604__4.4cm_cuff.jpg.\n\nWHAT THE DRAWING SPECIFIES: a side view of the trouser with a level red line across the leg near the hem. Measured: red line at row 1086, hem bottom at row 1153, leg span about 330 px, giving a drawn cuff depth of 67/330 = 0.203 of the leg width — deeper than the 3.2 cm sibling's 0.161, which is exactly the relationship the two labels assert.\n\nATTEMPTED REJECTIONS THAT FAILED:\n(1) Is this simply a duplicate of the 3.2 cm sibling, leaving the customer unable to tell the options apart? No. Rendered depth here is about 0.33 of leg width against about 0.25 there — the same direction and close to the same proportion as the drawings.\n(2) A plain hem with no turn-up? No — a clear folded-back band, closed all the way round, with two fold lines.\n(3) A slanted hem borrowed from the inner-edge-fold option? No — top and bottom edges of the cuff are both level and parallel to the floor.\n(4) Annotation traced? No red line, no numbers, nothing but cloth.\n(5) Wrong garment or wrong crop? Trouser lower leg over a dress shoe, second leg cropped to the frame edge, as briefed.\n\nOne minor dimensional finding, logged above. No critical or major findings.",
+  "checkedAt": "2026-07-31T21:05:49.417Z"
+}

@@ -1,0 +1,37 @@
+{
+  "addr": "suit-2pc > hem-inner-fold-40",
+  "productId": "suit-2pc",
+  "optionId": "hem-inner-fold-40",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 99,
+    "geometry": 99,
+    "dimensions": 98,
+    "angles": 99,
+    "construction": 99,
+    "placement": 99,
+    "symmetry": 99,
+    "composition": 99,
+    "blueprint-match": 99
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "dimensions",
+      "description": "The front-to-back drop across the slanted hem edge reads at roughly one quarter of the leg width; the brief derived about one fifth from the drawing. The direction and character of the slant are correct and the difference is small.",
+      "expected": "drop of about one fifth of the leg width from front edge to back edge",
+      "actual": "drop of about one quarter of the leg width",
+      "correction": "acceptable; no action required"
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "notes": "ADVERSARIAL READ vs /images/blueprints/remote/d4b184a45b4b__360K.jpg.\n\nWHAT THE DRAWING SPECIFIES: the same side-view trouser template used by the whole hem family, but here the red line at the hem is NOT level — it runs on a clear diagonal, lower at the back of the leg than at the front. There is no second line below it, i.e. no turn-up band.\n\nTHIS WAS THE HIGHEST-RISK OPTION IN THE SLICE. The known failure mode for a terse 'slanted inner edge fold' description is that the model renders the commonest commercial hem instead — a turn-up cuff — and two turn-up siblings were generated in the same run, so the prior was strongly primed. It did not happen.\n\nATTEMPTED REJECTIONS THAT FAILED:\n(1) Is there a turn-up cuff? No. There is exactly ONE fold at the bottom of the leg. I traced the full width of the leg looking for a second fold line or a band edge; there is none. The allowance is inside.\n(2) Is the hem actually level, with the apparent slant just the camera angle? No. The hem edge runs as a straight diagonal across the leg, the back corner reaching well below the front corner and down toward the heel, while the shoe and the floor line in the same frame are level. The slant is in the garment, not the camera.\n(3) Is the slant in the wrong direction (front lower than back)? No — it drops toward the back, matching the drawing.\n(4) Any visible hem stitching, which would contradict a blind-stitched inner fold? None.\n(5) Annotation traced? No red, no lines, no numbers.\n(6) Wrong crop or wrong leg? One leg, mid-calf to hem, over a dress shoe, second leg at the frame edge only.\n\nNo critical or major findings. This is the clean case of the whole hem family.",
+  "checkedAt": "2026-07-31T21:05:49.647Z"
+}

@@ -1,0 +1,45 @@
+{
+  "addr": "suit-3pc > vest-lower-slanted",
+  "productId": "suit-3pc",
+  "optionId": "vest-lower-slanted",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 99,
+    "construction": 98,
+    "placement": 98,
+    "symmetry": 99,
+    "composition": 98,
+    "blueprint-match": 99
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "Frame is much wider than the FRAMING LOCK allowed: the chest, the arms and the trousers below the hem are all in frame, and the trousers are cut from the same cloth so the hem silhouette has little contrast against them.",
+      "expected": "top edge about three welt-heights above the higher end of the openings; no chest, arms or trousers",
+      "actual": "top edge near the bottom of the V, shirt sleeves at both sides, and matching-cloth trousers filling the lower quarter behind the hem",
+      "correction": "Drop the top edge to about three welt-heights above the openings, bring the sides in to just outside the side seams, and raise the bottom edge to just below the hem points with plain background beneath."
+    },
+    {
+      "severity": "minor",
+      "category": "angles",
+      "description": "UPSTREAM PROMPT DEFECT, not an image defect: the GEOMETRY LOCK paragraph states the slant rises toward the side seam with the outer end higher, but the blueprint shows the opposite. Red-pixel measurement of the drawing gives frame-left opening avgY 901 at the side-seam end vs 849 at the centre end, and frame-right avgY 903 at the side-seam end vs 850 at the centre end - both openings rise toward the CENTRE FRONT. The candidate correctly followed the drawing, not the prompt text, as BLUEPRINT LOCK requires.",
+      "expected": "per the blueprint: both openings rise toward the centre front, outer end lower, about 22 degrees",
+      "actual": "candidate renders both openings rising toward the centre front at about 24 degrees - matches the blueprint; the prompt's GEOMETRY LOCK wording is inverted and should be corrected upstream",
+      "correction": "Do not change the image. Fix the GEOMETRY LOCK sentence in prompt.json so it describes the slant as rising toward the centre front."
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "notes": "Drawing: full waistcoat front, deep V, five centre-front marks, and TWO red slanted single-welt openings, one per side, mirrored, pointed hem. Measured the blueprint's red pixels directly: frame-left opening spans x354-485 with avgY 901.4 at the side-seam end and 849.4 at the centre end; frame-right spans x705-836 with avgY 902.8 at the side-seam end and 849.7 at the centre end. Both therefore rise toward the CENTRE, about 22 degrees. The same measurement on the sibling vest-lower-jetted blueprint gives the opposite and much shallower tilt (about 6 degrees rising toward the side seams), so the two options are genuinely distinct in both slant magnitude and direction. Candidate: two single-welt openings, mirrored, slanted about 24 degrees rising toward the centre - matching the drawing - with no flap, no patch pocket, and plainly not horizontal, which is the discriminator against the jetted sibling. No red, no annotation, no numerals, no text.",
+  "checkedAt": "2026-07-31T21:27:06.770Z"
+}
