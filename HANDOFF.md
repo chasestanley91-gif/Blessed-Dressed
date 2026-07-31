@@ -1,3 +1,151 @@
+# HANDOFF — 2026-07-31
+
+Where this session stopped, what changed, and what to do next.
+
+**Credits: 928.5 → 880.0. Spent 48.5 on 97 images, all at a flat 0.5.**
+Reserve floor is 100; it was never approached.
+
+The previous handoff (2026-07-30, session B) is preserved at the bottom of this file.
+
+---
+
+## Read this first — the three things that decide what happens next
+
+1. **The Vercel environment variables are still yours to set.** Stripe keys are under the
+   wrong names (`Secret_key` rather than the `STRIPE_SECRET_KEY` the code reads), so
+   **checkout returns 503 in production no matter what ships**. `BLOB_READ_WRITE_TOKEN`,
+   `STRIPE_WEBHOOK_SECRET`, `NEXT_PUBLIC_SITE_URL`, `ADMIN_PASSWORD` and
+   `ADMIN_TOKEN_SECRET` are all absent. `.env.example` names every one. Secret values are
+   not something this session handles.
+2. **437 clusters are blocked on source material, not effort.** See `NEEDS-SOURCE.md`
+   categories E, F and G. Category F alone is 414 clusters and should be ruled on *per
+   directory* — the contamination is directory-shaped, not option-shaped.
+3. **Four rows would replace a live customer-facing photograph.** `publish_approved.mjs`
+   refuses these without `--allow-swap`, deliberately. That is a human call.
+
+---
+
+## Where the catalog stands
+
+| | |
+|---|---|
+| Verified & shipped | **64** (was 12) |
+| In scope | 1,747 |
+| Total options | 2,862 — unchanged, verified against a pre-publish snapshot |
+| Usable blueprints | 2,473 before publishing, 2,473 after. **Zero lost.** |
+| QC verdicts on disk | 67 PASS, 2 PASS_WAIVED, 5 FAIL, 6 UNMET |
+| Playwright | **76 passed, 0 failed, 1 skipped** (was 53) |
+
+Every shipped image traces the full chain: `qc.json(attempt N)` → `candidate-N.png`
+(SHA-1 X) → `generated/<id>.png` (byte-identical) → `generated/<id>.webp` (the manifest
+records `sourceSha1 = X`).
+
+The in-scope denominator moved 1,979 → 1,747 and `no-blueprint` 162 → 394. That is a
+**stricter count, not a loss**: those options' "blueprints" are `/images/ai/` paths — AI
+photographs rather than drawings — which the pipeline has always been forbidden to
+generate from. They were never generatable; now the number says so.
+
+---
+
+## What was built
+
+### Gates that did not exist
+
+- **`tools/blueprint_triage.mjs`** — decides from the *pixels* whether a catalog blueprint
+  is a technical drawing. This is the one that mattered most: the queue's highest-leverage
+  cluster (`perfume-pad`, 8 clusters and 24 rows) is backed by **crops of button
+  photographs**, and nothing downstream could have caught it, because QC scores fidelity
+  *to the blueprint* — a render faithful to a picture of a button scores high. Run
+  `--calibrate` before trusting its thresholds; it prints both populations, and the first
+  threshold set failed.
+- **`tools/wave_queue.mjs`** — outstanding work grouped on the proven-safe
+  `part|field|option|label` key, ordered by rows unlocked per generation, gated on the
+  triage verdict.
+- **`tools/repoint_supplier_blueprints.mjs`** + **`tools/blueprint_contact_sheet.mjs`** —
+  moved **237 of 474** glyph-backed options onto genuine supplier drawings. `cb-none`
+  ("None") and `cb-1` ("1 Button") had both been illustrated with *two* buttons.
+
+### Defects closed in the pipeline
+
+- **`qc_ladder.mjs`, four of them.** An option-id join could reach `PASS` on fabricated
+  numbers; an unsigned `MEASURE_TOKEN` made `-2 cm` and `+2 cm` the same declared value and
+  fabricated a critical on `chest-dart` across three products; nothing bound a measurement
+  file to the family it measured; and with no upper bound on span fidelity an
+  **over-expanded** ladder passed silently. The self-test grew from 6 to 28 cases.
+- **A suit is not one garment.** `garmentNoun` and `resolvePart` keyed on `productId`, so
+  **578 rows** told the image model to photograph a "suit jacket" while a trouser or
+  waistcoat drawing was attached as the geometry reference. Now keyed on the section
+  prefix, which is what the catalog itself uses.
+- **Colour in a drawing is notation, not cloth.** Red highlights were rendering as red
+  garment cloth. Naming the marks in the prompt was not enough — it had to say what they
+  *mean*.
+- **`publish_approved.mjs` path mismatch.** 12 approved images were refused as "not on
+  disk" while sitting on disk, because QC stages under the product id and the publisher
+  looked in the part-derived folder.
+
+### The application
+
+- **The measurement unit is recorded end to end.** It was component-local `useState`, so a
+  41 cm chest and a 41 inch chest produced byte-identical orders. The atelier worksheet now
+  states the unit per value; orders placed before the fix read *"NOT RECORDED — confirm
+  with the customer before cutting"* rather than defaulting to centimetres.
+- **Bulk fabric import** was assembling each fabric from one cloth's photo and another
+  cloth's swatch code whenever an upload failed — silently, while reporting success.
+- Real 404s replacing soft 200s, an error boundary, `robots.ts`, `sitemap.ts`, canonicals,
+  `noindex` on cart and checkout, an un-nested option-card button, labelled checkout
+  inputs, and mobile fixes at 375px (iOS input zoom, clipped admin tables).
+
+---
+
+## Two things to know before continuing
+
+**Never infer credit cost from a balance delta.** Four generation agents independently
+reported per-image costs of 2.9, 3.3, 4.75 and about 6.5×. All four measured a shared
+account balance while sibling agents spent against it concurrently. The ledger settles it:
+all 97 transactions read exactly −0.5. Believing any of them would have halved planned
+coverage. Read `transactions`, not `balance`.
+
+**Never write prose through a bash heredoc.** Backticks get command-substituted; it has
+eaten code spans at least three times in this project, including in the very failure-log
+entry documenting it. Use the Write tool and append with node.
+
+---
+
+## What to do next, in order
+
+1. **Set the Vercel env vars.** Nothing else unblocks production.
+2. **Rule on `NEEDS-SOURCE.md` category F** — 414 clusters, per directory. Use
+   `node tools/blueprint_contact_sheet.mjs <garment/Category>` to build the comparison grid.
+3. **Rule on `DEFECT-FAMILIES.md`** — which unphotographable ladders to merge or reprice.
+   The re-assessment there separates "the premise was wrong, do not merge these" from
+   "still needs your ruling".
+4. **Continue generation.** `node tools/wave_queue.mjs --write` rebuilds the queue; it only
+   offers clusters whose blueprint has been verified from its pixels.
+5. **Legacy QC is free.** 811 options carry `SHIPPED_WITHOUT_QC` — an image with no verdict
+   behind it. QC costs nothing; only regeneration does.
+6. **`next/image` migration** — 61 raw `<img>` tags. Deliberately not attempted this
+   session: moderate reward, real regression risk, and it wants a quieter moment than one
+   with three generation waves in flight.
+
+---
+
+## Standing rules that earned themselves
+
+- **The drawing is the sole authority.** If it disagrees with the label about *which part
+  of the garment is shown*, that is a `BLUEPRINT_CONFLICT` — skip and report. Agents
+  refused 15 clusters on this basis and every refusal was correct.
+- **Subagents are read-only on `data-store/`.** The main loop performs every catalog write.
+  A subagent once deleted 96 options while under an explicit read-only instruction, so the
+  enforcement is structural, not verbal. Snapshot before every batch.
+- **`garment-image-qc` is the only authority that may approve a write-back**, and it
+  computes the verdict mechanically — it is never asserted by an agent.
+- **A correct filename is not evidence.** Look at the pixels.
+
+---
+---
+
+_Everything below is the previous handoff (2026-07-30, session B), retained for history._
+
 # HANDOFF — 2026-07-30, session B
 
 Where this session stopped, what changed, and what to do next.
