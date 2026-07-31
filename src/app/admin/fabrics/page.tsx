@@ -1,6 +1,7 @@
 ﻿"use client";
 
 import { useEffect, useRef, useState } from "react";
+import { apiSend } from "@/lib/api-fetch";
 
 type Fabric = {
   id: string;
@@ -213,6 +214,7 @@ function BulkImportPanel({ collections, onDone }: { collections: string[]; onDon
   const [collection, setCollection] = useState("");
   const [importing, setImporting] = useState(false);
   const [progress, setProgress] = useState(0);
+  const [importError, setImportError] = useState<string | null>(null);
   const dropRef = useRef<HTMLDivElement>(null);
 
   function handleFiles(files: FileList | null) {
@@ -244,50 +246,83 @@ function BulkImportPanel({ collections, onDone }: { collections: string[]; onDon
     const total = staged.length;
     let done = 0;
 
-    const uploadedPhotos: Array<{ label: string; url: string }> = [];
-    const uploadedCodes: Array<{ label: string; url: string }> = [];
+    // POSITION IS THE PAIRING KEY, SO A FAILED UPLOAD MUST LEAVE A HOLE.
+    // ------------------------------------------------------------------
+    // These arrays used to be built with `push` inside `try { } catch {}`. A
+    // single failed photo upload therefore made the photo array SHORTER than the
+    // code array while the records below were paired by index — so every fabric
+    // after the failure was built from one cloth's lifestyle photo and a
+    // DIFFERENT cloth's swatch code, silently, with the import reporting success.
+    // Writing to a fixed slot keeps the alignment the UI promises ("first photo
+    // + first code = one fabric") no matter what fails.
+    const uploadedPhotos: Array<{ label: string; url: string } | null> = new Array(photos.length).fill(null);
+    const uploadedCodes: Array<{ label: string; url: string } | null> = new Array(codes.length).fill(null);
+    const failures: string[] = [];
 
-    for (const s of photos) {
+    for (let i = 0; i < photos.length; i++) {
+      const s = photos[i];
       try {
-        const url = await uploadFile(s.file, "photos");
-        uploadedPhotos.push({ label: s.label, url });
-      } catch {}
+        uploadedPhotos[i] = { label: s.label, url: await uploadFile(s.file, "photos") };
+      } catch (error) {
+        failures.push(`photo "${s.label}": ${error instanceof Error ? error.message : "upload failed"}`);
+      }
       done++;
       setProgress(Math.round((done / total) * 80));
     }
 
-    for (const s of codes) {
+    for (let i = 0; i < codes.length; i++) {
+      const s = codes[i];
       try {
-        const url = await uploadFile(s.file, "codes");
-        uploadedCodes.push({ label: s.label, url });
-      } catch {}
+        uploadedCodes[i] = { label: s.label, url: await uploadFile(s.file, "codes") };
+      } catch (error) {
+        failures.push(`code "${s.label}": ${error instanceof Error ? error.message : "upload failed"}`);
+      }
       done++;
       setProgress(Math.round((done / total) * 80));
     }
 
-    // Create fabric records — pair by index if counts match, otherwise create individual records
+    // Create fabric records, paired by position as the UI states.
     const maxLen = Math.max(uploadedPhotos.length, uploadedCodes.length);
     for (let i = 0; i < maxLen; i++) {
       const photo = uploadedPhotos[i];
       const code = uploadedCodes[i];
+      // Both halves of this pair failed to upload — creating an imageless fabric
+      // record would be worse than skipping it.
+      if (!photo && !code) continue;
       const label = photo?.label ?? code?.label ?? `Fabric ${i + 1}`;
-      await fetch("/api/admin/fabrics", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          label,
-          detail: "",
-          premium: false,
-          collection: collection || undefined,
-          photoImage: photo?.url,
-          codeImage: code?.url,
-        }),
-      });
+      try {
+        await apiSend("/api/admin/fabrics", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            label,
+            detail: "",
+            premium: false,
+            collection: collection || undefined,
+            photoImage: photo?.url,
+            codeImage: code?.url,
+          }),
+        });
+      } catch (error) {
+        failures.push(`record "${label}": ${error instanceof Error ? error.message : "save failed"}`);
+      }
       setProgress(80 + Math.round(((i + 1) / maxLen) * 20));
     }
 
     setImporting(false);
-    setStaged([]);
+    // Only clear the staging tray on a clean run. Clearing it after a partial
+    // failure would destroy the only record of what still needs importing.
+    if (failures.length === 0) {
+      setStaged([]);
+      setImportError(null);
+    } else {
+      setImportError(
+        `${failures.length} of ${total} item(s) failed and were NOT imported. ` +
+          `Pairing was preserved, so the fabrics that did import are correct. ` +
+          failures.slice(0, 5).join("; ") +
+          (failures.length > 5 ? ` … and ${failures.length - 5} more.` : "")
+      );
+    }
     onDone();
   }
 
@@ -296,6 +331,17 @@ function BulkImportPanel({ collections, onDone }: { collections: string[]; onDon
       <p className="font-sans text-sm text-muted-dark">
         Drop all fabric images at once. Mark each as a <strong className="text-foreground">Lifestyle Photo</strong> or <strong className="text-foreground">Fabric Code</strong>. Photos and codes are paired by position (first photo + first code = one fabric).
       </p>
+
+      {/* Failures used to be swallowed entirely; the import reported success
+          while silently mis-pairing every fabric after the first error. */}
+      {importError && (
+        <div
+          role="alert"
+          className="rounded-xl border border-red-500/40 bg-red-500/10 px-4 py-3 font-sans text-sm leading-relaxed text-red-200"
+        >
+          {importError}
+        </div>
+      )}
 
       <div>
         <label className={lbl}>Collection Name (applied to all imports)</label>
