@@ -1,0 +1,106 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://blessed-dressed/schemas/garment-spec.schema.json",
+  "title": "Garment Spec",
+  "description": "The structured, persisted interpretation of one craft option's tech-pack illustration. Written by tech-pack-interpreter's extract_spec.mjs to <repo>/.craft-pipeline/<productId>/<optionId>/spec.json. This is the single source of truth handed to garment-image-director — nothing downstream may recompute it from raw catalog text.",
+  "type": "object",
+  "required": [
+    "schema", "addr", "productId", "optionId", "sourceFile", "label", "part",
+    "garment", "view", "absence", "measured", "illustration", "forbidden",
+    "generate", "extractedAt"
+  ],
+  "properties": {
+    "schema": { "const": "garment-spec/v1" },
+    "addr": {
+      "type": "string",
+      "description": "Human-readable path: productId > sectionId > fieldId > optionId."
+    },
+    "productId": { "type": "string" },
+    "sectionId": { "type": "string" },
+    "fieldId": { "type": "string" },
+    "optionId": { "type": "string" },
+    "sourceFile": {
+      "type": "string",
+      "description": "The catalog file this option was read from — also the write-back target once garment-image-qc approves a generation."
+    },
+    "source": { "enum": ["json", "ts"] },
+    "label": { "type": "string" },
+    "description": { "type": "string" },
+    "fieldLabel": { "type": "string" },
+    "sectionLabel": { "type": "string" },
+    "part": {
+      "type": "string",
+      "description": "Canonical garment part, e.g. 'jacket-lapel', 'trouser-waistband-width', 'fin-buttonhole'. Drives camera/composition selection downstream."
+    },
+    "garment": {
+      "type": "object",
+      "required": ["noun", "fabric"],
+      "properties": {
+        "noun": { "type": "string", "description": "The garment as a photographic subject, e.g. 'navy bespoke suit jacket'." },
+        "fabric": { "type": "string" }
+      }
+    },
+    "view": {
+      "type": "object",
+      "required": ["orientation", "wearerPerspective", "confirmedByVisualInspection"],
+      "properties": {
+        "orientation": {
+          "enum": [
+            "front", "back", "side-left", "side-right",
+            "three-quarter-front", "three-quarter-back", "detail", "interior"
+          ],
+          "description": "Which face of the garment the illustration depicts. Never inferred from field naming alone — must be confirmed by actually looking at the illustration (see orientation-rules.md)."
+        },
+        "wearerPerspective": {
+          "type": "boolean",
+          "description": "True: left/right in this record mean the wearer's left/right, not the viewer's. Construction facts (e.g. 'adjuster on the outseam') are always recorded from the wearer's perspective; only the photography plan (garment-image-director) converts to viewer's perspective."
+        },
+        "confirmedByVisualInspection": {
+          "type": "boolean",
+          "description": "Must be true before a spec is eligible for generation. False/missing means orientation was guessed from text, not confirmed by reading the image."
+        }
+      }
+    },
+    "absence": {
+      "type": "boolean",
+      "description": "True when this option is the deliberate ABSENCE of a feature (e.g. 'Ventless', 'No Pocket') — the photo must show a clean area, never a phantom feature."
+    },
+    "measured": {
+      "type": "object",
+      "description": "Literal values parsed deterministically from the catalog text. Every value here must be echoed verbatim downstream — nothing may be silently dropped.",
+      "required": ["dimensions", "angles", "counts", "shapes", "spread", "flags"],
+      "properties": {
+        "dimensions": { "type": "array", "items": { "type": "string" }, "description": "e.g. ['5.0 cm']" },
+        "angles": { "type": "array", "items": { "type": "string" }, "description": "e.g. ['115°']" },
+        "counts": { "type": "array", "items": { "type": "string" }, "description": "e.g. ['2-button', '6-loop']" },
+        "shapes": { "type": "array", "items": { "type": "string" }, "description": "e.g. ['peak lapel', 'jetted / besom welt']" },
+        "spread": { "type": "array", "items": { "type": "string" } },
+        "flags": { "type": "array", "items": { "type": "string" }, "description": "Binary construction facts, e.g. ['belt loops', 'top stitch']" }
+      }
+    },
+    "illustration": {
+      "type": "object",
+      "required": ["path", "exists", "remote"],
+      "properties": {
+        "path": { "type": ["string", "null"], "description": "As stored in the catalog — a web-root path or a remote URL." },
+        "disk": { "type": ["string", "null"], "description": "Resolved local filesystem path, if local." },
+        "exists": { "type": "boolean" },
+        "remote": { "type": "boolean" }
+      }
+    },
+    "forbidden": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Structural negative constraints derived from this exact spec (option isolation, absence guard, front/back lock, exact counts). garment-image-director merges this with its own universal photography negatives when assembling the final prompt."
+    },
+    "excluded": {
+      "enum": ["button", "thread-color", "fabric", null],
+      "description": "Non-null means this is a colour/material swatch, out of scope for photo generation."
+    },
+    "generate": {
+      "type": "boolean",
+      "description": "True only when a blueprint exists AND the option is not an excluded swatch."
+    },
+    "extractedAt": { "type": "string", "format": "date-time" }
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "at": "2026-07-31T00:34:37.650Z",
+  "at": "2026-07-31T06:02:18.865Z",
   "settings": {
     "maxWidth": 1400,
     "quality": 82,
@@ -7,30 +7,580 @@
   },
   "applied": true,
   "counts": {
-    "masters": 578,
-    "converted": 1,
-    "skipped": 577,
+    "masters": 629,
+    "converted": 51,
+    "skipped": 578,
     "failed": 0,
     "repointed": 0
   },
   "bytes": {
-    "before": 9519004,
-    "after": 382404,
-    "savedPct": 96
+    "before": 110249434,
+    "after": 8629674,
+    "savedPct": 92.2
   },
   "note": "targetSha1 is the derivative; sourceSha1 is the PNG master QC graded. The master and publish_approved.mjs byte-identity gate are untouched.",
   "results": {
     "ok": [
       {
-        "master": "public\\images\\generated\\vest\\vest-piping-diy-v2.png",
-        "masterBytes": 9519004,
-        "sourceSha1": "f99802f6d1daa61f3f5e9b0853a591900a26ba51",
-        "target": "public\\images\\generated\\vest\\vest-piping-diy-v2.webp",
-        "targetBytes": 382404,
-        "targetSha1": "91b1b01d500e4ab1cd371bf475fe63d5015e9cde",
-        "quality": 70,
-        "width": 1200,
-        "web": "/images/generated/vest/vest-piping-diy-v2.webp"
+        "master": "public\\images\\generated\\sport-coat\\cb-2.png",
+        "masterBytes": 1773285,
+        "sourceSha1": "5e6357eae5dcd9f87cb53df94bd237aefbb6e3ee",
+        "target": "public\\images\\generated\\sport-coat\\cb-2.webp",
+        "targetBytes": 134454,
+        "targetSha1": "3957d90313989ecdff5a67fe59f2b9632ccfbe0b",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/sport-coat/cb-2.webp"
+      },
+      {
+        "master": "public\\images\\generated\\sport-coat\\cb-3.png",
+        "masterBytes": 1701526,
+        "sourceSha1": "04f59a617e826b34031910bd8569cf2b6c9865fd",
+        "target": "public\\images\\generated\\sport-coat\\cb-3.webp",
+        "targetBytes": 118862,
+        "targetSha1": "27a6f18f9296ce025042f5e2057d82560d90fc2c",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/sport-coat/cb-3.webp"
+      },
+      {
+        "master": "public\\images\\generated\\sport-coat\\cb-6.png",
+        "masterBytes": 1804444,
+        "sourceSha1": "f1608be4a502e140a575b655182f84a9fda8724a",
+        "target": "public\\images\\generated\\sport-coat\\cb-6.webp",
+        "targetBytes": 144198,
+        "targetSha1": "05cfd2f9a7204159f62f19e660c0943e7b346915",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/sport-coat/cb-6.webp"
+      },
+      {
+        "master": "public\\images\\generated\\sport-coat\\ep-round.png",
+        "masterBytes": 1837136,
+        "sourceSha1": "338471b61353f4160183ab7e4e6616763a51a4f1",
+        "target": "public\\images\\generated\\sport-coat\\ep-round.webp",
+        "targetBytes": 147928,
+        "targetSha1": "f723f2f2b78fea617b57fabaff676e8d48429e8d",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/sport-coat/ep-round.webp"
+      },
+      {
+        "master": "public\\images\\generated\\sport-coat\\hm-none.png",
+        "masterBytes": 2043115,
+        "sourceSha1": "2e2f5bb82fefb61e6beb7db63082d22c28721692",
+        "target": "public\\images\\generated\\sport-coat\\hm-none.webp",
+        "targetBytes": 166820,
+        "targetSha1": "84242e34078f666facd64de9cadf36577b805d8d",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/sport-coat/hm-none.webp"
+      },
+      {
+        "master": "public\\images\\generated\\sport-coat\\lbp-both.png",
+        "masterBytes": 2208782,
+        "sourceSha1": "44bd596e79129087ff538c77a2ada3353fac08d8",
+        "target": "public\\images\\generated\\sport-coat\\lbp-both.webp",
+        "targetBytes": 213566,
+        "targetSha1": "8b7e8600dc4f9fc29b95017bbff494992cfbc8ec",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/sport-coat/lbp-both.webp"
+      },
+      {
+        "master": "public\\images\\generated\\sport-coat\\lbp-left-double.png",
+        "masterBytes": 2041134,
+        "sourceSha1": "47d16f68e23a3b0cd90b66f317dff47724aa089c",
+        "target": "public\\images\\generated\\sport-coat\\lbp-left-double.webp",
+        "targetBytes": 167312,
+        "targetSha1": "6ca1d403f1cc6164294a853179b5f70a1014073d",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/sport-coat/lbp-left-double.webp"
+      },
+      {
+        "master": "public\\images\\generated\\sport-coat\\pad-01.png",
+        "masterBytes": 2173253,
+        "sourceSha1": "6a980b5fc937f3db170f40f679e950aff2ae7834",
+        "target": "public\\images\\generated\\sport-coat\\pad-01.webp",
+        "targetBytes": 202006,
+        "targetSha1": "b72c8d48aa682f08fc6cc9fc0b1a985a52cf0bcb",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/sport-coat/pad-01.webp"
+      },
+      {
+        "master": "public\\images\\generated\\sport-coat\\pad-05-structured.png",
+        "masterBytes": 1844889,
+        "sourceSha1": "fbd7e1ccc7c82fd303752c9f1d0856957f457c09",
+        "target": "public\\images\\generated\\sport-coat\\pad-05-structured.webp",
+        "targetBytes": 131404,
+        "targetSha1": "d3c7a8abfde5071420fa832a136a131b16e3273b",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/sport-coat/pad-05-structured.webp"
+      },
+      {
+        "master": "public\\images\\generated\\sport-coat\\sbh-straight.png",
+        "masterBytes": 1923852,
+        "sourceSha1": "152165cd25975ed1fecc7ec39986812de984a426",
+        "target": "public\\images\\generated\\sport-coat\\sbh-straight.webp",
+        "targetBytes": 153868,
+        "targetSha1": "4b1d9e7e873ddf99aa4d19cef8aef84fa61719d4",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/sport-coat/sbh-straight.webp"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\adjuster-both.png",
+        "masterBytes": 2041132,
+        "sourceSha1": "52d027911e7f6dd8c7356af4729b2478e2951d43",
+        "target": "public\\images\\generated\\suit-2pc\\adjuster-both.webp",
+        "targetBytes": 160740,
+        "targetSha1": "be8ea9ba6c11c4976cedb16e375309f0911f3afe",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/suit-2pc/adjuster-both.webp"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\back-both-welt.png",
+        "masterBytes": 2067811,
+        "sourceSha1": "95469bd42ab5f1ae5c7a2d513f97823af9663a73",
+        "target": "public\\images\\generated\\suit-2pc\\back-both-welt.webp",
+        "targetBytes": 125268,
+        "targetSha1": "13eb9f4c023f5591518830ce0448ab1f5a1a5926",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/suit-2pc/back-both-welt.webp"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\coin-left.png",
+        "masterBytes": 2228972,
+        "sourceSha1": "4a4c2e37e50c36016504779cfc78c690427b03a1",
+        "target": "public\\images\\generated\\suit-2pc\\coin-left.webp",
+        "targetBytes": 186904,
+        "targetSha1": "160dc77a46678bc0a0dec9067899a0bfc5290531",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/suit-2pc/coin-left.webp"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\ext-straight.png",
+        "masterBytes": 2240288,
+        "sourceSha1": "5e0674b91430f57f5f5d59a6e01fb36e221dd5ec",
+        "target": "public\\images\\generated\\suit-2pc\\ext-straight.webp",
+        "targetBytes": 206818,
+        "targetSha1": "a252ed9d0bdb754029e7388687459aa9d8ec81f3",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/suit-2pc/ext-straight.webp"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\flat-front.png",
+        "masterBytes": 2266031,
+        "sourceSha1": "9127a9bc8091d123a0c7ab6347429d9dfc4b35ce",
+        "target": "public\\images\\generated\\suit-2pc\\flat-front.webp",
+        "targetBytes": 146290,
+        "targetSha1": "06b0d158b5510a1c76cbda736c581d588dfce5c0",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/suit-2pc/flat-front.webp"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\fly-button.png",
+        "masterBytes": 2445419,
+        "sourceSha1": "438cdc62eca20d7c8a1b5dddc406ef8de7acd5bd",
+        "target": "public\\images\\generated\\suit-2pc\\fly-button.webp",
+        "targetBytes": 199708,
+        "targetSha1": "4f7dbbd6d88c255bbfda0df06536b389ad9876d5",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/suit-2pc/fly-button.webp"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\fly-hook-bar.png",
+        "masterBytes": 2488758,
+        "sourceSha1": "d101d4cb56b8b34b95e28e9d937d422b14d20e6b",
+        "target": "public\\images\\generated\\suit-2pc\\fly-hook-bar.webp",
+        "targetBytes": 224382,
+        "targetSha1": "e542db32976456451844b35cb011a30de86ec4fe",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/suit-2pc/fly-hook-bar.webp"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\fly-straight.png",
+        "masterBytes": 2347425,
+        "sourceSha1": "f9bb2f3155fc2a1df079179ea155c0db1ecc0db3",
+        "target": "public\\images\\generated\\suit-2pc\\fly-straight.webp",
+        "targetBytes": 156318,
+        "targetSha1": "2bebc408399b608d79e5fa589d3da77be63af5bb",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/suit-2pc/fly-straight.webp"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\hem-blind.png",
+        "masterBytes": 1686804,
+        "sourceSha1": "5790a0a8a8d69433df3af98d7f9967b5b05c4c01",
+        "target": "public\\images\\generated\\suit-2pc\\hem-blind.webp",
+        "targetBytes": 99214,
+        "targetSha1": "7e51fa172d482b444b49c4b527940b935ca2a7db",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/suit-2pc/hem-blind.webp"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\hem-double-turnup.png",
+        "masterBytes": 1964389,
+        "sourceSha1": "6a491979e12615ddf7c734cba0f9bc4a15670210",
+        "target": "public\\images\\generated\\suit-2pc\\hem-double-turnup.webp",
+        "targetBytes": 137990,
+        "targetSha1": "36b11514b07771c0187572512ceb8b5b758cb529",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/suit-2pc/hem-double-turnup.webp"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\hem-inner-fold-70.png",
+        "masterBytes": 2063309,
+        "sourceSha1": "76e372f78dc39b759662093a9c32139b929956bd",
+        "target": "public\\images\\generated\\suit-2pc\\hem-inner-fold-70.webp",
+        "targetBytes": 178064,
+        "targetSha1": "7eca781f538166f70ec5441d590aed274a76d4d2",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/suit-2pc/hem-inner-fold-70.webp"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\jeans-diamond.png",
+        "masterBytes": 2375600,
+        "sourceSha1": "b6ab7a5b3b8839739364d28ec663f37e809bc9c1",
+        "target": "public\\images\\generated\\suit-2pc\\jeans-diamond.webp",
+        "targetBytes": 201348,
+        "targetSha1": "c23ae8b70f54eb0a2f3c8d05819fa4122969f4f7",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/suit-2pc/jeans-diamond.webp"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\no-front-pockets.png",
+        "masterBytes": 2168494,
+        "sourceSha1": "7576dd8aeb22ec51256c24d2efe7c5f621759d91",
+        "target": "public\\images\\generated\\suit-2pc\\no-front-pockets.webp",
+        "targetBytes": 150590,
+        "targetSha1": "ad06b1228e463b7a52ae92bd7730d91b966b09dc",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/suit-2pc/no-front-pockets.webp"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\pocket-stitch-06.png",
+        "masterBytes": 2071730,
+        "sourceSha1": "8786e8416dc429f08d02ee0cbaf89b0a629841e3",
+        "target": "public\\images\\generated\\suit-2pc\\pocket-stitch-06.webp",
+        "targetBytes": 170050,
+        "targetSha1": "05a0df6326c8976f1eb94b6987b84c4bbab4828b",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/suit-2pc/pocket-stitch-06.webp"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\pocket-stitch-none.png",
+        "masterBytes": 2164538,
+        "sourceSha1": "aa15cc8d1efe3df999d53e13f94a0248a7c18940",
+        "target": "public\\images\\generated\\suit-2pc\\pocket-stitch-none.webp",
+        "targetBytes": 143590,
+        "targetSha1": "444ec9ad4e5b178f2e2b88196ec9624a8c712aa1",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/suit-2pc/pocket-stitch-none.webp"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\slant-pockets.png",
+        "masterBytes": 2409043,
+        "sourceSha1": "a85164c21aa0ce80207a5cadfaedac300b4e84ea",
+        "target": "public\\images\\generated\\suit-2pc\\slant-pockets.webp",
+        "targetBytes": 206526,
+        "targetSha1": "c53e60f8d109a654cf18fb408e8a4239b1158799",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/suit-2pc/slant-pockets.webp"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\trouser-contrast-pocket.png",
+        "masterBytes": 2501479,
+        "sourceSha1": "a3f2a2c2bad1c950253dcd0a65fc0a07400d8096",
+        "target": "public\\images\\generated\\suit-2pc\\trouser-contrast-pocket.webp",
+        "targetBytes": 252780,
+        "targetSha1": "0b3371b9fee3b76c98a511db73e15f9b485d9549",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/suit-2pc/trouser-contrast-pocket.webp"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\watch-none.png",
+        "masterBytes": 2083896,
+        "sourceSha1": "9325ebbd54495665dc8dca8b59953c3c8cf5d127",
+        "target": "public\\images\\generated\\suit-2pc\\watch-none.webp",
+        "targetBytes": 129688,
+        "targetSha1": "8a2dea047b03c1114fb76ef2fbf6b52345d5158e",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/suit-2pc/watch-none.webp"
+      },
+      {
+        "master": "public\\images\\generated\\suit-3pc\\db-6x3.png",
+        "masterBytes": 2345547,
+        "sourceSha1": "82dfdcaa0a7270aee9bcc660d51d07cf0a60aaa5",
+        "target": "public\\images\\generated\\suit-3pc\\db-6x3.webp",
+        "targetBytes": 195254,
+        "targetSha1": "4b46ee92065c4073960957adcfb51f8c19bcc310",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/suit-3pc/db-6x3.webp"
+      },
+      {
+        "master": "public\\images\\generated\\suit-3pc\\sb-4.png",
+        "masterBytes": 1996931,
+        "sourceSha1": "2d1a457cc5270b9dddde8172fc25989e5f1c743d",
+        "target": "public\\images\\generated\\suit-3pc\\sb-4.webp",
+        "targetBytes": 104796,
+        "targetSha1": "3606e7b7e79ce19ab4c03adf9b0935afc7448be1",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/suit-3pc/sb-4.webp"
+      },
+      {
+        "master": "public\\images\\generated\\suit-3pc\\vest-back-belt-3cm.png",
+        "masterBytes": 1660933,
+        "sourceSha1": "477ab62ca3b4846ff5a1058f05c15df8129c74f6",
+        "target": "public\\images\\generated\\suit-3pc\\vest-back-belt-3cm.webp",
+        "targetBytes": 60248,
+        "targetSha1": "bbf61f1ee017723b0cd0c1c7891ea69e29b6e20d",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/suit-3pc/vest-back-belt-3cm.webp"
+      },
+      {
+        "master": "public\\images\\generated\\suit-3pc\\vest-bottom-regular.png",
+        "masterBytes": 2202329,
+        "sourceSha1": "54398ca5741193c5e2cf45e7a3dace102c195055",
+        "target": "public\\images\\generated\\suit-3pc\\vest-bottom-regular.webp",
+        "targetBytes": 145938,
+        "targetSha1": "8d059bba2c9a3ade2dd6305cda56cb6ec6e6ce6c",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/suit-3pc/vest-bottom-regular.webp"
+      },
+      {
+        "master": "public\\images\\generated\\suit-3pc\\vest-bottom-straight.png",
+        "masterBytes": 2257638,
+        "sourceSha1": "294ead52c07042a642b71c1a9354f5eb91b4bc3f",
+        "target": "public\\images\\generated\\suit-3pc\\vest-bottom-straight.webp",
+        "targetBytes": 136110,
+        "targetSha1": "d1b66e96eb9c8607b84761d01ea5e26e478bf528",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/suit-3pc/vest-bottom-straight.webp"
+      },
+      {
+        "master": "public\\images\\generated\\suit-3pc\\vest-chest-besom-flap.png",
+        "masterBytes": 2525957,
+        "sourceSha1": "c0fc43104f89e2a861469d2254208c50ca35ecf7",
+        "target": "public\\images\\generated\\suit-3pc\\vest-chest-besom-flap.webp",
+        "targetBytes": 268356,
+        "targetSha1": "40afa7113ddad1cc114c9864b241f6218eaf719d",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/suit-3pc/vest-chest-besom-flap.webp"
+      },
+      {
+        "master": "public\\images\\generated\\suit-3pc\\vest-left-over-right.png",
+        "masterBytes": 2252792,
+        "sourceSha1": "30a9f05bdbf32077c098824a8ad5bae479921a25",
+        "target": "public\\images\\generated\\suit-3pc\\vest-left-over-right.webp",
+        "targetBytes": 152344,
+        "targetSha1": "7c335b96eb50626b8d01a9fbe362fecb5d6b452f",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/suit-3pc/vest-left-over-right.webp"
+      },
+      {
+        "master": "public\\images\\generated\\suit-3pc\\vest-lining-artistic.png",
+        "masterBytes": 1717908,
+        "sourceSha1": "7cb54508b7d194ab4a8763317bc71b2bdc5c1798",
+        "target": "public\\images\\generated\\suit-3pc\\vest-lining-artistic.webp",
+        "targetBytes": 115982,
+        "targetSha1": "88b15968c4f011dc681fb028ae4733e50894f9e0",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/suit-3pc/vest-lining-artistic.webp"
+      },
+      {
+        "master": "public\\images\\generated\\suit-3pc\\vest-lower-besom-flap.png",
+        "masterBytes": 2024143,
+        "sourceSha1": "2d1c900e0991fe9a26ba103036d8db9eb56e2fb6",
+        "target": "public\\images\\generated\\suit-3pc\\vest-lower-besom-flap.webp",
+        "targetBytes": 128784,
+        "targetSha1": "d07684e3f7c24b9c56e4a21a2fdd7bd6d7d28b53",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/suit-3pc/vest-lower-besom-flap.webp"
+      },
+      {
+        "master": "public\\images\\generated\\suit-3pc\\vest-lower-slant-besom.png",
+        "masterBytes": 2897729,
+        "sourceSha1": "e89e59165ca5abe959d189442cde0b2969dced8e",
+        "target": "public\\images\\generated\\suit-3pc\\vest-lower-slant-besom.webp",
+        "targetBytes": 285568,
+        "targetSha1": "f06f3defcc2696a6ac07c7791c0ad4b821d88784",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/suit-3pc/vest-lower-slant-besom.webp"
+      },
+      {
+        "master": "public\\images\\generated\\suit-3pc\\vest-lower-welt-1cm.png",
+        "masterBytes": 2164310,
+        "sourceSha1": "a03ba7c1f48117c61c55f8446d0c1ce73f9b5148",
+        "target": "public\\images\\generated\\suit-3pc\\vest-lower-welt-1cm.webp",
+        "targetBytes": 133860,
+        "targetSha1": "852915f7cdf7cc414556cdb7d66b175268a51f21",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/suit-3pc/vest-lower-welt-1cm.webp"
+      },
+      {
+        "master": "public\\images\\generated\\suit-3pc\\vest-stitch-top-06.png",
+        "masterBytes": 2323455,
+        "sourceSha1": "6dff96a1bb883ae8042eed4869bf76b91ce69ecf",
+        "target": "public\\images\\generated\\suit-3pc\\vest-stitch-top-06.webp",
+        "targetBytes": 212568,
+        "targetSha1": "777d4bedd39aece414c7633cd9c5623dc44651cb",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/suit-3pc/vest-stitch-top-06.webp"
+      },
+      {
+        "master": "public\\images\\generated\\suit-3pc\\vest-ticket-besom.png",
+        "masterBytes": 2660562,
+        "sourceSha1": "334392919c564f188f87aee5402bac557704e60b",
+        "target": "public\\images\\generated\\suit-3pc\\vest-ticket-besom.webp",
+        "targetBytes": 332722,
+        "targetSha1": "cb61ce8e63d5f063f9309280b49d859428f6a981",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/suit-3pc/vest-ticket-besom.webp"
+      },
+      {
+        "master": "public\\images\\generated\\suit-3pc\\vest-ticket-lr-slant-welt.png",
+        "masterBytes": 2285702,
+        "sourceSha1": "ed499da2f42b408eb3c230c3da132ebc243c40c3",
+        "target": "public\\images\\generated\\suit-3pc\\vest-ticket-lr-slant-welt.webp",
+        "targetBytes": 171322,
+        "targetSha1": "f3a84ea2a28f15e6ee119a6706eff533f65efab7",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/suit-3pc/vest-ticket-lr-slant-welt.webp"
+      },
+      {
+        "master": "public\\images\\generated\\trousers\\back-both-patch.png",
+        "masterBytes": 2307998,
+        "sourceSha1": "19a17a90239f6693cc67bf9a5b2a2b928646a47c",
+        "target": "public\\images\\generated\\trousers\\back-both-patch.webp",
+        "targetBytes": 183136,
+        "targetSha1": "b648179cd26925a7126095f346f3884646d389c8",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/trousers/back-both-patch.webp"
+      },
+      {
+        "master": "public\\images\\generated\\trousers\\double-reverse.png",
+        "masterBytes": 1766315,
+        "sourceSha1": "9ddf3ae51a709d8b1a017558d17bf8403b59a340",
+        "target": "public\\images\\generated\\trousers\\double-reverse.webp",
+        "targetBytes": 84722,
+        "targetSha1": "1e02148110699131290e8907efe51f1ab71fc1e8",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/trousers/double-reverse.webp"
+      },
+      {
+        "master": "public\\images\\generated\\trousers\\fly-button.png",
+        "masterBytes": 2480674,
+        "sourceSha1": "5dc8e6d4d96bfaf26189e074f4c6c0ce9d0c00ab",
+        "target": "public\\images\\generated\\trousers\\fly-button.webp",
+        "targetBytes": 194512,
+        "targetSha1": "92df64a18278dc350d7712bf2f0ddba4003ebcb9",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/trousers/fly-button.webp"
+      },
+      {
+        "master": "public\\images\\generated\\trousers\\hem-inner-fold-70.png",
+        "masterBytes": 1992973,
+        "sourceSha1": "f2c1df22f9d9dd6c213ca74e014495cf66a505cd",
+        "target": "public\\images\\generated\\trousers\\hem-inner-fold-70.webp",
+        "targetBytes": 149480,
+        "targetSha1": "0156ce9e9e4e2e6cd31cf34664ed3486f8c86ff1",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/trousers/hem-inner-fold-70.webp"
+      },
+      {
+        "master": "public\\images\\generated\\trousers\\no-front-pockets.png",
+        "masterBytes": 2105534,
+        "sourceSha1": "0b9f96755e8f93d2e1ef0d282ff169bc310a245f",
+        "target": "public\\images\\generated\\trousers\\no-front-pockets.webp",
+        "targetBytes": 130840,
+        "targetSha1": "b54b0a1c9f0c5fb4f676e021f9e9ad917867d8cd",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/trousers/no-front-pockets.webp"
+      },
+      {
+        "master": "public\\images\\generated\\trousers\\single-reverse.png",
+        "masterBytes": 2203433,
+        "sourceSha1": "67748cad251dda9c849045b54adcfa8ebd249b52",
+        "target": "public\\images\\generated\\trousers\\single-reverse.webp",
+        "targetBytes": 182210,
+        "targetSha1": "fdba3d29512e627d39c299e6c4c36558bc78b367",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/trousers/single-reverse.webp"
+      },
+      {
+        "master": "public\\images\\generated\\trousers\\slant-pockets.png",
+        "masterBytes": 2201015,
+        "sourceSha1": "185bb35f52c9d8256074f284d245fe815ade2b83",
+        "target": "public\\images\\generated\\trousers\\slant-pockets.webp",
+        "targetBytes": 192090,
+        "targetSha1": "abf864bdca9f2709165291e335912859512607e8",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/trousers/slant-pockets.webp"
+      },
+      {
+        "master": "public\\images\\generated\\trousers\\watch-none.png",
+        "masterBytes": 2686209,
+        "sourceSha1": "cabd5e095b5671969e9e1971267ce10e30f78f8b",
+        "target": "public\\images\\generated\\trousers\\watch-none.webp",
+        "targetBytes": 229586,
+        "targetSha1": "7360d482d79f2f41bdea719e8a09d5ac8bf2e04f",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/trousers/watch-none.webp"
+      },
+      {
+        "master": "public\\images\\generated\\vest\\peak-lapel-vest.png",
+        "masterBytes": 2222813,
+        "sourceSha1": "c148cd56ee22757a2da5aa8d5b12e0af1580a894",
+        "target": "public\\images\\generated\\vest\\peak-lapel-vest.webp",
+        "targetBytes": 182560,
+        "targetSha1": "0bf32ab598d684704435a3d6a5540d222caffabd",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/vest/peak-lapel-vest.webp"
       }
     ],
     "skipped": [
@@ -2292,6 +2842,10 @@
       },
       {
         "master": "public\\images\\generated\\vest\\vest-lower-welt.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\vest\\vest-piping-diy-v2.png",
         "reason": "derivative already exists"
       },
       {

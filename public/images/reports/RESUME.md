@@ -96,10 +96,23 @@ remain. Never silently truncate coverage.
 
 ## Still owed by the user
 
-- **Vercel env vars** — cannot be fixed from here. Stripe keys are under the wrong names
-  (`Secret_key` vs the `STRIPE_SECRET_KEY` the code reads), so checkout 503s in
-  production. `BLOB_READ_WRITE_TOKEN`, `STRIPE_WEBHOOK_SECRET`, `NEXT_PUBLIC_SITE_URL`,
-  `ADMIN_PASSWORD`, `ADMIN_TOKEN_SECRET` are all absent.
+- **Vercel env vars** — _diagnosis corrected 2026-07-30 (session C), verified live via
+  `vercel env ls`._ The earlier "wrong names" finding was **wrong**. `STRIPE_SECRET_KEY`,
+  `ADMIN_PASSWORD` and `ADMIN_TOKEN_SECRET` all exist under the correct names (55d old)
+  but are scoped **Preview-only**, so production never receives them → checkout 503s and
+  admin fails closed. The fix is to extend scope to Production, not to rename anything.
+  `STRIPE_WEBHOOK_SECRET` **is** present in Production (previously listed absent — wrong).
+  Genuinely absent everywhere: `NEXT_PUBLIC_SITE_URL`, `BLOB_READ_WRITE_TOKEN`,
+  `RESEND_API_KEY`.
+  - Dead weight, read by no code path: `Secret_key`, `Publishable_key`, `Restricted_key`,
+    `BLOB_STORE_ID`, `BLOB_WEBHOOK_PUBLIC_KEY`, `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY`
+    (the app uses hosted Stripe Checkout redirect — no client-side publishable key),
+    `BlessedDressed` (purpose unknown, added 2026-07-30).
+  - **Open decision:** Preview Stripe creds are probably **test mode** (a stray Preview var
+    is _named_ `pk_test_51TfHMd…`). Do **not** clone Preview→Production for Stripe; paste a
+    fresh `sk_live_…`. Cloning a test key would make checkout silently take fake payments —
+    worse than the current loud 503.
+  - **Cleanup:** delete the Preview variable whose _name_ is a literal `pk_test_…` key.
 - **Repo reconciliation** (see `HANDOFF.md`) — the Vercel deploy source is 7 weeks stale.
 - The older standing decisions in `CHECKPOINT.json → decisions_needed_from_dustin`
   (items 2–6: per-family defect calls, `loops-5` source drawing, the 22 orphaned v2/v3

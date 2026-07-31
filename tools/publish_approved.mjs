@@ -171,11 +171,37 @@ for (const { productId, optionId } of pipelineDirs) {
   }
   const { fieldId, identity } = resolved;
 
-  const folder = GENERATED_FOLDER[productId] || productId;
-  const target = `/images/generated/${folder}/${optionId}.png`;
-  const targetAbs = path.join(PUBLIC, target.replace(/^\//, ''));
-  if (!fs.existsSync(targetAbs)) {
-    refuse(`approved image not on disk at ${target}`);
+  // WHERE THE APPROVED MASTER ACTUALLY IS.
+  // ---------------------------------------------------------------------
+  // Two scripts derive this path independently and they do not agree:
+  // log_qc_result.mjs stages under the PRODUCT id (suit-3pc/), while this tool
+  // computed it from GENERATED_FOLDER, which maps the suit products onto
+  // `jacket/`. Every waistcoat and trouser option inside suit-2pc/suit-3pc
+  // therefore staged to one path and was looked for at another, and 12 genuinely
+  // QC-approved images were refused as "not on disk" while sitting on disk.
+  //
+  // The folder is only a lookup. The GUARANTEE is gate 2 below — SHA-1
+  // byte-identity against the exact candidate QC graded — so widening the search
+  // costs nothing and loses nothing: a file found in the wrong folder still has
+  // to prove it is the graded artifact before it can be published.
+  const folderCandidates = [...new Set([GENERATED_FOLDER[productId] || productId, productId])];
+  let target = null;
+  let targetAbs = null;
+  for (const folder of folderCandidates) {
+    const candidate = `/images/generated/${folder}/${optionId}.png`;
+    const abs = path.join(PUBLIC, candidate.replace(/^\//, ''));
+    if (fs.existsSync(abs)) {
+      target = candidate;
+      targetAbs = abs;
+      break;
+    }
+  }
+  if (!targetAbs) {
+    refuse(
+      `approved image not on disk — looked in ${folderCandidates
+        .map((f) => `/images/generated/${f}/${optionId}.png`)
+        .join(' and ')}`
+    );
     continue;
   }
 

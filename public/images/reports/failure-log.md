@@ -492,3 +492,74 @@ rounded away.
 | Date | Batch | Model | Images | Credits | Balance after |
 |---|---|---|---|---|---|
 | 2026-07-30 | session C — hardening + incident recovery | — | 0 | 0 | **928.5 (unchanged)** |
+
+---
+
+## 2026-07-31 — session D: two false approvals caught at the write-back gate (0 credits)
+
+QC'd the 5 options sitting at `generated-awaiting-qc`. Two scored PASS and were one `Edit` away
+from shipping. **Both were wrong, and the scores were not the reason.**
+
+### What happened
+
+`compare_prep.mjs` handed back `/images/ai/collar-fashion-point-58.png` as "the illustration" —
+a 1.2 MB AI-generated *photograph*. The catalog's authoritative blueprint for that option is
+`techpackIllustration: /images/techpacks/shirt/lapel/fashion-point-in-58cm.jpg`, a 5 KB supplier
+line drawing that exists on disk. I graded a generated photo against another generated photo and
+it scored 98+ across all nine categories, exactly as `repoint_supplier_blueprints.mjs`'s header
+predicts it would.
+
+### Root cause — stale artifacts, NOT a tool bug
+
+`resolveBlueprint()` in tech-pack-interpreter's `lib/catalog.mjs` is correct: it prefers
+`techpackIllustration` and deliberately refuses to fall back to generated output. But these
+`spec.json` files were written **before** commit `0d2d49e` ("restore authoritative supplier
+tech-pack mappings and revoke AI-based verification") and baked the old `/images/ai/` path in.
+Every downstream artifact inherited it: prompt, generation, and QC.
+
+**20 of 38 pipeline specs are stale this way — every one is `shirt/collar-*`. The other 18
+correctly reference real tech packs.**
+
+### What the real blueprints proved
+
+The supplier drawings annotate the single most discriminating dimension for collars, and the
+stale specs have `measured.angles: []`:
+
+| option | supplier tech pack says | spec captured |
+|---|---|---|
+| collar-fashion-point-58 | **60.00°** spread, front-on view, throat button | `angles: []`, orientation `detail` |
+| collar-sq-65 | **80.00°** spread, front-on view, throat button | `angles: []`, orientation `detail` |
+
+Both candidates were 3/4 detail crops — an orientation in which the annotated spread angle
+**cannot be measured at all**. The tech packs are drawn front-on precisely so it can be.
+
+### Lessons
+
+- **[A PASS PROVES FIDELITY TO WHATEVER YOU SHOWED THE GRADER]** Not to the garment. Before
+  trusting any verdict, confirm `spec.illustration.path` actually points at
+  `techpackIllustration`. A spec written before a catalog remap is radioactive.
+- **[CHECK THE ARTIFACT'S VINTAGE AGAINST THE CATALOG'S]** The tool was right and the data was
+  stale. "The logic is correct" is not evidence the *inputs* are.
+- **[THE STAGING STEP MUTATES THE REPO BEFORE YOU DECIDE TO SHIP]** `log_qc_result.mjs` copies
+  the approved image into `public/images/generated/` the moment it computes PASS — it overwrote
+  two tracked assets that the catalog's `realImage` already pointed at. Caught via
+  `git status --porcelain`; restored with `git checkout --` (candidates preserved in
+  `.craft-pipeline/`, nothing lost). **Run `git status` after any PASS.**
+- **[EMPTY `measured.angles` ON AN ANGLE-DEFINED OPTION IS A SMELL]** Collar spread, lapel gorge
+  and pocket slant are all angle-defined families. An empty angles array there means the
+  extractor never saw the annotation.
+
+### Actions taken
+
+- Both PASS verdicts revoked → `qc-REVOKED-wrong-blueprint.json` (kept as evidence, per the
+  rename convention).
+- Overwritten assets restored; working tree clean.
+- No catalog write-back performed.
+- The 3 FAIL verdicts stand on their own findings, but were graded against the same stale
+  blueprints and must be re-run after re-interpretation.
+
+### Spend table (continued)
+
+| Date | Batch | Model | Images | Credits | Balance after |
+|---|---|---|---|---|---|
+| 2026-07-31 | session D — QC of 5 awaiting-verdict options | — | 0 | 0 | **928.5 (unchanged)** |
