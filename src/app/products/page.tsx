@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { loadData } from "@/lib/admin-data";
+import { loadDataAsync } from "@/lib/admin-data";
 import { readyToWear, type Product } from "@/data/products";
 import { SITE_DEFAULTS, type SiteSettings } from "@/data/site-settings";
 
@@ -10,9 +10,9 @@ export const metadata = {
   description: "Ready-to-wear suits, shirts, and accessories — luxury craftsmanship at every price.",
 };
 
-export default function ProductsPage() {
-  const products = loadData<Product[]>("products", readyToWear);
-  const settings = loadData<SiteSettings>("site-settings", SITE_DEFAULTS);
+export default async function ProductsPage() {
+  const products = await loadDataAsync<Product[]>("products", readyToWear);
+  const settings = await loadDataAsync<SiteSettings>("site-settings", SITE_DEFAULTS);
   const productsPage = settings.pages?.products ?? {
     heading: "Instant luxury.",
     subtext: "Curated pieces ready to ship — Italian fabrics, corozo buttons, and bespoke finish at accessible prices.",

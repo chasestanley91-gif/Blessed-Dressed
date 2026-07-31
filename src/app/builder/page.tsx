@@ -1,5 +1,5 @@
 ﻿import Link from "next/link";
-import { loadData } from "@/lib/admin-data";
+import { loadDataAsync } from "@/lib/admin-data";
 import { builderProducts } from "@/data/builder";
 import { SITE_DEFAULTS, type SiteSettings } from "@/data/site-settings";
 
@@ -7,8 +7,8 @@ export const dynamic = 'force-dynamic';
 
 type BuilderCard = { id: string; label: string; description: string; image: string };
 
-export default function BuilderIndexPage() {
-  const settings = loadData<SiteSettings>("site-settings", SITE_DEFAULTS);
+export default async function BuilderIndexPage() {
+  const settings = await loadDataAsync<SiteSettings>("site-settings", SITE_DEFAULTS);
   const builderPageSettings = settings.pages?.builder;
   const heading = builderPageSettings?.heading ?? "Begin your tailored journey.";
   const subtext = builderPageSettings?.subtext ?? "Choose a garment, select premium fabrics, and personalize every detail through our 7-step bespoke process.";

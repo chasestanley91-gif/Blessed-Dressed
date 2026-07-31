@@ -17,3 +17,10 @@ visual-qa
 
 # NOTE: do NOT ignore `public/` — it holds logo.png and /images/** used
 # across Nav, Footer, builders, fabrics, and product galleries.
+
+# …but DO exclude the generated PNG masters. They average 2 MB (1.13 GB total)
+# and exist only as the provenance anchor for QC: publish_approved.mjs proves
+# byte-identity between these and the graded candidate-N.png. The catalog serves
+# the .webp derivatives beside them (75.8 MB total, 93% smaller), which is what
+# actually needs to ship. Masters stay in git and on disk for re-verification.
+public/images/generated/**/*.png

@@ -1,6 +1,6 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
-import { loadData } from "@/lib/admin-data";
+import { loadDataAsync } from "@/lib/admin-data";
 
 export const metadata: Metadata = {
   title: "Fabric Book — Blessed & Dressed",
@@ -40,8 +40,8 @@ const COLLECTIONS = [
   },
 ];
 
-export default function FabricBookPage() {
-  const fabrics = loadData<FabricEntry[]>("fabric-book", []);
+export default async function FabricBookPage() {
+  const fabrics = await loadDataAsync<FabricEntry[]>("fabric-book", []);
 
   const counts = COLLECTIONS.reduce<Record<string, number>>((acc, col) => {
     acc[col.slug] = fabrics.filter((f) => f.collection === col.filter).length;

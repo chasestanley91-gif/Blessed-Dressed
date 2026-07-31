@@ -30,7 +30,11 @@ async function uploadFile(file: File, subfolder: string): Promise<string> {
   fd.append("imagePath", `fabrics/${subfolder}/${file.name}`);
   const res = await fetch("/api/admin/upload-image", { method: "POST", body: fd });
   if (!res.ok) throw new Error("Upload failed");
-  return `/images/fabrics/${subfolder}/${file.name}`;
+  // Use the server's path — in production the asset lives in Blob, so the
+  // local /images/... path it used to return would 404.
+  const data = (await res.json()) as { path?: string };
+  if (!data.path) throw new Error("Upload succeeded but returned no path");
+  return data.path;
 }
 
 function ImageSlot({

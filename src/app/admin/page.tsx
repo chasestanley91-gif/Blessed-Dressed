@@ -19,9 +19,9 @@ export default async function AdminPage() {
   const liveConsultations = await loadDataAsync<ConsultationRequest[]>("consultations", []);
   const newConsultations = liveConsultations.filter((c) => c.status === "New").length;
 
-  const liveProducts = loadData<Product[]>("products", readyToWear);
-  const liveAccessories = loadData<Accessory[]>("accessories", accessories);
-  const liveOrders = loadData<Order[]>("orders", orders);
+  const liveProducts = await loadDataAsync<Product[]>("products", readyToWear);
+  const liveAccessories = await loadDataAsync<Accessory[]>("accessories", accessories);
+  const liveOrders = await loadDataAsync<Order[]>("orders", orders);
 
   const totalRevenue = liveOrders
     .filter((o) => o.status !== "Cancelled")

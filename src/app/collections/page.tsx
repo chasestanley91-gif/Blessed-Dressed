@@ -1,13 +1,13 @@
 ﻿import Link from "next/link";
-import { loadData } from "@/lib/admin-data";
+import { loadDataAsync } from "@/lib/admin-data";
 import { collections, type Collection } from "@/data/collections";
 import { SITE_DEFAULTS, type SiteSettings } from "@/data/site-settings";
 
 export const dynamic = 'force-dynamic';
 
-export default function CollectionsPage() {
-  const settings = loadData<SiteSettings>("site-settings", SITE_DEFAULTS);
-  const collectionsData = loadData<Collection[]>("collections", collections);
+export default async function CollectionsPage() {
+  const settings = await loadDataAsync<SiteSettings>("site-settings", SITE_DEFAULTS);
+  const collectionsData = await loadDataAsync<Collection[]>("collections", collections);
   const collectionsPage = settings.pages?.collections ?? {
     heading: "Curated capsules for every occasion.",
     subtext: "Editorial curation for winter ateliers, heritage capsules, and elevated classics — each collection a complete wardrobe story.",

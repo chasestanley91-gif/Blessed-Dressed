@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
+import { getAdminSecret } from "@/lib/admin-secret";
 
-const SECRET = process.env.ADMIN_TOKEN_SECRET ?? "dev_secret";
 const COOKIE = "admin_session";
 
 async function hmacHex(key: string, data: string): Promise<string> {
@@ -28,11 +28,14 @@ function base64urlDecode(token: string): string {
 async function verifyToken(token: string | undefined): Promise<boolean> {
   if (!token) return false;
   try {
+    // Resolved inside the try so a missing ADMIN_TOKEN_SECRET in production
+    // throws and we fail CLOSED (deny) rather than verifying against a default.
+    const secret = getAdminSecret();
     const decoded = base64urlDecode(token);
     const lastColon = decoded.lastIndexOf(":");
     const payload = decoded.slice(0, lastColon);
     const sig = decoded.slice(lastColon + 1);
-    const expected = await hmacHex(SECRET, payload);
+    const expected = await hmacHex(secret, payload);
     return sig === expected && payload.startsWith("blessed_admin:");
   } catch {
     return false;

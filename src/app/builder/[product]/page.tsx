@@ -2,7 +2,7 @@
 
 import { use, useCallback, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-import { useRouter, useSearchParams } from "next/navigation";
+import { notFound, useRouter, useSearchParams } from "next/navigation";
 import {
   builderProducts,
   fabrics,
@@ -1120,6 +1120,11 @@ type AdminFabric = { id: string; label: string; detail: string; premium: boolean
 
 export default function BuilderProductPage({ params }: BuilderPageProps) {
   const { product: productSlug } = use(params);
+  // An unknown slug used to fall through to builderProducts[0]: the page
+  // rendered "Bespoke Shirt", offered zero design options, and priced the
+  // garment at basePrices[slug] ?? 0 — /builder/suit showed Add to Cart at $150.
+  // Checked before any other hook so the throw is consistent for a given slug.
+  if (!builderProducts.some((p) => p.id === productSlug)) notFound();
   const router = useRouter();
   const searchParams = useSearchParams();
   const [activeStep, setActiveStep] = useState(2);
@@ -1135,11 +1140,17 @@ export default function BuilderProductPage({ params }: BuilderPageProps) {
   const fetchFabrics = useCallback(() => {
     setFabricsLoading(true);
     setFabricsError(false);
-    fetch("/api/admin/fabrics")
-      .then((r) => r.json())
+    // Public, ungated fabric endpoint. The admin endpoint is auth-gated (401 for
+    // guests) and its error body has no `.length`, so fetching it here failed
+    // silently and served the bundled fallback list to every customer.
+    fetch("/api/fabrics")
+      .then((r) => { if (!r.ok) throw new Error("fabrics unavailable"); return r.json(); })
       .then((adminFabrics: AdminFabric[]) => {
         setFabricsLoading(false);
-        if (!adminFabrics?.length) return;
+        if (!Array.isArray(adminFabrics) || adminFabrics.length === 0) {
+          setFabricsError(true);
+          return;
+        }
         setActiveFabrics(adminFabrics.map((f) => ({
           id: f.id,
           label: f.label,

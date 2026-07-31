@@ -51,10 +51,22 @@ export async function POST(req: NextRequest) {
 
     // 1. Save a general order record (for the main orders admin panel)
     const orders = await loadDataAsync<StoredOrder[]>("orders", []);
-    const maxId = orders.reduce(
-      (m, o) => Math.max(m, parseInt(o.id.replace("ORD-", "") || "0", 10)),
-      0
-    );
+
+    // Idempotency. Stripe retries on any non-2xx, and saveDataAsync now rethrows,
+    // so without this a Blob hiccup after a partial write duplicates the order.
+    const already = orders.find((o) => o.stripeSessionId === session.id);
+    if (already) {
+      console.log(`Webhook replay for ${session.id} — order ${already.id} already recorded`);
+      return NextResponse.json({ received: true, deduped: true });
+    }
+
+    // isNaN guard: `Math.max(m, NaN)` is NaN, so ONE malformed id would poison
+    // every subsequent order as ORD-NaN, permanently. bespoke-orders already
+    // guards this; orders did not.
+    const maxId = orders.reduce((m, o) => {
+      const n = parseInt(String(o.id).replace("ORD-", ""), 10);
+      return isNaN(n) ? m : Math.max(m, n);
+    }, 0);
     const newOrder: StoredOrder = {
       id: `ORD-${String(maxId + 1).padStart(4, "0")}`,
       date: new Date().toISOString().slice(0, 10),
@@ -68,7 +80,13 @@ export async function POST(req: NextRequest) {
       ...(bespokeOrderId ? { bespokeOrderId } : {}),
     };
     orders.unshift(newOrder);
-    await saveDataAsync("orders", orders);
+    try {
+      await saveDataAsync("orders", orders);
+    } catch (err) {
+      // Return 5xx so Stripe retries — the payment happened; the record must exist.
+      console.error("Failed to persist paid order — asking Stripe to retry:", err);
+      return NextResponse.json({ error: "Could not record order." }, { status: 500 });
+    }
     console.log(`General order saved: ${newOrder.id}`);
 
     // 2. Mark the bespoke order record as Paid so the admin worksheet is complete
@@ -88,6 +106,28 @@ export async function POST(req: NextRequest) {
         console.log(`Bespoke order ${bespokeOrderId} marked as Paid`);
       } catch (err) {
         console.error("Failed to update bespoke order status:", err);
+      }
+    }
+  }
+
+  // A session that expires or fails otherwise leaves its bespoke record at
+  // "Pending Payment" forever, cluttering the worksheet with orders that will
+  // never be made.
+  if (event.type === "checkout.session.expired" || event.type === "checkout.session.async_payment_failed") {
+    const session = event.data.object;
+    const bespokeOrderId = session.metadata?.bespokeOrderId;
+    if (bespokeOrderId) {
+      try {
+        const bespokeOrders = await loadDataAsync<BespokeOrder[]>("bespoke-orders", []);
+        const updated = bespokeOrders.map((bo) =>
+          bo.id === bespokeOrderId && bo.status === "Pending Payment"
+            ? { ...bo, status: "Cancelled" as BespokeOrder["status"] }
+            : bo
+        );
+        await saveDataAsync("bespoke-orders", updated);
+        console.log(`Bespoke order ${bespokeOrderId} cancelled (${event.type})`);
+      } catch (err) {
+        console.error("Failed to cancel bespoke order:", err);
       }
     }
   }

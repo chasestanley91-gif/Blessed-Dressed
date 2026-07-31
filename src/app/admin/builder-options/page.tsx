@@ -1,7 +1,9 @@
 ﻿"use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import type { ProductDesignConfig, DesignField, DesignOption, FieldQuiz, QuizAnswer } from "@/data/options/types";
+import ImageEditorModal, { type ImageSlot } from "@/components/admin/ImageEditorModal";
+import { Toast } from "@/components/admin/shared";
 
 const PRODUCTS = [
   { id: "suit-2pc", label: "Suit (2pc)" },
@@ -13,48 +15,37 @@ const PRODUCTS = [
 ];
 
 function OptionRow({
-  opt, sectionIdx, fieldIdx, optIdx, onChange, onDelete, onImageUpload,
+  opt, sectionIdx, fieldIdx, optIdx, onChange, onDelete, onEditImage,
 }: {
   opt: DesignOption;
   sectionIdx: number; fieldIdx: number; optIdx: number;
   onChange: (si: number, fi: number, oi: number, patch: Partial<DesignOption>) => void;
   onDelete: (si: number, fi: number, oi: number) => void;
-  onImageUpload: (si: number, fi: number, oi: number, file: File, field: "image" | "aiImage" | "realImage") => Promise<void>;
+  onEditImage: (si: number, fi: number, oi: number, slot: ImageSlot) => void;
 }) {
-  const fileRef = useRef<HTMLInputElement>(null);
-  const pendingField = useRef<"image" | "aiImage" | "realImage">("image");
-  const [uploading, setUploading] = useState(false);
-
-  async function handleFile(e: React.ChangeEvent<HTMLInputElement>) {
-    const file = e.target.files?.[0];
-    if (!file) return;
-    setUploading(true);
-    await onImageUpload(sectionIdx, fieldIdx, optIdx, file, pendingField.current);
-    setUploading(false);
-    if (fileRef.current) fileRef.current.value = "";
-  }
-  function pick(field: "image" | "aiImage" | "realImage") {
-    pendingField.current = field;
-    fileRef.current?.click();
-  }
-
   const inp = "rounded-md border border-border-accent bg-surface-deep px-2 py-1 font-sans text-xs text-foreground outline-none focus:border-gold transition-colors";
 
   return (
     <div className="py-2 border-b border-surface-strong last:border-0">
-      <div className="grid grid-cols-[210px_1fr_2fr_70px_auto_auto] gap-2 items-center">
-        {/* Images: Illustration / AI render / Real photo */}
+      <div className="grid grid-cols-[230px_1fr_2fr_70px_auto_auto] gap-2 items-center">
+        {/* Images: Illustration / AI render / Real photo — click to edit */}
         <div className="flex items-start gap-1.5">
-          <input ref={fileRef} type="file" accept="image/*" title="Upload option image" className="hidden" onChange={handleFile} />
           {([["image", "Illus.", opt.image], ["aiImage", "AI", opt.aiImage], ["realImage", "Real", opt.realImage]] as const).map(([field, lbl, src]) => (
             <div key={field} className="flex flex-col items-center gap-0.5">
-              <div className="h-[44px] w-[58px] rounded bg-white overflow-hidden border border-border-accent">
-                {src ? <img src={src} alt={lbl} className="h-full w-full object-contain" /> : <div className="h-full w-full bg-border-accent" />}
-              </div>
-              <button type="button" onClick={() => pick(field)} disabled={uploading}
-                className="font-sans text-[8px] text-slate hover:text-gold transition-colors disabled:opacity-40">
-                {uploading ? "…" : lbl}
+              <button
+                type="button"
+                onClick={() => onEditImage(sectionIdx, fieldIdx, optIdx, field)}
+                title={`Edit ${lbl === "Illus." ? "illustration" : lbl === "AI" ? "AI render" : "real photo"}`}
+                className="group relative h-[52px] w-[68px] rounded bg-white overflow-hidden border border-border-accent hover:border-gold transition-colors"
+              >
+                {src
+                  ? <img src={src} alt={lbl} className="h-full w-full object-contain" />
+                  : <div className="flex h-full w-full items-center justify-center bg-border-accent/60 font-sans text-base text-dim">+</div>}
+                <span className="absolute inset-0 hidden items-center justify-center bg-black/50 font-sans text-[10px] font-semibold text-white group-hover:flex">
+                  ✎
+                </span>
               </button>
+              <span className="font-sans text-[8px] text-slate">{lbl}</span>
             </div>
           ))}
         </div>
@@ -95,7 +86,7 @@ function OptionRow({
 
 function FieldCard({
   field, sectionIdx, fieldIdx,
-  onFieldChange, onOptionChange, onOptionDelete, onAddOption, onImageUpload, onDeleteField,
+  onFieldChange, onOptionChange, onOptionDelete, onAddOption, onEditImage, onDeleteField,
 }: {
   field: DesignField;
   sectionIdx: number; fieldIdx: number;
@@ -103,7 +94,7 @@ function FieldCard({
   onOptionChange: (si: number, fi: number, oi: number, patch: Partial<DesignOption>) => void;
   onOptionDelete: (si: number, fi: number, oi: number) => void;
   onAddOption: (si: number, fi: number) => void;
-  onImageUpload: (si: number, fi: number, oi: number, file: File, field: "image" | "aiImage" | "realImage") => Promise<void>;
+  onEditImage: (si: number, fi: number, oi: number, slot: ImageSlot) => void;
   onDeleteField: (si: number, fi: number) => void;
 }) {
   const [open, setOpen] = useState(false);
@@ -241,7 +232,7 @@ function FieldCard({
           {field.options.map((opt, oi) => (
             <OptionRow key={opt.id} opt={opt}
               sectionIdx={sectionIdx} fieldIdx={fieldIdx} optIdx={oi}
-              onChange={onOptionChange} onDelete={onOptionDelete} onImageUpload={onImageUpload} />
+              onChange={onOptionChange} onDelete={onOptionDelete} onEditImage={onEditImage} />
           ))}
 
           <button type="button" onClick={() => onAddOption(sectionIdx, fieldIdx)}
@@ -261,8 +252,16 @@ export default function BuilderOptionsAdmin() {
   const [savedIdx, setSavedIdx] = useState<number | null>(null);
   const [addSectionForm, setAddSectionForm] = useState<{ id: string; label: string } | null>(null);
   const [savingAll, setSavingAll] = useState(false);
+  const [editorTarget, setEditorTarget] = useState<{ si: number; fi: number; oi: number; slot: ImageSlot } | null>(null);
+  const [toast, setToast] = useState<{ msg: string; ok: boolean } | null>(null);
+
+  function showToast(msg: string, ok: boolean) {
+    setToast({ msg, ok });
+    setTimeout(() => setToast(null), 3000);
+  }
 
   useEffect(() => {
+    setEditorTarget(null);
     fetch(`/api/admin/builder-options/${productId}`).then((r) => r.json()).then(setConfig);
   }, [productId]);
 
@@ -349,16 +348,34 @@ export default function BuilderOptionsAdmin() {
     });
   }
 
-  async function uploadImage(si: number, fi: number, oi: number, file: File, field: "image" | "aiImage" | "realImage" = "image") {
-    const opt = config!.sections[si].fields[fi].options[oi];
-    // image (illustration) keeps its category folder; AI/real go to /images/ai|real.
-    const folder = field === "aiImage" ? "ai" : field === "realImage" ? "real" : opt.id.split("-")[0];
-    const fname = `${opt.id}-${file.name}`;
-    const fd = new FormData();
-    fd.append("file", file);
-    fd.append("imagePath", `${folder}/${fname}`);
-    const res = await fetch("/api/admin/upload-image", { method: "POST", body: fd });
-    if (res.ok) updateOption(si, fi, oi, { [field]: `/images/${folder}/${fname}` });
+  /** Patch one option, update state AND persist the whole config (image editor flow). */
+  async function applyOptionPatch(si: number, fi: number, oi: number, patch: Partial<DesignOption>) {
+    if (!config) return;
+    const next: ProductDesignConfig = {
+      ...config,
+      sections: config.sections.map((s, si2) =>
+        si2 !== si ? s : {
+          ...s, fields: s.fields.map((f, fi2) =>
+            fi2 !== fi ? f : {
+              ...f, options: f.options.map((o, oi2) =>
+                oi2 !== oi ? o : { ...o, ...patch }
+              ),
+            }
+          ),
+        }
+      ),
+    };
+    setConfig(next);
+    try {
+      const res = await fetch(`/api/admin/builder-options/${productId}`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(next),
+      });
+      showToast(res.ok ? "Image updated ✓" : "Save failed", res.ok);
+    } catch {
+      showToast("Save failed", false);
+    }
   }
 
   async function saveSection(si: number) {
@@ -452,7 +469,7 @@ export default function BuilderOptionsAdmin() {
                   onOptionChange={updateOption}
                   onOptionDelete={deleteOption}
                   onAddOption={addOption}
-                  onImageUpload={uploadImage}
+                  onEditImage={(si2, fi2, oi2, slot) => setEditorTarget({ si: si2, fi: fi2, oi: oi2, slot })}
                   onDeleteField={deleteField}
                 />
               ))}
@@ -509,6 +526,23 @@ export default function BuilderOptionsAdmin() {
           </div>
         )}
       </div>
+
+      {/* Image editor modal */}
+      {editorTarget && config && (() => {
+        const opt = config.sections[editorTarget.si]?.fields[editorTarget.fi]?.options[editorTarget.oi];
+        if (!opt) return null;
+        return (
+          <ImageEditorModal
+            opt={opt}
+            productId={productId}
+            initialSlot={editorTarget.slot}
+            onApply={(patch) => applyOptionPatch(editorTarget.si, editorTarget.fi, editorTarget.oi, patch)}
+            onClose={() => setEditorTarget(null)}
+          />
+        );
+      })()}
+
+      <Toast toast={toast} />
     </div>
   );
 }

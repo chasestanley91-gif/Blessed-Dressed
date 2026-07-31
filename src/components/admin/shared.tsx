@@ -90,14 +90,109 @@ export function FocalPointPicker({
 
 /* ─── Image browser ──────────────────────────────────────────────── */
 
-type SiteImage = { path: string; dir: string; name: string };
+export type SiteImage = { path: string; dir: string; name: string };
 
 const DIR_LABELS: Record<string, string> = {
   "builder-heroes": "Hero Photos",
   collections: "Collections",
   products: "Products",
   uploads: "Uploaded",
+  real: "Real Photos",
+  ai: "AI Renders",
+  "generated/jacket": "Generated — Jacket",
+  "generated/shirt": "Generated — Shirt",
+  "generated/trousers": "Generated — Trousers",
+  "generated/vest": "Generated — Vest",
 };
+
+/* ─── Image grid (searchable, grouped by folder) ─────────────────── */
+
+export function ImageGrid({
+  images,
+  current,
+  onSelect,
+  initialSearch = "",
+  actions,
+  maxHeightClass = "max-h-72",
+}: {
+  images: SiteImage[];
+  current?: string;
+  onSelect: (path: string) => void;
+  initialSearch?: string;
+  actions?: React.ReactNode;
+  maxHeightClass?: string;
+}) {
+  const [search, setSearch] = useState(initialSearch);
+
+  const q = search.toLowerCase().trim();
+  const qLoose = q.replace(/[-_]/g, " ");
+  const filtered = images.filter(
+    (img) =>
+      img.name.toLowerCase().includes(qLoose) ||
+      img.dir.toLowerCase().includes(q) ||
+      img.path.toLowerCase().includes(q)
+  );
+
+  const byDir = filtered.reduce<Record<string, SiteImage[]>>((acc, img) => {
+    (acc[img.dir] ??= []).push(img);
+    return acc;
+  }, {});
+
+  return (
+    <>
+      <div className="flex gap-2 p-2 border-b border-border-accent">
+        <input
+          type="text"
+          className={`${inp} flex-1 !py-1.5`}
+          placeholder="Search images…"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
+        {actions}
+      </div>
+
+      <div className={`${maxHeightClass} overflow-y-auto p-2 space-y-3`}>
+        {Object.entries(byDir).map(([dir, imgs]) => (
+          <div key={dir}>
+            <p className="font-sans text-[9px] uppercase tracking-[0.15em] text-gold mb-1.5 px-1">
+              {DIR_LABELS[dir] ?? dir}
+            </p>
+            <div className="grid grid-cols-3 gap-1.5">
+              {imgs.map((img) => (
+                <button
+                  key={img.path}
+                  type="button"
+                  onClick={() => onSelect(img.path)}
+                  className={`relative overflow-hidden rounded border-2 transition-colors text-left aspect-[4/3] ${
+                    current === img.path
+                      ? "border-gold"
+                      : "border-transparent hover:border-gold/50"
+                  }`}
+                  title={img.name}
+                >
+                  <img
+                    src={img.path}
+                    alt={img.name}
+                    loading="lazy"
+                    className="h-full w-full object-cover object-top brightness-75"
+                  />
+                  {current === img.path && (
+                    <span className="absolute top-0.5 right-0.5 flex h-3.5 w-3.5 items-center justify-center rounded-full bg-gold text-[7px] font-bold text-background">
+                      ✓
+                    </span>
+                  )}
+                </button>
+              ))}
+            </div>
+          </div>
+        ))}
+        {filtered.length === 0 && (
+          <p className="font-sans text-xs text-dim text-center py-4">No images found</p>
+        )}
+      </div>
+    </>
+  );
+}
 
 export function ImageBrowser({
   current,
@@ -109,7 +204,6 @@ export function ImageBrowser({
   subfolder?: string;
 }) {
   const [images, setImages] = useState<SiteImage[]>([]);
-  const [search, setSearch] = useState("");
   const [uploading, setUploading] = useState(false);
   const [open, setOpen] = useState(false);
   const fileRef = useRef<HTMLInputElement>(null);
@@ -141,17 +235,6 @@ export function ImageBrowser({
     }
   }
 
-  const filtered = images.filter(
-    (img) =>
-      img.name.toLowerCase().includes(search.toLowerCase()) ||
-      img.dir.toLowerCase().includes(search.toLowerCase())
-  );
-
-  const byDir = filtered.reduce<Record<string, SiteImage[]>>((acc, img) => {
-    (acc[img.dir] ??= []).push(img);
-    return acc;
-  }, {});
-
   return (
     <div className="space-y-2">
       <div className="flex items-center gap-3">
@@ -172,70 +255,31 @@ export function ImageBrowser({
 
       {open && (
         <div className="rounded-lg border border-border-accent bg-surface-deep overflow-hidden">
-          <div className="flex gap-2 p-2 border-b border-border-accent">
-            <input
-              type="text"
-              className={`${inp} flex-1 !py-1.5`}
-              placeholder="Search images…"
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-            />
-            <button
-              type="button"
-              onClick={() => fileRef.current?.click()}
-              disabled={uploading}
-              className="shrink-0 rounded-md bg-gold px-2.5 py-1 font-sans text-[10px] font-semibold text-background hover:opacity-90 disabled:opacity-50 whitespace-nowrap"
-            >
-              {uploading ? "Uploading…" : "↑ Upload"}
-            </button>
-            <input
-              ref={fileRef}
-              type="file"
-              accept="image/*"
-              aria-label="Upload image file"
-              className="sr-only"
-              onChange={upload}
-            />
-          </div>
-
-          <div className="max-h-72 overflow-y-auto p-2 space-y-3">
-            {Object.entries(byDir).map(([dir, imgs]) => (
-              <div key={dir}>
-                <p className="font-sans text-[9px] uppercase tracking-[0.15em] text-gold mb-1.5 px-1">
-                  {DIR_LABELS[dir] ?? dir}
-                </p>
-                <div className="grid grid-cols-3 gap-1.5">
-                  {imgs.map((img) => (
-                    <button
-                      key={img.path}
-                      type="button"
-                      onClick={() => { onSelect(img.path); setOpen(false); }}
-                      className={`relative overflow-hidden rounded border-2 transition-colors text-left aspect-[4/3] ${
-                        current === img.path
-                          ? "border-gold"
-                          : "border-transparent hover:border-gold/50"
-                      }`}
-                      title={img.name}
-                    >
-                      <img
-                        src={img.path}
-                        alt={img.name}
-                        className="h-full w-full object-cover object-top brightness-75"
-                      />
-                      {current === img.path && (
-                        <span className="absolute top-0.5 right-0.5 flex h-3.5 w-3.5 items-center justify-center rounded-full bg-gold text-[7px] font-bold text-background">
-                          ✓
-                        </span>
-                      )}
-                    </button>
-                  ))}
-                </div>
-              </div>
-            ))}
-            {filtered.length === 0 && (
-              <p className="font-sans text-xs text-dim text-center py-4">No images found</p>
-            )}
-          </div>
+          <ImageGrid
+            images={images}
+            current={current}
+            onSelect={(path) => { onSelect(path); setOpen(false); }}
+            actions={
+              <>
+                <button
+                  type="button"
+                  onClick={() => fileRef.current?.click()}
+                  disabled={uploading}
+                  className="shrink-0 rounded-md bg-gold px-2.5 py-1 font-sans text-[10px] font-semibold text-background hover:opacity-90 disabled:opacity-50 whitespace-nowrap"
+                >
+                  {uploading ? "Uploading…" : "↑ Upload"}
+                </button>
+                <input
+                  ref={fileRef}
+                  type="file"
+                  accept="image/*"
+                  aria-label="Upload image file"
+                  className="sr-only"
+                  onChange={upload}
+                />
+              </>
+            }
+          />
         </div>
       )}
 

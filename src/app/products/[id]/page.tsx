@@ -1,7 +1,7 @@
 ﻿import { Metadata } from "next";
 import Link from "next/link";
 import { unstable_noStore as noStore } from "next/cache";
-import { loadData } from "@/lib/admin-data";
+import { loadDataAsync } from "@/lib/admin-data";
 import { readyToWear, type Product } from "@/data/products";
 import { SITE_DEFAULTS, type SiteSettings } from "@/data/site-settings";
 import AddToCartButton from "@/components/AddToCartButton";
@@ -16,7 +16,7 @@ interface ProductPageProps {
 
 export async function generateMetadata({ params }: ProductPageProps): Promise<Metadata> {
   const { id } = await params;
-  const products = loadData<Product[]>("products", readyToWear);
+  const products = await loadDataAsync<Product[]>("products", readyToWear);
   const product = products.find((item) => item.id === id);
   return {
     title: product ? `${product.name} | Blessed & Dressed` : "Product | Blessed & Dressed",
@@ -27,9 +27,9 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
 export default async function ProductPage({ params }: ProductPageProps) {
   noStore();
   const { id } = await params;
-  const products = loadData<Product[]>("products", readyToWear);
+  const products = await loadDataAsync<Product[]>("products", readyToWear);
   const product = products.find((item) => item.id === id);
-  const settings = loadData<SiteSettings>("site-settings", SITE_DEFAULTS);
+  const settings = await loadDataAsync<SiteSettings>("site-settings", SITE_DEFAULTS);
   const detailPage = settings.pages?.productDetail ?? {
     careInstructions: "Dry clean only. Store hanging in a breathable garment bag. Avoid direct sunlight.",
     guaranteeText: "Every garment is backed by our craftsmanship guarantee. If something isn't right, we'll make it right.",

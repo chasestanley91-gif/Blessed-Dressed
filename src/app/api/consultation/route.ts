@@ -18,10 +18,12 @@ export type ConsultationRequest = {
   notes: string;
 };
 
-export async function GET() {
-  const consultations = await loadDataAsync<ConsultationRequest[]>("consultations", []);
-  return NextResponse.json(consultations);
-}
+// NOTE: there is deliberately no GET here.
+// Listing consultations exposes every lead's name, email, phone, budget and
+// notes. src/proxy.ts only gates "/admin" and "/api/admin/:path*", so a GET on
+// this public route was an unauthenticated PII leak. The listing now lives at
+// /api/admin/consultations, behind the proxy. POST stays public so the
+// customer-facing form works.
 
 export async function POST(req: NextRequest) {
   try {

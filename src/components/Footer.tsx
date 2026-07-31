@@ -1,10 +1,10 @@
 ﻿import Link from "next/link";
 import Image from "next/image";
-import { loadData } from "@/lib/admin-data";
+import { loadDataAsync } from "@/lib/admin-data";
 import { SITE_DEFAULTS, type SiteSettings } from "@/data/site-settings";
 
-export default function Footer() {
-  const settings = loadData<SiteSettings>("site-settings", SITE_DEFAULTS);
+export default async function Footer() {
+  const settings = await loadDataAsync<SiteSettings>("site-settings", SITE_DEFAULTS);
   const f = settings.footer;
 
   return (

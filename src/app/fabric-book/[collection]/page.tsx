@@ -1,7 +1,7 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { loadData } from "@/lib/admin-data";
+import { loadDataAsync } from "@/lib/admin-data";
 import FabricCard from "../FabricCard";
 
 export const dynamic = "force-dynamic";
@@ -67,7 +67,7 @@ export default async function CollectionPage({
   const meta = COLLECTION_META[collection];
   if (!meta) notFound();
 
-  const allFabrics = loadData<FabricEntry[]>("fabric-book", []);
+  const allFabrics = await loadDataAsync<FabricEntry[]>("fabric-book", []);
   const fabrics = allFabrics.filter((f) => f.collection === meta.filter);
 
   return (

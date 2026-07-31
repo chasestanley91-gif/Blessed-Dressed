@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { loadData } from "@/lib/admin-data";
+import { loadDataAsync } from "@/lib/admin-data";
 import { accessories, type Accessory } from "@/data/accessories";
 import { SITE_DEFAULTS, type SiteSettings } from "@/data/site-settings";
 
@@ -10,9 +10,9 @@ export const metadata = {
   description: "Silk ties, pocket squares, leather shoes and more — finishing pieces for the well-dressed gentleman.",
 };
 
-export default function AccessoriesPage() {
-  const items = loadData<Accessory[]>("accessories", accessories);
-  const settings = loadData<SiteSettings>("site-settings", SITE_DEFAULTS);
+export default async function AccessoriesPage() {
+  const items = await loadDataAsync<Accessory[]>("accessories", accessories);
+  const settings = await loadDataAsync<SiteSettings>("site-settings", SITE_DEFAULTS);
   const page = (settings.pages as { accessories?: { heading: string; subtext: string } })?.accessories ?? {
     heading: "The finishing touch.",
     subtext: "Silk ties, pocket squares, leather shoes and more — every detail considered.",

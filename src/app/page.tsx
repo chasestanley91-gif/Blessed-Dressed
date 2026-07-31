@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { unstable_noStore as noStore } from "next/cache";
-import { loadData } from "@/lib/admin-data";
+import { loadDataAsync } from "@/lib/admin-data";
 import { readyToWear, type Product } from "@/data/products";
 import { accessories, type Accessory } from "@/data/accessories";
 import { collections, type Collection } from "@/data/collections";
@@ -29,12 +29,12 @@ function Wrap({ id, label, children }: { id: string; label: string; children: Re
   return <EditableSection id={id} label={label}>{children}</EditableSection>;
 }
 
-export default function Home() {
+export default async function Home() {
   noStore();
-  const settings = loadData<SiteSettings>("site-settings", SITE_DEFAULTS);
-  const products = loadData<Product[]>("products", readyToWear);
-  const accessoriesData = loadData<Accessory[]>("accessories", accessories);
-  const collectionsData = loadData<Collection[]>("collections", collections);
+  const settings = await loadDataAsync<SiteSettings>("site-settings", SITE_DEFAULTS);
+  const products = await loadDataAsync<Product[]>("products", readyToWear);
+  const accessoriesData = await loadDataAsync<Accessory[]>("accessories", accessories);
+  const collectionsData = await loadDataAsync<Collection[]>("collections", collections);
 
   const vis = settings.sections;
   const marqueeItems = settings.marquee;

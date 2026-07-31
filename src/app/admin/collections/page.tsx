@@ -22,7 +22,11 @@ function CollectionForm({ initial, onSave, onCancel }: {
     fd.append("file", file);
     fd.append("imagePath", `collections/${file.name}`);
     const res = await fetch("/api/admin/upload-image", { method: "POST", body: fd });
-    if (res.ok) setForm((f) => ({ ...f, image: `/images/collections/${file.name}` }));
+    if (res.ok) {
+      // Use the server's path — in production the asset lives in Blob.
+      const data = (await res.json()) as { path?: string };
+      if (data.path) setForm((f) => ({ ...f, image: data.path! }));
+    }
     if (fileRef.current) fileRef.current.value = "";
   }
 

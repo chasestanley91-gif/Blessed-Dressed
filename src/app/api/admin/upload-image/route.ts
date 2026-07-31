@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { writeFileSync, mkdirSync } from "fs";
-import { join, normalize, dirname } from "path";
+import { saveImageAsset, ImagePathError } from "@/lib/image-store";
 
 export async function POST(req: NextRequest) {
   try {
@@ -12,19 +11,16 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Missing file or imagePath" }, { status: 400 });
     }
 
-    // Prevent path traversal: ensure the resolved path stays within public/images/
-    const publicImages = join(process.cwd(), "public", "images");
-    const resolved = normalize(join(publicImages, imagePath));
-    if (!resolved.startsWith(publicImages)) {
+    const bytes = Buffer.from(await file.arrayBuffer());
+    // Returns a Blob URL in production, a /images/... path locally. Callers
+    // must use this value rather than reconstructing the path themselves.
+    const path = await saveImageAsset(imagePath, bytes, file.type || undefined);
+
+    return NextResponse.json({ ok: true, path });
+  } catch (err) {
+    if (err instanceof ImagePathError) {
       return NextResponse.json({ error: "Invalid path" }, { status: 400 });
     }
-
-    const bytes = await file.arrayBuffer();
-    mkdirSync(dirname(resolved), { recursive: true });
-    writeFileSync(resolved, Buffer.from(bytes));
-
-    return NextResponse.json({ ok: true });
-  } catch (err) {
     console.error("upload-image error:", err);
     return NextResponse.json({ error: "Server error" }, { status: 500 });
   }

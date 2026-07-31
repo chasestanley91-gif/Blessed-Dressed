@@ -1,6 +1,6 @@
 ﻿import { Metadata } from "next";
 import Link from "next/link";
-import { loadData } from "@/lib/admin-data";
+import { loadDataAsync } from "@/lib/admin-data";
 import { collections, type Collection } from "@/data/collections";
 import { readyToWear } from "@/data/products";
 
@@ -12,7 +12,7 @@ interface CollectionPageProps {
 
 export async function generateMetadata({ params }: CollectionPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const liveCollections = loadData<Collection[]>("collections", collections);
+  const liveCollections = await loadDataAsync<Collection[]>("collections", collections);
   const collection = liveCollections.find((item) => item.slug === slug);
   return {
     title: collection ? `${collection.title} | Blessed & Dressed` : "Collection | Blessed & Dressed",
@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: CollectionPageProps): Promise
 
 export default async function CollectionDetailPage({ params }: CollectionPageProps) {
   const { slug } = await params;
-  const collectionsData = loadData<Collection[]>("collections", collections);
+  const collectionsData = await loadDataAsync<Collection[]>("collections", collections);
   const collection = collectionsData.find((item) => item.slug === slug);
 
   if (!collection) {
@@ -61,7 +61,7 @@ export default async function CollectionDetailPage({ params }: CollectionPagePro
           </h1>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Link
-              href="/builder/suit"
+              href="/builder"
               className="font-sans inline-flex items-center gap-2 rounded-full bg-gold px-7 py-3 text-sm font-semibold text-background transition-[opacity,transform] duration-150 hover:opacity-90 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-surface-deep"
             >
               Design a bespoke piece

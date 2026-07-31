@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { loadData, saveData } from "@/lib/admin-data";
+import { loadDataAsync, saveDataAsync } from "@/lib/admin-data";
 
 export type SiteContent = {
   heroHeadline: string;
@@ -20,11 +20,17 @@ const DEFAULTS: SiteContent = {
 };
 
 export async function GET() {
-  return NextResponse.json(loadData<SiteContent>("content", DEFAULTS));
+  return NextResponse.json(await loadDataAsync<SiteContent>("content", DEFAULTS));
 }
 
 export async function PUT(req: NextRequest) {
   const body = await req.json() as SiteContent;
-  saveData("content", { ...DEFAULTS, ...body });
+  try {
+    // Was saveData (sync fs) — unwritable on Vercel's read-only Lambda FS.
+    await saveDataAsync("content", { ...DEFAULTS, ...body });
+  } catch (err) {
+    console.error("Failed to save site content:", err);
+    return NextResponse.json({ error: "Could not save content." }, { status: 500 });
+  }
   return NextResponse.json({ ok: true });
 }

@@ -79,7 +79,12 @@ export async function saveDataAsync<T>(filename: string, data: T): Promise<void>
         contentType: "application/json",
       });
     } catch (err) {
+      // Rethrow rather than swallow. Returning normally here reported success
+      // to the caller while the admin's edit was dropped — the write is the
+      // whole point of the call, so a failure must reach the route and become
+      // a 5xx the operator can see.
       console.error(`saveDataAsync(${filename}) failed:`, err);
+      throw err;
     }
     return;
   }

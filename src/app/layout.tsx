@@ -3,7 +3,7 @@ import { Cormorant_Garamond, Montserrat } from "next/font/google";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { CartProvider } from "@/context/CartContext";
-import { loadData } from "@/lib/admin-data";
+import { loadDataAsync } from "@/lib/admin-data";
 import { SITE_DEFAULTS, type SiteSettings } from "@/data/site-settings";
 import "./globals.css";
 
@@ -70,8 +70,8 @@ export const metadata: Metadata = {
 };
 
 export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  const theme = loadData<Record<string, string>>("theme", THEME_DEFAULTS);
-  const settings = loadData<SiteSettings>("site-settings", SITE_DEFAULTS);
+  const theme = await loadDataAsync<Record<string, string>>("theme", THEME_DEFAULTS);
+  const settings = await loadDataAsync<SiteSettings>("site-settings", SITE_DEFAULTS);
   const cssVars = Object.entries(KEY_TO_VAR)
     .map(([key, cssVar]) => `${cssVar}:${theme[key] ?? THEME_DEFAULTS[key]}`)
     .join(";");
@@ -110,8 +110,19 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
       </head>
       <body className="min-h-full bg-background text-foreground">
         <CartProvider>
+          <a
+            href="#content"
+            className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-gold focus:px-5 focus:py-2 focus:font-sans focus:text-sm focus:font-semibold focus:text-background"
+          >
+            Skip to content
+          </a>
           <Nav nav={settings.nav} />
-          <main>{children}</main>
+          {/* Deliberately a <div>, not a <main>. 21 page components open their
+              own <main>, so wrapping here emitted <main><main>…</main></main> on
+              every route — two landmarks, which is what
+              tests/e2e/public-routes.spec.ts documents. The id is the skip-link
+              target, which the app previously had no way to provide. */}
+          <div id="content">{children}</div>
           <Footer />
         </CartProvider>
       </body>

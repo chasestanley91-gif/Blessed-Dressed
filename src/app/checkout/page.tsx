@@ -73,12 +73,21 @@ export default function CheckoutPage() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
+          // Send the WHOLE line. This used to strip `id`, `cartId`, `size` and
+          // `config`, so the server had nothing to reprice against and — even
+          // once persistence was fixed — no garment specification to store.
+          // That was a second, independent cause of bespoke orders arriving at
+          // the atelier with no fabric, design, measurements or monograms.
           items: items.map((item) => ({
+            cartId: item.cartId,
+            id: item.id,
             name: item.name,
             price: item.price,
             qty: item.qty,
             image: item.image,
             type: item.type,
+            ...(item.size ? { size: item.size } : {}),
+            ...(item.config ? { config: item.config } : {}),
           })),
           customerInfo: form,
         }),
@@ -98,9 +107,18 @@ export default function CheckoutPage() {
       }
     } catch (err) {
       const msg = err instanceof Error ? err.message : "Something went wrong.";
-      setError(msg.includes("not configured")
-        ? "Payments are not yet configured. Please contact us to complete your order."
-        : "Something went wrong. Please try again.");
+      // Surface the server's reason where it is actionable. A cart that fails
+      // repricing needs the customer to reload it, not to "try again" — the
+      // generic message would have them retry the same rejected cart forever.
+      setError(
+        msg.includes("not configured")
+          ? "Payments are not yet configured. Please contact us to complete your order."
+          : msg.includes("could not be verified")
+            ? "Your cart could not be verified — prices may have changed. Please refresh this page and review your cart before paying."
+            : msg.includes("specification")
+              ? "We could not save your garment specification. Nothing has been charged — please try again."
+              : "Something went wrong. Please try again."
+      );
       setSubmitting(false);
     }
   }

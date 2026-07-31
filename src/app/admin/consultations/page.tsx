@@ -39,12 +39,23 @@ export default function ConsultationsPage() {
   const [filter, setFilter] = useState<Status | "All">("All");
   const [search, setSearch] = useState("");
   const [expanded, setExpanded] = useState<Set<string>>(new Set());
+  const [loadError, setLoadError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch("/api/consultation")
-      .then((r) => r.json())
-      .then((data: ConsultationRequest[]) => setConsultations(data))
-      .catch(() => {})
+    // Admin-gated listing. The public /api/consultation has no GET — it leaked
+    // every lead's PII to anyone.
+    fetch("/api/admin/consultations")
+      .then((r) => {
+        if (!r.ok) throw new Error(`consultations request failed (${r.status})`);
+        return r.json();
+      })
+      .then((data: ConsultationRequest[]) =>
+        setConsultations(Array.isArray(data) ? data : [])
+      )
+      .catch((err) => {
+        console.error(err);
+        setLoadError("Could not load consultations. Reload to try again.");
+      })
       .finally(() => setLoading(false));
   }, []);
 
@@ -128,6 +139,10 @@ export default function ConsultationsPage() {
         {/* List */}
         {loading ? (
           <p className="font-sans text-sm text-muted-dark">Loading…</p>
+        ) : loadError ? (
+          <div role="alert" className="rounded-2xl border border-red-500/40 bg-red-500/10 p-6 text-center">
+            <p className="font-sans text-sm text-red-300">{loadError}</p>
+          </div>
         ) : filtered.length === 0 ? (
           <div className="rounded-2xl border border-border-accent bg-surface-strong p-12 text-center">
             <p className="font-sans text-sm text-muted-dark">No consultations found.</p>

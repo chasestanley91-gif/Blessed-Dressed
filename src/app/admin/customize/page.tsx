@@ -351,12 +351,14 @@ function ImageBrowser({
     form.append("file", file);
     form.append("imagePath", `uploads/${file.name}`);
     try {
-      await fetch("/api/admin/upload-image", { method: "POST", body: form });
+      const up = await fetch("/api/admin/upload-image", { method: "POST", body: form });
+      // Use the server's path — in production the asset lives in Blob.
+      const uploaded = (await up.json()) as { path?: string };
       // Re-fetch images after upload
       const res = await fetch("/api/admin/images");
       const d: { images: SiteImage[] } = await res.json();
       setImages(d.images);
-      onSelect(`/images/uploads/${file.name}`);
+      if (uploaded.path) onSelect(uploaded.path);
       setOpen(false);
     } finally {
       setUploading(false);
