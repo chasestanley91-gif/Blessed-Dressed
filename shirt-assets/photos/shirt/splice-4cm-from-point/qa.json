@@ -1,0 +1,30 @@
+{
+  "final": {
+    "status": "qa-pass",
+    "file": "attempt-v3.png",
+    "attempt": "v3",
+    "promoted": "public/images/generated/shirt/splice-4cm-from-point-v3.png"
+  },
+  "attempts": [
+    {
+      "n": "v2",
+      "verdict": "fail",
+      "notes": "missing placket (prior session)"
+    },
+    {
+      "n": "v3",
+      "file": "attempt-v3.png",
+      "model": "gpt_image_2",
+      "settings": {
+        "quality": "low",
+        "resolution": "1k",
+        "aspect_ratio": "3:4"
+      },
+      "job_id": "d210e8e3-d1a4-4eb0-be44-b8761ef27e02",
+      "verdict": "pass",
+      "correction_applied": "explicit placket block",
+      "notes": "pixel-verified: strip 1.0cm at 4 strip-widths from point; placket topstitch rows present"
+    }
+  ],
+  "generated": "2026-07-26"
+}

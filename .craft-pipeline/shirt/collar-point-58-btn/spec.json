@@ -1,0 +1,53 @@
+{
+  "schema": "garment-spec/v1",
+  "addr": "shirt > collar > lapel > collar-point-58-btn",
+  "productId": "shirt",
+  "sectionId": "collar",
+  "fieldId": "lapel",
+  "optionId": "collar-point-58-btn",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\shirt.json",
+  "source": "json",
+  "label": "Point 5.8 cm with Button",
+  "description": "A compact 5.8 cm point finished with a throat button that fastens the leaves neatly together. The button anchors the points for a tidy, slightly sporty line whether worn with a tie or open — a versatile, modern take on the classic point.",
+  "fieldLabel": "Collar Style",
+  "sectionLabel": "Collar",
+  "part": "shirt-collar",
+  "garment": {
+    "noun": "white bespoke cotton dress shirt",
+    "fabric": "crisp cotton poplin"
+  },
+  "view": {
+    "orientation": "detail",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": false,
+  "measured": {
+    "dimensions": [
+      "5.8 cm"
+    ],
+    "angles": [],
+    "counts": [],
+    "shapes": [
+      "point"
+    ],
+    "spread": [],
+    "flags": [
+      "collar/closure button"
+    ]
+  },
+  "illustration": {
+    "path": "/images/ai/collar-point-58-btn.png",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\ai\\collar-point-58-btn.png",
+    "exists": true,
+    "remote": false
+  },
+  "forbidden": [
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-07-28T04:31:55.708Z"
+}

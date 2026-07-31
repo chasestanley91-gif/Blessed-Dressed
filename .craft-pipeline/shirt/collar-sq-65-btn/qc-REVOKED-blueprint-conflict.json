@@ -1,0 +1,41 @@
+{
+  "addr": "shirt > collar-sq-65-btn",
+  "productId": "shirt",
+  "optionId": "collar-sq-65-btn",
+  "attempt": 2,
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 98,
+    "placement": 99,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "belowMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "construction",
+      "description": "The collar-leaf edge topstitch is well resolved along the collar band and the in-focus stretch of the collar edge, but softens near the point tips where it reads more as a pressed crease than a discrete stitch row.",
+      "expected": "A single discrete row of edge topstitch set ~4-5 mm inside the collar edge, clearly legible all the way around the point, as drawn on the near leaf of the blueprint.",
+      "actual": "Stitch row is crisp at the band tab and mid-edge but loses definition at the tips. Attributable to the shallow depth of field the blueprint itself uses plus the mandated low/1k render budget, not to a construction error - offset, presence and path of the stitching are all correct.",
+      "correction": "If a higher-fidelity master is ever re-rendered, raise quality/resolution so the edge topstitch stays legible through the point; no geometry change required."
+    },
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "Bare neck skin fills the collar opening and the top of the frame, where the blueprint shows no skin at all (the drawing appears shot on a form).",
+      "expected": "Blueprint shows the collar with white fabric behind the opening and zero skin anywhere in frame.",
+      "actual": "Neck and the underside of the jaw are visible, occupying roughly the top 12% of the frame and the interior of the V. No facial features appear - no mouth, lips, chin, nose, cheeks or stubble.",
+      "correction": "None required. The locked prompt mandates 'photographed worn on a male model', so a visible neck is prompt-compliant; the deviation is between the drawing's form-shot and the prompt's worn-shot, not a garment error."
+    }
+  ],
+  "verdict": "PASS",
+  "correction": null,
+  "notes": "Adversarial pass, attempt 2, after the attempt-1 FAIL on composition. All three attempt-1 corrections landed. (1) Composition: the frame no longer contains any facial feature - it now cuts below the jaw, showing neck, collar and upper chest only, and the collar bounding region grew from ~35% to ~49% of frame area, inside both the 45-60% correction target and the 40-80% checklist floor. (2) Dimensions: normalising both images on the 11 mm throat button (blueprint 48.5 px/cm, candidate 55.3 px/cm), the drawn point measures ~7.29 cm apparent and the candidate ~7.37 cm - 1.1% deviation, down from 4% and now inside the <2% tolerance. (3) Symmetry: the two tips sit within 3 px of the same height, leaf lengths agree within 1%, and a mirrored left-vs-right overlay shows near-identical apex geometry. The distinguishing feature is exactly right and is not a generic substitution: a single 4-hole mother-of-pearl throat button, cross-stitched, on the rounded edge-stitched front tab of the collar band, sitting in the open V with no tie, with the mating buttonhole visible on the overlapping band end - a very close match to the blueprint's button crop at 6x. Orientation matches (front-face collar detail/macro). Background, cleanliness and the no-annotation requirement are fully met; top and bottom edge strips were scanned specifically for stray text, rulers or watermarks and are clean. Two Minor observations only, neither a construction defect: edge topstitch softens at the tips under the mandated low/1k render budget and the blueprint's own shallow depth of field, and bare neck skin appears where the drawing (shot on a form) shows none - the latter is required by the locked prompt's 'worn on a male model' instruction, so it is prompt-compliant rather than an error. Recorded for the catalog: the token 'square' in this option's label does not denote a flat-truncated tip. The manufacturing drawing shows a crisp pointed corner, and under the supreme rule the drawing outranks the naming convention, so the candidate's pointed termination is correct.",
+  "checkedAt": "2026-07-28T05:17:25.461Z"
+}

@@ -1,0 +1,24 @@
+{
+ "generated": "2026-07-27",
+ "final": {
+  "status": "qa-pass",
+  "file": "attempt1.png",
+  "attempt": 1,
+  "promoted": "public/images/generated/shirt/bias-none.png"
+ },
+ "attempts": [
+  {
+   "n": 1,
+   "file": "attempt1.png",
+   "model": "gpt_image_2",
+   "settings": {
+    "quality": "low",
+    "resolution": "1k",
+    "aspect_ratio": "3:4"
+   },
+   "job_id": "bd48a7c0-1626-427e-a16f-f4e300952f5b",
+   "verdict": "pass",
+   "checks": "all 8 lines pass (agent batch G, angle-measured: band -89.8deg coherence 1.00, zero diagonal anywhere)"
+  }
+ ]
+}

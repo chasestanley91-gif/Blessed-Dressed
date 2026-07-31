@@ -1,0 +1,75 @@
+{
+  "addr": "shirt > collar-fashion-point-58",
+  "productId": "shirt",
+  "optionId": "collar-fashion-point-58",
+  "attempt": 2,
+  "scores": {
+    "shape": 93,
+    "geometry": 85,
+    "dimensions": 80,
+    "angles": 88,
+    "construction": 88,
+    "placement": 96,
+    "symmetry": 82,
+    "composition": 97,
+    "blueprint-match": 84
+  },
+  "scoreMin": 98,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "major",
+      "category": "dimensions",
+      "description": "The decisive defect from attempt 1 was NOT corrected and is arguably worse. This SKU exists to express a SHORT 5.8 cm collar point. Using the collar band height as the scale reference, the rendered leaves are markedly longer and broader than the band, the viewer-left leaf in particular sweeping far down and out across the chest. It reads as a long 7-8 cm point, which is a different option on the same field.",
+      "expected": "A short, compact 5.8 cm collar point whose tip terminates only fractionally below the lower edge of the collar band.",
+      "actual": "Long, broad collar leaves extending well past the band and far down the chest.",
+      "correction": "Shorten and narrow the collar leaf so the tip stops just past the collar band's lower edge; a compact 5.8 cm fashion point, never a long point."
+    },
+    {
+      "severity": "major",
+      "category": "symmetry",
+      "description": "Pronounced left/right imbalance between the two collar leaves that exceeds what the drawing's viewpoint accounts for. The viewer-left leaf is rendered large, broad and fully splayed showing its whole outer face, while the viewer-right leaf is small, foreshortened and its point is partly lost against the chest, so the pair cannot be read as matching leaves.",
+      "expected": "Two matching collar leaves of equal length and width, both points clearly legible.",
+      "actual": "Left leaf oversized and dominant; right leaf undersized with its point poorly resolved.",
+      "correction": "Render both collar leaves at identical length and width with both points equally sharp and clearly separated from the chest."
+    },
+    {
+      "severity": "major",
+      "category": "blueprint-match",
+      "description": "PROCESS DEFECT: this generation was submitted without the tech-pack illustration attached as the geometry reference - the job's medias array came back empty. The image was therefore produced from prompt text alone, with no blueprint lock, which is the core mechanism the pipeline relies on to hold geometry. Any geometry agreement in this candidate is incidental rather than referenced.",
+      "expected": "The blueprint attached as an image reference on every credit-spending generation so geometry is locked to the drawing.",
+      "actual": "medias:[] on job 2b4df684-eb2d-41ce-9d79-572834b85ef4; generated from text only.",
+      "correction": "Re-run the generation with medias:[{value: <blueprint media id>, role: 'image'}] attached, together with the shortened-point and symmetry corrections."
+    },
+    {
+      "severity": "minor",
+      "category": "angles",
+      "description": "The three-quarter camera correction did not land. The blueprint is viewed from the front-left and slightly above; this frame is still an essentially straight-on frontal.",
+      "expected": "Three-quarter front-left camera position, slightly elevated above the collar.",
+      "actual": "Straight-on frontal view.",
+      "correction": "Move the camera off-axis to the front-left and slightly above the collar."
+    },
+    {
+      "severity": "minor",
+      "category": "construction",
+      "description": "The edge topstitch correction did not land. The stitch line remains faint and hugs the extreme edge of the leaf rather than sitting at the ~5-6 mm inset clearly visible in the drawing. The collar band is also under-resolved on the viewer-right side, with a kink where that leaf meets the band.",
+      "expected": "A crisp single topstitch inset ~5-6 mm from the collar edge around both leaves, and a cleanly resolved collar band on both sides.",
+      "actual": "Faint edge-hugging stitch; right-side band poorly resolved with a fold artefact at the leaf/band junction.",
+      "correction": "Render the topstitch as a distinct parallel line ~5-6 mm inside the collar edge around both leaves, and resolve the collar band cleanly on both sides."
+    }
+  ],
+  "verdict": "UNMET",
+  "correction": null,
+  "notes": "Attempt 2, gpt_image_2, job 2b4df684-eb2d-41ce-9d79-572834b85ef4. Two of the five corrections landed cleanly: the collar is now open at the throat with the top button undone as drawn, and the model's face is out of frame, which lifted composition to 97. The decisive dimensional defect did not land: the point still reads long, and the retry additionally introduced a pronounced left/right leaf asymmetry. Compounding this, the retry was submitted with an empty medias array, so the blueprint was never attached as a geometry reference for this generation - an operator error on my part, not a model failure, and it removed the very lock the pipeline depends on. No Critical defects and nothing forbidden appeared in either attempt: background, cleanliness, no-text and no-substitution rules all hold. But a collar whose point length reads as a longer sibling option is exactly the confusion this catalog exists to prevent, so this must not ship. Retry budget of 2 credit-spending generations is exhausted. Recommendation: re-run this option with the blueprint media attached and the shortened-point plus symmetry emphasis retained.",
+  "checkedAt": "2026-07-28T04:39:41.394Z"
+}

@@ -1,0 +1,55 @@
+{
+  "addr": "shirt > collar-curve-point-75",
+  "productId": "shirt",
+  "optionId": "collar-curve-point-75",
+  "attempt": 2,
+  "scores": {
+    "shape": 55,
+    "geometry": 58,
+    "dimensions": 62,
+    "angles": 60,
+    "construction": 62,
+    "placement": 85,
+    "symmetry": 40,
+    "composition": 90,
+    "blueprint-match": 55
+  },
+  "scoreMin": 98,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "critical",
+      "category": "shape",
+      "finding": "The wearer's-left collar leaf (viewer's right) terminates in a long, thin, SHARP knife-edge spike instead of the rounded curve point the blueprint draws. Verified at native resolution: the leaf tapers to a fine needle tip with no radius whatsoever. This is the exact opposite of the defining characteristic of this option ('tips are softened into a gentle rounded curve rather than a sharp tip'). A customer would read this leaf as a sharp point or a wing collar, not a curve point - the option would be mis-sold."
+    },
+    {
+      "severity": "critical",
+      "category": "geometry",
+      "finding": "The wearer's-left collar leaf is malformed and non-anatomical: the leaf edge visibly FORKS into two overlapping parallel edges, and the leaf lifts away from the shoulder into a hollow standing tunnel with a hard dark cavity beneath it. No real shirt collar is constructed this way. The leaf is also elongated well past the 7.5 cm proportion set by the opposite leaf."
+    },
+    {
+      "severity": "critical",
+      "category": "symmetry",
+      "finding": "Gross left/right asymmetry. The wearer's-right leaf is a correct, cleanly rounded 7.5 cm curve point with mitred edge stitching; the wearer's-left leaf is a longer, sharp, forked spike. The two leaves of one collar do not match in length, tip radius, or construction - a collar that could not exist as a manufactured garment."
+    },
+    {
+      "severity": "minor",
+      "category": "composition",
+      "finding": "The malformed wearer's-left leaf runs out to within a few pixels of the right frame edge, so its termination is crowded against the boundary rather than sitting clear of it."
+    }
+  ],
+  "verdict": "UNMET",
+  "correction": null,
+  "notes": "Attempt 2 traded one failure for a worse one. All three attempt-1 corrections landed: the face is gone, the crop is tight, the collar dominates the frame, and the collar band/stand is now fully exposed with the button and buttonhole readable exactly as the drawing shows. But the instruction to give the wearer's-left leaf a standing roll caused the model to invent a malformed leaf: a forked double edge lifting into a hollow tunnel and tapering to a sharp needle spike. That destroys the one thing this option exists to communicate - the rounded tip - and leaves the two leaves grossly mismatched. Attempt 1 had the correct rounded geometry on both leaves but hid the stand behind a fastened button and put a model's face in a third of the frame; attempt 2 has the correct presentation but broken geometry. Neither is shippable. HARD CAP of 2 credit-spending generations reached, so no further generation was attempted. For a future run: keep the attempt-2 framing, stand exposure and open collar verbatim, but drop the 'wearer's-left leaf stands up and rolls back' wording that induced the malformation - instead specify both leaves lying naturally with matched rounded terminations, and add an explicit negative against forked, doubled or spiked collar edges.",
+  "checkedAt": "2026-07-28T04:48:25.157Z"
+}

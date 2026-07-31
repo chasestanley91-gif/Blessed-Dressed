@@ -1,0 +1,48 @@
+{
+  "product_code": "cs-round-2btn",
+  "category_key": "collar_stand",
+  "option_label": "Round Stand (2 Buttons)",
+  "blueprint": "C:/Users/ChaseStanley/Downloads/files/brand_assets/blessed-dressed/public/images/collar_stand/round-collar-stand-with-2-buttons.jpg",
+  "view": "close three-quarter front, camera slightly below chin height; no tie; collar stand unbuttoned with band ends parted ~3 cm so both rounded ends, both buttons and both buttonholes read; collar leaves folded normally",
+  "stated_measurements_cm": {
+    "stand_height_center_front": 4.5,
+    "band_end_corner_radius": 1.5,
+    "stand_button_diameter": 1.1,
+    "stand_button_center_spacing_vertical": 1.5,
+    "edge_topstitch_inset": 0.4
+  },
+  "geometry": {
+    "collar_type": "Classic point collar with folded leaves and moderate spread, single-row edge topstitching, exactly as drawn in the blueprint.",
+    "stand": "Extra-tall two-button collar stand (~4.5 cm at center front, ~1.5x a standard one-button stand). BOTH front ends of the band are ROUND: one continuous convex curve (~1.5 cm radius) sweeping from the band's top edge into the neckline seam. No straight vertical front edge; no sharp corner anywhere on either band end.",
+    "buttons": "EXACTLY TWO stand buttons, stacked vertically on the center-front line, centers ~1.5 cm apart; wearer's right band end carries the two sewn buttons, wearer's left band end carries two matching horizontal buttonholes. Never one, never three, never side by side.",
+    "placket": "Below the stand: standard sewn button placket with TWO parallel vertical topstitch rows and the first placket button visible (blueprint draws the front placket dash-stitched on both edges).",
+    "annotation_semantics": "Red outline and red-filled buttons in the blueprint are tech-pack highlights marking the featured component (the stand and its two buttons); render as real white shirting, never as red fabric. Dashed lines are real topstitch rows."
+  },
+  "ratios": [
+    "stand height ~= 4 stand-button diameters (4.5 cm vs 1.1 cm buttons; drawing exaggerates button scale)",
+    "stand height ~= 1.5x a standard one-button collar stand",
+    "band-end corner radius ~= 1/3 of stand height (1.5 cm of 4.5 cm)",
+    "vertical gap between button centers ~= 1.5 button diameters"
+  ],
+  "locked_features": [
+    "Point collar with folded collar leaves — never a mandarin/band collar without leaves",
+    "Exactly 2 stand buttons stacked vertically; 2 horizontal buttonholes on the opposite band end",
+    "Both band ends fully rounded — continuous convex curve, zero straight corners",
+    "Extra-tall stand ~4.5 cm at center front",
+    "Single-row edge topstitching ~4 mm inside collar-leaf and stand edges",
+    "Standard sewn button placket with two parallel vertical topstitch rows and visible first placket button",
+    "Crisp white cotton poplin; mother-of-pearl buttons",
+    "No annotation text, arrows, numerals, or red color in the photograph"
+  ],
+  "visibly_distinguishes_from_siblings": {
+    "cs-round": "Single-button round stand: shorter band (~3 cm) with ONE button — mine is visibly taller and carries TWO stacked buttons.",
+    "cs-square-2btn": "Identical tall two-button band but with straight vertical front edges and crisp 90-degree corners — mine shows zero straight corners, only convex curves.",
+    "cs-left-sq-rt-rnd": "Asymmetric (one square end, one round end) — mine is symmetric, both ends round.",
+    "csh-50": "That option's feature is raw 5.0 cm stand height with standard end/closure; mine is defined by the round end profile plus the exact two-button closure at ~4.5 cm."
+  },
+  "uncertain": [
+    "Blueprint carries no printed dimensions; 4.5 cm stand height, 1.5 cm button spacing and 1.5 cm end radius are inferred from drawn proportions and standard two-button-stand practice.",
+    "Blueprint draws the stand fastened closed; the photo opens the stand per the category shot standard so end shape and button count read — state of wear, not geometry, differs from the drawing.",
+    "Lap direction when fastened is not legible at 192 px; spec assumes standard men's left-over-right with buttons on the wearer's right band end."
+  ]
+}

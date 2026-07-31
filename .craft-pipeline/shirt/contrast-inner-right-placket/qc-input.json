@@ -1,0 +1,59 @@
+{
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 99,
+    "construction": 98,
+    "placement": 99,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "shape",
+      "description": "The upper terminus of the contrast sliver is truncated where it disappears under the collar-band end, rather than tapering to a visible point at the collar notch as the drawing shows. Physically correct for a worn garment, but the drawn double-pointed leaf shape reads as single-pointed here.",
+      "expected": "contrast sliver tapering to a point at both its upper and lower ends",
+      "actual": "lower end tapers to a clean point; upper end is cut off beneath the collar-band end",
+      "correction": "If regenerated, ask for the sliver's upper tip to remain visible in the notch rather than being covered by the collar-band end."
+    },
+    {
+      "severity": "minor",
+      "category": "dimensions",
+      "description": "The contrast sliver is marginally wider relative to the placket-band width than in the drawing, where it is a slightly finer sliver. No dimension is specified in the catalog text for this option, so this is judged against the drawing's proportion only.",
+      "expected": "sliver noticeably narrower than the placket band, as drawn",
+      "actual": "sliver roughly one third of the placket-band width, slightly more generous than drawn",
+      "correction": "If regenerated, specify the contrast reveal as a finer sliver, clearly narrower than one third of the placket-band width."
+    },
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "The model's chin, jaw and neck remain in the top of the frame; the composition correction had asked for these to be cropped away. The crop did tighten materially versus attempt 1 and the feature region (collar notch plus upper placket) now dominates the frame, and the red reads instantly against the all-white garment, so the feature is unobstructed and identifiable well within one second.",
+      "expected": "macro on the collar notch and upper placket with chin and jaw excluded",
+      "actual": "tightened collar-and-placket framing that still includes chin, jaw and neck across the top of the frame",
+      "correction": "If regenerated, crop above the collar points only, excluding chin and jaw entirely."
+    },
+    {
+      "severity": "minor",
+      "category": "geometry",
+      "description": "Collar point length and spread angle are slightly longer and narrower than the loosely drawn blueprint collar. The collar is not the showcased craft option for this field and the drawing is stylistically loose here.",
+      "expected": "spread collar with points as loosely drawn",
+      "actual": "spread collar with slightly longer, narrower points",
+      "correction": "No action required; the collar is not this option's showcased feature."
+    }
+  ],
+  "lockedFeatures": [
+    "white bespoke cotton dress shirt in crisp cotton poplin",
+    "front orientation",
+    "spread collar with topstitched collar band, top collar-band button undone",
+    "contrast fabric as the exposed inner facing of the wearer's right under-placket at the centre-front neck opening",
+    "front fully closed below the collar, single centre-front placket edge",
+    "placket band with double edge stitching",
+    "seamless neutral light-grey studio background",
+    "natural daylight studio lighting, medium-format photorealism",
+    "no text, annotation, watermark, ruler or dimension callout"
+  ],
+  "notes": "Attempt 2 of 2. Both critical errors from attempt 1 are resolved. CONFIRMED at high magnification: (1) the contrast now sits on the CENTRE-FRONT side of the placket, as a tapered red sliver of the wearer's right under-placket's inner facing revealed in the neck opening immediately beside the centre-front placket edge — exactly as drawn; (2) NO contrast piping, tape or trim anywhere in the placket-band-to-body seam or along the band's outboard edge; (3) the shirt front is fully CLOSED with a single continuous centre-front placket edge and a fastened button at the next stance — no gaping front, no floating unfastened buttonhole panel, no bare chest or sternum skin; (4) only the topmost collar-band button is undone, with a sewn button on the viewer's-left band end and a worked buttonhole on the viewer's-right band end, so the collar spreads as drawn; (5) the contrast is on the correct SIDE — viewer's left equals the wearer's right, matching the drawing and the label 'Inner Right Placket'; (6) placket band carries the double row of edge stitching drawn in the blueprint. Also verified: seamless neutral light-grey studio background with no location, architecture, furniture, scenery or props; absolutely no text, numbers, units, arrows, leader lines, callouts, ruler ticks, watermark or dimension annotation anywhere in frame; the tech-pack inset detail circle was correctly NOT reproduced; photorealistic cotton poplin with visible weave and fine stitching, no CGI, line-art or mannequin appearance; no substitution of a sibling contrast position (contrast is at the neck placket, not the wrap collar, pocket flap, sleeve vent or cuff tab). Residual deviations are cosmetic only and are logged as minor: sliver upper tip hidden under the collar-band end, sliver marginally wider than drawn, chin and jaw still in frame, and slightly longer collar points on a collar that is not this option's showcased feature."
+}

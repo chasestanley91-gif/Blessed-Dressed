@@ -1,0 +1,49 @@
+{
+  "addr": "shirt > collar-point-75-holes",
+  "productId": "shirt",
+  "optionId": "collar-point-75-holes",
+  "attempt": 1,
+  "scores": {
+    "shape": 99,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 99,
+    "construction": 98,
+    "placement": 99,
+    "symmetry": 99,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "belowMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "construction",
+      "description": "Front placket rendered as a wider, distinctly top-stitched applied placket band; the blueprint shows a narrower, cleaner front with a single fine stitch line beside the folded edge.",
+      "expected": "narrow clean front edge with a single fine stitch line, placket reading roughly 3.5 cm wide relative to the collar",
+      "actual": "applied placket band noticeably wider than drawn, with two visible top-stitch lines",
+      "correction": "Not the showcased craft option (Collar Style) and not a locked feature; the placket is a separately configured shirt field. Logged for the record only."
+    },
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "The model's chin, mouth and lower face occupy roughly the top quarter of the frame; the blueprint is headless, showing only collar, yoke and upper chest.",
+      "expected": "crop tight on collar and neckline, blueprint shows no head",
+      "actual": "lower face visible above the collar, though it never overlaps or obstructs the collar leaves, the eyelets or the spread between the points",
+      "correction": "Collar still dominates the frame (~50%), is fully unobstructed and is identifiable within one second; the locked prompt explicitly specifies 'worn on a male model', so the crop satisfies the prompt spec."
+    },
+    {
+      "severity": "minor",
+      "category": "geometry",
+      "description": "Collar leaves sit flatter and more evenly matched than in the blueprint, where the wearer's-left leaf rolls forward and slightly turns, exposing more of its under-edge.",
+      "expected": "asymmetric natural roll with one leaf turning forward over the front",
+      "actual": "crisper, more symmetric presentation of both leaves",
+      "correction": "Difference is drape/styling rather than construction geometry; leaf shape, point length and stand height all match. No action."
+    }
+  ],
+  "verdict": "PASS",
+  "correction": null,
+  "notes": "Adversarial comparison of candidate-1.png against /images/ai/collar-point-75-holes.png. Showcased feature verified: EXACTLY 2 small metal-rimmed eyelet pinholes are present, one near the tip of each collar leaf, positioned about 1 cm above the point — matching the blueprint's placement on both leaves. No third hole, no missing hole, no button-down tab substituted for the eyelets (the key rejection risk for this option, since a sibling button-down collar would place a button/loop in the same spot). Collar reads unambiguously as a point collar with sharp downward-tapering points, not a spread, cutaway or club collar — no generic-category substitution. Point length reads long and proportionally consistent with 7.5 cm relative to the stand and neck width. Collar stand present with one mother-of-pearl band button exposed and no necktie, so both points and the full spread between them are completely unobstructed. Orientation confirmed: front-face collar macro, matching the blueprint's detail view — no front/back confusion possible for this part. Background is a seamless neutral light-grey studio sweep with a soft gradient and clear garment separation: no location, architecture, furniture, props or environmental context. Scanned the full frame including all four edges and corners for annotation contamination — ZERO text, numbers, units, arrows, leader/dimension lines, ruler ticks, coloured guide marks, labels or watermarks anywhere. Real photographic rendering with visible poplin weave and thread, not line-art, CGI or a mannequin. Three minor deltas logged above, all on unlocked styling or on garment fields configured separately from Collar Style; no Critical or Major discrepancy found.",
+  "checkedAt": "2026-07-28T04:46:56.293Z"
+}

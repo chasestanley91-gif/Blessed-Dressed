@@ -1,0 +1,32 @@
+{
+ "product_code": "stitch-06-top",
+ "category_key": "decoration_stitching_on_collar",
+ "option_label": "Machine 0.6 cm Top Stitching",
+ "blueprint": "public/images/decoration_stitching_on_collar/machine-01cm-amf-stitching.jpg",
+ "blueprint_annotation": "0.6cm",
+ "blueprint_provenance": "bound by ANNOTATION not filename - see failure-log DATA DEFECT entry 2026-07-27",
+ "view": "close three-quarter front view from slightly below collar height",
+ "stated_measurements_cm": {
+  "stitch_offset_from_edge": 0.6
+ },
+ "geometry": {
+  "stitch_type": "continuous machine lockstitch topstitch, single row",
+  "path": "the outer finished edge of each collar leaf, running from the collar point up around the leaf",
+  "offset_constant": true,
+  "region_extra": "The stitch row follows both collar leaves symmetrically and continues around the collar band edge exactly as drawn. Exactly ONE collar-stand button is visible; below it a standard sewn front placket with TWO parallel vertical topstitch rows."
+ },
+ "ratios": [
+  "offset = about three-fifths of a button diameter",
+  "offset = roughly two and a half stitch-lengths of the stitch itself",
+  "row perfectly parallel to the edge along its whole run"
+ ],
+ "locked_features": [
+  "single row only",
+  "constant 0.6 cm offset",
+  "continuous even machine lockstitch (NOT pick stitch)",
+  "self-coloured thread, still legible via indentation and raking light"
+ ],
+ "comparative_anchor": "WIDEST rung of the ladder: the gap must read wider than every sibling, and noticeably - if only slightly - wider than the 0.5 cm version, which is its nearest neighbour.",
+ "output": "public/images/generated/shirt/stitch-06-top-v2.png",
+ "uncertain": []
+}

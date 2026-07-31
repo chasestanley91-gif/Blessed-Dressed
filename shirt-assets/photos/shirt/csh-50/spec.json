@@ -1,0 +1,46 @@
+{
+  "product_code": "csh-50",
+  "category_key": "collar_stand_height",
+  "option_label": "5.0 cm (Collar Stand Height)",
+  "blueprint": {
+    "path": "C:/Users/ChaseStanley/Downloads/files/brand_assets/blessed-dressed/public/images/collar_stand_height/collar-stand-height-5cm.jpg",
+    "status": "PLACEHOLDER — the file is a 200x200 'NO IMAGE' card (md5 6b349017e6dd811959c4874b7d8c9b2b) with no drawn geometry. Do NOT attach it as a generation reference: it would leak the words 'NO IMAGE' and provides zero geometry.",
+    "convention_source": "Category tech-pack convention read from siblings collar-stand-height-4cm-2-button.jpg and collar-stand-height-42cm-2-button.jpg (band flattened out, red outline, buttonholes at wearer-left end, stacked buttons at wearer-right end, blue vertical height dimension at center) plus catalog text in data-store/options/shirt.json (csh-50: 'High band — structured Nehru style')."
+  },
+  "view": "Front three-quarter invisible-mannequin (ghost) crop, band fastened and standing upright, framed from just above the band's top edge down to the second placket button so the full 5.0 cm band height is instantly legible against the neck opening.",
+  "stated_measurements_cm": {
+    "collar_stand_height": 5.0,
+    "button_diameter": 1.0,
+    "button_count": 2,
+    "upper_button_center_below_top_edge": 1.5,
+    "lower_button_center_above_bottom_seam": 1.5,
+    "edge_topstitch_inset": 0.4,
+    "reference_standard_stand_height": 3.5
+  },
+  "geometry": "Upright closed collar band exactly 5.0 cm tall, encircling the neck at constant height. NO fold-over collar leaf: the band's top edge is the topmost edge of the shirt (Nehru/stand manner per catalog description). Front closure on the vertical centerline with exactly two stacked 10 mm buttons. Single-needle topstitching 4 mm inside the band's top and bottom edges. Standard sewn button placket with two parallel vertical topstitch rows continuing below the band. Front band end gently rounded (default — see uncertain).",
+  "ratios": [
+    "band height = 5.0 cm = five diameters of its own 10 mm buttons",
+    "band height ~1.43x the standard 3.5 cm collar stand",
+    "the two stacked buttons plus their gaps fill the band face vertically",
+    "band covers most of the neck from collarbone to jawline"
+  ],
+  "locked_features": [
+    "collar stand height exactly 5.0 cm, uniform all the way around the neck",
+    "exactly TWO stacked front-closure buttons — not one, not three",
+    "NO fold-over collar leaf of any kind — upright band only",
+    "plain white two-ply cotton poplin — no stripes and no diagonal grain (this is NOT a bias_cutting option)",
+    "edge topstitching ~4 mm inside the band's top and bottom edges",
+    "standard sewn button placket with two parallel vertical topstitch rows visible below the band"
+  ],
+  "distinguishing_vs_siblings": [
+    "vs cs-round / cs-square / cs-round-2btn / cs-square-2btn (collar_stand shape): those drawings show a normal-height (~3.5 cm) stand at the throat BENEATH a full pointed fold-over collar, and their hero is the band-end SHAPE (round vs square) at the closure. csh-50's hero is band HEIGHT: a markedly taller 5.0 cm band with no fold-over leaf; end shape is not the featured attribute.",
+    "vs csh-40 / csh-42 (same category): shorter bands (4.0 / 4.2 cm) drawn with a fold-over leaf behind them; csh-50 is visibly taller — five button-diameters instead of ~four — and per catalog text is worn as a stand-alone Nehru band.",
+    "vs bias-inner-collar-stand and other bias_cutting options: those are grain-direction options that require blue-and-white striped shirting with a 45-degree diagonal stripe on the named component; csh-50 uses plain white poplin with zero stripe or grain storytelling."
+  ],
+  "uncertain": [
+    "Blueprint is a NO IMAGE placeholder — no drawn geometry exists for csh-50; all geometry is derived from category convention plus catalog description, not from an illustration.",
+    "Button count of 2 is inferred from the height ladder (4.0 cm and 4.2 cm siblings are both drawn with 2 stacked buttons); not confirmed by a csh-50 drawing.",
+    "Absence of a fold-over collar leaf is inferred from the catalog description 'High band — structured Nehru style' and the matching 'Stand Collar 5.0 cm' collar-design option; sibling height drawings all include a leaf, so this conflicts with category convention and should be confirmed before publishing.",
+    "Front band-end curvature (round vs square) is unspecified anywhere — defaulted to gently rounded."
+  ]
+}

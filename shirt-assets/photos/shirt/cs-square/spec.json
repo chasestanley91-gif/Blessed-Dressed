@@ -1,0 +1,48 @@
+{
+  "product_code": "cs-square",
+  "category_key": "collar_stand",
+  "option_label": "Square Collar Stand",
+  "blueprint": "C:/Users/ChaseStanley/Downloads/files/brand_assets/blessed-dressed/public/images/collar_stand/square-collar-stand.jpg",
+  "view": "close three-quarter front view from slightly below chin height, collar worn open (top button undone), both collar-stand front ends and the single stand button as the hero, invisible mannequin, seamless light-gray background",
+  "stated_measurements_cm": {
+    "collar_stand_height_center_front": 3.5,
+    "band_end_corner_radius_max": 0.2,
+    "edge_stitch_offset_from_edge": 0.4,
+    "stand_button_diameter": 1.0,
+    "front_placket_width": 3.5
+  },
+  "geometry": {
+    "band_front_end_shape": "SQUARE: each collar-stand front end finishes in a straight, near-vertical leading edge that meets the band's top and bottom edges at crisp right-angle corners (radius <= 2 mm); a squared tab, no arc anywhere on the end",
+    "buttons": "exactly ONE button on the collar stand — sewn to the wearer's-right band end — and exactly ONE horizontal buttonhole through the wearer's-left band end; one black/pearl placket button visible below on the front placket per the drawing",
+    "stitching": "single row of edge stitching traced 4 mm inside all band edges, turning sharp 90-degree corners at the squared ends; collar leaf carries matching edge stitching; front placket carries TWO parallel vertical topstitch rows",
+    "collar": "point collar per the drawing, worn open so the band ends separate slightly and their squared profiles read instantly; red lines and red-tinted button in the blueprint are highlight annotations marking the featured component, not garment color",
+    "distinguishing_vs_siblings": {
+      "cs-round": "cs-round's band end is a smooth continuous rounded arc; cs-square is a straight vertical edge with sharp 90-degree corners — no curve",
+      "cs-square-2btn": "cs-square-2btn has TWO stacked buttons on a taller band; cs-square has ONE button on a standard ~3.5 cm band",
+      "cs-left-sq-rt-rnd": "that option mixes one square end with one round end; cs-square has BOTH ends square and symmetric",
+      "csh-50": "csh-50 is an extra-tall 5.0 cm band; cs-square stays at standard ~3.5 cm height",
+      "bias_* options": "bias options require striped fabric with a diagonal-grain component; cs-square is solid white poplin, straight grain everywhere"
+    }
+  },
+  "ratios": [
+    "band height at center front is approximately 3 stand-button diameters (3.5 cm vs 1.0 cm button)",
+    "stand button is centered on the band height, set back roughly 1.5 button diameters from the squared front edge",
+    "squared corner radius is under one-fifth of the button diameter (<= 2 mm) — reads as a sharp corner at catalog distance",
+    "edge stitching sits at roughly 1/9 of the band height inside every edge (4 mm on a 3.5 cm band)"
+  ],
+  "locked_features": [
+    "BOTH collar-stand front ends cut square (straight vertical edge, right-angle corners) — never rounded, never mixed",
+    "exactly ONE collar-stand button and ONE horizontal buttonhole — never two stacked buttons",
+    "standard band height ~3.5 cm — not an extra-tall stand",
+    "collar worn open, band ends fully visible and unobstructed — no tie, nothing covering the closure",
+    "standard sewn front placket with two parallel vertical topstitch rows and its top placket button visible — not a French/covered front",
+    "solid white cotton poplin on straight grain — no stripes, no pattern",
+    "no red-colored thread, fabric, or button in the photo; no annotation text, numbers, or arrows"
+  ],
+  "uncertain": [
+    "Stand height is not dimensioned on the blueprint; 3.5 cm assumed as the house standard (csh-50 exists as the explicit tall option).",
+    "Button diameter assumed 10 mm (standard dress-shirt stand button); blueprint gives no scale.",
+    "Blueprint draws the collar buttoned closed; per category shot direction the photo shows it worn open so both squared ends are legible — geometry, not pose, is taken from the drawing.",
+    "Collar leaf style (point collar, moderate spread) is read from the drawing but is not the featured option; kept generic and unemphasized."
+  ]
+}

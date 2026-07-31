@@ -1,0 +1,26 @@
+{
+  "product_code": "csplice-cuff-edge",
+  "category_key": "cuff_splicing",
+  "option_label": "Cuff Edge",
+  "blueprint": "public/images/cuff_splicing/cuff-edge.jpg",
+  "view": "barrel cuff fastened around invisible wrist form, 3/4 view; blueprint includes a magnifier inset annotating strip width 0.6cm",
+  "stated_measurements_cm": {"strip_width": 0.6},
+  "geometry": {
+    "splice_region": "narrow 0.6 cm contrast strip inset along the cuff's TOP edge (the sleeve-attachment seam edge), running the full circumference, then turning down at the closure end in a Y-junction to run vertically down the cuff's closure edge to the bottom",
+    "splice_seam": "the strip is a sewn-in fabric inset (two seams bounding a 0.6 cm band), not surface piping drawn wider than 0.6 cm",
+    "buttons": {"cuff": 1},
+    "corner": "closure corner framed by the descending strip",
+    "stitching": "single edge-stitch row along cuff edges; strip bounded by its own fine seams"
+  },
+  "ratios": [
+    "strip width 0.6 cm — clearly narrower than the button diameter (roughly half a button width)",
+    "the horizontal strip hugs the top edge; the vertical branch hugs the closure edge; both are the same width"
+  ],
+  "locked_features": [
+    "strip width uniform 0.6 cm", "strip along top edge full circumference",
+    "vertical branch down closure edge", "Y-junction where they meet",
+    "button count = 1", "no strip along the bottom (wrist-opening) edge"
+  ],
+  "uncertain": [],
+  "house_style_match": "public/images/generated/shirt/splice-upper-cuff-v2.png (white poplin + chambray blue contrast)"
+}

@@ -1,0 +1,32 @@
+{
+ "generated": "2026-07-27",
+ "final": {
+  "status": "qa-pass",
+  "file": "attempt2.png",
+  "attempt": 2,
+  "promoted": "public/images/generated/shirt/cs-left-sq-rt-rnd.png"
+ },
+ "attempts": [
+  {
+   "n": 1,
+   "file": "attempt1.png",
+   "job_id": "8e7e5c4d-231d-4cc0-b023-33677075a601",
+   "verdict": "fail",
+   "notes": "fail: both ends symmetrized to same tab shape; placket button on cord loop (agent batch I)"
+  },
+  {
+   "n": 2,
+   "file": "attempt2.png",
+   "model": "gpt_image_2",
+   "settings": {
+    "quality": "low",
+    "resolution": "1k",
+    "aspect_ratio": "3:4"
+   },
+   "job_id": "c0b0cbf9-84ff-4e79-90f5-be4557d2d2a3",
+   "verdict": "pass",
+   "correction_applied": "DELIBERATELY DIFFERENT SHAPES framing + per-end similes + forbid same-shape/dangling buttons",
+   "notes": "pass: frame-left end continuous convex arc w/ button, frame-right end knife-square w/ buttonhole, buttons sewn flat (inline QA)"
+  }
+ ]
+}

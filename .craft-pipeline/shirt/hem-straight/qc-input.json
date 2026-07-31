@@ -1,0 +1,31 @@
+{
+  "scores": {
+    "shape": 100,
+    "geometry": 99,
+    "dimensions": 100,
+    "angles": 100,
+    "construction": 99,
+    "placement": 100,
+    "symmetry": 99,
+    "composition": 99,
+    "blueprint-match": 99
+  },
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "construction",
+      "description": "The hem's edge topstitching is present but low-contrast at this exposure; the rolled-edge finish reads more by silhouette than by visible stitch line.",
+      "expected": "Rolled hem edge with its finishing stitch legible.",
+      "actual": "Hem edge cleanly finished and correctly level; stitch line faint against the white poplin.",
+      "correction": "Acceptable as shipped. If ever re-shot, add a touch more raking light along the hem to lift the stitch line."
+    }
+  ],
+  "lockedFeatures": [
+    "straight level hem at an even height all the way around",
+    "both side-seam vents visible",
+    "front orientation with button placket",
+    "seamless neutral light-grey studio background",
+    "photorealistic white cotton poplin, zero annotations"
+  ],
+  "notes": "Attempt 2 resolved both attempt-1 errors: the location/architecture set was replaced with a seamless neutral light-grey studio, and the crop now puts the level hem and BOTH side-seam vents as the dominant subject with only a shallow band of trouser below. Hem geometry reads unambiguously straight — a customer can distinguish it from the curved-hem sibling at a glance. Adversarial check found no generic substitution, no annotation leakage, no front/back confusion, no invented features."
+}

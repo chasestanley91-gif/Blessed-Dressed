@@ -1,0 +1,29 @@
+{
+  "skill_name": "shirt-image-factory",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Set up the option catalog from my supplier spreadsheet shirt design.xlsx - extract all the tech pack illustrations and map them to product codes.",
+      "expected_output": "illustrations/<category>/<slug>.jpg for every embedded image, catalog.json with ~1,149 options split structural/swatch, per-category counts printed, mismatches flagged loudly instead of guessed",
+      "files": ["shirt design.xlsx"]
+    },
+    {
+      "id": 1,
+      "prompt": "Read the tech pack for the 5.8cm fashion point collar and build the engineering spec for it before we generate the photo.",
+      "expected_output": "spec.json with stated cm measurements, blueprint annotations (60 degree spread), ratio anchors, and a locked-features list - no invented dimensions",
+      "files": ["illustrations/lapel/fashion-point-in-58cm.jpg"]
+    },
+    {
+      "id": 2,
+      "prompt": "Add the 5.8 cm measurement callout onto the collar image so customers can see the real scale.",
+      "expected_output": "photo-annotated.png with an engineering-style dimension line, end ticks, and a labeled pill reading 5.8 cm; drawn deterministically with the script, not AI-generated",
+      "files": ["illustrations/lapel/fashion-point-in-58cm.jpg"]
+    },
+    {
+      "id": 3,
+      "prompt": "Generate the product photo for the 5.8cm fashion point collar from its tech pack. (PILOT - uses Higgsfield credits, requires user approval)",
+      "expected_output": "photorealistic white-shirt collar photo matching the blueprint: 60 degree spread, short sharp points, 1 stitch row, 1 band button; QA checklist recorded in qa.json; catalog updated",
+      "files": ["illustrations/lapel/fashion-point-in-58cm.jpg"]
+    }
+  ]
+}

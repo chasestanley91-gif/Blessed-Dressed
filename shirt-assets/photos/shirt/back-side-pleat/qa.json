@@ -1,0 +1,32 @@
+{
+ "generated": "2026-07-26",
+ "final": {
+  "status": "qa-pass",
+  "file": "attempt2.png",
+  "attempt": 2,
+  "promoted": "public/images/generated/shirt/back-side-pleat.png"
+ },
+ "attempts": [
+  {
+   "n": 1,
+   "file": "attempt1.png",
+   "job_id": "3b19467e-8d1d-4739-af87-63ace0eb6abe",
+   "verdict": "fail",
+   "notes": "fail: pleats ~8cm inboard of armhole instead of ~5cm (agent batch E)"
+  },
+  {
+   "n": 2,
+   "file": "attempt2.png",
+   "model": "gpt_image_2",
+   "settings": {
+    "quality": "low",
+    "resolution": "1k",
+    "aspect_ratio": "3:4"
+   },
+   "job_id": "56f97479-8469-41cd-bc24-493a668f4017",
+   "verdict": "pass",
+   "correction_applied": "outward-position correction + outer-eighth anchor + forbid inboard drift",
+   "notes": "pass: folds anchored at outer eighth of yoke, ~3/4 back width apart, center plain, no darts (inline QA)"
+  }
+ ]
+}

@@ -1,0 +1,33 @@
+{
+ "generated": "2026-07-27",
+ "final": {
+  "status": "qa-pass",
+  "file": "attempt2.png",
+  "attempt": 2,
+  "promoted": "public/images/generated/shirt/cs-round-2btn-v2.png",
+  "note": "v2 suffix: prior generated photo is live-wired"
+ },
+ "attempts": [
+  {
+   "n": 1,
+   "file": "attempt1.png",
+   "job_id": "c876c92d-5a91-4696-8cd4-8e488a6dddb4",
+   "verdict": "fail",
+   "notes": "band only ~2.5 btn-dia tall, buttons crowding edges (agent batch H)"
+  },
+  {
+   "n": 2,
+   "file": "attempt2.png",
+   "model": "gpt_image_2",
+   "settings": {
+    "quality": "low",
+    "resolution": "1k",
+    "aspect_ratio": "3:4"
+   },
+   "job_id": "06ee63ca-9824-4ca8-b3b3-137fea18ce0e",
+   "verdict": "pass",
+   "correction_applied": "height as button-diameter count + fabric above/below buttons",
+   "notes": "inline QA: tall band, 2 stacked buttons + 2 buttonholes, rounded ends, folded leaves"
+  }
+ ]
+}

@@ -1,0 +1,42 @@
+{
+  "attempt": 2,
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 98,
+    "placement": 99,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "shape",
+      "checklistItem": "shape reads as drawn: curved point",
+      "finding": "The rounded tip radius is very slightly more pronounced than the blueprint's, which blunts the tip a touch more subtly. The termination still reads unambiguously as a softened curve point at a full 7.5 cm leaf length, and cannot be mistaken for the sharp-tipped point siblings or for the short Round 5.3 cm club collar. Cosmetic only."
+    },
+    {
+      "severity": "minor",
+      "category": "symmetry",
+      "checklistItem": "reproduced from the illustration: both collar leaves mirroring each other exactly in length, angle and tip shape",
+      "finding": "The torso is rotated a few degrees off square, so the wearer's-left leaf projects marginally larger in frame than the wearer's-right. This is camera perspective, not a construction difference - tip radius, leaf outline, pitch and edge-stitch are identical on both leaves."
+    }
+  ],
+  "lockedFeatures": {
+    "orientation": "detail - macro of the front collar area, no full-garment silhouette",
+    "tipShape": "each collar point terminates in a blunted, softly rounded radius - CONFIRMED PRESENT on both leaves",
+    "leafEdge": "gentle convex curve along the outer front edge of each leaf - CONFIRMED",
+    "pointLength": "full-length 7.5 cm point; softening confined to the tip, leaf not shortened into a club collar nor widened into a spread - CONFIRMED",
+    "collarCount": "exactly 2 collar leaves, mirrored - CONFIRMED",
+    "closure": "worn open at the throat, no necktie, top collar-band button unfastened, band and buttonhole visible - CONFIRMED",
+    "edgeStitch": "single fine continuous edge-stitch following the full leaf perimeter and turning around the rounded tip, identical on both leaves - CONFIRMED",
+    "hardware": "no collar buttons, no button-down tabs, no collar bar, no visible collar stays - CONFIRMED ABSENT as drawn",
+    "background": "seamless neutral light-grey studio sweep, no location, architecture, furniture or props - CONFIRMED",
+    "annotation": "zero text, numbers, units, arrows, leader lines, rulers, callouts or watermarks anywhere in frame - CONFIRMED",
+    "noPocket": "no pocket anywhere in frame - CONFIRMED (the extractor's 'rounded-bottom pocket' shape token was a false positive from the word 'rounded' in the description and did not render)"
+  },
+  "notes": "Attempt 2 verified against the blueprint at 3x zoom on both tips, the collar band and the neckline. The critical attempt-1 defect (needle-sharp acute V-apex tips, a generic point-collar substitution) is fully corrected: both leaves now terminate in the blunted, softly rounded radius the drawing specifies, and the edge-stitch is continuous, fine, and carried around the tip on BOTH leaves as drawn. The attempt-1 composition defect is also corrected - the frame now crops below the jawline with no mouth, lips or beard stubble competing with the collar, and the collar occupies roughly 55% of the frame, identifiable in well under one second. Sibling-substitution check run explicitly against the full collar roster: it is not a spread, French, cutaway, square, band/mandarin, button-down or club collar, and the full-length leaf rules out Round 5.3 cm. The only sibling not separable by eye is Round Point 7.0 cm, which differs from this option by 0.5 cm of leaf length alone - that ambiguity is inherent to the catalog's own option set and is equally unresolvable in the blueprint itself, so it is not charged against the photograph. Absolute 7.5 cm cannot be independently measured without a scale reference in frame (and no ruler is permitted), but leaf-to-band and leaf-to-neck-opening proportions match the blueprint. Two minor deviations remain, both cosmetic; no critical or major discrepancy survived verification."
+}

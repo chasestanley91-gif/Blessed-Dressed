@@ -1,0 +1,53 @@
+{
+  "scores": {
+    "shape": 78,
+    "geometry": 45,
+    "dimensions": 50,
+    "angles": 70,
+    "construction": 45,
+    "placement": 40,
+    "symmetry": 88,
+    "composition": 68,
+    "blueprint-match": 42
+  },
+  "errors": [
+    {
+      "severity": "critical",
+      "category": "geometry",
+      "detail": "The defining feature is absent. The blueprint draws TWO vertical pleat folds dropping from the yoke seam, one on each side, offset laterally toward each shoulder blade (drawing coords: marks at x=59.5 and x=132.5 about a body centre of 95.5, i.e. roughly 60% of the way from centre back to the side seam). In the photo the back panel below the yoke is smooth and featureless: contrast-boosted crops and a per-column brightness profile of the yoke-to-mid-back band show only soft drape shading and a faint centre-spine crease, with no pressed fold, no fold shadow pair, and no pleat originating at the yoke seam on either side."
+    },
+    {
+      "severity": "critical",
+      "category": "generic-substitution",
+      "detail": "What was delivered is a plain clean shirt back, which is the sibling option on this same field (back-napoli-no-dart / clean back). A customer comparing 'Side Pleat' against the no-pleat option would see no difference, so the image fails the one-second identification requirement and would mis-sell the option."
+    },
+    {
+      "severity": "major",
+      "category": "construction",
+      "detail": "No pleat construction of any kind is visible: no crease line, no fold edge catching light, and no stitch/tack where each pleat is caught into the yoke seam. The yoke seam itself reads as a soft tonal change rather than a stitched seam."
+    },
+    {
+      "severity": "major",
+      "category": "composition",
+      "detail": "Not framed on the upper back/yoke as specified. The frame runs from the top of the model's head to below the hip and includes dark charcoal trousers with visible waistband, belt loops and a rear pocket occupying roughly the bottom fifth of the image; the yoke-and-pleat zone the option is about occupies only a small central band, well under the 40-80% dominance target."
+    },
+    {
+      "severity": "minor",
+      "category": "placement",
+      "detail": "Because no pleats exist, lateral offset from centre back, pleat depth and pleat length cannot be verified against the drawing at all."
+    }
+  ],
+  "lockedFeatures": [
+    "back view of the garment (orientation: back) - CORRECT in candidate",
+    "one straight horizontal one-piece yoke seam across the upper back - present but very faint",
+    "TWO vertical knife/side pleats, one per side, each starting at the yoke seam - ABSENT",
+    "each pleat offset laterally toward its shoulder blade at approx. 60% of the distance from centre back to the side seam - ABSENT",
+    "centre back clean and uninterrupted, no centre or box pleat - correct (nothing there), but vacuously so",
+    "left/right mirror symmetry of the two pleats - unverifiable, pleats absent",
+    "barrel cuffs and sleeve plackets on both sleeves - partially visible, cropped",
+    "curved shirttail hem with topstitching - not in frame",
+    "seamless neutral light-grey studio background, no props/architecture - CORRECT",
+    "zero text, numbers, arrows, red guide marks, rulers or callouts - CORRECT, frame is clean"
+  ],
+  "notes": "Reference illustration was confirmed attached to the generation (reference_images populated with the blueprint media id). Blueprint/text consistency gate passed before generating: the drawing's two off-centre marks below the yoke agree with the catalog description 'two folds positioned below the yoke near each shoulder blade rather than at the center', and are clearly distinct from the sibling center-pleats.jpg whose marks sit tight against the centre line. Positives in the candidate: correct back orientation, correct white poplin dress-shirt silhouette, photoreal (not line-art, not CGI, not mannequin), clean seamless light-grey studio sweep with no location or props, and no annotation/watermark/measurement text anywhere. The single reason for rejection is that the showcased craft option itself was not rendered: the model simply produced a smooth plain back. Retry must force two hard, pressed, light-catching vertical folds starting at the yoke seam, offset out over each shoulder blade with the centre back left flat, and must tighten the crop to the yoke and upper back so the pleats dominate the frame."
+}

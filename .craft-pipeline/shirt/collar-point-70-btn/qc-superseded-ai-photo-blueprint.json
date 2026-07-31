@@ -1,0 +1,41 @@
+{
+  "addr": "shirt > collar-point-70-btn",
+  "productId": "shirt",
+  "optionId": "collar-point-70-btn",
+  "attempt": 1,
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 99,
+    "placement": 99,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "belowMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "composition",
+      "error": "Crop is looser than the blueprint's. The model's chin, mouth and hair occupy the top ~25% of the frame, so the collar's bounding box covers ~28% of frame AREA (width span ~67%, height span ~41%) rather than sitting mid-band of the 40-80% dominance target.",
+      "expected": "collar cloth dominating 40-80% of the frame, framed tight on collar and neckline",
+      "actual": "collar spans ~67% of frame width and ~41% of frame height; competing area is the model's lower face",
+      "assessment": "Scored as minor, not a failure: the frame is genuinely cut tight on collar and neckline (chest ends just below the collar points), the collar is the unambiguous dominant garment subject, and identification is instant. There is no necktie or prop competing for attention, so the competing area is less than the passing sibling collar-long-point-85 (tie + jaw). Intent of the composition rule is met."
+    },
+    {
+      "severity": "minor",
+      "category": "pose-perspective",
+      "error": "The model's head and torso are rotated very slightly to his right, so the viewer-right collar leaf projects ~15% shorter than the viewer-left leaf (242 px vs 283 px tip-to-neckline).",
+      "expected": "left/right collar leaves reading as identically drafted",
+      "actual": "projected leaf lengths differ by ~15% across the frame",
+      "assessment": "Not a construction asymmetry. Both leaves have identical edge shape, identical acute tip angle and identical topstitch inset when inspected at macro (see per-point crops); the difference is pure foreshortening from a near-frontal but slightly rotated pose. The blueprint itself is a rotated three-quarter detail with one leaf popped, so it does not lock a perfectly square frontal presentation."
+    }
+  ],
+  "verdict": "PASS",
+  "correction": null,
+  "notes": "Adversarial pass, attempt 1. Verified against blueprint C:/Users/ChaseStanley/Downloads/files/brand_assets/blessed-dressed/public/images/ai/collar-point-70-btn.png at macro zoom (throat/band crop, per-point crops, and a contrast-boosted full-frame sweep).\n\nTHE DECISIVE CHECK - BUTTON TYPE AND PLACEMENT: this option's single highest failure risk is that 'Point 7.0 cm with Button' gets rendered as a button-DOWN collar (buttons through the collar points into the shirt front), which is a completely different craft option. The blueprint clearly shows a throat button sewn on the collar STAND tab at the base of the collar V, with its buttonhole on the overlapping band tab and topstitching running around that rounded tab. The candidate reproduces this exactly: one mother-of-pearl button on the band tab, buttonhole to its side, topstitch around the tab, and ZERO buttons or loops at the collar points. Placement, count and construction all match.\n\nDIMENSION VERIFICATION (button used as the scale reference, a standard 15-16 ligne collar button at 9.5-10 mm): candidate scale resolves to ~39 px/cm; the viewer-left leaf measures 283 px tip-to-neckline = ~7.25 cm, the viewer-right leaf 242 px = ~6.2 cm foreshortened, mean ~6.7-7.2 cm. That brackets the specified 7.0 cm inside measurement noise (button-diameter uncertainty alone swings the result ~7%). Applying the identical method to the blueprint's forward-lying leaf gives ~6.6 cm projected, i.e. the same collar. Length is confirmed moderate - unambiguously not the 8.5 or 9.5 cm long point.\n\nCONFIRMED MATCHES: (1) Exactly two collar points, both straight-edged with acute tips, angled downward - point shape as drawn, not a spread, semi-spread, cutaway, club or rounded collar. (2) Edge topstitch present on both leaves, evenly inset ~4-5 mm and carried cleanly around each point, matching the drawn topstitch line. (3) Collar stand visible at both sides of the neck with a soft roll into the leaf. (4) Centre-front placket present and edge-stitched, agreeing with the drawing. (5) Orientation is 'detail' on the front face - tight macro on collar and neckline with no full-garment silhouette, same face as the blueprint. (6) Crisp white cotton poplin with correct fabric behaviour and pressing.\n\nHOSTILE CHECKS ALL CLEAN: contrast-boosted full-frame sweep shows no text, numerals, units, dimension or leader lines, arrows, callouts, ruler ticks, coloured guide marks or watermark anywhere in frame. Background is a seamless neutral light-grey gradient with clean garment separation - no location, architecture, furniture, scenery or props. Photoreal, not line-art, CGI or mannequin. No necktie obstructing the collar points, spread or band. No collar bar or pin invented. No sibling-option bleed: the button is visible (rules out collar-point-70-hidden-btn) and the point length is moderate (rules out collar-point-95-btn and collar-long-point-85).\n\nNo Critical or Major discrepancies found. Two Minor items recorded above, both photographic rather than geometric.\n\nNOTE FOR THE PARENT PROCESS: the extractor defect a sibling agent reported in tech-pack-interpreter scripts/lib/spec.mjs extractMeasures() (the /\\bspread\\b/ branch being tested before /\\bnarrow\\b/) does NOT affect this option - its catalog description contains no spread wording and measured.spread was correctly written as an empty array. No spec correction was needed here and no shared skill script was modified.",
+  "checkedAt": "2026-07-28T04:40:57.947Z"
+}

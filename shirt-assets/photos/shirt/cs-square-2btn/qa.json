@@ -1,0 +1,32 @@
+{
+ "generated": "2026-07-27",
+ "final": {
+  "status": "qa-pass",
+  "file": "attempt2.png",
+  "attempt": 2,
+  "promoted": "public/images/generated/shirt/cs-square-2btn.png"
+ },
+ "attempts": [
+  {
+   "n": 1,
+   "file": "attempt1.png",
+   "job_id": "7dc31421-0dbc-4752-998c-42c8793eb943",
+   "verdict": "fail",
+   "notes": "fail: leading-edge top corner rounded ~6mm (agent batch I)"
+  },
+  {
+   "n": 2,
+   "file": "attempt2.png",
+   "model": "gpt_image_2",
+   "settings": {
+    "quality": "low",
+    "resolution": "1k",
+    "aspect_ratio": "3:4"
+   },
+   "job_id": "c747d4b4-d7ed-47d7-9297-13e6e374141a",
+   "verdict": "pass",
+   "correction_applied": "book-cover/fingernail similes + stitching turns hard right angle + forbid any-radius arc",
+   "notes": "pass: straight vertical edge, crisp corners, 2 stacked buttons on tall closed band (inline QA)"
+  }
+ ]
+}

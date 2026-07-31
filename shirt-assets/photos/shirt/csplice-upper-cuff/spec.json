@@ -1,0 +1,26 @@
+{
+  "product_code": "csplice-upper-cuff",
+  "category_key": "cuff_splicing",
+  "option_label": "Upper Sleeve Cuff",
+  "blueprint": "public/images/cuff_splicing/upper-sleeve-cuff.jpg",
+  "view": "barrel cuff fastened around invisible wrist form, 3/4 view, closure corner visible at right",
+  "stated_measurements_cm": {"splice_fraction": "1/2 of cuff circumference (annotation 1/2拼)"},
+  "geometry": {
+    "splice_region": "the buttonhole-side half of the cuff barrel (viewer's left of the button) in contrast fabric; button-side half incl. rounded closure corner stays base fabric",
+    "splice_seam": "single straight vertical seam, perpendicular to cuff length, immediately left of the button at half the circumference",
+    "buttons": {"cuff": 1},
+    "corner": "rounded closure corner on the base-fabric half",
+    "stitching": "single edge-stitch row along all cuff edges, both fabrics"
+  },
+  "ratios": [
+    "contrast panel spans exactly half the visible cuff circumference — splice seam falls one button-diameter left of the button",
+    "cuff height is unchanged across the splice; the seam runs the full cuff height top edge to bottom edge"
+  ],
+  "locked_features": [
+    "splice panel count = 1", "seam vertical and straight", "split at 1/2 circumference",
+    "contrast on buttonhole-side (left) half", "button count = 1 on base-fabric half",
+    "rounded corner uncolored", "single edge-stitch row"
+  ],
+  "uncertain": [],
+  "house_style_match": "public/images/generated/shirt/splice-upper-cuff-v2.png (white poplin + chambray blue contrast)"
+}

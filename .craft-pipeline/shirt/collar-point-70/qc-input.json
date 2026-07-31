@@ -1,0 +1,52 @@
+{
+  "scores": {
+    "shape": 97,
+    "geometry": 93,
+    "dimensions": 96,
+    "angles": 97,
+    "construction": 94,
+    "placement": 96,
+    "symmetry": 92,
+    "composition": 95,
+    "blueprint-match": 95
+  },
+  "errors": [
+    {
+      "severity": "major",
+      "category": "construction",
+      "detail": "A small soft-edged off-white blob sits on the fold of the wearer's-right (far) collar leaf, at roughly x=150 y=410 in the 880x1168 frame. Inspected at 6x zoom: it has no rim, no thread holes, no stitching and no shadow, so it is a rendering artifact rather than a rendered button. But it sits exactly where a button-down button would be anchored on that leaf, and nothing in the blueprint corresponds to it. On a catalog where collar-point-70-btn and collar-point-70-hidden-btn are separately purchasable siblings, a viewer can misread this smudge as a collar button and buy the wrong option."
+    },
+    {
+      "severity": "major",
+      "category": "geometry",
+      "detail": "The wearer's-right (far) collar leaf is muddled. It reads as doubled - the outer leaf and its folded-back underside each present their own edge and apparent point, producing an ambiguous second point on that side. Its tip is soft and indistinct where the near leaf's tip is crisp. The blueprint's far leaf resolves as one clean leaf with a single unambiguous point."
+    },
+    {
+      "severity": "minor",
+      "category": "symmetry",
+      "detail": "The near (wearer's-left) leaf renders crisp, large and fully resolved while the far leaf renders soft and under-described - a difference larger than the three-quarter perspective alone accounts for."
+    },
+    {
+      "severity": "minor",
+      "category": "composition",
+      "detail": "The bare neck and throat occupy a sizeable high-contrast wedge through the centre of the frame. The blueprint's collar opening reads as shadowed fabric rather than a bright skin wedge, so the eye is pulled slightly off the collar."
+    }
+  ],
+  "lockedFeatures": [
+    "Head fully cropped out - no chin, mouth, jaw, cheek, nose, hair or ear anywhere in frame. The attempt-1 composition failure is FIXED.",
+    "Neckband UNBUTTONED exactly as drawn: the horizontal buttonhole on the collar band is visible and EMPTY with skin showing through it, the leaves splay apart at the throat and the band is exposed. The attempt-1 closure failure is FIXED.",
+    "Three-quarter viewpoint from the wearer's right, near leaf larger and closer, far leaf foreshortened, shoulder line receding - matches the blueprint's viewpoint. The attempt-1 viewpoint failure is FIXED.",
+    "Straight acute collar point termination - not squared/blunt, not a rounded club tip. Satisfies the forbidden-list clause.",
+    "NO button-down button and NO buttonhole at either collar point. No sibling-option substitution from collar-point-70-btn or collar-point-70-hidden-btn.",
+    "Single row of fine edge stitching approximately 4-5 mm in from the collar leaf edge, running around the leaf - matches the drawing.",
+    "Collar band/stand present with correct stand height, roll, and band edge stitching - matches the drawing.",
+    "Front placket verified against the blueprint side by side: same relative width, edge stitching down both sides, a single EMPTY vertical buttonhole, and a button at the lower frame edge. Near-identical to the drawing.",
+    "Point length reads at roughly 1.8-2x the collar band height, consistent with the specified 7.0 cm. Nothing in frame contradicts the dimension.",
+    "No tie - the collar is unobstructed. Collar dominates roughly 55-65% of the frame, inside the 40-80% target, identifiable within one second.",
+    "Seamless neutral light-grey studio background. No location, architecture, furniture, scenery or props. PASS.",
+    "Zero text, annotation, watermark, ruler, dimension callout, arrow or leader line anywhere in frame. PASS.",
+    "Real photograph, not line-art, not CGI, not a mannequin. Crisp cotton poplin weave and fine stitching visible. PASS.",
+    "Front face of the garment, collar detail - orientation 'detail' is correct."
+  ],
+  "notes": "ATTEMPT 2 of 2. All three failures the attempt-1 correction block named - composition, angles/closure and blueprint-match viewpoint - were fixed, and the placket, band, stitching and point geometry now match the drawing closely. Two defects remain and both sit on the wearer's-right collar leaf: an unexplained white blob where a button-down button would anchor, and a doubled/ambiguous leaf edge. Neither is cosmetic-only, because this option's whole job is to let a customer distinguish a plain 7.0 cm point collar from its button-down sibling, and the blob undercuts exactly that distinction. Declining to approve: a false approval ships a wrong image to a paying customer, and the credit cap is reached so no third generation is permitted.\n\nSPEC-EXTRACTION ARTIFACT (carried forward from attempt 1, still unresolved upstream): the locked prompt and checklist both carry a required shape token 'button-down point'. It is a text-mining false positive lifted from the contrastive clause in the catalog description ('between the long traditional point and the casual button-down'), not from any drawn feature. Both collar leaves were inspected at high zoom in the blueprint and show NO collar-point buttons and NO buttonholes at the points; the only buttonhole is the neckband one. Per the Supreme Rule the drawing wins, so 'shape reads as drawn: button-down point' is treated as NOT APPLICABLE rather than failed - the model correctly rendered a plain point collar both times. RECOMMENDED UPSTREAM FIX: narrow the shape-extraction regex in tech-pack-interpreter's lib/spec.mjs so that contrastive mentions of other options inside a description ('between X and Y', 'unlike the Z', 'rather than the W') do not enter measured.shapes. Until that is fixed this option cannot produce a clean prompt, and the same pollution will affect any option whose description names a sibling.\n\nRECOMMENDED NEXT STEP for whoever picks this up: fix the extraction regex, re-run extract_spec and build_prompt so 'button-down point' drops out of the locked tokens, then regenerate with an added negative on stray marks or hardware on the collar leaves. Candidate-2 is close enough that one clean attempt should clear the bar."
+}

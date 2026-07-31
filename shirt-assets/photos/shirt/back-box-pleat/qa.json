@@ -1,0 +1,32 @@
+{
+ "generated": "2026-07-26",
+ "final": {
+  "status": "qa-pass",
+  "file": "attempt2.png",
+  "attempt": 2,
+  "promoted": "public/images/generated/shirt/back-box-pleat.png"
+ },
+ "attempts": [
+  {
+   "n": 1,
+   "file": "attempt1-wrongref.png",
+   "job_id": "99d86031-ef42-452e-9ee6-f52e795935f4",
+   "verdict": "void",
+   "notes": "generated against the SWAPPED blueprint file (see failure-log DATA DEFECT); not judged"
+  },
+  {
+   "n": 2,
+   "file": "attempt2.png",
+   "model": "gpt_image_2",
+   "settings": {
+    "quality": "low",
+    "resolution": "1k",
+    "aspect_ratio": "3:4"
+   },
+   "job_id": "b2f7cc3f-d3bf-4fb0-9261-3006a7104a3d",
+   "verdict": "pass",
+   "checks": "counts 1 box pleat to hem/0 darts pass; silhouette pass; proportions pass (panel ~4% back width); positions center pass; construction pass; symmetry pass; photography pass; no-text pass; nothing-extra pass",
+   "qa_method": "inline vision QA"
+  }
+ ]
+}

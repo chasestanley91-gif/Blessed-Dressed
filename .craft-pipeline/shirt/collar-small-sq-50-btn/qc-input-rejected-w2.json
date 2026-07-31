@@ -1,0 +1,78 @@
+{
+  "scores": {
+    "shape": 30,
+    "geometry": 40,
+    "dimensions": 45,
+    "angles": 48,
+    "construction": 80,
+    "placement": 90,
+    "symmetry": 95,
+    "composition": 82,
+    "blueprint-match": 35
+  },
+  "errors": [
+    {
+      "severity": "critical",
+      "category": "shape",
+      "description": "Collar point termination is wrong — and this is the single attribute that defines the option. At 7x zoom the blueprint's leaves end in a short, broad, BLUNT SQUARED-OFF terminal edge where the edge-stitch line visibly turns a corner into a straight end. Both of the candidate's leaves instead taper to sharp, narrow, acute needle points.",
+      "expected": "A flat squared-off / truncated terminal edge (~8-10 mm) at each collar point, bracketed by two near-90-degree corners, exactly as the blueprint's edge-stitch traces and as the catalog text ('squared-off tips', 'blunt square ends') states.",
+      "actual": "Both leaves converge to a single acute vertex with no terminal edge and no squared corner anywhere — precisely the termination this option's FORBIDDEN list prohibits by name.",
+      "correction": "Prompt-level geometry language for this tip has now failed on three separate generations. Escalate beyond wording: supply a corrected square-tip geometry reference (a true square-tip collar photo, or a traced outline overlay of the blueprint's leaf) as an additional reference image, and/or raise the quality/resolution tier so the reference is weighted more strongly."
+    },
+    {
+      "severity": "critical",
+      "category": "blueprint-match",
+      "description": "Generic-category / sibling-option substitution. The candidate renders a conventional semi-spread long-point dress shirt collar — the default menswear prior — instead of the specific Small Square 5.0 cm option drawn in the blueprint. Placed side by side the two collars read as different products, and the render is indistinguishable from the catalog's point-collar siblings.",
+      "expected": "The exact drawn option: a small, square-tipped, compact collar with pronounced edge topstitching and a tall band, instantly distinguishable from the point-collar family.",
+      "actual": "A generic long-point semi-spread collar with a throat button; the locked differentiator is absent for the third time.",
+      "correction": "Do not ship. Requires a corrected geometry reference rather than further prompt escalation."
+    },
+    {
+      "severity": "critical",
+      "category": "dimensions",
+      "description": "Collar point length is far too long. The blueprint's leaf is compact and stubby, only modestly longer than the collar band height; the candidate's leaves are long and slender, reading as roughly a 7.5-8 cm long-point collar rather than the specified compact 5.0 cm.",
+      "expected": "5.0 cm from collar-band seam to terminal edge — a visibly SHORT, compact leaf whose end sits only marginally below the throat button.",
+      "actual": "Long slender leaves running well down onto the chest, forming a deep V; the compact 5.0 cm character is absent.",
+      "correction": "State the 5.0 cm leaf length explicitly as SHORT and STUBBY, and anchor it to the band: the terminal edge must sit only marginally below the throat button."
+    },
+    {
+      "severity": "major",
+      "category": "angles",
+      "description": "Tip termination angle is acute rather than the blunt near-right-angle corners drawn in the blueprint.",
+      "expected": "Two roughly 90-degree corners bracketing a short flat terminal edge on each leaf.",
+      "actual": "A single acute vertex on each leaf.",
+      "correction": "Same escalation as the shape error — prompt-level angle specification has now failed three times."
+    },
+    {
+      "severity": "minor",
+      "category": "construction",
+      "description": "Edge topstitching is under-expressed relative to the blueprint, which shows a pronounced single-needle topstitch set clearly in from the edge and plainly visible around the full leaf perimeter and the band.",
+      "expected": "Clearly legible single-needle edge topstitch inset roughly 5-6 mm, tracing the entire perimeter of both leaves and the collar band.",
+      "actual": "A faint stitch line sitting tight to the edge, with noticeably less presence than the blueprint's.",
+      "correction": "Emphasise a pronounced, clearly legible single-needle topstitch inset approximately 5-6 mm from the collar edge around both leaves and the band."
+    },
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "The model's lips, chin, jaw and stubble occupy the top of the frame, whereas the blueprint is a pure garment macro with no wearer visible. This is a regression versus the previous run, where the tightened crop had already solved it — rebuilding the prompt reset that correction. The collar still dominates and is unobstructed, so this is a distraction rather than a blocking fault.",
+      "expected": "A tight collar-and-neckline crop matching the blueprint's isolated macro, with the frame ending at or below the jawline and no facial features competing for attention.",
+      "actual": "Lower face (lips, chin, stubble) visible across the top ~20% of the frame.",
+      "correction": "Re-apply the attempt-2 crop fix: frame ends at or below the jawline; the wearer's face must not appear."
+    }
+  ],
+  "lockedFeatures": [
+    "squared-off / blunt terminal edge on BOTH collar leaves (the defining feature)",
+    "5.0 cm compact collar leaf length",
+    "exactly ONE throat button on the collar band, with the matching horizontal band buttonhole",
+    "separate tall collar band / stand",
+    "single row of edge topstitching ~5 mm inset, continuous around both leaves and the band",
+    "two collar leaves, bilaterally symmetric in length and angle",
+    "white bespoke cotton poplin dress shirt, plain weave",
+    "detail orientation — front face of the collar",
+    "collar open at the throat, no necktie, spread between points unobstructed",
+    "front placket with topstitching",
+    "seamless neutral light-grey studio background, no location, architecture or props",
+    "no text, annotation, watermark, ruler or dimension callout anywhere in frame"
+  ],
+  "notes": "Independent QC of pipeline attempt 3 (generation 1 of this run). Blueprint orientation confirmed by visual inspection as 'detail' — an isolated front-face collar macro with no full-garment silhouette. WHAT THE CANDIDATE GOT RIGHT: the throat button is correctly rendered on the collar band (button on the wearer's right band tip, matching horizontal buttonhole on the wearer's left band tip), top button unfastened, collar open, no necktie, spread unobstructed; background is a clean seamless neutral light grey with no location, architecture, props or environmental context; there is zero text, annotation, watermark, ruler or dimension callout anywhere in frame; the two leaves mirror each other well; convincing real-photograph poplin texture, not line-art or CGI. WHAT FAILS: the collar point termination and the point length — the two attributes that together define 'Small Square 5.0 cm'. Verified by 7x crops of both images and a scale-normalised side-by-side: the blueprint's leaves are short, broad and blunt-ended, the candidate's are long, slender and needle-pointed. This is the third consecutive generation to fail on the identical critical geometry (prior run logged the same failure at attempts 1 and 2 and explicitly concluded that prompt escalation alone was not converging). Rejecting, and recommending a corrected square-tip geometry reference or a higher-fidelity generation tier before any further credit spend."
+}

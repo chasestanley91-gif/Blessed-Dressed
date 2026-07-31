@@ -1,0 +1,39 @@
+{
+  "addr": "shirt > collar-round-point-70-holes",
+  "productId": "shirt",
+  "optionId": "collar-round-point-70-holes",
+  "attempt": 2,
+  "scores": {
+    "shape": 99,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 99,
+    "construction": 98,
+    "placement": 99,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "belowMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "symmetry",
+      "error": "The left collar leaf tip sits roughly 30 px lower in frame than the right leaf tip (about 4% of leaf length). This is natural drape of a worn collar on a living body rather than a construction fault; the blueprint itself shows the two leaves sitting differently because one leaf is splayed open.",
+      "expected": "Both collar leaf tips at identical height",
+      "actual": "Left tip ~30 px lower than right; both leaves otherwise identical in shape, size and eyelet placement"
+    },
+    {
+      "severity": "minor",
+      "category": "construction",
+      "error": "The collar band is visible and readable at the throat and along its top edge, but its outer flanks remain covered by the collar leaves lying against the chest. This is inherent to any collar photographed as worn and buttoned, and the blueprint shows the same coverage on its unsplayed side.",
+      "expected": "Entire collar band visible end to end",
+      "actual": "Band top edge and throat section clearly readable; flanks covered by the leaves as on any worn collar"
+    }
+  ],
+  "verdict": "PASS",
+  "correction": null,
+  "notes": "ATTEMPT 2 - PASSES. The single major finding from attempt 1 was composition, and the corrected crop resolved it without regressing any construction detail.\n\nCOMPOSITION NOW CORRECT: the model's chin, lips, jaw, ear and hair are entirely gone from the frame. The top edge sits at the base of the throat, exactly as directed. The collar assembly (both leaves, both eyelets, the band and the throat opening) now spans a bounding box of roughly 860x730 px in an 880x1168 frame - about 61% of the image, squarely inside the mandated 40-80% dominance band and inside the 55-70% target of the correction. Nothing in the frame competes with the collar; the option is identifiable in well under one second.\n\nCONSTRUCTION VERIFIED AGAINST THE DRAWING, FEATURE BY FEATURE: rounded point tips on both leaves matching the blueprint's rounded-off point profile (not a full semicircular club, not a sharp point); exactly two worked eyelets, one per leaf, each a small round eye with a short stitched tail, positioned near the tip and mirrored - identical in form and position to the eyelets in the blueprint; one fastened button on the collar band; no necktie so the spread is fully open; edge stitching tracking around both leaf edges and around both rounded tips; centre front placket present. The enlarged crop also fixed the two minor findings from attempt 1 - the collar stand top edge is now readable, and the 7.0 cm point length is now directly measurable against the collar band and reads correctly proportioned and compact.\n\nADVERSARIAL CHECKS I ACTIVELY TRIED TO FAIL IT ON, AND THE RESULT: (1) Sibling substitution as a BUTTON-DOWN collar - REJECTED as a finding; the tips carry eyelet rings with no button sewn to the shirt body beneath either tip, so it cannot be read as button-down. (2) Substitution as a plain round/club collar without holes - REJECTED; both eyelets are clearly present and legible. (3) Substitution as a plain point collar - REJECTED; both tips are unmistakably rounded. (4) Wrong face of the garment - REJECTED; this is the front collar, matching the blueprint. (5) Text, watermark, ruler or dimension callout anywhere in frame - swept the full frame including all four corners and the grey background; nothing found. (6) Location, architecture or props in the background - none; seamless light grey only. (7) Extra or missing eyelet count - exactly two, verified.\n\nEXTRACTION ARTIFACT (again not counted against the photo): the checklist carries a spurious 'rounded-bottom pocket' shape token from the keyword extractor. This is a collar option; the blueprint contains no pocket, the drawing is law, and so the absence of any pocket in the photo is CORRECT. Recommend the token be cleaned up upstream in the extractor, not in this option's photo.",
+  "checkedAt": "2026-07-28T04:49:20.513Z"
+}

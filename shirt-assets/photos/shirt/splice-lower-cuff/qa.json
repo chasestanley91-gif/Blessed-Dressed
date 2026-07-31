@@ -1,0 +1,30 @@
+{
+  "final": {
+    "status": "qa-pass",
+    "file": "attempt-v3.png",
+    "attempt": "v3",
+    "promoted": "public/images/generated/shirt/splice-lower-cuff-v3.png"
+  },
+  "attempts": [
+    {
+      "n": "v2",
+      "verdict": "fail",
+      "notes": "phantom horizontal seam (prior session)"
+    },
+    {
+      "n": "v3",
+      "file": "attempt-v3.png",
+      "model": "gpt_image_2",
+      "settings": {
+        "quality": "low",
+        "resolution": "1k",
+        "aspect_ratio": "3:4"
+      },
+      "job_id": "c9498607-7b33-424c-9967-bb862b33448f",
+      "verdict": "pass",
+      "correction_applied": "white panel ONE uninterrupted piece",
+      "notes": "luminance scan found no seam in white panel"
+    }
+  ],
+  "generated": "2026-07-26"
+}

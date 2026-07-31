@@ -1,0 +1,38 @@
+{
+  "final": {
+    "status": "qa-pass",
+    "file": "attempt2.png",
+    "attempt": 2,
+    "promoted": "public/images/generated/shirt/csplice-strip-mid.png"
+  },
+  "attempts": [
+    {
+      "n": 1,
+      "file": "attempt1.png",
+      "model": "gpt_image_2",
+      "settings": {
+        "quality": "low",
+        "resolution": "1k",
+        "aspect_ratio": "3:4"
+      },
+      "job_id": "0ac25181-c91b-4c60-abe6-c44c85536933",
+      "verdict": "fail",
+      "notes": "strip wider than button"
+    },
+    {
+      "n": 2,
+      "file": "attempt2.png",
+      "model": "gpt_image_2",
+      "settings": {
+        "quality": "low",
+        "resolution": "1k",
+        "aspect_ratio": "3:4"
+      },
+      "job_id": "f73aa6cf-748b-4ba2-9e86-c95b4a76a728",
+      "verdict": "pass",
+      "correction_applied": "strip NARROWER than button, stated both ways",
+      "notes": "second-opinion verified: ratio 0.70 vs blueprint 0.60-0.65, within tolerance"
+    }
+  ],
+  "generated": "2026-07-26"
+}

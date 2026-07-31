@@ -1,0 +1,27 @@
+{
+  "product_code": "splice-4cm-from-point",
+  "category_key": "collar_splicing",
+  "option_label": "4 cm to Collar Point Opening Edge",
+  "blueprint": "public/images/collar_splicing/4cm-to-collar-point-opening-edge.jpg",
+  "view": "front view, collar open (no tie), placket visible to second button",
+  "stated_measurements_cm": {"strip_width": 1.0, "offset_from_point_opening_edge": 4.0},
+  "geometry": {
+    "splice_region": "one 1.0 cm contrast strip per collar leaf, running across the leaf parallel to the point opening edge, its nearest edge 4 cm from the collar point opening edge",
+    "collar": "point collar, sharp points, single edge-stitch row on leaves; collar band with one button",
+    "placket": "standard front button placket with TWO parallel vertical topstitch rows and a placket button below the collar band",
+    "buttons": {"collar_band": 1, "placket_visible": 1}
+  },
+  "ratios": [
+    "strip width 1.0 cm ≈ half a button diameter; offset 4 cm ≈ four strip-widths from the opening edge — visibly deeper into the leaf than the 1.5 cm sibling option",
+    "strips mirrored left/right leaf"
+  ],
+  "locked_features": [
+    "strip count = 2 (one per leaf)", "strip width 1.0 cm", "offset 4 cm from point opening edge",
+    "front placket present with 2 topstitch rows", "placket button visible below band",
+    "sharp collar points", "no embroidery"
+  ],
+  "uncertain": [],
+  "reviewer_note": "remove Chinese from tech pack — blueprint carries Chinese annotations; photo must contain no text",
+  "qa_history": "v2 (2026-07-25) FAILED: rendered plain covered French front, omitted placket topstitch rows and placket button",
+  "house_style_match": "public/images/generated/shirt/splice-15cm-from-point-v2.png (PASSED sibling)"
+}

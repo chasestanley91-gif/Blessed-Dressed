@@ -1,0 +1,57 @@
+{
+  "scores": {
+    "shape": 20,
+    "geometry": 25,
+    "dimensions": 65,
+    "angles": 45,
+    "construction": 72,
+    "placement": 96,
+    "symmetry": 94,
+    "composition": 92,
+    "blueprint-match": 22
+  },
+  "errors": [
+    {
+      "severity": "critical",
+      "category": "shape",
+      "description": "Attempt 2 repeats the attempt-1 failure verbatim: both collar leaves still taper to sharp acute triangular tips despite maximum-emphasis wording that the leaf ends are cut off flat. The squared-off termination that defines this option is still completely absent.",
+      "expected": "Each collar leaf truncated in a straight flat terminal edge roughly 1.5-2 cm wide, meeting the leading edge at a crisp ~90 degree corner, giving two visible square corners per leaf.",
+      "actual": "Both leaves converge to a single sharp point with no flat terminal edge and no square corner anywhere. The render is a conventional point collar for the second consecutive attempt.",
+      "correction": "Prompt-level emphasis has now failed twice; the model is anchored on the point-collar prior and on the blueprint photo's foreshortened near leaf, which it is reading as a point. Escalate beyond wording: supply a cropped/zoomed reference of the squared leaf end alone, or a clean line-art diagram of the truncated leaf profile, as the geometry reference instead of the full collar photo."
+    },
+    {
+      "severity": "critical",
+      "category": "blueprint-match",
+      "description": "Generic-category substitution persists — the image would ship as an ordinary point collar to a customer who selected 'Square 6.5 cm', and is indistinguishable from a sibling point-collar option.",
+      "expected": "A collar visibly distinguishable at a glance from every sibling option by its blunt squared leaf ends.",
+      "actual": "A default dress-shirt point collar, visually interchangeable with a generic pointed collar.",
+      "correction": "Do not publish. Requires a different geometry-reference strategy or a model with stronger reference adherence before any further attempt."
+    },
+    {
+      "severity": "major",
+      "category": "dimensions",
+      "description": "Collar leaf length still reads longer than the specified 6.5 cm relative to the neck and jaw scale.",
+      "expected": "A short, compact 6.5 cm leaf.",
+      "actual": "Leaves still extend well down onto the chest, reading longer than 6.5 cm.",
+      "correction": "Pair the length wording with an in-frame scale anchor once the squared termination is solved."
+    },
+    {
+      "severity": "minor",
+      "category": "construction",
+      "description": "Edge topstitching is now faintly present but is very low contrast and does not turn any square corner (because no square corner exists).",
+      "expected": "A clearly visible single-needle topstitch inset 5-6 mm, continuous around the leaf perimeter and turning both square corners of the flat terminal edge.",
+      "actual": "A faint stitch line follows the collar edge and runs to the acute tip.",
+      "correction": "Increase stitch visibility emphasis; will resolve naturally once the leaf termination is corrected."
+    }
+  ],
+  "lockedFeatures": [
+    "white bespoke cotton poplin dress shirt",
+    "worn on a male model",
+    "no necktie, top collar-band button unfastened",
+    "seamless neutral light-grey studio background",
+    "natural daylight studio lighting",
+    "medium-format editorial photorealism",
+    "no text, annotation, watermark, ruler or dimension callout"
+  ],
+  "notes": "Attempt 2 of 2. Genuine improvements over attempt 1: the crop now cuts at the jawline with no mouth or lips in frame, the collar dominates roughly 60-65% of the frame, the two leaves mirror each other cleanly, a faint edge topstitch is now present, the background remains a clean seamless neutral light-grey with no props or architecture, and there is still zero text, annotation, watermark or dimension callout anywhere in frame. The tie is correctly absent and the top band button correctly unfastened. However the one thing that actually distinguishes this option — the flat squared-off collar point — failed identically to attempt 1: both leaves come to a sharp acute triangular tip. Escalated, explicit, repeated wording ('cut off flat', '~90 degree corner', 'two square corners', 'NOT a point collar', 'automatic rejection') did not move the model off its point-collar prior. Hard cap of 2 credit-spending generations reached; stopping. Do not publish candidate-2 — it would ship a visibly wrong collar to a paying customer. Recommended next step outside this run: re-reference with a tight crop of the squared leaf end, or a line-art profile of the truncated leaf, rather than the full-collar photo whose foreshortened near leaf is being misread as a point."
+}

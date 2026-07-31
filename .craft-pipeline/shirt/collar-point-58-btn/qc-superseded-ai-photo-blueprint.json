@@ -1,0 +1,49 @@
+{
+  "addr": "shirt > collar-point-58-btn",
+  "productId": "shirt",
+  "optionId": "collar-point-58-btn",
+  "attempt": 1,
+  "scores": {
+    "shape": 99,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 98,
+    "placement": 99,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "belowMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "construction",
+      "description": "The interior face of the collar stand that the blueprint shows as a clean white band curving across the back of the neck is occluded in the photo by the wearer's neck.",
+      "expected": "Blueprint shows the collar band's inner face fully visible through the open neckline because the drawing is shot on a form with no body inside it.",
+      "actual": "The model's neck fills the neck opening; only the near-side stand seam beneath the throat button and the right leaf's stand region remain readable.",
+      "correction": "Unavoidable and non-blocking: the locked prompt mandates 'Photographed worn on a male model', and the throat-button tab plus the collar-to-stand seam - the construction that actually distinguishes this option - are both fully visible."
+    },
+    {
+      "severity": "minor",
+      "category": "geometry",
+      "description": "The right (viewer's right) collar leaf reads marginally narrower and its point sits slightly higher than in the blueprint.",
+      "expected": "Right leaf folded with the point projecting down-right at the drawn splay.",
+      "actual": "Same fold and direction, point roughly 2-3% higher and the leaf a touch narrower.",
+      "correction": "Within photographic drape variance; the right leaf is partially cropped by the frame edge in the blueprint itself, so the drawn reference for it is incomplete."
+    },
+    {
+      "severity": "minor",
+      "category": "construction",
+      "description": "The upper topstitch row on the throat-button tab is rendered less crisply than in the blueprint.",
+      "expected": "Blueprint shows stitch rows bracketing the tab both above and below the button.",
+      "actual": "The lower stitch row (collar-to-stand seam) is crisp; the upper row reads as a pressed folded edge rather than a distinct stitch line.",
+      "correction": "Does not change option identification; the button, tab and seam all read correctly."
+    }
+  ],
+  "verdict": "PASS",
+  "correction": null,
+  "notes": "Adversarial comparison run at matched scale via a side-by-side composite of the blueprint collar region against the same region of candidate-1. Actively looked for grounds to reject and found none that block.\n\nCONFIRMED MATCHES. Orientation: both are detail close-ups of the collar/neckline at the same three-quarter camera angle - correct face of the garment, no front/back confusion. Feature counts are exact: 2 collar leaves (2/2), 2 collar points (2/2), 1 throat button (1/1), 1 visible placket button (1/1), 1 row of collar edge topstitching (1/1). Placement of the throat button is the decisive check and it is right: in both images the button sits immediately to the right of the left leaf's inner corner, on the small neckband tab, at the same relative height - it is a THROAT button per the catalog text ('a throat button that fastens the leaves neatly together'), NOT a button-down collar button anchoring the points to the body, and the photo did not drift into that far more common convention. Point geometry: measured at matched scale the left leaf's fold-apex-to-point length is 0.503 of the crop height in the photo vs 0.505 in the blueprint, and the point angle and lower-edge slope are visually indistinguishable. Construction: single-needle straight topstitch in both - critically NOT the decorative zigzag belonging to sibling option collar-point-58-zigzag, so no neighbouring-option contamination. No generic spread/semi-spread collar substituted for the drawn point.\n\nComposition and cleanliness: the collar occupies roughly 45-50% of the frame, within the 40-80% dominance target, is unobstructed, and is identifiable in under a second. Background is a plain seamless neutral light-grey with no location, architecture, furniture, scenery or props. Scanned the full frame at boosted contrast including all four corners - no text, no numbers, no units, no leader or dimension lines, no arrows, no coloured guide marks, no ruler ticks, no watermark. Result is photographic, not line-art or CGI.\n\nThe only deviations found are the three minors logged above; none of them would cause a customer to misidentify this option or confuse it with any sibling.",
+  "checkedAt": "2026-07-28T04:43:35.422Z"
+}

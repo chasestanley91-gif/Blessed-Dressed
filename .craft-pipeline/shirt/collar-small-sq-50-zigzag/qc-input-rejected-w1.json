@@ -1,0 +1,53 @@
+{
+  "scores": {
+    "shape": 55,
+    "geometry": 72,
+    "dimensions": 68,
+    "angles": 80,
+    "construction": 90,
+    "placement": 92,
+    "symmetry": 88,
+    "composition": 94,
+    "blueprint-match": 62
+  },
+  "errors": [
+    {
+      "severity": "critical",
+      "category": "shape",
+      "description": "Both collar point tips terminate in sharp, acute, tapered points. The option is a SQUARE collar - 'Small Square 5.0 cm' - and the catalog text states 'squared rather than pointed tips' and 'blunt squared tips'. The blueprint shows a short flat terminal edge at each tip. The photograph shows a conventional pointed collar.",
+      "expected": "Both tips cut SQUARE and BLUNT, each ending in a short flat terminal edge meeting the leaf edges at an approximately 90-degree corner, exactly as drawn.",
+      "actual": "Both leaves taper to an acute sharp point with no flat terminal edge. The garment reads as a point collar carrying zigzag trim, not as the square-tipped option the customer selected.",
+      "correction": "The squared tip must be made the single highest-priority geometry instruction, ahead of the zigzag. Describe the tip explicitly as a chopped-off, guillotined, flat-ended leaf - a horizontal cut across the end of the collar leaf roughly 8-10 mm wide - and forbid the words point/pointed/tapered entirely for the tip. Consider showing the tip geometry in isolation in the reference emphasis."
+    },
+    {
+      "severity": "major",
+      "category": "dimensions",
+      "description": "Collar leaf length still reads longer than the specified 5.0 cm and the leaves splay wider than drawn.",
+      "expected": "Short, compact 5.0 cm leaf from collar band seam to squared tip, sitting high with a narrow spread as drawn.",
+      "actual": "Leaves extend outward toward the shoulders and read as a medium-length collar with a wider spread than the blueprint.",
+      "correction": "Anchor the leaf length against a visible reference - e.g. the leaf is barely longer than the collar band is tall - and state the points hang forward and down rather than splaying outward."
+    },
+    {
+      "severity": "minor",
+      "category": "symmetry",
+      "description": "Zigzag perimeter coverage is not perfectly equal between the two leaves.",
+      "expected": "Identical mirrored zigzag running the complete perimeter of both leaves.",
+      "actual": "The viewer's-right leaf carries a more complete zigzag run than the viewer's-left leaf, which is lighter along part of its outer edge.",
+      "correction": "Require the zigzag to complete the full perimeter of both leaves with identical density."
+    }
+  ],
+  "lockedFeatures": [
+    "white crisp cotton poplin fabric",
+    "seamless neutral light-grey studio background",
+    "no props, architecture or environmental context",
+    "no text, annotation, watermark, ruler or dimension callout anywhere in frame",
+    "photoreal medium-format editorial rendering, not line-art or CGI",
+    "no necktie",
+    "collar worn open with the band buttonhole empty",
+    "face cropped out above the jaw",
+    "dense zigzag decorative topstitch on both collar leaves",
+    "topstitched front placket edges",
+    "collar is the dominant subject"
+  ],
+  "notes": "Attempt 2. The correction pass resolved four of the five attempt-1 defects: the zigzag now appears dense and unmistakable on BOTH collar leaves, the collar is worn open with the band buttonhole visible and empty as drawn, the model's face is cropped out so the collar dominates, and the topstitched placket is present. Background, fabric, realism and the no-text constraint remain clean. The blocking defect is the tip geometry: both collar points are now sharply tapered where the blueprint and the catalog text both require blunt SQUARED tips. Because 'Square' is the defining attribute of this option, the image would read to a customer as a pointed collar and would misrepresent the product. Leaf length also still exceeds the 5.0 cm spec. Attempt cap of 2 generations reached - stopping without a shippable asset rather than approving a wrong tip shape."
+}

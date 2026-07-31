@@ -1,0 +1,8 @@
+{
+  "option": "shirt/collar-sq-65-btn",
+  "revokedAt": "2026-07-28",
+  "reason": "FALSE APPROVAL. The blueprint filed at /images/ai/collar-sq-65-btn.png depicts a sharp acute POINT collar, contradicting this option label (\"Square 6.5 cm with Button\") and its description (\"squared-off\"). The candidate faithfully reproduced that wrong blueprint and therefore scored blueprint-match 98 and PASSED. Shipping it would send a POINT collar to customers ordering a SQUARE one.",
+  "evidence": "Sibling collar-sq-65 blueprint shows a genuine flat squared-off tip; this one does not. Verified by direct visual inspection of both the blueprint and the staged image.",
+  "structuralLesson": "QC scores fidelity TO the blueprint, so it cannot detect a wrong blueprint. The catalog label/description is the only independent cross-check.",
+  "action": "needs-source: supply a correct square-tip tech pack for collar-sq-65-btn, then regenerate. The currently live image is WRONG and should not be treated as approved."
+}

@@ -1,0 +1,32 @@
+{
+ "generated": "2026-07-27",
+ "final": {
+  "status": "qa-pass",
+  "file": "attempt2.png",
+  "attempt": 2,
+  "promoted": "public/images/generated/shirt/bias-inner-cuff.png"
+ },
+ "attempts": [
+  {
+   "n": 1,
+   "file": "attempt1.png",
+   "job_id": "532a4a69-b928-4172-ac4e-12e8f50d28bb",
+   "verdict": "fail",
+   "notes": "fail: no bias contrast (inner near-parallel to outer), broken sleeve grain, smears at button (agent batch G)"
+  },
+  {
+   "n": 2,
+   "file": "attempt2.png",
+   "model": "gpt_image_2",
+   "settings": {
+    "quality": "low",
+    "resolution": "1k",
+    "aspect_ratio": "3:4"
+   },
+   "job_id": "bd9db204-ab2d-4d49-b741-95f978af1258",
+   "verdict": "pass",
+   "correction_applied": "GRAIN CONTRAST framing + chevron simile + identical-repeat + forbid smears",
+   "notes": "pass: inner facing diagonal clashes with straight outer at rolled edge, clean weave, 1 button, rounded corner (inline QA); note: outer cuff cut cross-grain (stripes along cuff) - legitimate construction, blueprint does not dictate outer stripe direction"
+  }
+ ]
+}

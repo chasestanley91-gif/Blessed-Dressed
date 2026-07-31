@@ -1,0 +1,54 @@
+{
+  "scores": {
+    "shape": 99,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 99,
+    "placement": 98,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "Plain, featureless shirt chest still occupies roughly the bottom 30% of the frame; the lowest collar point sits at about 68% of frame height rather than nearer the lower third. The mandated dominance is nevertheless met.",
+      "expected": "Frame ending no more than a few centimetres below the lowest collar point.",
+      "actual": "About 380 px (roughly 32% of frame height) of plain cloth below the near collar point.",
+      "correction": "If ever re-shot, crop another 15-20% off the bottom. Not blocking: the collar assembly still spans the full frame width and comfortably meets the 40-80% dominance requirement."
+    },
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "A small sliver of the model's jaw underside and a dark edge of hair intrude at the extreme top-left corner.",
+      "expected": "Only the lower neck above the collar, no face or hair in frame.",
+      "actual": "A few hundred pixels of jaw/hair at the top-left corner; no mouth, lips, nose or eyes in frame.",
+      "correction": "Nudge the frame down slightly. Not blocking: nothing of the face proper is visible and the collar is entirely unobstructed."
+    },
+    {
+      "severity": "minor",
+      "category": "symmetry",
+      "description": "The far (viewer-right) collar leaf falls outside the plane of focus, so its tip shape cannot be independently resolved to confirm it mirrors the near leaf's rounded termination. Verified by cropping and enlarging the region at three tone mappings: an initial harsh-contrast crop suggested a sharp taper, but that proved to be the cast shadow beneath the leaf, not the cloth edge. Under neutral tone mapping the terminus reads blunt and blurred, consistent with the shallow depth of field the prompt specifies.",
+      "expected": "Both leaves visibly terminating in matching rounded club tips.",
+      "actual": "Near leaf tack-sharp with a textbook rounded tip; far leaf soft-focus with an indeterminate but non-contradicting terminus.",
+      "correction": "None required. Shallow depth of field is explicitly specified in the locked prompt, and the in-focus near leaf communicates the option unambiguously on its own."
+    }
+  ],
+  "lockedFeatures": [
+    "rounded club-style collar point termination, tack-sharp on the near leaf and a textbook match to the blueprint tip radius",
+    "single row of edge topstitching inset ~5-6 mm, running continuously around the curve of the rounded tip",
+    "collar band clearly visible with the top button fastened, no necktie, spread fully unobstructed",
+    "three-quarter oblique camera azimuth matching the blueprint, near leaf presented across the frame",
+    "no collar-tip buttonholes (correctly NOT the collar-round-point-70-holes sibling)",
+    "no decorative zigzag edge stitching (correctly NOT the collar-point-58-zigzag sibling)",
+    "tips rounded, not sharp (correctly NOT a plain point collar)",
+    "stitched front placket edge visible, matching the blueprint",
+    "white crisp cotton poplin with visible weave texture and natural drape",
+    "seamless neutral light-grey studio background, no location, architecture, furniture or props",
+    "zero text, annotation, watermark, ruler, arrow or dimension callout anywhere in frame",
+    "photorealistic, not line-art, not CGI, not a mannequin"
+  ],
+  "notes": "Attempt 2 after a composition FAIL on attempt 1. The crop correction landed: the collar assembly now spans the full frame width from roughly y70 to y790, comfortably inside the 40-80% dominance band, with no mouth, lips or nose in frame, and the camera azimuth now matches the blueprint's three-quarter oblique instead of attempt 1's flat frontal. The collar band and its fastened button read clearly, resolving attempt 1's shallow-stand nit, and the front placket edge is now present, resolving the french-front nit. Verified by enlarged crops: the near collar tip is a generous rounded club termination with a precise single row of edge topstitching following the curve, an excellent match to the blueprint. Adversarial checks all clear - no sibling contamination (no collar-tip buttonholes, no zigzag, tips not sharp), correct garment face, seamless neutral grey background with no props or architecture, and no text, annotation, watermark or dimension callout anywhere. Remaining issues are all minor and non-blocking: some dead cloth at the bottom of the frame, a sliver of jaw at the top-left corner, and a soft-focus far leaf whose tip shape is unresolvable but non-contradicting."
+}

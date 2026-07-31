@@ -1,0 +1,43 @@
+{
+  "product_code": "bias-none",
+  "category_key": "bias_cutting",
+  "option_label": "None (Standard Grain)",
+  "blueprint": "blessed-dressed/public/images/bias_cutting/none.jpg",
+  "blueprint_note": "none.jpg is a gray 'None' placeholder card with NO tech-pack drawing. Geometry is locked to the bias_cutting family base drawing (bias_cutting/inner-collar-stand.jpg: shirt buttoned to the top with the single collar-stand button FASTENED, worn without tie, inner collar-stand band revealed at the back neck by the slightly elevated viewpoint, standard sewn placket with two topstitch rows) with ALL red diagonal bias hatching removed.",
+  "view": "Front view, camera slightly above collar level angled gently down; collar-stand button fastened (shirt buttoned to the top), no tie; the downward angle looks into the neckline so the inner face of the collar stand at the back of the neck is clearly visible; detail-dominant crop from mid-chest up. Mirrors the inner-collar-stand sibling composition for direct side-by-side comparison.",
+  "stated_measurements_cm": {
+    "collar_stand_height": 3.5,
+    "collar_point_length": 7.0,
+    "placket_width": 3.5,
+    "stripe_repeat": 0.6,
+    "button_diameter": 1.0
+  },
+  "geometry": {
+    "fabric": "Fine blue-and-white bengal/candy stripe cotton poplin, ~3 mm stripes / ~6 mm repeat — required because straight vs bias grain is invisible on solid white.",
+    "grain": "EVERY pattern piece cut on the straight grain. Stripes run perfectly vertical on the body, front placket, outer collar leaf, outer collar stand, and the exposed INNER collar-stand band. Zero components show 45-degree diagonal stripes.",
+    "collar": "Turndown collar, semi-spread points ~7 cm, single-needle edge stitching on leaf and stand edges, exactly ONE button on the collar stand, FASTENED (shirt buttoned to the top, no tie), per family base drawing.",
+    "placket": "Standard sewn button placket ~3.5 cm wide with TWO parallel vertical topstitch rows and a visible placket button below the stand (per family base drawing; drift lesson applied).",
+    "red_hatching": "None anywhere — the family's red hatching convention marks bias components; this option has no bias component and must contain no red marks and no diagonal grain."
+  },
+  "ratios": [
+    "collar_stand_height (3.5 cm) is approximately 6 stripe repeats tall",
+    "collar_point_length (7 cm) = 2x collar_stand_height",
+    "placket_width (3.5 cm) = collar_stand_height",
+    "button_diameter (1 cm) = ~2 stripe repeats"
+  ],
+  "locked_features": [
+    "Blue-and-white bengal stripe shirting throughout (never solid white)",
+    "Straight-grain vertical stripes on ALL components including the inner collar-stand band",
+    "No diagonal / 45-degree stripe direction anywhere in frame",
+    "Collar-stand button fastened, no tie, inner collar-stand band face revealed at the back neck by the elevated camera angle",
+    "Standard placket: two parallel vertical topstitch rows + visible button",
+    "Exactly one collar-stand button; mother-of-pearl buttons",
+    "No red color, no annotation text, no arrows or dimension marks"
+  ],
+  "distinguishes_from_siblings": "bias-inner-collar-stand shows 45-degree diagonal stripes ONLY on the exposed inner collar-stand band; bias-inner-top-collar shows diagonal stripes ONLY on the underside of the top collar; bias-inner-cuff shows diagonal stripes ONLY on the inner cuff face. bias-none is the baseline: identical framing, but every visible piece — inner band included — carries vertical straight-grain stripes with no diagonal anywhere.",
+  "uncertain": [
+    "Blueprint is a placeholder ('None' card); geometry inferred from sibling base drawing inner-collar-stand.jpg rather than an option-specific tech pack",
+    "Exact stripe scale not specified by any tech pack; ~6 mm bengal repeat chosen per category rule",
+    "Collar spread angle and point length not dimensioned in the family drawing; 7 cm semi-spread assumed from standard shirtmaking practice"
+  ]
+}

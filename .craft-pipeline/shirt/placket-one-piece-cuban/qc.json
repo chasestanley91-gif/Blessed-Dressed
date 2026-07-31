@@ -1,0 +1,48 @@
+{
+  "addr": "shirt > placket-one-piece-cuban",
+  "productId": "shirt",
+  "optionId": "placket-one-piece-cuban",
+  "attempt": 1,
+  "scores": {
+    "shape": 99,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 99,
+    "placement": 98,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 99
+  },
+  "scoreMin": 98,
+  "belowMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "symmetry",
+      "detail": "The two collar leaves differ slightly in roll/lift — the wearer's-left leaf stands and folds a little more than the wearer's-right, which lies flatter. Collar point positions themselves are near-symmetric (left point ~(248,272), right ~(712,262): ~10 px / <1% vertical delta). Attributable to soft worn drape and directional lighting, which a flat technical drawing cannot represent."
+    },
+    {
+      "severity": "minor",
+      "category": "composition",
+      "detail": "The model's chin and lower jaw enter the top edge of the frame. It does not obstruct or compete with the collar or the front edge, and the placket/collar assembly remains the dominant subject."
+    },
+    {
+      "severity": "minor",
+      "category": "placement",
+      "detail": "The tab buttonhole sits on the wearer's-left collar leaf at the notch base, whereas the drawing places its buttonhole rectangle nearer the horizontal centre of the neck opening. Same throat location and same function; offset is within the tolerance of translating a flat to a worn three-dimensional collar."
+    }
+  ],
+  "verdict": "PASS",
+  "correction": null,
+  "notes": {
+    "blueprintTextConsistency": "Checked before generating. Label 'One Piece with Cuban Collar (Tab)' and description 'One-piece construction with Cuban collar tab.' both agree with the drawing: the drawing shows a flat open Cuban/camp collar, a one-piece fold-back centre front (single line, no applied band), and a tab buttonhole at the throat with the red callout arrow. No conflict on the defining feature.",
+    "referenceAttached": "Blueprint media 1b08861d-1912-44a3-b0af-cf91641d0dea was attached on the single generation; the job payload echoed reference_images:[1b08861d-...], confirming the drawing was supplied as geometry reference (not a text-only generation).",
+    "background": "Seamless neutral light-grey studio sweep. All four frame corners inspected at zoom: no location, architecture, furniture, scenery or props.",
+    "textAndAnnotation": "No text, numbers, units, arrows, leader or dimension lines, red/coloured guide marks, ruler ticks, watermark or labels anywhere in frame — all four corners and the full frame verified.",
+    "siblingSubstitution": "No sibling-option substitution: the front is NOT a plain/French applied placket, NOT an outer applied placket, NOT hidden or half-hidden, and carries no studs. It is specifically the one-piece Cuban-collar front.",
+    "countsNotLocked": "spec.measured.counts is empty, so no button count is locked; the 5 buttons visible in the chest-up macro crop were not scored as a count requirement.",
+    "verdict": "Left to log_qc_result.mjs."
+  },
+  "checkedAt": "2026-07-30T05:38:54.579Z"
+}

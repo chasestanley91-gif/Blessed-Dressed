@@ -1,0 +1,13 @@
+{
+  "batch": "2026-07-26 splice retries + cuff_splicing",
+  "model": "gpt_image_2 quality=low resolution=1k aspect=3:4",
+  "cost_per_image_credits": 0.5,
+  "jobs": [
+    {"job_id": "d210e8e3-d1a4-4eb0-be44-b8761ef27e02", "option": "splice-4cm-from-point", "out": "public/images/generated/shirt/splice-4cm-from-point-v3.png", "media_id": "65ffb1c3-e4f7-4a0c-b6da-ea64ccdbe790", "attempt": "v3 (correction: placket)"},
+    {"job_id": "c9498607-7b33-424c-9967-bb862b33448f", "option": "splice-lower-cuff", "out": "public/images/generated/shirt/splice-lower-cuff-v3.png", "media_id": "990a5386-ccc7-4690-821e-a7b2e99d72eb", "attempt": "v3 (correction: phantom seam)"},
+    {"job_id": "a2ee8400-d218-4126-b073-4f4221c0f480", "option": "csplice-upper-cuff", "out": "public/images/generated/shirt/csplice-upper-cuff.png", "media_id": "280677fd-8f35-4577-aff8-08a05b76f3cf", "attempt": "1"},
+    {"job_id": "8caef67a-3503-42fd-96d0-1c0e894e0bc3", "option": "csplice-lower-cuff", "out": "public/images/generated/shirt/csplice-lower-cuff.png", "media_id": "57e38c5a-d5d3-4aa9-a8f1-255058c74c62", "attempt": "1"},
+    {"job_id": "891efdc0-3568-4c8e-bc42-8a097057a278", "option": "csplice-cuff-edge", "out": "public/images/generated/shirt/csplice-cuff-edge.png", "media_id": "77cfd29a-466b-4b05-bd62-8e549a0f0a1d", "attempt": "1"},
+    {"job_id": "0ac25181-c91b-4c60-abe6-c44c85536933", "option": "csplice-strip-mid", "out": "public/images/generated/shirt/csplice-strip-mid.png", "media_id": "bd22f7f1-5ac0-45bc-be50-0f211916e014", "attempt": "1"}
+  ]
+}

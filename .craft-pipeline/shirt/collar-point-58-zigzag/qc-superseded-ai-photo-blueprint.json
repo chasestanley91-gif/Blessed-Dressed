@@ -1,0 +1,41 @@
+{
+  "addr": "shirt > collar-point-58-zigzag",
+  "productId": "shirt",
+  "optionId": "collar-point-58-zigzag",
+  "attempt": 2,
+  "scores": {
+    "shape": 99,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 98,
+    "placement": 99,
+    "symmetry": 98,
+    "composition": 99,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "belowMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "symmetry",
+      "description": "The viewer's-left collar leaf's edge stitching reads finer and less pronounced than the right leaf's zigzag.",
+      "expected": "Both leaves finished with the same zigzag topstitch.",
+      "actual": "Right leaf shows a bold, clearly resolved zigzag; the left leaf's edge stitch is finer and only partly resolves as zigzag near the band.",
+      "correction": "Accepted as-is: the blueprint exhibits the identical effect, because the left leaf is foreshortened and further from the lens at this camera angle. The photo mirrors the drawing rather than deviating from it."
+    },
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "Background sits at a mid-grey rather than the 'light-grey' the prompt text requested.",
+      "expected": "Seamless neutral grey studio sweep with clean garment/background separation.",
+      "actual": "Seamless graduated mid-grey sweep, no props, no architecture, clean separation maintained.",
+      "correction": "Accepted as-is: the blueprint's own ground is this same mid-grey, and the drawing outranks the prompt's wording. Separation between the white shirt and the ground is clean."
+    }
+  ],
+  "verdict": "PASS",
+  "correction": null,
+  "notes": "Attempt 2, gpt_image_2, job e4adea17-7ba4-410c-8bcd-d3277e99e7fc. Both major errors from attempt 1 are resolved. (1) Closure state now matches the blueprint exactly: the collar is open at the throat, the top band button is unfastened, the band buttonhole is visible through the opening, and the two points are spread wide, restoring the locked item 'the unobstructed spread between the collar points'. (2) The zigzag now renders bold and high-amplitude with clearly separated peaks, legible within one second as the showcased feature, and it runs continuously around the leaf perimeter and through the point as drawn. The face/chin intrusion is also gone - the shirt is on an invisible form, matching the blueprint, which contains no model. Camera angle, crop, collar roll, placket and grey ground now closely mirror the reference image. Adversarial sweep for rejection grounds found none: no text, annotation, watermark, ruler or dimension callout; no props, location or architecture; no necktie or obstruction over the collar; no sibling-option or generic-collar substitution. Remaining discrepancies are two minors, both of which track the blueprint itself rather than deviating from it.",
+  "checkedAt": "2026-07-28T04:39:17.348Z"
+}

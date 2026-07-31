@@ -1,0 +1,55 @@
+{
+  "addr": "shirt > bias-outer-top-collar",
+  "productId": "shirt",
+  "optionId": "bias-outer-top-collar",
+  "attempt": 2,
+  "scores": {
+    "shape": 90,
+    "geometry": 90,
+    "dimensions": 92,
+    "angles": 93,
+    "construction": 96,
+    "placement": 97,
+    "symmetry": 96,
+    "composition": 97,
+    "blueprint-match": 92
+  },
+  "scoreMin": 98,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "major",
+      "category": "shape",
+      "detail": "Collar-leaf proportions deviate from the drawing. Measured on the blueprint: leaf length / collar-opening width = 0.55 and point-to-point spread / opening = 0.50 (a moderate point collar). Measured on the photo: leaf length / opening = 0.84 and spread / opening = 0.65 - the leaves are roughly 50 percent longer relative to the neck opening and the spread is narrower, so the photo shows a long spear-point collar where the blueprint draws a moderate point collar. Far outside the sub-2-percent geometry tolerance the blueprint lock demands."
+    },
+    {
+      "severity": "minor",
+      "category": "angles",
+      "detail": "Grain lean on the viewer-left leaf is mirrored relative to the drawing. Structure-tensor measurement of the blueprint hatch gives left leaf 146 deg and right leaf 99 deg - both leaning the same way (up to the right), i.e. one continuous one-piece bias top collar. The photo measures left leaf 55 deg (leaning down to the right) and right leaf 137 deg, i.e. a mirrored chevron. Downgraded from major because the blueprint's own hatch angles differ between leaves (34 deg vs 81 deg from horizontal), which no single flat panel can show, so the hatch is a per-region fill convention indicating 'this panel is on the bias' rather than a surveyed per-leaf grain vector."
+    },
+    {
+      "severity": "minor",
+      "category": "construction",
+      "detail": "The mirrored chevron grain implies a two-piece top collar seamed at the centre back; the blueprint draws the hatched outer top collar as one continuous panel running from leaf to leaf around the neck with no centre seam."
+    },
+    {
+      "severity": "minor",
+      "category": "geometry",
+      "detail": "The back portion of the outer top collar, which the blueprint also hatches (the band visible behind the neck), is outside the photograph's crop, so continuity of the bias panel around the neck cannot be confirmed from this frame."
+    }
+  ],
+  "verdict": "UNMET",
+  "correction": null,
+  "notes": "Attempt 2. Large improvement over attempt 1 and the critical failures are resolved: the outer top collar now carries a clearly legible diagonal grain on BOTH leaves at normal viewing (verified at 1x with mild contrast, not only under high-pass amplification), while the placket and body read as plain vertical-grain cloth, so the grain junction at the collar/stand seam is visible and the image is no longer confusable with the bias-none standard-grain sibling or with the stand-only bias siblings. The bias panel is correctly on the top-collar leaves. Drawn edge topstitching on the collar leaves and both placket edges is restored. Orientation is correct (front-facing collar detail), background is seamless neutral light grey with no props or architecture, no text, annotation, callout, ruler or watermark anywhere in frame, and the crop now excludes the model's mouth and chin. Remaining blockers: the collar silhouette is a long spear-point collar rather than the moderate point collar drawn (leaf length 0.84 vs 0.55 of the collar opening), and the left-leaf grain lean is mirrored relative to the drawn hatch. Attempt 2 of 2, so the hard cap is reached; no further generation performed.",
+  "checkedAt": "2026-07-30T05:59:25.253Z"
+}

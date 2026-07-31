@@ -1,0 +1,34 @@
+{
+  "scores": {
+    "shape": 99,
+    "geometry": 99,
+    "dimensions": 100,
+    "angles": 99,
+    "construction": 98,
+    "placement": 99,
+    "symmetry": 100,
+    "composition": 99,
+    "blueprint-match": 99
+  },
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "material",
+      "description": "The silk/bemberg facing-lining panel carries a fairly high specular sheen in the central highlight, which in the brightest band reads slightly satin-synthetic rather than woven.",
+      "expected": "Luxury bemberg/silk lining with a soft, diffuse sheen and visible weave micro-texture throughout.",
+      "actual": "Continuous smooth panel with a broad glossy highlight through the centre; weave micro-texture is only faintly readable there.",
+      "correction": "Non-blocking. If ever re-shot, soften the key light or add a scrim to reduce the central specular band on the lining."
+    }
+  ],
+  "lockedFeatures": [
+    "interior orientation confirmed — jacket opened, shell facing strip along the front edge, lining panel inboard, second lining layer behind at left",
+    "pen pocket ABSENT — no welt, no jet, no double-jet slot, no piping, no teardrop or diamond opening, no pocket slot and no pocket button anywhere in frame (verified at full frame plus top and bottom zoom crops)",
+    "no sibling-option geometry: nothing resembling pen-left-jetted, pen-*-drop or pen-*-diamond appears",
+    "the clean, unbroken pocket-free facing/lining panel is the dominant subject, roughly half the frame, fully contained with nothing confusingly bisected",
+    "seamless neutral light-grey studio background; no location, architecture, furniture, scenery or props",
+    "zero text, numbers, units, arrows, leader lines, dimension marks, ruler ticks, callouts or watermark anywhere in frame",
+    "photorealistic: hopsack shell weave legible, hand pick-stitching along the facing/lining seam and around the rounded front quarter and hem",
+    "the two buttonholes on the shell front edge are the jacket's own front-closure buttonholes — legitimate forepart construction, not pocket geometry"
+  ],
+  "notes": "Attempt 2 after a FAIL on attempt 1. Blueprint (public/images/jacket/pen-pocket/none.jpg, 240x200 crop of the interior chest area) shows a diagonal double edge line, small round marks at lower left, and NO pen pocket — consistent with label 'None' / 'No pen pocket.', so the consistency gate passed and no BLUEPRINT_CONFLICT was raised. The photo reproduces exactly that: an interior face with a diagonal pick-stitched facing edge, small round buttonhole features on that edge, and a continuous pocket-free panel. Attempt 1's blocking defects are both resolved: the hallucinated interior jetted double-welt pocket and its button are gone, and the extreme macro crop has been pulled back so the opened interior reads as a sport coat interior within one second. Only a minor lighting/material nit remains (specular sheen on the lining highlight), which does not affect option identification."
+}

@@ -1,0 +1,49 @@
+{
+  "addr": "shirt > col-lining-hard-fc390057",
+  "productId": "shirt",
+  "optionId": "col-lining-hard-fc390057",
+  "attempt": 1,
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 99,
+    "angles": 98,
+    "construction": 99,
+    "placement": 99,
+    "symmetry": 98,
+    "composition": 99,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "belowMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "shape",
+      "description": "Outline of the interlining reveal window differs from the drawing's device.",
+      "expected": "Blueprint shows the heavy interlining as a rounded-square swatch inset on the wearer's-left collar leaf.",
+      "actual": "Photo shows the same interlining exposed through an irregular, torn-edge cutaway window in the same position on the same leaf.",
+      "correction": "Acceptable: the inset is a documentation device rather than garment construction, position/side/leaf and the exposed material all match. If regenerated, ask for a neat rounded-square cutaway window."
+    },
+    {
+      "severity": "minor",
+      "category": "angles",
+      "description": "Collar leaf length/spread reads slightly longer and narrower than the schematic drawing.",
+      "expected": "Drawing shows moderately spread point leaves crossing over one another at the front neck (illustration convention for a buttoned collar).",
+      "actual": "Photo shows a point collar of slightly longer leaf and narrower spread, leaves meeting rather than overlapping at the closed collar-band button.",
+      "correction": "No catalog dimension or spread angle is specified for this option (collar geometry belongs to the Collar Style field, not Collar Lining); the drawing is a loose schematic, so this is within stylisation tolerance."
+    },
+    {
+      "severity": "minor",
+      "category": "symmetry",
+      "description": "Slight left/right difference in collar point tip height.",
+      "expected": "Drawing is drawn symmetric about the centre front.",
+      "actual": "Wearer's-right leaf tip sits a few percent higher than the wearer's-left leaf tip, consistent with camera parallax and natural cloth drape.",
+      "correction": "Within natural-photography tolerance; no change required."
+    }
+  ],
+  "verdict": "PASS",
+  "correction": null,
+  "notes": "Blueprint/text consistency gate passed before generation: the drawing is captioned 'Collar Heavy Interlining' and shows a dense dark cross-hatched swatch, while the sibling Soft blueprint shows a fine light grid captioned 'Collar Soft Interlining' - so the drawing genuinely depicts the HARD lining the label claims. FC390057 is a supplier interlining SKU and is not a depictable geometry, so it cannot conflict. Adversarial pass over candidate-1: orientation matches (front-face collar detail, not an inside-out interior); the interlining reveal is on the correct leaf (wearer's left / viewer's right) in the correct region; button count matches at 1; edge-stitching present on both leaves and the stand; no sibling features (button-down tabs, hidden-button placket, eyelets) introduced; no generic-category substitution - the exposed heavy interlining plus the rigid board-flat leaves make the option identifiable in under a second. Background is a seamless neutral light grey with no location, architecture or props. No text, callouts, dimension lines or watermarks anywhere in frame. The showcased feature dominates roughly 65 percent of the frame, unobstructed. Deviations found are all Minor and all attributable to the blueprint being a small stylised schematic (icon-scale line art), not to invented geometry: no catalog dimension, angle, count or shape was available to violate. Reference image WAS attached to the generation (medias[0] = 933e4d41-eaf3-4e55-9592-9b7326488f3a, coerced role 'image', echoed back in reference_images).",
+  "checkedAt": "2026-07-30T05:38:54.004Z"
+}

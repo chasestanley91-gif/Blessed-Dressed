@@ -1,0 +1,29 @@
+{
+ "id": "back-side-pleat",
+ "red_interpretation": "Two short red vertical lines descending from the horizontal yoke seam, one near each end of the yoke (each a single 1-2 px stroke, ~15 px long on a 191 px drawing). Each line is the fold edge of one knife pleat caught in the yoke seam \u2014 a real pressed fabric fold in the finished garment, not contrast fabric, not red stitching, not a drawn line. There are exactly two red marks total: one pleat fold per side, and nothing at center-back or at the waist.",
+ "geometry_summary": "Standard dress-shirt back, rear view. One straight horizontal yoke seam spans the full shoulder width (yoke seam at y\u224843/191; back width at that level x\u224849-144, i.e. 95 px), drawn with a single dashed topstitch row; armholes and curved shirttail hem also carry dashed stitch lines. Exactly two side pleats originate at the yoke seam: left fold at x\u224859.5 (10.5 px \u2248 11% of back width in from the left armhole edge), right fold at x\u2248132.5 (11.5 px \u2248 12% in from the right armhole edge) \u2014 symmetric about center-back (x\u224896) and \u224873 px (77% of back width) apart. Each pleat is drawn as a SINGLE fold line (a knife pleat), not a pair of lines, so it is not a box or inverted pleat. The red fold indicator runs ~15 px below the yoke (~11% of the 134 px yoke-to-hem length), i.e. the fold is crisp at the yoke then releases into drape. The entire center-back panel and waist are plain: no center pleat, no darts, no additional seams. Long sleeves with sleeve plackets and single-button barrel cuffs; back collar band and collar visible above the yoke.",
+ "counts": "Pleats: 2 (one single-fold knife pleat per side, entering the yoke seam). Darts: 0. Yoke seams: 1 (straight horizontal, full shoulder width). Topstitch rows on yoke seam as drawn: 1 dashed row. Other seams: standard armhole seams, side seams, curved hem stitching only \u2014 no extra construction seams on the back panel.",
+ "locked_features": [
+  "One straight horizontal back yoke seam spanning full shoulder width with a single row of topstitching",
+  "Exactly two knife pleats, one per side, caught in and originating at the yoke seam",
+  "Each pleat is a single vertical fold edge (not a box/inverted pleat pair)",
+  "Pleats placed ~11-12% of back width in from each armhole end of the yoke (~5 cm from sleeve seam), symmetric about center-back",
+  "Plain center-back: no center pleat, no box pleat, no darts, no extra seams between the two side pleats",
+  "Curved shirttail hem; long sleeves with sleeve plackets and buttoned barrel cuffs",
+  "All-white fabric; red marks rendered only as real pressed folds"
+ ],
+ "ratios": [
+  "Each pleat fold sits 0.11-0.12 of the back width in from its armhole end of the yoke seam",
+  "The two pleat folds are ~0.77 of the back width apart, mirror-symmetric about center-back",
+  "Red fold indicator length \u2248 0.11 of the yoke-seam-to-hem length: fold pressed crisp for the first ~10% below the yoke, then releasing into soft fullness",
+  "Pleat fold is a single edge: 1 fold line per side (vs 2 fold lines at center for the Center Pleats sibling)"
+ ],
+ "uncertain": [
+  "Pleat fold direction (pressed toward the armholes vs toward center-back) is not indicated in the drawing; shirtmaking convention presses side pleats toward the side seams",
+  "Pleat depth (fold take-up) is not dimensioned; typical bespoke side-pleat depth is ~2.5-3 cm",
+  "Whether the yoke topstitching is single-needle or twin-needle cannot be resolved at this resolution; drawn as one dashed row",
+  "Label reads 'Side Pleat' (singular) but the drawing unambiguously shows one pleat per side, two total \u2014 the drawing is treated as source of truth"
+ ],
+ "verified": "draft-only (verify stage hit session limit 2026-07-26)",
+ "source": "workflow wf_b531b1e7-4fe"
+}

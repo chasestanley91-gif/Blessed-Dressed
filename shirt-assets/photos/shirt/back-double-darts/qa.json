@@ -1,0 +1,25 @@
+{
+ "generated": "2026-07-26",
+ "final": {
+  "status": "qa-pass",
+  "file": "attempt1.png",
+  "attempt": 1,
+  "promoted": "public/images/generated/shirt/back-double-darts.png"
+ },
+ "attempts": [
+  {
+   "n": 1,
+   "file": "attempt1.png",
+   "model": "gpt_image_2",
+   "settings": {
+    "quality": "low",
+    "resolution": "1k",
+    "aspect_ratio": "3:4"
+   },
+   "job_id": "49188baf-f482-4efd-bec5-e9badc31641c",
+   "verdict": "pass",
+   "checks": "counts 2 darts/0 pleats pass; silhouette pass; proportions pass (darts shoulder-blade to high-hip, ~half back-width apart); positions pass; construction pass (plain flat yoke, no extra seams); symmetry pass (left dart zoom-verified); photography pass; no-text pass; nothing-extra pass",
+   "qa_method": "inline vision QA + left-dart zoom crop (subagent fan-out unavailable)"
+  }
+ ]
+}

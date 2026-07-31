@@ -1,0 +1,25 @@
+{
+ "generated": "2026-07-27",
+ "final": {
+  "status": "qa-pass",
+  "file": "attempt1.png",
+  "attempt": 1,
+  "promoted": "public/images/generated/shirt/cs-round-v2.png",
+  "note": "v2 suffix: prior generated photo is live-wired; swap needs Dustin gallery Accept"
+ },
+ "attempts": [
+  {
+   "n": 1,
+   "file": "attempt1.png",
+   "model": "gpt_image_2",
+   "settings": {
+    "quality": "low",
+    "resolution": "1k",
+    "aspect_ratio": "3:4"
+   },
+   "job_id": "f5154f45-e299-43ec-ba54-53e45c9bf3f9",
+   "verdict": "pass",
+   "checks": "all 8 lines pass (agent batch H): both ends fully rounded, 1 stand button, standard ~3-btn-dia height, topstitch follows contours"
+  }
+ ]
+}

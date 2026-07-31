@@ -1,0 +1,31 @@
+{
+ "id": "back-side-pleats-dbl-darts",
+ "red_interpretation": "Four red marks, all construction features on an all-white shirt back. (1) Two SHORT red vertical strokes, one at each outer end of the horizontal yoke seam (starting exactly at the yoke seam, extending ~10% of the yoke-to-hem length downward): these are the fold lines of two side knife pleats, one per side. (2) Two LONG red vertical lines in the lower body, symmetric about center-back: these are the stitched seam lines of two vertical fish darts. Red is never contrast fabric \u2014 the pleat marks become real pressed fabric folds and the dart lines become real stitched dart seams in white poplin.",
+ "geometry_summary": "Standard shirt back, rear view. One straight horizontal yoke seam across the upper back with a single dashed topstitch row; armholes and curved hem also show single-row topstitching. Below the yoke: one knife pleat at each yoke end \u2014 pixel analysis (191px raster; body span x=47\u2013145, center x=96, yoke seam y=43, hem y\u2248183) puts the left pleat fold at x\u224858.5 (12% of back width in from left armhole end) and the right at x\u2248131.5 (14% in from right end), pleat-to-pleat span \u224875% of back width; each pleat drawn as one fold line starting at the yoke seam and marked for ~14px (~10% of body height) before the fullness releases. Two long vertical darts at x\u224870 and x\u2248119: each \u224826\u201327% of back width out from center-back, dart-to-dart spacing \u224850% of back width; both run y=80\u2192163, i.e. beginning \u224826% below the yoke seam (just under shoulder-blade level) and tapering out \u224886% of the way to the hem (a hand's width above the hem curve), dart length \u224859% of yoke-to-hem length. Center back between the darts is completely plain \u2014 no box pleat, no center fold, no center seam. Rounded shirttail hem.",
+ "counts": "Pleats: 2 (one knife pleat per side at the yoke ends; each drawn with a single red fold line; 0 center-back pleats). Darts: 2 (one per side; each a single red seam line, i.e. one stitched dart seam each). Yoke seams: 1 horizontal yoke seam with 1 visible topstitch row. Total red marks in blueprint: 4 (2 short pleat marks + 2 long dart lines). Other seams visible: 2 armhole seams, 1 hemmed shirttail \u2014 all standard, single stitch row as drawn.",
+ "locked_features": [
+  "Straight horizontal yoke seam across the upper back with a single topstitch row (standard yoke, not Napoli)",
+  "Exactly two side knife pleats, one at each outer end of the yoke seam, folds starting at the yoke seam",
+  "Exactly two long vertical fish darts, symmetric about center-back, single stitched seam line each",
+  "Center back between the darts is plain and flat \u2014 no box pleat, no inverted pleat, no center fold, no center seam",
+  "Darts begin just below shoulder-blade level and taper out well above the hem (never reaching the hem)",
+  "Curved shirttail hem; plain sleeve/armhole construction; all-white fabric, no contrast anywhere"
+ ],
+ "ratios": [
+  "Each side pleat sits ~12-14% of the back width in from its armhole end of the yoke seam (~5-6.5 cm on a ~47 cm back)",
+  "Pleat-to-pleat span ~75% of the back width",
+  "Each pleat's crisp fold is anchored at the yoke seam; the marked fold extends ~10% of the yoke-to-hem length before releasing into drape",
+  "Each dart lies ~26-27% of the back width out from center-back; dart-to-dart spacing ~50% of the back width (~23-24 cm apart)",
+  "Darts start ~26% below the yoke seam and end ~86% of the way down; dart length ~59% of the yoke-to-hem length (~8-10 cm above the hem)"
+ ],
+ "uncertain": [
+  "Pleat fold direction (pressed toward the armhole vs toward center-back) is not indicated by the drawing",
+  "Pleat depth is not dimensioned (typical shirtmaking knife pleat 1.5-2.5 cm assumed)",
+  "Dart intake width is not dimensioned (typical 1-1.5 cm at maximum suppression assumed)",
+  "Yoke topstitching appears as one dashed row at this raster size; a second row cannot be ruled out",
+  "Right pleat mark rasterizes slightly shorter than the left; symmetry assumed",
+  "Absolute dart length in cm is inferred from ratios, not dimensioned on the tech pack"
+ ],
+ "verified": "draft-only (verify stage hit session limit 2026-07-26)",
+ "source": "workflow wf_b531b1e7-4fe"
+}

@@ -1,0 +1,49 @@
+{
+  "addr": "shirt > cuff-french-6bh",
+  "productId": "shirt",
+  "optionId": "cuff-french-6bh",
+  "attempt": 2,
+  "scores": {
+    "shape": 99,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 98,
+    "placement": 98,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "belowMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "construction",
+      "description": "The cufflink is a polished bar resting on the open cuff face between the two buttonhole clusters rather than visibly threaded through a pair of aligned buttonholes. The blueprint depicts no cufflink at all, so no drawn geometry is contradicted, and the bar occludes no buttonhole - but a link with nothing through it is physically implausible on close inspection.",
+      "expected": "cufflink shank passing through an aligned pair of buttonholes, linking both folded leaves",
+      "actual": "cufflink bar resting on the cuff face, not registered through any hole",
+      "correction": "Cosmetic only: place the link through an aligned hole pair, or omit the link entirely, without moving any buttonhole."
+    },
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "Cuff dominance measured at roughly 39% of the frame by bounding extent (about 25% by filled silhouette area), marginally under the 40-80% target. Mitigated: the cuff is dead-centre, the only element in focus, and the six buttonholes are countable in well under a second; the competing shirt front placket and buttons present in attempt 1 were removed as directed.",
+      "expected": "cuff filling 40-80% of the frame",
+      "actual": "about 39% by bounding extent, about 25% by silhouette area",
+      "correction": "Cosmetic only: crop marginally tighter, keeping all six buttonholes and both squared corners fully in frame."
+    },
+    {
+      "severity": "minor",
+      "category": "construction",
+      "description": "The pointed-top sleeve placket with its single button, drawn in the blueprint's upper panel as context, is outside the tightened crop. Not a graded item - the sleeve placket is a separate craft field and is not in this option's reproduce-from-illustration list (cuff edge, closure, corner shape, topstitch).",
+      "expected": "context only; not required",
+      "actual": "sleeve placket out of frame due to the tighter crop",
+      "correction": "No action required."
+    }
+  ],
+  "verdict": "PASS",
+  "correction": null,
+  "notes": "Attempt 2 verified adversarially against the blueprint. COUNT: exactly 6 - confirmed visually and by local-contrast slit detection, which found six slit marks of 41-48px in two vertical triads (left x265-325 at y529/643/707; right x632-690 at y478/589/650); a seventh detection at x687-706 len 20px was crop-inspected and is the cuff's lower-edge topstitch, not a buttonhole. ARRANGEMENT: matches the drawing's mirrored one-over-two - at each end a single hole above, then two more closely stacked below. Normalised vertical positions on the left cluster are 0.30 / 0.60 / 0.76 of cuff height against the drawing's 0.30 / 0.68 / 0.78; the two clusters mirror each other and the 47-48px vs 41px length difference is correct perspective foreshortening, not asymmetry. CONSTRUCTION: every buttonhole is a fully cut slit with dense worked edges and bar tacks at both ends - the malformed eye-only stubs that failed attempt 1 are gone. Squared corners, doubled folded leaf edge and fine edge topstitch all present and matching the drawing's double-outline edge. NO sibling substitution: not the 4-buttonhole, 2-button-1-buttonhole or pleated variant. Background is a seamless neutral light-grey studio sweep with no location, architecture or props; no text, numbers, units, arrows, leader lines, ruler ticks or watermark anywhere in frame. Remaining issues are cosmetic only and recorded as minor: an unthreaded cufflink bar (the blueprint shows no cufflink, and it occludes nothing) and dominance at about 39% by bounding extent, marginally under the 40% target. All three attempt-1 blocking failures - wrong count, mid-face scatter, stub buttonholes - are resolved.",
+  "checkedAt": "2026-07-30T05:45:09.252Z"
+}

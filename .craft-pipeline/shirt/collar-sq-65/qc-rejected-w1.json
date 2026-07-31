@@ -1,0 +1,59 @@
+{
+  "addr": "shirt > collar-sq-65",
+  "productId": "shirt",
+  "optionId": "collar-sq-65",
+  "attempt": 2,
+  "scores": {
+    "shape": 35,
+    "geometry": 45,
+    "dimensions": 70,
+    "angles": 45,
+    "construction": 85,
+    "placement": 88,
+    "symmetry": 55,
+    "composition": 94,
+    "blueprint-match": 40
+  },
+  "scoreMin": 98,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "critical",
+      "category": "shape",
+      "description": "The squared-off collar point termination that defines this option is still not rendered. The collar remains, in substance, a conventional point collar. The viewer's-left leaf shows at most a marginal blunting of the tip; the viewer's-right leaf still converges to a clearly acute apex.",
+      "expected": "Both collar leaves terminate in an unmistakable flat, straight, squared-off edge roughly 1 cm wide, perpendicular to the collar's front edge, producing two crisp right-angle corners on each leaf (four across the collar) — a termination readable as 'square' within one second, as it plainly is in the blueprint.",
+      "actual": "The viewer's-right leaf tapers to a sharp acute point with no flat terminal edge and no square corners. The viewer's-left leaf is only slightly truncated — a tiny blunted nub, far short of the pronounced flat cut in the blueprint. A customer could not distinguish this image from a standard point collar.",
+      "correction": "The squared termination must be made geometrically explicit and identical on both leaves: end each leaf with a flat cut of real, visible width, not a softened or truncated point. Consider describing the leaf as a quadrilateral whose lower end is a straight horizontal edge, and explicitly stating that the collar tip has WIDTH rather than converging."
+    },
+    {
+      "severity": "major",
+      "category": "symmetry",
+      "description": "The two collar leaves are not treated consistently: their tip geometry differs from each other.",
+      "expected": "Both collar leaves mirror one another exactly, each ending in the same squared, flat termination of the same width and corner angle.",
+      "actual": "The viewer's-left tip is slightly blunted while the viewer's-right tip is a sharp acute point; the two leaves read as different collar styles within the same photograph.",
+      "correction": "Require explicit mirror symmetry: both leaves identical in length, taper and squared terminal edge width."
+    },
+    {
+      "severity": "minor",
+      "category": "placement",
+      "description": "The collar band remains largely obscured behind the neck.",
+      "expected": "The collar stand's height and topstitched upper edge readable alongside the points, as shown in the blueprint.",
+      "actual": "Only a narrow sliver of the band is visible near the front closure; its height and top edge cannot be assessed.",
+      "correction": "Raise the camera slightly and rotate marginally so the stand reads clearly."
+    }
+  ],
+  "verdict": "UNMET",
+  "correction": null,
+  "notes": "Attempt 2 corrected two of the three blocking errors from attempt 1: the model's face is now fully cropped out with only neck, collar, upper chest and shoulder line in frame and the collar clearly dominant, and a crisp edge topstitch line inset roughly 6-8 mm is now visible tracing the viewer's-left leaf. Background is correct seamless neutral light grey with no location, architecture or props; there is zero text, annotation, watermark or dimension callout; the image is genuinely photorealistic; and the orientation matches the blueprint's front-face collar detail. However the single defining feature of this option still fails: the collar points are not squared off. The right leaf is a textbook sharp point and the left leaf is only marginally blunted, so the photo would still read to a customer as a generic point collar rather than the Square 6.5 cm option — the exact sibling-option substitution the blueprint forbids. Two credit-spending generations have now been used, so this stops here rather than shipping a wrong image.",
+  "checkedAt": "2026-07-28T04:55:10.161Z"
+}

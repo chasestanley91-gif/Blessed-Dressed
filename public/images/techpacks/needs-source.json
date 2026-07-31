@@ -1,0 +1,120 @@
+{
+ "updated": "2026-07-25",
+ "needs_source": [
+  {
+   "garment": "shirt",
+   "fieldId": "collar_stand_height",
+   "id": "csh-35",
+   "label": "3.5 cm Standard",
+   "reason": "no illustration in supplier workbook (heights 3.0/3.2/3.4/3.7/3.8/4.0/4.2/5.0 exist, 3.5 does not)"
+  },
+  {
+   "garment": "shirt",
+   "fieldId": "collar_stand_height",
+   "id": "csh-none",
+   "label": "None (Collarless)",
+   "reason": "workbook file none.png is a \"NO IMAGE\" placeholder — site currently displays it"
+  },
+  {
+   "garment": "shirt",
+   "fieldId": "contrast_color_position",
+   "id": "contrast-none",
+   "label": "No Contrast",
+   "reason": "none-option; no illustration exists and card has no images at all"
+  },
+  {
+   "garment": "shirt",
+   "fieldId": "brand_label_position",
+   "id": "blp-5",
+   "label": "Position 5",
+   "reason": "workbook file picture-1116.jpg is a blank white image"
+  }
+ ],
+ "label_conflicts": [
+  {
+   "garment": "shirt",
+   "fieldId": "lapel",
+   "id": "collar-one-collar",
+   "label": "One Collar (Band / Mandarin)",
+   "conflict": "supplier pack one-collar.jpg shows a 170° one-line collar (一字领), not a band/mandarin; site AI photo shows a mandarin band. Needs Dustin ruling: relabel + remake, or treat pack as wrong."
+  },
+  {
+   "garment": "shirt",
+   "fieldId": "brand_label_position",
+   "id": "blp-1",
+   "label": "Position 1",
+   "conflict": "supplier card picture-1112.jpg reads 不订/\"No label\" — option is the NONE choice, not a position"
+  },
+  {
+   "garment": "shirt",
+   "fieldId": "fabric_label_position",
+   "id": "flp-1",
+   "label": "Position 1",
+   "conflict": "supplier card picture-1110.jpg reads 不订/\"No label\" — option is the NONE choice, not a position"
+  }
+ ],
+ "entries": [
+  {
+   "garment": "shirt",
+   "category": "collar_stand_height",
+   "id": "csh-50",
+   "label": "5.0 cm",
+   "reason": "collar-stand-height-5cm.jpg is a 200x200 NO IMAGE placeholder; draft spec exists (inferred from 4.0/4.2cm siblings) but publish blocked pending real tech pack",
+   "date": "2026-07-26"
+  },
+  {
+   "garment": "shirt",
+   "category": "decoration_stitching_on_collar",
+   "id": "stitch-01-amf",
+   "label": "Machine 0.1 cm AMF Stitching",
+   "reason": "No authentic AMF tech pack anywhere. decoration_stitching_on_cuff/machine-0Xcm-amf-stitching.jpg are byte-identical copies of the matching -top files (md5-verified); decoration_stitching_on_collar -amf files are actually the misfiled 0.1cm and 0.6cm TOPSTITCH drawings plus one un-annotated red-zigzag drawing. Offsets are known from siblings, but AMF stitch appearance is undrawn - generating it would be invention.",
+   "unblock": "Supply one authentic AMF/pick-stitch tech pack, OR confirm in writing that AMF here means machine-simulated hand pick stitch (discrete spaced stitches) at the same 0.1/0.3/0.5 cm offsets - specs are drafted and can generate immediately on that confirmation.",
+   "date": "2026-07-27"
+  },
+  {
+   "garment": "shirt",
+   "category": "decoration_stitching_on_collar",
+   "id": "stitch-03-amf",
+   "label": "Machine 0.3 cm AMF Stitching",
+   "reason": "No authentic AMF tech pack anywhere. decoration_stitching_on_cuff/machine-0Xcm-amf-stitching.jpg are byte-identical copies of the matching -top files (md5-verified); decoration_stitching_on_collar -amf files are actually the misfiled 0.1cm and 0.6cm TOPSTITCH drawings plus one un-annotated red-zigzag drawing. Offsets are known from siblings, but AMF stitch appearance is undrawn - generating it would be invention.",
+   "unblock": "Supply one authentic AMF/pick-stitch tech pack, OR confirm in writing that AMF here means machine-simulated hand pick stitch (discrete spaced stitches) at the same 0.1/0.3/0.5 cm offsets - specs are drafted and can generate immediately on that confirmation.",
+   "date": "2026-07-27"
+  },
+  {
+   "garment": "shirt",
+   "category": "decoration_stitching_on_collar",
+   "id": "stitch-05-amf",
+   "label": "Machine 0.5 cm AMF Stitching",
+   "reason": "No authentic AMF tech pack anywhere. decoration_stitching_on_cuff/machine-0Xcm-amf-stitching.jpg are byte-identical copies of the matching -top files (md5-verified); decoration_stitching_on_collar -amf files are actually the misfiled 0.1cm and 0.6cm TOPSTITCH drawings plus one un-annotated red-zigzag drawing. Offsets are known from siblings, but AMF stitch appearance is undrawn - generating it would be invention.",
+   "unblock": "Supply one authentic AMF/pick-stitch tech pack, OR confirm in writing that AMF here means machine-simulated hand pick stitch (discrete spaced stitches) at the same 0.1/0.3/0.5 cm offsets - specs are drafted and can generate immediately on that confirmation.",
+   "date": "2026-07-27"
+  },
+  {
+   "garment": "shirt",
+   "category": "decoration_stitching_on_cuff",
+   "id": "stitch-01-amf",
+   "label": "Machine 0.1 cm AMF Stitching",
+   "reason": "No authentic AMF tech pack anywhere. decoration_stitching_on_cuff/machine-0Xcm-amf-stitching.jpg are byte-identical copies of the matching -top files (md5-verified); decoration_stitching_on_collar -amf files are actually the misfiled 0.1cm and 0.6cm TOPSTITCH drawings plus one un-annotated red-zigzag drawing. Offsets are known from siblings, but AMF stitch appearance is undrawn - generating it would be invention.",
+   "unblock": "Supply one authentic AMF/pick-stitch tech pack, OR confirm in writing that AMF here means machine-simulated hand pick stitch (discrete spaced stitches) at the same 0.1/0.3/0.5 cm offsets - specs are drafted and can generate immediately on that confirmation.",
+   "date": "2026-07-27"
+  },
+  {
+   "garment": "shirt",
+   "category": "decoration_stitching_on_cuff",
+   "id": "stitch-03-amf",
+   "label": "Machine 0.3 cm AMF Stitching",
+   "reason": "No authentic AMF tech pack anywhere. decoration_stitching_on_cuff/machine-0Xcm-amf-stitching.jpg are byte-identical copies of the matching -top files (md5-verified); decoration_stitching_on_collar -amf files are actually the misfiled 0.1cm and 0.6cm TOPSTITCH drawings plus one un-annotated red-zigzag drawing. Offsets are known from siblings, but AMF stitch appearance is undrawn - generating it would be invention.",
+   "unblock": "Supply one authentic AMF/pick-stitch tech pack, OR confirm in writing that AMF here means machine-simulated hand pick stitch (discrete spaced stitches) at the same 0.1/0.3/0.5 cm offsets - specs are drafted and can generate immediately on that confirmation.",
+   "date": "2026-07-27"
+  },
+  {
+   "garment": "shirt",
+   "category": "decoration_stitching_on_cuff",
+   "id": "stitch-05-amf",
+   "label": "Machine 0.5 cm AMF Stitching",
+   "reason": "No authentic AMF tech pack anywhere. decoration_stitching_on_cuff/machine-0Xcm-amf-stitching.jpg are byte-identical copies of the matching -top files (md5-verified); decoration_stitching_on_collar -amf files are actually the misfiled 0.1cm and 0.6cm TOPSTITCH drawings plus one un-annotated red-zigzag drawing. Offsets are known from siblings, but AMF stitch appearance is undrawn - generating it would be invention.",
+   "unblock": "Supply one authentic AMF/pick-stitch tech pack, OR confirm in writing that AMF here means machine-simulated hand pick stitch (discrete spaced stitches) at the same 0.1/0.3/0.5 cm offsets - specs are drafted and can generate immediately on that confirmation.",
+   "date": "2026-07-27"
+  }
+ ]
+}

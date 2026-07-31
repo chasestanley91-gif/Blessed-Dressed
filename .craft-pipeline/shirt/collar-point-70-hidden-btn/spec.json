@@ -1,0 +1,54 @@
+{
+  "schema": "garment-spec/v1",
+  "addr": "shirt > collar > lapel > collar-point-70-hidden-btn",
+  "productId": "shirt",
+  "sectionId": "collar",
+  "fieldId": "lapel",
+  "optionId": "collar-point-70-hidden-btn",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\shirt.json",
+  "source": "json",
+  "label": "Point 7.0 cm Hidden Button",
+  "description": "A 7.0 cm point with a button concealed beneath the leaf — the structure of a fastened collar with none of the visible hardware. The hidden closure preserves a smooth, uninterrupted collar line while keeping the points crisply in place.",
+  "fieldLabel": "Collar Style",
+  "sectionLabel": "Collar",
+  "part": "shirt-collar",
+  "garment": {
+    "noun": "white bespoke cotton dress shirt",
+    "fabric": "crisp cotton poplin"
+  },
+  "view": {
+    "orientation": "detail",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": false,
+  "measured": {
+    "dimensions": [
+      "7.0 cm"
+    ],
+    "angles": [],
+    "counts": [],
+    "shapes": [
+      "point"
+    ],
+    "spread": [],
+    "flags": [
+      "hidden button fastening"
+    ]
+  },
+  "illustration": {
+    "path": "/images/ai/collar-point-70-hidden-btn.png",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\ai\\collar-point-70-hidden-btn.png",
+    "exists": true,
+    "remote": false
+  },
+  "forbidden": [
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)",
+    "collar leaves ending in a squared/blunt flat edge, or in a rounded club tip — this option's collar point termination is a straight acute point"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-07-28T05:09:54.972Z"
+}

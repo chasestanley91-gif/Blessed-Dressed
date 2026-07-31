@@ -1,0 +1,42 @@
+{
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 99,
+    "placement": 98,
+    "symmetry": 99,
+    "composition": 99,
+    "blueprint-match": 98
+  },
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "placement",
+      "description": "The pleat fold sits immediately abutting the sleeve placket's outer edge stitch line, whereas the blueprint draws the pleat line with a small gap (roughly 8-12% of sleeve width) between the placket edge and the pleat.",
+      "expected": "Single pleat fold set a short distance outboard of the placket edge, as the red pleat line is drawn in the illustration.",
+      "actual": "Single pleat fold correct in count, side and cuff-seam termination, but folded tight against the placket edge rather than slightly outboard of it.",
+      "correction": "If regenerated, state that the single pleat is set a short distance outboard of the placket edge with visible flat cloth between placket topstitching and the pleat fold."
+    },
+    {
+      "severity": "minor",
+      "category": "shape",
+      "description": "The visible lower corner of the barrel cuff carries a very slight radius rather than the hard squared corner implied by the flat drawing.",
+      "expected": "Rectangular barrel cuff with squared corners as drawn.",
+      "actual": "Rectangular barrel cuff, corner softened by a small radius plus the natural roll of the worn cuff.",
+      "correction": "Not the showcased feature (cuff corner shape is a separate catalog field); acceptable as-is."
+    }
+  ],
+  "lockedFeatures": [
+    "exactly ONE pleat at the sleeve-to-cuff junction (not two - must not borrow cpleat-double geometry)",
+    "pleat positioned between the sleeve placket and the outer sleeve edge, terminating at the cuff seam",
+    "pointed (tower) sleeve placket with exactly 1 placket button",
+    "single-button barrel cuff, exactly 1 cuff button",
+    "detail orientation - exterior face of the lower sleeve and cuff",
+    "white crisp cotton poplin, worn on a male model",
+    "seamless neutral light-grey studio background, no location/architecture/props",
+    "zero text, annotation, arrow, watermark, ruler or dimension callout in frame"
+  ],
+  "notes": "BLUEPRINT READ (6x upscale of 168x179 source, cross-checked against sibling double-pleat.jpg): the drawing is a detail view of the lower sleeve exterior showing a pointed tower placket with 1 button, a single-button barrel cuff, and exactly ONE red pleat line running vertically from the sleeve down into the cuff seam, positioned between the placket and the outer sleeve edge. The sibling cpleat-double blueprint shows TWO such lines, which independently confirms the count of one here. CONSISTENCY GATE: label 'Single Pleat' and description ('one small fold of fabric') agree with the drawing - no conflict.\n\nCANDIDATE VERIFICATION (adversarial; inspected at 6x on the sleeve-to-cuff junction with contrast stretch specifically to try to find a second pleat): exactly ONE crisp folded pleat edge with a hard shadow line descends into the cuff seam, immediately outboard of the placket. Everything further right is soft diagonal drape shading from the sleeve blousing, not a second fold - no second hard vertical fold edge terminates at the cuff seam anywhere in frame. Count therefore matches the drawing and does NOT substitute the two-pleat sibling geometry.\n\nCounts confirmed: 1 pleat, 1 placket button, 1 cuff button. Placket top is pointed/tower as drawn, with topstitching along both edges. Cuff is a rectangular single-button barrel cuff with edge stitching, matching the drawn cuff. Orientation is the detail exterior face of the lower sleeve, matching the illustration - no opposite-face substitution.\n\nComposition: the cuff/pleat junction is the dominant, unobstructed subject, framed macro; nothing covers the pleat, placket or cuff (no tie, no jacket sleeve). Background is a seamless plain neutral light-grey studio sweep with clear separation - no location, architecture, furniture, scenery or props. Full-frame contrast sweep found NO text, numbers, units, arrows, leader/dimension lines, callouts, red or coloured guide marks, ruler ticks, labels or watermark anywhere in frame; the red annotation line from the tech pack was correctly NOT traced onto the cloth. Real photograph, no line-art or CGI look.\n\nNot scored as defects: cuff depth-to-width ratio cannot be compared directly between a flat pattern drawing and a cuff worn on a wrist (the visible cuff width is a foreshortened cylinder arc, not the flat pattern width). Left/right symmetry is largely inapplicable to a single-sleeve detail; nothing is wrongly asymmetric and the cuff seam reads level.\n\nNo Critical or Major discrepancies found. The two logged Minors are a slight inboard bias of the pleat position relative to the drawn gap, and a slightly softened cuff corner - neither changes which craft option a customer would identify, and the defining feature (one pleat) reads correctly within one second."
+}

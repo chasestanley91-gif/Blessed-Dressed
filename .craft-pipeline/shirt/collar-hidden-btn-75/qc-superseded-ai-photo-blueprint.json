@@ -1,0 +1,49 @@
+{
+  "addr": "shirt > collar-hidden-btn-75",
+  "productId": "shirt",
+  "optionId": "collar-hidden-btn-75",
+  "attempt": 1,
+  "scores": {
+    "shape": 99,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 99,
+    "placement": 99,
+    "symmetry": 99,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "belowMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "The photo is worn on a live model whose jaw, chin and neck occupy roughly the upper quarter of the frame, whereas the blueprint isolates the collar on a headless form with no competing element.",
+      "expected": "Collar isolated as in the drawing, with nothing else claiming frame attention.",
+      "actual": "Collar is dominant (~50% of frame) and fully unobstructed, but skin/jaw fills the top ~25% of the frame.",
+      "correction": "Acceptable as-is: the locked prompt explicitly specifies 'worn on a male model', the collar still meets the 40-80% dominance target, and the feature remains unobstructed. If a cleaner isolate is later preferred, crop tighter below the jawline."
+    },
+    {
+      "severity": "minor",
+      "category": "angles",
+      "description": "The raised collar leaf is folded back slightly less steeply than drawn; the blueprint peels the leaf up more sharply, exposing a broader expanse of its underside.",
+      "expected": "Steeper upward peel of the wearer's-left leaf, exposing a wide underside plane.",
+      "actual": "Leaf is turned up at a marginally shallower, more relaxed angle, but the underside and the concealed button remain fully exposed and legible.",
+      "correction": "Optional emphasis only: strengthen wording to lift the collar leaf more sharply upward to expose a wider underside plane. Does not obscure the showcased feature."
+    },
+    {
+      "severity": "minor",
+      "category": "construction",
+      "description": "The concealed button renders slightly lower-contrast (white-on-white) than the crisply delineated button in the drawing, and the collar stand's inner band is partly hidden by the model's neck where the hollow form in the blueprint shows it fully.",
+      "expected": "Crisply defined button edge and a fully visible collar stand inner band.",
+      "actual": "Button is unmistakably present, correctly sized and correctly placed on the under-leaf tab, but reads softer; stand band is partly occluded by the neck.",
+      "correction": "Optional emphasis only: add wording for a crisply defined mother-of-pearl button edge with clear shadow separation under the leaf."
+    }
+  ],
+  "verdict": "PASS",
+  "correction": null,
+  "notes": "Adversarial pass, attempt 1. Actively tried to reject and could not substantiate a Critical or Major defect. The defining craft option is reproduced faithfully: a single concealed button sits on the underside tab beneath the turned-up collar leaf, and the outer collar face carries NO visible fastening - which is the entire point of this option versus its button-down siblings. Verified NOT mirrored: the lifted leaf is on the viewer's right in both the drawing and the photo, and the flat leaf on the viewer's left in both. Verified NO sibling substitution: this is not a generic point collar (collar-point-75), not a visible button-down, and not the triangular-patch or wrap variants on the same field - the concealed-button-under-leaf construction is unambiguously present. Point geometry, edgestitch placement, collar roll, placket and stand all track the drawing. Background is a clean seamless grey with no environmental context; frame contains no annotation, number, arrow or ruler traced from the tech pack. Three Minor deviations logged, all cosmetic and none obscuring or misrepresenting the showcased feature. A customer comparing this against a visible button-down would immediately read the difference, which is the educational bar this catalog exists to meet.",
+  "checkedAt": "2026-07-28T04:47:05.024Z"
+}

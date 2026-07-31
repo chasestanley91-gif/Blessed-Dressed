@@ -1,0 +1,48 @@
+{
+  "scores": {
+    "shape": 99,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 98,
+    "placement": 99,
+    "symmetry": 98,
+    "composition": 99,
+    "blueprint-match": 98
+  },
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "symmetry",
+      "description": "The viewer's-left collar leaf's edge stitching reads finer and less pronounced than the right leaf's zigzag.",
+      "expected": "Both leaves finished with the same zigzag topstitch.",
+      "actual": "Right leaf shows a bold, clearly resolved zigzag; the left leaf's edge stitch is finer and only partly resolves as zigzag near the band.",
+      "correction": "Accepted as-is: the blueprint exhibits the identical effect, because the left leaf is foreshortened and further from the lens at this camera angle. The photo mirrors the drawing rather than deviating from it."
+    },
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "Background sits at a mid-grey rather than the 'light-grey' the prompt text requested.",
+      "expected": "Seamless neutral grey studio sweep with clean garment/background separation.",
+      "actual": "Seamless graduated mid-grey sweep, no props, no architecture, clean separation maintained.",
+      "correction": "Accepted as-is: the blueprint's own ground is this same mid-grey, and the drawing outranks the prompt's wording. Separation between the white shirt and the ground is clean."
+    }
+  ],
+  "lockedFeatures": [
+    "point collar shape with short points, matching the drawn leaf geometry",
+    "bold zigzag decorative topstitch with individually visible peaks, running the full outer perimeter of the collar leaf and turning cleanly around the point",
+    "zigzag set approximately 6-8 mm inboard of the collar edge (correct placement)",
+    "collar worn open at the throat with the top band button unfastened and the band buttonhole visible through the opening",
+    "wide unobstructed spread between the two collar points",
+    "collar band and collar roll as drawn",
+    "front placket with buttonhole",
+    "white crisp cotton poplin, no pattern, no necktie",
+    "presented on an invisible form with no face, chin, jaw or skin in frame",
+    "detail orientation - tight crop on collar and neckline, collar dominates roughly 55-60% of frame",
+    "seamless neutral grey studio background, no location, architecture, furniture or props",
+    "zero text, annotation, watermark, ruler or dimension callout anywhere in frame",
+    "no generic-category substitution - a point collar with decorative zigzag edge stitching, not a generic spread collar or a sibling collar option",
+    "photographic realism, not line-art, CGI or stylisation"
+  ],
+  "notes": "Attempt 2, gpt_image_2, job e4adea17-7ba4-410c-8bcd-d3277e99e7fc. Both major errors from attempt 1 are resolved. (1) Closure state now matches the blueprint exactly: the collar is open at the throat, the top band button is unfastened, the band buttonhole is visible through the opening, and the two points are spread wide, restoring the locked item 'the unobstructed spread between the collar points'. (2) The zigzag now renders bold and high-amplitude with clearly separated peaks, legible within one second as the showcased feature, and it runs continuously around the leaf perimeter and through the point as drawn. The face/chin intrusion is also gone - the shirt is on an invisible form, matching the blueprint, which contains no model. Camera angle, crop, collar roll, placket and grey ground now closely mirror the reference image. Adversarial sweep for rejection grounds found none: no text, annotation, watermark, ruler or dimension callout; no props, location or architecture; no necktie or obstruction over the collar; no sibling-option or generic-collar substitution. Remaining discrepancies are two minors, both of which track the blueprint itself rather than deviating from it."
+}

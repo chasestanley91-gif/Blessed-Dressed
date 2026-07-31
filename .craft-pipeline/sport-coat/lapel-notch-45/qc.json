@@ -1,0 +1,49 @@
+{
+  "addr": "sport-coat > lapel-notch-45",
+  "productId": "sport-coat",
+  "optionId": "lapel-notch-45",
+  "attempt": 1,
+  "scores": {
+    "shape": 99,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 99,
+    "placement": 98,
+    "symmetry": 98,
+    "composition": 99,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "belowMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "symmetry",
+      "description": "Only the wearer's left lapel is in frame. The blueprint is a bilaterally symmetric drawing showing both collar leaves, both lapels and the centre-front break point at (40,30); that centre V and the opposite lapel fall outside the crop, so bilateral symmetry cannot be independently verified from the photograph. Mitigating: the locked prompt's composition block specifies 'chest-up, the lapel dominating the frame' (singular), so the crop obeys the locked spec, and the visible lapel edge, roll and gorge seam are clean and regular.",
+      "expected": "bilaterally symmetric collar/lapel pair with centre-front break point, per the drawing",
+      "actual": "single-lapel craft close-up; centre break point and opposite lapel cropped out",
+      "correction": "acceptable at this crop; if a symmetric read is wanted later, widen to include both lapels and the break point while keeping the notch dominant"
+    },
+    {
+      "severity": "minor",
+      "category": "construction",
+      "description": "A boutonniere buttonhole is rendered on the lapel face. The semi-notch.svg blueprint draws no buttonhole. Lapel buttonhole is a separate catalog field (lbh-none / lbh-real / lbh-fake-*), not a sibling option on this lapel-style field, so this is not a same-field geometry borrow, and a worked lapel buttonhole is a near-universal lapel feature rather than an alteration of the drawn notch geometry.",
+      "expected": "no buttonhole depicted in the blueprint outline",
+      "actual": "one hand-worked lapel buttonhole present on the lapel face",
+      "correction": "no action required; does not alter the notch geometry being showcased"
+    },
+    {
+      "severity": "minor",
+      "category": "dimensions",
+      "description": "The lapel runs off the bottom edge of the frame, so the lapel's full length and its absolute widest point are not entirely measurable in-frame. The notch/belly region that carries the widest point is visible and reads correctly.",
+      "expected": "lapel width at its widest point fully visible per the mandatory geometry coverage list",
+      "actual": "widest point visible at the notch/belly, but the lapel continues past the lower frame edge",
+      "correction": "acceptable; a marginally looser chest-up crop would place the whole lapel run inside the frame"
+    }
+  ],
+  "verdict": "PASS",
+  "correction": null,
+  "notes": "ADVERSARIAL READ AGAINST /images/jacket/lapel/semi-notch.svg (rasterised 800x1000 for inspection).\n\nBlueprint geometry measured from the vector path M40,8 L20,8 L12,24 L30,28 L38,24 L40,30 L42,24 L50,28 L68,24 L60,8 Z: symmetric front view of the collar/lapel assembly; collar front tip at (30,28) with an included angle of 140.9 degrees; collar-leaf lower edge 12.5 degrees off horizontal; lapel edge 26.6 degrees off horizontal; centre-front break point at (40,30). No annotation, callout or text anywhere in the drawing, so there was nothing for the model to trace.\n\nFAMILY CROSS-CHECK (the anti-sibling-substitution test): semi-notch is measurably the FLATTEST member of the notch family. notch-lapel.svg carries a 119.2-degree collar tip with arms at 24.0 and 36.9 degrees off horizontal; semi-notch carries 140.9 degrees with arms at 12.5 and 26.6 degrees. The peak family (peak-lapel, peak-105, semi-peak) is structurally different -- the outer segment leaves the vertex HORIZONTALLY as an outward-projecting spike (dy = 0) -- and shawl-lapel.svg is a continuous notch-free sweep sitting far lower (y=38 vs y=24). The photograph shows a stepped collar-tip/lapel-tip gap opening outward with the lapel tip below the collar tip, no outward peak spike and no continuous shawl curve: it is unambiguously in the notch family, and its notch mouth runs roughly 12 degrees above horizontal, matching the blueprint's 12.5-degree collar edge rather than the standard notch's 24 degrees. No generic-category substitution and no sibling drift detected.\n\nBLUEPRINT/TEXT CONSISTENCY (step 2b): the label 'Notch 45 degrees (Semi-notch)' and the description ('unusually low, almost horizontal angle where the collar meets the lapel', 'this very shallow cut') both agree with the drawing -- the drawing genuinely depicts the shallowest, most horizontal notch in the family. No conflict, so the credit was spent.\n\nVERIFIED IN THE PHOTOGRAPH: orientation is front, matching the drawing; the notch is the dominant subject at roughly 50-60 percent of frame and is identifiable in well under one second; the gorge sits low on the chest with the near-horizontal notch mouth and an obtuse collar tip, which is the defining shallow character; gorge seam, lapel roll and clean folded edge all read as genuine soft-constructed hand finishing; fabric is a visibly woven hopsack with natural drape, not CGI, not line-art, not a mannequin; background is a seamless neutral light-grey studio sweep with clear garment separation and zero location, architecture, furniture, scenery or props; and there is NO text, number, unit, arrow, leader line, dimension callout, ruler tick or watermark anywhere in frame.\n\nATTEMPTED REJECTIONS THAT FAILED: (1) is it a peak? No -- no horizontal outward spike, the lapel tip sits below the collar tip. (2) is it a shawl? No -- a discrete stepped notch gap is present. (3) is it the steeper standard notch or the 73-degree straight notch? No -- the notch mouth is near-horizontal at roughly 12 degrees, the flat end of the range, and the collar tip is obtuse. (4) did it trace annotation from the drawing? No annotation exists in this blueprint and none appears in the photo. (5) wrong face of the garment? No -- front lapel/gorge/chest, as drawn.\n\nThree minor discrepancies logged above (single-lapel crop, an undrawn boutonniere buttonhole, lapel running past the lower frame edge). None is critical or major: none would ship a customer a different lapel option than the one they ordered, and the defining shallow near-horizontal notch is correct, dominant and unobstructed.",
+  "checkedAt": "2026-07-30T05:34:55.535Z"
+}

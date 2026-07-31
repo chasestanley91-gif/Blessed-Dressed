@@ -1,0 +1,28 @@
+{
+ "id": "back-box-pleat",
+ "red_interpretation": "Red marks are construction lines, not contrast fabric. The two vivid parallel vertical red lines at center back (x\u224894.5 and x\u224898.5 of 191 px, from the yoke seam at y\u224846 down through the hem at y\u2248188) are the two outward-facing FOLD EDGES of a single full-length box pleat \u2014 rendered in the photo as real pressed creases flanking a flat raised center panel. The assigned file additionally draws two fainter curved red lines at the waist (x\u224871 and x\u2248122, y\u224899\u2013168), which are vertical waist DART seams identical to those in double-darts.jpg \u2014 these contradict this option's dart-free label and match the \"with Double Darts\" sibling instead (apparent file swap; see uncertain). No red element is ever colored fabric.",
+ "geometry_summary": "As literally drawn in box-pleat-to-bottom.jpg: standard back with a straight horizontal yoke seam (single dashed topstitch row, y\u224844/191) below the collar band; a single centered box pleat drawn as two parallel vertical red fold lines \u22484.5 px apart (\u22481/22 of the \u224898 px back chest width), starting immediately at the yoke seam and running perfectly vertical the full body length into the hem stitching (\"to bottom\"); dashed single-row stitching along the curved shirttail hem and armholes; two side seams. The file also draws two gently curved waist darts (\u224826 px left/right of CB, spanning \u224838%\u201385% of body length below the yoke, curving inward at the waist) \u2014 but the sibling file box-pleat-to-bottom-with-double-darts.jpg draws the identical pleat with NO darts, so the two assets appear swapped. The generation spec follows the option label: box pleat to hem, zero darts, back otherwise smooth from pleat to side seams. Pleat geometry is identical in both drawings, so the pleat spec is unaffected by the swap.",
+ "counts": "As specified for generation (label-correct): pleats = 1 box pleat (2 fold edges, 1 flat center panel); darts = 0; yoke seams = 1 horizontal (single visible stitch row); other seams = 2 side seams + 1 hem stitch row. As literally drawn in the assigned file: 1 box pleat + 2 waist darts \u2014 mismatch caused by an apparent asset swap with box-pleat-to-bottom-with-double-darts.jpg (whose drawing shows the pleat with 0 darts); flagged in uncertain.",
+ "locked_features": [
+  "Single straight horizontal back yoke seam below the collar band with one visible stitch row",
+  "One box pleat exactly on center back: flat raised center panel bounded by two knife-sharp fold edges facing outward (away from the panel)",
+  "Pleat begins immediately at the yoke seam \u2014 no gap between yoke seam and pleat top",
+  "Pleat runs uninterrupted, vertical and parallel, the full body length and is caught/sewn into the hem stitching (to bottom)",
+  "Zero darts and zero additional pleats \u2014 fabric between the pleat and each side seam is completely smooth",
+  "Curved shirttail hem with single stitch row; plain one-piece back panel apart from the pleat"
+ ],
+ "ratios": [
+  "Pleat fold-edge spacing \u22484.5 px on \u224898 px back chest width \u2248 1/22 of back width (render as a \u22483.5\u20134 cm pleat face at real-shirt scale; see uncertain)",
+  "Pleat length = 100% of back length below the yoke seam (y\u224846\u2192188 of body span 44\u2192190) \u2014 yoke seam to hem, through the hem stitch",
+  "Pleat centered on center back, equidistant from both side seams",
+  "Yoke seam sits at \u224814\u201315% of total visible back height (y\u224844 of \u2248170 px back height)"
+ ],
+ "uncertain": [
+  "ASSET SWAP (blocking, verify before publish): assigned blueprint box-pleat-to-bottom.jpg draws the box pleat PLUS two curved waist darts (x\u224871/122, y\u224899\u2013168), while sibling box-pleat-to-bottom-with-double-darts.jpg draws the same pleat with NO darts \u2014 the two files appear swapped; this spec follows the option label (pleat only, no darts) using the pleat geometry common to both drawings; confirm the mapping in data-store/options before generating/uploading either option",
+  "Pleat face width: drawn fold spacing (\u22484.6% of back width \u2248 2\u20132.5 cm at real scale) is narrower than the classic 3.5\u20134 cm shirt box pleat; drawing resolution too coarse to fix exact width, prompt anchors to 3.5\u20134 cm",
+  "Yoke seam stitch rows: one dashed row drawn; cannot confirm whether a second topstitch row is intended",
+  "Pleat fold finishing: no stitching drawn along the red fold lines, so folds are specified as pressed creases only (not edge-stitched)"
+ ],
+ "verified": "draft-only (verify stage hit session limit 2026-07-26)",
+ "source": "workflow wf_b531b1e7-4fe"
+}

@@ -1,0 +1,32 @@
+{
+ "generated": "2026-07-26",
+ "final": {
+  "status": "qa-pass",
+  "file": "attempt2.png",
+  "attempt": 2,
+  "promoted": "public/images/generated/shirt/back-side-pleats-dbl-darts.png"
+ },
+ "attempts": [
+  {
+   "n": 1,
+   "file": "attempt1.png",
+   "job_id": "beed9497-8ffc-44c5-be7d-0f5757997d49",
+   "verdict": "fail",
+   "notes": "fail: pleat+dart merged into one yoke-to-hem crease per side, asymmetric depth (agent batch F)"
+  },
+  {
+   "n": 2,
+   "file": "attempt2.png",
+   "model": "gpt_image_2",
+   "settings": {
+    "quality": "low",
+    "resolution": "1k",
+    "aspect_ratio": "3:4"
+   },
+   "job_id": "88318b69-ab1b-4b4d-8589-faf08209be59",
+   "verdict": "pass",
+   "correction_applied": "FOUR-features-never-merge enumeration + forbid single yoke-to-hem crease",
+   "notes": "pass: 4 distinct features - 2 short yoke-end pleats releasing + 2 long inboard darts tapering above hem, mirrored (inline QA)"
+  }
+ ]
+}

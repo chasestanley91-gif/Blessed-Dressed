@@ -1,0 +1,84 @@
+{
+  "addr": "shirt > collar-sq-65-btn",
+  "productId": "shirt",
+  "optionId": "collar-sq-65-btn",
+  "attempt": 1,
+  "scores": {
+    "shape": 97,
+    "geometry": 96,
+    "dimensions": 94,
+    "angles": 96,
+    "construction": 99,
+    "placement": 99,
+    "symmetry": 95,
+    "composition": 90,
+    "blueprint-match": 96
+  },
+  "scoreMin": 98,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "major",
+      "category": "composition",
+      "description": "The frame is materially looser than the blueprint and introduces a competing subject the drawing does not contain. The blueprint crops to collar-and-neckline only, with zero skin in frame; the candidate crops through the model's mouth, so lips, chin and heavy stubble occupy roughly the top 28% of the frame and pull the eye away from the collar.",
+      "expected": "Collar assembly framed tight on collar and neckline as the dominant subject, filling 40-80% of the frame. In the blueprint the collar bounding region spans x 60-800 of 896 and y 210-840 of 1200, i.e. ~43% of frame area, and no facial features appear at all.",
+      "actual": "Collar bounding region spans only x 150-830 of 880 and y 215-740 of 1168, i.e. ~35% of frame area - below the 40% dominance floor. The model's lower face (lips, chin, stubble) occupies the top ~28% of the frame and is the second-most salient element after the collar.",
+      "correction": "Tighten the crop so the collar and neckline fill the frame as in the drawing: raise the bottom crop to just below the collar points and cut the top of the frame at or below the jawline so no mouth, lips or chin stubble appear. Push the collar bounding region to 45-60% of frame area. Keep every locked block verbatim and append emphasis that the frame must contain NO facial features - crop below the jaw, collar and neckline only, exactly the framing of the attached drawing."
+    },
+    {
+      "severity": "minor",
+      "category": "dimensions",
+      "description": "Collar point length drifts long relative to the drawing when both are normalised on the throat button as a physical ruler (11 mm shirt button).",
+      "expected": "Point length matching the drawn leaf: ~354 px at 48 px/cm in the blueprint, i.e. ~7.4 cm apparent along the front edge under the drawing's perspective (nominal spec 6.5 cm).",
+      "actual": "~338 px at 44 px/cm in the candidate, i.e. ~7.7 cm apparent - roughly 4% longer than the drawn leaf, against the stated <2% deviation tolerance.",
+      "correction": "Shorten the collar point slightly so the leaf reads at the drawn 6.5 cm proportion relative to the collar band height and the throat button diameter; do not let the point run past the drawn termination."
+    },
+    {
+      "severity": "minor",
+      "category": "symmetry",
+      "description": "Small left/right mismatch in the point apex angle between the two collar leaves.",
+      "expected": "Both leaves cut to the same pattern, so both apexes at the same included angle (~54 degrees as drawn on the near leaf of the blueprint).",
+      "actual": "Viewer's-right apex measures ~54 degrees (correct), viewer's-left apex measures ~50 degrees - a slightly narrower, more acute point. Partly masked by shallow depth of field on the left leaf.",
+      "correction": "Render both collar points to an identical included angle and identical length; the two leaves are mirror-image pattern pieces and must read as such in a straight-on frontal crop."
+    }
+  ],
+  "verdict": "FAIL",
+  "correction": {
+    "errors": [
+      {
+        "severity": "major",
+        "category": "composition",
+        "error": "The frame is materially looser than the blueprint and introduces a competing subject the drawing does not contain. The blueprint crops to collar-and-neckline only, with zero skin in frame; the candidate crops through the model's mouth, so lips, chin and heavy stubble occupy roughly the top 28% of the frame and pull the eye away from the collar.",
+        "expected": "Collar assembly framed tight on collar and neckline as the dominant subject, filling 40-80% of the frame. In the blueprint the collar bounding region spans x 60-800 of 896 and y 210-840 of 1200, i.e. ~43% of frame area, and no facial features appear at all.",
+        "actual": "Collar bounding region spans only x 150-830 of 880 and y 215-740 of 1168, i.e. ~35% of frame area - below the 40% dominance floor. The model's lower face (lips, chin, stubble) occupies the top ~28% of the frame and is the second-most salient element after the collar.",
+        "correction": "Tighten the crop so the collar and neckline fill the frame as in the drawing: raise the bottom crop to just below the collar points and cut the top of the frame at or below the jawline so no mouth, lips or chin stubble appear. Push the collar bounding region to 45-60% of frame area. Keep every locked block verbatim and append emphasis that the frame must contain NO facial features - crop below the jaw, collar and neckline only, exactly the framing of the attached drawing."
+      }
+    ],
+    "lockedFeatures": [
+      "single throat button - one button only, sited on the front tab of the collar band inside the open V (reproduced correctly)",
+      "4-hole mother-of-pearl button sewn with a white cross/X stitch (reproduced correctly)",
+      "collar band front tab with a rounded, edge-stitched termination carrying the button (reproduced correctly - near 1:1 match to the drawing)",
+      "two collar leaves with crisp squared/blunt-cornered point termination as actually drawn (NOT a flat-truncated tip - the drawing shows a crisp ~54 degree corner, and the candidate reproduces it)",
+      "single row of edge topstitch set ~4-5 mm inside the collar edge, continuing around the point corner (reproduced correctly)",
+      "collar worn open at the throat with no necktie, so both points, the spread between them and the whole band are unobstructed (reproduced correctly)",
+      "white crisp cotton poplin, front face of the garment, detail/macro orientation (reproduced correctly)",
+      "seamless neutral light-grey studio ground - no location, architecture, furniture or props (reproduced correctly)",
+      "zero text, annotation, watermark, ruler, arrow or dimension callout anywhere in frame (verified clean on a full-frame plus edge-strip scan)"
+    ],
+    "forbiddenChanges": [
+      "do not alter any checklist item this attempt already passed",
+      "do not change the camera crop, composition, or accessories unless the error is itself a composition error",
+      "do not change the garment part, orientation, or any other option's geometry"
+    ]
+  },
+  "notes": "Adversarial pass, attempt 1. Blueprint re-read at 3x-6x on the throat button, both point tips and the front placket before grading. What is genuinely right: this is NOT a generic-category substitution. The distinguishing feature - a single throat button on the rounded front tab of the collar band, in the open V, with no tie - is present, correctly placed and correctly constructed; the scale-matched side-by-side of the near collar point (blueprint left vs candidate right, both normalised to 264 px/cm off the 11 mm button) shows the same ~54 degree apex, the same edge-stitch offset and the same pressed-edge roll. Orientation matches (front-face collar detail). Background, cleanliness and no-annotation requirements are fully met. What fails: framing. The drawing is a collar-only macro with no skin in frame; the candidate crops through the mouth and lets lips, chin and stubble take the top ~28%, dropping the collar to ~35% of frame - under the 40% dominance floor in the checklist. That is a real, fixable composition miss rather than a construction miss, so the retry should change the crop and the point length only, and must not disturb any locked geometry that already matches. Note for the record: the label token 'square' does not mean a flat-truncated tip here - the manufacturing drawing shows a crisp pointed corner, and per the supreme rule the drawing wins over the naming convention, so the candidate's pointed termination is correct, not an error.",
+  "checkedAt": "2026-07-28T05:02:16.005Z"
+}

@@ -1,0 +1,41 @@
+{
+ "generated": "2026-07-27",
+ "final": {
+  "status": "qa-pass",
+  "file": "attempt3.png",
+  "attempt": 3,
+  "promoted": "public/images/generated/shirt/bias-inner-top-collar.png",
+  "note": "PASS with reviewer flag: residual faint stripe-sheen smudges on the flipped leaf (best of 3 attempts, geometry fully correct) - Dustin judges aesthetics at gallery Accept"
+ },
+ "attempts": [
+  {
+   "n": 1,
+   "file": "attempt1.png",
+   "job_id": "7384df99-e115-469f-b889-c55f897c4739",
+   "verdict": "fail",
+   "notes": "bias bled onto body/shoulder; leaf detached, 3x too deep, solid binding (agent batch H)"
+  },
+  {
+   "n": 2,
+   "file": "attempt2.png",
+   "job_id": "cb2f8c91-a221-48ec-bcb9-4483c5063599",
+   "verdict": "fail",
+   "correction_applied": "confine diagonal + attach leaf + no binding",
+   "notes": "geometry fixed but heavy crumpled crease artifacts broke stripes (inline QA)"
+  },
+  {
+   "n": 3,
+   "file": "attempt3.png",
+   "model": "gpt_image_2",
+   "settings": {
+    "quality": "low",
+    "resolution": "1k",
+    "aspect_ratio": "3:4"
+   },
+   "job_id": "980dfdb8-4583-4a15-814a-16b46103a864",
+   "verdict": "pass",
+   "correction_applied": "board-flat pressing + forbid crease/distress/broken stripes",
+   "notes": "inline QA: all geometry correct, minor sheen smudges flagged"
+  }
+ ]
+}

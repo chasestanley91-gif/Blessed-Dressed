@@ -1,0 +1,27 @@
+{
+  "product_code": "splice-lower-cuff",
+  "category_key": "collar_splicing",
+  "option_label": "Lower Sleeve Cuff",
+  "blueprint": "public/images/collar_splicing/lower-sleeve-cuff.jpg",
+  "higgsfield_media_id": "990a5386-ccc7-4690-821e-a7b2e99d72eb",
+  "view": "barrel cuff fastened around invisible wrist form, 3/4 view",
+  "stated_measurements_cm": {"splice_fraction": "1/2 of cuff circumference (annotation 1/2拼)"},
+  "geometry": {
+    "splice_region": "closure-side half of the cuff (viewer's right of the button, incl. rounded closure corner) in contrast fabric; button-side half plain white",
+    "splice_seam": "single straight vertical seam at half the circumference, just right of the button",
+    "buttons": {"cuff": 1},
+    "white_panel": "ONE uninterrupted piece — no seams other than the splice seam and edge topstitching",
+    "stitching": "single edge-stitch row along cuff top and bottom edges"
+  },
+  "ratios": [
+    "contrast spans exactly half the visible circumference; seam one button-diameter right of the button",
+    "seam runs full cuff height top edge to bottom edge"
+  ],
+  "locked_features": [
+    "splice panel count = 1", "seam vertical", "contrast on closure-side half incl. corner",
+    "button count = 1 on white half", "white panel uninterrupted (no horizontal seam)"
+  ],
+  "uncertain": [],
+  "qa_history": "v2 (2026-07-25) FAILED: extraneous horizontal seam crossing white panel, dead-ending at splice seam",
+  "house_style_match": "public/images/generated/shirt/splice-upper-cuff-v2.png (PASSED sibling)"
+}

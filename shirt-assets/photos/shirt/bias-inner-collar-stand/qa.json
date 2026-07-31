@@ -1,0 +1,32 @@
+{
+ "generated": "2026-07-27",
+ "final": {
+  "status": "qa-pass",
+  "file": "attempt2.png",
+  "attempt": 2,
+  "promoted": "public/images/generated/shirt/bias-inner-collar-stand-v2.png"
+ },
+ "attempts": [
+  {
+   "n": 1,
+   "file": "attempt1.png",
+   "job_id": "02c45516-4459-4a52-9f30-33bfe90900d9",
+   "verdict": "fail",
+   "notes": "fail: watercolor smears at stand closure, bias band repeat 1.5x coarser than body (agent batch G)"
+  },
+  {
+   "n": 2,
+   "file": "attempt2.png",
+   "model": "gpt_image_2",
+   "settings": {
+    "quality": "low",
+    "resolution": "1k",
+    "aspect_ratio": "3:4"
+   },
+   "job_id": "1b6bf678-48d0-47fd-bebf-9d5326b5b21e",
+   "verdict": "pass",
+   "correction_applied": "IDENTICAL repeat wording + immaculate closure demand + forbid smears/dissolved buttonhole",
+   "notes": "pass: diagonal isolated to inner band, repeat matches body, closure clean (inline QA); v2 suffix - prior photo live-wired"
+  }
+ ]
+}

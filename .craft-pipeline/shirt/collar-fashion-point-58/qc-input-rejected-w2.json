@@ -1,0 +1,67 @@
+{
+  "scores": {
+    "shape": 96,
+    "geometry": 94,
+    "dimensions": 91,
+    "angles": 93,
+    "construction": 96,
+    "placement": 98,
+    "symmetry": 92,
+    "composition": 98,
+    "blueprint-match": 94
+  },
+  "errors": [
+    {
+      "severity": "major",
+      "category": "dimensions",
+      "description": "The recurring point-length defect is improved but not resolved. Measured crop-independently against neck width as the scale reference, the far (viewer-left) leaf now runs about 0.96 neck-widths against the blueprint's 0.87 - close. But the near (viewer-right) leaf runs about 1.2 neck-widths, a clear overshoot. That near leaf is the one the eye reads first, and it presents as roughly a 7 cm point rather than the short 5.8 cm this SKU exists to express. The shirt field carries a Point 7.0 cm sibling, so a customer comparing the two could not reliably tell them apart.",
+      "expected": "A short, compact 5.8 cm collar point on BOTH leaves, tip terminating only fractionally below the collar band's lower edge.",
+      "actual": "Far leaf close to correct; near leaf overshoots to roughly a 7 cm reading.",
+      "correction": "Shorten the near (viewer-right) collar leaf to match the far leaf, so both terminate just past the collar band's lower edge as an emphatically short 5.8 cm point."
+    },
+    {
+      "severity": "minor",
+      "category": "symmetry",
+      "description": "The near (viewer-right) leaf is visibly longer and broader than the far (viewer-left) leaf by more than the camera position accounts for. The two point tips now sit at nearly the same height (y 590 vs 620), which is a clear improvement over the previous attempt, but the leaves still do not read as an identically cut mirrored pair.",
+      "expected": "Two matching collar leaves of identical length and width, both points equally sharp.",
+      "actual": "Near leaf approximately 25% longer and broader than the far leaf.",
+      "correction": "Render both collar leaves at identical length and width."
+    },
+    {
+      "severity": "minor",
+      "category": "angles",
+      "description": "The three-quarter elevated camera correction only partially landed. The frame is now mildly off-axis and the near leaf does show some of its top surface, but the camera is still close to frontal and not clearly raised above the collar, so the drawing's downward look into the collar band is not reproduced.",
+      "expected": "Camera clearly off-axis front-left and elevated above the collar, angled down onto it.",
+      "actual": "Mildly off-axis, near eye level.",
+      "correction": "Raise the camera further above the collar and move it further to the front-left, angled down."
+    },
+    {
+      "severity": "minor",
+      "category": "construction",
+      "description": "The collar band remains hidden beneath the near leaf on the viewer-right side, where the blueprint shows the band and its interior cleanly. The band and its button are correctly exposed on the viewer-left side only.",
+      "expected": "The collar band clearly exposed and cleanly resolved on BOTH sides, as drawn.",
+      "actual": "Band visible on the viewer-left side only; obscured on the viewer-right.",
+      "correction": "Open the near leaf slightly so the collar band is exposed and cleanly resolved on both sides."
+    }
+  ],
+  "lockedFeatures": {
+    "confirmed": [
+      "COMPOSITION CORRECTION LANDED - the model's face is now entirely out of frame; no chin, mouth, jaw, beard or head anywhere. Only neck, collar and upper chest, exactly as the blueprint crops it",
+      "TOPSTITCH CORRECTION LANDED - a distinct topstitch line now runs parallel to and clearly inset from the collar edge around the leaves and down the placket, no longer a faint edge-hugging stitch",
+      "SPREAD CORRECTION LANDED - both leaves now hang close to vertical rather than angling outward toward the shoulders; the collar reads as a narrow point, not a semi-spread",
+      "Collar point termination is a straight acute point on both leaves - not squared/blunt, not a rounded club tip (forbidden list satisfied)",
+      "No collar buttons, no button-down tab, no eyelets, no hidden-button placket - correct plain fashion point, no sibling-option substitution",
+      "Worn open at the throat with NO necktie and the top collar-band button unfastened, exactly as drawn",
+      "Front face of the garment shown - orientation matches the blueprint's detail view, no front/back confusion",
+      "Seamless neutral light-grey studio background with clear garment separation - no location, architecture, furniture, scenery or props",
+      "Absolutely no text, annotation, watermark, ruler, dimension callout, leader line, arrow or measurement mark anywhere in frame",
+      "A real photograph of crisp white cotton poplin - not line-art, not CGI, not a mannequin",
+      "Blueprint attached as the geometry reference on both generations this wave (medias and reference_images populated)"
+    ],
+    "violated": [
+      "'short 5.8 cm point' - the near leaf still overshoots to roughly a 7 cm reading",
+      "'both collar leaves mirroring each other exactly in length, angle and tip shape' - near leaf ~25% larger than the far leaf"
+    ]
+  },
+  "notes": "Attempt 2 of this wave, gpt_image_2, job 2f106add-3b9d-4f05-86ad-905c492ad798. Substantial, real progress: three of the six corrections landed cleanly. The face is now completely out of frame, so the collar is the sole unobstructed subject and composition reaches 98. The topstitch is now a genuinely distinct line inset from the collar edge rather than the faint edge-hugging stitch that failed across the two previous attempts, lifting construction to 96. The spread tightened - both leaves hang near-vertical, so the semi-spread misread from attempt 1 is gone. No Critical defects, and nothing on the forbidden list appeared in either attempt this wave: acute point termination, no collar buttons, open throat, correct garment face, clean seamless background, and zero text or annotation all hold. What still blocks the 98 bar is the defect that has now survived four generations across two waves: the near collar leaf reads long. Measured against neck width as a crop-independent scale, the far leaf is close to the drawing (0.96 vs 0.87 neck-widths) but the near leaf reaches about 1.2, presenting as roughly a 7 cm point. Because the shirt field carries a Point 7.0 cm sibling, that overshoot is exactly the side-by-side confusion this catalog exists to prevent, so I will not approve it. The 2-generation budget for this option is now spent. Recommendation for a future wave: keep this prompt verbatim - the composition, topstitch and spread wording all work - and add only a near-leaf length constraint plus a stronger elevated-camera instruction. This candidate is close, and one more generation with that single narrow change would likely clear the bar."
+}

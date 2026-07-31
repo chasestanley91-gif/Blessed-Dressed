@@ -1,0 +1,31 @@
+{
+ "id": "back-center-pleats",
+ "red_interpretation": "The two short red vertical lines are the two pressed fold edges of a single centered box-pleat unit sewn into the middle of the yoke seam. Each red line is one fold edge flanking a flat center panel; they are construction folds in white fabric, not contrast fabric and not drawn lines. The red marks start at the yoke seam and extend only a short distance down (~9% of body length), meaning the folds are crisp at the top and release into soft fullness below \u2014 they are NOT pressed or stitched to the hem.",
+ "geometry_summary": "Standard dress-shirt back with one horizontal yoke seam (dashed line, full width, at ~1/6 of body height below the shoulder line). Centered exactly on the center-back line, a box-pleat unit: a flat raised center panel approximately 4-5 cm wide (gap between fold lines = ~10.5% of yoke-seam width) bounded by two parallel vertical fold edges, one on each side, caught into the yoke seam. The fold edges are drawn only ~13px against a 144px yoke-to-hem body length, i.e. the creases are legible for roughly the top 8-10% of the back below the yoke, then the pleat fullness releases and falls as soft vertical drape to the curved hem. No darts anywhere, no additional seams, no stitch rows drawn along the folds, standard curved shirttail hem, plain sleeves/cuffs not the subject.",
+ "counts": "Pleats: 1 box-pleat unit = exactly 2 visible fold edges (2 red lines). Darts: 0. Yoke seams: 1 (single horizontal dashed seam, full width). Other seams: standard armhole and side seams only; no extra vertical seams, no stitch rows drawn on the pleat.",
+ "locked_features": [
+  "Exactly one box pleat centered on the center-back line, sewn into the yoke seam",
+  "Exactly two vertical fold edges, symmetric about center-back, flanking a flat center panel ~4-5 cm wide",
+  "Fold edges crisp only near the yoke, releasing into soft unpressed fullness well before mid-back; nothing pressed or stitched to the hem",
+  "Zero darts \u2014 the waist area is completely clean",
+  "One standard straight horizontal yoke seam across the full back width",
+  "Center panel lies flat between the folds (folds face away from each other underneath) \u2014 the folds do NOT meet at a single center line",
+  "All-white fabric; construction shown by real folds and shadow only",
+  "Curved shirttail hem, plain back below the pleat release"
+ ],
+ "ratios": [
+  "Pleat panel width : yoke seam width = 8 : 76 px \u2248 1 : 9.5 (~4-5 cm on a ~46 cm yoke)",
+  "Pleat perfectly centered: fold edges at \u00b14 px around the center-back axis (x=91 and x=99, center 95.5)",
+  "Crisp visible fold length : yoke-to-hem body length = ~13 : 144 px \u2248 9% \u2014 folds legible only in the top tenth of the back",
+  "Yoke depth : yoke-to-hem body length \u2248 23 : 144 px \u2248 1 : 6.2 (~9-10 cm yoke)",
+  "Distance of each fold edge from center-back \u2248 2-2.5 cm (half of the ~4-5 cm panel)"
+ ],
+ "uncertain": [
+  "Underfold (pleat take-up) depth is not drawn \u2014 assumed standard 1.5-2 cm per side; only the 4-5 cm face-panel width is measurable from the blueprint",
+  "Exact release point of the folds: red marks end ~9% below the yoke, but whether the crease is pressed slightly further before softening is not specified",
+  "No topstitching rows are drawn along the fold edges \u2014 assumed press-only folds with no edge stitching; the drawing resolution cannot fully exclude a single stitch row at the yoke",
+  "The two red marks differ slightly in drawn length (JPEG artifact); assumed symmetric equal-length folds"
+ ],
+ "verified": "draft-only (verify stage hit session limit 2026-07-26)",
+ "source": "workflow wf_b531b1e7-4fe"
+}

@@ -1,0 +1,48 @@
+{
+  "product_code": "bias-inner-cuff",
+  "category_key": "bias_cutting",
+  "option_label": "Inner Cuff",
+  "blueprint": "C:/Users/ChaseStanley/Downloads/files/brand_assets/blessed-dressed/public/images/bias_cutting/inner-cuff.jpg",
+  "view": "Macro three-quarter detail of a single-button barrel cuff shown unbuttoned and curled open (matching the tech-pack pose): the bias-cut inner facing turned toward camera and dominant, outer cuff face with its button and the lower sleeve in frame for straight-grain stripe comparison; collar and body out of frame.",
+  "stated_measurements_cm": {
+    "cuff_depth": 6.5,
+    "button_diameter": 1.05,
+    "edge_topstitch_offset": 0.6,
+    "rounded_corner_radius_approx": 1.5,
+    "stripe_repeat": 0.4,
+    "blue_stripe_width": 0.2
+  },
+  "geometry": {
+    "cuff_type": "single-button rounded-corner barrel cuff, drawn unbuttoned and curled open into a cylinder",
+    "bias_component": "ENTIRE inner cuff facing, cut on the true bias at 45 degrees to the fabric grain (marked in the blueprint by red 45-degree hatching across the exposed inner face)",
+    "straight_grain_components": "outer cuff face, sleeve, sleeve placket — all stripes on straight grain, running down the sleeve and perpendicular to the cuff's long edges",
+    "button": "exactly one 4-hole button on the outer face, centered in the cuff depth, with a hand-wrapped thread shank (as drawn)",
+    "corner": "front cuff corner softly rounded (round-cut), wide gentle curve as drawn — not square, not beveled",
+    "stitching": "single row of edge topstitching 6 mm inside every cuff edge, drawn as dashed lines on the outer face and echoed on the inner facing; upper solid line is the cuff-to-sleeve attachment seam",
+    "panel_integrity": "outer cuff face is ONE uninterrupted panel; its only seams are the sleeve attachment seam and the perimeter edge topstitching (failure-log lesson: forbid invented mid-panel seams)",
+    "bias_angle_deg": 45
+  },
+  "ratios": [
+    "cuff depth = ~6 x button diameter (6.5 cm vs 10.5 mm button)",
+    "edge topstitch offset = ~0.5 x button diameter (6 mm), so the button rim reads clearly wider than the stitch margin",
+    "bias stripes cross the straight-grain stripes at exactly 45 degrees where inner facing meets outer edge",
+    "bias facing fills 100% of the inner cuff depth — full-depth facing, not a partial trim strip"
+  ],
+  "locked_features": [
+    "Fine blue-and-white bengal-striped shirting (approx 2 mm blue stripes on white); bias is INVISIBLE on solids so stripes are mandatory",
+    "Inner cuff facing stripes run diagonally at exactly 45 degrees; outer cuff, sleeve and placket stripes run straight — never diagonal on any outer part, never straight on the inner facing",
+    "Same identical stripe fabric inside and out, rotated 45 degrees — not a contrast fabric, not a different color, not a print",
+    "Exactly ONE button (four holes, thread shank) — one button, not two; no convertible, French, or link cuff",
+    "Rounded front cuff corner exactly as drawn",
+    "Single 6 mm edge topstitch row around the full cuff perimeter",
+    "Cuff shown unbuttoned and turned open so the inner facing faces the camera",
+    "No annotation text, arrows, numbers, or red hatch lines may leak into the photo; the red hatching is a grain-direction marker only"
+  ],
+  "distinguishing_vs_siblings": "bias-none: stripes straight-grain EVERYWHERE, zero diagonal. bias-inner-collar-stand: diagonal stripes appear only on the inside of the collar band at the neck (collar shot). bias-inner-top-collar: diagonal stripes appear only on the flipped-up collar underside (collar shot). bias-inner-cuff (THIS option): the only diagonal-stripe component anywhere is the inner cuff facing, revealed by the opened cuff; the collar is out of frame entirely.",
+  "uncertain": [
+    "Exact rounded-corner radius — drawing is stylized; ~1.5 cm assumed",
+    "Cuff depth not dimensioned in the tech pack; standard 6.5 cm barrel depth assumed",
+    "Upper solid line in the blueprint read as the cuff-to-sleeve attachment seam (could alternatively be the overlap edge of the closed cuff)",
+    "Stripe scale is a category convention (fine bengal ~2 mm), not specified by the drawing"
+  ]
+}

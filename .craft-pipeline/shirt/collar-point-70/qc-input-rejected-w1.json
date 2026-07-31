@@ -1,0 +1,67 @@
+{
+  "attempt": 2,
+  "candidate": "candidate-2.png",
+  "scores": {
+    "shape": 95,
+    "geometry": 93,
+    "dimensions": 94,
+    "angles": 96,
+    "construction": 95,
+    "placement": 96,
+    "symmetry": 96,
+    "composition": 95,
+    "blueprint-match": 95
+  },
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "geometry",
+      "checklist": "reproduced from the illustration: collar stand / collar roll",
+      "summary": "Collar band reads shorter than drawn and the leaf-to-band height proportion is off.",
+      "detail": "The blueprint's collar band is a tall, clearly articulated element with a crisp top edge and a deep roll where the leaf breaks over it. The candidate's band is visible and improved over attempt 1, but still reads roughly a third shorter relative to the leaf, so the leaf sits lower on the neck than drawn. Part of the difference is form-versus-live-model and not chargeable, but the band height itself is a genuine drift beyond the 2 percent tolerance."
+    },
+    {
+      "severity": "minor",
+      "category": "construction",
+      "checklist": "reproduced from the illustration: stitching precision",
+      "summary": "Edge topstitching is crisp on the viewer-right leaf but faint and discontinuous on the viewer-left leaf.",
+      "detail": "The blueprint shows an equally crisp inset topstitch line on both leaves, traceable all the way through each point tip. In the candidate the dominant right leaf reproduces this correctly at the right inset, but on the receding left leaf the line fades and cannot be traced through the point tip. The drawing shows it on both."
+    },
+    {
+      "severity": "minor",
+      "category": "shape",
+      "checklist": "shape reads as drawn: point / silhouette and proportions match",
+      "summary": "The dominant collar leaf is slightly fuller and its point marginally less acute than drawn.",
+      "detail": "Blueprint leaf: narrow blade with a sharply acute tip. Candidate leaf: same family and same downward angle, but a few degrees blunter at the tip and slightly broader across the blade. Small, but visible when the two are laid side by side."
+    },
+    {
+      "severity": "minor",
+      "category": "composition",
+      "checklist": "the Collar Style dominates the frame, identifiable within one second",
+      "summary": "A strip of the model's stubbled underjaw occupies the top of the frame.",
+      "detail": "Much improved over attempt 1 - the mouth, lips, chin and ear are now out of frame and the collar is unambiguously the dominant subject. A band of jaw and neck skin still sits along the top edge, where the blueprint is garment-only on a form. The locked prompt sanctions a live model, so this is noted rather than charged heavily."
+    }
+  ],
+  "passed": [
+    "CRITICAL DEFECT FROM ATTEMPT 1 IS FIXED: both collar leaves are completely plain bare cloth - no button, no button-down tab, no collar-stay tab, no eyelet, no hardware anywhere on either leaf. The image no longer collides with the sibling option collar-point-70-btn.",
+    "Closure evidence is now in the drawn location: a horizontal buttonhole worked on the collar BAND at the leaf base, unbuttoned, exactly as in the blueprint.",
+    "Edge topstitching restored on the dominant leaf at the drawn inset of roughly 4-5 mm, running along the outer edge and through the point.",
+    "Front placket with its own buttonhole present, as drawn. No tie obstructing the collar.",
+    "Orientation matches: front-face collar detail, same three-quarter presentation as the blueprint, with the viewer-right leaf forward and the viewer-left leaf receding - the same handedness as the drawing.",
+    "Background is a seamless plain neutral light-grey studio sweep: no location, architecture, furniture, scenery or props.",
+    "Zero text, numbers, units, arrows, callouts, leader lines, ruler ticks, watermarks or annotation anywhere in frame.",
+    "Real photographic rendering with convincing cotton poplin texture - no line-art, CGI, cartoon or mannequin appearance.",
+    "No generic-category substitution and no sibling contamination: reads as a plain point collar, not rounded, not cutaway, not square, not button-down."
+  ],
+  "lockedFeatures": [
+    "point collar, two leaves, straight edges, points angling downward",
+    "point length 7.0 cm, moderate spread",
+    "collar leaves COMPLETELY PLAIN - absolutely no button, no button-down tab, no collar stay tab, no eyelet on either leaf",
+    "horizontal buttonhole worked on the collar BAND at the leaf base, unbuttoned, as drawn",
+    "continuous edge topstitch inset approximately 4-5 mm from the leaf edge, running around the outer edge and through both points, equally crisp on BOTH leaves",
+    "tall collar band standing clear with a visible band seam and a pronounced collar roll",
+    "front placket with buttonhole, no tie",
+    "seamless neutral light-grey studio background, no text or annotation"
+  ],
+  "notes": "Attempt 2 is a large, genuine improvement: the shipping-blocker is gone. The stray collar-leaf button that made attempt 1 indistinguishable from the sibling option collar-point-70-btn has been removed, the band buttonhole is back in its drawn position, the edge topstitching is restored on the dominant leaf, and the crop no longer competes with the model's face. A customer could now correctly tell this option apart from its neighbours. What remains are four honest but Minor proportional and finishing drifts - band height, left-leaf stitch continuity, leaf blade width, and a strip of jaw in frame - none of which misrepresent the product, but none of which I can honestly certify at the 98 / under-2-percent-deviation bar the gate requires. Scoring truthfully rather than rounding up.\n\nUPSTREAM DEFECT REQUIRING HUMAN ACTION - this option cannot reliably pass until it is fixed: spec.json for collar-point-70 carries the shape token 'button-down point', a false positive scraped from the description's contrast clause 'the sweet spot between the long traditional point and the casual button-down'. build_prompt.mjs promotes that token into a hard instruction ('Exact specification - button-down point, point shape') and into the QC checklist ('shape reads as drawn: button-down point'), so the locked prompt actively instructs the model to add a collar button the drawing does not have, and the checklist then demands the very feature the blueprint forbids. Attempt 2 only succeeded because an explicit correction block was appended to override it. The fix belongs in the shape extractor in feature-extraction (negate shape tokens that appear inside a comparative or contrastive clause such as 'between X and Y', 'rather than', 'unlike', 'as opposed to'), not in this option's prompt. The same false positive will affect any option whose description names a sibling style for contrast."
+}

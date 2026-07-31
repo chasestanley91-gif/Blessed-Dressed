@@ -1,0 +1,45 @@
+{
+  "product_code": "cs-left-sq-rt-rnd",
+  "category_key": "collar_stand",
+  "option_label": "Left Square / Right Round",
+  "blueprint": "C:/Users/ChaseStanley/Downloads/files/brand_assets/blessed-dressed/public/images/collar_stand/left-square-and-right-round.jpg",
+  "view": "close three-quarter, slightly-low front view; collar worn open, top button unfastened, both collar-stand front ends parted and facing camera; invisible ghost mannequin",
+  "stated_measurements_cm": {
+    "collar_stand_height": 3.5,
+    "stand_end_extension_past_placket_edge": 1.5,
+    "round_end_curve_radius": 1.75,
+    "square_end_corner_radius": 0.0,
+    "edge_topstitch_inset": 0.6,
+    "stand_button_diameter": 1.15,
+    "buttonhole_length": 1.6
+  },
+  "geometry": {
+    "wearer_left_stand_end": "SQUARE: straight vertical front edge meeting the band's top and bottom edges in two crisp 90-degree corners, zero corner radius; carries the single horizontal buttonhole; this is the overlapping (top) end and in the blueprint's closed front view its squared edge is drawn on the viewer-left of center front",
+    "wearer_right_stand_end": "ROUND: one continuous convex curve of radius about half the band height (~1.75 cm), no corner anywhere along the front profile; carries the single sewn button; this is the underlapping end and in the blueprint its rounded profile is drawn emerging on the viewer-right below the collar point",
+    "buttons": "exactly ONE collar-stand button (one, not two), sewn on the rounded wearer-right end; one horizontal buttonhole on the square wearer-left end",
+    "collar": "semi-spread collar with edge stitching, worn open with points spread naturally; no tie",
+    "placket": "standard sewn button placket with TWO parallel vertical topstitch rows and one visible placket button below the stand",
+    "stand_topstitching": "single row of edge topstitching ~6 mm inside every stand contour: it turns the sharp 90-degree corner on the square end and sweeps smoothly around the curve on the round end"
+  },
+  "ratios": [
+    "stand height ~3.5 cm = roughly three stand-button diameters (NOT the extra-tall 5.0 cm band)",
+    "round end curve radius = about half the band height",
+    "each stand end extends ~1.5 cm (a bit over one button diameter) past the placket edge",
+    "buttonhole length ~1.4x button diameter, centered in band height"
+  ],
+  "locked_features": [
+    "wearer's LEFT stand end square (straight vertical edge, two crisp 90-degree corners, zero radius) — appears on the RIGHT side of the frame in the front-view photo",
+    "wearer's RIGHT stand end fully rounded (continuous convex curve, no corner) — appears on the LEFT side of the frame in the front-view photo",
+    "exactly ONE stand button, sewn on the rounded end; exactly ONE horizontal buttonhole, on the square end",
+    "standard stand height ~3.5 cm; ends must NOT be rendered as a taller two-button band",
+    "collar worn open, no tie, both end profiles simultaneously visible",
+    "standard placket with two parallel topstitch rows and visible placket button",
+    "red blueprint lines are shape highlights only — rendered as white fabric with normal white/tonal stitching, never red"
+  ],
+  "distinguishing_vs_siblings": "cs-square has BOTH ends squared and cs-round has BOTH ends rounded; this option is the only asymmetric one — one square end (wearer left) and one round end (wearer right) visible together. cs-square-2btn / cs-round-2btn use a taller band with TWO stacked buttons, whereas this option has ONE button on a standard-height band. csh-50 is the extra-tall 5.0 cm band; this stand is standard ~3.5 cm.",
+  "uncertain": [
+    "Blueprint red marks at the closure are faint; a small pink blot below the buttonhole circle was read as red highlight shading, not a second button (single-button reading also follows from the separate 2-button sibling options).",
+    "Exact stand height is not annotated on the drawing; 3.5 cm is the standard default (distinct from the csh-50 5.0 cm option).",
+    "Round-end radius (~half band height) is inferred from the drawn curve; the small source image (224x226) limits precision."
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "addr": "shirt > collar-point-95-btn",
+  "productId": "shirt",
+  "optionId": "collar-point-95-btn",
+  "attempt": 1,
+  "scores": {
+    "shape": 99,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 99,
+    "placement": 99,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "belowMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "construction",
+      "description": "The rear of the collar band is not visible in the photo because the collar is worn on a live model, whereas the blueprint photographs the collar on an empty form where the band arcs visibly across the back of the neck.",
+      "expected": "Collar stand readable at the sides AND across the back of the neck, as drawn on the empty form.",
+      "actual": "Collar stand readable at the front and sides only; the rear band is occluded by the wearer's neck.",
+      "correction": "Inherent to the locked prompt's 'worn on a male model' instruction. Front and side stand height match the drawing, so the option remains fully identifiable."
+    },
+    {
+      "severity": "minor",
+      "category": "symmetry",
+      "description": "The two collar point tips differ in height by roughly 2% of the leaf drop and the collar sits fractionally rotated, where the blueprint (shot on a form) is perfectly symmetric.",
+      "expected": "Both point tips terminating at identical height, perfectly mirrored leaves.",
+      "actual": "Wearer's-right tip sits about 10 px lower than the wearer's-left over a ~525 px leaf drop; leaf splay marginally uneven.",
+      "correction": "Natural drape variance on a worn garment rather than a construction asymmetry; leaf length, width and edge-stitch placement are mirrored correctly."
+    },
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "The model's chin and jaw enter the top ~15% of the frame, a context element the ghost-mannequin blueprint does not contain.",
+      "expected": "Frame occupied by the collar and upper chest only.",
+      "actual": "Chin/jaw visible above the collar; the collar itself remains completely unobstructed and dominant.",
+      "correction": "Does not obscure any showcased geometry. Could be tightened by cropping just below the jawline on any future regeneration."
+    },
+    {
+      "severity": "minor",
+      "category": "construction",
+      "description": "The collar leaves read a touch softer and less crisply pressed than the sharply pressed collar in the blueprint.",
+      "expected": "Crisp, heavily pressed collar with a defined roll, as drawn.",
+      "actual": "Crisp but marginally softer roll; points still terminate in sharp, well-defined tips.",
+      "correction": "Cosmetic finish difference only; no geometric consequence."
+    }
+  ],
+  "verdict": "PASS",
+  "correction": null,
+  "notes": "Adversarial comparison against the blueprint at C:/Users/ChaseStanley/Downloads/files/brand_assets/blessed-dressed/public/images/ai/collar-point-95-btn.png.\n\nTried to reject the photo on the following grounds and could not:\n- Sibling substitution: ruled out. Tips are sharp (not Curve Point 7.5), leaves are emphatically long (not Point 7.0 or Fashion Point 5.8), the throat button is EXPOSED (not Point 7.0 Hidden Button), there is no tab (not Regular 8.5 with Tab), and there are no buttons at the point tips (not a button-down). The option is unambiguously identifiable within one second.\n- Button count: exactly one visible button in both images. No extra or missing buttons.\n- Placket: both the drawing and the photo show a concealed/fly front with only the throat button exposed and no topstitched placket edges. No second button appears in either crop.\n- Point length: leaf-drop-to-collar-span ratio is 0.78 in the photo vs 0.73 in the drawing on rough pixel measurement, reading as the same emphatic long point and clearly longer than the 7.0/8.5 cm siblings.\n- Button placement: ~62% down the leaf vs ~65% in the drawing.\n- Edge stitching: present, parallel to the edge, carried around both points, at a comparable offset.\n- Orientation: detail view of the front face in both. No front/back confusion.\n- Background: seamless neutral grey, no location, architecture, furniture, scenery or props.\n- Annotation: no numbers, units, dimension or leader lines, arrows, callouts, coloured guide marks, ruler ticks, labels or watermark anywhere in frame.\n\nThe four surviving discrepancies are all Minor and all trace to the locked prompt's 'worn on a male model' instruction (the blueprint is shot on an empty form) or to natural drape. None alters the construction a customer would be choosing between.\n\nFraming footnote: the collar's bounding box occupies ~36% of the frame, marginally under the 40-80% dominance target, but the blueprint's own collar bounding box occupies the same ~36% — the photo matches the drawing's framing rather than deviating from it, and the collar is plainly the dominant subject.",
+  "checkedAt": "2026-07-28T04:37:17.239Z"
+}

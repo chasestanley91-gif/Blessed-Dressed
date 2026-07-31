@@ -1,0 +1,50 @@
+{
+  "product_code": "cs-square-2btn",
+  "category_key": "collar_stand",
+  "option_label": "Square Stand (2 Buttons)",
+  "blueprint": "C:/Users/ChaseStanley/Downloads/files/brand_assets/blessed-dressed/public/images/collar_stand/square-collar-stand-with-2-buttons.jpg",
+  "view": "close-up straight-on front view, camera at or very slightly below collar height, collar fastened closed (both stand buttons buttoned), invisible-mannequin ghost presentation, stand end and button column dominating the frame",
+  "stated_measurements_cm": {
+    "collar_stand_front_height": 4.5,
+    "button_diameter": 1.0,
+    "button_center_to_center_spacing": 1.5,
+    "gap_between_button_rims": 0.5,
+    "edge_stitch_offset_from_edges": 0.5,
+    "note": "no dimensions are printed on the tech pack; values are standard bespoke shirtmaking figures inferred from the drawn ratios (stand ~3 button-diameters tall)"
+  },
+  "geometry": {
+    "collar": "classic point collar worn closed over the stand; points spread symmetrically down-and-outward; single row of fine edge stitching following collar edges (dashed lines in tech pack)",
+    "stand_front_end": "the visible leading edge of the overlapping stand end is a dead-straight VERTICAL line meeting the neckline seam at a crisp ~90-degree corner (red vertical line in blueprint); squared, no curvature",
+    "closure": "left-over-right men's closure; the squared vertical edge of the top (wearer's-left, buttonhole-side) stand end sits just to the viewer-left of the button column",
+    "buttons_on_stand": "exactly TWO buttons, stacked in ONE vertical column, one directly above the other, centered on the stand's visible end (drawn red/highlighted in blueprint)",
+    "stand_height": "extra-tall band drawn to house two buttons: visible front height about 3 button-diameters (~4.5 cm), clearly taller than the standard 1-button stand of sibling cs-square",
+    "neckline_seam": "shallow downward curve where the stand joins the shirt body/placket top (red curved line in blueprint)",
+    "placket_below": "standard sewn button placket descending from the stand with TWO parallel vertical topstitch rows and its first placket button visible below the stand (drawn black in blueprint)"
+  },
+  "ratios": [
+    "stand front height : button diameter = approx 3 : 1",
+    "vertical gap between the two button rims = approx 0.5 button diameter",
+    "button column centered horizontally on the visible stand end, aligned with the placket center line",
+    "edge stitching offset = approx half a button diameter from collar and stand edges"
+  ],
+  "locked_features": [
+    "stand front end cut SQUARE: straight vertical edge, 90-degree corner — never rounded, no convex curve",
+    "exactly 2 buttons on the collar stand, vertically stacked — not 1, not 3, never merged into one",
+    "collar worn fastened/closed with both stand buttons closed, no tie",
+    "extra-tall stand (~4.5 cm) so both buttons fit with a visible gap",
+    "point collar with fine edge stitching on collar and stand",
+    "topstitched front placket with one black-drawn (real: pearl) button visible below the stand",
+    "red blueprint lines/buttons are highlights only — rendered as white fabric and mother-of-pearl buttons, zero red in photo"
+  ],
+  "distinguishers_vs_siblings": {
+    "cs-square": "same squared vertical band end, but cs-square has ONE button on a standard-height (~3.5 cm) stand; this option has TWO stacked buttons on a taller (~4.5 cm) stand",
+    "cs-round-2btn": "same two stacked buttons and tall stand, but its band end is ROUNDED (convex curve); this option's end is a straight vertical squared edge",
+    "cs-round": "rounded band end AND only one button — differs in both shape and count",
+    "cs-left-sq-rt-rnd": "asymmetric option mixing one squared and one rounded end; this option is squared on the visible end with symmetric square construction"
+  },
+  "uncertain": [
+    "exact stand height not dimensioned on the tech pack; 4.5 cm inferred from the drawn ~3:1 stand-height-to-button ratio and standard 2-button stand practice",
+    "button spacing (1.5 cm c-to-c) inferred, not printed",
+    "hidden (wearer's-right, under-lap) stand end shape not drawn; assumed squared to match, but it is not visible in the fastened front view"
+  ]
+}

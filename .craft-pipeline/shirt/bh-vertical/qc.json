@@ -1,0 +1,33 @@
+{
+  "addr": "shirt > bh-vertical",
+  "productId": "shirt",
+  "optionId": "bh-vertical",
+  "attempt": 2,
+  "scores": {
+    "shape": 99,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 99,
+    "construction": 99,
+    "placement": 98,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "belowMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "composition",
+      "checklistItem": "the Buttonhole Direction dominates the frame, identifiable within one second, framed macro on the buttonhole",
+      "expected": "Macro crop on two or three adjacent placket buttonholes.",
+      "actual": "Three buttonholes are in frame; the centre one is complete, while the top and bottom buttonholes are clipped by the frame edges. Inherent to a tight macro crop and does not obscure the showcased feature - the fully-visible centre buttonhole reads unambiguously.",
+      "correction": "Acceptable as delivered; no action required."
+    }
+  ],
+  "verdict": "PASS",
+  "correction": null,
+  "notes": "Attempt 2, after attempt 1 was rejected purely on framing (major composition error: 8.6% feature dominance, 25px buttonholes needing 5x magnification to read, plus the model's chin/beard/neck in frame). The correction was applied by appending a COMPOSITION OVERRIDE macro-crop block; all locked geometry/construction blocks were left untouched, and the blueprint was re-attached as the geometry reference on the retry (reference_images confirmed in the job payload). Result: buttonhole scale increased roughly 5x (centre buttonhole now ~170px of a 1168px frame, ~15% of frame height) and the vertical orientation is now identifiable in well under one second; all competing elements are gone. Adversarial verification performed at 4x zoom on two separate buttonholes plus a contrast-stretched full-frame text/watermark scan. The blueprint/text consistency gate had already passed pre-generation: the drawing (full front technical flat, point collar, 1 neck button + 6 placket buttons) shows every buttonhole as a vertical slit with top and bottom bar tacks, and the lower placket was inspected specifically to rule out a horizontal buttonhole - none present - which agrees with label 'Vertical' and description 'Standard vertical buttonholes - formal preferred.' No discrepancy found against the drawing on any of the nine categories.",
+  "checkedAt": "2026-07-30T05:51:34.240Z"
+}

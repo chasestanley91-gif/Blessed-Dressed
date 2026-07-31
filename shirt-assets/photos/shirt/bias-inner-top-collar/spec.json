@@ -1,0 +1,49 @@
+{
+  "product_code": "bias-inner-top-collar",
+  "category_key": "bias_cutting",
+  "option_label": "Inner Top Collar",
+  "blueprint": "C:/Users/ChaseStanley/Downloads/files/brand_assets/blessed-dressed/public/images/bias_cutting/inner-top-collar.jpg",
+  "view": "Front three-quarter view of the neck of a dress shirt from the wearer's left side, camera slightly above collar height; the collar leaf is flipped fully UP so its inner (under) face is completely exposed and dominates the upper frame; the collar stand, shoulder and armhole seams, and the top of the front buttonhole placket (with one vertical buttonhole) are visible below, matching the tech-pack drawing.",
+  "stated_measurements_cm": {
+    "collar_stand_height_center_back": 3.5,
+    "collar_leaf_depth_center_back": 4.5,
+    "edge_topstitch_inset": 0.5,
+    "stripe_pitch_bengal": 0.3,
+    "front_placket_width": 3.5,
+    "placket_buttonhole_length": 1.6,
+    "bias_angle_deg": 45
+  },
+  "geometry": {
+    "hatched_component": "Inner (under) face of the top collar leaf ONLY — the trapezoidal area exposed when the leaf is flipped up carries the red 45-degree hatching in the drawing, meaning that panel is cut on the true bias.",
+    "collar_leaf": "Flipped fully up and slightly back; one edge topstitch row runs about 5 mm inside its outer edge, following the drawing's dashed line along the top edge of the hatched area.",
+    "collar_stand": "Plain straight-grain band below the flipped leaf, edge-topstitched along both its upper and lower edges, curving to a rounded front end that carries one horizontal buttonhole slit (shown as the short dark dash in the drawing).",
+    "shoulders_and_body": "Straight-grain panels; the neckline seam where the stand joins the body, the shoulder seam, and the armhole/sleeve-cap seam are rendered as normal topstitched sewn seams, exactly where the drawing places its dashed lines.",
+    "front_placket": "Vertical strip at the frame's right edge: standard sewn buttonhole placket with TWO parallel vertical topstitch rows and ONE vertical buttonhole (the solid dark vertical bar in the drawing); no buttons are visible in this view.",
+    "fabric_grain_map": "Bias-cut inner top collar shows blue-and-white stripes running diagonally at exactly 45 degrees to the collar's lower seam; collar stand, yoke, body, and placket all show the same stripes on the straight grain (vertical on body and placket).",
+    "distinguishers_vs_siblings": {
+      "bias-none": "None shows NO diagonal stripe grain anywhere — every panel straight grain; this option shows 45-degree stripes on the flipped-up collar leaf's inner face.",
+      "bias-inner-collar-stand": "That sibling shows the collar worn folded DOWN normally with the diagonal stripes only on the inside face of the neckband above the folded leaf; here the leaf itself is flipped up and its inner face is the bias panel while the stand stays straight grain.",
+      "bias-inner-cuff": "That sibling shows the diagonal stripes on the inner face of a barrel cuff at the wrist; here the bias panel is at the collar, and both cuffs (if visible) stay straight grain."
+    }
+  },
+  "ratios": [
+    "Collar leaf depth is about 1.3x the collar stand height (4.5 cm vs 3.5 cm).",
+    "Edge topstitch inset is about one-ninth of the leaf depth (5 mm on a 4.5 cm leaf).",
+    "Stripe pitch is about one-fifth of the placket buttonhole length (3 mm stripes vs 16 mm buttonhole).",
+    "The bias stripes on the flipped leaf cross the stand's straight-grain stripes at exactly 45 degrees."
+  ],
+  "locked_features": [
+    "Fine blue-and-white bengal-striped cotton poplin — never solid white (bias would be invisible).",
+    "Collar leaf flipped fully up with its entire inner face visible; that face alone is bias-cut with stripes at 45 degrees.",
+    "One edge topstitch row on the collar leaf, ~5 mm inset.",
+    "Collar stand plain straight grain, topstitched both edges, rounded front end with ONE horizontal buttonhole; no button on the stand end in this view.",
+    "Standard sewn front placket with TWO parallel vertical topstitch rows and ONE vertical buttonhole; no buttons visible anywhere in the frame.",
+    "Red hatching in the drawing is a bias-direction construction marker — rendered as real diagonal stripe grain, never as red color or printed hatching.",
+    "No annotation text, arrows, numbers, or drawing marks in the photograph."
+  ],
+  "uncertain": [
+    "Exact collar model (semi-spread assumed) — the tech pack states no point length or spread angle; standard 3.5 cm stand / 4.5 cm leaf shirtmaking dimensions were applied.",
+    "The drawing's stylized perspective — interpreted as a front three-quarter view from the wearer's left with the leaf flipped up (the buttonhole placket and the stand-end buttonhole are both wearer's-left front features); the source is a 192px icon, so fine stitch counts along the shoulder seams could not be verified.",
+    "Whether the stand-end slit is a buttonhole or a stitch bar — interpreted as one horizontal buttonhole per standard collar-stand construction."
+  ]
+}

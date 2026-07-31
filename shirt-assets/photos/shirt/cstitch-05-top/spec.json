@@ -1,0 +1,32 @@
+{
+ "product_code": "stitch-05-top",
+ "category_key": "decoration_stitching_on_cuff",
+ "option_label": "Machine 0.5 cm Top Stitching",
+ "blueprint": "public/images/decoration_stitching_on_cuff/machine-05cm-top-stitching.jpg",
+ "blueprint_annotation": "0.5cm",
+ "blueprint_provenance": "bound by ANNOTATION not filename - see failure-log DATA DEFECT entry 2026-07-27",
+ "view": "close three-quarter view with the cuff dominating the frame",
+ "stated_measurements_cm": {
+  "stitch_offset_from_edge": 0.5
+ },
+ "geometry": {
+  "stitch_type": "continuous machine lockstitch topstitch, single row",
+  "path": "the finished cuff edge, running along the long lower edge and around the rounded closure corner",
+  "offset_constant": true,
+  "region_extra": "The stitch row follows the full cuff perimeter including the rounded closure corner, turning that corner smoothly at a constant distance from the edge. Exactly ONE mother-of-pearl button, sewn flat through its holes."
+ },
+ "ratios": [
+  "offset = exactly half a button diameter",
+  "offset = about two stitch-lengths of the stitch itself",
+  "row perfectly parallel to the edge along its whole run"
+ ],
+ "locked_features": [
+  "single row only",
+  "constant 0.5 cm offset",
+  "continuous even machine lockstitch (NOT pick stitch)",
+  "self-coloured thread, still legible via indentation and raking light"
+ ],
+ "comparative_anchor": "Third rung: the gap must read FIVE TIMES the 0.1 cm offset and clearly wider than 0.3 cm, while remaining a touch narrower than the widest 0.6 cm version.",
+ "output": "public/images/generated/shirt/cstitch-05-top.png",
+ "uncertain": []
+}

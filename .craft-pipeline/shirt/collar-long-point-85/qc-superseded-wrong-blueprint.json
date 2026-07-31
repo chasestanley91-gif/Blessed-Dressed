@@ -1,0 +1,49 @@
+{
+  "addr": "shirt > collar-long-point-85",
+  "productId": "shirt",
+  "optionId": "collar-long-point-85",
+  "attempt": 2,
+  "scores": {
+    "shape": 99,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 98,
+    "placement": 99,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "belowMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "angles",
+      "error": "Collar leaves hang at roughly 26-30 degrees from vertical in the candidate; the blueprint's undisturbed (viewer-left) leaf reads closer to 17-20 degrees from vertical, i.e. the drawn points hang marginally steeper.",
+      "expected": "long points angling sharply downward with a narrow spread, as drawn",
+      "actual": "long points angling downward at ~26-30 degrees from vertical - narrow, but ~8-10 degrees less steep than the drawn leaf",
+      "assessment": "Not scored as a blueprint deviation. The blueprint photographs the collar with its near leaf POPPED open off the chest; a popped leaf drags the band and rotates the opposite leaf inward, so the drawing's 17-20 degree read over-states the collar's true rest angle and is not a measurable construction fact. The candidate shows the same collar in normal fastened worn state, which is what the locked prompt prescribes. At 26-30 degrees the collar is still unambiguously a narrow-spread long point - a spread or semi-spread sibling would sit at 45 degrees or more - so there is no category substitution and no customer-facing ambiguity."
+    },
+    {
+      "severity": "minor",
+      "category": "composition",
+      "error": "The model's chin, jaw and stubble occupy roughly the top 20% of the frame; the blueprint is cropped below the neck and shows no face at all.",
+      "expected": "crop tight on collar and neckline with the collar dominant and minimal competing area",
+      "actual": "collar cloth spans essentially the full frame width and ~52% of frame height (mid-band of the 40-80% dominance target); a jaw fragment sits above it",
+      "assessment": "A male model was explicitly prescribed by the locked prompt's styling block, so a jaw fragment is an expected consequence, not an invented element. The face never touches, overlaps or obscures the collar, the crop is genuinely tight on collar and neckline, and identification is instant."
+    },
+    {
+      "severity": "minor",
+      "category": "construction",
+      "error": "The collar band/stand front is concealed behind the closed collar leaves; the blueprint exposes the band underside and the open band button because its near leaf is popped.",
+      "expected": "collar stand reproduced from the illustration",
+      "actual": "stand visible rising at both sides of the neck and at the leaf/band seam, but its front face is covered by the fastened leaves",
+      "assessment": "Inherent to a fastened worn collar - the leaves always cover the band front when the neck button is done up, which the locked prompt requires. The stand height, the leaf-to-band seam and the soft roll into the leaf are all legible at both sides of the neck, so the drawn stand is reproduced."
+    }
+  ],
+  "verdict": "PASS",
+  "correction": null,
+  "notes": "Adversarial pass, attempt 2 (candidate-2.png). Verified against blueprint C:/Users/ChaseStanley/Downloads/files/brand_assets/blessed-dressed/public/images/ai/collar-long-point-85.png.\n\nCONFIRMED MATCHES: (1) Exactly TWO collar points, both long, straight-edged and acutely pointed, angling downward onto the chest - matches the drawn elongated leaf profile. Leaf length reads roughly 1.9-2.0x the stand height, the correct ratio for an 8.5 cm point on a ~3.5-4 cm band. (2) Narrow spread - the leaf inner edges converge over the fastened band button; this is NOT a spread, semi-spread, cutaway or club collar, so no generic-category substitution and no bleed from a sibling collar option. (3) Edge topstitching present on both leaves, evenly inset a few millimetres from the edge and carried cleanly around each point, matching the drawn topstitch line; placket edge stitching also present. (4) Collar stand visible rising at both sides of the neck with a soft roll into the leaf, as drawn. (5) Narrow front placket running true vertical down frame centre, as drawn. (6) Orientation is 'detail' on the FRONT face - tight macro on collar and neckline, no full-garment silhouette - same face and same framing intent as the blueprint. (7) Crisp white cotton poplin, matte, fine weave, well pressed; fabric behaviour matches.\n\nIMPROVEMENT OVER ATTEMPT 1: the blueprint carries NO necktie. Attempt 1 was styled with a navy four-in-hand, which covered the throat and the spread between the points. Candidate-2 is tieless with the neck button fastened, so the collar points, the spread between them and the leaf/band seam are all directly readable - a strictly closer match to the drawing and to the checklist item 'the unobstructed spread between the collar points'.\n\nHOSTILE CHECKS ALL CLEAN: swept the full frame for annotation - NO text, numerals, units (cm/mm/deg), dimension or leader lines, arrows, callouts, ruler ticks, coloured guide marks, labels, logo or watermark anywhere. No button-down collar loops or buttons at the leaf tips (would indicate button-down sibling bleed) - correctly absent. No collar bar, collar pin, tab collar or eyelets. No extra buttons, seams or construction invented that the drawing does not show. Background is a seamless neutral light-grey studio sweep with clean garment separation - no location, architecture, furniture, scenery, props or environmental context. Photoreal throughout (visible skin texture, stubble, fabric weave, thread) - not line-art, not CGI, not a mannequin, not a fashion sketch. Left and right leaves are near-mirror in length and angle; the viewer-right leaf reads only marginally broader with its tip slightly higher, within natural worn-garment and off-axis-camera variance, so no asymmetry defect.\n\nRETAINED NOTE FOR THE PARENT PROCESS (upstream extractor defect, unchanged from attempt 1): tech-pack-interpreter's extractMeasures() in scripts/lib/spec.mjs (lines 372-376) tests /\\\\bspread\\\\b/ BEFORE /\\\\bnarrow\\\\b/ in an else-if chain. This option's description says 'creating a narrow spread', so the bare 'spread' branch fires and the spec would be written as 'wide spread' - the exact inverse of the catalog text and the drawing. spec.json for this option carries the corrected 'narrow spread' and the prompt was rebuilt from it with build_prompt.mjs (never hand-written). The shared skill script was deliberately NOT edited because sibling agents run against it concurrently. That ordering bug makes the 'narrow spread' branch unreachable for any text containing the word 'spread', so every other collar option in the catalog is likely mis-specified the same way and should be re-checked once the ordering is fixed.",
+  "checkedAt": "2026-07-28T04:38:26.669Z"
+}

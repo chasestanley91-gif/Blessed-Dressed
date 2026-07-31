@@ -1,0 +1,59 @@
+{
+  "scores": {
+    "shape": 70,
+    "geometry": 84,
+    "dimensions": 80,
+    "angles": 90,
+    "construction": 62,
+    "placement": 84,
+    "symmetry": 66,
+    "composition": 96,
+    "blueprint-match": 70
+  },
+  "errors": [
+    {
+      "severity": "critical",
+      "category": "construction",
+      "description": "The DEFINING feature of this option - the zigzag decorative topstitching - is severely under-rendered and inconsistent. In the blueprint the zigzag is bold and unmistakable: a pronounced sawtooth line with clearly separated peaks running the ENTIRE outer edge of the collar leaf, from the neck point, around the tip, and back along the top edge. In the candidate the viewer's-right leaf carries only a faint, fine, barely-serrated line, and the viewer's-left leaf reads as a PLAIN STRAIGHT topstitch with no zigzag at all. A customer comparing this image against the plain-edge sibling option could not reliably tell them apart, which is functionally a generic-category substitution on the one feature this option exists to sell.",
+      "expected": "bold, pronounced zigzag sawtooth topstitching with clearly separated peaks running the full outer edge of BOTH collar leaves - around the points and along the top edges - exactly as drawn",
+      "actual": "faint, fine, barely-serrated stitching on the right leaf only; the left leaf shows plain straight topstitching with no zigzag",
+      "correction": "Render the zigzag topstitching boldly and identically on BOTH collar leaves: a clearly visible sawtooth line with distinct, evenly spaced peaks approximately 6-8 mm inside the collar edge, running the complete outer edge of each leaf, around each squared tip, and back along the top edge. The zigzag must be the first thing the eye registers."
+    },
+    {
+      "severity": "critical",
+      "category": "shape",
+      "description": "Both collar leaves taper to SHARP ACUTE POINTS - the exact geometry named in this option's forbidden list. The blueprint terminates the leaf in a blunt, squared-off facet. This regressed relative to attempt 1, which was at least partially blunted.",
+      "expected": "a flat, blunt, SQUARED-OFF terminal edge on each collar leaf - a short straight chisel-like facet across the end",
+      "actual": "both leaves converge to sharp acute points, reading as a conventional point collar",
+      "correction": "Terminate BOTH collar leaves in an unmistakably flat, squared-off edge - a visible short straight facet cut across the end of each leaf. Never taper to a point and never round the tip."
+    },
+    {
+      "severity": "major",
+      "category": "dimensions",
+      "description": "The collar leaves still read longer than the drawn small 5.0 cm point. Relative to the collar band height the leaves are elongated, reading as a medium/long point collar rather than the compact small collar in the blueprint.",
+      "expected": "a SMALL, SHORT 5.0 cm collar point, compact and stubby relative to the collar band height",
+      "actual": "elongated leaves reading as a medium-to-long point collar",
+      "correction": "Shorten both collar leaves to a distinctly small, short and compact 5.0 cm point length relative to the collar band, matching the blueprint's stubby proportion."
+    },
+    {
+      "severity": "major",
+      "category": "symmetry",
+      "description": "The two collar leaves are not treated identically: the right leaf carries serrated edge stitching while the left leaf carries plain straight stitching. Leaf-to-leaf mirroring in stitch construction fails even though the leaf outlines are broadly mirrored.",
+      "expected": "both leaves mirroring exactly in length, angle, tip shape AND stitch treatment",
+      "actual": "stitch treatment differs between the two leaves - zigzag on one, plain straight on the other",
+      "correction": "Apply the identical bold zigzag topstitching to both leaves so they mirror exactly in stitch construction as well as outline."
+    }
+  ],
+  "lockedFeatures": [
+    "white cotton poplin shirt cloth",
+    "no face, chin, beard or facial skin in frame",
+    "both collar leaves complete and fully inside the frame with clear margin",
+    "top collar-band button left unfastened, white self-coloured buttonhole visible",
+    "no necktie",
+    "seamless neutral light-grey studio background, no props or architecture",
+    "no text, annotation, watermark, ruler or dimension callout",
+    "detail orientation - collar macro, front face",
+    "natural daylight studio lighting"
+  ],
+  "notes": "ATTEMPT 2 - both attempt-1 Criticals were successfully fixed. NOW PASSING: composition is excellent and closely matches the blueprint - the bearded chin/face is entirely gone, the shirt cloth fills the frame edge to edge, both collar leaves are complete and fully inside the frame with clear margin, and the point-to-point spread is fully readable; seamless neutral light-grey studio background with no location, architecture or props; zero text, annotation, watermark, ruler or dimension callout; top collar-band button correctly unfastened with the buttonhole now rendered in white self-coloured thread (attempt-1 minor fixed); no necktie; correct detail orientation and front face; real photograph, not line-art or CGI. STILL FAILING: the defining zigzag topstitching is faint on one leaf and entirely absent (plain straight stitch) on the other, so the image does not visually distinguish this option from its plain-edge sibling; and both collar tips taper to sharp acute points, the exact termination the option's forbidden list prohibits, where the blueprint shows a blunt squared-off facet. Two credit-spending generations have now been used - the hard cap for this option."
+}

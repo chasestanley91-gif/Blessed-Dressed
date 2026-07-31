@@ -1,0 +1,32 @@
+{
+ "generated": "2026-07-26",
+ "final": {
+  "status": "qa-pass",
+  "file": "attempt2.png",
+  "attempt": 2,
+  "promoted": "public/images/generated/shirt/back-box-dbl-darts.png"
+ },
+ "attempts": [
+  {
+   "n": 1,
+   "file": "attempt1-wrongref.png",
+   "job_id": "83c808ed-cf42-4e27-b916-057568d9f60c",
+   "verdict": "void",
+   "notes": "generated against the SWAPPED blueprint file (see failure-log DATA DEFECT); not judged"
+  },
+  {
+   "n": 2,
+   "file": "attempt2.png",
+   "model": "gpt_image_2",
+   "settings": {
+    "quality": "low",
+    "resolution": "1k",
+    "aspect_ratio": "3:4"
+   },
+   "job_id": "0361e0aa-12c4-4e14-a542-a907451fab4d",
+   "verdict": "pass",
+   "checks": "counts 1 center pleat + exactly 2 darts pass; silhouette waist suppression pass; proportions pass (darts at quarter points, taper above hem); positions pass; construction pass; symmetry pass; photography pass; no-text pass; nothing-extra pass",
+   "qa_method": "inline vision QA"
+  }
+ ]
+}

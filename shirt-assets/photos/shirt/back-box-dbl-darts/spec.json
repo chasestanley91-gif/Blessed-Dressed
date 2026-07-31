@@ -1,0 +1,34 @@
+{
+ "id": "back-box-dbl-darts",
+ "red_interpretation": "Red marks are construction features, not fabric. The two long parallel red verticals flanking center back (5 px apart at CB, running from the yoke seam y=46 to the hem y=188) are the two outer FOLD EDGES of a single box pleat whose flat center panel runs the full back length. The two faint curved red lines at the sides (x~70-72 and x~120-123, y~99-168) are STITCHED DART SEAMS - vertical fish darts bowing inward at the waist. IMPORTANT FILE ANOMALY: the file assigned to this option (box-pleat-to-bottom-with-double-darts.jpg) draws ONLY the two pleat fold edges with no darts, while the sibling file box-pleat-to-bottom.jpg draws pleat + both darts. The catalog description for this option is \"Full box pleat plus two darts\", so the two files' contents are evidently swapped; this spec follows the pleat-plus-darts drawing, which is the geometry matching this option's label.",
+ "geometry_summary": "Rear view, 191x191 px tech pack. Collar band atop a one-piece horizontal back yoke; single dashed stitch row at the yoke seam (y=44) spanning the full back width (x=48-146 at that height). Body side seams near-vertical at x=43 and x=151 (body width ~108 px at waist); center back x=97. Box pleat: two red fold edges at x=94.5 and x=99, i.e. a visible flat panel ~5 px wide (~4.5% of body width, ~3 cm real-world), starting immediately below the yoke seam and running uninterrupted through the curved shirttail hem (y=188) - \"to bottom\". Double darts: one per side at x~71 (left) and x~121.5 (right), each centered ~46-48% of the half-back width out from CB (essentially midway between pleat and side seam); vertical span y=99-168, i.e. beginning ~38% of the back length below the yoke seam, bowing ~1 px inward at the waist, tapering out ~86% down - tips end ~20 px (~14% of back length) above the hem. Curved shirttail hem with single dashed stitch row; dashed stitch rows also along armholes. Sleeves with buttoned plackets and barrel cuffs are drawn but are not the showcased feature. Geometry taken from the pleat+darts drawing (currently stored under the sibling filename box-pleat-to-bottom.jpg) because the assigned file's content is swapped and omits the darts required by this option's label and catalog description.",
+ "counts": "Pleats: 1 (one center-back box pleat = 2 pressed fold edges + 1 flat center panel). Darts: 2 (1 left, 1 right, vertical waist darts). Seams: 1 horizontal yoke seam (single dashed stitch row as drawn) + 2 body side seams + stitched shirttail hem; no other back seams. Yoke seams: 1 (full-width horizontal; no center split-yoke seam drawn). Total red-marked construction lines in the correct drawing: 4 (2 pleat fold edges + 2 dart seams).",
+ "locked_features": [
+  "Single centered box pleat: two crisp knife folds facing away from a flat raised center panel ~3 cm wide at center back",
+  "Pleat runs the FULL back length: from the yoke seam uninterrupted down through the curved shirttail hem edge",
+  "Exactly two vertical fish-shaped darts, one each side, stitched seams with gentle inward waist bow producing visible waist suppression",
+  "Dart tips end well above the hem (~14% of back length above it); darts never reach yoke or hem",
+  "One-piece horizontal back yoke with a single stitched yoke seam below the collar band; no split-yoke center seam",
+  "Curved shirttail hem with fine stitched hem; pleat panel crosses the hem edge",
+  "All-white garment: pleat and darts rendered only as real folds and stitched seams, zero contrast fabric or colored marking",
+  "Plain back panel otherwise: no side pleats, no additional darts, no extra seams"
+ ],
+ "ratios": [
+  "Visible box-pleat panel width ~ 4.5% of back body width at waist (~1/20; ~3 cm real-world)",
+  "Pleat length = 100% of back length below yoke: yoke seam to hem edge, uninterrupted",
+  "Each dart centered ~ midway (46-48%) between center back and side seam",
+  "Darts begin ~38% of back length below the yoke seam and end ~86% down; dart length ~ 48% of back length",
+  "Dart tips terminate ~14% of back length above the hem",
+  "Dart-to-dart spacing ~ 46-47% of back body width (~50 px of 108 px)",
+  "Yoke seam sits high: yoke depth ~ 13-15% of collar-to-hem length"
+ ],
+ "uncertain": [
+  "FILE-CONTENT SWAP (needs catalog fix): the assigned blueprint box-pleat-to-bottom-with-double-darts.jpg draws pleat only (no darts), while box-pleat-to-bottom.jpg draws pleat + double darts; spec follows the pleat+darts drawing per the option's label and catalog description 'Full box pleat plus two darts'",
+  "Pleat underfold depth is not readable from a flat rear-projection drawing; only the ~3 cm visible panel is locked (standard ~1.5-2 cm underfold per side assumed)",
+  "Single vs twin-needle stitching at yoke seam and hem cannot be resolved at 191 px; drawn as single dashed rows, single-needle assumed",
+  "Exact dart start height varies between sibling drawings (y~80 in double-darts.jpg vs y~99 in the combined drawing); the combined drawing's lower start was used",
+  "Slight left/right asymmetry of dart x-positions (26 px vs 24.5 px from CB) treated as drawing noise; symmetric placement assumed"
+ ],
+ "verified": "draft-only (verify stage hit session limit 2026-07-26)",
+ "source": "workflow wf_b531b1e7-4fe"
+}

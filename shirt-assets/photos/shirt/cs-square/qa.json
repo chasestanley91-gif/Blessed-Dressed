@@ -1,0 +1,24 @@
+{
+ "generated": "2026-07-27",
+ "final": {
+  "status": "qa-pass",
+  "file": "attempt1.png",
+  "attempt": 1,
+  "promoted": "public/images/generated/shirt/cs-square.png"
+ },
+ "attempts": [
+  {
+   "n": 1,
+   "file": "attempt1.png",
+   "model": "gpt_image_2",
+   "settings": {
+    "quality": "low",
+    "resolution": "1k",
+    "aspect_ratio": "3:4"
+   },
+   "job_id": "4ff0d242-75f5-4112-bf50-7c7b3e12bd61",
+   "verdict": "pass",
+   "checks": "all 8 lines pass (agent batch I): both ends square with <2mm corners, 1 stand button, standard height, stitching turns corners sharply"
+  }
+ ]
+}

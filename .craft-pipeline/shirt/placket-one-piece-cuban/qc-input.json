@@ -1,0 +1,98 @@
+{
+  "product": "shirt",
+  "option": "placket-one-piece-cuban",
+  "label": "One Piece with Cuban Collar (Tab)",
+  "attempt": 1,
+  "orientation": {
+    "drawn": "front",
+    "photographed": "front",
+    "match": true
+  },
+  "scores": {
+    "shape": 99,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 99,
+    "placement": 98,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 99
+  },
+  "lockedFeatures": [
+    {
+      "feature": "cuban collar shape",
+      "drawn": "flat open camp/Cuban collar, both leaves folding open and lying flat over the shoulders, no standing collar band, pointed leaves angled down-and-outward, open V neckline terminating at a point at centre front",
+      "observed": "flat open Cuban/camp collar, both leaves lying open and flat, no standing band, pointed leaves angled down-and-outward, V neckline terminating at a point at centre front where the front edge begins",
+      "verdict": "match"
+    },
+    {
+      "feature": "one-piece front construction",
+      "drawn": "centre front drawn as a single fine fold-back line — no applied placket strip, no pair of flanking topstitch rows",
+      "observed": "single clean fold-back front edge with buttons set directly on it; no applied placket band and no flanking parallel topstitch rows anywhere on the front",
+      "verdict": "match"
+    },
+    {
+      "feature": "tab fastening",
+      "drawn": "small horizontal buttonhole rectangle at the throat/neck-opening, called out by the red leader arrow at the collar leaf; no protruding fabric strap is drawn",
+      "observed": "single horizontal worked buttonhole at the throat on the wearer's-left collar leaf at the base of the notch, visible with the collar worn open; expressed at the same level of detail as the drawing (buttonhole, not a strap)",
+      "verdict": "match"
+    },
+    {
+      "feature": "button spacing",
+      "drawn": "evenly spaced round buttons on the centre-front line, first button below the neckline V",
+      "observed": "5 evenly spaced buttons on the centre-front edge, first below the neckline V; measured pitch 395/400/390/410 px — even within ~2.5%",
+      "verdict": "match"
+    },
+    {
+      "feature": "edge stitching",
+      "drawn": "plain front edge, no decorative topstitch rows",
+      "observed": "plain clean front edge, no decorative topstitching",
+      "verdict": "match"
+    },
+    {
+      "feature": "buttonholes",
+      "drawn": "buttonholes on the centre-front line at each button position",
+      "observed": "vertical worked buttonholes visible at the button positions on the centre-front edge",
+      "verdict": "match"
+    },
+    {
+      "feature": "placket width",
+      "drawn": "no applied band — width is the narrow fold-back of the one-piece front edge",
+      "observed": "narrow fold-back front edge only, consistent with the drawing's single line",
+      "verdict": "match"
+    },
+    {
+      "feature": "supporting silhouette (short sleeves, no chest pocket)",
+      "drawn": "short set-in sleeves with turned hem; no chest pocket",
+      "observed": "short sleeve hems visible at both frame edges; no chest pocket rendered",
+      "verdict": "match — confirms no substitution of a long-sleeve dress shirt"
+    }
+  ],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "symmetry",
+      "detail": "The two collar leaves differ slightly in roll/lift — the wearer's-left leaf stands and folds a little more than the wearer's-right, which lies flatter. Collar point positions themselves are near-symmetric (left point ~(248,272), right ~(712,262): ~10 px / <1% vertical delta). Attributable to soft worn drape and directional lighting, which a flat technical drawing cannot represent."
+    },
+    {
+      "severity": "minor",
+      "category": "composition",
+      "detail": "The model's chin and lower jaw enter the top edge of the frame. It does not obstruct or compete with the collar or the front edge, and the placket/collar assembly remains the dominant subject."
+    },
+    {
+      "severity": "minor",
+      "category": "placement",
+      "detail": "The tab buttonhole sits on the wearer's-left collar leaf at the notch base, whereas the drawing places its buttonhole rectangle nearer the horizontal centre of the neck opening. Same throat location and same function; offset is within the tolerance of translating a flat to a worn three-dimensional collar."
+    }
+  ],
+  "notes": {
+    "blueprintTextConsistency": "Checked before generating. Label 'One Piece with Cuban Collar (Tab)' and description 'One-piece construction with Cuban collar tab.' both agree with the drawing: the drawing shows a flat open Cuban/camp collar, a one-piece fold-back centre front (single line, no applied band), and a tab buttonhole at the throat with the red callout arrow. No conflict on the defining feature.",
+    "referenceAttached": "Blueprint media 1b08861d-1912-44a3-b0af-cf91641d0dea was attached on the single generation; the job payload echoed reference_images:[1b08861d-...], confirming the drawing was supplied as geometry reference (not a text-only generation).",
+    "background": "Seamless neutral light-grey studio sweep. All four frame corners inspected at zoom: no location, architecture, furniture, scenery or props.",
+    "textAndAnnotation": "No text, numbers, units, arrows, leader or dimension lines, red/coloured guide marks, ruler ticks, watermark or labels anywhere in frame — all four corners and the full frame verified.",
+    "siblingSubstitution": "No sibling-option substitution: the front is NOT a plain/French applied placket, NOT an outer applied placket, NOT hidden or half-hidden, and carries no studs. It is specifically the one-piece Cuban-collar front.",
+    "countsNotLocked": "spec.measured.counts is empty, so no button count is locked; the 5 buttons visible in the chest-up macro crop were not scored as a count requirement.",
+    "verdict": "Left to log_qc_result.mjs."
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "scores": {
+    "shape": 40,
+    "geometry": 50,
+    "dimensions": 60,
+    "angles": 60,
+    "construction": 88,
+    "placement": 92,
+    "symmetry": 84,
+    "composition": 90,
+    "blueprint-match": 45
+  },
+  "errors": [
+    {
+      "severity": "critical",
+      "category": "shape",
+      "description": "The squared-off collar tip is STILL not reproduced after the attempt-2 geometry correction. Both leaves again terminate in an acute point.",
+      "expected": "Each leaf ends in a short straight FLAT TERMINAL EDGE (~8-10 mm) meeting the front edge and the lower edge at roughly 90-degree corners — the blunt, cut-off termination the blueprint's edge-stitch line traces at high zoom, and which the catalog text calls 'squared-off tips' / 'blunt square ends'.",
+      "actual": "Wearer's-right leaf (viewer's left) tapers to a needle-sharp vertex. Wearer's-left leaf (viewer's right) converges to an acute point where the edge-stitch lines meet; only marginally less sharp than attempt 1. Neither leaf has a terminal edge or a squared corner anywhere.",
+      "correction": "The model is anchored on the point-collar prior and the explicit 90-degree / flat-terminal-edge language did not break it across two attempts. Escalation needed beyond prompt wording — e.g. a corrected geometry reference (a true square-tip collar photo or a traced outline overlay) supplied as an additional reference image, or a higher quality/resolution tier with a stronger edit-style reference weighting."
+    },
+    {
+      "severity": "critical",
+      "category": "blueprint-match",
+      "description": "Still a sibling-option substitution: the rendered collar remains indistinguishable from 'Point 5.8 cm with Button' / 'Point 7.0 cm with Button'.",
+      "expected": "The customer must instantly read square blunt tips versus the pointed tips of the point-collar family; that contrast is the only reason this option exists.",
+      "actual": "A conventional point collar with a throat button. The locked differentiator is absent for the second time.",
+      "correction": "Do not ship. Requires a corrected geometry reference rather than further prompt escalation."
+    },
+    {
+      "severity": "major",
+      "category": "dimensions",
+      "description": "Collar leaf length still reads longer than the locked 5.0 cm.",
+      "expected": "Short, compact leaves whose ends sit high and close together, as drawn.",
+      "actual": "Leaves run long and low, forming a deep V; the tips sit well below the throat button. Improved slightly from attempt 1 but still reads nearer 7 cm than 5.0 cm.",
+      "correction": "Shorten the leaf so the terminal edge sits only marginally below the throat button."
+    },
+    {
+      "severity": "major",
+      "category": "angles",
+      "description": "Tip termination angle remains acute rather than the blunt near-right-angle corners drawn.",
+      "expected": "Two ~90-degree corners bracketing a short flat terminal edge on each leaf.",
+      "actual": "A single acute vertex on each leaf.",
+      "correction": "Same escalation as the shape error — prompt-level angle specification has now failed twice."
+    },
+    {
+      "severity": "minor",
+      "category": "symmetry",
+      "description": "The two leaves are not equally finished: the wearer's-left leaf carries clear ~5 mm inset edge topstitching while the wearer's-right leaf's stitching is faint and its leaf sits slightly longer and lower.",
+      "expected": "Continuous, symmetric edge stitching around both leaves and matched leaf lengths.",
+      "actual": "Asymmetric stitch legibility and slightly mismatched leaf lengths.",
+      "correction": "Require matched leaf length and equally legible edge stitching on both leaves."
+    }
+  ],
+  "lockedFeatures": [
+    "squared-off / blunt terminal edge on BOTH collar leaves (the defining feature)",
+    "5.0 cm compact collar leaf length",
+    "exactly ONE throat button on the collar band at the throat",
+    "single row of edge topstitching ~5 mm inset, continuous around both leaves",
+    "white bespoke cotton poplin dress shirt",
+    "collar stand / band visible and correctly proportioned",
+    "seamless neutral light-grey studio background, no props, no location, no text or annotation",
+    "no necktie; collar spread unobstructed",
+    "detail orientation — front face of the collar",
+    "natural daylight studio lighting, medium-format look, shallow depth of field"
+  ],
+  "notes": "Attempt 2 of 2, generated from the locked prompt with the qc.json correction block appended verbatim as emphasis (no locked block removed). FIXED versus attempt 1: the crop correction landed — mouth, lips and ear are out of frame, only the underside of the jaw remains, and the collar now clearly dominates; edge topstitching is legible on the wearer's-left leaf and the collar band; background remains a seamless neutral light-grey with no location, architecture, props or environmental context; zero text, annotation, watermark, ruler or dimension callout anywhere in frame; exactly one correctly placed and fastened throat button on the collar band; correct front/detail orientation; no necktie; convincing real-photograph poplin texture. NOT FIXED: the single defining feature. Both collar leaves again terminate in an acute point instead of the blunt squared terminal edge confirmed on the blueprint at ~4x zoom (where the edge-stitch demonstrably turns a corner into a short straight end) and stated in the catalog text. The image therefore still reads as a point collar and is an unusable stand-in for its point-collar siblings. Two attempts have now failed on the same critical geometry, so prompt escalation alone is not converging — a corrected square-tip geometry reference or a higher-fidelity generation tier is required before any further spend."
+}

@@ -1,0 +1,38 @@
+{
+  "final": {
+    "status": "qa-pass",
+    "file": "attempt2.png",
+    "attempt": 2,
+    "promoted": "public/images/generated/shirt/csplice-cuff-edge.png"
+  },
+  "attempts": [
+    {
+      "n": 1,
+      "file": "attempt1.png",
+      "model": "gpt_image_2",
+      "settings": {
+        "quality": "low",
+        "resolution": "1k",
+        "aspect_ratio": "3:4"
+      },
+      "job_id": "891efdc0-3568-4c8e-bc42-8a097057a278",
+      "verdict": "fail",
+      "notes": "strip drifted to mid-cuff run + diagonal connector; too wide"
+    },
+    {
+      "n": 2,
+      "file": "attempt2.png",
+      "model": "gpt_image_2",
+      "settings": {
+        "quality": "low",
+        "resolution": "1k",
+        "aspect_ratio": "3:4"
+      },
+      "job_id": "dd878a2d-f34d-4cfa-acf2-0e89a6fda338",
+      "verdict": "pass",
+      "correction_applied": "segment-by-segment path + forbid mid-cuff/diagonal runs",
+      "notes": "second-opinion verified: path match, strip/button ratio 0.55 (~0.59cm at cuff scale)"
+    }
+  ],
+  "generated": "2026-07-26"
+}

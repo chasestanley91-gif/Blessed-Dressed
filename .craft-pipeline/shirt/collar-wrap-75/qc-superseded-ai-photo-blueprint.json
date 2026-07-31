@@ -1,0 +1,33 @@
+{
+  "addr": "shirt > collar-wrap-75",
+  "productId": "shirt",
+  "optionId": "collar-wrap-75",
+  "attempt": 2,
+  "scores": {
+    "shape": 99,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 98,
+    "placement": 99,
+    "symmetry": 98,
+    "composition": 99,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "belowMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "construction",
+      "description": "Collar edge-stitch and band buttonhole are slightly softer than in the blueprint.",
+      "expected": "Blueprint shows a crisp topstitch line running parallel to the collar leaf edge and a clearly readable buttonhole on the exposed collar band.",
+      "actual": "The perimeter edge-stitch is present and traceable along the leaf edge and the band seam is defined, but both render marginally softer than the blueprint; the band buttonhole is present yet fainter.",
+      "correction": "No action required at this fidelity. If a higher-resolution master is ever regenerated, request slightly stronger edge-stitch contrast."
+    }
+  ],
+  "verdict": "PASS",
+  "correction": null,
+  "notes": "Attempt 2, gpt_image_2, blueprint attached as image reference. Every critical and major defect from attempt 1 is resolved. Verified item by item against the drawing: (1) ORIENTATION - three-quarter detail crop of the collar on the front face, no full-garment silhouette, matching the blueprint exactly. (2) SHAPE - the asymmetric wrap is reproduced: the near viewer-left leaf is long and sweeps down and outward to a low point while the opposite side continues as an exposed standing band curving across the throat; the leaves are not mirrored and the opening sits off-centre, exactly as drawn. No generic symmetric point collar. (3) CLOSURE - throat is open and unbuttoned, the inside of the collar band is visible wrapping the neck and the band buttonhole is present, matching the blueprint. (4) DIMENSIONS - near-leaf point falls at approximately 67 percent of frame height with the collar top at approximately 13 percent, proportionally within a couple of percent of the blueprint's 7.5 cm leaf. (5) CONSTRUCTION - perimeter edge-stitch along the collar leaf, defined collar band seam, and yoke seam at the left shoulder all present as drawn. (6) PLACEMENT - front placket on the correct side of frame, yoke seam correct, collar seated correctly. (7) COMPOSITION - garment-only framing with no model face, mouth, lips or chin anywhere in frame; the collar is the dominant unobstructed subject. (8) SET - seamless neutral light-grey studio background, no location, architecture, furniture, scenery or props. (9) CLEANLINESS - zero text, numbers, units, arrows, callouts, leader lines, ruler ticks, dimension marks or watermarks anywhere in the frame. (10) NO sibling-option substitution and no opposite-face confusion. Photorealistic cotton poplin with natural pressing and drape, not line-art or CGI. Only a single minor softness in edge-stitch contrast separates it from the drawing. Approving.",
+  "checkedAt": "2026-07-28T04:50:02.930Z"
+}

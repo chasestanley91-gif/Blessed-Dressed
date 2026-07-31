@@ -1,0 +1,41 @@
+{
+  "addr": "sport-coat > lbh-none",
+  "productId": "sport-coat",
+  "optionId": "lbh-none",
+  "attempt": 1,
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 100,
+    "angles": 99,
+    "construction": 98,
+    "placement": 99,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "belowMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "A barchetta welt chest pocket is included in the lower-right of the frame as a secondary garment feature.",
+      "expected": "The clean lapel face as the sole element of interest; the blueprint draws only the lapel outlines.",
+      "actual": "Clean lapel dominates, but the left-breast welt pocket (a normal feature of any sport coat, not a lapel buttonhole style) also sits in frame below the subject.",
+      "correction": "Acceptable as-is; if retightening, crop slightly higher so the chest pocket falls outside the frame."
+    },
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "The macro crop shows only the wearer's left lapel, whereas the schematic blueprint renders the mirrored left+right lapel pair.",
+      "expected": "Blueprint iconography shows both lapel outlines symmetrically about the centre front.",
+      "actual": "One lapel photographed in macro, per this option's jacket-lapel-buttonhole camera profile ('macro on the lapel buttonhole'); the sibling blueprints in this same family draw only a single lapel edge, confirming the line count is schematic, not a garment count.",
+      "correction": "No change required — the crop is the composition the locked prompt specifies."
+    }
+  ],
+  "verdict": "PASS",
+  "correction": null,
+  "notes": "Blueprint (public/images/jacket/lapel-bh-style/none.svg, rasterised for reference attachment) draws a symmetric pair of clean lapel outlines with NO buttonhole mark, while every sibling in the same family (real-m, fake-round, eyelet, milanese-2cm) adds a gold keyhole/ellipse/arc mark — so the drawing genuinely depicts the label 'None' / 'Clean lapel — no buttonhole'. Consistency gate passed. Candidate-1 verified adversarially at full frame and at 2x zoom on both the upper lapel (notch/gorge region, where a lapel buttonhole would sit) and the lower lapel: the lapel face is entirely unbroken hopsack weave — no keyhole, slit, stitched bar, thread colour, Milanese arc, eyelet or any sibling-option buttonhole anywhere in frame, so the defining ABSENCE reads within one second. Correct face and side (wearer's left lapel, front). Real photograph, not CGI/illustration/mannequin. Background is a seamless plain light-grey studio sweep with clean garment separation: no location, architecture, furniture, props or scenery. No text, numbers, units, dimension or leader lines, arrows, callouts, guide marks, ruler ticks or watermark anywhere. No generic-category substitution and no geometry borrowed from a neighbouring option. Blueprint specifies no dimensions, angles, counts or shapes (spec.measured is empty), so nothing measurable could deviate; the only two findings are minor composition notes recorded above.",
+  "checkedAt": "2026-07-30T05:30:00.556Z"
+}

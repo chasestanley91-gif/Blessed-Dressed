@@ -1,0 +1,56 @@
+{
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 98,
+    "placement": 99,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "styling-deviation",
+      "error": "Blueprint photographs the collar open at the throat with the two leaves separated and the neckband button exposed and undone; the candidate shows the top neckband button fastened with the leaf front edges converging over it.",
+      "expected": "collar leaves splayed open at the throat, neckband button exposed (as posed in the drawing)",
+      "actual": "top neckband button fastened, no necktie, leaf front edges meeting just above the button",
+      "assessment": "Not scored as a blueprint deviation. Closure state is a photographic pose in the source image, not a construction feature the drawing governs. The fastened top button was prescribed verbatim by the locked prompt's styling block, and the catalog description itself states the collar 'works equally well open-necked or with any standard tie knot'. Button count is identical (one neckband button), and the fastened state leaves the points, the spread between them and the band fully unobstructed - which is the stated purpose of that composition rule. Every element the drawing actually governs (point shape, point length proportion, spread, stand, roll, edge topstitch, placket) is reproduced."
+    },
+    {
+      "severity": "minor",
+      "category": "presentation",
+      "error": "Blueprint is shot on an invisible form with no human present; the candidate is worn on a live male model whose chin, lips and jaw occupy roughly the top 22% of the frame.",
+      "expected": "collar cloth occupying 40-80% of frame with minimal competing area",
+      "actual": "collar assembly spans full frame width and roughly 45% of frame height; competing area is the prescribed model's lower face",
+      "assessment": "The model was prescribed by the locked prompt ('Photographed worn on a male model'). The face is cropped above the mouth so it does not compete for attention, identification of the collar is instant, and the crop is genuinely tight on collar and neckline. Dominance sits inside the 40-80% band, and with no necktie present this candidate carries more visible collar and placket cloth than the already-approved sibling collar-long-point-85."
+    },
+    {
+      "severity": "minor",
+      "category": "perspective",
+      "error": "The viewer-right collar leaf reads roughly 25% larger than the viewer-left leaf, and the two point tips sit about 45px apart vertically.",
+      "expected": "two congruent collar leaves",
+      "actual": "apparent size disparity between the two leaves from a slightly off-axis camera and a live body",
+      "assessment": "Not a construction defect. Both leaves are built identically - same straight-edged acute point, same point angle, same edge-topstitch inset, same roll off the stand. The disparity is pure foreshortening from the model's slight turn, and the blueprint itself exhibits the SAME phenomenon to a considerably greater degree (its three-quarter angle foreshortens the viewer-left leaf far harder than the candidate does). Grading the photo as asymmetric while the governing drawing shows a larger apparent disparity would be inconsistent."
+    }
+  ],
+  "lockedFeatures": [
+    "exactly two collar points, no more, no fewer",
+    "straight-edged point collar leaf with an acute tip, points angled downward and outward",
+    "moderate regular spread between the point tips - NOT a wide spread, cutaway or semi-spread",
+    "moderate collar stand (22 mm) visible on both sides of the neck and at the throat, with a soft roll from stand into leaf",
+    "edge topstitch evenly inset a few millimetres, parallel to the collar edge and carried around the point",
+    "exactly one neckband button at the throat, plain and visible",
+    "French front placket: single fold edge running true vertical down frame centre with one offset topstitch line",
+    "no button-down loops or buttons at the leaf tips, no collar bar, pin, tab or stay visible",
+    "no hidden/concealed placket, no contrast or zigzag decorative stitching",
+    "no necktie, so the spread between the points reads unobstructed",
+    "crisp white cotton poplin",
+    "tight crop on collar and neckline (detail orientation, front face)",
+    "seamless neutral light-grey studio background, no location, architecture, furniture, props or scenery",
+    "zero text, numerals, units, dimension or leader lines, arrows, callouts, ruler ticks, coloured guide marks or watermark anywhere in frame"
+  ],
+  "notes": "Adversarial pass, attempt 1. Verified against blueprint C:/Users/ChaseStanley/Downloads/files/brand_assets/blessed-dressed/public/images/ai/collar-regular-22.png.\n\nCONFIRMED MATCHES: (1) Exactly two collar points, both straight-edged with acute tips angling downward and outward - matches the drawn leaf profile. (2) Moderate regular spread; the tips sit a measured distance apart and this reads as neither a cutaway nor a wide spread, so no generic-category substitution. (3) Moderate collar stand visible on both sides of the neck with a soft roll into the leaf, consistent with the drawn band and with the catalog's 22 mm stand. (4) Edge topstitch present on both leaves, evenly inset and carried around the point, plus band topstitching - matching the drawn stitch architecture. (5) French front placket with a single fold edge down frame centre and one offset topstitch line - matches the drawing exactly. (6) One plain neckband button at the throat - same count as the drawing. (7) Orientation is 'detail' on the FRONT face: tight macro on collar and neckline with no full-garment silhouette, same face as the drawing. (8) Crisp white cotton poplin with matching fabric behaviour and sheen.\n\nHOSTILE CHECKS ALL CLEAN: no text, numerals, units, dimension/leader lines, arrows, callouts, ruler ticks, coloured guide marks or watermark anywhere in the frame. Background is seamless neutral light grey with clean garment separation - no location, architecture, furniture, props or scenery. Photoreal skin and cloth, not line-art, mannequin or CGI. SIBLING-BLEED SWEEP, all negative: no button-down loops or buttons at the leaf tips; no hidden/concealed placket (would indicate collar-point-70-hidden-btn); no zigzag or contrast decorative stitching (would indicate collar-point-58-zigzag); point length is moderate, neither the elongated 8.5 cm leaf of collar-long-point-85 nor the short cropped leaf of collar-fashion-point-58. No collar bar, pin, tab or stay invented. No necktie added.\n\nUPSTREAM EXTRACTOR DEFECT (same one already logged on collar-long-point-85, reconfirmed here - FOR THE PARENT PROCESS, NOT FIXED BY ME): tech-pack-interpreter's extractMeasures() in scripts/lib/spec.mjs tests /\\bspread\\b/ before the qualifier branches in an else-if chain. This option's description says 'a moderately spread, versatile collar', so the bare 'spread' branch fired and spec.json was written as spread: ['wide spread'] - contradicting both the catalog text ('moderately spread') and the drawing (a moderate regular spread). That corrupted token was carried verbatim into the locked prompt line 'Exact specification - spread shape; wide spread'. It did NOT damage this render: the attached blueprint overrode the text and the model produced the correct moderate spread, per the Supreme Rule. But the defect is live and will keep injecting an inverted or wrong spread qualifier into every collar prompt until the branch order in extractMeasures() is fixed. Per instructions I did not edit data-store/ or the spec.\n\nVERDICT REASONING: every geometric fact the drawing governs is reproduced within tolerance. The three logged discrepancies are all Minor and all trace to the locked prompt's own styling/composition block (fastened button, live model) or to camera perspective that the blueprint itself displays more strongly - none contradicts a construction fact. A customer comparing this against the sibling collar options would correctly identify the Regular collar's moderate point and moderate stand without reading the description."
+}

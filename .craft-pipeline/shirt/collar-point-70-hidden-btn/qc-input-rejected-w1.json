@@ -1,0 +1,45 @@
+{
+  "scores": {
+    "shape": 96,
+    "geometry": 80,
+    "dimensions": 90,
+    "angles": 95,
+    "construction": 72,
+    "placement": 70,
+    "symmetry": 93,
+    "composition": 97,
+    "blueprint-match": 68
+  },
+  "errors": [
+    {
+      "severity": "critical",
+      "category": "blueprint-match",
+      "description": "Attempt 2 still does not depict the hidden button fastening. The blueprint works a horizontal buttonhole into the collar leaf near the point — that under-leaf buttonhole IS the craft option. In the render, neither collar leaf carries a buttonhole anywhere along its length or underside. Instead the model produced ordinary shirt construction: a worked buttonhole on the collar stand plus an exposed four-hole mother-of-pearl button sitting openly on the top of the placket in the collar gap. That exposed button directly contradicts the option's own definition — 'a button concealed beneath the leaf, the structure of a fastened collar with none of the visible hardware' — and, because no buttonhole exists in the leaf to receive it, the closure is non-functional. A customer comparing this image against the sibling plain Point 7.0 cm option would see no difference, which is the prohibited generic-category substitution.",
+      "expected": "A horizontal worked buttonhole in the collar leaf approximately 1 cm back from the point tip, engaging a small button mounted on the shirt body beneath the leaf, with no exposed hardware breaking the collar line.",
+      "actual": "No buttonhole on either collar leaf. A fully exposed four-hole button sits on the placket top inside the collar opening, plus a standard collar-band buttonhole — i.e. a conventional point collar, not the hidden-button variant.",
+      "correction": "The under-leaf buttonhole must be worked into the collar leaf itself and shown engaging its concealed button, with no exposed button visible in the collar opening."
+    },
+    {
+      "severity": "minor",
+      "category": "symmetry",
+      "description": "The wearer's right collar leaf reads slightly shorter and more curled at the tip than the left.",
+      "expected": "Both collar leaves identical in length and point angle.",
+      "actual": "Minor length and curl mismatch between the two leaves beyond what the three-quarter angle explains.",
+      "correction": "Match both collar leaves in length, curl and point angle."
+    }
+  ],
+  "lockedFeatures": [
+    "point collar shape",
+    "7.0 cm collar point length",
+    "white bespoke cotton dress shirt in crisp cotton poplin",
+    "seamless neutral light-grey studio background with no location, architecture, furniture or props",
+    "photorealistic garment photography, not line art or CGI",
+    "no necktie, collar and collar band unobstructed",
+    "zero text, numbers, units, arrows, callouts, leader lines, rulers or watermarks anywhere in frame",
+    "natural daylight studio lighting, medium-format look, shallow depth of field",
+    "garment-only crop with no face in frame",
+    "fine edge-stitch 1-2 mm inside the collar leaf perimeter and a topstitched collar-stand seam",
+    "topstitched front placket with worked buttonhole"
+  ],
+  "notes": "Attempt 2, gpt_image_2, job f2bb5a61-ff82-451b-a6c8-ce8e0a254203. The correction pass resolved four of the five attempt-1 blocking errors: composition is now a clean garment-only detail crop with no face and the collar dominant (~65% of frame); the fine edge-stitch around both collar leaves and the topstitched collar-stand seam are present and countable; the front placket is now topstitched down both edges with a worked buttonhole rather than a concealed fly; and the collar spread and point angle are tightened to match the narrow point geometry drawn. Background is seamless neutral grey with no props, architecture or scenery, and the frame is completely free of text, numbers, units, arrows, callouts, leader lines, rulers and watermarks. The single remaining defect is also the decisive one: the hidden button fastening — the one feature that distinguishes this option from the plain Point 7.0 cm sibling — is still not rendered, and the exposed placket button the model added actively contradicts the specified concealed closure. Two credit-spending generations used; hard cap reached, so no further attempt was made. The existing illustration should be retained rather than shipping an image that is visually identical to a different catalog option."
+}

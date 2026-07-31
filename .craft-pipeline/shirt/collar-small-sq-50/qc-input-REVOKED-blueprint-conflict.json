@@ -1,0 +1,45 @@
+{
+  "scores": {
+    "shape": 99,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 99,
+    "construction": 99,
+    "placement": 99,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "dimensions",
+      "description": "Absolute point length cannot be verified from a photograph, and my manual measurement resolution is about +/-15%. Measured against the neckband button as a common scale, the blueprint's leaf runs ~6.1 button-diameters from neckband seam to tip; attempt 1 measured ~5.4 and this attempt measures ~6.8. The two attempts bracket the reference value rather than deviating from it systematically, which is the signature of measurement noise around a correct value, not of a geometry error. Both read unmistakably as a compact short-point collar consistent with the stated 5.0 cm; neither reads as a long point.",
+      "expected": "Collar point length exactly as drawn (catalog states 5.0 cm).",
+      "actual": "Within measurement resolution of the drawing; compact short-point collar.",
+      "correction": "No corrective action identified - residual uncertainty is below measurement resolution, not a detected defect."
+    },
+    {
+      "severity": "minor",
+      "category": "blueprint-match",
+      "description": "Two prompt-driven departures from the reference image, neither a geometry violation: the cloth renders as fine poplin whereas the blueprint shows a softer oxford basketweave (the locked spec sets garment fabric to 'crisp cotton poplin', so the locked prompt caused this), and the blueprint shows the shirt on a form with no visible wearer whereas the candidate shows a live model's neck and jaw (the locked prompt explicitly directs 'worn on a male model'). Both are styling dictated by the locked prompt, not construction drift.",
+      "expected": "Blueprint texture and presentation.",
+      "actual": "Poplin texture on a live model, as the locked prompt directs.",
+      "correction": "No change - these follow the locked prompt and must not be altered."
+    }
+  ],
+  "lockedFeatures": [
+    "fabric: crisp white cotton poplin",
+    "camera: medium-format, shallow depth of field, natural daylight studio lighting",
+    "background: seamless plain neutral light-grey, no props, no architecture",
+    "styling: worn on a male model, top button fastened, no necktie",
+    "sharp pointed collar tips exactly as drawn",
+    "single-needle straight edge stitch running around the leaf perimeter and around the point",
+    "separate collar band with its own topstitch line",
+    "exactly one mother-of-pearl button at the neckband",
+    "two collar leaves, tips free (no button-down)",
+    "orientation: front-face collar detail",
+    "no text, annotation, watermark, ruler or dimension callout anywhere in frame"
+  ],
+  "notes": "ATTEMPT 2 - the single major defect from attempt 1 (loose crop) is corrected and nothing else regressed.\n\nCOMPOSITION FIX VERIFIED using the same bounding-box metric applied to attempt 1, so the two are graded consistently: attempt 1 collar bounding box ~715x430 of 880x1168 = ~30% (below the locked 40-80% target); attempt 2 spans ~865x650 = ~55%, squarely inside the target. The model's jaw is reduced from ~15% to ~12% of frame height and the blank shirt-body expanse in the lower third is gone. The collar is the dominant, wholly unobstructed subject and is identifiable in well under one second.\n\nVERIFIED CORRECT AGAINST THE DRAWING (checked adversarially at magnification): orientation is front-face collar detail; exactly TWO collar leaves; tips are SHARP POINTS matching the drawing; single-needle straight edge stitch at a matching offset carried cleanly around the leaf perimeter and around the point; separate collar band carrying its own topstitch line; exactly ONE 4-hole mother-of-pearl button at the neckband with the buttonhole visible and fastened; no necktie, so leaves, spread and band are fully unobstructed; seamless neutral light-grey studio ground with no location, architecture, furniture or props; ZERO text, annotation, watermark, ruler or dimension callout anywhere in frame.\n\nNO SIBLING CONTAMINATION - actively checked for it: leaf tips are free with no collar buttons (did not drift into collar-small-sq-50-btn), stitching is straight single-needle not zigzag (did not drift into collar-small-sq-50-zigzag), and there is no tab, no eyelet holes, no cutaway spread, no rounded tip, no mandarin band. Symmetry improved over attempt 1: both tips now land at near-equal height (y~775 and y~780) with matched leaf length and angle.\n\nCATALOG DATA CONFLICT (resolved in favour of the drawing, per the Supreme Rule; carried forward from attempt 1): the label 'Small Square 5.0 cm' and the description ('finished with squared rather than pointed tips', 'blunt geometry') both assert a squared tip, but the tech-pack illustration shows an unambiguously SHARP POINTED tip at magnification. I investigated rather than guessed. The sibling square-family blueprint collar-sq-65 ('Square 6.5 cm') also shows a sharp point, while collar-round-53 correctly shows rounded club tips and collar-one-collar correctly shows a leafless mandarin band - proving the /images/ai/ set does faithfully encode per-option geometry (62 files, zero duplicate content hashes, so this is not reused stock). Conclusion: in this catalog 'square' is a silhouette family (the option carries group:'square'), NOT a blunt-cut tip, and the auto-generated marketing prose is the inaccurate artifact. The generated photo correctly followed the attached drawing rather than the description's 'squared tips' wording.\n\nACTION FOR THE CATALOG OWNER (outside this skill's authority): the description text for the square-family collars is misleading and should be corrected upstream. No file in data-store/ and no file in public/images/*.json was edited by this run."
+}

@@ -1,0 +1,27 @@
+{
+  "product_code": "csplice-strip-mid",
+  "category_key": "cuff_splicing",
+  "option_label": "Strip in Middle Cuff",
+  "blueprint": "public/images/cuff_splicing/strip-in-middle-cuff.jpg",
+  "view": "barrel cuff fastened around invisible wrist form, 3/4 view, closure corner visible at right",
+  "stated_measurements_cm": {"strip_width": 1.0},
+  "geometry": {
+    "splice_region": "one 1 cm wide contrast strip running VERTICALLY (perpendicular to cuff length) down the middle of the cuff's circumference, full cuff height, passing directly through the button position — the button is sewn on top of the strip",
+    "splice_seam": "two parallel vertical seams bounding the 1 cm strip",
+    "buttons": {"cuff": 1, "position": "centered on the strip"},
+    "corner": "rounded closure corner plain base fabric",
+    "stitching": "single edge-stitch row along all cuff edges"
+  },
+  "ratios": [
+    "strip width 1 cm — slightly narrower than the button diameter; the button just overhangs the strip edges",
+    "strip splits the visible cuff face at mid-circumference, equal white panels either side"
+  ],
+  "locked_features": [
+    "strip count = 1", "strip vertical, full cuff height", "width uniform 1 cm",
+    "button centered ON the strip", "button count = 1", "plain closure corner",
+    "no horizontal strips"
+  ],
+  "uncertain": [],
+  "house_style_match": "public/images/generated/shirt/splice-upper-cuff-v2.png (white poplin + chambray blue contrast)",
+  "comparative_anchor": "differs from csplice-upper/lower-cuff (half panels) — this is a narrow central band only"
+}

@@ -1,0 +1,62 @@
+{
+  "attempt": 2,
+  "scores": {
+    "shape": 97,
+    "geometry": 95,
+    "dimensions": 92,
+    "angles": 96,
+    "construction": 90,
+    "placement": 84,
+    "symmetry": 95,
+    "composition": 98,
+    "blueprint-match": 90
+  },
+  "errors": [
+    {
+      "severity": "major",
+      "category": "placement",
+      "feature": "position of the concealed buttonhole relative to the collar point",
+      "expected": "In the blueprint the concealed buttonhole sits close to the TIP of the turned-back collar leaf, just inboard of the acute point — measured on the drawing it is roughly 110 px from the left collar point tip. That near-the-point position is what defines a hidden button-down: the leaf tip is what gets anchored.",
+      "observed": "The candidate places the worked buttonhole up near the collar base / neckband instead, roughly 365 px from the left collar point tip — about three times further from the point than the drawing shows. The left collar point tip itself carries no buttonhole.",
+      "impact": "The fastening reads as an ordinary neckband top-button closure rather than as a point-anchoring hidden button-down. A customer comparing this against a sibling collar option could mistake the mechanism, which is the exact confusion this catalog exists to prevent."
+    },
+    {
+      "severity": "major",
+      "category": "construction",
+      "feature": "count of worked buttonholes in the collar region",
+      "expected": "The blueprint shows a single worked buttonhole in the exposed collar-leaf underside region.",
+      "observed": "The candidate renders what reads as two separate worked buttonholes in that region — one at the collar base and a second immediately adjacent to the mating button — plus the button itself.",
+      "impact": "Feature count does not match the drawing; an extra buttonhole is an invented feature not present in the blueprint."
+    },
+    {
+      "severity": "minor",
+      "category": "dimensions",
+      "feature": "7.0 cm collar point length",
+      "expected": "Collar points of exactly 7.0 cm, reading as a moderate point collar.",
+      "observed": "Point length is proportionally plausible for 7.0 cm when scaled against the collar band height, but cannot be confirmed to the required tolerance from the image alone.",
+      "impact": "Dimension is consistent with spec but not positively verifiable."
+    },
+    {
+      "severity": "minor",
+      "category": "construction",
+      "feature": "visibility of the mating button",
+      "expected": "The button is concealed beneath the collar leaf; it becomes visible only because the leaf is lifted for documentation, and it must not read as hardware sitting on the outer collar face.",
+      "observed": "The button sits on the band front in a position that is only partly explained by the lifted leaf, so it reads as somewhat more exposed than a fully concealed closure.",
+      "impact": "Slight ambiguity about whether the closure is genuinely hidden."
+    }
+  ],
+  "lockedFeatures": [
+    "point collar with straight acute tip termination (not squared, not club/rounded)",
+    "collar point length exactly 7.0 cm",
+    "hidden button fastening: buttonhole worked on the UNDERSIDE of the collar leaf close to the point, with its mating button on the shirt body beneath, revealed by lifting one leaf exactly as the blueprint stages it",
+    "no button, stud or hardware of any kind visible on the OUTER face of either collar leaf",
+    "exactly 2 collar leaves, mirrored in length, angle and tip shape",
+    "exactly 1 worked buttonhole visible in the exposed collar-leaf region",
+    "collar stand/band present and visible with its own edge stitching",
+    "crisp inset edge-stitching along both collar leaves",
+    "garment-only isolated macro detail — no model, no face, no skin, no hands",
+    "seamless neutral light-grey studio background, no location/architecture/props",
+    "zero text, annotation, watermark, ruler or dimension callout anywhere in frame"
+  ],
+  "notes": "Attempt 2 corrected all three criticals from attempt 1 and is a large improvement. Confirmed fixed and now matching the blueprint: the image is garment-only with no model, face, skin, hair or hands and zero flesh tones; the collar is the dominant unobstructed subject at roughly 70% of frame; the background is a seamless neutral light-grey sweep with no location, architecture, furniture or props; there is no text, numeral, unit, arrow, leader line, ruler tick, callout or watermark anywhere in frame; both collar leaves are present with straight acute point terminations (not squared, not club) and both points sit fully inside the frame; the collar band/stand is now clearly rendered with defined height and its own edge stitching; crisp inset edge-stitching runs along the collar leaves and around the points; the cloth reads as crisp, opaque, freshly pressed poplin with a proper collar roll; the high three-quarter camera angle and overall staging track the drawing closely; and the collar family is correctly a point collar, with no substitution of a spread, cutaway or other sibling option. A concealed fastening IS now depicted — a worked buttonhole under the lifted leaf together with its mating button — which is the single biggest gain over attempt 1. What still blocks approval is placement, not presence: the blueprint anchors the concealed buttonhole close to the collar POINT TIP, which is the geometry that makes this a hidden button-DOWN, whereas the candidate moves it up to the collar base where it reads as a conventional neckband closure. A second, un-drawn buttonhole also appears in that region, so the feature count exceeds the drawing. Under the iron rule that the drawing wins on any conflict, the defining feature is placed wrongly and an extra feature is invented, so this cannot be certified as an accurate reproduction of this specific option. Hard cap of 2 credit-spending generations is now reached; no further generation attempted. Recommended next step for a future pass: keep attempt 2's composition, staging, background and stitching verbatim and change only the buttonhole location — move the single worked buttonhole to just inboard of the collar point tip and delete the second buttonhole."
+}

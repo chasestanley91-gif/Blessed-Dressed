@@ -1,0 +1,135 @@
+{
+  "addr": "shirt > collar-small-sq-50-btn",
+  "productId": "shirt",
+  "optionId": "collar-small-sq-50-btn",
+  "attempt": 1,
+  "scores": {
+    "shape": 35,
+    "geometry": 45,
+    "dimensions": 55,
+    "angles": 58,
+    "construction": 84,
+    "placement": 90,
+    "symmetry": 86,
+    "composition": 74,
+    "blueprint-match": 40
+  },
+  "scoreMin": 98,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "critical",
+      "category": "shape",
+      "description": "The defining feature of this option — the squared-off collar tip — was not reproduced. Both collar leaves in the photo terminate in a sharp acute point.",
+      "expected": "Blueprint (high-zoom on the wearer's-left leaf terminus) shows the edge-stitch running down the leaf's lower edge and TURNING A CORNER into a short straight terminal edge, producing a blunt, near-right-angle squared end. Catalog text is unambiguous: 'squared-off tips', 'blunt square ends'. Locked spec shapes = 'small square', 'square'.",
+      "actual": "Both leaves converge to an acute, needle-sharp point (~35-40 deg included angle) with the two edges meeting at a single vertex. No terminal edge, no corner, no blunt face anywhere on either leaf.",
+      "correction": "Append hard emphasis that each collar leaf must END IN A SHORT STRAIGHT SQUARED-OFF EDGE, not a point: the outer front edge and the lower edge of each leaf must be joined by a visible flat terminal edge roughly 8-10 mm long, meeting each adjoining edge at an approximately 90-degree corner, so the leaf reads as CUT OFF / BLUNT / TRUNCATED. State explicitly: NO acute vertex, NO tapering needle point, NO single-point convergence on either leaf. Both leaves squared identically."
+    },
+    {
+      "severity": "critical",
+      "category": "blueprint-match",
+      "description": "Generic-category / sibling-option substitution — the rendered collar is visually indistinguishable from the sibling options 'Point 5.8 cm with Button' and 'Point 7.0 cm with Button'.",
+      "expected": "A customer comparing this option against the point-collar siblings must instantly see the difference: square blunt tips vs pointed tips. The blueprint's silhouette is a short, stubby, square-ended leaf.",
+      "actual": "A textbook long point collar with a throat button. Nothing in frame distinguishes it from the point-collar family; the only locked differentiator (square tip) is absent.",
+      "correction": "Reinforce the anti-substitution clause with the specific sibling named: this is NOT a point collar; do not render a point/spear/tapered collar leaf under any circumstance. The squared termination is the entire reason this option exists."
+    },
+    {
+      "severity": "major",
+      "category": "dimensions",
+      "description": "Collar leaf length reads far longer than the locked 5.0 cm.",
+      "expected": "Blueprint shows a compact, short leaf — the tip sits high and close to the collar band, well above the chest, reading as a 5.0 cm point length.",
+      "actual": "The leaves extend long and low down the chest, forming a deep wide V; proportionally against the collar band height they read closer to 8 cm than 5.0 cm.",
+      "correction": "Emphasise that the leaf is SHORT and COMPACT — a 5.0 cm point length measured from the collar-band seam to the squared end, sitting high on the chest with the tips close together, not a long dramatic leaf."
+    },
+    {
+      "severity": "major",
+      "category": "angles",
+      "description": "Tip termination angle is acute instead of the blunt near-right-angle corner drawn.",
+      "expected": "Two ~90 degree corners bracketing a short flat terminal edge on each leaf, as traced by the blueprint's edge-stitch line.",
+      "actual": "A single acute vertex where the two stitched edges converge.",
+      "correction": "Specify the corner angles explicitly: each leaf's terminal edge meets the front edge and the lower edge at approximately 90 degrees."
+    },
+    {
+      "severity": "minor",
+      "category": "construction",
+      "description": "Edge topstitching is present and legible on the wearer's-left collar leaf but effectively absent on the wearer's-right leaf.",
+      "expected": "Blueprint shows a single row of edge stitching set roughly 5 mm in from the edge, running continuously around BOTH leaves.",
+      "actual": "Only one leaf carries visible edge stitching.",
+      "correction": "Require the ~5 mm inset edge stitch to run continuously and symmetrically around both collar leaves, turning cleanly at each squared corner."
+    },
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "The model's mouth, chin, jaw, stubble and ear occupy roughly the top quarter of the frame and compete with the collar for attention.",
+      "expected": "Blueprint is shot on an invisible form with no model anatomy in frame; the collar is the sole subject.",
+      "actual": "Human face detail (lips, chin, jawline, ear) fills the upper ~25% of the image.",
+      "correction": "Crop tighter on the collar so no mouth, lips or ear enter the frame — jaw underside at most, with the collar and neckline filling the frame."
+    }
+  ],
+  "verdict": "FAIL",
+  "correction": {
+    "errors": [
+      {
+        "severity": "critical",
+        "category": "shape",
+        "error": "The defining feature of this option — the squared-off collar tip — was not reproduced. Both collar leaves in the photo terminate in a sharp acute point.",
+        "expected": "Blueprint (high-zoom on the wearer's-left leaf terminus) shows the edge-stitch running down the leaf's lower edge and TURNING A CORNER into a short straight terminal edge, producing a blunt, near-right-angle squared end. Catalog text is unambiguous: 'squared-off tips', 'blunt square ends'. Locked spec shapes = 'small square', 'square'.",
+        "actual": "Both leaves converge to an acute, needle-sharp point (~35-40 deg included angle) with the two edges meeting at a single vertex. No terminal edge, no corner, no blunt face anywhere on either leaf.",
+        "correction": "Append hard emphasis that each collar leaf must END IN A SHORT STRAIGHT SQUARED-OFF EDGE, not a point: the outer front edge and the lower edge of each leaf must be joined by a visible flat terminal edge roughly 8-10 mm long, meeting each adjoining edge at an approximately 90-degree corner, so the leaf reads as CUT OFF / BLUNT / TRUNCATED. State explicitly: NO acute vertex, NO tapering needle point, NO single-point convergence on either leaf. Both leaves squared identically."
+      },
+      {
+        "severity": "critical",
+        "category": "blueprint-match",
+        "error": "Generic-category / sibling-option substitution — the rendered collar is visually indistinguishable from the sibling options 'Point 5.8 cm with Button' and 'Point 7.0 cm with Button'.",
+        "expected": "A customer comparing this option against the point-collar siblings must instantly see the difference: square blunt tips vs pointed tips. The blueprint's silhouette is a short, stubby, square-ended leaf.",
+        "actual": "A textbook long point collar with a throat button. Nothing in frame distinguishes it from the point-collar family; the only locked differentiator (square tip) is absent.",
+        "correction": "Reinforce the anti-substitution clause with the specific sibling named: this is NOT a point collar; do not render a point/spear/tapered collar leaf under any circumstance. The squared termination is the entire reason this option exists."
+      },
+      {
+        "severity": "major",
+        "category": "dimensions",
+        "error": "Collar leaf length reads far longer than the locked 5.0 cm.",
+        "expected": "Blueprint shows a compact, short leaf — the tip sits high and close to the collar band, well above the chest, reading as a 5.0 cm point length.",
+        "actual": "The leaves extend long and low down the chest, forming a deep wide V; proportionally against the collar band height they read closer to 8 cm than 5.0 cm.",
+        "correction": "Emphasise that the leaf is SHORT and COMPACT — a 5.0 cm point length measured from the collar-band seam to the squared end, sitting high on the chest with the tips close together, not a long dramatic leaf."
+      },
+      {
+        "severity": "major",
+        "category": "angles",
+        "error": "Tip termination angle is acute instead of the blunt near-right-angle corner drawn.",
+        "expected": "Two ~90 degree corners bracketing a short flat terminal edge on each leaf, as traced by the blueprint's edge-stitch line.",
+        "actual": "A single acute vertex where the two stitched edges converge.",
+        "correction": "Specify the corner angles explicitly: each leaf's terminal edge meets the front edge and the lower edge at approximately 90 degrees."
+      }
+    ],
+    "lockedFeatures": [
+      "squared-off / blunt terminal edge on BOTH collar leaves (the defining feature)",
+      "5.0 cm compact collar leaf length",
+      "exactly ONE throat button on the collar band at the throat",
+      "single row of edge topstitching ~5 mm inset, continuous around both leaves",
+      "white bespoke cotton poplin dress shirt",
+      "collar stand / band visible and correctly proportioned",
+      "seamless neutral light-grey studio background, no props, no location, no text or annotation",
+      "no necktie; collar spread unobstructed",
+      "detail orientation — front face of the collar",
+      "natural daylight studio lighting, medium-format look, shallow depth of field"
+    ],
+    "forbiddenChanges": [
+      "do not alter any checklist item this attempt already passed",
+      "do not change the camera crop, composition, or accessories unless the error is itself a composition error",
+      "do not change the garment part, orientation, or any other option's geometry"
+    ]
+  },
+  "notes": "Attempt 1. Verified against the blueprint at high zoom. Blueprint's own tip geometry was ambiguous at 1x, so the wearer's-left leaf terminus was enlarged ~4x: the edge-stitch line demonstrably turns a corner into a short straight terminal edge, confirming a blunt squared end and agreeing with the catalog text ('squared-off tips', 'blunt square ends'). The generated photo instead produced a classic acute point collar on both leaves. PASSES: seamless neutral light-grey background with no location, architecture, props or environmental context; zero text, annotation, watermark, ruler or dimension callout anywhere in frame; exactly one throat button correctly placed and fastened on the collar band; correct front/detail orientation; no tie; real-photograph rendering with convincing poplin texture; collar dominates roughly half the frame and is identifiable within one second. FAILS: the one locked differentiating feature (square tip) is absent, making the image an unusable stand-in for its point-collar siblings.",
+  "checkedAt": "2026-07-28T05:00:11.040Z"
+}

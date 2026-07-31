@@ -1,0 +1,27 @@
+{
+  "product_code": "csplice-lower-cuff",
+  "category_key": "cuff_splicing",
+  "option_label": "Lower Sleeve Cuff",
+  "blueprint": "public/images/cuff_splicing/lower-sleeve-cuff.jpg",
+  "view": "barrel cuff fastened around invisible wrist form, 3/4 view, closure corner visible at right",
+  "stated_measurements_cm": {"splice_fraction": "1/2 of cuff circumference (annotation 1/2拼)"},
+  "geometry": {
+    "splice_region": "the closure-side half of the cuff barrel (viewer's right of the button, including the rounded closure corner) in contrast fabric; buttonhole-side half stays base fabric",
+    "splice_seam": "single straight vertical seam, perpendicular to cuff length, immediately right of the button at half the circumference",
+    "buttons": {"cuff": 1},
+    "corner": "rounded closure corner IS in contrast fabric",
+    "stitching": "single edge-stitch row along all cuff edges, both fabrics"
+  },
+  "ratios": [
+    "contrast panel spans exactly half the visible cuff circumference — splice seam falls one button-diameter right of the button",
+    "the seam runs the full cuff height top edge to bottom edge; button sits on the base-fabric side touching the seam"
+  ],
+  "locked_features": [
+    "splice panel count = 1", "seam vertical and straight", "split at 1/2 circumference",
+    "contrast on closure-side (right) half incl. rounded corner", "button count = 1 on base-fabric half",
+    "single edge-stitch row"
+  ],
+  "uncertain": [],
+  "house_style_match": "public/images/generated/shirt/splice-upper-cuff-v2.png (white poplin + chambray blue contrast)",
+  "comparative_anchor": "mirror-opposite of csplice-upper-cuff: there the contrast is left of the button; here it is right of the button and covers the closure corner"
+}

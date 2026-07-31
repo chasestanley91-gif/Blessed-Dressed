@@ -1,0 +1,30 @@
+{
+  "batch": "2026-07-26 shirt back category (9 options)",
+  "model": "gpt_image_2 quality=low resolution=1k aspect=3:4",
+  "cost_per_image_credits": 0.5,
+  "media_ids": {
+    "back-double-darts": "c9feb735-77ea-4b74-a45d-83e3ec5e10bb",
+    "back-center-pleats": "54df38e4-442d-4f1b-819e-635a374024a6",
+    "back-side-pleat": "d3c965e4-b211-40d3-913b-c2b6af7dbf83",
+    "back-box-dbl-darts": "d0babf67-1378-478a-b951-ad1de66dd3b3",
+    "back-inverted-center-pleats": "b9079c16-2900-456d-aace-ccd54d6ebdb5",
+    "back-napoli-dbl-darts": "c0558457-135f-42c5-a1b2-d167bc8ee682",
+    "back-box-pleat": "7d2b76a9-83a9-422f-bb68-3147760ce3dd",
+    "back-side-pleats-dbl-darts": "27ce39e3-dbae-450c-83cb-4075629c3088",
+    "back-napoli-no-dart": "fbfbcb57-f600-42aa-9b3b-be5026a0dc24"
+  },
+  "jobs": [
+    {"job_id": "49188baf-f482-4efd-bec5-e9badc31641c", "option": "back-double-darts", "attempt": 1},
+    {"job_id": "f8742c37-62c2-4833-9156-af79d3bdc5b5", "option": "back-center-pleats", "attempt": 1},
+    {"job_id": "3b19467e-8d1d-4739-af87-63ace0eb6abe", "option": "back-side-pleat", "attempt": 1},
+    {"job_id": "99d86031-ef42-452e-9ee6-f52e795935f4", "option": "back-box-pleat", "attempt": 1},
+    {"job_id": "83c808ed-cf42-4e27-b916-057568d9f60c", "option": "back-box-dbl-darts", "attempt": 1},
+    {"job_id": "18232769-0e23-43be-b037-3e8a55f68549", "option": "back-inverted-center-pleats", "attempt": 1},
+    {"job_id": "c9dfb8b8-6810-4f73-96f9-3bc1087e3d99", "option": "back-napoli-dbl-darts", "attempt": 1},
+    {"job_id": "beed9497-8ffc-44c5-be7d-0f5757997d49", "option": "back-side-pleats-dbl-darts", "attempt": 1},
+    {"job_id": "a84dce2b-c7d2-4a7c-99e2-50cfb1779ad6", "option": "back-napoli-no-dart", "attempt": 1}
+  ],
+  "pending_submission": [],
+  "pending_note": "all 9 submitted (2 retried after transient classifier outage)",
+  "next_steps": "poll job_status per job -> download to shirt-assets/photos/shirt/<option>/attempt1.png -> QA vs blueprint (red = construction, all-white shirt) -> promote passes to public/images/generated/shirt/<option>.png -> queue statuses -> rebuild review.html"
+}
