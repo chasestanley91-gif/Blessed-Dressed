@@ -404,5 +404,44 @@
    "outliers": "1 of 578 (9.1MB vest piping master) now 400KB at q70/w1200",
    "asserted_by": "tests/e2e/asset-delivery.spec.ts"
   }
+ },
+ "session_2026_07_30_d": {
+  "mode": "P0 ship-blockers + deploy unblock + repo reconciliation",
+  "credits_spent": 0,
+  "credits_balance_verified": 928.5,
+  "directive": "User cancelled the ChatGPT description research — Claude Code performs the deep research instead. NO image generation until those descriptions exist. Fix the app first.",
+  "ship_blockers_closed": [
+   "CLIENT-SUPPLIED PRICE: create-session passed item.price from req.json() straight into Stripe unit_amount. A crafted POST bought a bespoke suit for /usr/bin/bash.50. Now repriced server-side in src/lib/pricing.ts from the LIVE option config, fabric list and product catalogue; mismatch -> 409. Proven by a hostile test: server log reads \"price mismatch — cart says $0.5, server computes $799.99\".",
+   "LOST BESPOKE SPECIFICATIONS — TWO independent causes stacked: (a) checkout persisted via a server-to-server fetch to /api/admin/bespoke-orders, which proxy.ts gates; no cookie, always 401, if(res.ok) with no else. (b) the checkout PAGE stripped id/cartId/size/config from every line before POSTing, so the server had nothing to store anyway. Persistence moved to src/lib/bespoke-orders.ts and called in-process; client now sends the whole line; a storage failure now FAILS the checkout instead of charging for an unmanufacturable order.",
+   "PUBLIC PII: GET /api/consultation returned every lead name/email/phone/budget/notes. Moved to /api/admin/consultations behind the proxy; public route keeps POST only.",
+   "/builder/suit sold a 50 bespoke suit — no such product; builder fell through to builderProducts[0] and basePrices[\"suit\"] was undefined->0. Unknown slugs now 404; the collections link points at /builder."
+  ],
+  "also_fixed": [
+   "Validation + repricing now run BEFORE the Stripe availability check — a 503-first order made every guard unreachable on a deployment without a key. Caught by my own test.",
+   "Webhook: isNaN guard on the id reduce (one malformed id made every later order ORD-NaN), idempotency on session.id, 5xx on write failure so Stripe retries, and checkout.session.expired / async_payment_failed handling.",
+   "Only FILLED monogram slots are chargeable (the store billed blank ones: 0 for embroidery never ordered and never sent to the atelier).",
+   "Design upcharges price from the LIVE config, so an admin price edit reaches the charge.",
+   "Accessibility: layout wrapped every route in <main> while 21 pages open their own — two landmarks per route. Now <div id=\"content\"> plus a real skip-to-content link.",
+   "Checkout error banner distinguishes a repricing rejection (reload your cart) from an unconfigured gateway."
+  ],
+  "deploy_unblocked": {
+   "webp": "578 derivatives the catalog serves were UNTRACKED while the PNG masters were vercelignored — a deploy would have 404d every craft image. Committed (f77759e).",
+   "factory": "332 catalog references pointed at /images/factory/kute/**, gitignored AND vercelignored. tools/promote_factory_assets.mjs copied the 78 distinct files into public/images/blueprints/factory/ (tracked+shipped) and repointed. Catalog integrity unchanged: 2862/1979/12.",
+   "gate": "tests/repo/deploy-assets.spec.ts now PASSES as a real assertion — no longer annotated test.fail()."
+  },
+  "repo_reconciliation": {
+   "done": true,
+   "what": "blessed-dressed/.git (GitHub Blessed-Dressed, the Vercel source) is now the single source of truth. The outer files repo stopped double-tracking 20,496 duplicated files via git rm -r --cached + .gitignore. Files remain on disk; no history rewritten.",
+   "outer_repo_tracked": "25,770 -> 5,274",
+   "commits_now_reachable_by_vercel": [
+    "d1f536f tooling",
+    "d30fa79 checkout ship-blockers",
+    "f77759e webp derivatives",
+    "07ae63e factory asset promotion"
+   ]
+  },
+  "tests": "53 passed, 0 failed, 1 skipped (Stripe paid path, pending keys). Both former test.fail() known-bug annotations are gone — replaced by real passing assertions.",
+  "still_blocked_on_user": "Vercel env vars — Stripe keys are under the wrong names (Secret_key vs STRIPE_SECRET_KEY), so checkout 503s in production regardless of code. BLOB_READ_WRITE_TOKEN, STRIPE_WEBHOOK_SECRET, NEXT_PUBLIC_SITE_URL, ADMIN_PASSWORD, ADMIN_TOKEN_SECRET all absent.",
+  "next": "Phase 3 remaining app defects (order correctness incl. the measurement-unit gap, ~30 unchecked fetches, mobile 375px, next/image migration, sitemap/robots/metadata), Phase 4 qc_ladder defects, Phase 6 the ~860 craft descriptions."
  }
 }
