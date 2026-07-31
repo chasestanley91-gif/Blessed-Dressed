@@ -158,7 +158,7 @@ export default async function CollectionPage({
             garment and start your bespoke order.
           </p>
           <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-            <a
+            <Link
               href="/builder"
               className="font-sans inline-flex items-center gap-3 rounded-full bg-gold px-8 py-3.5 text-sm font-semibold text-background shadow-[0_2px_16px_rgba(212,175,55,0.3)] transition-[opacity,transform] duration-150 hover:opacity-90 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-[#09141e]"
             >
@@ -166,7 +166,7 @@ export default async function CollectionPage({
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
                 <path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
-            </a>
+            </Link>
             <Link
               href="/fabric-book"
               className="font-sans inline-flex items-center gap-2 rounded-full border border-gold/20 px-6 py-3.5 text-sm text-muted-dark transition-[border-color,color] duration-150 hover:border-gold/40 hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-[#09141e]"

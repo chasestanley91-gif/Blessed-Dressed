@@ -152,12 +152,36 @@ function ItemWorksheet({ item, idx }: { item: BespokeOrderItem; idx: number }) {
           {config.measureMode === "standard" ? (
             <Row label="Standard Size" value={config.standardSize ?? ""} />
           ) : (
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-0.5">
-              {Object.entries(config.customMeasurements ?? {}).map(([k, v]) => (
-                <Row key={k} label={idToLabel(k)} value={v} />
-              ))}
-            </div>
+            <>
+              {/*
+                The unit is stated on the section AND repeated on every value.
+                This worksheet is what the garment is cut from, and a bare "41"
+                is a 16-inch ambiguity. Orders placed before the unit was
+                recorded have no `measurementUnit` at all — those say so
+                explicitly rather than defaulting to centimetres and inventing
+                a certainty the record does not contain.
+              */}
+              <Row
+                label="Units"
+                value={
+                  config.measurementUnit
+                    ? config.measurementUnit === "cm" ? "centimetres" : "inches"
+                    : "NOT RECORDED — confirm with the customer before cutting"
+                }
+              />
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-0.5">
+                {Object.entries(config.customMeasurements ?? {}).map(([k, v]) => (
+                  <Row
+                    key={k}
+                    label={idToLabel(k)}
+                    value={config.measurementUnit ? `${v} ${config.measurementUnit === "cm" ? "cm" : "in"}` : `${v} (?)`}
+                  />
+                ))}
+              </div>
+            </>
           )}
+          {/* Chest allowance is always centimetres: the builder converts it into
+              the customer's display unit rather than storing it in one. */}
           {config.chestAllowance && (
             <Row label="Chest Allowance" value={`${config.chestAllowance} cm`} />
           )}

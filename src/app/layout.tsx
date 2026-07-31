@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import { CartProvider } from "@/context/CartContext";
 import { loadDataAsync } from "@/lib/admin-data";
 import { SITE_DEFAULTS, type SiteSettings } from "@/data/site-settings";
+import { SITE_URL } from "@/lib/site-url";
 import "./globals.css";
 
 const THEME_DEFAULTS: Record<string, string> = {
@@ -57,15 +58,29 @@ const montserrat = Montserrat({
 
 export const dynamic = 'force-dynamic';
 
+const SITE_DESCRIPTION =
+  "Luxury bespoke tailoring, ready-to-wear essentials, and premium ecommerce for modern gentlemen.";
+
 export const metadata: Metadata = {
-  title: "Blessed & Dressed",
-  description: "Luxury bespoke tailoring, ready-to-wear essentials, and premium ecommerce for modern gentlemen.",
-  metadataBase: new URL("https://blessed-dressed.vercel.app"),
+  // `%s` is filled by each route's own `title`; routes that set none get the
+  // bare default rather than "undefined | Blessed & Dressed".
+  title: { default: "Blessed & Dressed", template: "%s | Blessed & Dressed" },
+  description: SITE_DESCRIPTION,
+  // Was hardcoded to the Vercel preview domain, so every canonical and OG URL
+  // pointed there even once a custom domain was live. Now one source of truth.
+  metadataBase: new URL(SITE_URL),
+  alternates: { canonical: "/" },
   openGraph: {
     title: "Blessed & Dressed",
-    description: "Luxury bespoke tailoring, ready-to-wear essentials, and premium ecommerce for modern gentlemen.",
+    description: SITE_DESCRIPTION,
     siteName: "Blessed & Dressed",
     type: "website",
+    url: SITE_URL,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Blessed & Dressed",
+    description: SITE_DESCRIPTION,
   },
 };
 

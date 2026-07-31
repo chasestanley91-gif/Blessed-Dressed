@@ -24,6 +24,16 @@ export type BuilderState = {
   measureMode: "standard" | "body" | "finished";
   standardSize: string;
   customMeasurements: Record<string, string>;
+  /**
+   * The unit every value in `customMeasurements` is expressed in.
+   *
+   * This has to live in the store, not in the measurements step. It used to be
+   * component-local `useState`, which meant a 41 cm chest and a 41 inch chest
+   * produced byte-identical orders — a 16 inch difference, and nothing anywhere
+   * downstream could tell them apart. A garment cut from the wrong one is
+   * scrapped cloth.
+   */
+  measurementUnit: "cm" | "inch";
   chestAllowance: string;
   wearingHabit: string;
 
@@ -48,6 +58,7 @@ export type BuilderState = {
   setMeasureMode: (mode: "standard" | "body" | "finished") => void;
   setStandardSize: (size: string) => void;
   setCustomMeasurement: (key: string, value: string) => void;
+  setMeasurementUnit: (unit: "cm" | "inch") => void;
   setChestAllowance: (v: string) => void;
   setWearingHabit: (v: string) => void;
   setPostureAdjustment: (fieldId: string, optionId: string) => void;
@@ -63,6 +74,7 @@ export type BuilderState = {
     measureMode?: "standard" | "body" | "finished";
     standardSize?: string;
     customMeasurements?: Record<string, string>;
+    measurementUnit?: "cm" | "inch";
     chestAllowance?: string;
     wearingHabit?: string;
     postureAdjustments?: Record<string, string>;
@@ -127,6 +139,7 @@ export const useBuilderStore = create<BuilderState>((set) => ({
   measureMode: "standard",
   standardSize: "",
   customMeasurements: {},
+  measurementUnit: "cm",
   chestAllowance: "8",
   wearingHabit: "",
   postureAdjustments: {},
@@ -189,6 +202,11 @@ export const useBuilderStore = create<BuilderState>((set) => ({
       customMeasurements: { ...state.customMeasurements, [key]: value },
     })),
 
+  // Switching units does NOT convert the numbers already entered. The customer
+  // is re-declaring which scale they are working in, and silently rewriting
+  // their figures would be a worse surprise than leaving them alone.
+  setMeasurementUnit: (unit) => set({ measurementUnit: unit }),
+
   setChestAllowance: (v) => set({ chestAllowance: v }),
 
   setWearingHabit: (v) => set({ wearingHabit: v }),
@@ -244,6 +262,7 @@ export const useBuilderStore = create<BuilderState>((set) => ({
       measureMode: "standard",
       standardSize: "",
       customMeasurements: {},
+      measurementUnit: "cm",
       chestAllowance: "8",
       wearingHabit: "",
       postureAdjustments: {},

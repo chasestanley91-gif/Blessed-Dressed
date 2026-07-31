@@ -1,4 +1,5 @@
 ﻿import { Metadata } from "next";
+import { notFound } from "next/navigation";
 import Link from "next/link";
 import { loadDataAsync } from "@/lib/admin-data";
 import { collections, type Collection } from "@/data/collections";
@@ -25,21 +26,9 @@ export default async function CollectionDetailPage({ params }: CollectionPagePro
   const collectionsData = await loadDataAsync<Collection[]>("collections", collections);
   const collection = collectionsData.find((item) => item.slug === slug);
 
-  if (!collection) {
-    return (
-      <main className="min-h-screen bg-background pt-20 text-foreground px-6 py-12 lg:px-16">
-        <div className="mx-auto max-w-4xl rounded-[2rem] border border-border-accent bg-surface-strong p-10 text-center shadow-[0_4px_20px_rgba(0,0,0,0.3)]">
-          <p className="font-sans text-lg text-muted-dark">Collection not found.</p>
-          <Link
-            href="/collections"
-            className="font-sans mt-6 inline-flex rounded-full bg-gold px-6 py-3 text-sm font-semibold text-background transition-opacity hover:opacity-90"
-          >
-            View all collections
-          </Link>
-        </div>
-      </main>
-    );
-  }
+  // Real 404 rather than a 200 whose body says "not found" — see the note in
+  // products/[id]/page.tsx.
+  if (!collection) notFound();
 
   return (
     <main className="min-h-screen bg-background pt-20 text-foreground">

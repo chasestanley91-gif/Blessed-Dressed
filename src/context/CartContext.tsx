@@ -19,6 +19,12 @@ export type BespokeConfig = {
   measureMode: "standard" | "body" | "finished";
   standardSize?: string;
   customMeasurements?: Record<string, string>;
+  /**
+   * The unit every value in `customMeasurements` is expressed in. Without it a
+   * 41 cm chest and a 41 inch chest are byte-identical orders, and the atelier
+   * has no way to tell which garment to cut.
+   */
+  measurementUnit?: "cm" | "inch";
   chestAllowance?: string;
   wearingHabit?: string;
   postureAdjustments?: Record<string, string>;

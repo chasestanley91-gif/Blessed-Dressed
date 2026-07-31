@@ -1,4 +1,5 @@
 ﻿import { Metadata } from "next";
+import { notFound } from "next/navigation";
 import Link from "next/link";
 import { unstable_noStore as noStore } from "next/cache";
 import { loadDataAsync } from "@/lib/admin-data";
@@ -35,21 +36,11 @@ export default async function ProductPage({ params }: ProductPageProps) {
     guaranteeText: "Every garment is backed by our craftsmanship guarantee. If something isn't right, we'll make it right.",
   };
 
-  if (!product) {
-    return (
-      <main className="min-h-screen bg-background pt-20 text-foreground px-6 py-12 lg:px-16">
-        <div className="mx-auto max-w-4xl rounded-[2rem] border border-border-accent bg-surface-strong p-10 text-center shadow-[0_4px_20px_rgba(0,0,0,0.3)]">
-          <p className="font-sans text-lg text-muted-dark">Product not found.</p>
-          <Link
-            href="/"
-            className="font-sans mt-6 inline-flex rounded-full bg-gold px-6 py-3 text-sm font-semibold text-background transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
-          >
-            Return to homepage
-          </Link>
-        </div>
-      </main>
-    );
-  }
+  // A missing product is a 404, not a 200 that happens to say "not found".
+  // The soft version told the customer the truth but told Google the page was
+  // real, so dead product URLs stayed indexed and kept accruing crawl budget.
+  // notFound() renders src/app/not-found.tsx with a genuine 404 status.
+  if (!product) notFound();
 
   const totalStock = product.stockBySize.reduce((s, x) => s + x.stock, 0);
   const allImages = product.images?.length ? product.images : [product.image];

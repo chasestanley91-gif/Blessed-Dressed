@@ -44,6 +44,7 @@ type ShareState = {
   measureMode: "standard" | "body" | "finished";
   standardSize: string;
   customMeasurements: Record<string, string>;
+  measurementUnit: "cm" | "inch";
   chestAllowance: string;
   wearingHabit: string;
   postureAdjustments: Record<string, string>;
@@ -61,6 +62,10 @@ function encodeShare(s: ShareState): string {
     mm: s.measureMode !== "standard" ? s.measureMode : undefined,
     ss: s.standardSize || undefined,
     cm: Object.keys(s.customMeasurements).length ? s.customMeasurements : undefined,
+    // The unit the numbers in `cm` are expressed in. A shared link that carried
+    // the figures but not the scale would recreate the exact ambiguity this
+    // field exists to remove.
+    mu: s.measurementUnit !== "cm" ? s.measurementUnit : undefined,
     ca: s.chestAllowance !== "8" ? s.chestAllowance : undefined,
     wh: s.wearingHabit || undefined,
     pa: Object.keys(s.postureAdjustments).length ? s.postureAdjustments : undefined,
@@ -86,6 +91,7 @@ function decodeShare(encoded: string): Partial<ShareState> | null {
       measureMode: (d.mm as "standard" | "body" | "finished") ?? "standard",
       standardSize: (d.ss as string) ?? "",
       customMeasurements: (d.cm as Record<string, string>) ?? {},
+      measurementUnit: (d.mu as "cm" | "inch") ?? "cm",
       chestAllowance: (d.ca as string) ?? "8",
       wearingHabit: (d.wh as string) ?? "",
       postureAdjustments: (d.pa as Record<string, string>) ?? {},
@@ -651,8 +657,8 @@ function MeasurementsStep({ productSlug }: { productSlug: string }) {
     chestAllowance, wearingHabit,
     setMeasureMode, setStandardSize, setCustomMeasurement,
     setChestAllowance, setWearingHabit,
+    measurementUnit: unit, setMeasurementUnit: setUnit,
   } = useBuilderStore();
-  const [unit, setUnit] = useState<"cm" | "inch">("cm");
   const [tab, setTab] = useState<MeasureTab>("body");
 
   const isShirt = productSlug === "shirt";
@@ -1202,6 +1208,7 @@ export default function BuilderProductPage({ params }: BuilderPageProps) {
     measureMode,
     standardSize,
     customMeasurements,
+    measurementUnit,
     chestAllowance,
     wearingHabit,
     postureAdjustments,
@@ -1230,6 +1237,7 @@ export default function BuilderProductPage({ params }: BuilderPageProps) {
       measureMode: decoded.measureMode,
       standardSize: decoded.standardSize,
       customMeasurements: decoded.customMeasurements,
+      measurementUnit: decoded.measurementUnit,
       chestAllowance: decoded.chestAllowance,
       wearingHabit: decoded.wearingHabit,
       postureAdjustments: decoded.postureAdjustments,
@@ -1256,6 +1264,7 @@ export default function BuilderProductPage({ params }: BuilderPageProps) {
       measureMode,
       standardSize,
       customMeasurements: customMeasurements ?? {},
+      measurementUnit,
       chestAllowance,
       wearingHabit,
       postureAdjustments: postureAdjustments ?? {},
@@ -1270,7 +1279,7 @@ export default function BuilderProductPage({ params }: BuilderPageProps) {
       setTimeout(() => setShareCopied(false), 2500);
     });
   }, [fabric, fabricPremium, designSelections, measureMode, standardSize,
-      customMeasurements, chestAllowance, wearingHabit, postureAdjustments,
+      customMeasurements, measurementUnit, chestAllowance, wearingHabit, postureAdjustments,
       styleQuiz, discoveryQuiz, monograms, activeStep, productSlug]);
 
   useEffect(() => {
@@ -1323,6 +1332,9 @@ export default function BuilderProductPage({ params }: BuilderPageProps) {
         measureMode,
         standardSize: measureMode === "standard" ? standardSize : undefined,
         customMeasurements: (measureMode === "body" || measureMode === "finished") ? customMeasurements : undefined,
+        // Carried only when there are figures for it to qualify. A standard-size
+        // order has no measurements, so a unit on it would be noise.
+        measurementUnit: (measureMode === "body" || measureMode === "finished") ? measurementUnit : undefined,
         chestAllowance,
         wearingHabit,
         postureAdjustments,
@@ -1547,7 +1559,9 @@ export default function BuilderProductPage({ params }: BuilderPageProps) {
               <div className="flex justify-between px-6 py-3">
                 <span className="font-sans text-sm text-muted-dark">Measurements</span>
                 <span className="font-sans text-sm font-semibold text-foreground">
-                  {measureMode === "standard" ? `Standard ${standardSize || "(not selected)"}` : measureMode === "finished" ? "Garment measurements provided" : "Body measurements provided"}
+                  {measureMode === "standard"
+                    ? `Standard ${standardSize || "(not selected)"}`
+                    : `${measureMode === "finished" ? "Garment" : "Body"} measurements provided in ${measurementUnit === "cm" ? "centimetres" : "inches"}`}
                 </span>
               </div>
               {Object.entries(postureAdjustments).filter(([, v]) => v && !v.includes("normal")).map(([k, v]) => {
