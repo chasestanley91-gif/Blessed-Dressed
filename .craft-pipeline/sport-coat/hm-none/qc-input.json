@@ -1,0 +1,51 @@
+{
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 99,
+    "placement": 98,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "symmetry",
+      "description": "Only the wearer's right lapel and forepart are in frame. The blueprint is a whole-jacket view showing both forequarters, both sleeves and the full front. Bilateral symmetry therefore cannot be independently verified from the photograph. Mitigating: the locked CLOSE-CROP clause explicitly directs the camera onto the lapel edge and front edge at close range, so the crop obeys the locked spec, and the visible edges are clean and regular.",
+      "expected": "bilaterally symmetric jacket front per the whole-garment drawing",
+      "actual": "single-forepart close crop; opposite lapel and sleeve outside the frame",
+      "correction": "acceptable at this crop; the option is an edge-finish treatment, which is legible on one forepart"
+    },
+    {
+      "severity": "minor",
+      "category": "construction",
+      "description": "The prompt's extracted specification token reads 'hand-worked buttonhole', which directly contradicts the option itself ('Standard Machine' — the absence of hand finishing). This is an upstream extraction defect: the token was harvested from description prose that mentions hand work only to contrast against it. The render resolved the contradiction correctly, producing a clean, uniform, machine-made lapel buttonhole rather than a hand-worked one, so the image is right even though the prompt was internally inconsistent.",
+      "expected": "machine-made finishing throughout, consistent with 'Standard Machine'",
+      "actual": "clean uniform machine buttonhole and machine-finished edges — correct; but the prompt demanded a 'hand-worked buttonhole'",
+      "correction": "no image change needed; fix the token extraction upstream so 'Standard Machine' does not inherit a 'hand-worked buttonhole' requirement"
+    },
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "The hip flap pocket and the second front button, both present in the whole-jacket drawing, fall outside the crop. They are not the showcased option and their omission is a direct consequence of the mandated close crop.",
+      "expected": "whole-jacket features per the drawing",
+      "actual": "hip flap pocket and lower button cropped out",
+      "correction": "no action; the option is the edge finish, not the pocket or button count"
+    }
+  ],
+  "lockedFeatures": [
+    "orientation: front",
+    "NO hand pick stitching / AMF stitching anywhere on the lapel edge or front edge — this is the defining characteristic of the option",
+    "notch lapel with clean machine-finished folded edge",
+    "chest welt pocket present, as drawn",
+    "one worked lapel buttonhole, machine-made, as marked in the drawing",
+    "fabric: navy hopsack with visible basketweave, appropriate to a sport coat",
+    "styling: white dress shirt, no tie",
+    "background: seamless neutral light-grey studio sweep",
+    "zero annotation in frame"
+  ],
+  "notes": "ADVERSARIAL READ vs /images/blueprints/factory/13c1b88ec1cb__0570__No.png.\n\nBLUEPRINT: whole single-breasted jacket, front view, notch lapel, chest welt pocket, hip flap pocket, two front buttons, a small mark on the lapel indicating the lapel buttonhole. Critically, NO pick-stitch dashes are drawn along any edge — this is the 'No' (standard machine) member of the handmade-type field.\n\nATTEMPTED REJECTIONS THAT FAILED:\n(1) Did it hallucinate pick stitching? This was the single highest-risk failure, because 'bespoke/Savile Row' priors and the prompt's own boilerplate phrase 'fine hand stitching' both push toward AMF dashes along the lapel edge. Examined the lapel edge, the front edge and the welt pocket edge at full resolution: the edges are clean and unbroken, with NO row of spaced pick stitches. The option is correctly depicted as an absence.\n(2) Wrong lapel family? Drawing shows a notch; render shows a notch with a stepped collar/lapel gap. No peak spike, no shawl sweep. Correct.\n(3) Chest pocket substituted? Drawing shows a welt chest pocket; render shows a welt chest pocket, not a patch and not a flap. Correct.\n(4) Annotation traced? No numbers, arrows, leader lines or text anywhere in frame.\n(5) Wrong face? Front, as drawn.\n(6) Is it a sport coat rather than a suit jacket? Yes — the cloth is a visibly open hopsack basketweave, correct for sport-coat.\n\nThe hardest judgement here is that 'Standard Machine' is inherently a low-contrast option: its photograph is defined by what is absent. The render succeeds on exactly that axis — a clean machine-finished edge presented large in frame — and adds nothing that the drawing does not show."
+}

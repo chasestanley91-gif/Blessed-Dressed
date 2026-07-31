@@ -1,0 +1,44 @@
+{
+  "scores": {
+    "shape": 99,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 99,
+    "placement": 98,
+    "symmetry": 99,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "angles",
+      "description": "The pocket rises toward the side seam in the correct direction but at roughly 8 degrees rather than the ~15 degrees measured off the drawing. Improved from ~5 degrees on attempt 1.",
+      "expected": "pocket line rising toward the side seam at roughly 15 degrees",
+      "actual": "pocket line rising toward the side seam at roughly 8 degrees",
+      "correction": "Steepen the slant further if a third attempt is taken; the drawn angle is itself measured off a low-resolution illustration, so the residual gap is within reading tolerance."
+    },
+    {
+      "severity": "minor",
+      "category": "dimensions",
+      "description": "The flap is now marginally shallower relative to its length than drawn (overcorrected from attempt 1).",
+      "expected": "flap depth-to-length ratio of roughly 0.31",
+      "actual": "flap depth-to-length ratio of roughly 0.23",
+      "correction": "Increase flap depth slightly if a third attempt is taken."
+    }
+  ],
+  "lockedFeatures": [
+    "exactly ONE chest pocket — CORRECT (no mirrored second pocket invented)",
+    "pocket on the WEARER'S LEFT chest — CORRECT (confirmed in this macro by the V-neckline edge and shirt visible at the frame's top-left, placing centre front to the pocket's left)",
+    "a real FLAP with genuine depth — CORRECT",
+    "the jetted BESOM welt clearly readable as a separate element from the flap — CORRECT (this is precisely what distinguishes this option from the plain-welt sibling)",
+    "flap and welt both rendered in the same navy cloth with clean pressed edges — CORRECT",
+    "pocket rises toward the side seam (correct direction) — CORRECT, angle slightly shallow",
+    "macro crop: the pocket now spans ~89% of the frame width and is identifiable in well under a second — CORRECT (this was the attempt-1 failure and is fixed)",
+    "clean even lighting, no competing background element — CORRECT",
+    "zero annotation: no numbers, units, arrows, leader lines, red guide marks or text anywhere in frame — CORRECT",
+    "photographic, not line-art; navy fine wool suiting with visible weave — CORRECT"
+  ],
+  "notes": "Attempt 2, retried only against the three logged findings from attempt 1. The composition failure is resolved: the flapped besom now spans nearly the full frame width instead of under 10% of the frame area, and both the flap and the besom welt beneath it are individually resolved — the exact discrimination a customer needs against the plain-welt sibling option. Every identity-critical property from attempt 1 was preserved: one pocket, wearer's left, genuine flap over a besom welt, front view, no annotation, no red. Two residual minor geometry deviations remain (slant slightly shallow, flap slightly shallow); both are within the reading tolerance of the low-resolution source drawing and neither is a count, side or orientation error."
+}

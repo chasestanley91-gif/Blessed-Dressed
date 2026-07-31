@@ -1,0 +1,37 @@
+{
+  "addr": "suit-3pc > db-6x3",
+  "productId": "suit-3pc",
+  "optionId": "db-6x3",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 98,
+    "geometry": 99,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 99,
+    "placement": 99,
+    "symmetry": 99,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "shape",
+      "description": "The waistcoat hem terminates in a fairly sharp centre point; the blueprint's bottom line (cut off by the crop) reads as a shallow curve.",
+      "expected": "Shallow curved hem as suggested by the drawing's lower edge.",
+      "actual": "Distinct V point at centre front hem.",
+      "correction": "If regenerated, soften the hem toward a shallow curve. Low priority: the blueprint crops the hem line, so it is only partly determinable."
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "notes": "Button count verified by explicit count: 6, arranged 2 columns x 3 rows, with the DB wrap overlap present. This is the single most failure-prone attribute for this option and it is correct. The prompt's 'suit jacket' wording did not propagate; the blueprint overrode it.",
+  "checkedAt": "2026-07-31T05:27:38.545Z"
+}

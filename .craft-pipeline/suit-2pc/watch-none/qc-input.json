@@ -1,0 +1,35 @@
+{
+  "scores": {
+    "shape": 99,
+    "geometry": 98,
+    "dimensions": 99,
+    "angles": 98,
+    "construction": 98,
+    "placement": 99,
+    "symmetry": 99,
+    "composition": 99,
+    "blueprint-match": 98
+  },
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "geometry",
+      "description": "The (non-subject) front hip pocket opening is rendered as a gentle curve, where the drawing shows it as a straight diagonal.",
+      "expected": "straight diagonal front pocket opening as drawn",
+      "actual": "gently curved front pocket opening",
+      "correction": "Straighten the front pocket opening; it is background context for this option, not the subject."
+    }
+  ],
+  "lockedFeatures": [
+    "ABSENCE VERIFIED — no watch pocket anywhere in frame: no small besom, no jetted mouth, no opening of any kind at or below the waistband — CORRECT (checked at 2x zoom across the whole waistband run)",
+    "clean, unbroken waistband is the subject and fills the frame — CORRECT",
+    "three-quarter front view of the trouser front — CORRECT",
+    "waistband with belt loops present as drawn — CORRECT",
+    "front crease line present — CORRECT",
+    "a front hip pocket IS present, which is correct: the drawing for this option retains its front pocket and removes only the watch pocket — CORRECT (shape minor logged separately)",
+    "the absent feature was NOT hallucinated in — CORRECT",
+    "zero annotation: no numbers, units, arrows, leader lines, red guide marks or text anywhere in frame — CORRECT",
+    "photographic, not line-art; navy fine wool suiting — CORRECT"
+  ],
+  "notes": "Adversarial pass on an ABSENCE option, where the failure mode is hallucinating the removed feature back in. Zoomed 2x along the full waistband run: there is no watch pocket, no small besom and no opening of any kind. The clean waistband and upper front hip fill the frame and read in well under a second. One minor logged on the front hip pocket's curvature — that pocket is present in the drawing and is correctly retained, only its opening is curved rather than straight; it is not this option's subject."
+}

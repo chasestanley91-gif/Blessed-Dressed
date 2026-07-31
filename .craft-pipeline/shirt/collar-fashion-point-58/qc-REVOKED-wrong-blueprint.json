@@ -1,0 +1,37 @@
+{
+  "addr": "shirt > collar-fashion-point-58",
+  "productId": "shirt",
+  "optionId": "collar-fashion-point-58",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 99,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 99,
+    "construction": 98,
+    "placement": 99,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "Background is rendered a shade more olive/green than the neutral warm grey of the illustration, and the left collar leaf sits closer to the frame edge than in the reference.",
+      "expected": "Neutral warm grey seamless background; both collar leaves comfortably inside the frame as in the illustration.",
+      "actual": "Slightly olive-toned grey background; left collar point close to (but not cut by) the left frame edge.",
+      "correction": "Nudge the crop right by ~5% and specify a neutral warm grey seamless; no geometry change needed."
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "notes": "Strong attempt-1 match. Collar leaves terminate in straight acute points as required; the forbidden squared/blunt and rounded-club terminations are both absent. Collar stand, roll and edge topstitching all read consistently with the illustration. Narrow spread preserved and unobstructed. Only cosmetic deviations found.",
+  "checkedAt": "2026-07-31T04:32:53.299Z"
+}

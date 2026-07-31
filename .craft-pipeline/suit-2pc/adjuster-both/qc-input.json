@@ -1,0 +1,38 @@
+{
+  "scores": {
+    "shape": 99,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 99,
+    "placement": 98,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "The adjuster assembly spans the full width of the frame but occupies only the top band of it, so by area the hardware itself is roughly 10-12% of the frame rather than the 40-80% the CLOSE CROP directive asks for. It is still the only hardware present and reads instantly, so this is a framing preference rather than an accuracy fault.",
+      "expected": "the strap and buckle filling 40-80% of the frame",
+      "actual": "the strap and buckle occupy a full-width band across the top ~15% of the frame; the rest is plain hip cloth, pleats and the welt pocket",
+      "correction": "if re-shot, tilt in closer so the strap band runs across the middle third of the frame rather than the top edge"
+    }
+  ],
+  "lockedFeatures": [
+    "orientation: trouser hip seen from the front/three-quarter, waistband across the top - CORRECT",
+    "ONE side-adjuster visible on the visible side of the trousers, as the drawing's single three-quarter view can show - CORRECT",
+    "the adjuster is SET INTO the waistband, not applied below it - CORRECT",
+    "self-fabric navy strap running horizontally through the waistband with metal hardware at its centre - CORRECT",
+    "metal buckle/slide with a shaped plate, strap tail passing through it - CORRECT, matches the drawn strap-through-buckle geometry",
+    "NO belt loops anywhere on the waistband (side adjusters replace them) - CORRECT",
+    "two forward pleats on the front panel below the waistband - CORRECT, matches the two pleat lines in the drawing",
+    "single jetted/welt pocket set below the waistband to the frame-right, with the short vertical tab above it - CORRECT, matches the drawn welt and its tab",
+    "pressed front crease running down from the waistband - CORRECT",
+    "fine navy wool suiting, no contrast fabric - CORRECT",
+    "seamless neutral light-grey studio background - CORRECT",
+    "zero text, numbers, arrows, leader lines, red guide marks or callouts - CORRECT; the red-highlighted adjuster in the drawing was correctly rendered as polished metal hardware on navy cloth, never in red"
+  ],
+  "notes": "Attempt 1. Counted and checked one at a time: one adjuster (correct for a three-quarter view of a both-sides option), self-fabric strap through a metal buckle set into the waistband, no belt loops, two pleats, one welt pocket with its tab, one crease line. Every element in the drawing is accounted for and nothing was invented. The red highlight in the drawing was correctly interpreted as a highlight, not a colour instruction. Photographic realism, fabric behaviour and background are all correct and the frame is free of any traced annotation. Only finding is the framing note above. Note also the known upstream prompt defect - the built prompt calls this 'a premium navy bespoke suit jacket' although it is a trouser option - but the attached blueprint overrode the wording completely and the render is unambiguously a trouser waistband, so it had no effect on the result."
+}

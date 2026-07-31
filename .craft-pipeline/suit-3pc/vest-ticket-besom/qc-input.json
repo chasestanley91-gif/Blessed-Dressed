@@ -1,0 +1,37 @@
+{
+  "scores": {
+    "shape": 99,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 99,
+    "construction": 99,
+    "placement": 98,
+    "symmetry": 99,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "placement",
+      "description": "The welt sits between the second and third visible front buttons; the drawing places it level with the third of five buttons. The render's crop makes exact button indexing uncertain.",
+      "expected": "besom ticket pocket level with the third front button, at the natural waist",
+      "actual": "besom ticket pocket between the second and third visible front buttons",
+      "correction": "Drop the welt marginally if a third attempt is taken; the crop truncates the button run so the index cannot be fixed precisely."
+    }
+  ],
+  "lockedFeatures": [
+    "exactly ONE ticket pocket — CORRECT (no second pocket invented)",
+    "clean double-jetted BESOM welt with BOTH jets individually resolved and NO FLAP — CORRECT (this is the discrimination against a flapped sibling option)",
+    "welt runs horizontal, matching the drawn welt — CORRECT",
+    "pocket on the waistcoat front panel to the image-LEFT of the centre-front button run, matching the drawing's panel and handedness — CORRECT",
+    "centre-front button run visible at image-right with tonal horn buttons, giving the positional context that proves placement — CORRECT",
+    "three-quarter front orientation — CORRECT",
+    "macro crop: the welt now spans ~57% of the frame width, up from ~32%, and is the unambiguous dominant subject — CORRECT (attempt-1 failure fixed)",
+    "the dark shadowed arm that intruded at the left edge on attempt 1 is gone; background is clean, evenly lit light grey — CORRECT (attempt-1 failure fixed)",
+    "welt rendered in cloth colour, NOT red (red in the drawing is a highlight, not a colour instruction) — CORRECT",
+    "zero annotation: no numbers, units, arrows, leader lines, red guide marks or text anywhere in frame — CORRECT",
+    "photographic, not line-art; navy fine wool suiting with visible weave — CORRECT"
+  ],
+  "notes": "Attempt 2, retried only against the two logged composition findings from attempt 1; both are resolved. The welt now spans over half the frame width, is dead centre and sharply resolved with both jets and the cloth weave readable, and the competing dark mass at the left edge is gone. A besom is an inherently linear feature and cannot reach 40% of frame AREA without magnifying past the point where the surrounding button run — the only context that proves the pocket's placement and handedness against the drawing — would be lost; at this framing it is unmistakably the dominant subject and reads in well under a second, which is what the mandate is for. Every identity-critical property from attempt 1 was preserved: one pocket, besom with no flap, correct panel and handedness, no annotation, no red."
+}

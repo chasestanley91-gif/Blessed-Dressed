@@ -1,0 +1,49 @@
+{
+  "schema": "garment-spec/v1",
+  "addr": "trousers > pleats-structure > pleat-style > double-reverse",
+  "productId": "trousers",
+  "sectionId": "pleats-structure",
+  "fieldId": "pleat-style",
+  "optionId": "double-reverse",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\trousers.json",
+  "source": "json",
+  "label": "Double Reverse Pleats",
+  "description": "Double reverse pleats use two outward-facing folds per side, giving the fullest, roomiest front and a relaxed, voluminous drape through the hip and thigh. The outward direction emphasises width, making this a bold, classic choice on wide and high-rise trousers. It is the most generous pleat configuration in common use.",
+  "fieldLabel": "Pleat Style",
+  "sectionLabel": "Pleats & Structure",
+  "part": "trouser-pleat",
+  "garment": {
+    "noun": "pair of bespoke wool tailored trousers",
+    "fabric": "fine wool trouser cloth with visible weave"
+  },
+  "view": {
+    "orientation": "front",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": false,
+  "measured": {
+    "dimensions": [],
+    "angles": [],
+    "counts": [],
+    "shapes": [
+      "double reverse pleat"
+    ],
+    "spread": [],
+    "flags": []
+  },
+  "illustration": {
+    "path": "/images/blueprints/factory/087231c58490__3023__Double_toward_side.jpg",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\factory\\087231c58490__3023__Double_toward_side.jpg",
+    "exists": true,
+    "remote": false
+  },
+  "forbidden": [
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-07-31T04:49:53.903Z"
+}

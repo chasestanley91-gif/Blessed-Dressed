@@ -1,0 +1,37 @@
+{
+  "scores": {
+    "shape": 99,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 98,
+    "placement": 98,
+    "symmetry": 99,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "construction",
+      "description": "A worked buttonhole with no button appears low on the centre front, at the position where the drawing carries only a small annotation arrow.",
+      "expected": "Nothing at that position, or a button seated in its buttonhole.",
+      "actual": "Empty buttonhole rendered.",
+      "correction": "Omit the low buttonhole, or seat a button in it."
+    }
+  ],
+  "lockedFeatures": [
+    "front view of the waistcoat, lower half — CORRECT",
+    "bottom hem edge STRAIGHT / SQUARE and level across the full width — CORRECT",
+    "NO points at the centre front — CORRECT",
+    "hem edge crossing the centre-front line uninterrupted — CORRECT",
+    "two lower welt pockets, one per side — CORRECT",
+    "welt slant with the outer/side end higher and the inner/centre end lower, as drawn — CORRECT",
+    "two vertical front darts — CORRECT",
+    "two centre-front buttons with buttonholes in the cropped zone — CORRECT",
+    "navy fine wool suiting with visible weave — CORRECT",
+    "no numbers, units, arrows, leader lines, red guide marks or text anywhere in frame — CORRECT",
+    "seamless neutral light-grey studio background — CORRECT"
+  ],
+  "notes": "Blueprint (vest-bottom-straight.jpg) is a cropped waistcoat lower front. Magnified inspection of its hem confirms a single straight edge running level across the whole bottom with no V and no points at the centre front — the absence of points is the whole option, and the candidate reproduces it exactly. Pocket welt angle, dart count and button count all match the drawing."
+}

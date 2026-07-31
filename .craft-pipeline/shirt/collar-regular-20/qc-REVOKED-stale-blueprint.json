@@ -1,0 +1,70 @@
+{
+  "addr": "shirt > collar-regular-20",
+  "productId": "shirt",
+  "optionId": "collar-regular-20",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 97,
+    "angles": 98,
+    "construction": 82,
+    "placement": 90,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 90
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "dimensions",
+    "construction",
+    "placement",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "construction",
+    "placement",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "major",
+      "category": "construction",
+      "description": "Button count is wrong at the collar throat: the candidate shows TWO buttons stacked at the neckband/placket top, where the illustration shows a single button.",
+      "expected": "Exactly one button at the throat, positioned below the left collar leaf as drawn.",
+      "actual": "Two distinct buttons visible — one partially tucked under the left collar leaf and a second, fully visible, just below and right of it.",
+      "correction": "Regenerate with exactly ONE throat button at the neckband, matching the illustration's single-button placement. State the count explicitly and forbid any second or duplicate button."
+    }
+  ],
+  "verdict": "FAIL",
+  "waiver": null,
+  "correction": {
+    "errors": [
+      {
+        "severity": "major",
+        "category": "construction",
+        "error": "Button count is wrong at the collar throat: the candidate shows TWO buttons stacked at the neckband/placket top, where the illustration shows a single button.",
+        "expected": "Exactly one button at the throat, positioned below the left collar leaf as drawn.",
+        "actual": "Two distinct buttons visible — one partially tucked under the left collar leaf and a second, fully visible, just below and right of it.",
+        "correction": "Regenerate with exactly ONE throat button at the neckband, matching the illustration's single-button placement. State the count explicitly and forbid any second or duplicate button."
+      }
+    ],
+    "lockedFeatures": [
+      "moderate spread collar geometry",
+      "acute pointed collar leaf termination",
+      "detail orientation / three-quarter collar crop",
+      "collar stand and roll",
+      "white cotton poplin fabric",
+      "light grey seamless background"
+    ],
+    "forbiddenChanges": [
+      "do not alter any checklist item this attempt already passed",
+      "do not change the camera crop, composition, or accessories unless the error is itself a composition error",
+      "do not change the garment part, orientation, or any other option's geometry"
+    ]
+  },
+  "notes": "Attempt 1. Spread, point geometry, collar stand, roll, edge topstitching, crop, framing and background all match the illustration closely — this is very nearly right. The single blocking defect is the duplicated throat button. Button count is called out in comparison-rules.md as the most commonly miscounted element, and it is a countable structural feature, so it is graded Major rather than Minor.",
+  "checkedAt": "2026-07-31T04:32:54.074Z"
+}

@@ -1,0 +1,37 @@
+{
+  "addr": "suit-3pc > sb-4",
+  "productId": "suit-3pc",
+  "optionId": "sb-4",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 99,
+    "placement": 99,
+    "symmetry": 99,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "The suit jacket fronts flank the waistcoat on both sides (roughly 35% of frame combined); the blueprint shows the waistcoat alone.",
+      "expected": "Waistcoat front isolated as in the drawing.",
+      "actual": "Waistcoat front dominant and fully legible, with jacket fronts framing it left and right.",
+      "correction": "Optional: crop in so the waistcoat front fills more of the width, or shoot the waistcoat without the jacket."
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "notes": "Adversarial pass. Count is the whole point of this option and it is verifiably 4: four buttons in one column, evenly pitched, nothing hidden in shadow and no fifth button lurking below the crop. Single-breasted confirmed — one column only. Cross-checked against the blueprint, whose red column resolves to four marks at an even ~215px pitch (three ring marks plus a fourth lower mark on the same axis); render reproduces that same 4-up rhythm, the two welt pockets between buttons 2 and 3, and the pointed V hem. The blueprint is cropped above the neckline so it fixes no lapel geometry; the shawl lapel comes from the spec and nothing in the drawing contradicts it, so no detail was invented. Buttons are navy horn, not red — the highlight was correctly read as an identifier.",
+  "checkedAt": "2026-07-31T05:45:57.146Z"
+}

@@ -1,0 +1,45 @@
+{
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 99,
+    "placement": 99,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "The overlap direction reads only from the button/buttonhole relationship at the closure; on a fully fastened waistcoat the lap itself is inherently subtle.",
+      "expected": "Placket direction identifiable within one second.",
+      "actual": "Correct direction, but a viewer must look at the buttonhole tails rather than an obvious stepped edge.",
+      "correction": "Optional: light the closure edge more raking, or leave the lowest button undone, so the overlapping front edge casts a visible step."
+    },
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "Suit jacket fronts flank the waistcoat on both sides; the blueprint shows a bare waistcoat front.",
+      "expected": "Waistcoat front isolated as drawn.",
+      "actual": "Waistcoat front dominant and centred, jacket fronts framing it.",
+      "correction": "Optional: shoot the waistcoat without the jacket."
+    }
+  ],
+  "lockedFeatures": [
+    "placket direction = wearer's LEFT front lapping OVER the right — CORRECT (in this front view the viewer's-right panel lies on top; buttonhole tails run rightward from each button into that top panel, which is the signature of left-over-right)",
+    "single vertical button column at centre front — CORRECT",
+    "worked buttonholes beside each button — CORRECT",
+    "V-neck opening with no collar or lapel on the waistcoat itself — CORRECT (matches the drawing's plain vest front)",
+    "front edge / closure seam running straight down from the V point — CORRECT",
+    "buttons begin immediately below the V point, as drawn — CORRECT",
+    "no waistcoat pockets drawn, none rendered on the waistcoat front — CORRECT (ABSENT, as drawn)",
+    "orientation = waistcoat FRONT — CORRECT",
+    "buttons rendered in navy horn — CORRECT",
+    "zero traced annotation: no numbers, arrows, leader lines, red guide marks or text — CORRECT (ABSENT, as required)",
+    "drawing carries NO red marking, so no detail beyond the drawn geometry plus the label's stated direction was invented — CORRECT"
+  ],
+  "notes": "Adversarial pass. The drawing is a plain vest front with no red marking, so the only thing it fixes is geometry — V-neck, no collar, centre button column below the V point, no pockets — and all of that is reproduced. The overlap direction comes from the label alone, per instruction, and it is rendered correctly: in a front-facing photograph the wearer's left is the viewer's right, and the render puts the top panel on the viewer's right with the buttonhole slits cut into it running rightward from each button. That is standard Western left-over-right. Nothing beyond the drawn geometry and the labelled direction has been invented. No annotation, numerals, arrows or red marks anywhere in frame."
+}

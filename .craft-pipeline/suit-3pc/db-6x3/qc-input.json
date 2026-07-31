@@ -1,0 +1,35 @@
+{
+  "scores": {
+    "shape": 98,
+    "geometry": 99,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 99,
+    "placement": 99,
+    "symmetry": 99,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "shape",
+      "description": "The waistcoat hem terminates in a fairly sharp centre point; the blueprint's bottom line (cut off by the crop) reads as a shallow curve.",
+      "expected": "Shallow curved hem as suggested by the drawing's lower edge.",
+      "actual": "Distinct V point at centre front hem.",
+      "correction": "If regenerated, soften the hem toward a shallow curve. Low priority: the blueprint crops the hem line, so it is only partly determinable."
+    }
+  ],
+  "lockedFeatures": [
+    "exactly SIX buttons — CORRECT (counted 6: two columns of three)",
+    "two columns of three, evenly spaced — CORRECT",
+    "DOUBLE-BREASTED wrap overlap at the front edge — CORRECT",
+    "three fastening buttonholes worked beside the closing column — CORRECT",
+    "two lower welt pockets, one per side, level with the middle button row — CORRECT",
+    "garment rendered as a WAISTCOAT, not a jacket, despite the prompt's upstream garment-noun wording — CORRECT",
+    "red circles interpreted as button highlights and rendered as dark horn buttons, never red — CORRECT",
+    "front orientation — CORRECT",
+    "zero annotation: no numbers, arrows, leader lines or text — CORRECT"
+  ],
+  "notes": "Button count verified by explicit count: 6, arranged 2 columns x 3 rows, with the DB wrap overlap present. This is the single most failure-prone attribute for this option and it is correct. The prompt's 'suit jacket' wording did not propagate; the blueprint overrode it."
+}

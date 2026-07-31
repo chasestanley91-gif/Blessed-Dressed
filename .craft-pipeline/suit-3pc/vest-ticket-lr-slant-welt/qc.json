@@ -1,0 +1,37 @@
+{
+  "addr": "suit-3pc > vest-ticket-lr-slant-welt",
+  "productId": "suit-3pc",
+  "optionId": "vest-ticket-lr-slant-welt",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 99,
+    "geometry": 99,
+    "dimensions": 98,
+    "angles": 99,
+    "construction": 99,
+    "placement": 99,
+    "symmetry": 99,
+    "composition": 98,
+    "blueprint-match": 99
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "Because the option is a matched pair, both welts must stay in frame, and in a 3:4 portrait frame that forces the whole waistcoat front from the neckline V to the pointed hem into shot. The two welts therefore occupy well under the 40-80% of frame area the CLOSE CROP directive targets, even though they are unmistakably the subject.",
+      "expected": "the pair of welts filling 40-80% of the frame",
+      "actual": "the pair of welts spans about three quarters of the frame width but only a narrow horizontal band of its height",
+      "correction": "no correction required for accuracy; a landscape frame would be the only way to raise the fill ratio without dropping one welt out of shot"
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "notes": "Attempt 1. Checked one element at a time against the drawing and measured proportionally using button spacing as the ruler, so the comparison does not depend on absolute scale: welt count 2, slant angle 25 vs 24 degrees, welt length 1.19 vs 1.13 button-spacings, distance from placket 0.81 vs 0.87 button-spacings, welt height at the third button in both, five buttons in both, dart positions 1.4 vs 1.39 button-spacings. Slant direction is mirror-symmetric with the centre-front end high, as drawn. No lower pockets were invented, no flap was added, no red was traced from the highlight marks, and the frame carries no annotation. The only finding is the framing note above, which is forced by the option being a symmetric pair in a portrait frame.",
+  "checkedAt": "2026-07-31T05:48:59.964Z"
+}

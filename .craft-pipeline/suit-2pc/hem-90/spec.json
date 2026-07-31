@@ -1,0 +1,49 @@
+{
+  "schema": "garment-spec/v1",
+  "addr": "suit-2pc > Trousers-bottom-hem > hem-style > hem-90",
+  "productId": "suit-2pc",
+  "sectionId": "Trousers-bottom-hem",
+  "fieldId": "hem-style",
+  "optionId": "hem-90",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\suit-2pc.json",
+  "source": "json",
+  "label": "Plain Hem 9.0 cm",
+  "description": "Wide 9.0 cm hem — traditional trouser.",
+  "fieldLabel": "Hem Finish",
+  "sectionLabel": "Trousers — Bottom & Hem",
+  "part": "trouser-hem",
+  "garment": {
+    "noun": "pair of bespoke wool tailored trousers",
+    "fabric": "fine wool trouser cloth with visible weave"
+  },
+  "view": {
+    "orientation": "side-left",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": false,
+  "measured": {
+    "dimensions": [
+      "9.0 cm"
+    ],
+    "angles": [],
+    "counts": [],
+    "shapes": [],
+    "spread": [],
+    "flags": []
+  },
+  "illustration": {
+    "path": "/images/blueprints/remote/9e8b12a7ade9__360H.jpg",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\remote\\9e8b12a7ade9__360H.jpg",
+    "exists": true,
+    "remote": false
+  },
+  "forbidden": [
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-07-31T06:28:56.237Z"
+}

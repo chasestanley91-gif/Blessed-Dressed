@@ -1,0 +1,35 @@
+{
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 98,
+    "placement": 99,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "Roughly the lower half of the frame is featureless trouser leg; the pocket assembly occupies the upper portion only.",
+      "expected": "Feature zone dominating 40-80% of the frame.",
+      "actual": "Pocket assembly reads across the top ~43% of the frame; the remainder is plain cloth.",
+      "correction": "If regenerated, crop up from the hem so the pocket mouth sits nearer frame centre."
+    }
+  ],
+  "lockedFeatures": [
+    "diamond jeans pocket on the FRONT hip — CORRECT",
+    "opening leaves the waistband, runs down, then cuts sharply inward and down to a point — CORRECT",
+    "angular (faceted, non-curved) pocket mouth giving the diamond shape — CORRECT",
+    "distinct vertex where the run changes direction — CORRECT",
+    "second besom pocket sited to the other side of the crease, as drawn — CORRECT",
+    "belt loops present as drawn — CORRECT",
+    "three-quarter front orientation — CORRECT",
+    "red trace rendered as a cloth seam / pocket mouth, never as red colour — CORRECT",
+    "zero annotation: no numbers, arrows, leader lines or text — CORRECT"
+  ],
+  "notes": "Pocket path matches the blueprint's red trace: waistband, down, sharp inward run, then a hard turn down to a point at the crease. The paired besom pocket is placed as drawn. Diamond geometry is identifiable within one second."
+}

@@ -1,0 +1,37 @@
+{
+  "addr": "suit-2pc > hem-inner-fold-70",
+  "productId": "suit-2pc",
+  "optionId": "hem-inner-fold-70",
+  "attempt": 2,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 99,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 99,
+    "construction": 99,
+    "placement": 98,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "The leg reads as an unworn, hanging trouser leg rather than one worn on a model.",
+      "expected": "Worn on a male model per the prompt.",
+      "actual": "Empty leg hanging against the seamless background.",
+      "correction": "Put the leg on a model if regenerated; note that the blueprint is itself a garment-only technical flat, so this does not conflict with the drawing."
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "notes": "Attempt 2. All three logged errors from attempt 1 are fixed. The external turn-up is gone and replaced by a plain hem with the allowance turned inside — the inside of the fold and its blind stitching are visible through the leg opening, which proves the construction. The leg is presented with vertical side seams and the single bottom edge runs visibly downhill across it, so the slant now reads as a deliberate cut angle. Footwear and floor are gone. Matches the blueprint's slanted hem line with the allowance depth indicated below it.",
+  "checkedAt": "2026-07-31T05:53:08.287Z"
+}

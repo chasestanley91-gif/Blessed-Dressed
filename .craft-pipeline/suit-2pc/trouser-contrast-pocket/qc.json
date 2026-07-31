@@ -1,0 +1,37 @@
+{
+  "addr": "suit-2pc > trouser-contrast-pocket",
+  "productId": "suit-2pc",
+  "optionId": "trouser-contrast-pocket",
+  "attempt": 2,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 98,
+    "placement": 99,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "Roughly the lower quarter of the frame either side of the bag point is plain navy cloth; the drawn contrast panel is inherently a narrow triangle, so its own bounding area is about 13% of frame even at this crop.",
+      "expected": "Contrast panel filling 40-80% of frame.",
+      "actual": "Contrast panel bounding box roughly 13% of frame, but rendered about 8x larger relative to the frame than in the blueprint, dominant by contrast, and unmissable within one second.",
+      "correction": "Optional: crop a further ~15% from the bottom."
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "notes": "Attempt 2, adversarial re-check against both logged majors from attempt 1. FRAME DOMINANCE: fixed. The camera moved in hard; the frame is now waistband-to-bag-point and pleats-to-welt only, the jacket is gone and the empty trouser leg is gone. The panel is roughly 8x its blueprint-relative scale, so the drawing's scale was explicitly not copied. POCKET OPENING: fixed. Verified at 2.4x zoom - the navy front panel now carries a stitched, cleanly pressed pocket mouth down the right edge of the contrast cloth, with the bag reading unmistakably as hanging behind and through that opening. PANEL WIDTH: fixed, now a broad triangle rather than a sliver. Everything locked from attempt 1 survived: pleats, rear welt, belt loop, waistband, orientation, cloth, ground. The contrast cloth shows real diagonal twill, sheen and fold shading at zoom - genuine fabric, not traced flat ink. No numerals, arrows, leader lines or guide marks anywhere in frame.",
+  "checkedAt": "2026-07-31T05:55:40.127Z"
+}

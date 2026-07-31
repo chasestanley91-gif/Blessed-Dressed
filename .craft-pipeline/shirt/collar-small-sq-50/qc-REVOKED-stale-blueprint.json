@@ -1,0 +1,108 @@
+{
+  "addr": "shirt > collar-small-sq-50",
+  "productId": "shirt",
+  "optionId": "collar-small-sq-50",
+  "attempt": 2,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 55,
+    "geometry": 58,
+    "dimensions": 85,
+    "angles": 60,
+    "construction": 70,
+    "placement": 92,
+    "symmetry": 96,
+    "composition": 80,
+    "blueprint-match": 55
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "composition",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "critical",
+      "category": "shape",
+      "description": "BLUEPRINT DEFECT, not merely a generation defect. The option is labelled 'Small Square 5.0 cm' and its own description states it is 'finished with squared rather than pointed tips' — but the tech-pack illustration at /images/ai/collar-small-sq-50.png itself shows a collar with sharp ACUTE POINTED tips. The candidate faithfully reproduced the illustration and is therefore also a pointed collar. Shipping it would put a point collar in front of a customer under a 'Small Square' label.",
+      "expected": "A compact 5.0 cm collar terminating in flat squared-off tips, per the option label and description.",
+      "actual": "Both the illustration AND the candidate show acute pointed collar tips. The candidate matches the drawing but contradicts the customer-facing label.",
+      "correction": "DO NOT regenerate against this illustration — a faithful render will reproduce the same wrong geometry and score highly while remaining wrong. The illustration is either mis-assigned or mislabelled and must be resolved upstream (tech-pack-interpreter / catalog owner) before any further credits are spent on this option."
+    },
+    {
+      "severity": "major",
+      "category": "construction",
+      "description": "A throat/closure button is present at the neckband in both the illustration and the candidate, but this is the non-button variant. The button variant exists as a separate option (collar-small-sq-50-btn, currently at stage prompt-built), so the button here is a feature the option does not specify.",
+      "expected": "No collar closure button — measured.flags for this option is empty; the button belongs to collar-small-sq-50-btn.",
+      "actual": "A four-hole throat button is rendered at the neckband in the candidate, mirroring the same button in the illustration.",
+      "correction": "Resolve alongside the shape defect: confirm whether the illustration for collar-small-sq-50 has been swapped with the -btn variant's drawing. If so, both options need their illustrations re-mapped before regeneration."
+    },
+    {
+      "severity": "major",
+      "category": "composition",
+      "description": "The frame is dominated by a bare human neck, jaw and chin occupying roughly the upper third, whereas the illustration is a garment-only detail shot with no skin visible.",
+      "expected": "Garment-only detail crop tight on collar and neckline, matching the illustration's presentation.",
+      "actual": "Bare neck and chin occupy the top third of the frame, reducing the collar's effective dominance and diverging from the reference presentation.",
+      "correction": "Return to the garment-only presentation on a form as in the illustration; no model skin, chin or jaw in frame."
+    }
+  ],
+  "verdict": "FAIL",
+  "waiver": null,
+  "correction": {
+    "errors": [
+      {
+        "severity": "critical",
+        "category": "shape",
+        "error": "BLUEPRINT DEFECT, not merely a generation defect. The option is labelled 'Small Square 5.0 cm' and its own description states it is 'finished with squared rather than pointed tips' — but the tech-pack illustration at /images/ai/collar-small-sq-50.png itself shows a collar with sharp ACUTE POINTED tips. The candidate faithfully reproduced the illustration and is therefore also a pointed collar. Shipping it would put a point collar in front of a customer under a 'Small Square' label.",
+        "expected": "A compact 5.0 cm collar terminating in flat squared-off tips, per the option label and description.",
+        "actual": "Both the illustration AND the candidate show acute pointed collar tips. The candidate matches the drawing but contradicts the customer-facing label.",
+        "correction": "DO NOT regenerate against this illustration — a faithful render will reproduce the same wrong geometry and score highly while remaining wrong. The illustration is either mis-assigned or mislabelled and must be resolved upstream (tech-pack-interpreter / catalog owner) before any further credits are spent on this option."
+      },
+      {
+        "severity": "major",
+        "category": "construction",
+        "error": "A throat/closure button is present at the neckband in both the illustration and the candidate, but this is the non-button variant. The button variant exists as a separate option (collar-small-sq-50-btn, currently at stage prompt-built), so the button here is a feature the option does not specify.",
+        "expected": "No collar closure button — measured.flags for this option is empty; the button belongs to collar-small-sq-50-btn.",
+        "actual": "A four-hole throat button is rendered at the neckband in the candidate, mirroring the same button in the illustration.",
+        "correction": "Resolve alongside the shape defect: confirm whether the illustration for collar-small-sq-50 has been swapped with the -btn variant's drawing. If so, both options need their illustrations re-mapped before regeneration."
+      },
+      {
+        "severity": "major",
+        "category": "composition",
+        "error": "The frame is dominated by a bare human neck, jaw and chin occupying roughly the upper third, whereas the illustration is a garment-only detail shot with no skin visible.",
+        "expected": "Garment-only detail crop tight on collar and neckline, matching the illustration's presentation.",
+        "actual": "Bare neck and chin occupy the top third of the frame, reducing the collar's effective dominance and diverging from the reference presentation.",
+        "correction": "Return to the garment-only presentation on a form as in the illustration; no model skin, chin or jaw in frame."
+      }
+    ],
+    "lockedFeatures": [
+      "white cotton poplin fabric",
+      "detail crop on collar and neckline"
+    ],
+    "forbiddenChanges": [
+      "do not alter any checklist item this attempt already passed",
+      "do not change the camera crop, composition, or accessories unless the error is itself a composition error",
+      "do not change the garment part, orientation, or any other option's geometry"
+    ]
+  },
+  "notes": "Attempt 2. This option is BLOCKED ON A SOURCE-DATA DEFECT and should not consume further generation credits until a human resolves it. This is precisely the failure mode RESUME.md warns about: 'A wrong blueprint is invisible to QC — every score measures fidelity to the drawing, so the more faithful the render, the higher it scores. The catalog label is the only independent cross-check.' Scored against the option's own label and description rather than against the drawing, because the drawing is the thing under suspicion. Escalate to the catalog owner: does collar-small-sq-50 need a corrected squared-tip illustration, or has it been swapped with collar-small-sq-50-btn?",
+  "checkedAt": "2026-07-31T04:32:53.698Z"
+}

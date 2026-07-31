@@ -1,0 +1,37 @@
+{
+  "addr": "suit-2pc > fly-hook-bar",
+  "productId": "suit-2pc",
+  "optionId": "fly-hook-bar",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 98,
+    "placement": 98,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "geometry",
+      "description": "The wavy fish-mouth shaped edge runs the full depth of the fly opening down to the crotch, whereas the blueprint's red wave occupies roughly the upper third of the fly before straightening.",
+      "expected": "Wavy fish-mouth notch concentrated where the waistband end meets the fly, easing into a straighter edge lower down.",
+      "actual": "Continuous shaped curve running the whole depth of the opening.",
+      "correction": "Acceptable in kind - the distinguishing wavy fish-mouth geometry is present and unmistakable versus the straight-fly sibling. Extent could be shortened on a future pass."
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "notes": "Despite the option id 'fly-hook-bar', both the label and the drawing specify a FISH-MOUTH fly, and the drawing is authoritative. The red line in the blueprint traces the waistband top edge then curves down the fly edge in a wavy notch; that wave is reproduced in cloth colour with no red anywhere. Clearly distinguishable from the straight-fly sibling.",
+  "checkedAt": "2026-07-31T05:31:16.537Z"
+}

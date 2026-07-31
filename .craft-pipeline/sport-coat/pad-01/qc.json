@@ -1,0 +1,37 @@
+{
+  "addr": "sport-coat > pad-01",
+  "productId": "sport-coat",
+  "optionId": "pad-01",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 99,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 99,
+    "construction": 99,
+    "placement": 99,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "Close crop shows only one shoulder; the option label is '(Both Sides)' so left/right parity cannot be visually confirmed from this frame alone.",
+      "expected": "Drawing shows both shoulders, red pad wedge marked on one side only.",
+      "actual": "Single shoulder and sleeve head in frame, opposite shoulder cropped away.",
+      "correction": "Acceptable - the mandated CLOSE CROP forces a single-shoulder frame and the drawing's red wedge is itself drawn on one side only. No change needed."
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "notes": "Adversarial check passed. The red wedge in the blueprint marks the shoulder-pad zone between neck point and shoulder end; it is a highlight, not a colour instruction, and nothing red appears in the render. The rendered shoulder is soft and barely built - correctly reading as the +0.1 cm natural shoulder and clearly distinguishable from the structured pad-05 sibling. Notch lapel and breast welt pocket both present exactly as drawn. No traced annotation of any kind.",
+  "checkedAt": "2026-07-31T05:31:15.953Z"
+}

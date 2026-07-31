@@ -1,0 +1,48 @@
+{
+  "schema": "garment-spec/v1",
+  "addr": "trousers > front-pockets > front-pocket-style > no-front-pockets",
+  "productId": "trousers",
+  "sectionId": "front-pockets",
+  "fieldId": "front-pocket-style",
+  "optionId": "no-front-pockets",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\trousers.json",
+  "source": "json",
+  "label": "No Front Pockets",
+  "description": "Clean front — formal eveningwear.",
+  "fieldLabel": "Front Pocket Style",
+  "sectionLabel": "Front & Pockets",
+  "part": "trouser-front-pocket",
+  "garment": {
+    "noun": "pair of bespoke wool tailored trousers",
+    "fabric": "fine wool trouser cloth with visible weave"
+  },
+  "view": {
+    "orientation": "three-quarter-front",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": true,
+  "measured": {
+    "dimensions": [],
+    "angles": [],
+    "counts": [],
+    "shapes": [],
+    "spread": [],
+    "flags": []
+  },
+  "illustration": {
+    "path": "/images/blueprints/factory/39618b03fc3d__313C__No.jpg",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\factory\\39618b03fc3d__313C__No.jpg",
+    "exists": true,
+    "remote": false
+  },
+  "forbidden": [
+    "any front pocket style rendered anywhere in frame — this option is its deliberate absence",
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-07-31T04:39:50.906Z"
+}

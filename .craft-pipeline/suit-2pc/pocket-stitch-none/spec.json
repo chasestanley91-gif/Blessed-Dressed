@@ -1,0 +1,50 @@
+{
+  "schema": "garment-spec/v1",
+  "addr": "suit-2pc > Trousers-front-pockets > pocket-stitching > pocket-stitch-none",
+  "productId": "suit-2pc",
+  "sectionId": "Trousers-front-pockets",
+  "fieldId": "pocket-stitching",
+  "optionId": "pocket-stitch-none",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\suit-2pc.json",
+  "source": "json",
+  "label": "No Topstitch (Hidden Stitch)",
+  "description": "Clean hidden pocket edge.",
+  "fieldLabel": "Pocket Topstitch",
+  "sectionLabel": "Trousers — Front & Pockets",
+  "part": "fin-stitch",
+  "garment": {
+    "noun": "navy bespoke suit jacket",
+    "fabric": "fine wool suiting with visible weave"
+  },
+  "view": {
+    "orientation": "front",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": true,
+  "measured": {
+    "dimensions": [],
+    "angles": [],
+    "counts": [],
+    "shapes": [],
+    "spread": [],
+    "flags": [
+      "top stitch"
+    ]
+  },
+  "illustration": {
+    "path": "/images/blueprints/factory/10bfe4668d92__31A6__No_top_stitch_hidden_stitch.jpg",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\factory\\10bfe4668d92__31A6__No_top_stitch_hidden_stitch.jpg",
+    "exists": true,
+    "remote": false
+  },
+  "forbidden": [
+    "any pocket topstitch rendered anywhere in frame — this option is its deliberate absence",
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-07-31T04:41:37.652Z"
+}

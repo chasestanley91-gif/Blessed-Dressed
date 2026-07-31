@@ -1,0 +1,37 @@
+{
+  "addr": "trousers > hem-inner-fold-70",
+  "productId": "trousers",
+  "optionId": "hem-inner-fold-70",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 98,
+    "placement": 98,
+    "symmetry": 98,
+    "composition": 99,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "angles",
+      "description": "The hem slant measures roughly 6-7 degrees across the leg, whereas the blueprint's red hem line is drawn at closer to 10 degrees.",
+      "expected": "Hem line running downhill across the leg, as drawn.",
+      "actual": "Hem edge falls about 70px over 605px of leg width - visibly slanted and clearly not level, but shallower than the schematic.",
+      "correction": "Accepted as correct in kind. Technical drawings exaggerate this angle for legibility; a real slanted hem falls roughly 1-1.5 cm across a 20 cm leg, which is what the render shows. Forcing the schematic's angle would produce a physically wrong garment, and the brief forbids inventing tailoring detail."
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "notes": "The blueprint's red line marks the hem/fold line and runs visibly downhill; the render reproduces a slanted, uncuffed hem in cloth colour with the correct downhill direction. Directly comparable against suit-2pc/hem-double-turnup in the same batch, whose hem is dead level - a customer could tell the two apart instantly. The 7.0 cm fold depth is internal and not directly verifiable from an exterior photograph; nothing in the render contradicts it.",
+  "checkedAt": "2026-07-31T05:31:18.072Z"
+}

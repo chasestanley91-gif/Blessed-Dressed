@@ -1,0 +1,45 @@
+{
+  "addr": "suit-3pc > vest-left-over-right",
+  "productId": "suit-3pc",
+  "optionId": "vest-left-over-right",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 99,
+    "placement": 99,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "The overlap direction reads only from the button/buttonhole relationship at the closure; on a fully fastened waistcoat the lap itself is inherently subtle.",
+      "expected": "Placket direction identifiable within one second.",
+      "actual": "Correct direction, but a viewer must look at the buttonhole tails rather than an obvious stepped edge.",
+      "correction": "Optional: light the closure edge more raking, or leave the lowest button undone, so the overlapping front edge casts a visible step."
+    },
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "Suit jacket fronts flank the waistcoat on both sides; the blueprint shows a bare waistcoat front.",
+      "expected": "Waistcoat front isolated as drawn.",
+      "actual": "Waistcoat front dominant and centred, jacket fronts framing it.",
+      "correction": "Optional: shoot the waistcoat without the jacket."
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "notes": "Adversarial pass. The drawing is a plain vest front with no red marking, so the only thing it fixes is geometry — V-neck, no collar, centre button column below the V point, no pockets — and all of that is reproduced. The overlap direction comes from the label alone, per instruction, and it is rendered correctly: in a front-facing photograph the wearer's left is the viewer's right, and the render puts the top panel on the viewer's right with the buttonhole slits cut into it running rightward from each button. That is standard Western left-over-right. Nothing beyond the drawn geometry and the labelled direction has been invented. No annotation, numerals, arrows or red marks anywhere in frame.",
+  "checkedAt": "2026-07-31T05:45:57.379Z"
+}

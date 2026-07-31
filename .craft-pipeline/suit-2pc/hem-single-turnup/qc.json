@@ -1,0 +1,44 @@
+{
+  "addr": "suit-2pc > hem-single-turnup",
+  "productId": "suit-2pc",
+  "optionId": "hem-single-turnup",
+  "attempt": 3,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 97,
+    "geometry": 96,
+    "dimensions": 93,
+    "angles": 98,
+    "construction": 99,
+    "placement": 98,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 95
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "dimensions"
+  ],
+  "errors": [
+    {
+      "severity": "major",
+      "category": "dimensions",
+      "description": "Third and final attempt. The band measures roughly 27% of the hem opening width against the blueprint's 21%, essentially unchanged from attempt 2 despite three progressively more explicit and quantified depth instructions. At that scale the cuff reads as approximately 5.3 cm, which sits closer to the neighbouring 5.1 cm option than to the 4.4 cm this option must show. Because band depth is the sole difference between the two, a customer comparing them side by side could not reliably tell which is which.",
+      "expected": "4.4 cm turn-up, a band roughly 20-22% of the trouser hem opening width (blueprint magnified detail measures 0.212).",
+      "actual": "Band spans roughly 27% of the hem opening width, reading as approximately 5.3 cm.",
+      "correction": "Model prior appears fixed at a deep cuff and did not respond to three escalating instructions including an explicit one-fifth ratio. Any further work on this option should use a different approach than prompt wording alone."
+    }
+  ],
+  "verdict": "UNMET",
+  "waiver": null,
+  "correction": null,
+  "notes": "Retry budget exhausted at 3 attempts. Depth progression across attempts: 0.336, 0.284, 0.270 of hem width against a 0.212 target — improving but plateauing well short. Every other attribute of the photograph is correct and clean. Logged as a genuine unmet dimension rather than waived, because the residual error puts the render on top of the sibling 5.1 cm option and defeats the side-by-side comparison this catalog exists to support.",
+  "checkedAt": "2026-07-31T05:46:17.520Z"
+}

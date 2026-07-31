@@ -1,0 +1,39 @@
+{
+  "scores": {
+    "shape": 99,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 98,
+    "placement": 98,
+    "symmetry": 98,
+    "composition": 99,
+    "blueprint-match": 98
+  },
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "construction",
+      "description": "The waistband now carries one horn button plus TWO worked buttonholes side by side. The drawing marks one clearly identifiable buttonhole on the waistband above the fly together with the button on the folded-back waistband extension; whether the small second mark further along the drawn waistband is a second buttonhole or a keeper is not resolvable at the drawing's resolution, so the extra buttonhole is recorded rather than asserted to be wrong.",
+      "expected": "one waistband button and its single matching worked buttonhole",
+      "actual": "one waistband button and two worked buttonholes on the waistband",
+      "correction": "if re-shot, show a single worked buttonhole on the waistband paired with the single waistband button"
+    }
+  ],
+  "lockedFeatures": [
+    "orientation: trouser front at the waistband and fly - CORRECT",
+    "fly shown OPEN with the placket folded back toward frame right, exposing the worked buttonholes - CORRECT, preserved from attempt 1",
+    "EXACTLY FOUR buttons in the fly column - CORRECT, FIXED (counted top to bottom: 1, 2, 3, 4; the fourth sits at the base of the fly curve and there is no fifth button below it)",
+    "the button column terminates at the base of the fly curve and does not run past it - CORRECT, FIXED",
+    "matching worked buttonholes down the folded-back fly placket, one per button - CORRECT, preserved",
+    "waistband button AND its worked buttonhole on the waistband above the fly - CORRECT, FIXED (was absent in attempt 1); rendered as real horn and cloth hardware, never in red",
+    "waistband running straight across the top of the frame - CORRECT, preserved",
+    "one belt loop to the wearer's right of the fly (frame-left) - CORRECT, preserved",
+    "forward pleat on the front panel beside the fly - CORRECT, preserved",
+    "curved J-shaped fly base where the fly meets the crotch seam - CORRECT, preserved",
+    "fine navy wool suiting, no contrast fabric anywhere - CORRECT, preserved",
+    "seamless neutral light-grey studio background - CORRECT, preserved",
+    "zero text, numbers, arrows, red guide marks, rulers or callouts - CORRECT, frame is clean; the drawing's red circles were correctly rendered as horn buttons in cloth colour"
+  ],
+  "notes": "Attempt 2, resumed from the logged attempt-1 FAIL. Both logged major errors are fixed and nothing previously correct was disturbed. Fly buttons counted explicitly one at a time: four, the fourth sitting at the base of the fly curve, no fifth. The waistband closure that was entirely missing in attempt 1 is now present as a horn button with a worked buttonhole on the waistband above the fly. Every locked feature from attempt 1 - open fly, placket folded to frame right, worked placket buttonholes, straight waistband, single belt loop, forward pleat, J-curve fly base, navy wool, grey seamless, clean frame - survived unchanged. Only new finding is the extra waistband buttonhole noted above, logged as minor because the drawing is genuinely ambiguous on that point and I will not assert tailoring detail I cannot read. Also re-confirming the known upstream prompt defect: the built prompt names the garment 'a premium navy bespoke suit jacket' although this is a trouser option; the attached blueprint overrode it and the render is unambiguously a trouser front, so it had no effect."
+}

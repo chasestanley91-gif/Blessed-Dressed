@@ -1,0 +1,47 @@
+{
+  "schema": "garment-spec/v1",
+  "addr": "suit-2pc > Trousers-pleats-structure > pleat-style > single-forward",
+  "productId": "suit-2pc",
+  "sectionId": "Trousers-pleats-structure",
+  "fieldId": "pleat-style",
+  "optionId": "single-forward",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\suit-2pc.json",
+  "source": "json",
+  "label": "Single Forward Pleat",
+  "description": "A single forward pleat is one fold per side that opens inward toward the fly, the direction associated with English tailoring. It adds room across the front of the thigh that collapses when standing, keeping a streamlined, slimming front line. Drawing the eye inward, forward pleats look narrower and tidier than reverse ones.",
+  "fieldLabel": "Pleat Style",
+  "sectionLabel": "Trousers — Pleats & Structure",
+  "part": "trouser-pleat",
+  "garment": {
+    "noun": "pair of bespoke wool tailored trousers",
+    "fabric": "fine wool trouser cloth with visible weave"
+  },
+  "view": {
+    "orientation": "front",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": false,
+  "measured": {
+    "dimensions": [],
+    "angles": [],
+    "counts": [],
+    "shapes": [],
+    "spread": [],
+    "flags": []
+  },
+  "illustration": {
+    "path": "/images/blueprints/factory/768640315c4d__3022__Single_toward_fly.jpg",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\factory\\768640315c4d__3022__Single_toward_fly.jpg",
+    "exists": true,
+    "remote": false
+  },
+  "forbidden": [
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-07-31T06:28:52.010Z"
+}

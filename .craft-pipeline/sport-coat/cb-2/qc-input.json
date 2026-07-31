@@ -1,0 +1,44 @@
+{
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 99,
+    "placement": 98,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 99
+  },
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "The two buttons sit near the right frame edge and occupy roughly 6% of the image, with a large area of plain sleeve cloth filling the left and centre. The cuff region that carries the option does dominate (~70% of frame) and the count is readable in well under a second, but a crop centred on the button column would present the option more directly.",
+      "expected": "the two cuff buttons centred and dominant in frame",
+      "actual": "buttons legible but pushed toward the right frame edge; much of the frame is plain sleeve",
+      "correction": "acceptable; if re-shot, centre the button column and reduce the plain sleeve area"
+    },
+    {
+      "severity": "minor",
+      "category": "placement",
+      "description": "The model's wrist and part of the hand enter the lower frame below the shirt cuff. This is natural for a worn sleeve and does not touch or occlude either button or the cuff edge, but it is bare skin in a documentation frame.",
+      "expected": "nothing competing with the cuff detail",
+      "actual": "wrist and part of hand visible at bottom of frame; buttons and cuff edge unobstructed",
+      "correction": "no action required; the craft option is not hidden"
+    }
+  ],
+  "lockedFeatures": [
+    "orientation: detail (sleeve cuff)",
+    "EXACTLY TWO cuff buttons — the defining specification of this option",
+    "buttons SPACED apart, not overlapping — correctly distinct from the sibling 'kissing' spacing option",
+    "one worked buttonhole beside each button, as drawn",
+    "buttons and buttonholes tonal navy — no annotation colour anywhere",
+    "cuff edge and sleeve hem as drawn",
+    "fabric: navy hopsack with visible basketweave",
+    "white shirt cuff showing below the jacket sleeve",
+    "background: seamless neutral light-grey studio sweep",
+    "zero annotation in frame"
+  ],
+  "notes": "ADVERSARIAL READ vs /images/blueprints/supplier/36f9c9757607__0629__2_flat.jpg.\n\nBLUEPRINT MEASURED PROGRAMMATICALLY (this mattered, because the marks are too small and anti-aliased to count reliably by eye): the red mark forms a single merged connected component, but enclosed-hole analysis returns exactly FOUR holes, centred at y=680, 747, 823 and 890. The spacing alternates 67, 76, 67 — i.e. the holes group into TWO pairs, each pair being one drawn button symbol. Cross-checked against the sibling file 0627__5_flat.jpg, which returns TEN holes in FIVE evenly spaced pairs. The 2:5 ratio of pairs matches the 2:5 ratio of the labels, and the red-mark bounding boxes scale accordingly (295px vs 732px tall). CONCLUSION: this drawing specifies exactly 2 buttons, confirming the label. No guessing was involved.\n\nWHAT THE RENDER GOT RIGHT: exactly two buttons — the single most important attribute of a count option, and the one most prone to drift toward the conventional four-button jacket cuff. It did not drift. Each button has its own worked buttonhole beside it, as drawn. The buttons are spaced with a clear gap rather than overlapping, which correctly distinguishes this from the 'kissing buttons' sibling on the related spacing field.\n\nATTEMPTED REJECTIONS THAT FAILED:\n(1) Is it actually four buttons with two hidden in shadow? No — examined the full cuff run at resolution; there are two buttons and no further buttonholes above them.\n(2) Did it render kissing buttons by borrowing from the sibling option? No — measurable gap between the two buttons, roughly a fifth of a button diameter; the blueprint's own pair gap is about a quarter of a button height, so this matches.\n(3) Annotation colour traced, as happened on sport-coat/lbp-both? No — buttons and buttonholes are tonal navy horn; there is no red anywhere.\n(4) Any numbers, arrows, leader lines or text? None.\n(5) Wrong garment face? No — this is the sleeve cuff detail, as drawn.\n\nNo critical or major findings."
+}

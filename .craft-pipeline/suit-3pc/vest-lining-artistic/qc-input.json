@@ -1,0 +1,37 @@
+{
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 99,
+    "placement": 98,
+    "symmetry": 99,
+    "composition": 99,
+    "blueprint-match": 98
+  },
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "shape",
+      "description": "The two front panels are folded back against the sides rather than splayed fully flat out to the left and right as in the blueprint's completely opened-out layout.",
+      "expected": "Fully flat layout with both fronts splayed outward as wings.",
+      "actual": "Waistcoat opened and laid flat with the fronts turned back along the sides; the full interior lining zone is still exposed.",
+      "correction": "Acceptable - this is how a real waistcoat lies when opened, and the entire lining zone the blueprint shades is visible and unobstructed."
+    }
+  ],
+  "lockedFeatures": [
+    "Interior/lining view, waistcoat opened and laid flat - CORRECT",
+    "Garment identity is a sleeveless waistcoat, not a jacket - CORRECT",
+    "PRINTED PLACEMENT ARTWORK on the lining cloth, bold and unmistakable at a glance - CORRECT (this was ABSENT on attempt 1 and is the defining feature of the option)",
+    "Lustrous silk/cupro lining with visible sheen - CORRECT",
+    "Lining coverage runs from neckline to the full shaped lower edge, entirely inside the frame - CORRECT (was cropped on attempt 1)",
+    "Armhole curves, shoulder line and neckline shape matching the blueprint layout - CORRECT",
+    "Centre-back seam running the full height - CORRECT",
+    "Vertical panel seam lines flanking the centre back in the drawn count and spacing - CORRECT",
+    "Dark navy cloth facings framing the lining zone at the outer edges, matching the blueprint's unshaded border - CORRECT",
+    "Left/right symmetry of the layout - CORRECT",
+    "Zero annotation: no numbers, arrows, leader lines, red guide marks or text - CORRECT"
+  ],
+  "notes": "Attempt 2 fixes the critical failure from attempt 1. The lining now carries a large decorative printed placement artwork centred on the back panel and continuing in scale across the adjoining panels, so the option is identifiable in under a second and cannot be confused with a plain-lining sibling. All the geometry that was already correct on attempt 1 - armholes, shoulder line, centre-back seam, panel seams, navy facings, symmetry - is preserved unchanged, and the previously cropped lower hem is now fully in frame."
+}

@@ -1,0 +1,37 @@
+{
+  "addr": "trousers > fly-button",
+  "productId": "trousers",
+  "optionId": "fly-button",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 99,
+    "geometry": 99,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 99,
+    "placement": 99,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 99
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "The lower ~30% of the frame is plain thigh cloth below the fly.",
+      "expected": "Closure zone filling as much of the frame as possible.",
+      "actual": "Waistband and fly occupy roughly the upper two thirds; buttons are large, high-contrast and centred.",
+      "correction": "Optional: crop up from the bottom by ~15%."
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "notes": "Adversarial pass, with both of the sibling cluster's known failure modes checked explicitly. FLY BUTTON COUNT: four, not five — counted at 2x zoom on the fly column, and cross-checked against the blueprint zoomed 2x, which resolves to exactly four red ring marks down the fly. WAISTBAND CLOSURE: present, not omitted — a button and its buttonhole sit above the waistband seam, clearly separate from the four fly buttons, matching the black buttonhole the drawing places on the waistband. Also matched: the curved J fly topstitch, the button-and-buttonhole on the waistband extension, and forward pleats. No zip hardware, no red traced into the cloth, no numerals, arrows or leader lines in frame.",
+  "checkedAt": "2026-07-31T05:45:57.612Z"
+}

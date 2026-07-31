@@ -1,0 +1,51 @@
+{
+  "schema": "garment-spec/v1",
+  "addr": "suit-3pc > Vest-pockets > ticket-pocket-vest > vest-ticket-diamond-flap",
+  "productId": "suit-3pc",
+  "sectionId": "Vest-pockets",
+  "fieldId": "ticket-pocket-vest",
+  "optionId": "vest-ticket-diamond-flap",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\suit-3pc.json",
+  "source": "json",
+  "label": "Besom with Diamond Flap",
+  "description": "Besom with decorative diamond flap.",
+  "fieldLabel": "Ticket Pocket",
+  "sectionLabel": "Vest — Pockets",
+  "part": "jacket-detail",
+  "garment": {
+    "noun": "navy bespoke suit jacket",
+    "fabric": "fine wool suiting with visible weave"
+  },
+  "view": {
+    "orientation": "front",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": false,
+  "measured": {
+    "dimensions": [],
+    "angles": [],
+    "counts": [],
+    "shapes": [
+      "jetted / besom welt",
+      "flap pocket",
+      "ticket pocket"
+    ],
+    "spread": [],
+    "flags": []
+  },
+  "illustration": {
+    "path": "/images/options/vest/vest-ticket-diamond-flap.jpg",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\options\\vest\\vest-ticket-diamond-flap.jpg",
+    "exists": true,
+    "remote": false
+  },
+  "forbidden": [
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-07-31T04:55:08.683Z"
+}

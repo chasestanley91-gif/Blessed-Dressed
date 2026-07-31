@@ -1,0 +1,37 @@
+{
+  "addr": "suit-2pc > back-both-welt",
+  "productId": "suit-2pc",
+  "optionId": "back-both-welt",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 99,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 99,
+    "construction": 99,
+    "placement": 99,
+    "symmetry": 99,
+    "composition": 98,
+    "blueprint-match": 99
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "The lower ~40% of the frame is unfeatured seat/thigh cloth; the two welts and the button sit in the upper band.",
+      "expected": "Pocket zone filling as much of the frame as possible.",
+      "actual": "Pocket zone occupies roughly the upper half; both welts must stay in frame, which forces a wide crop.",
+      "correction": "Optional: crop up from the bottom by ~20% to push the pocket band toward frame centre."
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "notes": "Adversarial pass. Counts verified explicitly: TWO welt pockets (one per side), ONE button. The laterality is the trap on this cluster and it is right — in a back view the viewer and the wearer share handedness, so image-left = wearer's left, and the button is under the image-left welt exactly as drawn. The drawing's red is highlight only; both welts and the button are rendered in navy cloth and dark horn, with no red anywhere. Welt lips, buttonhole tab and belt loops all read as real construction, not traced line-art. No annotation, numerals or leader lines in frame.",
+  "checkedAt": "2026-07-31T05:45:56.684Z"
+}

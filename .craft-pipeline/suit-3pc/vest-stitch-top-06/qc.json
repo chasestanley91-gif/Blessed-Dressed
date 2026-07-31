@@ -1,0 +1,37 @@
+{
+  "addr": "suit-3pc > vest-stitch-top-06",
+  "productId": "suit-3pc",
+  "optionId": "vest-stitch-top-06",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 98,
+    "placement": 98,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "construction",
+      "description": "Cloth surface reads closer to a brushed moleskin than the specified fine wool suiting; weave is less legible than requested.",
+      "expected": "Fine wool suiting with visible weave texture.",
+      "actual": "Matte, slightly brushed navy surface with suppressed weave.",
+      "correction": "If regenerated, reinforce open-weave fine wool suiting in the material clause."
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "notes": "The topstitch traces exactly the run the blueprint marks in red: neckline, placket, bottom point and pocket opening. Rendered tonal in thread, never in red. Crop is a legitimate macro of the stitch line.",
+  "checkedAt": "2026-07-31T05:27:37.967Z"
+}

@@ -1,0 +1,45 @@
+{
+  "addr": "suit-2pc > coin-left",
+  "productId": "suit-2pc",
+  "optionId": "coin-left",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 99,
+    "construction": 99,
+    "placement": 98,
+    "symmetry": 99,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "shape",
+      "description": "The applied coin pocket's lower corners are rendered with a generous radius, where the drawing's red U-mark is drawn with near-square corners.",
+      "expected": "U-shaped applied coin pocket with near-square lower corners, as drawn",
+      "actual": "U-shaped applied coin pocket with noticeably rounded lower corners",
+      "correction": "Specify square-cornered U outline for the applied coin pocket on the left bag."
+    },
+    {
+      "severity": "minor",
+      "category": "placement",
+      "description": "The coin pocket sits slightly higher on the pocket bag than in the drawing, where the red U sits close to the bag's lower edge.",
+      "expected": "coin pocket applied low on the turned-out left pocket bag, near its bottom edge",
+      "actual": "coin pocket applied at mid-to-lower height on the bag",
+      "correction": "Drop the coin pocket lower on the left bag, closer to the bag's bottom edge."
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "notes": "Adversarial pass. The critical checks — turned-out interior orientation, coin pocket on the LEFT bag only, single U-shaped applied patch — all match the drawing, including the side convention confirmed by the coin-right sibling drawing. Two genuine but minor geometry deviations logged (corner radius, height on the bag); neither changes what a customer would read from the image, and neither is a count, side or orientation error. No red thread, no traced annotation.",
+  "checkedAt": "2026-07-31T05:32:15.199Z"
+}

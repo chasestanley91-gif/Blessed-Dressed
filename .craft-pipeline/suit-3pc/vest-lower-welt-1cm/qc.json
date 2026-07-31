@@ -1,0 +1,37 @@
+{
+  "addr": "suit-3pc > vest-lower-welt-1cm",
+  "productId": "suit-3pc",
+  "optionId": "vest-lower-welt-1cm",
+  "attempt": 2,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 99,
+    "placement": 99,
+    "symmetry": 99,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "angles",
+      "description": "Both welts sit very nearly horizontal; the blueprint gives each a slight rise toward its side seam.",
+      "expected": "Each welt angled to rise a few degrees toward the side seam.",
+      "actual": "Welts read close to level.",
+      "correction": "Low priority: the angle in the drawing is only a few degrees and the pocket type reads correctly regardless."
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "notes": "Attempt 2 fixed the logged failure: both drawn lower welt pockets are now visible together, symmetric about the placket, each a thin single welt. Welt width, absence of flap and pocket placement all match the blueprint. Shirt sleeve intrusion from attempt 1 is gone.",
+  "checkedAt": "2026-07-31T05:37:55.964Z"
+}

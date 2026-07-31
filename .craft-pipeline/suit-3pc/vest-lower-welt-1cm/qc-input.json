@@ -1,0 +1,35 @@
+{
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 99,
+    "placement": 99,
+    "symmetry": 99,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "angles",
+      "description": "Both welts sit very nearly horizontal; the blueprint gives each a slight rise toward its side seam.",
+      "expected": "Each welt angled to rise a few degrees toward the side seam.",
+      "actual": "Welts read close to level.",
+      "correction": "Low priority: the angle in the drawing is only a few degrees and the pocket type reads correctly regardless."
+    }
+  ],
+  "lockedFeatures": [
+    "TWO lower welt pockets, one per side — CORRECT (both now in frame, mirrored about the placket, at the same height)",
+    "narrow 1.0 cm welt height on each — CORRECT (welt reads roughly 1 cm against pocket length)",
+    "single thin welt, no flap and no wide double jetting — CORRECT",
+    "no upper/breast pocket — CORRECT",
+    "single-breasted waistcoat front, front view, square on — CORRECT",
+    "double-pointed bottom hem — CORRECT",
+    "front buttons down the placket with the lowest position left unbuttoned — CORRECT",
+    "red highlights rendered as cloth welts, never as red — CORRECT",
+    "zero annotation: no numbers, arrows, leader lines or text — CORRECT"
+  ],
+  "notes": "Attempt 2 fixed the logged failure: both drawn lower welt pockets are now visible together, symmetric about the placket, each a thin single welt. Welt width, absence of flap and pocket placement all match the blueprint. Shirt sleeve intrusion from attempt 1 is gone."
+}

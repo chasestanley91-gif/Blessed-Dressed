@@ -1,0 +1,37 @@
+{
+  "addr": "suit-2pc > fly-straight",
+  "productId": "suit-2pc",
+  "optionId": "fly-straight",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 99,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 99,
+    "construction": 98,
+    "placement": 98,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "construction",
+      "description": "The waistband carries a worked buttonhole but no button through it, so the closure reads as unfastened.",
+      "expected": "Waistband closure mark at the fly as drawn.",
+      "actual": "Buttonhole rendered, button absent.",
+      "correction": "Render the waistband button seated in the buttonhole."
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "notes": "Blueprint (6a4438c01dcf__3401.jpg) traces the waistband top edge in red then runs the red straight down the fly edge; the distinguishing feature versus the sibling is the absence of a fish-mouth notch. Magnified inspection of the candidate confirms a dead-vertical, unnotched fly fold with the topstitch parallel and correctly on the overlapping side. Red guide marks were correctly not reproduced as coloured cloth.",
+  "checkedAt": "2026-07-31T05:41:29.525Z"
+}

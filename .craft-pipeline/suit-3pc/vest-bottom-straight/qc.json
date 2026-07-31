@@ -1,0 +1,37 @@
+{
+  "addr": "suit-3pc > vest-bottom-straight",
+  "productId": "suit-3pc",
+  "optionId": "vest-bottom-straight",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 99,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 98,
+    "placement": 98,
+    "symmetry": 99,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "construction",
+      "description": "A worked buttonhole with no button appears low on the centre front, at the position where the drawing carries only a small annotation arrow.",
+      "expected": "Nothing at that position, or a button seated in its buttonhole.",
+      "actual": "Empty buttonhole rendered.",
+      "correction": "Omit the low buttonhole, or seat a button in it."
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "notes": "Blueprint (vest-bottom-straight.jpg) is a cropped waistcoat lower front. Magnified inspection of its hem confirms a single straight edge running level across the whole bottom with no V and no points at the centre front — the absence of points is the whole option, and the candidate reproduces it exactly. Pocket welt angle, dart count and button count all match the drawing.",
+  "checkedAt": "2026-07-31T05:41:29.946Z"
+}

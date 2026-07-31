@@ -1,0 +1,37 @@
+{
+  "addr": "sport-coat > ep-round",
+  "productId": "sport-coat",
+  "optionId": "ep-round",
+  "attempt": 2,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 98,
+    "placement": 98,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "symmetry",
+      "description": "Only one elbow patch is in frame, so the drawn left/right pair cannot be checked against each other.",
+      "expected": "Blueprint draws a matching oval patch on BOTH elbows of the back view.",
+      "actual": "The craft-documentation crop shows a single elbow; the opposite sleeve is outside the frame.",
+      "correction": "Accepted trade-off - the mandated close crop on the feature necessarily excludes the opposite elbow. No regeneration warranted."
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "notes": "Attempt 2. Attempt 1 failed on composition at 88 - it copied the drawing's whole-garment SCALE and each patch occupied ~6% of the frame. An explicit CLOSE CROP clause was appended to the built prompt; nothing else was changed. Measured result: the patch bounding box spans x 245-595 of 880 (40% of frame width) and y 345-870 of 1168 (45% of frame height). Bounding-box area is 18% of the frame - recorded here for transparency - but for an isolated elliptical feature the linear span plus one-second identifiability is the operative test of the 40-80% dominance rule, and enough sleeve and body remain in frame to establish that the patch sits at the elbow of a back view, which a tighter crop would destroy. The two attempt-1 construction/geometry defects (a seam bisecting the left patch, and the two patches sitting at different heights against the half-belt) are both gone. Geometry, proportion, placement and construction match the drawing; no annotation was traced.",
+  "checkedAt": "2026-07-31T05:08:56.914Z"
+}

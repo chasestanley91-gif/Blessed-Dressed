@@ -1,0 +1,37 @@
+{
+  "addr": "suit-2pc > jeans-diamond",
+  "productId": "suit-2pc",
+  "optionId": "jeans-diamond",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 98,
+    "placement": 99,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "Roughly the lower half of the frame is featureless trouser leg; the pocket assembly occupies the upper portion only.",
+      "expected": "Feature zone dominating 40-80% of the frame.",
+      "actual": "Pocket assembly reads across the top ~43% of the frame; the remainder is plain cloth.",
+      "correction": "If regenerated, crop up from the hem so the pocket mouth sits nearer frame centre."
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "notes": "Pocket path matches the blueprint's red trace: waistband, down, sharp inward run, then a hard turn down to a point at the crease. The paired besom pocket is placed as drawn. Diamond geometry is identifiable within one second.",
+  "checkedAt": "2026-07-31T05:27:38.153Z"
+}

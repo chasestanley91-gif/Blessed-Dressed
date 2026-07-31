@@ -1,0 +1,43 @@
+{
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 99,
+    "construction": 99,
+    "placement": 98,
+    "symmetry": 99,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "shape",
+      "description": "The applied coin pocket's lower corners are rendered with a generous radius, where the drawing's red U-mark is drawn with near-square corners.",
+      "expected": "U-shaped applied coin pocket with near-square lower corners, as drawn",
+      "actual": "U-shaped applied coin pocket with noticeably rounded lower corners",
+      "correction": "Specify square-cornered U outline for the applied coin pocket on the left bag."
+    },
+    {
+      "severity": "minor",
+      "category": "placement",
+      "description": "The coin pocket sits slightly higher on the pocket bag than in the drawing, where the red U sits close to the bag's lower edge.",
+      "expected": "coin pocket applied low on the turned-out left pocket bag, near its bottom edge",
+      "actual": "coin pocket applied at mid-to-lower height on the bag",
+      "correction": "Drop the coin pocket lower on the left bag, closer to the bag's bottom edge."
+    }
+  ],
+  "lockedFeatures": [
+    "interior / turned-out construction view — the front pocket bags are pulled out of the trousers — CORRECT",
+    "coin pocket applied to the LEFT pocket bag (image-left, matching the drawing's red U on the image-left bag) — CORRECT",
+    "exactly ONE coin pocket; the opposite bag carries none — CORRECT",
+    "coin pocket is a small applied U-shaped patch, open at the top, not a besom/welt — CORRECT",
+    "bartack reinforcement at both top corners of the coin pocket opening — CORRECT",
+    "waistband with belt loop visible above the turned-out bags — CORRECT",
+    "coin pocket rendered in cloth/pocketing tone, NOT red (red in the drawing is a highlight, not a colour instruction) — CORRECT",
+    "zero annotation: no numbers, units, arrows, leader lines, red guide marks or text anywhere in frame — CORRECT",
+    "photographic, not line-art — CORRECT"
+  ],
+  "notes": "Adversarial pass. The critical checks — turned-out interior orientation, coin pocket on the LEFT bag only, single U-shaped applied patch — all match the drawing, including the side convention confirmed by the coin-right sibling drawing. Two genuine but minor geometry deviations logged (corner radius, height on the bag); neither changes what a customer would read from the image, and neither is a count, side or orientation error. No red thread, no traced annotation."
+}

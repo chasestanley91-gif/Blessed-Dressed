@@ -140,21 +140,21 @@ export default function CheckoutPage() {
                 <p className="font-sans text-xs uppercase tracking-[0.3em] text-gold">Contact</p>
                 <div className="grid gap-4 sm:grid-cols-2">
                   <div>
-                    <label className={labelCls}>First name *</label>
-                    <input className={inputCls} placeholder="Marcus" value={form.firstName} onChange={(e) => set("firstName", e.target.value)} required />
+                    <label htmlFor="checkout-first-name" className={labelCls}>First name *</label>
+                    <input id="checkout-first-name" autoComplete="given-name" className={inputCls} placeholder="Marcus" value={form.firstName} onChange={(e) => set("firstName", e.target.value)} required />
                   </div>
                   <div>
-                    <label className={labelCls}>Last name *</label>
-                    <input className={inputCls} placeholder="Whitfield" value={form.lastName} onChange={(e) => set("lastName", e.target.value)} required />
+                    <label htmlFor="checkout-last-name" className={labelCls}>Last name *</label>
+                    <input id="checkout-last-name" autoComplete="family-name" className={inputCls} placeholder="Whitfield" value={form.lastName} onChange={(e) => set("lastName", e.target.value)} required />
                   </div>
                 </div>
                 <div>
-                  <label className={labelCls}>Email address *</label>
-                  <input className={inputCls} type="email" placeholder="you@example.com" value={form.email} onChange={(e) => set("email", e.target.value)} required />
+                  <label htmlFor="checkout-email" className={labelCls}>Email address *</label>
+                  <input id="checkout-email" autoComplete="email" className={inputCls} type="email" placeholder="you@example.com" value={form.email} onChange={(e) => set("email", e.target.value)} required />
                 </div>
                 <div>
-                  <label className={labelCls}>Phone</label>
-                  <input className={inputCls} type="tel" placeholder="+1 (555) 000-0000" value={form.phone} onChange={(e) => set("phone", e.target.value)} />
+                  <label htmlFor="checkout-phone" className={labelCls}>Phone</label>
+                  <input id="checkout-phone" autoComplete="tel" className={inputCls} type="tel" placeholder="+1 (555) 000-0000" value={form.phone} onChange={(e) => set("phone", e.target.value)} />
                 </div>
               </section>
 
@@ -162,17 +162,17 @@ export default function CheckoutPage() {
               <section className="rounded-[1.5rem] border border-border-accent bg-surface-strong p-6 space-y-5 shadow-[0_4px_20px_rgba(0,0,0,0.3)]">
                 <p className="font-sans text-xs uppercase tracking-[0.3em] text-gold">Delivery Address</p>
                 <div>
-                  <label className={labelCls}>Street address *</label>
-                  <input className={inputCls} placeholder="123 Savile Row" value={form.address} onChange={(e) => set("address", e.target.value)} required />
+                  <label htmlFor="checkout-address" className={labelCls}>Street address *</label>
+                  <input id="checkout-address" autoComplete="street-address" className={inputCls} placeholder="123 Savile Row" value={form.address} onChange={(e) => set("address", e.target.value)} required />
                 </div>
                 <div className="grid gap-4 sm:grid-cols-2">
                   <div>
-                    <label className={labelCls}>City *</label>
-                    <input className={inputCls} placeholder="London" value={form.city} onChange={(e) => set("city", e.target.value)} required />
+                    <label htmlFor="checkout-city" className={labelCls}>City *</label>
+                    <input id="checkout-city" autoComplete="address-level2" className={inputCls} placeholder="London" value={form.city} onChange={(e) => set("city", e.target.value)} required />
                   </div>
                   <div>
-                    <label className={labelCls}>Country</label>
-                    <input className={inputCls} placeholder="United Kingdom" value={form.country} onChange={(e) => set("country", e.target.value)} />
+                    <label htmlFor="checkout-country" className={labelCls}>Country</label>
+                    <input id="checkout-country" autoComplete="country-name" className={inputCls} placeholder="United Kingdom" value={form.country} onChange={(e) => set("country", e.target.value)} />
                   </div>
                 </div>
               </section>

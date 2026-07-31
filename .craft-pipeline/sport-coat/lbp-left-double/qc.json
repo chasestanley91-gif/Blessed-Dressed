@@ -1,0 +1,37 @@
+{
+  "addr": "sport-coat > lbp-left-double",
+  "productId": "sport-coat",
+  "optionId": "lbp-left-double",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 99,
+    "geometry": 99,
+    "dimensions": 98,
+    "angles": 99,
+    "construction": 99,
+    "placement": 98,
+    "symmetry": 98,
+    "composition": 99,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "Only the wearer's left lapel is in frame. The drawing shows both lapels, which is what proves the right lapel carries NO buttonhole; the tight crop demanded by the CLOSE CROP directive removes that side, so the 'left only' half of the option is implied rather than demonstrated.",
+      "expected": "both lapels visible so the empty right lapel can be compared against the doubled left lapel",
+      "actual": "a tight crop on the wearer's left lapel alone; the right lapel is outside the frame",
+      "correction": "if ever re-shot, pull back slightly to a chest-up frame that still keeps the two buttonholes at 40%+ of the frame but lets the plain right lapel enter at the frame edge"
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "notes": "Attempt 1. The distinguishing detail - two stacked lapel buttonholes on the wearer's left lapel - is unambiguous and reads in well under a second. Buttonhole count verified by explicit count: two, no more. Side verified by the position of the shirt collar and centre front relative to the lapel. Fabric, lighting, background and cleanliness are all correct, and no annotation from the drawing was traced into the photograph. Sole finding is the compositional one above: the CLOSE CROP directive (which is mandatory in this pipeline) crops the right lapel out, so a customer sees the doubled left lapel but cannot directly compare it with the untouched right lapel. Logged as minor because the option's own construction is fully and correctly shown.",
+  "checkedAt": "2026-07-31T05:31:11.775Z"
+}

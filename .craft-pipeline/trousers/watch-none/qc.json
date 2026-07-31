@@ -1,0 +1,37 @@
+{
+  "addr": "trousers > watch-none",
+  "productId": "trousers",
+  "optionId": "watch-none",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 99,
+    "placement": 98,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "blueprint-match",
+      "description": "The rear welt pocket that the blueprint shows wrapping into the three-quarter view is outside the tighter documentation crop.",
+      "expected": "Three-quarter front with the rear welt just visible at the top right, as drawn.",
+      "actual": "Crop stops at the hip, so the rear welt falls outside the frame.",
+      "correction": "Optional: widen the crop slightly to the wearer's rear so the back welt re-enters frame."
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "notes": "Adversarial pass on an ABSENCE option, where the critical failure would be a watch pocket appearing anywhere. It does not: the waistband runs clean and unbroken from edge to edge, with no small coin/watch pocket, no welt, no jetting, no buttonhole and no opening at the waistband or just below it. I checked the waistband band specifically at full resolution rather than inferring from the overall look. The front slant pocket that is present belongs to a different field and is drawn in the blueprint, so it is not an intrusion. Three belt loops, crease line and three-quarter orientation all match the drawing. No annotation, numerals, arrows or coloured guide marks in frame.",
+  "checkedAt": "2026-07-31T05:45:57.831Z"
+}

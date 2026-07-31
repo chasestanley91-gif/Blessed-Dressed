@@ -1,0 +1,45 @@
+{
+  "scores": {
+    "shape": 98,
+    "geometry": 99,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 99,
+    "placement": 98,
+    "symmetry": 99,
+    "composition": 98,
+    "blueprint-match": 99
+  },
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "The showcased feature is a seam-type option (a pocket opening carrying no topstitch), so it is inherently linear rather than area-filling. The two slant pocket openings plus the hip cloth between them fill the frame and the option is readable in well under a second, but the opening lines themselves are narrow. This is intrinsic to a 'no topstitch' option and cannot be raised much further without losing the pocket's shape and position.",
+      "expected": "the craft option dominating 40-80% of frame area",
+      "actual": "the pocket-opening region dominates the frame; the opening lines themselves are narrow linear features",
+      "correction": "no action; the hip/pocket region is correctly presented and both openings are unobstructed"
+    },
+    {
+      "severity": "minor",
+      "category": "dimensions",
+      "description": "The waistband is clipped by the top frame edge, so waistband depth cannot be measured in-frame. Waistband depth is not part of this field and is not among the locked features.",
+      "expected": "full waistband visible per the whole-front drawing",
+      "actual": "waistband top clipped by the crop",
+      "correction": "acceptable; the close crop is mandated and the waistband is not the option"
+    }
+  ],
+  "lockedFeatures": [
+    "orientation: front",
+    "NO topstitching along either pocket opening — the deliberate absence that defines the option",
+    "slant side pockets at both hips, as drawn",
+    "belt loops present on the waistband, as drawn",
+    "single forward pleat each side of the fly, as drawn",
+    "fly with curved J-stitch on the wearer's left",
+    "pressed centre creases both legs",
+    "fabric: navy fine wool suiting",
+    "background: seamless neutral light-grey studio sweep",
+    "no hands, forearms or shirt cuffs anywhere in frame",
+    "zero annotation in frame"
+  ],
+  "notes": "ATTEMPT 2 — ADVERSARIAL RE-READ vs /images/blueprints/factory/10bfe4668d92__31A6__No_top_stitch_hidden_stitch.jpg.\n\nThe attempt-1 major finding (a hand inserted into the slant pocket, occluding the documented edge) is FULLY RESOLVED: there are no hands, forearms or shirt cuffs anywhere in the frame, and both slant pocket openings are completely visible and unobstructed.\n\nEVERY LOCKED FEATURE RE-VERIFIED AFTER THE CORRECTION (checking that the fix did not break something else):\n- No topstitch on either pocket opening — still correct, the defining absence survived the regeneration.\n- Belt loops still present, matching the drawing.\n- Single forward pleat each side of the fly — count did not drift to double, which was the main sibling-drift risk on the pleat-style field.\n- Slant side pockets, both hips, angle consistent with the drawing.\n- Fly J-stitch on the wearer's left, as drawn.\n- Front creases pressed, both legs.\n\nATTEMPTED REJECTIONS THAT FAILED:\n(1) Did the regeneration sneak topstitching back in? No — examined both openings at full resolution; the edges are clean folded seams with no stitch line.\n(2) Pleat count drift? No — one pleat per side, folded toward the fly.\n(3) Annotation traced from the drawing? None anywhere.\n(4) Wrong garment from the bad 'suit jacket' garment noun in the prompt? No — trousers, correctly following the drawing.\n(5) Wrong face? Front, as drawn.\n\nNo critical or major findings remain."
+}

@@ -1,0 +1,37 @@
+{
+  "addr": "sport-coat > sbh-straight",
+  "productId": "sport-coat",
+  "optionId": "sbh-straight",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 98,
+    "geometry": 99,
+    "dimensions": 98,
+    "angles": 99,
+    "construction": 98,
+    "placement": 99,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "construction",
+      "description": "The turned-back cuff vent corner renders with a pale cream underside, reading as a contrast underlay. The line drawing specifies the turned-back corner but assigns it no colour.",
+      "expected": "Turned-back vent corner at the cuff hem, colour unspecified by the drawing.",
+      "actual": "Turned-back vent corner present, but its exposed face is a light cream tone against the navy hopsack.",
+      "correction": "If regenerated, render the vent corner underside in self cloth rather than a contrasting pale tone."
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "notes": "Four level buttonholes in a vertical column beside the cuff vent, exactly as drawn. Red marks in the blueprint correctly interpreted as highlights, not colour. Straight-vs-slanted distinction is unmistakable within one second.",
+  "checkedAt": "2026-07-31T05:27:37.764Z"
+}

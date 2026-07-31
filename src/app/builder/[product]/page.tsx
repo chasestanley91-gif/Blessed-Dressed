@@ -127,11 +127,20 @@ function OptionCard({ id, label, description, priceAdj, image, images, aiImage, 
   const hasPhoto = !!photo;
   const thumb = photo ?? image;
   return (
+    // The expand control used to be a <div role="button" tabIndex={0}> INSIDE
+    // this <button>. Interactive content inside a button is invalid HTML: the
+    // accessibility tree collapses it into the parent, so a screen-reader user
+    // heard one control where there are two, and Tab could not reach the expand
+    // action at all. The card is now a positioned wrapper with two sibling
+    // buttons — same appearance, two real controls.
+    <div
+      className={`group relative rounded-[1rem] border transition-[border-color,background] duration-150 ${selected ? "border-gold bg-[#122742]" : "border-border-accent bg-surface-strong hover:border-gold/40"}`}
+    >
     <button
       id={id}
       type="button"
       onClick={onClick}
-      className={`group rounded-[1rem] border text-left transition-[border-color,background] duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold active:scale-[0.98] ${selected ? "border-gold bg-[#122742]" : "border-border-accent bg-surface-strong hover:border-gold/40"}`}
+      className="block w-full rounded-[1rem] text-left transition-transform duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold active:scale-[0.98]"
     >
       {thumb && (
         <div
@@ -154,20 +163,6 @@ function OptionCard({ id, label, description, priceAdj, image, images, aiImage, 
               }
             }}
           />
-          {onExpand && (
-            <div
-              role="button"
-              tabIndex={0}
-              onClick={(e) => { e.stopPropagation(); onExpand(); }}
-              onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.stopPropagation(); onExpand(); } }}
-              className="absolute right-1.5 top-1.5 flex h-6 w-6 cursor-pointer items-center justify-center rounded-full bg-black/40 text-white opacity-0 backdrop-blur-sm transition-opacity group-hover:opacity-100 hover:bg-black/60 focus-visible:opacity-100 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gold"
-              aria-label={`Expand ${label}`}
-            >
-              <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
-                <path d="M1 9l8-8M6 1h3v3M4 9H1V6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </div>
-          )}
         </div>
       )}
       <div className={image ? "p-3" : "p-4"}>
@@ -185,6 +180,19 @@ function OptionCard({ id, label, description, priceAdj, image, images, aiImage, 
         <p className="font-sans mt-1 text-xs leading-[1.6] text-muted-dark">{description}</p>
       </div>
     </button>
+    {onExpand && thumb && (
+      <button
+        type="button"
+        onClick={onExpand}
+        className="absolute right-1.5 top-1.5 z-10 flex h-6 w-6 items-center justify-center rounded-full bg-black/40 text-white opacity-0 backdrop-blur-sm transition-opacity duration-150 group-hover:opacity-100 hover:bg-black/60 focus-visible:opacity-100 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gold"
+        aria-label={`Expand ${label}`}
+      >
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
+          <path d="M1 9l8-8M6 1h3v3M4 9H1V6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      </button>
+    )}
+    </div>
   );
 }
 

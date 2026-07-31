@@ -1,0 +1,93 @@
+{
+  "addr": "shirt > collar-sq-65-btn",
+  "productId": "shirt",
+  "optionId": "collar-sq-65-btn",
+  "attempt": 2,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 60,
+    "geometry": 62,
+    "dimensions": 88,
+    "angles": 65,
+    "construction": 90,
+    "placement": 95,
+    "symmetry": 96,
+    "composition": 80,
+    "blueprint-match": 60
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "composition",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "critical",
+      "category": "shape",
+      "description": "Generic-category substitution: both collar leaves taper to sharp acute POINTS. This option is 'Square 6.5 cm with Button', whose defining termination is a flat squared-off terminal edge. A point collar has been generated in place of a square collar.",
+      "expected": "Both collar leaves terminating in a flat, squared-off terminal edge, as drawn in the illustration and as required by the option label.",
+      "actual": "Both collar leaves taper to sharp acute points — the exact termination named in this option's forbidden list.",
+      "correction": "Regenerate with the squared termination stated as the single non-negotiable geometry: each collar leaf must end in a flat horizontal cut edge roughly 8-10 mm wide, with NO taper to a point. Attach the illustration and reference the foreground leaf's blunt terminal edge explicitly."
+    },
+    {
+      "severity": "major",
+      "category": "composition",
+      "description": "The frame is dominated by a bare human neck, jaw and chin occupying roughly the upper third, whereas the illustration is a garment-only detail shot on a form with no skin visible.",
+      "expected": "Garment-only detail crop tight on collar and neckline, matching the illustration's presentation; collar dominating 40-80% of frame.",
+      "actual": "Bare neck and chin occupy the top third of the frame, pulling attention off the collar and reducing its effective dominance.",
+      "correction": "Return to the garment-only presentation on a form or mannequin as in the illustration; no model skin, chin or jaw in frame."
+    }
+  ],
+  "verdict": "FAIL",
+  "waiver": null,
+  "correction": {
+    "errors": [
+      {
+        "severity": "critical",
+        "category": "shape",
+        "error": "Generic-category substitution: both collar leaves taper to sharp acute POINTS. This option is 'Square 6.5 cm with Button', whose defining termination is a flat squared-off terminal edge. A point collar has been generated in place of a square collar.",
+        "expected": "Both collar leaves terminating in a flat, squared-off terminal edge, as drawn in the illustration and as required by the option label.",
+        "actual": "Both collar leaves taper to sharp acute points — the exact termination named in this option's forbidden list.",
+        "correction": "Regenerate with the squared termination stated as the single non-negotiable geometry: each collar leaf must end in a flat horizontal cut edge roughly 8-10 mm wide, with NO taper to a point. Attach the illustration and reference the foreground leaf's blunt terminal edge explicitly."
+      },
+      {
+        "severity": "major",
+        "category": "composition",
+        "error": "The frame is dominated by a bare human neck, jaw and chin occupying roughly the upper third, whereas the illustration is a garment-only detail shot on a form with no skin visible.",
+        "expected": "Garment-only detail crop tight on collar and neckline, matching the illustration's presentation; collar dominating 40-80% of frame.",
+        "actual": "Bare neck and chin occupy the top third of the frame, pulling attention off the collar and reducing its effective dominance.",
+        "correction": "Return to the garment-only presentation on a form or mannequin as in the illustration; no model skin, chin or jaw in frame."
+      }
+    ],
+    "lockedFeatures": [
+      "throat/collar closure button present and correctly positioned",
+      "white cotton poplin fabric",
+      "collar stand height",
+      "front placket geometry"
+    ],
+    "forbiddenChanges": [
+      "do not alter any checklist item this attempt already passed",
+      "do not change the camera crop, composition, or accessories unless the error is itself a composition error",
+      "do not change the garment part, orientation, or any other option's geometry"
+    ]
+  },
+  "notes": "Attempt 2. The closure button — the feature distinguishing this option from plain collar-sq-65 — is correctly present and well placed, and should be preserved on retry. The collar geometry, however, regressed to a point collar and violates the explicit forbidden termination. Note the pattern: this candidate and collar-small-sq-50 candidate-2 are both attempt-2 regenerations that drifted to a human-model framing AND lost the squared geometry at the same time; the attempt-2 prompt revision appears to be the common cause.",
+  "checkedAt": "2026-07-31T04:32:53.886Z"
+}

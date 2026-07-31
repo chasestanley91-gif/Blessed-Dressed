@@ -1,0 +1,37 @@
+{
+  "addr": "suit-3pc > vest-lining-artistic",
+  "productId": "suit-3pc",
+  "optionId": "vest-lining-artistic",
+  "attempt": 2,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 99,
+    "placement": 98,
+    "symmetry": 99,
+    "composition": 99,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "shape",
+      "description": "The two front panels are folded back against the sides rather than splayed fully flat out to the left and right as in the blueprint's completely opened-out layout.",
+      "expected": "Fully flat layout with both fronts splayed outward as wings.",
+      "actual": "Waistcoat opened and laid flat with the fronts turned back along the sides; the full interior lining zone is still exposed.",
+      "correction": "Acceptable - this is how a real waistcoat lies when opened, and the entire lining zone the blueprint shades is visible and unobstructed."
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "notes": "Attempt 2 fixes the critical failure from attempt 1. The lining now carries a large decorative printed placement artwork centred on the back panel and continuing in scale across the adjoining panels, so the option is identifiable in under a second and cannot be confused with a plain-lining sibling. All the geometry that was already correct on attempt 1 - armholes, shoulder line, centre-back seam, panel seams, navy facings, symmetry - is preserved unchanged, and the previously cropped lower hem is now fully in frame.",
+  "checkedAt": "2026-07-31T05:41:54.134Z"
+}

@@ -1,0 +1,37 @@
+{
+  "scores": {
+    "shape": 99,
+    "geometry": 99,
+    "dimensions": 98,
+    "angles": 99,
+    "construction": 99,
+    "placement": 99,
+    "symmetry": 99,
+    "composition": 98,
+    "blueprint-match": 99
+  },
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "A narrow strip of the jacket body appears at the far left of the frame; not present in the drawing, though it does not obscure the cuff.",
+      "expected": "Cuff and its button column isolated against the seamless grey ground.",
+      "actual": "Cuff isolated and dominant, with an out-of-focus sliver of jacket body at frame left.",
+      "correction": "Optional: tighten the crop a further ~10% toward the cuff."
+    }
+  ],
+  "lockedFeatures": [
+    "cuff button count = exactly 3 — CORRECT (three buttons, no more, no fewer)",
+    "buttons arranged FLAT/spaced apart, not kissing or overlapping — CORRECT (clear cloth gap between each button)",
+    "single vertical column along the cuff vent edge — CORRECT",
+    "buttons positioned hard against the cuff vent seam as drawn — CORRECT",
+    "functional buttonholes beside each button, matching the drawing's three cells — CORRECT",
+    "cuff edge / sleeve opening shape — CORRECT",
+    "orientation = detail view of the cuff — CORRECT",
+    "buttons rendered in horn/cloth-appropriate colour, NOT the drawing's highlight red — CORRECT",
+    "zero traced annotation: no numbers, arrows, leader lines, red guide marks or text — CORRECT (ABSENT, as required)",
+    "textured wool/hopsack basketweave cloth per spec — CORRECT",
+    "seamless neutral light-grey studio ground — CORRECT"
+  ],
+  "notes": "Adversarial pass. The single highest-risk item on this cluster is the button COUNT, and it is verifiably 3 — counted directly off the render at three distinct button centres down the cuff vent edge, matching the three separated red cells in the blueprint (blueprint zoomed 5x to confirm the red column resolves into exactly three cells, each with its own centre tick). Spacing is FLAT, not kissing: there is visible cloth between adjacent buttons in both drawing and render. No red was traced into the cloth; the highlight was correctly read as an identifier and the buttons rendered in dark horn. No measurement text, arrows or leader lines anywhere in frame."
+}

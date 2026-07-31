@@ -1,0 +1,49 @@
+{
+  "schema": "garment-spec/v1",
+  "addr": "sport-coat > shoulder-structure > shoulder-pad > pad-05-soft",
+  "productId": "sport-coat",
+  "sectionId": "shoulder-structure",
+  "fieldId": "shoulder-pad",
+  "optionId": "pad-05-soft",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\sport-coat.json",
+  "source": "json",
+  "label": "+0.5 cm Soft (Both Sides)",
+  "description": "A 5mm soft pad is the classical bespoke standard — substantial enough to project a definite, authoritative shoulder line while remaining visibly rounded and human rather than squared off. The soft construction means the pad compresses naturally under pressure and presents a gently curved profile that echoes the natural deltoid rather than fighting it, giving the jacket both presence and ease. This is the padding weight favoured by the great London houses for day suits: purposeful enough to command attention, comfortable enough to wear for twelve hours without fatigue.",
+  "fieldLabel": "Shoulder Padding",
+  "sectionLabel": "Shoulder & Structure",
+  "part": "jacket-shoulder",
+  "garment": {
+    "noun": "bespoke sport coat",
+    "fabric": "textured wool/hopsack with visible weave"
+  },
+  "view": {
+    "orientation": "front",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": false,
+  "measured": {
+    "dimensions": [
+      "0.5 cm"
+    ],
+    "angles": [],
+    "counts": [],
+    "shapes": [],
+    "spread": [],
+    "flags": []
+  },
+  "illustration": {
+    "path": "/images/blueprints/factory/9fd6de75414f__060K__Regular.jpg",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\factory\\9fd6de75414f__060K__Regular.jpg",
+    "exists": true,
+    "remote": false
+  },
+  "forbidden": [
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-07-31T06:28:47.637Z"
+}

@@ -1,0 +1,36 @@
+{
+  "scores": {
+    "shape": 99,
+    "geometry": 99,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 99,
+    "placement": 98,
+    "symmetry": 99,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "The model's hands rest in the side pockets, partly occluding both slanted side-pocket openings, and a jacket, shirt and knitted tie appear at the top of the frame — styling context absent from the technical drawing.",
+      "expected": "Trouser front only, side pockets unobstructed.",
+      "actual": "Side-pocket openings partly covered by hands; jacket/shirt/tie visible above the waistband.",
+      "correction": "Hands out of pockets and crop to the waistband so no upper-body styling enters the frame."
+    }
+  ],
+  "lockedFeatures": [
+    "front view of the trousers, waistband to upper thigh — CORRECT",
+    "ZERO pleats at the waistband — CORRECT",
+    "ZERO waistband darts — CORRECT",
+    "cloth running smooth and uninterrupted from waistband down the front — CORRECT",
+    "belt loops on the waistband — CORRECT",
+    "slanted side pockets running from the waistband to the side seam — CORRECT (partly occluded)",
+    "fly at centre front with J-shaped bottom stitch — CORRECT",
+    "pressed front crease on each leg — CORRECT",
+    "no numbers, units, arrows, leader lines, red guide marks or text anywhere in frame — CORRECT",
+    "seamless neutral light-grey studio background — CORRECT"
+  ],
+  "notes": "Blueprint (edc7138c802f__302L__No_pleat_no_dart.jpg) shows a trouser front with waistband, belt loops, slanted side pockets, fly and pressed creases, and critically NO pleat and NO dart. Magnified inspection of the waistband region of the candidate confirms a completely clean flat front — no pleat fold, no dart intake anywhere. Every drawn element is present and correctly placed."
+}

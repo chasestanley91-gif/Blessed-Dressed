@@ -1,0 +1,105 @@
+{
+  "addr": "sport-coat > shoulder-structure > shoulder-pad > pad-none",
+  "label": "No Padding",
+  "part": "jacket-shoulder",
+  "orientation": "front",
+  "excluded": null,
+  "generate": true,
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\sport-coat.json",
+  "source": "json",
+  "illustration": "/images/blueprints/factory/d45437530f73__060J__No_pad.jpg",
+  "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\factory\\d45437530f73__060J__No_pad.jpg",
+  "illustrationExists": true,
+  "illustrationRemote": false,
+  "profile": {
+    "addr": "sport-coat > shoulder-structure > shoulder-pad > pad-none",
+    "product": "sport-coat",
+    "field": "Shoulder Padding",
+    "option": "No Padding",
+    "part": "jacket-shoulder",
+    "garment": "bespoke sport coat",
+    "orientation": "front",
+    "absence": true,
+    "distinguishingDetail": "No padding produces the most natural, body-following shoulder possible — the sleeve is set into the armhole so the jacket falls directly from the wearer's natural shoulder point with no added projection or squaring. Associated above all with Neapolitan tailoring and the spalla camicia (shirt shoulder) tradition, this construction gives the jacket an almost relaxed, casually aristocratic quality: soft, human, and free of any militaristic squareness. It demands a clean natural shoulder from the wearer to look its best, but rewards one with a silhouette of exceptional ease and grace.",
+    "measured": {
+      "dimensions": [],
+      "angles": [],
+      "counts": [],
+      "shapes": [],
+      "spread": [],
+      "flags": []
+    },
+    "reproduceFromIllustration": [],
+    "composition": {
+      "crop": "on the shoulder and sleeve head as the blueprint shows it",
+      "dominanceTarget": "40–80% of frame",
+      "identifyWithin": "1 second"
+    },
+    "forbidden": [
+      "any shoulder padding rendered anywhere in frame — this option is its deliberate absence",
+      "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+      "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+      "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+    ],
+    "excluded": null,
+    "generate": true
+  },
+  "requiredTokens": [],
+  "checklist": [
+    "the shoulder padding is ABSENT — a clean area, no shoulder padding rendered",
+    "the clean area is the subject (40–80% of frame), identifiable within one second",
+    "a real photograph; the absent feature was NOT hallucinated in",
+    "orientation matches the illustration: front"
+  ],
+  "scoreCard": [
+    {
+      "category": "shape",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "geometry",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "dimensions",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "angles",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "construction",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "placement",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "symmetry",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "composition",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "blueprint-match",
+      "score": null,
+      "min": 98
+    }
+  ],
+  "prompt": "Ultra-photorealistic luxury menswear product photography.\n\nA clean studio DOCUMENTATION photograph of the deliberate ABSENCE of a feature. Shoulder Padding: \"No Padding\". The clean, unbroken area where the shoulder padding would be IS the subject, identifiable within one second.\n\nA premium bespoke sport coat featuring a precise No Padding (Shoulder Padding).\n\nIntent: No padding produces the most natural, body-following shoulder possible — the sleeve is set into the armhole so the jacket falls directly from the wearer's natural shoulder point with no added projection or squaring. Associated above all with Neapolitan tailoring and the spalla camicia (shirt shoulder) tradition, this construction gives the jacket an almost relaxed, casually aristocratic quality: soft, human, and free of any militaristic squareness. It demands a clean natural shoulder from the wearer to look its best, but rewards one with a silhouette of exceptional ease and grace.\n\nThis option is the ABSENCE of the shoulder padding.\n\nMANDATORY — do NOT render a shoulder padding. Reproduce a clean garment with no shoulder padding, exactly as the illustration shows; adding the feature is a failure.\n\nVIEW — this illustration is the front of the garment. Photograph the same face; never substitute a different face of the garment.\n\nBLUEPRINT LOCK — THE DRAWING IS LAW: the attached technical illustration is the manufacturing blueprint for this exact craft option and the SOLE authority for the image. Reproduce its geometry precisely — point/edge shape, lengths, widths, depths, angles, curvature, roll lines, symmetry, button/tab/stay positions, seam and stitch placement, and proportions — within less than 2% deviation. Assume NOTHING from tailoring/menswear/fashion convention or model priors; every visible characteristic must come from the drawing. Do not redesign, reinterpret, substitute a similar commercial style, stylise, or \"improve\" it. Do NOT fall back to a generic version of this category — reproduce THIS option, not a typical one. If convention conflicts with the drawing, the drawing wins. Accuracy over aesthetics. ANNOTATIONS ARE NOT THE GARMENT: the technical drawing may carry measurement callouts — dimension numbers (\"2.5cm\", \"9cm\", \"115°\"), tick / leader / dimension lines, arrows, red or coloured guide marks, and text labels. These are manufacturing documentation, NOT features of the cloth. Reproduce ONLY the finished garment: never render any number, unit, arrow, callout, leader line, measurement mark, or text anywhere in the photograph. The final image is a clean garment photo with zero annotation.\n\nPhotographed worn on a male model, upper-chest/shoulder framing.\n\nFrame on the shoulder and sleeve head as the blueprint shows it; the detail must read clearly and sharply.\n\nSavile Row and high-end Italian sartorial aesthetic. Natural daylight studio lighting, Phase One IQ4 medium-format camera, 150MP detail, shallow depth of field, magazine-quality editorial menswear photography. Authentic bespoke craftsmanship, fine hand stitching, premium finishing. SET — shot in a clean luxury photographic studio against a seamless, plain, neutral light-grey background with clear separation between garment and background: no location, no architecture, no furniture, no scenery, no props and no environmental context of any kind competing with the garment.\n\nExtremely realistic textured wool/hopsack with visible weave texture, fine stitching.\n\nAvoid: any GENERIC menswear substitution (a generic spread collar, generic notch/peak lapel, generic pocket/pleat/vent/cuff/waistband in place of the drawn one), illustration or line-art style, CGI or 3D-render look, cartoon, mannequin, fashion sketch, inaccurate geometry, altered proportions, missing construction details, asymmetry, watermark, AI-art appearance, AND any text or annotation traced from the drawing: NO measurement numbers, units (cm/mm/°), dimension or leader lines, arrows, callouts, red/coloured guide marks, ruler ticks, or labels anywhere in the frame. This is real garment photography of the exact drawn option — clean cloth only, nothing else.\n\nFORBIDDEN FOR THIS OPTION — do not render: any shoulder padding rendered anywhere in frame — this option is its deliberate absence; a generic version of this part standing in for the exact drawn option (generic-category substitution); any feature, count, or geometry borrowed from a neighboring craft option on the same field; a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion).\n\nCLOSE-CROP MANDATE — this is a craft-documentation photograph, not a garment portrait: do NOT copy the scale of the technical drawing. Move the camera in until the showcased craft option alone fills 40-80% of the frame and is identifiable within one second. Crop away all garment area that does not directly surround and explain this one feature; the remainder of the garment may appear only as immediate context at the frame edges. Never render the whole garment.\n\nFRAMING LOCK — EXPLICIT FRAME BOUNDARIES (this overrides any earlier vague \"move closer\" wording): BOTH shoulders must stay inside the frame together — never crop to one shoulder, because it is the symmetry and the unbroken sweep of the two natural shoulders that shows the absence of padding. Compose the frame exactly to the extent the drawing itself uses: the TOP edge of the image sits just above the top of the collar; the BOTTOM edge sits immediately below the chest welt pocket; the LEFT and RIGHT edges sit just outside both sleeve heads so that both shoulder points, both armhole seams and both sleeve heads are fully visible. Crop the model at the jaw so no face, mouth, chin or hair enters the frame, and crop away everything below the chest welt pocket — no waist, no hands, no jacket hem. Photograph the shoulder line straight on and level. The shoulder must fall away from the neck in a soft continuous slope with NO squaring, NO built-up corner at the shoulder end, NO roped or raised sleeve head and NO ridge where the sleeve meets the body — the cloth follows the wearer's own shoulder and collapses gently into the sleeve. Do not zoom into the chest, the lapel or a single armhole seam.",
+  "builtAt": "2026-07-31T04:54:44.607Z",
+  "closeCropClauseAdded": true,
+  "framingLock": true
+}

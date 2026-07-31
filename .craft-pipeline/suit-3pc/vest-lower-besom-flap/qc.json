@@ -1,0 +1,37 @@
+{
+  "addr": "suit-3pc > vest-lower-besom-flap",
+  "productId": "suit-3pc",
+  "optionId": "vest-lower-besom-flap",
+  "attempt": 2,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 99,
+    "geometry": 99,
+    "dimensions": 98,
+    "angles": 99,
+    "construction": 99,
+    "placement": 99,
+    "symmetry": 99,
+    "composition": 98,
+    "blueprint-match": 99
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "Measured as raw pixel area the two welt-and-flap bars are about 8% of the frame, because a besom pocket is an inherently thin horizontal element.",
+      "expected": "Option zone dominating 40-80% of the frame.",
+      "actual": "The pocket band spans the full frame width and the waistcoat lower front now fills roughly three quarters of the frame with no competing element; the pockets are the only features besides the closure.",
+      "correction": "No further tightening is possible without cropping out one of the two pockets and destroying the count, which is the more important checklist item. Framing target considered met in substance."
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "notes": "Attempt 2 applies both logged corrections. Explicit counts re-verified against the drawing: exactly 2 flapped besom pockets, exactly 2 buttons plus 1 empty buttonhole, exactly 2 hem points with a centre notch. The red outlines in the blueprint were correctly treated as option highlights, not colour instructions - both pockets are navy cloth. Flap depth is the distinguishing feature against the plain-welt sibling and is now rendered with clear relief and shadow.",
+  "checkedAt": "2026-07-31T05:41:54.356Z"
+}

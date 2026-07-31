@@ -1,0 +1,37 @@
+{
+  "addr": "trousers > ext-curved",
+  "productId": "trousers",
+  "optionId": "ext-curved",
+  "attempt": 2,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 99,
+    "placement": 99,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "shape",
+      "description": "The tab's outer corners are lightly chamfered rather than crisp 90 degree corners. The end still reads unmistakably as the SQUARE/blunt tab rather than the pointed sibling, so the option remains correctly identifiable.",
+      "expected": "Rectangular tab end with square corners, as outlined in the blueprint.",
+      "actual": "Rectangular tab end with small clipped corners.",
+      "correction": "If regenerated, specify crisp right-angle corners on the tab end with no chamfer."
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "notes": "Attempt 2 fixed the logged composition failure: the camera moved in dramatically and the tab with its hook and button now spans nearly the full frame width instead of under 10% of the frame area. Hardware count and tab geometry from attempt 1 were preserved exactly.",
+  "checkedAt": "2026-07-31T05:37:56.171Z"
+}

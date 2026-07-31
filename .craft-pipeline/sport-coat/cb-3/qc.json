@@ -1,0 +1,37 @@
+{
+  "addr": "sport-coat > cb-3",
+  "productId": "sport-coat",
+  "optionId": "cb-3",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 99,
+    "geometry": 99,
+    "dimensions": 98,
+    "angles": 99,
+    "construction": 99,
+    "placement": 99,
+    "symmetry": 99,
+    "composition": 98,
+    "blueprint-match": 99
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "A narrow strip of the jacket body appears at the far left of the frame; not present in the drawing, though it does not obscure the cuff.",
+      "expected": "Cuff and its button column isolated against the seamless grey ground.",
+      "actual": "Cuff isolated and dominant, with an out-of-focus sliver of jacket body at frame left.",
+      "correction": "Optional: tighten the crop a further ~10% toward the cuff."
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "notes": "Adversarial pass. The single highest-risk item on this cluster is the button COUNT, and it is verifiably 3 — counted directly off the render at three distinct button centres down the cuff vent edge, matching the three separated red cells in the blueprint (blueprint zoomed 5x to confirm the red column resolves into exactly three cells, each with its own centre tick). Spacing is FLAT, not kissing: there is visible cloth between adjacent buttons in both drawing and render. No red was traced into the cloth; the highlight was correctly read as an identifier and the buttons rendered in dark horn. No measurement text, arrows or leader lines anywhere in frame.",
+  "checkedAt": "2026-07-31T05:45:56.460Z"
+}

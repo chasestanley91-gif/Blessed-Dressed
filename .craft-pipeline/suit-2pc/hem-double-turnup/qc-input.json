@@ -1,0 +1,43 @@
+{
+  "scores": {
+    "shape": 99,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 99,
+    "construction": 99,
+    "placement": 98,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "The shoe occupies roughly a third of the frame and competes with the cuff for attention; the cuff band itself is about 13% of frame area rather than the stated 40-80% dominance target.",
+      "expected": "Turn-up cuff dominant in frame with minimal competing elements.",
+      "actual": "Cuff clearly the hero and unmistakable within one second, but a large black oxford shares the lower frame.",
+      "correction": "Acceptable - the shoe provides the scale reference that makes the 5.1 cm depth readable. Could crop tighter on a future pass."
+    },
+    {
+      "severity": "minor",
+      "category": "placement",
+      "description": "The cuff sits high above the shoe with no break and a wide band of sock exposed.",
+      "expected": "Blueprint shows only the leg and hem; no shoe or break is specified.",
+      "actual": "Notable gap between cuff bottom edge and shoe.",
+      "correction": "Not a blueprint violation; the hem length is not a specified dimension for this option."
+    }
+  ],
+  "lockedFeatures": [
+    "Turn-up (cuff) present at the trouser hem as a visible folded-up band - CORRECT",
+    "Cuff depth deep, reading as 5.1 cm and clearly deeper than the 4.4 cm sibling - CORRECT",
+    "Cuff bottom and top fold edges LEVEL all the way round, not slanted - CORRECT",
+    "Crisp pressed top fold edge on the turn-up - CORRECT",
+    "Pressed front crease running down the leg into the cuff - CORRECT",
+    "Garment identity is trousers, not a jacket (upstream garmentNoun bug did not propagate) - CORRECT",
+    "Detail/side orientation of the lower leg, matching the blueprint's magnified hem view - CORRECT",
+    "Red line rendered in cloth colour only, never as red cloth - CORRECT",
+    "Zero annotation: no numbers, arrows, leader lines or text - CORRECT"
+  ],
+  "notes": "The blueprint's red horizontal line marks the TOP EDGE of the turn-up and is level; the render reproduces a level, deep turn-up in cloth colour with no red. Depth is the distinguishing feature against the 4.4 cm and plain-hem siblings and reads unambiguously deep. Level hem correctly distinguishes it from the slanted-hem option in the same batch."
+}

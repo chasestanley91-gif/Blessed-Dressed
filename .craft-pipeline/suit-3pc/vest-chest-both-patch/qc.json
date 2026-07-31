@@ -1,0 +1,45 @@
+{
+  "addr": "suit-3pc > vest-chest-both-patch",
+  "productId": "suit-3pc",
+  "optionId": "vest-chest-both-patch",
+  "attempt": 2,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 99,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 99,
+    "construction": 99,
+    "placement": 98,
+    "symmetry": 99,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "dimensions",
+      "description": "The pockets are a little deeper than drawn. Measured against button spacing: 1.51 button-spacings tall in the render against 1.20 in the drawing. Width is right (1.15 against 1.05).",
+      "expected": "pocket depth about 1.2 button-spacings",
+      "actual": "pocket depth about 1.5 button-spacings",
+      "correction": "trim the pocket depth so it finishes just below the second button without extending further"
+    },
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "No seamless background margin is visible; the shirt sleeves run to both frame edges.",
+      "expected": "a margin of neutral light-grey seamless at the frame edges",
+      "actual": "garment and shirt fill the frame edge to edge",
+      "correction": "pull back slightly so the seamless shows at the edges"
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "notes": "Attempt 2. The logged major from attempt 1 - pockets sited roughly 1.6 button-spacings too low, at the waistcoat's lower-pocket station instead of the chest station this field is about - is fixed, verified by re-measuring against button spacing: the pockets now straddle the first and second buttons with their bottom edge finishing just below the second button, which is where the drawing puts them. Everything already correct in attempt 1 survived: count of two, patch construction, squared-top / rounded-bottom corners, mirror symmetry, horizontal spacing, navy cloth, clean frame. Two minor findings remain, neither affecting which option the photograph depicts.",
+  "checkedAt": "2026-07-31T06:04:29.807Z"
+}

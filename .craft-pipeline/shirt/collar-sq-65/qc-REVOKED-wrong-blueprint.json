@@ -1,0 +1,37 @@
+{
+  "addr": "shirt > collar-sq-65",
+  "productId": "shirt",
+  "optionId": "collar-sq-65",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 98,
+    "placement": 99,
+    "symmetry": 98,
+    "composition": 99,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "dimensions",
+      "description": "The squared terminal edge on the dominant foreground collar leaf is rendered slightly narrower than the broad flat termination drawn in the illustration.",
+      "expected": "A broad, flat squared-off terminal edge as drawn, with the leaf holding its width almost to the tip.",
+      "actual": "Squared termination is present and unambiguous, but the leaf tapers marginally more before the flat edge, making that edge a little narrower than drawn.",
+      "correction": "Hold the collar leaf width closer to the tip so the flat squared edge reads as wide as the illustration; termination type itself is already correct."
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "notes": "Attempt 1. The defining characteristic of this option — a flat squared-off terminal edge rather than an acute point — is clearly present on the dominant foreground leaf and reads within one second. Neither forbidden termination (sharp acute point, rounded club tip) is present on the foreground leaf. Background leaf is foreshortened in both illustration and candidate, so its apparent taper is a shared perspective artefact rather than a geometry defect. Crop, stand, roll and topstitching all match.",
+  "checkedAt": "2026-07-31T04:32:53.514Z"
+}

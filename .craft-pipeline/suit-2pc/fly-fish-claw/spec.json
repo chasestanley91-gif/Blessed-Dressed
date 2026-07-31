@@ -1,0 +1,47 @@
+{
+  "schema": "garment-spec/v1",
+  "addr": "suit-2pc > Trousers-pleats-structure > fly-style > fly-fish-claw",
+  "productId": "suit-2pc",
+  "sectionId": "Trousers-pleats-structure",
+  "fieldId": "fly-style",
+  "optionId": "fly-fish-claw",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\suit-2pc.json",
+  "source": "json",
+  "label": "Fish-Claw Fly",
+  "description": "Fish-claw shaped fly front.",
+  "fieldLabel": "Fly Style",
+  "sectionLabel": "Trousers — Pleats & Structure",
+  "part": "jacket-detail",
+  "garment": {
+    "noun": "navy bespoke suit jacket",
+    "fabric": "fine wool suiting with visible weave"
+  },
+  "view": {
+    "orientation": "front",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": false,
+  "measured": {
+    "dimensions": [],
+    "angles": [],
+    "counts": [],
+    "shapes": [],
+    "spread": [],
+    "flags": []
+  },
+  "illustration": {
+    "path": "/images/blueprints/remote/0c07e29e9fc5__3402.jpg",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\remote\\0c07e29e9fc5__3402.jpg",
+    "exists": true,
+    "remote": false
+  },
+  "forbidden": [
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-07-31T04:54:53.417Z"
+}

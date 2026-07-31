@@ -1,0 +1,57 @@
+{
+  "schema": "garment-spec/v1",
+  "addr": "suit-2pc > Trousers-waistband > waistband-extension > ext-pointed",
+  "productId": "suit-2pc",
+  "sectionId": "Trousers-waistband",
+  "fieldId": "waistband-extension",
+  "optionId": "ext-pointed",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\suit-2pc.json",
+  "source": "json",
+  "label": "Round, Hook & Button",
+  "description": "Rounded tab with hook and button.",
+  "fieldLabel": "Extension & Closure",
+  "sectionLabel": "Trousers — Waistband",
+  "part": "trouser-extension",
+  "garment": {
+    "noun": "pair of bespoke wool tailored trousers",
+    "fabric": "fine wool trouser cloth with visible weave"
+  },
+  "view": {
+    "orientation": "front",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": false,
+  "measured": {
+    "dimensions": [],
+    "angles": [],
+    "counts": [
+      "1-hook",
+      "1-button"
+    ],
+    "shapes": [
+      "rounded extension tab"
+    ],
+    "spread": [],
+    "flags": [
+      "tab fastening",
+      "hook & button closure"
+    ]
+  },
+  "illustration": {
+    "path": "/images/blueprints/factory/b14a71bdfdb9__3413__Round_hook_btn.jpg",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\factory\\b14a71bdfdb9__3413__Round_hook_btn.jpg",
+    "exists": true,
+    "remote": false
+  },
+  "forbidden": [
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)",
+    "any hook count other than exactly 1",
+    "any button count other than exactly 1"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-07-31T06:28:50.443Z"
+}

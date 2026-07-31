@@ -1,0 +1,37 @@
+{
+  "addr": "trousers > back-both-patch",
+  "productId": "trousers",
+  "optionId": "back-both-patch",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 99,
+    "geometry": 99,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 99,
+    "placement": 99,
+    "symmetry": 99,
+    "composition": 98,
+    "blueprint-match": 99
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "The lower ~45% of the frame is plain trouser leg below the pockets, adding no information.",
+      "expected": "Tightest useful crop on the pocket zone.",
+      "actual": "Pockets occupy the upper half; the bottom half is empty leg.",
+      "correction": "Crop closer, ending just below the pocket points."
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "notes": "Blueprint (ba3e4540b7bb__3231__Point_patch_with_bttn.jpg) shows a trouser back with two pink-highlighted patch pockets, each rectangular at the top, sides angling in, bottom converging to a shallow chevron point, with a small button at the top centre and a back dart above. Magnified inspection confirms the thin lines from the waistband are back darts, not leader lines, and the candidate reproduces them. Counts verified explicitly: 2 pockets, 2 buttons, 2 chevron points, 4 belt loops, 2 back darts. All match.",
+  "checkedAt": "2026-07-31T05:41:30.336Z"
+}

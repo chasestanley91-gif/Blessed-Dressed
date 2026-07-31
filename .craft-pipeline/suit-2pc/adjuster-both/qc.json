@@ -1,0 +1,37 @@
+{
+  "addr": "suit-2pc > adjuster-both",
+  "productId": "suit-2pc",
+  "optionId": "adjuster-both",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 99,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 99,
+    "placement": 98,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "The adjuster assembly spans the full width of the frame but occupies only the top band of it, so by area the hardware itself is roughly 10-12% of the frame rather than the 40-80% the CLOSE CROP directive asks for. It is still the only hardware present and reads instantly, so this is a framing preference rather than an accuracy fault.",
+      "expected": "the strap and buckle filling 40-80% of the frame",
+      "actual": "the strap and buckle occupy a full-width band across the top ~15% of the frame; the rest is plain hip cloth, pleats and the welt pocket",
+      "correction": "if re-shot, tilt in closer so the strap band runs across the middle third of the frame rather than the top edge"
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "notes": "Attempt 1. Counted and checked one at a time: one adjuster (correct for a three-quarter view of a both-sides option), self-fabric strap through a metal buckle set into the waistband, no belt loops, two pleats, one welt pocket with its tab, one crease line. Every element in the drawing is accounted for and nothing was invented. The red highlight in the drawing was correctly interpreted as a highlight, not a colour instruction. Photographic realism, fabric behaviour and background are all correct and the frame is free of any traced annotation. Only finding is the framing note above. Note also the known upstream prompt defect - the built prompt calls this 'a premium navy bespoke suit jacket' although it is a trouser option - but the attached blueprint overrode the wording completely and the render is unambiguously a trouser waistband, so it had no effect on the result.",
+  "checkedAt": "2026-07-31T05:31:12.272Z"
+}

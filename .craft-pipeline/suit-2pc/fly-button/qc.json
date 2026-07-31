@@ -1,0 +1,37 @@
+{
+  "addr": "suit-2pc > fly-button",
+  "productId": "suit-2pc",
+  "optionId": "fly-button",
+  "attempt": 2,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 99,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 98,
+    "placement": 98,
+    "symmetry": 98,
+    "composition": 99,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "construction",
+      "description": "The waistband now carries one horn button plus TWO worked buttonholes side by side. The drawing marks one clearly identifiable buttonhole on the waistband above the fly together with the button on the folded-back waistband extension; whether the small second mark further along the drawn waistband is a second buttonhole or a keeper is not resolvable at the drawing's resolution, so the extra buttonhole is recorded rather than asserted to be wrong.",
+      "expected": "one waistband button and its single matching worked buttonhole",
+      "actual": "one waistband button and two worked buttonholes on the waistband",
+      "correction": "if re-shot, show a single worked buttonhole on the waistband paired with the single waistband button"
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "notes": "Attempt 2, resumed from the logged attempt-1 FAIL. Both logged major errors are fixed and nothing previously correct was disturbed. Fly buttons counted explicitly one at a time: four, the fourth sitting at the base of the fly curve, no fifth. The waistband closure that was entirely missing in attempt 1 is now present as a horn button with a worked buttonhole on the waistband above the fly. Every locked feature from attempt 1 - open fly, placket folded to frame right, worked placket buttonholes, straight waistband, single belt loop, forward pleat, J-curve fly base, navy wool, grey seamless, clean frame - survived unchanged. Only new finding is the extra waistband buttonhole noted above, logged as minor because the drawing is genuinely ambiguous on that point and I will not assert tailoring detail I cannot read. Also re-confirming the known upstream prompt defect: the built prompt names the garment 'a premium navy bespoke suit jacket' although this is a trouser option; the attached blueprint overrode it and the render is unambiguously a trouser front, so it had no effect.",
+  "checkedAt": "2026-07-31T05:31:13.560Z"
+}

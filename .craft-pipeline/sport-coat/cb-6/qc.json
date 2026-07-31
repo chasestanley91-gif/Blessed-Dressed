@@ -1,0 +1,28 @@
+{
+  "addr": "sport-coat > cb-6",
+  "productId": "sport-coat",
+  "optionId": "cb-6",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 99,
+    "geometry": 99,
+    "dimensions": 98,
+    "angles": 99,
+    "construction": 100,
+    "placement": 99,
+    "symmetry": 99,
+    "composition": 99,
+    "blueprint-match": 99
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "notes": "Adversarial pass, count checked explicitly. The blueprint's red chain was measured programmatically against its 2_flat / 3_flat / 4_flat siblings: span lengths 289/445/584/872 px give an identical 145-148 px per button pitch across all four, confirming the 6_flat chain is exactly SIX button positions, evenly spaced, non-overlapping. The render has exactly six buttons at even pitch in a vertical column on the cuff vent edge, each with its own buttonhole. No seventh button, no kissing/stacked overlap, no annotation traced from the drawing. Dimensions 98 rather than 100 only because absolute button diameter cannot be verified from a photograph.",
+  "checkedAt": "2026-07-31T05:32:14.905Z"
+}

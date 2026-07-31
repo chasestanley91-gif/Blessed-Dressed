@@ -1,0 +1,49 @@
+{
+  "schema": "garment-spec/v1",
+  "addr": "sport-coat > handmade > handmade-type > hm-none",
+  "productId": "sport-coat",
+  "sectionId": "handmade",
+  "fieldId": "handmade-type",
+  "optionId": "hm-none",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\sport-coat.json",
+  "source": "json",
+  "label": "Standard Machine",
+  "description": "A standard machine-made jacket relies entirely on industrial sewing machines for all seams, canvas attachment, and finishing, producing consistent and precise results at higher speed and lower cost than hand finishing. Long structural seams — back, side, sleeves — are done by machine in virtually all jackets including bespoke, as the straight length does not benefit from hand work. The overall character is uniform and neat, but lacks the subtle organic variation and flex of hand-sewn construction, and the jacket's canvas is typically fused or machine-padded rather than shaped by hand.",
+  "fieldLabel": "Handmade Construction",
+  "sectionLabel": "Handmade & Craftsmanship",
+  "part": "fin-stitch",
+  "garment": {
+    "noun": "bespoke sport coat",
+    "fabric": "textured wool/hopsack with visible weave"
+  },
+  "view": {
+    "orientation": "front",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": false,
+  "measured": {
+    "dimensions": [],
+    "angles": [],
+    "counts": [],
+    "shapes": [],
+    "spread": [],
+    "flags": [
+      "hand-worked buttonhole"
+    ]
+  },
+  "illustration": {
+    "path": "/images/blueprints/factory/13c1b88ec1cb__0570__No.png",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\factory\\13c1b88ec1cb__0570__No.png",
+    "exists": true,
+    "remote": false
+  },
+  "forbidden": [
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-07-31T04:41:36.999Z"
+}

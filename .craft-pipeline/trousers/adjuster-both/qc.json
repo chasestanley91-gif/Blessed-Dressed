@@ -1,0 +1,45 @@
+{
+  "addr": "trousers > adjuster-both",
+  "productId": "trousers",
+  "optionId": "adjuster-both",
+  "attempt": 2,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 99,
+    "geometry": 99,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 99,
+    "placement": 98,
+    "symmetry": 99,
+    "composition": 98,
+    "blueprint-match": 99
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "Measured as raw pixel area the buckle-and-strap assembly is about 17% of the frame rather than the literal 40-60% target, because the strap is a thin horizontal band.",
+      "expected": "Adjuster mechanism at 40-60% of frame area.",
+      "actual": "The assembly spans roughly 80% of the frame width as the sole subject, with only waistband cloth around it and nothing competing; identifiable in well under one second.",
+      "correction": "Cropping tighter would cut off the strap ends and destroy the 'how the strap engages the buckle' checklist item. The component-macro intent is met."
+    },
+    {
+      "severity": "minor",
+      "category": "placement",
+      "description": "The three-quarter viewing angle of the blueprint is flattened to a near-frontal macro of the waistband.",
+      "expected": "Three-quarter front view of the trouser hip.",
+      "actual": "Near-frontal close macro on the waistband band itself.",
+      "correction": "Unavoidable consequence of the mandated extreme macro crop; the waistband face shown is the same face the blueprint shows."
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "notes": "Attempt 2 fixes the major scale failure from attempt 1 and removes the invented belt loop. The hardware geometry that was already outstanding on attempt 1 is preserved verbatim: the elongated octagonal buckle with a central bar and a pointed strap end is an almost literal reproduction of the red-outlined shape in the blueprint, rendered in polished metal and navy wool with no red anywhere. This now reads as the luxury-hardware macro the option requires.",
+  "checkedAt": "2026-07-31T05:41:54.585Z"
+}

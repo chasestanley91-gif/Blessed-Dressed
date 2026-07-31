@@ -1,0 +1,37 @@
+{
+  "addr": "suit-3pc > vest-back-belt-3cm",
+  "productId": "suit-3pc",
+  "optionId": "vest-back-belt-3cm",
+  "attempt": 2,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 99,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 99,
+    "construction": 99,
+    "placement": 99,
+    "symmetry": 99,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "The belt spans the full width of the frame but occupies only a narrow horizontal band of its height, so by area it sits below the 40-80% fill the CLOSE CROP directive targets. It is nonetheless the only hardware in frame and reads instantly.",
+      "expected": "the belt filling 40-80% of the frame",
+      "actual": "a full-width band across roughly the middle of the frame",
+      "correction": "a landscape frame would be the only way to raise the fill ratio without losing the belt's full run across the back"
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "notes": "Attempt 2. The logged major from attempt 1 - a belt roughly 40-50% wider than the 3 cm the option is named for - is fixed, verified by re-measuring the belt-width to back-panel-width ratio rather than guessing absolute scale: 6.5% rendered against 7.6% drawn, where attempt 1 was 12.9%. The buckle was scaled down with it. Nothing that was already correct changed: the hatching is still correctly read as plain lining rather than stripes, and orientation, centred buckle, strap geometry, centre back seam, V-notch hem, suppression, background and frame cleanliness all survived. Only the framing note remains.",
+  "checkedAt": "2026-07-31T05:59:52.030Z"
+}

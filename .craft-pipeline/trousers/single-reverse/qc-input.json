@@ -1,0 +1,43 @@
+{
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 98,
+    "placement": 98,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "symmetry",
+      "description": "Under the chosen lighting the wearer's-right pleat reads slightly fainter than the left; both are present and correctly placed.",
+      "expected": "Both pleats equally legible.",
+      "actual": "Left pleat carries a stronger fold shadow than the right.",
+      "correction": "If regenerated, balance the key light so both pleat folds catch equal relief."
+    },
+    {
+      "severity": "minor",
+      "category": "construction",
+      "description": "Belt loops are rendered although the blueprint draws the waistband plain.",
+      "expected": "Waistband as drawn.",
+      "actual": "Belt loops present at the waistband.",
+      "correction": "Low priority: the blueprint is a pleat schematic and simplifies the band; belt loops do not obscure or contradict the showcased pleat."
+    }
+  ],
+  "lockedFeatures": [
+    "exactly ONE reverse pleat per side, TWO in total across the front — CORRECT (counted)",
+    "pleat folds toward the side seam (reverse direction) — CORRECT",
+    "pleats originate at the waistband and fall into the leg — CORRECT",
+    "no second pleat per side (not a double-pleat) — CORRECT",
+    "front orientation, waistband to mid-thigh — CORRECT",
+    "magnified callout CIRCLE and its red leader line from the blueprint NOT rendered — CORRECT",
+    "no red marks anywhere in the photograph — CORRECT",
+    "zero annotation: no numbers, arrows, leader lines or text — CORRECT",
+    "fly and front crease placement as drawn — CORRECT"
+  ],
+  "notes": "Pleat count verified by explicit count: one per side, two total, folding outward toward the pockets. Critically, the blueprint's magnified callout circle was correctly recognised as annotation and excluded from the photograph."
+}

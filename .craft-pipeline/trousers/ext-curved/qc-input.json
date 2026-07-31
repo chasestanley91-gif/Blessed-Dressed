@@ -1,0 +1,36 @@
+{
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 99,
+    "placement": 99,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "shape",
+      "description": "The tab's outer corners are lightly chamfered rather than crisp 90 degree corners. The end still reads unmistakably as the SQUARE/blunt tab rather than the pointed sibling, so the option remains correctly identifiable.",
+      "expected": "Rectangular tab end with square corners, as outlined in the blueprint.",
+      "actual": "Rectangular tab end with small clipped corners.",
+      "correction": "If regenerated, specify crisp right-angle corners on the tab end with no chamfer."
+    }
+  ],
+  "lockedFeatures": [
+    "SQUARE / blunt rectangular extension tab end, NOT tapered to a point — CORRECT (the distinguishing feature vs the pointed sibling)",
+    "exactly ONE hook — CORRECT (counted 1 metal hook bar)",
+    "exactly ONE button — CORRECT (counted 1 dark horn button)",
+    "one worked buttonhole sited beside the button on the tab, as the blueprint draws it — CORRECT",
+    "hook inboard of the button along the tab — CORRECT",
+    "band and tab flat, pressed, symmetrical, tension-balanced — CORRECT",
+    "single state: no interior curtain shown alongside the exterior — CORRECT",
+    "tight component macro, legs and knees cropped away — CORRECT",
+    "red outlines rendered as cloth and metal, never as red — CORRECT",
+    "zero annotation: no numbers, arrows, leader lines or text — CORRECT"
+  ],
+  "notes": "Attempt 2 fixed the logged composition failure: the camera moved in dramatically and the tab with its hook and button now spans nearly the full frame width instead of under 10% of the frame area. Hardware count and tab geometry from attempt 1 were preserved exactly."
+}

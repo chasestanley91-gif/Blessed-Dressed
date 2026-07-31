@@ -1,0 +1,77 @@
+{
+  "addr": "suit-2pc > trouser-contrast-waist",
+  "productId": "suit-2pc",
+  "optionId": "trouser-contrast-waist",
+  "attempt": 2,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 98,
+    "placement": 97,
+    "symmetry": 99,
+    "composition": 93,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "placement",
+    "composition"
+  ],
+  "belowWaiverMinCategories": [
+    "composition"
+  ],
+  "errors": [
+    {
+      "severity": "major",
+      "category": "composition",
+      "description": "The dominance correction backfired. The camera did move closer, but it moved closer to the TROUSER BODY rather than to the waistband: the contrast waistband now runs from roughly y=30 to y=140 of 1168px, about 9.4% of frame area — LESS than attempt 1's 13% — and it has been pushed hard against the top frame edge instead of being the centred subject. The bulk of the frame is now plain navy trouser front, which is not the craft option.",
+      "expected": "the contrast waistband occupying 40-80% of the frame, centred and presented as the subject",
+      "actual": "contrast waistband reduced to a ~9% strip pinned to the top edge; plain navy trouser body occupies most of the frame",
+      "correction": "shoot the waistband as a near-macro horizontal band: place its top edge about 25% down the frame and its bottom edge about 60-65% down, so the band itself spans roughly a third to a half of the image height. Include only a shallow band of trouser cloth below it and a sliver of shirt above. Do not zoom into the trouser body; zoom into the WAISTBAND."
+    },
+    {
+      "severity": "minor",
+      "category": "placement",
+      "description": "Because the crop tightened onto the trouser body, the tops of the slant pockets — requested as positional context so the viewer can locate the waistband on the garment — are now only marginally visible at the extreme frame edges.",
+      "expected": "tops of both slant pockets visible for positional context",
+      "actual": "pocket tops reduced to slivers at the left and right frame edges",
+      "correction": "re-include the pocket tops when reframing onto the waistband"
+    }
+  ],
+  "verdict": "FAIL",
+  "waiver": null,
+  "correction": {
+    "errors": [
+      {
+        "severity": "major",
+        "category": "composition",
+        "error": "The dominance correction backfired. The camera did move closer, but it moved closer to the TROUSER BODY rather than to the waistband: the contrast waistband now runs from roughly y=30 to y=140 of 1168px, about 9.4% of frame area — LESS than attempt 1's 13% — and it has been pushed hard against the top frame edge instead of being the centred subject. The bulk of the frame is now plain navy trouser front, which is not the craft option.",
+        "expected": "the contrast waistband occupying 40-80% of the frame, centred and presented as the subject",
+        "actual": "contrast waistband reduced to a ~9% strip pinned to the top edge; plain navy trouser body occupies most of the frame",
+        "correction": "shoot the waistband as a near-macro horizontal band: place its top edge about 25% down the frame and its bottom edge about 60-65% down, so the band itself spans roughly a third to a half of the image height. Include only a shallow band of trouser cloth below it and a sliver of shirt above. Do not zoom into the trouser body; zoom into the WAISTBAND."
+      }
+    ],
+    "lockedFeatures": [
+      "orientation: front (fly J-stitch confirms the front face)",
+      "contrast fabric waistband, full width, single clean band",
+      "no belt loops on the waistband — the drawing shows none and the render correctly has none",
+      "slant side pockets at both hips",
+      "fly with curved J-stitch on the wearer's left, as drawn",
+      "pressed front creases both legs",
+      "fabric: navy fine wool suiting with visible twill",
+      "background: seamless neutral light-grey studio sweep",
+      "zero annotation in frame"
+    ],
+    "forbiddenChanges": [
+      "do not alter any checklist item this attempt already passed",
+      "do not change the camera crop, composition, or accessories unless the error is itself a composition error",
+      "do not change the garment part, orientation, or any other option's geometry"
+    ]
+  },
+  "notes": "ATTEMPT 2 — ADVERSARIAL RE-READ vs /images/blueprints/factory/b16ea7165058__33A2__Appointed_Waistband.jpg.\n\nCONSTRUCTION IS STILL CORRECT AND NOTHING REGRESSED: full-width contrast waistband present; still NO belt loops (the drawing shows none, and this remains the most likely convention-driven hallucination); fly J-stitch on the wearer's left; slant side pockets; pressed creases; navy twill; clean grey sweep; zero annotation traced from the drawing.\n\nIMPROVEMENTS OVER ATTEMPT 1: the shirt above has been almost entirely removed and the frame is cleaner, so the only competing subject is gone.\n\nTHE MAJOR FINDING PERSISTS AND HAS WORSENED. The attempt-2 correction said 'move the camera substantially closer to the waist' and the render interpreted that as moving closer to the trousers generally. Measured on the delivered pixels the band fell from ~13% to ~9.4% of frame area and migrated to the top edge. The attempt-3 correction must therefore stop describing camera distance and instead pin the waistband's required position IN THE FRAME explicitly (top edge ~25% down, bottom edge ~60-65% down), which is unambiguous and cannot be satisfied by zooming the trouser body.\n\nRetry budget: this is attempt 2 of 3. One attempt remains.",
+  "checkedAt": "2026-07-31T05:14:39.724Z"
+}

@@ -1,0 +1,55 @@
+{
+  "schema": "garment-spec/v1",
+  "addr": "trousers > waistband > metal-adjuster > adjuster-left",
+  "productId": "trousers",
+  "sectionId": "waistband",
+  "fieldId": "metal-adjuster",
+  "optionId": "adjuster-left",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\trousers.json",
+  "source": "json",
+  "label": "Square Side Adjust Button",
+  "description": "Square button adjusters on both sides.",
+  "fieldLabel": "Side Adjustment Style",
+  "sectionLabel": "Waistband",
+  "part": "trouser-adjuster",
+  "garment": {
+    "noun": "pair of bespoke wool tailored trousers",
+    "fabric": "fine wool trouser cloth with visible weave"
+  },
+  "view": {
+    "orientation": "three-quarter-front",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": false,
+  "measured": {
+    "dimensions": [],
+    "angles": [],
+    "counts": [
+      "1-button"
+    ],
+    "shapes": [
+      "square button-tab adjuster"
+    ],
+    "spread": [],
+    "flags": [
+      "side adjuster",
+      "button-only closure"
+    ]
+  },
+  "illustration": {
+    "path": "/images/blueprints/factory/ffa914420c24__3351__Square_side_adjust_button.jpg",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\factory\\ffa914420c24__3351__Square_side_adjust_button.jpg",
+    "exists": true,
+    "remote": false
+  },
+  "forbidden": [
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)",
+    "any button count other than exactly 1"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-07-31T04:55:10.208Z"
+}
