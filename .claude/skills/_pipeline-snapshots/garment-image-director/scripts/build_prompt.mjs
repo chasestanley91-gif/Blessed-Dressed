@@ -73,6 +73,36 @@ const out = {
 if (args.write) {
   const root = args.root || resolveRepoRoot();
   const dir = pipelineDir(root, spec.productId, spec.optionId);
+  // SPEC-ONLY transform (owner ruling 2026-08-01): when the spec was written with
+  // --spec-only there is NO attached illustration — the drafting specification is
+  // the sole authority. Rewrite the lock language so the model is never told to
+  // consult an attachment that does not exist.
+  if (record.specOnly) {
+    out.prompt = out.prompt
+      .replace(/(reproduce exactly as drawn)/g, '(reproduce exactly as specified)')
+      .replace(/BLUEPRINT LOCK[^]*?names that colour./,
+        'SPECIFICATION LOCK — THE DRAFTING SPECIFICATION IS LAW: this option has no ' +
+        'manufacturing drawing; the written specification above is the SOLE authority ' +
+        'for the image. Reproduce every stated dimension, radius, angle, count and ' +
+        'construction exactly as written. Assume NOTHING from tailoring/menswear/fashion ' +
+        'convention or model priors beyond what the specification states; do not redesign, ' +
+        'reinterpret, substitute a similar commercial style, stylise, or "improve" it. ' +
+        'Do NOT fall back to a generic version of this category — reproduce THIS option ' +
+        'as specified, not a typical one. Accuracy over aesthetics. Never render any ' +
+        'measurement number, unit, arrow, callout, or text anywhere in the photograph.')
+      .replace(/MANDATORY GEOMETRY COVERAGE — reproduce from the illustration, exactly and without assumption/,
+        'MANDATORY GEOMETRY COVERAGE — reproduce from the specification, exactly and without assumption')
+      .replace(/reproduced from the illustration:/g, 'reproduced from the specification:')
+      .replace(/VIEW — this illustration is the ([a-z-]+) of the garment. Photograph the same face; never substitute a different face of the garment./,
+        'VIEW — photograph the $1 of the garment; never substitute a different face of the garment.')
+      .replace(/Match each to the drawing./, 'Match each to the specification.')
+      .replace(/matching the illustration precisely/, 'matching the specification precisely');
+    out.checklist = (out.checklist || []).map((c) =>
+      c.replace(/reproduced from the illustration:/, 'reproduced from the specification:')
+       .replace(/orientation matches the illustration:/, 'orientation matches the specification:')
+       .replace(/match the illustration/, 'match the specification')
+       .replace(/not the line-art/, 'not an illustration'));
+  }
   const file = writeJson(`${dir}/prompt.json`, { ...out, builtAt: new Date().toISOString() });
   console.error(`Wrote ${file}`);
 }
