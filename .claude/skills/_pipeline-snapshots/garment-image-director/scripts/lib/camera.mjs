@@ -159,7 +159,19 @@ export function resolveStyling(spec) {
   } else if (spec.part === 'jacket-lapel') {
     accessory = 'the jacket worn open just enough to read the gorge and lapel roll';
   } else if (spec.part === 'vest-front' || spec.part === 'vest-bottom' || spec.part === 'vest-lapel') {
-    accessory = 'over a crisp white dress shirt and tie, no jacket so the full waistcoat front reads clearly';
+    // NO TIE, for exactly the reason given in the shirt-collar branch above.
+    // That reasoning was written for collars and never carried across, yet a
+    // four-in-hand hangs straight down the waistcoat opening — over the neckline
+    // apex, the top button, the lapel break and the front edge, which are
+    // precisely the features that separate one vest-front option from another.
+    // v-neckline vs u-neckline is decided at the apex the tie would cover.
+    accessory =
+      'over a crisp white dress shirt with NO necktie and nothing at the throat, no jacket, ' +
+      'so the entire waistcoat opening reads clearly — the neckline apex, the front edge, ' +
+      'the lapel break and every button completely unobstructed from shoulder to hem';
+    if (spec.part === 'vest-front' || spec.part === 'vest-lapel') {
+      styling.focus.unshift('the unobstructed neckline opening and the exact point at which its two edges meet');
+    }
   } else if (spec.part === 'trouser-waistband' || spec.part === 'trouser-fly') {
     accessory = 'shirt tucked, no jacket, so the waistband and closure read clearly';
   } else if (
