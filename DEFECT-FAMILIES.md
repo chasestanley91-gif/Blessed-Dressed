@@ -1333,3 +1333,35 @@ The other trouser findings do not depend on the direction question at all:
 **Legacy defect rate is now 32.4% across 37 graded**, up from 16% at 25. The trouser family is
 substantially worse than shirts or waistcoats, which is worth knowing before estimating the remaining
 315.
+
+### CONTESTED — first hypothesis eliminated (zero credits)
+
+The two graders did **not** measure different sheets. The blueprints are **byte-identical across all
+three products**:
+
+| option | suit-2pc | suit-3pc | trousers |
+|---|---|---|---|
+| `jeans-arc` | `a00255f5` (3135) | `a00255f5` | `a00255f5` |
+| `jeans-square` | `5ba98d61` (3133) | `5ba98d61` | `5ba98d61` |
+| `jeans-diamond` | `52b5f3bd` (3134) | `52b5f3bd` | `52b5f3bd` |
+| `jeans-round` | `32be84ad` (3136) | `32be84ad` | `32be84ad` |
+
+Same files, opposite conclusions. Three possibilities reduce to one question:
+
+> **Which vertical line in `3133`–`3136` is the SIDE SEAM, and which is the pressed front crease?**
+
+Grader A located centre front from the shirt placket in the RENDER and reasoned inward from there.
+Grader B identified the side seam in the DRAWING from surrounding construction — a back-pocket besom
+with a dart above it on the far panel, the waistband end, a fly topstitch terminating mid-length —
+then cross-checked against a straight-on two-leg front view. **If either identification is wrong,
+"inboard" and "outboard" swap wholesale and every dependent verdict flips with them.**
+
+Grader B's evidence is the more direct: it reads the drawing itself rather than inferring from the
+render, and it carries an independent control view. But that is an argument about method, not a
+measurement, and this file does not record arguments as findings.
+
+**Next step, still zero credits:** open `14975407461c__3133.jpg` and identify the side seam from the
+garment's own construction — the seam running the full length of the leg with no waistband
+termination, against the pressed crease which starts AT the waistband seam and runs to the hem. Those
+two are distinguishable in the drawing without reference to either grader's reasoning. Everything else
+follows from it.
