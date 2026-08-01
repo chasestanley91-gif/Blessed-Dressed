@@ -502,6 +502,38 @@ export function buildPrompt(spec) {
   // value. It also has to say "do not compensate", because the natural
   // temptation is to zoom in on a small measurement to make it look distinctive,
   // which destroys the very comparison the family exists to support.
+  // THE SUPPLIER OFTEN ENCODES THE COUNTING CONVENTION IN THE FILENAME, and it
+  // was going straight to waste. The shirt placket family is drawn on files
+  // named "7-buttons-NOT-INCLUDING-collar-button.jpg" — the convention is
+  // stated outright — and the prompt said only "exactly 7", "7-button".
+  //
+  // Measured consequence, all three options in the family:
+  //   btn-7  promises 7  ->  rendered 7 total, one on the collar stand, 6 on the placket
+  //   btn-8  promises 8  ->  7 on the placket
+  //   btn-9  promises 9  ->  7 on the placket   (identical to btn-8)
+  //
+  // The model was not miscounting. It was counting the right number of the
+  // wrong thing, because nothing told it where the count applies. A grader
+  // confirmed the drawings themselves are correct: each shows a collar-stand
+  // mark PLUS the labelled number of placket buttons.
+  //
+  // So lift the disambiguation out of the filename verbatim. It is free,
+  // authoritative, and already written down.
+  const illoName = String(spec.illustration || '').split('/').pop() || '';
+  const scopeHint = /not[-_ ]?including|excluding|except/i.test(illoName)
+    ? illoName.replace(/\.[a-z0-9]+$/i, '').replace(/[-_]+/g, ' ').trim()
+    : null;
+  const countScope = (Array.isArray(spec.counts) && spec.counts.length && scopeHint)
+    ? `COUNTING CONVENTION — the manufacturer's own drawing for this option is filed as `
+      + `"${scopeHint}", and that wording is the specification. The stated number counts ONLY the `
+      + `buttons it names and excludes the one it excludes. Render the excluded button too if the `
+      + `garment normally has one, but do NOT let it absorb one of the counted buttons: the counted `
+      + `run must reach its full stated number on its own, in addition to anything the convention `
+      + `sets aside. Frame the shot so the entire counted run is inside the picture from first to `
+      + `last, with the garment continuing past the final one — a crop that ends mid-run makes the `
+      + `count unverifiable and the image worthless for choosing.`
+    : null;
+
   // DISTINGUISHED BY WHAT IS MISSING — a wider set than spec.absence.
   //
   // spec.absence governs what to RENDER, and it deliberately excludes labels
@@ -615,6 +647,7 @@ export function buildPrompt(spec) {
     BLUEPRINT_LOCK,
     presentation,
     focus,
+    countScope,
     absenceProof,
     matchedFraming,
     photoBlockFor(spec),
