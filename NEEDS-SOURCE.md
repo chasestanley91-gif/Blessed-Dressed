@@ -318,3 +318,20 @@ in the strict sense: no prompt can separate them and QC actively drives them tog
 `lp-jetted-4` ("Straight Jetted Pocket 4 cm") and `lp-straight-jetted` ("Straight Jetted Pocket")
 share one drawing and differ only by a centimetre figure appearing in one of the two names. They may
 be the same option listed twice.
+
+## Shape vocabulary gaps (2026-08-01)
+
+`lapel-fishtail` now extracts **zero** shapes. Before its description was rewritten it extracted
+`notch lapel` AND `peak lapel` — both scraped from the sentence "more formal than a standard notch
+and less aggressive than a peak", neither of which the option has. Zero is strictly better than two
+wrong ones, and the description now carries the geometry in prose, but the SHAPES vocabulary in
+`spec.mjs` has no entry for this form.
+
+Candidates for a vocabulary entry, all currently unrepresented:
+- **fishtail / cran Camps / cran parisien** — the closed horizontal junction where lapel meets collar
+- **D-shawl** — currently resolves to the generic `shawl lapel`, losing the D profile entirely
+
+Not added unilaterally: adding a shape term changes what every matching description extracts across
+2,658 rows, and the pocket/jeans/neckline families added today were only safe because the blast radius
+was measured first (39 changed, 0 emptied, 0 gained). The same measurement should be run before adding
+any lapel term.
