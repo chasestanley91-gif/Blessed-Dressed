@@ -1463,3 +1463,47 @@ figure was not wrong, but the framing was - it was a partition, presented as a c
 **Fix:** group by file hash FIRST, across the entire in-scope catalog, and only then describe whether
 a group is same-field, cross-field or mixed. Field is an attribute of a collision, not a way to
 partition the search. Until that lands, treat every collision figure in this file as a floor.
+
+### RETRACTION — my diagnosis of `image_collisions.mjs` was wrong
+
+The previous section claimed the tool under-reports because it "partitions by field and never unions
+across the partition". **That is not the cause, and I asserted it without measuring it.**
+
+I built `tools/asset_duplicates.mjs` to group by file hash first — precisely the fix I had proposed —
+and it found **10 groups, 46 options, 138 rows, and ZERO cross-field groups**, with a largest group of
+10 options: the same as the tool I had criticised. The prediction failed.
+
+The real difference is **scope filtering**. Checking the grader's specific example:
+
+| option | inScope | sha1 |
+|---|---|---|
+| `lp-patch` | **Y** | `f7fa88b7` |
+| `cp-patch` | **n** | `f7fa88b7` |
+| `lp-patch-flap` | **Y** | `f7fa88b7` |
+| `lp-patch-rounded` | **Y** | `f7fa88b7` |
+| `lp-water-drop` | **n** | `f7fa88b7` |
+
+The grader hashed every file on disk and counted all 13 options sharing it. Both `image_collisions.mjs`
+and my new tool count only `inScope` rows, which drops `cp-patch` and `lp-water-drop` — and with them
+the cross-field spread. The two counts answer **different questions**, and the in-scope count is
+arguably the right one: an out-of-scope option carries no photography obligation.
+
+So `image_collisions.mjs` is not defective in the way I described, my "208 rows presented as a census"
+self-criticism was also misplaced, and the corrective commit that preceded this one is wrong on its
+central claim.
+
+**Third time today I have asserted a diagnosis without measuring it** — after the 68° notch and the
+`opt.id` diff. What caught it this time was building the tool to test the hypothesis rather than
+acting on the hypothesis directly. That is the cheap version of the same discipline: *when you think
+you know why something is wrong, measure the why before you write it down.*
+
+### What IS real, and unchanged
+
+The collisions themselves. Within `lower-pocket` alone, `lp-patch`, `lp-patch-flap` and
+`lp-patch-rounded` — three options that must look visibly different — ship one identical photograph.
+`cp-welt-23/25/27` + `cp-jetted` + `cp-trapezoid` share another. Ten peak-lapel options share a third.
+**46 in-scope options across 138 rows are showing customers a photograph that belongs to a sibling.**
+
+`tools/asset_duplicates.mjs` is kept: hash-first grouping is a clearer way to see blast radius even
+though it did not find what I expected, and it reports fan-out separately (256 files where one option
+recurs across products — legitimate, and the thing that makes the catalog affordable).
