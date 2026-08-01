@@ -940,3 +940,33 @@ distinction is recoverable — re-running will not separate `-55` from `-65`.
 
 The tool reports at family granularity and cannot see that. Stated here rather than left to be
 discovered when someone regenerates six straight-jetted options and gets six identical images.
+
+### Pair-level detail — 27 of 47 pairs are actually separable
+
+`collision_triage.mjs` now enumerates every PAIR of colliding options rather than reporting per
+family, because the family label was misleading on its own:
+
+```
+  27 of 47 option pairs can be separated by re-running
+  20 share one drawing and will stay identical however often they are regenerated
+```
+
+The 20 that cannot move:
+
+| stuck pairs | why |
+|---|---|
+| `lp-straight-jetted-40/45/50/55/60/65` — all **15** pairs | six options, one sheet `0201__Regular` |
+| `cp-welt-23/25/27` — 3 pairs | three options, one sheet `0101__Normal` |
+| `lp-slanted-flap-55` vs `-65` | one sheet `02A1__Regular_slanted` |
+| `lp-jetted-4` vs `lp-straight-jetted` | one sheet `0231__Besom` |
+
+That last one deserves a second look from someone who knows the product line: **"Straight Jetted
+Pocket 4 cm" and "Straight Jetted Pocket" share a drawing and differ only by a centimetre figure in
+one of the two names.** They may be the same option listed twice.
+
+**What this changes in practice.** The naive reading of "5 recoverable families, 22 options" is to
+regenerate all 22. Doing so would spend roughly 11 credits on six straight-jetted options that must
+come back identical, three chest welts likewise, and a slanted-flap pair — and then the regenerated
+images would collide exactly as before. The work that actually pays is the 27 separable pairs, which
+are the *between-construction* distinctions: jetted versus trapezoid versus welt, patch versus
+patch-with-flap versus curved patch, plain besom versus besom-with-tab-and-button.

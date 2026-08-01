@@ -75,6 +75,7 @@ for (const entry of col.sameFieldCollisions) {
     distinctBlueprintBytes: distinctBytes,
     options: entry.options,
     blueprints: [...new Set(blueprints)],
+    optionBlueprint: Object.fromEntries(keys.map((k,i)=>[k.split("/").pop(), blueprints[i]]).filter(([,v])=>v)),
   };
 
   // One drawing behind them all — by path or, more damningly, by bytes.
@@ -87,6 +88,35 @@ for (const entry of col.sameFieldCollisions) {
     rec.why = `${distinctBytes} genuinely different blueprints — the material to separate these exists`;
     generationLimited.push(rec);
   }
+}
+
+// FAMILY GRANULARITY IS NOT ENOUGH, and reporting only at that level is
+// actively misleading. lp-slanted-flap-55 is flagged recoverable because it
+// contains two different sheets — but inside it:
+//
+//   lp-slanted-flap-55, -65        share 02A1  -> a cm ladder, NOT separable
+//   lp-straight-jetted-40 ... -65  share 0201  -> a cm ladder, NOT separable
+//   slanted-flap vs straight-jetted   two sheets -> genuinely separable
+//
+// Someone reading "recoverable" and regenerating six straight-jetted options
+// would get six identical images and spend three credits proving it. So also
+// enumerate every PAIR of colliding options and say which pairs a regeneration
+// could actually separate.
+function separablePairs(list) {
+  const out = [];
+  for (const fam of list) {
+    const keys = fam.rows ? fam.rows : null;
+    const opts = fam.options;
+    for (let i = 0; i < opts.length; i += 1) {
+      for (let j = i + 1; j < opts.length; j += 1) {
+        const a = fam.optionBlueprint?.[opts[i]];
+        const b = fam.optionBlueprint?.[opts[j]];
+        if (!a || !b) continue;
+        out.push({ family: fam.image, a: opts[i], b: opts[j], separable: hashOf(a) !== hashOf(b) });
+      }
+    }
+  }
+  return out;
 }
 
 const rows = (l) => l.reduce((s, e) => s + e.rowCount, 0);
@@ -103,6 +133,16 @@ if (process.argv.includes('--json')) {
   for (const e of generationLimited.sort((a, b) => b.rowCount - a.rowCount)) {
     console.log(`  ${String(e.rowCount).padStart(3)} rows  ${e.optionCount} options  ${e.image}`);
     console.log(`           ${e.why}`);
+  }
+
+  const pairs = separablePairs(generationLimited);
+  const sep = pairs.filter((p) => p.separable);
+  const stuck = pairs.filter((p) => !p.separable);
+  console.log('\n  --- PAIR DETAIL inside those families ---');
+  console.log(`  ${sep.length} of ${pairs.length} option pairs can actually be separated by re-running.`);
+  if (stuck.length) {
+    console.log(`  The other ${stuck.length} share one drawing and will stay identical however many times they are regenerated:`);
+    for (const p of stuck) console.log(`    NOT separable:  ${p.a}  vs  ${p.b}`);
   }
 
   console.log('\n  --- SOURCE-LIMITED: regenerating cannot help ---');
