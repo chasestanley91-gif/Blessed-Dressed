@@ -135,6 +135,17 @@ for (const c of clusters.values()) {
       blocked.push({ ...entry, blockedBy: 'NOT_A_DRAWING', triage: t.reasons, why: `blueprint_triage refused this file: ${(t.reasons || []).join('; ')}` });
     } else if (t.verdict === 'SUSPECT') {
       blocked.push({ ...entry, blockedBy: 'UNVERIFIED_BLUEPRINT', triage: t.reasons, why: `blueprint_triage could not verify this file from its pixels: ${(t.reasons || []).join('; ')}` });
+    } else if (t.verdict === 'LINE_DRAWING_SMALL') {
+      // Generatable, but the drawing is authored below the verified canvas, so
+      // roughly 1px is 3-4mm. Fine terminal geometry cannot be read off it —
+      // that limit is exactly what closed collar-small-sq-50 and
+      // collar-sq-65-btn as UNMET on squared-versus-pointed tips. Carry the
+      // caveat through so QC states it rather than inventing a reading.
+      queue.push({
+        ...entry,
+        triage: { verdict: t.verdict, canvas: `${t.width}x${t.height}`, edgeDensity: t.edgeDensity },
+        resolutionCaveat: `blueprint is ${t.width}x${t.height} — about 1px per 3-4mm. Grade shape families and counts from it; do NOT claim fine terminal geometry (squared vs pointed tip, 1mm stitch settings) either way.`,
+      });
     } else {
       queue.push({ ...entry, triage: { verdict: t.verdict, canvas: `${t.width}x${t.height}`, edgeDensity: t.edgeDensity } });
     }

@@ -39,9 +39,11 @@
  * prints them in its report so they can be argued with.
  *
  * VERDICTS
- *   LINE_DRAWING  usable as a generation reference
- *   SUSPECT       cannot be decided from the pixels alone — a human must look
- *   NOT_A_DRAWING refuse; route to NEEDS-SOURCE rather than spend credits
+ *   LINE_DRAWING        usable as a generation reference
+ *   LINE_DRAWING_SMALL  usable, but authored below the verified canvas: roughly 1px
+ *                       is 3-4mm, so fine terminal geometry cannot be settled from it
+ *   SUSPECT             cannot be decided from the pixels alone — a human must look
+ *   NOT_A_DRAWING       refuse; route to NEEDS-SOURCE rather than spend credits
  *
  * The tool never edits the catalog. It writes a report and, with --sheet, a
  * contact sheet of the SUSPECT tier so the ruling can actually be made.
@@ -87,7 +89,11 @@ const rel = (p) => path.relative(REPO, p).split(path.sep).join('/');
 // everywhere, and a blank frame has no strokes at all. Both are present in this
 // catalog as "blueprints".
 const T = {
-  verifiedCanvas: 800,   // shorter side at or above which the pixels can be trusted
+  verifiedCanvas: 800,       // shorter side at or above which the pixels can be trusted
+  smallMinWhite: 0.75,       // below verifiedCanvas: paper-white floor, set so the scraped
+                             // supplier page (0.609) fails independently of saturation
+  smallMaxSaturation: 2.5,   // below verifiedCanvas: greyscale-ink ceiling. Genuine small
+                             // drawings here measure 0-1; every known-bad file measures 3.3+
   minWhite: 0.6,         // line art is mostly paper
   minEdge: 0.02,         // and carries real strokes across the frame
   blankEdge: 0.005,      // below this there is essentially nothing drawn
@@ -155,11 +161,46 @@ function classify(m) {
     return { verdict: 'NOT_A_DRAWING', reasons: [`edge density ${m.edgeDensity} — the frame is essentially blank`] };
   }
 
-  // Below the verified canvas the pixels simply cannot settle it. Say so.
+  // Below the verified canvas, size alone used to end the matter. That was too
+  // strict, and it was blocking real work: `point-in-7cm.jpg` is 229x244 and is
+  // an unmistakable supplier tech pack with "60.00°" printed on it in blue and
+  // leader lines drawn to both collar points. `collar-long-point-85` is 356x392
+  // and its option has ALREADY SHIPPED with a PASS at lowest-score 98. Small is
+  // not the same as fake — the original threshold conflated the two because the
+  // glyphs that motivated it happened to also be small.
+  //
+  // So: a small canvas can still be accepted when the CONTENT says line drawing.
+  // The discriminator is calibrated against the four known-bad files in this
+  // repo, and the middle one is why a white+edge test alone is not enough:
+  //
+  //   front-style/sb-3      240x200  white 0.000  edge 0.0000  sat  5.0  swatch
+  //   front-style/db-4x2    240x200  white 0.430  edge 0.0173  sat  3.3  swatch
+  //   front-style/sb-5      240x200  white 0.266  edge 0.0181  sat 45.2  swatch
+  //   coin-pocket/right     240x200  white 0.609  edge 0.1143  sat  5.9  SCRAPED PAGE
+  //   ------------------------------------------------------------------
+  //   point-in-7cm          229x244  white 0.888  edge 0.0622  sat  0.8  genuine
+  //   fashion-point-in-58cm 229x244  white 0.887  edge 0.0671  sat  1.0  genuine
+  //   collar-long-point-85  356x392  white 0.895  edge 0.1280  sat  0.3  genuine
+  //
+  // The scraped supplier web page clears white>0.6 and edge>0.02 comfortably, so
+  // saturation carries the separation: genuine drawings here are greyscale ink
+  // (0-1), everything known-bad carries colour (3.3-45.2). Both guards are
+  // required, and the white floor is set at 0.75 rather than 0.6 so the scraped
+  // page fails on either test independently.
   if (shortSide < T.verifiedCanvas) {
+    const contentSaysDrawing =
+      m.whiteFraction >= T.smallMinWhite &&
+      m.edgeDensity >= T.minEdge &&
+      m.saturation <= T.smallMaxSaturation;
+    if (contentSaysDrawing) {
+      return {
+        verdict: 'LINE_DRAWING_SMALL',
+        reasons: [`canvas ${m.width}x${m.height} is below the ${T.verifiedCanvas}px verified size, but the content reads as line art (${(m.whiteFraction * 100).toFixed(0)}% paper-white, edge density ${m.edgeDensity}, saturation ${m.saturation}). USABLE as a generation reference, but roughly 1px is 3-4mm at this scale, so fine terminal geometry — a squared versus pointed collar tip, a 1mm stitch setting — CANNOT be settled from it and must not be claimed either way`],
+      };
+    }
     return {
       verdict: 'SUSPECT',
-      reasons: [`canvas ${m.width}x${m.height} is a UI thumbnail, not an authored drawing (every genuine supplier drawing here is 1200x1200) — cannot be verified from pixels; needs a look`],
+      reasons: [`canvas ${m.width}x${m.height} is below the ${T.verifiedCanvas}px verified size AND the content does not read as line art (${(m.whiteFraction * 100).toFixed(0)}% paper-white, edge density ${m.edgeDensity}, saturation ${m.saturation}) — needs a look`],
     };
   }
 
@@ -262,6 +303,7 @@ async function main() {
     thresholdProvenance: 'Fitted to this repo by measuring the 848 kutetailor supplier drawings against the known-bad underarm-shield set. Reproduce with --calibrate.',
     summary: {
       LINE_DRAWING: { files: by('LINE_DRAWING').length, rows: rowsOf(by('LINE_DRAWING')) },
+      LINE_DRAWING_SMALL: { files: by('LINE_DRAWING_SMALL').length, rows: rowsOf(by('LINE_DRAWING_SMALL')) },
       SUSPECT: { files: by('SUSPECT').length, rows: rowsOf(by('SUSPECT')) },
       NOT_A_DRAWING: { files: by('NOT_A_DRAWING').length, rows: rowsOf(by('NOT_A_DRAWING')) },
       MISSING: { files: by('MISSING').length, rows: rowsOf(by('MISSING')) },
@@ -273,7 +315,7 @@ async function main() {
   fs.writeFileSync(OUT, JSON.stringify(report, null, 2) + '\n');
 
   console.log(`blueprint_triage — ${results.length} distinct blueprint(s)\n`);
-  for (const v of ['LINE_DRAWING', 'SUSPECT', 'NOT_A_DRAWING', 'MISSING']) {
+  for (const v of ['LINE_DRAWING', 'LINE_DRAWING_SMALL', 'SUSPECT', 'NOT_A_DRAWING', 'MISSING']) {
     const s = report.summary[v];
     console.log(`  ${v.padEnd(15)} ${String(s.files).padStart(4)} file(s)  ${String(s.rows).padStart(4)} catalog row(s)`);
   }
