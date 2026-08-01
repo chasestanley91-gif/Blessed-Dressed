@@ -1010,3 +1010,65 @@ rounded corners"* (rounded patch). No contradiction to fix first.
 If those images predate the pipeline in the same way, the honest expectation is that a substantial
 share are recoverable simply by running them through it — which reframes that backlog from "857
 images to re-shoot" to "857 images that have never been attempted properly".
+
+---
+
+## The prose-contradiction class is now CONFIRMED CAUSAL, not just correlated
+
+Until now the claim "catalog prose that contradicts its drawing produces wrong renders" was an
+inference from co-occurrence. The jeans pair was run as a controlled test of it: the descriptions
+were corrected at source, nothing else in the pipeline was touched, and the pair was re-measured
+against the same blueprints using the same landmark (belt-loop pitch).
+
+| | before the prose fix | after | drawn target |
+|---|---|---|---|
+| `jeans-square` inboard travel | 0 — one unbroken near-vertical line at the side seam | **0.71 pitches** | 0.75 |
+| `jeans-arc` inboard travel | 0 — same side-seam line | **0.78 pitches** | 0.78 |
+| inner end reaching the pressed crease | neither | **both** (486 vs crease 485–493; 389 vs 387–393) | yes |
+| `BLUEPRINT_CONFLICT` | — | false for both | — |
+
+95% and 100% of the drawn value, from renders that previously produced a pocket on the wrong seam.
+Four independent features now separate the pair: the square ends **flat** against the crease while
+the arc **hooks down** ~76° over its last stretch; square is three straight segments through a
+zero-radius corner, arc is one continuous sweep; square carries a heavy topstitched band, arc a fine
+double-line slash; travel 0.71 vs 0.78.
+
+**`jeans-arc`'s own description had literally instructed the defect** — it said the mouth ran *"down
+to the side seam"*. The generator obeyed. The description is an INPUT to the prompt, not documentation
+of it, and this is the measurement that proves it.
+
+Residual defects are second-order and unrelated to the geometry under test: the arc's sweep is ~1.4×
+steeper than drawn, its side belt loop renders as a hollow wire outline, and the square render places
+a hip welt on the near front thigh panel where none exists.
+
+### Sixth instance: `lapel-shawl-0a` / `lapel-shawl-0e`
+
+Measured from `090A` and `090E`, normalised to the neckband width present in both. No centimetres are
+claimed — neither sheet carries a dimension callout.
+
+- The catalog called 0E *"narrower … reduced width across the chest"*. **Across the chest (20–50% of
+  the drop — the exact region that sentence names) 0E measures 17.6% WIDER**, range 8.6–26.5%.
+- Below 55% the relationship reverses, but only to −4.1%. **No single wider/narrower statement
+  describes this pair**, which is why width was never a usable discriminator — and the prose staked
+  the whole distinction on it.
+- The two differences that are real and large went **unmentioned by both entries**:
+  - **Foot.** 0A's front edges converge to a sharp acute point with a fine tail running on below the
+    meeting. 0E's sweep down in convex arcs and close in one smooth rounded bowl. Unmistakable at a
+    glance.
+  - **Taper.** 0A varies **36%** in width down its own length; 0E varies **12%** — near parallel-sided.
+
+Both descriptions were rewritten from the drawings. This pair is *generation-limited*, so it is
+genuinely recoverable — but note it would have been regenerated straight into the same collision had
+the prose not been read first.
+
+### `lp-jetted-btn-tab` — a five-word stub
+
+Carried `"Jetted pocket with button tab."` while its sibling `lp-jetted-4` had a full paragraph, and
+the two ship the same photograph. Rewritten from `02M1__Besom_with_tab_and_button`, which draws the
+tab descending from the **centre** of the mouth to a small rounded terminal, roughly as deep as the
+jets. Position and proportion are now stated, because "with a button tab" is not enough for the
+generator to place anything.
+
+**Sequencing rule, now evidence-backed: read the description before spending a credit on any option
+in the recoverable list.** Six of the pairs examined so far had prose that would have re-created the
+defect at full price.
