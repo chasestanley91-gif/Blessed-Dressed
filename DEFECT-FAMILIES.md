@@ -357,3 +357,68 @@ So this is a genuine source-material limit, not a generation failure: the only a
 settle square-versus-point is too coarse to do so, and the written record says "square" while the
 image model keeps producing the point its priors favour. A higher-resolution collar drawing would
 resolve it. Listed in [NEEDS-SOURCE.md](NEEDS-SOURCE.md).
+
+---
+
+## DISTINCT_OPTION_IMAGE_COLLISION — measured, ranked, and separated from the false alarms
+
+**Computed 2026-08-01 by `tools/image_collisions.mjs` (new).** This finding had been carried as a
+count of "14 families". It is now an exact list, hashed from the bytes the customer actually
+receives rather than from filenames.
+
+```
+  SAME-FIELD    24 images   208 rows   BLOCKING: rival options on one menu, indistinguishable
+  CROSS-FIELD    6 images    25 rows   different options on different menus: suspicious, not fatal
+  fan-out      379 images              one option across several products: CORRECT, ignored
+```
+
+**The 379 matter as much as the 24.** The catalog deliberately fans one approved photograph across
+the same option on jacket / suit-2pc / suit-3pc, and that is right. Any audit that flags shared
+images without separating fan-out from collision produces 403 "defects" and is unusable. The tool
+makes that distinction structurally: it only reports where two *different* option ids share bytes,
+and escalates to BLOCKING only where those options sit on the *same* product+field — i.e. side by
+side in one picker, where the customer is being asked to choose between two identical pictures.
+
+### Ranked by rows affected
+
+| rows | options | image |
+|---:|---:|---|
+| 30 | **10** | `generated/jacket/lapel-peak-101.webp` |
+| 24 | 8 | `generated/jacket/lp-slanted-flap-55.webp` |
+| 24 | 8 | `jacket/lining/half-lining.jpg` |
+| 15 | 5 | `generated/jacket/cp-welt-23.webp` |
+| 12 | 4 | `generated/jacket/lapel-notch-50.webp` |
+| 12 | 4 | `generated/jacket/cp-welt-curved-23.webp` |
+| 12 | 4 | `generated/jacket/lp-slanted-flap-40.webp` |
+| 12 | 4 | `blueprints/factory/d3eb9a6df665__0711__Match_fabric.webp` |
+| 9 | 3 | `generated/jacket/lapel-shawl-0a.webp`, `lp-jetted-4.webp`, `lp-patch.webp`, `jacket/ticket-pocket/jetted.jpg` |
+| 6 | 2 | `generated/jacket/lapel-peak-99.webp` |
+| ≤3 | 2–3 | 11 further images, mostly shirt stitching and collar-stand buttons |
+
+**Rank 1 is the angle ladder, quantified.** One photograph is serving `lapel-peak-101`, `-102`,
+`-102-rl`, `-103-curved`, `-105`, `-107`, `-108`, `-110`, `-110-low` and `-115` across three
+products. The plan already listed the peak-lapel ladder as unfinishable for want of source material;
+this puts a number on the customer-facing cost — 30 rows where the picker offers ten choices and one
+picture.
+
+### Which of these are source problems and which are generation problems
+
+Reading the list against `FAM-PRINTED-CALLOUTS-UNREAD`, the 208 rows split into two different
+diseases with two different cures:
+
+- **Source-limited** — the ladders (`lapel-peak-*`, `lapel-notch-*`, `cp-welt-*`, `lp-slanted-flap-*`).
+  One supplier drawing backs the whole family, so no prompt can separate them. These need drawings,
+  and they are in [NEEDS-SOURCE.md](NEEDS-SOURCE.md).
+- **Pipeline-limited** — the pairs that differ by a *documented, drawable* feature and simply were
+  never given it: `cs-square` vs `cs-square-2btn` (two buttons on the collar stand), `bh-hand` vs
+  `bh-machine`, `canvas-none-press` vs `canvas-top`, `stitch-01-inner-plain` vs `stitch-01-top`.
+  These are the same shape as `collar-sq-65-btn`, which shipped an image missing the two tip buttons
+  that were its entire identity — and which was *fixed* this session once the feature was named in
+  the prompt. They are recoverable without new source material.
+
+The AMF pairs (`stitch-03-amf` vs `stitch-03-top`, etc.) are already known to be source-limited:
+every `-amf` file is md5-identical to its `-top` sibling, so no authentic AMF artwork exists in this
+repo at all.
+
+**Nothing merged, nothing repriced.** The merge/reprice ruling on any customer-facing option remains
+the user's, and this table exists to make that ruling on evidence rather than on impression.
