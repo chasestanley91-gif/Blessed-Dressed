@@ -1,0 +1,53 @@
+{
+  "schema": "garment-spec/v1",
+  "addr": "suit-2pc > suit-pockets > lower-pocket > lp-jetted-4",
+  "productId": "suit-2pc",
+  "sectionId": "suit-pockets",
+  "fieldId": "lower-pocket",
+  "optionId": "lp-jetted-4",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\suit-2pc.json",
+  "source": "json",
+  "label": "Straight Jetted Pocket 4 cm",
+  "description": "The jetted, or besom, lower pocket presents only two precisely cut strips of cloth — the jets — above and below a neat horizontal slit, with no flap to interrupt the jacket's surface. It is the most formal hip pocket treatment, mandatory on dinner jackets and tuxedos, where it reinforces the sleek, uncluttered front that black tie demands. In bespoke work the jets are the ultimate test of a cutter's precision: they must be the exact same width along their full length, finish at identical points at both ends, and lie perfectly flat without drawing or puckering.",
+  "fieldLabel": "Lower Pockets",
+  "sectionLabel": "Pockets",
+  "part": "jacket-pocket",
+  "garment": {
+    "noun": "navy bespoke suit jacket",
+    "fabric": "fine wool suiting with visible weave"
+  },
+  "view": {
+    "orientation": "front",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": false,
+  "measured": {
+    "dimensions": [
+      "4 cm"
+    ],
+    "angles": [],
+    "counts": [],
+    "shapes": [
+      "jetted / besom welt",
+      "flap pocket"
+    ],
+    "negatedShapes": [],
+    "spread": [],
+    "flags": []
+  },
+  "illustration": {
+    "path": "/images/blueprints/supplier/f97bc3d4910c__0231__Besom.jpg",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\supplier\\f97bc3d4910c__0231__Besom.jpg",
+    "exists": true,
+    "remote": false
+  },
+  "forbidden": [
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-08-01T09:58:39.415Z"
+}

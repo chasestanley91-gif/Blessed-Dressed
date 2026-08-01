@@ -1,6 +1,102 @@
 {
-  "updatedAt": "2026-08-01T09:46:55.710Z",
+  "updatedAt": "2026-08-01T10:24:06.686Z",
   "rows": [
+    {
+      "option": "shirt/collar-af1-70",
+      "verdict": "OK",
+      "liveImage": "/images/generated/shirt/collar-af1-70.webp",
+      "confidence": "medium",
+      "why": "Drawing carries a printed 85.00 degree callout with leader arrows onto the two collar point tips; the callout convention was independently validated on french-in-8cm (printed 145, drawing measured 151). Drawing shows pointed tips, no tip buttons, one band button; photo matches on family and button configuration. Photo spread off a 50px-gridded render: vertex (405,505), tips (250,690) and (625,665), giving 40 and 54 degree half-angles, total 94 vs drawn 85. The 14 degree asymmetry shows the model is rotated off-axis so this is 94 plus or minus 10. Across all ten leafed photos measured the same way the apparent-spread ranking matched the drawn-callout ranking monotonically. DEFECT: necktie plus fastened throat button completely conceal the collar band.",
+      "gradedAt": "2026-08-01T10:24:06.683Z"
+    },
+    {
+      "option": "shirt/collar-cutaway-55",
+      "verdict": "OK",
+      "liveImage": "/images/generated/shirt/collar-cutaway-55.webp",
+      "confidence": "medium",
+      "why": "Drawing: 115.00 degree callout, pointed tips, NO tip buttons. Photo shows sharp-pointed tips, clean and bare - correctly distinguished from collar-cutaway-55-btn, its only real sibling (the two illustrations differ by ink-region mean 20.2, attributable to the two tip buttons alone). Measured spread: vertex (400,490), tips (140,655) and (660,640), 57.6 and 60.0, total 118 against drawn 115 - closest agreement of the three 115 degree options. COULD NOT MEASURE: the 5.5 cm point length. This matters because cutaway-55 and large-cutaway-75 carry the SAME 115 degree callout and are separated in the catalog only by point length, which no drawing prints.",
+      "gradedAt": "2026-08-01T10:24:06.683Z"
+    },
+    {
+      "option": "shirt/collar-cutaway-55-btn",
+      "verdict": "OK",
+      "liveImage": "/images/generated/shirt/collar-cutaway-55-btn.webp",
+      "confidence": "high",
+      "why": "Drawing: 115.00 degree callout plus two small circles at the collar point tips (button-down). Photo shows exactly two buttons, one at each collar point tip at (130,600) and (655,605), plus the band button - count and placement match. Spread from vertex (395,495) to tips (110,640) and (680,640): 63.0 degrees each side, perfectly symmetric so the subject is square to camera, total 126 against a drawn 115. Reads 11 degrees wide but is unambiguously in the widest non-french class and comfortably wider than the 100/105 degree photos measured identically (99, 101). Separation from its no-button twin rests entirely on the tip buttons and they are plainly visible and correctly counted. COULD NOT MEASURE: 5.5 cm point length, no printed length callout anywhere in this family.",
+      "gradedAt": "2026-08-01T10:24:06.683Z"
+    },
+    {
+      "option": "shirt/collar-french-80",
+      "verdict": "OK",
+      "liveImage": "/images/generated/shirt/collar-french-80.webp",
+      "confidence": "high",
+      "why": "The one option where the drawing itself was measured rather than the callout trusted. On a common scale the drawn crossover vertex sits at (378,425) with leaf tips at (155,485) and (600,480), giving half-angles 74.9 and 76.1 - a drawn spread of 151 against the printed 145. That validates the callout convention for the whole shirt-collar family. Photo: vertex (300,580), tips (95,700) and (640,700), total 130. The 11 degree left/right asymmetry shows the subject is rotated, and horizontal foreshortening of a collar across a curved chest compresses apparent spread, so 130 for a 145 flat drawing errs in the expected direction and magnitude. Strongest check: measured by one identical method this is the widest of all ten leafed photographs and its drawing is the widest of all ten drawings, by a large margin in both.",
+      "gradedAt": "2026-08-01T10:24:06.683Z"
+    },
+    {
+      "option": "shirt/collar-hexagon-stand",
+      "verdict": "WRONG",
+      "liveImage": "/images/generated/shirt/collar-hexagon-stand.webp",
+      "confidence": "medium",
+      "why": "Drawing shows a full TURNDOWN collar with two large angular leaves - traced on a 900px render each leaf has a top-inner corner, an outer wing point reaching past the shoulder/yoke lines, an upward notch apex and a centre-front point, six exterior vertices across the pair. The photo shows an upright band/stand collar with NO leaves at all. Quantified against the neck-opening width at the collar top edge, validated first as comparable (290px drawing vs 270px photo on a common render): the drawn collar lowest point sits 1.62 neck-widths below its top edge, the photographed collar 0.80 - roughly half as deep. Vertical foreshortening on a near-frontal chest accounts for 1.0-1.2x, nowhere near 2x. The photo matches the option LABEL and description but the drawing is the authority.",
+      "gradedAt": "2026-08-01T10:24:06.681Z"
+    },
+    {
+      "option": "shirt/collar-large-cutaway-75",
+      "verdict": "OK",
+      "liveImage": "/images/generated/shirt/collar-large-cutaway-75.webp",
+      "confidence": "medium",
+      "why": "Drawing: 115.00 degree callout, pointed tips, no tip buttons; photo matches family and button configuration. Measured spread: vertex (355,468), tips (85,660) and (700,690), half-angles 54.6 and 57.2, total 112 against drawn 115. Sits in the correct band relative to same-method measurements of the 100/105 degree photos (99, 101) below and french (130) above. COULD NOT MEASURE: the 7.5 cm point length, the sole catalog discriminator between this and collar-cutaway-55 since both are drawn at 115 degrees. Here the band button, the only plausible shared scale landmark, is hidden behind the tie knot. Raw pixel lengths across photos at different framings are meaningless and were not used.",
+      "gradedAt": "2026-08-01T10:24:06.683Z"
+    },
+    {
+      "option": "shirt/collar-large-cutaway-80",
+      "verdict": "OK",
+      "liveImage": "/images/generated/shirt/collar-large-cutaway-80.webp",
+      "confidence": "medium",
+      "why": "Drawing: 105.00 degree callout, pointed tips, no tip buttons; photo matches family. Measured spread: vertex (395,480), tips (195,660) and (605,640), half-angles 48.0 and 52.7, total 101 against drawn 105. First visual impression from the contact sheet was that this looked too narrow for a large cut-away; measuring corrected that impression, which is why the measurement is reported rather than the impression. COULD NOT MEASURE: the 8.0 cm point length, the only thing separating this from its 115 degree siblings. Normalising point length by neck width across photos was attempted and discarded - each photo uses a different model at different framing and the resulting ratios inverted the label order, so the landmark did not validate.",
+      "gradedAt": "2026-08-01T10:24:06.683Z"
+    },
+    {
+      "option": "shirt/collar-large-round-53",
+      "verdict": "UNSURE",
+      "liveImage": "/images/generated/shirt/collar-large-round-53.webp",
+      "confidence": "medium",
+      "why": "The drawing cannot settle this. large-round-in-53cm.jpg and round-in-53cm.jpg are different files but effectively the same drawing: resampled to a common 300x300 and differenced over the ink region only, mean absolute difference is 16.9/255 - LOWER than the 20.2 measured between cut-away-in-55cm and its with-button twin, whose only genuine difference is two 4px tip buttons. Both carry identical 100.00 degree callouts and both labels say 5.3 cm. Confirmed: the photo shows a club collar with fully rounded tips, no points, band button visible - correct family. Cannot confirm which of the two round options it is. Angle reading discarded: a club collar has no sharp front-edge crossing so the vertex is ill-defined. This is a catalog spec defect, not an image defect - no regeneration can fix it.",
+      "gradedAt": "2026-08-01T10:24:06.683Z"
+    },
+    {
+      "option": "shirt/collar-mid-cutaway-70",
+      "verdict": "OK",
+      "liveImage": "/images/generated/shirt/collar-mid-cutaway-70.webp",
+      "confidence": "medium",
+      "why": "Drawing: 90.00 degree callout, pointed tips, NO tip buttons - which is what separates it from collar-mid-cutaway-70-btn, whose drawing is identical apart from two small circles at the tips. Photo shows pointed tips with no tip buttons, correct. Measured spread: vertex (395,597), tips (295,690) and (500,685), about 96 against a drawn 90. Least confident reading in the batch: the tips sit low in frame against a dark suit so tip localisation is soft by about 25px, i.e. 10 degrees. Note this option and collar-af1-70 are drawn only 5 degrees apart, below photographic resolution, so that pair is not distinguishable regardless of image.",
+      "gradedAt": "2026-08-01T10:24:06.683Z"
+    },
+    {
+      "option": "shirt/collar-mid-cutaway-70-btn",
+      "verdict": "OK",
+      "liveImage": "/images/generated/shirt/collar-mid-cutaway-70-btn.webp",
+      "confidence": "high",
+      "why": "Drawing: 90.00 degree callout plus two small circles at the collar point tips. Photo shows exactly two white buttons, one anchoring each collar point tip, plus the band button; count and placement match. Spread from vertex (400,395) to tips (100,700) and (700,690): 44.5 and 45.5 degree half-angles, total 90 - the closest agreement with a drawn callout in the batch, and the near-perfect symmetry means the model is square to camera so no rotation correction is needed. NOTE: the catalog description says a throat button, which the drawing contradicts - the drawing shows tip buttons. The drawing wins and the photograph follows it, so the description is what needs fixing.",
+      "gradedAt": "2026-08-01T10:24:06.683Z"
+    },
+    {
+      "option": "shirt/collar-round-53",
+      "verdict": "UNSURE",
+      "liveImage": "/images/generated/shirt/collar-round-53.webp",
+      "confidence": "medium",
+      "why": "Same root cause as collar-large-round-53: the two source drawings are pixel-equivalent over the ink region (mean diff 16.9/255), carry identical 100 degree callouts, and both labels state 5.3 cm, so the illustration cannot adjudicate which photo belongs to which option. Confirmed on this one: club collar with fully rounded tips and no points, band button visible. Its spread does measure cleanly - vertex (400,465), rounded tip bottoms (185,630) and (590,645), giving 52.5 and 46.5 degree half-angles, total 99 against the drawn 100. So the image is consistent with its own drawing; it simply is not separable from its sibling.",
+      "gradedAt": "2026-08-01T10:24:06.683Z"
+    },
+    {
+      "option": "shirt/collar-squared-stand",
+      "verdict": "OK",
+      "liveImage": "/images/generated/shirt/collar-squared-stand.webp",
+      "confidence": "high",
+      "why": "Drawing shows a band-only mandarin stand collar: no leaves, band front ends cut square, a narrow vertical gap between the band ends at centre front, a small step where the band meets the shirt front. No angle callout, correctly, since spread is undefined for a band collar. Photo matches on every structural point including the square-cut ends that separate it from the rounded-stand sibling in the same techpack folder. Critically this is one of only two images in the batch photographed with NO necktie and the throat open, so the band - the entire discriminating feature - is fully visible. NOTE: the catalog description contradicts the drawing, describing collar points cut with a squared-off end, i.e. a squared POINT collar. The drawing shows no points at all; the description needs fixing.",
+      "gradedAt": "2026-08-01T10:24:06.683Z"
+    },
     {
       "option": "suit-3pc/peak-collar-stand",
       "verdict": "WRONG",

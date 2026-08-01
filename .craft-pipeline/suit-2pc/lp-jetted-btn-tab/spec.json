@@ -1,0 +1,56 @@
+{
+  "schema": "garment-spec/v1",
+  "addr": "suit-2pc > suit-pockets > lower-pocket > lp-jetted-btn-tab",
+  "productId": "suit-2pc",
+  "sectionId": "suit-pockets",
+  "fieldId": "lower-pocket",
+  "optionId": "lp-jetted-btn-tab",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\suit-2pc.json",
+  "source": "json",
+  "label": "Jetted + Button Tab",
+  "description": "The jetted pocket with button tab is the plain besom hip pocket carrying one additional detail: a short tab of self-cloth that descends from the centre of the pocket mouth, ending in a small rounded terminal fastened by a single button. The pocket itself is unchanged — two narrow strips of cloth above and below a clean horizontal slit, with no flap — so the tab is the only thing that separates this option from the plain jetted pocket, and it must be clearly visible hanging below the opening rather than merged into it. The tab runs roughly as deep as the jets themselves and sits centred on the mouth. Traditionally a working detail on country and travel coats, where it kept the pocket closed in movement.",
+  "fieldLabel": "Lower Pockets",
+  "sectionLabel": "Pockets",
+  "part": "jacket-pocket",
+  "garment": {
+    "noun": "navy bespoke suit jacket",
+    "fabric": "fine wool suiting with visible weave"
+  },
+  "view": {
+    "orientation": "front",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": false,
+  "measured": {
+    "dimensions": [],
+    "angles": [],
+    "counts": [],
+    "shapes": [
+      "jetted / besom welt",
+      "flap pocket"
+    ],
+    "negatedShapes": [],
+    "spread": [
+      "narrow spread"
+    ],
+    "flags": [
+      "collar/closure button",
+      "tab fastening"
+    ]
+  },
+  "illustration": {
+    "path": "/images/blueprints/supplier/b390170669a3__02M1__Besom_with_tab_and_button.jpg",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\supplier\\b390170669a3__02M1__Besom_with_tab_and_button.jpg",
+    "exists": true,
+    "remote": false
+  },
+  "forbidden": [
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-08-01T09:58:39.901Z"
+}

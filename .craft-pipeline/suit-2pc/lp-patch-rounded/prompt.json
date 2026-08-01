@@ -1,0 +1,120 @@
+{
+  "addr": "suit-2pc > suit-pockets > lower-pocket > lp-patch-rounded",
+  "label": "Rounded Patch",
+  "part": "jacket-pocket",
+  "orientation": "front",
+  "excluded": null,
+  "generate": true,
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\suit-2pc.json",
+  "source": "json",
+  "illustration": "/images/blueprints/supplier/a8da948466fd__02K0__Curved_patch.jpg",
+  "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\supplier\\a8da948466fd__02K0__Curved_patch.jpg",
+  "illustrationExists": true,
+  "illustrationRemote": false,
+  "profile": {
+    "addr": "suit-2pc > suit-pockets > lower-pocket > lp-patch-rounded",
+    "product": "suit-2pc",
+    "field": "Lower Pockets",
+    "option": "Rounded Patch",
+    "part": "jacket-pocket",
+    "garment": "navy bespoke suit jacket",
+    "orientation": "front",
+    "absence": false,
+    "distinguishingDetail": "The rounded lower patch pocket — called tasca a pignata by Neapolitan tailors — replaces the square corners of a standard patch pocket with a continuous curved lower edge and gently rounded corners. The curvature is wholly characteristic of Neapolitan tailoring, complementing the rounded cutaway fronts and soft construction those houses favour. A jacket with rounded patch pockets at the hip and a barchetta breast pocket is one of the most recognisable expressions of the Neapolitan canon.",
+    "measured": {
+      "dimensions": [],
+      "angles": [],
+      "counts": [],
+      "shapes": [
+        "patch pocket"
+      ],
+      "spread": [
+        "wide cutaway spread"
+      ],
+      "flags": []
+    },
+    "reproduceFromIllustration": [
+      "pocket style (jetted/flap/patch)",
+      "welt",
+      "flap shape",
+      "pattern match"
+    ],
+    "composition": {
+      "crop": "on the hip pocket",
+      "dominanceTarget": "40–80% of frame",
+      "identifyWithin": "1 second"
+    },
+    "forbidden": [
+      "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+      "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+      "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+    ],
+    "excluded": null,
+    "generate": true
+  },
+  "requiredTokens": [
+    "patch pocket"
+  ],
+  "checklist": [
+    "shape reads as drawn: patch pocket",
+    "distinguishing detail present: The rounded lower patch pocket — called tasca a pignata by Neapolitan tailors — replaces the square corners of a standard patch pocket with a continuous curved lower edge and gently rounded corners. The curvature is wholly characteristic of Neapolitan tailoring, complementing the rounded cutaway fronts and soft construction those houses favour. A jacket with rounded patch pockets at the hip and a barchetta breast pocket is one of the most recognisable expressions of the Neapolitan canon.",
+    "reproduced from the illustration: pocket style (jetted/flap/patch)",
+    "reproduced from the illustration: welt",
+    "reproduced from the illustration: flap shape",
+    "reproduced from the illustration: pattern match",
+    "orientation matches the illustration: front",
+    "the Lower Pockets dominates the frame (40–80%), identifiable within one second, framed on the hip pocket",
+    "silhouette, proportions, seam & stitch placement match the illustration; left/right symmetry correct",
+    "NO generic-category substitution — this exact option, not a typical one",
+    "a real photograph of the exact drawn option — not the line-art, no stylisation"
+  ],
+  "scoreCard": [
+    {
+      "category": "shape",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "geometry",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "dimensions",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "angles",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "construction",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "placement",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "symmetry",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "composition",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "blueprint-match",
+      "score": null,
+      "min": 98
+    }
+  ],
+  "prompt": "Ultra-photorealistic luxury menswear product photography.\n\nA single-subject craft DOCUMENTATION photograph: the Lower Pockets is the dominant subject, filling 40–80% of the frame and identifiable within one second.\n\nA premium navy bespoke suit jacket featuring a precise Rounded Patch (Lower Pockets).\n\nDistinguishing construction detail (reproduce exactly as drawn): The rounded lower patch pocket — called tasca a pignata by Neapolitan tailors — replaces the square corners of a standard patch pocket with a continuous curved lower edge and gently rounded corners. The curvature is wholly characteristic of Neapolitan tailoring, complementing the rounded cutaway fronts and soft construction those houses favour. A jacket with rounded patch pockets at the hip and a barchetta breast pocket is one of the most recognisable expressions of the Neapolitan canon.\n\nExact specification — patch pocket shape; wide cutaway spread — matching the illustration precisely.\n\nMANDATORY GEOMETRY COVERAGE — reproduce from the illustration, exactly and without assumption, every one of these: pocket style (jetted/flap/patch), welt, flap shape, pattern match. Match each to the drawing.\n\nVIEW — this illustration is the front of the garment. Photograph the same face; never substitute a different face of the garment.\n\nBLUEPRINT LOCK — THE DRAWING IS LAW: the attached technical illustration is the manufacturing blueprint for this exact craft option and the SOLE authority for the image. Reproduce its geometry precisely — point/edge shape, lengths, widths, depths, angles, curvature, roll lines, symmetry, button/tab/stay positions, seam and stitch placement, and proportions — within less than 2% deviation. Assume NOTHING from tailoring/menswear/fashion convention or model priors; every visible characteristic must come from the drawing. Do not redesign, reinterpret, substitute a similar commercial style, stylise, or \"improve\" it. Do NOT fall back to a generic version of this category — reproduce THIS option, not a typical one. If convention conflicts with the drawing, the drawing wins. Accuracy over aesthetics. ANNOTATIONS ARE NOT THE GARMENT: the technical drawing may carry measurement callouts — dimension numbers (\"2.5cm\", \"9cm\", \"115°\"), tick / leader / dimension lines, arrows, red or coloured guide marks, and text labels. These are manufacturing documentation, NOT features of the cloth. Reproduce ONLY the finished garment: never render any number, unit, arrow, callout, leader line, measurement mark, or text anywhere in the photograph. The final image is a clean garment photo with zero annotation. COLOUR IN THE DRAWING IS NOTATION, NOT CLOTH: any red, orange or otherwise highlighted region marks WHERE the craft option sits — it is a position marker, never a colour specification. Flat grey or tinted shading marks the EXTENT of a panel, lining or facing, not its shade. Render every one of those areas in the garment's own cloth and thread, in the natural colour that tailoring would use there. There must be no red, no highlighter tint and no flat unshaded grey panel anywhere in the photograph unless the option's own label explicitly names that colour.\n\nPhotographed worn on a male model.\n\nFrame on the hip pocket; the detail must read clearly and sharply.\n\nSavile Row and high-end Italian sartorial aesthetic. Natural daylight studio lighting, Phase One IQ4 medium-format camera, 150MP detail, shallow depth of field, magazine-quality editorial menswear photography. Authentic bespoke craftsmanship, fine hand stitching, premium finishing. SET — shot in a clean luxury photographic studio against a seamless, plain, neutral light-grey background with clear separation between garment and background: no location, no architecture, no furniture, no scenery, no props and no environmental context of any kind competing with the garment.\n\nExtremely realistic fine wool suiting with visible weave texture, fine stitching.\n\nAvoid: any GENERIC menswear substitution (a generic spread collar, generic notch/peak lapel, generic pocket/pleat/vent/cuff/waistband in place of the drawn one), illustration or line-art style, CGI or 3D-render look, cartoon, mannequin, fashion sketch, inaccurate geometry, altered proportions, missing construction details, asymmetry, watermark, AI-art appearance, AND any text or annotation traced from the drawing: NO measurement numbers, units (cm/mm/°), dimension or leader lines, arrows, callouts, red/coloured guide marks, ruler ticks, or labels anywhere in the frame. This is real garment photography of the exact drawn option — clean cloth only, nothing else.\n\nFORBIDDEN FOR THIS OPTION — do not render: a generic version of this part standing in for the exact drawn option (generic-category substitution); any feature, count, or geometry borrowed from a neighboring craft option on the same field; a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion).",
+  "builtAt": "2026-08-01T10:19:28.308Z"
+}

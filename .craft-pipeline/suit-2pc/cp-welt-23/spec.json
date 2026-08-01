@@ -1,0 +1,54 @@
+{
+  "schema": "garment-spec/v1",
+  "addr": "suit-2pc > suit-pockets > chest-pocket > cp-welt-23",
+  "productId": "suit-2pc",
+  "sectionId": "suit-pockets",
+  "fieldId": "chest-pocket",
+  "optionId": "cp-welt-23",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\suit-2pc.json",
+  "source": "json",
+  "label": "Straight Welt 2.3 cm",
+  "description": "A straight welt breast pocket at 2.3 cm is the narrowest conventional English welt, lending the chest a particularly refined, restrained line. The slim welt draws minimal attention to itself and reads as deliberate minimalism rather than economy, suiting dark worsted city suits and formal jackets. The opening is left completely empty so the full length of the welt and the precision of its finishing at each end are visible end to end. This width is especially popular with Savile Row firms who favour a long, lean chest line, the welt standing proud of the chest as a single narrow band with its top and bottom edges running parallel.",
+  "fieldLabel": "Chest Pocket",
+  "sectionLabel": "Pockets",
+  "part": "jacket-chest-pocket",
+  "garment": {
+    "noun": "navy bespoke suit jacket",
+    "fabric": "fine wool suiting with visible weave"
+  },
+  "view": {
+    "orientation": "front",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": false,
+  "measured": {
+    "dimensions": [
+      "2.3 cm"
+    ],
+    "angles": [],
+    "counts": [],
+    "shapes": [
+      "welt pocket"
+    ],
+    "negatedShapes": [],
+    "spread": [
+      "narrow spread"
+    ],
+    "flags": []
+  },
+  "illustration": {
+    "path": "/images/blueprints/supplier/f8f05045ab36__0101__Normal.jpg",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\supplier\\f8f05045ab36__0101__Normal.jpg",
+    "exists": true,
+    "remote": false
+  },
+  "forbidden": [
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-08-01T09:58:38.160Z"
+}

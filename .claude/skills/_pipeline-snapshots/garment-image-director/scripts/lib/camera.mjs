@@ -28,13 +28,24 @@ const STYLE = {
   'shirt-detail': { base: 'worn on a male model', focus: ['the named construction detail'], crop: 'macro on the detail' },
 
   // JACKET
-  'jacket-lapel': { base: 'worn on a male model over a crisp white dress shirt and silk tie', focus: ['lapel width at its widest point', 'peak/notch/shawl geometry', 'gorge position', 'lapel roll and edge stitch', 'relationship to the tie knot'], crop: 'chest-up, the lapel dominating the frame' },
+  // NO TIE — third and last part to get this fix. Measured 2026-08-01 on the
+  // legacy shipped images: ten of twelve shirt-collar photographs are worn with
+  // a necktie, and it conceals the collar band on ALL ten, completely on four.
+  // A lapel is no safer. A four-in-hand runs down the opening between the two
+  // lapels, over the lower half of each and over the point where they meet —
+  // and for the shawl family that foot is precisely the discriminator: measured
+  // against the neckband landmark, the three shawl blueprints differ at the foot
+  // by 0.101 / 0.247 / 0.365, a 3.6x spread, while differing across the chest by
+  // far less. A tie hides the one place they separate.
+  // 'relationship to the tie knot' left the tie in the focus list even when the
+  // styling dropped it, which is how a removed feature comes back.
+  'jacket-lapel': { base: 'worn on a male model over a crisp white dress shirt with NO necktie and nothing at the throat', focus: ['lapel width at its widest point', 'peak/notch/shawl geometry', 'gorge position', 'lapel roll and edge stitch', 'the lower end of the lapel and the exact point at which its edges terminate, completely unobstructed'], crop: 'chest-up, the lapel dominating the frame' },
   'jacket-lapel-buttonhole': { base: 'worn on a male model', focus: ['lapel buttonhole shape and stitch (Milanese/AMF/keyhole/straight)', 'the specific decorative buttonhole form drawn', 'thread'], crop: 'macro on the lapel buttonhole' },
   'jacket-lapel-bh-position': { base: 'worn on a male model, chest-up showing both lapels', focus: ['buttonhole count per lapel', 'left/right placement as drawn', 'symmetry between sides'], crop: 'chest-up, both lapels in frame' },
   'jacket-front-buttonhole': { base: 'worn on a male model', focus: ['front buttonhole construction (hand vs machine)', 'stitch density and keyhole', 'thread'], crop: 'macro on the front buttonhole' },
   'jacket-sleeve-buttonhole': { base: 'worn on a male model, cuff presented', focus: ['sleeve buttonhole orientation (straight vs slanted)', 'which buttonhole is functional', 'stitch'], crop: 'macro on the sleeve cuff buttonholes' },
   'jacket-back-belt': { base: 'worn on a male model, rear three-quarter', focus: ['half-belt panel height and width', 'horizontal placement across the waist seam', 'button/buckle stance, fixed vs adjustable strap', 'the side vents below it'], crop: 'on the back waist half-belt and the vents below it' },
-  'jacket-lapel-detail': { base: 'worn on a male model over a white shirt and tie', focus: ['the named lapel/collar detail', 'edge', 'roll'], crop: 'on the lapel/collar' },
+  'jacket-lapel-detail': { base: 'worn on a male model over a white shirt, no necktie', focus: ['the named lapel/collar detail', 'edge', 'roll'], crop: 'on the lapel/collar' },
   'jacket-chest-pocket': { base: 'worn on a male model', focus: ['breast pocket shape (barchetta/welt)', 'curve', 'pattern match'], crop: 'on the left breast pocket' },
   'jacket-ticket-pocket': { base: 'worn on a male model', focus: ['ticket pocket above the hip flap', 'welt alignment'], crop: 'on the right hip pockets' },
   'jacket-pocket': { base: 'worn on a male model', focus: ['pocket style (jetted/flap/patch)', 'welt', 'flap shape', 'pattern match'], crop: 'on the hip pocket' },
