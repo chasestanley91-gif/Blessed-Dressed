@@ -1072,3 +1072,65 @@ generator to place anything.
 **Sequencing rule, now evidence-backed: read the description before spending a credit on any option
 in the recoverable list.** Six of the pairs examined so far had prose that would have re-created the
 defect at full price.
+
+---
+
+## Catalog-wide description audit — `tools/description_audit.mjs`
+
+The prose-contradiction class was being found one option at a time. It is now scanned mechanically,
+because the description is an input to the prompt and a sentence in the catalog is an instruction to
+the camera. Every pattern the tool looks for is derived from a defect that actually happened here.
+
+**2658 descriptions scanned. 241 rows across 125 distinct option ids carry a hazard that would
+actively mis-render.** (A further ~2100 are flagged NO_GEOMETRY/STUB — those are the not-yet-authored
+backlog, not defects.)
+
+| hazard | rows | what it is |
+|---|---|---|
+| `EXCLUDED_SHAPE` | 84 | names the shape the option is *not*, or what it turns into |
+| `UNLABELLED_FIGURE` | 74 | a measurement in the prose that the label does not carry |
+| `OCCLUDER` | 59 | an accessory that would sit on top of the showcased feature |
+| `DUPLICATE_PROSE` | 85 rows / **14 distinct texts over 40 ids** | identical text cannot render differently |
+| `CLOSURE_ASSERTED` | 10 | asserts buttoned/open, which is the drawing's call |
+
+**Honest scoping of `OCCLUDER`.** 33 of the 59 are neckties on collar options, but most mention the
+tie *descriptively* — "works equally well open-necked or with any standard tie knot" — rather than
+instructing one. They are risk candidates, not confirmed defects. What makes the risk real rather
+than theoretical is that a necktie already covered the band, spread and top button across 216
+clusters.
+
+### The occluder's actual source was the styling code, not the prose
+
+`garment-image-director/scripts/lib/camera.mjs` had a carefully argued **NO-TIE default** for shirt
+collars, with the reasoning written out in full — a four-in-hand covers the spread, the stand height,
+the band seam and the top button, so a tie is worn *only* where it is required to demonstrate the
+option (tab, wing). That comment records three independent QC agents catching the defect.
+
+**It was never carried across to waistcoats.** `vest-front`, `vest-bottom` and `vest-lapel` were
+styled `'over a crisp white dress shirt and tie'` — and a four-in-hand hangs straight down the
+waistcoat opening, over the neckline apex, the top button, the lapel break and the front edge. Those
+are exactly the features that separate one vest-front option from another; `v-neckline` versus
+`u-neckline` is decided at the apex the tie would cover, and `u-neckline` is one of the options whose
+prose was also found wrong.
+
+Fixed, with the collar branch's reasoning cited at the site. This is the project's signature defect in
+its purest form: **not bad reasoning about garments, but sound reasoning that stopped at a boundary.**
+
+### `tools/set_description.mjs`
+
+Blind string replacement across the catalog is unsafe and this was proven, not assumed. Sibling
+options carry byte-identical prose — `lp-slanted-flap-55`/`-65` did, as did `lp-straight-jetted-40`/
+`lp-straight-jetted` — so replacing "the old text" with the 5.5 cm version silently rewrote the 6.5 cm
+option too. 18 replacements landed where 3 were intended. A JSON round-trip is *also* unsafe: measured,
+`shirt`/`trousers`/`vest` re-serialise losslessly but `sport-coat`/`suit-2pc`/`suit-3pc` differ by
+4–10 KB, and those three hold every jacket option. The tool edits by option id, in place, and verifies
+every file still parses.
+
+### Ten descriptions rewritten in the recoverable set
+
+All ten hazards cleared, verified by re-running the audit (10 scanned, 0 hazards). Two of them were my
+own prose from the same session — the audit caught `"rather than a parallel band"` in the shawl
+descriptions I had just written while applying that very rule.
+
+`lp-straight-jetted` was the worst: its prose was copied verbatim from the *flap* option and asserted
+"covered by a flat, rectangular flap", but its blueprint is `0231__Besom` — no flap exists on it.
