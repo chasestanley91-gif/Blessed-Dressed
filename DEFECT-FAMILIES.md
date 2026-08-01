@@ -622,3 +622,53 @@ These need a diagram or text, not a photograph. Recorded rather than retried.
 judged against the label instead, so the defect counts above remain about the live images. This is
 the same `jacket/front-style/` folder already found to hold swatches for `sb-3` and `db-4x2` — the
 folder is systematically mis-populated.
+
+### The full 24-row sample — and a correction to the rate I published from the first 12
+
+The second half of the sample came back **6 OK, 5 INDISTINCT, 1 WRONG**, which moves the headline
+materially. Combined over all 24:
+
+```
+   9  OK           37.5%
+   9  INDISTINCT   37.5%
+   6  WRONG        25.0%
+   -------------------------
+  15  not fit for a customer to choose from   62.5%
+```
+
+**I previously recorded "~40% actively wrong" from the first 12 rows. The correct figure is 25%.**
+The first batch happened to draw the worse half. Extrapolated across 745 ungraded live rows that is
+roughly **185 actively wrong** and **465 not fit for choosing** — still a large number, and still
+enough to invert the priority against the 645 drawing-only rows, but a quarter rather than two
+fifths. Recorded here rather than left standing, because a headline defect rate is exactly the kind
+of number that gets quoted later without its provenance.
+
+Sampling caveat worth stating: 24 of 745 is a ~5% sample, so the true rate has real spread around
+25% — this is an order-of-magnitude finding, not a precise one.
+
+### New from the second batch
+
+- **`suit-3pc/lbh-no1-tc-arc` — WRONG, and starkly.** The option is a hand-worked lapel buttonhole in
+  three thread colours. The live photo has **no lapel buttonhole at all** — the whole lapel face was
+  cropped and enlarged to confirm. It depicts the "None" option.
+- **The shoulder-pad drawing backs FOUR options per product, not two.**
+  `9fd6de75414f__060K__Regular.jpg` serves `pad-01`, `pad-03`, `pad-05-soft` and `pad-05-structured`
+  — **12 catalog records** on one picture. My earlier note treated this as a soft/structured pair;
+  it is twice that.
+- **The notch-angle family is degenerate.** `lapel-notch-50`, `-55` and `-65` ship effectively the
+  same image, independent of any single verdict. That is the same disease as the peak ladder.
+- **`slant-20` disagrees with its own drawing.** The blueprint depicts a near-horizontal high-set
+  besom welt; the render shows a steeply angled side pocket. So it is both unmeasurable *and*
+  geometrically wrong — a case where the shared-family assumption ("these differ only by cm") is
+  itself false.
+
+### What the two batches agree on
+
+Both halves independently found the same three structural causes, which is the useful result:
+
+1. **Counts are unreliable** where a count is the whole option (`sb-4` → 3 buttons,
+   `cs-round-2btn` → 1 button, `lbh-no1-tc-arc` → no buttonhole).
+2. **One drawing backing many options** guarantees indistinguishable photographs — shoulder pads
+   (4 per product), notch angles, peak angles, chest-pocket welts, slant widths.
+3. **Annotation rendered as cloth** — red hatching becoming a contrast panel (`bias-inner-collar-stand`),
+   and red welt marks becoming tonal sheen rather than real contrast (`vest-contrast-specify-seam`).
