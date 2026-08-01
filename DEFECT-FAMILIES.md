@@ -557,3 +557,68 @@ this same sheet, correctly renders a **single** left pointed pocket — which sh
 the count from the label rather than the drawing. That is a real mitigation, but it is not a
 guarantee, so **QC must explicitly verify pocket COUNT on both candidates**: a two-pocket result
 would be identical to the `both` option and would sail through a naive fidelity check.
+
+---
+
+## LEGACY-LIVE-IMAGE DEFECT RATE — measured on a sample, and it inverts a priority
+
+**Measured 2026-08-01.** 745 in-scope rows show a generated photograph that this pipeline has never
+graded. Rather than commit hundreds of agent-hours to grading all of them blind, a deterministic
+spread of 24 was sampled across every product and field. **The first 12 are judged.**
+
+```
+   3  OK           correctly and recognisably depicts the option
+   4  INDISTINCT   right family, but nothing separates it from its menu siblings
+   5  WRONG        different feature, wrong count, or wrong part of the garment
+```
+
+**~40% actively wrong. 75% not fit for a customer to choose from.** Extrapolated across 745 rows
+that is on the order of 300 customer-facing images showing something other than what was ordered.
+
+### The unambiguous ones
+
+| option | label promises | image shows |
+|---|---|---|
+| `suit-2pc/sb-4` | SB **4** Buttons | **three** buttons and three buttonholes — it is an SB 3 |
+| `shirt/cs-round-2btn` | Round Stand (**2 Buttons**) | **one** button, with a tie knot over the band that is the subject |
+| `suit-3pc/contrast-ticket-besom` | contrast trim on the **ticket** pocket | the **chest** welt, with a pocket square in it; the ticket pocket is not in frame |
+| `shirt/bias-inner-collar-stand` | a panel **cut on the bias** | a solid navy **contrast band** — the drawing's red hatching rendered as cloth |
+
+That last one is the "colour in the drawing is notation, not cloth" failure, live in production. The
+correctly-executed sibling `bias-outer-top-collar` shows what it should look like: striped fabric
+with the stripes running diagonally on the affected piece. **Worth sweeping the whole `bias_cutting`
+family and any other hatched-blueprint option for the same artifact.**
+
+### This inverts the priority order
+
+`customer_view_audit.mjs` found 645 rows still showing a technical drawing, and that read as the
+bigger problem. It is not. **A drawing is honest** — the customer sees manufacturing documentation
+and knows it. **A wrong photograph is not** — it is a confident, specific, false claim about what
+will be manufactured. Someone ordering "SB 4 Buttons" is being shown a three-button jacket.
+
+So the ~300 wrong live images outrank the 645 drawings, and they are cheaper to find than to fix:
+grading is free.
+
+### Duplicate reuse is worse than this sample can show
+
+In the sport-coat chest-pocket menu alone, `cp-welt-23`, `cp-welt-25`, `cp-welt-27`, `cp-jetted` and
+`cp-trapezoid` all ship the **identical file** (sha1 `60aa2e9282`); `cp-welt-curved-23/25/27/29`
+share another (`ed619110ab`); four patch variants share a third (`f7fa88b7d6`). **Nine of nineteen
+options in one menu are duplicates of a sibling.** The INDISTINCT rate across the full 745 is
+therefore materially higher than 4-in-12.
+
+### Two options cannot be photographed distinguishably at all
+
+- `suit-2pc/cd-minus-3` — a ±cm chest-dart *position* adjustment has no visual signature. -3, -2,
+  standard, +2 and +3 cannot differ in a photograph.
+- `suit-2pc/heel-none` — an absence, on the **inside back** hem, which the shot does not even show.
+
+These need a diagram or text, not a photograph. Recorded rather than retried.
+
+### Three of twelve blueprints are not drawings
+
+`jacket/front-style/sb-3-roll-2.jpg` and `jacket/front-style/sb-4.jpg` are plain fabric swatches;
+`jacket/chest-dart/minus-3.jpg` is a screenshot of a supplier **button** catalogue page. These were
+judged against the label instead, so the defect counts above remain about the live images. This is
+the same `jacket/front-style/` folder already found to hold swatches for `sb-3` and `db-4x2` — the
+folder is systematically mis-populated.
