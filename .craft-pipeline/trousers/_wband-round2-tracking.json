@@ -1,0 +1,37 @@
+{
+ "schema": "ladder-round-tracking/v1",
+ "family": "wband",
+ "round": 2,
+ "startedAt": "2026-08-01T23:36:01.336Z",
+ "anchor": "1.5 cm horn fly button on band extension; band = N/1.5 button-diameters; band top edge at one-third frame height",
+ "jobs": {
+  "wband-35": {
+   "jobId": "17cf5b46-642b-4fba-ae87-7db9fdbbfe04",
+   "status": "fired"
+  },
+  "wband-38": {
+   "jobId": "e974c09d-3893-4296-bf0a-a0f5cdc90686",
+   "status": "fired"
+  },
+  "wband-40": {
+   "jobId": null,
+   "status": "TO-FIRE — prompt.json ready with 2.67 button-diameters line"
+  },
+  "wband-45": {
+   "jobId": null,
+   "status": "TO-FIRE — 3.0 button-diameters"
+  },
+  "wband-50": {
+   "jobId": null,
+   "status": "TO-FIRE — 3.33 button-diameters"
+  }
+ },
+ "next": [
+  "fire 40/45/50 from their prompt.json (already carry SPEC LOCK + button anchor)",
+  "poll all 5, record_generation (attempt auto-increments to 2 from the FAIL qc.json)",
+  "BEFORE regenerating anything further: rename each qc.json is NOT needed — attempt 2 is within budget",
+  "measure: band-height / button-diameter per image (sharp script in failure-log lesson); require monotonic 2.33<2.53<2.67<3.0<3.33 within tolerance",
+  "if monotonic: per-image QC (compare_prep --spec-only) + ship the SET together",
+  "if not: owner report with both rounds — never ship unordered"
+ ]
+}

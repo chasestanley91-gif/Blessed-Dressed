@@ -766,3 +766,5 @@ five independent generations — each tile needs an INTERNAL SCALE REFERENCE (a 
 gate becomes zoom-invariant. Set report: .craft-pipeline/trousers/_wband-ladder-report.json.
 Retry round 2 planned with the button anchor; on a second ordering failure the family
 goes to the owner with both measurement rounds.
+
+[TOOL GAP] apply_correction.mjs rebuilds prompts WITHOUT the spec-only SPEC LOCK transform (it has its own rebuild path that bypasses build_prompt --write specOnly branch). One-off transformed the 5 wband round-2 prompts by hand; the durable fix is to route apply_correction through build_prompt or duplicate the transform there.
