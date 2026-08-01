@@ -407,9 +407,36 @@ export function buildPrompt(spec) {
         `the whole span of the garment, so BOTH ends of it must sit inside the picture with clear ` +
         `background beyond each. Do not crop in on the centre — cropping the ends away removes the very ` +
         `place the absence is judged.`
+      // AN ABSENCE MUST BE PROVEN, NOT MERELY UNSHOWN, and the difference is
+      // entirely a framing and lighting decision. Measured across four options:
+      //
+      //   back-besom-no-right  PASSED. The right seat panel is genuinely in
+      //                        shot, centre-back seam out to the hip edge with
+      //                        background beyond it, and the mirrored position
+      //                        where a right besom would sit is lit,
+      //                        unobstructed and plain. The absence is PROVEN.
+      //   heel-none            FAILED. Shot the OUTSIDE FRONT of the hem. A heel
+      //                        guard lives on the inside back, never in frame,
+      //                        so the image is identical to heel-standard.
+      //   vest-extra-no-seal-stitch  FAILED. The pocket ends occupy a sliver of
+      //                        a frame dominated by ornate buttons.
+      //   flat-front           FAILED first pass. Near-black cloth, flat frontal
+      //                        light: a pleated front would look identical.
+      //
+      // "No pleat visible" is not the same claim as "flatness demonstrated". The
+      // frame has to put the viewer where the feature would have been, at a size
+      // where it could not be missed, under light that would reveal it.
       : `A clean studio DOCUMENTATION photograph of the deliberate ABSENCE of a feature. ` +
         `${spec.fieldLabel}: "${spec.label}". The clean, unbroken area where the ${feature} would be IS ` +
-        `the subject, identifiable within one second.`;
+        `the subject, identifiable within one second. ` +
+        `PROVE THE ABSENCE — do not merely omit the feature. Frame the exact place on the garment where ` +
+        `the ${feature} would sit if this option had one, large enough in the picture that a viewer ` +
+        `could not miss it were it there, and include enough surrounding construction — seams, edges, ` +
+        `the matching position on the opposite side — that the viewer can recognise WHERE they are ` +
+        `looking. Light that surface so a ${feature}, if present, would break the plane or throw a ` +
+        `shadow: a flatly-lit or shadowed surface proves nothing, because the feature would be ` +
+        `invisible there whether or not it existed. The picture must let a customer conclude "there is ` +
+        `none here", not merely fail to show one.`;
     geometry = `This option is the ABSENCE of the ${feature}.`;
     coverage =
       `MANDATORY — do NOT render a ${feature}. Reproduce a clean garment with no ${feature}, exactly as ` +
@@ -475,6 +502,35 @@ export function buildPrompt(spec) {
   // value. It also has to say "do not compensate", because the natural
   // temptation is to zoom in on a small measurement to make it look distinctive,
   // which destroys the very comparison the family exists to support.
+  // DISTINGUISHED BY WHAT IS MISSING — a wider set than spec.absence.
+  //
+  // spec.absence governs what to RENDER, and it deliberately excludes labels
+  // like "Flat Front" and "Standard" (isAbsence() in tech-pack-interpreter,
+  // line 273) because those are positive things to photograph: a flat front is
+  // a smooth panel, not nothing. That decision is right and is left alone.
+  //
+  // But the FRAMING requirement is broader than the rendering one. A customer
+  // tells "Flat Front (No Dart)" from its pleated siblings by what is ABSENT,
+  // so the picture still has to prove the absence — and trousers/flat-front is
+  // exactly the option that failed that test, twice, while carrying
+  // absence:false. Its label says "(No Dart)" in parentheses, which the
+  // start-anchored isAbsence() regex cannot see.
+  //
+  // So this predicate is for framing only. It never changes what gets rendered.
+  const MISSING_FEATURE = /\b(no|none|without|ventless|unlined|flat|plain)\b/i;
+  const distinguishedByMissing = Boolean(spec.absence) || MISSING_FEATURE.test(String(spec.label || ''));
+
+  // Fires for options distinguished by what is MISSING, including those
+  // spec.absence deliberately excludes (see the predicate above). Framing only.
+  const absenceProof = (distinguishedByMissing && !spec.absence)
+    ? 'PROVE THE ABSENCE — this option is told apart from its siblings by what is NOT there, so the '
+      + 'picture has to show that. Frame the exact place where the missing feature would sit, large '
+      + 'enough that a viewer could not miss one were it there, with enough surrounding construction — '
+      + 'seams, edges, the matching position on the opposite side — to recognise where they are looking. '
+      + 'Light it so the feature, if present, would break the plane or throw a shadow: a flatly-lit '
+      + 'surface proves nothing, because the feature would be invisible there whether or not it existed.'
+    : null;
+
   const LADDER_LABEL = /(\d+(?:\.\d+)?)\s*(cm|mm|°|deg)/i;
   const isLadder = LADDER_LABEL.test(String(spec.label || ''));
   const matchedFraming = isLadder
@@ -554,6 +610,7 @@ export function buildPrompt(spec) {
     BLUEPRINT_LOCK,
     presentation,
     focus,
+    absenceProof,
     matchedFraming,
     photoBlockFor(spec),
     texture,
