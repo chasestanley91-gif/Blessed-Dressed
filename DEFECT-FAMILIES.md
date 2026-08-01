@@ -1665,3 +1665,55 @@ legend-free structural facts — presence or absence of the material boundary, a
   shared landmark spanning both.
 - All five neckline photos were confirmed to be **waistcoats** — topstitched armhole with a shirt sleeve
   behind — despite living under `/images/generated/jacket/`.
+
+---
+
+## Two buttonhole options ship a bare lapel — and two near-miss measurements caught in flight
+
+Twelve sport-coat options graded 2026-08-01: **9 OK, 3 WRONG**.
+
+### `lbh-no1-dc-straight` and `lbh-no1-tc-arc` have no buttonhole at all
+
+Both shipped photographs are a **clean navy notch lapel** — which is precisely what the *sibling*
+option `lbh-none` ("Clean lapel, no buttonhole") calls for. Verified three independent ways: full-frame
+inspection, a 950 px zoom on the whole lapel panel, and a saturated-pixel scan whose only components
+resolve to skin, background and collar — nothing on the lapel face. The same scan isolates
+`lbh-rome-18`'s buttonhole cleanly as a 6354 px component, so the method detects one when present.
+
+**Both files are unique on disk, so both are regenerable.** What a replacement for `lbh-no1-tc-arc`
+must show is unusually well specified by its drawing and worth recording: an arch-up arc (signed
+sagitta/chord **+0.153** over a 707 px run), keyhole eye at the **right**, closed bar at left, and a
+three-zone scheme where **the outer two zones match** (green) separated by a single contrasting pink
+band at **0.36–0.53** of the run. That flanked-band signature is the option's whole identity.
+
+### The lapel-buttonhole family is otherwise the best work in the catalog
+
+Nine of twelve reproduce their drawing's measurable signature closely — `lbh-rome-18`'s colour
+transitions land at 0.54/0.71 against a drawn 0.54/0.72; `lbh-undivided`'s heart-head flare begins at
+0.69 against 0.70 drawn with the flare ratio within 10%; `lbh-glory-rays` has exactly five star points
+in both. Every one has a unique file.
+
+### Two measurements that would have produced wrong verdicts, caught by checking extent
+
+Both are the session's recurring lesson in a new form — **a measurement taken over the wrong *span*
+rather than the wrong *object***:
+
+1. **`lbh-arc-double`** — the first pass captured only 514 px of a 716 px run, because the pink half
+   renders faintly and fell below threshold. That put the drawn colour boundary at **0.60**, implying a
+   12% error against the photo's 0.48. Re-measured over the validated full extent the drawn boundary is
+   **0.47** — near-exact agreement, not an error.
+2. **`lbh-milanese-25`** — the first photo pass returned sagitta **+0.110** because the mask latched onto
+   only the saturated pink portion and missed the pale left third. The corrected full-run figure is
+   **−0.111**. A **sign flip**, which would have failed a correct image for arcing the wrong way.
+
+The fix in both cases was to check the extracted component's bounding box against the visually confirmed
+run before trusting the number. Worth adding to the standing discipline: *validate the span, not just
+the target.*
+
+### Red-markup literalisation checked and NOT found here
+
+Given `stitch-03-amf` and `lbh-milanese-20` both baked drawing annotation into product images, this
+grader checked specifically. Across this supplier set the drawn thread is variously green, gold, violet,
+blue and pink, so coloured thread here is a **genuine sample colour, not the highlight convention**, and
+the circled ①②③ markers are separate high-chroma components well clear of the stitch run in every case.
+The concern is real but does not generalise to this family.

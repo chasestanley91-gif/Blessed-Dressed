@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-01T13:42:15.494Z",
+  "updatedAt": "2026-08-01T14:02:39.042Z",
   "rows": [
     {
       "option": "shirt/collar-af1-70",
@@ -218,6 +218,14 @@
       "gradedAt": "2026-08-01T11:42:53.992Z"
     },
     {
+      "option": "sport-coat/lapel-shawl-0e",
+      "verdict": "WRONG",
+      "liveImage": "/images/generated/jacket/lapel-shawl-0e.webp",
+      "confidence": "high",
+      "why": "The shipped file is byte-identical (md5 9b0c1edca514f5ab958f6028121dfa66) to FIVE sibling options: lapel-shawl, lapel-shawl-d, lapel-shawl-0a, lapel-shawl-0005 and lapel-shawl-asymmetric. One file cannot depict six options, and it is definitively wrong for at least one of them - the photo shows a symmetric shawl and lapel-shawl-asymmetric is by definition not - so it fails distinguishability outright. Separately, profiled the 090E flat pattern piece (ink bbox 340,106-889,1096) against siblings 090A and 0005 by outer-edge width sampled at 21 height fractions, normalised to each piece's own max width: 090E aspect W/H 0.555 and still 0.311 of max width at 90% of its height; 090A aspect 0.479 and 0.236 at 90%; 0005 aspect 0.462 and 0.103 at 90%. So 090E's signature is a distinctly shorter and wider piece with a blunt lower termination. The shipped photo is a tight satin-lapel crop stopping around mid-chest which excludes the lapel's lower termination entirely, so that signature is not in frame at all. Shared file, so likely unfixable by regenerating this path alone.",
+      "gradedAt": "2026-08-01T13:58:51.652Z"
+    },
+    {
       "option": "sport-coat/lbh-005-hand",
       "verdict": "OK",
       "liveImage": "/images/generated/jacket/lbh-005-hand.webp",
@@ -242,6 +250,30 @@
       "gradedAt": "2026-08-01T11:42:53.992Z"
     },
     {
+      "option": "sport-coat/lbh-arc-double",
+      "verdict": "OK",
+      "liveImage": "/images/generated/jacket/lbh-arc-double.webp",
+      "confidence": "high",
+      "why": "Two colour zones, green left / pink right, eye at right, gentle arch up - all matching. Signed sagitta/chord: drawing 055H = +0.1214 over the full 715px run, rows restricted to y 578-800 to exclude the annotation ring which had merged into the component and pushed a contaminated +0.179; shipped photo = +0.0993 over a 293px run matching the visually-confirmed extent. IMPORTANT CORRECTION, because it changes a conclusion: the first drawing pass captured only 514px of the 716px run because the pink half renders faintly and fell below threshold, putting the green-to-pink boundary at 0.60. Re-measured over the validated full extent the drawn boundary is at 0.47 - and the photo's is at 0.48. Near-exact, where the truncated measurement had suggested a 12% error. Colour ORDER also correct, green first.",
+      "gradedAt": "2026-08-01T13:58:51.652Z"
+    },
+    {
+      "option": "sport-coat/lbh-cloud",
+      "verdict": "OK",
+      "liveImage": "/images/generated/jacket/lbh-cloud.webp",
+      "confidence": "high",
+      "why": "Matches drawing d316bedda294: a green undulating double line running left to right, tapering to a fine point at the LEFT end, cresting at roughly 0.40 of the run, descending, then rising at the RIGHT end into a closed loop. The photo reproduces all four features in the same order and the same green. Signed sagitta/chord of the drawn run is -0.088 over 699px with a chord slope of -11.3 degrees, the crest-then-descend profile, and the photo shows the same silhouette. ONE MINOR DIFFERENCE called out rather than failed: the drawn terminal loop is a rounded rectangle, the shipped one a circle. NOT MEASURED: no number was put on the loop aspect ratio - the drawn loop is only ~120px across and partly open at the frame edge of the ink bbox, so a ratio from it would not be trustworthy.",
+      "gradedAt": "2026-08-01T13:58:51.652Z"
+    },
+    {
+      "option": "sport-coat/lbh-glory-rays",
+      "verdict": "OK",
+      "liveImage": "/images/generated/jacket/lbh-glory-rays.webp",
+      "confidence": "high",
+      "why": "Near-exact reproduction of drawing 0328997b9427: a blue FIVE-pointed star outline at the right with a long swooping tail sweeping down and to the left, terminating in a small hook curl at the left end. Verified point count = 5 in both drawing and shipped photo at 950px zoom - the count the drawing specifies is met exactly. Motif orientation matches (star right, curl left, tail passing beneath the star) and thread colour matches the drawn blue. The drawing carries no red annotation markup, zero strong-red components, so there is nothing to have been literalised. NOT MEASURED: signed sagitta is not a meaningful descriptor for a closed decorative motif, so this was graded on motif topology and point count rather than curvature.",
+      "gradedAt": "2026-08-01T13:58:51.652Z"
+    },
+    {
       "option": "sport-coat/lbh-lumi",
       "verdict": "OK",
       "liveImage": "/images/generated/jacket/lbh-lumi.webp",
@@ -258,12 +290,44 @@
       "gradedAt": "2026-08-01T11:42:53.992Z"
     },
     {
+      "option": "sport-coat/lbh-milanese-23",
+      "verdict": "OK",
+      "liveImage": "/images/generated/jacket/lbh-milanese-23.webp",
+      "confidence": "high",
+      "why": "Arc direction, colour-zone count and eye placement all match. Signed sagitta/chord-length (positive = arch upward) measured on the largest connected ink component: drawing 055J = +0.1216 over a 621px run, independently re-measured at a looser threshold over the full 670px extent = +0.1201, so two thresholds agree and the figure is validated. Shipped photo = +0.1122 over a 401px run, component bbox matching the visually-confirmed extent rather than truncated. Both arch upward, magnitudes within 8%. Keyhole eye at the RIGHT and closed bar at left in both. Three colour zones in both. DRIFT NOTED: drawn zone boundaries sit at 0.29 and 0.66 of the run, shipped at 0.44 and 0.75 - the first colour occupies 44% of the shipped run against 29% drawn. A proportion drift on a customer-appointed attribute, not a sibling confusion; it stays clearly separable from lbh-milanese-25 (sags) and lbh-arc-double (two colours).",
+      "gradedAt": "2026-08-01T13:58:51.652Z"
+    },
+    {
+      "option": "sport-coat/lbh-milanese-25",
+      "verdict": "OK",
+      "liveImage": "/images/generated/jacket/lbh-milanese-25.webp",
+      "confidence": "high",
+      "why": "Signed sagitta/chord: drawing 06EJ = -0.1255 (tight threshold, 694px run) and -0.1281 (loose threshold, 747px run), agreeing so validated; NEGATIVE means the run sags below its own chord, i.e. arc downwards. Shipped photo = -0.1110 over a 256px run, component bbox clear of all crop edges. CORRECTION RECORDED: the first photo pass returned +0.110 because the mask had latched onto only the saturated pink portion and missed the pale left third - cropping and looking showed the full run, and the corrected full-run figure is -0.111, a SIGN FLIP that would have wrongly failed a correct image. Keyhole eye at right in both, three colour zones in both. Checked for red-markup literalisation and it is NOT that: across this supplier set the drawn thread is variously green, gold, violet, blue and pink, so pink reads as a sample thread colour; the circled markers are separate red components well above the run and are NOT baked into the photo.",
+      "gradedAt": "2026-08-01T13:58:51.652Z"
+    },
+    {
       "option": "sport-coat/lbh-milanese-curved",
       "verdict": "OK",
       "liveImage": "/images/generated/jacket/lbh-milanese-curved.webp",
       "confidence": "high",
       "why": "Drawing 06EG, arc slight downwards, is an ORANGE macro sagging concave-upward, squared left, curling to a rounded hook right. Orange mask plus principal-axis profiling: centreline sagitta/L -0.131 photo vs -0.131 drawing, exact agreement on the discriminating curvature and correctly opposite in sign to lbh-lumi at +0.150. L/W 8.31 vs 7.55 (10%). Accounting for the drawing reversed axis, both are widest at the hooked right end (1.48 photo, 1.55 drawing) and squared at the left. Thread orange in both.",
       "gradedAt": "2026-08-01T11:42:53.992Z"
+    },
+    {
+      "option": "sport-coat/lbh-no1-dc-straight",
+      "verdict": "WRONG",
+      "liveImage": "/images/generated/jacket/lbh-no1-dc-straight.webp",
+      "confidence": "high",
+      "why": "There is NO BUTTONHOLE anywhere in the shipped photograph - a clean navy notch lapel, which is what the sibling option lbh-none (Clean lapel, no buttonhole) calls for. Verified three ways: full-frame visual inspection; a 950px zoom on the whole lapel panel (crop 280,380 460x460) showing only edge pick-stitching and fabric weave with no stitched eye; and a whole-image saturated-pixel scan (chroma/max above 0.35, max above 70) whose only components are the neck/skin region and two small colour-cast fragments at the shirt/lapel boundary - nothing on the lapel face. For contrast the same scan on lbh-rome-18 isolates its buttonhole cleanly as a 6354px component. Drawing 055R specifies a straight two-colour buttonhole, gold body to ~0.72 of the run with a rose round head over the last ~0.28. Unique file, so regenerable.",
+      "gradedAt": "2026-08-01T13:58:51.639Z"
+    },
+    {
+      "option": "sport-coat/lbh-no1-tc-arc",
+      "verdict": "WRONG",
+      "liveImage": "/images/generated/jacket/lbh-no1-tc-arc.webp",
+      "confidence": "high",
+      "why": "There is NO BUTTONHOLE in the shipped photograph - a clean navy notch lapel with edge pick-stitching only. Verified by full-frame inspection, a 950px zoom on the lapel (crop 250,380 440x440), and a whole-image saturated-pixel scan whose components resolve to blurred background, skin and the collar/tie - nothing on the lapel face. What drawing 055Y specifies, and what a replacement must show: an arch-up arc (signed sagitta/chord +0.153 over a 707px run), keyhole eye at the RIGHT, closed bar end at left, and a distinctive THREE-ZONE colour scheme in which the outer two zones MATCH (green, rgb ~145,200,162) separated by a single contrasting pink band (rgb ~250,138,178) occupying roughly 0.36-0.53 of the run. That flanked-band signature is this option's whole identity against its arc siblings. Unique file, so regenerable.",
+      "gradedAt": "2026-08-01T13:58:51.652Z"
     },
     {
       "option": "sport-coat/lbh-pinpoint",
@@ -274,12 +338,44 @@
       "gradedAt": "2026-08-01T11:42:53.992Z"
     },
     {
+      "option": "sport-coat/lbh-rome-18",
+      "verdict": "OK",
+      "liveImage": "/images/generated/jacket/lbh-rome-18.webp",
+      "confidence": "high",
+      "why": "Best geometric match in the batch. Drawing 055V is a STRAIGHT run (sagitta/chord +0.036 over 690px) with a squared bar end left and a bulbous ROUND head right; three colour zones yellow (241,215,113) / pale tan (204,155,128) / orange (222,140,84) with boundaries at 0.54 and 0.72. Shipped photo (component bbox orig x 455-652) is straight (sagitta/chord -0.068 over a short 204px run, within noise of straight at that length; the 15.5 degree chord tilt is the lapel angle, not a gradeable attribute), bar end left, round head right, three zones yellow (227,205,105) / tan (204,160,121) / orange (222,145,55) with boundaries at 0.54 and 0.71. Colour-transition fractional positions agree to within 0.01 and 0.01 - the tightest agreement of any option here.",
+      "gradedAt": "2026-08-01T13:58:51.652Z"
+    },
+    {
+      "option": "sport-coat/lbh-rome-point-m",
+      "verdict": "OK",
+      "liveImage": "/images/generated/jacket/lbh-rome-point-m.webp",
+      "confidence": "high",
+      "why": "Single-colour violet buttonhole, T-bar tack at LEFT, lens/leaf body converging to a POINTED tip at RIGHT, matching drawing 1c04488ca8c7. Same width-profile discriminator as its round-head sibling: DRAWING point-m reaches max width 178 at 0.54 of the run then tapers continuously to 52 at the tip, 29% of peak. SHIPPED photo reaches max width 51 at 0.54-0.62 then tapers to 16 - peak position 0.54-0.58 against 0.54 drawn, terminal width 31% of peak against 29% drawn. Both the widest-point location and the taper depth reproduce the drawing. METHOD NOTE: the first pass used a luminance threshold and returned a flat thickness of 130, the full crop height, because the dark violet thread sits below the fabric highlights - that reading measured the shading, not the thread, and was discarded for the saturation-based mask above.",
+      "gradedAt": "2026-08-01T13:58:51.652Z"
+    },
+    {
+      "option": "sport-coat/lbh-rome-round-h",
+      "verdict": "OK",
+      "liveImage": "/images/generated/jacket/lbh-rome-round-h.webp",
+      "confidence": "high",
+      "why": "Single-colour light-blue buttonhole with a T-shaped bar tack at the LEFT and a ROUND head at the RIGHT, matching drawing 9d4e8f89bffb on every count and cleanly separable from its pointed sibling. The discriminator profiled is where the run reaches maximum width and how late it drops, as per-column mask thickness normalised to run length: DRAWING round-h peaks at 170 units at 0.84 of the run and is still 168 at 0.89 before dropping to 69, whereas drawing point-m peaks at 178 at 0.54 and tapers continuously. SHIPPED photo peaks at 65 at 0.78-0.82, holds 62-63 to 0.90, then drops 54 then 38 - the late-drop round-head profile, not the long-taper pointed profile. Confirmed by eye at 950px zoom.",
+      "gradedAt": "2026-08-01T13:58:51.652Z"
+    },
+    {
       "option": "sport-coat/lbh-smoking-pipe",
       "verdict": "OK",
       "liveImage": "/images/generated/jacket/lbh-smoking-pipe.webp",
       "confidence": "high",
       "why": "Drawing 00EF carries a red magnified callout inside an ellipse; at 4.5x it resolves as a teardrop with a narrow POINT at the upper-left widening progressively to a broad ROUND HEAD at the lower-right, length 168px, head/mid-bar ratio ~1.9, and no squared sealing bar-tack at the tail. The photo, resolved with CLAHE at 5x on tone-on-tone navy, shows the same object: narrow rounded tail at (428,676) widening to a round head centred ~(525,755) with an open hole, outer head diameter ~45px against mid-bar ~24px = 1.9, matching the drawing, total length ~152px, and no squared bar-tack at the tail. Orientation matches (tail up-left, head down-right). The absent seal and the progressive taper are what separate it from lbh-005, lbh-017 and lbh-pinpoint, all of which show a crisp squared bar.",
       "gradedAt": "2026-08-01T11:42:53.992Z"
+    },
+    {
+      "option": "sport-coat/lbh-undivided",
+      "verdict": "OK",
+      "liveImage": "/images/generated/jacket/lbh-undivided.webp",
+      "confidence": "high",
+      "why": "Near-exact reproduction of drawing e040c5d47a70: a straight run terminating in a HEART-shaped head at the RIGHT with the cleft facing left, in coral-red thread. Profiled the head flare as per-column thickness normalised to run length. DRAWING: body holds ~85 units through the first two-thirds, flare begins at 0.70 and peaks at 270, head/body ratio 3.2. SHIPPED photo, re-run at a wider crop to confirm neither end was clipped with identical result: body ~25, flare begins at 0.69, peaks at 73, ratio 2.9. Flare-onset agrees to 0.01 and flare ratio to within 10%. Checked specifically for red-markup literalisation and it is NOT that: the drawn thread itself is coral (243,136,125) uniformly along the whole run, this illustration carries no circled annotation at all (zero strong-red annotation components), and sibling drawings from the same source use blue and green thread.",
+      "gradedAt": "2026-08-01T13:58:51.652Z"
     },
     {
       "option": "sport-coat/lp-patch",
@@ -386,6 +482,14 @@
       "gradedAt": "2026-08-01T11:41:40.168Z"
     },
     {
+      "option": "suit-3pc/back-stretch-vest",
+      "verdict": "OK",
+      "liveImage": "/images/generated/jacket/back-stretch-vest.webp",
+      "confidence": "high",
+      "why": "Drawing is a hatched waistcoat BACK with centre-back seam and no belt, strap or buckle. Validated that the absence is deliberate rather than hidden by the hatch fill: sibling vest-back-belt-3cm draws the belt band and buckle ON TOP of the identical hatching, and vest-back-strap-buckle draws a strap plus buckle, so a belt would be visible if present. Photo: navy waistcoat back, centre seam, panel uninterrupted from shoulders to hem, no strap and no buckle at the waist.",
+      "gradedAt": "2026-08-01T14:02:39.039Z"
+    },
+    {
       "option": "suit-3pc/lapel-collar-stand",
       "verdict": "WRONG",
       "liveImage": "/images/generated/jacket/lapel-collar-stand.webp",
@@ -482,6 +586,30 @@
       "gradedAt": "2026-08-01T09:46:55.708Z"
     },
     {
+      "option": "suit-3pc/vest-contrast-diy-1cm",
+      "verdict": "OK",
+      "liveImage": "/images/generated/vest/vest-contrast-diy-1cm.webp",
+      "confidence": "medium",
+      "why": "Correct as the thin-strip option: the photo's contrast band measures 53px over a 267px welt, h/w 0.199, against 0.355-0.398 for the flap and seam siblings - unambiguously the thinnest of the four, and close to the drawing's contrast-height over pocket-width of 0.165. DEVIATIONS RECORDED: the drawing confines contrast to a strip on the pocket's TOP edge (red h=30 of pocket h=87, 34%) leaving about 66% of the face in self fabric, whereas in the photo the contrast occupies 100% of the welt face (red 22px plus white 27px, with self-fabric navy resuming immediately above y521 and below y575); and the photo uses a red/white/red striped ribbon, i.e. two contrast colours where the drawing marks one zone - defensible for a DIY option where the customer picks the fabric, but noted.",
+      "gradedAt": "2026-08-01T14:02:39.039Z"
+    },
+    {
+      "option": "suit-3pc/vest-contrast-diy-flap",
+      "verdict": "UNSURE",
+      "liveImage": "/images/generated/vest/vest-contrast-diy-flap.webp",
+      "confidence": "low",
+      "why": "Two readings of the drawing conflict and could not be settled at 1200px, so no guess was made. Drawing: pocket outline h=97 w=189 (h/w 0.513), contrast filling the lower 62% of the pocket with a distinct grey band above spanning ~69% of pocket width against only ~27% in the DIY Seam drawing. Reading (a): that band is a welt above a contrast FLAP - supported by tech-pack convention calibrated on vest-lower-besom-flap (h/w 0.502) against vest-lower-welt (0.354) and vest-lower-jetted (0.269), which puts 0.513 squarely in flap territory. Reading (b): the band is edge shading and the red is just a deep welt face - supported by grey bands also appearing on the 1cm drawing. The PHOTO is unambiguous: a plain besom, red face bounded by stitch lines immediately above (y634) and below (y710) with NO second welt band, so no flap exists; and it is only 12% taller relative to width than the DIY Seam sibling photo (h/w 0.398 against 0.355), leaving the two options nearly indistinguishable. WRONG under reading (a), OK under reading (b).",
+      "gradedAt": "2026-08-01T14:02:39.037Z"
+    },
+    {
+      "option": "suit-3pc/vest-contrast-diy-seam",
+      "verdict": "OK",
+      "liveImage": "/images/generated/vest/vest-contrast-diy-seam.webp",
+      "confidence": "medium",
+      "why": "Drawing: a single filled red bar with no welt band above it (grey max ~27% of pocket width against 69% for the flap sibling), contrast height over pocket width 0.297. Photo: charcoal waistcoat chest besom whose welt face is entirely red, contrast h/w 0.355 - same single-element structure, ratio within 20% of the drawing, and the flap-greater-than-seam ordering seen in the drawings (0.317 over 0.297) is preserved in the photos (0.398 over 0.355). Caveat: this photo is nearly indistinguishable from the DIY Flap Surface sibling's photo, so the pair does not read apart without the label.",
+      "gradedAt": "2026-08-01T14:02:39.039Z"
+    },
+    {
       "option": "suit-3pc/vest-contrast-diy-seam-bottom",
       "verdict": "OK",
       "liveImage": "/images/generated/vest/vest-contrast-diy-seam-bottom.webp",
@@ -490,12 +618,60 @@
       "gradedAt": "2026-08-01T09:46:55.708Z"
     },
     {
+      "option": "suit-3pc/vest-contrast-lapel-1cm-specify",
+      "verdict": "OK",
+      "liveImage": "/images/generated/vest/vest-contrast-lapel-1cm-specify.webp",
+      "confidence": "medium",
+      "why": "Named feature correct: the drawing marks a CONSTANT-width red stripe (34-37px at every height) hugging only the outer lapel edge, about 23% of the 158px lapel width, collar left plain, total red 46,339px - a quarter of the diy fill. The photo's grey tape is likewise constant width (14-24px) tracking the lapel edge as it moves inward (x 201 to 224 to 258 to 284 to 323 to 366 with increasing y), measuring 18-24% of lapel width - same geometry, not a surface fill. OVERREACH: the photo also runs the same tape along BOTH armholes (a second tape run detected at x~81-95, separated from the lapel tape by navy), the chest welt and both lower pockets. The drawing marks none of these, and they belong to the separate contrast-pocket-vest field whose options appear in this same batch.",
+      "gradedAt": "2026-08-01T14:02:39.039Z"
+    },
+    {
+      "option": "suit-3pc/vest-contrast-lapel-diy",
+      "verdict": "OK",
+      "liveImage": "/images/generated/vest/vest-contrast-lapel-diy.webp",
+      "confidence": "high",
+      "why": "Drawing: red fills the ENTIRE lapel width at every scanline - 158px at y=400 tapering to 86px at y=800, with the red run's outer and inner edges both tracking the lapel outline - plus the collar leaf; total 195,599 red px. Photo: charcoal waistcoat whose full lapel AND collar surface is red, body, pockets and armholes left plain charcoal. Full-surface fill confirmed and contrast correctly confined to the lapel-plus-collar field with no trespass onto pockets or armholes.",
+      "gradedAt": "2026-08-01T14:02:39.039Z"
+    },
+    {
       "option": "suit-3pc/vest-contrast-lapel-diy-1cm",
       "verdict": "OK",
       "liveImage": "/images/generated/vest/vest-contrast-lapel-diy-1cm.webp",
       "confidence": "medium",
       "why": "Blueprint puts a narrow red edging strip along the outer edge of both lapels, the collar and the front edge; the live photo shows an ivory tape running exactly those edges, so the named feature is correct and cannot be confused with the full-contrast-lapel sibling. Noted deviation: the photo also adds the same tape to both armholes, the hem and all three pocket welts, which the drawing does not show and which trespasses on the separate contrast-pocket-vest field.",
       "gradedAt": "2026-08-01T09:46:55.708Z"
+    },
+    {
+      "option": "suit-3pc/vest-contrast-specify-seam-bottom",
+      "verdict": "OK",
+      "liveImage": "/images/generated/vest/vest-contrast-specify-seam-bottom.webp",
+      "confidence": "medium",
+      "why": "Named discriminator IS demonstrated: a vertical profile through the pocket shows a two-part red welt - upper strip peaking at y~423, lower strip at y~443, separated by a seam-line luminance dip at y~429-435 - consistent with contrast on the seam AND bottom. Pocket position correct (waist/lower, above the pointed hem, not chest). CROP DEVIATION: the drawing renders TWO lower pockets, one per front panel, confirmed numerically as symmetric red regions at x218-445 and x753-978, both y448-508, about 7,130px each; the photo's three-quarter crop contains only ONE, the opposite panel being entirely out of frame. Unlike the vest-chest-both-besom failure, dropping the twin does not collapse this into any sibling because no sibling is 'one lower pocket' and pocket count is not this field's discriminator - so recorded as a deviation rather than a fail. Under a strict excludes-one-of-two-drawn-features rule this would fail.",
+      "gradedAt": "2026-08-01T14:02:39.039Z"
+    },
+    {
+      "option": "suit-3pc/vest-hole-real-straight",
+      "verdict": "OK",
+      "liveImage": "/images/generated/vest/vest-hole-real-straight.webp",
+      "confidence": "medium",
+      "why": "Photo matches its drawing: straight bar, squared ends, no eye. But the drawing measures L/W 5.73, 0 enclosed holes, axis -147.8 degrees - geometrically IDENTICAL to the regular-straight sibling's drawing at 5.69 - so the drawing does not encode the handworked-versus-machine property that is the only real difference between these two options. Hand versus machine could NOT be verified: three stitch-density measurements disagreed (FFT gave 39 against 6 stitches; peak-count gave ~27 against ~24 per buttonhole) at buttonhole lengths of 113px and 68px, at or below the resolution limit, so none is validated. Sibling ambiguity unresolved.",
+      "gradedAt": "2026-08-01T14:02:39.039Z"
+    },
+    {
+      "option": "suit-3pc/vest-hole-regular-round",
+      "verdict": "OK",
+      "liveImage": "/images/generated/vest/vest-hole-regular-round.webp",
+      "confidence": "high",
+      "why": "The drawing's callout is the only one of the three with an enclosed eye: 1 hole of 2035px at the lower-right terminus, max width 107.5px against a 74px bar shank (the eye bulge), L/W 4.01. Photo shows a keyhole buttonhole with a clear open round eye at the lower-right end and a bar tack at the upper-left - eye present, same terminus, same orientation.",
+      "gradedAt": "2026-08-01T14:02:39.038Z"
+    },
+    {
+      "option": "suit-3pc/vest-hole-regular-straight",
+      "verdict": "OK",
+      "liveImage": "/images/generated/vest/vest-hole-regular-straight.webp",
+      "confidence": "high",
+      "why": "The drawing's magnified red callout measures a straight bar with ZERO enclosed holes, L/W 5.69, axis -147.8 degrees. Photo shows a red straight buttonhole with squared bar-tacked ends at both terminals and no eye, L/W 5.78 - within 2% of the drawing. The end-shape discriminator matches. COULD NOT MEASURE: absolute cm, no scale reference in either image.",
+      "gradedAt": "2026-08-01T14:02:39.038Z"
     },
     {
       "option": "suit-3pc/vest-lapel-bh-both",
@@ -530,12 +706,28 @@
       "gradedAt": "2026-08-01T13:42:15.492Z"
     },
     {
+      "option": "suit-3pc/vest-lower-none",
+      "verdict": "OK",
+      "liveImage": "/images/generated/jacket/vest-lower-none.webp",
+      "confidence": "high",
+      "why": "Drawing (md5 01d9880de5) is a V-neck waistcoat front, pointed hem, 4 buttons plus an open bottom buttonhole, and ZERO pockets. Photo: charcoal waistcoat, V-neck, pointed hem, no lower pockets and no chest pocket. Critically the waist/lower-pocket zone is fully in frame - the crop runs down past the pointed hem to the trouser waistband - so the absence is positively demonstrated, not a crop artefact. Minor deviation: photo has 5 fastened buttons against the drawing's 4 plus open buttonhole, but button count is a separate field.",
+      "gradedAt": "2026-08-01T14:02:39.039Z"
+    },
+    {
       "option": "suit-3pc/vest-piping-diy",
       "verdict": "OK",
       "liveImage": "/images/generated/vest/vest-piping-diy-v2.webp",
       "confidence": "high",
       "why": "Blueprint shows the vest interior with a red piping line along the junction of the front facing and the lining; the live photo shows the garment open on a hanger with bright red corded piping running that exact facing/lining seam from shoulder to hem, and a zoom on the mid-body confirms a finished sleeveless armhole, so it is a vest interior and not a jacket.",
       "gradedAt": "2026-08-01T09:46:55.708Z"
+    },
+    {
+      "option": "suit-3pc/vest-ticket-none",
+      "verdict": "OK",
+      "liveImage": "/images/generated/jacket/vest-ticket-none.webp",
+      "confidence": "medium",
+      "why": "Photo: navy waistcoat front with no ticket pocket, no lower pockets, no chest pocket; full front in frame down to hem and trousers. Button treatment matches the drawing exactly (4 buttons plus open bottom buttonhole). LIMITATION RECORDED: this option's illustration is BYTE-IDENTICAL to vest-lower-none's (same md5 01d9880de5), so the drawing cannot by itself discriminate no-ticket-pocket from no-lower-pockets - both photos are consistent with it. The two shipped photos are genuinely different images of different garments, so there is no photo reuse.",
+      "gradedAt": "2026-08-01T14:02:39.039Z"
     },
     {
       "option": "trousers/jeans-arc",
