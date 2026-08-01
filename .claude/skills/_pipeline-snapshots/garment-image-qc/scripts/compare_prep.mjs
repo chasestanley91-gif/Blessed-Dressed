@@ -65,7 +65,20 @@ const badBlueprint = (s) =>
   /(^|\/)images\/(generated|ai)\//i.test(s) ||
   /\.svg(\?|#|$)/i.test(s);
 
-if (badBlueprint(spec.illustration && spec.illustration.path)) {
+// SPEC-ONLY MODE (owner ruling 2026-08-01: the drafting specification is LAW;
+// illustrations aid, they do not direct). --spec-only sets up a comparison
+// against the SPEC'S OWN GEOMETRY for options that genuinely have no
+// manufacturing drawing. It NEVER bypasses a real blueprint: if the spec
+// records an existing drawing on disk, the flag is refused — QC against the
+// drawing stays mandatory wherever a drawing exists.
+const SPEC_ONLY = process.argv.includes('--spec-only');
+if (SPEC_ONLY && spec.illustration && spec.illustration.exists) {
+  console.error('ERROR: --spec-only refused — this option HAS a manufacturing drawing on disk:');
+  console.error('  ' + spec.illustration.disk);
+  console.error('  QC must compare against the drawing. Drop --spec-only.');
+  process.exit(1);
+}
+if (!SPEC_ONLY) if (badBlueprint(spec.illustration && spec.illustration.path)) {
   const p = (spec.illustration && spec.illustration.path) || '(none)';
   console.error(`ERROR: refusing to QC "${spec.addr}" — its blueprint is not a manufacturing drawing.`);
   console.error(`  spec.illustration.path = ${p}`);
@@ -79,6 +92,7 @@ if (badBlueprint(spec.illustration && spec.illustration.path)) {
   console.error('  belongs in needs-source — do not generate or QC it.');
   process.exit(1);
 }
+
 
 let candidatePath = gen.candidatePath;
 if (args.attempt && Number(args.attempt) !== gen.attempt) {
@@ -96,11 +110,18 @@ const out = {
   label: spec.label,
   orientation: spec.view.orientation,
   absence: spec.absence,
-  illustration: {
-    path: spec.illustration.path,
-    disk: spec.illustration.disk,
-    remote: spec.illustration.remote,
-  },
+  illustration: SPEC_ONLY
+    ? null
+    : {
+        path: spec.illustration.path,
+        disk: spec.illustration.disk,
+        remote: spec.illustration.remote,
+      },
+  // spec-only: the comparison reference is the SPEC itself — QC scores the
+  // candidate against the stated geometry (owner ruling: the spec is law).
+  specReference: SPEC_ONLY
+    ? { description: spec.description, measured: spec.measured, garment: spec.garment }
+    : undefined,
   candidatePath,
   attempt: gen.attempt,
   forbidden: spec.forbidden,
