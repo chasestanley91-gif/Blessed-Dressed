@@ -1,0 +1,58 @@
+{
+  "scores": {
+    "shape": 87,
+    "geometry": 88,
+    "dimensions": 79,
+    "angles": 86,
+    "construction": 82,
+    "placement": 77,
+    "symmetry": 90,
+    "composition": 81,
+    "blueprint-match": 85
+  },
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "placement",
+      "description": "Both patches sit too high on their bags. Measuring patch top as a fraction of bag height (bag top at the waistband to bag bottom edge): drawing red mark starts about 73 percent down the bag; render patches start about 60 percent down (left patch top about 545px on a bag running about 160 to 800). Same error on both sides, so systematic rather than an asymmetry.",
+      "expected": "Watch pocket set low on the bag, its top edge roughly three quarters of the way down toward the bag's bottom edge",
+      "actual": "Patch tops at roughly 60 percent of bag height on both sides",
+      "correction": "Drop each patch so its top edge sits about three quarters of the way down the pocket bag, with the patch bottom close to the bag's rounded lower edge."
+    },
+    {
+      "severity": "minor",
+      "category": "dimensions",
+      "description": "Patch proportions drift from the drawing. Width as a fraction of bag width: drawing about 65 percent (150px mark on a 230px bag), render about 57 percent left (155 on 270) and about 47 percent right (135 on 285). Height as a fraction of bag height: drawing about 21 percent, render about 27. So the rendered watch pockets are narrower and deeper than drawn - closer to square, where the drawing is a wider shallower rectangle.",
+      "expected": "A wide shallow squared pocket spanning roughly two thirds of the bag's width and about a fifth of its height",
+      "actual": "Patches roughly half the bag width and about a quarter of bag height, reading nearly square",
+      "correction": "Widen each patch to about two thirds of its bag's width and reduce its depth so it reads as a shallow horizontal rectangle rather than a square."
+    },
+    {
+      "severity": "minor",
+      "category": "construction",
+      "description": "The drawing's mark is a squared U - three sides closed, top open, an applied pouch with an opening along its upper edge. In the render the patches read as a closed four-sided outline; an open top could not be confirmed on either side at this resolution, so the pocket's function is not clearly legible.",
+      "expected": "Three stitched sides with a visibly open finished top edge",
+      "actual": "A four-sided stitched square outline with no clearly readable opening",
+      "correction": "Stitch each patch along its two sides and bottom only, and give the top edge a folded topstitched finish that stands slightly away from the bag so the opening reads as an opening."
+    },
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "The drawing shows the whole trouser down past the knee; the render cuts at mid-thigh and includes bare abdomen above the waistband. The ecru-on-ecru patches are also low in contrast, which works against instant legibility.",
+      "expected": "The pocket bags shown in the context of the trouser, subject clearly separated",
+      "actual": "Mid-thigh crop with bare midriff; low patch-to-bag contrast",
+      "correction": "Keep the waistband and both bags but include more of the trouser below them, dress the waist so no skin shows, and light the bags so the applied patch edges throw a small shadow and read distinctly against the pocketing."
+    }
+  ],
+  "lockedFeatures": [
+    "COUNT AND SIDES CORRECT - exactly two watch pockets, one on each pocket bag, matching the drawing's two red squared-U marks. This is the whole point of the option and it is right; any regeneration must keep both",
+    "Both patches placed outboard on their bags and mirrored about the centre front",
+    "Near-identical vertical placement left and right, patch tops within about 10px",
+    "Presentation matches the drawing: trousers turned out at the waistband with both front pocket bags pulled forward and lying flat, fly extension exposed at centre",
+    "Rounded bottom-outer corner on each pocket bag, as drawn",
+    "Small dark stud at the top of each bag near the waistband, corresponding to the drawing's small marks there",
+    "No red guide marks, leader lines, ruler ticks or dimension text rendered into the photograph",
+    "Ecru cotton pocketing against dark charcoal worsted"
+  ],
+  "notes": "The strongest of its batch: correct count, correct sides, correct presentation, no traced annotation; all findings are proportional and stylistic rather than structural. Measurable: patch width and height as fractions of bag width and height, and patch top as a fraction of bag height - the only ratios both images share; all come out slightly small-and-square and set slightly high, consistently on both sides. NOT measurable: any centimetre figure for the pocket mouth, since spec.json carries no extracted dimensions and neither image contains a scale reference."
+}

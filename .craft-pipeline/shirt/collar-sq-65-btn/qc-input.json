@@ -1,0 +1,56 @@
+{
+  "scores": {
+    "shape": 15,
+    "geometry": 25,
+    "dimensions": 40,
+    "angles": 62,
+    "construction": 12,
+    "placement": 20,
+    "symmetry": 84,
+    "composition": 40,
+    "blueprint-match": 10
+  },
+  "errors": [
+    {
+      "severity": "critical",
+      "category": "construction",
+      "description": "The collar-point buttons are missing, and they are literally the only thing that makes this option exist. A pixel diff of square-in-65cm-with-button.jpg against square-in-65cm.jpg shows the two drawings are IDENTICAL across the entire frame except at rows y=130 to y=133, where the with-button version adds two circles of about 4-5px diameter centred at (78,131.5) and (134,131.5), sitting directly above each collar tip. That single difference is the whole option. The render shows plain leaves with no button at either tip and no buttonhole.",
+      "expected": "A button-down collar: one small button on each collar leaf just above the tip, fastening each leaf to the shirt front, plus the separate throat button",
+      "actual": "Two plain unfastened collar leaves with no tip buttons and no buttonholes; only the throat button present",
+      "correction": "Place a small mother-of-pearl button on the shirt front just above each collar tip, with the leaf tip buttoned down flat through a worked buttonhole in the leaf, so both leaves are anchored to the body and the button-down closure is the obvious subject of the photograph."
+    },
+    {
+      "severity": "critical",
+      "category": "shape",
+      "description": "Tip termination is a sharp acute point on both leaves. The drawing shares its leaf geometry pixel-for-pixel with square-in-65cm, and the label, description and spec forbidden list all specify a flat squared terminal edge.",
+      "expected": "A flat squared-off terminal edge on each collar leaf",
+      "actual": "Crisp acute point tips on both leaves",
+      "correction": "Terminate each collar leaf in a short flat horizontal cut edge with two right-angle corners, giving a blunt squared end face on both leaves."
+    },
+    {
+      "severity": "critical",
+      "category": "blueprint-match",
+      "description": "This render and the candidate for collar-small-sq-50 are effectively the same photograph. Between them the two options differ in the drawings by tip shape, point length and a pair of tip buttons, and none of those three differences survive into the images.",
+      "expected": "A photograph unmistakably distinct from its siblings, led by the visible button-down tip closure",
+      "actual": "Near-duplicate of the collar-small-sq-50 candidate",
+      "correction": "Crop tight on one buttoned collar tip so the button, buttonhole and squared leaf end fill a substantial share of the frame, while keeping both leaves in shot."
+    },
+    {
+      "severity": "major",
+      "category": "placement",
+      "description": "With no tip buttons rendered there is nothing at the drawn button coordinates. Scaled from the blueprint, the buttons sit immediately above each tip at the leaf's lower extremity, one per leaf, mirrored either side of centre.",
+      "expected": "One button per leaf, mirrored, positioned just above each collar tip",
+      "actual": "No feature at either drawn button position",
+      "correction": "Set each button on the shirt front a short distance above its collar tip, the pair mirrored symmetrically about the placket centre line at equal height."
+    }
+  ],
+  "lockedFeatures": [
+    "Front-on camera position on the garment centre line with both leaves at equal scale",
+    "Strong left-right symmetry between the two collar leaves",
+    "Throat button present, fastened, correctly rendered as 4-hole mother-of-pearl and fully unobscured",
+    "No necktie; collar band, spread and top button all clear of obstruction",
+    "No traced annotation",
+    "Clean fly-front placket and crisp cotton poplin hand"
+  ],
+  "notes": "The clearest failure of the five and the easiest to prove. The headline finding did not rely on judgement: a direct pixel diff of the two square-6.5 blueprints shows they are identical everywhere except two 4-5px circles at (78,131.5) and (134,131.5). Those two circles are the ENTIRE product difference between collar-sq-65 and collar-sq-65-btn, and the render contains neither - which means this image is not merely inaccurate, it is a photograph of a different catalogue option. On top of that the tips are pointed where the drawing calls for squared, and the image duplicates the collar-small-sq-50 candidate. Photography craft and symmetry are good and should survive a regeneration."
+}

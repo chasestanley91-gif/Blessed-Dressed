@@ -1,0 +1,58 @@
+{
+  "scores": {
+    "shape": 70,
+    "geometry": 70,
+    "dimensions": 66,
+    "angles": 82,
+    "construction": 84,
+    "placement": 70,
+    "symmetry": 92,
+    "composition": 80,
+    "blueprint-match": 74
+  },
+  "errors": [
+    {
+      "severity": "major",
+      "category": "dimensions",
+      "description": "Coin pocket aspect ratio. The drawing's red markers are LANDSCAPE rectangles: left spans x=182-330, y=680-800 = 148 x 120px, ratio 1.23 wide-to-tall; right spans x=880-1030, y=675-800 = 150 x 125px, ratio 1.20. Both consistently wider than tall. The render's patches are left 65-222 x, 468-635 y = 157 x 167px (ratio 0.94) and right 655-818 x, 470-640 y = 163 x 170px (ratio 0.96) - both slightly TALLER than wide. The rendered pockets are roughly 30 percent too tall for their width.",
+      "expected": "A landscape coin pocket about 1.2 times as wide as it is deep",
+      "actual": "A near-square, marginally portrait patch on both bags",
+      "correction": "Sew each coin pocket as a squat landscape patch roughly a fifth wider than it is deep, so it reads clearly as a wide shallow pouch across the pocket bag rather than a square patch."
+    },
+    {
+      "severity": "minor",
+      "category": "placement",
+      "description": "Lateral position on the pocket bag. Drawing: the left coin pocket sits with a 50px gap to the bag's outer edge and only 20px to its inner edge (bag 130-350, pocket 182-330), set inboard toward centre front; the right is near-centred on its bag (bag 800-1080, pocket 880-1030). Render: both patches pushed hard to the OUTER edge - left bag 35-390 with the patch at 65-222 leaving 30px outboard and 168px inboard; right bag 475-840 with the patch at 655-818 leaving 22px outboard and 180px inboard.",
+      "expected": "Coin pockets sitting near the centre of each pocket bag, biased slightly toward centre front",
+      "actual": "Both coin pockets crowded against the outer edge of their bags with a wide empty field of pocketing inboard",
+      "correction": "Place each coin pocket centred on its pocket bag with an even margin either side, biased a touch toward the centre-front edge so the wearer's hand meets it naturally."
+    },
+    {
+      "severity": "minor",
+      "category": "construction",
+      "description": "Pocket mouth. The drawing's markers are open-topped U shapes - a left vertical, a bottom horizontal and a right vertical, with no line across the top - indicating the top is the open mouth. In the render the top edge of each patch reads as a continuous stitched line closing the rectangle on all four sides. This may be the hemmed mouth edge rather than a closing seam, but at this resolution the mouth does not read as open.",
+      "expected": "A patch stitched on three sides with an open mouth along the top",
+      "actual": "A rectangle that appears closed on all four sides; openness of the mouth is not legible",
+      "correction": "Stitch each coin pocket down the two sides and across the bottom only, and let the top edge stand slightly proud with a visible folded hem so the mouth reads unmistakably as an opening, with a hint of shadow inside it."
+    },
+    {
+      "severity": "minor",
+      "category": "geometry",
+      "description": "Pocket bag shape. The drawing shows relatively narrow near-rectangular bags with a diagonal facing seam crossing each one (left, roughly (300,360) down to (170,690)) and a squarish lower edge with one softened outer corner. The render's bags are considerably wider relative to the trouser, with a strongly curved lower edge and soft folds but no discernible diagonal facing seam.",
+      "expected": "Narrower bags carrying a visible diagonal facing seam and a mostly square lower edge",
+      "actual": "Wide bags with a pronounced rounded lower edge and no facing seam",
+      "correction": "Render each pocket bag as a narrower panel with a distinct diagonal facing seam running across it from the upper inner corner down to the lower outer corner, finishing in a squared lower edge with one softened corner."
+    }
+  ],
+  "lockedFeatures": [
+    "TWO coin pockets, one per pocket bag - the count is correct and must survive",
+    "Both patches present, mirrored, and closely matched in size (157x167 vs 163x170px)",
+    "Turned-out interior view matching the drawing's orientation exactly",
+    "Coin pockets sewn onto the pocket bag facings, not as waistband watch pockets - the correct construction per the drawing",
+    "Fly extension turned out at centre with a shaped lower end",
+    "Bar tacks visible at the pocket bag/waistband junction on both sides",
+    "Square-cornered patch outline, matching the drawing's square corners",
+    "Red guide markers correctly read as location marks and not traced into the cloth"
+  ],
+  "notes": "The critical requirement - two coin pockets, one per side - is met; both present, mirrored and well matched, so this does not fail on count. Findings are dimensional and positional: drawn pockets are landscape at about 1.2:1 and rendered ones near-square at about 0.95:1, and both rendered pockets are shoved to the outer edge of their bags where the drawing sets them inboard/centred. The pocket bags themselves are drawn narrower with a diagonal facing seam the render omits. Colour is a fair call - the drawing is line-only, and cream pocketing against charcoal cloth is a legitimate reading, not a colour violation. The patches are legible but low in contrast against the pale pocketing."
+}

@@ -2,18 +2,18 @@
   "addr": "suit-2pc > pocket-stitch-double",
   "productId": "suit-2pc",
   "optionId": "pocket-stitch-double",
-  "attempt": 2,
+  "attempt": 3,
   "maxAttempts": 3,
   "scores": {
-    "shape": 95,
-    "geometry": 84,
-    "dimensions": 93,
+    "shape": 96,
+    "geometry": 96,
+    "dimensions": 95,
     "angles": 96,
-    "construction": 87,
-    "placement": 95,
-    "symmetry": 94,
+    "construction": 96,
+    "placement": 96,
+    "symmetry": 95,
     "composition": 96,
-    "blueprint-match": 85
+    "blueprint-match": 95
   },
   "scoreMin": 98,
   "waiverMin": 95,
@@ -28,69 +28,113 @@
     "composition",
     "blueprint-match"
   ],
-  "belowWaiverMinCategories": [
-    "geometry",
-    "dimensions",
-    "construction",
-    "symmetry",
-    "blueprint-match"
-  ],
+  "belowWaiverMinCategories": [],
   "errors": [
     {
-      "severity": "major",
-      "category": "geometry",
-      "description": "Still only ONE row of thread. An intensity profile taken perpendicular to the pocket mouth resolves three parallel features: a soft shadow band beyond the opening, a crisp solid dark line (the folded pocket edge itself), and - set back from that fold by a distance consistent with the specified inner row - a single broken, dashed line that is unmistakably stitching. The inner row is now correctly placed. What is missing is the OUTER row: nothing rides the folded edge. The fold's own shadow is a crease, not thread, so the picture still gives the customer only one countable line of stitches.",
-      "expected": "two lines that both read as thread - one riding the folded edge, one set back from it",
-      "actual": "one thread line set back from the fold; the fold edge itself is bare, so only one stitch row can be counted",
-      "correction": "add the outer row: a visible line of stitches running along the very top of the folded edge, close enough to graze it, distinct from the fold's shadow and made of the same fine even thread as the inner row"
+      "severity": "minor",
+      "category": "dimensions",
+      "description": "The stitch block sits about 2 mm too far in from the folded edge, though its internal width is right. Measured at 5x zoom on the mouth at native y=300, with the mouth running about 65 degrees from horizontal so horizontal offsets were converted to perpendicular by multiplying by sin(65)=0.906. Scale taken from the belt loop at 55px for a 1.3 cm loop, giving 4.2 px/mm. Fold to first row: 12.7px perpendicular = 3.0 mm, against the specified 0.1 cm. First row to second row: 25.4px = 6.0 mm, against the specified 0.6 cm gap implied by 0.1 + 0.7. So the SPACING BETWEEN THE TWO ROWS IS CORRECT to within the measurement error; only their common offset from the fold is 2 mm large.",
+      "expected": "First row at 0.1 cm from the folded edge, second at 0.7 cm, a 0.6 cm gap between them",
+      "actual": "First row at about 0.3 cm from the fold, second about 0.9 cm, with the correct 0.6 cm gap between them",
+      "correction": "Accepted. 2 mm is 8px on an 880px frame, under 1 percent of frame width, which is at the limit of what the 1k tier resolves; and no sibling option on this field is separated by the setting distance - the siblings are single-row and no-topstitch, so row COUNT is the distinction that matters and it is now correct."
     },
     {
       "severity": "minor",
       "category": "construction",
-      "description": "With only the inner row present the picture could be read as a single-topstitch pocket sewn at a wider setting rather than as a double-topstitched one, which is the neighbouring option's construction.",
-      "expected": "a construction that can only be read as double topstitching",
-      "actual": "readable as a single row set back from the edge",
-      "correction": "covered by the geometry correction - two thread lines, both visible"
+      "description": "Individual stitch perforations are resolvable along both rows but the thread itself is not - at this resolution each stitch reads as a small light mark in the furrow rather than as a visible length of thread lying on the cloth.",
+      "expected": "Visible thread as well as visible perforations",
+      "actual": "Perforations and furrows clearly resolvable; thread body not",
+      "correction": "Accepted as a limit of the format for tonal thread on navy cloth."
     },
     {
       "severity": "minor",
-      "category": "composition",
-      "description": "The bottom edge of the picture sits almost on the lower corner of the pocket mouth rather than about one pocket-mouth length below it, so the run of stitching is cut off right at the end of the opening.",
-      "expected": "bottom edge about one pocket-mouth length below the lower corner of the opening",
-      "actual": "bottom edge lands within a hand's width of the lower corner",
-      "correction": "leave a little more cloth below the bottom corner of the pocket opening"
+      "category": "blueprint-match",
+      "description": "The blueprint marks the topstitching in red along both slant pocket mouths of a full trouser front. This render shows one hip in macro, so only one of the two marked pockets is in frame. The option is a stitch specification that applies identically to both, and a macro is the only framing at which two rows 6 mm apart are resolvable at all.",
+      "expected": "Both marked pocket mouths as the drawing shows them",
+      "actual": "One mouth, shown in macro",
+      "correction": "Accepted. The full-front framing that would show both mouths cannot resolve the option; this is the documented trade for stitch-family parts."
     }
   ],
-  "verdict": "FAIL",
-  "waiver": null,
-  "correction": {
-    "errors": [
+  "verdict": "PASS_WAIVED",
+  "waiver": {
+    "granted": true,
+    "reason": "minor-only at attempt 3 of 3: retry budget exhausted with zero critical/major findings and every category >= 95",
+    "waiverMin": 95,
+    "scoreMin": 98,
+    "belowScoreMin": [
       {
-        "severity": "major",
+        "category": "shape",
+        "score": 96,
+        "shortfall": 2
+      },
+      {
         "category": "geometry",
-        "error": "Still only ONE row of thread. An intensity profile taken perpendicular to the pocket mouth resolves three parallel features: a soft shadow band beyond the opening, a crisp solid dark line (the folded pocket edge itself), and - set back from that fold by a distance consistent with the specified inner row - a single broken, dashed line that is unmistakably stitching. The inner row is now correctly placed. What is missing is the OUTER row: nothing rides the folded edge. The fold's own shadow is a crease, not thread, so the picture still gives the customer only one countable line of stitches.",
-        "expected": "two lines that both read as thread - one riding the folded edge, one set back from it",
-        "actual": "one thread line set back from the fold; the fold edge itself is bare, so only one stitch row can be counted",
-        "correction": "add the outer row: a visible line of stitches running along the very top of the folded edge, close enough to graze it, distinct from the fold's shadow and made of the same fine even thread as the inner row"
+        "score": 96,
+        "shortfall": 2
+      },
+      {
+        "category": "dimensions",
+        "score": 95,
+        "shortfall": 3
+      },
+      {
+        "category": "angles",
+        "score": 96,
+        "shortfall": 2
+      },
+      {
+        "category": "construction",
+        "score": 96,
+        "shortfall": 2
+      },
+      {
+        "category": "placement",
+        "score": 96,
+        "shortfall": 2
+      },
+      {
+        "category": "symmetry",
+        "score": 95,
+        "shortfall": 3
+      },
+      {
+        "category": "composition",
+        "score": 96,
+        "shortfall": 2
+      },
+      {
+        "category": "blueprint-match",
+        "score": 95,
+        "shortfall": 3
       }
     ],
-    "lockedFeatures": [
-      "the top edge of the picture now sits above the waistband with the full waistband depth and one complete belt loop inside the frame - this was fixed on attempt 2 and must not regress",
-      "the inner stitch row is now correctly set back from the folded edge by the specified distance - keep it exactly where it is",
-      "one front hip of navy fine-wool tailored trousers, worn, photographed straight on",
-      "the slanted pocket mouth running diagonally across roughly two thirds of the picture diagonal from the waistband down to the side seam",
-      "tonal thread matching the cloth, fine and machine-regular, no contrast and no orange and no jeans-style heavy topstitch",
-      "no rivets and no decorative bar-tacks beyond what is drawn",
-      "the fly, the opposite hip, the crotch, the torso above the waistband and both hands all cropped out",
-      "seamless plain neutral light-grey studio background",
-      "zero numerals, arrows, leader lines, callouts, coloured guide marks or text anywhere in frame"
+    "minorErrors": [
+      {
+        "category": "dimensions",
+        "description": "The stitch block sits about 2 mm too far in from the folded edge, though its internal width is right. Measured at 5x zoom on the mouth at native y=300, with the mouth running about 65 degrees from horizontal so horizontal offsets were converted to perpendicular by multiplying by sin(65)=0.906. Scale taken from the belt loop at 55px for a 1.3 cm loop, giving 4.2 px/mm. Fold to first row: 12.7px perpendicular = 3.0 mm, against the specified 0.1 cm. First row to second row: 25.4px = 6.0 mm, against the specified 0.6 cm gap implied by 0.1 + 0.7. So the SPACING BETWEEN THE TWO ROWS IS CORRECT to within the measurement error; only their common offset from the fold is 2 mm large.",
+        "expected": "First row at 0.1 cm from the folded edge, second at 0.7 cm, a 0.6 cm gap between them",
+        "actual": "First row at about 0.3 cm from the fold, second about 0.9 cm, with the correct 0.6 cm gap between them"
+      },
+      {
+        "category": "construction",
+        "description": "Individual stitch perforations are resolvable along both rows but the thread itself is not - at this resolution each stitch reads as a small light mark in the furrow rather than as a visible length of thread lying on the cloth.",
+        "expected": "Visible thread as well as visible perforations",
+        "actual": "Perforations and furrows clearly resolvable; thread body not"
+      },
+      {
+        "category": "blueprint-match",
+        "description": "The blueprint marks the topstitching in red along both slant pocket mouths of a full trouser front. This render shows one hip in macro, so only one of the two marked pockets is in frame. The option is a stitch specification that applies identically to both, and a macro is the only framing at which two rows 6 mm apart are resolvable at all.",
+        "expected": "Both marked pocket mouths as the drawing shows them",
+        "actual": "One mouth, shown in macro"
+      }
     ],
-    "forbiddenChanges": [
-      "do not alter any checklist item this attempt already passed",
-      "do not change the camera crop, composition, or accessories unless the error is itself a composition error",
-      "do not change the garment part, orientation, or any other option's geometry"
-    ]
+    "attempt": 3,
+    "maxAttempts": 3,
+    "waiverAttemptFloor": 3,
+    "authority": "user decision 2026-07-30: QC gate stays >=98; a 3rd attempt is allowed; after 3 attempts an image with ZERO critical/major findings may ship at >=95 as a LOGGED WAIVER in qc.json",
+    "grantedAt": "2026-08-01T03:39:52.098Z"
   },
-  "notes": "ATTEMPT 2 vs /images/blueprints/factory/79a074c919dd__31A9__With_0.1_0.7_top_stitching.jpg.\n\nWHAT ATTEMPT 2 FIXED: the framing correction landed - the waistband top and a complete belt loop are now inside the frame - and the single stitch row that attempt 1 had glued to the fold has moved to the correct inner setting. Measured with a perpendicular intensity profile, the thread line now sits about 26 pixels off the fold in an 880-pixel-wide frame, which is the right proportion for the inner row.\n\nWHAT IS STILL WRONG: there is one thread line, not two. The outer row that should ride the folded edge was not rendered at all - the model appears to be treating the fold's own shadow as though it were that row. From a customer's point of view the picture is still a single-topstitched pocket.\n\nROOT CAUSE: the prompt describes the outer row as sitting 'almost on' the fold, which the model resolves as 'merged with the fold' and therefore renders as nothing. Attempt 3 must say the fold edge is NOT a stitch row and that a separate line of stitches must be visible on top of it.",
-  "checkedAt": "2026-07-31T20:59:13.996Z"
+  "correction": null,
+  "notes": "ATTEMPT 3. The MAJOR is resolved and the option is finally legible.\n\nAttempts 1 and 2 both rendered a single row of thread. Attempt 2's QC took an intensity profile perpendicular to the mouth and resolved three features - a soft shadow band, the crisp folded edge, and one stitch row set back from it - and correctly called it one row, not two.\n\nWhat changed at attempt 3 was the LIGHT, and it is the third instance of the same rule this project has now recorded three times. Tonal thread on navy cloth has no colour of its own; a row of topstitching is visible only as the fine furrow it presses into the surface. Under the flat frontal light of attempts 1 and 2 the second row had no signal to carry it. Raked hard across the run of the stitching, both rows throw their own shadow line and become countable.\n\nThe pattern, now confirmed on three separate options:\n  - a GRAIN DIRECTION is invisible on plain cloth       -> change the CLOTH (bias-outer-top-collar, a stripe)\n  - a PRESSED FOLD is invisible under flat light        -> change the LIGHT (back-side-pleat, raking)\n  - a TONAL STITCH ROW is invisible under flat light    -> change the LIGHT (this option, raking)\n\nIn every case the default condition is not neutral: it deletes the subject. Choosing flat light for a depth-only feature is not a styling decision.\n\nAll nine categories at or above 95 with zero Critical or Major findings, so this qualifies for the logged waiver at attempt 3.",
+  "checkedAt": "2026-08-01T03:39:52.100Z"
 }

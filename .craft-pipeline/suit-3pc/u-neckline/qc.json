@@ -1,0 +1,113 @@
+{
+  "addr": "suit-3pc > u-neckline",
+  "productId": "suit-3pc",
+  "optionId": "u-neckline",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 74,
+    "geometry": 72,
+    "dimensions": 74,
+    "angles": 82,
+    "construction": 90,
+    "placement": 84,
+    "symmetry": 94,
+    "composition": 80,
+    "blueprint-match": 74
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "major",
+      "category": "geometry",
+      "description": "The opening is far wider in proportion than drawn. Drawing: shoulder straps splay to tips at x=210 and x=980 (span 770) while the opening at its widest runs x=470 to x=733 (263) - the opening is 34 percent of the shoulder span. Render: outer edges at x=45 and x=840 (795) with the opening x=265 to x=640 (375) - 47 percent. As depth-to-width the drawing gives 1025 over 263, about 3.9:1; the render at most 960 over 375, about 2.6:1. The drawn horseshoe is a narrow slot; the rendered one is a broad scoop.",
+      "expected": "A narrow deep horseshoe about a third of the shoulder span wide, roughly four times as deep as it is wide",
+      "actual": "A broad horseshoe nearly half the shoulder span wide, under three times as deep as wide",
+      "correction": "Narrow the horseshoe so the opening spans about one third of the shoulder width, making it a tall slot roughly four times deeper than it is wide, with the forepart cloth carrying much further inboard on each side of the shirt."
+    },
+    {
+      "severity": "major",
+      "category": "shape",
+      "description": "Edge profile. Drawing: the two front edges run very nearly parallel and almost straight for the whole descent, turning into the U only in the last portion - a slot with a rounded foot. Render: the edges curve continuously from the top of frame, splaying steadily outward, producing a smooth parabolic scoop with no parallel section.",
+      "expected": "Front edges falling close to parallel and near-straight down the chest, breaking into the rounded base only at the bottom",
+      "actual": "Front edges curving outward the whole way, forming a continuous parabola",
+      "correction": "Draw the two front edges as near-vertical near-parallel lines running straight down the chest at constant separation, then sweeping into a tight semicircular base at the bottom - a keyhole slot rather than a scoop."
+    },
+    {
+      "severity": "minor",
+      "category": "placement",
+      "description": "Gap between the base of the U and the button. Drawing: button centre y=1130 sits directly against the base of the curve at y=1080 - a 50px gap on a 1025px opening, about 5 percent. Render: base y=960, button y=1065, a 105px gap on an opening of at least 960, about 11 percent.",
+      "expected": "Button set immediately at the foot of the horseshoe, nearly touching the curve",
+      "actual": "Button set about one button-diameter clear below the foot of the horseshoe",
+      "correction": "Place the single button directly at the base of the horseshoe so its top edge nearly meets the bottom of the curve, closing the vest right where the opening ends."
+    },
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "The top of the opening is cropped out. The drawing explicitly shows where the neckline meets the shoulder straps - the two thin double-line straps at the top corners are the only construction detail it gives besides the curve. The render cuts through the upper chest so the shoulder junction is never shown.",
+      "expected": "Full neckline shown including where the front edges meet the shoulder seams",
+      "actual": "Frame cutting the shoulder junction at the top and closing just under the button at the bottom",
+      "correction": "Frame wider and higher so both shoulder seams and the point where each front edge rises to meet them are inside the picture, with a little of the vest front below the button visible for context."
+    }
+  ],
+  "verdict": "FAIL",
+  "waiver": null,
+  "correction": {
+    "errors": [
+      {
+        "severity": "major",
+        "category": "geometry",
+        "error": "The opening is far wider in proportion than drawn. Drawing: shoulder straps splay to tips at x=210 and x=980 (span 770) while the opening at its widest runs x=470 to x=733 (263) - the opening is 34 percent of the shoulder span. Render: outer edges at x=45 and x=840 (795) with the opening x=265 to x=640 (375) - 47 percent. As depth-to-width the drawing gives 1025 over 263, about 3.9:1; the render at most 960 over 375, about 2.6:1. The drawn horseshoe is a narrow slot; the rendered one is a broad scoop.",
+        "expected": "A narrow deep horseshoe about a third of the shoulder span wide, roughly four times as deep as it is wide",
+        "actual": "A broad horseshoe nearly half the shoulder span wide, under three times as deep as wide",
+        "correction": "Narrow the horseshoe so the opening spans about one third of the shoulder width, making it a tall slot roughly four times deeper than it is wide, with the forepart cloth carrying much further inboard on each side of the shirt."
+      },
+      {
+        "severity": "major",
+        "category": "shape",
+        "error": "Edge profile. Drawing: the two front edges run very nearly parallel and almost straight for the whole descent, turning into the U only in the last portion - a slot with a rounded foot. Render: the edges curve continuously from the top of frame, splaying steadily outward, producing a smooth parabolic scoop with no parallel section.",
+        "expected": "Front edges falling close to parallel and near-straight down the chest, breaking into the rounded base only at the bottom",
+        "actual": "Front edges curving outward the whole way, forming a continuous parabola",
+        "correction": "Draw the two front edges as near-vertical near-parallel lines running straight down the chest at constant separation, then sweeping into a tight semicircular base at the bottom - a keyhole slot rather than a scoop."
+      }
+    ],
+    "lockedFeatures": [
+      "U-shaped horseshoe neckline with a smooth continuous rounded base - the correct family, matching the drawing rather than a V or a shawl",
+      "Exactly one button at the foot of the opening with a stitched buttonhole",
+      "Symmetric opening - left edge x=265, right x=640, centred within 12px of frame centre",
+      "Clean finished front edges with no lapel, collar or facing break, matching the drawing's bare outline",
+      "Formal styling consistent with the drawing's ceremonial read: pleated bib shirt and bow tie, neither encroaching on the neckline",
+      "Zero traced annotation"
+    ],
+    "forbiddenChanges": [
+      "do not alter any checklist item this attempt already passed",
+      "do not change the camera crop, composition, or accessories unless the error is itself a composition error",
+      "do not change the garment part, orientation, or any other option's geometry"
+    ]
+  },
+  "notes": "No blueprint conflict - the drawing is a waistcoat neckline diagram and the option is a waistcoat neckline. The drawing is unusually sparse: only the opening outline, the centre-front line, two thin shoulder straps and one button, with no vest body, armholes, pockets or hem, so several categories are only weakly measurable. Depth could NOT be measured cleanly on the render because the frame cuts the top of the opening, so the 2.6:1 figure is a LOWER BOUND and the true ratio is shallower still - which makes the width error at least as bad as scored. Angles are largely unmeasurable: the drawing contains no straight-line intersections other than the shoulder straps and the render crops those out, so angles were scored conservatively rather than invented. Both majors are the same underlying failure - a wide scoop where the drawing specifies a narrow deep slot, which is exactly the distinction a customer would use to tell this neckline from its neighbours.",
+  "checkedAt": "2026-08-01T03:26:26.293Z"
+}

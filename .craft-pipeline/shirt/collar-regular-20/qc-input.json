@@ -1,0 +1,63 @@
+{
+  "scores": {
+    "shape": 45,
+    "geometry": 30,
+    "dimensions": 35,
+    "angles": 15,
+    "construction": 35,
+    "placement": 25,
+    "symmetry": 15,
+    "composition": 20,
+    "blueprint-match": 20
+  },
+  "errors": [
+    {
+      "severity": "critical",
+      "category": "composition",
+      "description": "The drawing is a symmetric front elevation. The render is the same oblique three-quarter flat-lay staging as collar-fashion-point-58 and collar-sq-65, with the image-right leaf dominant and the image-left leaf foreshortened.",
+      "expected": "Front elevation, both leaves at equal scale",
+      "actual": "Oblique staging with unequal leaves",
+      "correction": "Shoot square-on from directly in front at collar height with the placket vertical and centred, so both leaves render at equal scale."
+    },
+    {
+      "severity": "critical",
+      "category": "angles",
+      "description": "The blueprint prints an 80.00-degree spread; tips located at approximately (78,138) and (129,140), separation about 51px. The oblique render makes the included angle unmeasurable, so the moderate spread the description calls the option's defining quality is not communicated.",
+      "expected": "A readable 80-degree moderate spread, the balanced everyday geometry the option is named for",
+      "actual": "Spread angle not measurable",
+      "correction": "Lay both leaves flat and symmetric with the collar closed so the included angle reads clearly as a moderate 80 degrees."
+    },
+    {
+      "severity": "critical",
+      "category": "blueprint-match",
+      "description": "Visually interchangeable with the candidates for collar-fashion-point-58 and collar-sq-65. Three menu entries served by three photographs a customer cannot separate.",
+      "expected": "A photograph immediately distinguishable from its four menu siblings",
+      "actual": "Generic angled shirt photo duplicating two siblings",
+      "correction": "Compose so the moderate 80-degree spread and the pattern-20 leaf details are the dominant read, with the collar filling the frame and both leaves symmetric and legible."
+    },
+    {
+      "severity": "major",
+      "category": "construction",
+      "description": "The drawing carries two distinct leaf-mounted details the render does not reproduce. On the image-left leaf a closed triangular element, apex about (80,112) with edges to (69,129) and (86,129) and a base line at y=130 spanning x=69 to 86, about 17px wide by 18px tall. On the image-right leaf a round button about 5px diameter at (134,131.5) - the same coordinates as the tip buttons in square-in-65cm-with-button.jpg. Diffing regular-collar-19 and regular-collar-21 confirms these are NOT family boilerplate; both siblings differ structurally, so these details are specific to pattern 20. At 229x244 their geometry is measurable but they cannot be definitively named - most plausibly a collar-stay pocket or turned-back under-collar on one leaf and a leaf button on the other. The render instead shows two buttons clustered at the throat and band around (270,640) and (345,682), with no triangular element anywhere.",
+      "expected": "A triangular element on one collar leaf and a separate round button on the other leaf near its tip, in addition to the throat button at the crossing",
+      "actual": "Two buttons stacked at the throat and band; no leaf-mounted button near a tip and no triangular element",
+      "correction": "Render the throat button at the leaf crossing, place a second small button on the opposite leaf near its tip, and show the triangular leaf element on the first leaf as drawn, so all three details read as separate and correctly positioned."
+    },
+    {
+      "severity": "major",
+      "category": "shape",
+      "description": "The one legible leaf terminates in an acute point. The blueprint's tips at (78,138) and (129,140) are not resolvable as square or pointed at this scale, and unlike its square-labelled siblings this option's spec extracts no tip-shape constraint, so the render's termination is recorded as UNVERIFIED rather than scored as correct.",
+      "expected": "Tip termination as drawn; not resolvable at 229x244",
+      "actual": "Acute point on the legible leaf; second leaf's tip not resolvable in the render",
+      "correction": "Terminate both leaves identically and show both tips clearly in frame so the pattern-20 termination can be read and verified."
+    }
+  ],
+  "lockedFeatures": [
+    "No necktie; the collar band and throat area are unobstructed",
+    "No traced annotation across a 256,960-pixel sample",
+    "Mother-of-pearl buttons rendered with correct scale and translucency",
+    "White crisp cotton poplin with clean parallel edge topstitching",
+    "Neutral background and soft directional lighting"
+  ],
+  "notes": "Same oblique staging batch as fashion-point-58 and sq-65, with the same consequence. The distinctive finding: regular-collar-20's drawing is NOT a plain collar. It carries a triangular element on one leaf and a round button on the other, confirmed by pixel-mapping at two thresholds and cross-checked against regular-collar-19 and regular-collar-21 to rule out family boilerplate. Those two elements were deliberately NOT named, because at 229x244 their outlines are measurable but their construction is not readable, and the option's spec.json extracts no flags and no counts at all so the catalogue text gives no corroboration. ESCALATE SEPARATELY: a spec that records nothing cannot drive a prompt that renders them."
+}

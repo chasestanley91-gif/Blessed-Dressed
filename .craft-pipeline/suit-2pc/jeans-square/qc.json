@@ -1,0 +1,107 @@
+{
+  "addr": "suit-2pc > jeans-square",
+  "productId": "suit-2pc",
+  "optionId": "jeans-square",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 80,
+    "geometry": 84,
+    "dimensions": 74,
+    "angles": 88,
+    "construction": 60,
+    "placement": 85,
+    "symmetry": 82,
+    "composition": 72,
+    "blueprint-match": 74
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "major",
+      "category": "construction",
+      "description": "Two metallic dome studs are rendered at the ends of the pocket mouth - one at the squared outer corner, one at the inboard end. The drawing shows the opening as plain line work with plain end stops; there is no hardware anywhere on the sheet. The option's prose mentions rivets, but the DRAWING is the authority and it draws none, so this is the render following denim convention over the sheet. On charcoal worsted the studs are the most eye-catching thing in the frame.",
+      "expected": "A clean pocket mouth terminating at each end with a flat reinforcement, no raised metal hardware, as drawn",
+      "actual": "Two raised dark metal dome rivets, roughly one third of a belt-loop width across, at each end of the mouth",
+      "correction": "Finish each end of the pocket mouth with a flat self-cloth bar tack sewn in matching thread, sitting flush with the surface of the wool."
+    },
+    {
+      "severity": "minor",
+      "category": "dimensions",
+      "description": "Mouth length measured against belt-loop spacing, the only stable in-frame scale since the waistband top is cropped: drawing run 335px against a first-to-second loop spacing of 470px = 0.71; render run about 305px against a loop spacing of about 370px = 0.82. The render's mouth is roughly 15 percent long for the width of the front.",
+      "expected": "Pocket mouth running about three quarters of the distance between the side belt loop and the next loop inboard",
+      "actual": "Mouth runs about 0.82 of that loop spacing and its inboard end sits almost on the crease line",
+      "correction": "Shorten the horizontal run so the inboard end of the mouth stops noticeably short of the front crease, ending about three quarters of the way from the side loop toward the next loop."
+    },
+    {
+      "severity": "minor",
+      "category": "construction",
+      "description": "The mouth reads as a jetted/welt slit with a defined under-welt lip rather than a single squared opening edge with the pocket facing continuing below it. The drawing renders it as one line - an opening edge, not a two-lipped welt.",
+      "expected": "A single squared-off opening edge, topstitched, with the front cloth continuing below it as the pocket facing",
+      "actual": "A narrow two-lipped welt slit",
+      "correction": "Render the opening as one crisp topstitched fold edge with the trouser front continuing uninterrupted beneath it, no second lip and no gap."
+    },
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "The pocket occupies the upper-left quadrant only; roughly the lower half of the frame is empty trouser leg carrying no information about the option.",
+      "expected": "Composition existing to show the pocket opening",
+      "actual": "Pocket confined to the top-left; large empty leg below",
+      "correction": "Tighten the frame to waistband through upper thigh so the mouth and its squared corner fill the middle of the picture, keeping the belt loops and the front crease in shot for scale."
+    }
+  ],
+  "verdict": "FAIL",
+  "waiver": null,
+  "correction": {
+    "errors": [
+      {
+        "severity": "major",
+        "category": "construction",
+        "error": "Two metallic dome studs are rendered at the ends of the pocket mouth - one at the squared outer corner, one at the inboard end. The drawing shows the opening as plain line work with plain end stops; there is no hardware anywhere on the sheet. The option's prose mentions rivets, but the DRAWING is the authority and it draws none, so this is the render following denim convention over the sheet. On charcoal worsted the studs are the most eye-catching thing in the frame.",
+        "expected": "A clean pocket mouth terminating at each end with a flat reinforcement, no raised metal hardware, as drawn",
+        "actual": "Two raised dark metal dome rivets, roughly one third of a belt-loop width across, at each end of the mouth",
+        "correction": "Finish each end of the pocket mouth with a flat self-cloth bar tack sewn in matching thread, sitting flush with the surface of the wool."
+      }
+    ],
+    "lockedFeatures": [
+      "Squared outer corner: the mouth drops vertically from the waistband seam at the outboard side then turns and runs inboard - the defining square-jeans geometry, correct against the drawing",
+      "Mouth slant measured at about 9 degrees below horizontal against the drawing's about 8",
+      "Top of the vertical leg meets the waistband seam at the base of the side belt loop, exactly as the red mark starts at the waistband in the drawing",
+      "Pocket on the viewer-left leg, the same side the drawing marks in red",
+      "Three-quarter view reproducing the drawing's arrangement, including the plain double-welt back pocket on the far side with a belt loop directly above it",
+      "Fine topstitch along the mouth, satisfying the spec's top stitch flag",
+      "No red guide lines, arrows or dimension text rendered into the photograph",
+      "Charcoal worsted with visible weave, pressed front crease, clean belt loops"
+    ],
+    "forbiddenChanges": [
+      "do not alter any checklist item this attempt already passed",
+      "do not change the camera crop, composition, or accessories unless the error is itself a composition error",
+      "do not change the garment part, orientation, or any other option's geometry"
+    ]
+  },
+  "notes": "Measurable: mouth angle (render about 9 degrees vs drawing about 7.7 - a genuine match) and mouth length normalised to belt-loop spacing (0.82 vs 0.71 - slightly long). NOT measurable: absolute welt depth and the mouth's distance from the true side seam, because the view is three-quarter so the side seam does not sit on the silhouette edge in either image, and the waistband top is cropped in the render; any centimetre figure would be invented. Count and side are right. The blocking issue is the metal rivets, which appear nowhere on the sheet.",
+  "checkedAt": "2026-08-01T03:32:26.347Z"
+}

@@ -1,0 +1,98 @@
+{
+  "addr": "suit-3pc > db-4x2",
+  "productId": "suit-3pc",
+  "optionId": "db-4x2",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 90,
+    "geometry": 85,
+    "dimensions": 84,
+    "angles": 86,
+    "construction": 92,
+    "placement": 76,
+    "symmetry": 93,
+    "composition": 88,
+    "blueprint-match": 82
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "major",
+      "category": "placement",
+      "description": "Pocket line relative to the two button rows. Drawing: rows at y=520 and y=855 (gap 335), welt centres y=710, which is 0.57 of the way down the gap - welts sit clearly between the rows with the lower row distinctly below them. Render: rows y=513 and y=800 (gap 287), welt centres y=790, which is 0.965 of the way down - the welts are effectively level with the lower button row. The drawn separation between pocket line and bottom pair is lost.",
+      "expected": "Welt line crossing the front a little past halfway between the upper and lower button rows, with the lower row clearly below the pockets",
+      "actual": "Welt line level with the lower button row, both on the same horizontal",
+      "correction": "Set the two besom welts on a line roughly 57 percent of the way from the upper button row down to the lower row, so the bottom pair of buttons sits a clear button-and-a-half below the pocket openings."
+    },
+    {
+      "severity": "minor",
+      "category": "geometry",
+      "description": "Aspect ratio of the four-button box. Drawing: column gap 259px (x=468 to 727), row gap 335px (y=520 to 855), width/height 0.77. Render: column gap 205px (x=355 to 560), row gap 287px (y=513 to 800), 0.71. The render's button box is about 8 percent taller relative to its width.",
+      "expected": "Column gap about three-quarters of the row gap",
+      "actual": "Column gap about seven-tenths of the row gap",
+      "correction": "Widen the spacing between the two button columns so the horizontal gap measures about three-quarters of the vertical gap between the rows, spreading the four buttons into a slightly squatter rectangle."
+    },
+    {
+      "severity": "minor",
+      "category": "placement",
+      "description": "Where the wrap edge turns. Drawing: the diagonal front edge descends and terminates exactly at the upper-left button (x=468, y=520) before running vertically to the hem. Render: the corner where the diagonal turns vertical sits at about x=320, y=450 - above and outboard of the upper-left button at x=355, y=513. The turn happens before the button rather than at it.",
+      "expected": "Diagonal wrap edge running down to meet the top button of the inner column and turning vertical at that exact point",
+      "actual": "Wrap edge turning vertical roughly 60px above and 35px outboard of the top button",
+      "correction": "Run the diagonal wrap edge down so it lands precisely on the centre of the upper-left button and breaks to vertical there, making the button sit in the corner of the turn."
+    }
+  ],
+  "verdict": "FAIL",
+  "waiver": null,
+  "correction": {
+    "errors": [
+      {
+        "severity": "major",
+        "category": "placement",
+        "error": "Pocket line relative to the two button rows. Drawing: rows at y=520 and y=855 (gap 335), welt centres y=710, which is 0.57 of the way down the gap - welts sit clearly between the rows with the lower row distinctly below them. Render: rows y=513 and y=800 (gap 287), welt centres y=790, which is 0.965 of the way down - the welts are effectively level with the lower button row. The drawn separation between pocket line and bottom pair is lost.",
+        "expected": "Welt line crossing the front a little past halfway between the upper and lower button rows, with the lower row clearly below the pockets",
+        "actual": "Welt line level with the lower button row, both on the same horizontal",
+        "correction": "Set the two besom welts on a line roughly 57 percent of the way from the upper button row down to the lower row, so the bottom pair of buttons sits a clear button-and-a-half below the pocket openings."
+      }
+    ],
+    "lockedFeatures": [
+      "Exactly four buttons in two columns of two - left column x=355, right x=560, rows y=513 and y=800. Count and arrangement correct and must survive",
+      "Two functioning buttonholes stitched beside the left-column buttons, matching 'four of which two fasten'",
+      "Double-breasted wrap with the overlapping panel edge running from upper right down to the left of the inner button column",
+      "Straight near-horizontal bottom hem with no point - correct for this drawing",
+      "Two besom welt pockets, one each side, raked outer-end-high",
+      "Rows level and columns plumb, no skew between the four buttons",
+      "Zero traced annotation"
+    ],
+    "forbiddenChanges": [
+      "do not alter any checklist item this attempt already passed",
+      "do not change the camera crop, composition, or accessories unless the error is itself a composition error",
+      "do not change the garment part, orientation, or any other option's geometry"
+    ]
+  },
+  "notes": "Graded against /images/options/vest/db-4x2.jpg, the waistcoat line drawing spec.json declares. The path in my batch manifest, /images/jacket/front-style/db-4x2.jpg, is a 240x200 fabric swatch - the stale pointer on a second catalog row for the same option id. Manifest error, not a generation error.\n\nBUTTON COUNT IS CORRECT - four buttons, two columns of two, the entire option. The drawing marks all four positions identically and gives no indication which pair fastens; the render puts the buttonholes on the left column, consistent with the wrap edge terminating there and with the catalog description, so that was not penalised. Neckline could NOT be graded - the drawing is cropped so severely at the top that only a stray mark survives. spec.json has every measured array empty, so no cm or degree targets exist and none were invented.",
+  "checkedAt": "2026-08-01T03:26:26.145Z"
+}

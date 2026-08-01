@@ -1,0 +1,153 @@
+{
+  "addr": "suit-3pc > vest-ticket-diamond-flap",
+  "productId": "suit-3pc",
+  "optionId": "vest-ticket-diamond-flap",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 92,
+    "geometry": 91,
+    "dimensions": 88,
+    "angles": 86,
+    "construction": 94,
+    "placement": 94,
+    "symmetry": 88,
+    "composition": 88,
+    "blueprint-match": 89
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "angles",
+      "description": "Mouth tilt. Blueprint top edge (517,762) to (617,780) = 10.2 degrees descending toward centre front. Render top edge (266,508) to (566,521) = 2.5 degrees, effectively dead level. The V legs: drawing 27 degrees outer and 10 inner; render 26 and 17 - the outer leg matches, the inner leg is 7 degrees steeper than drawn.",
+      "expected": "Mouth line tilting down toward centre front by about 10 degrees, with the inner leg of the V noticeably flatter than the outer",
+      "actual": "Mouth dead level at 2.5 degrees; inner leg 17 degrees against 10 drawn",
+      "correction": "Set the flap's top edge tilting down toward the button line by about 10 degrees, and let the inner half of the pointed lower edge run at roughly 10 degrees while the outer half falls at about 27, so the point sits centred but the two halves are visibly unequal in slope."
+    },
+    {
+      "severity": "minor",
+      "category": "dimensions",
+      "description": "Flap depth. Blueprint: 32px at the ends and 48px at the point on a 141px flap (23 and 34 percent of flap width), point-to-side ratio 1.5:1. Render: 58px at the ends and 114px at the point on a 310px flap (19 and 37 percent), ratio 1.97:1. The rendered flap is slightly shallower at the ends and the point drops noticeably further, so the diamond is more exaggerated than drawn.",
+      "expected": "A flap about a quarter of its own length deep at each end, dropping to about a third at the centre point - a restrained diamond",
+      "actual": "Ends 19 percent, point 37 percent, ratio 1.97:1 against 1.5:1 drawn",
+      "correction": "Draw the flap a touch deeper at both ends, about a quarter of the flap's length, and bring the centre point down to only about a third of the flap length, so the diamond is a gentle centred point rather than a deep spearhead."
+    }
+  ],
+  "verdict": "FAIL",
+  "waiver": null,
+  "correction": {
+    "errors": [
+      {
+        "severity": "minor",
+        "category": "shape",
+        "error": "score-card category \"shape\" scored 92 (< 98)",
+        "expected": ">= 98",
+        "actual": "92",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"shape\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "geometry",
+        "error": "score-card category \"geometry\" scored 91 (< 98)",
+        "expected": ">= 98",
+        "actual": "91",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"geometry\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "dimensions",
+        "error": "score-card category \"dimensions\" scored 88 (< 98)",
+        "expected": ">= 98",
+        "actual": "88",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"dimensions\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "angles",
+        "error": "score-card category \"angles\" scored 86 (< 98)",
+        "expected": ">= 98",
+        "actual": "86",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"angles\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "construction",
+        "error": "score-card category \"construction\" scored 94 (< 98)",
+        "expected": ">= 98",
+        "actual": "94",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"construction\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "placement",
+        "error": "score-card category \"placement\" scored 94 (< 98)",
+        "expected": ">= 98",
+        "actual": "94",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"placement\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "symmetry",
+        "error": "score-card category \"symmetry\" scored 88 (< 98)",
+        "expected": ">= 98",
+        "actual": "88",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"symmetry\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "composition",
+        "error": "score-card category \"composition\" scored 88 (< 98)",
+        "expected": ">= 98",
+        "actual": "88",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"composition\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "blueprint-match",
+        "error": "score-card category \"blueprint-match\" scored 89 (< 98)",
+        "expected": ">= 98",
+        "actual": "89",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"blueprint-match\" and regenerate."
+      }
+    ],
+    "lockedFeatures": [
+      "Single ticket pocket on the wearer's right front",
+      "Flap present and its lower edge comes to a single point at the horizontal centre - a TRUE DIAMOND FLAP, which is the whole option",
+      "Mouth is level, not slanted",
+      "Flap length 47 percent of the front panel width, inner end 27 percent and outer end 26 percent of panel width from front edge and side seam - these placement figures match the drawing almost exactly",
+      "Double line along the top of the flap (flap fold plus mouth seam) about 20px apart",
+      "No annotation, numbers, arrows or coloured guide marks"
+    ],
+    "forbiddenChanges": [
+      "do not alter any checklist item this attempt already passed",
+      "do not change the camera crop, composition, or accessories unless the error is itself a composition error",
+      "do not change the garment part, orientation, or any other option's geometry"
+    ]
+  },
+  "notes": "The most accurate image of the whole wave. Blueprint verified as a flap with a pointed lower edge: sampling the red mark column by column, the lower boundary descends to a maximum of y=840 at x=567 and rises again either side, and x=567 is exactly the mid-point of the mark's x-range 497-638, so the point is dead centre. Render measured by edge map: two diagonals (278,586) to (396,644) at 26 degrees and (566,596) to (410,644) at 17, converging at an apex near (405,646). The apex sits at 43.5 percent of the on-screen flap span rather than 50, but under this three-quarter turn a truly centred point projects left of the screen mid-point, so it was read as correctly centred rather than off-centre. Placement is the strongest result in the set: flap 47 percent of panel in BOTH drawing and render, both ends landing within one percentage point of the drawn insets.",
+  "checkedAt": "2026-08-01T03:34:40.753Z"
+}

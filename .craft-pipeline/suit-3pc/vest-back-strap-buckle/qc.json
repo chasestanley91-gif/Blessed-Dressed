@@ -1,0 +1,113 @@
+{
+  "addr": "suit-3pc > vest-back-strap-buckle",
+  "productId": "suit-3pc",
+  "optionId": "vest-back-strap-buckle",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 84,
+    "geometry": 62,
+    "dimensions": 60,
+    "angles": 82,
+    "construction": 70,
+    "placement": 68,
+    "symmetry": 88,
+    "composition": 82,
+    "blueprint-match": 62
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "major",
+      "category": "dimensions",
+      "description": "Horizontal run of the back strap measured against back width at the same height. Drawing: the two grey strap rails run x=293 to x=898 while the back silhouette at that height spans x=288 to x=908 - the strap covers about 98 percent of the back, terminating in the side seams. Render: strap runs x=237 to x=645 against a back spanning x=112 to x=772 - roughly 61 percent of back width, floating well clear of both side seams.",
+      "expected": "A full-width cinch belt whose two ends are caught into the left and right side seams, crossing the entire back panel uninterrupted",
+      "actual": "A short centred half-belt whose two free ends stop about a fifth of the back width inside each side seam",
+      "correction": "Draw the back strap as one continuous belt of cloth anchored into the side seam on each side, running edge to edge across the whole back panel and passing over both back waist seams, with the buckle sitting mid-run at centre back."
+    },
+    {
+      "severity": "major",
+      "category": "placement",
+      "description": "The two vertical seam lines on the back panel sit at very different distances from centre. Drawing: short waist darts at x=430 and x=755 about centre x=590 - roughly plus/minus 0.26 of the half-width - beginning only at blade level (y=670) and running to the hem, so both fall INSIDE the strap's span. Render: vertical seams at x=165 and x=705 about centre x=440 - roughly plus/minus 0.83 of the half-width - running full height from shoulder to hem, and both fall OUTSIDE the strap's ends.",
+      "expected": "Two short back waist darts starting near blade level, set close to centre back at about a quarter of the half-width, both crossed by the strap",
+      "actual": "Two full-length side-back panel seams set far out toward the armholes, both outboard of the strap ends",
+      "correction": "Render the back as a two-panel back with a centre-back seam plus a pair of short vertical waist darts that begin at blade height and run to the hem, positioned close in to centre back so the strap crosses over both of them."
+    },
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "The buckle occupies roughly 60px of an 880px frame, about 7 percent of frame width, in a full-back framing. It is sharp and unobstructed but not dominant; the eye lands on the large field of plain back cloth first.",
+      "expected": "The drawing is itself a full-back flat so full-back framing is correct, but the strap and buckle are the entire subject",
+      "actual": "Correct full-back framing with the hardware rendered small and low-emphasis",
+      "correction": "Keep the full-back view but bring the camera in so the strap band and buckle occupy a clearly dominant horizontal register across the frame, with directional light raking the metal so the buckle frame, prong and slot all read."
+    },
+    {
+      "severity": "minor",
+      "category": "placement",
+      "description": "Strap height: the drawing places the strap centre at y=833 of a vest spanning y=50 to 1145, about 71.5 percent down the back. The render's strap centre is at y=828 but the vest top is cropped out of frame, so the equivalent percentage is NOT measurable at this crop. Height looks consistent by eye only.",
+      "expected": "Strap centred at roughly 71-72 percent of back length, at the natural waist",
+      "actual": "Consistent by eye; not verifiable because the neckline is cropped away",
+      "correction": "Include the back neckline in frame so the strap's height as a fraction of total back length is directly readable, with the strap sitting at the natural waist about seven-tenths of the way down the back."
+    }
+  ],
+  "verdict": "FAIL",
+  "waiver": null,
+  "correction": {
+    "errors": [
+      {
+        "severity": "major",
+        "category": "dimensions",
+        "error": "Horizontal run of the back strap measured against back width at the same height. Drawing: the two grey strap rails run x=293 to x=898 while the back silhouette at that height spans x=288 to x=908 - the strap covers about 98 percent of the back, terminating in the side seams. Render: strap runs x=237 to x=645 against a back spanning x=112 to x=772 - roughly 61 percent of back width, floating well clear of both side seams.",
+        "expected": "A full-width cinch belt whose two ends are caught into the left and right side seams, crossing the entire back panel uninterrupted",
+        "actual": "A short centred half-belt whose two free ends stop about a fifth of the back width inside each side seam",
+        "correction": "Draw the back strap as one continuous belt of cloth anchored into the side seam on each side, running edge to edge across the whole back panel and passing over both back waist seams, with the buckle sitting mid-run at centre back."
+      },
+      {
+        "severity": "major",
+        "category": "placement",
+        "error": "The two vertical seam lines on the back panel sit at very different distances from centre. Drawing: short waist darts at x=430 and x=755 about centre x=590 - roughly plus/minus 0.26 of the half-width - beginning only at blade level (y=670) and running to the hem, so both fall INSIDE the strap's span. Render: vertical seams at x=165 and x=705 about centre x=440 - roughly plus/minus 0.83 of the half-width - running full height from shoulder to hem, and both fall OUTSIDE the strap's ends.",
+        "expected": "Two short back waist darts starting near blade level, set close to centre back at about a quarter of the half-width, both crossed by the strap",
+        "actual": "Two full-length side-back panel seams set far out toward the armholes, both outboard of the strap ends",
+        "correction": "Render the back as a two-panel back with a centre-back seam plus a pair of short vertical waist darts that begin at blade height and run to the hem, positioned close in to centre back so the strap crosses over both of them."
+      }
+    ],
+    "lockedFeatures": [
+      "Back view with the wearer's back squarely to camera",
+      "Centre-back seam running the full height of the back panel",
+      "Split pointed back hem with a deep centre inverted-V notch and two dropped points, matching the drawing's hem",
+      "Metal rectangular slide buckle with visible frame and prong, sitting on the centre-back line",
+      "Sleeveless waistcoat back over white shirt sleeves - no jacket",
+      "No traced numbers, arrows, leader lines or ruler ticks anywhere in the frame"
+    ],
+    "forbiddenChanges": [
+      "do not alter any checklist item this attempt already passed",
+      "do not change the camera crop, composition, or accessories unless the error is itself a composition error",
+      "do not change the garment part, orientation, or any other option's geometry"
+    ]
+  },
+  "notes": "The render gets the view, the centre seam, the hem geometry and the hardware type right. The two failures are geometric: the belt is drawn side-seam-to-side-seam and rendered as a short centred half-belt (about 61 vs 98 percent of back width), and the back's vertical seams are placed far outboard as full-length panel seams instead of short waist darts close to centre. Strap band thickness relative to back length was NOT measurable because the render crops off the back neckline.",
+  "checkedAt": "2026-08-01T03:32:26.646Z"
+}

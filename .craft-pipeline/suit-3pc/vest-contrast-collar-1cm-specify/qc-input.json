@@ -1,0 +1,63 @@
+{
+  "scores": {
+    "shape": 45,
+    "geometry": 48,
+    "dimensions": 65,
+    "angles": 68,
+    "construction": 62,
+    "placement": 50,
+    "symmetry": 90,
+    "composition": 60,
+    "blueprint-match": 40
+  },
+  "errors": [
+    {
+      "severity": "critical",
+      "category": "shape",
+      "description": "Garment category. The drawing's shoulder lines are thin DOUBLE lines running out from the neck - the narrow shoulder straps of a waistcoat, the same convention used in the shawl-lapel-vest drawing in this set. Below the collar it shows a deep narrow V with sliver-thin lapels converging to a point at y=890 of 1180 (about 75 percent depth) with a single button at (590,1105). That is a collared waistcoat. The render shows a navy garment with a broad structured shoulder running off both frame edges, a full-width padded chest, and a wide notch lapel of jacket proportion (max lapel width about 150px against an 880px frame) over a shirt.",
+      "expected": "A bespoke waistcoat with a standing collar band, collar leaves, a small gorge notch, and long narrow lapels running down a deep V to a single button",
+      "actual": "A suit jacket with a conventional broad notch lapel worn over a shirt; the waistcoat's narrow shoulder strap and armhole are nowhere in evidence",
+      "correction": "Photograph a sleeveless bespoke waistcoat with a narrow shoulder strap and a visible waistcoat armhole edge on each side, a standing collar band at the back neck, small collar leaves, and long slim lapels running down a deep narrow V to a single closing button, worn over a dress shirt so the shirt sleeve reads outside the armhole."
+    },
+    {
+      "severity": "major",
+      "category": "placement",
+      "description": "Which edge carries the edging. In the drawing the red location marks are two SHORT strips, one per side, lying on the collar leaf's LEADING edge - left from about (375,150) to (365,330), right from (825,150) to (850,330), roughly 180px each. They stop at the gorge and never reach the back-neck band. In the render the contrast tape runs continuously along the collar's upper fold edge from the notch, up over the shoulder line and around behind the neck on both sides - a far longer run on a different edge of the collar.",
+      "expected": "A 1 cm contrast edging confined to a short strip on the leading front edge of each collar leaf, terminating at the gorge and not carried around the back-neck stand",
+      "actual": "Contrast piping applied along the whole outer/top edge of the collar and carried unbroken around the back neck",
+      "correction": "Apply the contrast edging as a narrow band bound onto the front leading edge of each collar leaf only, starting at the gorge notch and running up the leaf edge for roughly a third of the collar's visible length on each side, leaving the back-neck collar band in the base cloth."
+    },
+    {
+      "severity": "major",
+      "category": "dimensions",
+      "description": "Edging width. Using the shirt buttons as scale reference (visible at about 26-28px diameter, a dress-shirt button being about 1.05 cm), the contrast tape measures about 18-20px perpendicular to the collar edge, giving about 0.70-0.75 cm against the specified 1.0 cm. Approximate: the collar edge is foreshortened by the roll, so the true width could be slightly greater.",
+      "expected": "1.0 cm finished edging width",
+      "actual": "Approximately 0.7 cm as measured against shirt-button scale; roughly 25-30 percent narrow",
+      "correction": "Set the finished contrast edging at a full 1.0 cm - about the width of a dress-shirt button - measured perpendicular to the collar edge, and shoot with the collar edge close to square to the lens so the true width reads."
+    },
+    {
+      "severity": "major",
+      "category": "composition",
+      "description": "Legibility of the demonstrated feature. The contrast is a slate/periwinkle blue against navy - a tonal shift of only a few steps in value. At catalogue thumbnail size the 1 cm edging, which is the entire subject, barely separates from the base cloth.",
+      "expected": "The drawing marks the edging in high-visibility red specifically so its location is unmistakable; the marker is documentation, not a colour instruction, but it signals that the edging must be the unmistakable subject",
+      "actual": "A low-value-contrast tonal piping on navy that a customer must hunt for",
+      "correction": "Choose a base cloth and edging that differ clearly in value as well as hue - for example a mid-grey or navy body with a distinctly lighter or deeper edging - and light the collar with soft directional light across the edge so the bound band separates crisply from the ground."
+    },
+    {
+      "severity": "minor",
+      "category": "geometry",
+      "description": "V-opening proportion. The drawing's lapels are slivers roughly 110px wide at the top against a 530px opening, converging at about 75 percent of the drawing height. The render's lapels are broad jacket lapels about 150px wide converging near the bottom of frame at about 93 percent. The crops differ so depth percentages are not directly comparable; the lapel-width-to-opening ratio is, and it differs materially.",
+      "expected": "Very narrow slim lapels flanking a deep narrow V",
+      "actual": "Broad softly rolled jacket lapels flanking a wide V",
+      "correction": "Draft the lapels as narrow slim bands roughly a fifth the width of the neckline opening, running as long tapering strips down a deep narrow V."
+    }
+  ],
+  "lockedFeatures": [
+    "Contrast edging present and mirrored evenly on both left and right sides",
+    "Red guide marks correctly interpreted as location markers and NOT traced as red cloth - the edging is rendered in a neutral tone",
+    "No numerals, arrows, leader lines or callouts rendered into the photograph",
+    "Clean evenly bound edging with no puckering - the edging construction itself is well executed",
+    "Front view, centred and square to camera"
+  ],
+  "notes": "The drawing is a waistcoat neckline detail: a rectangular standing collar band at the back neck, collar leaves stepping down through a small gorge, then long narrow lapels down a deep V to a single button, with two short red strips marking 1.0 cm edging on the leading edge of each collar leaf only. The render substitutes a SUIT JACKET with a broad notch lapel - read from the full-width structured shoulder running off both frame edges, the padded chest, and the jacket-proportion lapel. The crop leaves the armhole out of frame so a waistcoat armhole edge cannot be seen either, which is itself disqualifying: a customer buying a vest detail would be shown something that reads as a jacket. Symmetry and edging craftsmanship are genuinely good."
+}

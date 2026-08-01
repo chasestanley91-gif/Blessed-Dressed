@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-01T02:55:43.176Z",
+  "at": "2026-08-01T03:39:52.882Z",
   "settings": {
     "maxWidth": 1400,
     "quality": 82,
@@ -7,30 +7,30 @@
   },
   "applied": true,
   "counts": {
-    "masters": 686,
+    "masters": 687,
     "converted": 1,
-    "skipped": 685,
+    "skipped": 686,
     "failed": 0,
     "repointed": 0
   },
   "bytes": {
-    "before": 2077916,
-    "after": 177130,
-    "savedPct": 91.5
+    "before": 2325486,
+    "after": 195302,
+    "savedPct": 91.6
   },
   "note": "targetSha1 is the derivative; sourceSha1 is the PNG master QC graded. The master and publish_approved.mjs byte-identity gate are untouched.",
   "results": {
     "ok": [
       {
-        "master": "public\\images\\generated\\sport-coat\\lapel-notch-68.png",
-        "masterBytes": 2077916,
-        "sourceSha1": "3811d099da383f494cb0b03253dd06d743e22ce1",
-        "target": "public\\images\\generated\\sport-coat\\lapel-notch-68.webp",
-        "targetBytes": 177130,
-        "targetSha1": "41f57a815e307c4c37b2297194f8c8842bcae047",
+        "master": "public\\images\\generated\\suit-2pc\\pocket-stitch-double.png",
+        "masterBytes": 2325486,
+        "sourceSha1": "2db65ad88c418a2385e90c1c79c7e000f95ababd",
+        "target": "public\\images\\generated\\suit-2pc\\pocket-stitch-double.webp",
+        "targetBytes": 195302,
+        "targetSha1": "6843f2a430d8d75e82d7b9818ee0710f171dd104",
         "quality": 82,
         "width": 1400,
-        "web": "/images/generated/sport-coat/lapel-notch-68.webp"
+        "web": "/images/generated/suit-2pc/pocket-stitch-double.webp"
       }
     ],
     "skipped": [
@@ -1576,6 +1576,10 @@
       },
       {
         "master": "public\\images\\generated\\sport-coat\\lapel-notch-45.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\sport-coat\\lapel-notch-68.png",
         "reason": "derivative already exists"
       },
       {

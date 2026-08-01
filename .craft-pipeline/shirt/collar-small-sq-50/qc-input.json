@@ -1,0 +1,56 @@
+{
+  "scores": {
+    "shape": 15,
+    "geometry": 30,
+    "dimensions": 35,
+    "angles": 62,
+    "construction": 68,
+    "placement": 60,
+    "symmetry": 84,
+    "composition": 45,
+    "blueprint-match": 20
+  },
+  "errors": [
+    {
+      "severity": "critical",
+      "category": "shape",
+      "description": "Tip termination is wrong and it is the entire identity of this option. In the blueprint the left leaf runs to a 4px flat terminal at y=144 before closing at (88.5,145), and the right closes at (137.5,146) with the same blunt run - the widest, bluntest terminal of the five drawings mapped, against fashion-point-58 which closes to a single pixel. The render shows two crisp acute points converging to a sharp V on both leaves.",
+      "expected": "A flat squared-off terminal edge across the end of each collar leaf, blunt rather than tapered",
+      "actual": "Sharp acute point collar tips on both leaves",
+      "correction": "Terminate each collar leaf in a short flat horizontal cut edge, so the leaf ends in a small squared corner with two visible right-angle corners and a blunt end face, giving an architectural squared silhouette."
+    },
+    {
+      "severity": "critical",
+      "category": "blueprint-match",
+      "description": "This render and the candidate for collar-sq-65-btn are effectively the same photograph: same model, neck and chin crop, fly-front placket, throat button and sharp point collar, differing only slightly in framing.",
+      "expected": "A collar photograph unmistakably distinct from its four menu siblings on tip shape and point length",
+      "actual": "Near-duplicate of the collar-sq-65-btn candidate",
+      "correction": "Render the squared 5.0 cm leaf noticeably shorter and blunter than the 6.5 cm siblings, cropping tighter on the collar so the short blunt tips dominate the frame."
+    },
+    {
+      "severity": "major",
+      "category": "dimensions",
+      "description": "Point length reads long, not the short 5.0 cm drawn. Using the throat button as a shared landmark: blueprint button at (113,129.5), tips 15.5px below at half-width 24.5px, a drop-to-half-width ratio of 0.63. Render: button about (447,548), tips about (152,778) and (762,788), ratio 0.78. The rendered leaves also bury the collar band almost completely, whereas the drawing keeps the band visible above the leaves.",
+      "expected": "A compact 5.0 cm leaf terminating high, leaving the collar band clearly visible above it",
+      "actual": "Long leaves hanging well down the chest, ratio 0.78 against 0.63 drawn, band almost fully covered",
+      "correction": "Shorten each collar leaf so the squared tip stops just below the throat button, leaving a clear band of collar stand visible above the leaf across its full width."
+    },
+    {
+      "severity": "minor",
+      "category": "angles",
+      "description": "Spread measured at the throat button between lines to the two tips: blueprint about 114 degrees, render about 105. Direction and magnitude are close and the difference sits within the error of eyeballed tip coordinates on draped cloth. The drawing's printed 80.00 degrees is measured at a higher vertex near the neck, not at the button, so it is not directly comparable to a photograph.",
+      "expected": "Included angle at the throat of roughly 114 degrees on the same construction",
+      "actual": "Roughly 105 degrees at the throat",
+      "correction": "Open the leaves slightly wider at the tips so the angle subtended at the throat button reads a touch broader, keeping both leaves mirrored."
+    }
+  ],
+  "lockedFeatures": [
+    "Front-on camera position on the garment centre line, both leaves at equal scale",
+    "Left and right leaves closely mirrored: tip drops 230px and 240px, half-widths 295px and 312px, within about 2 percent",
+    "Throat button present, fastened and fully unobscured; no necktie",
+    "Collar band and the spread between the leaves both clearly visible and unblocked",
+    "No traced annotation",
+    "Clean edge topstitching parallel to the leaf edge, correct 4-hole mother-of-pearl throat button"
+  ],
+  "notes": "Composition and craft are genuinely good and the staging is worth keeping. The failure is geometric and total: the option is called Small Square, the drawing terminates bluntly, the spec's forbidden list explicitly calls for a flat squared terminal edge, and the render delivers a textbook sharp point collar. Tip shape was verified by pixel-mapping rather than eyeballing, with the resolution limit stated: at 232x244 a real squared tip is only 1-2px wide, so terminals were compared RELATIVELY across all five drawings rather than claiming an absolute width. Small-square's 4px flat run is the bluntest of the set and fashion-point's single-pixel close the sharpest, so the drawing does support a squared reading."
+}

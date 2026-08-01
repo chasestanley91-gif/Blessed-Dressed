@@ -1,0 +1,113 @@
+{
+  "addr": "suit-3pc > sb-3",
+  "productId": "suit-3pc",
+  "optionId": "sb-3",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 90,
+    "geometry": 82,
+    "dimensions": 80,
+    "angles": 84,
+    "construction": 92,
+    "placement": 78,
+    "symmetry": 95,
+    "composition": 88,
+    "blueprint-match": 80
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "composition",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "major",
+      "category": "placement",
+      "description": "Button stance measured as a fraction of the V-apex-to-hem-point span. Drawing: apex y=380, hem point y=1135 (span 755); top button y=440 lands 0.079 down that span, essentially touching the apex. Render: apex y=500, hem point y=1105 (span 605); top button y=608 lands 0.179 down. The top button sits roughly twice as far below the neckline apex, leaving a visible panel of empty cloth between the V and the first button.",
+      "expected": "Top button set immediately beneath the point where the two front edges converge, about 8 percent of the apex-to-hem span below the apex",
+      "actual": "Top button about 18 percent of the apex-to-hem span below the apex, with a bare gap of cloth between",
+      "correction": "Place the top button directly under the V apex so the buttoning line begins at the moment the two front edges meet, with the button head nearly grazing the convergence point."
+    },
+    {
+      "severity": "major",
+      "category": "placement",
+      "description": "The pocket-line to second-button relationship is inverted. Drawing: welt centres y=628, second button y=685 - the button falls 57px BELOW the pocket line. Render: welt centres y=810, second button y=775 - the button falls 35px ABOVE it. The two most visible features stack in the opposite order to the drawing.",
+      "expected": "Middle button sitting just below the horizontal line of the two waist besom welts",
+      "actual": "Middle button sitting just above the welt line, with the welts pushed down toward the third button",
+      "correction": "Set the waist besom welts so their line passes just above the middle button, with the welt opening roughly one button-diameter higher than the middle button's centre."
+    },
+    {
+      "severity": "minor",
+      "category": "angles",
+      "description": "Welt rake. Drawing's left welt runs y=590 outer to y=665 inner across a 300px span - outer-end-high rake of roughly 13-14 degrees. Render's welts rise only 8-10px across 195px, roughly 3 degrees, reading as near-horizontal.",
+      "expected": "Waist besom welts raked distinctly outer-end-high at roughly 13 degrees",
+      "actual": "Waist besom welts nearly horizontal at roughly 3 degrees",
+      "correction": "Rake each waist besom so the outer end sits clearly higher than the inner end, about 13 degrees off horizontal, following the hip line."
+    },
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "A necktie occupies the V opening. The drawing shows the neckline opening empty, and for a front-style option the shape of the V is part of what is being sold. The tie covers no button and hides no front edge, so the option still reads.",
+      "expected": "Open neckline showing the shirt front so the V of the front style is unobstructed",
+      "actual": "A charcoal necktie filling the V opening",
+      "correction": "Show the shirt front open under the neckline with the collar visible and no tie, so the full V of the front edges reads against plain white shirting."
+    }
+  ],
+  "verdict": "FAIL",
+  "waiver": null,
+  "correction": {
+    "errors": [
+      {
+        "severity": "major",
+        "category": "placement",
+        "error": "Button stance measured as a fraction of the V-apex-to-hem-point span. Drawing: apex y=380, hem point y=1135 (span 755); top button y=440 lands 0.079 down that span, essentially touching the apex. Render: apex y=500, hem point y=1105 (span 605); top button y=608 lands 0.179 down. The top button sits roughly twice as far below the neckline apex, leaving a visible panel of empty cloth between the V and the first button.",
+        "expected": "Top button set immediately beneath the point where the two front edges converge, about 8 percent of the apex-to-hem span below the apex",
+        "actual": "Top button about 18 percent of the apex-to-hem span below the apex, with a bare gap of cloth between",
+        "correction": "Place the top button directly under the V apex so the buttoning line begins at the moment the two front edges meet, with the button head nearly grazing the convergence point."
+      },
+      {
+        "severity": "major",
+        "category": "placement",
+        "error": "The pocket-line to second-button relationship is inverted. Drawing: welt centres y=628, second button y=685 - the button falls 57px BELOW the pocket line. Render: welt centres y=810, second button y=775 - the button falls 35px ABOVE it. The two most visible features stack in the opposite order to the drawing.",
+        "expected": "Middle button sitting just below the horizontal line of the two waist besom welts",
+        "actual": "Middle button sitting just above the welt line, with the welts pushed down toward the third button",
+        "correction": "Set the waist besom welts so their line passes just above the middle button, with the welt opening roughly one button-diameter higher than the middle button's centre."
+      }
+    ],
+    "lockedFeatures": [
+      "Exactly three buttons in one single column, centre front - count is correct and is the whole option",
+      "Even button spacing: 167px and 165px between consecutive buttons, matching the drawing's even 245/245 rhythm",
+      "Pointed hem with the two front edges splitting above the point, matching the drawing's V hem",
+      "Two besom welt pockets at waist level, one each side",
+      "Front darts on each forepart",
+      "Working-style buttonholes stitched beside each button",
+      "Zero traced annotation - no numbers, arrows, leader lines, callouts or coloured guide marks anywhere"
+    ],
+    "forbiddenChanges": [
+      "do not alter any checklist item this attempt already passed",
+      "do not change the camera crop, composition, or accessories unless the error is itself a composition error",
+      "do not change the garment part, orientation, or any other option's geometry"
+    ]
+  },
+  "notes": "Graded against /images/options/vest/sb-3.jpg, the 1200x1200 waistcoat line drawing that spec.json declares and the generator actually used. NOTE ON THE BATCH MANIFEST: I handed the grader /images/jacket/front-style/sb-3.jpg, taken from repo-index.json's collapsed illustration field. That file is a 240x200 photograph of charcoal woven cloth - a fabric swatch, verified directly. It is the stale pointer on a SECOND catalog row for the same option id, under a different field. The generation was never affected; only my manifest was. This is FAM-MASTER-PATH-CROSS-FIELD confirmed from a second direction.\n\nBUTTON COUNT IS CORRECT - three buttons, one column, which is the entire option. What fails is stance: the top button sits twice as far below the V apex as drawn, and the middle button crosses to the wrong side of the pocket line. spec.json records only the count '3-button' with every measured array empty, so no absolute cm targets exist and none were invented; all figures are proportions normalised to the apex-to-hem span, read to about plus or minus 15px.",
+  "checkedAt": "2026-08-01T03:26:25.985Z"
+}
