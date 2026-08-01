@@ -422,3 +422,48 @@ repo at all.
 
 **Nothing merged, nothing repriced.** The merge/reprice ruling on any customer-facing option remains
 the user's, and this table exists to make that ruling on evidence rather than on impression.
+
+### Correction: I checked the "recoverable" bucket and it was partly wrong
+
+The section above split the 208 blocking rows into *source-limited* and *pipeline-limited*, and named
+four pairs as recoverable without new source material. I then verified each by md5 rather than by
+filename, and two of the four were mine to retract:
+
+| pair | claim | verified |
+|---|---|---|
+| `bh-hand` / `bh-machine` | recoverable | **WRONG — source-limited.** `buttonhole/hand-made.jpg` is **byte-identical** to `buttonhole/machine.jpg`. The supplier shipped one drawing under two names, so hand-versus-machine cannot be drawn from source at all. This extends the known AMF finding to the buttonhole family. |
+| `stitch-01-inner-plain` / `stitch-01-top` | recoverable | **WRONG — source-limited.** `decoration_stitching_on_placket/` contains exactly ONE file. There is no second drawing to point at. |
+| `cs-square` / `cs-square-2btn` | recoverable | **CONFIRMED, and it is a MIS-POINTING, not a generation gap.** |
+| `canvas-none-press` / `canvas-top` | recoverable | **CONFIRMED as a mis-pointing**, but the correct target is not obvious. |
+
+The AMF pairs re-verified as identical too, confirming the earlier md5 result:
+`machine-01cm-amf-stitching.jpg`, `-03cm-`, `-05cm-` are each byte-identical to their `-top` sibling.
+
+**Lesson worth keeping: a differently-named file is not a different drawing.** Four of these looked
+recoverable purely because a plausibly-named alternate existed on disk. Hashing them took one
+command and reversed half the conclusion.
+
+### Two ready-to-apply pointer fixes — NOT applied, they change a live image
+
+**`cs-square` "Square Collar Stand"** currently shows
+`techpacks/shirt/collar_stand/square-collar-stand-with-2-buttons.jpg` — which is `cs-square-2btn`'s
+drawing. The correct file exists and is genuinely different:
+
+```
+square-collar-stand.jpg               md5 f1c52febf4…   <- what cs-square should show
+square-collar-stand-with-2-buttons.jpg md5 6455ac3807…  <- what it shows now, and what
+                                                            cs-square-2btn correctly shows
+```
+
+A customer choosing between "Square Collar Stand" and "Square Stand (2 Buttons)" is shown the same
+picture, and it is the 2-button one — so the plain option is actively mis-sold.
+
+**`canvas-none-press` "None Pressing Craftsmanship"** shows `canvas/top-craftsmanship.jpg`, which is
+`canvas-top`'s drawing. Here the correct target is *not* obvious: `canvas/` holds
+`normal-craftsmanship`, `senior-craftsmanship`, `top-craftsmanship` and six files named
+`picture-1…6`. None is named for "none pressing". This one needs a human to say which drawing — or
+whether it belongs in NEEDS-SOURCE.
+
+Both are left unapplied deliberately: they change what a customer sees, which is the same class of
+change as the four live-photo swaps already awaiting `--allow-swap`. The evidence is here so the
+ruling can be a decision rather than a guess.
