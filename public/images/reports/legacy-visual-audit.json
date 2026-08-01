@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-01T14:02:39.042Z",
+  "updatedAt": "2026-08-01T20:27:22.708Z",
   "rows": [
     {
       "option": "shirt/collar-af1-70",
@@ -386,6 +386,38 @@
       "gradedAt": "2026-08-01T11:42:53.991Z"
     },
     {
+      "option": "suit-2pc/cb-1",
+      "verdict": "OK",
+      "liveImage": "/images/generated/sport-coat/cb-1.webp",
+      "confidence": "high",
+      "why": "Drawing: a single buttonhole glyph, one contiguous red run 301px tall by 62px wide with one centre bar. Photo: exactly 1 button with its buttonhole stitched alongside; blob detection found one button-sized dark disc (93x97px, area 1556) and the overlay confirms the other blob is the seam shadow, not a second button; the sleeve is clean above and below so nothing is cropped out of frame. COULD NOT verify the 32L size in the source filename: the red marks are schematic, not to scale - cb-3's three holes span 97% of the drawn sleeve width where a real 3-button cuff spans about 33% - so no real button diameter is recoverable from the drawing. Graded on the catalog-facing claim, count = 1, which matches.",
+      "gradedAt": "2026-08-01T20:27:22.695Z"
+    },
+    {
+      "option": "suit-2pc/cb-2",
+      "verdict": "OK",
+      "liveImage": "/images/generated/sport-coat/cb-2.webp",
+      "confidence": "high",
+      "why": "Drawing: 2 stacked buttonhole glyphs, total red height 292px over a 458px sleeve width, i.e. 146px per hole, each with its own centre bar and separated by a pinch confirmed at zoom. Photo: exactly 2 buttons stacked vertically, each with a buttonhole; blob detection returns two button-sized discs (areas 1210, 1273) plus small stitching and shadow blobs. The sleeve above the top button is clean for about 565px against roughly 90px button spacing, so no further buttons are cropped out of frame.",
+      "gradedAt": "2026-08-01T20:27:22.695Z"
+    },
+    {
+      "option": "suit-2pc/cb-3",
+      "verdict": "OK",
+      "liveImage": "/images/generated/sport-coat/cb-3.webp",
+      "confidence": "high",
+      "why": "Drawing: 3 stacked buttonhole glyphs, total red height 448px over a 461px sleeve width = 149px per hole; the 448/292 ratio against cb-2 is 1.53, matching 3/2 and confirming the count independently of the visual zoom, which also shows three segments separated by two pinches. Photo: exactly 3 buttons stacked vertically, each with a buttonhole; blob detection returns three button-sized discs (areas 1280, 1243, 1202) and the overlay confirms all three land on buttons. Clean sleeve above and below, so nothing is cropped out of frame.",
+      "gradedAt": "2026-08-01T20:27:22.695Z"
+    },
+    {
+      "option": "suit-2pc/cb-none",
+      "verdict": "OK",
+      "liveImage": "/images/generated/sport-coat/cb-none.webp",
+      "confidence": "high",
+      "why": "Absence option. Drawing contains ZERO red pixels - the red mask returns no hits at all - on the same base sleeve silhouette used by cb-1/2/3. Photo shows a bare cuff with the sleeve vent seam running the full height clearly in frame, the same seam that carries the buttons in the cb-1/cb-2/cb-3 photos at the same relative position, plus the full cuff depth from the hem upward well past where a 4-button stack would sit, all clean. The control feature is in frame and empty, so the absence is positively demonstrated rather than cropped away.",
+      "gradedAt": "2026-08-01T20:27:22.695Z"
+    },
+    {
       "option": "suit-2pc/ext-no-btn",
       "verdict": "OK",
       "liveImage": "/images/generated/trousers/ext-no-btn.webp",
@@ -426,6 +458,62 @@
       "gradedAt": "2026-08-01T11:41:40.168Z"
     },
     {
+      "option": "suit-2pc/lapel-notch-45",
+      "verdict": "OK",
+      "liveImage": "/images/generated/jacket/lapel-notch-45.webp",
+      "confidence": "medium",
+      "why": "Measured the drawing rather than reading the label. Drawing (supplier Semi-notch, 0003) at 9x fine-grid zoom: notch vertex (812,331), collar tip (849,304), lapel tip (856,345), chord opening 53.8 degrees; gorge inner end (715,262) so gorge inclination 35.4 degrees. Photo is a strongly OBLIQUE close-up, so edges were resolved with a gamma-lifted view rather than raw shadow: notch vertex ~(505,288), collar edge rising to ~(600,175) at -47.9 degrees, lapel top edge running to the lapel point ~(768,272) at -4.3 degrees, opening ~43.6 degrees. Consistent with the drawing. Cross-check: this drawing and lapel-notch-68's share one template (collar top y=47/43, bottom point y=1154/1153) and their chord openings differ by 22.9 degrees against a label difference of 23, both at label plus 8.8, so the labels name the notch opening and the chord method carries a consistent bias. COULD NOT establish the photo's viewing plane, so 44 degrees is an apparent uncorrected angle.",
+      "gradedAt": "2026-08-01T20:27:22.695Z"
+    },
+    {
+      "option": "suit-2pc/lapel-notch-68",
+      "verdict": "OK",
+      "liveImage": "/images/generated/sport-coat/lapel-notch-68.webp",
+      "confidence": "medium",
+      "why": "Drawing (factory Notch_with_high_gorge, 0689) at 9x fine-grid zoom: notch vertex (833,321), collar tip (856,298), lapel tip (880,350), giving a chord opening of 76.7 degrees. CORRECTION TO THE PROJECT RECORD: the previously recorded 39.8 degrees does NOT measure the notch - it reproduces as the GORGE SEAM inclination, measured here at 38.4 degrees from gorge inner end (722,233) to vertex (833,321), atan(88/111). A different feature, mis-named. Against template-mate lapel-notch-45 the notch difference is 22.9 degrees against a label difference of 23, both sitting at label plus 8.8, so 68 DOES name the notch opening and the chord method carries a consistent bias. Photo: the first read of a narrow ~20 degree slit was WRONG - that was the shadow core inside the fold, the documented trap; a gaussian-smoothed gradient edge map resolves the true V at vertex ~(730,265) with arms to (793,213) and (788,292), opening ~63-69 degrees, matching the drawing. An automated wedge-width fit returned negative openings and was discarded as invalid. Gorge sits high on the chest, consistent with the source name. NOTE: the label says Curved Gorge but the drawing's gorge seam is straight, under 1px deviation over 111px; the drawing governs so the photo is not required to show a curve.",
+      "gradedAt": "2026-08-01T20:27:22.679Z"
+    },
+    {
+      "option": "suit-2pc/lbp-3l-1r",
+      "verdict": "OK",
+      "liveImage": "/images/generated/sport-coat/lbp-3l-1r.webp",
+      "confidence": "high",
+      "why": "Drawing: 3 marks on the viewer's right = wearer's LEFT lapel, evenly stacked at y=409/437/466, and 1 mark on the viewer's left = wearer's RIGHT lapel at y=408. Photo is frontal with both lapels in frame: crop of the wearer's left lapel shows exactly 3 stacked buttonholes, crop of the wearer's right shows exactly 1. Counts and sides both match, and the asymmetry is demonstrated because both lapels are visible.",
+      "gradedAt": "2026-08-01T20:27:22.695Z"
+    },
+    {
+      "option": "suit-2pc/lbp-both",
+      "verdict": "OK",
+      "liveImage": "/images/generated/sport-coat/lbp-both.webp",
+      "confidence": "high",
+      "why": "Drawing: exactly 1 mark each side at equal height - viewer-left x=368 y=426, viewer-right x=789 y=427. Photo is a symmetric close-up with BOTH lapels in frame: 1 buttonhole on each at matching height, confirmed by separate crops of each lapel each showing a single keyhole. The two-sided claim requires both lapels visible and they are, so the option is positively demonstrated.",
+      "gradedAt": "2026-08-01T20:27:22.695Z"
+    },
+    {
+      "option": "suit-2pc/lbp-left",
+      "verdict": "OK",
+      "liveImage": "/images/generated/sport-coat/lbp-left.webp",
+      "confidence": "high",
+      "why": "Drawing red-blob count about image centre x=600: 1 mark on the viewer's right at x=826 = wearer's LEFT lapel, 0 on the wearer's right. Photo is frontal with both lapels in frame: exactly 1 buttonhole on the wearer's left lapel, and the wearer's right lapel crop is clean fabric with no buttonhole. Count and side both match, and the zero-on-the-other-side condition is positively shown because both lapels are visible.",
+      "gradedAt": "2026-08-01T20:27:22.695Z"
+    },
+    {
+      "option": "suit-2pc/lbp-left-double",
+      "verdict": "OK",
+      "liveImage": "/images/generated/sport-coat/lbp-left-double.webp",
+      "confidence": "high",
+      "why": "Drawing: 2 red marks, both viewer-right (x=821, 811) = wearer's LEFT lapel, stacked at y=404 and y=431; 0 on the wearer's right. Blob areas 602 and 624 match the other lbp glyphs (583-710), so the count is clean. Photo: exactly 2 stacked buttonholes with keyhole eyes on a single lapel; side confirmed as wearer's left because the shirt/chest centre lies to that lapel's left in frame. LIMITATION: the tight crop shows only the wearer's left lapel, so the drawing's zero-on-the-right baseline is not visible - but the option's positive claim of 2 on the left is fully demonstrated.",
+      "gradedAt": "2026-08-01T20:27:22.695Z"
+    },
+    {
+      "option": "suit-2pc/pad-none",
+      "verdict": "OK",
+      "liveImage": "/images/generated/sport-coat/pad-none.webp",
+      "confidence": "medium",
+      "why": "Absence option, so positive demonstration was tested first. The full jacket silhouette lies INSIDE the frame: navy bbox x[32,859] of 880, y[262,966] of 1168, touching no edge, so both shoulder lines AND both sleeve heads are in frame and the pad's location is shown rather than cropped away. Shoulder slope traced from the topmost-navy profile: left neck (330,300) to sleeve head (110,399) = 24.2 degrees; right (605,305) to (825,427) = 29.0 degrees, with no squared corner and no roping at either sleeve head. Drawing (060J No_pad) shows both shoulders with the same soft sloping line: left 28.2 degrees, right 32.2 degrees. Photo 24-29 against drawing 28-32: agrees, both unpadded. An automated percentile slope fit returned 32/39 degrees but its endpoints landed on the chest rather than the shoulder line, so it was discarded. Weaker framing than siblings pad-01 and pad-05-structured which are three-quarter shoulder close-ups; this is frontal so the shoulder is smaller in frame, but fully visible and measurable.",
+      "gradedAt": "2026-08-01T20:27:22.695Z"
+    },
+    {
       "option": "suit-2pc/pocket-stitch-015",
       "verdict": "WRONG",
       "liveImage": "/images/generated/trousers/pocket-stitch-015.webp",
@@ -440,6 +528,14 @@
       "confidence": "high",
       "why": "Drawing 3302 highlights a stitch line hugging the front pocket mouth with no visible gap - the 0.15 cm condition. At 5x with brightness enhancement the opening carries a clear line of DISCRETE, EVENLY SPACED RAISED STITCHES sitting directly on the folded edge, unmistakably a hand pick stitch rather than a continuous machine line, with no band of fabric between edge and stitch. That excludes pocket-stitch-none, both 0.6 cm siblings (31A3 shows a visibly separated line) and pocket-stitch-double (two parallel lines; only one here). SOURCE PROBLEM worth recording: 31A1 (0.15 cm topstitch) and 3302 (0.15 cm pick stitch) are graphically near-identical - neither dashes nor otherwise encodes topstitch versus pick stitch - so the drawing alone cannot separate this option from pocket-stitch-015. The photograph settles it here.",
       "gradedAt": "2026-08-01T11:41:40.168Z"
+    },
+    {
+      "option": "suit-2pc/quarter-canvas",
+      "verdict": "OK",
+      "liveImage": "/images/generated/sport-coat/quarter-canvas.webp",
+      "confidence": "medium",
+      "why": "Drawing is an interior cutaway (supplier name Single_layer, code 00C3). Layers counted in it: a chest piece rendered as rows of short dashes, i.e. pad-stitching EXPLICITLY DRAWN, plus a separate cross-hatched interlining strip along the front edge, plus plain shell panel and pocket. Photo is a flat-laid jacket front interior showing a cream canvas chest piece with clearly visible HAND pad-stitching in horizontal rows - same row orientation, same density taper, same triangular chest-piece outline narrowing downward as the drawn dashes - plus grey linen body canvas, pocket bag, beige lining, navy shell. Because pad-stitching IS drawn here, showing it is correct; this is not the fused-sibling failure mode. COULD NOT VERIFY the quarter extent: the illustration carries no quarter/half/full callout and is titled Single layer, so no extent claim is recoverable. A colour segmentation of the chest piece's vertical span was invalid - the cream mask also caught the beige lining, returning an absurd 4-95% span - and was discarded, so no extent ratio is given. FLAGGING that the label (Quarter Canvas) and the illustration (Single layer) describe different attributes.",
+      "gradedAt": "2026-08-01T20:27:22.695Z"
     },
     {
       "option": "suit-2pc/quarter-top",

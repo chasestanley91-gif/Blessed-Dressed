@@ -1717,3 +1717,64 @@ grader checked specifically. Across this supplier set the drawn thread is variou
 blue and pink, so coloured thread here is a **genuine sample colour, not the highlight convention**, and
 the circled ①②③ markers are separate high-chroma components well clear of the stitch run in every case.
 The concern is real but does not generalise to this family.
+
+---
+
+## RETRACTION: the founding measurement lesson of this project was itself mis-measured
+
+This project's most-cited rule — *"a number in a label is not a measurement of the drawing"* — originated
+in `lapel-notch-68`, where the label's 68° was said to be contradicted by a drawing measuring **39.8°**.
+Four generations were spent on that reading.
+
+**The 39.8° was measuring the wrong feature.** Re-measured at 9× on a fine grid:
+
+| | `lapel-notch-45` | `lapel-notch-68` |
+|---|---|---|
+| notch vertex | (812, 331) | (833, 321) |
+| collar tip | (849, 304) | (856, 298) |
+| lapel tip | (856, 345) | (880, 350) |
+| **notch chord opening** | **53.8°** | **76.7°** |
+| gorge seam inclination | 35.4° | **38.4°** |
+
+The 39.8° reproduces as the **gorge seam inclination** (38.4° here), a different feature entirely.
+
+**And the labels are correct.** The two notch openings differ by **22.9°** against a label difference of
+**23°**, and both sit at exactly **label + 8.8°** — a constant offset attributable to the chord method
+(measuring tip-to-tip rather than along the seams). The drawings share one template, confirmed by
+collar-top y = 47/43 and bottom-point y = 1154/1153, so the comparison is clean.
+
+### What this changes, and what it does not
+
+**Changed:** the specific claim that `lapel-notch-68`'s label contradicts its drawing is **withdrawn**.
+The label names the notch opening and the drawing agrees with it. Any plan to "correct" that option
+toward 39.8° would have made it wrong.
+
+**Not changed:** the *lesson* drawn from it was right, and is if anything better supported now — the
+failure was always **measuring the wrong feature and naming it as though it were the right one**. That
+is the same error as the 139 px depth in a 140 px box, the two drawing measurements that read lapel
+edges instead of a welt, and the `opt.id` diff that compared unrelated rows. It is now confirmed to
+have been the error in the founding case too.
+
+The corrected form of the rule: **before concluding a label contradicts a drawing, verify you measured
+the feature the label names.** The original phrasing generalised from a case that did not support it.
+
+### The same trap caught a second time in the same option
+
+The grader's own first read of the `lapel-notch-68` photo gave a "narrow ~20° slit" — which is the
+documented shadow-core-inside-the-fold trap, recorded earlier in this file from an identical 2.6°
+reading. A gaussian-smoothed gradient edge map resolved the true V at **63–69°**, matching the drawing.
+An automated wedge-width fit returned *negative* openings (−0.6°) and was discarded as invalid.
+
+Three independent methods, two of them wrong, one validated by agreeing with an independent
+measurement of the drawing. That is the discipline working.
+
+### Minor, logged for the record
+
+- `quarter-canvas`: the label says "Quarter Canvas" but the illustration is titled **`Single_layer`**
+  and carries no quarter/half/full callout, so **no extent claim is recoverable from it**. Label and
+  drawing describe different attributes.
+- `lapel-notch-68`: label says "Curved Gorge" but the drawn gorge seam is **straight** (≤1 px deviation
+  over 111 px). The drawing governs, so the photo is not required to show a curve.
+- The cuff-button drawings are **schematic, not to scale**: `cb-3`'s three holes span 97% of the drawn
+  sleeve width where a real 3-button cuff spans ~33%. No button diameter is recoverable from them.
+  Counts are gradeable; sizes are not.
