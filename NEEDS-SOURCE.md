@@ -241,3 +241,80 @@ mis-sold.
   0.212 target, then plateaued. If the 4.4 / 5.1 cm cuff pair matters commercially it needs
   a different mechanism — an in-frame scale reference, or accepting that sub-centimetre
   depth is below what this model resolves.
+
+---
+
+# Added 2026-08-01 — findings from the live-catalog audit
+
+## 1. `jacket/front-style/` — an ENTIRE FIELD with no usable drawing
+
+Triage over the whole folder: **13 files, 13 failures.** Four are `NOT_A_DRAWING`, nine `SUSPECT`.
+All are 240×200; white fraction 0.000–0.430 against the 0.75 floor a genuine small drawing clears;
+saturation 1.3–45.2. They are fabric swatches and scraped page fragments.
+
+```
+sb-1  sb-2  sb-3  sb-4  sb-3-roll-2  sb-4-roll-3  sb-5
+db-2x1  db-4x1  db-4x2  db-6x1  db-6x2  db-6x3
+```
+
+**Every jacket button-stance option — single- and double-breasted — has no authentic source.** This
+is already causing a live defect: `sb-4` renders three buttons for a four-button option, and one file
+serves `sport-coat`, `suit-2pc` and `suit-3pc`, so it is wrong on three products at once.
+
+**The equivalent waistcoat drawings exist and are genuine** — `/images/options/vest/sb-3.jpg`,
+`db-4x2.jpg` etc. are 1200×1200 line art. So the supplier draws these; the jacket set is simply
+missing from this repo. **That makes it a request, not a research problem.**
+
+## 2. The canvas field — one sheet for five different extents
+
+`83dbc62b46ef__00C3__Single_layer.jpg` is the **only** canvas sheet in `public/images/blueprints`,
+and the catalog carries five extent options: quarter / half / light-half / ultra-thin-half / full.
+
+Worse, the sheet documents a **different distinction entirely**. Its title is "Single layer" — a
+layer *count*. The options are about *extent*. And its drawn pad-stitched canvas descends to 58% of
+forepart height, which is half-canvas territory, not the "top quarter" the quarter-canvas description
+claims.
+
+Needed: one drawing per extent, or a ruling that the five options collapse.
+
+## 3. Hand-versus-machine buttonholes cannot be drawn from source
+
+`buttonhole/hand-made.jpg` is **byte-identical** to `buttonhole/machine.jpg`. One drawing under two
+filenames. This extends the known AMF finding — where every `-amf` file is byte-identical to its
+`-top` sibling — to a second family.
+
+`bh-hand` and `bh-machine` therefore cannot be told apart from any source material in this repo.
+
+## 4. `decoration_stitching_on_placket/` holds exactly one file
+
+`stitch-01-inner-plain` and `stitch-01-top` both point at
+`machine-01cm-top-stitching-on-inner-plain-placket.jpg` because it is the only file in the directory.
+There is no second drawing to point at.
+
+## 5. Two options that cannot be photographed distinguishably at all
+
+Recorded so no further credits are spent trying:
+
+- **`suit-2pc/cd-minus-3`** — a ±cm chest-dart *position* adjustment. −3, −2, standard, +2 and +3
+  cannot differ in a photograph; the dart looks the same wherever it sits. Its "blueprint" is also a
+  screenshot of a supplier **button** catalogue page.
+- **`suit-2pc/heel-none`** — an absence on the **inside back** of the hem. The shot would have to
+  show the inside of the trouser leg, and even then the option is the absence of a tape a customer
+  never sees.
+
+These need a diagram, a text note, or removal from the picker — not a photograph.
+
+## 6. The peak-lapel ladder, quantified
+
+Previously recorded as unfinishable. Now measured: **one photograph
+(`generated/jacket/lapel-peak-101.webp`) serves ten options across three products — 30 catalog
+rows.** `lapel-peak-101, -102, -102-rl, -103-curved, -105, -107, -108, -110, -110-low, -115`.
+
+`collision_triage.mjs` confirms all ten resolve to **one** blueprint file, so this is source-limited
+in the strict sense: no prompt can separate them and QC actively drives them together.
+
+## 7. Possible duplicate option, worth a catalog ruling rather than a drawing
+
+`lp-jetted-4` ("Straight Jetted Pocket 4 cm") and `lp-straight-jetted` ("Straight Jetted Pocket")
+share one drawing and differ only by a centimetre figure appearing in one of the two names. They may
+be the same option listed twice.
