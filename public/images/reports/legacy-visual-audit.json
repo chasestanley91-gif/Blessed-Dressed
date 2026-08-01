@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-01T11:42:53.994Z",
+  "updatedAt": "2026-08-01T12:37:50.663Z",
   "rows": [
     {
       "option": "shirt/collar-af1-70",
@@ -442,12 +442,36 @@
       "gradedAt": "2026-08-01T11:36:49.820Z"
     },
     {
+      "option": "vest/db-4x2",
+      "verdict": "OK",
+      "liveImage": "/images/generated/vest/db-4x2.webp",
+      "confidence": "high",
+      "why": "Counted by eye on a 2x crop (x300-600, y450-1000): exactly 2 columns x 2 rows = 4 buttons, with no third row below the frame - the hem point is visible in the same crop. Drawing db-4x2.jpg: 2 columns x 2 rows at x~465/728. Wrap direction agrees too: in both, the overlap edge sits to the viewer's LEFT of centre with the top panel extending right. NOTED (different field): photo hem is pointed while this drawing's hem is a flat arc; hem is governed by bottom-shape-vest.",
+      "gradedAt": "2026-08-01T12:37:50.660Z"
+    },
+    {
       "option": "vest/db-6x2",
       "verdict": "OK",
       "liveImage": "/images/generated/vest/db-6x2.webp",
       "confidence": "high",
       "why": "Blueprint marks six buttons in two columns of three on a wrapped double-breasted front; a brightened zoom confirms six buttons as two columns of three, with stitched buttonholes beside the middle and bottom buttons of the closing column and none at the top row, i.e. two of six fastening, which separates 6x2 from the 6x3 sibling. Noted deviation: hem is straight in the drawing but pointed in the photo.",
       "gradedAt": "2026-08-01T09:46:55.708Z"
+    },
+    {
+      "option": "vest/db-6x3",
+      "verdict": "OK",
+      "liveImage": "/images/generated/vest/db-6x3.webp",
+      "confidence": "high",
+      "why": "Eye count on a 2x crop (x300-600, y400-900): exactly 2 columns x 3 rows = 6 buttons, evenly pitched, none cropped. Drawing db-6x3.jpg: 2 columns x 3 rows at x~455/720, rows y~515/775/1040. Overlap edge on the viewer's left with the top panel extending right in both. Distinguishable from db-4x2 and db-8x4 by row count.",
+      "gradedAt": "2026-08-01T12:37:50.660Z"
+    },
+    {
+      "option": "vest/db-8x4",
+      "verdict": "OK",
+      "liveImage": "/images/generated/vest/db-8x4.webp",
+      "confidence": "high",
+      "why": "Eye count on a 2x crop (x300-600, y500-1000): exactly 2 columns x 4 rows = 8 buttons; the top row sits just below the collar and the bottom row above the hem, so no row is cropped away. Drawing db-8x4.jpg: 2 columns x 4 rows at y~297/545/772/1022. Wrap direction matches. NOTED: the photo has a shawl collar; the drawing's crop cuts off above the neckline so it neither shows nor contradicts a collar - collar type not verifiable from this drawing.",
+      "gradedAt": "2026-08-01T12:37:50.660Z"
     },
     {
       "option": "vest/sb-3",
@@ -458,12 +482,68 @@
       "gradedAt": "2026-08-01T09:46:55.708Z"
     },
     {
+      "option": "vest/sb-4",
+      "verdict": "OK",
+      "liveImage": "/images/generated/vest/sb-4.webp",
+      "confidence": "high",
+      "why": "Counted by eye at 2x zoom on a full-height placket strip (crop x350-560 of the 880x1168 photo): exactly 4 buttons in ONE column, spanning the V-break to the hem point, nothing above the top button and nothing hidden below the hem. Drawing sb-4.jpg carries 4 centre-front marks (rings at y~290/510/720 plus the bottom dash at y~930) on a single column. Supporting: V-neck, two plain besom waist pockets, double-point hem, all as drawn. Cleanly separable from sb-5 and sb-6. No printed dimension callout, so no cm recoverable.",
+      "gradedAt": "2026-08-01T12:37:50.660Z"
+    },
+    {
+      "option": "vest/sb-5",
+      "verdict": "OK",
+      "liveImage": "/images/generated/vest/sb-5.webp",
+      "confidence": "high",
+      "why": "Eye count at 2x on the full placket strip: exactly 5 buttons, one column, top button at the V-break and bottom at the hem point, none cropped at either end. Drawing sb-5.jpg has 5 CF marks (rings y~68/288/498/715 plus dash y~930). Single-breasted in both. Two besom waist pockets and double-point hem also match. Distinguishable from sb-4 and sb-6 by count alone.",
+      "gradedAt": "2026-08-01T12:37:50.660Z"
+    },
+    {
+      "option": "vest/sb-6",
+      "verdict": "OK",
+      "liveImage": "/images/generated/vest/sb-6.webp",
+      "confidence": "high",
+      "why": "Eye count at 2x on the full placket strip: exactly 6 buttons in one column, none cropped. Drawing sb-6.jpg has 6 CF marks (dash y~45, rings y~228/420/605/787, dash y~953), single column. Button stance correct and separable from sb-4/sb-5. NOTED but not failing because they belong to different fields: the photo additionally shows a chest welt pocket on the wearer's left and FLAP waist pockets, where the drawing shows no chest pocket and two plain besoms.",
+      "gradedAt": "2026-08-01T12:37:50.660Z"
+    },
+    {
       "option": "vest/v-neckline",
       "verdict": "OK",
       "liveImage": "/images/generated/vest/v-neckline.webp",
       "confidence": "high",
       "why": "Blueprint shows a collarless, lapel-less neckline with two straight edges converging to a sharp point above the top button; the live photo shows exactly that - a deep straight-sided V terminating in a crisp apex just above the top button, with no collar band and no lapel - so it cannot be mistaken for the U-neckline or any lapel sibling.",
       "gradedAt": "2026-08-01T09:46:55.708Z"
+    },
+    {
+      "option": "vest/vest-bottom-point",
+      "verdict": "WRONG",
+      "liveImage": "/images/generated/vest/vest-bottom-point.webp",
+      "confidence": "medium",
+      "why": "The drawing shows a STRAIGHT hem; the photo shows a deep pointed hem, and hem shape is this field's own discriminator. Drawing, per-column lowest-dark-pixel trace: a single monotonic arc, y=1098 at x=0 to y=1137 at centre to y=1097 at x=1199, total sag 40px across 1200px, with NO notch and NO tip. Verified that arc is the hem and not a trouser line - both front dart lines and the CF placket line terminate on it. Its profile is within 3px of vest-bottom-straight.jpg (sag 37px). Photo at 2.2x brightened: a sharp angular double point with a clear CF notch. FLAGGING THAT THE DRAWING MAY BE THE WRONG ARTIFACT: it is a DOUBLE-BREASTED 8-button figure (4 rows x 2 cols) whose four hem-shape siblings are all single-breasted, and among all 8 vest drawings compared its nearest neighbour is db-8x4.jpg (mean abs diff 15.6 against 27-32 for the round and pointed hem drawings). Verify the source illustration before regenerating the photo.",
+      "gradedAt": "2026-08-01T12:37:50.646Z"
+    },
+    {
+      "option": "vest/vest-bottom-regular",
+      "verdict": "OK",
+      "liveImage": "/images/generated/vest/vest-bottom-regular.webp",
+      "confidence": "medium",
+      "why": "Measured hem geometry normalised to button pitch, the landmark present in both (each shows 2 buttons plus a bottom buttonhole). Photo on a ruler overlay at 2.2x: buttons y=293 and y=522 giving pitch 229px; CF notch apex (441,875); point tips (357,964) and (539,957), so point depth below notch 85.5px = 0.373 pitch at 47 degrees from vertical. Drawing by per-column lowest-dark-pixel trace, which is the hem here since the front darts and CF line terminate on it: notch y=1040 at x=599, tips y=1141/1148, depth 104.5px = 0.423 pitch at 44 degrees. Archetype and ratios agree within 12%. Held at medium because the Small Point sibling drawing is geometrically identical, so distinguishability from that one sibling cannot be established.",
+      "gradedAt": "2026-08-01T12:37:50.660Z"
+    },
+    {
+      "option": "vest/vest-bottom-round",
+      "verdict": "OK",
+      "liveImage": "/images/generated/vest/vest-bottom-round.webp",
+      "confidence": "high",
+      "why": "Decided at the hem corners and the CF on a 2.2x brightened crop. Photo: both front corners are smooth semicircular arcs meeting at a rounded cusp at centre front, no angular tip anywhere. Drawing: same archetype, confirmed by per-column hem trace - smooth curve, deepest y=1148 at x~449 and x~749, rising to a ROUNDED cusp of y=1090 at CF; cusp depth 58px versus 104px for the angular notch of vest-bottom-regular, and no straight-line facet on either corner. Supporting: 2 CF buttons plus bottom buttonhole and two besom waist pockets in both. Unambiguously separable from Regular, Small Point and the flat-hem siblings.",
+      "gradedAt": "2026-08-01T12:37:50.660Z"
+    },
+    {
+      "option": "vest/vest-bottom-small",
+      "verdict": "UNSURE",
+      "liveImage": "/images/generated/vest/vest-bottom-small.webp",
+      "confidence": "low",
+      "why": "The drawing cannot settle this. Normalising both point-hem drawings to button pitch and to the CF notch, vest-bottom-small.jpg and vest-bottom-regular.jpg have the SAME point: peak hem depth below the notch 0.437 vs 0.423 pitch, point half-angle 45.0 vs 43.7 degrees, peak located 0.5 vs 0.4 pitch from CF. A 3% difference is inside reading error, so the drawing does not define what small means or separate it from Regular. An earlier contrary reading - that small's point is much deeper - came from measuring down from the image crop edge, which is not a garment landmark, and was discarded. Separately the shipped photo does not follow its own drawing: buttons y=318/566 giving pitch 248px, notch apex (448,821), tips (361,962)/(541,960), depth 140px = 0.565 pitch at 33 degrees. That is 29% DEEPER and narrower than its drawing, and deeper than the Regular photo at 0.373 pitch, so the shipped pair reads backwards against the labels. Needs a correct source drawing for Small Point before this row can be graded.",
+      "gradedAt": "2026-08-01T12:37:50.660Z"
     },
     {
       "option": "vest/vest-bottom-straight",
@@ -482,12 +562,28 @@
       "gradedAt": "2026-08-01T09:46:55.708Z"
     },
     {
+      "option": "vest/vest-left-over-right",
+      "verdict": "OK",
+      "liveImage": "/images/generated/vest/vest-left-over-right.webp",
+      "confidence": "high",
+      "why": "Discriminator is which side of the centre-front edge the closure marks sit on. Drawing, column dark-pixel profile across the button row y700-800: the CF placket line occupies x=569-582 and the button ring x=589-615, so the mark centre is ~26px to the RIGHT of the front edge; 3 buttons total. Photo at 3x (crop x330-560): front edge at x~407, button centres x~435 (+28px right of the edge), each buttonhole slit running further right to x~468 with its eye at the LEFT end nearest the edge - the viewer-right panel is on top, i.e. wearer's left over right. 3 buttons, matching. Read by eye at zoom, not by an automated mask. Exact mirror of the sibling photo, so the pair is distinguishable.",
+      "gradedAt": "2026-08-01T12:37:50.660Z"
+    },
+    {
       "option": "vest/vest-lower-besom-flap",
       "verdict": "OK",
       "liveImage": "/images/generated/vest/vest-lower-besom-flap.webp",
       "confidence": "medium",
       "why": "Blueprint shows the lower pocket as a besom mouth with a rectangular flap hanging over it; the live photo shows a horizontal slit pocket covered by a flap (no patch outline, no slant), separating it from the Besom no-flap, Patch and Slant Besom with Flap siblings. Noted deviations: flap corners are rounded where the drawing squares them, and as in the drawing the besom itself is hidden beneath the flap so besom-vs-welt cannot be verified.",
       "gradedAt": "2026-08-01T09:46:55.708Z"
+    },
+    {
+      "option": "vest/vest-right-over-left",
+      "verdict": "OK",
+      "liveImage": "/images/generated/vest/vest-right-over-left.webp",
+      "confidence": "high",
+      "why": "Same discriminator, mirrored. Drawing: on a mark-free placket row (y520-580) the only dark columns are x=621-633 at full height, establishing the CF edge there; on the buttonhole rows the dash spans x=537-604, entirely to the LEFT of that edge with a 16px gap. 3 dashes, and notably NO button rings are drawn. Photo at 3x (crop x320-560): the overlap edge is at x~460 with its cast shadow falling right, so the viewer-LEFT panel lies on top = wearer's right over left; the 3 buttonholes span x~388-433, entirely left of that edge, each with the bar-tack eye at the RIGHT end nearest the edge - the exact mirror of the left-over-right photo, which is the second independent check. NOTED: the photo shows buttonholes with no buttons through them, faithfully reproducing the drawing (also holes only) but not how the garment would fasten.",
+      "gradedAt": "2026-08-01T12:37:50.660Z"
     }
   ]
 }

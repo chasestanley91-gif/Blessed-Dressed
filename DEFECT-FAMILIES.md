@@ -1507,3 +1507,31 @@ The collisions themselves. Within `lower-pocket` alone, `lp-patch`, `lp-patch-fl
 `tools/asset_duplicates.mjs` is kept: hash-first grouping is a clearer way to see blast radius even
 though it did not find what I expected, and it reports fan-out separately (256 files where one option
 recurs across products — legitimate, and the thing that makes the catalog affordable).
+
+### A THIRD indistinguishable pair, and a drawing that may itself be misfiled
+
+From the waistcoat hem-shape grading (2026-08-01):
+
+**`vest-bottom-small` cannot be graded at all.** Normalised to button pitch and to the centre-front
+notch, `vest-bottom-small.jpg` and `vest-bottom-regular.jpg` describe the SAME point: depth below the
+notch **0.437 vs 0.423** pitch, half-angle **45.0° vs 43.7°**, peak at 0.5 vs 0.4 pitch from CF. A 3%
+spread is inside reading error, so the drawing does not define what "small" means.
+
+Third unresolvable pair, after `round-53`/`large-round-53` and slant `2.0`/`2.5` — and unlike those
+two, here **the shipped photos also read backwards against the labels**: Small measures 0.565 pitch
+deep against Regular's 0.373, so the "small" point is the deeper one.
+
+**`vest-bottom-point`'s drawing may be the wrong artifact, not the photo.** Its hem traces as a single
+monotonic arc — 40 px sag across 1200 px, no notch, no tip, within 3 px of `vest-bottom-straight.jpg` —
+while the photo shows a sharp double point. But the drawing is a **double-breasted 8-button figure** in
+a hem family whose other four members are all single-breasted, and across all eight vest drawings its
+nearest neighbour is **`db-8x4.jpg`** (mean absolute difference 15.6, against 27–32 for the round and
+pointed hem drawings). **Verify the source illustration before spending a credit regenerating.**
+
+This is the second time today the *drawing* rather than the render was the suspect artifact — the first
+being the `jacket/front-style/` field, 13 files with 13 triage failures. Worth checking a drawing's
+provenance whenever a photo contradicts it on a feature the photo had no reason to invent.
+
+**Method note the grader recorded against itself:** an earlier reading that Small's point was much
+deeper came from measuring down from the *image crop edge*, which is not a garment landmark. It was
+discarded rather than reported — the same discipline that caught four bad measurements elsewhere today.
