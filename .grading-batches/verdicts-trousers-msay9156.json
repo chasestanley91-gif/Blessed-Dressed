@@ -1,0 +1,65 @@
+[
+ {
+  "option": "trousers/hem-no-cuff",
+  "verdict": "OK",
+  "liveImage": "/images/generated/trousers/hem-no-cuff.webp",
+  "confidence": "high",
+  "why": "Drawing 3600 marks a plain turn-up-free hem line above a clean bottom edge; the photo shows a single-fold plain hem with no cuff band, no topstitching, sharp front crease running to the raw edge — construction class matches exactly."
+ },
+ {
+  "option": "trousers/hem-single-turnup",
+  "verdict": "OK",
+  "liveImage": "/images/generated/suit-3pc/hem-single-turnup.webp",
+  "confidence": "medium",
+  "why": "Blueprint 3604 places the hem marker high enough for a turn-up and the photo shows a genuine single external cuff with a distinct folded lip and shadow line at its top edge; cuff depth reads slightly deeper than 4.4 cm relative to leg opening, but the construction (single turn-up cuff) is correct."
+ },
+ {
+  "option": "trousers/hem-machine-plain",
+  "verdict": "WRONG",
+  "liveImage": "/images/generated/trousers/hem-machine-plain.webp",
+  "confidence": "high",
+  "why": "The shipped photo RENDERS an explicit dimension callout reading 7cm above the hem edge — annotation text traced from the drawing into the photograph. Annotations are manufacturing documentation and must never render in a customer-facing photo (standing rule). Construction (plain uncuffed hem) otherwise matches drawing 3608, so the regeneration is an annotation fix, not a geometry fix."
+ },
+ {
+  "option": "trousers/hem-76",
+  "verdict": "OK",
+  "liveImage": "/images/generated/trousers/hem-76.webp",
+  "confidence": "medium",
+  "why": "Blueprint 3609 marks a plain hem allowance with no turn-up; the navy photo shows a clean plain hem, no cuff fold, no topstitch, correct single front crease. Exact 7.6 cm allowance depth is internal and not measurable in the photo."
+ },
+ {
+  "option": "trousers/hem-90",
+  "verdict": "OK",
+  "liveImage": "/images/generated/trousers/hem-90.webp",
+  "confidence": "medium",
+  "why": "Drawing 360H shows the deepest plain-hem marker with no cuff geometry; the charcoal photo is likewise a plain uncuffed hem with unbroken fabric to the edge. Construction agrees; the 9.0 cm allowance is an interior dimension not verifiable externally."
+ },
+ {
+  "option": "trousers/hem-cuff-32",
+  "verdict": "OK",
+  "liveImage": "/images/generated/trousers/hem-cuff-32.webp",
+  "confidence": "medium",
+  "why": "Blueprint 3602 sets the turn-up marker very close to the hem edge for a shallow cuff; the photo shows a real external turn-up with the folded lip and a horizontal seam line at the cuff top. Cuff present and shallow, though 3.2 vs 3.8 cm is not separable by eye."
+ },
+ {
+  "option": "trousers/hem-cuff-38",
+  "verdict": "OK",
+  "liveImage": "/images/generated/trousers/hem-cuff-38.webp",
+  "confidence": "medium",
+  "why": "Drawing 3603 marks a turn-up hem; the photo shows a single external cuff of roughly 3.8 cm against the leg opening, fold edge and cuff-top crease clearly visible. Correct single turn-up, no double fold."
+ },
+ {
+  "option": "trousers/hem-inner-fold-40",
+  "verdict": "OK",
+  "liveImage": "/images/generated/trousers/hem-inner-fold-40.webp",
+  "confidence": "low",
+  "why": "Drawing 360K is the only one in the batch with a slanted hem marker; the photo shows no external cuff and an interior fold crease about 4 cm up whose slope (~9°) is steeper than perspective slant in sibling photos, indicating an angled fold. Slant direction vs the shoe toe is ambiguous, so the angle orientation is unconfirmed."
+ },
+ {
+  "option": "trousers/hem-fixed-topstitch",
+  "verdict": "OK",
+  "liveImage": "/images/generated/trousers/hem-fixed-topstitch.webp",
+  "confidence": "medium",
+  "why": "The 1661418 blueprint shows a fixed plain bottom with a stitch line just above the edge; the photo is the only one in the batch with a visible parallel topstitch band ~2.5 cm above the hem edge and no turn-up, matching the fixed-bottom topstitched construction."
+ }
+]
