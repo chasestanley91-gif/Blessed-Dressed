@@ -672,3 +672,56 @@ Both halves independently found the same three structural causes, which is the u
    (4 per product), notch angles, peak angles, chest-pocket welts, slant widths.
 3. **Annotation rendered as cloth** — red hatching becoming a contrast panel (`bias-inner-collar-stand`),
    and red welt marks becoming tonal sheen rather than real contrast (`vest-contrast-specify-seam`).
+
+---
+
+## COUNT AUDIT — targeted sweep of every option whose label asserts a number
+
+**2026-08-01.** The 24-row sample found that counts fail where a count IS the option, so all 24
+options in the catalog whose label asserts a countable quantity or a side were swept directly. This
+is the most objective check available: no missing dimension callouts, no viewer-versus-wearer
+ambiguity, no ratio normalisation. A grader either counts four buttons or does not.
+
+**First 12 (pockets, cuff buttons, sides): 10 MATCH, 2 MISMATCH.**
+
+### This CORRECTS an over-broad claim of mine
+
+I wrote earlier that "counts are unreliable — the generator got it wrong twice out of two". That was
+drawn from two failures (`sb-4`, `cs-round-2btn`) and does not survive the wider sweep. **All five
+cuff-button counts are correct** — `cb-1`, `cb-2`, `cb-3`, `cb-5`, `cb-6`, each verified with the
+cuff hem in frame below the lowest button so the stack is closed. So is `back-both-patch` (two),
+`back-both-besom-right-btn` (two, button on the correct side) and `back-both-welt`.
+
+The accurate statement is narrower: **front-placket and small-hardware counts fail; cuff-button
+ladders do not.** Worth keeping, because it says where to look.
+
+### The two real failures
+
+**`trousers/watch-both` — the worst image found so far.** The label promises watch pockets on both
+sides. The render contains **zero identifiable watch pockets**. Each side instead shows a hanging
+tongue of cloth running from below the waistband to past mid-thigh — roughly 22 cm at garment scale,
+about three times a real watch pocket — with finished edges but **no welt, no slit, no opening
+anywhere**. The frame, resolution and both sides are all perfectly adequate, so this is not a
+framing excuse: a customer cannot identify a watch pocket at all, let alone two.
+
+**`suit-2pc/back-both-besom-tab`** promises both besoms with tab & button. Both pockets are fully in
+frame, so the count is real and not a crop artefact: the wearer's left besom carries a pointed
+stitched tab with a four-hole button, and the wearer's right welt is **completely bare**. The option
+delivers half the feature it names.
+
+### An absence option done RIGHT, worth keeping as the reference
+
+`suit-2pc/back-besom-no-right` — "Left Besom Only (No Right)" — **MATCHES**, and the reason is
+instructive after so many absence options failing. The right seat panel is genuinely in shot, from
+the centre-back seam out to the hip edge with background visible past it, and the mirrored position
+where a right besom would sit is lit, unobstructed and plain. **The absence is proven rather than
+merely assumed.** That is the standard the other absence options (`heel-none`,
+`vest-extra-no-seal-stitch`, `flat-front`) fail to meet: they are framed so the missing thing was
+never going to be visible either way.
+
+### Method note worth reusing
+
+Handedness was established independently rather than assumed — on `loops-one-right` the grader fixed
+the wearer's side two ways at once (the fly J-topstitch lying viewer-right of the fold edge, giving
+standard left-over-right; and the waistband extension anchored viewer-right with its buttoned tip
+travelling viewer-left). That is the discipline the unresolved coin-pocket side question needs.
