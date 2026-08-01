@@ -3259,6 +3259,53 @@
           ]
         }
       ]
+    },
+    {
+      "at": "2026-08-01T01:05:06.361Z",
+      "by": "tools/publish_approved.mjs",
+      "count": 1,
+      "rowCount": 3,
+      "fanout": true,
+      "options": [
+        {
+          "product": "sport-coat",
+          "option": "cb-5",
+          "field": "cuff-button-number",
+          "identity": "cuff-button-number/cb-5",
+          "image": "/images/generated/sport-coat/cb-5.webp",
+          "master": "/images/generated/sport-coat/cb-5.png",
+          "previous": "/images/jacket/cuff-btn-num/five-buttons.svg",
+          "preservedBlueprint": null,
+          "verdict": "PASS_WAIVED",
+          "waived": true,
+          "qcAttempt": 3,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 97,
+          "rows": [
+            {
+              "product": "sport-coat",
+              "section": "sleeves-cuffs",
+              "field": "cuff-button-number",
+              "previous": "/images/jacket/cuff-btn-num/five-buttons.svg",
+              "preservedBlueprint": null
+            },
+            {
+              "product": "suit-2pc",
+              "section": "sleeves-cuffs",
+              "field": "cuff-button-number",
+              "previous": "/images/jacket/cuff-btn-num/five-buttons.svg",
+              "preservedBlueprint": null
+            },
+            {
+              "product": "suit-3pc",
+              "section": "sleeves-cuffs",
+              "field": "cuff-button-number",
+              "previous": "/images/jacket/cuff-btn-num/five-buttons.svg",
+              "preservedBlueprint": null
+            }
+          ]
+        }
+      ]
     }
   ]
 }

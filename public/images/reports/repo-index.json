@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-01T00:49:31.000Z",
+  "generatedAt": "2026-08-01T01:05:11.591Z",
   "count": 2862,
   "records": [
     {
@@ -24015,11 +24015,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/supplier/91d5e77db9c2__0627__5_flat.jpg",
-      "liveImage": "/images/jacket/cuff-btn-num/five-buttons.svg",
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/sport-coat/cb-5.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/sport-coat/cb-5.webp",
+      "shippedBytes": 162264,
+      "shippedSha1": "4ba237854dc32016013c0fd7165d42e7c91496ed",
       "pipeline": {
         "dir": ".craft-pipeline/sport-coat/cb-5",
         "have": {
@@ -24028,20 +24028,18 @@
           "generation": true,
           "qc": true
         },
-        "verdict": "FAIL",
-        "attempt": 1,
-        "lowestScore": 89,
+        "verdict": "PASS_WAIVED",
+        "attempt": 3,
+        "lowestScore": 97,
         "belowMin": [
           "dimensions",
-          "construction",
-          "composition",
-          "blueprint-match"
+          "construction"
         ],
-        "candidates": 1,
+        "candidates": 3,
         "needsReverify": false,
-        "checkedAt": "2026-07-31T19:55:06.729Z"
+        "checkedAt": "2026-08-01T01:05:03.942Z"
       },
-      "stage": "failed-retry-due"
+      "stage": "shipped-waived"
     },
     {
       "key": "sport-coat/cb-6",
@@ -32518,13 +32516,13 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/supplier/91d5e77db9c2__0627__5_flat.jpg",
-      "liveImage": "/images/jacket/cuff-btn-num/five-buttons.svg",
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/sport-coat/cb-5.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/sport-coat/cb-5.webp",
+      "shippedBytes": 162264,
+      "shippedSha1": "4ba237854dc32016013c0fd7165d42e7c91496ed",
       "pipeline": null,
-      "stage": "not-started"
+      "stage": "legacy-shipped-unverified"
     },
     {
       "key": "suit-2pc/cb-6",
@@ -46691,13 +46689,13 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/supplier/91d5e77db9c2__0627__5_flat.jpg",
-      "liveImage": "/images/jacket/cuff-btn-num/five-buttons.svg",
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/sport-coat/cb-5.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/sport-coat/cb-5.webp",
+      "shippedBytes": 162264,
+      "shippedSha1": "4ba237854dc32016013c0fd7165d42e7c91496ed",
       "pipeline": null,
-      "stage": "not-started"
+      "stage": "legacy-shipped-unverified"
     },
     {
       "key": "suit-3pc/cb-6",

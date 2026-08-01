@@ -2,7 +2,7 @@
   "addr": "sport-coat > cb-5",
   "productId": "sport-coat",
   "optionId": "cb-5",
-  "attempt": 1,
+  "attempt": 3,
   "maxAttempts": 3,
   "scores": {
     "shape": 98,
@@ -11,100 +11,74 @@
     "angles": 98,
     "construction": 97,
     "placement": 98,
-    "symmetry": 99,
-    "composition": 89,
-    "blueprint-match": 96
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
   },
   "scoreMin": 98,
   "waiverMin": 95,
   "belowMinCategories": [
     "dimensions",
-    "construction",
-    "composition",
-    "blueprint-match"
+    "construction"
   ],
-  "belowWaiverMinCategories": [
-    "composition"
-  ],
+  "belowWaiverMinCategories": [],
   "errors": [
     {
       "severity": "minor",
-      "category": "composition",
-      "description": "The button count is legible but does not dominate the frame, and two distractions share the picture. On this 880x1168 render the five-button run occupies roughly 90x330 px, about 3% of the frame area, far under the 40-80% dominance target. The model's bare hand and wrist fill the bottom ~20% of the frame, and a second mass of jacket cloth (the body panel with a visible flap/welt pocket) fills the right ~28%. Both pull the eye off the cuff.",
-      "expected": "the run of five kissing cuff buttons dominating the frame, nothing else in shot but that one cuff and the grey sweep",
-      "actual": "the button run occupies about 3% of the frame; a bare hand and the jacket body with its own pocket share the picture",
-      "correction": "TIGHTEN ONTO THE CUFF BUTTON RUN. Bottom edge of the picture: the jacket cuff edge itself, including only the thin sliver of shirt cuff that shows below it - no hand, no fingers, no wrist skin. Top edge: about two button-diameters of plain sleeve above the topmost button. Left edge: just outside the sleeve's vent edge so a thin margin of grey background shows. Right edge: about three button-diameters of plain sleeve to the right of the button column - and NOTHING beyond it: the jacket body panel and its pocket must be entirely out of frame. Nothing in the picture but this one cuff and the plain grey sweep. All FIVE buttons complete and in frame."
-    },
-    {
-      "severity": "minor",
-      "category": "blueprint-match",
-      "description": "The drawing places the button column directly on a drawn vertical sleeve-vent line that runs the full height of the sleeve down to the cuff edge. The render shows a plain unbroken sleeve face with no visible vent seam beneath or beside the buttons.",
-      "expected": "the sleeve vent seam visible as a line running down through the button column to the cuff edge, as drawn",
-      "actual": "no vent seam anywhere; buttons sit on plain cloth",
-      "correction": "show the sleeve vent seam running vertically through the button column down to the cuff edge, exactly as the drawing's vertical line does"
+      "category": "construction",
+      "description": "Each buttonhole is stitched BESIDE its button, to the sleeve-body side, rather than beneath it. On a working cuff the buttonhole lies under the button on the overlapping vent edge. The drawing does not settle the point — its red marks give position only, not the buttonhole's relationship to the button.",
+      "expected": "buttonhole placement as a working cuff would carry it",
+      "actual": "button and buttonhole side by side",
+      "correction": "Accepted. The drawing does not specify it, the option being sold is the COUNT, and the count and its placement are both exactly right. Recorded rather than waved past."
     },
     {
       "severity": "minor",
       "category": "dimensions",
-      "description": "The gap between the lowest button and the cuff edge is slightly compressed relative to the drawing. In the drawing the column ends about 0.45 sleeve-widths above the cuff edge; in the render it is about 0.33 sleeve-widths.",
-      "expected": "lowest button set back from the cuff edge by roughly half the visible sleeve width, as drawn",
-      "actual": "lowest button sits about a third of a sleeve width above the cuff edge",
-      "correction": "raise the whole button column very slightly so the lowest button clears the cuff edge by about half the visible sleeve width"
+      "description": "The button column spans a slightly shorter run of sleeve than the drawing does relative to the cuff. The drawn column covers roughly two thirds of the visible sleeve height; here it covers closer to half.",
+      "expected": "the column spanning as drawn relative to the cuff",
+      "actual": "a slightly more compact run",
+      "correction": "Accepted. The render is framed closer than the drawing, so the two spans are not directly comparable, and the spacing between buttons is even and proportionate."
     }
   ],
-  "verdict": "FAIL",
-  "waiver": null,
-  "correction": {
-    "errors": [
+  "verdict": "PASS_WAIVED",
+  "waiver": {
+    "granted": true,
+    "reason": "minor-only at attempt 3 of 3: retry budget exhausted with zero critical/major findings and every category >= 95",
+    "waiverMin": 95,
+    "scoreMin": 98,
+    "belowScoreMin": [
       {
-        "severity": "minor",
         "category": "dimensions",
-        "error": "score-card category \"dimensions\" scored 97 (< 98)",
-        "expected": ">= 98",
-        "actual": "97",
-        "correction": "Strengthen the geometry/coverage wording or reference weight for \"dimensions\" and regenerate."
+        "score": 97,
+        "shortfall": 1
       },
       {
-        "severity": "minor",
         "category": "construction",
-        "error": "score-card category \"construction\" scored 97 (< 98)",
-        "expected": ">= 98",
-        "actual": "97",
-        "correction": "Strengthen the geometry/coverage wording or reference weight for \"construction\" and regenerate."
-      },
-      {
-        "severity": "minor",
-        "category": "composition",
-        "error": "score-card category \"composition\" scored 89 (< 98)",
-        "expected": ">= 98",
-        "actual": "89",
-        "correction": "Strengthen the geometry/coverage wording or reference weight for \"composition\" and regenerate."
-      },
-      {
-        "severity": "minor",
-        "category": "blueprint-match",
-        "error": "score-card category \"blueprint-match\" scored 96 (< 98)",
-        "expected": ">= 98",
-        "actual": "96",
-        "correction": "Strengthen the geometry/coverage wording or reference weight for \"blueprint-match\" and regenerate."
+        "score": 97,
+        "shortfall": 1
       }
     ],
-    "lockedFeatures": [
-      "exactly FIVE buttons in a single column - do not add or remove one",
-      "buttons kissing/stacked so their edges just overlap, exactly as the drawing stacks them",
-      "buttons set on the sleeve vent edge, evenly spaced, column parallel to the vent",
-      "real four-hole horn buttons in the garment's own tone, self-coloured thread shanks",
-      "detail view of the jacket cuff, outer face, exactly as drawn",
-      "textured brown/taupe wool hopsack with visible weave, light blue shirt cuff showing below",
-      "seamless neutral light-grey studio sweep",
-      "zero numerals, arrows, leader lines, callouts, coloured guide marks or labels; no red anywhere"
+    "minorErrors": [
+      {
+        "category": "construction",
+        "description": "Each buttonhole is stitched BESIDE its button, to the sleeve-body side, rather than beneath it. On a working cuff the buttonhole lies under the button on the overlapping vent edge. The drawing does not settle the point — its red marks give position only, not the buttonhole's relationship to the button.",
+        "expected": "buttonhole placement as a working cuff would carry it",
+        "actual": "button and buttonhole side by side"
+      },
+      {
+        "category": "dimensions",
+        "description": "The button column spans a slightly shorter run of sleeve than the drawing does relative to the cuff. The drawn column covers roughly two thirds of the visible sleeve height; here it covers closer to half.",
+        "expected": "the column spanning as drawn relative to the cuff",
+        "actual": "a slightly more compact run"
+      }
     ],
-    "forbiddenChanges": [
-      "do not alter any checklist item this attempt already passed",
-      "do not change the camera crop, composition, or accessories unless the error is itself a composition error",
-      "do not change the garment part, orientation, or any other option's geometry"
-    ]
+    "attempt": 3,
+    "maxAttempts": 3,
+    "waiverAttemptFloor": 3,
+    "authority": "user decision 2026-07-30: QC gate stays >=98; a 3rd attempt is allowed; after 3 attempts an image with ZERO critical/major findings may ship at >=95 as a LOGGED WAIVER in qc.json",
+    "grantedAt": "2026-08-01T01:05:03.933Z"
   },
-  "notes": "ATTEMPT 1 vs /images/blueprints/supplier/91d5e77db9c2__0627__5_flat.jpg. Button COUNT is exactly right first time: five buttons, no sixth partially cropped, none hidden - confirmed against the blueprint's red marker column which encodes five. Stacking (kissing), column placement on the vent edge, spacing and the deliberate absence of any other cuff feature are all correct, and no red leaked from the drawing into the cloth. All three findings are Minor and none touches construction: the frame is loose and shares the picture with a hand and a second garment mass, and the drawn vent seam is missing.",
-  "checkedAt": "2026-07-31T19:55:06.729Z"
+  "correction": null,
+  "notes": "ATTEMPT 3, and every finding from both earlier attempts is now resolved.\n\nAttempt 1 omitted the sleeve-vent seam entirely and let distractions share the frame. Attempt 2 fixed those but introduced a new fault THAT I CAUSED: I instructed it to leave 'roughly half a sleeve-width' between the lowest button and the cuff edge, a figure I took from the attempt-1 QC note without opening the drawing to check it. It obeyed, and the whole column sat far too high.\n\nOpening 0627__5_flat.jpg directly showed the column runs down close to the hem. This attempt moved it as one unit and centred it on the seam, and both are now correct.\n\nThe lesson is a familiar one wearing new clothes: an inherited measurement is not evidence. A number in a prior QC note is a claim, and propagating it into a correction without checking the source cost one generation.\n\nTwo minor findings remain, both accepted. Every category is at or above 95 with zero Critical or Major findings, so this qualifies for the logged waiver at attempt 3.",
+  "checkedAt": "2026-08-01T01:05:03.942Z"
 }

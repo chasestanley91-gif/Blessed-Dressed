@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-01T00:49:24.355Z",
+  "at": "2026-08-01T01:05:04.591Z",
   "settings": {
     "maxWidth": 1400,
     "quality": 82,
@@ -7,30 +7,30 @@
   },
   "applied": true,
   "counts": {
-    "masters": 682,
+    "masters": 683,
     "converted": 1,
-    "skipped": 681,
+    "skipped": 682,
     "failed": 0,
     "repointed": 0
   },
   "bytes": {
-    "before": 1519785,
-    "after": 85614,
-    "savedPct": 94.4
+    "before": 1915737,
+    "after": 162264,
+    "savedPct": 91.5
   },
   "note": "targetSha1 is the derivative; sourceSha1 is the PNG master QC graded. The master and publish_approved.mjs byte-identity gate are untouched.",
   "results": {
     "ok": [
       {
-        "master": "public\\images\\generated\\sport-coat\\pad-none.png",
-        "masterBytes": 1519785,
-        "sourceSha1": "80dbdc0f5d7a4bba53c04300398004606691558e",
-        "target": "public\\images\\generated\\sport-coat\\pad-none.webp",
-        "targetBytes": 85614,
-        "targetSha1": "1c05b43d928713da546ab6fd17ee7f5587d4f0aa",
+        "master": "public\\images\\generated\\sport-coat\\cb-5.png",
+        "masterBytes": 1915737,
+        "sourceSha1": "874aba55947b54988b14686c3582222f24e0ef34",
+        "target": "public\\images\\generated\\sport-coat\\cb-5.webp",
+        "targetBytes": 162264,
+        "targetSha1": "4ba237854dc32016013c0fd7165d42e7c91496ed",
         "quality": 82,
         "width": 1400,
-        "web": "/images/generated/sport-coat/pad-none.webp"
+        "web": "/images/generated/sport-coat/cb-5.webp"
       }
     ],
     "skipped": [
@@ -1596,6 +1596,10 @@
       },
       {
         "master": "public\\images\\generated\\sport-coat\\pad-05-structured.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\sport-coat\\pad-none.png",
         "reason": "derivative already exists"
       },
       {
