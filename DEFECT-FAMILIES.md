@@ -907,3 +907,36 @@ The headline number treats every collision as one problem. It is two problems wi
 remedies, and the cheap half is only a quarter of the rows. Without the split, an obvious reading of
 "208 blocking rows" is to start regenerating — which would spend credits on 142 rows that cannot
 move, while the 66 that can move sit untouched.
+
+### Reading the generation-limited 66 properly — the differences are not subtle
+
+Listing what actually collides makes the case stronger than the counts do. These are not near-misses
+on a millimetre; they are **different constructions sharing one photograph**:
+
+| family | colliding options | their sheets |
+|---|---|---|
+| `cp-welt-23` | `cp-jetted` · `cp-trapezoid` · `cp-welt-23/25/27` | Besom · **Trapezoid** · Normal |
+| `lp-patch` | `lp-patch` · `lp-patch-flap` · `lp-patch-rounded` | Patch · **Patch with flap** · **Curved patch** |
+| `lp-jetted-4` | `lp-jetted-4` · `lp-straight-jetted` · `lp-jetted-btn-tab` | Besom · Besom · **Besom with tab and button** |
+| `lapel-shawl-0a` | `lapel-shawl-0005` · `-0a` · `-0e` | three distinct shawl sheets |
+
+A trapezoid chest pocket and a jetted chest pocket are not a fine distinction. Neither is a patch
+pocket with a flap versus one without, nor a besom with a button tab versus a plain one. Each has its
+own supplier drawing. One photograph is currently doing all of that work.
+
+**One correction to my own tool's output.** `collision_triage.mjs` classifies per family, and
+`lp-slanted-flap-55` is **mixed** — it contains both kinds at once:
+
+```
+  lp-slanted-flap-55, -65          share 02A1__Regular_slanted      <- cm ladder, SOURCE-limited
+  lp-straight-jetted-40 … -65      share 0201__Regular              <- cm ladder, SOURCE-limited
+  slanted-flap  vs  straight-jetted   TWO DIFFERENT SHEETS          <- GENERATION-limited
+```
+
+So within each sub-group the options differ only by a centimetre on one shared drawing and cannot be
+separated; but the two sub-groups are different constructions with different drawings and should
+never have collided. The family is correctly flagged as recoverable, but only the between-group
+distinction is recoverable — re-running will not separate `-55` from `-65`.
+
+The tool reports at family granularity and cannot see that. Stated here rather than left to be
+discovered when someone regenerates six straight-jetted options and gets six identical images.
