@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-01T12:37:50.663Z",
+  "updatedAt": "2026-08-01T13:42:15.494Z",
   "rows": [
     {
       "option": "shirt/collar-af1-70",
@@ -8,6 +8,14 @@
       "confidence": "medium",
       "why": "Drawing carries a printed 85.00 degree callout with leader arrows onto the two collar point tips; the callout convention was independently validated on french-in-8cm (printed 145, drawing measured 151). Drawing shows pointed tips, no tip buttons, one band button; photo matches on family and button configuration. Photo spread off a 50px-gridded render: vertex (405,505), tips (250,690) and (625,665), giving 40 and 54 degree half-angles, total 94 vs drawn 85. The 14 degree asymmetry shows the model is rotated off-axis so this is 94 plus or minus 10. Across all ten leafed photos measured the same way the apparent-spread ranking matched the drawn-callout ranking monotonically. DEFECT: necktie plus fastened throat button completely conceal the collar band.",
       "gradedAt": "2026-08-01T10:24:06.683Z"
+    },
+    {
+      "option": "shirt/collar-button-down-78",
+      "verdict": "WRONG",
+      "liveImage": "/images/generated/shirt/collar-button-down-78.webp",
+      "confidence": "high",
+      "why": "Button count contradiction. At 16x nearest-neighbour raw-pixel zoom of both collar leaves, button-down-collar-with-78cm-stand.jpg has NO button anywhere on either leaf; its only button is a single throat button on the band, inside the triangular gap where the leaves cross. The convention is verified inside the family: point-in-7cm-with-button.jpg, at identical scale and viewpoint, draws a distinct 4px circle on each leaf just above the tip PLUS the throat button, so this illustrator does draw tip buttons when they exist. The photo shows tip buttons on BOTH points (left ~(320,720), right ~(755,715), each confirmed at 4x) and hides the band and its throat button entirely behind a necktie. The photo adds two buttons the drawing lacks and conceals the one it has. Secondary and weaker: the drawing prints 90.00 degrees and measures ~95 as drawn, while the photo projects 76.9 degrees with a 5.9 degree left/right asymmetry as the error bar. ESCALATE THE DRAWING TOO: a file named button-down-collar that draws no button-down is a source defect. Also note 7.8 cm is not a plausible collar-stand height - real stands run 3-4.5 cm - so that number looks like a point length mis-filed as a stand.",
+      "gradedAt": "2026-08-01T13:36:10.972Z"
     },
     {
       "option": "shirt/collar-cutaway-55",
@@ -82,6 +90,30 @@
       "gradedAt": "2026-08-01T10:24:06.683Z"
     },
     {
+      "option": "shirt/collar-one-piece-75-tab",
+      "verdict": "UNSURE",
+      "liveImage": "/images/generated/shirt/collar-one-piece-75-tab.webp",
+      "confidence": "medium",
+      "why": "The drawing filed for this row shows a plain band/stand collar with one throat button, NO tab and NO collar leaves - the same artwork as rolled-stand-collar.jpg at 1.64/255 mean absolute difference. The photo agrees with that drawing: band collar, single silver stud at the band base, no leaves, no tab. So photo and drawing match, but they match on something that is not a one-piece 7.5 cm collar with tab. A tab is a large unmistakable feature - a fabric strap crossing behind the knot - and it is absent from BOTH. Because the drawing is the authority and has no tab, the photo cannot be called WRONG; but the drawing is almost certainly mis-filed, since its own length-siblings one-piece-collar-in-85cm-with-tab.jpg and -9cm-with-tab.jpg are visibly different artwork with a different viewpoint, vertical CF placket and offset button.",
+      "gradedAt": "2026-08-01T13:36:10.987Z"
+    },
+    {
+      "option": "shirt/collar-point-85-btn",
+      "verdict": "UNSURE",
+      "liveImage": "/images/generated/shirt/collar-point-85-btn.webp",
+      "confidence": "medium",
+      "why": "This drawing is the outlier of its family: oblique skewed projection, NO printed angle callout where its three siblings all print 60.00 degrees, and the left collar leaf drawn turned up. At 22x nearest-neighbour zoom a ~5px ring is drawn at the LEFT collar point only; no button is drawn at the right point. The photo shows a long point collar with a white 4-hole button and buttonhole at the LEFT point and a completely BARE right point, verified at 4x on crop x640-880/y600-780. Projected spread, apex at the leaf crossing (555,350) to tips (318,715) and (770,700), is 33.0 + 31.6 = 64.6 degrees with only 1.4 degrees left/right asymmetry. Two readings remain and the drawing cannot settle them: either the photo faithfully copies a drawing that itself exposes one button, or the intended option is a two-tip button-down like all three callout-bearing siblings and the photo is missing the right button. DEFECT either way: the left/right button asymmetry is not a real garment, and the band is hidden by a necktie.",
+      "gradedAt": "2026-08-01T13:36:10.987Z"
+    },
+    {
+      "option": "shirt/collar-rolled-stand",
+      "verdict": "UNSURE",
+      "liveImage": "/images/generated/shirt/collar-rolled-stand.webp",
+      "confidence": "medium",
+      "why": "The photo matches its drawing on every feature: band/stand collar, no leaves, one white 4-hole button at the band base, softly rolled top edge, band fully visible with no necktie. What blocks a pass is sibling separation, not photo quality. rolled-stand-collar.jpg is effectively the SAME artwork as one-piece-collar-in-75cm-with-tab.jpg - mean absolute pixel difference 1.64/255 at native size, only 1.6% of pixels differing by more than 40, and those differences are 1px shifts on the CF seam and inner band edge visible in a red/cyan overlay - and near-identical to one-piece-collar-in-8cm-with-tab.jpg at 2.93/255. Three catalog options share one drawing. COULD NOT MEASURE: band height - no length callout on any of the three drawings, and scaling from the photo would require assuming a real-world garment size.",
+      "gradedAt": "2026-08-01T13:36:10.987Z"
+    },
+    {
       "option": "shirt/collar-round-53",
       "verdict": "UNSURE",
       "liveImage": "/images/generated/shirt/collar-round-53.webp",
@@ -96,6 +128,70 @@
       "confidence": "high",
       "why": "Drawing shows a band-only mandarin stand collar: no leaves, band front ends cut square, a narrow vertical gap between the band ends at centre front, a small step where the band meets the shirt front. No angle callout, correctly, since spread is undefined for a band collar. Photo matches on every structural point including the square-cut ends that separate it from the rounded-stand sibling in the same techpack folder. Critically this is one of only two images in the batch photographed with NO necktie and the throat open, so the band - the entire discriminating feature - is fully visible. NOTE: the catalog description contradicts the drawing, describing collar points cut with a squared-off end, i.e. a squared POINT collar. The drawing shows no points at all; the description needs fixing.",
       "gradedAt": "2026-08-01T10:24:06.683Z"
+    },
+    {
+      "option": "shirt/stitch-01-amf",
+      "verdict": "UNSURE",
+      "liveImage": "/images/generated/shirt/stitch-01-amf.webp",
+      "confidence": "high",
+      "why": "The drawing's printed callout reads 0.6cm, contradicting the row's 0.1 cm label, and the drawing wins. This is also the only drawing in the family rendered at 221x221 rather than 192x192, so its offsets are not directly comparable to siblings without rescaling. The photo does show a tonal stitch line inset from the leaf edge and turning the point, so the stitching is present on the correct part. But neither discriminator resolves: offset in cm is unmeasurable (no scale landmark in the photo, and the drawings do not encode offset to scale), and the AMF-versus-machine distinction is not readable - at 6x on a 160px crop this stitch's pitch, length and regularity are indistinguishable from the machine siblings, with none of the long widely spaced slightly irregular pick stitches that make AMF identifiable, as they obviously are in stitch-03-amf.",
+      "gradedAt": "2026-08-01T13:36:10.987Z"
+    },
+    {
+      "option": "shirt/stitch-01-top",
+      "verdict": "UNSURE",
+      "liveImage": "/images/generated/shirt/stitch-01-top.webp",
+      "confidence": "high",
+      "why": "Two blockers, both in the source data. First, machine-01cm-top-stitching.jpg is BYTE-IDENTICAL to machine-03cm-top-stitching.jpg (md5 8e910bc6bbdd1d964c7e92557800de00, 8241 bytes each), so 0.1 cm and 0.3 cm cannot be told apart. Second, the drawing's printed callout reads 0.3cm, contradicting the row label, and the drawing wins. Tested whether the drawn offset encodes the printed number by measuring the red stitch line offset from the collar edge on the right leaf across the family, all normalised to 192x192: printed 0.1cm gives 4px, 0.3cm gives 4px, 0.5cm gives 5px, 0.6cm gives 4px. The drawn offsets do NOT scale with the printed values, so those two measurements disagree and neither is validated - unlike the collar-angle callouts, these stitching drawings do not encode their dimension to scale. The photo does show the right feature class: a fine tonal machine topstitch parallel to and inset from the leaf edge.",
+      "gradedAt": "2026-08-01T13:36:10.987Z"
+    },
+    {
+      "option": "shirt/stitch-03-amf",
+      "verdict": "UNSURE",
+      "liveImage": "/images/generated/shirt/stitch-03-amf.webp",
+      "confidence": "medium",
+      "why": "The drawing's printed callout reads 0.1cm, contradicting the row's 0.3 cm label, and the drawing wins. The photo is the only one in the batch showing a genuine AMF signature - long, widely spaced, slightly irregular pick stitches following the leaf edge and mitring round the point - so the construction class reads correctly and is distinguishable from the machine group. Two problems stop it passing. The offset is unverifiable for the same reason as the rest of the family. And the stitches are rendered in RED contrast thread while all seven siblings are tonal white-on-white; red is the drafting convention every one of these drawings uses to highlight the stitch line, so the photo appears to have literalised an annotation colour as real thread. Since thread colour is a separate option group in this catalog, a customer would read this photo as a thread-colour choice rather than a stitch-offset choice.",
+      "gradedAt": "2026-08-01T13:36:10.987Z"
+    },
+    {
+      "option": "shirt/stitch-03-top",
+      "verdict": "UNSURE",
+      "liveImage": "/images/generated/shirt/stitch-03-top.webp",
+      "confidence": "high",
+      "why": "Same drawing file as stitch-01-top, byte-identical at md5 8e910bc6bbdd1d964c7e92557800de00, so the two options cannot be separated by their illustrations. Here the printed callout 0.3cm does agree with the row label. The photo shows a fine continuous tonal machine topstitch inset from the outer edge of both leaves and turning both points - correct feature class and garment part. But the discriminating dimension is the offset and it is unmeasurable: the drawing does not encode offset to scale (4px for 0.1cm, 4px for 0.3cm, 5px for 0.5cm, 4px for 0.6cm at 192x192) and the photograph carries no scale landmark.",
+      "gradedAt": "2026-08-01T13:36:10.987Z"
+    },
+    {
+      "option": "shirt/stitch-05-amf",
+      "verdict": "UNSURE",
+      "liveImage": "/images/generated/shirt/stitch-05-amf.webp",
+      "confidence": "medium",
+      "why": "This is the only drawing in the family carrying NO callout at all and no detail-bubble inset - it just draws a dense red zigzag along the leaf edge, so there is no printed dimension to hold the photo to. Whether that zigzag is meant to sit ON the edge at offset zero or is merely a bolder rendering of the same nominal line cannot be decided: by eye it rides the edge, but the same automated offset scan that returns 5px for the printed-0.5cm top-stitch drawing also returns 5px here, so the two readings disagree and neither is validated. The photo shows a tonal stitch line clearly INSET from the leaf edge with ordinary machine pitch and no readable AMF signature, so it neither confirms the drawing's edge-riding zigzag nor its AMF class, and there is no quantitative content in the drawing to check it against.",
+      "gradedAt": "2026-08-01T13:36:10.987Z"
+    },
+    {
+      "option": "shirt/stitch-05-top",
+      "verdict": "UNSURE",
+      "liveImage": "/images/generated/shirt/stitch-05-top.webp",
+      "confidence": "high",
+      "why": "machine-05cm-top-stitching.jpg is BYTE-IDENTICAL to machine-06cm-top-stitching.jpg (md5 7a75c65c1f4fb2cbbea798f622252ab5, 8227 bytes each), so 0.5 and 0.6 cm share one drawing. The printed callout reads 0.5cm, agreeing with this row. The photo shows a tonal machine topstitch inset from the leaf edge - right feature class and part - and by eye its inset looks the widest of the four top-stitch photos, but that will not be converted to cm: the drawing does not encode offset to scale, and the photos are framed at different zooms with no shared landmark, so cross-photo pixel offsets are not comparable.",
+      "gradedAt": "2026-08-01T13:36:10.987Z"
+    },
+    {
+      "option": "shirt/stitch-06-top",
+      "verdict": "UNSURE",
+      "liveImage": "/images/generated/shirt/stitch-06-top.webp",
+      "confidence": "high",
+      "why": "Same drawing file as stitch-05-top (md5 7a75c65c1f4fb2cbbea798f622252ab5), and its printed callout reads 0.5cm, contradicting this row's 0.6 cm label with the drawing winning. So the drawing both contradicts the label and is shared with a sibling. The photo shows a tonal stitch line parallel to and inset from the leaf edge and turning the point - right feature class. DISCARDED READING recorded: the stitch character initially read as a discrete hand/pick stitch rather than a machine line, but on a matched 6x zoom against 01-top, 03-top, 05-top, 01-amf and 05-amf every one resolves into discrete stitches at that magnification, so beaded-versus-continuous is not a valid discriminator at this resolution.",
+      "gradedAt": "2026-08-01T13:36:10.987Z"
+    },
+    {
+      "option": "shirt/stitch-none",
+      "verdict": "OK",
+      "liveImage": "/images/generated/shirt/stitch-none.webp",
+      "confidence": "high",
+      "why": "The illustration this row points at is a 300x300 grey placeholder card bearing the literal word None rather than a technical drawing, but the parallel techpack file images/techpacks/shirt/decoration_stitching_on_collar/none.jpg draws the intent properly: a collar whose leaf edge is plain and unstitched in the detail bubble. The photo shows a point collar whose leaf edges are completely clean, no stitch line on either leaf, checked at 2x on the left-leaf crop (80,150)-(480,550) and on the full frame. Unambiguously separable from all seven siblings, every one of which draws a stitch line along the leaf edge. Absence is the entire spec and absence is what the photo shows.",
+      "gradedAt": "2026-08-01T13:36:10.987Z"
     },
     {
       "option": "sport-coat/cp-jetted",
@@ -290,6 +386,22 @@
       "gradedAt": "2026-08-01T11:41:40.168Z"
     },
     {
+      "option": "suit-3pc/lapel-collar-stand",
+      "verdict": "WRONG",
+      "liveImage": "/images/generated/jacket/lapel-collar-stand.webp",
+      "confidence": "high",
+      "why": "The drawing's whole differentiator is a standing collar band, drawn as a closed rectangle across the back neck. Sampling the centre column x=600 returns TWO separate ink runs - y44-51 (band top edge) and y111 onward (band lower edge, where the centre-front line begins) - a 59px band gap; at 4x the two horizontals are joined by side edges and the band rises above the shoulder points. The three no-band siblings return a SINGLE continuous run at the identical column (notch from y75, peak y69, shawl y68), so this is a clean binary, and the runs measured were confirmed by cropping to be the band edges named. The photo shows no band whatsoever: the charcoal waistcoat's collar terminates at the shoulder and the white shirt collar sits free all the way around the neck, identical to the notch-lapel-vest photo. NOT a crop problem - the neck and shirt collar are fully in frame at exactly the height a band would occupy. The photo depicts the sibling notch-without-collar-band option.",
+      "gradedAt": "2026-08-01T13:42:15.476Z"
+    },
+    {
+      "option": "suit-3pc/notch-lapel-vest",
+      "verdict": "OK",
+      "liveImage": "/images/generated/jacket/notch-lapel-vest.webp",
+      "confidence": "high",
+      "why": "Drawing shows a notch lapel and, at the back neck, a single neckline curve: sampling the centre column x=600 returns one continuous ink run from y=75 downward, i.e. no collar band, where the band siblings return two runs at the same column. Photo shows a navy waistcoat with a clear step notch on both fronts, no standing band, and the shirt collar sitting free around the neck. Confirmed waistcoat rather than jacket: the left edge shows the topstitched armhole with a white shirt sleeve behind it. Distinguishable from the peak and shawl siblings by lapel shape and from lapel-collar-stand by the absent band. COULD NOT MEASURE: no printed dimension callout, so no cm lapel width or notch angle - shape class only.",
+      "gradedAt": "2026-08-01T13:42:15.492Z"
+    },
+    {
       "option": "suit-3pc/peak-collar-stand",
       "verdict": "WRONG",
       "liveImage": "/images/generated/jacket/peak-collar-stand.webp",
@@ -298,12 +410,68 @@
       "gradedAt": "2026-08-01T09:46:55.708Z"
     },
     {
+      "option": "suit-3pc/peak-lapel-vest",
+      "verdict": "OK",
+      "liveImage": "/images/generated/jacket/peak-lapel-vest.webp",
+      "confidence": "high",
+      "why": "Drawing shows peak lapels with tips angled up toward the shoulders; centre column x=600 returns one continuous ink run from y=69, so no collar band. Photo shows a grey waistcoat with unmistakable upward-pointing peak tips on both fronts, no standing band, and white shirt sleeves visible through both armholes, so it is a waistcoat. Clearly distinct from the notch and shawl siblings. COULD NOT MEASURE: no printed dimension callout, so no cm lapel-width or peak-angle claim is made - deliberately not assumed from the label.",
+      "gradedAt": "2026-08-01T13:42:15.492Z"
+    },
+    {
+      "option": "suit-3pc/shawl-collar-stand",
+      "verdict": "WRONG",
+      "liveImage": "/images/generated/jacket/shawl-collar-stand.webp",
+      "confidence": "high",
+      "why": "Same test as its notch counterpart. The drawing has a collar band: centre column x=600 returns two ink runs (y70-78 and y109 onward), a 30px band gap, confirmed at 4x as a closed band with side edges rising above the shoulder points, whereas shawl-lapel-vest returns one continuous run from y68 at the same column. The photo shows a charcoal waistcoat with a correct continuous shawl roll but NO standing band - the shirt collar is unobstructed around the entire visible neck and the vest top edge stops at the shoulder, matching the shawl-lapel-vest photo. The neck region is fully in frame, so this is not a crop artefact hiding the feature. The photo depicts the sibling shawl-without-collar-band option.",
+      "gradedAt": "2026-08-01T13:42:15.492Z"
+    },
+    {
+      "option": "suit-3pc/shawl-lapel-vest",
+      "verdict": "OK",
+      "liveImage": "/images/generated/jacket/shawl-lapel-vest.webp",
+      "confidence": "high",
+      "why": "Drawing shows one continuous unbroken shawl curve with no notch and no peak; centre column x=600 returns one continuous ink run from y=68, so no collar band. Photo shows a black waistcoat with a single continuous shawl roll from the neck down to the button, no break anywhere along the edge, no standing band, and white shirt sleeves visible through both armholes. Distinguishable from notch and peak siblings by the unbroken edge and from shawl-collar-stand by the absent band.",
+      "gradedAt": "2026-08-01T13:42:15.492Z"
+    },
+    {
+      "option": "suit-3pc/vest-bh-hand",
+      "verdict": "OK",
+      "liveImage": "/images/generated/vest/vest-bh-hand.webp",
+      "confidence": "high",
+      "why": "Counted the red-marked buttonhole positions with saturated-red blob detection: drawing 5 (y-centres 512/617/723/830/935 on a 1200px canvas), photo 5 (y-centres 456/580/707/839/974 on 1168px). The detector was validated by returning exactly 0 on the two no-buttonhole controls in this same batch. Gap-to-span ratios agree (drawing .237/.238/.243/.236; photo .239/.245/.256/.260 of the button-column span). Both show 2 welt pockets with button 4 level with the welt line. At 12x the photo buttonholes are straight bars closed by square bar-tacks at BOTH ends with discrete slightly irregular purl loops - straight hand-worked, not the keyhole or round end that would belong to the sibling vest-bh-round. COULD NOT MEASURE: no printed dimension callout so no cm buttonhole length; hand-versus-machine stitch quality is near the resolution limit of an 880px source and the machine sibling has no image to compare against.",
+      "gradedAt": "2026-08-01T13:42:15.492Z"
+    },
+    {
+      "option": "suit-3pc/vest-canvas-full",
+      "verdict": "OK",
+      "liveImage": "/images/generated/vest/vest-canvas-full.webp",
+      "confidence": "high",
+      "why": "Drawing is an interior cutaway with two interlining zones: a dense chest fill ending at a boundary above the welt pocket, then a distinct dash-row fill continuing past the pocket to the hem. Photo matches that topology - coarse brown haircloth over the chest terminating at a curved seam, then cream linen canvas, hand pad-stitched, continuing past and below the welt pocket to the frame edge, visibly floating (peeled clear of the shell), sewn, with raw canvas edges. Normalised to the welt pocket, the only landmark present in both images, the chest-material boundary sits 0.32 pocket-heights above the pocket top in the drawing and 0.40 in the photo, both measured from cropped views rather than assumed. Two sewn interlining layers running the whole front is exactly full canvas. COULD NOT MEASURE: the Chinese hatch-legend callouts are illegible at source resolution so the fills cannot be decoded by name; and the photo crops above the hem, so full-length coverage is inferred from uninterrupted continuation rather than seen reaching the hem.",
+      "gradedAt": "2026-08-01T13:42:15.492Z"
+    },
+    {
+      "option": "suit-3pc/vest-canvas-half",
+      "verdict": "WRONG",
+      "liveImage": "/images/generated/vest/vest-canvas-half.webp",
+      "confidence": "medium",
+      "why": "The drawing places a clear material boundary ABOVE the welt pocket: coarse brick/grid fill over the chest, then a visibly different diagonal-lattice fill from roughly 0.29 pocket-heights above the pocket top downward, and that lower fill carries its own leader line and callout, so the two-material split is deliberate rather than a drafting artefact. The photo shows no such boundary anywhere: identical diamond hand pad-stitched linen canvas runs continuously from the shoulder, around the welt pocket, and on to the bottom of frame with no change of material, plus a coarse haircloth panel at the armhole. Canvas that never terminates is full-canvas construction; the photo is not distinguishable from what vest-canvas-full claims and it contradicts the termination the drawing draws. Verified by matched same-coordinate crops of all three canvas drawings and a 2x crop of the photo pocket zone. Medium not high because the drawing's Chinese hatch-legend callouts are illegible at source resolution, so the lower material cannot be named - the verdict rests only on presence versus absence of the boundary, which is directly observable in both.",
+      "gradedAt": "2026-08-01T13:42:15.492Z"
+    },
+    {
       "option": "suit-3pc/vest-canvas-single",
       "verdict": "WRONG",
       "liveImage": "/images/generated/vest/vest-canvas-single.webp",
       "confidence": "medium",
       "why": "Blueprint is an interior cutaway with a shaped chest piece over a base interlining and a taped front edge; the live photo shows dense rows of hand pad-stitching over at least two distinct tan interlining layers, which is the signature of hand-canvassed construction and the opposite of a single fused layer. It is also not separable from the shipped Full Canvas and Fused Canvas photos, which show the same pad-stitched cutaway language.",
       "gradedAt": "2026-08-01T09:46:55.692Z"
+    },
+    {
+      "option": "suit-3pc/vest-canvas-uncon",
+      "verdict": "WRONG",
+      "liveImage": "/images/generated/vest/vest-canvas-uncon.webp",
+      "confidence": "medium",
+      "why": "Same base cutaway as its two siblings with only the fills changed. Ink density measured over one identical column (x640-860, confirmed by overlay to sit on the interlining zone rather than the outline or facing band) puts uncon lowest through the chest - 0.11-0.25 across y300-620 against half at 0.34-0.45 and full at 0.40-0.53 - and below the pocket it carries the sparsest stipple of the three. The drawing therefore gives this option the least interlining of the set. The photo instead shows a teardrop chest piece covered in dense diamond HAND PAD-STITCHING sewn onto a full-length floating linen canvas with hand pick-stitching and raw edges - the same hand-canvassed construction its full-canvas sibling shows. Pad-stitching is the signature of canvassing and contradicts Unconstructed Chest on its face; this is the same defect that already failed vest-canvas-single. Ruled out the obvious misread: the cream is garment canvas, not the linen dress form - it has pad-stitch texture, hand stitching along the armhole and raw frayed edges, while the dress form behind it is smooth and unstitched.",
+      "gradedAt": "2026-08-01T13:42:15.492Z"
     },
     {
       "option": "suit-3pc/vest-chest-none",
@@ -336,6 +504,30 @@
       "confidence": "high",
       "why": "Blueprint marks one red buttonhole on each of the two lapels; the live photo shows exactly two red-stitched buttonholes, one per lapel, and a zoom on the wearer's-right one confirms both bar-tack ends are inside the frame, so the count of 2 and the both-sides pairing are legible.",
       "gradedAt": "2026-08-01T09:46:55.708Z"
+    },
+    {
+      "option": "suit-3pc/vest-lapel-bh-left",
+      "verdict": "OK",
+      "liveImage": "/images/generated/vest/vest-lapel-bh-left.webp",
+      "confidence": "high",
+      "why": "Drawing: exactly 1 saturated-red blob, centroid (824,459) on a 1200px canvas, right of centre i.e. the wearer's left lapel. Photo: exactly 1 red blob, centroid (541,542) on 880px, right of centre on the lapel lying to the right of the tie, which is the wearer's left front. Count 1 = 1 and side matches. Detector validated against the 0-mark none case and the 2-mark left-two case in the same batch. The whole lapel is in frame from gorge to lapel point, so no second buttonhole is being cropped away and this cannot be a disguised left-two. Minor: the drawing places the mark closer to the notch than the photo does - a positioning nuance, not a different option.",
+      "gradedAt": "2026-08-01T13:42:15.492Z"
+    },
+    {
+      "option": "suit-3pc/vest-lapel-bh-left-two",
+      "verdict": "OK",
+      "liveImage": "/images/generated/vest/vest-lapel-bh-left-two.webp",
+      "confidence": "high",
+      "why": "Drawing: 2 saturated-red blobs, centroids (838,447) and (823,483), stacked 36px apart, both right of centre = wearer's left lapel. Photo: the red pixels resolve into 2 buttonholes - an upper one fragmented across 3 collinear blobs spanning x543-633 at y527-561, and a lower one across 2 collinear blobs at y597-611, the fragmentation being the dark gaps between purl loops rather than extra holes - both right of centre on the lapel to the right of the tie. Count 2 = 2, side matches, whole lapel in frame so nothing cropped. COULD NOT COMPARE: buttonhole spacing - the two framings differ in scale with no shared landmark spanning both at usable precision, so the normalised gaps (drawing .030 of canvas height, photo .056) are NOT evidence and are not treated as such.",
+      "gradedAt": "2026-08-01T13:42:15.492Z"
+    },
+    {
+      "option": "suit-3pc/vest-lapel-bh-none",
+      "verdict": "OK",
+      "liveImage": "/images/generated/vest/vest-lapel-bh-none.webp",
+      "confidence": "high",
+      "why": "Saturated-red blob detection returns 0 marks on the drawing and 0 on the photo; the same detector returns exactly 1 and exactly 2 on the two sibling pairs in this batch, so it is validated rather than merely null. Visually the photo wearer-left lapel is fully in frame from shoulder to mid-chest and is clean - no buttonhole in any thread colour, so the absence is not a colour-detection artefact. Sleeveless with a white shirt sleeve at the right edge, so a waistcoat. LOGGED MISMATCH outside this field: the drawing (blueprint 4544) is a peak-lapel front while the photo lapel reads as a plain roll with no visible peak. Lapel style belongs to the separate neckline-style field so it does not change this verdict, but the image is not reusable as a peak reference.",
+      "gradedAt": "2026-08-01T13:42:15.492Z"
     },
     {
       "option": "suit-3pc/vest-piping-diy",

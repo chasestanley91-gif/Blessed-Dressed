@@ -1535,3 +1535,133 @@ provenance whenever a photo contradicts it on a feature the photo had no reason 
 **Method note the grader recorded against itself:** an earlier reading that Small's point was much
 deeper came from measuring down from the *image crop edge*, which is not a garment landmark. It was
 discarded rather than reported — the same discipline that caught four bad measurements elsewhere today.
+
+---
+
+## The collar-stitching family is ungradeable at source — and a rule that did NOT transfer
+
+Twelve shirt options graded 2026-08-01: **1 WRONG, 1 OK, 10 UNSURE** — and the UNSURE verdicts are
+almost entirely **source-data defects, not photo quality**. This is the first family where the
+drawings, not the renders, are the binding problem.
+
+### Duplicate drawings — seven options covered by three files
+
+| | |
+|---|---|
+| `machine-01cm-top` ≡ `machine-03cm-top` | **byte-identical**, md5 `8e910bc6…`, 8241 bytes each |
+| `machine-05cm-top` ≡ `machine-06cm-top` | **byte-identical**, md5 `7a75c65c…`, 8227 bytes each |
+| `rolled-stand-collar` ≈ `one-piece-collar-in-75cm-with-tab` | mean abs diff **1.64/255**; the only differing pixels are 1px shifts on the CF seam |
+| … ≈ `one-piece-collar-in-8cm-with-tab` | 2.93/255 |
+
+### Printed callouts contradict their own labels in 4 of 7 stitching drawings
+
+| row label | drawing prints |
+|---|---|
+| 0.1 cm Top | **0.3cm** |
+| 0.6 cm Top | **0.5cm** |
+| 0.1 cm AMF | **0.6cm** |
+| 0.3 cm AMF | **0.1cm** |
+| 0.5 cm AMF | **nothing at all** |
+
+### The rule that did not transfer, and was tested rather than assumed
+
+Earlier grading established that shirt-collar **angle** callouts genuinely describe drawn geometry
+(`french-in-8cm` prints 145°, measures 151°). The obvious move is to extend that trust to the stitch
+offsets. **It does not hold.** Measured drawn offset of the red stitch line from the collar edge, right
+leaf, all normalised to 192×192:
+
+| printed | 0.1 cm | 0.3 cm | 0.5 cm | 0.6 cm |
+|---|---|---|---|---|
+| drawn offset | 4 px | 4 px | 5 px | 4 px |
+
+No proportionality. **These drawings do not encode their dimension to scale**, so the offset — the only
+thing separating seven of these options — is unmeasurable from either artefact. The grader tested the
+transfer instead of assuming it, which is the same discipline that caught four bad measurements
+elsewhere today.
+
+### Two drawings that appear mis-filed, worth escalating on their own
+
+- **`button-down-collar-with-78cm-stand.jpg` draws no button-down.** At 16× raw-pixel zoom neither leaf
+  carries a button; the only button is a throat button on the band. The convention is verified inside
+  the family — `point-in-7cm-with-button.jpg` draws a distinct circle on *each* leaf at identical scale
+  — so the absence is real, not a resolution artefact. A file named `button-down-collar` that draws no
+  button-down is a source defect. Also: **7.8 cm is not a plausible collar-stand height** (real stands
+  run 3–4.5 cm), so that figure looks like a point length mis-filed as a stand.
+- **`one-piece-collar-in-75cm-with-tab.jpg` draws no tab and no collar leaves.** Its own length-siblings
+  (`-85cm`, `-9cm`) are visibly different artwork with a different viewpoint.
+
+### Photo-side defects logged separately
+
+- `collar-point-85-btn` — a button on the **left** point and a bare **right** point. Not a real garment,
+  whichever way the drawing is read.
+- `stitch-03-amf` — renders the drawings' **red annotation colour as actual red thread**, while all seven
+  siblings are tonal. Thread colour is a separate option group, so a customer reads this as a
+  thread-colour choice rather than a stitch-offset one. Second instance today of annotation literalised
+  into a product image, after `lbh-milanese-20`'s circled ①②③.
+- Neckties conceal the collar band in `collar-point-85-btn` and `collar-button-down-78`.
+
+**Consequence for planning:** these seven stitching options cannot be separated by any photograph until
+the supplier provides drawings that encode the offset. That is a **fifth** merge/reprice candidate group,
+and the largest — bigger than `round-53`, the slant pair, and `vest-bottom-small` combined.
+
+---
+
+## Two whole waistcoat fields are unshot — collar bands and canvas grades
+
+Twelve suit-3pc options graded 2026-08-01: **8 OK, 4 WRONG**. The four failures fall into two clusters,
+and in both the *entire discriminating feature of the option* is missing from the photograph.
+
+### The collar-band options have never been photographed with a collar band
+
+`lapel-collar-stand` and `shawl-collar-stand` are defined by a standing band across the back neck, and
+the drawings encode it cleanly enough to test numerically. Sampling the **centre column x=600**:
+
+| drawing | ink runs at x=600 | reading |
+|---|---|---|
+| `lapel-collar-stand` | **two** — y44–51, then y111 onward | band, 59 px gap |
+| `shawl-collar-stand` | **two** — y70–78, then y109 onward | band, 30 px gap |
+| `notch-lapel-vest` | one, from y75 | no band |
+| `peak-lapel-vest` | one, from y69 | no band |
+| `shawl-lapel-vest` | one, from y68 | no band |
+
+A clean binary across five drawings, with the measured runs confirmed by cropping to be the band edges
+named. **Both photographs show no band at all** — the shirt collar sits free around the entire neck and
+the waistcoat's top edge stops at the shoulder, matching their no-band siblings exactly.
+
+**This is not a crop.** The neck and shirt collar are fully in frame at exactly the height a band would
+occupy. Two customer-facing options are showing the picture of a different option.
+
+### The canvas grades have collapsed into one construction
+
+`vest-canvas-half` and `vest-canvas-uncon` both ship photographs of **full hand-canvassed
+construction** — dense diamond pad-stitching on floating linen with raw edges.
+
+- **half** — the drawing terminates the chest canvas *above* the welt pocket, with a separately
+  labelled material below carrying its own leader line. The photo runs identical canvas continuously
+  past the pocket to the frame edge. Canvas that never terminates is full canvas.
+- **uncon** — measured ink density over one identical column (x640–860, verified by overlay to sit on
+  the interlining zone rather than the outline) puts it **lowest** of the three through the chest:
+  **0.11–0.25** against half's 0.34–0.45 and full's 0.40–0.53. The drawing gives this option the least
+  interlining of the set; the photo gives it a pad-stitched chest piece over full-length floating
+  canvas.
+
+**That makes three of the four canvas options wrong the same way** — `vest-canvas-single` already
+failed for showing hand pad-stitching on a fused option. Pad-stitching is the signature of canvassing,
+so a generator that reaches for it by default will fail every non-canvassed grade in the field.
+
+Both are medium confidence *for a stated reason*: the drawings' Chinese hatch-legend callouts are
+illegible at source resolution, so the fills cannot be decoded by name. The verdicts rest only on
+legend-free structural facts — presence or absence of the material boundary, and relative ink density.
+
+### Method notes worth keeping
+
+- The red-blob buttonhole detector was **validated against controls in its own batch** — returning
+  exactly 0 on `vest-lapel-bh-none`, 1 on `-left`, 2 on `-left-two` — before any count was trusted.
+- An automated neck scan was **discarded mid-way** after checking it was picking up chin shadow and
+  beard rather than vest fabric. The band findings rest on the drawing-side column measurement plus
+  direct high-zoom inspection instead.
+- On `vest-lapel-bh-left-two` the normalised buttonhole spacings (drawing 0.030 of canvas height, photo
+  0.056) were explicitly **not** treated as evidence, because the two framings differ in scale with no
+  shared landmark spanning both.
+- All five neckline photos were confirmed to be **waistcoats** — topstitched armhole with a shirt sleeve
+  behind — despite living under `/images/generated/jacket/`.
