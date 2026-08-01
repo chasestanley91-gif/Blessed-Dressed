@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-01T10:24:06.686Z",
+  "updatedAt": "2026-08-01T11:36:49.824Z",
   "rows": [
     {
       "option": "shirt/collar-af1-70",
@@ -152,6 +152,102 @@
       "confidence": "high",
       "why": "Blueprint shows the vest interior with a red piping line along the junction of the front facing and the lining; the live photo shows the garment open on a hanger with bright red corded piping running that exact facing/lining seam from shoulder to hem, and a zoom on the mid-body confirms a finished sleeveless armhole, so it is a vest interior and not a jacket.",
       "gradedAt": "2026-08-01T09:46:55.708Z"
+    },
+    {
+      "option": "trousers/jeans-arc",
+      "verdict": "WRONG",
+      "liveImage": "/images/generated/trousers/jeans-arc.webp",
+      "confidence": "medium",
+      "why": "Correct arc vocabulary - squared start at the waistband, smooth sweep, clear terminal downward hook, which is what separates 3135 from its three siblings - but the far end is on the wrong side. The mouth runs (285,300) to (520,470), down-and-inboard, terminating its hook at the pressed crease rather than the side seam. NOT SETTLED: the model hand at frame left partly occludes the side-seam region, so whether any part of the opening also reaches the side seam behind the hand could not be verified. NOTE: the direction premise conflicts with the suit-2pc grading of jeans-arc, which measured 0.78 pitches of INBOARD travel as correct. Recorded as CONTESTED.",
+      "gradedAt": "2026-08-01T11:36:49.822Z"
+    },
+    {
+      "option": "trousers/jeans-diamond",
+      "verdict": "WRONG",
+      "liveImage": "/images/generated/trousers/jeans-diamond.webp",
+      "confidence": "medium",
+      "why": "The diamond point exists but sits at the wrong end. 3134 profiles as a drop near the fly, then a run outboard, and at the outboard extreme a distinct downward spike - the diamond point lands ON THE SIDE SEAM. In the photo the drop is at the outboard end and the point at the inboard end, right at the pressed front crease: both ends transposed. The chevron shape itself is rendered correctly, so this is an orientation failure rather than a shape failure. NOTE: the direction premise conflicts with the suit-2pc grading and is recorded as CONTESTED.",
+      "gradedAt": "2026-08-01T11:36:49.822Z"
+    },
+    {
+      "option": "trousers/jeans-round",
+      "verdict": "OK",
+      "liveImage": "/images/generated/trousers/jeans-round.webp",
+      "confidence": "high",
+      "why": "Best match in the batch. 3136 profiles as a drop from the waistband, a clearly ROUNDED corner with visible radius unlike the sharp 90 degrees of 3133, then a near-flat run to the side seam ending with no hook. The photo reproduces all three. Quantitatively the closest of the whole batch: run travel 225px / belt-loop pitch 330px = 0.68 against the drawing 305/445 = 0.69, within 2%. Drop depth 50px against waistband depth 90px = 0.55 versus the drawing 0.96 - right order of magnitude, unlike jeans-square at 2.7. Unambiguously distinguishable from square by corner radius, from diamond by absence of a point, from arc by absence of a terminal hook.",
+      "gradedAt": "2026-08-01T11:36:49.822Z"
+    },
+    {
+      "option": "trousers/jeans-square",
+      "verdict": "OK",
+      "liveImage": "/images/generated/trousers/jeans-square.webp",
+      "confidence": "medium",
+      "why": "All three discriminating features match 3133. Confirmed front view via fly J-topstitch with waistband closure above. Mouth is an L: vertical drop at x=362 from the waistband seam to y=593, a corner, then a straight run to the side, ending flat with no downward hook. Corner radius is crisp, effectively 90 degrees with no easing, which is precisely what separates 3133 from round (visible radius), diamond (downward point at the far end) and arc (long drop plus terminal hook). Run length 272px/315px = 0.86 versus drawing 0.69, inside foreshortening tolerance. DEVIATION not reconciled: the vertical drop is ~3x deeper than drawn (photo 301px against waistband depth 112px = 2.7, drawing 0.83). Vertical-to-vertical, so foreshortening does not excuse it. Not treated as disqualifying because drop depth is not what separates this option from its three siblings - all four drawings have a drop, and the corner and end treatment are correct.",
+      "gradedAt": "2026-08-01T11:36:49.822Z"
+    },
+    {
+      "option": "trousers/pocket-stitch-pick-06",
+      "verdict": "OK",
+      "liveImage": "/images/generated/trousers/pocket-stitch-pick-06.webp",
+      "confidence": "medium",
+      "why": "Right feature, right seam, right place. Illustration 165588 marks the option as a thin line running ALONG the front pocket mouths on both sides, so the stitch belongs on the front pocket opening, not a back pocket or hem. The photo shows a stitch line parallel to and inboard of the front pocket mouth. Character is correct for PICK rather than machine topstitch: at 6.5x the line resolves into discrete regularly spaced stitch points with visible gaps, not a continuous chainstitch, which separates it from pocket-stitch-06 and pocket-stitch-double. NOT MEASURABLE: the 0.6 cm cannot be verified - the drawing carries no dimension callout and draws the stitch directly on the mouth line, encoding zero offset. Reported as a ratio instead: 34-43px from the mouth edge, roughly 0.10-0.12 of front-panel belt-loop pitch, generous for a 0.6 cm pick stitch but with no drawing-side number to compare against.",
+      "gradedAt": "2026-08-01T11:36:49.822Z"
+    },
+    {
+      "option": "trousers/slant-20",
+      "verdict": "WRONG",
+      "liveImage": "/images/generated/trousers/slant-20.webp",
+      "confidence": "medium",
+      "why": "Correct direction and correct plain edge, wrong magnitude. Normalising horizontal mouth travel by belt-loop pitch - a ratio of two horizontal spans on the same curved surface, so hip foreshortening largely cancels - gives photo 133px/330px = 0.403 against drawing 3120 at 79px/445px = 0.178. That is 2.3x the drawn 2.0 slant, and the residual bias runs the wrong way for rescue: the mouth sits in the outer third where compression is worst while the loop pitch spans the flatter middle, so 0.403 UNDERSTATES the true ratio. Angle agrees: 15.3 degrees from vertical against 8.9 measured on the drawing. At 0.403 the photo lands between the 3.2 sibling (~0.285) and the 5.1 sibling (0.445), nearest 5.1 - not distinguishable as the narrowest slant in the family. The label ratio is self-validating: drawing travels 79px and 198px, ratio 2.51, against labels 5.1/2.0 = 2.55.",
+      "gradedAt": "2026-08-01T11:36:49.822Z"
+    },
+    {
+      "option": "trousers/slant-20-stripe",
+      "verdict": "WRONG",
+      "liveImage": "/images/generated/trousers/slant-20-stripe.webp",
+      "confidence": "medium",
+      "why": "Correct feature and direction, wrong magnitude. The cream contrast piping is present along the pocket mouth, which is exactly what 3120 adds over 3100. Normalised travel 127px/392px = 0.324 versus the drawing 0.178 - 1.8x too wide, landing essentially on the slant-32-stripe sibling (~0.285) rather than on 2.0. Measured angle 15.3 degrees against the drawing 8.9. The tangent ratio against its own 5.1 sibling photo is 0.70 where the drawings demand 0.37, so the pair under-differentiates by ~1.9x. Both checks are independent and agree, and foreshortening cannot explain it since the travel/pitch ratio is taken between two horizontal spans on the same curved hip.",
+      "gradedAt": "2026-08-01T11:36:49.822Z"
+    },
+    {
+      "option": "trousers/slant-51-stripe",
+      "verdict": "WRONG",
+      "liveImage": "/images/generated/trousers/slant-51-stripe.webp",
+      "confidence": "medium",
+      "why": "Width is right, mouth runs backwards. Navy piping isolated by colour: top (247,250) to bottom (402,668). Normalised travel 155px/330px = 0.470 against the drawing 198/445 = 0.445 - within 6%, so magnitude is not the problem. DIRECTION IS: an equalized crop shows the folded centre-front edge at x~690 with the fly J-topstitch to its right, so going DOWN this mouth x increases toward the fly, ending near the pressed crease rather than running out to the side seam. Mirror- and viewpoint-invariant, so not explicable as the opposite leg. NOTE: this direction claim conflicts with the suit-2pc grading of the same feature family and is recorded as CONTESTED - see DEFECT-FAMILIES.md.",
+      "gradedAt": "2026-08-01T11:36:49.822Z"
+    },
+    {
+      "option": "trousers/watch-both",
+      "verdict": "WRONG",
+      "liveImage": "/images/generated/trousers/watch-both.webp",
+      "confidence": "medium",
+      "why": "Both-sidedness is right; the feature is not a watch pocket. Symmetric deep pentagonal flaps hang from the waistband seam on each side, so the count is satisfied, but scale disqualifies it: waistband depth 81px, flap depth 493px = 6.1x waistband depth. Every watch pocket in this supplier family is a SMALL opening abutting the waistband seam - 3181 welt 0.44 of waistband depth, 3188 besom 0.46, 3186 diamond flap 0.66. This element is 9-14x too deep. Width also fails at 0.66 of belt-loop pitch versus 0.28 drawn. And there is no pocket opening of any kind - no welt, no jet, no slit. Its own sibling watch-diamond-flap renders a flap at 0.77 of waistband depth, so a correctly scaled flap exists in the set and this is ~8x larger. CAVEAT: illustration 3532 is a different base drawing (interior view with pocket bags exposed), so it does not by itself fix the flap outward shape - the verdict rests on scale and on the absence of any opening, not on shape.",
+      "gradedAt": "2026-08-01T11:36:49.822Z"
+    },
+    {
+      "option": "trousers/watch-diamond-flap",
+      "verdict": "OK",
+      "liveImage": "/images/generated/trousers/watch-diamond-flap.webp",
+      "confidence": "medium",
+      "why": "The only watch-pocket photo in the batch that actually shows a watch pocket. 3186 draws a flap hanging from the waistband seam on the front panel, deeper than its welt/besom siblings (69px vs 46 and 48) with a downward point in the centre of its lower edge. The photo shows precisely that, plus a 4-hole button and horizontal buttonhole matching the label. The frame also reproduces the drawing whole layout - back besom with a dart above it on the far side, vertical side seam, then the front panel carrying the flap. Flap depth 85px against waistband depth 110px = 0.77 versus the drawing 0.66. DEVIATION: width 0.48 of belt-loop pitch versus 0.285 drawn, about 1.7x wide, and since foreshortening compresses horizontal spans the true width is larger still - a genuine overshoot. Not disqualifying because a pointed diamond flap with a button is unmistakable against its siblings at any width. NOT VERIFIABLE: the label says Right and no fly or closure appears in frame, so handedness could not be established.",
+      "gradedAt": "2026-08-01T11:36:49.822Z"
+    },
+    {
+      "option": "trousers/watch-right-besom",
+      "verdict": "WRONG",
+      "liveImage": "/images/generated/trousers/watch-right-besom.webp",
+      "confidence": "high",
+      "why": "Same failure as watch-right-welt: this is the BACK besom. The besom construction itself is correct - two narrow lips at 2.2x - but a vertical DART runs from the waistband seam to the pocket top at x~342, a back-panel feature. No fly, no J-topstitch, no waistband closure anywhere in frame. Scale is decisive and independent of the dart: pocket length 310px / belt-loop pitch 405px = 0.77 against the base drawing back besom 330/445 = 0.74, versus the drawn watch besom 122/445 = 0.27 - roughly 2.8x too long to be a fob pocket. Illustration 3188 marks the option as a small jetted slit hanging off the waistband seam on the FRONT panel.",
+      "gradedAt": "2026-08-01T11:36:49.822Z"
+    },
+    {
+      "option": "trousers/watch-right-welt",
+      "verdict": "WRONG",
+      "liveImage": "/images/generated/trousers/watch-right-welt.webp",
+      "confidence": "high",
+      "why": "Depicts a BACK pocket, not the front watch pocket. Decisive: at 2.1x magnification a vertical DART runs from the waistband seam down to the top edge of the pocket at x~315 - a dart terminating in a pocket is back-panel construction and appears nowhere on a trouser front. An equalized crop of the whole right half contains no fly J-topstitch, no waistband closure and no watch pocket at all. Scale confirms independently: pocket length 290px / belt-loop pitch 400px = 0.73, matching the base drawing BACK besom (330/445 = 0.74) to within 2%, and 2.7x the drawn watch pocket (125/445 = 0.28). Illustration 3181 places this option on the FRONT panel abutting the waistband seam between the front pocket mouth-top and the fly. The photograph shows none of that.",
+      "gradedAt": "2026-08-01T11:36:49.820Z"
     },
     {
       "option": "vest/db-6x2",
