@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-01T22:29:47.384Z",
+  "at": "2026-08-01T23:05:44.890Z",
   "settings": {
     "maxWidth": 1400,
     "quality": 82,
@@ -7,30 +7,30 @@
   },
   "applied": true,
   "counts": {
-    "masters": 691,
+    "masters": 692,
     "converted": 1,
-    "skipped": 690,
+    "skipped": 691,
     "failed": 0,
     "repointed": 0
   },
   "bytes": {
-    "before": 2093562,
-    "after": 146950,
-    "savedPct": 93
+    "before": 1641819,
+    "after": 66742,
+    "savedPct": 95.9
   },
   "note": "targetSha1 is the derivative; sourceSha1 is the PNG master QC graded. The master and publish_approved.mjs byte-identity gate are untouched.",
   "results": {
     "ok": [
       {
-        "master": "public\\images\\generated\\suit-2pc\\cp-trapezoid.png",
-        "masterBytes": 2093562,
-        "sourceSha1": "6f77d44e17acb0e3789c7318d3083e8e79900345",
-        "target": "public\\images\\generated\\suit-2pc\\cp-trapezoid.webp",
-        "targetBytes": 146950,
-        "targetSha1": "20ce0686999152b0d34d93672b64c7f2f7808337",
+        "master": "public\\images\\generated\\suit-2pc\\lapel-shawl.png",
+        "masterBytes": 1641819,
+        "sourceSha1": "d487d30802d328e874a5acc810fe6c7391076863",
+        "target": "public\\images\\generated\\suit-2pc\\lapel-shawl.webp",
+        "targetBytes": 66742,
+        "targetSha1": "47262c25a56f2c7666345b03bc917958f8aa61c1",
         "quality": 82,
         "width": 1400,
-        "web": "/images/generated/suit-2pc/cp-trapezoid.webp"
+        "web": "/images/generated/suit-2pc/lapel-shawl.webp"
       }
     ],
     "skipped": [
@@ -1664,6 +1664,10 @@
       },
       {
         "master": "public\\images\\generated\\suit-2pc\\coin-none.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\cp-trapezoid.png",
         "reason": "derivative already exists"
       },
       {

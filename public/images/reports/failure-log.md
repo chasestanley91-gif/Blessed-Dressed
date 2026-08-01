@@ -723,3 +723,14 @@ published with fan-out (sport-coat/suit-2pc/suit-3pc), replacing the legacy coll
 chest-welt collision group 60aa2e9282f7 now 4 members (cp-welt-23/25/27, cp-jetted).
 Session running total: 5 generations / 4 shipped / 2.5 credits = 1.25 attempts-per-shipped.
 Credits ~792.0.
+
+## 2026-08-01 — FIRST SPEC-ONLY GENERATION SHIPPED: suit-2pc/lapel-shawl (0.5 credits)
+
+No drawing exists for the generic shawl (its catalog pointer wrongly borrowed the 0005 sheet
+and was cleared). Full spec-only chain: extract_spec --spec-only -> SPEC LOCK prompt variant
+(build_prompt rewrites all attached-illustration language) -> validate --allow-missing-illustration
+-> generate WITHOUT medias (sanctioned: nothing exists to attach) -> compare_prep --spec-only
+(QC vs the drafting spec as sole authority) -> PASS 9x98 attempt 1 -> published with fan-out,
+replacing the ca22563b317d collision copy. Shawl collision now 2 (-d, -asymmetric, both
+spec-only-capable). Session: 6 generations / 5 shipped / 3.0 credits = 1.2 attempts/shipped.
+Credits ~791.5.
