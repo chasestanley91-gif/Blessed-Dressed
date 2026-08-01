@@ -69,6 +69,13 @@ const EXCLUDED_SHAPE = [
   { re: /\b(?:unlike|as opposed to|in contrast to|rather than) (?:a|the|its)\b/i, what: 'explicitly contrasts against another shape' },
   { re: /\bnotch-free\b|\bwithout a notch\b|\bno notch\b/i, what: 'names the notch it lacks' },
   { re: /\bpresents as\b|\breads as a\b[^.]*\bpocket\b/i, what: 'says the option presents as a different feature' },
+  // Both of these were MISSED by the first version of this rule and found by hand.
+  // cp-trapezoid said it "departs from both the rectangle and the arc" — naming
+  // two sibling shapes, and the word "arc" alone was enough to make spec
+  // extraction emit a spurious `arc buttonhole`. lp-straight-jetted-40 said it was
+  // "more formal than the slanted hacking pocket", naming a third.
+  { re: /\bdeparts? from (?:both )?(?:the|a)\b[^.]{0,70}/i, what: 'names the shape(s) it departs from' },
+  { re: /\b(?:more|less) \w+ than (?:a|the)\b[^.]{0,60}/i, what: 'compares against a named sibling shape' },
 ];
 
 // CLOSURE is the pattern most prone to false positives, because "open" and
