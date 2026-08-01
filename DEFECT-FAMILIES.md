@@ -522,3 +522,38 @@ decides, and the sibling drawings in the same family are usually what makes the 
 
 **None of these mappings were changed.** Repointing an option's illustration alters what a customer
 sees, and sits with the other pending pointer fixes for a human ruling.
+
+## FAM-BACK-DARTS-WRONG-FACE — a whole field mapped to the opposite side of the garment
+
+**Found 2026-08-01** by the conflict gate. All three options in `Trousers-back > back-darts` —
+`darts-none`, `darts-single`, `darts-double` — are backed by the factory **302 front** pleat-and-dart
+series (`302L__No_pleat_no_dart`, `302M__No_pleat_single_dart`, `302Y__No_pleat_double_darts`).
+
+Every one of those sheets is a trouser **FRONT** view: J-shaped fly topstitch curving into the
+crotch, fly extension, slant side-seam pockets, front crease lines, with the red dart marks on the
+front panels either side of the fly. The true back sheets (3230 / 3231 / 320B) look nothing like
+them — straight centre-back seam, four belt loops, no fly.
+
+`darts-single` is the dangerous one: the dart **count** matches (one each side), so a
+fidelity-to-blueprint QC pass would score the render correct while it depicts the wrong face.
+
+There is a second-order harm worth spelling out. Recording `orientation: front` from these sheets
+makes `extract_spec`'s `computeForbidden()` add front/back-confusion negatives — so **the spec would
+forbid the very back-face feature the option names**. A wrong blueprint does not merely mislead the
+image model; it can turn the pipeline's own safety machinery against the option.
+
+## Two sheets that do not encode the distinction the catalog asserts
+
+Flagged during the same wave and **deliberately not gated**, because the evidence cut both ways:
+
+- `back-left-patch` — `3230__Patch_with_pointed.jpg` draws pointed patch pockets on **both** sides,
+  and its sibling `3231__Point_patch_with_bttn.jpg` (mapped to `back-both-patch`) is the same drawing
+  **plus a button**. So the factory pair encodes button-versus-no-button, not left-versus-both.
+- `back-left-welt` — `3221__Welt_with_bttn.jpg` draws **two** welts with one button, and is nearly
+  indistinguishable from `320B__Right_left_besom_left_bttn.jpg` backing `back-both-welt`.
+
+These were allowed through because the already-shipped asset for `back-left-patch`, generated from
+this same sheet, correctly renders a **single** left pointed pocket — which shows the pipeline takes
+the count from the label rather than the drawing. That is a real mitigation, but it is not a
+guarantee, so **QC must explicitly verify pocket COUNT on both candidates**: a two-pocket result
+would be identical to the `both` option and would sail through a naive fidelity check.

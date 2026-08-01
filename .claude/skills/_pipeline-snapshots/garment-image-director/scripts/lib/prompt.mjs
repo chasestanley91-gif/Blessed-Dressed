@@ -102,6 +102,51 @@ export const PHOTO_BLOCK =
   'background: no location, no architecture, no furniture, no scenery, no props ' +
   'and no environmental context of any kind competing with the garment.';
 
+// SOME OPTIONS HAVE NO SIGNAL EXCEPT DEPTH, and the default lighting deletes
+// them. photography-rules.md has said so since 2026-07-30 — and, like the SET
+// sentence before it, the rule lived only in the reference file and never
+// reached the prompt string, so it kept costing generations:
+//
+//   shirt/bias-outer-top-collar   2 attempts   grain, invisible on plain cloth
+//   shirt/back-side-pleat         2 attempts   pressed folds under flat light
+//   suit-2pc/pocket-stitch-double 2 attempts   tonal stitch rows, flat light
+//   trousers/flat-front           1 attempt    flatness itself, unlit
+//   trousers/hem-cuff-32 + suit-3pc/hem-single-turnup — flagged mid-wave as
+//                                              about to fail the same way
+//
+// A fold, a dart, a turn-up and a tonal stitch row have no colour and no
+// outline. Their ONLY visual signal is the shadow they cast, so lighting stops
+// being a styling choice. The remedy is measured: raking the light was the
+// single change that fixed back-side-pleat and pocket-stitch-double.
+//
+// Note this REPLACES the lighting sentence rather than appending a second one.
+// Appending would leave "natural daylight studio lighting" and "raking
+// sidelight" both in the prompt, and a prompt that contradicts itself loses —
+// that is exactly how sport-coat/lapel-notch-68 burned four generations.
+//
+// Deliberately NOT applied to parts whose feature has an outline of its own
+// (vents, cuff shapes, hem curves): those read fine under even light, and
+// raking them would trade a real benefit for a cosmetic one.
+const DEPTH_SIGNAL_PARTS = /^(fin-stitch|fin-dart|fin-pleat-detail|trouser-pleat|trouser-hem)$/;
+
+const RAKING_LIGHT =
+  'Savile Row and high-end Italian sartorial aesthetic. STRONG RAKING SIDELIGHT ' +
+  'skimming low and almost parallel across the cloth, across the run of the ' +
+  'feature, so every fold, pressed edge and line of stitching throws its own ' +
+  'distinct shadow and reads as real depth — this feature has no colour and no ' +
+  'outline of its own, and flat frontal light would erase it from its own ' +
+  'photograph. Phase One IQ4 medium-format camera, 150MP detail, shallow depth ' +
+  'of field, magazine-quality editorial menswear photography. Authentic bespoke ' +
+  'craftsmanship, fine hand stitching, premium finishing. ' +
+  'SET — shot in a clean luxury photographic studio against a seamless, plain, ' +
+  'neutral light-grey background with clear separation between garment and ' +
+  'background: no location, no architecture, no furniture, no scenery, no props ' +
+  'and no environmental context of any kind competing with the garment.';
+
+export function photoBlockFor(spec) {
+  return DEPTH_SIGNAL_PARTS.test(String(spec?.part || '')) ? RAKING_LIGHT : PHOTO_BLOCK;
+}
+
 // Universal negatives that apply to every option, every part. Per-option
 // negatives (option isolation, absence guard, front/back lock, exact counts)
 // come from tech-pack-interpreter's `forbidden[]` and are appended separately
@@ -447,7 +492,7 @@ export function buildPrompt(spec) {
     BLUEPRINT_LOCK,
     presentation,
     focus,
-    PHOTO_BLOCK,
+    photoBlockFor(spec),
     texture,
     NEGATIVE,
     forbiddenBlock,
