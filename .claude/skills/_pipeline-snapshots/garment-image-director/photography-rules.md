@@ -40,6 +40,38 @@ lifestyle. If the craft isn't immediately obvious in a rendered image,
 garment-image-qc should treat that as a composition failure, not just wait
 for a geometry mismatch.
 
+## Some options do not exist under default conditions
+
+A craft option is normally a *shape* — a lapel, a pocket, a cuff — and a shape
+photographs under any reasonable studio setup. But a few options are a **property
+of the cloth or of the surface**, and those have no colour and no outline of their
+own. Photograph them under the defaults and the picture contains **nothing at
+all**: not a poor rendering of the option, but a garment with no option visible.
+
+Both instances below were measured, and both cost two failed attempts before the
+condition was changed:
+
+| the option is… | the default that DELETES it | what the photograph needs |
+|---|---|---|
+| a **grain direction** — bias cutting, nap, weave orientation | plain white cloth, where grain is invisible | **change the CLOTH**: a fine stripe, so panel direction is legible in the run of the stripe |
+| a **fold or a pressed edge** — pleats, darts, turn-ups, creases | flat frontal light, where a white fold on white cloth casts no shadow | **change the LIGHT**: strong raking sidelight skimming the surface, so each fold throws a distinct shadow |
+
+`shirt/bias-outer-top-collar` failed twice on plain poplin. The blueprint marks
+the bias with diagonal hatching, and hatching on plain cloth photographs as
+nothing. On a navy pinstripe the option reads in one second: diagonal stripes on
+the collar meeting vertical stripes on the body at the collar seam.
+
+`shirt/back-side-pleat` failed twice: first with a plain back (which is the
+*sibling option*, so it sold the wrong garment), then with soft drape creases
+under flat light. Raked hard from one side, the same two pleats became crisp
+pressed folds with real shadow.
+
+**The rule.** Before generating, ask what the option's only visual signal is. If
+it is *direction*, the cloth must carry a pattern. If it is *depth*, the light
+must be raking. Choosing the default in those cases is not a neutral styling
+decision — it removes the subject from its own photograph, and QC will correctly
+grade the result against the sibling option it now resembles.
+
 ## Camera selection by feature type
 
 Choose the crop from the option's `part` via `camera-rules.md`'s table, but
