@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-01T01:05:11.591Z",
+  "generatedAt": "2026-08-01T01:19:02.690Z",
   "count": 2862,
   "records": [
     {
@@ -244,11 +244,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/techpacks/shirt/lapel/point-in-7cm-with-hidden-button.jpg",
-      "liveImage": "/images/techpacks/shirt/lapel/point-in-7cm-with-hidden-button.jpg",
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/shirt/collar-point-70-hidden-btn.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/shirt/collar-point-70-hidden-btn.webp",
+      "shippedBytes": 105886,
+      "shippedSha1": "87e2c6549b12ec46e9abe2bad7f8ce1e6e8396d2",
       "pipeline": {
         "dir": ".craft-pipeline/shirt/collar-point-70-hidden-btn",
         "have": {
@@ -257,24 +257,19 @@
           "generation": true,
           "qc": true
         },
-        "verdict": "UNMET",
-        "attempt": 2,
-        "lowestScore": 84,
+        "verdict": "PASS_WAIVED",
+        "attempt": 3,
+        "lowestScore": 96,
         "belowMin": [
-          "shape",
-          "geometry",
           "dimensions",
           "angles",
-          "construction",
-          "placement",
-          "symmetry",
           "blueprint-match"
         ],
-        "candidates": 2,
+        "candidates": 3,
         "needsReverify": false,
-        "checkedAt": "2026-07-28T05:21:46.071Z"
+        "checkedAt": "2026-08-01T01:18:55.285Z"
       },
-      "stage": "unmet"
+      "stage": "shipped-waived"
     },
     {
       "key": "shirt/collar-curve-point-75",

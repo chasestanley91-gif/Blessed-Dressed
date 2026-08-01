@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-01T01:05:04.591Z",
+  "at": "2026-08-01T01:18:55.787Z",
   "settings": {
     "maxWidth": 1400,
     "quality": 82,
@@ -8,31 +8,19 @@
   "applied": true,
   "counts": {
     "masters": 683,
-    "converted": 1,
-    "skipped": 682,
+    "converted": 0,
+    "skipped": 683,
     "failed": 0,
     "repointed": 0
   },
   "bytes": {
-    "before": 1915737,
-    "after": 162264,
-    "savedPct": 91.5
+    "before": 0,
+    "after": 0,
+    "savedPct": 0
   },
   "note": "targetSha1 is the derivative; sourceSha1 is the PNG master QC graded. The master and publish_approved.mjs byte-identity gate are untouched.",
   "results": {
-    "ok": [
-      {
-        "master": "public\\images\\generated\\sport-coat\\cb-5.png",
-        "masterBytes": 1915737,
-        "sourceSha1": "874aba55947b54988b14686c3582222f24e0ef34",
-        "target": "public\\images\\generated\\sport-coat\\cb-5.webp",
-        "targetBytes": 162264,
-        "targetSha1": "4ba237854dc32016013c0fd7165d42e7c91496ed",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/sport-coat/cb-5.webp"
-      }
-    ],
+    "ok": [],
     "skipped": [
       {
         "master": "public\\images\\generated\\jacket\\back-besom-btn.png",
@@ -1544,6 +1532,10 @@
       },
       {
         "master": "public\\images\\generated\\sport-coat\\cb-3.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\sport-coat\\cb-5.png",
         "reason": "derivative already exists"
       },
       {

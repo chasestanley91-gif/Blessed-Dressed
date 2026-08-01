@@ -3306,6 +3306,39 @@
           ]
         }
       ]
+    },
+    {
+      "at": "2026-08-01T01:18:57.635Z",
+      "by": "tools/publish_approved.mjs",
+      "count": 1,
+      "rowCount": 1,
+      "fanout": true,
+      "options": [
+        {
+          "product": "shirt",
+          "option": "collar-point-70-hidden-btn",
+          "field": "lapel",
+          "identity": "lapel/collar-point-70-hidden-btn",
+          "image": "/images/generated/shirt/collar-point-70-hidden-btn.webp",
+          "master": "/images/generated/shirt/collar-point-70-hidden-btn.png",
+          "previous": "/images/techpacks/shirt/lapel/point-in-7cm-with-hidden-button.jpg",
+          "preservedBlueprint": null,
+          "verdict": "PASS_WAIVED",
+          "waived": true,
+          "qcAttempt": 3,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 96,
+          "rows": [
+            {
+              "product": "shirt",
+              "section": "collar",
+              "field": "lapel",
+              "previous": "/images/techpacks/shirt/lapel/point-in-7cm-with-hidden-button.jpg",
+              "preservedBlueprint": null
+            }
+          ]
+        }
+      ]
     }
   ]
 }
