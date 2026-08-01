@@ -847,3 +847,63 @@ territory.
 Worse, `00C3` is the **only** canvas sheet in `public/images/blueprints`, while the catalog carries
 five distinct extent options (quarter / half / light-half / ultra-thin-half / full). One sheet cannot
 distinguish five extents, and it is not even drawing extent.
+
+---
+
+## COLLISION TRIAGE — 208 rows split by cause, because the two halves need opposite responses
+
+`tools/collision_triage.mjs` (new) answers the question `image_collisions.mjs` could not: **why** two
+options show the same picture. It resolves each colliding option to its blueprint and compares those
+blueprints by path and by bytes.
+
+```
+  SOURCE-LIMITED       19 families  142 rows   needs DRAWINGS or a merge ruling
+  GENERATION-LIMITED    5 families   66 rows   RECOVERABLE by re-running
+```
+
+### GENERATION-LIMITED — 66 rows, 22 options, the source is already adequate
+
+| rows | options | image | blueprints |
+|---:|---:|---|---:|
+| 24 | 8 | `lp-slanted-flap-55.webp` | 2 distinct |
+| 15 | 5 | `cp-welt-23.webp` | 3 distinct |
+| 9 | 3 | `lapel-shawl-0a.webp` | 3 distinct |
+| 9 | 3 | `lp-jetted-4.webp` | 2 distinct |
+| 9 | 3 | `lp-patch.webp` | 3 distinct |
+
+These options have **genuinely different drawings** and still ship one photograph. Nothing needs to
+be sourced — the material to tell them apart exists and was not used. At roughly two attempts per
+option this is about 22 credits for 66 customer-facing rows, which is the best-value work remaining
+in the whole project.
+
+The jeans pair is the proven precedent: `jeans-arc` and `jeans-square` rendered the *same* side-seam
+pocket and scored 15-24, yet their sheets differ measurably — drop 1.31 against 1.00 waistband
+depths, run angle 3.8 against 5.7 degrees, and one carries a terminal 34-degree hook the other lacks.
+The cause turned out to be catalog prose describing the wrong geometry, which is a free fix. **Check
+the description before spending a credit on any option in this list.**
+
+### SOURCE-LIMITED — 142 rows, and regenerating cannot help
+
+The worst are one drawing behind many options:
+
+| rows | options | image |
+|---:|---:|---|
+| 30 | **10** | `lapel-peak-101.webp` |
+| 24 | 8 | `jacket/lining/half-lining.jpg` |
+| 12 | 4 | `lapel-notch-50.webp`, `cp-welt-curved-23.webp`, `lp-slanted-flap-40.webp`, `0711__Match_fabric.webp` |
+| 9 | 3 | `jacket/ticket-pocket/jetted.jpg` |
+
+Plus the byte-identical families already documented — collar-stand buttons (3 filenames, one file),
+and the AMF stitching pairs.
+
+**QC actively drives these together.** It scores fidelity *to the blueprint*, so the more faithfully
+each option is rendered against a shared drawing, the more identical the two photographs become.
+Spending credits here produces images that must still match. These need drawings from the supplier,
+or a merge/reprice ruling — both of which are the user's call, and neither is taken here.
+
+### Why this split matters more than the raw 208
+
+The headline number treats every collision as one problem. It is two problems with opposite
+remedies, and the cheap half is only a quarter of the rows. Without the split, an obvious reading of
+"208 blocking rows" is to start regenerating — which would spend credits on 142 rows that cannot
+move, while the 66 that can move sit untouched.
