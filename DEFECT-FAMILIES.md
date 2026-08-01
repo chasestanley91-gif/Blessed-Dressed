@@ -1134,3 +1134,49 @@ descriptions I had just written while applying that very rule.
 
 `lp-straight-jetted` was the worst: its prose was copied verbatim from the *flap* option and asserted
 "covered by a flat, rectangular flap", but its blueprint is `0231__Besom` — no flap exists on it.
+
+---
+
+## Shape contamination — three mutually-exclusive families that had no rule
+
+`spec.mjs` already had an `EXCLUSIVE_SHAPE_FAMILIES` mechanism, written for exactly this problem and
+documented with the case that motivated it: a description names a sibling to contrast against
+("unlike a NOTCH lapel"), `scanList` reads the whole text, and the option ends up tagged with a shape
+it does not have — telling the image model to render two incompatible geometries at once.
+
+**It declared only two families: lapels and hems.** Pockets, jeans pockets and waistcoat necklines
+had no rule at all, so every contamination in those families passed straight through.
+
+Found while running spec extraction on `cp-welt-23`: it emitted **both** `jetted / besom welt` **and**
+`welt pocket`, while its own siblings `cp-welt-25`/`-27` emitted `welt pocket` alone. A welt pocket has
+a standing welt; a besom does not. The source was a phrase I had preserved in my own rewrite an hour
+earlier — "tight, precise jetted work on the welt fabric itself".
+
+Three families added. Blast radius measured across the whole catalog rather than assumed, since this
+is shared library code: **39 of 2862 shape sets changed, 0 options left with no shapes, 0 options
+gained a shape.** The rule only ever drops.
+
+| dropped | from | e.g. |
+|---|---|---|
+| `barchetta (boat) welt` | 15 | `cp-welt-curved-*` ("Curved Welt"), `lp-patch-rounded` ("Rounded Patch") |
+| `welt pocket` | 13 | `cp-jetted`, `cp-boat-28/30`, `vest-chest-left-besom`, `vest-lower-jetted` |
+| `jetted / besom welt` | 9 | `tp-welt`, `welt-pocket`, `back-both-welt` |
+| `jeans arc pocket` | 1 | **`jeans-square`** |
+| `jeans square pocket` | 1 | **`jeans-arc`** |
+
+`flap pocket` was deliberately excluded from the pocket family — a flap sits over a jetted mouth, so
+the two legitimately co-occur — as were `slant`/`on-seam` (orientation and placement) and
+`ticket`/`watch`/`coin` (identity).
+
+**The last two rows matter most.** `jeans-square` was tagged with `jeans arc pocket` and `jeans-arc`
+with `jeans square pocket` — each carrying the other's shape. That is the collision this project spent
+real effort diagnosing, and it **survived the prose rewrite**: correcting the descriptions removed the
+wording but the extractor kept emitting the sibling shape. Two independent causes, one symptom, and
+fixing the visible one would have left the other in place indefinitely.
+
+**Method note.** The first blast-radius measurement reported 905 changed and 249 emptied, which would
+have been an alarming regression. It was wrong: the comparison key used `opt.id`, which does not
+exist on these records (the field is `optionId`), so every option collapsed to
+`product/field/undefined` and unrelated rows were compared against each other. A diff is only evidence
+once you have checked it is comparing the things you named — the same lesson as the 2.6° notch that
+turned out to be a shadow crease.

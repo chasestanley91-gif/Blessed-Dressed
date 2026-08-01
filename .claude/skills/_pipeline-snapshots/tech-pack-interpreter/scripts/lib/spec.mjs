@@ -513,6 +513,42 @@ const EXCLUSIVE_SHAPE_FAMILIES = [
     label: { 'peak lapel': /peak/i, 'notch lapel': /notch/i, 'shawl lapel': /shawl/i } },
   { members: ['curved hem', 'straight hem', 'squared hem'],
     label: { 'curved hem': /curved|round/i, 'straight hem': /straight/i, 'squared hem': /square/i } },
+
+  // POCKET MOUTH CONSTRUCTION. How the opening is finished — these cannot
+  // co-exist on one pocket. Measured 2026-08-01: `cp-welt-23` extracted BOTH
+  // `jetted / besom welt` AND `welt pocket`, because its description mentioned
+  // "jetted work on the welt fabric", while its siblings cp-welt-25 and -27
+  // extracted `welt pocket` alone. `cp-jetted` carried the same contradiction in
+  // the other direction. A welt pocket has a standing welt; a besom does not.
+  // Telling the model to render both is the "curved hem, straight hem" failure
+  // exactly, on a family that had no rule.
+  //
+  // `flap pocket` is deliberately NOT a member: a flap sits over a jetted mouth,
+  // so the two legitimately co-occur. Nor are `slant`/`on-seam` (orientation and
+  // placement, not construction) or `ticket`/`watch`/`coin` (identity).
+  { members: ['patch pocket', 'jetted / besom welt', 'welt pocket', 'barchetta (boat) welt'],
+    label: {
+      'patch pocket': /patch/i,
+      'jetted / besom welt': /jetted|besom/i,
+      'welt pocket': /\bwelt\b/i,
+      'barchetta (boat) welt': /barchetta|boat/i,
+    } },
+
+  // JEANS POCKET SHAPE. jeans-arc and jeans-square rendered the same pocket and
+  // scored 15-24; their descriptions each named the other's geometry.
+  { members: ['jeans square pocket', 'jeans arc pocket', 'jeans diamond pocket', 'jeans round pocket'],
+    label: {
+      'jeans square pocket': /square/i,
+      'jeans arc pocket': /\barc\b/i,
+      'jeans diamond pocket': /diamond/i,
+      'jeans round pocket': /round/i,
+    } },
+
+  // WAISTCOAT NECKLINE. u-neckline's own description described a wide, deep
+  // opening when the drawing shows a long narrow one with near-parallel edges —
+  // prose that names the sibling shape it is not.
+  { members: ['V-neckline', 'U-neckline'],
+    label: { 'V-neckline': /v[- ]?neck/i, 'U-neckline': /u[- ]?neck/i } },
 ];
 
 // Styles so distinctive that they must be NAMED IN THE LABEL to be real. The
