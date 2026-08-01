@@ -754,3 +754,15 @@ ships only after a blind-ordering check confirms rendered band heights are monot
 Any adjacent pair that fails ordering goes to the owner with measurements, never shipped
 as indistinguishable near-duplicates. Session: 13 generations / 7 shipped+5 held / 6.5
 credits. Credits ~788.0.
+
+## 2026-08-01 — wband ladder attempt 1: ORDERING FAILED (held, 0 additional credits)
+
+Automated band-fraction measure non-monotonic (0.171/0.250/0.233/0.209/0.171 — extremes
+IDENTICAL, 3.8 tallest) and the 5-up contact sheet confirms why: the model varied camera
+distance per tile despite MATCHED FRAMING, confounding in-frame height with zoom. LESSON
+(generalises to every mm-ladder): matched framing via prose alone does not survive
+five independent generations — each tile needs an INTERNAL SCALE REFERENCE (a standard
+1.5 cm fly button) so band height is expressible in button-diameters and the ordering
+gate becomes zoom-invariant. Set report: .craft-pipeline/trousers/_wband-ladder-report.json.
+Retry round 2 planned with the button anchor; on a second ordering failure the family
+goes to the owner with both measurement rounds.

@@ -1,0 +1,28 @@
+{
+ "schema": "ladder-set-report/v1",
+ "family": "waistband-width (wband-35/38/40/45/50)",
+ "attempt": 1,
+ "verdict": "ORDERING_FAILED",
+ "checkedAt": "2026-08-01T23:30:06.103Z",
+ "methods": {
+  "automated": {
+   "metric": "band-height fraction of frame, center-column luminance edges",
+   "values": {
+    "wband-35": 0.1712,
+    "wband-38": 0.25,
+    "wband-40": 0.2329,
+    "wband-45": 0.2089,
+    "wband-50": 0.1712
+   },
+   "monotonic": false,
+   "note": "extremes measure IDENTICAL; 3.8 measures tallest"
+  },
+  "visual": {
+   "note": "5-up contact sheet: framing distance drifts across tiles despite the MATCHED FRAMING block; per-frame band heights not orderable; 3.8 reads as tall as 4.5"
+  }
+ },
+ "diagnosis": "The model varied camera distance per tile, destroying cross-image comparability — the exact failure MATCHED FRAMING prohibits. In-frame band height is confounded with zoom; without an internal scale reference the ladder cannot be certified.",
+ "correction": "Retry round with an INTERNAL SCALE REFERENCE anchoring absolute size in every tile: state that the fly button (a standard 1.5 cm trouser button) sits centred just below the band, and that the band height equals N/1.5 button-diameters (2.33/2.53/2.67/3.0/3.33 respectively). Keep MATCHED FRAMING; the button gives the blind-ordering gate a zoom-invariant measurable.",
+ "budget": "attempt 2 of 3 per option; if ordering fails again, the family goes to the owner with both rounds of measurements — never shipped unordered.",
+ "shipped": false
+}
