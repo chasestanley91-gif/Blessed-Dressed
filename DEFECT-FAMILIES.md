@@ -467,3 +467,58 @@ whether it belongs in NEEDS-SOURCE.
 Both are left unapplied deliberately: they change what a customer sees, which is the same class of
 change as the four live-photo swaps already awaiting `--allow-swap`. The evidence is here so the
 ruling can be a decision rather than a guess.
+
+---
+
+## FAM-TROUSER-DETAIL-MISMAPPING — options pointed at drawings documenting a different distinction
+
+**Found 2026-08-01** by the zero-cost blueprint-conflict gate during generation wave 1. Three of six
+options in one batch were stopped before a prompt was built. No credits spent on any of them.
+
+### `watch-left` — the drawing does not mark a watch pocket at all
+
+`suit-2pc/watch-left` and `trousers/watch-left` ("Left Welt Watch Pocket") point at
+`factory/2a5f7a6c70e1__3171__Left_welt.jpg`.
+
+Two agents disagreed about this file — one generated from it, one refused — so it was settled
+directly, and the sibling drawing is what proves it:
+
+| file | shows | red mark |
+|---|---|---|
+| `3169__No.jpg` ("None") | trouser, hip welt, back darts | **none** |
+| `3171__Left_welt.jpg` (mapped to *watch-left*) | the same trouser, hip welt, back darts | **none** |
+| `3180__Regular_right.jpg` (*watch-right*) | the same trouser | **a small red mark tucked under the waistband** |
+
+In this family the base drawing is context and **the red mark IS the option**. `3180` marks the watch
+pocket; `3171` marks nothing, which is why it is visually indistinguishable from the "None" drawing.
+The long welt at hip level with a tab above it is a besom **back** pocket, not a watch pocket.
+
+So `watch-left` cannot be specified from this file. Either the supplier's left-marked sheet is
+missing from the repo, or the mapping took `3171__Left_welt` on its filename — which names a *back*
+left welt, not a watch pocket.
+
+**One image was already generated from it** — `trousers/watch-left` candidate-1, produced by a
+parallel agent that judged the drawing acceptable. It cost 0.5 credits and **must not be published**;
+it is unverifiable against a drawing that does not mark the feature.
+
+### `fly-stitch-curved` / `fly-stitch-straight` — the drawings document topstitch WIDTH, not fly shape
+
+These point at `31A3__0.6cm_top_stitch.jpg` and `31A1__0.15cm_top_stitch.jpg`. In both, the fly is
+drawn as the *same* curved J and is not highlighted; the red marks the **hip/side-seam pocket
+topstitch**. The factory codes say what the pair actually encodes: 0.6 cm versus 0.15 cm topstitch
+distance from the edge.
+
+So a "Curved vs Straight Fly Stitch" choice is mapped onto a pair of sheets about pocket topstitch
+width, and neither sheet draws a straight fly at all. Generating would have produced two confident
+wrong images that QC scores as faithful, because QC scores fidelity *to the blueprint*.
+
+### Why these were caught and the earlier ones were not
+
+The gate that stopped them is the `BLUEPRINT_CONFLICT` check, run **after** spec extraction and
+**before** prompt building — so it costs nothing and it looks at the actual pixels. It has now paid
+for itself several times over. Note it is not infallible: `trousers/watch-left` passed it in one
+agent and failed it in another, on the same file. Where two readings disagree, the drawing itself
+decides, and the sibling drawings in the same family are usually what makes the answer obvious.
+
+**None of these mappings were changed.** Repointing an option's illustration alters what a customer
+sees, and sits with the other pending pointer fixes for a human ruling.
