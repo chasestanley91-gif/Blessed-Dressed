@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-08-01T22:20:54.305Z",
+  "generatedAt": "2026-08-01T22:29:52.605Z",
   "generatedBy": "tools/project_state.mjs",
   "repo": ".",
   "catalog": "data-store/options",
   "totals": {
     "total": 2862,
     "inScope": 1759,
-    "shipped": 105,
+    "shipped": 106,
     "shipped-waived": 15,
     "passed-not-shipped": 0,
     "waived-not-shipped": 0,
     "needs-reverify": 11,
-    "failed-retry-due": 25,
+    "failed-retry-due": 24,
     "unmet": 8,
     "generated-awaiting-qc": 4,
     "prompt-built": 29,
@@ -64,12 +64,12 @@
     "suit-2pc": {
       "total": 600,
       "inScope": 405,
-      "shipped": 40,
+      "shipped": 41,
       "shipped-waived": 3,
       "passed-not-shipped": 0,
       "waived-not-shipped": 0,
       "needs-reverify": 0,
-      "failed-retry-due": 5,
+      "failed-retry-due": 4,
       "unmet": 2,
       "generated-awaiting-qc": 3,
       "prompt-built": 16,
@@ -138,12 +138,12 @@
       "out-of-scope": 0
     }
   },
-  "verifiedShipped": 120,
-  "verifiedShippedClean": 105,
+  "verifiedShipped": 121,
+  "verifiedShippedClean": 106,
   "verifiedShippedWaived": 15,
-  "verifiedShippedPct": "6.8",
+  "verifiedShippedPct": "6.9",
   "pipelineDirs": 201,
-  "generatedFiles": 1380,
+  "generatedFiles": 1382,
   "sharedBlueprintIllustrations": 448,
   "sharedBlueprintOptions": 1412,
   "credits": {
@@ -176,7 +176,7 @@
         "8559bce7d538 — 6 options share 1 image (6 filename(s)): lower-pocket/lp-jetted-4 | lower-pocket/lp-straight-jetted | lower-pocket/lp-welt-10 | lower-pocket/lp-welt-12 | lower-pocket/lp-welt-15 | lower-pocket/lp-jetted-btn-tab",
         "bd8b61e8d40d — 6 options share 1 image (6 filename(s)): lower-pocket/lp-inverted-flap | lower-pocket/lp-inverted-flap-btn | lower-pocket/lp-inverted-angled-flap-btn | lower-pocket/lp-box-pleat-flap | lower-pocket/lp-angled-box-pleat | lower-pocket/lp-multi-pleat",
         "5580d6e85db4 — 5 options share 1 image (5 filename(s)): lapel-style/lapel-notch-50 | lapel-style/lapel-notch-55 | lapel-style/lapel-notch-65 | lapel-style/lapel-notch-73 | lapel-style/lapel-notch-tab-basic",
-        "60aa2e9282f7 — 5 options share 1 image (5 filename(s)): chest-pocket/cp-welt-23 | chest-pocket/cp-welt-25 | chest-pocket/cp-welt-27 | chest-pocket/cp-jetted | chest-pocket/cp-trapezoid",
+        "60aa2e9282f7 — 4 options share 1 image (4 filename(s)): chest-pocket/cp-welt-23 | chest-pocket/cp-welt-25 | chest-pocket/cp-welt-27 | chest-pocket/cp-jetted",
         "ed619110ab18 — 4 options share 1 image (4 filename(s)): chest-pocket/cp-welt-curved-23 | chest-pocket/cp-welt-curved-25 | chest-pocket/cp-welt-curved-27 | chest-pocket/cp-welt-curved-29",
         "ca22563b317d — 3 options share 1 image (3 filename(s)): lapel-style/lapel-shawl | lapel-style/lapel-shawl-d | lapel-style/lapel-shawl-asymmetric",
         "a673d2f8828c — 3 options share 1 image (3 filename(s)): cuff-style/cuff-british | cuff-style/cuff-turnback-35 | cuff-style/cuff-turnback-40",
@@ -305,8 +305,10 @@
       "severity": "warning",
       "code": "ORPHAN_IMAGE_FILE",
       "message": "Generated image on disk is not referenced by any catalog option, and has no wired .png/.webp counterpart.",
-      "count": 236,
+      "count": 238,
       "items": [
+        "/images/generated/jacket/cp-trapezoid.png",
+        "/images/generated/jacket/cp-trapezoid.webp",
         "/images/generated/jacket/ep-round.png",
         "/images/generated/jacket/ep-round.webp",
         "/images/generated/jacket/lapel-notch-68.png",
@@ -354,9 +356,7 @@
         "/images/generated/shirt/collar-curved-80.png",
         "/images/generated/shirt/collar-curved-80.webp",
         "/images/generated/shirt/collar-curved-90.png",
-        "/images/generated/shirt/collar-curved-90.webp",
-        "/images/generated/shirt/collar-dbl-cutaway-55-btn.png",
-        "/images/generated/shirt/collar-dbl-cutaway-55-btn.webp"
+        "/images/generated/shirt/collar-curved-90.webp"
       ]
     },
     {
@@ -396,7 +396,6 @@
         "/images/generated/jacket/cp-patch-angled.png  (anchor for the served /images/generated/jacket/cp-patch-angled.webp)",
         "/images/generated/jacket/cp-patch-multi.png  (anchor for the served /images/generated/jacket/cp-patch-multi.webp)",
         "/images/generated/jacket/cp-patch.png  (anchor for the served /images/generated/jacket/cp-patch.webp)",
-        "/images/generated/jacket/cp-trapezoid.png  (anchor for the served /images/generated/jacket/cp-trapezoid.webp)",
         "/images/generated/jacket/cp-welt-23.png  (anchor for the served /images/generated/jacket/cp-welt-23.webp)",
         "/images/generated/jacket/cp-welt-25.png  (anchor for the served /images/generated/jacket/cp-welt-25.webp)",
         "/images/generated/jacket/cp-welt-27.png  (anchor for the served /images/generated/jacket/cp-welt-27.webp)",
@@ -414,7 +413,8 @@
         "/images/generated/jacket/db-4x1.png  (anchor for the served /images/generated/jacket/db-4x1.webp)",
         "/images/generated/jacket/db-4x2.png  (anchor for the served /images/generated/jacket/db-4x2.webp)",
         "/images/generated/jacket/db-6x1.png  (anchor for the served /images/generated/jacket/db-6x1.webp)",
-        "/images/generated/jacket/db-6x2.png  (anchor for the served /images/generated/jacket/db-6x2.webp)"
+        "/images/generated/jacket/db-6x2.png  (anchor for the served /images/generated/jacket/db-6x2.webp)",
+        "/images/generated/jacket/db-6x3.png  (anchor for the served /images/generated/jacket/db-6x3.webp)"
       ]
     },
     {

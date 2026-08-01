@@ -711,3 +711,15 @@ replacing the collision copy. Shawl collision 6 -> 3 today (remaining: lapel-sha
 -asymmetric — NO drawing exists in any store for these; spec-only or harvest).
 Session: 4 generations / 3 shipped / 2.0 credits = 1.33 attempts-per-shipped. Credits ~792.5.
 DATA DEFECT noted: catalog wires lapel-shawl (generic) to the 0005 drawing file.
+
+## 2026-08-01 — cp-trapezoid: PASS attempt 2 after taper-magnitude correction (0.5 credits)
+
+The prior FAIL (recorded as attempt 1 after the overwrite incident) was the formal grading
+of the correct-direction render; it failed on EXAGGERATED taper vs the drawn 1.15 and a
+stray necktie. apply_correction folded the softening instruction in; the current camera
+rule already carried no-necktie. Attempt 2 (job 7dfbe579): restrained convergence, deep
+end at the armhole, upward rake matching the red overlay, empty welt, no tie. PASS 9x98,
+published with fan-out (sport-coat/suit-2pc/suit-3pc), replacing the legacy collision copy —
+chest-welt collision group 60aa2e9282f7 now 4 members (cp-welt-23/25/27, cp-jetted).
+Session running total: 5 generations / 4 shipped / 2.5 credits = 1.25 attempts-per-shipped.
+Credits ~792.0.

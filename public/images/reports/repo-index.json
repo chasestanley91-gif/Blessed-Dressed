@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-01T22:20:54.305Z",
+  "generatedAt": "2026-08-01T22:29:52.605Z",
   "count": 2862,
   "records": [
     {
@@ -21703,11 +21703,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/supplier/9dc885487d07__00J2__Trapezoid.jpg",
-      "liveImage": "/images/generated/jacket/cp-trapezoid.webp",
+      "liveImage": "/images/generated/suit-2pc/cp-trapezoid.webp",
       "shipped": true,
-      "shippedPath": "/images/generated/jacket/cp-trapezoid.webp",
-      "shippedBytes": 199994,
-      "shippedSha1": "60aa2e9282f7f4fe5b45b2826a0926dc0bf1457f",
+      "shippedPath": "/images/generated/suit-2pc/cp-trapezoid.webp",
+      "shippedBytes": 146950,
+      "shippedSha1": "20ce0686999152b0d34d93672b64c7f2f7808337",
       "pipeline": null,
       "stage": "legacy-shipped-unverified"
     },
@@ -30279,11 +30279,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/supplier/9dc885487d07__00J2__Trapezoid.jpg",
-      "liveImage": "/images/generated/jacket/cp-trapezoid.webp",
+      "liveImage": "/images/generated/suit-2pc/cp-trapezoid.webp",
       "shipped": true,
-      "shippedPath": "/images/generated/jacket/cp-trapezoid.webp",
-      "shippedBytes": 199994,
-      "shippedSha1": "60aa2e9282f7f4fe5b45b2826a0926dc0bf1457f",
+      "shippedPath": "/images/generated/suit-2pc/cp-trapezoid.webp",
+      "shippedBytes": 146950,
+      "shippedSha1": "20ce0686999152b0d34d93672b64c7f2f7808337",
       "pipeline": {
         "dir": ".craft-pipeline/suit-2pc/cp-trapezoid",
         "have": {
@@ -30292,25 +30292,15 @@
           "generation": true,
           "qc": true
         },
-        "verdict": "FAIL",
-        "attempt": 1,
-        "lowestScore": 78,
-        "belowMin": [
-          "shape",
-          "geometry",
-          "dimensions",
-          "angles",
-          "construction",
-          "placement",
-          "symmetry",
-          "composition",
-          "blueprint-match"
-        ],
-        "candidates": 1,
+        "verdict": "PASS",
+        "attempt": 2,
+        "lowestScore": 98,
+        "belowMin": [],
+        "candidates": 2,
         "needsReverify": false,
-        "checkedAt": "2026-08-01T11:26:49.166Z"
+        "checkedAt": "2026-08-01T22:29:46.812Z"
       },
-      "stage": "failed-retry-due"
+      "stage": "shipped"
     },
     {
       "key": "suit-2pc/cp-inverted-pleat-2flap",
@@ -44517,11 +44507,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/supplier/9dc885487d07__00J2__Trapezoid.jpg",
-      "liveImage": "/images/generated/jacket/cp-trapezoid.webp",
+      "liveImage": "/images/generated/suit-2pc/cp-trapezoid.webp",
       "shipped": true,
-      "shippedPath": "/images/generated/jacket/cp-trapezoid.webp",
-      "shippedBytes": 199994,
-      "shippedSha1": "60aa2e9282f7f4fe5b45b2826a0926dc0bf1457f",
+      "shippedPath": "/images/generated/suit-2pc/cp-trapezoid.webp",
+      "shippedBytes": 146950,
+      "shippedSha1": "20ce0686999152b0d34d93672b64c7f2f7808337",
       "pipeline": null,
       "stage": "legacy-shipped-unverified"
     },
