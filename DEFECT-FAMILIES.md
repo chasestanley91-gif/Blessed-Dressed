@@ -970,3 +970,43 @@ come back identical, three chest welts likewise, and a slanted-flap pair — and
 images would collide exactly as before. The work that actually pays is the 27 separable pairs, which
 are the *between-construction* distinctions: jetted versus trapezoid versus welt, patch versus
 patch-with-flap versus curved patch, plain besom versus besom-with-tab-and-button.
+
+### The recoverable 66 have never actually been through the pipeline
+
+Checked before spending a credit on them, and it changes the expected outcome. **Every option in the
+generation-limited families carries no pipeline record at all** — `cp-jetted`, `cp-trapezoid`,
+`cp-welt-23`, `lp-patch`, `lp-patch-flap`, `lp-patch-rounded`, `lp-jetted-4`, `lp-jetted-btn-tab`,
+`lapel-shawl-0a`, `lapel-shawl-0e` are all `legacy-shipped-unverified`.
+
+They were generated before any of this existed:
+
+- `BLUEPRINT_LOCK` and the "colour is notation, not cloth" clause
+- the `BLUEPRINT_CONFLICT` gate that runs before a credit is spent
+- raking light for depth · patterned cloth for grain · matched framing for ladders ·
+  absence-proof framing · the counting convention lifted from filenames
+- QC of any kind
+
+So these are **not** hard cases that resisted a good pipeline. They are artefacts of the era before
+one. Regenerating them is not "retry and hope" — it is running them through the machinery for the
+first time.
+
+**Their descriptions are already good**, which is the other half of the encouragement. Unlike the
+jeans pair, the prose here is specific and genuinely distinguishing: *"two thin parallel strips of
+cloth flanking a neat slit — with no welt standing above the opening"* (jetted), *"wider at the top
+than the bottom, tapering as it descends"* (trapezoid), *"a continuous curved lower edge and gently
+rounded corners"* (rounded patch). No contradiction to fix first.
+
+**Two exceptions worth fixing before regenerating:**
+
+1. **`lp-jetted-btn-tab` has a five-word stub description** — "Jetted pocket with button tab." — while
+   its sibling `lp-jetted-4` has a full paragraph. That asymmetry is a plausible cause of the two
+   colliding: the prompt has almost nothing to distinguish the tab version.
+2. **`lapel-shawl-0a` / `-0e` are described only qualitatively** — "particular proportions and roll
+   line", "moderately wide", "narrower, tighter roll". No measurable geometry, so nothing separates
+   them in the prompt even though their drawings differ.
+
+**This very likely generalises to the wider legacy population.** 857 rows are
+`legacy-shipped-unverified`, and the sampled defect rate among them was 25% wrong / 37.5% indistinct.
+If those images predate the pipeline in the same way, the honest expectation is that a substantial
+share are recoverable simply by running them through it — which reframes that backlog from "857
+images to re-shoot" to "857 images that have never been attempted properly".
