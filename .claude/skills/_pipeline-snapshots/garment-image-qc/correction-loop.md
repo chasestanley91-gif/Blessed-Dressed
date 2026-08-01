@@ -39,6 +39,39 @@ Each error carries: what went wrong (`error`), what should have happened
 (`expected`), what actually happened (`actual`), and a specific instruction
 for the next attempt (`correction`) — not just "try again."
 
+## Write the `correction` as a DESCRIPTION, never as a prohibition
+
+This is the single highest-yield rule for writing a correction, and it was
+learned the expensive way — three separate options, each of which had already
+failed with a prohibition in the prompt, and each of which was fixed on the very
+next attempt once the same instruction was rewritten as a description.
+
+**A prohibition tells the model what not to draw. A description tells it what to
+draw instead. Only the second reliably works.**
+
+| option | the prohibition that FAILED | the description that WORKED |
+|---|---|---|
+| `collar-point-70-hidden-btn` | "do not render a visible buttonhole on the collar leaf" | "the button is sewn on the UNDERSIDE of the leaf, its buttonhole cut on the shirt front beneath; from outside the collar reads completely clean" |
+| `canvas-normal` | (implicitly) render the finish properly | "a flat nacreous button, matte not mirrored, four holes each crossed by dark thread with a visible shank; a straight slit bound by dense whipstitching with a bar tack at each end" |
+| `lbp-both` and others | "red or coloured guide marks are annotations — do not render them" | "any highlighted region marks WHERE the option sits; render that area in the garment's own cloth and thread" |
+
+The failure mode a bare prohibition produces is specific and worth recognising:
+the model removes the named thing and puts **nothing** there, or puts something
+equally wrong there, because it was never told what belongs in that space. Naming
+the construction closes the gap.
+
+Two corollaries:
+
+- **Say what the feature MEANS, not only where it is.** "Hidden button" failed as
+  a label and succeeded as an explanation. The model does not share the trade
+  vocabulary; it shares the physical description.
+- **When a whole paragraph is losing, do not add a louder paragraph.** A
+  `FRAMING LOCK` that declared itself to *outrank* the close-crop mandate lost
+  three times running, because the close-crop sentence was still in the prompt.
+  The contradiction has to stop being emitted at all — which is a change to
+  `prompt.mjs`, not to a correction. If two attempts fail the same way, suspect
+  the prompt is fighting itself and read it end to end before writing a third.
+
 ## Feature locking
 
 `lockedFeatures` names what already passed and must survive the next
