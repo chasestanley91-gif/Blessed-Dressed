@@ -46,7 +46,12 @@ const STYLE = {
   'jacket-sleeve-buttonhole': { base: 'worn on a male model, cuff presented', focus: ['sleeve buttonhole orientation (straight vs slanted)', 'which buttonhole is functional', 'stitch'], crop: 'macro on the sleeve cuff buttonholes' },
   'jacket-back-belt': { base: 'worn on a male model, rear three-quarter', focus: ['half-belt panel height and width', 'horizontal placement across the waist seam', 'button/buckle stance, fixed vs adjustable strap', 'the side vents below it'], crop: 'on the back waist half-belt and the vents below it' },
   'jacket-lapel-detail': { base: 'worn on a male model over a white shirt, no necktie', focus: ['the named lapel/collar detail', 'edge', 'roll'], crop: 'on the lapel/collar' },
-  'jacket-chest-pocket': { base: 'worn on a male model', focus: ['breast pocket shape (barchetta/welt)', 'curve', 'pattern match'], crop: 'on the left breast pocket' },
+  // SILENCE IS NOT A PROHIBITION. cp-trapezoid attempt 2 came back wearing a
+  // necktie although this entry asked for nothing but a model — the prior
+  // supplies one by default. It did not occlude the welt there, but a pocket
+  // square would, and this is the field where a pocket square is the reflex.
+  // Stated explicitly for the same reason the collar/lapel/vest parts are.
+  'jacket-chest-pocket': { base: 'worn on a male model, with NO pocket square and nothing tucked into or protruding from the pocket, and no necktie', focus: ['breast pocket shape (barchetta/welt)', 'curve', 'pattern match', 'the empty opening with both its edges visible end to end'], crop: 'on the left breast pocket' },
   'jacket-ticket-pocket': { base: 'worn on a male model', focus: ['ticket pocket above the hip flap', 'welt alignment'], crop: 'on the right hip pockets' },
   'jacket-pocket': { base: 'worn on a male model', focus: ['pocket style (jetted/flap/patch)', 'welt', 'flap shape', 'pattern match'], crop: 'on the hip pocket' },
   'jacket-front': { base: 'worn on a male model, jacket buttoned', focus: ['button stance/configuration', 'front quarters', 'chest drape'], crop: 'on the jacket front' },
