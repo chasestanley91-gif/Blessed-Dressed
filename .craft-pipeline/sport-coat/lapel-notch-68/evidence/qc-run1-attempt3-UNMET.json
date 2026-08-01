@@ -1,0 +1,79 @@
+{
+  "addr": "sport-coat > lapel-notch-68",
+  "productId": "sport-coat",
+  "optionId": "lapel-notch-68",
+  "attempt": 3,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 88,
+    "geometry": 84,
+    "dimensions": 86,
+    "angles": 78,
+    "construction": 96,
+    "placement": 94,
+    "symmetry": 93,
+    "composition": 96,
+    "blueprint-match": 82
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "placement",
+    "symmetry",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "major",
+      "category": "angles",
+      "description": "The notch opening was measured on both images by the same method: locate the node where the collar's lower edge, the lapel's upper edge and the gorge seam meet, locate the two tips, and solve the included angle by the law of cosines. BLUEPRINT: node (30.2, 27.4), collar tip (25.4, 25.4), lapel tip (22.3, 29.8), all as percent of image width/height -> 39.8 degrees. RENDER attempt 3: node (13.6, 22.4), collar tip (6.2, 19.2), lapel tip (6.3, 20.7) -> 10.3 degrees. The render is 29.5 degrees too TIGHT.",
+      "expected": "a notch opening of approximately 40 degrees",
+      "actual": "a notch opening of 10.3 degrees - a near-closed slit",
+      "correction": "The notch is an OPEN wedge of about 40 degrees: from the point where collar and lapel meet, the collar's lower edge and the lapel's upper edge diverge steadily, so that at their outer ends the collar tip and the lapel tip stand well apart, separated by a gap about two thirds as long as the lapel's upper edge itself. It is a tight notch, not a closed one."
+    },
+    {
+      "severity": "major",
+      "category": "geometry",
+      "description": "Because the wedge is too tight, the collar tip and the lapel tip very nearly touch. Measured tip-to-tip separation is 1.50 units against a lapel upper edge of 7.50 units, a ratio of 0.20. The blueprint's is 5.4 units against 8.26, a ratio of 0.65 - more than three times wider.",
+      "expected": "collar tip and lapel tip standing clearly apart, the gap about two thirds the length of the lapel's upper edge",
+      "actual": "the two tips almost meeting, the gap one fifth of that edge",
+      "correction": "Open the gap between the collar tip and the lapel tip so the two stand distinctly apart, with a clear wedge of shirt visible between them."
+    },
+    {
+      "severity": "major",
+      "category": "blueprint-match",
+      "description": "The rendered notch is now distinguishable from a generic notch lapel, but in the wrong direction: it reads as an almost-closed slit rather than as the drawn tight-but-open 40 degree notch. A customer comparing this against the straight-notch sibling would see a difference, but not the difference the drawing specifies.",
+      "expected": "the drawn notch geometry at approximately 40 degrees",
+      "actual": "a distinctive but incorrect near-closed slit at 10.3 degrees",
+      "correction": "Render the measured 40 degree wedge."
+    },
+    {
+      "severity": "minor",
+      "category": "symmetry",
+      "description": "The frame-left notch apex sits at about 19.7% of frame height and the frame-right at about 21.6%, a difference of roughly 1.9% of the frame.",
+      "expected": "both notches at the same height",
+      "actual": "a small vertical offset between the two sides",
+      "correction": "Accepted. Within the drape variation of a coat worn on a body, and not worth a regeneration on its own."
+    }
+  ],
+  "verdict": "UNMET",
+  "waiver": null,
+  "correction": null,
+  "notes": "ATTEMPT 3. Still FAIL, and the reason is a measurement error of mine that ran through all three attempts.\n\nNo attempt so far was ever aimed at the correct geometry. Attempts 1 and 2 were generated from a prompt whose GEOMETRY LOCK read 'the notch between the lapel and the collar opens at 68 degrees' - it took the 68 in the option's NAME to be the notch angle. The model obeyed, and QC correctly measured 'close to a right angle'. For attempt 3 I corrected that to 'a NARROW HORIZONTAL SLIT, its two edges nearly parallel', which I had read off the drawing at thumbnail size. The model obeyed that too, and produced 10.3 degrees.\n\nOnly now has the drawing actually been MEASURED. Rendering it at 1000px, zooming the frame-left notch 4x and overlaying a percent grid resolves three strokes meeting at a node - the collar's lower edge, the lapel's upper edge, and the gorge seam. Law of cosines on the node and the two tips gives 39.8 degrees, confirmed independently by the direction angles of the two edges (156.6 and 166.9 measured from the node). The drawn notch is a TIGHT BUT GENUINELY OPEN wedge of about 40 degrees.\n\nSo the sequence is: 68 specified -> 90 rendered; 'nearly parallel' specified -> 10 rendered; against a true 40. The option has never once been asked for the right shape.\n\nThis is the cb-5 lesson a second time: AN INHERITED OR EYEBALLED MEASUREMENT IS NOT EVIDENCE. A number in a label is not a measurement of the drawing, and a shape read off a thumbnail is not a measurement either. Both times the model faithfully rendered what it was told, and both times what it was told was wrong.\n\nWhat did land: the gorge is now correctly arced and correctly high, the lapel edge pitch measures ~70 against 62-68 drawn, and composition and construction are clean. The failure is isolated to the notch opening.\n\nRecorded as attempt 3 of 3, which closes this run.",
+  "checkedAt": "2026-08-01T02:32:04.262Z"
+}

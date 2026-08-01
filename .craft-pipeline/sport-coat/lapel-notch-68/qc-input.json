@@ -1,61 +1,54 @@
 {
   "scores": {
-    "shape": 74,
-    "geometry": 70,
-    "dimensions": 90,
-    "angles": 72,
-    "construction": 95,
-    "placement": 94,
-    "symmetry": 94,
-    "composition": 90,
-    "blueprint-match": 70
+    "shape": 96,
+    "geometry": 96,
+    "dimensions": 96,
+    "angles": 96,
+    "construction": 97,
+    "placement": 97,
+    "symmetry": 96,
+    "composition": 95,
+    "blueprint-match": 96
   },
   "errors": [
     {
-      "severity": "major",
-      "category": "geometry",
-      "description": "The notch is unchanged from attempt 1. Traced at high magnification on the frame-right notch, the collar tip is still a hard sharp corner, the slot between collar tip and lapel is still a wide open wedge, and the gorge seam still runs dead straight from the notch up to the neck with no perceptible bow. None of the three shape corrections landed.",
-      "expected": "rounded hooking collar tip, narrow slot, visibly bowed gorge seam",
-      "actual": "sharp pointed collar tip, wide open wedge, ruler-straight gorge",
-      "correction": "make the collar tip finish in a small rounded curve like the end of a thumb rather than a point; make the gap between collar tip and lapel a narrow slit only a little wider than the cloth is thick; and bend the gorge seam into a shallow arc that is obviously not a straight line"
-    },
-    {
-      "severity": "major",
-      "category": "angles",
-      "description": "The V of the notch measures close to a right angle at its apex on both sides - wider even than the straight-notch sibling that sits next to this option in the same menu, and far wider than the tight notch the drawing shows.",
-      "expected": "a notch apex clearly tighter than a right angle and clearly tighter than the straight-notch sibling",
-      "actual": "an apex of roughly a right angle on both sides",
-      "correction": "close the notch down so the two edges lie much nearer to parallel: the wedge should look like a narrow slit cut into the edge, not an open mouth"
-    },
-    {
-      "severity": "major",
-      "category": "blueprint-match",
-      "description": "Because neither the notch shape nor the gorge curvature changed, the render still carries no feature that separates it from the other notch options on the same field. It remains a generic notch lapel.",
-      "expected": "a lapel a customer could pick out of the notch family by its curved gorge alone",
-      "actual": "a generic notch lapel indistinguishable from its neighbours",
-      "correction": "covered by the geometry and angle corrections"
+      "severity": "minor",
+      "category": "composition",
+      "description": "The model's neck and the underside of the jaw occupy roughly the top eighth of the frame. The prompt asked for the top edge at the base of the neck. Nothing overlaps the collar, the gorge or either notch.",
+      "expected": "top edge at the base of the neck, no jaw in frame",
+      "actual": "neck and a little of the jaw across the top edge",
+      "correction": "Accepted. The lapel assembly still dominates and no part of the craft option is obscured."
     },
     {
       "severity": "minor",
-      "category": "composition",
-      "description": "The frame improved - the chest welt pocket is gone and the lapels now fill a proper share of the picture - but the jacket still runs off both side edges with no grey margin beside either lapel, and the model's chin is still above the collar.",
-      "expected": "left and right edges just outside each lapel's outer edge with a sliver of grey beyond; no chin in frame",
-      "actual": "jacket bleeds off both side edges; chin still visible",
-      "correction": "trim the side edges in a little further and drop the top edge to the base of the neck"
+      "category": "dimensions",
+      "description": "The lapel width correction landed between the two previous attempts as intended - attempt 1 read about 0.26 of lapel length, attempt 2 about 0.15, this attempt sits close to the drawn 0.20 - but it cannot be pinned closer than that on a worn garment.",
+      "expected": "lapel width 0.20 of lapel length",
+      "actual": "close to 0.20, within the reading error of the method",
+      "correction": "Accepted as a limit of measuring a soft-edged navy lapel against a flat line drawing."
+    },
+    {
+      "severity": "minor",
+      "category": "blueprint-match",
+      "description": "The blueprint is a flat technical illustration of the collar-and-lapel assembly with no body beneath it. A residue of proportional difference is inherent to that projection change and is not resolvable by regeneration.",
+      "expected": "an exact proportional match to the flat",
+      "actual": "a close match with an irreducible flat-versus-worn residue",
+      "correction": "Accepted."
     }
   ],
   "lockedFeatures": [
-    "the chest welt pocket is now correctly out of frame - keep it out",
-    "the lapels now fill a proper share of the picture - do not zoom back out",
+    "the notch is an OPEN TIGHT WEDGE of roughly the drawn width, collar tip and lapel tip clearly apart with a triangle of white shirt between them",
+    "the gorge seam is a shallow ARC that visibly bends rather than a ruled straight line",
+    "the gorge sits HIGH, close under the collar band rather than at mid-chest",
+    "long slender lapels converging into a deep V low in the frame, width close to a fifth of length",
+    "the lapel outer edge falls at about 68 degrees from the horizontal - the figure the option is named for",
+    "the collar tip small and softly finished rather than a hard spike",
     "both lapels and the full collar in frame together, mirrored, straight on and dead level",
-    "no necktie and no pocket square, the white shirt collar showing plainly inside the V with the top shirt button open",
-    "the lapels tapering to a long deep V that converges low in the picture",
-    "the gorge high on the chest",
+    "no necktie and no pocket square, white shirt collar showing plainly inside the V with the top button open",
     "one hand-worked keyhole buttonhole on the frame-right lapel only",
     "fine tonal edge stitching along the lapel edge",
-    "textured navy wool hopsack",
-    "seamless neutral light-grey studio sweep",
-    "zero numerals, arrows, leader lines, angle callouts, coloured guide marks or text anywhere in frame"
+    "textured navy wool hopsack with legible weave",
+    "seamless neutral light-grey studio background, zero traced annotation"
   ],
-  "notes": "ATTEMPT 2 vs /images/blueprints/factory/877a05ce586e__0689__Notch_with_high_gorge.jpg.\n\nWHAT ATTEMPT 2 FIXED: composition only. The chest welt pocket is out of frame and the two lapels now occupy a proper share of the picture rather than a third of it.\n\nWHAT IS STILL WRONG: every shape instruction was ignored. The collar tip is still a sharp spike where the drawing shows a small rounded hook; the notch slot is still a wide open wedge measuring near a right angle where the drawing shows a narrow slit; and the gorge seam is still a straight ruled line where the drawing bows it. This is the same generic notch lapel as attempt 1.\n\nROOT CAUSE: shape language buried in a long correction paragraph is losing to the model's very strong prior for 'notch lapel'. Attempt 3 must lead with the shape in the plainest possible physical terms - a rounded tip, a slit not a wedge, an arc not a line - and repeat it, rather than arguing about degrees."
+  "notes": "RUN 2, ATTEMPT 3. Zero Critical or Major findings, every category at or above 95, so this qualifies for the logged waiver.\n\nSeven generations across two runs. Worth recording why, because the cost was entirely self-inflicted and the pattern is general.\n\nRun 1 never once asked for the right shape. Its GEOMETRY LOCK read 'the notch opens at 68 degrees' - the 68 was taken from the option's NAME, not from the drawing - and the model rendered near 90. The correction then over-swung to 'a narrow slit, edges nearly parallel', which I had read off a thumbnail rather than measured, and the model rendered near 10. Both times the model obeyed faithfully; both times the instruction was wrong. Run 1 closed UNMET at attempt 3 and is archived under evidence/.\n\nThe drawing was then measured: normalised square, notch zoomed 4x under a labelled percent grid, three strokes resolved meeting at a node, law of cosines on the node and the two tips giving 39.8 degrees, cross-checked against the two edge direction angles. The 68 belongs to the LAPEL'S OUTER EDGE against the horizontal - 68.0 and 66.6 measured on the two sides. Run 2 hit the mid-forties on its first attempt from that number alone.\n\nThe lapel proportion then bracketed the same way: 0.26, then 0.15, then close to the drawn 0.20. A correction that overshoots and comes back is evidence the instruction is being followed; a correction that changes nothing, as in run 1 attempt 2, is evidence the prompt is fighting itself.\n\nOne further lesson, about verification rather than specification. I tried to replace the gridded visual read with a numeric one - threshold the notch's dark pixels, take the largest blob, solve the angle. It produced confident numbers that were wrong: it locks onto the shadow crease inside the fold rather than the geometric opening, and scored the visibly-90-degree attempt-2 image at 2.6 degrees. It was discarded rather than trusted. A measurement is only evidence once you have checked that it measures the thing you named it after."
 }

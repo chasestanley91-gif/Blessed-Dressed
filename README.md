@@ -50,19 +50,16 @@ and *are* committed.
 
 ### The three-skill photography pipeline
 
-The tech-pack illustration is the source of truth. Not the catalog text, not the
-filename, not tailoring convention. If the drawing and the description disagree, the
-drawing wins; if something is missing, it gets flagged rather than invented.
+The written specification is the highest authority. The tech-pack illustration is
+a visual reference that identifies the craft option, confirms orientation, and
+anchors shape/placement, but if the catalog text defines a measurement, angle,
+count, or construction detail, the written spec takes precedence over the drawing.
+If the illustration is missing a detail that the text specifies, the text still
+defines the final garment; missing visual detail is only flagged when the spec is
+absent or ambiguous.
 
-```
-tech-pack-interpreter   →  spec.json        what is this option, dimensionally
-garment-image-director  →  prompt.json      build the locked prompt
-                           candidate-N.png  generate (Higgsfield gpt_image_2)
-                           generation.json
-garment-image-qc        →  qc.json          score 9 categories, accept or reject
-tools/publish_approved  →  catalog write-back
-tools/project_state     →  STATE.md, CONTINUE.md, PROJECT_DASHBOARD.md
-```
+See `CRAFT_SPECIFICATION_STANDARD.md` for the formal parameterized tailoring
+specification standard and the exact hierarchy of authority used by the pipeline.
 
 Artifacts live in `.craft-pipeline/<productId>/<optionId>/`. **`garment-image-qc` is the
 only authority that may approve a catalog write-back.**

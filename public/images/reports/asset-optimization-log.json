@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-01T02:04:16.609Z",
+  "at": "2026-08-01T02:55:43.176Z",
   "settings": {
     "maxWidth": 1400,
     "quality": 82,
@@ -7,20 +7,32 @@
   },
   "applied": true,
   "counts": {
-    "masters": 685,
-    "converted": 0,
+    "masters": 686,
+    "converted": 1,
     "skipped": 685,
     "failed": 0,
     "repointed": 0
   },
   "bytes": {
-    "before": 0,
-    "after": 0,
-    "savedPct": 0
+    "before": 2077916,
+    "after": 177130,
+    "savedPct": 91.5
   },
   "note": "targetSha1 is the derivative; sourceSha1 is the PNG master QC graded. The master and publish_approved.mjs byte-identity gate are untouched.",
   "results": {
-    "ok": [],
+    "ok": [
+      {
+        "master": "public\\images\\generated\\sport-coat\\lapel-notch-68.png",
+        "masterBytes": 2077916,
+        "sourceSha1": "3811d099da383f494cb0b03253dd06d743e22ce1",
+        "target": "public\\images\\generated\\sport-coat\\lapel-notch-68.webp",
+        "targetBytes": 177130,
+        "targetSha1": "41f57a815e307c4c37b2297194f8c8842bcae047",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/sport-coat/lapel-notch-68.webp"
+      }
+    ],
     "skipped": [
       {
         "master": "public\\images\\generated\\jacket\\back-besom-btn.png",

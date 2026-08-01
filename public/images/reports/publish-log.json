@@ -3438,6 +3438,53 @@
           ]
         }
       ]
+    },
+    {
+      "at": "2026-08-01T02:56:09.990Z",
+      "by": "tools/publish_approved.mjs",
+      "count": 1,
+      "rowCount": 3,
+      "fanout": true,
+      "options": [
+        {
+          "product": "sport-coat",
+          "option": "lapel-notch-68",
+          "field": "lapel-style",
+          "identity": "lapel-style/lapel-notch-68",
+          "image": "/images/generated/sport-coat/lapel-notch-68.webp",
+          "master": "/images/generated/sport-coat/lapel-notch-68.png",
+          "previous": "/images/blueprints/factory/877a05ce586e__0689__Notch_with_high_gorge.jpg",
+          "preservedBlueprint": null,
+          "verdict": "PASS_WAIVED",
+          "waived": true,
+          "qcAttempt": 3,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 95,
+          "rows": [
+            {
+              "product": "sport-coat",
+              "section": "lapel",
+              "field": "lapel-style",
+              "previous": "/images/blueprints/factory/877a05ce586e__0689__Notch_with_high_gorge.jpg",
+              "preservedBlueprint": null
+            },
+            {
+              "product": "suit-2pc",
+              "section": "lapel",
+              "field": "lapel-style",
+              "previous": "/images/blueprints/factory/877a05ce586e__0689__Notch_with_high_gorge.jpg",
+              "preservedBlueprint": null
+            },
+            {
+              "product": "suit-3pc",
+              "section": "lapel",
+              "field": "lapel-style",
+              "previous": "/images/blueprints/factory/877a05ce586e__0689__Notch_with_high_gorge.jpg",
+              "preservedBlueprint": null
+            }
+          ]
+        }
+      ]
     }
   ]
 }

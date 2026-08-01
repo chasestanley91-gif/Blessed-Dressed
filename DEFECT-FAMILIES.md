@@ -194,3 +194,54 @@ photographs. That would manufacture the distinction rather than show it.
 
 Until you decide, these 85 options keep their current (wrong) images and the blocking finding stays
 open. That is the correct state: the alternative is guessing.
+
+---
+
+## FAM-MASTER-PATH-CROSS-FIELD — one master path serving two different fields
+
+**Found:** 2026-08-01, while publishing the six options that had passed QC but never shipped.
+**Status:** open. Blocks 4 approved images. **No image is wrong; the filing system is.**
+
+Four options passed QC on their first attempt and could not be published:
+`suit-2pc/coin-none`, `suit-3pc/sb-4`, `suit-3pc/db-6x2`, `suit-3pc/db-6x3`.
+
+`publish_approved.mjs` refused each with "does not match the QC-approved candidate", and it was
+right to. The approved candidate is staged correctly at `generated/<product>/<option>.png` and its
+SHA-1 matches; what does not match is the file at `generated/jacket/<option>.png`, which is where
+the catalog row points.
+
+The reason is not a stale file. **The same option id lives under two different fields in the same
+product**, and the master path is derived from the *part*, so both fields resolve to one filename:
+
+| option id | field A | field B | shared master path |
+|---|---|---|---|
+| `sb-4` | jacket button stance | vest button stance | `generated/jacket/sb-4.png` |
+| `db-6x2` | jacket button stance | vest button stance | `generated/jacket/db-6x2.png` |
+| `db-6x3` | jacket button stance | vest button stance | `generated/jacket/db-6x3.png` |
+| `coin-none` | trouser coin pocket | (second field) | `generated/jacket/coin-none.png` |
+
+Publishing the vest's button-stance photo would therefore overwrite the jacket's. The SHA-1 gate
+caught it. Without that gate this would have shipped silently as four wrong images, and it would
+have looked like a success.
+
+This is the same root cause the plan already names for spec ingestion — *86 option ids appear under
+more than one field, `stitch-01-top` exists under Collar, Placket and Cuff* — surfacing a second
+time, in the asset layer rather than the data layer. Keying on `optionId` alone is unsafe anywhere
+in this pipeline.
+
+**Fix (not applied — it changes the path convention for every shipped asset):** make the master path
+field-scoped, `generated/<product>/<field>/<option>.png`, and migrate the existing masters with the
+manifest rewritten in the same transaction. That is a mechanical change but it touches all 686
+masters and their WebP derivatives and every `liveImage` in the catalog, so it should be done as its
+own verified pass, not folded into a generation wave.
+
+**Until then** these 4 keep their existing images and stay counted as `passed-not-shipped`. They are
+not lost work — the approved photo sits in `.craft-pipeline/<product>/<option>/candidate-1.png` with
+its `qc.json` beside it, and republishing is a one-command operation once the paths are field-scoped.
+
+### The other two of the six
+
+- `suit-2pc/coin-left` — refused for fan-out: three rows share `field+option+label` but are drawn
+  against a *different* tech pack than the one this photo was made from. One photo cannot serve two
+  drawings. Correct refusal; publish from each row's own pipeline folder.
+- `suit-3pc/sb-5` — would replace a live photo. Needs `--allow-swap` and a human decision.
