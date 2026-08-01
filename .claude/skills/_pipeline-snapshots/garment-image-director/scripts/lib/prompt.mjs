@@ -451,6 +451,42 @@ export function buildPrompt(spec) {
       `plain background beyond each are inside the picture. Completeness across the full span beats ` +
       `closeness; do not move in.`
     : `Frame ${styling.crop}; the detail must read clearly and sharply.`;
+
+  // LADDER OPTIONS: 361 options across 43 families differ from their siblings
+  // ONLY by a measurement — 18 lapel angles per jacket product, 13 pocket
+  // depths, 12 hem depths, 41 collar point lengths. For those, framing is not
+  // a styling choice, it is part of the specification: two images shot at
+  // different distances cannot be compared, however accurate each is on its own.
+  //
+  // Measured on the first pair that reached QC. hem-cuff-32 and
+  // hem-single-turnup differ by 3.2 cm against 4.4 cm, and BOTH rendered their
+  // depth correctly — the drawn step is 1.23, the rendered step 1.33, against a
+  // 1.375 nominal, so the renders separate BETTER than the drawings do. Yet
+  // both failed, because they were shot 18% apart in scale (trouser leg 393px
+  // against 465px), so a customer comparing them side by side sees the
+  // difference overstated by 18%. Each image was right; the PAIR was wrong.
+  //
+  // This is also the largest defect class measured in the live catalog: of a
+  // 24-row sample, 37.5% were INDISTINCT — right family, nothing separating
+  // them from their siblings — and ladders are the main cause.
+  //
+  // The instruction has to be one every sibling derives IDENTICALLY, so it is
+  // keyed on the part (shared across the family) and never on this option's own
+  // value. It also has to say "do not compensate", because the natural
+  // temptation is to zoom in on a small measurement to make it look distinctive,
+  // which destroys the very comparison the family exists to support.
+  const LADDER_LABEL = /(\d+(?:\.\d+)?)\s*(cm|mm|°|deg)/i;
+  const isLadder = LADDER_LABEL.test(String(spec.label || ''));
+  const matchedFraming = isLadder
+    ? `MATCHED FRAMING — this option belongs to a family whose members differ from one another ONLY `
+      + `by a measurement, so this photograph will be shown beside its siblings and compared directly. `
+      + `Frame it the way EVERY member of the family must be framed: the garment part square to camera, `
+      + `centred, at a standard distance that leaves the part occupying the same share of the picture `
+      + `regardless of which value this option carries. Do NOT move the camera closer to make a small `
+      + `measurement look more impressive, and do NOT pull back for a large one — changing the framing `
+      + `to suit the value destroys the only comparison this family exists to support. The measured `
+      + `dimension must be the single thing that differs between this image and its siblings.`
+    : null;
   // A GRAIN DIRECTION IS INVISIBLE ON PLAIN CLOTH, and the default fabric line
   // deletes it. This is the other half of the same table in
   // photography-rules.md that the raking-light fix covers: depth needs raking
@@ -518,6 +554,7 @@ export function buildPrompt(spec) {
     BLUEPRINT_LOCK,
     presentation,
     focus,
+    matchedFraming,
     photoBlockFor(spec),
     texture,
     NEGATIVE,
