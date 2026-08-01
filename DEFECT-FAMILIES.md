@@ -1444,3 +1444,22 @@ One trap caught mid-flight, exactly per this project's own discipline: on `lbh-0
 mask returned eye/bar = 2.6 by latching onto lapel shading around the eye; hand-measuring the stitch
 envelope off a 4× grid gave 1.73 against the drawing's 1.60. **The automated number would have
 produced a spurious rejection.**
+
+### `image_collisions.mjs` under-reports, and the cause is structural
+
+Verified: the tool partitions results into `sameFieldCollisions` (24 entries, largest group **10**
+options) and `crossFieldCollisions` (6 entries, largest **7**). A grader hashing the actually-served
+`.webp` files found one file (`4660e3dc...`) serving **13** options spanning BOTH `chest-pocket` and
+`lower-pocket`.
+
+**It partitions by field and never unions across the partition.** A group that straddles two fields is
+split into a same-field fragment plus a cross-field fragment and is never seen whole, so the true
+blast radius of any one duplicated file is systematically under-stated.
+
+My own earlier summary compounded it: I reported the **208 same-field rows** as though it were the
+total, when cross-field collisions were sitting in a separate bucket the whole time. The stated
+figure was not wrong, but the framing was - it was a partition, presented as a census.
+
+**Fix:** group by file hash FIRST, across the entire in-scope catalog, and only then describe whether
+a group is same-field, cross-field or mixed. Field is an attribute of a collision, not a way to
+partition the search. Until that lands, treat every collision figure in this file as a floor.
