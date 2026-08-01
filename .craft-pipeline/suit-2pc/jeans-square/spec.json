@@ -8,7 +8,7 @@
   "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\suit-2pc.json",
   "source": "json",
   "label": "Square Jeans Pocket",
-  "description": "The square jeans pocket is the classic Western five-pocket front opening: a near-vertical, squared-off curve reinforced with rivets and topstitching. It is the most casual and rugged front-pocket style, signalling denim and workwear heritage rather than tailoring. The squared shape sits tight to the body and is built for durability.",
+  "description": "The square jeans pocket is the classic Western five-pocket front opening. The mouth drops straight down from the waistband at the side, turns a crisp squared corner, then runs inboard across the front of the leg on a shallow fall of a few degrees, finishing at the pressed front crease. That long inboard run is what makes it a jeans pocket rather than a tailored side pocket, and the squared corner is what separates it from the arc. Heavily topstitched along the opening. It is the most casual and rugged front-pocket style, signalling denim and workwear heritage rather than tailoring.",
   "fieldLabel": "Front Pocket Style",
   "sectionLabel": "Trousers — Front & Pockets",
   "part": "trouser-detail",
@@ -17,7 +17,7 @@
     "fabric": "fine wool trouser cloth with visible weave"
   },
   "view": {
-    "orientation": "three-quarter-front",
+    "orientation": "front",
     "wearerPerspective": true,
     "confirmedByVisualInspection": true
   },
@@ -26,7 +26,9 @@
     "dimensions": [],
     "angles": [],
     "counts": [],
-    "shapes": [],
+    "shapes": [
+      "arc buttonhole"
+    ],
     "negatedShapes": [],
     "spread": [],
     "flags": [
@@ -46,5 +48,5 @@
   ],
   "excluded": null,
   "generate": true,
-  "extractedAt": "2026-08-01T06:18:57.768Z"
+  "extractedAt": "2026-08-01T08:13:33.070Z"
 }
