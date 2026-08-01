@@ -3339,6 +3339,39 @@
           ]
         }
       ]
+    },
+    {
+      "at": "2026-08-01T01:30:36.628Z",
+      "by": "tools/publish_approved.mjs",
+      "count": 1,
+      "rowCount": 1,
+      "fanout": true,
+      "options": [
+        {
+          "product": "shirt",
+          "option": "canvas-normal",
+          "field": "canvas",
+          "identity": "canvas/canvas-normal",
+          "image": "/images/generated/shirt/canvas-normal.webp",
+          "master": "/images/generated/shirt/canvas-normal.png",
+          "previous": "/images/canvas/normal-craftsmanship.jpg",
+          "preservedBlueprint": "/images/canvas/normal-craftsmanship.jpg",
+          "verdict": "PASS_WAIVED",
+          "waived": true,
+          "qcAttempt": 3,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 96,
+          "rows": [
+            {
+              "product": "shirt",
+              "section": "canvas-front",
+              "field": "canvas",
+              "previous": "/images/canvas/normal-craftsmanship.jpg",
+              "preservedBlueprint": "/images/canvas/normal-craftsmanship.jpg"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-01T01:18:55.787Z",
+  "at": "2026-08-01T01:30:34.928Z",
   "settings": {
     "maxWidth": 1400,
     "quality": 82,
@@ -7,20 +7,32 @@
   },
   "applied": true,
   "counts": {
-    "masters": 683,
-    "converted": 0,
+    "masters": 684,
+    "converted": 1,
     "skipped": 683,
     "failed": 0,
     "repointed": 0
   },
   "bytes": {
-    "before": 0,
-    "after": 0,
-    "savedPct": 0
+    "before": 1545744,
+    "after": 108896,
+    "savedPct": 93
   },
   "note": "targetSha1 is the derivative; sourceSha1 is the PNG master QC graded. The master and publish_approved.mjs byte-identity gate are untouched.",
   "results": {
-    "ok": [],
+    "ok": [
+      {
+        "master": "public\\images\\generated\\shirt\\canvas-normal.png",
+        "masterBytes": 1545744,
+        "sourceSha1": "f22c7fe60cfc70d26c9aea74a9a3f53ddc524e55",
+        "target": "public\\images\\generated\\shirt\\canvas-normal.webp",
+        "targetBytes": 108896,
+        "targetSha1": "f2f9cf4ab05e98dd41cbb2fe40e4d96a5c5906cf",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/shirt/canvas-normal.webp"
+      }
+    ],
     "skipped": [
       {
         "master": "public\\images\\generated\\jacket\\back-besom-btn.png",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-01T01:19:02.690Z",
+  "generatedAt": "2026-08-01T01:30:41.412Z",
   "count": 2862,
   "records": [
     {
@@ -7528,11 +7528,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/canvas/normal-craftsmanship.jpg",
-      "liveImage": "/images/canvas/normal-craftsmanship.jpg",
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/shirt/canvas-normal.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/shirt/canvas-normal.webp",
+      "shippedBytes": 108896,
+      "shippedSha1": "f2f9cf4ab05e98dd41cbb2fe40e4d96a5c5906cf",
       "pipeline": {
         "dir": ".craft-pipeline/shirt/canvas-normal",
         "have": {
@@ -7541,21 +7541,22 @@
           "generation": true,
           "qc": true
         },
-        "verdict": "UNMET",
-        "attempt": 2,
-        "lowestScore": 90,
+        "verdict": "PASS_WAIVED",
+        "attempt": 3,
+        "lowestScore": 96,
         "belowMin": [
           "shape",
           "angles",
           "construction",
           "symmetry",
+          "composition",
           "blueprint-match"
         ],
-        "candidates": 2,
+        "candidates": 3,
         "needsReverify": false,
-        "checkedAt": "2026-07-30T06:00:16.608Z"
+        "checkedAt": "2026-08-01T01:30:34.354Z"
       },
-      "stage": "unmet"
+      "stage": "shipped-waived"
     },
     {
       "key": "shirt/canvas-senior",
