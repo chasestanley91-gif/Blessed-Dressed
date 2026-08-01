@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-01T01:47:10.692Z",
+  "generatedAt": "2026-08-01T02:04:23.229Z",
   "generatedBy": "tools/project_state.mjs",
   "repo": ".",
   "catalog": "data-store/options",
@@ -7,11 +7,11 @@
     "total": 2862,
     "inScope": 1747,
     "shipped": 109,
-    "shipped-waived": 13,
+    "shipped-waived": 14,
     "passed-not-shipped": 6,
     "waived-not-shipped": 0,
     "needs-reverify": 11,
-    "failed-retry-due": 3,
+    "failed-retry-due": 2,
     "unmet": 4,
     "generated-awaiting-qc": 26,
     "prompt-built": 21,
@@ -27,11 +27,11 @@
       "total": 796,
       "inScope": 382,
       "shipped": 8,
-      "shipped-waived": 4,
+      "shipped-waived": 5,
       "passed-not-shipped": 0,
       "waived-not-shipped": 0,
       "needs-reverify": 11,
-      "failed-retry-due": 1,
+      "failed-retry-due": 0,
       "unmet": 1,
       "generated-awaiting-qc": 5,
       "prompt-built": 1,
@@ -138,9 +138,9 @@
       "out-of-scope": 0
     }
   },
-  "verifiedShipped": 122,
+  "verifiedShipped": 123,
   "verifiedShippedClean": 109,
-  "verifiedShippedWaived": 13,
+  "verifiedShippedWaived": 14,
   "verifiedShippedPct": "7.0",
   "pipelineDirs": 185,
   "generatedFiles": 1370,
@@ -319,7 +319,7 @@
       "severity": "warning",
       "code": "ORPHAN_IMAGE_FILE",
       "message": "Generated image on disk is not referenced by any catalog option, and has no wired .png/.webp counterpart.",
-      "count": 240,
+      "count": 238,
       "items": [
         "/images/generated/jacket/ep-round.png",
         "/images/generated/jacket/ep-round.webp",
@@ -347,8 +347,6 @@
         "/images/generated/shirt/back-napoli-dbl-darts.webp",
         "/images/generated/shirt/back-napoli-no-dart.png",
         "/images/generated/shirt/back-napoli-no-dart.webp",
-        "/images/generated/shirt/back-side-pleat.png",
-        "/images/generated/shirt/back-side-pleat.webp",
         "/images/generated/shirt/back-side-pleats-dbl-darts.png",
         "/images/generated/shirt/back-side-pleats-dbl-darts.webp",
         "/images/generated/shirt/bias-inner-collar-stand-v2.png",
@@ -370,14 +368,16 @@
         "/images/generated/shirt/collar-dr-point-58.png",
         "/images/generated/shirt/collar-dr-point-58.webp",
         "/images/generated/shirt/collar-french-75.png",
-        "/images/generated/shirt/collar-french-75.webp"
+        "/images/generated/shirt/collar-french-75.webp",
+        "/images/generated/shirt/collar-hexagon.png",
+        "/images/generated/shirt/collar-hexagon.webp"
       ]
     },
     {
       "severity": "info",
       "code": "PROVENANCE_ANCHOR",
       "message": "Unreferenced by the catalog BY DESIGN: the QC-graded master behind a served derivative. Required by publish_approved.mjs gate 2 — do not delete.",
-      "count": 565,
+      "count": 566,
       "items": [
         "/images/generated/jacket/back-besom-btn.png  (anchor for the served /images/generated/jacket/back-besom-btn.webp)",
         "/images/generated/jacket/back-besom-decorative.png  (anchor for the served /images/generated/jacket/back-besom-decorative.webp)",

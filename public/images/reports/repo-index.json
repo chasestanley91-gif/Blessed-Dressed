@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-01T01:47:10.692Z",
+  "generatedAt": "2026-08-01T02:04:23.229Z",
   "count": 2862,
   "records": [
     {
@@ -16553,11 +16553,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/back/side-pleat.jpg",
-      "liveImage": "/images/back/side-pleat.jpg",
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/shirt/back-side-pleat.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/shirt/back-side-pleat.webp",
+      "shippedBytes": 11746,
+      "shippedSha1": "1be4eadcf7cc11765fa39a02bb5f284ce8f4203a",
       "pipeline": {
         "dir": ".craft-pipeline/shirt/back-side-pleat",
         "have": {
@@ -16566,9 +16566,9 @@
           "generation": true,
           "qc": true
         },
-        "verdict": "FAIL",
-        "attempt": 1,
-        "lowestScore": 40,
+        "verdict": "PASS_WAIVED",
+        "attempt": 3,
+        "lowestScore": 95,
         "belowMin": [
           "shape",
           "geometry",
@@ -16580,11 +16580,11 @@
           "composition",
           "blueprint-match"
         ],
-        "candidates": 2,
+        "candidates": 3,
         "needsReverify": false,
-        "checkedAt": "2026-07-30T05:53:37.799Z"
+        "checkedAt": "2026-08-01T02:04:16.187Z"
       },
-      "stage": "failed-retry-due"
+      "stage": "shipped-waived"
     },
     {
       "key": "shirt/back-box-dbl-darts",

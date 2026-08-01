@@ -3405,6 +3405,39 @@
           ]
         }
       ]
+    },
+    {
+      "at": "2026-08-01T02:04:18.423Z",
+      "by": "tools/publish_approved.mjs",
+      "count": 1,
+      "rowCount": 1,
+      "fanout": true,
+      "options": [
+        {
+          "product": "shirt",
+          "option": "back-side-pleat",
+          "field": "back",
+          "identity": "back/back-side-pleat",
+          "image": "/images/generated/shirt/back-side-pleat.webp",
+          "master": "/images/generated/shirt/back-side-pleat.png",
+          "previous": "/images/back/side-pleat.jpg",
+          "preservedBlueprint": "/images/back/side-pleat.jpg",
+          "verdict": "PASS_WAIVED",
+          "waived": true,
+          "qcAttempt": 3,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 95,
+          "rows": [
+            {
+              "product": "shirt",
+              "section": "back-structure",
+              "field": "back",
+              "previous": "/images/back/side-pleat.jpg",
+              "preservedBlueprint": "/images/back/side-pleat.jpg"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-01T01:47:04.153Z",
+  "at": "2026-08-01T02:04:16.609Z",
   "settings": {
     "maxWidth": 1400,
     "quality": 82,
@@ -8,31 +8,19 @@
   "applied": true,
   "counts": {
     "masters": 685,
-    "converted": 1,
-    "skipped": 684,
+    "converted": 0,
+    "skipped": 685,
     "failed": 0,
     "repointed": 0
   },
   "bytes": {
-    "before": 1876974,
-    "after": 148050,
-    "savedPct": 92.1
+    "before": 0,
+    "after": 0,
+    "savedPct": 0
   },
   "note": "targetSha1 is the derivative; sourceSha1 is the PNG master QC graded. The master and publish_approved.mjs byte-identity gate are untouched.",
   "results": {
-    "ok": [
-      {
-        "master": "public\\images\\generated\\shirt\\bias-outer-top-collar.png",
-        "masterBytes": 1876974,
-        "sourceSha1": "71c9771163cd1526d8e19df386714032673051c9",
-        "target": "public\\images\\generated\\shirt\\bias-outer-top-collar.webp",
-        "targetBytes": 148050,
-        "targetSha1": "1780207f294e36f3272040cadac622209b1099a5",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/shirt/bias-outer-top-collar.webp"
-      }
-    ],
+    "ok": [],
     "skipped": [
       {
         "master": "public\\images\\generated\\jacket\\back-besom-btn.png",
@@ -1008,6 +996,10 @@
       },
       {
         "master": "public\\images\\generated\\shirt\\bias-none.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\shirt\\bias-outer-top-collar.png",
         "reason": "derivative already exists"
       },
       {

@@ -2,19 +2,21 @@
   "addr": "shirt > back-side-pleat",
   "productId": "shirt",
   "optionId": "back-side-pleat",
-  "attempt": 1,
+  "attempt": 3,
+  "maxAttempts": 3,
   "scores": {
-    "shape": 78,
-    "geometry": 45,
-    "dimensions": 50,
-    "angles": 70,
-    "construction": 45,
-    "placement": 40,
-    "symmetry": 88,
-    "composition": 68,
-    "blueprint-match": 42
+    "shape": 97,
+    "geometry": 96,
+    "dimensions": 96,
+    "angles": 97,
+    "construction": 97,
+    "placement": 96,
+    "symmetry": 95,
+    "composition": 97,
+    "blueprint-match": 96
   },
   "scoreMin": 98,
+  "waiverMin": 95,
   "belowMinCategories": [
     "shape",
     "geometry",
@@ -26,83 +28,113 @@
     "composition",
     "blueprint-match"
   ],
+  "belowWaiverMinCategories": [],
   "errors": [
     {
-      "severity": "critical",
-      "category": "geometry",
-      "detail": "The defining feature is absent. The blueprint draws TWO vertical pleat folds dropping from the yoke seam, one on each side, offset laterally toward each shoulder blade (drawing coords: marks at x=59.5 and x=132.5 about a body centre of 95.5, i.e. roughly 60% of the way from centre back to the side seam). In the photo the back panel below the yoke is smooth and featureless: contrast-boosted crops and a per-column brightness profile of the yoke-to-mid-back band show only soft drape shading and a faint centre-spine crease, with no pressed fold, no fold shadow pair, and no pleat originating at the yoke seam on either side."
-    },
-    {
-      "severity": "critical",
-      "category": "generic-substitution",
-      "detail": "What was delivered is a plain clean shirt back, which is the sibling option on this same field (back-napoli-no-dart / clean back). A customer comparing 'Side Pleat' against the no-pleat option would see no difference, so the image fails the one-second identification requirement and would mis-sell the option."
-    },
-    {
-      "severity": "major",
-      "category": "construction",
-      "detail": "No pleat construction of any kind is visible: no crease line, no fold edge catching light, and no stitch/tack where each pleat is caught into the yoke seam. The yoke seam itself reads as a soft tonal change rather than a stitched seam."
-    },
-    {
-      "severity": "major",
-      "category": "composition",
-      "detail": "Not framed on the upper back/yoke as specified. The frame runs from the top of the model's head to below the hip and includes dark charcoal trousers with visible waistband, belt loops and a rear pocket occupying roughly the bottom fifth of the image; the yoke-and-pleat zone the option is about occupies only a small central band, well under the 40-80% dominance target."
+      "severity": "minor",
+      "category": "symmetry",
+      "description": "The two pleats are not quite equidistant from the centre back — roughly 290px and 260px from the centre line of an 880px frame, an imbalance of about 3% of the back width.",
+      "expected": "both pleats equidistant from the centre back",
+      "actual": "a small imbalance, the frame-left pleat sitting slightly further out",
+      "correction": "Accepted. Within the drape variation of a cloth garment on a form, and both pleats are unmistakably present and matched in depth."
     },
     {
       "severity": "minor",
       "category": "placement",
-      "detail": "Because no pleats exist, lateral offset from centre back, pleat depth and pleat length cannot be verified against the drawing at all."
+      "description": "Both pleats sit a little further out toward the armholes than the drawing's position marks suggest.",
+      "expected": "pleat positions matching the two red marks below the yoke",
+      "actual": "pleats set somewhat wider",
+      "correction": "Accepted. The drawing is a 191px thumbnail whose marks cannot be located to better than a few percent of the back width, so this is inside the measurable tolerance of the source."
+    },
+    {
+      "severity": "minor",
+      "category": "dimensions",
+      "description": "Fold depth is now legible from the shadow but cannot be measured against the 2 cm the construction implies, since nothing in frame gives scale.",
+      "expected": "a measurable pleat depth",
+      "actual": "depth clearly visible, not measurable",
+      "correction": "Accepted as a limit of the format."
     }
   ],
-  "verdict": "FAIL",
-  "correction": {
-    "errors": [
+  "verdict": "PASS_WAIVED",
+  "waiver": {
+    "granted": true,
+    "reason": "minor-only at attempt 3 of 3: retry budget exhausted with zero critical/major findings and every category >= 95",
+    "waiverMin": 95,
+    "scoreMin": 98,
+    "belowScoreMin": [
       {
-        "severity": "critical",
+        "category": "shape",
+        "score": 97,
+        "shortfall": 1
+      },
+      {
         "category": "geometry",
-        "expected": null,
-        "actual": null,
-        "correction": "Regenerate to fix: undefined"
+        "score": 96,
+        "shortfall": 2
       },
       {
-        "severity": "critical",
-        "category": "generic-substitution",
-        "expected": null,
-        "actual": null,
-        "correction": "Regenerate to fix: undefined"
+        "category": "dimensions",
+        "score": 96,
+        "shortfall": 2
       },
       {
-        "severity": "major",
+        "category": "angles",
+        "score": 97,
+        "shortfall": 1
+      },
+      {
         "category": "construction",
-        "expected": null,
-        "actual": null,
-        "correction": "Regenerate to fix: undefined"
+        "score": 97,
+        "shortfall": 1
       },
       {
-        "severity": "major",
+        "category": "placement",
+        "score": 96,
+        "shortfall": 2
+      },
+      {
+        "category": "symmetry",
+        "score": 95,
+        "shortfall": 3
+      },
+      {
         "category": "composition",
-        "expected": null,
-        "actual": null,
-        "correction": "Regenerate to fix: undefined"
+        "score": 97,
+        "shortfall": 1
+      },
+      {
+        "category": "blueprint-match",
+        "score": 96,
+        "shortfall": 2
       }
     ],
-    "lockedFeatures": [
-      "back view of the garment (orientation: back) - CORRECT in candidate",
-      "one straight horizontal one-piece yoke seam across the upper back - present but very faint",
-      "TWO vertical knife/side pleats, one per side, each starting at the yoke seam - ABSENT",
-      "each pleat offset laterally toward its shoulder blade at approx. 60% of the distance from centre back to the side seam - ABSENT",
-      "centre back clean and uninterrupted, no centre or box pleat - correct (nothing there), but vacuously so",
-      "left/right mirror symmetry of the two pleats - unverifiable, pleats absent",
-      "barrel cuffs and sleeve plackets on both sleeves - partially visible, cropped",
-      "curved shirttail hem with topstitching - not in frame",
-      "seamless neutral light-grey studio background, no props/architecture - CORRECT",
-      "zero text, numbers, arrows, red guide marks, rulers or callouts - CORRECT, frame is clean"
+    "minorErrors": [
+      {
+        "category": "symmetry",
+        "description": "The two pleats are not quite equidistant from the centre back — roughly 290px and 260px from the centre line of an 880px frame, an imbalance of about 3% of the back width.",
+        "expected": "both pleats equidistant from the centre back",
+        "actual": "a small imbalance, the frame-left pleat sitting slightly further out"
+      },
+      {
+        "category": "placement",
+        "description": "Both pleats sit a little further out toward the armholes than the drawing's position marks suggest.",
+        "expected": "pleat positions matching the two red marks below the yoke",
+        "actual": "pleats set somewhat wider"
+      },
+      {
+        "category": "dimensions",
+        "description": "Fold depth is now legible from the shadow but cannot be measured against the 2 cm the construction implies, since nothing in frame gives scale.",
+        "expected": "a measurable pleat depth",
+        "actual": "depth clearly visible, not measurable"
+      }
     ],
-    "forbiddenChanges": [
-      "do not alter any checklist item this attempt already passed",
-      "do not change the camera crop, composition, or accessories unless the error is itself a composition error",
-      "do not change the garment part, orientation, or any other option's geometry"
-    ]
+    "attempt": 3,
+    "maxAttempts": 3,
+    "waiverAttemptFloor": 3,
+    "authority": "user decision 2026-07-30: QC gate stays >=98; a 3rd attempt is allowed; after 3 attempts an image with ZERO critical/major findings may ship at >=95 as a LOGGED WAIVER in qc.json",
+    "grantedAt": "2026-08-01T02:04:16.185Z"
   },
-  "notes": "Reference illustration was confirmed attached to the generation (reference_images populated with the blueprint media id). Blueprint/text consistency gate passed before generating: the drawing's two off-centre marks below the yoke agree with the catalog description 'two folds positioned below the yoke near each shoulder blade rather than at the center', and are clearly distinct from the sibling center-pleats.jpg whose marks sit tight against the centre line. Positives in the candidate: correct back orientation, correct white poplin dress-shirt silhouette, photoreal (not line-art, not CGI, not mannequin), clean seamless light-grey studio sweep with no location or props, and no annotation/watermark/measurement text anywhere. The single reason for rejection is that the showcased craft option itself was not rendered: the model simply produced a smooth plain back. Retry must force two hard, pressed, light-catching vertical folds starting at the yoke seam, offset out over each shoulder blade with the centre back left flat, and must tighten the crop to the yoke and upper back so the pleats dominate the frame.",
-  "checkedAt": "2026-07-30T05:53:37.799Z"
+  "correction": null,
+  "notes": "ATTEMPT 3. The MAJOR is resolved and the option is finally legible.\n\nThe three attempts trace a clean diagnosis. Attempt 1 rendered a completely PLAIN back — which is the sibling option in this same field, so the image sold the wrong garment outright. Attempt 2 put two folds in the right places but rendered them as loose drape creases under flat frontal light, so a customer could not have told this from the plain-back sibling either. Attempt 3 changed the LIGHT, and that alone made the difference.\n\nThe principle is worth keeping, because it is the same one bias-outer-top-collar taught in a different form earlier today: SOME OPTIONS NEED A SPECIFIC PHOTOGRAPHIC CONDITION TO EXIST IN THE PICTURE AT ALL.\n\n  - A grain direction is invisible on plain cloth   -> change the CLOTH (use a stripe)\n  - A pressed fold is invisible under flat light    -> change the LIGHT (rake it hard across the surface)\n\nIn both cases the default condition is not neutral: it deletes the subject. A white pleat on white poplin has no colour and no pattern, so the shadow it casts is its only visual signal, and lighting stops being a stylistic choice.\n\nAll nine categories at or above 95 with zero Critical or Major findings, so this qualifies for the logged waiver at attempt 3.",
+  "checkedAt": "2026-08-01T02:04:16.187Z"
 }
