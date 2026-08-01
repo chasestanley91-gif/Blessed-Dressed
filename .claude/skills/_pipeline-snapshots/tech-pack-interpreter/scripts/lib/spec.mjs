@@ -532,13 +532,32 @@ const LABEL_GATED_SHAPES = [
   { shape: 'button-down point', label: /button[- ]?down/i },
 ];
 
-function resolveExclusiveShapes(shapes, label, _productId) {
-  if (!Array.isArray(shapes) || shapes.length < 2) return shapes;
+function resolveExclusiveShapes(shapes, label, _productId, removed = []) {
+  if (!Array.isArray(shapes) || shapes.length === 0) return shapes;
   const lab = String(label || '');
   let out = shapes.slice();
+
+  // The label gate runs BEFORE the "fewer than two shapes, nothing to resolve"
+  // shortcut, and that ordering is the point. A LABEL_GATED_SHAPE is false
+  // whenever the label does not name it, regardless of what else was extracted —
+  // an option left holding ONLY `button-down point`, scraped from a contrast
+  // clause, is exactly as wrong as one holding it alongside a real shape, and
+  // more dangerous, because there is no competing shape to make the conflict
+  // visible. The old guard returned early in precisely that case.
   for (const g of LABEL_GATED_SHAPES) {
-    if (out.includes(g.shape) && !g.label.test(lab)) out = out.filter((s) => s !== g.shape);
+    if (out.includes(g.shape) && !g.label.test(lab)) {
+      out = out.filter((s) => s !== g.shape);
+      // Report it. Dropping the shape stops the prompt ASSERTING the feature,
+      // but the sentence that produced it is still in the catalog description,
+      // and the prompt quotes that description verbatim. So the model is still
+      // told about a "casual button-down" — just no longer told to render one.
+      // The caller turns each removal into an explicit NEGATIVE, which is the
+      // only thing that actually cancels the prose.
+      removed.push(g.shape);
+    }
   }
+
+  if (out.length < 2) return out;                        // nothing left to resolve
   for (const fam of EXCLUSIVE_SHAPE_FAMILIES) {
     const present = out.filter((s) => fam.members.includes(s));
     if (present.length < 2) continue;                    // no conflict in this family
@@ -558,8 +577,16 @@ export function extractSpec(opt) {
 
   const part = resolvePart(opt);
   const { dims, angles, counts, spreadWord } = extractMeasures(textCore + ' ' + opt.hint);
+  // `negatedShapes` are styles the description NAMED but the label does not
+  // claim — almost always a comparative clause ("the sweet spot between the long
+  // traditional point and the casual button-down"). Dropping them from `shapes`
+  // stops the prompt asserting the feature, but the prose survives verbatim in
+  // the prompt's description block, so the model is still told about it. The
+  // director turns each of these into an explicit NEGATIVE, which is the only
+  // thing that actually cancels the sentence.
+  const negatedShapes = [];
   const shapes = resolveExclusiveShapes(
-    scanList(text, SHAPES, opt.productId), opt.label, opt.productId);
+    scanList(text, SHAPES, opt.productId), opt.label, opt.productId, negatedShapes);
   const flags = scanList(text, FLAGS, opt.productId);
 
   // Absence must be resolved BEFORE family augmentation so a positive shape /
@@ -629,6 +656,7 @@ export function extractSpec(opt) {
     counts,
     spread: spreadWord,
     shapes,
+    negatedShapes,
     flags,
     illustration: opt.image,
     illustrationDisk: opt.imageDisk,

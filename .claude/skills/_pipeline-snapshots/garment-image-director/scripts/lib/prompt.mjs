@@ -33,6 +33,7 @@ export function specFromRecord(record) {
     counts: record.measured.counts,
     spread: record.measured.spread,
     shapes: record.measured.shapes,
+    negatedShapes: record.measured.negatedShapes || [],
     flags: record.measured.flags,
     illustration: record.illustration.path,
     illustrationDisk: record.illustration.disk,
@@ -318,22 +319,67 @@ export function buildPrompt(spec) {
   // default so the differentiating component — not the trouser — owns the frame.
   const dominance = isWaistbandFamily(spec.part) ? '40–60%' : '40–80%';
 
+  // SOME OPTIONS ARE A RELATIONSHIP, NOT A DETAIL.
+  // ---------------------------------------------------------------------
+  // A shoulder option is read at the shoulder END — the point where padding
+  // declares itself as a squared, built-up corner. A left/right buttonhole
+  // position is read by seeing BOTH lapels. A paired pocket is read by seeing
+  // both pockets. Crop in on any of them and the option disappears from its own
+  // photograph while the crop still looks tight and confident.
+  //
+  // Measured on sport-coat/pad-none: three attempts, each carrying an explicit
+  // FRAMING LOCK paragraph that declared itself to OUTRANK the close-crop
+  // mandate and told the camera to move back. All three came back cropped, with
+  // both shoulder end points outside the frame. Declaring one paragraph the
+  // winner does not make the model drop the other — the contradiction has to not
+  // be emitted. So for these parts the dominance sentence is replaced rather
+  // than overridden.
+  // Every name below was checked against the live part taxonomy in
+  // repo-index.json, not guessed. The first draft of this list said
+  // `jacket-lapel-buttonhole-position`; the real part is `jacket-lapel-bh-position`,
+  // so the single clearest left/right case in the catalog matched nothing and the
+  // list silently covered 44 options instead of 75.
+  //
+  //   jacket-shoulder        30  padding/shape, judged at the shoulder END
+  //   jacket-lapel-bh-position 15  left / right / both — meaningless cropped to one lapel
+  //   jacket-sleeve-vent      -   NOT included: one cuff, a genuine detail
+  //   jacket-vent             9   one vent vs two is a whole-back comparison
+  //   shirt-back              7   pleat placement, read left against right
+  //   jacket-back-belt        6   spans the back
+  //   vest-back               6   spans the back
+  //   fin-epaulet             2   a pair
+  //   trouser-back-pocket     -   NOT included: mixed, many are genuinely single-sided
+  const RELATIONAL_PARTS = /^(jacket-shoulder|jacket-lapel-bh-position|jacket-vent|jacket-back-belt|vest-back|shirt-back|fin-epaulet)$/;
+  const isRelational = RELATIONAL_PARTS.test(String(spec.part || ''));
+
   let composition, geometry, coverage, detailLine;
   if (spec.absence) {
     // The option is the ABSENCE of a feature — never order the model to draw it.
-    composition =
-      `A clean studio DOCUMENTATION photograph of the deliberate ABSENCE of a feature. ` +
-      `${spec.fieldLabel}: "${spec.label}". The clean, unbroken area where the ${feature} would be IS ` +
-      `the subject, identifiable within one second.`;
+    composition = isRelational
+      ? `A clean studio DOCUMENTATION photograph of the deliberate ABSENCE of a feature. ` +
+        `${spec.fieldLabel}: "${spec.label}". The clean, unbroken area where the ${feature} would be IS ` +
+        `the subject, identifiable within one second. FRAME WIDE, NOT TIGHT: this option is read across ` +
+        `the whole span of the garment, so BOTH ends of it must sit inside the picture with clear ` +
+        `background beyond each. Do not crop in on the centre — cropping the ends away removes the very ` +
+        `place the absence is judged.`
+      : `A clean studio DOCUMENTATION photograph of the deliberate ABSENCE of a feature. ` +
+        `${spec.fieldLabel}: "${spec.label}". The clean, unbroken area where the ${feature} would be IS ` +
+        `the subject, identifiable within one second.`;
     geometry = `This option is the ABSENCE of the ${feature}.`;
     coverage =
       `MANDATORY — do NOT render a ${feature}. Reproduce a clean garment with no ${feature}, exactly as ` +
       `the illustration shows; adding the feature is a failure.`;
     detailLine = detail ? `Intent: ${detail}` : '';
   } else {
-    composition =
-      `A single-subject craft DOCUMENTATION photograph: the ${spec.fieldLabel || 'craft detail'} is the ` +
-      `dominant subject, filling ${dominance} of the frame and identifiable within one second.`;
+    composition = isRelational
+      ? `A single-subject craft DOCUMENTATION photograph: the ${spec.fieldLabel || 'craft detail'} is the ` +
+        `sole subject, identifiable within one second. FRAME WIDE, NOT TIGHT: this option is read across ` +
+        `the whole span of the garment, so BOTH ends of it must sit inside the picture with clear ` +
+        `background beyond each — a shoulder is judged at its END POINT, a left/right option by seeing ` +
+        `both sides, a pair by seeing both. Do not crop in on the centre. There is no frame-fill target ` +
+        `for this option; getting both ends in is what matters.`
+      : `A single-subject craft DOCUMENTATION photograph: the ${spec.fieldLabel || 'craft detail'} is the ` +
+        `dominant subject, filling ${dominance} of the frame and identifiable within one second.`;
     geometry = measured.length
       ? `Exact specification — ${measured.join('; ')} — matching the illustration precisely.`
       : `Reproduce the "${spec.label}" detail exactly as drawn.`;
@@ -361,8 +407,22 @@ export function buildPrompt(spec) {
   // rather than folded into the universal NEGATIVE constant, so every option
   // gets its own generated exclusion list, not one static list for every
   // garment. See negative-constraints.md.
-  const forbiddenBlock = spec.forbidden && spec.forbidden.length
-    ? `FORBIDDEN FOR THIS OPTION — do not render: ${spec.forbidden.join('; ')}.`
+  // Styles the description NAMED but the label does not claim — nearly always a
+  // comparative clause. tech-pack-interpreter drops these from `shapes`, which
+  // stops the prompt ASSERTING them, but the sentence that produced them is
+  // still quoted verbatim in the description block above, so the model has been
+  // told about the feature regardless. Measured: "the sweet spot between the long
+  // traditional point and the casual BUTTON-DOWN" put a button on a collar leaf
+  // and made the render indistinguishable from its own sibling option. Only an
+  // explicit negative cancels a sentence the prompt is still carrying.
+  const negated = Array.isArray(spec.negatedShapes) ? spec.negatedShapes : [];
+  const negatedClause = negated.map(
+    (sh) => `any ${sh} — the description mentions it only by comparison, and this option is NOT that`
+  );
+  const forbiddenAll = [...(spec.forbidden || []), ...negatedClause];
+
+  const forbiddenBlock = forbiddenAll.length
+    ? `FORBIDDEN FOR THIS OPTION — do not render: ${forbiddenAll.join('; ')}.`
     : '';
 
   const prompt = [

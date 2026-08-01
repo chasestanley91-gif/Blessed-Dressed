@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-01T00:21:51.712Z",
+  "generatedAt": "2026-08-01T00:39:14.405Z",
   "count": 2862,
   "records": [
     {
@@ -18351,13 +18351,14 @@
           "generation": true,
           "qc": true
         },
-        "verdict": "FAIL",
-        "attempt": 2,
-        "lowestScore": 92,
+        "verdict": "UNMET",
+        "attempt": 3,
+        "lowestScore": 90,
         "belowMin": [
           "shape",
           "geometry",
           "dimensions",
+          "angles",
           "construction",
           "placement",
           "symmetry",
@@ -18366,9 +18367,9 @@
         ],
         "candidates": 3,
         "needsReverify": false,
-        "checkedAt": "2026-07-31T19:40:46.463Z"
+        "checkedAt": "2026-08-01T00:31:36.833Z"
       },
-      "stage": "failed-retry-due"
+      "stage": "unmet"
     },
     {
       "key": "sport-coat/pad-01",

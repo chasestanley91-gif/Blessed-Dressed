@@ -1,60 +1,57 @@
 {
   "scores": {
-    "shape": 97,
-    "geometry": 97,
+    "shape": 94,
+    "geometry": 93,
     "dimensions": 96,
-    "angles": 98,
-    "construction": 93,
-    "placement": 97,
-    "symmetry": 95,
-    "composition": 92,
-    "blueprint-match": 96
+    "angles": 96,
+    "construction": 95,
+    "placement": 93,
+    "symmetry": 96,
+    "composition": 90,
+    "blueprint-match": 94
   },
   "errors": [
     {
-      "severity": "minor",
-      "category": "composition",
-      "description": "The bottom edge of the picture sits far below where the framing lock put it. The chest welt pocket ends at roughly 58% of the image height and the frame continues for another 42%, showing the lapel V converging and the button area. That lower 40% of the picture carries no information about shoulder padding and dilutes the subject: the shoulder line and both sleeve heads occupy only about the upper third.",
-      "expected": "bottom edge of the picture level with the chest welt pocket, nothing below it, so the shoulder line and sleeve heads dominate the frame",
-      "actual": "frame runs on well past the welt pocket down to the button point; the shoulder line occupies only the upper third",
-      "correction": "bring the bottom edge of the picture up so it lands level with the lower edge of the chest welt pocket, with nothing of the jacket below that line"
+      "severity": "major",
+      "category": "placement",
+      "description": "Both shoulder END POINTS are outside the picture. The jacket's shoulder line runs off the left and right edges of the frame, so neither sleeve head, neither armhole seam end, nor either shoulder terminus is visible. For an unpadded-shoulder option this is not a framing preference — the shoulder END is precisely where padding declares itself, as a squared built-up corner. With both ends cropped away, the one place a customer would look to tell padded from unpadded is absent from its own photograph.",
+      "expected": "the two shoulder end points at roughly 12% and 88% of image width, with plain grey background visible outside each sleeve head — stated twice in the prompt, in the FRAMING LOCK and again in the attempt-3 correction",
+      "actual": "the shoulder line exits both the left and right frame edges; no margin outside either sleeve head",
+      "correction": "Move the camera back far enough that both sleeve heads sit inside the frame with grey visible beyond each. This is the third attempt at this instruction and the third time it has not been honoured; see the note below — the prompt is fighting itself."
     },
     {
       "severity": "minor",
-      "category": "symmetry",
-      "description": "The two shoulder end points are not placed symmetrically and the frame-left one is almost clipped: the outer edge of the frame-left sleeve sits about 2% in from the left picture edge while the frame-right sleeve edge sits about 6% in from the right edge. The framing lock asked for 12% and 88%.",
-      "expected": "shoulder end points at about 12% and 88% of image width, with an equal clear margin of grey background outside each sleeve head",
-      "actual": "left sleeve edge roughly 2% from the frame edge, right sleeve edge roughly 6% - unequal, and the left margin is barely there",
-      "correction": "pull the camera back a little further so both sleeve heads sit well inside the picture with an equal grey margin outside each"
+      "category": "composition",
+      "description": "The bottom edge still runs well past the chest welt pocket, down to roughly the second button, exactly as at attempt 2. The correction asked for the bottom edge at the lower edge of the welt pocket.",
+      "expected": "bottom edge level with the lower edge of the chest welt pocket",
+      "actual": "the frame continues roughly 250px past it, to the button point",
+      "correction": "Crop the bottom to the welt pocket. The dead cloth below it pushes the shoulder line — the actual subject — into the upper third."
     },
     {
       "severity": "minor",
       "category": "construction",
-      "description": "Three lapel buttonhole slits were rendered where the drawing carries one. The frame-right lapel has TWO parallel keyhole slits stacked on it (one just under the notch, one lower on the lapel body), and the frame-left lapel carries a third.",
-      "expected": "a single lapel buttonhole on the frame-right lapel, as drawn, and none on the frame-left lapel",
-      "actual": "two stacked buttonhole slits on the frame-right lapel plus one on the frame-left lapel",
-      "correction": "exactly one lapel buttonhole, on the frame-right lapel only; the frame-left lapel is plain"
+      "description": "Two lapel buttonhole slits are rendered, one on each lapel, where the drawing carries one. Improved from attempt 2, which had three, including two stacked on the same lapel.",
+      "expected": "exactly one buttonhole, on one lapel; the other lapel plain",
+      "actual": "one buttonhole on each lapel",
+      "correction": "Render the frame-left lapel plain with no buttonhole at all."
     },
     {
       "severity": "minor",
       "category": "dimensions",
-      "description": "The model's chin and the shadow under the lower lip are inside the frame; the lock asked for a crop at the jaw with no mouth.",
-      "expected": "top edge just above the collar, model cropped at the jaw - no mouth, no face, no hair",
-      "actual": "chin and the underside of the mouth are visible above the collar",
-      "correction": "drop the top edge slightly so it clears the collar but cuts the model at the jawline"
+      "description": "The underside of the chin and jaw is still inside the frame with visible stubble. The correction asked for a crop at the jawline. Improved from attempt 2, which also showed the mouth and the shadow under the lower lip.",
+      "expected": "crop at the jaw; no chin, no mouth, no face",
+      "actual": "jaw and chin underside visible",
+      "correction": "Raise the bottom of the head crop to the jawline itself."
     }
   ],
   "lockedFeatures": [
-    "BOTH shoulder end points, BOTH armhole seams and BOTH sleeve heads complete and inside the frame with grey background outside each - this is the fix that attempt 1 lacked and it must not regress",
-    "WIDE shot, camera back, not a close crop on the chest",
-    "the shoulder is unmistakably unpadded: one soft continuous slope from the neck point, collapsing into the sleeve head with no squaring, no built-up corner, no roped or raised sleeve head, no ridge at the sleeve join",
-    "shoulder seams running across the upper part of the frame",
-    "collar and both notch lapels with the drawn gorge and notch geometry",
-    "chest welt pocket on the frame-right side, as drawn",
-    "textured navy wool hopsack with visible basketweave",
+    "the shoulder line falls from the neck point in one soft continuous slope with no squaring, no built-up corner and no roped sleeve head — the option itself is rendered correctly where it IS visible",
+    "notch lapel geometry with the drawn gorge and notch",
+    "chest welt pocket on the frame-right side",
+    "textured navy wool hopsack with legible weave",
     "crisp white shirt, collar open, no necktie",
-    "seamless neutral light-grey studio sweep",
-    "zero numerals, arrows, leader lines, callouts, coloured guide marks or text anywhere in frame"
+    "seamless neutral light-grey studio background",
+    "zero traced annotation: no numerals, arrows, leader lines or callouts"
   ],
-  "notes": "ATTEMPT 2 vs /images/blueprints/factory/d45437530f73__060J__No_pad.jpg.\n\nWHAT THE DRAWING SHOWS: jacket front upper body - collar, both notch lapels, BOTH complete shoulders running out to the shoulder points where the sleeves begin, both sleeves, chest welt pocket on the frame-right, cropped at about the first button, with NO red pad wedge on either shoulder.\n\nWHAT ATTEMPT 2 FIXED: all three Major errors from attempt 1 are gone. The camera moved back; both shoulder end points, both armhole seams and both sleeve heads are now inside the picture with grey background beyond each, verified by zooming both top corners. The shoulder itself now reads correctly unpadded - a soft continuous fall from the neck point, no squaring at the shoulder end, no rope and no ridge at the sleeve join - so it is now distinguishable from the padded sibling.\n\nWHAT IS STILL WRONG: only framing trim and one construction detail. The bottom edge overshoots the welt pocket by about 40% of the picture height, which pushes the subject up into the top third; the left sleeve edge is nearly clipped and the two margins are unequal; three lapel buttonholes were rendered where the drawing has one; the chin is in frame.\n\nROOT CAUSE: the 'MOVE THE CAMERA BACK' correction was obeyed for width but the bottom-edge and 12%/88% clauses of the same paragraph were not, so the model widened the shot by keeping more chest rather than by pulling back evenly. Attempt 3 should restate the bottom edge as a garment landmark and demand an equal grey margin on both sides, while explicitly freezing the shoulder framing that now works."
+  "notes": "ATTEMPT 3 of 3. The shoulder CONSTRUCTION is right — soft, unpadded, no built-up corner — but it is framed out of its own photograph at both ends, which is a major placement fault for this particular option and not a cosmetic one.\n\nWORTH RECORDING UPSTREAM, because this is the third attempt to lose to the same cause: THE PROMPT CONTRADICTS ITSELF ABOUT FRAMING. The composition template opens every prompt with 'the subject filling 40-80% of the frame' and 'Frame on the shoulder and sleeve head; the detail must read clearly and sharply' — close-crop language. The FRAMING LOCK then says 'THIS IS A WIDE SHOT, NOT A CLOSE CROP. THIS PARAGRAPH OUTRANKS THE CLOSE-CROP MANDATE... MOVE THE CAMERA BACK.' Declaring one paragraph the winner does not make the model drop the other; across three attempts the close-crop language has won every time.\n\nThe general lesson, which applies to every option whose subject is a RELATIONSHIP across the garment rather than a single detail — both shoulders, both lapels, a left/right pocket difference, a symmetric pair — is that the 40-80% dominance default is wrong for them and cannot be overridden by adding a louder paragraph. It has to not be emitted in the first place. That is a change to camera.mjs, not to a correction clause, and it is beyond what a retry can fix.\n\nRecording UNMET honestly rather than waiving. A waiver requires zero critical/major findings and this has a major, so it does not qualify — and it should not: the option is not adequately shown."
 }

@@ -106,6 +106,12 @@ if (args.write) {
       angles: spec.angles,
       counts: spec.counts,
       shapes: spec.shapes,
+      // Shapes the description named but the label does not claim — dropped
+      // from `shapes`, and carried here so the director can turn each into an
+      // explicit NEGATIVE. Without this they are silently discarded, and the
+      // comparative sentence that produced them still reaches the image model
+      // inside the quoted description.
+      negatedShapes: spec.negatedShapes || [],
       spread: spec.spread,
       flags: spec.flags,
     },
