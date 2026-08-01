@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-01T11:36:49.824Z",
+  "updatedAt": "2026-08-01T11:42:53.994Z",
   "rows": [
     {
       "option": "shirt/collar-af1-70",
@@ -96,6 +96,198 @@
       "confidence": "high",
       "why": "Drawing shows a band-only mandarin stand collar: no leaves, band front ends cut square, a narrow vertical gap between the band ends at centre front, a small step where the band meets the shirt front. No angle callout, correctly, since spread is undefined for a band collar. Photo matches on every structural point including the square-cut ends that separate it from the rounded-stand sibling in the same techpack folder. Critically this is one of only two images in the batch photographed with NO necktie and the throat open, so the band - the entire discriminating feature - is fully visible. NOTE: the catalog description contradicts the drawing, describing collar points cut with a squared-off end, i.e. a squared POINT collar. The drawing shows no points at all; the description needs fixing.",
       "gradedAt": "2026-08-01T10:24:06.683Z"
+    },
+    {
+      "option": "sport-coat/cp-jetted",
+      "verdict": "WRONG",
+      "liveImage": "/images/generated/jacket/cp-jetted.webp",
+      "confidence": "high",
+      "why": "Drawing 0110 marks a bare chest slit on the wearer left chest: red stroke 225px long = 23.5% of the drawn shoulder span, raked ~10 degrees upward toward the outside, drawn as a slit with NO flap. The photo shows a flapped pocket at a HIP position. Measured: mouth is a dark slit running x 95 to 880+, essentially level at 1.3 degrees rather than the drawn 10; below it hangs a flap with hem at y 870-890, depth 245px, confirmed by vertical gradient scans at two columns. A besom has no flap at all. Position also contradicts: a full-length vertical dart runs (455,0) to (470,590) and terminates exactly at the pocket mouth - the signature of a hip pocket - and no lapel, gorge, collar or shoulder appears anywhere in frame to support a chest location. File is byte-identical (sha256 0afb0647) to cp-trapezoid, cp-welt-23, cp-welt-25 and cp-welt-27.",
+      "gradedAt": "2026-08-01T11:42:53.992Z"
+    },
+    {
+      "option": "sport-coat/lapel-fishtail",
+      "verdict": "UNSURE",
+      "liveImage": "/images/generated/jacket/lapel-fishtail.webp",
+      "confidence": "medium",
+      "why": "The notch is outside the frame. Drawing 0006 is a notch lapel whose discriminating feature is a near-closed fish-mouth slit: the collar lower edge runs almost horizontally from (327,318) to (400,327) with the lapel upper edge only ~12px below, a slit ~70px long by ~12px gap, i.e. 0.64 and 0.11 of the drawn 110px lapel width. The photo does establish a two-piece collar-and-lapel construction with its own pick-stitched edge, so not a shawl, and the lapel front point at (275,800) subtends ~30 degrees. But the lapel outer edge runs off the top-right corner at (860,50) with no discontinuity and the model neck skin is visible at the top edge, confirming the crop stops at or above the gorge. The only candidate slit in frame measures 40-60px over 620+px, i.e. 2.2-2.4 lapel widths, so it is the front-opening shadow rather than the drawn 0.64-lapel-width fish mouth.",
+      "gradedAt": "2026-08-01T11:42:53.992Z"
+    },
+    {
+      "option": "sport-coat/lapel-shawl-0a",
+      "verdict": "UNSURE",
+      "liveImage": "/images/generated/jacket/lapel-shawl-0a.webp",
+      "confidence": "medium",
+      "why": "The frame cannot settle it. What was measured: the dominant pick-stitched outer edge traces continuously from (830,0) to (130,1060) via a Sobel map on gamma-lifted luminance, with no step, no notch cut-out and no upward peak along its ~1050px visible length, and the two front edges converge to a downward wedge apex at (105,855) with a ~29 degree interior angle - both consistent with a shawl. What could NOT be settled: the frame is cut off above the gorge and below the break, so the shawl defining continuous collar-to-lapel wrap is never in view, and a fine pressed seam from (778,180) to (896,152) meets the outer edge without interrupting it - not a notch or peak, but unresolvable between a two-piece shawl joining seam and a gorge. Decisive for grading regardless: this file is byte-identical (sha256 c24c7c80) to lapel-shawl, lapel-shawl-0005, lapel-shawl-0e, lapel-shawl-d and lapel-shawl-asymmetric - one photo serving all six shawl rows, so it cannot be right for Asymmetric Shawl Collar and Shawl 0A simultaneously.",
+      "gradedAt": "2026-08-01T11:42:53.992Z"
+    },
+    {
+      "option": "sport-coat/lbh-005-hand",
+      "verdict": "OK",
+      "liveImage": "/images/generated/jacket/lbh-005-hand.webp",
+      "confidence": "high",
+      "why": "Drawing 064Q is a macro of a hand-worked keyhole in bright cyan: squared bar-tack at the LEFT, pierced round eye at the RIGHT, straight. Photo shows exactly that in bright cyan on a navy notch lapel. Masked-thread principal-axis profile in 20 bins: photo L/W 7.75 vs drawing 6.44; both straight (sagitta/L +0.007 and +0.006); width profile in both peaks in the end-quarter nearest the eye and is flat elsewhere, giving eye/bar 1.52 photo vs 1.44 drawing - 5.5% agreement on the discriminating ratio. Eye right and squared bar left in both, pierced hole visible at (515,578). Distinguishable from lbh-017 (round head), whose ratio is 1.73 photo vs 1.60 drawing - each photo tracks its own drawing.",
+      "gradedAt": "2026-08-01T11:42:53.992Z"
+    },
+    {
+      "option": "sport-coat/lbh-006-hand",
+      "verdict": "OK",
+      "liveImage": "/images/generated/jacket/lbh-006-hand.webp",
+      "confidence": "high",
+      "why": "Drawing 035C, knot but no seal, is a RED macro: squared knot at one end, a rounded UNSEALED unpierced end at the other, straight. Red-dominant mask with principal-axis profiling: photo L/W 6.18 vs drawing 6.40, a 3.4% match. Both straight (sagitta/L -0.006 and -0.004). Correcting for the drawing axis pointing left, the width profiles agree in direction: both narrowest at the squared end and widest at the far end (1.36 photo, 1.63 drawing). Critically the far end in the photo is a rounded swelling with NO pierced eyelet, unlike lbh-005 and lbh-017 which both show an open hole - which is what no seal calls for.",
+      "gradedAt": "2026-08-01T11:42:53.992Z"
+    },
+    {
+      "option": "sport-coat/lbh-017-hand",
+      "verdict": "OK",
+      "liveImage": "/images/generated/jacket/lbh-017-hand.webp",
+      "confidence": "high",
+      "why": "Drawing 00EC, round head, is a purple macro: squared bar-tack left, large open ROUND head right, straight. MEASUREMENT TRAP CAUGHT MID-FLIGHT: an automated mask first gave eye/bar 2.6 by latching onto lapel shading around the eye; re-measuring the outer stitch envelope by hand off a 4x grid gave bar height 37px and eye 64px, i.e. 1.73 against the drawing 208/130 = 1.60, an 8% agreement. The automated number would have produced a spurious rejection. Length/bar 6.4 vs 7.25. Both dead straight. Eye right and squared bar left in both, purple thread in both. Note the two source drawings are themselves only 0.16 apart on that ratio, so the pair is inherently close at the source.",
+      "gradedAt": "2026-08-01T11:42:53.992Z"
+    },
+    {
+      "option": "sport-coat/lbh-lumi",
+      "verdict": "OK",
+      "liveImage": "/images/generated/jacket/lbh-lumi.webp",
+      "confidence": "high",
+      "why": "Drawing 055F, arc upwards, is a RED macro bowing convex-upward, squared left, curling to a rounded hook right. Red mask plus principal-axis profiling in 20 bins: centreline sagitta/L +0.150 photo vs +0.151 drawing - the curvature signature matches to three significant figures, and it is OPPOSITE IN SIGN to its sibling lbh-milanese-curved at -0.131, so the two arc options are genuinely discriminable. L/W 8.88 vs 7.29 (18% apart). Correcting for the drawing reversed axis, both widen toward the same hooked right end (1.70 photo, 1.66 drawing).",
+      "gradedAt": "2026-08-01T11:42:53.992Z"
+    },
+    {
+      "option": "sport-coat/lbh-milanese-20",
+      "verdict": "OK",
+      "liveImage": "/images/generated/jacket/lbh-milanese-20.webp",
+      "confidence": "high",
+      "why": "Drawing 055U is a keyhole worked in three sequential thread colours with red circled numerals 1, 2, 3 over each segment, eye right. The photo reproduces it segment for segment. Sampling mean RGB per column along the thread at 5% intervals: drawing goes light cyan-blue to 0.35, steps at ~0.375 to a deeper blue through 0.65, steps at ~0.675 to violet-grey; photo goes light blue to 0.35, steps at ~0.375 to deep blue through 0.65, steps at ~0.675 to violet. Both transitions land at the same fractional positions, segment proportions ~37.5/30/32.5 in both. Open round eye right, unsealed left, in both. DEFECT worth flagging separately: the photo has BAKED THE TECH-PACK RED CIRCLED 1-2-3 ANNOTATION INTO THE SHIPPED PRODUCT IMAGE - accurate as a depiction of the drawing, but it is manufacturing markup living inside a customer-facing photograph.",
+      "gradedAt": "2026-08-01T11:42:53.992Z"
+    },
+    {
+      "option": "sport-coat/lbh-milanese-curved",
+      "verdict": "OK",
+      "liveImage": "/images/generated/jacket/lbh-milanese-curved.webp",
+      "confidence": "high",
+      "why": "Drawing 06EG, arc slight downwards, is an ORANGE macro sagging concave-upward, squared left, curling to a rounded hook right. Orange mask plus principal-axis profiling: centreline sagitta/L -0.131 photo vs -0.131 drawing, exact agreement on the discriminating curvature and correctly opposite in sign to lbh-lumi at +0.150. L/W 8.31 vs 7.55 (10%). Accounting for the drawing reversed axis, both are widest at the hooked right end (1.48 photo, 1.55 drawing) and squared at the left. Thread orange in both.",
+      "gradedAt": "2026-08-01T11:42:53.992Z"
+    },
+    {
+      "option": "sport-coat/lbh-pinpoint",
+      "verdict": "OK",
+      "liveImage": "/images/generated/jacket/lbh-pinpoint.webp",
+      "confidence": "high",
+      "why": "Drawing 00ED is a lilac macro: uniform-width bar, squared end at the left, plain rounded end at the right, NO enlarged eye, dead straight. Masked-thread principal-axis profiling gives photo L/W 5.77 against drawing 5.63 - a 2.5% agreement, the tightest of the set. Both straight (sagitta/L +0.003 photo, +0.006 drawing). Width profiles near-uniform in both with only a slight swell toward the right: max/min 1.31 photo vs 1.26 drawing, i.e. no keyhole eye in either, which is precisely what separates this from lbh-005 (eye/bar 1.52) and lbh-017 (1.73). File hash unique.",
+      "gradedAt": "2026-08-01T11:42:53.992Z"
+    },
+    {
+      "option": "sport-coat/lbh-smoking-pipe",
+      "verdict": "OK",
+      "liveImage": "/images/generated/jacket/lbh-smoking-pipe.webp",
+      "confidence": "high",
+      "why": "Drawing 00EF carries a red magnified callout inside an ellipse; at 4.5x it resolves as a teardrop with a narrow POINT at the upper-left widening progressively to a broad ROUND HEAD at the lower-right, length 168px, head/mid-bar ratio ~1.9, and no squared sealing bar-tack at the tail. The photo, resolved with CLAHE at 5x on tone-on-tone navy, shows the same object: narrow rounded tail at (428,676) widening to a round head centred ~(525,755) with an open hole, outer head diameter ~45px against mid-bar ~24px = 1.9, matching the drawing, total length ~152px, and no squared bar-tack at the tail. Orientation matches (tail up-left, head down-right). The absent seal and the progressive taper are what separate it from lbh-005, lbh-017 and lbh-pinpoint, all of which show a crisp squared bar.",
+      "gradedAt": "2026-08-01T11:42:53.992Z"
+    },
+    {
+      "option": "sport-coat/lp-patch",
+      "verdict": "WRONG",
+      "liveImage": "/images/generated/jacket/lp-patch.webp",
+      "confidence": "high",
+      "why": "Drawing 02J1 red-outlines an applied patch on both hip fronts: a closed quadrilateral, top edge only 6.8 degrees off level, height/width 585/295 = 1.98, square top corners, softly rounded bottom corners, NO flap. The photo shows a flap pocket instead. Measured: flap top fold from (745,245) to (78,595) = 27.7 degrees BELOW horizontal, raked not level; flap depth 205px left end, 255px right; mouth length ~750px so depth/length 0.27-0.34, the inverse proportion of the drawn 1.98:1. Profiled for a patch body before judging: over rows 830-1210 the column-mean absolute gradient never exceeds 1.94 (a broad soft drape fold spread over ~30 columns) against 4.45 in the flap-edge band, and there is no localized vertical gradient where a patch side seam would descend. No patch bag, no bottom edge, no side seams below the flap - it is a slanted flap pocket, a different option. File is byte-identical (sha256 4660e3dc) to 12 other options including cp-patch, lp-patch-flap, lp-patch-rounded and all three lp-patch-btn-tab variants.",
+      "gradedAt": "2026-08-01T11:42:53.991Z"
+    },
+    {
+      "option": "suit-2pc/ext-no-btn",
+      "verdict": "OK",
+      "liveImage": "/images/generated/trousers/ext-no-btn.webp",
+      "confidence": "high",
+      "why": "Drawing 3411 marks three things: a round BUTTON on the waistband, a small buttonhole slot at the waistband end, and critically NO extension tab, the waistband terminating flush at the fly. Siblings differ on exactly these: 3410 replaces the round button with a filled hook bar and has no button, 3412/3413/342A add a large protruding tab respectively pointed, rounded and square, 3416 shows TWO buttons. The photo shows a single four-hole button, an adjacent horizontal buttonhole slot, no protruding extension tab of any shape beyond the fly line, and no hook bar. Button count 1, tab absent, hook absent - each attribute individually excludes a different sibling, so this is a three-way independent confirmation. Minor rendering defect not affecting identity: button and buttonhole sit side by side rather than the button passing through the hole.",
+      "gradedAt": "2026-08-01T11:41:40.168Z"
+    },
+    {
+      "option": "suit-2pc/knot-d",
+      "verdict": "OK",
+      "liveImage": "/images/generated/trousers/knot-d--f35c7b45.webp",
+      "confidence": "high",
+      "why": "Drawing knot-d shows a HORIZONTAL pocket whose end callout carries a straight vertical stitched bar with a semicircular arc bulging outward from it - the flat side plus the bow of a D. At 5x the photo shows precisely this at the left end of a horizontal welt pocket: a dense vertical bartack bar spanning the pocket end with a clean semicircular arc sweeping outward into the panel, closing the D. Both the pocket orientation (horizontal, matching the drawing rather than the vertical pockets of knot-i and knot-dash) and the compound bar-plus-arc shape match. Separable from knot-hip-i, which shares the horizontal pocket but has a plain vertical I bar with no arc. Thread is tonal.",
+      "gradedAt": "2026-08-01T11:41:40.168Z"
+    },
+    {
+      "option": "suit-2pc/knot-dash",
+      "verdict": "OK",
+      "liveImage": "/images/generated/trousers/knot-dash--98cf86c4.webp",
+      "confidence": "medium",
+      "why": "Drawing knot-dash shows a VERTICAL pocket whose end callout carries only a SHORT dash, clearly shorter than the mouth width and offset to one side, in deliberate contrast to knot-i whose bar spans the full mouth. At 6x with brightness enhancement the photo shows a compact densely-stitched short bar tack at the lower end of a vertical pocket opening, projecting to one side of the slit rather than bridging it. Orientation and the short one-sided form both match, and it is visibly a different construction from the knot-i photo. Medium rather than high because the pocket is rendered as a very narrow closed slit rather than an open mouth with two measurable edges, so the tack length could not be expressed as a fraction of mouth width - the comparison is qualitative.",
+      "gradedAt": "2026-08-01T11:41:40.168Z"
+    },
+    {
+      "option": "suit-2pc/knot-hip-i",
+      "verdict": "OK",
+      "liveImage": "/images/generated/trousers/knot-hip-i.webp",
+      "confidence": "high",
+      "why": "Drawing knot-hip-i shows a HORIZONTAL hip pocket - the callout draws both welt lips as horizontal lines - with a vertical I bar at the pocket end spanning the full height across both lips. At 5x the photo shows exactly that: a horizontal double-welt jetted hip pocket with a dense vertical bartack at its left end running the full depth of the opening and crossing both welt lips. Pocket type (horizontal jetted hip, not the vertical front pocket used by knot-i and knot-dash), bar orientation and extent all match. Separable from knot-d, which shares the horizontal pocket but adds the semicircular arc absent here.",
+      "gradedAt": "2026-08-01T11:41:40.168Z"
+    },
+    {
+      "option": "suit-2pc/knot-i",
+      "verdict": "OK",
+      "liveImage": "/images/generated/trousers/knot-i.webp",
+      "confidence": "high",
+      "why": "knot-i shows a VERTICAL pocket with a straight bar of stitching running the FULL WIDTH across the mouth at its end, edge to edge. At 5x the photo shows exactly that: a bar tack spanning edge to edge between the two sides of a vertical pocket opening at its lower end, straight, no curved arc. That separates it from knot-dash (short tack well under mouth width, offset to one side), knot-d (bar plus semicircular arc on a horizontal pocket) and knot-hip-i (vertical bar on a horizontal jetted hip pocket). DEFECT not reconciled: the tack is rendered in bright RED thread, whereas red in this drawing set is the highlight convention marking the graded feature - the same red marks the seam in 3130, the welt in 3132 and the stripe in 3121. The generator appears to have literalised the highlight as thread colour. Not failed on it because the graded attribute is tack GEOMETRY, which is correct.",
+      "gradedAt": "2026-08-01T11:41:40.168Z"
+    },
+    {
+      "option": "suit-2pc/pocket-stitch-015",
+      "verdict": "WRONG",
+      "liveImage": "/images/generated/trousers/pocket-stitch-015.webp",
+      "confidence": "medium",
+      "why": "Matches the No Topstitch sibling, not this option. The field discriminators are presence, offset and count of a stitch line along the front pocket mouth: 31A1 (0.15cm) puts the red line hard against the pocket seam with no gap, 31A3 (0.6cm) shows a clear band of fabric between seam and stitch, 31A6 has no red at all, 31A9 shows two parallel lines. At 5x with brightness 2.0 and contrast 1.6 - a setting at which the individual twill wales of the cloth are clearly resolved - there is NO stitching visible anywhere in the frame, not along the pocket mouth and not along the fly J. Every seam renders as a bare pressed fold. Absence is treated as evidence rather than a resolution limit because the sibling photo pocket-stitch-pick-015, at the same 0.15cm scale and same render size, resolves individual stitches easily.",
+      "gradedAt": "2026-08-01T11:41:40.168Z"
+    },
+    {
+      "option": "suit-2pc/pocket-stitch-pick-015",
+      "verdict": "OK",
+      "liveImage": "/images/generated/trousers/pocket-stitch-pick-015.webp",
+      "confidence": "high",
+      "why": "Drawing 3302 highlights a stitch line hugging the front pocket mouth with no visible gap - the 0.15 cm condition. At 5x with brightness enhancement the opening carries a clear line of DISCRETE, EVENLY SPACED RAISED STITCHES sitting directly on the folded edge, unmistakably a hand pick stitch rather than a continuous machine line, with no band of fabric between edge and stitch. That excludes pocket-stitch-none, both 0.6 cm siblings (31A3 shows a visibly separated line) and pocket-stitch-double (two parallel lines; only one here). SOURCE PROBLEM worth recording: 31A1 (0.15 cm topstitch) and 3302 (0.15 cm pick stitch) are graphically near-identical - neither dashes nor otherwise encodes topstitch versus pick stitch - so the drawing alone cannot separate this option from pocket-stitch-015. The photograph settles it here.",
+      "gradedAt": "2026-08-01T11:41:40.168Z"
+    },
+    {
+      "option": "suit-2pc/quarter-top",
+      "verdict": "WRONG",
+      "liveImage": "/images/generated/jacket/quarter-top.webp",
+      "confidence": "medium",
+      "why": "No pocket opening is depicted at all. Drawing 3104 belongs to a 6-member shared template registered to a common frame (waistband depth 104px, belt-loop pitch 445.5px). Sibling 3130 red highlight sits exactly on the full-height vertical line, proving that line is the SIDE SEAM; the graded feature is a stitched slant mouth running from the waistband down to terminate ON the side seam with a bartack. The photo shows only one crisp stitched full-height seam on the silhouette and one SOFT PRESSED FOLD that starts at the waistband and fades out around y=1000 with no bartack, no corner and no stitched mouth edge - confirmed at 4x on the convergence region. Taking the fold as the mouth anyway gives a corrected offset of 1.28 waistband-depths against the drawn 0.62, roughly double and landing between the 3.2 and 5.1 siblings, with a vertical run of 6.4wb against the drawn 2.6wb. Failure is at the coarse level - no depicted mouth - not the fine cm level. No centimetre figure is recoverable; the drawings carry no printed callout.",
+      "gradedAt": "2026-08-01T11:41:40.155Z"
+    },
+    {
+      "option": "suit-2pc/slant-32-stripe",
+      "verdict": "OK",
+      "liveImage": "/images/generated/trousers/slant-32-stripe.webp",
+      "confidence": "medium",
+      "why": "Drawing 3121 red-highlights the pocket mouth itself, i.e. contrast piping along the opening, on the same geometry as plain sibling 3101 (top corners agree, 424 vs 427 in the registered frame - a cross-check on the calibration). The photo shows a slant front pocket whose mouth carries distinct NAVY CONTRAST PIPING its full length, from the waistband seam at (405,272) to a bartack corner at (280,706) near the side seam. Mouth Dy 3.84wb against the drawn 3.95wb for 3.2 cm, a 3% match and closer than 5.1 cm at 4.16wb. Reservation stated plainly: the corrected Dx reads 1.29wb against a drawn 0.89wb, about 45% over. The offset excludes the 2.0 and 2.5 stripe siblings by more than 2x but does NOT cleanly separate 3.2 from 5.1; the mouth-length ratio is the tiebreaker and favours 3.2.",
+      "gradedAt": "2026-08-01T11:41:40.168Z"
+    },
+    {
+      "option": "suit-2pc/slant-51",
+      "verdict": "OK",
+      "liveImage": "/images/generated/trousers/slant-51.webp",
+      "confidence": "medium",
+      "why": "Matches drawing 3102 element for element: front pleat hanging from the waistband, slant mouth as a crisp double line from (285,245) descending to a clean V bartack at (410,575) ON the side seam, side seam continuing full height below it, and beyond it a back dart over a horizontal double-jetted BACK pocket - the back-pocket furniture present in every drawing of this family. Landmarks: waistband depth 106px (106/105 at two columns), belt-loop pitch 327.5px. Mouth Dx 1.18wb, Dy 3.11wb. Horizontal foreshortening factor from belt-loop-pitch/waistband (photo 3.09 vs drawing 4.28) = 0.72, giving a corrected offset of 1.63wb against the drawn 1.77wb for 5.1 cm (-8%) and against 0.89wb for 3.2 cm (+83%), comfortably excluding every narrower sibling. Unresolved: the mouth vertical run is 3.11wb against a drawn 4.16wb, and the side seam is not visible above the bartack.",
+      "gradedAt": "2026-08-01T11:41:40.168Z"
+    },
+    {
+      "option": "suit-2pc/watch-left-besom",
+      "verdict": "OK",
+      "liveImage": "/images/generated/jacket/watch-left-besom.webp",
+      "confidence": "high",
+      "why": "Drawing 3178 red-highlights a small horizontal pocket immediately below the waistband seam on the viewer left, drawn as a filled slit (besom) rather than an outlined raised strip. Siblings differ precisely on those axes: 3188 puts the same besom on the right, 3181 draws the right one as an OUTLINED welt, 3180 a narrower regular mark, 3169 none. The photo reproduces 3178 whole layout: small horizontal pocket at x 215-360 directly under the waistband on the viewer left, base-template slant front pocket converging to a V at (455,720), horizontal jetted back pocket at x 580-930 with its back dart above. At 7x the small pocket resolves as a genuine DOUBLE-JETTED BESOM - two narrow parallel lips framing a slit with bartacked ends - separating it from watch-left-welt. Limitation: left here is viewer-side; neither drawing nor photo carries a cue fixing wearer-left, so consistency was verified rather than absolute handedness.",
+      "gradedAt": "2026-08-01T11:41:40.168Z"
+    },
+    {
+      "option": "suit-2pc/welt-pocket",
+      "verdict": "WRONG",
+      "liveImage": "/images/generated/jacket/welt-pocket.webp",
+      "confidence": "high",
+      "why": "The graded feature is absent and a different garment part is foregrounded. Drawing 3132 highlights a VERTICAL WELT STRIP on the front panel: row-tracing gives two parallel edges 26-27px apart (0.25 of the 104px waistband depth) running 4.5wb long, centred 0.66wb inboard of the side seam - a long single-welt opening parallel to the seam. The drawn welt should appear near x~297 in the photo and be 18-29px wide. The front panel there is blank: at 3x it contains only two soft pressed folds ~0.70wb apart, about 3x too wide for a welt, with no welt lips, no opening, no bartacks. The only pocket in frame is the horizontal double-jetted BACK pocket with its back dart above it - base-template furniture appearing in all six drawings of this family.",
+      "gradedAt": "2026-08-01T11:41:40.168Z"
     },
     {
       "option": "suit-3pc/peak-collar-stand",

@@ -1365,3 +1365,82 @@ garment's own construction — the seam running the full length of the leg with 
 termination, against the pressed crease which starts AT the waistband seam and runs to the hem. Those
 two are distinguishable in the drawing without reference to either grader's reasoning. Everything else
 follows from it.
+
+---
+
+## CONTESTED DIRECTION: RESOLVED — and against my own earlier fix
+
+A third grader settled it independently, from the drawing rather than from any render:
+
+> Sibling drawing **`3130`'s red highlight sits exactly on the full-height vertical line**, which proves
+> that line is the **SIDE SEAM**, not a pressed front crease. The template is a **rear-three-quarter
+> view**: front panel with the graded slant pocket mouth on the left, side seam, then back dart +
+> horizontal jetted **back** pocket on the right.
+
+That is decisive because it does not infer the seam from the photograph at all — it uses a *sibling
+drawing whose graded feature IS the seam* to label the line. Two independent graders (trousers,
+suit-2pc) now agree the full-height vertical is the side seam, and both note the back-pocket furniture
+that only a rear-three-quarter view would contain.
+
+**Grader A was wrong, and so is the catalog prose I wrote on its reading.** It reported the mouth
+running "inboard to the pressed front crease" — but what it identified as the pressed crease is the
+side seam, and the drawing is not a front view. `jeans-square` and `jeans-arc` descriptions currently
+say the mouth "sweeps inboard", which now looks backwards.
+
+**What must NOT be concluded from this:** that the jeans renders are wrong. Grader A measured *travel
+of 0.71 and 0.78 belt-loop pitches against drawn 0.75 and 0.78* — those magnitudes are landmark-
+normalised and stand regardless of which end is called inboard. It is the *naming* that inverted, not
+necessarily the geometry. The renders may still match; the prose describing them does not.
+
+**Next action, zero credits:** re-read `3133`–`3136` with the side seam fixed by `3130`'s highlight,
+restate the jeans descriptions in terms of *"from the waistband down to terminate ON the side seam"*,
+then re-measure the two renders against that frame before regenerating anything.
+
+### What the slant cm figures actually mean
+
+Established in the same pass, and previously unknown: **the `N cm` in "2.0 / 2.5 / 3.2 / 5.1 cm Slant
+Pocket" is the horizontal offset of the mouth's TOP CORNER from the SIDE SEAM.** Measured on a
+registered common frame: 58 / 64 / 92 / 184 px against a 104 px waistband depth — 0.56 / 0.62 / 0.89 /
+1.77 waistband-depths. The ladder is self-validating (drawn travels 79 px and 198 px, ratio 2.51,
+against labels 5.1/2.0 = 2.55).
+
+**Anyone regenerating the slant family needs this**, or they reproduce the `quarter-top` failure —
+which rendered a soft pressed fold with no bartack, no corner and no stitched mouth edge at all.
+
+**Also established: 2.0 vs 2.5 cm differ by 6 px on a 104 px waistband — about 6% of a waistband
+depth. No photograph will resolve that.** Another merge/reprice candidate, alongside `round-53`.
+
+## Duplicate assets are far worse than the collision tool reported
+
+`tools/image_collisions.mjs` counted 208 rows across 24 same-field collisions. The graders found
+single files serving far more:
+
+- `4660e3dc…` — **13** lower/chest-pocket options (`lp-patch`, `cp-patch`, `lp-patch-flap`,
+  `lp-patch-rounded`, all three `lp-patch-btn-tab-*`, `lp-water-drop`, …)
+- `c24c7c80…` — **all six shawl rows**, including `lapel-shawl-asymmetric`. One photo cannot be right
+  for "Asymmetric Shawl Collar" and "Shawl 0A" at once.
+- `0afb0647…` — `cp-jetted` + `cp-trapezoid` + `cp-welt-23/25/27`
+- `e18953…` (11 lapel options), `d159c25f…` (11), `d1ca0f96…` (10)
+
+Several are **mutually exclusive by construction**. This needs a repo-wide hash audit rather than
+option-by-option review — `image_collisions.mjs` should be re-run and its scope questioned, since it
+evidently under-counts.
+
+## Live defect: manufacturing markup inside a customer-facing photograph
+
+`lbh-milanese-20` has the tech pack's **red circled ①②③ annotation baked into the shipped image**.
+Accurate as a depiction of the drawing, and the colour-segment proportions match to within a few
+percent — but circled numerals are manufacturing documentation, not garment. The prompt's
+ANNOTATIONS-ARE-NOT-THE-GARMENT clause exists precisely for this and did not reach this legacy image.
+
+## The lapel buttonholes are the best work in the catalog
+
+Eight options, each with a **unique file**, each reproducing its drawing's measurable signature:
+`lbh-pinpoint` L/W 5.77 vs 5.63 · `lbh-lumi` sagitta/L **+0.150 vs +0.151** · `lbh-milanese-curved`
+**−0.131 vs −0.131**. The two arc options carry *opposite curvature signs* in both drawing and photo,
+so they are genuinely discriminable. This is what the rest of the catalog should look like.
+
+One trap caught mid-flight, exactly per this project's own discipline: on `lbh-017-hand` an automated
+mask returned eye/bar = 2.6 by latching onto lapel shading around the eye; hand-measuring the stitch
+envelope off a 4× grid gave 1.73 against the drawing's 1.60. **The automated number would have
+produced a spurious rejection.**
