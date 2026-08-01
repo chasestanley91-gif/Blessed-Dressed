@@ -74,14 +74,25 @@ if (args.write) {
     console.error(`ERROR: --orientation must be one of: ${ORIENTATIONS.join(' | ')}`);
     process.exit(1);
   }
-  if (!spec.hasBlueprint) {
+  // SPEC-ONLY MODE (owner ruling 2026-08-01: the drafting specification is LAW;
+  // illustrations aid, they do not direct). --spec-only admits an option with NO
+  // drawing into the pipeline on the strength of its spec-derived description
+  // alone. It never bypasses a real drawing: if one exists, the flag is refused.
+  const SPEC_ONLY = process.argv.includes('--spec-only');
+  if (SPEC_ONLY && spec.hasBlueprint) {
+    console.error('ERROR: --spec-only refused — this option HAS an illustration. Trace the drawing; drop --spec-only.');
+    process.exit(1);
+  }
+  if (!spec.hasBlueprint && !SPEC_ONLY) {
     console.error('ERROR: this option has no illustration — nothing to trace. Not eligible for the photo pipeline.');
+    console.error('If its catalog description carries owner drafting-spec geometry, re-run with --spec-only.');
     process.exit(1);
   }
 
   const forbidden = computeForbidden(spec);
   const record = {
     schema: 'garment-spec/v1',
+    specOnly: SPEC_ONLY || undefined,
     addr: spec.addr,
     productId: spec.productId,
     sectionId: spec.sectionId,
@@ -123,7 +134,10 @@ if (args.write) {
     },
     forbidden,
     excluded: spec.excluded,
-    generate: spec.generate,
+    // spec-only options are generable BY DESIGN — the false that spec.generate
+    // computes for them comes solely from the missing blueprint, which the
+    // owner's ruling explicitly waives for these options.
+    generate: SPEC_ONLY ? !spec.excluded : spec.generate,
     extractedAt: new Date().toISOString(),
   };
 
