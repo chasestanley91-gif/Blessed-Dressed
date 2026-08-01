@@ -725,3 +725,57 @@ Handedness was established independently rather than assumed — on `loops-one-r
 the wearer's side two ways at once (the fly J-topstitch lying viewer-right of the fold edge, giving
 standard left-over-right; and the waistband extension anchored viewer-right with its buttoned tip
 travelling viewer-left). That is the discipline the unresolved coin-pocket side question needs.
+
+### Count audit part 2 (buttons) — a systematic family failure
+
+**12 more options: 5 MATCH, 5 MISMATCH, 2 UNCOUNTABLE.** Combined across both halves of the sweep:
+
+```
+  24 count-claiming options
+  15  MATCH
+   7  MISMATCH
+   2  UNCOUNTABLE  (a necktie or a crop prevents the check)
+```
+
+**FAM-SHIRT-PLACKET-SHORT.** The shirt front-button family fails in one consistent way: every render
+places its topmost button on the **collar stand** and then under-delivers the placket count.
+
+| option | promises | placket buttons rendered |
+|---|---:|---:|
+| `shirt/btn-7` | 7 | **6** |
+| `shirt/btn-8` | 8 | **7** |
+| `shirt/btn-9` | 9 | **7** |
+
+`btn-8` and `btn-9` render the same count, so two options a customer must choose between are
+effectively identical.
+
+The obvious counter-explanation — that the label might be counting the collar-stand button — was
+ruled out against the source: **all four tech packs draw a collar-stand mark PLUS exactly the
+labelled number of placket buttons.** The illustrations are correct; only the photographs are wrong.
+
+Compounding it, three of these images are cropped through the placket: on `btn-8` the button pitch
+is about 155px and the frame ends about 80px above where an eighth would fall, so the promised count
+**could not fit in frame regardless of what was rendered**.
+
+**One bad render, three products.** `sport-coat/sb-4`, `suit-2pc/sb-4` and `suit-3pc/sb-4` are all
+served by the single file `/images/generated/jacket/sb-4.webp` (md5 `e47bc06a…`) — the one already
+proven to show three buttons for a four-button option. Fixing it once fixes three rows; leaving it
+mis-sells on three products.
+
+**`shirt/cs-round-2btn` is UNCOUNTABLE for a styling reason that is already a written rule.** A
+knotted necktie covers the lower collar stand where the second button would sit, so the promised
+pair can neither be seen nor ruled out. `photography-rules.md` already says a necktie is worn only
+where the tie is required to demonstrate the option — tab and wing collars. A collar-stand option
+must never be shot with one.
+
+### A blind spot in my own collision tool, found by this sweep
+
+`tools/image_collisions.mjs` hashes bytes. `btn-7`, `btn-8` and `btn-9` are three **different** files
+(`157e98f1…`, `fb75592d…`, `efdb69c7…`) that render the **same count**. The tool cannot see that, and
+would report them as three healthy distinct images.
+
+So the 208 same-field collisions it reports are a **floor, not a ceiling**: they are the cases where
+the identical file was reused. Options that were generated separately and merely came out
+indistinguishable — which the 24-row sample suggests is the larger population, at 37.5% INDISTINCT —
+are invisible to it and can only be found by looking. Worth stating plainly next to that 208, so the
+number is not read as the full extent of the problem.
