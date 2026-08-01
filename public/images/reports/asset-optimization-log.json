@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-01T22:04:56.735Z",
+  "at": "2026-08-01T22:12:46.391Z",
   "settings": {
     "maxWidth": 1400,
     "quality": 82,
@@ -7,30 +7,30 @@
   },
   "applied": true,
   "counts": {
-    "masters": 688,
+    "masters": 689,
     "converted": 1,
-    "skipped": 687,
+    "skipped": 688,
     "failed": 0,
     "repointed": 0
   },
   "bytes": {
-    "before": 1922613,
-    "after": 116914,
-    "savedPct": 93.9
+    "before": 1509567,
+    "after": 45256,
+    "savedPct": 97
   },
   "note": "targetSha1 is the derivative; sourceSha1 is the PNG master QC graded. The master and publish_approved.mjs byte-identity gate are untouched.",
   "results": {
     "ok": [
       {
-        "master": "public\\images\\generated\\suit-2pc\\lapel-shawl-0e.png",
-        "masterBytes": 1922613,
-        "sourceSha1": "28f694ed2f0d9e02295da38c328c264e3abeee76",
-        "target": "public\\images\\generated\\suit-2pc\\lapel-shawl-0e.webp",
-        "targetBytes": 116914,
-        "targetSha1": "cd1dbef29342a2371a1f498f55dcc4f47b845148",
+        "master": "public\\images\\generated\\suit-2pc\\lapel-shawl-0005.png",
+        "masterBytes": 1509567,
+        "sourceSha1": "d9f348c548734cc6d6ff8b6326252cfae7526887",
+        "target": "public\\images\\generated\\suit-2pc\\lapel-shawl-0005.webp",
+        "targetBytes": 45256,
+        "targetSha1": "9c14d3bfb16464851849afb39bba0071fd2f3cde",
         "quality": 82,
         "width": 1400,
-        "web": "/images/generated/suit-2pc/lapel-shawl-0e.webp"
+        "web": "/images/generated/suit-2pc/lapel-shawl-0005.webp"
       }
     ],
     "skipped": [
@@ -1752,6 +1752,10 @@
       },
       {
         "master": "public\\images\\generated\\suit-2pc\\jeans-round.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\lapel-shawl-0e.png",
         "reason": "derivative already exists"
       },
       {

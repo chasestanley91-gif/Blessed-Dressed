@@ -687,3 +687,16 @@ First generation under the owner drafting-spec authority ruling. Spec-derived de
 replacing the ca22563b317d 6-way shawl collision copy on those rows (--allow-swap per the
 approved campaign plan). Shawl collision group now 5. Attempts-per-shipped this wave: 1.0
 vs 1.75 historical. Credits after: ~794.0.
+
+## 2026-08-01 — lapel-shawl-0005: attempt 1 FAIL (crop hid the narrow foot), attempt 2 PASS (1.0 credits total)
+
+Attempt 1 (job d02694bb): correct shape/taper/styling but the chest-up crop ended above the
+crossing — the 0005 discriminator (74% taper to a narrow foot) was out of frame, the exact
+0a family failure mode. FAIL logged with a descriptive correction (waist-up, full lapel run,
+foot ~1/3 of widest width, termination in the lower quarter). Attempt 2 (job 5b6681ab) landed
+the correction precisely; PASS 9x98, published with fan-out, replacing the ca22563b317d
+collision copy. Shawl collision group now 4 (lapel-shawl, -d, -0a, -asymmetric).
+Session total: 3 generations, 2 shipped -> 1.5 attempts/shipped. Credits after: ~793.0.
+LESSON (generalises to every taper/ladder family): when the discriminator lives at the
+BOTTOM of the option, the base prompt's chest-up default crops it — build_prompt should
+frame waist-up for any option whose spec names a foot/termination/crossing feature.

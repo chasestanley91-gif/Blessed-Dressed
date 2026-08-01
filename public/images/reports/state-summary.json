@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-08-01T22:05:38.568Z",
+  "generatedAt": "2026-08-01T22:12:51.727Z",
   "generatedBy": "tools/project_state.mjs",
   "repo": ".",
   "catalog": "data-store/options",
   "totals": {
     "total": 2862,
     "inScope": 1759,
-    "shipped": 103,
+    "shipped": 104,
     "shipped-waived": 15,
     "passed-not-shipped": 0,
     "waived-not-shipped": 0,
@@ -14,7 +14,7 @@
     "failed-retry-due": 25,
     "unmet": 8,
     "generated-awaiting-qc": 4,
-    "prompt-built": 30,
+    "prompt-built": 29,
     "spec-only": 1,
     "legacy-shipped-unverified": 862,
     "not-started": 700,
@@ -64,7 +64,7 @@
     "suit-2pc": {
       "total": 600,
       "inScope": 405,
-      "shipped": 38,
+      "shipped": 39,
       "shipped-waived": 3,
       "passed-not-shipped": 0,
       "waived-not-shipped": 0,
@@ -72,7 +72,7 @@
       "failed-retry-due": 5,
       "unmet": 2,
       "generated-awaiting-qc": 3,
-      "prompt-built": 17,
+      "prompt-built": 16,
       "spec-only": 0,
       "legacy-shipped-unverified": 212,
       "not-started": 125,
@@ -138,12 +138,12 @@
       "out-of-scope": 0
     }
   },
-  "verifiedShipped": 118,
-  "verifiedShippedClean": 103,
+  "verifiedShipped": 119,
+  "verifiedShippedClean": 104,
   "verifiedShippedWaived": 15,
-  "verifiedShippedPct": "6.7",
+  "verifiedShippedPct": "6.8",
   "pipelineDirs": 200,
-  "generatedFiles": 1376,
+  "generatedFiles": 1378,
   "sharedBlueprintIllustrations": 448,
   "sharedBlueprintOptions": 1412,
   "credits": {
@@ -176,8 +176,8 @@
         "8559bce7d538 — 6 options share 1 image (6 filename(s)): lower-pocket/lp-jetted-4 | lower-pocket/lp-straight-jetted | lower-pocket/lp-welt-10 | lower-pocket/lp-welt-12 | lower-pocket/lp-welt-15 | lower-pocket/lp-jetted-btn-tab",
         "bd8b61e8d40d — 6 options share 1 image (6 filename(s)): lower-pocket/lp-inverted-flap | lower-pocket/lp-inverted-flap-btn | lower-pocket/lp-inverted-angled-flap-btn | lower-pocket/lp-box-pleat-flap | lower-pocket/lp-angled-box-pleat | lower-pocket/lp-multi-pleat",
         "5580d6e85db4 — 5 options share 1 image (5 filename(s)): lapel-style/lapel-notch-50 | lapel-style/lapel-notch-55 | lapel-style/lapel-notch-65 | lapel-style/lapel-notch-73 | lapel-style/lapel-notch-tab-basic",
-        "ca22563b317d — 5 options share 1 image (5 filename(s)): lapel-style/lapel-shawl | lapel-style/lapel-shawl-d | lapel-style/lapel-shawl-0a | lapel-style/lapel-shawl-0005 | lapel-style/lapel-shawl-asymmetric",
         "60aa2e9282f7 — 5 options share 1 image (5 filename(s)): chest-pocket/cp-welt-23 | chest-pocket/cp-welt-25 | chest-pocket/cp-welt-27 | chest-pocket/cp-jetted | chest-pocket/cp-trapezoid",
+        "ca22563b317d — 4 options share 1 image (4 filename(s)): lapel-style/lapel-shawl | lapel-style/lapel-shawl-d | lapel-style/lapel-shawl-0a | lapel-style/lapel-shawl-asymmetric",
         "ed619110ab18 — 4 options share 1 image (4 filename(s)): chest-pocket/cp-welt-curved-23 | chest-pocket/cp-welt-curved-25 | chest-pocket/cp-welt-curved-27 | chest-pocket/cp-welt-curved-29",
         "a673d2f8828c — 3 options share 1 image (3 filename(s)): cuff-style/cuff-british | cuff-style/cuff-turnback-35 | cuff-style/cuff-turnback-40",
         "dec3294803e6 — 2 options share 1 image (2 filename(s)): lapel-style/lapel-peak-99 | lapel-style/lapel-peak-114",
@@ -305,7 +305,7 @@
       "severity": "warning",
       "code": "ORPHAN_IMAGE_FILE",
       "message": "Generated image on disk is not referenced by any catalog option, and has no wired .png/.webp counterpart.",
-      "count": 232,
+      "count": 234,
       "items": [
         "/images/generated/jacket/ep-round.png",
         "/images/generated/jacket/ep-round.webp",
@@ -313,6 +313,8 @@
         "/images/generated/jacket/lapel-notch-68.webp",
         "/images/generated/jacket/lapel-peak-120-curved.png",
         "/images/generated/jacket/lapel-peak-120-curved.webp",
+        "/images/generated/jacket/lapel-shawl-0005.png",
+        "/images/generated/jacket/lapel-shawl-0005.webp",
         "/images/generated/jacket/lapel-shawl-0e.png",
         "/images/generated/jacket/lapel-shawl-0e.webp",
         "/images/generated/jacket/slant-32-stripe.png",
@@ -354,9 +356,7 @@
         "/images/generated/shirt/collar-dbl-cutaway-55-btn.png",
         "/images/generated/shirt/collar-dbl-cutaway-55-btn.webp",
         "/images/generated/shirt/collar-dr-point-58.png",
-        "/images/generated/shirt/collar-dr-point-58.webp",
-        "/images/generated/shirt/collar-french-75.png",
-        "/images/generated/shirt/collar-french-75.webp"
+        "/images/generated/shirt/collar-dr-point-58.webp"
       ]
     },
     {

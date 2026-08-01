@@ -3758,6 +3758,53 @@
           ]
         }
       ]
+    },
+    {
+      "at": "2026-08-01T22:12:46.736Z",
+      "by": "tools/publish_approved.mjs",
+      "count": 1,
+      "rowCount": 3,
+      "fanout": true,
+      "options": [
+        {
+          "product": "suit-2pc",
+          "option": "lapel-shawl-0005",
+          "field": "lapel-style",
+          "identity": "lapel-style/lapel-shawl-0005",
+          "image": "/images/generated/suit-2pc/lapel-shawl-0005.webp",
+          "master": "/images/generated/suit-2pc/lapel-shawl-0005.png",
+          "previous": "/images/generated/jacket/lapel-shawl-0005.webp",
+          "preservedBlueprint": null,
+          "verdict": "PASS",
+          "waived": false,
+          "qcAttempt": 2,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 98,
+          "rows": [
+            {
+              "product": "sport-coat",
+              "section": "lapel",
+              "field": "lapel-style",
+              "previous": "/images/generated/jacket/lapel-shawl-0005.webp",
+              "preservedBlueprint": null
+            },
+            {
+              "product": "suit-2pc",
+              "section": "lapel",
+              "field": "lapel-style",
+              "previous": "/images/generated/jacket/lapel-shawl-0005.webp",
+              "preservedBlueprint": null
+            },
+            {
+              "product": "suit-3pc",
+              "section": "lapel",
+              "field": "lapel-style",
+              "previous": "/images/generated/jacket/lapel-shawl-0005.webp",
+              "preservedBlueprint": null
+            }
+          ]
+        }
+      ]
     }
   ]
 }
