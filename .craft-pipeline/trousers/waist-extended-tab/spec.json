@@ -1,0 +1,57 @@
+{
+  "schema": "garment-spec/v1",
+  "specOnly": true,
+  "addr": "trousers > waistband > waistband-style > waist-extended-tab",
+  "productId": "trousers",
+  "sectionId": "waistband",
+  "fieldId": "waistband-style",
+  "optionId": "waist-extended-tab",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\trousers.json",
+  "source": "json",
+  "label": "Extended Tab Waistband",
+  "description": "Extended tab waistband — one side projects 5 cm to 15 cm beyond center front and overlaps the opposite side, so closure sits away from the fly. The front waist becomes one uninterrupted line; Florentine bespoke character.",
+  "fieldLabel": "Waistband Style",
+  "sectionLabel": "Waistband",
+  "part": "trouser-waistband",
+  "garment": {
+    "noun": "pair of bespoke wool tailored trousers",
+    "fabric": "fine wool trouser cloth with visible weave"
+  },
+  "view": {
+    "orientation": "front",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": false,
+  "measured": {
+    "dimensions": [
+      "5 cm",
+      "15 cm"
+    ],
+    "angles": [],
+    "counts": [],
+    "shapes": [
+      "extended-tab waistband"
+    ],
+    "negatedShapes": [],
+    "spread": [],
+    "flags": [
+      "tab fastening",
+      "extended waistband tab"
+    ]
+  },
+  "illustration": {
+    "path": null,
+    "disk": null,
+    "exists": false,
+    "remote": false
+  },
+  "forbidden": [
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-08-01T23:17:05.784Z"
+}

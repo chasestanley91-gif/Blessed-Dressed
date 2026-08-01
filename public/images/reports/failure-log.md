@@ -743,3 +743,14 @@ declared the asymmetry as THE option and removed it from the Avoid list). All SI
 options now ship distinct verified images; the ca22563b317d 6-way group is OFF the blocking
 list (DISTINCT_OPTION_IMAGE_COLLISION 14 -> 13 families). Session: 8 generations / 7 shipped
 / 4.0 credits = 1.14 attempts-per-shipped. Credits ~790.5.
+
+## 2026-08-01 — wband LADDER SET generated, HELD for blind-ordering gate (2.5 credits)
+
+All five rungs (3.5/3.8/4.0/4.5/5.0 cm) generated spec-only with the MATCHED FRAMING block,
+candidate-1 recorded in each .craft-pipeline/trousers/wband-* folder. NOT QC-d and NOT
+shipped: this is a cm ladder (adjacent rungs 2-5 mm) — per the set discipline the family
+ships only after a blind-ordering check confirms rendered band heights are monotonic
+(qc_ladder-style: measure band-height ratio per frame, verify 35<38<40<45<50 ordering).
+Any adjacent pair that fails ordering goes to the owner with measurements, never shipped
+as indistinguishable near-duplicates. Session: 13 generations / 7 shipped+5 held / 6.5
+credits. Credits ~788.0.

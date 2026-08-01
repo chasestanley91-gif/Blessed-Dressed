@@ -1,0 +1,56 @@
+{
+  "schema": "garment-spec/v1",
+  "specOnly": true,
+  "addr": "trousers > bottom-hem > leg-shape > leg-wide",
+  "productId": "trousers",
+  "sectionId": "bottom-hem",
+  "fieldId": "leg-shape",
+  "optionId": "leg-wide",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\trousers.json",
+  "source": "json",
+  "label": "Wide Leg",
+  "description": "Wide leg — the hem approaches the thigh ratio (34 cm thigh, 24 cm to 28 cm hem) with minimal taper; side seam and inseam run nearly parallel, the characteristic draping column of Florentine and Neapolitan trousers.",
+  "fieldLabel": "Leg Shape",
+  "sectionLabel": "Bottom & Hem",
+  "part": "trouser-leg",
+  "garment": {
+    "noun": "pair of bespoke wool tailored trousers",
+    "fabric": "fine wool trouser cloth with visible weave"
+  },
+  "view": {
+    "orientation": "front",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": false,
+  "measured": {
+    "dimensions": [
+      "34 cm",
+      "24 cm",
+      "28 cm"
+    ],
+    "angles": [],
+    "counts": [],
+    "shapes": [
+      "tapered leg",
+      "wide leg"
+    ],
+    "negatedShapes": [],
+    "spread": [],
+    "flags": []
+  },
+  "illustration": {
+    "path": null,
+    "disk": null,
+    "exists": false,
+    "remote": false
+  },
+  "forbidden": [
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-08-01T23:17:05.274Z"
+}

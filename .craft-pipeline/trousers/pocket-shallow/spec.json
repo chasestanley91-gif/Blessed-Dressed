@@ -1,0 +1,51 @@
+{
+  "schema": "garment-spec/v1",
+  "specOnly": true,
+  "addr": "trousers > front-pockets > pocket-depth > pocket-shallow",
+  "productId": "trousers",
+  "sectionId": "front-pockets",
+  "fieldId": "pocket-depth",
+  "optionId": "pocket-shallow",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\trousers.json",
+  "source": "json",
+  "label": "Shallow (20 cm)",
+  "description": "Shallow 20 cm pocket bag — the bag stays high for less bulk at the thigh; a cleaner front and slimmer hip appearance.",
+  "fieldLabel": "Pocket Depth",
+  "sectionLabel": "Front & Pockets",
+  "part": "fin-adjust",
+  "garment": {
+    "noun": "pair of bespoke wool tailored trousers",
+    "fabric": "fine wool trouser cloth with visible weave"
+  },
+  "view": {
+    "orientation": "front",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": false,
+  "measured": {
+    "dimensions": [
+      "20 cm"
+    ],
+    "angles": [],
+    "counts": [],
+    "shapes": [],
+    "negatedShapes": [],
+    "spread": [],
+    "flags": []
+  },
+  "illustration": {
+    "path": null,
+    "disk": null,
+    "exists": false,
+    "remote": false
+  },
+  "forbidden": [
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-08-01T23:17:02.100Z"
+}
