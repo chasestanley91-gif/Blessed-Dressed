@@ -1,50 +1,41 @@
 {
   "scores": {
-    "shape": 88,
-    "geometry": 85,
-    "dimensions": 76,
-    "angles": 90,
-    "construction": 88,
-    "placement": 88,
-    "symmetry": 85,
-    "composition": 87,
-    "blueprint-match": 82
+    "shape": 80,
+    "geometry": 68,
+    "dimensions": 91,
+    "angles": 93,
+    "construction": 84,
+    "placement": 70,
+    "symmetry": 80,
+    "composition": 86,
+    "blueprint-match": 74
   },
   "errors": [
     {
-      "severity": "minor",
-      "category": "dimensions",
-      "description": "Slant offset, converted using belt-loop width as scale reference (a trouser belt loop being about 1.3 cm). Drawing: loop width 40px giving 30.8px/cm; pocket mouth (450,235) to (528,610), horizontal offset 78px = 2.5 cm - an exact match to the label. Render: loop width 45px giving 34.6px/cm; mouth (300,215) to (195,720), horizontal offset 105px = 3.0 cm. Roughly 20 percent over, but the belt-loop reference carries about plus/minus 0.5 cm of uncertainty at this resolution, so the render is close to and may be within tolerance.",
-      "expected": "2.5 cm of horizontal slant across the pocket mouth",
-      "actual": "Approximately 3.0 cm plus/minus 0.5",
-      "correction": "Set the pocket mouth so its lower end sits exactly 2.5 cm outboard of its upper end - a mouth that is near-vertical with just a fingerbreadth of drift toward the side seam over its full length."
-    },
-    {
-      "severity": "minor",
-      "category": "dimensions",
-      "description": "Pocket mouth length. Drawing: y=235 to 610 = 375px at 30.8px/cm, about 12.2 cm. Render: y=215 to 720 = 505px at 34.6px/cm, about 14.6 cm. About 2.4 cm longer than drawn, though still inside the normal range for a slant pocket mouth.",
-      "expected": "A pocket mouth of roughly 12 cm from the waistband seam to its lower terminus",
-      "actual": "Roughly 14.6 cm",
-      "correction": "Run the pocket mouth about 12 cm from the waistband seam down to a bar-tacked lower terminus, so the opening ends well above the level of the hip curve."
-    },
-    {
-      "severity": "minor",
+      "severity": "major",
       "category": "geometry",
-      "description": "Relationship of the pocket's lower end to the front crease. Drawing: the pocket's bottom terminus at (528,610) lands exactly on the full-length vertical crease line at x=530. Render: the pocket's bottom at x=195 sits well inboard of the visible crease at x=480-560, so the two never meet.",
-      "expected": "The pocket mouth's lower terminus falling on the pressed front crease",
-      "actual": "The lower terminus finishing a clear distance to the side-seam side of the crease",
-      "correction": "Position the pocket so its lower bar tack lands right on the pressed front crease line, with the mouth angling down and outward from the waistband to meet it."
+      "description": "Direction of the slant relative to the pressed front crease. Drawing: the opening starts 63px from the crease at the waistband and closes to 5px at its lower end - it CONVERGES and terminates on the crease. Render: it starts about 191px from the crease and widens to about 270px - it DIVERGES. Convergence versus divergence relative to a landmark is unaffected by mirroring, so this is a genuine inversion, not a left/right leg difference.",
+      "expected": "An opening that begins outboard at the waistband and closes onto the front crease, its lower terminus landing on the crease",
+      "actual": "An opening that begins near the crease and runs away from it, finishing far outboard",
+      "correction": "Render the pocket mouth so it starts at the waistband seam roughly two thirds of a waistband depth outboard of the crease and rakes INBOARD as it descends, its lower bar tack landing directly on the pressed front crease."
+    },
+    {
+      "severity": "minor",
+      "category": "placement",
+      "description": "Top terminus against the waistband seam. Drawing: the opening begins exactly at the waistband's lower edge. Render: it begins about 22px below the seam, roughly 0.19 of a waistband depth.",
+      "expected": "Mouth beginning flush at the waistband seam",
+      "actual": "Mouth beginning a fifth of a waistband depth below the seam",
+      "correction": "Carry the top of the pocket mouth right up into the waistband seam so the opening and the seam meet at a single point."
     }
   ],
   "lockedFeatures": [
-    "Slant angle: 11.7 degrees from vertical measured in the render against 11.8 in the drawing - essentially exact, must survive",
-    "Contrast stripe IS present - a clearly visible taupe/warm-grey piping running the full length of the pocket opening",
-    "Stripe rendered in a neutral tone rather than tracing the drawing's red guide line",
-    "Pocket mouth beginning at the waistband seam, exactly as drawn",
-    "Slant direction correct: the mouth drifts toward the side seam as it descends",
-    "Three belt loops on the waistband, matching the drawing's count",
-    "Crisp jetted/piped pocket construction with clean pressed edges and no gaping",
-    "No numerals, arrows, ruler ticks or red guide lines traced into the photograph"
+    "Slant angle from vertical: drawing 12.7 degrees, render 12.6 - essentially exact, must survive",
+    "Mouth length normalised to waistband depth: drawing 4.06, render 4.08 - essentially exact, must survive",
+    "Horizontal slant offset normalised to waistband depth: drawing 0.89, render 0.89 - essentially exact, must survive",
+    "Contrast stripe present along the pocket mouth, rendered in neutral grey/taupe",
+    "The stripe was NOT rendered red - the drawing's red overlay correctly read as a location marker",
+    "Single front pocket on the visible panel",
+    "Bar tack at the lower terminus"
   ],
-  "notes": "The strongest of its batch and the closest of the whole wave. Both required features check out: slant measured at 11.7 degrees from vertical against 11.8 drawn, and the contrast stripe is unambiguously present as a lighter taupe piping along the whole opening. Deviations are modest - slant offset about 3.0 cm against 2.5 specified with real plus/minus 0.5 uncertainty from the belt-loop scale, mouth about 2.4 cm longer than drawn, and the lower terminus not landing on the crease. The drawing's rear welt pocket is out of frame in a front-hip crop, which was NOT counted against the render. The drawing's viewpoint handedness could not be independently verified, so slant direction was judged relative to the crease and side seam in each image rather than absolutely."
+  "notes": "IMPORTANT CORRECTION TO THE PREVIOUS ROUND'S FINDINGS. Two of the three minors logged last time were not real defects. Normalising to waistband depth - the one landmark readable cleanly in both images - the drawing's slant offset is 0.89 waistband depths and the render's is 0.89; mouth length 4.06 against 4.08; angle from vertical 12.7 against 12.6. The previous round's '3.0 cm against 2.5 specified' and '14.6 cm against 12' were absolute figures derived by assuming a belt loop is 1.3 cm and converting - against a drawing that carries NO dimension callouts. The uncertainty was stated at the time, but the chain was still assumption-to-conversion-to-comparison, and it produced two corrections chasing errors that did not exist.\n\nMETHOD RULE THIS ESTABLISHES: when a drawing carries no callouts, measure RATIOS against a landmark visible in both images. Do not manufacture centimetres from an assumed real-world size and then compare them to a label.\n\nThe third minor is genuinely unfixed and worse than a near-miss: the mouth runs the WRONG WAY relative to the crease.\n\nUNRESOLVED, and the reason that finding is major rather than critical: it could not be determined whether the vertical line the red marker lands on is the pressed front crease or the fly/centre-front edge. The same base illustration is used across this option family and the line's identity is ambiguous. If it is the fly, the render's geometry may be correct and the drawing's marker simply sits at the fly. Menswear convention runs a slant pocket down and OUTBOARD toward the side seam, which is what the render did; the drawing appears to specify the opposite. That conflict needs settling against a clearer drawing before another attempt is spent."
 }

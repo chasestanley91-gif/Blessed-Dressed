@@ -126,3 +126,50 @@ so simply re-running a closed-out option immediately re-exhausts the budget
 and lands straight back on `UNMET`/`PASS_WAIVED`. To grant a genuine further
 attempt, rename the prior `qc.json` (keep it as evidence) and delete the
 rejected candidate images first.
+
+## Give the RATIO, never the adjective (added 2026-08-01)
+
+A correction must carry the measured number. An adjective describing that number has no scale, and
+the model will follow the adjective — past the target and out the other side.
+
+Measured on one wave, on two options that share a blueprint:
+
+| option | drawn | correction said | rendered |
+|---|---|---|---|
+| `watch-both` | patch **1.2 : 1** landscape | "a **shallow horizontal** rectangle" | 1.9 : 1 |
+| `coin-both` | patch **1.2 : 1** landscape | "a **squat landscape** patch" | 1 : 1.44 — *portrait* |
+
+Both previous attempts were near-square, i.e. slightly under 1.2. The corrections pushed "more
+landscape" as a *direction* rather than "1.2 : 1" as a *value*, and both overshot — `coin-both`
+so far that it inverted. The second attempt is further from the drawing than the first was.
+
+This is the same failure as `lapel-notch-68`, where the prompt said "the notch opens at 68 degrees"
+because 68 was in the option's *name*: the model renders exactly what it is told, so what it is told
+has to be measured. There the number was wrong; here there was no number at all.
+
+**Write `depth is about four fifths of the width`, not `shallow`. Write `1.2 times as wide as deep`,
+not `squat`.** If you cannot state the ratio, you have not finished measuring.
+
+## When the drawing carries no callouts, measure ratios — do not manufacture centimetres
+
+`slant-25-stripe` was logged with two minor findings — "slant offset 3.0 cm against 2.5 specified"
+and "mouth 14.6 cm against 12" — derived by assuming a belt loop is 1.3 cm, converting pixels to
+centimetres through that assumption, and comparing the result to the option's label. The uncertainty
+was stated at the time (±0.5 cm), which was honest but did not make the chain sound.
+
+Re-measured as **ratios against waistband depth**, a landmark readable in both images:
+
+```
+slant offset   drawing 0.89 waistband depths   render 0.89
+mouth length   drawing 4.06                    render 4.08
+angle          drawing 12.7°                   render 12.6°
+```
+
+The option was already correct. Two corrections were written chasing errors that did not exist, and
+a regeneration was spent on them.
+
+**The rule.** Most of these tech packs carry no dimension callouts at all. When a drawing has none,
+normalise both images to a landmark that appears in both — waistband depth, belt-loop pitch, bag
+width, button pitch, the V-apex-to-hem span — and compare ratios. An absolute centimetre figure
+invented from an assumed real-world size, then checked against a label, is not a measurement; it is
+two guesses multiplied together.

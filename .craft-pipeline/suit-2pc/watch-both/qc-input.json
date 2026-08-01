@@ -1,58 +1,56 @@
 {
   "scores": {
-    "shape": 87,
-    "geometry": 88,
-    "dimensions": 79,
-    "angles": 86,
-    "construction": 82,
-    "placement": 77,
-    "symmetry": 90,
-    "composition": 81,
-    "blueprint-match": 85
+    "shape": 62,
+    "geometry": 64,
+    "dimensions": 57,
+    "angles": 76,
+    "construction": 78,
+    "placement": 80,
+    "symmetry": 88,
+    "composition": 85,
+    "blueprint-match": 65
   },
   "errors": [
     {
-      "severity": "minor",
-      "category": "placement",
-      "description": "Both patches sit too high on their bags. Measuring patch top as a fraction of bag height (bag top at the waistband to bag bottom edge): drawing red mark starts about 73 percent down the bag; render patches start about 60 percent down (left patch top about 545px on a bag running about 160 to 800). Same error on both sides, so systematic rather than an asymmetry.",
-      "expected": "Watch pocket set low on the bag, its top edge roughly three quarters of the way down toward the bag's bottom edge",
-      "actual": "Patch tops at roughly 60 percent of bag height on both sides",
-      "correction": "Drop each patch so its top edge sits about three quarters of the way down the pocket bag, with the patch bottom close to the bag's rounded lower edge."
+      "severity": "major",
+      "category": "shape",
+      "description": "Aspect ratio overshot. The drawn marker measures 151 wide by 122 deep on the left bag and 148 by 125 on the right - about 1.2:1 landscape. The rendered patches are 153 by 80 and 145 by 77 - about 1.9:1. The previous attempt was near-square; this one has gone past the drawn 1.2:1 into markedly shallow.",
+      "expected": "A gently landscape rectangle about 1.2 times as wide as it is deep",
+      "actual": "A shallow band about 1.9 times as wide as deep",
+      "correction": "Render each watch pocket as a rectangle whose depth is about FOUR FIFTHS of its width - a ratio of 1.2 to 1, not a shallow slot - so it reads as a substantial squared-off pouch with real depth."
+    },
+    {
+      "severity": "major",
+      "category": "dimensions",
+      "description": "Patch depth normalised to bag depth. Drawing: 126px patch against a 630px bag, ratio 0.20. Render: about 80px against about 600px, ratio 0.13. Patch area relative to bag area is 0.076 rendered against 0.129 drawn, so the patch covers about 60 percent of the relative area it should.",
+      "expected": "Patch depth about one fifth of the bag's total depth",
+      "actual": "About one eighth of bag depth",
+      "correction": "Deepen each patch so its top edge sits at roughly three quarters of the way down the bag while its bottom edge stays where it is, restoring the drawn one-fifth-of-bag-depth proportion."
     },
     {
       "severity": "minor",
-      "category": "dimensions",
-      "description": "Patch proportions drift from the drawing. Width as a fraction of bag width: drawing about 65 percent (150px mark on a 230px bag), render about 57 percent left (155 on 270) and about 47 percent right (135 on 285). Height as a fraction of bag height: drawing about 21 percent, render about 27. So the rendered watch pockets are narrower and deeper than drawn - closer to square, where the drawing is a wider shallower rectangle.",
-      "expected": "A wide shallow squared pocket spanning roughly two thirds of the bag's width and about a fifth of its height",
-      "actual": "Patches roughly half the bag width and about a quarter of bag height, reading nearly square",
-      "correction": "Widen each patch to about two thirds of its bag's width and reduce its depth so it reads as a shallow horizontal rectangle rather than a square."
+      "category": "placement",
+      "description": "Horizontal seat on the bag. Drawing places the patch from 26 to 91 percent of bag width measured from the outer edge, centre at 58 percent - inboard-biased with its inner edge nearly on the bag's inboard edge. Render places it 20 to 77 percent, centre 49 - effectively centred.",
+      "expected": "Patch biased inboard, inner edge running almost to the bag's inboard edge",
+      "actual": "Patch centred on the bag",
+      "correction": "Slide each patch inboard so its inner edge finishes within a hair of the bag's inboard edge, leaving the spare bag width outboard."
     },
     {
       "severity": "minor",
       "category": "construction",
-      "description": "The drawing's mark is a squared U - three sides closed, top open, an applied pouch with an opening along its upper edge. In the render the patches read as a closed four-sided outline; an open top could not be confirmed on either side at this resolution, so the pocket's function is not clearly legible.",
-      "expected": "Three stitched sides with a visibly open finished top edge",
-      "actual": "A four-sided stitched square outline with no clearly readable opening",
-      "correction": "Stitch each patch along its two sides and bottom only, and give the top edge a folded topstitched finish that stands slightly away from the bag so the opening reads as an opening."
-    },
-    {
-      "severity": "minor",
-      "category": "composition",
-      "description": "The drawing shows the whole trouser down past the knee; the render cuts at mid-thigh and includes bare abdomen above the waistband. The ecru-on-ecru patches are also low in contrast, which works against instant legibility.",
-      "expected": "The pocket bags shown in the context of the trouser, subject clearly separated",
-      "actual": "Mid-thigh crop with bare midriff; low patch-to-bag contrast",
-      "correction": "Keep the waistband and both bags but include more of the trouser below them, dress the waist so no skin shows, and light the bags so the applied patch edges throw a small shadow and read distinctly against the pocketing."
+      "description": "The small dark dots at the bag tops and along the fly render as hard metallic studs. The drawing shows filled dots in the same positions, which in a factory line drawing denote BAR TACKS, not hardware.",
+      "expected": "Small thread reinforcement marks at the bag corners and fly stations",
+      "actual": "Dark round dots reading as metal studs",
+      "correction": "Render these as short dense thread bar tacks in matching pocketing thread, worked flat into the cloth at the bag corners and fly stations."
     }
   ],
   "lockedFeatures": [
-    "COUNT AND SIDES CORRECT - exactly two watch pockets, one on each pocket bag, matching the drawing's two red squared-U marks. This is the whole point of the option and it is right; any regeneration must keep both",
-    "Both patches placed outboard on their bags and mirrored about the centre front",
-    "Near-identical vertical placement left and right, patch tops within about 10px",
-    "Presentation matches the drawing: trousers turned out at the waistband with both front pocket bags pulled forward and lying flat, fly extension exposed at centre",
-    "Rounded bottom-outer corner on each pocket bag, as drawn",
-    "Small dark stud at the top of each bag near the waistband, corresponding to the drawing's small marks there",
-    "No red guide marks, leader lines, ruler ticks or dimension text rendered into the photograph",
-    "Ecru cotton pocketing against dark charcoal worsted"
+    "Two watch pockets, exactly one per pocket bag, on both sides - count and sides correct",
+    "VERTICAL SEAT FIXED: bottom edge of each patch now at 92-95 percent of bag depth against the drawn 93 - the 'set too high' failure is resolved",
+    "Interior view with both pocket bags flipped out, matching blueprint orientation",
+    "The diagonal seam line down each bag face, as drawn",
+    "Contrasting ecru pocketing against dark cloth keeps both patches legible",
+    "No red on cloth, no traced annotation"
   ],
-  "notes": "The strongest of its batch: correct count, correct sides, correct presentation, no traced annotation; all findings are proportional and stylistic rather than structural. Measurable: patch width and height as fractions of bag width and height, and patch top as a fraction of bag height - the only ratios both images share; all come out slightly small-and-square and set slightly high, consistently on both sides. NOT measurable: any centimetre figure for the pocket mouth, since spec.json carries no extracted dimensions and neither image contains a scale reference."
+  "notes": "Half fixed, half not, so recorded as NOT fixed. Fixed: vertical placement now matches the drawing. Not fixed: the proportional error persists with its sign flipped.\n\nTHE LESSON, and it is general. The previous correction told the model to make the patch 'a shallow horizontal rectangle'. The drawing is only 1.2:1 - mild landscape. The model obeyed the ADJECTIVE and produced 1.9:1. An adjective has no scale; a ratio does. Corrections must carry the measured ratio, not a word describing it. This is the same failure as naming an option '68 degrees' and having the model render a 68-degree notch: the model follows what it is told, exactly, so what it is told must be measured.\n\nNOT measurable: any centimetre dimension - the drawing carries no callouts, so all figures are ratios against bag width and depth, both traceable unambiguously in each image."
 }

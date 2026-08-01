@@ -1,55 +1,49 @@
 {
   "scores": {
-    "shape": 35,
-    "geometry": 40,
-    "dimensions": 30,
-    "angles": 35,
-    "construction": 62,
-    "placement": 38,
-    "symmetry": 20,
-    "composition": 25,
-    "blueprint-match": 30
+    "shape": 86,
+    "geometry": 84,
+    "dimensions": 70,
+    "angles": 85,
+    "construction": 87,
+    "placement": 84,
+    "symmetry": 80,
+    "composition": 72,
+    "blueprint-match": 79
   },
   "errors": [
     {
-      "severity": "critical",
-      "category": "composition",
-      "description": "The showcased part is out of frame. The render is 880x1152 and the jacket cloth runs to the top edge and the full right edge; the only background visible is upper-left, behind the neck and shirt. There is therefore NO shoulder silhouette in the picture - the outer shoulder end, the shoulder slope from neck point to shoulder end, and the sleevehead crown are all cropped away. What is legible is the notch lapel, the lapel buttonhole and the welted breast pocket. A shoulder-padding option cannot be read from this frame at all.",
-      "expected": "A wide front view showing the full shoulder line on both sides against empty ground, as the blueprint draws it with the red pad callout over the wearer's left shoulder from neck point out to shoulder end and down into the armhole",
-      "actual": "An extreme close crop of the wearer's left forepart; jacket cloth fills the entire right half and top-right corner, so no shoulder edge meets background",
-      "correction": "Frame the jacket from mid-chest up with clear background on both sides of the body, so both shoulder lines are silhouetted end to end: neck point, the straight run of the shoulder, the shoulder end, and the sleevehead seam turning into the sleeve crown all inside the frame with air around them."
-    },
-    {
-      "severity": "critical",
-      "category": "symmetry",
-      "description": "Label is '+0.5 cm Soft (Both Sides)'. Only one side of the garment is in frame - the wearer's left forepart, identified by the breast pocket and lapel buttonhole both sitting on the same forepart. The bilateral claim is unverifiable and a customer comparing padding options sees nothing of the pair.",
-      "expected": "Both shoulders present and matching, as the blueprint draws them",
-      "actual": "One forepart and one partially cropped shoulder region only",
-      "correction": "Show the wearer square to camera with both shoulders in frame and the same soft gently rounded 5mm pad expression on each, the two shoulder lines mirroring each other about the centre front."
-    },
-    {
       "severity": "major",
-      "category": "dimensions",
-      "description": "The 0.5 cm pad height is NOT measurable in this frame. Pad height is read at the shoulder end, as the vertical build between the natural deltoid line and the top of the shoulder, and that terminus is outside the crop. There is also no in-frame scale reference against which any figure could be stated. Recorded as not measurable rather than inventing a number.",
-      "expected": "A shoulder end carrying a slight visibly rounded build over the natural deltoid - soft, compressible, not squared - legible against background",
-      "actual": "Shoulder end absent from frame; padding height unreadable",
-      "correction": "Render the shoulder end with a low rounded build sitting just proud of the natural deltoid line, the crown easing smoothly into the sleevehead with no square corner and no roped ridge, so the small amount of soft padding is readable against the ground."
+      "category": "composition",
+      "description": "Frame share given to the showcased part. The head and face occupy roughly the top 40 percent of the frame and sit dead centre; the two shoulder ends, which ARE the option, sit in the far corners and each occupy only a small sliver. The drawing devotes its whole field to the shoulder and upper-chest block with no head at all.",
+      "expected": "Framing from collar to below the chest welt pocket, both sleeves included, the shoulder line spanning the full width of the field",
+      "actual": "A head-and-shoulders portrait where the shoulder line competes with a fully rendered face occupying the upper 40 percent",
+      "correction": "Frame from the base of the neck down to just below the chest welt pocket so the shoulder yoke spans the full image width and the model's jaw is the topmost element, with the sleevehead crowns of both arms fully inside the frame and even background margin on each side."
     },
     {
       "severity": "minor",
-      "category": "construction",
-      "description": "Breast pocket profile differs from the drawing. The blueprint draws the chest welt as a straight-edged welt slanting slightly up toward the outside; the render gives a curved boat-shaped barchetta welt. Not the showcased feature, but a visible departure.",
-      "expected": "Straight-edged chest welt, slight upward slant toward the armhole side",
-      "actual": "Curved barchetta welt",
-      "correction": "Draw the breast pocket as a straight welt with parallel top and bottom edges, slanting gently upward toward the armhole."
+      "category": "placement",
+      "description": "Framing is laterally off-centre. Measured against frame width, the wearer's right shoulder end carries roughly 10 percent of frame width as background margin while the wearer's left carries under 3 percent and nearly touches the edge.",
+      "expected": "Symmetric about centre front with equal background beyond each shoulder end",
+      "actual": "Subject right of centre; the wearer's left sleevehead at the very frame edge",
+      "correction": "Centre the centre-front line of the jacket on the frame's vertical axis so both shoulder ends carry an equal background margin of about one shoulder-pad width."
+    },
+    {
+      "severity": "minor",
+      "category": "dimensions",
+      "description": "The 0.5 cm pad height is not photographically resolvable in this view. Nothing in frame provides a scale against which pad thickness could be normalised, so only the qualitative reading is available: the shoulder is soft and gently domed rather than squared or roped.",
+      "expected": "+0.5 cm soft pad, rounded profile, both sides",
+      "actual": "Shoulder reads lightly structured and rounded; actual pad height not measurable",
+      "correction": "Shoot with a shallow three-quarter raking light across the shoulder end so the pad's built height casts a readable step at the sleevehead seam, giving a visible thickness cue."
     }
   ],
   "lockedFeatures": [
-    "No red guide lines, arrows, callouts or measurement text rendered into the photograph - the blueprint's red shoulder wedge correctly treated as documentation, not cloth",
-    "Textured hopsack-type wool with visible weave",
-    "Notch lapel with a working lapel buttonhole on the wearer's left lapel, matching the drawing's buttonhole mark on that side",
-    "Breast pocket correctly on the wearer's left forepart, same side as the drawing",
-    "Natural unexaggerated posture and soft directional studio light on a plain neutral ground"
+    "BOTH SHOULDERS NOW IN FRAME with shoulder slope, shoulder end and sleevehead crown all visible - the prior crop failure, which put the entire subject outside the picture, is resolved",
+    "The two sides match each other in slope and height within a few pixels",
+    "Notch lapel with the boutonniere buttonhole on the wearer's left lapel, matching the drawing",
+    "Chest welt pocket on the wearer's left chest angled up toward the armhole, as drawn",
+    "Textured hopsack with visible weave",
+    "Open collar, no tie - nothing covers the shoulder line",
+    "No red guide triangle rendered onto the cloth"
   ],
-  "notes": "The render is a well-made photograph of the wrong subject. Measurable: the lapel buttonhole side, the breast pocket side, the pocket profile, and the absence of traced annotation. NOT measurable: shoulder slope, shoulder end position, pad height, sleevehead crown, roping - none are inside the frame, since cloth reaches every edge except upper-left. For a shoulder option that is a fatal framing choice independent of image quality, and 'Both Sides' cannot be checked at all."
+  "notes": "The named defect IS fixed. The previous attempt let cloth reach every edge so no shoulder silhouette existed at all; this one shows both shoulder slopes descending into open background, both shoulder ends and both sleevehead crowns. NOT measurable: the 0.5 cm pad height itself - nothing in frame gives a scale and a 0.5 cm build is below what a soft-lit portrait resolves. Worth recording: the blueprint marks the pad on ONE side only (a red wedge on the wearer's left), which is factory convention for a both-sides option, so single-side marking is not a conflict. The remaining weakness is compositional - a face dominates a frame that exists to teach shoulder padding."
 }

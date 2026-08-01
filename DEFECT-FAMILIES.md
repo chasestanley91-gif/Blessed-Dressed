@@ -245,3 +245,43 @@ its `qc.json` beside it, and republishing is a one-command operation once the pa
   against a *different* tech pack than the one this photo was made from. One photo cannot serve two
   drawings. Correct refusal; publish from each row's own pipeline folder.
 - `suit-3pc/sb-5` — would replace a live photo. Needs `--allow-swap` and a human decision.
+
+---
+
+## FAM-SHARED-BLUEPRINT-COIN-WATCH — one drawing backing two different options
+
+**Found:** 2026-08-01, during the retry wave. **Verified by md5, not by eye.**
+
+```
+coin-both   public/images/blueprints/remote/7f475092fe8b__3532.jpg
+watch-both  public/images/blueprints/factory/88f95280e442__3532__Left_right.jpg
+both        md5 87658726bf98f5322cbc719704c23291 · 61437 bytes · BYTE-IDENTICAL
+```
+
+Two filenames, two folders, one file. It backs `trousers/coin-both` (a coin pocket) and
+`suit-2pc/watch-both` (a watch pocket) — two different craft options a customer chooses between —
+with the marker in the same position on both pocket bags in each case.
+
+**Why this cannot be fixed by generating harder.** QC scores fidelity *to the blueprint*. If two
+options share one blueprint, then the more faithfully each is rendered, the more identical the two
+photographs become. The pipeline's own quality gate drives them together. This is the same structural
+trap already recorded for the glyph-backed options in Stage A, arriving from a different direction.
+
+**What it needs:** either a genuine supplier drawing that distinguishes a coin pocket from a watch
+pocket, or a ruling that they are the same construction under two names and should be merged/repriced.
+Both are listed in [NEEDS-SOURCE.md](NEEDS-SOURCE.md). **Nothing merged unilaterally.**
+
+Note this is distinct from the AMF case, where every `-amf` file was byte-identical to its `-top`
+sibling. Here the two options are on *different products* and are plausibly genuinely different
+constructions — the drawing simply does not document the difference.
+
+## SPEC-VERSUS-DRAWING: `suit-2pc/jeans-square`
+
+`spec.json`'s description calls for a pocket "reinforced with **rivets** and topstitching" and
+`spec.measured.flags` carries `"top stitch"`. The drawing shows neither — it is plain line work with
+no hardware and no topstitch dashes.
+
+Attempt 1 followed the prose and rendered two metal dome rivets. QC removed them on the drawing's
+authority and attempt 2 is correctly clean. **But the spec still says rivets**, so every future
+rebuild of this prompt will re-inject them. The prose needs correcting at source, or the drawing needs
+replacing with one that does show the hardware. Until then this option will oscillate.

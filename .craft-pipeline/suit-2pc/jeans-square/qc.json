@@ -2,18 +2,18 @@
   "addr": "suit-2pc > jeans-square",
   "productId": "suit-2pc",
   "optionId": "jeans-square",
-  "attempt": 1,
+  "attempt": 2,
   "maxAttempts": 3,
   "scores": {
-    "shape": 80,
-    "geometry": 84,
-    "dimensions": 74,
-    "angles": 88,
-    "construction": 60,
-    "placement": 85,
-    "symmetry": 82,
-    "composition": 72,
-    "blueprint-match": 74
+    "shape": 72,
+    "geometry": 64,
+    "dimensions": 67,
+    "angles": 55,
+    "construction": 78,
+    "placement": 74,
+    "symmetry": 77,
+    "composition": 80,
+    "blueprint-match": 66
   },
   "scoreMin": 98,
   "waiverMin": 95,
@@ -42,35 +42,27 @@
   "errors": [
     {
       "severity": "major",
-      "category": "construction",
-      "description": "Two metallic dome studs are rendered at the ends of the pocket mouth - one at the squared outer corner, one at the inboard end. The drawing shows the opening as plain line work with plain end stops; there is no hardware anywhere on the sheet. The option's prose mentions rivets, but the DRAWING is the authority and it draws none, so this is the render following denim convention over the sheet. On charcoal worsted the studs are the most eye-catching thing in the frame.",
-      "expected": "A clean pocket mouth terminating at each end with a flat reinforcement, no raised metal hardware, as drawn",
-      "actual": "Two raised dark metal dome rivets, roughly one third of a belt-loop width across, at each end of the mouth",
-      "correction": "Finish each end of the pocket mouth with a flat self-cloth bar tack sewn in matching thread, sitting flush with the surface of the wool."
+      "category": "angles",
+      "description": "Slope of the long lower run of the pocket mouth. Drawing: the run from the squared corner to its inboard terminus falls 43px over 337px of horizontal travel, about 7 degrees below horizontal and about 12 against the drawn waistband edge. Render: the same run falls about 88px over 222px, about 22 degrees below horizontal and about 25 against the waistband. Close to double the drawn rake.",
+      "expected": "A long almost level run raking about 7 degrees below horizontal",
+      "actual": "A distinctly diagonal run raking about 22 degrees",
+      "correction": "Render the lower run of the pocket mouth as a nearly level line that drops only about one eighth of its own length as it travels inboard, so it reads as a shallow shelf roughly parallel to the waistband rather than a slash."
     },
     {
-      "severity": "minor",
+      "severity": "major",
       "category": "dimensions",
-      "description": "Mouth length measured against belt-loop spacing, the only stable in-frame scale since the waistband top is cropped: drawing run 335px against a first-to-second loop spacing of 470px = 0.71; render run about 305px against a loop spacing of about 370px = 0.82. The render's mouth is roughly 15 percent long for the width of the front.",
-      "expected": "Pocket mouth running about three quarters of the distance between the side belt loop and the next loop inboard",
-      "actual": "Mouth runs about 0.82 of that loop spacing and its inboard end sits almost on the crease line",
-      "correction": "Shorten the horizontal run so the inboard end of the mouth stops noticeably short of the front crease, ending about three quarters of the way from the side loop toward the next loop."
+      "description": "Mouth length normalised to belt-loop spacing, the one landmark present in both images. Drawing: mouth run 337px against 463px between the side loop and the next, ratio 0.73. Render: 222px against 365px, ratio 0.61. Roughly 16 percent short.",
+      "expected": "Mouth run about three quarters of the belt-loop pitch, reaching in to the front crease",
+      "actual": "About six tenths of loop pitch, stopping about an eighth of loop spacing outboard of the crease",
+      "correction": "Extend the pocket mouth inboard until its terminus lands directly on the pressed front crease, giving a run about three quarters of the belt-loop pitch."
     },
     {
-      "severity": "minor",
-      "category": "construction",
-      "description": "The mouth reads as a jetted/welt slit with a defined under-welt lip rather than a single squared opening edge with the pocket facing continuing below it. The drawing renders it as one line - an opening edge, not a two-lipped welt.",
-      "expected": "A single squared-off opening edge, topstitched, with the front cloth continuing below it as the pocket facing",
-      "actual": "A narrow two-lipped welt slit",
-      "correction": "Render the opening as one crisp topstitched fold edge with the trouser front continuing uninterrupted beneath it, no second lip and no gap."
-    },
-    {
-      "severity": "minor",
-      "category": "composition",
-      "description": "The pocket occupies the upper-left quadrant only; roughly the lower half of the frame is empty trouser leg carrying no information about the option.",
-      "expected": "Composition existing to show the pocket opening",
-      "actual": "Pocket confined to the top-left; large empty leg below",
-      "correction": "Tighten the frame to waistband through upper thigh so the mouth and its squared corner fill the middle of the picture, keeping the belt loops and the front crease in shot for scale."
+      "severity": "major",
+      "category": "shape",
+      "description": "Depth of the squared vertical segment at the outer end. Normalised to waistband depth: drawing shows a vertical drop of 77px against a waistband depth of 88px, ratio 0.87. Render shows about 34px against about 104px, ratio 0.33 - under half of what makes the pocket read as SQUARE.",
+      "expected": "A deep vertical squared segment dropping roughly the full depth of the waistband before the mouth turns inboard",
+      "actual": "A shallow vertical stub about a third of waistband depth, so the corner reads as a soft kink rather than a squared corner",
+      "correction": "Render the outer end as a crisp right-angled corner where a vertical segment as deep as the waistband drops from the waistband seam and then turns hard inboard, giving the L-shaped mouth its squared character."
     }
   ],
   "verdict": "FAIL",
@@ -79,22 +71,36 @@
     "errors": [
       {
         "severity": "major",
-        "category": "construction",
-        "error": "Two metallic dome studs are rendered at the ends of the pocket mouth - one at the squared outer corner, one at the inboard end. The drawing shows the opening as plain line work with plain end stops; there is no hardware anywhere on the sheet. The option's prose mentions rivets, but the DRAWING is the authority and it draws none, so this is the render following denim convention over the sheet. On charcoal worsted the studs are the most eye-catching thing in the frame.",
-        "expected": "A clean pocket mouth terminating at each end with a flat reinforcement, no raised metal hardware, as drawn",
-        "actual": "Two raised dark metal dome rivets, roughly one third of a belt-loop width across, at each end of the mouth",
-        "correction": "Finish each end of the pocket mouth with a flat self-cloth bar tack sewn in matching thread, sitting flush with the surface of the wool."
+        "category": "angles",
+        "error": "Slope of the long lower run of the pocket mouth. Drawing: the run from the squared corner to its inboard terminus falls 43px over 337px of horizontal travel, about 7 degrees below horizontal and about 12 against the drawn waistband edge. Render: the same run falls about 88px over 222px, about 22 degrees below horizontal and about 25 against the waistband. Close to double the drawn rake.",
+        "expected": "A long almost level run raking about 7 degrees below horizontal",
+        "actual": "A distinctly diagonal run raking about 22 degrees",
+        "correction": "Render the lower run of the pocket mouth as a nearly level line that drops only about one eighth of its own length as it travels inboard, so it reads as a shallow shelf roughly parallel to the waistband rather than a slash."
+      },
+      {
+        "severity": "major",
+        "category": "dimensions",
+        "error": "Mouth length normalised to belt-loop spacing, the one landmark present in both images. Drawing: mouth run 337px against 463px between the side loop and the next, ratio 0.73. Render: 222px against 365px, ratio 0.61. Roughly 16 percent short.",
+        "expected": "Mouth run about three quarters of the belt-loop pitch, reaching in to the front crease",
+        "actual": "About six tenths of loop pitch, stopping about an eighth of loop spacing outboard of the crease",
+        "correction": "Extend the pocket mouth inboard until its terminus lands directly on the pressed front crease, giving a run about three quarters of the belt-loop pitch."
+      },
+      {
+        "severity": "major",
+        "category": "shape",
+        "error": "Depth of the squared vertical segment at the outer end. Normalised to waistband depth: drawing shows a vertical drop of 77px against a waistband depth of 88px, ratio 0.87. Render shows about 34px against about 104px, ratio 0.33 - under half of what makes the pocket read as SQUARE.",
+        "expected": "A deep vertical squared segment dropping roughly the full depth of the waistband before the mouth turns inboard",
+        "actual": "A shallow vertical stub about a third of waistband depth, so the corner reads as a soft kink rather than a squared corner",
+        "correction": "Render the outer end as a crisp right-angled corner where a vertical segment as deep as the waistband drops from the waistband seam and then turns hard inboard, giving the L-shaped mouth its squared character."
       }
     ],
     "lockedFeatures": [
-      "Squared outer corner: the mouth drops vertically from the waistband seam at the outboard side then turns and runs inboard - the defining square-jeans geometry, correct against the drawing",
-      "Mouth slant measured at about 9 degrees below horizontal against the drawing's about 8",
-      "Top of the vertical leg meets the waistband seam at the base of the side belt loop, exactly as the red mark starts at the waistband in the drawing",
-      "Pocket on the viewer-left leg, the same side the drawing marks in red",
-      "Three-quarter view reproducing the drawing's arrangement, including the plain double-welt back pocket on the far side with a belt loop directly above it",
-      "Fine topstitch along the mouth, satisfying the spec's top stitch flag",
-      "No red guide lines, arrows or dimension text rendered into the photograph",
-      "Charcoal worsted with visible weave, pressed front crease, clean belt loops"
+      "NO METAL RIVETS AND NO HARDWARE OF ANY KIND at the pocket mouth ends - the named defect is resolved and the mouth is finished as a clean jetted opening",
+      "Single front pocket on the visible panel, count matching the drawing",
+      "Overall L-shaped mouth topology: vertical at the outer end, long run inboard",
+      "The far panel's welt pocket with the vertical dart line above it, as drawn",
+      "Belt loops at the same three stations as the drawing",
+      "No red cloth anywhere"
     ],
     "forbiddenChanges": [
       "do not alter any checklist item this attempt already passed",
@@ -102,6 +108,6 @@
       "do not change the garment part, orientation, or any other option's geometry"
     ]
   },
-  "notes": "Measurable: mouth angle (render about 9 degrees vs drawing about 7.7 - a genuine match) and mouth length normalised to belt-loop spacing (0.82 vs 0.71 - slightly long). NOT measurable: absolute welt depth and the mouth's distance from the true side seam, because the view is three-quarter so the side seam does not sit on the silhouette edge in either image, and the waistband top is cropped in the render; any centimetre figure would be invented. Count and side are right. The blocking issue is the metal rivets, which appear nowhere on the sheet.",
-  "checkedAt": "2026-08-01T03:32:26.347Z"
+  "notes": "The rivets are gone - unambiguous, no hardware anywhere.\n\nSPEC-VERSUS-DRAWING CONFLICT, verified directly: spec.json's description calls for a pocket 'reinforced with rivets and topstitching' and spec.measured.flags carries 'top stitch', while the drawing is plain line work with no hardware and no topstitch dashes. Graded to the DRAWING as the sole authority. The render also carries no topstitching, which agrees with the drawing and contradicts the spec flag. The spec text needs correcting or the conflict will keep re-injecting rivets on every rebuild.\n\nNOT measurable: any centimetre figure - the drawing carries no dimension callouts, so every figure above is a ratio against belt-loop pitch or waistband depth. Also unresolved: some of the 7-to-22-degree rake gap may be foreshortening from the render's tighter three-quarter perspective, but not all of it, since the waistband sits at a comparable angle in both.",
+  "checkedAt": "2026-08-01T04:36:43.038Z"
 }

@@ -2,18 +2,18 @@
   "addr": "trousers > coin-both",
   "productId": "trousers",
   "optionId": "coin-both",
-  "attempt": 1,
+  "attempt": 2,
   "maxAttempts": 3,
   "scores": {
-    "shape": 70,
-    "geometry": 70,
-    "dimensions": 66,
-    "angles": 82,
-    "construction": 84,
-    "placement": 70,
-    "symmetry": 92,
-    "composition": 80,
-    "blueprint-match": 74
+    "shape": 44,
+    "geometry": 54,
+    "dimensions": 45,
+    "angles": 78,
+    "construction": 77,
+    "placement": 76,
+    "symmetry": 90,
+    "composition": 84,
+    "blueprint-match": 54
   },
   "scoreMin": 98,
   "waiverMin": 95,
@@ -41,36 +41,28 @@
   ],
   "errors": [
     {
-      "severity": "major",
-      "category": "dimensions",
-      "description": "Coin pocket aspect ratio. The drawing's red markers are LANDSCAPE rectangles: left spans x=182-330, y=680-800 = 148 x 120px, ratio 1.23 wide-to-tall; right spans x=880-1030, y=675-800 = 150 x 125px, ratio 1.20. Both consistently wider than tall. The render's patches are left 65-222 x, 468-635 y = 157 x 167px (ratio 0.94) and right 655-818 x, 470-640 y = 163 x 170px (ratio 0.96) - both slightly TALLER than wide. The rendered pockets are roughly 30 percent too tall for their width.",
-      "expected": "A landscape coin pocket about 1.2 times as wide as it is deep",
-      "actual": "A near-square, marginally portrait patch on both bags",
-      "correction": "Sew each coin pocket as a squat landscape patch roughly a fifth wider than it is deep, so it reads clearly as a wide shallow pouch across the pocket bag rather than a square patch."
+      "severity": "critical",
+      "category": "shape",
+      "description": "Aspect ratio is INVERTED. The drawn markers measure 151 wide by 126 deep on the left bag and 148 by 125 on the right - about 1.2:1 landscape. The rendered patches measure about 121 wide by 175 deep on both bags - about 1:1.44, portrait. The previous attempt was near-square; this one has gone past landscape entirely and out the other side.",
+      "expected": "A landscape rectangle about 1.2 times as wide as it is deep",
+      "actual": "A portrait rectangle about 1.4 times as deep as it is wide",
+      "correction": "Render each coin pocket as a squat landscape rectangle whose depth is about four fifths of its width - measurably wider across the bag than it is tall - with squared lower corners."
     },
     {
-      "severity": "minor",
-      "category": "placement",
-      "description": "Lateral position on the pocket bag. Drawing: the left coin pocket sits with a 50px gap to the bag's outer edge and only 20px to its inner edge (bag 130-350, pocket 182-330), set inboard toward centre front; the right is near-centred on its bag (bag 800-1080, pocket 880-1030). Render: both patches pushed hard to the OUTER edge - left bag 35-390 with the patch at 65-222 leaving 30px outboard and 168px inboard; right bag 475-840 with the patch at 655-818 leaving 22px outboard and 180px inboard.",
-      "expected": "Coin pockets sitting near the centre of each pocket bag, biased slightly toward centre front",
-      "actual": "Both coin pockets crowded against the outer edge of their bags with a wide empty field of pocketing inboard",
-      "correction": "Place each coin pocket centred on its pocket bag with an even margin either side, biased a touch toward the centre-front edge so the wearer's hand meets it naturally."
+      "severity": "major",
+      "category": "dimensions",
+      "description": "Patch depth normalised to bag depth. Drawing: 126px patch against a 620px bag, ratio 0.20. Render: about 175px against about 415px, ratio 0.42 - more than double the drawn depth. Width is close: 0.71 of bag width drawn against 0.64 rendered.",
+      "expected": "Patch depth about one fifth of the bag's total depth",
+      "actual": "About two fifths, so its top edge climbs to mid-bag",
+      "correction": "Halve the patch depth, keeping its bottom edge at its present height so the top edge settles at roughly three quarters of the way down the bag."
     },
     {
       "severity": "minor",
       "category": "construction",
-      "description": "Pocket mouth. The drawing's markers are open-topped U shapes - a left vertical, a bottom horizontal and a right vertical, with no line across the top - indicating the top is the open mouth. In the render the top edge of each patch reads as a continuous stitched line closing the rectangle on all four sides. This may be the hemmed mouth edge rather than a closing seam, but at this resolution the mouth does not read as open.",
-      "expected": "A patch stitched on three sides with an open mouth along the top",
-      "actual": "A rectangle that appears closed on all four sides; openness of the mouth is not legible",
-      "correction": "Stitch each coin pocket down the two sides and across the bottom only, and let the top edge stand slightly proud with a visible folded hem so the mouth reads unmistakably as an opening, with a hint of shadow inside it."
-    },
-    {
-      "severity": "minor",
-      "category": "geometry",
-      "description": "Pocket bag shape. The drawing shows relatively narrow near-rectangular bags with a diagonal facing seam crossing each one (left, roughly (300,360) down to (170,690)) and a squarish lower edge with one softened outer corner. The render's bags are considerably wider relative to the trouser, with a strongly curved lower edge and soft folds but no discernible diagonal facing seam.",
-      "expected": "Narrower bags carrying a visible diagonal facing seam and a mostly square lower edge",
-      "actual": "Wide bags with a pronounced rounded lower edge and no facing seam",
-      "correction": "Render each pocket bag as a narrower panel with a distinct diagonal facing seam running across it from the upper inner corner down to the lower outer corner, finishing in a squared lower edge with one softened corner."
+      "description": "Small dark dots at the bag tops and along the fly render as metal studs. The drawing's filled dots at those stations denote bar tacks.",
+      "expected": "Thread reinforcement tacks at the bag corners and fly stations",
+      "actual": "Hard round dots reading as metal hardware",
+      "correction": "Render these as short dense thread bar tacks in pocketing-matched thread, lying flat in the cloth."
     }
   ],
   "verdict": "FAIL",
@@ -78,23 +70,29 @@
   "correction": {
     "errors": [
       {
+        "severity": "critical",
+        "category": "shape",
+        "error": "Aspect ratio is INVERTED. The drawn markers measure 151 wide by 126 deep on the left bag and 148 by 125 on the right - about 1.2:1 landscape. The rendered patches measure about 121 wide by 175 deep on both bags - about 1:1.44, portrait. The previous attempt was near-square; this one has gone past landscape entirely and out the other side.",
+        "expected": "A landscape rectangle about 1.2 times as wide as it is deep",
+        "actual": "A portrait rectangle about 1.4 times as deep as it is wide",
+        "correction": "Render each coin pocket as a squat landscape rectangle whose depth is about four fifths of its width - measurably wider across the bag than it is tall - with squared lower corners."
+      },
+      {
         "severity": "major",
         "category": "dimensions",
-        "error": "Coin pocket aspect ratio. The drawing's red markers are LANDSCAPE rectangles: left spans x=182-330, y=680-800 = 148 x 120px, ratio 1.23 wide-to-tall; right spans x=880-1030, y=675-800 = 150 x 125px, ratio 1.20. Both consistently wider than tall. The render's patches are left 65-222 x, 468-635 y = 157 x 167px (ratio 0.94) and right 655-818 x, 470-640 y = 163 x 170px (ratio 0.96) - both slightly TALLER than wide. The rendered pockets are roughly 30 percent too tall for their width.",
-        "expected": "A landscape coin pocket about 1.2 times as wide as it is deep",
-        "actual": "A near-square, marginally portrait patch on both bags",
-        "correction": "Sew each coin pocket as a squat landscape patch roughly a fifth wider than it is deep, so it reads clearly as a wide shallow pouch across the pocket bag rather than a square patch."
+        "error": "Patch depth normalised to bag depth. Drawing: 126px patch against a 620px bag, ratio 0.20. Render: about 175px against about 415px, ratio 0.42 - more than double the drawn depth. Width is close: 0.71 of bag width drawn against 0.64 rendered.",
+        "expected": "Patch depth about one fifth of the bag's total depth",
+        "actual": "About two fifths, so its top edge climbs to mid-bag",
+        "correction": "Halve the patch depth, keeping its bottom edge at its present height so the top edge settles at roughly three quarters of the way down the bag."
       }
     ],
     "lockedFeatures": [
-      "TWO coin pockets, one per pocket bag - the count is correct and must survive",
-      "Both patches present, mirrored, and closely matched in size (157x167 vs 163x170px)",
-      "Turned-out interior view matching the drawing's orientation exactly",
-      "Coin pockets sewn onto the pocket bag facings, not as waistband watch pockets - the correct construction per the drawing",
-      "Fly extension turned out at centre with a shaped lower end",
-      "Bar tacks visible at the pocket bag/waistband junction on both sides",
-      "Square-cornered patch outline, matching the drawing's square corners",
-      "Red guide markers correctly read as location marks and not traced into the cloth"
+      "Two coin pockets, exactly one per bag, one on each side - count correct and preserved",
+      "HORIZONTAL SEAT FIXED: patches now span 22-86 percent of bag width from the outer edge against the drawn 23-94, centre at 54 against 59 - the 'shoved to the outer edge' failure is resolved",
+      "Bottom edge of each patch at 92 percent of bag depth, matching the drawing exactly",
+      "Interior view with both bags flipped out, matching blueprint orientation",
+      "Left and right patches mirror-matched to within a few pixels",
+      "No red rendered onto cloth"
     ],
     "forbiddenChanges": [
       "do not alter any checklist item this attempt already passed",
@@ -102,6 +100,6 @@
       "do not change the garment part, orientation, or any other option's geometry"
     ]
   },
-  "notes": "The critical requirement - two coin pockets, one per side - is met; both present, mirrored and well matched, so this does not fail on count. Findings are dimensional and positional: drawn pockets are landscape at about 1.2:1 and rendered ones near-square at about 0.95:1, and both rendered pockets are shoved to the outer edge of their bags where the drawing sets them inboard/centred. The pocket bags themselves are drawn narrower with a diagonal facing seam the render omits. Colour is a fair call - the drawing is line-only, and cream pocketing against charcoal cloth is a legitimate reading, not a colour violation. The patches are legible but low in contrast against the pale pocketing.",
-  "checkedAt": "2026-08-01T03:32:27.081Z"
+  "notes": "The placement half of the defect is genuinely fixed. The aspect-ratio half is not, and is now WORSE than before: the render swung from near-square past the drawn 1.2:1 into 1:1.44 portrait. Same root cause as watch-both - the correction supplied an adjective ('squat landscape') where it needed the measured ratio.\n\nBLUEPRINT COLLISION, verified by md5: this option's blueprint file (blueprints/remote/7f475092fe8b__3532.jpg) is BYTE-IDENTICAL to watch-both's (blueprints/factory/88f95280e442__3532__Left_right.jpg) - same md5 87658726bf98f5322cbc719704c23291, same 61437 bytes, two filenames in two folders. One drawing backs two different craft options, a coin pocket and a watch pocket, with markers in the same position. The illustration alone therefore CANNOT distinguish the two options, and no amount of fidelity to it will make the two images differ. Recorded as a finding.\n\nNOT measurable: centimetre dimensions - no callouts on this drawing. All figures are ratios against bag width and depth.",
+  "checkedAt": "2026-08-01T04:36:43.489Z"
 }

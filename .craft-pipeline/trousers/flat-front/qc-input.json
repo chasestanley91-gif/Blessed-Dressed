@@ -1,65 +1,58 @@
 {
   "scores": {
     "shape": 84,
-    "geometry": 66,
-    "dimensions": 76,
-    "angles": 82,
-    "construction": 68,
-    "placement": 72,
-    "symmetry": 88,
-    "composition": 52,
-    "blueprint-match": 68
+    "geometry": 77,
+    "dimensions": 70,
+    "angles": 76,
+    "construction": 82,
+    "placement": 77,
+    "symmetry": 71,
+    "composition": 88,
+    "blueprint-match": 77
   },
   "errors": [
     {
       "severity": "major",
-      "category": "composition",
-      "description": "THE ABSENCE IS NOT DEMONSTRATED. This is an absence option - the subject is smoothness itself - and the render is a near-black charcoal cloth lit by a broad essentially frontal soft source. Across the whole hip and upper thigh field there is almost no tonal modelling and no specular sheen; the front panels read as flat dark shapes. A PLEATED front photographed under this same light on this same cloth would look very nearly identical, so the image carries no information distinguishing it from its neighbours on the pleat-style menu.",
-      "expected": "The drawing's whole point is that the front panels between the fly and the pockets are blank - an unbroken plane from waistband to thigh",
-      "actual": "A near-black front lit flat, where a smooth plane and a folded plane would be indistinguishable",
-      "correction": "Light the trouser front with a raking source from one side, low and near-grazing across the cloth, so the front panel resolves as one continuous unbroken plane with a smooth gradient from lit edge to shadow edge and a soft sheen travelling uninterrupted from the waistband to the thigh; choose a mid-tone cloth with visible weave so that continuity is legible."
+      "category": "dimensions",
+      "description": "Length of the slant pocket openings. Normalised to waistband depth (80px in both images): the drawing's opening runs 385px vertically, 4.8 waistband depths, from the seam down to well below mid-thigh. The render's wearer-right opening runs about 168px (2.1 depths) and the wearer-left about 232px (2.9). Both materially short, and the two sides do not match.",
+      "expected": "Both slant openings running about 4.8 waistband depths from the waistband seam down and outward, terminating near the side seam",
+      "actual": "Openings of 2.1 and 2.9 waistband depths, fading out before the side seam and unequal side to side",
+      "correction": "Run each slant opening the full drawn length - from the waistband seam down and outward for about five waistband depths until it meets the side seam - and light it so the jetted lip stays legible along its whole run on both sides."
     },
     {
       "severity": "major",
-      "category": "construction",
-      "description": "Front pocket openings. The drawing clearly shows a slant pocket mouth on each side, each drawn as a doubled line running from the waistband at (205,160) down to (135,545) on the left and (995,160) to (1065,545) on the right - a long near-vertical opening set in from the side seam. In the render no pocket mouth can be resolved on either hip; there are faint vertical tonal edges near x=120 and x=810 but nothing that reads as a defined opening.",
-      "expected": "A clearly defined slant front pocket opening on each side, running from the waistband seam down toward the hip",
-      "actual": "No legible pocket opening on either side; if present, it is lost in the dark cloth",
-      "correction": "Render a crisply pressed slant front pocket mouth on each hip, running from the waistband seam down and slightly outward toward the side seam, with a defined edge and a bar tack at the lower terminus, lit so the opening's edge separates from the surrounding panel."
-    },
-    {
-      "severity": "major",
-      "category": "geometry",
-      "description": "Ambiguous vertical folds high on both front panels. Two soft vertical fold lines run from close under the waistband down each front panel (left around x=240 descending from y=560, right around x=690 from y=570). In the drawing the front creases begin much lower - at y=690, which is 54 percent of the way from the waistband seam (y=155) to the frame bottom (y=1140). In the render the equivalent creases start at about 38 percent of that span. They read as pressed leg creases starting high rather than as pleats, but on an ABSENCE option a soft vertical fold running up under the waistband is exactly what a customer would misread as a pleat.",
-      "expected": "Front creases beginning at roughly mid-thigh, a bit past halfway down the panel, with the cloth above them completely uninterrupted",
-      "actual": "Soft vertical folds beginning close under the waistband on both panels, ambiguous between a high-starting crease and a soft pleat",
-      "correction": "Press the front crease so it begins only at mid-thigh, roughly halfway down the visible panel, and keep the cloth above it as one uninterrupted plane running clean from the waistband seam."
+      "category": "symmetry",
+      "description": "The two pocket openings are not equally resolvable. The wearer's left opening reads clearly as a dark jetted slit; the wearer's right is a faint tonal edge only, and confirming it exists at all took effort. The drawing renders both identically.",
+      "expected": "Two identical equally legible slant openings, mirror-matched about centre front",
+      "actual": "One clearly resolved opening and one faint, shorter one",
+      "correction": "Light the front from a single high three-quarter source at a shallow enough angle that both jetted pocket lips throw a matching shadow line, so the two openings read with equal weight."
     },
     {
       "severity": "minor",
       "category": "placement",
-      "description": "Belt loop count and spacing. The drawing shows two loops in the front field, at x=380 and x=818 about a centre front of x=600 - symmetric at plus/minus 220. The render shows at least three, at x=285, x=618 and x=750 about a fly at x=460, so the loop at +290 has no counterpart at the mirrored position on the left.",
-      "expected": "Two front belt loops placed symmetrically either side of the fly",
-      "actual": "Three or more loops with the outermost one unmatched on the opposite side",
-      "correction": "Set two front belt loops, one either side of the fly at equal distance from centre front, with the next pair falling out toward the side seams beyond the frame."
+      "description": "Height at which the pressed front creases begin. Drawing starts both at about 6.6 waistband depths below the seam, at the same height on each leg. Render begins them higher - roughly 3.3 depths on one leg and 4.5 on the other - and at different heights.",
+      "expected": "Both creases beginning at the same height, about six and a half waistband depths below the seam",
+      "actual": "Creases beginning higher than drawn and at unequal heights",
+      "correction": "Begin each pressed crease at the same height on both legs, roughly two thirds of the way from the waistband to the crotch line, letting the cloth above stay unbroken."
     },
     {
       "severity": "minor",
       "category": "dimensions",
-      "description": "Fly topstitch run. The drawing's fly stitch drops from the waistband at y=155 to its curve at y=640, 49 percent of the waistband-to-frame-bottom span. The render's runs from about y=195 to y=520, about 34 percent of its equivalent span. Crops differ so this is approximate.",
-      "expected": "A fly topstitch running roughly half the visible panel depth before hooking toward centre",
-      "actual": "A shorter fly run, about a third of the panel depth",
-      "correction": "Run the fly topstitch down about half the visible depth of the front before curving in toward the centre-front seam, in a thread that sits close in tone to the cloth."
+      "description": "Length of the fly topstitch J. Drawing runs it 7.0 waistband depths before curving inboard; the render's runs about 4.0.",
+      "expected": "Fly curve descending about seven waistband depths before hooking inboard",
+      "actual": "About four",
+      "correction": "Extend the fly topstitch so it descends about seven waistband depths in a straight run before curving inboard toward the crotch seam."
     }
   ],
   "lockedFeatures": [
-    "Front is genuinely flat - no pleat folds and no stitched darts anywhere on either front panel; the absence itself is respected",
-    "Front view, squarely to camera",
-    "Waistband depth proportionally correct against the drawing",
-    "J-shaped fly topstitch present and correctly shaped",
-    "Left/right silhouette symmetric with a clean side-seam taper",
-    "Red bar-tack ticks in the drawing correctly read as documentation and not rendered as red thread",
-    "No numerals, arrows, leader lines or callouts traced into the photograph"
+    "ABSENCE TEST PART ONE PASSES: no pleat and no dart anywhere on either front panel, checked specifically at the pleat station just under the waistband inboard of the crease",
+    "ABSENCE TEST PART TWO NOW PASSES: mid-grey cloth with directional modelling shows each front panel as one continuous unbroken plane from waistband to crease, with a visible sheen gradient and no interrupting fold. The near-black flat-lit failure, where a pleated front would have looked identical, is resolved",
+    "Slant pocket openings are now resolvable rather than invisible",
+    "Two front belt loops flanking the fly, count matching the drawing",
+    "Fly topstitch J-curve present and curving in the drawn direction",
+    "Full front view, waist to mid-thigh, both legs, centred - matches the blueprint's coverage",
+    "The drawing's small red belt-loop tack marks correctly read as documentation",
+    "Visible weave texture"
   ],
-  "notes": "The render DOES respect the absence: both panels between the fly and the pockets were checked and carry no pleat fold and no dart stitching. It fails on the second half of the absence test. On near-black cloth under flat frontal light there is essentially no surface modelling, so the image does not affirmatively SHOW flatness; it merely fails to show a pleat, which is not the same thing and leaves it indistinguishable from every neighbouring option. This is the documented failure mode for options whose only signal is depth - the remedy is raking light, exactly as it was for back-side-pleat. Compounding it, the drawn front pocket openings are not resolvable, and two soft vertical folds run high on both panels which, while most consistent with high-starting leg creases, are close enough to soft pleats to be misread on precisely the option where that misreading is fatal. Fabric weave was NOT measurable at this exposure."
+  "notes": "THE SUBSTANTIVE FIX LANDED. The absence test was applied in two parts. Part one passes outright - nothing is wrongly present. Part two now passes too, which is what failed before: the cloth moved from near-black to mid-grey giving real tonal latitude, and the light is directional from the upper left rather than flat frontal, so sheen rolls continuously across each front panel with the pressed creases as the only vertical breaks. A pleated front could not produce this reading. This is the fourth confirmation that an option whose only signal is DEPTH needs light that models depth.\n\nThe demonstration is good rather than emphatic - the light is soft-directional, not truly raking, so the modelling is gentle and a more oblique key would make the flatness undeniable.\n\nThe pocket-opening half is only partly fixed: openings are resolvable now but short against the drawing and markedly unequal between sides.\n\nNOT measurable: any centimetre figure - no callouts, so all figures are ratios against waistband depth, read as 80px in both images. The crease start heights could not be pinned precisely; low contrast in the upper leg leaves the left crease onset uncertain within about one waistband depth, which is why that finding is minor."
 }
