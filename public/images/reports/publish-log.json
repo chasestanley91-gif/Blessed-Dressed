@@ -3372,6 +3372,39 @@
           ]
         }
       ]
+    },
+    {
+      "at": "2026-08-01T01:47:05.855Z",
+      "by": "tools/publish_approved.mjs",
+      "count": 1,
+      "rowCount": 1,
+      "fanout": true,
+      "options": [
+        {
+          "product": "shirt",
+          "option": "bias-outer-top-collar",
+          "field": "bias_cutting",
+          "identity": "bias_cutting/bias-outer-top-collar",
+          "image": "/images/generated/shirt/bias-outer-top-collar.webp",
+          "master": "/images/generated/shirt/bias-outer-top-collar.png",
+          "previous": "/images/bias_cutting/outer-top-collar.jpg",
+          "preservedBlueprint": "/images/bias_cutting/outer-top-collar.jpg",
+          "verdict": "PASS_WAIVED",
+          "waived": true,
+          "qcAttempt": 3,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 96,
+          "rows": [
+            {
+              "product": "shirt",
+              "section": "back-structure",
+              "field": "bias_cutting",
+              "previous": "/images/bias_cutting/outer-top-collar.jpg",
+              "preservedBlueprint": "/images/bias_cutting/outer-top-collar.jpg"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

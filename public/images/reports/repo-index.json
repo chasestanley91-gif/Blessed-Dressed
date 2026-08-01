@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-01T01:30:41.412Z",
+  "generatedAt": "2026-08-01T01:47:10.692Z",
   "count": 2862,
   "records": [
     {
@@ -16798,11 +16798,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/bias_cutting/outer-top-collar.jpg",
-      "liveImage": "/images/bias_cutting/outer-top-collar.jpg",
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/shirt/bias-outer-top-collar.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/shirt/bias-outer-top-collar.webp",
+      "shippedBytes": 148050,
+      "shippedSha1": "1780207f294e36f3272040cadac622209b1099a5",
       "pipeline": {
         "dir": ".craft-pipeline/shirt/bias-outer-top-collar",
         "have": {
@@ -16811,25 +16811,23 @@
           "generation": true,
           "qc": true
         },
-        "verdict": "UNMET",
-        "attempt": 2,
-        "lowestScore": 90,
+        "verdict": "PASS_WAIVED",
+        "attempt": 3,
+        "lowestScore": 96,
         "belowMin": [
           "shape",
           "geometry",
           "dimensions",
           "angles",
           "construction",
-          "placement",
           "symmetry",
-          "composition",
           "blueprint-match"
         ],
-        "candidates": 2,
+        "candidates": 3,
         "needsReverify": false,
-        "checkedAt": "2026-07-30T05:59:25.253Z"
+        "checkedAt": "2026-08-01T01:47:03.552Z"
       },
-      "stage": "unmet"
+      "stage": "shipped-waived"
     },
     {
       "key": "shirt/bias-inner-collar-stand",

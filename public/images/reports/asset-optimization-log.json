@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-01T01:30:34.928Z",
+  "at": "2026-08-01T01:47:04.153Z",
   "settings": {
     "maxWidth": 1400,
     "quality": 82,
@@ -7,30 +7,30 @@
   },
   "applied": true,
   "counts": {
-    "masters": 684,
+    "masters": 685,
     "converted": 1,
-    "skipped": 683,
+    "skipped": 684,
     "failed": 0,
     "repointed": 0
   },
   "bytes": {
-    "before": 1545744,
-    "after": 108896,
-    "savedPct": 93
+    "before": 1876974,
+    "after": 148050,
+    "savedPct": 92.1
   },
   "note": "targetSha1 is the derivative; sourceSha1 is the PNG master QC graded. The master and publish_approved.mjs byte-identity gate are untouched.",
   "results": {
     "ok": [
       {
-        "master": "public\\images\\generated\\shirt\\canvas-normal.png",
-        "masterBytes": 1545744,
-        "sourceSha1": "f22c7fe60cfc70d26c9aea74a9a3f53ddc524e55",
-        "target": "public\\images\\generated\\shirt\\canvas-normal.webp",
-        "targetBytes": 108896,
-        "targetSha1": "f2f9cf4ab05e98dd41cbb2fe40e4d96a5c5906cf",
+        "master": "public\\images\\generated\\shirt\\bias-outer-top-collar.png",
+        "masterBytes": 1876974,
+        "sourceSha1": "71c9771163cd1526d8e19df386714032673051c9",
+        "target": "public\\images\\generated\\shirt\\bias-outer-top-collar.webp",
+        "targetBytes": 148050,
+        "targetSha1": "1780207f294e36f3272040cadac622209b1099a5",
         "quality": 82,
         "width": 1400,
-        "web": "/images/generated/shirt/canvas-normal.webp"
+        "web": "/images/generated/shirt/bias-outer-top-collar.webp"
       }
     ],
     "skipped": [
@@ -1024,6 +1024,10 @@
       },
       {
         "master": "public\\images\\generated\\shirt\\btn-9.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\shirt\\canvas-normal.png",
         "reason": "derivative already exists"
       },
       {
