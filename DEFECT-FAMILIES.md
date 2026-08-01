@@ -1180,3 +1180,49 @@ exist on these records (the field is `optionId`), so every option collapsed to
 `product/field/undefined` and unrelated rows were compared against each other. A diff is only evidence
 once you have checked it is comparing the things you named — the same lesson as the 2.6° notch that
 turned out to be a shadow crease.
+
+---
+
+## cp-trapezoid attempt 1 — the trapezoid is reversed, and three measurements were wrong first
+
+**Result: the render tapers the wrong way.** Measured on the supplier's own red overlay, which *is*
+the welt, so no thresholding guesswork is involved:
+
+| | drawing | render |
+|---|---|---|
+| taper ratio (deep end / shallow end) | **1.15** | **1.69** |
+| deeper at | **outboard** (toward the armhole) | **inboard** (toward centre front) |
+| depth / run | 0.274 → 0.314 | 0.244 → 0.144 |
+
+So the option's defining feature — the taper that makes it a trapezoid rather than a plain slanted
+welt — is present but runs in the opposite direction, and is exaggerated to 1.69 where the drawing
+draws a gentle 1.15. Both errors matter: a customer choosing this option gets a wedge pointing the
+wrong way, and a more emphatic one than the tailor drew.
+
+**Note on the description.** It says the welt is *"wider at the top than the bottom"*. The drawn welt
+runs diagonally and tapers along its length, deeper at the outboard end — "top vs bottom" does not
+describe that unambiguously and may be part of why the render chose the opposite end. This should be
+restated in terms of the two ENDS of the run before attempt 2.
+
+### Three wrong measurements before one right one — all the same error
+
+This is worth recording in full, because the failure repeated three times in one grading and every
+instance was the same mistake in different clothing.
+
+1. **Raw threshold on the render** returned a welt depth of 139px inside a 140px crop window. It had
+   saturated against its own box — navy-on-navy has almost no absolute contrast, so the threshold
+   caught the whole jacket. Discarded.
+2. **Raw threshold on the drawing** returned taper 2.31, deeper at LEFT.
+3. **Local-contrast on the drawing** returned taper 1.18, deeper at RIGHT — disagreeing with (2) in
+   both magnitude *and direction*, which is what forced the question rather than a choice between them.
+
+The answer was that **both drawing measurements were reading the wrong part of the garment**. The crop
+box sat at x 560–860, y 320–480; locating the red overlay showed the welt is at **x 693–921, y 513–630**.
+Cropping and *looking* settled it in one glance: the top panel of the comparison was lapel edges, not a
+welt at all.
+
+**The rule this reinforces, now demonstrated four times in one session** (the 68° notch, the 2.6°
+shadow crease, the `opt.id` diff that reported 905 phantom changes, and this): *a measurement is only
+evidence once you have checked that it measures the thing you named.* Two measurements disagreeing is
+not a reason to pick one — it is a signal that neither has been validated. And the cheapest validation
+is almost always to crop the region and look at it.
