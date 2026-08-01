@@ -451,7 +451,33 @@ export function buildPrompt(spec) {
       `plain background beyond each are inside the picture. Completeness across the full span beats ` +
       `closeness; do not move in.`
     : `Frame ${styling.crop}; the detail must read clearly and sharply.`;
-  const texture = `Extremely realistic ${spec.fabric} texture, fine stitching.`;
+  // A GRAIN DIRECTION IS INVISIBLE ON PLAIN CLOTH, and the default fabric line
+  // deletes it. This is the other half of the same table in
+  // photography-rules.md that the raking-light fix covers: depth needs raking
+  // light, DIRECTION needs a pattern to run along. Both rules were written
+  // 2026-07-30 and neither reached the prompt string.
+  //
+  // Measured: shirt/bias-outer-top-collar failed TWICE on plain poplin. The
+  // blueprint marks the bias with diagonal hatching, and hatching on plain
+  // cloth photographs as nothing at all — the image was not slightly wrong, it
+  // was empty. On a navy pinstripe the option reads in one second: diagonal
+  // stripes on the collar meeting vertical stripes on the body at the seam.
+  // Its sibling bias-inner-collar-stand, generated before any of this was
+  // understood, is live in the catalog right now rendering the red hatching as
+  // a solid navy CONTRAST BAND — annotation mistaken for cloth.
+  //
+  // Five bias options still have no photograph. This is what stops them
+  // repeating it.
+  const GRAIN_PARTS = /(^|-)bias($|-)|grain|nap/i;
+  const isGrainOption = GRAIN_PARTS.test(String(spec.optionId || '')) || GRAIN_PARTS.test(String(spec.field || ''));
+  const texture = isGrainOption
+    ? `Extremely realistic ${spec.fabric} in a FINE EVEN STRIPE, and the stripe is not decoration — `
+      + `it is the only way this option is visible at all. This option is a GRAIN DIRECTION, which has `
+      + `no colour and no outline of its own: on plain cloth it photographs as nothing. Render the `
+      + `stripe running at a clear diagonal across the panel this option names, while every other `
+      + `panel keeps its stripe running straight, so the two directions meet along the seam between `
+      + `them and the difference reads in one second. Fine stitching, legible weave.`
+    : `Extremely realistic ${spec.fabric} texture, fine stitching.`;
 
   // Waistband-family micro-craft lock (Primary Craft / Hardware Lock / Single
   // State / Flatness) — '' for every other part, so it filters out.

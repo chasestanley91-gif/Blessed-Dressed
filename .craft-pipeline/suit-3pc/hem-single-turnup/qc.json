@@ -2,36 +2,103 @@
   "addr": "suit-3pc > hem-single-turnup",
   "productId": "suit-3pc",
   "optionId": "hem-single-turnup",
-  "attempt": 1,
+  "attempt": 2,
   "maxAttempts": 3,
   "scores": {
-    "shape": 99,
-    "geometry": 98,
-    "dimensions": 98,
-    "angles": 99,
-    "construction": 99,
-    "placement": 99,
-    "symmetry": 98,
-    "composition": 99,
-    "blueprint-match": 98
+    "shape": 94,
+    "geometry": 92,
+    "dimensions": 91,
+    "angles": 93,
+    "construction": 96,
+    "placement": 94,
+    "symmetry": 90,
+    "composition": 80,
+    "blueprint-match": 88
   },
   "scoreMin": 98,
   "waiverMin": 95,
-  "belowMinCategories": [],
-  "belowWaiverMinCategories": [],
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
   "errors": [
+    {
+      "severity": "major",
+      "category": "composition",
+      "description": "Framing does not match the sibling. Trouser leg width at the hem is 465px here against 393px in suit-2pc/hem-cuff-32 - shot 18 percent tighter. Because the customer compares the two side by side, the raw on-screen band heights (151px against 96px, 1.57x) overstate the real depth difference (1.33x). The leg also runs to the top frame edge with no headroom, whereas the sibling keeps it centred.",
+      "expected": "Identical camera distance and focal length across both cuff options so depth is the only variable perceived",
+      "actual": "18 percent tighter framing, inflating the apparent difference",
+      "correction": "Re-frame to match the 3.2 cm sibling exactly - same focal length and subject distance, trouser leg silhouette the same width in frame, hem line at the same frame height - so the deeper band is the only visible difference between the two catalog images."
+    },
+    {
+      "severity": "minor",
+      "category": "symmetry",
+      "description": "The band lower-left corner collapses where it meets the shoe. Left silhouette runs flat at x=71 from y=771 to 831, then pulls in sharply through 72,73,76,80,84,88,93,96 over y=833-847 - a 25px notch. The right side shows no equivalent, holding at 558-559 through the same rows.",
+      "expected": "An even depth and even outer face all the way round, as the drawing clean straight-sided band shows",
+      "actual": "A 25px notch in the lower-left corner only",
+      "correction": "Render the lower-left corner with the same clean pressed edge as the right side, the band outer face continuing straight down to the hem before the leg silhouette turns away, with the shoe reading behind it rather than deforming it."
+    },
+    {
+      "severity": "minor",
+      "category": "geometry",
+      "description": "The fold edge kinks at the far left. Fold y-position runs 702, 711, 714, 717, 717, 716, 713, 711 - 9px of change in the first 60px of width, then only 6px across the remaining 300px.",
+      "expected": "A single continuous fold line wrapping a straight-sided tube, as drawn",
+      "actual": "A smooth sweep that steps near the left edge",
+      "correction": "Render the top fold as one smooth continuous ellipse from left silhouette to right, rising evenly toward both outer edges by the same amount, so it reads as a single uninterrupted press."
+    },
     {
       "severity": "minor",
       "category": "dimensions",
-      "description": "Measured against the drawing: in blueprint 3604 the cuff fold line sits 67 px above the hem across a 330 px leg span, a depth-to-leg-width ratio of 0.203. In the render the same ratio is roughly 0.33, about one and a half times deeper than drawn. The overshoot is the same systematic factor seen on the 3.2 cm sibling, and the two remain correctly ordered: 0.33 here against 0.25 there, matching the drawn 0.203 against 0.161.",
-      "expected": "cuff depth about 0.20 of the leg width, as measured off blueprint 3604",
-      "actual": "cuff depth about 0.33 of the leg width",
-      "correction": "systematic across both cuff options and the sibling ordering is preserved; if re-shot, state the depth as a fraction of the visible leg width at the hem rather than in centimetres"
+      "description": "Absolute depth is unverifiable and this is the render where it matters most: the band occupies about a third (0.325) of the leg projected width, a deep turn-up. The drawing predicts 0.204 (flat-pressed) to 0.320 (circular tube) depending on an unmeasurable cross-section factor, so 0.325 sits AT OR JUST PAST the upper bound.",
+      "expected": "4.4 cm turn-up; the drawing carries no callout so no real-world scale is recoverable",
+      "actual": "0.325 of projected leg width - at the deep end of what the drawing permits",
+      "correction": "If a future pass adds a fixed real-world reference visible in both sibling images, re-verify against it. On present evidence a render sitting 5-10 percent shallower would sit more safely inside the bracket while still reading clearly deeper than the 3.2 cm option."
     }
   ],
-  "verdict": "PASS",
+  "verdict": "FAIL",
   "waiver": null,
-  "correction": null,
-  "notes": "ADVERSARIAL READ vs /images/blueprints/factory/30517f02c254__3604__4.4cm_cuff.jpg.\n\nWHAT THE DRAWING SPECIFIES: a side view of the trouser with a level red line across the leg near the hem. Measured: red line at row 1086, hem bottom at row 1153, leg span about 330 px, giving a drawn cuff depth of 67/330 = 0.203 of the leg width — deeper than the 3.2 cm sibling's 0.161, which is exactly the relationship the two labels assert.\n\nATTEMPTED REJECTIONS THAT FAILED:\n(1) Is this simply a duplicate of the 3.2 cm sibling, leaving the customer unable to tell the options apart? No. Rendered depth here is about 0.33 of leg width against about 0.25 there — the same direction and close to the same proportion as the drawings.\n(2) A plain hem with no turn-up? No — a clear folded-back band, closed all the way round, with two fold lines.\n(3) A slanted hem borrowed from the inner-edge-fold option? No — top and bottom edges of the cuff are both level and parallel to the floor.\n(4) Annotation traced? No red line, no numbers, nothing but cloth.\n(5) Wrong garment or wrong crop? Trouser lower leg over a dress shoe, second leg cropped to the frame edge, as briefed.\n\nOne minor dimensional finding, logged above. No critical or major findings.",
-  "checkedAt": "2026-07-31T21:05:49.417Z"
+  "correction": {
+    "errors": [
+      {
+        "severity": "major",
+        "category": "composition",
+        "error": "Framing does not match the sibling. Trouser leg width at the hem is 465px here against 393px in suit-2pc/hem-cuff-32 - shot 18 percent tighter. Because the customer compares the two side by side, the raw on-screen band heights (151px against 96px, 1.57x) overstate the real depth difference (1.33x). The leg also runs to the top frame edge with no headroom, whereas the sibling keeps it centred.",
+        "expected": "Identical camera distance and focal length across both cuff options so depth is the only variable perceived",
+        "actual": "18 percent tighter framing, inflating the apparent difference",
+        "correction": "Re-frame to match the 3.2 cm sibling exactly - same focal length and subject distance, trouser leg silhouette the same width in frame, hem line at the same frame height - so the deeper band is the only visible difference between the two catalog images."
+      }
+    ],
+    "lockedFeatures": [
+      "GENUINE FOLDED TURN-UP: the band steps about 6px proud of the leg silhouette with a clear undercut shadow beneath its lower edge on the left - unambiguous three-dimensional depth, not a seam line, and the single clearest depth cue in either image",
+      "The raking sidelight that makes the fold shadow legible - the fix that worked",
+      "EXCEPTIONALLY CONSISTENT band depth around the leg: 149-152px across seven sample columns, standard deviation 1.3px - the cleanest measurement of the pair",
+      "Front crease continues down the face of the turn-up to the hem bottom, matching the tech pack",
+      "No topstitching on the cuff band - blind-finished, matching the drawing",
+      "ZERO non-neutral pixels in the whole render (max channel spread 13/255) - the drawing red guide band, the only coloured mark in the tech pack, correctly not reproduced"
+    ],
+    "forbiddenChanges": [
+      "do not alter any checklist item this attempt already passed",
+      "do not change the camera crop, composition, or accessories unless the error is itself a composition error",
+      "do not change the garment part, orientation, or any other option's geometry"
+    ]
+  },
+  "notes": "Same method as the sibling; see that entry for the full landmark reasoning.\n\nTHE DECISIVE TEST PASSED: the 4.4 cm render IS visibly deeper than the 3.2 cm render, by a third, and the step (1.33) is within about 3 percent of the 4.4/3.2 = 1.375 target - closer than the drawings themselves manage (1.23). Not a blueprint-match failure on either image, and the pair is not indistinguishable.\n\nNOT measurable: absolute depth in cm, with no real-world size assumed. The drawings own 1.23 step cannot be treated as a defect because their 14-16px line weight admits plus/minus 8px, spanning 0.92-1.65 - hence BLUEPRINT_CONFLICT false.\n\nSAME CORRECTION AS THE SIBLING: the leg crease does NOT die at the cuff top edge in either tech pack. Both drawings carry it through to the hem and both renders match. Correct as rendered.",
+  "checkedAt": "2026-08-01T07:22:55.448Z"
 }
