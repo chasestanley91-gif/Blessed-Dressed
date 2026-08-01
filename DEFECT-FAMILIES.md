@@ -1226,3 +1226,36 @@ shadow crease, the `opt.id` diff that reported 905 phantom changes, and this): *
 evidence once you have checked that it measures the thing you named.* Two measurements disagreeing is
 not a reason to pick one — it is a signal that neither has been validated. And the cheapest validation
 is almost always to crop the region and look at it.
+
+### cp-trapezoid attempt 2 — direction corrected, and a tooling flaw found
+
+Rewriting the description to name the **ends of the run** rather than "top vs bottom" flipped the
+taper to the drawn direction. Attempt 1 put the depth at the inboard/centre-front end; attempt 2 puts
+it at the outboard/armhole end, matching the drawing. Confirmed by tight crop and direct inspection.
+
+**This is the second controlled confirmation of the prose mechanism**, on a different garment part and
+a different kind of error from the jeans. There the description named the wrong *location*; here it
+used a spatial frame ("top vs bottom") that does not describe a diagonal run at all, so the generator
+had to guess which end — and guessed wrong. **Ambiguity in the prose is as damaging as error in it.**
+
+Magnitude is NOT claimed. The local-contrast measurement returned "deeper at LEFT, taper 2.03" with
+290 of 290 columns usable — a suspiciously perfect hit rate, and the cause is that the lapel edge runs
+diagonally through the left of the measurement box, so the detector paired the lapel edge with the
+welt edge. Fourth contaminated measurement on this one option. Direction is reported because it was
+confirmed by eye; the ratio is not, because it was not.
+
+**Tooling flaw: `record_generation.mjs` silently overwrote candidate-1.** It auto-increments the
+attempt number from any prior `qc.json`, and no qc.json had been logged for attempt 1, so attempt 2
+was also written as attempt 1 and replaced the file. Nothing was permanently lost — attempt 1's
+`generation.json` was committed and carries its CDN result URL, so it is recoverable from git — but
+the provenance chain (`qc.json(attempt N)` -> `candidate-N.png`) depends on QC being logged between
+generations, and that dependency is undocumented and unenforced. **Log QC before regenerating, or pass
+`--attempt` explicitly.**
+
+### Pipeline ordering rule, learned the same way
+
+A description change does **not** reach the prompt on its own. `spec.json` caches the description, so
+`build_prompt` alone rebuilds from the stale copy — the rebuilt prompt came back byte-identical at
+5007 chars and still contained the sentence I had just deleted. The order is
+**`set_description` -> `extract_spec --write` -> `build_prompt --write`**. Skipping the middle step
+produces a prompt that silently disagrees with the catalog.
