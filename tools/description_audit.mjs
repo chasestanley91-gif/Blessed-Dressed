@@ -75,7 +75,11 @@ const EXCLUDED_SHAPE = [
   // extraction emit a spurious `arc buttonhole`. lp-straight-jetted-40 said it was
   // "more formal than the slanted hacking pocket", naming a third.
   { re: /\bdeparts? from (?:both )?(?:the|a)\b[^.]{0,70}/i, what: 'names the shape(s) it departs from' },
-  { re: /\b(?:more|less) \w+ than (?:a|the)\b[^.]{0,60}/i, what: 'compares against a named sibling shape' },
+  // Guarded against SELF-reference. "the rake reading more strongly than the flap
+  // ITSELF" compares two parts of the same option and is fine; this rule is only
+  // about naming a DIFFERENT option's shape. Caught as a false positive on prose I
+  // wrote minutes after adding the pattern.
+  { re: /\b(?:more|less) \w+ than (?:a|the)\b(?![^.]{0,40}\b(?:itself|its own)\b)[^.]{0,60}/i, what: 'compares against a named sibling shape' },
 ];
 
 // CLOSURE is the pattern most prone to false positives, because "open" and
