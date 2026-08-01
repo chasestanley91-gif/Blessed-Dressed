@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-01T03:39:52.882Z",
+  "at": "2026-08-01T22:04:56.735Z",
   "settings": {
     "maxWidth": 1400,
     "quality": 82,
@@ -7,30 +7,30 @@
   },
   "applied": true,
   "counts": {
-    "masters": 687,
+    "masters": 688,
     "converted": 1,
-    "skipped": 686,
+    "skipped": 687,
     "failed": 0,
     "repointed": 0
   },
   "bytes": {
-    "before": 2325486,
-    "after": 195302,
-    "savedPct": 91.6
+    "before": 1922613,
+    "after": 116914,
+    "savedPct": 93.9
   },
   "note": "targetSha1 is the derivative; sourceSha1 is the PNG master QC graded. The master and publish_approved.mjs byte-identity gate are untouched.",
   "results": {
     "ok": [
       {
-        "master": "public\\images\\generated\\suit-2pc\\pocket-stitch-double.png",
-        "masterBytes": 2325486,
-        "sourceSha1": "2db65ad88c418a2385e90c1c79c7e000f95ababd",
-        "target": "public\\images\\generated\\suit-2pc\\pocket-stitch-double.webp",
-        "targetBytes": 195302,
-        "targetSha1": "6843f2a430d8d75e82d7b9818ee0710f171dd104",
+        "master": "public\\images\\generated\\suit-2pc\\lapel-shawl-0e.png",
+        "masterBytes": 1922613,
+        "sourceSha1": "28f694ed2f0d9e02295da38c328c264e3abeee76",
+        "target": "public\\images\\generated\\suit-2pc\\lapel-shawl-0e.webp",
+        "targetBytes": 116914,
+        "targetSha1": "cd1dbef29342a2371a1f498f55dcc4f47b845148",
         "quality": 82,
         "width": 1400,
-        "web": "/images/generated/suit-2pc/pocket-stitch-double.webp"
+        "web": "/images/generated/suit-2pc/lapel-shawl-0e.webp"
       }
     ],
     "skipped": [
@@ -1764,6 +1764,10 @@
       },
       {
         "master": "public\\images\\generated\\suit-2pc\\pocket-stitch-06.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\pocket-stitch-double.png",
         "reason": "derivative already exists"
       },
       {

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-01T21:57:08.047Z",
+  "generatedAt": "2026-08-01T22:05:38.568Z",
   "count": 2862,
   "records": [
     {
@@ -19227,11 +19227,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/supplier/41b79662304b__090E__E_shawl.png",
-      "liveImage": "/images/generated/jacket/lapel-shawl-0e.webp",
+      "liveImage": "/images/generated/suit-2pc/lapel-shawl-0e.webp",
       "shipped": true,
-      "shippedPath": "/images/generated/jacket/lapel-shawl-0e.webp",
-      "shippedBytes": 161786,
-      "shippedSha1": "ca22563b317dc247e8a6edc512510d84e5f4f435",
+      "shippedPath": "/images/generated/suit-2pc/lapel-shawl-0e.webp",
+      "shippedBytes": 116914,
+      "shippedSha1": "cd1dbef29342a2371a1f498f55dcc4f47b845148",
       "pipeline": null,
       "stage": "legacy-shipped-unverified"
     },
@@ -27799,28 +27799,28 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/supplier/41b79662304b__090E__E_shawl.png",
-      "liveImage": "/images/generated/jacket/lapel-shawl-0e.webp",
+      "liveImage": "/images/generated/suit-2pc/lapel-shawl-0e.webp",
       "shipped": true,
-      "shippedPath": "/images/generated/jacket/lapel-shawl-0e.webp",
-      "shippedBytes": 161786,
-      "shippedSha1": "ca22563b317dc247e8a6edc512510d84e5f4f435",
+      "shippedPath": "/images/generated/suit-2pc/lapel-shawl-0e.webp",
+      "shippedBytes": 116914,
+      "shippedSha1": "cd1dbef29342a2371a1f498f55dcc4f47b845148",
       "pipeline": {
         "dir": ".craft-pipeline/suit-2pc/lapel-shawl-0e",
         "have": {
           "spec": true,
           "prompt": true,
-          "generation": false,
-          "qc": false
+          "generation": true,
+          "qc": true
         },
-        "verdict": null,
-        "attempt": null,
-        "lowestScore": null,
+        "verdict": "PASS",
+        "attempt": 1,
+        "lowestScore": 98,
         "belowMin": [],
-        "candidates": 0,
+        "candidates": 1,
         "needsReverify": false,
-        "checkedAt": null
+        "checkedAt": "2026-08-01T22:04:33.985Z"
       },
-      "stage": "prompt-built"
+      "stage": "shipped"
     },
     {
       "key": "suit-2pc/lapel-shawl-0005",
@@ -42104,11 +42104,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/supplier/41b79662304b__090E__E_shawl.png",
-      "liveImage": "/images/generated/jacket/lapel-shawl-0e.webp",
+      "liveImage": "/images/generated/suit-2pc/lapel-shawl-0e.webp",
       "shipped": true,
-      "shippedPath": "/images/generated/jacket/lapel-shawl-0e.webp",
-      "shippedBytes": 161786,
-      "shippedSha1": "ca22563b317dc247e8a6edc512510d84e5f4f435",
+      "shippedPath": "/images/generated/suit-2pc/lapel-shawl-0e.webp",
+      "shippedBytes": 116914,
+      "shippedSha1": "cd1dbef29342a2371a1f498f55dcc4f47b845148",
       "pipeline": null,
       "stage": "legacy-shipped-unverified"
     },

@@ -675,3 +675,15 @@ catalog.
 Writing this very entry through a bash heredoc ate every code span again and
 executed the contents as commands. It is at least the third time. **Write prose
 with the Write tool and append with node; never through a shell heredoc.**
+
+
+## 2026-08-01 — SPEC-AS-LAW PIPELINE PROOF: suit-2pc/lapel-shawl-0e (0.5 credits)
+
+First generation under the owner drafting-spec authority ruling. Spec-derived description
+-> extract_spec -> build_prompt (validate 1/1) -> media_upload/hf_put/media_confirm
+(media cdcd3969-f33e-4b99-ae71-5ae06d41232d) -> gpt_image_2 low/1k/3:4 (job 17830709-3944-4aa3-996b-c771218e9155,
+0.5 credits, preflight-verified) -> QC PASS attempt 1, all 9 categories 98, one logged minor
+(foot crossing tight to frame edge). Published with fan-out to sport-coat + suit-3pc,
+replacing the ca22563b317d 6-way shawl collision copy on those rows (--allow-swap per the
+approved campaign plan). Shawl collision group now 5. Attempts-per-shipped this wave: 1.0
+vs 1.75 historical. Credits after: ~794.0.
