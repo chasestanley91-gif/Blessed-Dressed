@@ -8,13 +8,13 @@
   "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\suit-2pc.json",
   "source": "json",
   "label": "Adjust Buckle",
-  "description": "Side adjustment buckle.",
+  "description": "Metal side adjusters on both sides, placed 7 cm to 10 cm behind the side seams — beltless waist control; immediately custom-made.",
   "fieldLabel": "Side Adjustment Style",
   "sectionLabel": "Trousers — Waistband",
-  "part": "fin-adjust",
+  "part": "trouser-adjuster",
   "garment": {
-    "noun": "navy bespoke suit jacket",
-    "fabric": "fine wool suiting with visible weave"
+    "noun": "pair of bespoke wool tailored trousers",
+    "fabric": "fine wool trouser cloth with visible weave"
   },
   "view": {
     "orientation": "three-quarter-front",
@@ -23,14 +23,22 @@
   },
   "absence": false,
   "measured": {
-    "dimensions": [],
+    "dimensions": [
+      "7 cm",
+      "10 cm"
+    ],
     "angles": [],
     "counts": [],
-    "shapes": [],
+    "shapes": [
+      "on-seam (side-seam) pocket",
+      "metal side-adjuster with buckle"
+    ],
+    "negatedShapes": [],
     "spread": [],
     "flags": [
       "side adjuster",
-      "strap & buckle back"
+      "strap & buckle back",
+      "buckle hardware"
     ]
   },
   "illustration": {
@@ -46,5 +54,5 @@
   ],
   "excluded": null,
   "generate": true,
-  "extractedAt": "2026-07-31T04:39:45.849Z"
+  "extractedAt": "2026-08-01T21:51:45.236Z"
 }

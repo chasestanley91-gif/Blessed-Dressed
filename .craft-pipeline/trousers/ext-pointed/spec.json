@@ -8,7 +8,7 @@
   "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\trousers.json",
   "source": "json",
   "label": "Round, Hook & Button",
-  "description": "Rounded tab with hook and button.",
+  "description": "Pointed waistband extension — a sharp nose angled 20° to 35° on a 5 cm to 15 cm tab.",
   "fieldLabel": "Extension & Closure",
   "sectionLabel": "Waistband",
   "part": "trouser-extension",
@@ -23,8 +23,14 @@
   },
   "absence": false,
   "measured": {
-    "dimensions": [],
-    "angles": [],
+    "dimensions": [
+      "5 cm",
+      "15 cm"
+    ],
+    "angles": [
+      "20°",
+      "35°"
+    ],
     "counts": [
       "1-hook",
       "1-button"
@@ -32,6 +38,7 @@
     "shapes": [
       "rounded extension tab"
     ],
+    "negatedShapes": [],
     "spread": [],
     "flags": [
       "tab fastening",
@@ -53,5 +60,5 @@
   ],
   "excluded": null,
   "generate": true,
-  "extractedAt": "2026-07-31T04:55:11.668Z"
+  "extractedAt": "2026-08-01T21:51:57.589Z"
 }

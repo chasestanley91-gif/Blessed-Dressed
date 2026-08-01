@@ -226,7 +226,7 @@
   "next_steps": [
    "Re-run collar-long-point-85 against its restored line drawing",
    "Continue waves over the 759 clusters; BLUEPRINT_CONFLICT will divert mis-sourced options at zero cost",
-   "RESOLVED 2026-07-30 (was: OPEN QUESTION FOR USER on the >=98 gate). User decision: the gate STAYS >=98; a 3rd attempt is allowed; after 3 attempts an image with ZERO critical/major findings may ship at >=95 as a LOGGED WAIVER in qc.json (verdict PASS_WAIVED, computed mechanically by log_qc_result.mjs, never asserted by the agent). Not yet implemented — see HANDOFF.md next action 4."
+   "RESOLVED 2026-07-30 (was: OPEN QUESTION FOR USER on the >=98 gate). User decision: the gate STAYS >=98; a 3rd attempt is allowed; after 3 attempts an image with ZERO critical/major findings may ship at >=95 as a LOGGED WAIVER in qc.json (verdict PASS_WAIVED, computed mechanically by log_qc_result.mjs, never asserted by the agent). IMPLEMENTED and verified 2026-08-01: log_qc_result.mjs computes PASS_WAIVED mechanically; stage_approved.mjs and publish_approved.mjs both accept it; 15 options currently shipped-waived."
   ]
  },
  "session_2026_07_30": {

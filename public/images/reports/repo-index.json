@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-01T21:43:02.271Z",
+  "generatedAt": "2026-08-01T21:54:19.495Z",
   "count": 2862,
   "records": [
     {
@@ -19135,8 +19135,8 @@
       "label": "Curved Peak 120°",
       "part": "jacket-lapel",
       "kind": "structural",
-      "excluded": "fabric",
-      "inScope": false,
+      "excluded": null,
+      "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/supplier/ec013dda688e__0002__Peak.jpg",
       "liveImage": "/images/generated/jacket/lapel-peak-120-curved--25b239a8.webp",
@@ -19145,7 +19145,7 @@
       "shippedBytes": 135552,
       "shippedSha1": "e23b6edbf2431d79d1d861051f92fcf1679b07e3",
       "pipeline": null,
-      "stage": "excluded-swatch"
+      "stage": "legacy-shipped-unverified"
     },
     {
       "key": "sport-coat/lapel-shawl",
@@ -19157,8 +19157,8 @@
       "label": "Shawl Lapel",
       "part": "jacket-lapel",
       "kind": "structural",
-      "excluded": "fabric",
-      "inScope": false,
+      "excluded": null,
+      "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/supplier/9345e8ee9d9a__0005__Shawl.jpg",
       "liveImage": "/images/generated/jacket/lapel-shawl.webp",
@@ -19167,7 +19167,7 @@
       "shippedBytes": 161786,
       "shippedSha1": "ca22563b317dc247e8a6edc512510d84e5f4f435",
       "pipeline": null,
-      "stage": "excluded-swatch"
+      "stage": "legacy-shipped-unverified"
     },
     {
       "key": "sport-coat/lapel-shawl-d",
@@ -27707,8 +27707,8 @@
       "label": "Curved Peak 120°",
       "part": "jacket-lapel",
       "kind": "structural",
-      "excluded": "fabric",
-      "inScope": false,
+      "excluded": null,
+      "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/supplier/ec013dda688e__0002__Peak.jpg",
       "liveImage": "/images/generated/jacket/lapel-peak-120-curved--25b239a8.webp",
@@ -27717,7 +27717,7 @@
       "shippedBytes": 135552,
       "shippedSha1": "e23b6edbf2431d79d1d861051f92fcf1679b07e3",
       "pipeline": null,
-      "stage": "excluded-swatch"
+      "stage": "legacy-shipped-unverified"
     },
     {
       "key": "suit-2pc/lapel-shawl",
@@ -27729,8 +27729,8 @@
       "label": "Shawl Lapel",
       "part": "jacket-lapel",
       "kind": "structural",
-      "excluded": "fabric",
-      "inScope": false,
+      "excluded": null,
+      "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/supplier/9345e8ee9d9a__0005__Shawl.jpg",
       "liveImage": "/images/generated/jacket/lapel-shawl.webp",
@@ -27739,7 +27739,7 @@
       "shippedBytes": 161786,
       "shippedSha1": "ca22563b317dc247e8a6edc512510d84e5f4f435",
       "pipeline": null,
-      "stage": "excluded-swatch"
+      "stage": "legacy-shipped-unverified"
     },
     {
       "key": "suit-2pc/lapel-shawl-d",
@@ -35524,8 +35524,8 @@
       "label": "Besom / Jetted Pocket",
       "part": "trouser-detail",
       "kind": "structural",
-      "excluded": "fabric",
-      "inScope": false,
+      "excluded": null,
+      "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/factory/9092405bd48f__3131__Besom.jpg",
       "liveImage": "/images/blueprints/factory/9092405bd48f__3131__Besom.jpg",
@@ -35534,7 +35534,7 @@
       "shippedBytes": null,
       "shippedSha1": null,
       "pipeline": null,
-      "stage": "excluded-swatch"
+      "stage": "not-started"
     },
     {
       "key": "suit-2pc/slant-20",
@@ -35612,8 +35612,8 @@
       "label": "2.0 cm Slant with Stripe",
       "part": "trouser-detail",
       "kind": "structural",
-      "excluded": null,
-      "inScope": true,
+      "excluded": "fabric",
+      "inScope": false,
       "blueprint": "local",
       "illustration": "/images/blueprints/remote/cac83d873411__3120.jpg",
       "liveImage": "/images/generated/jacket/slant-20-stripe.webp",
@@ -35622,7 +35622,7 @@
       "shippedBytes": 114440,
       "shippedSha1": "f4d755940d9637512b744dbae90afd30bac480db",
       "pipeline": null,
-      "stage": "legacy-shipped-unverified"
+      "stage": "excluded-swatch"
     },
     {
       "key": "suit-2pc/slant-25-stripe",
@@ -36608,7 +36608,7 @@
       "label": "Standard Waistband",
       "part": "trouser-waistband",
       "kind": "structural",
-      "excluded": "fabric",
+      "excluded": null,
       "inScope": false,
       "blueprint": "none",
       "illustration": null,
@@ -36618,7 +36618,7 @@
       "shippedBytes": null,
       "shippedSha1": null,
       "pipeline": null,
-      "stage": "excluded-swatch"
+      "stage": "no-blueprint"
     },
     {
       "key": "suit-2pc/waist-extended-tab",
@@ -36652,7 +36652,7 @@
       "label": "Waistcoat Back Band",
       "part": "trouser-waistband",
       "kind": "structural",
-      "excluded": "button",
+      "excluded": null,
       "inScope": false,
       "blueprint": "none",
       "illustration": null,
@@ -36662,7 +36662,7 @@
       "shippedBytes": null,
       "shippedSha1": null,
       "pipeline": null,
-      "stage": "excluded-swatch"
+      "stage": "no-blueprint"
     },
     {
       "key": "suit-2pc/waist-elasticated",
@@ -37820,8 +37820,8 @@
       "label": "Single Forward Pleat",
       "part": "trouser-pleat",
       "kind": "structural",
-      "excluded": null,
-      "inScope": true,
+      "excluded": "fabric",
+      "inScope": false,
       "blueprint": "local",
       "illustration": "/images/blueprints/factory/768640315c4d__3022__Single_toward_fly.jpg",
       "liveImage": "/images/generated/suit-2pc/single-forward.webp",
@@ -37845,7 +37845,7 @@
         "needsReverify": false,
         "checkedAt": "2026-07-31T21:00:59.582Z"
       },
-      "stage": "shipped"
+      "stage": "excluded-swatch"
     },
     {
       "key": "suit-2pc/double-forward",
@@ -37857,8 +37857,8 @@
       "label": "Double Forward Pleats",
       "part": "trouser-pleat",
       "kind": "structural",
-      "excluded": null,
-      "inScope": true,
+      "excluded": "fabric",
+      "inScope": false,
       "blueprint": "local",
       "illustration": "/images/blueprints/factory/48f3c94b03b0__3024__Double_toward_fly.jpg",
       "liveImage": "/images/blueprints/factory/48f3c94b03b0__3024__Double_toward_fly.jpg",
@@ -37882,7 +37882,7 @@
         "needsReverify": false,
         "checkedAt": null
       },
-      "stage": "prompt-built"
+      "stage": "excluded-swatch"
     },
     {
       "key": "suit-2pc/single-reverse",
@@ -37894,8 +37894,8 @@
       "label": "Single Reverse Pleat",
       "part": "trouser-pleat",
       "kind": "structural",
-      "excluded": null,
-      "inScope": true,
+      "excluded": "fabric",
+      "inScope": false,
       "blueprint": "local",
       "illustration": "/images/blueprints/factory/600d8568a158__3021__Single_toward_side.jpg",
       "liveImage": "/images/generated/trousers/single-reverse.webp",
@@ -37904,7 +37904,7 @@
       "shippedBytes": 182210,
       "shippedSha1": "fdba3d29512e627d39c299e6c4c36558bc78b367",
       "pipeline": null,
-      "stage": "legacy-shipped-unverified"
+      "stage": "excluded-swatch"
     },
     {
       "key": "suit-2pc/double-reverse",
@@ -37916,8 +37916,8 @@
       "label": "Double Reverse Pleats",
       "part": "trouser-pleat",
       "kind": "structural",
-      "excluded": null,
-      "inScope": true,
+      "excluded": "fabric",
+      "inScope": false,
       "blueprint": "local",
       "illustration": "/images/blueprints/factory/087231c58490__3023__Double_toward_side.jpg",
       "liveImage": "/images/generated/trousers/double-reverse.webp",
@@ -37926,7 +37926,7 @@
       "shippedBytes": 84722,
       "shippedSha1": "1e02148110699131290e8907efe51f1ab71fc1e8",
       "pipeline": null,
-      "stage": "legacy-shipped-unverified"
+      "stage": "excluded-swatch"
     },
     {
       "key": "suit-2pc/pleat-15",
@@ -39328,8 +39328,8 @@
       "label": "4.4 cm Cuff Turn-Up",
       "part": "trouser-hem",
       "kind": "structural",
-      "excluded": null,
-      "inScope": true,
+      "excluded": "fabric",
+      "inScope": false,
       "blueprint": "local",
       "illustration": "/images/blueprints/factory/30517f02c254__3604__4.4cm_cuff.jpg",
       "liveImage": "/images/generated/suit-3pc/hem-single-turnup.webp",
@@ -39358,7 +39358,7 @@
         "needsReverify": false,
         "checkedAt": "2026-07-31T05:46:17.520Z"
       },
-      "stage": "unmet"
+      "stage": "excluded-swatch"
     },
     {
       "key": "suit-2pc/hem-double-turnup",
@@ -39370,8 +39370,8 @@
       "label": "5.1 cm Cuff Turn-Up",
       "part": "trouser-hem",
       "kind": "structural",
-      "excluded": null,
-      "inScope": true,
+      "excluded": "fabric",
+      "inScope": false,
       "blueprint": "local",
       "illustration": "/images/blueprints/factory/8bcc8e766c5e__3605__5.1cm_cuff.jpg",
       "liveImage": "/images/generated/suit-2pc/hem-double-turnup.webp",
@@ -39395,7 +39395,7 @@
         "needsReverify": false,
         "checkedAt": "2026-07-31T05:31:16.900Z"
       },
-      "stage": "shipped"
+      "stage": "excluded-swatch"
     },
     {
       "key": "suit-2pc/hem-machine-plain",
@@ -40395,8 +40395,8 @@
       "label": "Standard, Piping & Snugtex",
       "part": "trouser-waistband",
       "kind": "structural",
-      "excluded": "fabric",
-      "inScope": false,
+      "excluded": null,
+      "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/remote/c8538a87dffb__3441.jpg",
       "liveImage": "/images/blueprints/remote/c8538a87dffb__3441.jpg",
@@ -40405,7 +40405,7 @@
       "shippedBytes": null,
       "shippedSha1": null,
       "pipeline": null,
-      "stage": "excluded-swatch"
+      "stage": "not-started"
     },
     {
       "key": "suit-2pc/inner-lining",
@@ -42012,8 +42012,8 @@
       "label": "Curved Peak 120°",
       "part": "jacket-lapel",
       "kind": "structural",
-      "excluded": "fabric",
-      "inScope": false,
+      "excluded": null,
+      "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/supplier/ec013dda688e__0002__Peak.jpg",
       "liveImage": "/images/generated/jacket/lapel-peak-120-curved--25b239a8.webp",
@@ -42022,7 +42022,7 @@
       "shippedBytes": 135552,
       "shippedSha1": "e23b6edbf2431d79d1d861051f92fcf1679b07e3",
       "pipeline": null,
-      "stage": "excluded-swatch"
+      "stage": "legacy-shipped-unverified"
     },
     {
       "key": "suit-3pc/lapel-shawl",
@@ -42034,8 +42034,8 @@
       "label": "Shawl Lapel",
       "part": "jacket-lapel",
       "kind": "structural",
-      "excluded": "fabric",
-      "inScope": false,
+      "excluded": null,
+      "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/supplier/9345e8ee9d9a__0005__Shawl.jpg",
       "liveImage": "/images/generated/jacket/lapel-shawl.webp",
@@ -42044,7 +42044,7 @@
       "shippedBytes": 161786,
       "shippedSha1": "ca22563b317dc247e8a6edc512510d84e5f4f435",
       "pipeline": null,
-      "stage": "excluded-swatch"
+      "stage": "legacy-shipped-unverified"
     },
     {
       "key": "suit-3pc/lapel-shawl-d",
@@ -53289,8 +53289,8 @@
       "label": "Besom / Jetted Pocket",
       "part": "trouser-detail",
       "kind": "structural",
-      "excluded": "fabric",
-      "inScope": false,
+      "excluded": null,
+      "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/factory/9092405bd48f__3131__Besom.jpg",
       "liveImage": "/images/blueprints/factory/9092405bd48f__3131__Besom.jpg",
@@ -53299,7 +53299,7 @@
       "shippedBytes": null,
       "shippedSha1": null,
       "pipeline": null,
-      "stage": "excluded-swatch"
+      "stage": "not-started"
     },
     {
       "key": "suit-3pc/slant-20",
@@ -53377,8 +53377,8 @@
       "label": "2.0 cm Slant with Stripe",
       "part": "trouser-detail",
       "kind": "structural",
-      "excluded": null,
-      "inScope": true,
+      "excluded": "fabric",
+      "inScope": false,
       "blueprint": "local",
       "illustration": "/images/blueprints/remote/cac83d873411__3120.jpg",
       "liveImage": "/images/generated/jacket/slant-20-stripe.webp",
@@ -53387,7 +53387,7 @@
       "shippedBytes": 114440,
       "shippedSha1": "f4d755940d9637512b744dbae90afd30bac480db",
       "pipeline": null,
-      "stage": "legacy-shipped-unverified"
+      "stage": "excluded-swatch"
     },
     {
       "key": "suit-3pc/slant-25-stripe",
@@ -54128,7 +54128,7 @@
       "label": "Standard Waistband",
       "part": "trouser-waistband",
       "kind": "structural",
-      "excluded": "fabric",
+      "excluded": null,
       "inScope": false,
       "blueprint": "none",
       "illustration": null,
@@ -54138,7 +54138,7 @@
       "shippedBytes": null,
       "shippedSha1": null,
       "pipeline": null,
-      "stage": "excluded-swatch"
+      "stage": "no-blueprint"
     },
     {
       "key": "suit-3pc/waist-extended-tab",
@@ -54172,7 +54172,7 @@
       "label": "Waistcoat Back Band",
       "part": "trouser-waistband",
       "kind": "structural",
-      "excluded": "button",
+      "excluded": null,
       "inScope": false,
       "blueprint": "none",
       "illustration": null,
@@ -54182,7 +54182,7 @@
       "shippedBytes": null,
       "shippedSha1": null,
       "pipeline": null,
-      "stage": "excluded-swatch"
+      "stage": "no-blueprint"
     },
     {
       "key": "suit-3pc/waist-elasticated",
@@ -55250,8 +55250,8 @@
       "label": "Single Forward Pleat",
       "part": "trouser-pleat",
       "kind": "structural",
-      "excluded": null,
-      "inScope": true,
+      "excluded": "fabric",
+      "inScope": false,
       "blueprint": "local",
       "illustration": "/images/blueprints/factory/768640315c4d__3022__Single_toward_fly.jpg",
       "liveImage": "/images/generated/suit-2pc/single-forward.webp",
@@ -55260,7 +55260,7 @@
       "shippedBytes": 163142,
       "shippedSha1": "0656f8acd63b99cb4b4e848781ccc4d6a457309b",
       "pipeline": null,
-      "stage": "legacy-shipped-unverified"
+      "stage": "excluded-swatch"
     },
     {
       "key": "suit-3pc/double-forward",
@@ -55272,8 +55272,8 @@
       "label": "Double Forward Pleats",
       "part": "trouser-pleat",
       "kind": "structural",
-      "excluded": null,
-      "inScope": true,
+      "excluded": "fabric",
+      "inScope": false,
       "blueprint": "local",
       "illustration": "/images/blueprints/factory/48f3c94b03b0__3024__Double_toward_fly.jpg",
       "liveImage": "/images/blueprints/factory/48f3c94b03b0__3024__Double_toward_fly.jpg",
@@ -55282,7 +55282,7 @@
       "shippedBytes": null,
       "shippedSha1": null,
       "pipeline": null,
-      "stage": "not-started"
+      "stage": "excluded-swatch"
     },
     {
       "key": "suit-3pc/single-reverse",
@@ -55294,8 +55294,8 @@
       "label": "Single Reverse Pleat",
       "part": "trouser-pleat",
       "kind": "structural",
-      "excluded": null,
-      "inScope": true,
+      "excluded": "fabric",
+      "inScope": false,
       "blueprint": "local",
       "illustration": "/images/blueprints/factory/600d8568a158__3021__Single_toward_side.jpg",
       "liveImage": "/images/generated/trousers/single-reverse.webp",
@@ -55304,7 +55304,7 @@
       "shippedBytes": 182210,
       "shippedSha1": "fdba3d29512e627d39c299e6c4c36558bc78b367",
       "pipeline": null,
-      "stage": "legacy-shipped-unverified"
+      "stage": "excluded-swatch"
     },
     {
       "key": "suit-3pc/double-reverse",
@@ -55316,8 +55316,8 @@
       "label": "Double Reverse Pleats",
       "part": "trouser-pleat",
       "kind": "structural",
-      "excluded": null,
-      "inScope": true,
+      "excluded": "fabric",
+      "inScope": false,
       "blueprint": "local",
       "illustration": "/images/blueprints/factory/087231c58490__3023__Double_toward_side.jpg",
       "liveImage": "/images/generated/trousers/double-reverse.webp",
@@ -55326,7 +55326,7 @@
       "shippedBytes": 84722,
       "shippedSha1": "1e02148110699131290e8907efe51f1ab71fc1e8",
       "pipeline": null,
-      "stage": "legacy-shipped-unverified"
+      "stage": "excluded-swatch"
     },
     {
       "key": "suit-3pc/pleat-15",
@@ -56438,8 +56438,8 @@
       "label": "4.4 cm Cuff Turn-Up",
       "part": "trouser-hem",
       "kind": "structural",
-      "excluded": null,
-      "inScope": true,
+      "excluded": "fabric",
+      "inScope": false,
       "blueprint": "local",
       "illustration": "/images/blueprints/factory/30517f02c254__3604__4.4cm_cuff.jpg",
       "liveImage": "/images/generated/suit-3pc/hem-single-turnup.webp",
@@ -56473,7 +56473,7 @@
         "needsReverify": false,
         "checkedAt": "2026-08-01T07:22:55.448Z"
       },
-      "stage": "failed-retry-due"
+      "stage": "excluded-swatch"
     },
     {
       "key": "suit-3pc/hem-double-turnup",
@@ -56485,8 +56485,8 @@
       "label": "5.1 cm Cuff Turn-Up",
       "part": "trouser-hem",
       "kind": "structural",
-      "excluded": null,
-      "inScope": true,
+      "excluded": "fabric",
+      "inScope": false,
       "blueprint": "local",
       "illustration": "/images/blueprints/factory/8bcc8e766c5e__3605__5.1cm_cuff.jpg",
       "liveImage": "/images/generated/suit-2pc/hem-double-turnup.webp",
@@ -56495,7 +56495,7 @@
       "shippedBytes": 137990,
       "shippedSha1": "36b11514b07771c0187572512ceb8b5b758cb529",
       "pipeline": null,
-      "stage": "legacy-shipped-unverified"
+      "stage": "excluded-swatch"
     },
     {
       "key": "suit-3pc/hem-machine-plain",
@@ -57365,8 +57365,8 @@
       "label": "Standard, Piping & Snugtex",
       "part": "trouser-waistband",
       "kind": "structural",
-      "excluded": "fabric",
-      "inScope": false,
+      "excluded": null,
+      "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/remote/c8538a87dffb__3441.jpg",
       "liveImage": "/images/blueprints/remote/c8538a87dffb__3441.jpg",
@@ -57375,7 +57375,7 @@
       "shippedBytes": null,
       "shippedSha1": null,
       "pipeline": null,
-      "stage": "excluded-swatch"
+      "stage": "not-started"
     },
     {
       "key": "suit-3pc/inner-lining",
@@ -58276,8 +58276,8 @@
       "label": "Besom / Jetted Pocket",
       "part": "trouser-front-pocket",
       "kind": "structural",
-      "excluded": "fabric",
-      "inScope": false,
+      "excluded": null,
+      "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/factory/9092405bd48f__3131__Besom.jpg",
       "liveImage": "/images/blueprints/factory/9092405bd48f__3131__Besom.jpg",
@@ -58286,7 +58286,7 @@
       "shippedBytes": null,
       "shippedSha1": null,
       "pipeline": null,
-      "stage": "excluded-swatch"
+      "stage": "not-started"
     },
     {
       "key": "trousers/slant-20",
@@ -58364,8 +58364,8 @@
       "label": "2.0 cm Slant with Stripe",
       "part": "trouser-front-pocket",
       "kind": "structural",
-      "excluded": null,
-      "inScope": true,
+      "excluded": "fabric",
+      "inScope": false,
       "blueprint": "local",
       "illustration": "/images/blueprints/remote/cac83d873411__3120.jpg",
       "liveImage": "/images/generated/trousers/slant-20-stripe.webp",
@@ -58374,7 +58374,7 @@
       "shippedBytes": 82900,
       "shippedSha1": "e526ce127daa4a2541f354084174c0152ff40c6f",
       "pipeline": null,
-      "stage": "legacy-shipped-unverified"
+      "stage": "excluded-swatch"
     },
     {
       "key": "trousers/slant-25-stripe",
@@ -59185,7 +59185,7 @@
       "label": "Standard Waistband",
       "part": "trouser-waistband",
       "kind": "structural",
-      "excluded": "fabric",
+      "excluded": null,
       "inScope": false,
       "blueprint": "none",
       "illustration": null,
@@ -59195,7 +59195,7 @@
       "shippedBytes": null,
       "shippedSha1": null,
       "pipeline": null,
-      "stage": "excluded-swatch"
+      "stage": "no-blueprint"
     },
     {
       "key": "trousers/waist-extended-tab",
@@ -59229,7 +59229,7 @@
       "label": "Waistcoat Back Band",
       "part": "trouser-waistband",
       "kind": "structural",
-      "excluded": "button",
+      "excluded": null,
       "inScope": false,
       "blueprint": "none",
       "illustration": null,
@@ -59239,7 +59239,7 @@
       "shippedBytes": null,
       "shippedSha1": null,
       "pipeline": null,
-      "stage": "excluded-swatch"
+      "stage": "no-blueprint"
     },
     {
       "key": "trousers/waist-elasticated",
@@ -60392,8 +60392,8 @@
       "label": "Single Forward Pleat",
       "part": "trouser-pleat",
       "kind": "structural",
-      "excluded": null,
-      "inScope": true,
+      "excluded": "fabric",
+      "inScope": false,
       "blueprint": "local",
       "illustration": "/images/blueprints/factory/768640315c4d__3022__Single_toward_fly.jpg",
       "liveImage": "/images/generated/suit-2pc/single-forward.webp",
@@ -60402,7 +60402,7 @@
       "shippedBytes": 163142,
       "shippedSha1": "0656f8acd63b99cb4b4e848781ccc4d6a457309b",
       "pipeline": null,
-      "stage": "legacy-shipped-unverified"
+      "stage": "excluded-swatch"
     },
     {
       "key": "trousers/double-forward",
@@ -60414,8 +60414,8 @@
       "label": "Double Forward Pleats",
       "part": "trouser-pleat",
       "kind": "structural",
-      "excluded": null,
-      "inScope": true,
+      "excluded": "fabric",
+      "inScope": false,
       "blueprint": "local",
       "illustration": "/images/blueprints/factory/48f3c94b03b0__3024__Double_toward_fly.jpg",
       "liveImage": "/images/blueprints/factory/48f3c94b03b0__3024__Double_toward_fly.jpg",
@@ -60424,7 +60424,7 @@
       "shippedBytes": null,
       "shippedSha1": null,
       "pipeline": null,
-      "stage": "not-started"
+      "stage": "excluded-swatch"
     },
     {
       "key": "trousers/single-reverse",
@@ -60436,8 +60436,8 @@
       "label": "Single Reverse Pleat",
       "part": "trouser-pleat",
       "kind": "structural",
-      "excluded": null,
-      "inScope": true,
+      "excluded": "fabric",
+      "inScope": false,
       "blueprint": "local",
       "illustration": "/images/blueprints/factory/600d8568a158__3021__Single_toward_side.jpg",
       "liveImage": "/images/generated/trousers/single-reverse.webp",
@@ -60461,7 +60461,7 @@
         "needsReverify": false,
         "checkedAt": "2026-07-31T05:27:39.108Z"
       },
-      "stage": "shipped"
+      "stage": "excluded-swatch"
     },
     {
       "key": "trousers/double-reverse",
@@ -60473,8 +60473,8 @@
       "label": "Double Reverse Pleats",
       "part": "trouser-pleat",
       "kind": "structural",
-      "excluded": null,
-      "inScope": true,
+      "excluded": "fabric",
+      "inScope": false,
       "blueprint": "local",
       "illustration": "/images/blueprints/factory/087231c58490__3023__Double_toward_side.jpg",
       "liveImage": "/images/generated/trousers/double-reverse.webp",
@@ -60498,7 +60498,7 @@
         "needsReverify": false,
         "checkedAt": "2026-07-31T05:41:30.554Z"
       },
-      "stage": "shipped"
+      "stage": "excluded-swatch"
     },
     {
       "key": "trousers/pleat-15",
@@ -61700,8 +61700,8 @@
       "label": "4.4 cm Cuff Turn-Up",
       "part": "trouser-hem",
       "kind": "structural",
-      "excluded": null,
-      "inScope": true,
+      "excluded": "fabric",
+      "inScope": false,
       "blueprint": "local",
       "illustration": "/images/blueprints/factory/30517f02c254__3604__4.4cm_cuff.jpg",
       "liveImage": "/images/generated/suit-3pc/hem-single-turnup.webp",
@@ -61710,7 +61710,7 @@
       "shippedBytes": 159836,
       "shippedSha1": "f7963995ff1fb030f176ef3c6d1faccbfc9b6331",
       "pipeline": null,
-      "stage": "legacy-shipped-unverified"
+      "stage": "excluded-swatch"
     },
     {
       "key": "trousers/hem-double-turnup",
@@ -61722,8 +61722,8 @@
       "label": "5.1 cm Cuff Turn-Up",
       "part": "trouser-hem",
       "kind": "structural",
-      "excluded": null,
-      "inScope": true,
+      "excluded": "fabric",
+      "inScope": false,
       "blueprint": "local",
       "illustration": "/images/blueprints/factory/8bcc8e766c5e__3605__5.1cm_cuff.jpg",
       "liveImage": "/images/generated/suit-2pc/hem-double-turnup.webp",
@@ -61732,7 +61732,7 @@
       "shippedBytes": 137990,
       "shippedSha1": "36b11514b07771c0187572512ceb8b5b758cb529",
       "pipeline": null,
-      "stage": "legacy-shipped-unverified"
+      "stage": "excluded-swatch"
     },
     {
       "key": "trousers/hem-machine-plain",
@@ -62617,8 +62617,8 @@
       "label": "Standard, Piping & Snugtex",
       "part": "trouser-waistband",
       "kind": "structural",
-      "excluded": "fabric",
-      "inScope": false,
+      "excluded": null,
+      "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/remote/c8538a87dffb__3441.jpg",
       "liveImage": "/images/blueprints/remote/c8538a87dffb__3441.jpg",
@@ -62627,7 +62627,7 @@
       "shippedBytes": null,
       "shippedSha1": null,
       "pipeline": null,
-      "stage": "excluded-swatch"
+      "stage": "not-started"
     },
     {
       "key": "trousers/inner-lining",

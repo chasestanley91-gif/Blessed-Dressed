@@ -8,7 +8,7 @@
   "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\suit-2pc.json",
   "source": "json",
   "label": "Square, Hook & Button",
-  "description": "Square tab with hook and button.",
+  "description": "Curved waistband extension — a radius sweep of 3 cm to 6 cm whose curve meets the waistband edge at 0° for a perfectly smooth closure.",
   "fieldLabel": "Extension & Closure",
   "sectionLabel": "Trousers — Waistband",
   "part": "trouser-extension",
@@ -23,8 +23,13 @@
   },
   "absence": false,
   "measured": {
-    "dimensions": [],
-    "angles": [],
+    "dimensions": [
+      "3 cm",
+      "6 cm"
+    ],
+    "angles": [
+      "0°"
+    ],
     "counts": [
       "1-hook",
       "1-button"
@@ -32,9 +37,9 @@
     "shapes": [
       "square extension tab"
     ],
+    "negatedShapes": [],
     "spread": [],
     "flags": [
-      "tab fastening",
       "hook & button closure"
     ]
   },
@@ -53,5 +58,5 @@
   ],
   "excluded": null,
   "generate": true,
-  "extractedAt": "2026-07-31T19:00:19.251Z"
+  "extractedAt": "2026-08-01T21:51:45.953Z"
 }

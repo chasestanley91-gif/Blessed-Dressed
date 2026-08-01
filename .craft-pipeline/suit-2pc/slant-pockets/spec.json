@@ -8,13 +8,13 @@
   "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\suit-2pc.json",
   "source": "json",
   "label": "3.2 cm Slant Pocket",
-  "description": "A slant pocket has its opening cut on an angle, running diagonally from the waistband toward the side seam, with a standard ~3.2cm opening. The angle gives easy hand access and helps the pocket lie flat against the hip without gaping when sitting, making it the most common front-pocket style on tailored trousers. It reads as slightly more contemporary and sporty than a straight on-seam pocket.",
+  "description": "Slant front pocket with a 3.2 cm drop over a 15 cm run from the side seam — a 12° mouth, with the pocket bag rotated 18° to 25° in production and a bag depth of 23 cm. The diagonal cuts across the hip, lengthening the leg and narrowing the waist.",
   "fieldLabel": "Front Pocket Style",
   "sectionLabel": "Trousers — Front & Pockets",
-  "part": "jacket-detail",
+  "part": "trouser-detail",
   "garment": {
-    "noun": "navy bespoke suit jacket",
-    "fabric": "fine wool suiting with visible weave"
+    "noun": "pair of bespoke wool tailored trousers",
+    "fabric": "fine wool trouser cloth with visible weave"
   },
   "view": {
     "orientation": "three-quarter-front",
@@ -24,14 +24,20 @@
   "absence": false,
   "measured": {
     "dimensions": [
-      "3.2 cm"
+      "3.2 cm",
+      "15 cm",
+      "23 cm"
     ],
-    "angles": [],
+    "angles": [
+      "12°",
+      "18°",
+      "25°"
+    ],
     "counts": [],
     "shapes": [
-      "slant pocket",
-      "on-seam (side-seam) pocket"
+      "slant pocket"
     ],
+    "negatedShapes": [],
     "spread": [],
     "flags": []
   },
@@ -48,5 +54,5 @@
   ],
   "excluded": null,
   "generate": true,
-  "extractedAt": "2026-07-31T04:39:51.325Z"
+  "extractedAt": "2026-08-01T21:53:32.254Z"
 }

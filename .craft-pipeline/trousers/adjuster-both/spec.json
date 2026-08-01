@@ -8,7 +8,7 @@
   "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\trousers.json",
   "source": "json",
   "label": "Adjust Buckle",
-  "description": "Side adjustment buckle.",
+  "description": "Metal side adjusters on both sides, placed 7 cm to 10 cm behind the side seams — beltless waist control; immediately custom-made.",
   "fieldLabel": "Side Adjustment Style",
   "sectionLabel": "Waistband",
   "part": "trouser-adjuster",
@@ -23,12 +23,17 @@
   },
   "absence": false,
   "measured": {
-    "dimensions": [],
+    "dimensions": [
+      "7 cm",
+      "10 cm"
+    ],
     "angles": [],
     "counts": [],
     "shapes": [
+      "on-seam (side-seam) pocket",
       "metal side-adjuster with buckle"
     ],
+    "negatedShapes": [],
     "spread": [],
     "flags": [
       "side adjuster",
@@ -49,5 +54,5 @@
   ],
   "excluded": null,
   "generate": true,
-  "extractedAt": "2026-07-31T04:39:46.226Z"
+  "extractedAt": "2026-08-01T21:51:56.576Z"
 }

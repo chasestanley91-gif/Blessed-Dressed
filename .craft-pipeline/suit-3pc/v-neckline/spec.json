@@ -8,7 +8,7 @@
   "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\suit-3pc.json",
   "source": "json",
   "label": "V-Neckline",
-  "description": "A waistcoat with a deep V-shaped neckline and no lapels, the cleanest and most common opening for three-piece suits. The bare V exposes the shirt and tie and creates a long vertical line up the chest. It is versatile and reads as the default business and formal cut.",
+  "description": "V-neck waistcoat — the V point sits 8 cm to 14 cm below the neck point (10 cm to 12 cm on a five-button front), each side angled 25° to 40° from vertical. A narrowing funnel that lengthens the torso, enlarges the chest and directs the eye to the neckwear.",
   "fieldLabel": "Neckline / Lapel Style",
   "sectionLabel": "Vest — Lapel & Neckline",
   "part": "vest-detail",
@@ -23,10 +23,19 @@
   },
   "absence": false,
   "measured": {
-    "dimensions": [],
-    "angles": [],
+    "dimensions": [
+      "8 cm",
+      "14 cm",
+      "10 cm",
+      "12 cm"
+    ],
+    "angles": [
+      "25°",
+      "40°"
+    ],
     "counts": [],
     "shapes": [],
+    "negatedShapes": [],
     "spread": [],
     "flags": []
   },
@@ -43,5 +52,5 @@
   ],
   "excluded": null,
   "generate": true,
-  "extractedAt": "2026-07-31T18:55:10.991Z"
+  "extractedAt": "2026-08-01T21:51:55.884Z"
 }

@@ -8,7 +8,7 @@
   "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\trousers.json",
   "source": "json",
   "label": "Regular Right",
-  "description": "Small right-side watch fob pocket.",
+  "description": "Watch pocket nested inside the right front pocket, 6 cm to 8 cm wide — the classic heritage utility detail, a hidden compartment inside the waistband.",
   "fieldLabel": "Watch Pocket",
   "sectionLabel": "Front & Pockets",
   "part": "trouser-small-pocket",
@@ -23,10 +23,16 @@
   },
   "absence": false,
   "measured": {
-    "dimensions": [],
+    "dimensions": [
+      "6 cm",
+      "8 cm"
+    ],
     "angles": [],
     "counts": [],
-    "shapes": [],
+    "shapes": [
+      "watch pocket"
+    ],
+    "negatedShapes": [],
     "spread": [],
     "flags": []
   },
@@ -43,5 +49,5 @@
   ],
   "excluded": null,
   "generate": true,
-  "extractedAt": "2026-07-31T18:59:37.229Z"
+  "extractedAt": "2026-08-01T21:53:36.147Z"
 }

@@ -8,7 +8,7 @@
   "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\suit-3pc.json",
   "source": "json",
   "label": "U-Neckline",
-  "description": "A waistcoat with a low, U-shaped (horseshoe) neckline that opens wide and deep, exposing a large expanse of shirt front. Traditionally associated with formal evening and morning dress, it frames a bow tie or dress shirt elegantly. The scooped opening reads as the most formal and ceremonial neckline.",
+  "description": "U-neck waistcoat — the V intersection replaced by an arc of 6 cm to 15 cm radius (approaching the neck width on the deepest cuts). Softens the chest and reduces vertical aggression; broader, rounder, softer tailoring.",
   "fieldLabel": "Neckline / Lapel Style",
   "sectionLabel": "Vest — Lapel & Neckline",
   "part": "vest-detail",
@@ -23,10 +23,16 @@
   },
   "absence": false,
   "measured": {
-    "dimensions": [],
+    "dimensions": [
+      "6 cm",
+      "15 cm"
+    ],
     "angles": [],
     "counts": [],
-    "shapes": [],
+    "shapes": [
+      "arc buttonhole"
+    ],
+    "negatedShapes": [],
     "spread": [],
     "flags": []
   },
@@ -43,5 +49,5 @@
   ],
   "excluded": null,
   "generate": true,
-  "extractedAt": "2026-07-31T19:00:30.192Z"
+  "extractedAt": "2026-08-01T21:51:55.526Z"
 }

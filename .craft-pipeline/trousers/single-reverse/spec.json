@@ -8,7 +8,7 @@
   "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\trousers.json",
   "source": "json",
   "label": "Single Reverse Pleat",
-  "description": "A single reverse pleat is one fold per side that opens outward toward the pockets, the style associated with Italian tailoring and most ready-to-wear. It adds comfortable thigh room and keeps the inward half of the leg neat, with many considering it the more attractive of the two. It is the most common pleat found on off-the-peg trousers.",
+  "description": "Single reverse pleat, 2.5 cm deep, opening toward the pocket with its center 4 cm to 6 cm from the pocket edge — 5 cm of hidden fabric moving expansion toward the hip for a smoother fly.",
   "fieldLabel": "Pleat Style",
   "sectionLabel": "Pleats & Structure",
   "part": "trouser-pleat",
@@ -23,12 +23,18 @@
   },
   "absence": false,
   "measured": {
-    "dimensions": [],
+    "dimensions": [
+      "2.5 cm",
+      "4 cm",
+      "6 cm",
+      "5 cm"
+    ],
     "angles": [],
     "counts": [],
     "shapes": [
       "single reverse pleat"
     ],
+    "negatedShapes": [],
     "spread": [],
     "flags": []
   },
@@ -43,7 +49,7 @@
     "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
     "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
   ],
-  "excluded": null,
-  "generate": true,
-  "extractedAt": "2026-07-31T04:49:54.648Z"
+  "excluded": "fabric",
+  "generate": false,
+  "extractedAt": "2026-08-01T21:51:58.641Z"
 }

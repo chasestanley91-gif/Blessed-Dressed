@@ -105,7 +105,9 @@ const SHAPES = [
   ['barchetta (boat) welt', /barchetta|boat/, POCKETS],
   ['jetted / besom welt', /jetted|besom|piped pocket/, POCKETS],
   ['slant pocket', /\bslant\b/, POCKETS],
-  ['on-seam (side-seam) pocket', /on[- ]?seam|side[- ]?seam/, POCKETS],
+  // 'side seam' alone is a drafting DATUM ('3.2 cm drop from the side seam'),
+  // not a pocket construction — only tag when the opening is IN the seam.
+  ['on-seam (side-seam) pocket', /on[- ]?seam|side[- ]?seam pocket|(?:set|cut|placed|built)s+(?:directlys+)?into the side[- ]?seam|opening coincides with the side[- ]?seam/, POCKETS],
   ['welt pocket', /\bwelt\b/, POCKETS],
   ['flap pocket', /\bflap\b/, POCKETS],
   ['patch pocket', /\bpatch\b/, POCKETS],

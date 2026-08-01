@@ -8,7 +8,7 @@
   "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\vest.json",
   "source": "json",
   "label": "Shawl without Collar Band",
-  "description": "A waistcoat with a smooth, rounded shawl lapel that runs in one continuous curve with no notch or peak. The unbroken roll gives a soft, luxurious, and decidedly formal look, classic on evening and morning-dress waistcoats. It is the signature lapel of dressy double-breasted vests.",
+  "description": "Shawl-lapel waistcoat — one continuous spline with no notch and no gorge, its radius progression 3 cm, 5 cm and 8 cm blended from top to bottom. Flow, luxury, formality.",
   "fieldLabel": "Neckline / Lapel Style",
   "sectionLabel": "Lapel & Neckline",
   "part": "vest-lapel",
@@ -23,13 +23,17 @@
   },
   "absence": false,
   "measured": {
-    "dimensions": [],
+    "dimensions": [
+      "3 cm",
+      "5 cm",
+      "8 cm"
+    ],
     "angles": [],
     "counts": [],
     "shapes": [
-      "shawl lapel",
-      "double-breasted"
+      "shawl lapel"
     ],
+    "negatedShapes": [],
     "spread": [],
     "flags": []
   },
@@ -46,5 +50,5 @@
   ],
   "excluded": null,
   "generate": true,
-  "extractedAt": "2026-07-31T19:00:31.553Z"
+  "extractedAt": "2026-08-01T21:52:01.079Z"
 }

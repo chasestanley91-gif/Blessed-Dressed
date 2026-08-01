@@ -8,7 +8,7 @@
   "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\sport-coat.json",
   "source": "json",
   "label": "Notch 68° (Curved Gorge)",
-  "description": "The curved gorge notch at 68 degrees is a distinctly Italian refinement in which the gorge seam follows a gentle curve rather than a straight line, softening what would otherwise be a sharp mechanical angle into something more sculptural and alive. Associated with Florentine and Milanese ateliers, this lapel style communicates craftsmanship and intentionality — the curve is invisible to a casual observer but signals to the trained eye that the jacket was made with unusual care. The overall effect is a notch lapel that appears to melt naturally into the collar rather than simply joining it.",
+  "description": "Notch lapel with a 68° opening and a curved gorge — the notch sweeps through a 0.8 cm to 1.5 cm radius instead of a straight excavation. Less mechanical, more handmade; Florentine and Neapolitan character.",
   "fieldLabel": "Lapel Style",
   "sectionLabel": "Lapel",
   "part": "jacket-lapel",
@@ -23,7 +23,10 @@
   },
   "absence": false,
   "measured": {
-    "dimensions": [],
+    "dimensions": [
+      "0.8 cm",
+      "1.5 cm"
+    ],
     "angles": [
       "68°"
     ],
@@ -31,10 +34,9 @@
     "shapes": [
       "notch lapel"
     ],
+    "negatedShapes": [],
     "spread": [],
-    "flags": [
-      "hand-worked buttonhole"
-    ]
+    "flags": []
   },
   "illustration": {
     "path": "/images/blueprints/factory/877a05ce586e__0689__Notch_with_high_gorge.jpg",
@@ -49,5 +51,5 @@
   ],
   "excluded": null,
   "generate": true,
-  "extractedAt": "2026-07-31T18:54:59.970Z"
+  "extractedAt": "2026-08-01T21:51:44.886Z"
 }

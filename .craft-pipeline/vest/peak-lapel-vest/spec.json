@@ -8,7 +8,7 @@
   "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\vest.json",
   "source": "json",
   "label": "Peak without Collar Band",
-  "description": "A waistcoat with peak lapels, whose pointed lapel tips angle upward toward the shoulders for a sharp, formal flourish. Peak lapels add the most assertive, dressy character to a vest and are often paired with double-breasted fronts. They give the waistcoat a bold, elevated presence.",
+  "description": "Peak-lapel waistcoat — peak angle 100° to 115°, projecting 2 cm to 4 cm. Creates the shoulder-width illusion critical in formalwear; broader chest, more authority, stronger V shape.",
   "fieldLabel": "Neckline / Lapel Style",
   "sectionLabel": "Lapel & Neckline",
   "part": "vest-lapel",
@@ -23,14 +23,19 @@
   },
   "absence": false,
   "measured": {
-    "dimensions": [],
-    "angles": [],
+    "dimensions": [
+      "2 cm",
+      "4 cm"
+    ],
+    "angles": [
+      "100°",
+      "115°"
+    ],
     "counts": [],
     "shapes": [
-      "peak lapel",
-      "pointed bottom",
-      "double-breasted"
+      "peak lapel"
     ],
+    "negatedShapes": [],
     "spread": [],
     "flags": []
   },
@@ -47,5 +52,5 @@
   ],
   "excluded": null,
   "generate": true,
-  "extractedAt": "2026-07-31T04:49:55.475Z"
+  "extractedAt": "2026-08-01T21:52:00.773Z"
 }

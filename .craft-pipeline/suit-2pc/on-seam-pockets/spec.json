@@ -8,7 +8,7 @@
   "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\suit-2pc.json",
   "source": "json",
   "label": "On-Seam (Side Seam)",
-  "description": "An on-seam (vertical) pocket hides its opening directly within the trouser's side seam, so the entry is virtually invisible from the front. This creates the cleanest, most formal silhouette with no line interrupting the front of the trouser, though access is slightly less convenient than a slant. It is the traditional choice for dress and suit trousers.",
+  "description": "On-seam pocket set directly into the side seam — the opening starts 2 cm below the waistline and runs 16 cm vertically, with an 18 cm wide, 24 cm deep bag swung inward. Virtually invisible from the front; quiet luxury and the most elegant drape.",
   "fieldLabel": "Front Pocket Style",
   "sectionLabel": "Trousers — Front & Pockets",
   "part": "trouser-detail",
@@ -23,13 +23,18 @@
   },
   "absence": false,
   "measured": {
-    "dimensions": [],
+    "dimensions": [
+      "2 cm",
+      "16 cm",
+      "18 cm",
+      "24 cm"
+    ],
     "angles": [],
     "counts": [],
     "shapes": [
-      "slant pocket",
       "on-seam (side-seam) pocket"
     ],
+    "negatedShapes": [],
     "spread": [],
     "flags": []
   },
@@ -46,5 +51,5 @@
   ],
   "excluded": null,
   "generate": true,
-  "extractedAt": "2026-07-31T18:55:04.255Z"
+  "extractedAt": "2026-08-01T21:53:30.410Z"
 }
