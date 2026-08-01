@@ -1,40 +1,48 @@
 {
   "scores": {
-    "shape": 92,
-    "geometry": 91,
-    "dimensions": 88,
-    "angles": 86,
-    "construction": 94,
-    "placement": 94,
-    "symmetry": 88,
+    "shape": 94,
+    "geometry": 90,
+    "dimensions": 87,
+    "angles": 84,
+    "construction": 93,
+    "placement": 82,
+    "symmetry": 92,
     "composition": 88,
-    "blueprint-match": 89
+    "blueprint-match": 87
   },
   "errors": [
     {
       "severity": "minor",
       "category": "angles",
-      "description": "Mouth tilt. Blueprint top edge (517,762) to (617,780) = 10.2 degrees descending toward centre front. Render top edge (266,508) to (566,521) = 2.5 degrees, effectively dead level. The V legs: drawing 27 degrees outer and 10 inner; render 26 and 17 - the outer leg matches, the inner leg is 7 degrees steeper than drawn.",
-      "expected": "Mouth line tilting down toward centre front by about 10 degrees, with the inner leg of the V noticeably flatter than the outer",
-      "actual": "Mouth dead level at 2.5 degrees; inner leg 17 degrees against 10 drawn",
-      "correction": "Set the flap's top edge tilting down toward the button line by about 10 degrees, and let the inner half of the pointed lower edge run at roughly 10 degrees while the outer half falls at about 27, so the point sits centred but the two halves are visibly unequal in slope."
+      "description": "Mouth angle on the upper welt line: (318,627) to (538,648) = 5.5 degrees descending toward centre front; a column scan agreed at 7.0. Blueprint top edge (508,763) to (618,780) = 8.8 degrees.",
+      "expected": "About 8.8 degrees descending toward centre front",
+      "actual": "5.5-7.0 degrees - improved from the rejected 2.5 but still 2-3 flatter than drawn",
+      "correction": "Tilt the pocket mouth so its outboard end sits about one centimetre higher than its centre-front end across a 12 cm mouth - a clearly readable 9 degree fall toward the buttons, not a level line."
+    },
+    {
+      "severity": "minor",
+      "category": "placement",
+      "description": "Distance from the flap's inner end to the front edge, normalised by the flap's own length: render 617-545 = 72px against a 225px flap = 0.32. Blueprint 711-638 = 73px against a 141px mark = 0.52.",
+      "expected": "A gap of about half the pocket's own length between its inner end and the front edge - 24 percent of panel from the side silhouette, 26 from centre front",
+      "actual": "Only 13 percent of panel width from the front edge against 26 drawn, with 44 percent of panel left empty outboard against 24 drawn",
+      "correction": "Slide the whole flap outboard so it sits centred in the front panel, with an equal band of plain cloth on each side - roughly a quarter of the panel width clear at each end."
     },
     {
       "severity": "minor",
       "category": "dimensions",
-      "description": "Flap depth. Blueprint: 32px at the ends and 48px at the point on a 141px flap (23 and 34 percent of flap width), point-to-side ratio 1.5:1. Render: 58px at the ends and 114px at the point on a 310px flap (19 and 37 percent), ratio 1.97:1. The rendered flap is slightly shallower at the ends and the point drops noticeably further, so the diamond is more exaggerated than drawn.",
-      "expected": "A flap about a quarter of its own length deep at each end, dropping to about a third at the centre point - a restrained diamond",
-      "actual": "Ends 19 percent, point 37 percent, ratio 1.97:1 against 1.5:1 drawn",
-      "correction": "Draw the flap a touch deeper at both ends, about a quarter of the flap's length, and bring the centre point down to only about a third of the flap length, so the diamond is a gentle centred point rather than a deep spearhead."
+      "description": "Flap length 225px (x=317-542) against a 540px panel = 42 percent. Blueprint mark is 141px against a 282px panel = 50 percent.",
+      "expected": "A flap spanning a full half of the front panel's width",
+      "actual": "42 percent - about one sixth shorter in proportion",
+      "correction": "Cut the flap a full half of the front panel's width, so it reads as a generous pocket spanning the middle half of the panel."
     }
   ],
   "lockedFeatures": [
-    "Single ticket pocket on the wearer's right front",
-    "Flap present and its lower edge comes to a single point at the horizontal centre - a TRUE DIAMOND FLAP, which is the whole option",
-    "Mouth is level, not slanted",
-    "Flap length 47 percent of the front panel width, inner end 27 percent and outer end 26 percent of panel width from front edge and side seam - these placement figures match the drawing almost exactly",
-    "Double line along the top of the flap (flap fold plus mouth seam) about 20px apart",
-    "No annotation, numbers, arrows or coloured guide marks"
+    "THE NAMED DEFECT IS FIXED: the diamond point no longer over-drops. Measured on a 4x crop - top edge at the point's x is y=638, point y=728, a 90px drop; end depths 63px outboard and 52 inboard, giving 1.43:1 and 1.73:1, average about 1.55, against the drawing's 1.47 and 1.29, average 1.38. A 12 percent overshoot against the 1.97:1 that was rejected",
+    "The point is genuinely CENTRED: flap spans x=317-542 (mid 429.5), point at x=437, off by 8px = 3.8 percent of length",
+    "Besom mouth line with a separate flap fold line 15px below it, then the flap hanging free",
+    "Exactly one ticket pocket, on the wearer's right front",
+    "Mouth descends toward centre front",
+    "Zero strongly-saturated pixels in the entire image - no traced annotation"
   ],
-  "notes": "The most accurate image of the whole wave. Blueprint verified as a flap with a pointed lower edge: sampling the red mark column by column, the lower boundary descends to a maximum of y=840 at x=567 and rises again either side, and x=567 is exactly the mid-point of the mark's x-range 497-638, so the point is dead centre. Render measured by edge map: two diagonals (278,586) to (396,644) at 26 degrees and (566,596) to (410,644) at 17, converging at an apex near (405,646). The apex sits at 43.5 percent of the on-screen flap span rather than 50, but under this three-quarter turn a truly centred point projects left of the screen mid-point, so it was read as correctly centred rather than off-centre. Placement is the strongest result in the set: flap 47 percent of panel in BOTH drawing and render, both ends landing within one percentage point of the drawn insets."
+  "notes": "The identity-defining feature - the centred diamond point - is right, which is why this is recorded as fixed. The second named defect, the level mouth, is only about 40 percent corrected: 2.5 degrees before, 5.5-7.0 now, 8.8 drawn.\n\nNOT measurable: absolute pocket size in centimetres, since the three-quarter turn foreshortens the panel non-uniformly and the side seam wraps out of sight; the 42 percent length figure is a floor, not an exact value."
 }

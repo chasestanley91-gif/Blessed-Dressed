@@ -1,49 +1,48 @@
 {
   "scores": {
-    "shape": 90,
-    "geometry": 85,
-    "dimensions": 84,
-    "angles": 86,
-    "construction": 92,
-    "placement": 76,
-    "symmetry": 93,
-    "composition": 88,
-    "blueprint-match": 82
+    "shape": 86,
+    "geometry": 91,
+    "dimensions": 87,
+    "angles": 84,
+    "construction": 90,
+    "placement": 92,
+    "symmetry": 91,
+    "composition": 89,
+    "blueprint-match": 87
   },
   "errors": [
     {
-      "severity": "major",
-      "category": "placement",
-      "description": "Pocket line relative to the two button rows. Drawing: rows at y=520 and y=855 (gap 335), welt centres y=710, which is 0.57 of the way down the gap - welts sit clearly between the rows with the lower row distinctly below them. Render: rows y=513 and y=800 (gap 287), welt centres y=790, which is 0.965 of the way down - the welts are effectively level with the lower button row. The drawn separation between pocket line and bottom pair is lost.",
-      "expected": "Welt line crossing the front a little past halfway between the upper and lower button rows, with the lower row clearly below the pockets",
-      "actual": "Welt line level with the lower button row, both on the same horizontal",
-      "correction": "Set the two besom welts on a line roughly 57 percent of the way from the upper button row down to the lower row, so the bottom pair of buttons sits a clear button-and-a-half below the pocket openings."
+      "severity": "minor",
+      "category": "angles",
+      "description": "Welt slant. Blueprint left welt runs from its outboard end at y=695 to its inboard end at y=745 over x=68-400 - about 8.6 degrees dropping toward centre front; the right mirrors it. Candidate welts trace near-level: left peak row y=755 across x=200-300, right y=748 across x=600-700, with no measurable drop toward centre.",
+      "expected": "Each welt mouth tilted about 8-9 degrees, outboard end higher, inboard end lower toward centre front",
+      "actual": "Both welt mouths essentially horizontal",
+      "correction": "Angle each besom welt so the end nearest the side seam sits about one welt-height above the end nearest the centre front."
     },
     {
       "severity": "minor",
-      "category": "geometry",
-      "description": "Aspect ratio of the four-button box. Drawing: column gap 259px (x=468 to 727), row gap 335px (y=520 to 855), width/height 0.77. Render: column gap 205px (x=355 to 560), row gap 287px (y=513 to 800), 0.71. The render's button box is about 8 percent taller relative to its width.",
-      "expected": "Column gap about three-quarters of the row gap",
-      "actual": "Column gap about seven-tenths of the row gap",
-      "correction": "Widen the spacing between the two button columns so the horizontal gap measures about three-quarters of the vertical gap between the rows, spreading the four buttons into a slightly squatter rectangle."
+      "category": "shape",
+      "description": "Hem shape. The blueprint's bottom edge is a single shallow curve running unbroken across the full width at y=1090-1140, with no point. The candidate finishes in a pronounced centre-front point below the lower button row.",
+      "expected": "A shallow near-continuous curved hem across the bottom of the front",
+      "actual": "A sharp centre-front point at the hem",
+      "correction": "Finish the front hem as one shallow sweeping curve across the width, squared off rather than pointed."
     },
     {
       "severity": "minor",
-      "category": "placement",
-      "description": "Where the wrap edge turns. Drawing: the diagonal front edge descends and terminates exactly at the upper-left button (x=468, y=520) before running vertically to the hem. Render: the corner where the diagonal turns vertical sits at about x=320, y=450 - above and outboard of the upper-left button at x=355, y=513. The turn happens before the button rather than at it.",
-      "expected": "Diagonal wrap edge running down to meet the top button of the inner column and turning vertical at that exact point",
-      "actual": "Wrap edge turning vertical roughly 60px above and 35px outboard of the top button",
-      "correction": "Run the diagonal wrap edge down so it lands precisely on the centre of the upper-left button and breaks to vertical there, making the button sit in the corner of the turn."
+      "category": "dimensions",
+      "description": "Overlap depth past the button column. Blueprint: body centre x=596, wrap edge x=433 (offset 163), buttons x=468/726 (half-pitch 128), edge/half-pitch 1.27. Candidate: centre 436, wrap edge 308 (offset 128), buttons 350/522 (half-pitch 86), ratio 1.49. The overlap extends about 17 percent further past the outer button column than drawn.",
+      "expected": "Wrap edge about 1.27 half-pitches from centre",
+      "actual": "About 1.49 half-pitches - a slightly deeper overlap",
+      "correction": "Bring the overlapping front edge in so it clears the near button column by roughly a quarter of the horizontal button spacing."
     }
   ],
   "lockedFeatures": [
-    "Exactly four buttons in two columns of two - left column x=355, right x=560, rows y=513 and y=800. Count and arrangement correct and must survive",
-    "Two functioning buttonholes stitched beside the left-column buttons, matching 'four of which two fasten'",
-    "Double-breasted wrap with the overlapping panel edge running from upper right down to the left of the inner button column",
-    "Straight near-horizontal bottom hem with no point - correct for this drawing",
-    "Two besom welt pockets, one each side, raked outer-end-high",
-    "Rows level and columns plumb, no skew between the four buttons",
-    "Zero traced annotation"
+    "exactly four buttons in two columns of two - rows y=620 and y=855, columns x=350 and x=522",
+    "THE NAMED DEFECT IS FIXED AND PRECISELY: chest welts now sit at 55.7 percent of the way between the upper and lower button rows against 57.8 drawn - a 2-point miss where the previous attempt was 100 percent out, level with the lower row",
+    "lower button pair clearly below the welt line by 44 percent of the row pitch, against 42 drawn",
+    "button columns straddling the body centre symmetrically",
+    "wrap edge running vertically between the two button rows, as drawn",
+    "no annotation - the high-saturation pixels are a brown grenadine necktie above the drawn region, hiding nothing"
   ],
-  "notes": "Graded against /images/options/vest/db-4x2.jpg, the waistcoat line drawing spec.json declares. The path in my batch manifest, /images/jacket/front-style/db-4x2.jpg, is a 240x200 fabric swatch - the stale pointer on a second catalog row for the same option id. Manifest error, not a generation error.\n\nBUTTON COUNT IS CORRECT - four buttons, two columns of two, the entire option. The drawing marks all four positions identically and gives no indication which pair fastens; the render puts the buttonholes on the left column, consistent with the wrap edge terminating there and with the catalog description, so that was not penalised. Neckline could NOT be graded - the drawing is cropped so severely at the top that only a stray mark survives. spec.json has every measured array empty, so no cm or degree targets exist and none were invented."
+  "notes": "The named defect is fixed and the fix is precise. Blueprint red marks: upper row y=528 at x=468 and 724, lower row y=860 at x=470 and 728 (pitch 332); welt outline y=670-770, centre y=720 - 57.8 percent between the rows. Candidate: button shadow rings bracket rows at y=620 and 855 (pitch 235); welt slits by peak local darkness at y=755 and 748, mean 751 - 55.7 percent.\n\nNOT measurable: button column pitch against body width - the blueprint is cropped at both side edges so the body silhouette is absent at the welt row; the drawn panel seams were used as a proxy only."
 }

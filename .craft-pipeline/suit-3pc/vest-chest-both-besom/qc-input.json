@@ -1,51 +1,48 @@
 {
   "scores": {
-    "shape": 92,
-    "geometry": 86,
-    "dimensions": 80,
-    "angles": 92,
-    "construction": 95,
-    "placement": 88,
-    "symmetry": 96,
-    "composition": 85,
-    "blueprint-match": 86
+    "shape": 82,
+    "geometry": 72,
+    "dimensions": 78,
+    "angles": 82,
+    "construction": 86,
+    "placement": 64,
+    "symmetry": 82,
+    "composition": 86,
+    "blueprint-match": 70
   },
   "errors": [
     {
       "severity": "major",
-      "category": "dimensions",
-      "description": "Welt length relative to chest width. Drawing: each welt about 180px (left x=310 to 490) across a vest measuring 950px at chest level (x=125 to 1075) - 19 percent of chest width. Render: each welt about 205px (left x=115 to 320) across a vest measuring 810px (x=35 to 845) - 25 percent. The rendered welts are roughly a third longer in proportion.",
-      "expected": "Chest besom welts about 19 percent of the vest's chest width, reading as short discreet openings",
-      "actual": "Chest besom welts about 25 percent of chest width, noticeably longer and more prominent",
-      "correction": "Shorten each chest besom so its opening measures about one fifth of the vest's chest width, keeping the welt compact and discreet against the forepart."
+      "category": "placement",
+      "description": "Outboard margin - the second half of the named defect, still failing. Blueprint: body edges x=136 and 1064 at the welt row (chest 928); left welt outer end x=304 leaves 168 = 18.1 percent of chest, right outer end x=901 leaves 163 = 17.6. Candidate: body edges x=169 and 721 at y=580 (chest 552); left welt outer end x=230 leaves 61 = 11.1 percent, right x=650 leaves 71 = 12.9. Moved from the rejected 10 percent only to 11-13, against a target of 17-18 - roughly a third of the required correction.",
+      "expected": "Each welt's outboard end stopping about 17-18 percent of chest width short of the side edge",
+      "actual": "Stopping only 11-13 percent short - still crowding the armhole side",
+      "correction": "Slide both chest welts inboard so each outer end finishes a good hand's-width in from the side seam, roughly one sixth of the chest width clear of the body edge."
     },
     {
       "severity": "major",
       "category": "placement",
-      "description": "Lateral placement - the welts run too far outboard. Drawing: the left welt's outer end stops at x=310 with the body edge at x=150, a 160px margin, about 17 percent of chest width. Render: the outer end reaches x=115 with the body edge at x=35, only 80px, about 10 percent. Inner ends are closer to correct: 11 percent of chest width short of centre front drawn, 14 percent rendered.",
-      "expected": "Outer end of each welt stopping well inboard of the side seam, about 17 percent of chest width clear of the body edge",
-      "actual": "Outer end running out to within about 10 percent of chest width of the body edge",
-      "correction": "Pull each chest besom inboard so its outer end finishes a clear hand's width in from the side seam, sitting centred on the upper forepart panel rather than reaching toward the armhole."
+      "description": "Welt height relative to the button run - a placement error NOT named in the previous rejection. Blueprint: welt centre y=736, top button y=755, pitch 157 - the welts sit essentially level with the top button, only 0.12 of a pitch above. Candidate: welt line y=582, buttons y=655/752/853, pitch about 99 - the welts sit 73px, or 0.73 of a button pitch, above the top button.",
+      "expected": "The chest welt mouths landing at the same height as the top button, immediately below the V apex",
+      "actual": "Welts almost three quarters of a button pitch above the top button, with a wide empty band between",
+      "correction": "Drop both chest welts so their mouths run level with the topmost button, immediately under the point of the V."
     },
     {
       "severity": "minor",
-      "category": "composition",
-      "description": "The drawing shows the complete vest front - both shoulders, both armholes, the full V-neck and the body down past the third button. The render crops through the upper chest so shoulder seams and armhole scyes are out of frame. Both pockets remain large and fully legible, so the option still reads clearly.",
-      "expected": "Whole vest front in frame including shoulders and armholes",
-      "actual": "Frame cutting across the upper chest above the V apex",
-      "correction": "Frame wider so the full vest front is inside the picture - both shoulder seams, both armholes, the complete neckline and the body down past the lowest button - with the two chest besoms still large enough to read."
+      "category": "dimensions",
+      "description": "Welt length - the first half of the named defect, largely fixed. Blueprint: left welt 182px, right 181px, both 19.6 percent of the 928px chest. Candidate: left 113px = 20.5 percent of the 552px chest, right 123px = 22.3. Down from the rejected 25; the left is within a point of target, the right still about 14 percent oversize.",
+      "expected": "Both welts about 19.6 percent of chest width, and equal to each other",
+      "actual": "Left 20.5 percent, right 22.3",
+      "correction": "Cut both besom welts to the same length, each about one fifth of the chest width across."
     }
   ],
   "lockedFeatures": [
-    "TWO besom pockets, one on each side of the chest - the defining requirement is met and must survive any regeneration",
-    "Both welts at chest level not waist level: welt centre sits 92 percent of the way from V apex to top button in the render versus 86 percent drawn",
-    "Plain double-jetted besom construction with no flap and no button, matching the drawing's plain rectangles",
-    "Outer-end-high rake of about 11 degrees on each welt against about 13 drawn",
-    "Welts rendered in the vest's own navy cloth - the drawing's red highlight correctly read as a location marker, not a colour specification",
-    "Near-perfect symmetry: welt centres y=665 and y=663, lengths 205px and 200px",
-    "Vertical dart lines below each welt, matching the drawing's darts",
-    "Three placket buttons, consistent with the drawing",
-    "Zero traced annotation"
+    "exactly two chest besom welts, one on each front, no flaps",
+    "welt slant - each mouth rising toward the armhole and dropping toward centre front, matching the drawing",
+    "exactly three centre-front buttons",
+    "left welt length now at 20.5 percent of chest width against the drawn 19.6 - essentially on target",
+    "single-breasted V-neck front with the fronts meeting at one apex",
+    "no traced annotation - the red guide shading was correctly read as marking WHERE the pocket sits, and the rendered welts are self-fabric navy"
   ],
-  "notes": "The strongest of its batch. Both pockets present, one per side, correct chest height, correct plain besom construction, correct rake - no critical failure. The errors are dimensional: welts proportionally about a third too long and set too far outboard toward the side seam. Vertical placement is genuinely good - normalised against the V-apex-to-top-button gap, which exists in both images, giving 92 percent against 86 drawn. spec.json records only the shape 'jetted / besom welt' with no dimensions, angles or counts, so there are no absolute cm or degree targets and none were stated; every figure is a proportion measured off the two images to about plus or minus 15px."
+  "notes": "Welt mouths located by tracing, column by column, the row of maximum local darkness inside a vertical-only high-pass, which gives clean x-extents and slant direction where simple row/column profiling could not.\n\nOf the two named dimensional failures, welt LENGTH is close to fixed and outboard MARGIN is not, so the regeneration half-landed. Also flagged: a placement error absent from the rejection note - the drawing puts these chest welts level with the top button and the render floats them nearly three quarters of a pitch higher.\n\nNOT trustworthy: the V-apex-to-welt distance across the two images - the schematic's chest is proportionally much wider than the photographed body (drawn aspect 1.19 against rendered 1.48), so that normalisation was not used for scoring."
 }

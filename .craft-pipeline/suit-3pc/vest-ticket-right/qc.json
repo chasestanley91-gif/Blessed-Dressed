@@ -2,18 +2,18 @@
   "addr": "suit-3pc > vest-ticket-right",
   "productId": "suit-3pc",
   "optionId": "vest-ticket-right",
-  "attempt": 1,
+  "attempt": 2,
   "maxAttempts": 3,
   "scores": {
-    "shape": 86,
-    "geometry": 82,
-    "dimensions": 76,
-    "angles": 94,
-    "construction": 84,
-    "placement": 82,
-    "symmetry": 88,
-    "composition": 74,
-    "blueprint-match": 76
+    "shape": 92,
+    "geometry": 90,
+    "dimensions": 84,
+    "angles": 90,
+    "construction": 93,
+    "placement": 88,
+    "symmetry": 90,
+    "composition": 86,
+    "blueprint-match": 88
   },
   "scoreMin": 98,
   "waiverMin": 95,
@@ -41,36 +41,28 @@
   ],
   "errors": [
     {
-      "severity": "major",
-      "category": "blueprint-match",
-      "description": "A SECOND pocket mouth is visible on the OPPOSITE front, at the right edge of the frame: two parallel dark lines running from about (850,626) down-left to (800,668), at essentially the same body height as the graded welt. Confirmed numerically at 2x sampling, not by eye alone. The blueprint draws ONE pocket only, on one front. The whole point of this option is that the welt is on the right side and nowhere else, so a matching mouth on the far front destroys the right-versus-left distinction the option exists to sell.",
-      "expected": "A single welt mouth on the wearer's right front (viewer's left of the button line); the opposite front plain cloth",
-      "actual": "A second mouth on the far front at the same height",
-      "correction": "Show the welt on the wearer's right front only, and render the opposite front as clean uninterrupted cloth for the full height of the frame, so the one mouth in the picture is unmistakably the right-side one."
-    },
-    {
       "severity": "minor",
       "category": "dimensions",
-      "description": "Mouth length relative to the front panel. Blueprint: red mark x=498-635 = 137px on a panel x=418-718 = 300px, 46 percent of panel; welt height about 31px = 23 percent of mouth length. Render: mouth x=404-548 = 144px on a panel x=255-700 = 445px, 32 percent of panel; welt height 22px = 15 percent of mouth length. Cross-checked against button pitch: drawn pocket 1.19x the button spacing, rendered 0.91x. Even allowing about 13 percent horizontal foreshortening for the three-quarter turn, the mouth reads roughly 12-25 percent short and the welt about a third too shallow.",
-      "expected": "A welt spanning about 46 percent of the front panel width, welt height about a fifth to a quarter of its own length",
-      "actual": "32 percent of panel, welt height 15 percent of mouth length",
-      "correction": "Lengthen the mouth so it covers close to half the distance from the side seam to the button line, and deepen the welt so its lip is about a fifth of the mouth length top to bottom - a broad generously proportioned welt rather than a short slit."
+      "description": "Welt depth as the vertical gap between the two detected edge lines: 54px at x=300 (569 to 623) and 53px at x=500 (608 to 661), against a mouth length of 271px. Ratio 1:5.0. Blueprint red welt outline is 137px long by 42px deep at mid-length, about 1:3.3 gross or 1:3.8 to stroke centrelines.",
+      "expected": "A distinctly chunky welt, depth about a quarter to a third of the mouth length",
+      "actual": "1:5.0, roughly 25 percent shallower in proportion than drawn",
+      "correction": "Cut the welt deeper so the single lip of cloth standing below the mouth measures about one quarter of the mouth's length, giving a visibly substantial band of cloth between the mouth line and the welt's lower stitched edge."
     },
     {
       "severity": "minor",
-      "category": "construction",
-      "description": "The render's mouth reads as a jetted/besom slit: a dark line at y=608, a bright 10px band, a second dark line at y=621, then a shadowed band - two lips of equal weight rather than one raised lip. The label is Welt. The BLUEPRINT CANNOT ARBITRATE: its red mark is a solid tapered band identical in structure to the sibling vest-ticket-besom.jpg drawing, so the drawing does not itself distinguish welt from besom. No credit or penalty is taken on the drawing's authority - flagged only because it is the one thing that would separate this option from a level besom in a menu.",
-      "expected": "The drawing shows a plain narrow mouth band with no flap; the label calls for a welt",
-      "actual": "A two-lip besom-style mouth",
-      "correction": "Render the mouth as a single welt: one piece of cloth standing up from the lower edge of the opening, its top edge catching the light and casting a fine shadow into the opening above it, with no second lip below."
+      "category": "angles",
+      "description": "Mouth angle on the upper welt line: (300,569) to (500,608), rise 39 over run 200 = 11.9 degrees descending toward centre front. Blueprint top edge (509,753) to (619,770) = 8.8 degrees, same direction.",
+      "expected": "About 8.8 degrees from horizontal, outboard end high",
+      "actual": "11.9 degrees - about 3 steeper, though sign and character are correct",
+      "correction": "Set the welt mouth at a gentle 9 degrees from horizontal, its outboard end just under a centimetre higher than its centre-front end."
     },
     {
       "severity": "minor",
       "category": "composition",
-      "description": "The pocket occupies 144px of an 880px frame (16 percent of frame width) in a wide three-quarter shot that also includes a bare hand pushed into the trouser pocket at lower left and the far-side pocket at the right edge. The craft option is the smallest and least salient element in the picture.",
-      "expected": "A composition in which the welt is the subject",
-      "actual": "The welt is the smallest element in a wide shot with a hand in frame",
-      "correction": "Frame tighter on the right front so the welt runs across a good half of the frame width, with the hand out of shot and the body turned enough that the mouth is seen close to square-on."
+      "description": "Median cloth RGB (51,53,71) against (30,31,39) on the diamond-flap sibling and (22,24,34) on the slant-besom sibling.",
+      "expected": "One cloth and one exposure across the three ticket-pocket tiles",
+      "actual": "A visibly lighter, bluer navy - the tile reads as a different cloth weight or a brighter key light",
+      "correction": "Match this frame to the darker navy worsted and softer key light used on the diamond-flap and slant-besom tiles, so the three ticket options differ only in pocket construction."
     }
   ],
   "verdict": "FAIL",
@@ -78,20 +70,85 @@
   "correction": {
     "errors": [
       {
-        "severity": "major",
+        "severity": "minor",
+        "category": "shape",
+        "error": "score-card category \"shape\" scored 92 (< 98)",
+        "expected": ">= 98",
+        "actual": "92",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"shape\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "geometry",
+        "error": "score-card category \"geometry\" scored 90 (< 98)",
+        "expected": ">= 98",
+        "actual": "90",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"geometry\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "dimensions",
+        "error": "score-card category \"dimensions\" scored 84 (< 98)",
+        "expected": ">= 98",
+        "actual": "84",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"dimensions\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "angles",
+        "error": "score-card category \"angles\" scored 90 (< 98)",
+        "expected": ">= 98",
+        "actual": "90",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"angles\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "construction",
+        "error": "score-card category \"construction\" scored 93 (< 98)",
+        "expected": ">= 98",
+        "actual": "93",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"construction\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "placement",
+        "error": "score-card category \"placement\" scored 88 (< 98)",
+        "expected": ">= 98",
+        "actual": "88",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"placement\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "symmetry",
+        "error": "score-card category \"symmetry\" scored 90 (< 98)",
+        "expected": ">= 98",
+        "actual": "90",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"symmetry\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "composition",
+        "error": "score-card category \"composition\" scored 86 (< 98)",
+        "expected": ">= 98",
+        "actual": "86",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"composition\" and regenerate."
+      },
+      {
+        "severity": "minor",
         "category": "blueprint-match",
-        "error": "A SECOND pocket mouth is visible on the OPPOSITE front, at the right edge of the frame: two parallel dark lines running from about (850,626) down-left to (800,668), at essentially the same body height as the graded welt. Confirmed numerically at 2x sampling, not by eye alone. The blueprint draws ONE pocket only, on one front. The whole point of this option is that the welt is on the right side and nowhere else, so a matching mouth on the far front destroys the right-versus-left distinction the option exists to sell.",
-        "expected": "A single welt mouth on the wearer's right front (viewer's left of the button line); the opposite front plain cloth",
-        "actual": "A second mouth on the far front at the same height",
-        "correction": "Show the welt on the wearer's right front only, and render the opposite front as clean uninterrupted cloth for the full height of the frame, so the one mouth in the picture is unmistakably the right-side one."
+        "error": "score-card category \"blueprint-match\" scored 88 (< 98)",
+        "expected": ">= 98",
+        "actual": "88",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"blueprint-match\" and regenerate."
       }
     ],
     "lockedFeatures": [
-      "Single welt on the wearer's right front, verified against the mirrored sibling drawing vest-ticket-left.jpg",
-      "No flap of any kind over the mouth",
-      "Mouth essentially level, tilting down toward centre front by about 9.5 degrees against the drawing's 7.7-10 - the best angular match of its batch",
-      "Mouth positioned about a third of the panel width in from the front edge, at waist height",
-      "Clean navy worsted, no annotation, numbers, arrows or coloured guide marks"
+      "THE CRITICAL IS FIXED: exactly ONE pocket mouth in frame. The entire opposite front was cropped and contrast-stretched at 3x - it carries the button/buttonhole column and two soft curved drape shadows, diffuse, with no crisp lips, no squared ends and no defined length. There is no second pocket mouth",
+      "Pocket on the wearer's RIGHT front, confirmed because that panel runs UNDER the button-and-buttonhole panel, matching the drawing",
+      "WELT construction: a single lip of cloth standing below the mouth line, no flap",
+      "Mouth length now 53 percent of the 512px panel against 48 drawn, up from the rejected 32",
+      "Mouth descends toward centre front",
+      "No traced guide marks - the saturated pixels are the model's hand at the frame corner"
     ],
     "forbiddenChanges": [
       "do not alter any checklist item this attempt already passed",
@@ -99,6 +156,6 @@
       "do not change the garment part, orientation, or any other option's geometry"
     ]
   },
-  "notes": "Blueprint verified: single red component x=498-635, y=753-815, on the panel to the viewer's LEFT of the button line. Confirmed as the wearer's right by comparing garment extents against vest-ticket-left.jpg, which is the same sketch mirrored. Construction call made from a vertical luminance profile at x=430: dark trough y=605-609 (min L=10), bright band y=610-619 (L about 40), second trough y=620-622 (min L=11), shaded band to y=637 - a two-lip mouth, not an unambiguous single welt lip. The warm pixels flagged by the colour scan are the model's hand, not guide marks.",
-  "checkedAt": "2026-08-01T03:34:40.585Z"
+  "notes": "The critical defect is fixed and was verified rather than assumed - the opposite front was examined at 3x under contrast stretch specifically to look for a second mouth, and none exists. Side identification confirmed structurally: the pocket panel runs under the button panel, so it is the wearer's right front, which is what the drawing shows. vest-ticket-left exists as a real sibling in the catalog, so this distinction genuinely has to sell.\n\nNOT measurable: the wearer's-right front's own front edge, because the wearer's-left front overlaps it; the button line at x=683 was used as centre front, matching how the blueprint was read.",
+  "checkedAt": "2026-08-01T05:01:01.562Z"
 }

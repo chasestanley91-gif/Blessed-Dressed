@@ -1,64 +1,48 @@
 {
   "scores": {
-    "shape": 55,
-    "geometry": 50,
-    "dimensions": 74,
-    "angles": 72,
-    "construction": 48,
-    "placement": 50,
-    "symmetry": 45,
-    "composition": 55,
-    "blueprint-match": 45
+    "shape": 82,
+    "geometry": 78,
+    "dimensions": 72,
+    "angles": 80,
+    "construction": 86,
+    "placement": 88,
+    "symmetry": 80,
+    "composition": 88,
+    "blueprint-match": 78
   },
   "errors": [
     {
-      "severity": "critical",
-      "category": "construction",
-      "description": "Closure type and button count. The drawing is bilaterally symmetric: two mirrored outer curves run from (378,155) and (825,150) down to meet at a single point at (600,1035) on the centre line, with ONE button at (590,1105) directly on centre. There is no overlap and no second button column. The render shows a DOUBLE-BREASTED waistcoat with an asymmetric wrap, the right front crossing over the left, and FOUR buttons in two columns at roughly (270,888), (600,888), (365,1075) and (535,1075).",
-      "expected": "A symmetric single-breasted closure where the two front edges meet at a point on the centre line, closed by a single centred button",
-      "actual": "An asymmetric double-breasted wrap with four buttons in two columns",
-      "correction": "Construct the waistcoat single-breasted: the two front edges mirror each other and meet at a point on the centre-front line, closed by a single button sitting exactly on centre directly beneath that point, with the whole front bilaterally symmetric about the centre line."
-    },
-    {
       "severity": "major",
-      "category": "symmetry",
-      "description": "The drawing is perfectly symmetric about the centre-front line x=600 - every lapel curve, the neckline and the button all mirror. The render is inherently asymmetric because of the double-breasted wrap: the left shawl edge descends to about (390,1000) while the right crosses over it to about (430,1010), and the button columns sit at unequal distances from centre.",
-      "expected": "Bilateral symmetry about centre front, with both lapel edges converging to the same point",
-      "actual": "An asymmetric overlap where one front covers the other",
-      "correction": "Mirror both shawl edges exactly about the centre-front line so they descend as a matched pair and converge to a single shared point, with the centre-front line falling through the middle of the closure."
-    },
-    {
-      "severity": "major",
-      "category": "composition",
-      "description": "The feature that defines this option is obscured. 'Shawl WITHOUT collar band' is proven at the BACK NECK, where a separate stand would show as a seamed band. In the render the shirt collar and a navy tie fill the entire upper V and the back-neck region, so the very area that distinguishes this option from a shawl WITH a collar band is not visible and cannot be verified.",
-      "expected": "The back-neck region visible so the unbroken shawl can be seen running behind the neck with no separate stand",
-      "actual": "Shirt collar and tie covering the neck and the whole upper opening",
-      "correction": "Shoot the waistcoat over an open-necked dress shirt with no tie, framed so the shawl is followed continuously from the closure point up one side, around behind the neck, and down the other side as a single uninterrupted band of cloth."
-    },
-    {
-      "severity": "minor",
-      "category": "angles",
-      "description": "V half-angle, taking the chord of the outer lapel edge: drawing (378,155) to (600,1035) gives dx=222, dy=880, 14.2 degrees from vertical. Render left outer shawl edge (110,120) to (395,1010) gives dx=285, dy=890, 17.7 degrees. The render's V opens roughly 3.5 degrees wider per side. Crops differ so this is a chord comparison, not a tangent comparison.",
-      "expected": "A narrow V opening at about 14 degrees per side from vertical",
-      "actual": "About 17.7 degrees per side - a slightly wider shallower V",
-      "correction": "Draft the neckline as a narrow steep V opening about 14 degrees per side from vertical, so the opening reads long and slim rather than broad."
-    },
-    {
-      "severity": "minor",
       "category": "dimensions",
-      "description": "Lapel width measured against button diameter as scale (a waistcoat button being about 1.5 cm). Drawing: button 40px giving 26.7px/cm; lapel width at mid-V is outer x=452 to inner x=528 = 76px, about 2.85 cm. Render: buttons about 48px giving 32px/cm; lapel at the same relative height outer x=195 to inner x=300 = 105px, about 3.3 cm. About 15 percent wide, within reasonable tolerance.",
-      "expected": "Shawl lapel about 2.85 cm wide at mid-V",
-      "actual": "About 3.3 cm",
-      "correction": "Set the shawl lapel at roughly 2.9 cm wide at the mid-point of the V, tapering evenly as it runs down toward the closure."
+      "description": "Opening width relative to the garment. Blueprint at the shoulder-tip row y=170: inner lapel edges x=481 and 711, opening 230px against a shoulder-tip span of 735px = 31.3 percent; at y=210 the opening is 211px = 28.6. Candidate at the equivalent row y=300: inner edges x=298 and 593, opening 295px against a garment width of 736px = 40.1 percent. Normalised against the shoulder-to-button span the gap is wider still: 43.5 percent at 19 percent depth against the drawing's 26.9.",
+      "expected": "A narrow opening about 29-31 percent of the shoulder span at the top of the roll",
+      "actual": "About 40 percent of garment width at the same level",
+      "correction": "Bring both shawl edges inboard so the shirt gap is under a third of the shoulder width, giving a long narrow slot down to the closure."
+    },
+    {
+      "severity": "major",
+      "category": "dimensions",
+      "description": "Shawl band width. Blueprint: the band between each front edge and its roll line measures 119px at y=210, 130 at y=610 and 103 at y=810 - 14-18 percent of the 735px shoulder span, near-constant down the roll. Candidate: about 80px on the left and 100 on the right at y=600 against a garment width of 756px - about 11 and 13 percent.",
+      "expected": "A shawl band about 17-18 percent of the shoulder span, holding near-constant width from shoulder to break",
+      "actual": "About 11-13 percent - proportionally narrow",
+      "correction": "Widen the shawl facing on both fronts so the rolled band is close to a fifth of the shoulder width, carrying that width evenly from the shoulder seam down to the closing point."
+    },
+    {
+      "severity": "minor",
+      "category": "symmetry",
+      "description": "The two shawl bands are not the same width - roughly 80px on the wearer's left front against roughly 100 on the right at y=600 - although the front EDGES are mirrored to within 2px of body centre at every row sampled (centre 446 at y=400, 445 at y=600). The blueprint's two bands are exactly equal at every row.",
+      "expected": "Both halves of the shawl rolling to identical width",
+      "actual": "The wearer's-right band about a quarter wider than the left",
+      "correction": "Cut and press both shawl facings to identical width and photograph the model square on, so each side of the roll shows the same band."
     }
   ],
   "lockedFeatures": [
-    "NO notch and NO peak anywhere on either side - both edges were traced from behind the neck down to the closure and are a continuous unbroken curve throughout. This is the single most important requirement and it is met",
-    "Smooth continuous shawl roll with an even well-pressed edge on both sides",
-    "No separate collar band visible behind the neck",
-    "Front view, centred and square to camera",
-    "Clean lapel edge finish with no puckering along the roll",
-    "No numerals, arrows, leader lines, ruler ticks or coloured guide marks traced into the photograph"
+    "THE CRITICAL IS FIXED ON ALL THREE COUNTS. Exactly ONE button, centred at x=438 against a body centre of 445-446, sitting just below where the two front edges meet - the previous attempt rendered FOUR in two columns",
+    "symmetric single-breasted closing - no wrap, no second button column; front edges mirrored to within 2px of centre at every sampled row",
+    "continuous unbroken shawl roll with no notch and no peak",
+    "NO NECKTIE - open shirt collar, and the shawl running out to the shoulder seam with no collar band across the back neck, which is what the drawing shows",
+    "break point at 72.8 percent of the shoulder-to-button span against 75.6 drawn, front edges converging to a single point with the button immediately below",
+    "no traced annotation - the red-ish pixels are the model's face and neck"
   ],
-  "notes": "The render nails the hardest and most important thing - the shawl curve is genuinely continuous with no notch or peak on either side - then renders a double-breasted waistcoat with four buttons in two columns and an asymmetric wrap. IMPORTANT PROVENANCE NOTE: spec.json carries 'double-breasted' among its shapes, but that came from the DESCRIPTION PROSE ('the signature lapel of dressy double-breasted vests'), a general remark about the style, not a reading of this drawing. The drawing is the sole authority and it is unambiguously symmetric and single-closing. This is a spec-extraction defect feeding a wrong prompt, not a model failure. The tie and shirt collar obscure the back neck, so 'without collar band' could NOT actually be verified from this image - only that no separate stand is visible in what is shown."
+  "notes": "BLUEPRINT VERSUS SPEC, and the drawing governs. spec.json carries shapes ['shawl lapel','double-breasted'] and the description prose calls it 'the signature lapel of dressy double-breasted vests', but the illustration is unambiguously symmetric: at every sampled row the five drawn lines sit at mirrored offsets from the centre-front line (y=210: -223.5, -104.5, +106.5, +220.5; y=610: -176, -46, +47.5, +167.5), the two front edges converge to a single point at about (590,1055), and one button sits below it at (590,1105). Prose ignored, drawing followed. THIS IS A SPEC-EXTRACTION DEFECT: 'double-breasted' was harvested from prose describing the style in general, not from a reading of this drawing, and it will keep re-injecting a wrap on every rebuild until corrected at source.\n\nWhat remains is proportional, not structural.\n\nNOT measurable: the back neck directly - this is a front view in both drawing and render, so 'shawl without collar band' is proven only by the shawl terminating at the shoulder seam with nothing rising behind the neck, which is the same evidence the drawing offers."
 }

@@ -285,3 +285,75 @@ Attempt 1 followed the prose and rendered two metal dome rivets. QC removed them
 authority and attempt 2 is correctly clean. **But the spec still says rivets**, so every future
 rebuild of this prompt will re-inject them. The prose needs correcting at source, or the drawing needs
 replacing with one that does show the hardware. Until then this option will oscillate.
+
+---
+
+## FAM-PRINTED-CALLOUTS-UNREAD — the drawings state their angles and the pipeline never reads them
+
+**Found:** 2026-08-01, grading the regenerated shirt collars. **This is the root cause of the
+angle-ladder risk the plan already flagged, and it is fixable.**
+
+The shirt-collar tech packs print their spread angle as text on the drawing — `60.00°` on
+`fashion-point-in-58cm.jpg`, `80.00°` on `square-in-65cm.jpg`, `square-in-65cm-with-button.jpg` and
+`regular-collar-20.jpg`, with leader lines drawn to both collar tips.
+
+Every one of those options has `spec.measured.angles = []`.
+
+```
+collar-fashion-point-58   angles: []   dims: ["5.8 cm"]   spread: ["narrow spread"]
+collar-sq-65              angles: []   dims: ["6.5 cm"]   spread: []
+collar-sq-65-btn          angles: []   dims: ["6.5 cm"]   spread: []
+collar-regular-20         angles: []   dims: []           spread: ["moderate spread"]
+collar-small-sq-50        angles: []   dims: ["5.0 cm"]   spread: []
+```
+
+`extract_spec.mjs` scans the **description prose**. It never looks at the drawing. So a dimension the
+manufacturer printed directly onto the blueprint — the most authoritative number available — cannot
+reach the prompt, and the image model is left to invent the angle.
+
+**The measured consequence, with a clean control.** Four of the five collars were regenerated with no
+angle anywhere in their prompt. The fifth, `collar-regular-20`, happened to have `"reads clearly as a
+moderate 80 degrees"` inside its QC correction text:
+
+| option | printed on drawing | number in prompt? | rendered |
+|---|---|---|---|
+| `collar-fashion-point-58` | 60.00° | no | **71°** |
+| `collar-small-sq-50` | 80.00° | no | 84° |
+| `collar-sq-65` | 80.00° | no | **89°** |
+| `collar-sq-65-btn` | 80.00° | no | **70°** |
+| `collar-regular-20` | 80.00° | **yes** | **81.2°** |
+
+The one option whose prompt carried the number is the only one that landed on it. The other four
+scattered across 19 degrees. `collar-sq-65` and `collar-sq-65-btn` print the *same* 80.00° and
+rendered 19° apart; `collar-sq-65-btn` at 70° now collides with `collar-fashion-point-58` at 71°,
+which is a different option on the same menu.
+
+**Why this matters beyond collars.** The plan lists "the angle ladders" — ten peak-lapel options
+spanning 101°–115° — as one of three things that cannot be finished. Part of that is real (one
+supplier drawing backs all ten). But this finding says the *general* angle problem is not a physics
+limit at all: where a drawing does print its angle, the pipeline simply is not reading it, and when
+the number is supplied the model hits it to within 1.2°.
+
+**Fix:** extract printed dimension callouts from the illustration into `spec.measured.angles` /
+`.dimensions`, and emit them in the prompt. That is a `tech-pack-interpreter` change and it needs a
+vision pass over each drawing rather than a text scan. **Not applied here** — it changes spec
+extraction for the whole catalog and belongs in its own verified pass with a diff against the
+pre-ingest baseline, exactly as Stage D specifies.
+
+**Interim, and free:** when a QC correction is written for any option whose drawing prints a number,
+put the number in the correction text. That is what made `collar-regular-20` land.
+
+## The squared-tip family is UNMET, and honestly so
+
+`collar-small-sq-50` and `collar-sq-65-btn` closed at `UNMET` after three attempts. Both fail on the
+same thing: the label, the description and `spec.forbidden` all specify a **flat squared terminal
+edge**, and all three attempts rendered a tapering point with a rounded apex.
+
+The blueprint **cannot arbitrate**. At 232×244 px, roughly 1 px ≈ 3.5 mm, a 10 mm squared facet
+occupies under 3 px and the drawn tip is a 2–3 px anti-aliased convergence. The grader declined to
+claim the drawing shows either shape — correctly.
+
+So this is a genuine source-material limit, not a generation failure: the only authority that could
+settle square-versus-point is too coarse to do so, and the written record says "square" while the
+image model keeps producing the point its priors favour. A higher-resolution collar drawing would
+resolve it. Listed in [NEEDS-SOURCE.md](NEEDS-SOURCE.md).

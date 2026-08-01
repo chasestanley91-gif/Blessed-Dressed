@@ -2,18 +2,18 @@
   "addr": "suit-3pc > vest-back-strap-buckle",
   "productId": "suit-3pc",
   "optionId": "vest-back-strap-buckle",
-  "attempt": 1,
+  "attempt": 2,
   "maxAttempts": 3,
   "scores": {
-    "shape": 84,
-    "geometry": 62,
-    "dimensions": 60,
-    "angles": 82,
-    "construction": 70,
-    "placement": 68,
-    "symmetry": 88,
-    "composition": 82,
-    "blueprint-match": 62
+    "shape": 90,
+    "geometry": 93,
+    "dimensions": 88,
+    "angles": 88,
+    "construction": 90,
+    "placement": 94,
+    "symmetry": 93,
+    "composition": 91,
+    "blueprint-match": 90
   },
   "scoreMin": 98,
   "waiverMin": 95,
@@ -41,36 +41,20 @@
   ],
   "errors": [
     {
-      "severity": "major",
+      "severity": "minor",
       "category": "dimensions",
-      "description": "Horizontal run of the back strap measured against back width at the same height. Drawing: the two grey strap rails run x=293 to x=898 while the back silhouette at that height spans x=288 to x=908 - the strap covers about 98 percent of the back, terminating in the side seams. Render: strap runs x=237 to x=645 against a back spanning x=112 to x=772 - roughly 61 percent of back width, floating well clear of both side seams.",
-      "expected": "A full-width cinch belt whose two ends are caught into the left and right side seams, crossing the entire back panel uninterrupted",
-      "actual": "A short centred half-belt whose two free ends stop about a fifth of the back width inside each side seam",
-      "correction": "Draw the back strap as one continuous belt of cloth anchored into the side seam on each side, running edge to edge across the whole back panel and passing over both back waist seams, with the buckle sitting mid-run at centre back."
-    },
-    {
-      "severity": "major",
-      "category": "placement",
-      "description": "The two vertical seam lines on the back panel sit at very different distances from centre. Drawing: short waist darts at x=430 and x=755 about centre x=590 - roughly plus/minus 0.26 of the half-width - beginning only at blade level (y=670) and running to the hem, so both fall INSIDE the strap's span. Render: vertical seams at x=165 and x=705 about centre x=440 - roughly plus/minus 0.83 of the half-width - running full height from shoulder to hem, and both fall OUTSIDE the strap's ends.",
-      "expected": "Two short back waist darts starting near blade level, set close to centre back at about a quarter of the half-width, both crossed by the strap",
-      "actual": "Two full-length side-back panel seams set far out toward the armholes, both outboard of the strap ends",
-      "correction": "Render the back as a two-panel back with a centre-back seam plus a pair of short vertical waist darts that begin at blade height and run to the hem, positioned close in to centre back so the strap crosses over both of them."
+      "description": "Buckle size. Blueprint buckle assembly spans x=524-659 at y=824-840 - 135px, or 22 percent of the 613px back width, reading as a buckle plus two slider bars. Candidate buckle occupies about x=410-465, about 55px or 15 percent of the 371px back width, reading as a single small frame.",
+      "expected": "A buckle roughly 22 percent of back width, with the strap's slider bars flanking it",
+      "actual": "A plain buckle about 15 percent of back width with no flanking hardware",
+      "correction": "Render a wider centre buckle spanning about a fifth of the back, with the strap doubling back through a keeper bar either side of it."
     },
     {
       "severity": "minor",
-      "category": "composition",
-      "description": "The buckle occupies roughly 60px of an 880px frame, about 7 percent of frame width, in a full-back framing. It is sharp and unobstructed but not dominant; the eye lands on the large field of plain back cloth first.",
-      "expected": "The drawing is itself a full-back flat so full-back framing is correct, but the strap and buckle are the entire subject",
-      "actual": "Correct full-back framing with the hardware rendered small and low-emphasis",
-      "correction": "Keep the full-back view but bring the camera in so the strap band and buckle occupy a clearly dominant horizontal register across the frame, with directional light raking the metal so the buckle frame, prong and slot all read."
-    },
-    {
-      "severity": "minor",
-      "category": "placement",
-      "description": "Strap height: the drawing places the strap centre at y=833 of a vest spanning y=50 to 1145, about 71.5 percent down the back. The render's strap centre is at y=828 but the vest top is cropped out of frame, so the equivalent percentage is NOT measurable at this crop. Height looks consistent by eye only.",
-      "expected": "Strap centred at roughly 71-72 percent of back length, at the natural waist",
-      "actual": "Consistent by eye; not verifiable because the neckline is cropped away",
-      "correction": "Include the back neckline in frame so the strap's height as a fraction of total back length is directly readable, with the strap sitting at the natural waist about seven-tenths of the way down the back."
+      "category": "dimensions",
+      "description": "Waist-dart length. Blueprint darts run y=672-1040, about 33 percent of the back's 1100px shoulder-to-hem height. Candidate darts are detectable y=600 to 900, about 44 percent of the back's 685px height - proportionally about a third longer than drawn.",
+      "expected": "Short waist darts covering about a third of the back's height, centred on the waist",
+      "actual": "Darts covering about 44 percent",
+      "correction": "Shorten each waist dart so it begins just below the shoulder blade and dies out just above the hem, spanning about a third of the back."
     }
   ],
   "verdict": "FAIL",
@@ -78,29 +62,85 @@
   "correction": {
     "errors": [
       {
-        "severity": "major",
-        "category": "dimensions",
-        "error": "Horizontal run of the back strap measured against back width at the same height. Drawing: the two grey strap rails run x=293 to x=898 while the back silhouette at that height spans x=288 to x=908 - the strap covers about 98 percent of the back, terminating in the side seams. Render: strap runs x=237 to x=645 against a back spanning x=112 to x=772 - roughly 61 percent of back width, floating well clear of both side seams.",
-        "expected": "A full-width cinch belt whose two ends are caught into the left and right side seams, crossing the entire back panel uninterrupted",
-        "actual": "A short centred half-belt whose two free ends stop about a fifth of the back width inside each side seam",
-        "correction": "Draw the back strap as one continuous belt of cloth anchored into the side seam on each side, running edge to edge across the whole back panel and passing over both back waist seams, with the buckle sitting mid-run at centre back."
+        "severity": "minor",
+        "category": "shape",
+        "error": "score-card category \"shape\" scored 90 (< 98)",
+        "expected": ">= 98",
+        "actual": "90",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"shape\" and regenerate."
       },
       {
-        "severity": "major",
+        "severity": "minor",
+        "category": "geometry",
+        "error": "score-card category \"geometry\" scored 93 (< 98)",
+        "expected": ">= 98",
+        "actual": "93",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"geometry\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "dimensions",
+        "error": "score-card category \"dimensions\" scored 88 (< 98)",
+        "expected": ">= 98",
+        "actual": "88",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"dimensions\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "angles",
+        "error": "score-card category \"angles\" scored 88 (< 98)",
+        "expected": ">= 98",
+        "actual": "88",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"angles\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "construction",
+        "error": "score-card category \"construction\" scored 90 (< 98)",
+        "expected": ">= 98",
+        "actual": "90",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"construction\" and regenerate."
+      },
+      {
+        "severity": "minor",
         "category": "placement",
-        "error": "The two vertical seam lines on the back panel sit at very different distances from centre. Drawing: short waist darts at x=430 and x=755 about centre x=590 - roughly plus/minus 0.26 of the half-width - beginning only at blade level (y=670) and running to the hem, so both fall INSIDE the strap's span. Render: vertical seams at x=165 and x=705 about centre x=440 - roughly plus/minus 0.83 of the half-width - running full height from shoulder to hem, and both fall OUTSIDE the strap's ends.",
-        "expected": "Two short back waist darts starting near blade level, set close to centre back at about a quarter of the half-width, both crossed by the strap",
-        "actual": "Two full-length side-back panel seams set far out toward the armholes, both outboard of the strap ends",
-        "correction": "Render the back as a two-panel back with a centre-back seam plus a pair of short vertical waist darts that begin at blade height and run to the hem, positioned close in to centre back so the strap crosses over both of them."
+        "error": "score-card category \"placement\" scored 94 (< 98)",
+        "expected": ">= 98",
+        "actual": "94",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"placement\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "symmetry",
+        "error": "score-card category \"symmetry\" scored 93 (< 98)",
+        "expected": ">= 98",
+        "actual": "93",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"symmetry\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "composition",
+        "error": "score-card category \"composition\" scored 91 (< 98)",
+        "expected": ">= 98",
+        "actual": "91",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"composition\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "blueprint-match",
+        "error": "score-card category \"blueprint-match\" scored 90 (< 98)",
+        "expected": ">= 98",
+        "actual": "90",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"blueprint-match\" and regenerate."
       }
     ],
     "lockedFeatures": [
-      "Back view with the wearer's back squarely to camera",
-      "Centre-back seam running the full height of the back panel",
-      "Split pointed back hem with a deep centre inverted-V notch and two dropped points, matching the drawing's hem",
-      "Metal rectangular slide buckle with visible frame and prong, sitting on the centre-back line",
-      "Sleeveless waistcoat back over white shirt sleeves - no jacket",
-      "No traced numbers, arrows, leader lines or ruler ticks anywhere in the frame"
+      "BOTH NAMED DEFECTS FIXED BY A CLEAR MARGIN. Back strap now runs side seam to side seam - x=258 to 612 against body edges x=251 to 622, 96.8 percent of back width, against the rejected 61 percent and the drawn 96",
+      "buckle centred on the back - buckle centre x=440 against back centre x=436.5",
+      "two SHORT waist darts at plus and minus 27.9 percent of back width from centre against plus and minus 26.5 drawn, and absent above y=560 - confirming short waist darts rather than the full-length panel seams that failed before",
+      "full-length centre-back seam",
+      "back hem with a centre notch and a point either side",
+      "no traced annotation - the red-ish pixels at y=132-200 are the model's hair"
     ],
     "forbiddenChanges": [
       "do not alter any checklist item this attempt already passed",
@@ -108,6 +148,6 @@
       "do not change the garment part, orientation, or any other option's geometry"
     ]
   },
-  "notes": "The render gets the view, the centre seam, the hem geometry and the hardware type right. The two failures are geometric: the belt is drawn side-seam-to-side-seam and rendered as a short centred half-belt (about 61 vs 98 percent of back width), and the back's vertical seams are placed far outboard as full-length panel seams instead of short waist darts close to centre. Strap band thickness relative to back length was NOT measurable because the render crops off the back neckline.",
-  "checkedAt": "2026-08-01T03:32:26.646Z"
+  "notes": "Both named defects fixed, both by a clear margin. Strap traced by per-column vertical-gradient extrema, strong signal x=260-605 with falloff to 256/615; left and right end gaps 1.9 and 2.7 percent of back width against the drawing's 3.9 and 0. Darts isolated by averaging a horizontal high-pass over long vertical windows to beat fabric noise: two interior seams at x=333 and 540 in the y=600-900 windows, ABSENT from the y=380-560 window, which is what confirms they are short waist darts and not full-length panel seams. Back view confirmed against spec orientation, so no front/back confusion.",
+  "checkedAt": "2026-08-01T04:54:38.732Z"
 }

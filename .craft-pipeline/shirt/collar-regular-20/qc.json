@@ -2,18 +2,18 @@
   "addr": "shirt > collar-regular-20",
   "productId": "shirt",
   "optionId": "collar-regular-20",
-  "attempt": 1,
+  "attempt": 2,
   "maxAttempts": 3,
   "scores": {
-    "shape": 45,
-    "geometry": 30,
-    "dimensions": 35,
-    "angles": 15,
-    "construction": 35,
-    "placement": 25,
-    "symmetry": 15,
-    "composition": 20,
-    "blueprint-match": 20
+    "shape": 76,
+    "geometry": 80,
+    "dimensions": 86,
+    "angles": 94,
+    "construction": 82,
+    "placement": 84,
+    "symmetry": 90,
+    "composition": 92,
+    "blueprint-match": 77
   },
   "scoreMin": 98,
   "waiverMin": 95,
@@ -41,44 +41,28 @@
   ],
   "errors": [
     {
-      "severity": "critical",
-      "category": "composition",
-      "description": "The drawing is a symmetric front elevation. The render is the same oblique three-quarter flat-lay staging as collar-fashion-point-58 and collar-sq-65, with the image-right leaf dominant and the image-left leaf foreshortened.",
-      "expected": "Front elevation, both leaves at equal scale",
-      "actual": "Oblique staging with unequal leaves",
-      "correction": "Shoot square-on from directly in front at collar height with the placket vertical and centred, so both leaves render at equal scale."
-    },
-    {
-      "severity": "critical",
-      "category": "angles",
-      "description": "The blueprint prints an 80.00-degree spread; tips located at approximately (78,138) and (129,140), separation about 51px. The oblique render makes the included angle unmeasurable, so the moderate spread the description calls the option's defining quality is not communicated.",
-      "expected": "A readable 80-degree moderate spread, the balanced everyday geometry the option is named for",
-      "actual": "Spread angle not measurable",
-      "correction": "Lay both leaves flat and symmetric with the collar closed so the included angle reads clearly as a moderate 80 degrees."
-    },
-    {
-      "severity": "critical",
-      "category": "blueprint-match",
-      "description": "Visually interchangeable with the candidates for collar-fashion-point-58 and collar-sq-65. Three menu entries served by three photographs a customer cannot separate.",
-      "expected": "A photograph immediately distinguishable from its four menu siblings",
-      "actual": "Generic angled shirt photo duplicating two siblings",
-      "correction": "Compose so the moderate 80-degree spread and the pattern-20 leaf details are the dominant read, with the collar filling the frame and both leaves symmetric and legible."
-    },
-    {
       "severity": "major",
+      "category": "geometry",
+      "description": "Pixel-diffing regular-collar-20.jpg against square-in-65cm.jpg isolates a 178px cluster at x=66-89 / y=112-140 on the LEFT leaf. Enlarged 20x it resolves as a triangle with its apex up at (80,112), a short vertical bar inside from (78,122) to (79,129), and a BOLD FLAT HORIZONTAL BASE at y=130 running x=69 to 86 (about 17px) at which the left leaf's outer edge STOPS - about 7px above where the right leaf's tip falls at (133,139.5) - with the small circle at (76.5,135.5) sitting BELOW that flat edge. The candidate instead renders a normally pointed left leaf, equal in length to the right, with the triangle applied as surface topstitching across its face and the button on the leaf.",
+      "expected": "Left leaf terminating at a straight horizontal edge with the triangular element above it and the small round button below that edge - most consistent with the left point being drawn TURNED BACK to expose its underside and stay pocket, the button on the shirt body showing beneath",
+      "actual": "Left leaf drawn full-length and pointed like the right, triangle as flat stitching on the leaf face, button on the leaf",
+      "correction": "Render the left collar point folded back on itself along a straight horizontal fold, so the underside of the point faces the camera as a triangular panel with the collar stay visible as a slim vertical bar in its pocket, and the shirt-body button exposed on the placket just below the fold, while the right point stays down and buttoned."
+    },
+    {
+      "severity": "minor",
       "category": "construction",
-      "description": "The drawing carries two distinct leaf-mounted details the render does not reproduce. On the image-left leaf a closed triangular element, apex about (80,112) with edges to (69,129) and (86,129) and a base line at y=130 spanning x=69 to 86, about 17px wide by 18px tall. On the image-right leaf a round button about 5px diameter at (134,131.5) - the same coordinates as the tip buttons in square-in-65cm-with-button.jpg. Diffing regular-collar-19 and regular-collar-21 confirms these are NOT family boilerplate; both siblings differ structurally, so these details are specific to pattern 20. At 229x244 their geometry is measurable but they cannot be definitively named - most plausibly a collar-stay pocket or turned-back under-collar on one leaf and a leaf button on the other. The render instead shows two buttons clustered at the throat and band around (270,640) and (345,682), with no triangular element anywhere.",
-      "expected": "A triangular element on one collar leaf and a separate round button on the other leaf near its tip, in addition to the throat button at the crossing",
-      "actual": "Two buttons stacked at the throat and band; no leaf-mounted button near a tip and no triangular element",
-      "correction": "Render the throat button at the leaf crossing, place a second small button on the opposite leaf near its tip, and show the triangular leaf element on the first leaf as drawn, so all three details read as separate and correctly positioned."
+      "description": "The triangle reads as an open chevron of topstitching rather than a closed triangular panel. Candidate apex (255,608), base corners about (190,703) and (303,708), base 113px on a 319px leaf = 0.35; blueprint base 17px on a 42.7px leaf = 0.40. Scale and position on the leaf are close; the closing base line and the internal bar are faint.",
+      "expected": "A clearly bounded triangular panel with a defined straight base and a distinct slim vertical element centred inside it",
+      "actual": "Two converging stitch lines with only a faint base and a soft internal mark",
+      "correction": "Give the triangular panel a crisp stitched base line joining both lower corners and a clearly defined slim vertical stay centred inside it, so the panel reads as an enclosed shape rather than a chevron."
     },
     {
-      "severity": "major",
-      "category": "shape",
-      "description": "The one legible leaf terminates in an acute point. The blueprint's tips at (78,138) and (129,140) are not resolvable as square or pointed at this scale, and unlike its square-labelled siblings this option's spec extracts no tip-shape constraint, so the render's termination is recorded as UNVERIFIED rather than scored as correct.",
-      "expected": "Tip termination as drawn; not resolvable at 229x244",
-      "actual": "Acute point on the legible leaf; second leaf's tip not resolvable in the render",
-      "correction": "Terminate both leaves identically and show both tips clearly in frame so the pattern-20 termination can be read and verified."
+      "severity": "minor",
+      "category": "dimensions",
+      "description": "In the drawing the left leaf stops about 7px higher than the right tip, about 17 percent of point length. In the render both leaves are the same length: left tip (240,805), right tip (660,795).",
+      "expected": "Left leaf terminating noticeably higher than the right",
+      "actual": "Both leaves equal length",
+      "correction": "Finish the left leaf about 17 percent shorter along its axis than the right, ending at a straight horizontal edge, so the asymmetry the drawing carries is visible."
     }
   ],
   "verdict": "FAIL",
@@ -86,52 +70,22 @@
   "correction": {
     "errors": [
       {
-        "severity": "critical",
-        "category": "composition",
-        "error": "The drawing is a symmetric front elevation. The render is the same oblique three-quarter flat-lay staging as collar-fashion-point-58 and collar-sq-65, with the image-right leaf dominant and the image-left leaf foreshortened.",
-        "expected": "Front elevation, both leaves at equal scale",
-        "actual": "Oblique staging with unequal leaves",
-        "correction": "Shoot square-on from directly in front at collar height with the placket vertical and centred, so both leaves render at equal scale."
-      },
-      {
-        "severity": "critical",
-        "category": "angles",
-        "error": "The blueprint prints an 80.00-degree spread; tips located at approximately (78,138) and (129,140), separation about 51px. The oblique render makes the included angle unmeasurable, so the moderate spread the description calls the option's defining quality is not communicated.",
-        "expected": "A readable 80-degree moderate spread, the balanced everyday geometry the option is named for",
-        "actual": "Spread angle not measurable",
-        "correction": "Lay both leaves flat and symmetric with the collar closed so the included angle reads clearly as a moderate 80 degrees."
-      },
-      {
-        "severity": "critical",
-        "category": "blueprint-match",
-        "error": "Visually interchangeable with the candidates for collar-fashion-point-58 and collar-sq-65. Three menu entries served by three photographs a customer cannot separate.",
-        "expected": "A photograph immediately distinguishable from its four menu siblings",
-        "actual": "Generic angled shirt photo duplicating two siblings",
-        "correction": "Compose so the moderate 80-degree spread and the pattern-20 leaf details are the dominant read, with the collar filling the frame and both leaves symmetric and legible."
-      },
-      {
         "severity": "major",
-        "category": "construction",
-        "error": "The drawing carries two distinct leaf-mounted details the render does not reproduce. On the image-left leaf a closed triangular element, apex about (80,112) with edges to (69,129) and (86,129) and a base line at y=130 spanning x=69 to 86, about 17px wide by 18px tall. On the image-right leaf a round button about 5px diameter at (134,131.5) - the same coordinates as the tip buttons in square-in-65cm-with-button.jpg. Diffing regular-collar-19 and regular-collar-21 confirms these are NOT family boilerplate; both siblings differ structurally, so these details are specific to pattern 20. At 229x244 their geometry is measurable but they cannot be definitively named - most plausibly a collar-stay pocket or turned-back under-collar on one leaf and a leaf button on the other. The render instead shows two buttons clustered at the throat and band around (270,640) and (345,682), with no triangular element anywhere.",
-        "expected": "A triangular element on one collar leaf and a separate round button on the other leaf near its tip, in addition to the throat button at the crossing",
-        "actual": "Two buttons stacked at the throat and band; no leaf-mounted button near a tip and no triangular element",
-        "correction": "Render the throat button at the leaf crossing, place a second small button on the opposite leaf near its tip, and show the triangular leaf element on the first leaf as drawn, so all three details read as separate and correctly positioned."
-      },
-      {
-        "severity": "major",
-        "category": "shape",
-        "error": "The one legible leaf terminates in an acute point. The blueprint's tips at (78,138) and (129,140) are not resolvable as square or pointed at this scale, and unlike its square-labelled siblings this option's spec extracts no tip-shape constraint, so the render's termination is recorded as UNVERIFIED rather than scored as correct.",
-        "expected": "Tip termination as drawn; not resolvable at 229x244",
-        "actual": "Acute point on the legible leaf; second leaf's tip not resolvable in the render",
-        "correction": "Terminate both leaves identically and show both tips clearly in frame so the pattern-20 termination can be read and verified."
+        "category": "geometry",
+        "error": "Pixel-diffing regular-collar-20.jpg against square-in-65cm.jpg isolates a 178px cluster at x=66-89 / y=112-140 on the LEFT leaf. Enlarged 20x it resolves as a triangle with its apex up at (80,112), a short vertical bar inside from (78,122) to (79,129), and a BOLD FLAT HORIZONTAL BASE at y=130 running x=69 to 86 (about 17px) at which the left leaf's outer edge STOPS - about 7px above where the right leaf's tip falls at (133,139.5) - with the small circle at (76.5,135.5) sitting BELOW that flat edge. The candidate instead renders a normally pointed left leaf, equal in length to the right, with the triangle applied as surface topstitching across its face and the button on the leaf.",
+        "expected": "Left leaf terminating at a straight horizontal edge with the triangular element above it and the small round button below that edge - most consistent with the left point being drawn TURNED BACK to expose its underside and stay pocket, the button on the shirt body showing beneath",
+        "actual": "Left leaf drawn full-length and pointed like the right, triangle as flat stitching on the leaf face, button on the leaf",
+        "correction": "Render the left collar point folded back on itself along a straight horizontal fold, so the underside of the point faces the camera as a triangular panel with the collar stay visible as a slim vertical bar in its pocket, and the shirt-body button exposed on the placket just below the fold, while the right point stays down and buttoned."
       }
     ],
     "lockedFeatures": [
-      "No necktie; the collar band and throat area are unobstructed",
-      "No traced annotation across a 256,960-pixel sample",
-      "Mother-of-pearl buttons rendered with correct scale and translucency",
-      "White crisp cotton poplin with clean parallel edge topstitching",
-      "Neutral background and soft directional lighting"
+      "THE TRIANGULAR LEAF ELEMENT IS NOW RENDERED, on the correct LEFT leaf only, at roughly the drawn scale and position - previously absent entirely",
+      "LEAF BUTTONS NOW RENDERED on both leaf tips, matching the drawing's circles; right-side button-to-tip distance measures 19 percent of point length against the drawing's 20",
+      "SPREAD MEASURES 81.2 DEGREES (half-angles 40.3 and 40.9) against the printed 80.00 - THE MOST ACCURATE ANGLE IN THE WHOLE SET, and the only one whose prompt carried the number",
+      "Square-on frontal staging with both leaves equally presented",
+      "Point length over centre-front collar height 0.89 against the drawing's 0.87",
+      "No necktie; band, spread and throat button fully exposed",
+      "No traced annotation"
     ],
     "forbiddenChanges": [
       "do not alter any checklist item this attempt already passed",
@@ -139,6 +93,6 @@
       "do not change the garment part, orientation, or any other option's geometry"
     ]
   },
-  "notes": "Same oblique staging batch as fashion-point-58 and sq-65, with the same consequence. The distinctive finding: regular-collar-20's drawing is NOT a plain collar. It carries a triangular element on one leaf and a round button on the other, confirmed by pixel-mapping at two thresholds and cross-checked against regular-collar-19 and regular-collar-21 to rule out family boilerplate. Those two elements were deliberately NOT named, because at 229x244 their outlines are measurable but their construction is not readable, and the option's spec.json extracts no flags and no counts at all so the catalogue text gives no corroboration. ESCALATE SEPARATELY: a spec that records nothing cannot drive a prompt that renders them.",
-  "checkedAt": "2026-08-01T03:32:25.861Z"
+  "notes": "Every named defect is fixed: staging is frontal, the 80 degrees reads at 81.2, and both the triangular leaf element and the leaf buttons are present.\n\nTHIS OPTION IS THE CONTROL CASE FOR THE PRINTED-CALLOUT FINDING. Its correction was the only one in the set that carried the number '80 degrees' into the prompt, and it is the only one that landed on its printed angle - 81.2 against 80.00. The four whose prompts carried no angle drifted to 71, 84, 89 and 70 against printed 60/80/80/80.\n\nSPEC-VERSUS-DRAWING: the label and description call this a plain 'moderately spread everyday collar (pattern #20)' with no mention of buttons or stays, while the drawing carries two tip buttons and a triangular stay/turn-back element. The drawing wins and the render followed it.\n\nNOT settled at 229px: whether that triangle is a turned-back left point revealing its stay pocket, or a see-through callout on a normal leaf. The bold flat base at y=130 and the button falling below it favour the turned-back reading, but it is not certain and no figure was invented for it.\n\nCROSS-OPTION RISK TO RECORD: this drawing and square-in-65cm-with-button.jpg print the same 80.00 degrees and both carry tip buttons, so in the ILLUSTRATIONS the triangle is the ONLY thing separating them. The two renders are currently separable mainly because sq-65-btn came out 11 degrees narrow; once that is corrected, distinguishability rests entirely on this faint triangle.",
+  "checkedAt": "2026-08-01T05:01:02.899Z"
 }

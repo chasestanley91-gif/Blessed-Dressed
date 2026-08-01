@@ -1,56 +1,56 @@
 {
   "scores": {
-    "shape": 15,
-    "geometry": 25,
-    "dimensions": 40,
-    "angles": 62,
-    "construction": 12,
-    "placement": 20,
-    "symmetry": 84,
-    "composition": 40,
-    "blueprint-match": 10
+    "shape": 60,
+    "geometry": 72,
+    "dimensions": 76,
+    "angles": 64,
+    "construction": 87,
+    "placement": 85,
+    "symmetry": 95,
+    "composition": 92,
+    "blueprint-match": 66
   },
   "errors": [
     {
       "severity": "critical",
-      "category": "construction",
-      "description": "The collar-point buttons are missing, and they are literally the only thing that makes this option exist. A pixel diff of square-in-65cm-with-button.jpg against square-in-65cm.jpg shows the two drawings are IDENTICAL across the entire frame except at rows y=130 to y=133, where the with-button version adds two circles of about 4-5px diameter centred at (78,131.5) and (134,131.5), sitting directly above each collar tip. That single difference is the whole option. The render shows plain leaves with no button at either tip and no buttonhole.",
-      "expected": "A button-down collar: one small button on each collar leaf just above the tip, fastening each leaf to the shirt front, plus the separate throat button",
-      "actual": "Two plain unfastened collar leaves with no tip buttons and no buttonholes; only the throat button present",
-      "correction": "Place a small mother-of-pearl button on the shirt front just above each collar tip, with the leaf tip buttoned down flat through a worked buttonhole in the leaf, so both leaves are anchored to the body and the button-down closure is the obvious subject of the photograph."
-    },
-    {
-      "severity": "critical",
       "category": "shape",
-      "description": "Tip termination is a sharp acute point on both leaves. The drawing shares its leaf geometry pixel-for-pixel with square-in-65cm, and the label, description and spec forbidden list all specify a flat squared terminal edge.",
-      "expected": "A flat squared-off terminal edge on each collar leaf",
-      "actual": "Crisp acute point tips on both leaves",
-      "correction": "Terminate each collar leaf in a short flat horizontal cut edge with two right-angle corners, giving a blunt squared end face on both leaves."
-    },
-    {
-      "severity": "critical",
-      "category": "blueprint-match",
-      "description": "This render and the candidate for collar-small-sq-50 are effectively the same photograph. Between them the two options differ in the drawings by tip shape, point length and a pair of tip buttons, and none of those three differences survive into the images.",
-      "expected": "A photograph unmistakably distinct from its siblings, led by the visible button-down tip closure",
-      "actual": "Near-duplicate of the collar-small-sq-50 candidate",
-      "correction": "Crop tight on one buttoned collar tip so the button, buttonhole and squared leaf end fill a substantial share of the frame, while keeping both leaves in shot."
+      "description": "The leaf terminations are tapering points with a rounded apex, identical in construction to the point-collar render.",
+      "expected": "A flat squared terminal edge on each leaf per the label 'Square 6.5 cm with Button', the description and spec.forbidden",
+      "actual": "Rounded points",
+      "correction": "Finish each leaf with a straight flat edge about 10-12 mm long cut square across the leaf axis, giving two crisp corners with the edgestitch turning at each, and seat the tip button just inboard of that flat."
     },
     {
       "severity": "major",
+      "category": "angles",
+      "description": "Apex (447,515); left tip (247,800), right tip (645,800). Half-angles 35.1 and 34.8, total 69.9 degrees. Verified by projection: a 35 degree ray from the apex lands at x=247.5/646.5 which matches the tips, while a 40 degree ray would land at 208/686 which does not. The drawing prints 80.00 and is pixel-identical to square-in-65cm apart from the two tip circles, so its spread is the same about 83 as drawn.",
+      "expected": "80 degrees printed, about 83 as drawn - the same spread as square-in-65cm",
+      "actual": "70 degrees - about 10 narrow, and within 1 degree of the fashion-point-58 render at 71, so spread alone no longer separates them",
+      "correction": "Open each leaf front edge to 40 degrees off vertical from the centre-front vertex so the pair encloses 80 degrees; at the present 285px drop each tip belongs about 239px out from centre rather than the current 199."
+    },
+    {
+      "severity": "minor",
       "category": "placement",
-      "description": "With no tip buttons rendered there is nothing at the drawn button coordinates. Scaled from the blueprint, the buttons sit immediately above each tip at the leaf's lower extremity, one per leaf, mirrored either side of centre.",
-      "expected": "One button per leaf, mirrored, positioned just above each collar tip",
-      "actual": "No feature at either drawn button position",
-      "correction": "Set each button on the shirt front a short distance above its collar tip, the pair mirrored symmetrically about the placket centre line at equal height."
+      "description": "Button-to-tip distance as a fraction of point length. Blueprint: button centre (78,131.5), tip (77.5,137.5), 6px above the tip on a 42.5px leaf = 14 percent. Candidate: button (256,730), tip (247,800), about 72px on a 348px leaf = 21 percent.",
+      "expected": "Button about 14 percent of point length above the tip, tight to the point",
+      "actual": "About 21 percent - slightly further up the leaf than drawn",
+      "correction": "Move each tip button about 25px down its leaf axis so it sits about one button-diameter above the point, tight to the end of the leaf as the drawing places it."
+    },
+    {
+      "severity": "minor",
+      "category": "dimensions",
+      "description": "Point length over centre-front collar height: candidate 348/363 = 0.96; blueprint 42.5/49 = 0.87.",
+      "expected": "0.87 of the centre-front collar height",
+      "actual": "0.96 - about 11 percent long",
+      "correction": "Shorten each leaf by roughly 35px along its axis so the tip finishes at 0.87 of the vertex-to-top-edge distance."
     }
   ],
   "lockedFeatures": [
-    "Front-on camera position on the garment centre line with both leaves at equal scale",
-    "Strong left-right symmetry between the two collar leaves",
-    "Throat button present, fastened, correctly rendered as 4-hole mother-of-pearl and fully unobscured",
-    "No necktie; collar band, spread and top button all clear of obstruction",
-    "No traced annotation",
-    "Clean fly-front placket and crisp cotton poplin hand"
+    "THE TWO COLLAR-TIP BUTTONS ARE PRESENT - one per leaf, matched, four-hole pearl, with the buttonhole slit visible beneath each. This is the ENTIRE option and the previous absence is fully corrected",
+    "Verified by pixel diff: square-in-65cm-with-button.jpg differs from square-in-65cm.jpg only at two clusters, x76-79/y130-133 and x132-136/y130-133 - exactly the two tip buttons - and both are now rendered, correctly sized and symmetric",
+    "OUTSTANDING left/right symmetry - half-angles 35.1 against 34.8, both tips at y=800",
+    "Square-on frontal staging, no necktie, band and throat button unobstructed",
+    "Top button fastened with the placket button visible in the V",
+    "No traced annotation - max chroma 19/255"
   ],
-  "notes": "The clearest failure of the five and the easiest to prove. The headline finding did not rely on judgement: a direct pixel diff of the two square-6.5 blueprints shows they are identical everywhere except two 4-5px circles at (78,131.5) and (134,131.5). Those two circles are the ENTIRE product difference between collar-sq-65 and collar-sq-65-btn, and the render contains neither - which means this image is not merely inaccurate, it is a photograph of a different catalogue option. On top of that the tips are pointed where the drawing calls for squared, and the image duplicates the collar-small-sq-50 candidate. Photography craft and symmetry are good and should survive a regeneration."
+  "notes": "The named defect is fixed outright, and verified by pixel diff rather than impression.\n\nA NEW DEFECT APPEARED IN THE SAME PASS: the spread dropped to 70 degrees where its own blueprint prints 80.00 and is otherwise pixel-identical to square-in-65cm, whose render came out at 89. Two drawings with the same printed angle are now 19 degrees apart, and at 70 this collides with fashion-point-58 at 71.\n\nSPEC-VERSUS-DRAWING: the description says the collar is 'secured with a throat button', singular and at the throat, while the drawing plainly shows TWO buttons at the leaf tips - button-down, not throat-fastened. The drawing wins and the render followed the drawing, which is the right call, but the prose will keep fighting it."
 }

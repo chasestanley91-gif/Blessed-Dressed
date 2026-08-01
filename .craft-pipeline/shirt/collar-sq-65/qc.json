@@ -2,18 +2,18 @@
   "addr": "shirt > collar-sq-65",
   "productId": "shirt",
   "optionId": "collar-sq-65",
-  "attempt": 1,
+  "attempt": 2,
   "maxAttempts": 3,
   "scores": {
-    "shape": 35,
-    "geometry": 30,
-    "dimensions": 30,
-    "angles": 15,
-    "construction": 55,
-    "placement": 35,
-    "symmetry": 15,
-    "composition": 20,
-    "blueprint-match": 20
+    "shape": 56,
+    "geometry": 72,
+    "dimensions": 73,
+    "angles": 77,
+    "construction": 84,
+    "placement": 85,
+    "symmetry": 87,
+    "composition": 92,
+    "blueprint-match": 60
   },
   "scoreMin": 98,
   "waiverMin": 95,
@@ -42,43 +42,27 @@
   "errors": [
     {
       "severity": "critical",
-      "category": "composition",
-      "description": "The drawing is a symmetric front elevation. The render is the same oblique three-quarter flat-lay staging used for collar-fashion-point-58, with only the image-left leaf legible and the image-right leaf running away from camera into heavy foreshortening at the frame edge.",
-      "expected": "Front elevation with both collar leaves presented at equal scale",
-      "actual": "Oblique staging; one leaf legible, the other collapsed",
-      "correction": "Shoot square-on from directly in front at collar height with the placket vertical and centred, so both squared leaves render at equal scale and can be compared."
-    },
-    {
-      "severity": "critical",
-      "category": "angles",
-      "description": "The blueprint prints an 80.00-degree spread with leader lines to both tips, and both tips were located at (78,140) and (134,140.5), separation 56px - the widest of the five drawings. The oblique render makes the included angle unmeasurable, so the annotated dimension is not communicated at all.",
-      "expected": "A readable 80-degree included angle, visibly wider than the 60-degree fashion-point sibling",
-      "actual": "Spread angle not measurable from this viewpoint",
-      "correction": "Lay both collar leaves flat and symmetric with the collar closed, so the included angle between them reads clearly as a moderately wide 80 degrees."
-    },
-    {
-      "severity": "critical",
-      "category": "blueprint-match",
-      "description": "Visually interchangeable with the candidates for collar-fashion-point-58 and collar-regular-20. Three menu entries, three photographs a customer cannot tell apart.",
-      "expected": "A photograph immediately distinguishable from its four menu siblings by squared tips and 80-degree spread",
-      "actual": "Generic angled shirt photo duplicating two siblings",
-      "correction": "Compose so the squared tips and the wide 80-degree spread are the dominant read, with the collar filling the frame and both leaves symmetric."
-    },
-    {
-      "severity": "major",
       "category": "shape",
-      "description": "The visible leaf terminates at roughly (375,812) in what reads as a soft blunt point rather than a crisp squared terminal edge. The blueprint's tip closes over about 2px from a 5px width at y=138, which at 229px resolution cannot definitively be called square versus point, but the label, description and spec forbidden list all call for a flat squared edge and the render does not read as squared.",
-      "expected": "A flat squared-off terminal edge on each collar leaf",
-      "actual": "Soft rounded-off point on the one legible leaf; the second leaf's tip is not resolvable",
-      "correction": "Terminate each collar leaf in a short flat horizontal cut edge with two crisp right-angle corners, so the end face is a visible straight segment rather than a taper."
+      "description": "3x magnification of the left tip shows a single converging vertex with a small edge radius - the same termination rendered on the fashion-point option. No flat facet, no corner pair.",
+      "expected": "A flat squared terminal edge on each leaf per the label 'Square 6.5 cm', the description and spec.forbidden",
+      "actual": "A rounded point - the option's defining feature is absent",
+      "correction": "Close each leaf with a straight flat edge roughly 10-12 mm long cut square across the leaf axis, so the outer edge and the front edge each land on that flat at a sharp corner and the edgestitch turns two corners at the leaf end."
     },
     {
       "severity": "major",
-      "category": "construction",
-      "description": "The blueprint shows the leaves crossing over a fastened throat button. The render shows the collar open with the leaves apart; a faint circular form near (615,610) may be a band button or buttonhole but is ambiguous and not clearly fastened.",
-      "expected": "Collar leaves crossing at a closed throat button, band fastened",
-      "actual": "Collar presented open; throat closure ambiguous",
-      "correction": "Fasten the top band button so the leaves converge and cross at the throat as drawn, with the button clearly visible at the crossing."
+      "category": "angles",
+      "description": "Apex (455,543); left tip (205,793), right tip (690,785). Half-angles 45.0 and 44.2, total 89.2 degrees. The drawing PRINTS 80.00 and measures about 83 apex-to-tip.",
+      "expected": "80 degrees printed, about 83 as drawn",
+      "actual": "89 degrees - about 9 over, pushing this toward cutaway territory",
+      "correction": "Set each leaf front edge 40 degrees off vertical from the centre-front vertex so the pair encloses 80 degrees; at a 250px drop each tip should sit about 210px out from centre rather than the present 250."
+    },
+    {
+      "severity": "major",
+      "category": "dimensions",
+      "description": "Point length over centre-front collar height: candidate 345/333 = 1.04; blueprint 42.5/49 = 0.87. The leaf tips drop BELOW the level of the shoulder line, which the drawing does not do.",
+      "expected": "0.87 of the centre-front collar height",
+      "actual": "1.04 - roughly 19 percent long",
+      "correction": "Draw each leaf back about 55px along its axis so the tip finishes at 0.87 of the vertex-to-top-edge distance, sitting clearly above the shoulder line as in the drawing."
     }
   ],
   "verdict": "FAIL",
@@ -87,51 +71,35 @@
     "errors": [
       {
         "severity": "critical",
-        "category": "composition",
-        "error": "The drawing is a symmetric front elevation. The render is the same oblique three-quarter flat-lay staging used for collar-fashion-point-58, with only the image-left leaf legible and the image-right leaf running away from camera into heavy foreshortening at the frame edge.",
-        "expected": "Front elevation with both collar leaves presented at equal scale",
-        "actual": "Oblique staging; one leaf legible, the other collapsed",
-        "correction": "Shoot square-on from directly in front at collar height with the placket vertical and centred, so both squared leaves render at equal scale and can be compared."
-      },
-      {
-        "severity": "critical",
-        "category": "angles",
-        "error": "The blueprint prints an 80.00-degree spread with leader lines to both tips, and both tips were located at (78,140) and (134,140.5), separation 56px - the widest of the five drawings. The oblique render makes the included angle unmeasurable, so the annotated dimension is not communicated at all.",
-        "expected": "A readable 80-degree included angle, visibly wider than the 60-degree fashion-point sibling",
-        "actual": "Spread angle not measurable from this viewpoint",
-        "correction": "Lay both collar leaves flat and symmetric with the collar closed, so the included angle between them reads clearly as a moderately wide 80 degrees."
-      },
-      {
-        "severity": "critical",
-        "category": "blueprint-match",
-        "error": "Visually interchangeable with the candidates for collar-fashion-point-58 and collar-regular-20. Three menu entries, three photographs a customer cannot tell apart.",
-        "expected": "A photograph immediately distinguishable from its four menu siblings by squared tips and 80-degree spread",
-        "actual": "Generic angled shirt photo duplicating two siblings",
-        "correction": "Compose so the squared tips and the wide 80-degree spread are the dominant read, with the collar filling the frame and both leaves symmetric."
-      },
-      {
-        "severity": "major",
         "category": "shape",
-        "error": "The visible leaf terminates at roughly (375,812) in what reads as a soft blunt point rather than a crisp squared terminal edge. The blueprint's tip closes over about 2px from a 5px width at y=138, which at 229px resolution cannot definitively be called square versus point, but the label, description and spec forbidden list all call for a flat squared edge and the render does not read as squared.",
-        "expected": "A flat squared-off terminal edge on each collar leaf",
-        "actual": "Soft rounded-off point on the one legible leaf; the second leaf's tip is not resolvable",
-        "correction": "Terminate each collar leaf in a short flat horizontal cut edge with two crisp right-angle corners, so the end face is a visible straight segment rather than a taper."
+        "error": "3x magnification of the left tip shows a single converging vertex with a small edge radius - the same termination rendered on the fashion-point option. No flat facet, no corner pair.",
+        "expected": "A flat squared terminal edge on each leaf per the label 'Square 6.5 cm', the description and spec.forbidden",
+        "actual": "A rounded point - the option's defining feature is absent",
+        "correction": "Close each leaf with a straight flat edge roughly 10-12 mm long cut square across the leaf axis, so the outer edge and the front edge each land on that flat at a sharp corner and the edgestitch turns two corners at the leaf end."
       },
       {
         "severity": "major",
-        "category": "construction",
-        "error": "The blueprint shows the leaves crossing over a fastened throat button. The render shows the collar open with the leaves apart; a faint circular form near (615,610) may be a band button or buttonhole but is ambiguous and not clearly fastened.",
-        "expected": "Collar leaves crossing at a closed throat button, band fastened",
-        "actual": "Collar presented open; throat closure ambiguous",
-        "correction": "Fasten the top band button so the leaves converge and cross at the throat as drawn, with the button clearly visible at the crossing."
+        "category": "angles",
+        "error": "Apex (455,543); left tip (205,793), right tip (690,785). Half-angles 45.0 and 44.2, total 89.2 degrees. The drawing PRINTS 80.00 and measures about 83 apex-to-tip.",
+        "expected": "80 degrees printed, about 83 as drawn",
+        "actual": "89 degrees - about 9 over, pushing this toward cutaway territory",
+        "correction": "Set each leaf front edge 40 degrees off vertical from the centre-front vertex so the pair encloses 80 degrees; at a 250px drop each tip should sit about 210px out from centre rather than the present 250."
+      },
+      {
+        "severity": "major",
+        "category": "dimensions",
+        "error": "Point length over centre-front collar height: candidate 345/333 = 1.04; blueprint 42.5/49 = 0.87. The leaf tips drop BELOW the level of the shoulder line, which the drawing does not do.",
+        "expected": "0.87 of the centre-front collar height",
+        "actual": "1.04 - roughly 19 percent long",
+        "correction": "Draw each leaf back about 55px along its axis so the tip finishes at 0.87 of the vertex-to-top-edge distance, sitting clearly above the shoulder line as in the drawing."
       }
     ],
     "lockedFeatures": [
-      "No necktie; nothing covers the collar band or the spread",
-      "No traced annotation across a 256,960-pixel sample",
-      "White crisp cotton poplin with clean parallel edge topstitching",
-      "Neutral background and soft directional lighting",
-      "Collar band roll and stand visible and correctly proportioned on the legible side"
+      "SQUARE-ON FRONTAL CAMERA with both leaves equally presented - the oblique staging that collapsed one leaf is gone and the spread is now measurable at all",
+      "Good left/right symmetry, half-angles 45.0 against 44.2",
+      "No necktie; collar band, spread and throat button fully exposed",
+      "Top button fastened with the placket button visible in the V",
+      "No traced annotation - max chroma 15/255"
     ],
     "forbiddenChanges": [
       "do not alter any checklist item this attempt already passed",
@@ -139,6 +107,6 @@
       "do not change the garment part, orientation, or any other option's geometry"
     ]
   },
-  "notes": "Same failure mode and same staging batch as collar-fashion-point-58. Measurable on the drawing: printed 80.00 degrees; tips at (78,140) and (134,140.5) giving 56px separation, the widest of the five, against 36.5px for the 60-degree fashion point - a coherent cross-check on the drawings themselves. NOT measurable: tip squareness at 229x244 is genuinely borderline, since the leaf narrows from 5px to 1px over 2px of drop, so shape was graded on the render not reading as squared rather than claiming the drawing proves an exact terminal width.",
-  "checkedAt": "2026-08-01T03:32:25.519Z"
+  "notes": "Two of three named items fixed - staging is frontal and the spread is readable - but it reads 89 degrees where the drawing prints 80, and the tips are still not squared, so the defect is not fixed.\n\nFAMILY-CONSISTENCY PROBLEM, not a defect in either image alone: this option and collar-sq-65-btn print IDENTICAL 80.00 degree spreads and now render 19 degrees apart (89 against 70).",
+  "checkedAt": "2026-08-01T05:01:02.606Z"
 }

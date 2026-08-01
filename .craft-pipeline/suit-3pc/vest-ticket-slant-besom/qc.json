@@ -2,18 +2,18 @@
   "addr": "suit-3pc > vest-ticket-slant-besom",
   "productId": "suit-3pc",
   "optionId": "vest-ticket-slant-besom",
-  "attempt": 1,
+  "attempt": 2,
   "maxAttempts": 3,
   "scores": {
-    "shape": 94,
-    "geometry": 92,
-    "dimensions": 90,
-    "angles": 96,
-    "construction": 93,
-    "placement": 87,
-    "symmetry": 91,
-    "composition": 84,
-    "blueprint-match": 91
+    "shape": 93,
+    "geometry": 94,
+    "dimensions": 85,
+    "angles": 98,
+    "construction": 94,
+    "placement": 96,
+    "symmetry": 92,
+    "composition": 90,
+    "blueprint-match": 92
   },
   "scoreMin": 98,
   "waiverMin": 95,
@@ -21,7 +21,6 @@
     "shape",
     "geometry",
     "dimensions",
-    "angles",
     "construction",
     "placement",
     "symmetry",
@@ -33,7 +32,6 @@
     "geometry",
     "dimensions",
     "construction",
-    "placement",
     "symmetry",
     "composition",
     "blueprint-match"
@@ -41,19 +39,11 @@
   "errors": [
     {
       "severity": "minor",
-      "category": "placement",
-      "description": "Mouth position across the panel. Blueprint: red mark x=503-627 on a panel x=419-718, inner end 91px (30 percent of panel) from the front edge, outer end 84px (28 percent) from the side seam. Render: mouth x=330-528 on a panel x=215-730, inner end 202px (39 percent) from the front edge, outer end 115px (22 percent) from the side seam - translated outboard by roughly 8 percent of panel width. Mouth length itself is good: 38 percent of panel against 41 drawn.",
-      "expected": "Inner end about 30 percent of panel width in from the button line, outer end about 28 percent in from the side seam",
-      "actual": "Inner 39 percent, outer 22 percent - shifted outboard by about 8 percent of panel width",
-      "correction": "Slide the whole besom toward the button line by roughly a finger's width on the body, so the high inner end finishes about a third of the way across the panel from the front edge and the low outer end keeps a slightly larger margin from the side seam."
-    },
-    {
-      "severity": "minor",
-      "category": "composition",
-      "description": "SET CONSISTENCY. Fabric is mid-charcoal grey (frame mean RGB 106,104,106) while the other three options on this same vest-pocket menu are navy (frame means around 50,53,64). Laid out side by side in the option picker, this tile changes CLOTH as well as pocket, which invites the customer to read the colour as the difference. The drawing is uncoloured line art and specifies no cloth colour, so this is a set-consistency issue, not a blueprint violation.",
-      "expected": "The drawing specifies geometry only; the cloth should match the rest of the menu so the pocket is the only variable",
-      "actual": "Charcoal cloth where the three sibling options are navy",
-      "correction": "Shoot this option in the same navy worsted, same shirt and same lighting as the other vest-pocket options, so the slanted besom is the single thing that changes between tiles."
+      "category": "dimensions",
+      "description": "Besom depth as the vertical gap between the two lip lines: 24px at x=350 and 25 at x=548, against a slant length of 222px; perpendicular depth 21px, ratio 1:10.6. Blueprint bar is 124px horizontal / 139 along the slant by 35px vertical (31 perpendicular) = 1:4.5.",
+      "expected": "A chunky double-jetted bar, depth about a fifth of the mouth length",
+      "actual": "1:10.6, roughly half as deep in proportion as drawn",
+      "correction": "Build the besom with two substantial jet strips, each thick enough that the pair together occupy about a fifth of the mouth's length in depth, so the slanted opening reads as a solid double-piped bar rather than a hairline slit."
     }
   ],
   "verdict": "FAIL",
@@ -63,83 +53,76 @@
       {
         "severity": "minor",
         "category": "shape",
-        "error": "score-card category \"shape\" scored 94 (< 98)",
+        "error": "score-card category \"shape\" scored 93 (< 98)",
         "expected": ">= 98",
-        "actual": "94",
+        "actual": "93",
         "correction": "Strengthen the geometry/coverage wording or reference weight for \"shape\" and regenerate."
       },
       {
         "severity": "minor",
         "category": "geometry",
-        "error": "score-card category \"geometry\" scored 92 (< 98)",
+        "error": "score-card category \"geometry\" scored 94 (< 98)",
         "expected": ">= 98",
-        "actual": "92",
+        "actual": "94",
         "correction": "Strengthen the geometry/coverage wording or reference weight for \"geometry\" and regenerate."
       },
       {
         "severity": "minor",
         "category": "dimensions",
-        "error": "score-card category \"dimensions\" scored 90 (< 98)",
+        "error": "score-card category \"dimensions\" scored 85 (< 98)",
         "expected": ">= 98",
-        "actual": "90",
+        "actual": "85",
         "correction": "Strengthen the geometry/coverage wording or reference weight for \"dimensions\" and regenerate."
       },
       {
         "severity": "minor",
-        "category": "angles",
-        "error": "score-card category \"angles\" scored 96 (< 98)",
-        "expected": ">= 98",
-        "actual": "96",
-        "correction": "Strengthen the geometry/coverage wording or reference weight for \"angles\" and regenerate."
-      },
-      {
-        "severity": "minor",
         "category": "construction",
-        "error": "score-card category \"construction\" scored 93 (< 98)",
+        "error": "score-card category \"construction\" scored 94 (< 98)",
         "expected": ">= 98",
-        "actual": "93",
+        "actual": "94",
         "correction": "Strengthen the geometry/coverage wording or reference weight for \"construction\" and regenerate."
       },
       {
         "severity": "minor",
         "category": "placement",
-        "error": "score-card category \"placement\" scored 87 (< 98)",
+        "error": "score-card category \"placement\" scored 96 (< 98)",
         "expected": ">= 98",
-        "actual": "87",
+        "actual": "96",
         "correction": "Strengthen the geometry/coverage wording or reference weight for \"placement\" and regenerate."
       },
       {
         "severity": "minor",
         "category": "symmetry",
-        "error": "score-card category \"symmetry\" scored 91 (< 98)",
+        "error": "score-card category \"symmetry\" scored 92 (< 98)",
         "expected": ">= 98",
-        "actual": "91",
+        "actual": "92",
         "correction": "Strengthen the geometry/coverage wording or reference weight for \"symmetry\" and regenerate."
       },
       {
         "severity": "minor",
         "category": "composition",
-        "error": "score-card category \"composition\" scored 84 (< 98)",
+        "error": "score-card category \"composition\" scored 90 (< 98)",
         "expected": ">= 98",
-        "actual": "84",
+        "actual": "90",
         "correction": "Strengthen the geometry/coverage wording or reference weight for \"composition\" and regenerate."
       },
       {
         "severity": "minor",
         "category": "blueprint-match",
-        "error": "score-card category \"blueprint-match\" scored 91 (< 98)",
+        "error": "score-card category \"blueprint-match\" scored 92 (< 98)",
         "expected": ">= 98",
-        "actual": "91",
+        "actual": "92",
         "correction": "Strengthen the geometry/coverage wording or reference weight for \"blueprint-match\" and regenerate."
       }
     ],
     "lockedFeatures": [
-      "Single besom mouth, two lips of roughly equal weight (about 9-10px each, 21px overall), no flap",
-      "Slant rising toward the centre front at 26-27 degrees - measured (326,654) to (526,557) against the drawing's 26-27, the closest angular match of its batch",
-      "Located on the wearer's right front",
-      "Mouth length 38 percent of the front panel width against 41 drawn",
-      "Front dart line running vertically through the pocket area, as drawn",
-      "No annotation, numbers, arrows or coloured guide marks"
+      "BOTH NAMED DEFECTS FIXED, and this is the strongest image of the wave. Placement: the previous 8-percent-of-panel outboard translation is gone - the outer end now sits at 27 percent of panel width from the silhouette against 27 drawn, and the inner end at 31 percent from centre front against 30 drawn",
+      "Cloth: median RGB (22,24,34), a dark navy essentially matching the diamond-flap sibling at (30,31,39). The charcoal that broke set consistency is gone",
+      "Slant angle survived the regeneration intact at 26.8 degrees against 26.6 drawn",
+      "BESOM construction: two parallel lips bounding the mouth, no flap, no single welt",
+      "Mouth length 41 percent of the 478px panel against 43 drawn",
+      "Exactly one ticket pocket, on the wearer's right front",
+      "No traced guide marks"
     ],
     "forbiddenChanges": [
       "do not alter any checklist item this attempt already passed",
@@ -147,6 +130,6 @@
       "do not change the garment part, orientation, or any other option's geometry"
     ]
   },
-  "notes": "CROSS-COMPARISON OF THE FOUR VEST POCKET OPTIONS. Laid side by side a customer CAN tell these four apart and no pair is indistinguishable, so no blueprint-match pair finding is raised. The discriminators actually present: vest-lower-slant-flap is the only one with TWO pockets and the only full-front view, its flaps straight-edged; vest-ticket-diamond-flap is the only one whose flap comes to a centre point, mouth level; vest-ticket-slant-besom is flapless and slanted 26 degrees; vest-ticket-right is flapless and level at 9.5.\n\nTHE RISK WORTH RECORDING: vest-ticket-right and vest-ticket-slant-besom are both bare, flapless, single mouths on the same panel at the same height, and the ONLY geometric difference in the renders is mouth angle - 9.5 degrees against 26.5. That is a real and readable 17-degree gap, but it is the ENTIRE margin, and the two source drawings for Right Welt and the level Besom sibling are themselves near-identical solid bands, so the welt-versus-besom construction distinction is doing no work in either drawing or render. If a future pass flattens the slant besom at all, the pair collapses.\n\nSET-LEVEL WEAKNESS, not a per-option blueprint miss: the four renders use three different crops (full front, wide three-quarter with a hand in frame, very tight detail, medium three-quarter) and two different cloth colours, so the menu will not read as one system. The tightest crop is also the most accurate image and the widest crop the least legible. NOT measurable on any of the four: vertical placement as a fraction of garment length, because all four crop the shoulders or hem; the button line and button pitch were used as landmarks instead. Absolute depths on the three-quarter views carry perspective error of roughly 10-15 percent, allowed for before scoring.",
-  "checkedAt": "2026-08-01T03:34:40.920Z"
+  "notes": "CROSS-COMPARISON OF THE FOUR VEST-POCKET TILES - all six pairs separate cleanly, so no distinguishability finding is raised.\n  (1) vest-lower-slant-flap: TWO flap pockets, one per front, at the waist; slant 23.8/25.2 rising toward centre front; parallel-sided flap.\n  (2) vest-ticket-right: ONE welt, single lip 54px deep, no flap; mouth 11.9 degrees DESCENDING toward centre front.\n  (3) vest-ticket-diamond-flap: ONE flap with a centred diamond point 90px deep; mouth 5.5-7.0 descending.\n  (4) vest-ticket-slant-besom: ONE bare besom, two lips 24px apart; mouth 26.8 RISING toward centre front.\n\nTHE FRAGILE PAIR IS NOW SAFE. The previous pass flagged (2) against (4) as separated only by a 17-degree mouth angle - the entire margin. They now slant in OPPOSITE DIRECTIONS: 11.9 down toward centre front against 26.8 up, a 39-degree total separation. That is not a lucky margin, it is what the blueprints themselves show - the ticket-right mark falls 8.8 degrees toward centre front and the slant-besom mark rises 26.6, a 35-degree drawn separation. On top of the angle they differ in construction: (2) is a single 54px welt lip, (4) a 24px two-lip besom.\n\nThe one menu-level blemish is CLOTH CONSISTENCY rather than geometry: the four tiles vary cloth and exposure as well as pocket, logged as a minor on (1) and (2).\n\nSOFT MINOR NOTED: the drawn 4.5:1 besom depth is unusually deep for real tailoring and part of that 35px is the sketch's own 8px line weight, so the depth finding is softer than the raw ratio suggests.",
+  "checkedAt": "2026-08-01T05:01:01.877Z"
 }

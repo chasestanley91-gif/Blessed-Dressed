@@ -2,18 +2,18 @@
   "addr": "suit-3pc > vest-lower-slant-flap",
   "productId": "suit-3pc",
   "optionId": "vest-lower-slant-flap",
-  "attempt": 1,
+  "attempt": 2,
   "maxAttempts": 3,
   "scores": {
-    "shape": 90,
-    "geometry": 86,
-    "dimensions": 80,
-    "angles": 93,
+    "shape": 93,
+    "geometry": 92,
+    "dimensions": 91,
+    "angles": 96,
     "construction": 90,
-    "placement": 74,
-    "symmetry": 96,
-    "composition": 88,
-    "blueprint-match": 84
+    "placement": 86,
+    "symmetry": 90,
+    "composition": 82,
+    "blueprint-match": 88
   },
   "scoreMin": 98,
   "waiverMin": 95,
@@ -32,36 +32,36 @@
     "shape",
     "geometry",
     "dimensions",
-    "angles",
     "construction",
     "placement",
+    "symmetry",
     "composition",
     "blueprint-match"
   ],
   "errors": [
     {
-      "severity": "major",
+      "severity": "minor",
       "category": "placement",
-      "description": "Horizontal position of the pocket on the front panel. Blueprint (1200px): at pocket height the garment runs x=284-900 with the button line at x=592, so one front panel is 308px; the left pocket spans x=333-490, inner end 102px (33 percent of panel) from centre front, outer end 51px (16.5 percent) inboard of the side seam. Render (880x1168): button line x=440, left silhouette x=88 at pocket height, panel 355px; the left flap spans x=90-272, inner end 168px (47 percent) from centre front and the outer tip sitting essentially ON the side silhouette (about 1 percent margin). Pocket LENGTH is right (51 percent both) - the whole pocket is translated outboard by roughly 14 percent of panel width. The right pocket mirrors this exactly.",
-      "expected": "Both slant flaps set inboard, starting about a third of the panel width out from the centre-front button line and ending with a clear margin of about a sixth of the panel width before the side seam",
-      "actual": "Pockets translated outboard by about 14 percent of panel width, the outer tip sitting on the side silhouette",
-      "correction": "Move both lower pockets inboard toward the button line: the inner flap corner sits about a third of the way from centre front to side seam, and the outer flap tip finishes on the flat of the front panel with a visible band of uninterrupted cloth (roughly 5 cm on the body) between the tip and the side seam, so the flap reads as sitting on the front, not wrapping around the ribs."
-    },
-    {
-      "severity": "major",
-      "category": "dimensions",
-      "description": "Flap depth measured perpendicular from the mouth line to the lower flap edge. Blueprint: 70px at the inner end and 30px at the outer end of a 157px-wide pocket (45 and 19 percent of pocket length), a pronounced 2.3:1 taper. Render: 112px inner and 98px outer on a 182px pocket (62 and 54 percent), essentially parallel-sided at 1.14:1. The rendered flap is roughly a third deeper than drawn and loses the wedge taper.",
-      "expected": "A shallow slant flap noticeably deeper at the centre-front end, tapering toward the side-seam end, its deepest point about 45 percent of pocket length",
-      "actual": "A near parallel-sided flap about a third too deep, taper 1.14:1 against 2.3:1 drawn",
-      "correction": "Draw the flap as a tapering wedge: deepest at the inner button-line corner at roughly 45 percent of the pocket length, narrowing steadily to about 20 percent at the outer tip, so the lower flap edge lies at a shallower angle than the mouth above it and the flap visibly wedges."
+      "description": "Outboard clearance between the flap's outer tip and the vest side silhouette at the pocket row. Wearer's-left front: tip x=672, silhouette x=702, panel 430-692 = 262px, clearance 11.5 percent of panel. Wearer's-right front: tip x=181, silhouette x=158-164, panel 170-430 = 260px, clearance about 9 percent. Blueprint clearances are 12 percent and 14 percent.",
+      "expected": "About 12-14 percent of panel width between the outer tip and the side silhouette on each front",
+      "actual": "11.5 percent on the wearer's left - near exact - but only about 9 on the wearer's right, so that flap sits about 5 percent of panel width further outboard than drawn",
+      "correction": "Set the wearer's-right lower flap so its outer tip finishes a full hand's width inboard of the side seam, leaving a clear band of undisturbed cloth equal to about one seventh of the front panel width between flap tip and silhouette, exactly mirroring the wearer's-left flap already rendered."
     },
     {
       "severity": "minor",
-      "category": "angles",
-      "description": "Mouth slant corner-to-corner. Blueprint upper mouth edge (490,832) to (334,940) = 33 degrees from horizontal, lower flap edge (486,907) to (340,972) = 24 degrees, both rising toward centre front. Render mouth (272,588) to (100,688) = 30 degrees, lower edge (244,712) to (88,786) = 25 degrees, same direction. Within about 3 degrees - reported for completeness only.",
-      "expected": "Mouth about 30-33 degrees from horizontal, lower flap edge about 24, both rising toward centre front",
-      "actual": "Mouth 30 degrees, lower edge 25 - a close match",
-      "correction": "Keep the mouth at roughly 32 degrees from horizontal rising toward the button line, with the lower flap edge set a little flatter at about 24 degrees."
+      "category": "composition",
+      "description": "Median cloth RGB sampled in a clean panel patch: this tile is (55,49,45), a warm brown/taupe, while the three ticket-pocket tiles on the same menu are navy at (51,53,71), (30,31,39) and (22,24,34).",
+      "expected": "One consistent suiting cloth across the vest-pocket tiles so the customer reads only the pocket difference",
+      "actual": "Brown/taupe hopsack with a matching brown tie, against navy on the sibling tiles",
+      "correction": "Shoot this waistcoat in the same mid-to-dark navy worsted used on the ticket-pocket tiles, with the same white shirt, so cloth is held constant and the slant flap is the only variable."
+    },
+    {
+      "severity": "minor",
+      "category": "dimensions",
+      "description": "Button count: the render shows 5 buttons (y=460,560,660,770,880); the flat shows 4 drawn buttons plus a small dash at the bottom edge.",
+      "expected": "Four round buttons with a bottom mark below them",
+      "actual": "Five round buttons evenly spaced",
+      "correction": "Render the waistcoat front with four buttons above the pocket line and the bottom fastening mark at the point, matching the drawn button stance."
     }
   ],
   "verdict": "FAIL",
@@ -69,30 +69,86 @@
   "correction": {
     "errors": [
       {
-        "severity": "major",
-        "category": "placement",
-        "error": "Horizontal position of the pocket on the front panel. Blueprint (1200px): at pocket height the garment runs x=284-900 with the button line at x=592, so one front panel is 308px; the left pocket spans x=333-490, inner end 102px (33 percent of panel) from centre front, outer end 51px (16.5 percent) inboard of the side seam. Render (880x1168): button line x=440, left silhouette x=88 at pocket height, panel 355px; the left flap spans x=90-272, inner end 168px (47 percent) from centre front and the outer tip sitting essentially ON the side silhouette (about 1 percent margin). Pocket LENGTH is right (51 percent both) - the whole pocket is translated outboard by roughly 14 percent of panel width. The right pocket mirrors this exactly.",
-        "expected": "Both slant flaps set inboard, starting about a third of the panel width out from the centre-front button line and ending with a clear margin of about a sixth of the panel width before the side seam",
-        "actual": "Pockets translated outboard by about 14 percent of panel width, the outer tip sitting on the side silhouette",
-        "correction": "Move both lower pockets inboard toward the button line: the inner flap corner sits about a third of the way from centre front to side seam, and the outer flap tip finishes on the flat of the front panel with a visible band of uninterrupted cloth (roughly 5 cm on the body) between the tip and the side seam, so the flap reads as sitting on the front, not wrapping around the ribs."
+        "severity": "minor",
+        "category": "shape",
+        "error": "score-card category \"shape\" scored 93 (< 98)",
+        "expected": ">= 98",
+        "actual": "93",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"shape\" and regenerate."
       },
       {
-        "severity": "major",
+        "severity": "minor",
+        "category": "geometry",
+        "error": "score-card category \"geometry\" scored 92 (< 98)",
+        "expected": ">= 98",
+        "actual": "92",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"geometry\" and regenerate."
+      },
+      {
+        "severity": "minor",
         "category": "dimensions",
-        "error": "Flap depth measured perpendicular from the mouth line to the lower flap edge. Blueprint: 70px at the inner end and 30px at the outer end of a 157px-wide pocket (45 and 19 percent of pocket length), a pronounced 2.3:1 taper. Render: 112px inner and 98px outer on a 182px pocket (62 and 54 percent), essentially parallel-sided at 1.14:1. The rendered flap is roughly a third deeper than drawn and loses the wedge taper.",
-        "expected": "A shallow slant flap noticeably deeper at the centre-front end, tapering toward the side-seam end, its deepest point about 45 percent of pocket length",
-        "actual": "A near parallel-sided flap about a third too deep, taper 1.14:1 against 2.3:1 drawn",
-        "correction": "Draw the flap as a tapering wedge: deepest at the inner button-line corner at roughly 45 percent of the pocket length, narrowing steadily to about 20 percent at the outer tip, so the lower flap edge lies at a shallower angle than the mouth above it and the flap visibly wedges."
+        "error": "score-card category \"dimensions\" scored 91 (< 98)",
+        "expected": ">= 98",
+        "actual": "91",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"dimensions\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "angles",
+        "error": "score-card category \"angles\" scored 96 (< 98)",
+        "expected": ">= 98",
+        "actual": "96",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"angles\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "construction",
+        "error": "score-card category \"construction\" scored 90 (< 98)",
+        "expected": ">= 98",
+        "actual": "90",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"construction\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "placement",
+        "error": "score-card category \"placement\" scored 86 (< 98)",
+        "expected": ">= 98",
+        "actual": "86",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"placement\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "symmetry",
+        "error": "score-card category \"symmetry\" scored 90 (< 98)",
+        "expected": ">= 98",
+        "actual": "90",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"symmetry\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "composition",
+        "error": "score-card category \"composition\" scored 82 (< 98)",
+        "expected": ">= 98",
+        "actual": "82",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"composition\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "blueprint-match",
+        "error": "score-card category \"blueprint-match\" scored 88 (< 98)",
+        "expected": ">= 98",
+        "actual": "88",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"blueprint-match\" and regenerate."
       }
     ],
     "lockedFeatures": [
-      "Two lower pockets, one on each front, mirrored about the button line",
-      "Flap present on both pockets, hanging over the mouth, with a STRAIGHT lower edge and no centre point",
-      "Slant rising toward the centre front (outer end low, inner end high) on both sides",
-      "Mouth slant about 30 degrees from horizontal, lower flap edge slightly flatter at about 25",
-      "Pocket length about 51 percent of one front panel width - matches the drawing exactly",
-      "Straight-on front view of the whole waistcoat, 5-button front, V neckline, pointed hem, no chest pockets",
-      "No annotation, numbers, arrows or coloured guide marks anywhere"
+      "Two slant flap pockets, one on each front, at the waist",
+      "THE OUTBOARD-PLACEMENT DEFECT IS LARGELY FIXED: the previous tip landed ON the side silhouette; this one clears it by 30px (11.5 percent of panel) on one front and 23px (9 percent) on the other, against 12-14 drawn",
+      "Mouth slant rising toward centre front at 23.8 degrees (wearer's left) and 25.2 (wearer's right)",
+      "Flap is a PARALLEL-SIDED parallelogram, vertical depth 67px inner to 61px outer (1.10:1) and 66 to 61 (1.08:1) - this MATCHES the drawing, see notes",
+      "Besom mouth visible as a fine jet line directly above the flap fold",
+      "Mouth length 51-52 percent of front panel width against 49.5-55 drawn",
+      "No chest pocket, no ticket pocket, no traced guide marks"
     ],
     "forbiddenChanges": [
       "do not alter any checklist item this attempt already passed",
@@ -100,6 +156,6 @@
       "do not change the garment part, orientation, or any other option's geometry"
     ]
   },
-  "notes": "Blueprint verified as a front elevation with BOTH lower pockets picked out in red (two connected components, x=333-490 and x=699-857, mirror-symmetric about x=592). Depth calibration against the non-flap sibling vest-lower-slant-besom.jpg (red bbox 140x95 against this drawing's 157x146) confirms the extra depth here is a FLAP, not a wider besom. The drawn flap's lower edge is monotonic across every sampled column - straight, no diamond point - and the render matches. Render measured by luminance-gradient edge mapping on a 4x downsample. NOT measurable: the pocket's height as a fraction of garment length, because the render crops off the shoulders; the button line was used as the only reliable vertical landmark.",
-  "checkedAt": "2026-08-01T03:34:40.424Z"
+  "notes": "BLUEPRINT_CONFLICT AGAINST MY OWN PREVIOUS FINDING - and the previous finding was wrong.\n\nThe last round rejected this option partly for having 'lost its wedge taper', claiming the drawing shows a flap 2.3:1 deeper at the inner end. This grader extracted the red guide mark BY COLOUR and profiled its vertical extent column by column: wearer's-left mark x=699-857 with extents 85,85,85,82,82,84,85,80,82,82; wearer's-right x=333-490 with extents 81,84,82,80,84,82,81,85,84,86. Top edge 23.2 degrees, bottom edge 22.2. THE DRAWN FLAP IS A PARALLELOGRAM AT 1.03:1, NOT A WEDGE. The render at 1.10:1 and 1.08:1 therefore MATCHES the drawing, and the previous rejection reason was a mis-measurement.\n\nDO NOT ADD A WEDGE TAPER ON ANY FUTURE PASS - it would move the render away from the blueprint. This is the second time this session that a rigorous re-measurement has overturned an earlier eyeballed one; the first was slant-25-stripe's invented centimetre figures.\n\nNOT measurable: the true side seam position, since this is a straight-on shot of a body and the seam wraps behind the silhouette, so all outboard clearances carry a few percent of uncertainty. Also not measurable: whether the jet under the flap is a true double besom, because the flap covers it.",
+  "checkedAt": "2026-08-01T05:01:01.437Z"
 }
