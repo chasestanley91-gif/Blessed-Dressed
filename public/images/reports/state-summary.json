@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-01T23:05:50.586Z",
+  "generatedAt": "2026-08-01T23:14:37.886Z",
   "generatedBy": "tools/project_state.mjs",
   "repo": ".",
   "catalog": "data-store/options",
@@ -142,8 +142,8 @@
   "verifiedShippedClean": 106,
   "verifiedShippedWaived": 15,
   "verifiedShippedPct": "6.9",
-  "pipelineDirs": 202,
-  "generatedFiles": 1384,
+  "pipelineDirs": 204,
+  "generatedFiles": 1388,
   "sharedBlueprintIllustrations": 448,
   "sharedBlueprintOptions": 1409,
   "credits": {
@@ -167,7 +167,7 @@
       "severity": "blocking",
       "code": "DISTINCT_OPTION_IMAGE_COLLISION",
       "message": "Byte-identical images ship for craft options that must look different from each other.",
-      "count": 14,
+      "count": 13,
       "items": [
         "f7fa88b7d6d1 — 13 options share 1 image (13 filename(s)): chest-pocket/cp-patch | chest-pocket/cp-patch-angled | chest-pocket/cp-patch-multi | chest-pocket/cp-inverted-pleat-2flap | chest-pocket/cp-inverted-pleat-flap | lower-pocket/lp-patch | lower-pocket/lp-patch-rounded | lower-pocket/lp-patch-flap | lower-pocket/lp-patch-flap-btn | lower-pocket/lp-patch-btn-tab-round | lower-pocket/lp-patch-btn-tab-straight | lower-pocket/lp-patch-btn-tab-angled | lower-pocket/lp-water-drop",
         "d3e9123ef264 — 11 options share 1 image (11 filename(s)): lower-pocket/lp-slanted-flap-55 | lower-pocket/lp-slanted-flap-65 | lower-pocket/lp-large-slanted-55 | lower-pocket/lp-large-slanted-65 | lower-pocket/lp-straight-jetted-40 | lower-pocket/lp-straight-jetted-45 | lower-pocket/lp-straight-jetted-50 | lower-pocket/lp-straight-jetted-55 | lower-pocket/lp-straight-jetted-60 | lower-pocket/lp-straight-jetted-65 | lower-pocket/lp-rl-flat-55",
@@ -180,7 +180,6 @@
         "ed619110ab18 — 4 options share 1 image (4 filename(s)): chest-pocket/cp-welt-curved-23 | chest-pocket/cp-welt-curved-25 | chest-pocket/cp-welt-curved-27 | chest-pocket/cp-welt-curved-29",
         "a673d2f8828c — 3 options share 1 image (3 filename(s)): cuff-style/cuff-british | cuff-style/cuff-turnback-35 | cuff-style/cuff-turnback-40",
         "dec3294803e6 — 2 options share 1 image (2 filename(s)): lapel-style/lapel-peak-99 | lapel-style/lapel-peak-114",
-        "ca22563b317d — 2 options share 1 image (2 filename(s)): lapel-style/lapel-shawl-d | lapel-style/lapel-shawl-asymmetric",
         "55116eb64714 — 2 options share 1 image (2 filename(s)): cuff-style/cuff-angled | cuff-style/cuff-square",
         "0634a8c204cd — 2 options share 1 image (1 filename(s)): belt-loops/loops-standard | belt-loops/loops-5"
       ]
@@ -305,7 +304,7 @@
       "severity": "warning",
       "code": "ORPHAN_IMAGE_FILE",
       "message": "Generated image on disk is not referenced by any catalog option, and has no wired .png/.webp counterpart.",
-      "count": 240,
+      "count": 244,
       "items": [
         "/images/generated/jacket/cp-trapezoid.png",
         "/images/generated/jacket/cp-trapezoid.webp",
@@ -321,6 +320,10 @@
         "/images/generated/jacket/lapel-shawl-0a.webp",
         "/images/generated/jacket/lapel-shawl-0e.png",
         "/images/generated/jacket/lapel-shawl-0e.webp",
+        "/images/generated/jacket/lapel-shawl-asymmetric.png",
+        "/images/generated/jacket/lapel-shawl-asymmetric.webp",
+        "/images/generated/jacket/lapel-shawl-d.png",
+        "/images/generated/jacket/lapel-shawl-d.webp",
         "/images/generated/jacket/lapel-shawl.png",
         "/images/generated/jacket/lapel-shawl.webp",
         "/images/generated/jacket/slant-32-stripe.png",
@@ -352,11 +355,7 @@
         "/images/generated/shirt/bias-inner-top-collar.png",
         "/images/generated/shirt/bias-inner-top-collar.webp",
         "/images/generated/shirt/bias-none.png",
-        "/images/generated/shirt/bias-none.webp",
-        "/images/generated/shirt/collar-cuban.png",
-        "/images/generated/shirt/collar-cuban.webp",
-        "/images/generated/shirt/collar-curved-80.png",
-        "/images/generated/shirt/collar-curved-80.webp"
+        "/images/generated/shirt/bias-none.webp"
       ]
     },
     {

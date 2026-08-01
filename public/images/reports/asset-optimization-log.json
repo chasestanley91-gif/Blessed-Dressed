@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-01T23:05:44.890Z",
+  "at": "2026-08-01T23:14:32.734Z",
   "settings": {
     "maxWidth": 1400,
     "quality": 82,
@@ -7,30 +7,30 @@
   },
   "applied": true,
   "counts": {
-    "masters": 692,
+    "masters": 694,
     "converted": 1,
-    "skipped": 691,
+    "skipped": 693,
     "failed": 0,
     "repointed": 0
   },
   "bytes": {
-    "before": 1641819,
-    "after": 66742,
-    "savedPct": 95.9
+    "before": 1403311,
+    "after": 28788,
+    "savedPct": 97.9
   },
   "note": "targetSha1 is the derivative; sourceSha1 is the PNG master QC graded. The master and publish_approved.mjs byte-identity gate are untouched.",
   "results": {
     "ok": [
       {
-        "master": "public\\images\\generated\\suit-2pc\\lapel-shawl.png",
-        "masterBytes": 1641819,
-        "sourceSha1": "d487d30802d328e874a5acc810fe6c7391076863",
-        "target": "public\\images\\generated\\suit-2pc\\lapel-shawl.webp",
-        "targetBytes": 66742,
-        "targetSha1": "47262c25a56f2c7666345b03bc917958f8aa61c1",
+        "master": "public\\images\\generated\\suit-2pc\\lapel-shawl-asymmetric.png",
+        "masterBytes": 1403311,
+        "sourceSha1": "c49827cb9e3efea239fbc85bd24fb250234e59f7",
+        "target": "public\\images\\generated\\suit-2pc\\lapel-shawl-asymmetric.webp",
+        "targetBytes": 28788,
+        "targetSha1": "2fc6dacd0f8269f0635411456301b831a44b8a4a",
         "quality": 82,
         "width": 1400,
-        "web": "/images/generated/suit-2pc/lapel-shawl.webp"
+        "web": "/images/generated/suit-2pc/lapel-shawl-asymmetric.webp"
       }
     ],
     "skipped": [
@@ -1768,6 +1768,14 @@
       },
       {
         "master": "public\\images\\generated\\suit-2pc\\lapel-shawl-0e.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\lapel-shawl-d.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\lapel-shawl.png",
         "reason": "derivative already exists"
       },
       {

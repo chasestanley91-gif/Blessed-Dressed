@@ -734,3 +734,12 @@ and was cleared). Full spec-only chain: extract_spec --spec-only -> SPEC LOCK pr
 replacing the ca22563b317d collision copy. Shawl collision now 2 (-d, -asymmetric, both
 spec-only-capable). Session: 6 generations / 5 shipped / 3.0 credits = 1.2 attempts/shipped.
 Credits ~791.5.
+
+## 2026-08-01 — SHAWL COLLISION FAMILY CLEARED (lapel-shawl-d + -asymmetric, 1.0 credits)
+
+Both spec-only, both PASS attempt 1: -d (outer edge flattened through the mid-run, capital-D
+read) and -asymmetric (deliberate left-right radius difference — the prompt explicitly
+declared the asymmetry as THE option and removed it from the Avoid list). All SIX shawl
+options now ship distinct verified images; the ca22563b317d 6-way group is OFF the blocking
+list (DISTINCT_OPTION_IMAGE_COLLISION 14 -> 13 families). Session: 8 generations / 7 shipped
+/ 4.0 credits = 1.14 attempts-per-shipped. Credits ~790.5.
