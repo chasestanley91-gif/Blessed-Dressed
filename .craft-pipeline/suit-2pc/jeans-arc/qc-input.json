@@ -1,22 +1,48 @@
 {
-  "scores": {"shape":99,"geometry":98,"dimensions":98,"angles":98,"construction":99,
-             "placement":99,"symmetry":100,"composition":98,"blueprint-match":98},
+  "scores": {
+    "shape": 22,
+    "geometry": 15,
+    "dimensions": 30,
+    "angles": 20,
+    "construction": 60,
+    "placement": 30,
+    "symmetry": 70,
+    "composition": 80,
+    "blueprint-match": 15
+  },
   "errors": [
-    {"severity":"minor","category":"composition",
-     "description":"The bottom edge of the frame still sits somewhat further below the pocket mouth than the framing lock asked for; roughly the lower third of the picture is plain thigh cloth.",
-     "expected":"Bottom edge about one pocket-mouth-depth below the lowest point of the curved mouth.",
-     "actual":"Bottom edge roughly two mouth-depths below, so the lower third of the frame is empty cloth.",
-     "correction":"Could be tightened another notch, but the mouth already spans about three quarters of the picture width and reads instantly."}
+    {
+      "severity": "critical",
+      "category": "geometry",
+      "description": "THE POCKET MOUTH'S INBOARD RUN IS ENTIRELY ABSENT. Drawing 3135: loop centres x142 and x585, pitch 443; the red mouth drops vertically at x185 from the waistband edge y237 to a corner at y355, then runs 338px INBOARD (0.76 pitches) to terminate exactly on the front crease at x523. Render: the mouth runs (188,148) to (110,600) with ZERO inboard travel - it actually drifts 78px OUTBOARD - and its inboard-most point sits 0.94 belt-loop pitches short of the crease.",
+      "expected": "A mouth that drops briefly at the side, turns hard, then sweeps about three quarters of a belt-loop pitch inboard across the front panel to finish on the crease line",
+      "actual": "A single unbroken near-vertical seam hugging the side of the leg, never crossing the front panel",
+      "correction": "Render the mouth in two parts: a short vertical drop from the waistband at the side seam, then a long sweeping run inboard across the front panel finishing right at the pressed front crease, so the opening spans most of the panel and the pocket bag corner sits beside the fly."
+    },
+    {
+      "severity": "critical",
+      "category": "shape",
+      "description": "The rendered pocket is a plain vertical ON-SEAM SIDE POCKET - the geometry of sheet 3130 'Sideseam', a DIFFERENT option on the same front-pocket-style field. This option's own spec.json lists 'any feature, count, or geometry borrowed from a neighboring craft option on the same field' as forbidden, and this is that failure exactly.",
+      "expected": "A five-pocket jeans scoop mouth per sheet 3135",
+      "actual": "A tailored on-seam side pocket, indistinguishable in kind from the Sideseam option",
+      "correction": "Render a five-pocket jeans front: a scooped opening with a curved facing edge whose corner reaches in toward the fly, the pocket bag visible as a shaped panel behind it, so the opening reads as denim-derived rather than as a tailored side pocket."
+    },
+    {
+      "severity": "major",
+      "category": "geometry",
+      "description": "The terminal down-turn is missing. In the drawing the last about 45px of the mouth bend downward at about 34 degrees, dropping y378 to y430 as they meet the crease - THIS SECOND BEND IS THE FEATURE THAT MOST SEPARATES 3135 FROM 3133. The render has nothing in that region.",
+      "expected": "A distinct downward hook at the inboard end where the mouth meets the crease line",
+      "actual": "No inboard end exists to hook, because the mouth never reaches the panel",
+      "correction": "Finish the inboard end of the opening with a short, distinctly steeper downward turn just before the crease, so the mouth ends in a hooked corner rather than running out flat."
+    }
   ],
   "lockedFeatures": [
-    "one single continuous smooth curved pocket mouth, no corner and no straight break",
-    "short drop from the waistband seam then a long shallow sweep across to the hip",
-    "waistband with one belt loop across the top of the frame",
-    "opposite front panel and its welt pocket fully cropped out",
-    "charcoal fine worsted wool with visible weave",
-    "seamless neutral light-grey studio background",
-    "clean welted mouth lying flat and closed, no rivets, no contrast topstitching",
-    "zero annotation, numerals, arrows or red marks"
+    "Three-quarter front orientation, matching the sheet's viewpoint",
+    "Belt loop count and positions on the front panel",
+    "Pressed front crease line present and correctly placed",
+    "The sheet's un-highlighted right-hip welt reproduced faithfully as context",
+    "Charcoal cloth correctly treats the sheet's red as a location marker, not a colour",
+    "No traced annotation"
   ],
-  "notes": "Blueprint: trouser hip, shallow three-quarter; red marks one curved front pocket mouth leaving the waistband seam near the side seam and sweeping across to the hip. Attempt 2 corrected the attempt-1 framing failure: camera moved in, opposite panel and its competing welt pocket removed, waistband and belt loop retained at the top. The mouth is now a single unbroken smooth curve that drops from the waistband and then runs long and shallow across roughly three quarters of the frame width, matching the drawn path. Clearly distinct from the square, round, diamond and straight-slant siblings on the same field. No annotation bleed, no red, no text, fully photographic."
+  "notes": "BLUEPRINT_CONFLICT: the label 'Arc Jeans Pocket' and its description say the mouth sweeps 'in a smooth curve', but sheet 3135 draws NO smooth curve - it is a vertical drop, a straight 3.8-degree run, and a separate angular 34-degree down-turn. Graded against the drawing and reporting the disagreement rather than picking a side.\n\nThe red guide pixels were TRACED DIRECTLY (16,167 px, bbox x163-535 y237-432) to derive the path rather than eyeballed.\n\nAN INVERSION WORTH RECORDING: the sheet's UN-HIGHLIGHTED context feature (the right-hip welt) is rendered crisply, while the RED-MARKED craft option is replaced by generic geometry. The model rendered everything except the thing the drawing was marking.\n\nNOT measurable: no dimension callouts on 3135. Curvature below about 10px cannot be assessed - the source is a 39KB JPEG and the line is a few pixels wide - so it can be stated that no curve is RESOLVABLE, not that the original vector was straight."
 }

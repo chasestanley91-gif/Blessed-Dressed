@@ -2,44 +2,80 @@
   "addr": "suit-2pc > back-left-patch",
   "productId": "suit-2pc",
   "optionId": "back-left-patch",
-  "attempt": 2,
+  "attempt": 3,
   "maxAttempts": 3,
   "scores": {
-    "shape": 99,
-    "geometry": 98,
-    "dimensions": 98,
-    "angles": 98,
-    "construction": 99,
-    "placement": 98,
-    "symmetry": 99,
-    "composition": 98,
-    "blueprint-match": 98
+    "shape": 88,
+    "geometry": 82,
+    "dimensions": 80,
+    "angles": 92,
+    "construction": 40,
+    "placement": 62,
+    "symmetry": 74,
+    "composition": 86,
+    "blueprint-match": 78
   },
   "scoreMin": 98,
   "waiverMin": 95,
-  "belowMinCategories": [],
-  "belowWaiverMinCategories": [],
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
   "errors": [
     {
-      "severity": "minor",
-      "category": "composition",
-      "description": "The bottom edge of the frame sits roughly one and a half pocket-depths below the pocket point rather than one, so the lower third of the picture is plain trouser leg. The pocket and the bare opposite hip both still read instantly and both hips remain fully in frame at full width, which is the load-bearing requirement for this option.",
-      "expected": "Bottom edge about one pocket-depth below the lowest point of the pocket.",
-      "actual": "Bottom edge about one and a half pocket-depths below the point; plain leg fills the lower third.",
-      "correction": "Cosmetic only; no regeneration warranted. A future crop could raise the bottom edge without narrowing the frame horizontally."
+      "severity": "critical",
+      "category": "construction",
+      "description": "POCKET COUNT. The render contains TWO pointed patch pockets, one on each seat panel - left top-right corner (307,345) apex (222,608); right top-right corner (790,300) apex (700,600). Sheet 3230 also draws two, red outlines x264-468 and x738-943, both y300-548, dimensionally identical at 204 and 205px wide. The catalog label is 'Left Pointed Patch Pocket' - singular, one side. The render is CORRECT AGAINST THE DRAWING and WRONG AGAINST THE OPTION, which is exactly the failure a naive fidelity check passes.",
+      "expected": "The drawing shows two pockets; the option name specifies one, on the left. They disagree and the sheet encodes nothing about left-versus-both, so the sheet cannot settle it",
+      "actual": "Two pointed patch pockets, one on each seat panel",
+      "correction": "Render a SINGLE pointed patch pocket on the wearer's left seat panel, applied on top of the cloth and topstitched around its edge, with the opposite seat panel showing clean uninterrupted cloth carrying only its back dart - so the asymmetry between the two panels is the first thing a customer sees."
+    },
+    {
+      "severity": "major",
+      "category": "placement",
+      "description": "Vertical gap between waistband lower seam and pocket top edge, normalised to belt-loop pitch. Drawing: loop centres x266 and x552, pitch 286; waistband lower edge y170, pocket top y300, gap 130-135 = 0.47 pitches. Render: loop centres x114 and x397, pitch 278 mean; waistband lower seam y188, pocket top y365, gap 177 = 0.64 pitches. Pockets sit about 35 percent lower than drawn. Seat curvature foreshortens vertical distances, which would SHRINK the measured gap, so the true error is at least this large.",
+      "expected": "Pocket top edge about half a belt-loop pitch below the waistband seam - high on the seat, close under the band",
+      "actual": "About 0.64 pitches - roughly 35 percent low",
+      "correction": "Raise both pocket top edges so the gap between waistband seam and pocket mouth is about half the distance from the side belt loop to the centre belt loop, seating the pockets high on the seat where the back dart meets them."
     },
     {
       "severity": "minor",
       "category": "dimensions",
-      "description": "The rendered pocket is marginally wider and its bottom point marginally deeper than the drawn outline (point drop approximately 24% of pocket height versus about 18% in the drawing), and it sits very slightly further outboard toward the side seam.",
-      "expected": "Pocket width about one sixth of the seat width with a shallow bottom point dropping roughly one fifth of the pocket height.",
-      "actual": "Pocket about one seventh wider than drawn, point drop nearer one quarter of pocket height, positioned a little further toward the outseam.",
-      "correction": "Within photographic tolerance; no regeneration warranted."
+      "description": "Pocket width normalised to belt-loop pitch: drawing 204/286 = 0.71; render (left, most face-on) 222/278 = 0.80, about 12 percent wide. Consequent height:width is 1.22 drawn against 1.12 rendered, so the pocket is squarer than drawn.",
+      "expected": "A pocket noticeably taller than wide, at 0.71 belt-loop pitches across",
+      "actual": "0.80 pitches, squarer than drawn",
+      "correction": "Narrow each pocket so its width is about seven tenths of the side-loop-to-centre-loop distance, giving a pocket clearly taller than wide."
+    },
+    {
+      "severity": "minor",
+      "category": "symmetry",
+      "description": "Centre-back seam is not centred between the two inner belt loops. Drawing: seam x598.5, inner loops x552 and x647.5, gaps 46 and 49. Render: seam x418, inner loops x397 and x472, gaps 21 and 54. Perspective across the frame is only 1.16:1, so a 2.6:1 inner-gap ratio is NOT explained by camera angle.",
+      "expected": "The two centre belt loops straddling the centre-back seam at equal distances",
+      "actual": "Gaps of 21 and 54 - a 2.6:1 asymmetry",
+      "correction": "Place the two centre belt loops symmetrically about the centre-back seam, each the same short distance from it."
     }
   ],
-  "verdict": "PASS",
+  "verdict": "UNMET",
   "waiver": null,
   "correction": null,
-  "notes": "Attempt 2. Attempt 1 was rejected Critical for rendering TWO pointed patch pockets (which is the separate catalog option back-both-patch); the correction fixed it cleanly with no other regression. Attempt 2 shows exactly one pointed patch pocket on the wearer's left hip with the right hip completely bare, both hips in frame, so the asymmetry that defines the option is directly comparable inside a single picture. Handedness check: this is a rear view, so there is no mirror flip and the wearer's left hip is the left-hand side of the frame; the pocket is on the left-hand side. DRAWING-vs-LABEL DISCREPANCY, recorded deliberately: the tech-pack illustration (/images/blueprints/factory/5e26a3e5997d__3230__Patch_with_pointed.jpg) outlines a pointed patch pocket in pink on BOTH hips, but this option's label is 'Left Pointed Patch Pocket'. The catalog carries back-both-patch, 'Both Pointed Patch Pockets', as its own option with a different image file, which proves the factory drawing is a generic field illustration marking where this pocket family sits rather than a per-option count, and the pink outline is position notation rather than cloth colour. The label therefore governs the count and the drawing governs the shape. Everything else matches the drawing: pointed patch outline, patch-on-top construction with topstitched edge, belt loops, back darts running from the waistband toward the pocket, centre rise seam, no button/flap/zip, no annotation and no pink anywhere.",
-  "checkedAt": "2026-07-31T20:25:27.014Z"
+  "notes": "The headline is the pocket COUNT. Everything about the pocket's own shape is good - point angle, point depth ratio and lateral position all close enough to lock - which is precisely why this image would survive a shape-only check while shipping the wrong option.\n\nNOT measurable: sheet 3230 carries no dimension callouts, so no centimetre figure for pocket width, height or point depth exists; all figures are ratios against belt-loop pitch or waistband depth. The right-hand pocket wraps around the seat and is foreshortened, so only the left face-on pocket was used for dimensional comparison.",
+  "checkedAt": "2026-08-01T08:09:39.001Z"
 }

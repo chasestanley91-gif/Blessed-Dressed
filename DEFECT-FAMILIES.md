@@ -779,3 +779,71 @@ the identical file was reused. Options that were generated separately and merely
 indistinguishable — which the 24-row sample suggests is the larger population, at 37.5% INDISTINCT —
 are invisible to it and can only be found by looking. Worth stating plainly next to that 208, so the
 number is not read as the full extent of the problem.
+
+---
+
+## FAM-FRONT-STYLE-FOLDER — an entire field with no usable source material
+
+**Verified 2026-08-01 by running triage over the whole folder.** `public/images/jacket/front-style/`
+holds 13 files. **Every one fails.**
+
+```
+NOT_A_DRAWING   sb-1  sb-3  db-4x1  db-6x1
+SUSPECT         sb-2  sb-4  sb-3-roll-2  sb-4-roll-3  sb-5
+                db-2x1  db-4x2  db-6x2  db-6x3
+                        13 of 13 unusable
+```
+
+All are 240x200. White fraction runs 0.000-0.430 — nowhere near the 0.75 floor a genuine small
+drawing clears — and saturation runs 1.3 to 45.2. These are fabric swatches and scraped page
+fragments, not tech packs.
+
+**Consequence.** Every jacket front-style option — the entire button-stance field, single- and
+double-breasted — has no authentic drawing behind it. `sport-coat/sb-4` cannot be regenerated
+correctly because there is nothing correct to generate from, and its current render (3 buttons for a
+4-button option) is live on **three products** from a single shared file.
+
+Note the vest equivalents at `/images/options/vest/` ARE genuine 1200x1200 line art. So the drawings
+exist for waistcoat button stances and are missing only for jackets. Added to
+[NEEDS-SOURCE.md](NEEDS-SOURCE.md).
+
+## The jeans pair — usable source, unused. This is NOT a source limitation.
+
+`jeans-arc` and `jeans-square` are indistinguishable, and both rendered the geometry of a **third,
+neighbouring option** (`Sideseam`, sheet 3130) — which each option's own `spec.forbidden` explicitly
+prohibits as "geometry borrowed from a neighboring craft option on the same field". Scores 15-24
+across shape, geometry, angles and blueprint-match.
+
+What makes this different from the ladder families is that **the source material is adequate**. The
+two sheets differ measurably, traced from the red guide pixels directly rather than eyeballed:
+
+| | 3135 (arc) | 3133 (square) |
+|---|---|---|
+| vertical drop | 1.31 waistband depths | 1.00 |
+| run angle below horizontal | 3.8° | 5.7° |
+| mouth vertical extent | 0.433 belt-loop pitches | 0.312 |
+| terminal down-turn | **yes, ~34°** | none |
+| mouth rendering | open double-line channel | single stroke |
+
+Both renders instead show a long near-vertical side pocket with **zero inboard travel** — the mouth
+never crosses the front panel at all, finishing 0.79-0.94 belt-loop pitches short of the crease where
+the drawing terminates it exactly on the crease line.
+
+So this is a generation failure against usable drawings, and it is recoverable — unlike the peak
+lapels or the AMF pairs. Worth separating in any triage of what needs new source versus what needs
+re-running.
+
+An inversion worth recording: in both renders the sheet's **un-highlighted context feature** (a
+right-hip welt) is reproduced crisply, while the **red-marked craft option** is replaced by generic
+geometry. The model rendered everything except the thing the drawing was marking.
+
+## `quarter-canvas` — the sheet documents a different distinction entirely
+
+Sheet `00C3` is titled **"Single layer"** — a layer-COUNT distinction. The option is **"Quarter
+Canvas"** — an EXTENT distinction, described as canvas covering "roughly the top quarter of the front
+panel". The drawn pad-stitched canvas descends to 58% of forepart height, which is half-canvas
+territory.
+
+Worse, `00C3` is the **only** canvas sheet in `public/images/blueprints`, while the catalog carries
+five distinct extent options (quarter / half / light-half / ultra-thin-half / full). One sheet cannot
+distinguish five extents, and it is not even drawing extent.

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-01T07:05:39.454Z",
+  "generatedAt": "2026-08-01T08:09:44.899Z",
   "count": 2862,
   "records": [
     {
@@ -8060,8 +8060,23 @@
       "shippedPath": "/images/generated/shirt/btn-7.webp",
       "shippedBytes": 23784,
       "shippedSha1": "c6c2bfaf3442f30e5ff6205deafae3cfa0ae0ed3",
-      "pipeline": null,
-      "stage": "legacy-shipped-unverified"
+      "pipeline": {
+        "dir": ".craft-pipeline/shirt/btn-7",
+        "have": {
+          "spec": true,
+          "prompt": true,
+          "generation": false,
+          "qc": false
+        },
+        "verdict": null,
+        "attempt": null,
+        "lowestScore": null,
+        "belowMin": [],
+        "candidates": 0,
+        "needsReverify": false,
+        "checkedAt": null
+      },
+      "stage": "prompt-built"
     },
     {
       "key": "shirt/btn-8",
@@ -8082,8 +8097,23 @@
       "shippedPath": "/images/generated/shirt/btn-8.webp",
       "shippedBytes": 24104,
       "shippedSha1": "66db8e89c27fcc51cb6ccb9f266fd09eeed3779e",
-      "pipeline": null,
-      "stage": "legacy-shipped-unverified"
+      "pipeline": {
+        "dir": ".craft-pipeline/shirt/btn-8",
+        "have": {
+          "spec": true,
+          "prompt": false,
+          "generation": false,
+          "qc": false
+        },
+        "verdict": null,
+        "attempt": null,
+        "lowestScore": null,
+        "belowMin": [],
+        "candidates": 0,
+        "needsReverify": false,
+        "checkedAt": null
+      },
+      "stage": "spec-only"
     },
     {
       "key": "shirt/btn-9",
@@ -8104,8 +8134,23 @@
       "shippedPath": "/images/generated/shirt/btn-9.webp",
       "shippedBytes": 15354,
       "shippedSha1": "f537ddb5d3630704a110ad270bae170db79f67a1",
-      "pipeline": null,
-      "stage": "legacy-shipped-unverified"
+      "pipeline": {
+        "dir": ".craft-pipeline/shirt/btn-9",
+        "have": {
+          "spec": true,
+          "prompt": true,
+          "generation": false,
+          "qc": false
+        },
+        "verdict": null,
+        "attempt": null,
+        "lowestScore": null,
+        "belowMin": [],
+        "candidates": 0,
+        "needsReverify": false,
+        "checkedAt": null
+      },
+      "stage": "prompt-built"
     },
     {
       "key": "shirt/btn-5-dbl",
@@ -16898,8 +16943,23 @@
       "shippedPath": "/images/generated/shirt/bias-inner-collar-stand.webp",
       "shippedBytes": 27916,
       "shippedSha1": "70b7cd66aa622e7107b371f0f0fbf0ea6dd99292",
-      "pipeline": null,
-      "stage": "legacy-shipped-unverified"
+      "pipeline": {
+        "dir": ".craft-pipeline/shirt/bias-inner-collar-stand",
+        "have": {
+          "spec": true,
+          "prompt": true,
+          "generation": false,
+          "qc": false
+        },
+        "verdict": null,
+        "attempt": null,
+        "lowestScore": null,
+        "belowMin": [],
+        "candidates": 0,
+        "needsReverify": false,
+        "checkedAt": null
+      },
+      "stage": "prompt-built"
     },
     {
       "key": "shirt/bias-outer-collar-stand",
@@ -18351,22 +18411,25 @@
           "generation": true,
           "qc": true
         },
-        "verdict": "PASS_WAIVED",
-        "attempt": 3,
-        "lowestScore": 96,
+        "verdict": "UNMET",
+        "attempt": 4,
+        "lowestScore": 66,
         "belowMin": [
           "shape",
           "geometry",
           "dimensions",
           "angles",
+          "construction",
+          "placement",
+          "symmetry",
           "composition",
           "blueprint-match"
         ],
         "candidates": 4,
         "needsReverify": false,
-        "checkedAt": "2026-07-31T21:19:03.542Z"
+        "checkedAt": "2026-08-01T08:09:39.770Z"
       },
-      "stage": "shipped-waived"
+      "stage": "unmet"
     },
     {
       "key": "sport-coat/pad-none",
@@ -35579,9 +35642,9 @@
           "generation": true,
           "qc": true
         },
-        "verdict": "FAIL",
-        "attempt": 2,
-        "lowestScore": 55,
+        "verdict": "UNMET",
+        "attempt": 3,
+        "lowestScore": 16,
         "belowMin": [
           "shape",
           "geometry",
@@ -35595,9 +35658,9 @@
         ],
         "candidates": 3,
         "needsReverify": false,
-        "checkedAt": "2026-08-01T04:36:43.038Z"
+        "checkedAt": "2026-08-01T08:09:39.557Z"
       },
-      "stage": "failed-retry-due"
+      "stage": "unmet"
     },
     {
       "key": "suit-2pc/jeans-diamond",
@@ -35663,15 +35726,25 @@
           "generation": true,
           "qc": true
         },
-        "verdict": "PASS",
-        "attempt": 2,
-        "lowestScore": 98,
-        "belowMin": [],
+        "verdict": "UNMET",
+        "attempt": 3,
+        "lowestScore": 15,
+        "belowMin": [
+          "shape",
+          "geometry",
+          "dimensions",
+          "angles",
+          "construction",
+          "placement",
+          "symmetry",
+          "composition",
+          "blueprint-match"
+        ],
         "candidates": 3,
         "needsReverify": false,
-        "checkedAt": "2026-07-31T19:47:33.880Z"
+        "checkedAt": "2026-08-01T08:09:39.343Z"
       },
-      "stage": "shipped"
+      "stage": "unmet"
     },
     {
       "key": "suit-2pc/jeans-round",
@@ -38449,17 +38522,27 @@
           "spec": true,
           "prompt": true,
           "generation": true,
-          "qc": false
+          "qc": true
         },
-        "verdict": null,
+        "verdict": "FAIL",
         "attempt": 1,
-        "lowestScore": null,
-        "belowMin": [],
+        "lowestScore": 38,
+        "belowMin": [
+          "shape",
+          "geometry",
+          "dimensions",
+          "angles",
+          "construction",
+          "placement",
+          "symmetry",
+          "composition",
+          "blueprint-match"
+        ],
         "candidates": 1,
         "needsReverify": false,
-        "checkedAt": null
+        "checkedAt": "2026-08-01T08:09:39.170Z"
       },
-      "stage": "generated-awaiting-qc"
+      "stage": "failed-retry-due"
     },
     {
       "key": "suit-2pc/back-both-welt",
@@ -38599,15 +38682,25 @@
           "generation": true,
           "qc": true
         },
-        "verdict": "PASS",
-        "attempt": 2,
-        "lowestScore": 98,
-        "belowMin": [],
+        "verdict": "UNMET",
+        "attempt": 3,
+        "lowestScore": 40,
+        "belowMin": [
+          "shape",
+          "geometry",
+          "dimensions",
+          "angles",
+          "construction",
+          "placement",
+          "symmetry",
+          "composition",
+          "blueprint-match"
+        ],
         "candidates": 3,
         "needsReverify": false,
-        "checkedAt": "2026-07-31T20:25:27.014Z"
+        "checkedAt": "2026-08-01T08:09:39.001Z"
       },
-      "stage": "shipped"
+      "stage": "unmet"
     },
     {
       "key": "suit-2pc/back-both-patch",
@@ -39362,15 +39455,25 @@
           "generation": true,
           "qc": true
         },
-        "verdict": "PASS",
-        "attempt": 1,
-        "lowestScore": 98,
-        "belowMin": [],
-        "candidates": 2,
+        "verdict": "FAIL",
+        "attempt": 2,
+        "lowestScore": 82,
+        "belowMin": [
+          "shape",
+          "geometry",
+          "dimensions",
+          "angles",
+          "construction",
+          "placement",
+          "symmetry",
+          "composition",
+          "blueprint-match"
+        ],
+        "candidates": 3,
         "needsReverify": false,
-        "checkedAt": "2026-07-31T21:05:49.203Z"
+        "checkedAt": "2026-08-01T07:22:55.253Z"
       },
-      "stage": "shipped"
+      "stage": "failed-retry-due"
     },
     {
       "key": "suit-2pc/hem-cuff-38",
@@ -56407,15 +56510,25 @@
           "generation": true,
           "qc": true
         },
-        "verdict": "PASS",
-        "attempt": 1,
-        "lowestScore": 98,
-        "belowMin": [],
-        "candidates": 2,
+        "verdict": "FAIL",
+        "attempt": 2,
+        "lowestScore": 80,
+        "belowMin": [
+          "shape",
+          "geometry",
+          "dimensions",
+          "angles",
+          "construction",
+          "placement",
+          "symmetry",
+          "composition",
+          "blueprint-match"
+        ],
+        "candidates": 3,
         "needsReverify": false,
-        "checkedAt": "2026-07-31T21:05:49.417Z"
+        "checkedAt": "2026-08-01T07:22:55.448Z"
       },
-      "stage": "shipped"
+      "stage": "failed-retry-due"
     },
     {
       "key": "suit-3pc/hem-double-turnup",

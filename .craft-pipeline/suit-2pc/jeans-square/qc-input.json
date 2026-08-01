@@ -1,48 +1,48 @@
 {
   "scores": {
-    "shape": 72,
-    "geometry": 64,
-    "dimensions": 67,
-    "angles": 55,
-    "construction": 78,
-    "placement": 74,
-    "symmetry": 77,
-    "composition": 80,
-    "blueprint-match": 66
+    "shape": 24,
+    "geometry": 16,
+    "dimensions": 55,
+    "angles": 22,
+    "construction": 66,
+    "placement": 32,
+    "symmetry": 72,
+    "composition": 78,
+    "blueprint-match": 16
   },
   "errors": [
     {
-      "severity": "major",
-      "category": "angles",
-      "description": "Slope of the long lower run of the pocket mouth. Drawing: the run from the squared corner to its inboard terminus falls 43px over 337px of horizontal travel, about 7 degrees below horizontal and about 12 against the drawn waistband edge. Render: the same run falls about 88px over 222px, about 22 degrees below horizontal and about 25 against the waistband. Close to double the drawn rake.",
-      "expected": "A long almost level run raking about 7 degrees below horizontal",
-      "actual": "A distinctly diagonal run raking about 22 degrees",
-      "correction": "Render the lower run of the pocket mouth as a nearly level line that drops only about one eighth of its own length as it travels inboard, so it reads as a shallow shelf roughly parallel to the waistband rather than a slash."
+      "severity": "critical",
+      "category": "geometry",
+      "description": "THE INBOARD RUN IS ENTIRELY ABSENT. Drawing 3133: loop centres x144 and x589, pitch 445; red mouth drops vertically at x195 from the waistband edge y240 to a corner at y330, then runs 333px inboard (0.75 pitches) at 5.7 degrees below horizontal to terminate on the front crease at x528. Render: pitch 458; the mouth runs (245,270) to (185,690) with ZERO inboard travel, drifting 60px outboard, finishing 0.79 pitches short of the crease.",
+      "expected": "A short vertical drop, a squared corner, then a straight run three quarters of a belt-loop pitch inboard, ending on the crease line",
+      "actual": "A single unbroken near-vertical seam at the side of the leg",
+      "correction": "Render the mouth as a short vertical drop from the waistband followed by a SQUARED corner and one straight angular run inboard across the front panel, terminating at the pressed crease, so the opening reads as the Western five-pocket shape."
     },
     {
-      "severity": "major",
-      "category": "dimensions",
-      "description": "Mouth length normalised to belt-loop spacing, the one landmark present in both images. Drawing: mouth run 337px against 463px between the side loop and the next, ratio 0.73. Render: 222px against 365px, ratio 0.61. Roughly 16 percent short.",
-      "expected": "Mouth run about three quarters of the belt-loop pitch, reaching in to the front crease",
-      "actual": "About six tenths of loop pitch, stopping about an eighth of loop spacing outboard of the crease",
-      "correction": "Extend the pocket mouth inboard until its terminus lands directly on the pressed front crease, giving a run about three quarters of the belt-loop pitch."
-    },
-    {
-      "severity": "major",
+      "severity": "critical",
       "category": "shape",
-      "description": "Depth of the squared vertical segment at the outer end. Normalised to waistband depth: drawing shows a vertical drop of 77px against a waistband depth of 88px, ratio 0.87. Render shows about 34px against about 104px, ratio 0.33 - under half of what makes the pocket read as SQUARE.",
-      "expected": "A deep vertical squared segment dropping roughly the full depth of the waistband before the mouth turns inboard",
-      "actual": "A shallow vertical stub about a third of waistband depth, so the corner reads as a soft kink rather than a squared corner",
-      "correction": "Render the outer end as a crisp right-angled corner where a vertical segment as deep as the waistband drops from the waistband seam and then turns hard inboard, giving the L-shaped mouth its squared character."
+      "description": "The rendered pocket is a plain vertical on-seam side pocket - the geometry of sheet 3130 'Sideseam', a neighbouring option on the same field, which this option's spec.json explicitly forbids.",
+      "expected": "A squared jeans front pocket per sheet 3133",
+      "actual": "A tailored on-seam side pocket",
+      "correction": "Render a Western five-pocket front: a squared-off opening with a heavy topstitched facing, the corner turning sharply and running toward the fly, and the pocket bag reading as a separate rugged panel behind."
+    },
+    {
+      "severity": "critical",
+      "category": "composition",
+      "description": "THIS RENDER AND jeans-arc ARE NOT DISTINGUISHABLE FROM ONE ANOTHER. Both show a long near-vertical side pocket with a hand inserted, the same charcoal cloth, the same right-hip welt, the same crop and pose. Measured mouth extents are 0.92 belt-loop pitches here and 1.22 in jeans-arc, both running top-to-bottom at the side with zero inboard travel. The ONLY consistent difference is that this render carries visible edge topstitching and jeans-arc does not - which is not the distinction the two option names describe.",
+      "expected": "Two visibly different pocket mouths: a smooth curved sweep versus a short vertical drop into a straight angular run",
+      "actual": "Two near-identical vertical side pockets separated only by the presence of topstitching",
+      "correction": "Give each render the mouth geometry its own sheet draws - for this option a squared corner and one straight angular run to the crease, and for jeans-arc a shallower run with a hooked downturn at the inboard end - and shoot both from the same angle so the shapes can be compared directly."
     }
   ],
   "lockedFeatures": [
-    "NO METAL RIVETS AND NO HARDWARE OF ANY KIND at the pocket mouth ends - the named defect is resolved and the mouth is finished as a clean jetted opening",
-    "Single front pocket on the visible panel, count matching the drawing",
-    "Overall L-shaped mouth topology: vertical at the outer end, long run inboard",
-    "The far panel's welt pocket with the vertical dart line above it, as drawn",
-    "Belt loops at the same three stations as the drawing",
-    "No red cloth anywhere"
+    "Edge topstitching along the pocket mouth is present and clearly visible, satisfying the spec's top-stitch flag - the one genuine differentiator this render carries",
+    "Waistband depth normalised to belt-loop pitch: drawing 0.203, render 0.214 - near exact, and the measurement that VALIDATES belt-loop pitch as the normalising landmark for this pair",
+    "Three-quarter front orientation matching the sheet's viewpoint",
+    "Belt loop count and positions; pressed front crease line present",
+    "The sheet's un-highlighted right-hip welt reproduced as context",
+    "No traced annotation"
   ],
-  "notes": "The rivets are gone - unambiguous, no hardware anywhere.\n\nSPEC-VERSUS-DRAWING CONFLICT, verified directly: spec.json's description calls for a pocket 'reinforced with rivets and topstitching' and spec.measured.flags carries 'top stitch', while the drawing is plain line work with no hardware and no topstitch dashes. Graded to the DRAWING as the sole authority. The render also carries no topstitching, which agrees with the drawing and contradicts the spec flag. The spec text needs correcting or the conflict will keep re-injecting rivets on every rebuild.\n\nNOT measurable: any centimetre figure - the drawing carries no dimension callouts, so every figure above is a ratio against belt-loop pitch or waistband depth. Also unresolved: some of the 7-to-22-degree rake gap may be foreshortening from the render's tighter three-quarter perspective, but not all of it, since the waistband sits at a comparable angle in both."
+  "notes": "DIRECT ANSWER TO THE DISTINGUISHABILITY CHECK: NO - a customer could not tell jeans-arc from jeans-square. Both show the same generic vertical side-seam pocket with a hand in it; neither shows a jeans mouth at all. Both have in fact rendered the neighbouring 'Sideseam' option.\n\nCRUCIALLY, THIS IS NOT A SOURCE LIMITATION. The two sheets DO differ measurably: vertical drop 1.31 waistband depths (3135) against 1.00 (3133); run angle 3.8 against 5.7 degrees; mouth vertical extent 0.433 against 0.312 belt-loop pitches; and 3135 alone has a terminal 34-degree down-turn and is drawn as an open double-line channel rather than a single stroke. The source material supports two distinguishable renders; the generator did not use it. That separates this cleanly from the peak-lapel and AMF families, which genuinely lack source.\n\nBLUEPRINT_CONFLICT: the description asserts the pocket is 'reinforced with rivets', but sheet 3133 draws no rivets anywhere.\n\nNOT measurable: no dimension callouts on 3133. At 1200px on a 38KB JPEG neither sheet resolves a smooth curve, so 'square versus arc' cannot be confirmed from curvature alone - they were distinguished by drop depth, run angle and the presence of the terminal hook."
 }
