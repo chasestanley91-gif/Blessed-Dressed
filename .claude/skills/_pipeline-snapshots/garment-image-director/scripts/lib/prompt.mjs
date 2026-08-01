@@ -534,14 +534,19 @@ export function buildPrompt(spec) {
   const LADDER_LABEL = /(\d+(?:\.\d+)?)\s*(cm|mm|°|deg)/i;
   const isLadder = LADDER_LABEL.test(String(spec.label || ''));
   const matchedFraming = isLadder
-    ? `MATCHED FRAMING — this option belongs to a family whose members differ from one another ONLY `
+    ? `MATCHED FRAMING — this option belongs to a family whose members differ from one another only `
       + `by a measurement, so this photograph will be shown beside its siblings and compared directly. `
-      + `Frame it the way EVERY member of the family must be framed: the garment part square to camera, `
-      + `centred, at a standard distance that leaves the part occupying the same share of the picture `
-      + `regardless of which value this option carries. Do NOT move the camera closer to make a small `
-      + `measurement look more impressive, and do NOT pull back for a large one — changing the framing `
-      + `to suit the value destroys the only comparison this family exists to support. The measured `
-      + `dimension must be the single thing that differs between this image and its siblings.`
+      + `TWO SEPARATE REQUIREMENTS, and both must hold. FIRST, THE GARMENT: build the feature at exactly `
+      + `the size the drawing gives it — no larger. Do not exaggerate the dimension to make this option `
+      + `look more distinct from its siblings; the difference between them is small in real tailoring `
+      + `and must stay small here, because a customer choosing on these numbers is ordering a real `
+      + `garment. SECOND, THE CAMERA: frame the shot the way every member of the family must be framed `
+      + `— the garment part square to camera, centred, at a standard distance that leaves the whole `
+      + `garment occupying the same share of the picture no matter which value this option carries. `
+      + `Do not move closer for a small measurement or pull back for a large one. `
+      + `Getting one of these right while getting the other wrong is still a failure: an accurate `
+      + `feature shot at the wrong distance, or a matched frame containing an exaggerated feature, both `
+      + `mislead a customer comparing two pictures side by side.`
     : null;
   // A GRAIN DIRECTION IS INVISIBLE ON PLAIN CLOTH, and the default fabric line
   // deletes it. This is the other half of the same table in
