@@ -127,10 +127,18 @@ function scanPipeline() {
 
       const qc = files.includes('qc.json') ? tryJson(path.join(odir, 'qc.json')) : null;
       const gen = files.includes('generation.json') ? tryJson(path.join(odir, 'generation.json')) : null;
+      const spec = files.includes('spec.json') ? tryJson(path.join(odir, 'spec.json')) : null;
 
       byKey.set(`${productId}/${optionId}`, {
         productId,
         optionId,
+        // The pipeline path carries no field; spec.json is the authority on which
+        // field this record belongs to (publish_approved.mjs joins the same way).
+        fieldId: spec ? spec.fieldId || null : null,
+        // ...and a product can even repeat one field/option pair across two
+        // SECTIONS (suit-2pc coin-pocket exists in suit-pockets AND
+        // Trousers-front-pockets, drawn against different tech packs).
+        sectionId: spec ? spec.sectionId || null : null,
         dir: rel(odir),
         have,
         candidates: files.filter((f) => /^candidate-\d+\.png$/i.test(f)).length,
@@ -192,7 +200,15 @@ const shippedUse = new Map(); // generated path -> [addr]
 
 for (const inv of inventory) {
   const key = `${inv.product}/${inv.option}`;
-  const pipe = pipeline.get(key) || null;
+  let pipe = pipeline.get(key) || null;
+  // Field- and section-aware join: a product/option key can be shared by two
+  // DIFFERENT fields (suit-3pc front-style/button-config sb-5 vs Vest
+  // button-stance sb-5) and even by one field across two SECTIONS (suit-2pc
+  // coin-pocket in suit-pockets vs Trousers-front-pockets). When spec.json
+  // names its field/section and either disagrees with this row's, the pipeline
+  // record belongs to the sibling — do not let its verdict leak.
+  if (pipe && pipe.fieldId && inv.field && pipe.fieldId !== inv.field) pipe = null;
+  if (pipe && pipe.sectionId && inv.section && pipe.sectionId !== inv.section) pipe = null;
 
   // What the builder actually renders today. inventory.mjs reports `illustration`
   // as the BLUEPRINT (tech pack wins), so the live value is read back here from

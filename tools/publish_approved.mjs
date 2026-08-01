@@ -157,11 +157,15 @@ for (const { productId, optionId } of pipelineDirs) {
   // Gate 0 — resolve the pipeline folder to a FIELD before anything else.
   const specPath = path.join(odir, 'spec.json');
   let specFieldId = null;
+  let specSectionId = null;
   if (fs.existsSync(specPath)) {
     try {
-      specFieldId = readJson(specPath).fieldId || null;
+      const specJson = readJson(specPath);
+      specFieldId = specJson.fieldId || null;
+      specSectionId = specJson.sectionId || null;
     } catch {
       specFieldId = null;
+      specSectionId = null;
     }
   }
   const resolved = resolvePipelineRows(index, productId, optionId, specFieldId);
@@ -185,16 +189,43 @@ for (const { productId, optionId } of pipelineDirs) {
   // costs nothing and loses nothing: a file found in the wrong folder still has
   // to prove it is the graded artifact before it can be published.
   const folderCandidates = [...new Set([GENERATED_FOLDER[productId] || productId, productId])];
+
+  // Gate 2's candidate is needed BEFORE the folder scan: two folders can hold
+  // same-named files (jacket/db-6x3.png is a legacy image; suit-3pc/db-6x3.png
+  // is the staged master), and picking the first that merely EXISTS selected
+  // the legacy copy and refused a genuinely approved image as a mismatch.
+  // Prefer the folder whose bytes match the graded candidate; fall back to the
+  // first existing so the original refusal messages still fire unchanged.
+  const approved = path.join(odir, `candidate-${qc.attempt}.png`);
+  if (!fs.existsSync(approved)) {
+    refuse(`candidate-${qc.attempt}.png (the graded attempt) is missing`);
+    continue;
+  }
+  const approvedSha = sha1(approved);
+
   let target = null;
   let targetAbs = null;
+  let firstExisting = null;
+  let firstExistingAbs = null;
   for (const folder of folderCandidates) {
     const candidate = `/images/generated/${folder}/${optionId}.png`;
     const abs = path.join(PUBLIC, candidate.replace(/^\//, ''));
-    if (fs.existsSync(abs)) {
+    if (!fs.existsSync(abs)) continue;
+    if (!firstExistingAbs) {
+      firstExisting = candidate;
+      firstExistingAbs = abs;
+    }
+    if (sha1(abs) === approvedSha) {
       target = candidate;
       targetAbs = abs;
       break;
     }
+  }
+  if (!targetAbs && firstExistingAbs) {
+    // No folder holds the graded bytes — fall through to gate 2 so the
+    // mismatch is reported against a real path, exactly as before.
+    target = firstExisting;
+    targetAbs = firstExistingAbs;
   }
   if (!targetAbs) {
     refuse(
@@ -206,12 +237,7 @@ for (const { productId, optionId } of pipelineDirs) {
   }
 
   // Gate 2 — the bytes on disk must be the bytes QC graded.
-  const approved = path.join(odir, `candidate-${qc.attempt}.png`);
-  if (!fs.existsSync(approved)) {
-    refuse(`candidate-${qc.attempt}.png (the graded attempt) is missing`);
-    continue;
-  }
-  if (sha1(approved) !== sha1(targetAbs)) {
+  if (approvedSha !== sha1(targetAbs)) {
     refuse(`${target} does not match the QC-approved candidate-${qc.attempt}.png`);
     continue;
   }
@@ -269,7 +295,17 @@ for (const { productId, optionId } of pipelineDirs) {
     const img = row.option.image;
     return typeof img === 'string' && img && !isGenerated(img) ? img.toLowerCase() : null;
   };
-  const primaryRow = resolved.rows.find((r) => r.productId === productId) || resolved.rows[0];
+  // A product can carry the SAME field/option identity in two sections drawn
+  // against different tech packs (suit-2pc coin-pocket: suit-pockets uses the
+  // jacket drawing, Trousers-front-pockets a trouser drawing). The spec records
+  // which section it interpreted — the primary row must be THAT row, or the
+  // blueprint reference belongs to the sibling and the real target reads as
+  // drift while the wrong-section rows read as the cluster.
+  const primaryRow =
+    (specSectionId &&
+      resolved.rows.find((r) => r.productId === productId && r.sectionId === specSectionId)) ||
+    resolved.rows.find((r) => r.productId === productId) ||
+    resolved.rows[0];
   const primaryBlueprint = blueprintOf(primaryRow);
 
   const targets = [];

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-01T08:09:44.899Z",
+  "generatedAt": "2026-08-01T21:43:02.271Z",
   "count": 2862,
   "records": [
     {
@@ -27804,8 +27804,23 @@
       "shippedPath": "/images/generated/jacket/lapel-shawl-0e.webp",
       "shippedBytes": 161786,
       "shippedSha1": "ca22563b317dc247e8a6edc512510d84e5f4f435",
-      "pipeline": null,
-      "stage": "legacy-shipped-unverified"
+      "pipeline": {
+        "dir": ".craft-pipeline/suit-2pc/lapel-shawl-0e",
+        "have": {
+          "spec": true,
+          "prompt": true,
+          "generation": false,
+          "qc": false
+        },
+        "verdict": null,
+        "attempt": null,
+        "lowestScore": null,
+        "belowMin": [],
+        "candidates": 0,
+        "needsReverify": false,
+        "checkedAt": null
+      },
+      "stage": "prompt-built"
     },
     {
       "key": "suit-2pc/lapel-shawl-0005",
@@ -27826,8 +27841,23 @@
       "shippedPath": "/images/generated/jacket/lapel-shawl-0005.webp",
       "shippedBytes": 161786,
       "shippedSha1": "ca22563b317dc247e8a6edc512510d84e5f4f435",
-      "pipeline": null,
-      "stage": "legacy-shipped-unverified"
+      "pipeline": {
+        "dir": ".craft-pipeline/suit-2pc/lapel-shawl-0005",
+        "have": {
+          "spec": true,
+          "prompt": true,
+          "generation": false,
+          "qc": false
+        },
+        "verdict": null,
+        "attempt": null,
+        "lowestScore": null,
+        "belowMin": [],
+        "candidates": 0,
+        "needsReverify": false,
+        "checkedAt": null
+      },
+      "stage": "prompt-built"
     },
     {
       "key": "suit-2pc/lapel-shawl-asymmetric",
@@ -29894,8 +29924,23 @@
       "shippedPath": "/images/generated/jacket/cp-welt-23.webp",
       "shippedBytes": 199994,
       "shippedSha1": "60aa2e9282f7f4fe5b45b2826a0926dc0bf1457f",
-      "pipeline": null,
-      "stage": "legacy-shipped-unverified"
+      "pipeline": {
+        "dir": ".craft-pipeline/suit-2pc/cp-welt-23",
+        "have": {
+          "spec": true,
+          "prompt": true,
+          "generation": false,
+          "qc": false
+        },
+        "verdict": null,
+        "attempt": null,
+        "lowestScore": null,
+        "belowMin": [],
+        "candidates": 0,
+        "needsReverify": false,
+        "checkedAt": null
+      },
+      "stage": "prompt-built"
     },
     {
       "key": "suit-2pc/cp-welt-25",
@@ -30224,8 +30269,33 @@
       "shippedPath": "/images/generated/jacket/cp-trapezoid.webp",
       "shippedBytes": 199994,
       "shippedSha1": "60aa2e9282f7f4fe5b45b2826a0926dc0bf1457f",
-      "pipeline": null,
-      "stage": "legacy-shipped-unverified"
+      "pipeline": {
+        "dir": ".craft-pipeline/suit-2pc/cp-trapezoid",
+        "have": {
+          "spec": true,
+          "prompt": true,
+          "generation": true,
+          "qc": true
+        },
+        "verdict": "FAIL",
+        "attempt": 1,
+        "lowestScore": 78,
+        "belowMin": [
+          "shape",
+          "geometry",
+          "dimensions",
+          "angles",
+          "construction",
+          "placement",
+          "symmetry",
+          "composition",
+          "blueprint-match"
+        ],
+        "candidates": 1,
+        "needsReverify": false,
+        "checkedAt": "2026-08-01T11:26:49.166Z"
+      },
+      "stage": "failed-retry-due"
     },
     {
       "key": "suit-2pc/cp-inverted-pleat-2flap",
@@ -30356,8 +30426,23 @@
       "shippedPath": "/images/generated/jacket/lp-slanted-flap-55.webp",
       "shippedBytes": 213814,
       "shippedSha1": "d3e9123ef264a714872c241fac7f696e47f200b6",
-      "pipeline": null,
-      "stage": "legacy-shipped-unverified"
+      "pipeline": {
+        "dir": ".craft-pipeline/suit-2pc/lp-slanted-flap-55",
+        "have": {
+          "spec": true,
+          "prompt": true,
+          "generation": false,
+          "qc": false
+        },
+        "verdict": null,
+        "attempt": null,
+        "lowestScore": null,
+        "belowMin": [],
+        "candidates": 0,
+        "needsReverify": false,
+        "checkedAt": null
+      },
+      "stage": "prompt-built"
     },
     {
       "key": "suit-2pc/lp-slanted-flap-60",
@@ -30554,8 +30639,23 @@
       "shippedPath": "/images/generated/jacket/lp-straight-jetted-40.webp",
       "shippedBytes": 213814,
       "shippedSha1": "d3e9123ef264a714872c241fac7f696e47f200b6",
-      "pipeline": null,
-      "stage": "legacy-shipped-unverified"
+      "pipeline": {
+        "dir": ".craft-pipeline/suit-2pc/lp-straight-jetted-40",
+        "have": {
+          "spec": true,
+          "prompt": true,
+          "generation": false,
+          "qc": false
+        },
+        "verdict": null,
+        "attempt": null,
+        "lowestScore": null,
+        "belowMin": [],
+        "candidates": 0,
+        "needsReverify": false,
+        "checkedAt": null
+      },
+      "stage": "prompt-built"
     },
     {
       "key": "suit-2pc/lp-straight-jetted-45",
@@ -30686,8 +30786,23 @@
       "shippedPath": "/images/generated/jacket/lp-jetted-4.webp",
       "shippedBytes": 107226,
       "shippedSha1": "8559bce7d538cbf0418438a4f4760c4e4ad115cb",
-      "pipeline": null,
-      "stage": "legacy-shipped-unverified"
+      "pipeline": {
+        "dir": ".craft-pipeline/suit-2pc/lp-jetted-4",
+        "have": {
+          "spec": true,
+          "prompt": true,
+          "generation": false,
+          "qc": false
+        },
+        "verdict": null,
+        "attempt": null,
+        "lowestScore": null,
+        "belowMin": [],
+        "candidates": 0,
+        "needsReverify": false,
+        "checkedAt": null
+      },
+      "stage": "prompt-built"
     },
     {
       "key": "suit-2pc/lp-straight-jetted",
@@ -30884,8 +30999,23 @@
       "shippedPath": "/images/generated/jacket/lp-patch-rounded.webp",
       "shippedBytes": 203348,
       "shippedSha1": "f7fa88b7d6d1076383d4f982881c6a34a8b69669",
-      "pipeline": null,
-      "stage": "legacy-shipped-unverified"
+      "pipeline": {
+        "dir": ".craft-pipeline/suit-2pc/lp-patch-rounded",
+        "have": {
+          "spec": true,
+          "prompt": true,
+          "generation": false,
+          "qc": false
+        },
+        "verdict": null,
+        "attempt": null,
+        "lowestScore": null,
+        "belowMin": [],
+        "candidates": 0,
+        "needsReverify": false,
+        "checkedAt": null
+      },
+      "stage": "prompt-built"
     },
     {
       "key": "suit-2pc/lp-patch-flap",
@@ -30906,8 +31036,23 @@
       "shippedPath": "/images/generated/jacket/lp-patch-flap.webp",
       "shippedBytes": 203348,
       "shippedSha1": "f7fa88b7d6d1076383d4f982881c6a34a8b69669",
-      "pipeline": null,
-      "stage": "legacy-shipped-unverified"
+      "pipeline": {
+        "dir": ".craft-pipeline/suit-2pc/lp-patch-flap",
+        "have": {
+          "spec": true,
+          "prompt": true,
+          "generation": false,
+          "qc": false
+        },
+        "verdict": null,
+        "attempt": null,
+        "lowestScore": null,
+        "belowMin": [],
+        "candidates": 0,
+        "needsReverify": false,
+        "checkedAt": null
+      },
+      "stage": "prompt-built"
     },
     {
       "key": "suit-2pc/lp-patch-flap-btn",
@@ -31082,8 +31227,23 @@
       "shippedPath": "/images/generated/jacket/lp-jetted-btn-tab.webp",
       "shippedBytes": 107226,
       "shippedSha1": "8559bce7d538cbf0418438a4f4760c4e4ad115cb",
-      "pipeline": null,
-      "stage": "legacy-shipped-unverified"
+      "pipeline": {
+        "dir": ".craft-pipeline/suit-2pc/lp-jetted-btn-tab",
+        "have": {
+          "spec": true,
+          "prompt": true,
+          "generation": false,
+          "qc": false
+        },
+        "verdict": null,
+        "attempt": null,
+        "lowestScore": null,
+        "belowMin": [],
+        "candidates": 0,
+        "needsReverify": false,
+        "checkedAt": null
+      },
+      "stage": "prompt-built"
     },
     {
       "key": "suit-2pc/lp-box-pleat-flap",
@@ -31544,23 +31704,8 @@
       "shippedPath": "/images/generated/jacket/coin-none.webp",
       "shippedBytes": 189568,
       "shippedSha1": "28f8e0584c04fc8e71946b08054e74125798bc4b",
-      "pipeline": {
-        "dir": ".craft-pipeline/suit-2pc/coin-none",
-        "have": {
-          "spec": true,
-          "prompt": true,
-          "generation": true,
-          "qc": true
-        },
-        "verdict": "PASS",
-        "attempt": 1,
-        "lowestScore": 98,
-        "belowMin": [],
-        "candidates": 1,
-        "needsReverify": false,
-        "checkedAt": "2026-07-31T19:51:27.080Z"
-      },
-      "stage": "shipped"
+      "pipeline": null,
+      "stage": "legacy-shipped-unverified"
     },
     {
       "key": "suit-2pc/coin-left",
@@ -31581,23 +31726,8 @@
       "shippedPath": "/images/generated/suit-2pc/coin-left.webp",
       "shippedBytes": 186904,
       "shippedSha1": "160dc77a46678bc0a0dec9067899a0bfc5290531",
-      "pipeline": {
-        "dir": ".craft-pipeline/suit-2pc/coin-left",
-        "have": {
-          "spec": true,
-          "prompt": true,
-          "generation": true,
-          "qc": true
-        },
-        "verdict": "PASS",
-        "attempt": 1,
-        "lowestScore": 98,
-        "belowMin": [],
-        "candidates": 1,
-        "needsReverify": false,
-        "checkedAt": "2026-07-31T05:32:15.199Z"
-      },
-      "stage": "shipped"
+      "pipeline": null,
+      "stage": "legacy-shipped-unverified"
     },
     {
       "key": "suit-2pc/coin-right",
@@ -31618,23 +31748,8 @@
       "shippedPath": null,
       "shippedBytes": null,
       "shippedSha1": null,
-      "pipeline": {
-        "dir": ".craft-pipeline/suit-2pc/coin-right",
-        "have": {
-          "spec": true,
-          "prompt": true,
-          "generation": true,
-          "qc": false
-        },
-        "verdict": null,
-        "attempt": 1,
-        "lowestScore": null,
-        "belowMin": [],
-        "candidates": 1,
-        "needsReverify": false,
-        "checkedAt": null
-      },
-      "stage": "generated-awaiting-qc"
+      "pipeline": null,
+      "stage": "not-started"
     },
     {
       "key": "suit-2pc/coin-both",
@@ -31655,23 +31770,8 @@
       "shippedPath": null,
       "shippedBytes": null,
       "shippedSha1": null,
-      "pipeline": {
-        "dir": ".craft-pipeline/suit-2pc/coin-both",
-        "have": {
-          "spec": true,
-          "prompt": true,
-          "generation": false,
-          "qc": false
-        },
-        "verdict": null,
-        "attempt": null,
-        "lowestScore": null,
-        "belowMin": [],
-        "candidates": 0,
-        "needsReverify": false,
-        "checkedAt": null
-      },
-      "stage": "prompt-built"
+      "pipeline": null,
+      "stage": "not-started"
     },
     {
       "key": "suit-2pc/sb-1",
@@ -35640,27 +35740,17 @@
           "spec": true,
           "prompt": true,
           "generation": true,
-          "qc": true
+          "qc": false
         },
-        "verdict": "UNMET",
-        "attempt": 3,
-        "lowestScore": 16,
-        "belowMin": [
-          "shape",
-          "geometry",
-          "dimensions",
-          "angles",
-          "construction",
-          "placement",
-          "symmetry",
-          "composition",
-          "blueprint-match"
-        ],
-        "candidates": 3,
+        "verdict": null,
+        "attempt": 1,
+        "lowestScore": null,
+        "belowMin": [],
+        "candidates": 1,
         "needsReverify": false,
-        "checkedAt": "2026-08-01T08:09:39.557Z"
+        "checkedAt": null
       },
-      "stage": "unmet"
+      "stage": "generated-awaiting-qc"
     },
     {
       "key": "suit-2pc/jeans-diamond",
@@ -35724,27 +35814,17 @@
           "spec": true,
           "prompt": true,
           "generation": true,
-          "qc": true
+          "qc": false
         },
-        "verdict": "UNMET",
-        "attempt": 3,
-        "lowestScore": 15,
-        "belowMin": [
-          "shape",
-          "geometry",
-          "dimensions",
-          "angles",
-          "construction",
-          "placement",
-          "symmetry",
-          "composition",
-          "blueprint-match"
-        ],
-        "candidates": 3,
+        "verdict": null,
+        "attempt": 1,
+        "lowestScore": null,
+        "belowMin": [],
+        "candidates": 1,
         "needsReverify": false,
-        "checkedAt": "2026-08-01T08:09:39.343Z"
+        "checkedAt": null
       },
-      "stage": "unmet"
+      "stage": "generated-awaiting-qc"
     },
     {
       "key": "suit-2pc/jeans-round",
@@ -36296,11 +36376,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/remote/1b89d5849265__3533.jpg",
-      "liveImage": "/images/blueprints/remote/1b89d5849265__3533.jpg",
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/suit-2pc/coin-none.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/suit-2pc/coin-none.webp",
+      "shippedBytes": 157426,
+      "shippedSha1": "4a17593c9654eee66ff13adf84388046538f4623",
       "pipeline": {
         "dir": ".craft-pipeline/suit-2pc/coin-none",
         "have": {
@@ -36317,7 +36397,7 @@
         "needsReverify": false,
         "checkedAt": "2026-07-31T19:51:27.080Z"
       },
-      "stage": "passed-not-shipped"
+      "stage": "shipped"
     },
     {
       "key": "suit-2pc/coin-right",
@@ -36370,11 +36450,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/remote/099818025ae9__3531.jpg",
-      "liveImage": "/images/blueprints/remote/099818025ae9__3531.jpg",
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/suit-2pc/coin-left.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/suit-2pc/coin-left.webp",
+      "shippedBytes": 186904,
+      "shippedSha1": "160dc77a46678bc0a0dec9067899a0bfc5290531",
       "pipeline": {
         "dir": ".craft-pipeline/suit-2pc/coin-left",
         "have": {
@@ -36391,7 +36471,7 @@
         "needsReverify": false,
         "checkedAt": "2026-07-31T05:32:15.199Z"
       },
-      "stage": "passed-not-shipped"
+      "stage": "shipped"
     },
     {
       "key": "suit-2pc/coin-both",
@@ -45769,33 +45849,8 @@
       "shippedPath": "/images/generated/suit-2pc/coin-left.webp",
       "shippedBytes": 186904,
       "shippedSha1": "160dc77a46678bc0a0dec9067899a0bfc5290531",
-      "pipeline": {
-        "dir": ".craft-pipeline/suit-3pc/coin-left",
-        "have": {
-          "spec": true,
-          "prompt": true,
-          "generation": true,
-          "qc": true
-        },
-        "verdict": "UNMET",
-        "attempt": 3,
-        "lowestScore": 84,
-        "belowMin": [
-          "shape",
-          "geometry",
-          "dimensions",
-          "angles",
-          "construction",
-          "placement",
-          "symmetry",
-          "composition",
-          "blueprint-match"
-        ],
-        "candidates": 3,
-        "needsReverify": false,
-        "checkedAt": "2026-07-31T20:54:26.555Z"
-      },
-      "stage": "unmet"
+      "pipeline": null,
+      "stage": "legacy-shipped-unverified"
     },
     {
       "key": "suit-3pc/coin-right",
@@ -45904,33 +45959,8 @@
       "shippedPath": "/images/generated/jacket/sb-3.webp",
       "shippedBytes": 35148,
       "shippedSha1": "aba9bbd5f263f64ef7cc0c1a740c33cab7e9d649",
-      "pipeline": {
-        "dir": ".craft-pipeline/suit-3pc/sb-3",
-        "have": {
-          "spec": true,
-          "prompt": true,
-          "generation": true,
-          "qc": true
-        },
-        "verdict": "FAIL",
-        "attempt": 2,
-        "lowestScore": 55,
-        "belowMin": [
-          "shape",
-          "geometry",
-          "dimensions",
-          "angles",
-          "construction",
-          "placement",
-          "symmetry",
-          "composition",
-          "blueprint-match"
-        ],
-        "candidates": 2,
-        "needsReverify": false,
-        "checkedAt": "2026-08-01T04:54:38.174Z"
-      },
-      "stage": "failed-retry-due"
+      "pipeline": null,
+      "stage": "legacy-shipped-unverified"
     },
     {
       "key": "suit-3pc/sb-4",
@@ -45951,23 +45981,8 @@
       "shippedPath": "/images/generated/jacket/sb-4.webp",
       "shippedBytes": 58572,
       "shippedSha1": "17079027b28f87b415198e6e714eaa9fa3336396",
-      "pipeline": {
-        "dir": ".craft-pipeline/suit-3pc/sb-4",
-        "have": {
-          "spec": true,
-          "prompt": true,
-          "generation": true,
-          "qc": true
-        },
-        "verdict": "PASS",
-        "attempt": 1,
-        "lowestScore": 98,
-        "belowMin": [],
-        "candidates": 1,
-        "needsReverify": false,
-        "checkedAt": "2026-07-31T05:45:57.146Z"
-      },
-      "stage": "shipped"
+      "pipeline": null,
+      "stage": "legacy-shipped-unverified"
     },
     {
       "key": "suit-3pc/sb-3-roll-2",
@@ -46054,23 +46069,8 @@
       "shippedPath": null,
       "shippedBytes": null,
       "shippedSha1": null,
-      "pipeline": {
-        "dir": ".craft-pipeline/suit-3pc/sb-5",
-        "have": {
-          "spec": true,
-          "prompt": true,
-          "generation": true,
-          "qc": true
-        },
-        "verdict": "PASS",
-        "attempt": 1,
-        "lowestScore": 98,
-        "belowMin": [],
-        "candidates": 1,
-        "needsReverify": false,
-        "checkedAt": "2026-07-31T20:25:16.709Z"
-      },
-      "stage": "passed-not-shipped"
+      "pipeline": null,
+      "stage": "not-started"
     },
     {
       "key": "suit-3pc/db-2x1",
@@ -46135,33 +46135,8 @@
       "shippedPath": "/images/generated/jacket/db-4x2.webp",
       "shippedBytes": 130716,
       "shippedSha1": "3f9de14d0a40312ca168fb8a0aaa23d1b0d8a4ee",
-      "pipeline": {
-        "dir": ".craft-pipeline/suit-3pc/db-4x2",
-        "have": {
-          "spec": true,
-          "prompt": true,
-          "generation": true,
-          "qc": true
-        },
-        "verdict": "FAIL",
-        "attempt": 2,
-        "lowestScore": 84,
-        "belowMin": [
-          "shape",
-          "geometry",
-          "dimensions",
-          "angles",
-          "construction",
-          "placement",
-          "symmetry",
-          "composition",
-          "blueprint-match"
-        ],
-        "candidates": 2,
-        "needsReverify": false,
-        "checkedAt": "2026-08-01T04:54:38.328Z"
-      },
-      "stage": "failed-retry-due"
+      "pipeline": null,
+      "stage": "legacy-shipped-unverified"
     },
     {
       "key": "suit-3pc/db-6x1",
@@ -46204,23 +46179,8 @@
       "shippedPath": "/images/generated/jacket/db-6x2.webp",
       "shippedBytes": 54448,
       "shippedSha1": "af33c4243cca8f2a216fde4da2f20d48f1d83b4f",
-      "pipeline": {
-        "dir": ".craft-pipeline/suit-3pc/db-6x2",
-        "have": {
-          "spec": true,
-          "prompt": true,
-          "generation": true,
-          "qc": true
-        },
-        "verdict": "PASS",
-        "attempt": 1,
-        "lowestScore": 98,
-        "belowMin": [],
-        "candidates": 1,
-        "needsReverify": false,
-        "checkedAt": "2026-07-31T20:08:38.849Z"
-      },
-      "stage": "shipped"
+      "pipeline": null,
+      "stage": "legacy-shipped-unverified"
     },
     {
       "key": "suit-3pc/db-6x3",
@@ -46241,23 +46201,8 @@
       "shippedPath": "/images/generated/jacket/db-6x3.webp",
       "shippedBytes": 83288,
       "shippedSha1": "58b036c453ce9025266a700a34dfef28136f2701",
-      "pipeline": {
-        "dir": ".craft-pipeline/suit-3pc/db-6x3",
-        "have": {
-          "spec": true,
-          "prompt": true,
-          "generation": true,
-          "qc": true
-        },
-        "verdict": "PASS",
-        "attempt": 1,
-        "lowestScore": 98,
-        "belowMin": [],
-        "candidates": 1,
-        "needsReverify": false,
-        "checkedAt": "2026-07-31T05:27:38.545Z"
-      },
-      "stage": "shipped"
+      "pipeline": null,
+      "stage": "legacy-shipped-unverified"
     },
     {
       "key": "suit-3pc/fbh-machine",
@@ -49620,11 +49565,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/options/vest/sb-4.jpg",
-      "liveImage": "/images/options/vest/sb-4.jpg",
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/suit-3pc/sb-4.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/suit-3pc/sb-4.webp",
+      "shippedBytes": 104796,
+      "shippedSha1": "3606e7b7e79ce19ab4c03adf9b0935afc7448be1",
       "pipeline": {
         "dir": ".craft-pipeline/suit-3pc/sb-4",
         "have": {
@@ -49641,7 +49586,7 @@
         "needsReverify": false,
         "checkedAt": "2026-07-31T05:45:57.146Z"
       },
-      "stage": "passed-not-shipped"
+      "stage": "shipped"
     },
     {
       "key": "suit-3pc/sb-5",
@@ -49778,11 +49723,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/options/vest/db-6x2.png",
-      "liveImage": "/images/options/vest/db-6x2.png",
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/suit-3pc/db-6x2.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/suit-3pc/db-6x2.webp",
+      "shippedBytes": 52002,
+      "shippedSha1": "8b198dd67bed89e271d797db47654cddfe59cddb",
       "pipeline": {
         "dir": ".craft-pipeline/suit-3pc/db-6x2",
         "have": {
@@ -49799,7 +49744,7 @@
         "needsReverify": false,
         "checkedAt": "2026-07-31T20:08:38.849Z"
       },
-      "stage": "passed-not-shipped"
+      "stage": "shipped"
     },
     {
       "key": "suit-3pc/db-6x3",
@@ -49815,11 +49760,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/options/vest/db-6x3.jpg",
-      "liveImage": "/images/options/vest/db-6x3.jpg",
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/suit-3pc/db-6x3.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/suit-3pc/db-6x3.webp",
+      "shippedBytes": 195254,
+      "shippedSha1": "4b46ee92065c4073960957adcfb51f8c19bcc310",
       "pipeline": {
         "dir": ".craft-pipeline/suit-3pc/db-6x3",
         "have": {
@@ -49836,7 +49781,7 @@
         "needsReverify": false,
         "checkedAt": "2026-07-31T05:27:38.545Z"
       },
-      "stage": "passed-not-shipped"
+      "stage": "shipped"
     },
     {
       "key": "suit-3pc/db-8x4",
@@ -53986,13 +53931,13 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/remote/1b89d5849265__3533.jpg",
-      "liveImage": "/images/blueprints/remote/1b89d5849265__3533.jpg",
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/suit-2pc/coin-none.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/suit-2pc/coin-none.webp",
+      "shippedBytes": 157426,
+      "shippedSha1": "4a17593c9654eee66ff13adf84388046538f4623",
       "pipeline": null,
-      "stage": "not-started"
+      "stage": "legacy-shipped-unverified"
     },
     {
       "key": "suit-3pc/coin-right",
@@ -54030,11 +53975,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/remote/099818025ae9__3531.jpg",
-      "liveImage": "/images/blueprints/remote/099818025ae9__3531.jpg",
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/suit-2pc/coin-left.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/suit-2pc/coin-left.webp",
+      "shippedBytes": 186904,
+      "shippedSha1": "160dc77a46678bc0a0dec9067899a0bfc5290531",
       "pipeline": {
         "dir": ".craft-pipeline/suit-3pc/coin-left",
         "have": {
