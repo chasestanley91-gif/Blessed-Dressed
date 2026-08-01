@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-31T23:51:55.777Z",
+  "generatedAt": "2026-08-01T00:21:51.712Z",
   "count": 2862,
   "records": [
     {
@@ -191,7 +191,7 @@
         "needsReverify": false,
         "checkedAt": "2026-07-31T23:49:20.470Z"
       },
-      "stage": "generated-awaiting-qc"
+      "stage": "shipped-waived"
     },
     {
       "key": "shirt/collar-point-70-btn",
@@ -18322,7 +18322,7 @@
         "needsReverify": false,
         "checkedAt": "2026-07-31T21:19:03.542Z"
       },
-      "stage": "generated-awaiting-qc"
+      "stage": "shipped-waived"
     },
     {
       "key": "sport-coat/pad-none",
@@ -18451,7 +18451,7 @@
         "needsReverify": false,
         "checkedAt": "2026-07-31T20:05:38.734Z"
       },
-      "stage": "generated-awaiting-qc"
+      "stage": "shipped-waived"
     },
     {
       "key": "sport-coat/pad-05-soft",
@@ -20886,7 +20886,7 @@
         "needsReverify": false,
         "checkedAt": "2026-07-31T06:39:15.478Z"
       },
-      "stage": "generated-awaiting-qc"
+      "stage": "shipped-waived"
     },
     {
       "key": "sport-coat/lbp-right",
@@ -24212,7 +24212,7 @@
         "needsReverify": false,
         "checkedAt": "2026-07-31T21:05:40.316Z"
       },
-      "stage": "generated-awaiting-qc"
+      "stage": "shipped-waived"
     },
     {
       "key": "sport-coat/bv-none",
@@ -40294,11 +40294,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/factory/5252459c3a51__3382__Side_seam_with_fabric_1.2cm_width_.jpg",
-      "liveImage": "/images/blueprints/factory/5252459c3a51__3382__Side_seam_with_fabric_1.2cm_width_.jpg",
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/suit-2pc/trouser-contrast-side.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/suit-2pc/trouser-contrast-side.webp",
+      "shippedBytes": 43646,
+      "shippedSha1": "68491157086f053af10de2cf349795f8c82cb78d",
       "pipeline": {
         "dir": ".craft-pipeline/suit-2pc/trouser-contrast-side",
         "have": {
@@ -40307,22 +40307,20 @@
           "generation": true,
           "qc": true
         },
-        "verdict": "FAIL",
-        "attempt": 2,
+        "verdict": "PASS_WAIVED",
+        "attempt": 3,
         "lowestScore": 96,
         "belowMin": [
-          "shape",
-          "geometry",
           "dimensions",
-          "construction",
+          "placement",
           "composition",
           "blueprint-match"
         ],
         "candidates": 3,
         "needsReverify": false,
-        "checkedAt": "2026-07-31T20:55:17.413Z"
+        "checkedAt": "2026-08-01T00:17:18.925Z"
       },
-      "stage": "failed-retry-due"
+      "stage": "shipped-waived"
     },
     {
       "key": "suit-2pc/trouser-contrast-pocket",
@@ -40401,7 +40399,7 @@
         "needsReverify": false,
         "checkedAt": "2026-07-31T06:38:32.226Z"
       },
-      "stage": "generated-awaiting-qc"
+      "stage": "shipped-waived"
     },
     {
       "key": "suit-2pc/trouser-contrast-front-besom",
@@ -57262,13 +57260,13 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/factory/5252459c3a51__3382__Side_seam_with_fabric_1.2cm_width_.jpg",
-      "liveImage": "/images/blueprints/factory/5252459c3a51__3382__Side_seam_with_fabric_1.2cm_width_.jpg",
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/suit-2pc/trouser-contrast-side.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/suit-2pc/trouser-contrast-side.webp",
+      "shippedBytes": 43646,
+      "shippedSha1": "68491157086f053af10de2cf349795f8c82cb78d",
       "pipeline": null,
-      "stage": "not-started"
+      "stage": "legacy-shipped-unverified"
     },
     {
       "key": "suit-3pc/trouser-contrast-pocket",
@@ -57922,7 +57920,7 @@
         "needsReverify": false,
         "checkedAt": "2026-07-31T21:13:36.837Z"
       },
-      "stage": "generated-awaiting-qc"
+      "stage": "shipped-waived"
     },
     {
       "key": "trousers/quarter-top",
@@ -62484,13 +62482,13 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/factory/5252459c3a51__3382__Side_seam_with_fabric_1.2cm_width_.jpg",
-      "liveImage": "/images/blueprints/factory/5252459c3a51__3382__Side_seam_with_fabric_1.2cm_width_.jpg",
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/suit-2pc/trouser-contrast-side.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/suit-2pc/trouser-contrast-side.webp",
+      "shippedBytes": 43646,
+      "shippedSha1": "68491157086f053af10de2cf349795f8c82cb78d",
       "pipeline": null,
-      "stage": "not-started"
+      "stage": "legacy-shipped-unverified"
     },
     {
       "key": "trousers/trouser-contrast-pocket",

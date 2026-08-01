@@ -247,6 +247,14 @@ function deriveStage(r) {
   const p = r.pipeline;
   if (p && p.needsReverify) return 'needs-reverify';
   if (p && p.verdict === 'PASS') return r.shipped ? 'shipped' : 'passed-not-shipped';
+  // PASS_WAIVED ships too — it is an approval, granted after the retry budget is
+  // spent, to an image scoring >=95 in every category with ZERO critical or major
+  // findings. This branch did not exist, so every waived image fell through to
+  // `generated-awaiting-qc`: it vanished from the shipped count, and the state
+  // doc told the next reader to go and QC an image that already carries a logged
+  // verdict. Kept as its own stage rather than folded into `shipped`, because a
+  // waiver is a weaker claim than a clean pass and the report should keep saying so.
+  if (p && p.verdict === 'PASS_WAIVED') return r.shipped ? 'shipped-waived' : 'waived-not-shipped';
   if (p && p.verdict === 'FAIL') return 'failed-retry-due';
   if (p && p.verdict === 'UNMET') return 'unmet';
   if (p && p.have.generation) return 'generated-awaiting-qc';
@@ -412,7 +420,8 @@ if (sharedBlueprints.length) {
 
 // --- roll-ups ---------------------------------------------------------------
 const STAGES = [
-  'shipped', 'passed-not-shipped', 'needs-reverify', 'failed-retry-due', 'unmet',
+  'shipped', 'shipped-waived', 'passed-not-shipped', 'waived-not-shipped',
+  'needs-reverify', 'failed-retry-due', 'unmet',
   'generated-awaiting-qc', 'prompt-built', 'spec-only', 'legacy-shipped-unverified',
   'not-started', 'no-blueprint', 'excluded-swatch', 'out-of-scope',
 ];
@@ -432,7 +441,13 @@ for (const r of records) {
 }
 
 const inScope = records.filter((r) => r.inScope);
-const verified = inScope.filter((r) => r.stage === 'shipped').length;
+// A waived pass IS shipped and IS verified — it carries a mechanical verdict and
+// a logged waiver. Counting only 'shipped' understated coverage by every waived
+// image. The waived subtotal is reported alongside so the weaker claim stays
+// visible rather than being absorbed into the headline.
+const verifiedClean = inScope.filter((r) => r.stage === 'shipped').length;
+const verifiedWaived = inScope.filter((r) => r.stage === 'shipped-waived').length;
+const verified = verifiedClean + verifiedWaived;
 const pct = (n, d) => (d ? ((n / d) * 100).toFixed(1) : '0.0');
 
 const checkpoint = tryJson(path.join(REPORTS, 'CHECKPOINT.json'));
@@ -446,6 +461,8 @@ const summary = {
   totals,
   perProduct,
   verifiedShipped: verified,
+  verifiedShippedClean: verifiedClean,
+  verifiedShippedWaived: verifiedWaived,
   verifiedShippedPct: pct(verified, inScope.length),
   pipelineDirs: pipeline.size,
   generatedFiles: generated.size,
@@ -487,7 +504,7 @@ write(path.join(REPORTS, 'repo-index.json'), JSON.stringify({ generatedAt: summa
 write(path.join(REPORTS, 'state-summary.json'), JSON.stringify({ ...summary, findings }, null, 2));
 
 // --- PROJECT_DASHBOARD.md ---------------------------------------------------
-const dashCols = ['shipped', 'passed-not-shipped', 'generated-awaiting-qc', 'spec-only', 'failed-retry-due', 'unmet', 'needs-reverify', 'legacy-shipped-unverified', 'not-started'];
+const dashCols = ['shipped', 'shipped-waived', 'passed-not-shipped', 'generated-awaiting-qc', 'spec-only', 'failed-retry-due', 'unmet', 'needs-reverify', 'legacy-shipped-unverified', 'not-started'];
 const dashRow = (name, p) =>
   `| ${name} | ${p.total} | ${p.inScope} | ` + dashCols.map((c) => p[c]).join(' | ') + ' |';
 

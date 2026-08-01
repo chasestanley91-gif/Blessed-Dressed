@@ -3165,6 +3165,53 @@
           ]
         }
       ]
+    },
+    {
+      "at": "2026-08-01T00:17:50.836Z",
+      "by": "tools/publish_approved.mjs",
+      "count": 1,
+      "rowCount": 3,
+      "fanout": true,
+      "options": [
+        {
+          "product": "suit-2pc",
+          "option": "trouser-contrast-side",
+          "field": "contrast-positions",
+          "identity": "contrast-positions/trouser-contrast-side",
+          "image": "/images/generated/suit-2pc/trouser-contrast-side.webp",
+          "master": "/images/generated/suit-2pc/trouser-contrast-side.png",
+          "previous": "/images/blueprints/factory/5252459c3a51__3382__Side_seam_with_fabric_1.2cm_width_.jpg",
+          "preservedBlueprint": "/images/blueprints/factory/5252459c3a51__3382__Side_seam_with_fabric_1.2cm_width_.jpg",
+          "verdict": "PASS_WAIVED",
+          "waived": true,
+          "qcAttempt": 3,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 96,
+          "rows": [
+            {
+              "product": "suit-2pc",
+              "section": "Trousers-details-contrast",
+              "field": "contrast-positions",
+              "previous": "/images/blueprints/factory/5252459c3a51__3382__Side_seam_with_fabric_1.2cm_width_.jpg",
+              "preservedBlueprint": "/images/blueprints/factory/5252459c3a51__3382__Side_seam_with_fabric_1.2cm_width_.jpg"
+            },
+            {
+              "product": "suit-3pc",
+              "section": "Trousers-details-contrast",
+              "field": "contrast-positions",
+              "previous": "/images/blueprints/factory/5252459c3a51__3382__Side_seam_with_fabric_1.2cm_width_.jpg",
+              "preservedBlueprint": "/images/blueprints/factory/5252459c3a51__3382__Side_seam_with_fabric_1.2cm_width_.jpg"
+            },
+            {
+              "product": "trousers",
+              "section": "details-contrast",
+              "field": "contrast-positions",
+              "previous": "/images/blueprints/factory/5252459c3a51__3382__Side_seam_with_fabric_1.2cm_width_.jpg",
+              "preservedBlueprint": "/images/blueprints/factory/5252459c3a51__3382__Side_seam_with_fabric_1.2cm_width_.jpg"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

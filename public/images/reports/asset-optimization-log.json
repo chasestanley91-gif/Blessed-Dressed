@@ -1,5 +1,5 @@
 {
-  "at": "2026-07-31T23:50:23.878Z",
+  "at": "2026-08-01T00:17:49.178Z",
   "settings": {
     "maxWidth": 1400,
     "quality": 82,
@@ -7,547 +7,30 @@
   },
   "applied": true,
   "counts": {
-    "masters": 680,
-    "converted": 48,
-    "skipped": 632,
+    "masters": 681,
+    "converted": 1,
+    "skipped": 680,
     "failed": 0,
     "repointed": 0
   },
   "bytes": {
-    "before": 98880325,
-    "after": 7443556,
-    "savedPct": 92.5
+    "before": 1441362,
+    "after": 43646,
+    "savedPct": 97
   },
   "note": "targetSha1 is the derivative; sourceSha1 is the PNG master QC graded. The master and publish_approved.mjs byte-identity gate are untouched.",
   "results": {
     "ok": [
       {
-        "master": "public\\images\\generated\\sport-coat\\cb-1.png",
-        "masterBytes": 2161100,
-        "sourceSha1": "e0a49d57344ac9a791fd2ea69f1ff94d5d1ef704",
-        "target": "public\\images\\generated\\sport-coat\\cb-1.webp",
-        "targetBytes": 212456,
-        "targetSha1": "779b8e8c8420685bd5cd7b8de2fa727ace033b95",
+        "master": "public\\images\\generated\\suit-2pc\\trouser-contrast-side.png",
+        "masterBytes": 1441362,
+        "sourceSha1": "07ba6364a10c9874b7745c2e2e781e8720b3c04e",
+        "target": "public\\images\\generated\\suit-2pc\\trouser-contrast-side.webp",
+        "targetBytes": 43646,
+        "targetSha1": "68491157086f053af10de2cf349795f8c82cb78d",
         "quality": 82,
         "width": 1400,
-        "web": "/images/generated/sport-coat/cb-1.webp"
-      },
-      {
-        "master": "public\\images\\generated\\sport-coat\\cb-none.png",
-        "masterBytes": 1782233,
-        "sourceSha1": "73111dbd3f7a2eae7aa61c8c011f89cbbc749edb",
-        "target": "public\\images\\generated\\sport-coat\\cb-none.webp",
-        "targetBytes": 126088,
-        "targetSha1": "c43ff3941937e01d3a72cb11a6add337e8ff6575",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/sport-coat/cb-none.webp"
-      },
-      {
-        "master": "public\\images\\generated\\sport-coat\\lbp-3l-1r.png",
-        "masterBytes": 2229264,
-        "sourceSha1": "6195d54ce1cc1a2454314d910e8021bbdd92dc6f",
-        "target": "public\\images\\generated\\sport-coat\\lbp-3l-1r.webp",
-        "targetBytes": 184540,
-        "targetSha1": "2e8cc3579a029a4f1e6d1af063779d630a16d143",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/sport-coat/lbp-3l-1r.webp"
-      },
-      {
-        "master": "public\\images\\generated\\sport-coat\\pad-03.png",
-        "masterBytes": 1786302,
-        "sourceSha1": "03025690ff81dd5ce32badfa1776657c66dace7b",
-        "target": "public\\images\\generated\\sport-coat\\pad-03.webp",
-        "targetBytes": 115806,
-        "targetSha1": "6a4668a57618f02f6b4be6032df433b4619d676b",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/sport-coat/pad-03.webp"
-      },
-      {
-        "master": "public\\images\\generated\\sport-coat\\quarter-canvas.png",
-        "masterBytes": 2670515,
-        "sourceSha1": "02b230f7a57679e9a00cabdfeb3ef3fe0f99d0dc",
-        "target": "public\\images\\generated\\sport-coat\\quarter-canvas.webp",
-        "targetBytes": 257740,
-        "targetSha1": "2e469c65bbe60cb6848523e0f24a51e840ed4f3f",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/sport-coat/quarter-canvas.webp"
-      },
-      {
-        "master": "public\\images\\generated\\sport-coat\\sbh-slant.png",
-        "masterBytes": 2117104,
-        "sourceSha1": "bb41f2f17b34f8876e004b3387d45e874ae56325",
-        "target": "public\\images\\generated\\sport-coat\\sbh-slant.webp",
-        "targetBytes": 207526,
-        "targetSha1": "21438f72e92a275362d20ede64bafd59f1a3b8a2",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/sport-coat/sbh-slant.webp"
-      },
-      {
-        "master": "public\\images\\generated\\suit-2pc\\adjuster-left.png",
-        "masterBytes": 2390338,
-        "sourceSha1": "670bf34af7e6011321325997b617812e15b9cf44",
-        "target": "public\\images\\generated\\suit-2pc\\adjuster-left.webp",
-        "targetBytes": 249674,
-        "targetSha1": "5ac79d9baea15d1c98a711a7698f4b8155096332",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/suit-2pc/adjuster-left.webp"
-      },
-      {
-        "master": "public\\images\\generated\\suit-2pc\\back-both-jetted.png",
-        "masterBytes": 2386595,
-        "sourceSha1": "29651ab28735799cb9d714b8a0ef583c4234b3d3",
-        "target": "public\\images\\generated\\suit-2pc\\back-both-jetted.webp",
-        "targetBytes": 227638,
-        "targetSha1": "ea582d2440202d1f0b73e1974b7563f0ba681be0",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/suit-2pc/back-both-jetted.webp"
-      },
-      {
-        "master": "public\\images\\generated\\suit-2pc\\back-left-patch.png",
-        "masterBytes": 2114923,
-        "sourceSha1": "5b09b61a6fc7e5ea46b2eacd177b7782034774f4",
-        "target": "public\\images\\generated\\suit-2pc\\back-left-patch.webp",
-        "targetBytes": 135796,
-        "targetSha1": "bed338f023feaf0e812fc860377856b0b04ad25c",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/suit-2pc/back-left-patch.webp"
-      },
-      {
-        "master": "public\\images\\generated\\suit-2pc\\bartack-standard.png",
-        "masterBytes": 2261564,
-        "sourceSha1": "989c6cab7b4d5b745f7ac8d42eecffd59a125ff1",
-        "target": "public\\images\\generated\\suit-2pc\\bartack-standard.webp",
-        "targetBytes": 199744,
-        "targetSha1": "015f6401e45aec132771162fdb05bbe09dce228b",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/suit-2pc/bartack-standard.webp"
-      },
-      {
-        "master": "public\\images\\generated\\suit-2pc\\coin-none.png",
-        "masterBytes": 2211327,
-        "sourceSha1": "7fe06f54f9e069fe41d751efc23a162972422c3c",
-        "target": "public\\images\\generated\\suit-2pc\\coin-none.webp",
-        "targetBytes": 157426,
-        "targetSha1": "4a17593c9654eee66ff13adf84388046538f4623",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/suit-2pc/coin-none.webp"
-      },
-      {
-        "master": "public\\images\\generated\\suit-2pc\\ext-curved.png",
-        "masterBytes": 2271145,
-        "sourceSha1": "aed6e51b73d9bac1cc45a74ff917bcd1e9768690",
-        "target": "public\\images\\generated\\suit-2pc\\ext-curved.webp",
-        "targetBytes": 220032,
-        "targetSha1": "73c64bf5881bd4c782a32b19f10150eccedec20d",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/suit-2pc/ext-curved.webp"
-      },
-      {
-        "master": "public\\images\\generated\\suit-2pc\\ext-pointed.png",
-        "masterBytes": 2373153,
-        "sourceSha1": "2c5bd21c5cd364258a2c6ccd8a894d3374cb6662",
-        "target": "public\\images\\generated\\suit-2pc\\ext-pointed.webp",
-        "targetBytes": 211822,
-        "targetSha1": "8f9848129b9e41c0980090dc66c665df30f4d096",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/suit-2pc/ext-pointed.webp"
-      },
-      {
-        "master": "public\\images\\generated\\suit-2pc\\fly-fish-claw.png",
-        "masterBytes": 2657110,
-        "sourceSha1": "839b392d8094d016be6a035bcebfc7516c9a36ce",
-        "target": "public\\images\\generated\\suit-2pc\\fly-fish-claw.webp",
-        "targetBytes": 237242,
-        "targetSha1": "3b358fd2ae5d01c3a2a29e728ebb5832a5c7f474",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/suit-2pc/fly-fish-claw.webp"
-      },
-      {
-        "master": "public\\images\\generated\\suit-2pc\\fly-metal-zip.png",
-        "masterBytes": 1977445,
-        "sourceSha1": "58078bdb9985658867c60b17769b25afc9731cd5",
-        "target": "public\\images\\generated\\suit-2pc\\fly-metal-zip.webp",
-        "targetBytes": 135748,
-        "targetSha1": "dd507699b63918b5a71bfe32344aada22d2bb97b",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/suit-2pc/fly-metal-zip.webp"
-      },
-      {
-        "master": "public\\images\\generated\\suit-2pc\\fly-pointed.png",
-        "masterBytes": 3000632,
-        "sourceSha1": "17d45c1365e0653f1b4214af3b24cb9c664e39e1",
-        "target": "public\\images\\generated\\suit-2pc\\fly-pointed.webp",
-        "targetBytes": 296338,
-        "targetSha1": "5797bf27c1ef1c5f1f738630a79966b2b28d46a1",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/suit-2pc/fly-pointed.webp"
-      },
-      {
-        "master": "public\\images\\generated\\suit-2pc\\fly-zip.png",
-        "masterBytes": 2337371,
-        "sourceSha1": "242585c05bba9e32a1d6bf2e2e2968477514beef",
-        "target": "public\\images\\generated\\suit-2pc\\fly-zip.webp",
-        "targetBytes": 190218,
-        "targetSha1": "92f093a2ac925265e31ca8947a7c4fe07997543c",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/suit-2pc/fly-zip.webp"
-      },
-      {
-        "master": "public\\images\\generated\\suit-2pc\\hem-90.png",
-        "masterBytes": 1570662,
-        "sourceSha1": "1f261ab7d6fbdfb98921d0ab9653a0fee85d9a0b",
-        "target": "public\\images\\generated\\suit-2pc\\hem-90.webp",
-        "targetBytes": 82354,
-        "targetSha1": "c245282365e28568bd7a411e9d791afbac321815",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/suit-2pc/hem-90.webp"
-      },
-      {
-        "master": "public\\images\\generated\\suit-2pc\\hem-cuff-32.png",
-        "masterBytes": 2085060,
-        "sourceSha1": "605a0eab710518051975d967531e5c82eaaf0e75",
-        "target": "public\\images\\generated\\suit-2pc\\hem-cuff-32.webp",
-        "targetBytes": 167252,
-        "targetSha1": "af810c2a2f0af198ecbcb2a24751b3de9538b5ec",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/suit-2pc/hem-cuff-32.webp"
-      },
-      {
-        "master": "public\\images\\generated\\suit-2pc\\hem-fixed-topstitch.png",
-        "masterBytes": 1502750,
-        "sourceSha1": "0e155919c33c7331805a5fbd8abf38c966cb5e97",
-        "target": "public\\images\\generated\\suit-2pc\\hem-fixed-topstitch.webp",
-        "targetBytes": 69976,
-        "targetSha1": "dedcf8c37f8d2ab2711b7a6cfeae9de85052640a",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/suit-2pc/hem-fixed-topstitch.webp"
-      },
-      {
-        "master": "public\\images\\generated\\suit-2pc\\hem-inner-fold-40.png",
-        "masterBytes": 2021471,
-        "sourceSha1": "f1083b577fc05609b2819c8c817597dbdd156d67",
-        "target": "public\\images\\generated\\suit-2pc\\hem-inner-fold-40.webp",
-        "targetBytes": 154132,
-        "targetSha1": "3cbfd2b12c8ef02086b49f35d19485faf6746304",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/suit-2pc/hem-inner-fold-40.webp"
-      },
-      {
-        "master": "public\\images\\generated\\suit-2pc\\hem-no-cuff.png",
-        "masterBytes": 1508038,
-        "sourceSha1": "10e8b97d9adc26e392d7342c2346e1c714767efb",
-        "target": "public\\images\\generated\\suit-2pc\\hem-no-cuff.webp",
-        "targetBytes": 72176,
-        "targetSha1": "b0220e8afd0d4c352e5a98e4e124826b71ab114f",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/suit-2pc/hem-no-cuff.webp"
-      },
-      {
-        "master": "public\\images\\generated\\suit-2pc\\jeans-arc.png",
-        "masterBytes": 2652628,
-        "sourceSha1": "f709ede6108edb85dd1912e9c58c03bd31428a00",
-        "target": "public\\images\\generated\\suit-2pc\\jeans-arc.webp",
-        "targetBytes": 297972,
-        "targetSha1": "c404c9065494f5ec86cf38091543261dd6887f4b",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/suit-2pc/jeans-arc.webp"
-      },
-      {
-        "master": "public\\images\\generated\\suit-2pc\\jeans-round.png",
-        "masterBytes": 1918853,
-        "sourceSha1": "7030e465d75d47b3d3c2681df272c7fc70b59367",
-        "target": "public\\images\\generated\\suit-2pc\\jeans-round.webp",
-        "targetBytes": 115666,
-        "targetSha1": "2deaed975a1d0bd914d51f65486654b0671a091d",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/suit-2pc/jeans-round.webp"
-      },
-      {
-        "master": "public\\images\\generated\\suit-2pc\\on-seam-pockets.png",
-        "masterBytes": 2372383,
-        "sourceSha1": "8e1719a4ff6d0f12fe07ac9ddb824a90c7a69c52",
-        "target": "public\\images\\generated\\suit-2pc\\on-seam-pockets.webp",
-        "targetBytes": 204158,
-        "targetSha1": "10ba20f521830f4bcbd417f69aeb3475760a8167",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/suit-2pc/on-seam-pockets.webp"
-      },
-      {
-        "master": "public\\images\\generated\\suit-2pc\\single-forward.png",
-        "masterBytes": 2131878,
-        "sourceSha1": "bf907a139db59e5ecf890e80f045fa2138b56240",
-        "target": "public\\images\\generated\\suit-2pc\\single-forward.webp",
-        "targetBytes": 163142,
-        "targetSha1": "0656f8acd63b99cb4b4e848781ccc4d6a457309b",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/suit-2pc/single-forward.webp"
-      },
-      {
-        "master": "public\\images\\generated\\suit-2pc\\slant-25-stripe.png",
-        "masterBytes": 1802670,
-        "sourceSha1": "246bb43bda324dfeac1ce72834df38df82385caf",
-        "target": "public\\images\\generated\\suit-2pc\\slant-25-stripe.webp",
-        "targetBytes": 97388,
-        "targetSha1": "74338103f6d1d1fc33040f612b647fb171dede4b",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/suit-2pc/slant-25-stripe.webp"
-      },
-      {
-        "master": "public\\images\\generated\\suit-2pc\\watch-left.png",
-        "masterBytes": 2404715,
-        "sourceSha1": "66e0fb4bd6457ac50c0fe8357ce3a45df4465b6e",
-        "target": "public\\images\\generated\\suit-2pc\\watch-left.webp",
-        "targetBytes": 212814,
-        "targetSha1": "6b9161d9c23d584bf3e31a8217642d28eadfde35",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/suit-2pc/watch-left.webp"
-      },
-      {
-        "master": "public\\images\\generated\\suit-2pc\\watch-right.png",
-        "masterBytes": 2173103,
-        "sourceSha1": "316aa43d167dcf68c4805177858f54ba5bd32c84",
-        "target": "public\\images\\generated\\suit-2pc\\watch-right.webp",
-        "targetBytes": 150240,
-        "targetSha1": "be501188cfacb70dbaaa87c385c031b17a469644",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/suit-2pc/watch-right.webp"
-      },
-      {
-        "master": "public\\images\\generated\\suit-3pc\\db-6x2.png",
-        "masterBytes": 1485360,
-        "sourceSha1": "1e6d039ada485f53cf18d1cf1ff58390ef946feb",
-        "target": "public\\images\\generated\\suit-3pc\\db-6x2.webp",
-        "targetBytes": 52002,
-        "targetSha1": "8b198dd67bed89e271d797db47654cddfe59cddb",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/suit-3pc/db-6x2.webp"
-      },
-      {
-        "master": "public\\images\\generated\\suit-3pc\\db-8x4.png",
-        "masterBytes": 1754576,
-        "sourceSha1": "088603a67040c9fb37eb192ee147bd650779a346",
-        "target": "public\\images\\generated\\suit-3pc\\db-8x4.webp",
-        "targetBytes": 84838,
-        "targetSha1": "38dda2c39085f471c82a1eedc245723aa968d5aa",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/suit-3pc/db-8x4.webp"
-      },
-      {
-        "master": "public\\images\\generated\\suit-3pc\\hem-single-turnup.png",
-        "masterBytes": 2077419,
-        "sourceSha1": "d007dac751a4566863f898ee5be559749424c827",
-        "target": "public\\images\\generated\\suit-3pc\\hem-single-turnup.webp",
-        "targetBytes": 159836,
-        "targetSha1": "f7963995ff1fb030f176ef3c6d1faccbfc9b6331",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/suit-3pc/hem-single-turnup.webp"
-      },
-      {
-        "master": "public\\images\\generated\\suit-3pc\\sb-5.png",
-        "masterBytes": 1649693,
-        "sourceSha1": "e458494eaf7ae3d91dafc3b7320101f607d1fcb6",
-        "target": "public\\images\\generated\\suit-3pc\\sb-5.webp",
-        "targetBytes": 75256,
-        "targetSha1": "1cd35bed8bd846d8d4fbfae0b987cf65d419e8f2",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/suit-3pc/sb-5.webp"
-      },
-      {
-        "master": "public\\images\\generated\\suit-3pc\\sb-6.png",
-        "masterBytes": 1688247,
-        "sourceSha1": "c4b4d97764df260ade9811f39e2c8a7a0816be06",
-        "target": "public\\images\\generated\\suit-3pc\\sb-6.webp",
-        "targetBytes": 79074,
-        "targetSha1": "e070cc7210245e406c474afc4cabac5529adda1b",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/suit-3pc/sb-6.webp"
-      },
-      {
-        "master": "public\\images\\generated\\suit-3pc\\v-neckline.png",
-        "masterBytes": 1974469,
-        "sourceSha1": "0f6caee3fdf062c5b795b4adbeced4e6b7107c24",
-        "target": "public\\images\\generated\\suit-3pc\\v-neckline.webp",
-        "targetBytes": 124930,
-        "targetSha1": "091df7f9a22818a9fb2a10d3e2377a22d6c13a84",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/suit-3pc/v-neckline.webp"
-      },
-      {
-        "master": "public\\images\\generated\\suit-3pc\\vest-bottom-round.png",
-        "masterBytes": 1617605,
-        "sourceSha1": "7120e72caa63da54e8c2c5b7dc20e67c1e0ad32a",
-        "target": "public\\images\\generated\\suit-3pc\\vest-bottom-round.webp",
-        "targetBytes": 65668,
-        "targetSha1": "0886f39c53c41ef7581427458cc298a695d7b88b",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/suit-3pc/vest-bottom-round.webp"
-      },
-      {
-        "master": "public\\images\\generated\\suit-3pc\\vest-bottom-small.png",
-        "masterBytes": 1902094,
-        "sourceSha1": "22380783ee9f925958a1b07360e7b573cd849193",
-        "target": "public\\images\\generated\\suit-3pc\\vest-bottom-small.webp",
-        "targetBytes": 125046,
-        "targetSha1": "953e71f9db5c3c2314de5b2ad1f1b187dea9f711",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/suit-3pc/vest-bottom-small.webp"
-      },
-      {
-        "master": "public\\images\\generated\\suit-3pc\\vest-chest-both-besom-flap.png",
-        "masterBytes": 1645830,
-        "sourceSha1": "261e5f97c6692ce207a5f46fb4861ab02e899332",
-        "target": "public\\images\\generated\\suit-3pc\\vest-chest-both-besom-flap.webp",
-        "targetBytes": 57988,
-        "targetSha1": "709d4d3f677b35bb0965a2a8c5c95c39d05e8acc",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/suit-3pc/vest-chest-both-besom-flap.webp"
-      },
-      {
-        "master": "public\\images\\generated\\suit-3pc\\vest-chest-both-welt.png",
-        "masterBytes": 2060212,
-        "sourceSha1": "d63c75c6c056a0b0fd5202a896a61f727e41bb9f",
-        "target": "public\\images\\generated\\suit-3pc\\vest-chest-both-welt.webp",
-        "targetBytes": 144624,
-        "targetSha1": "e8046b081819b4041658068e00256cc58b59ee66",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/suit-3pc/vest-chest-both-welt.webp"
-      },
-      {
-        "master": "public\\images\\generated\\suit-3pc\\vest-chest-left-patch.png",
-        "masterBytes": 1932725,
-        "sourceSha1": "9e343cb5ae117dc7903e33137111c2d7d05c7144",
-        "target": "public\\images\\generated\\suit-3pc\\vest-chest-left-patch.webp",
-        "targetBytes": 133114,
-        "targetSha1": "48ace94cbaed0d3ef2648789f038db106221c904",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/suit-3pc/vest-chest-left-patch.webp"
-      },
-      {
-        "master": "public\\images\\generated\\suit-3pc\\vest-hole-real-straight-05.png",
-        "masterBytes": 2076884,
-        "sourceSha1": "8ca41fc28c1c0813683c8e2e201a051c6b4d0171",
-        "target": "public\\images\\generated\\suit-3pc\\vest-hole-real-straight-05.webp",
-        "targetBytes": 184638,
-        "targetSha1": "f196a8af5ed622b572015bbd630e61d50468b8d1",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/suit-3pc/vest-hole-real-straight-05.webp"
-      },
-      {
-        "master": "public\\images\\generated\\suit-3pc\\vest-lower-jetted.png",
-        "masterBytes": 1691133,
-        "sourceSha1": "13532c62d271f4cb72e5faa278e6505137ffa017",
-        "target": "public\\images\\generated\\suit-3pc\\vest-lower-jetted.webp",
-        "targetBytes": 94310,
-        "targetSha1": "fc47048ca4490ee417e688c4d1f66d62aa2b06f3",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/suit-3pc/vest-lower-jetted.webp"
-      },
-      {
-        "master": "public\\images\\generated\\suit-3pc\\vest-lower-patch.png",
-        "masterBytes": 2263979,
-        "sourceSha1": "dd31889f73fd920c94a96836df4a8e358faa8053",
-        "target": "public\\images\\generated\\suit-3pc\\vest-lower-patch.webp",
-        "targetBytes": 196522,
-        "targetSha1": "1b111524bb38064570bbdf00e51fd242b596dd17",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/suit-3pc/vest-lower-patch.webp"
-      },
-      {
-        "master": "public\\images\\generated\\suit-3pc\\vest-lower-slanted.png",
-        "masterBytes": 2311873,
-        "sourceSha1": "f980582fc1422a11a411d9bab46e1ac9865d6da9",
-        "target": "public\\images\\generated\\suit-3pc\\vest-lower-slanted.webp",
-        "targetBytes": 213486,
-        "targetSha1": "f4e24c3405d000a932a9de1a6c402b47b9cab8fa",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/suit-3pc/vest-lower-slanted.webp"
-      },
-      {
-        "master": "public\\images\\generated\\suit-3pc\\vest-right-over-left.png",
-        "masterBytes": 1564934,
-        "sourceSha1": "4629da93e3c83f84a84e86957113f63b5b8d6c8b",
-        "target": "public\\images\\generated\\suit-3pc\\vest-right-over-left.webp",
-        "targetBytes": 49610,
-        "targetSha1": "3e3f19dd10edfe31612fedcedfbe25a0b2b48d37",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/suit-3pc/vest-right-over-left.webp"
-      },
-      {
-        "master": "public\\images\\generated\\suit-3pc\\vest-ticket-besom-flap.png",
-        "masterBytes": 1680438,
-        "sourceSha1": "c5e64720c474f9b17e15bf2b9e146225e0890870",
-        "target": "public\\images\\generated\\suit-3pc\\vest-ticket-besom-flap.webp",
-        "targetBytes": 64644,
-        "targetSha1": "2eb37d0d52df0cf09192edefc8ca3daf7e8f0e78",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/suit-3pc/vest-ticket-besom-flap.webp"
-      },
-      {
-        "master": "public\\images\\generated\\trousers\\fly-hook-bar.png",
-        "masterBytes": 2509429,
-        "sourceSha1": "b5c6b9125ad88a39d8afca7e0ce1afafc58d313e",
-        "target": "public\\images\\generated\\trousers\\fly-hook-bar.webp",
-        "targetBytes": 232440,
-        "targetSha1": "9cd6fa47140adcf15efa1b1e00ac68c3f0379405",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/trousers/fly-hook-bar.webp"
-      },
-      {
-        "master": "public\\images\\generated\\trousers\\on-seam-pockets.png",
-        "masterBytes": 2121093,
-        "sourceSha1": "b99c39e7018b5d939474093191dce6598878e021",
-        "target": "public\\images\\generated\\trousers\\on-seam-pockets.webp",
-        "targetBytes": 152426,
-        "targetSha1": "2efea841e2f06033bb5aa0783f05d7eede3c99b6",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/trousers/on-seam-pockets.webp"
+        "web": "/images/generated/suit-2pc/trouser-contrast-side.webp"
       }
     ],
     "skipped": [
@@ -2052,6 +1535,10 @@
         "reason": "derivative already exists"
       },
       {
+        "master": "public\\images\\generated\\sport-coat\\cb-1.png",
+        "reason": "derivative already exists"
+      },
+      {
         "master": "public\\images\\generated\\sport-coat\\cb-2.png",
         "reason": "derivative already exists"
       },
@@ -2061,6 +1548,10 @@
       },
       {
         "master": "public\\images\\generated\\sport-coat\\cb-6.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\sport-coat\\cb-none.png",
         "reason": "derivative already exists"
       },
       {
@@ -2080,6 +1571,10 @@
         "reason": "derivative already exists"
       },
       {
+        "master": "public\\images\\generated\\sport-coat\\lbp-3l-1r.png",
+        "reason": "derivative already exists"
+      },
+      {
         "master": "public\\images\\generated\\sport-coat\\lbp-both.png",
         "reason": "derivative already exists"
       },
@@ -2096,11 +1591,23 @@
         "reason": "derivative already exists"
       },
       {
+        "master": "public\\images\\generated\\sport-coat\\pad-03.png",
+        "reason": "derivative already exists"
+      },
+      {
         "master": "public\\images\\generated\\sport-coat\\pad-05-structured.png",
         "reason": "derivative already exists"
       },
       {
         "master": "public\\images\\generated\\sport-coat\\pen-none.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\sport-coat\\quarter-canvas.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\sport-coat\\sbh-slant.png",
         "reason": "derivative already exists"
       },
       {
@@ -2112,11 +1619,39 @@
         "reason": "derivative already exists"
       },
       {
+        "master": "public\\images\\generated\\suit-2pc\\adjuster-left.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\back-both-jetted.png",
+        "reason": "derivative already exists"
+      },
+      {
         "master": "public\\images\\generated\\suit-2pc\\back-both-welt.png",
         "reason": "derivative already exists"
       },
       {
+        "master": "public\\images\\generated\\suit-2pc\\back-left-patch.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\bartack-standard.png",
+        "reason": "derivative already exists"
+      },
+      {
         "master": "public\\images\\generated\\suit-2pc\\coin-left.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\coin-none.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\ext-curved.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\ext-pointed.png",
         "reason": "derivative already exists"
       },
       {
@@ -2132,7 +1667,19 @@
         "reason": "derivative already exists"
       },
       {
+        "master": "public\\images\\generated\\suit-2pc\\fly-fish-claw.png",
+        "reason": "derivative already exists"
+      },
+      {
         "master": "public\\images\\generated\\suit-2pc\\fly-hook-bar.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\fly-metal-zip.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\fly-pointed.png",
         "reason": "derivative already exists"
       },
       {
@@ -2140,7 +1687,19 @@
         "reason": "derivative already exists"
       },
       {
+        "master": "public\\images\\generated\\suit-2pc\\fly-zip.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\hem-90.png",
+        "reason": "derivative already exists"
+      },
+      {
         "master": "public\\images\\generated\\suit-2pc\\hem-blind.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\hem-cuff-32.png",
         "reason": "derivative already exists"
       },
       {
@@ -2148,7 +1707,23 @@
         "reason": "derivative already exists"
       },
       {
+        "master": "public\\images\\generated\\suit-2pc\\hem-fixed-topstitch.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\hem-inner-fold-40.png",
+        "reason": "derivative already exists"
+      },
+      {
         "master": "public\\images\\generated\\suit-2pc\\hem-inner-fold-70.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\hem-no-cuff.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\jeans-arc.png",
         "reason": "derivative already exists"
       },
       {
@@ -2156,7 +1731,15 @@
         "reason": "derivative already exists"
       },
       {
+        "master": "public\\images\\generated\\suit-2pc\\jeans-round.png",
+        "reason": "derivative already exists"
+      },
+      {
         "master": "public\\images\\generated\\suit-2pc\\no-front-pockets.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\on-seam-pockets.png",
         "reason": "derivative already exists"
       },
       {
@@ -2165,6 +1748,14 @@
       },
       {
         "master": "public\\images\\generated\\suit-2pc\\pocket-stitch-none.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\single-forward.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\slant-25-stripe.png",
         "reason": "derivative already exists"
       },
       {
@@ -2180,7 +1771,19 @@
         "reason": "derivative already exists"
       },
       {
+        "master": "public\\images\\generated\\suit-2pc\\watch-left.png",
+        "reason": "derivative already exists"
+      },
+      {
         "master": "public\\images\\generated\\suit-2pc\\watch-none.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\watch-right.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\suit-3pc\\db-6x2.png",
         "reason": "derivative already exists"
       },
       {
@@ -2188,7 +1791,27 @@
         "reason": "derivative already exists"
       },
       {
+        "master": "public\\images\\generated\\suit-3pc\\db-8x4.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\suit-3pc\\hem-single-turnup.png",
+        "reason": "derivative already exists"
+      },
+      {
         "master": "public\\images\\generated\\suit-3pc\\sb-4.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\suit-3pc\\sb-5.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\suit-3pc\\sb-6.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\suit-3pc\\v-neckline.png",
         "reason": "derivative already exists"
       },
       {
@@ -2200,6 +1823,14 @@
         "reason": "derivative already exists"
       },
       {
+        "master": "public\\images\\generated\\suit-3pc\\vest-bottom-round.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\suit-3pc\\vest-bottom-small.png",
+        "reason": "derivative already exists"
+      },
+      {
         "master": "public\\images\\generated\\suit-3pc\\vest-bottom-straight.png",
         "reason": "derivative already exists"
       },
@@ -2208,7 +1839,23 @@
         "reason": "derivative already exists"
       },
       {
+        "master": "public\\images\\generated\\suit-3pc\\vest-chest-both-besom-flap.png",
+        "reason": "derivative already exists"
+      },
+      {
         "master": "public\\images\\generated\\suit-3pc\\vest-chest-both-patch.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\suit-3pc\\vest-chest-both-welt.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\suit-3pc\\vest-chest-left-patch.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\suit-3pc\\vest-hole-real-straight-05.png",
         "reason": "derivative already exists"
       },
       {
@@ -2224,7 +1871,19 @@
         "reason": "derivative already exists"
       },
       {
+        "master": "public\\images\\generated\\suit-3pc\\vest-lower-jetted.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\suit-3pc\\vest-lower-patch.png",
+        "reason": "derivative already exists"
+      },
+      {
         "master": "public\\images\\generated\\suit-3pc\\vest-lower-slant-besom.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\suit-3pc\\vest-lower-slanted.png",
         "reason": "derivative already exists"
       },
       {
@@ -2232,7 +1891,15 @@
         "reason": "derivative already exists"
       },
       {
+        "master": "public\\images\\generated\\suit-3pc\\vest-right-over-left.png",
+        "reason": "derivative already exists"
+      },
+      {
         "master": "public\\images\\generated\\suit-3pc\\vest-stitch-top-06.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\suit-3pc\\vest-ticket-besom-flap.png",
         "reason": "derivative already exists"
       },
       {
@@ -2448,6 +2115,10 @@
         "reason": "derivative already exists"
       },
       {
+        "master": "public\\images\\generated\\trousers\\fly-hook-bar.png",
+        "reason": "derivative already exists"
+      },
+      {
         "master": "public\\images\\generated\\trousers\\fly-metal-zip.png",
         "reason": "derivative already exists"
       },
@@ -2581,6 +2252,10 @@
       },
       {
         "master": "public\\images\\generated\\trousers\\no-front-pockets.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\trousers\\on-seam-pockets.png",
         "reason": "derivative already exists"
       },
       {
