@@ -3212,6 +3212,53 @@
           ]
         }
       ]
+    },
+    {
+      "at": "2026-08-01T00:49:26.114Z",
+      "by": "tools/publish_approved.mjs",
+      "count": 1,
+      "rowCount": 3,
+      "fanout": true,
+      "options": [
+        {
+          "product": "sport-coat",
+          "option": "pad-none",
+          "field": "shoulder-pad",
+          "identity": "shoulder-pad/pad-none",
+          "image": "/images/generated/sport-coat/pad-none.webp",
+          "master": "/images/generated/sport-coat/pad-none.png",
+          "previous": "/images/blueprints/factory/d45437530f73__060J__No_pad.jpg",
+          "preservedBlueprint": "/images/blueprints/factory/d45437530f73__060J__No_pad.jpg",
+          "verdict": "PASS_WAIVED",
+          "waived": true,
+          "qcAttempt": 4,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 95,
+          "rows": [
+            {
+              "product": "sport-coat",
+              "section": "shoulder-structure",
+              "field": "shoulder-pad",
+              "previous": "/images/blueprints/factory/d45437530f73__060J__No_pad.jpg",
+              "preservedBlueprint": "/images/blueprints/factory/d45437530f73__060J__No_pad.jpg"
+            },
+            {
+              "product": "suit-2pc",
+              "section": "shoulder-structure",
+              "field": "shoulder-pad",
+              "previous": "/images/blueprints/factory/d45437530f73__060J__No_pad.jpg",
+              "preservedBlueprint": "/images/blueprints/factory/d45437530f73__060J__No_pad.jpg"
+            },
+            {
+              "product": "suit-3pc",
+              "section": "shoulder-structure",
+              "field": "shoulder-pad",
+              "previous": "/images/blueprints/factory/d45437530f73__060J__No_pad.jpg",
+              "preservedBlueprint": "/images/blueprints/factory/d45437530f73__060J__No_pad.jpg"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -395,7 +395,17 @@ export function buildPrompt(spec) {
     : '';
 
   const presentation = `Photographed ${styling.base}${styling.accessory ? ', ' + styling.accessory : ''}.`;
-  const focus = `Frame ${styling.crop}; the detail must read clearly and sharply.`;
+  // The second half of the same contradiction. Removing the 40-80% dominance
+  // sentence for relational parts is not enough while this line still says
+  // "Frame on the shoulder and sleeve head; the detail must read clearly" — the
+  // model reads that as permission to move in, which is exactly what cropped both
+  // shoulder ends out of pad-none three times. For relational parts the framing
+  // instruction has to point OUTWARD, not at the feature.
+  const focus = isRelational
+    ? `Frame ${styling.crop}, but WIDE — far enough back that both ends of the feature and a margin of ` +
+      `plain background beyond each are inside the picture. Completeness across the full span beats ` +
+      `closeness; do not move in.`
+    : `Frame ${styling.crop}; the detail must read clearly and sharply.`;
   const texture = `Extremely realistic ${spec.fabric} texture, fine stitching.`;
 
   // Waistband-family micro-craft lock (Primary Craft / Hardware Lock / Single

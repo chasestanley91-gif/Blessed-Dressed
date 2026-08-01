@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-01T00:39:14.405Z",
+  "generatedAt": "2026-08-01T00:49:31.000Z",
   "count": 2862,
   "records": [
     {
@@ -18338,11 +18338,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/factory/d45437530f73__060J__No_pad.jpg",
-      "liveImage": "/images/blueprints/factory/d45437530f73__060J__No_pad.jpg",
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/sport-coat/pad-none.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/sport-coat/pad-none.webp",
+      "shippedBytes": 85614,
+      "shippedSha1": "1c05b43d928713da546ab6fd17ee7f5587d4f0aa",
       "pipeline": {
         "dir": ".craft-pipeline/sport-coat/pad-none",
         "have": {
@@ -18351,9 +18351,9 @@
           "generation": true,
           "qc": true
         },
-        "verdict": "UNMET",
-        "attempt": 3,
-        "lowestScore": 90,
+        "verdict": "PASS_WAIVED",
+        "attempt": 4,
+        "lowestScore": 95,
         "belowMin": [
           "shape",
           "geometry",
@@ -18365,11 +18365,11 @@
           "composition",
           "blueprint-match"
         ],
-        "candidates": 3,
+        "candidates": 4,
         "needsReverify": false,
-        "checkedAt": "2026-08-01T00:31:36.833Z"
+        "checkedAt": "2026-08-01T00:48:47.678Z"
       },
-      "stage": "unmet"
+      "stage": "shipped-waived"
     },
     {
       "key": "sport-coat/pad-01",
@@ -27046,13 +27046,13 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/factory/d45437530f73__060J__No_pad.jpg",
-      "liveImage": "/images/blueprints/factory/d45437530f73__060J__No_pad.jpg",
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/sport-coat/pad-none.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/sport-coat/pad-none.webp",
+      "shippedBytes": 85614,
+      "shippedSha1": "1c05b43d928713da546ab6fd17ee7f5587d4f0aa",
       "pipeline": null,
-      "stage": "not-started"
+      "stage": "legacy-shipped-unverified"
     },
     {
       "key": "suit-2pc/pad-01",
@@ -41186,13 +41186,13 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/factory/d45437530f73__060J__No_pad.jpg",
-      "liveImage": "/images/blueprints/factory/d45437530f73__060J__No_pad.jpg",
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/sport-coat/pad-none.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/sport-coat/pad-none.webp",
+      "shippedBytes": 85614,
+      "shippedSha1": "1c05b43d928713da546ab6fd17ee7f5587d4f0aa",
       "pipeline": null,
-      "stage": "not-started"
+      "stage": "legacy-shipped-unverified"
     },
     {
       "key": "suit-3pc/pad-01",

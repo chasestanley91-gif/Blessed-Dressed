@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-01T00:17:49.178Z",
+  "at": "2026-08-01T00:49:24.355Z",
   "settings": {
     "maxWidth": 1400,
     "quality": 82,
@@ -7,30 +7,30 @@
   },
   "applied": true,
   "counts": {
-    "masters": 681,
+    "masters": 682,
     "converted": 1,
-    "skipped": 680,
+    "skipped": 681,
     "failed": 0,
     "repointed": 0
   },
   "bytes": {
-    "before": 1441362,
-    "after": 43646,
-    "savedPct": 97
+    "before": 1519785,
+    "after": 85614,
+    "savedPct": 94.4
   },
   "note": "targetSha1 is the derivative; sourceSha1 is the PNG master QC graded. The master and publish_approved.mjs byte-identity gate are untouched.",
   "results": {
     "ok": [
       {
-        "master": "public\\images\\generated\\suit-2pc\\trouser-contrast-side.png",
-        "masterBytes": 1441362,
-        "sourceSha1": "07ba6364a10c9874b7745c2e2e781e8720b3c04e",
-        "target": "public\\images\\generated\\suit-2pc\\trouser-contrast-side.webp",
-        "targetBytes": 43646,
-        "targetSha1": "68491157086f053af10de2cf349795f8c82cb78d",
+        "master": "public\\images\\generated\\sport-coat\\pad-none.png",
+        "masterBytes": 1519785,
+        "sourceSha1": "80dbdc0f5d7a4bba53c04300398004606691558e",
+        "target": "public\\images\\generated\\sport-coat\\pad-none.webp",
+        "targetBytes": 85614,
+        "targetSha1": "1c05b43d928713da546ab6fd17ee7f5587d4f0aa",
         "quality": 82,
         "width": 1400,
-        "web": "/images/generated/suit-2pc/trouser-contrast-side.webp"
+        "web": "/images/generated/sport-coat/pad-none.webp"
       }
     ],
     "skipped": [
@@ -1764,6 +1764,10 @@
       },
       {
         "master": "public\\images\\generated\\suit-2pc\\trouser-contrast-pocket.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\trouser-contrast-side.png",
         "reason": "derivative already exists"
       },
       {
