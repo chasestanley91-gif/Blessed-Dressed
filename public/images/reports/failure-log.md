@@ -700,3 +700,14 @@ Session total: 3 generations, 2 shipped -> 1.5 attempts/shipped. Credits after: 
 LESSON (generalises to every taper/ladder family): when the discriminator lives at the
 BOTTOM of the option, the base prompt's chest-up default crops it — build_prompt should
 frame waist-up for any option whose spec names a foot/termination/crossing feature.
+
+## 2026-08-01 — lapel-shawl-0a: PASS attempt 1 under the new waist-up camera rule (0.5 credits)
+
+The 'unfixable' verdict on 0a applied to its shipped IMAGE (byte-shared across the family)
+and the old chest-up crop — NOT to its blueprint: 090A is a distinct sheet. camera.mjs
+jacket-lapel crop changed chest-up -> waist-up with the full lapel run + termination in frame
+(snapshot synced); 0a then PASSed 9x98 first attempt (job 34ff3cfb). Published with fan-out,
+replacing the collision copy. Shawl collision 6 -> 3 today (remaining: lapel-shawl, -d,
+-asymmetric — NO drawing exists in any store for these; spec-only or harvest).
+Session: 4 generations / 3 shipped / 2.0 credits = 1.33 attempts-per-shipped. Credits ~792.5.
+DATA DEFECT noted: catalog wires lapel-shawl (generic) to the 0005 drawing file.
