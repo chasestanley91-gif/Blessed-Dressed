@@ -2,44 +2,105 @@
   "addr": "suit-2pc > slant-25-stripe",
   "productId": "suit-2pc",
   "optionId": "slant-25-stripe",
-  "attempt": 1,
+  "attempt": 2,
   "maxAttempts": 3,
   "scores": {
-    "shape": 99,
-    "geometry": 99,
-    "dimensions": 98,
-    "angles": 99,
-    "construction": 98,
-    "placement": 99,
-    "symmetry": 98,
-    "composition": 98,
-    "blueprint-match": 99
+    "shape": 76,
+    "geometry": 74,
+    "dimensions": 72,
+    "angles": 88,
+    "construction": 42,
+    "placement": 82,
+    "symmetry": 74,
+    "composition": 78,
+    "blueprint-match": 66
   },
   "scoreMin": 98,
   "waiverMin": 95,
-  "belowMinCategories": [],
-  "belowWaiverMinCategories": [],
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
   "errors": [
     {
-      "severity": "minor",
-      "category": "composition",
-      "description": "Frame runs down to mid-thigh, so roughly the lower half carries plain leg cloth and the piped opening occupies less than the 40-80% dominance target.",
-      "expected": "Pocket opening dominating 40-80% of frame.",
-      "actual": "Opening occupies a narrow band in the upper-centre-left; lower half is empty leg.",
-      "correction": "Bottom edge could sit about one opening-length below the bartack rather than at mid-thigh. The stripe is still fully sharp and unmistakable."
+      "severity": "major",
+      "category": "construction",
+      "description": "THE POCKET MOUTH IS NOT BUILT. Along the entire marked path the render shows only a fine uniform light-grey hairline lying on an UNBROKEN cloth surface: no cut opening, no welt or facing lip, no shadow line where the two edges of the opening part, and no bartack at either terminal. The drawing terminates the opening in a small dark bartack wedge at its lower end, present in the sibling drawing 3104 as well.",
+      "expected": "A genuine slant pocket mouth running from the waistband seam down to a reinforced lower end, with a cut opening, a facing lip and a bartack closing the bottom",
+      "actual": "A closed panel of cloth with a flat grey line drawn along the pocket path - the trouser front is effectively pocketless",
+      "correction": "Render an OPEN slant pocket mouth: the cloth parts along the marked line into a clean folded-edge opening about one fifth of a waistband depth wide at its centre, the under-facing visible as a darker recess inside, the upper lip catching the light and casting a soft shadow onto the facing, a compact bartack of dense thread closing the lower terminal, and the contrast piping applied as a narrow strip of cloth sitting proud along the opening edge with its own highlight and cast shadow."
     },
     {
       "severity": "minor",
-      "category": "composition",
-      "description": "The model's hand and forearm intrude at the right edge of the frame.",
-      "expected": "No non-garment content competing with the detail.",
-      "actual": "Skin visible along the right edge at about hip height.",
-      "correction": "Crop the right edge inside the far hip, or move the hand out of frame."
+      "category": "dimensions",
+      "description": "Opening length normalised to waistband depth, the only landmark carrying a dimension in both images. Drawing: about 3.4-3.8 waistband depths. Render: about 3.9-4.1. Cross-checked independently against belt-loop height: drawing 2.90 loop-heights, render 3.24. The two normalisations agree.",
+      "expected": "About 3.6 waistband depths / 2.9 belt-loop heights, starting exactly at the waistband seam",
+      "actual": "About 4.0 waistband depths / 3.24 belt-loop heights - roughly 10-15 percent long",
+      "correction": "Shorten the opening by about one eighth so its lower terminal sits a little above mid-thigh-crease level, ending roughly 2.9 belt-loop heights below the waistband seam."
+    },
+    {
+      "severity": "minor",
+      "category": "blueprint-match",
+      "description": "The contrast stripe promised by the option is present as a fine light grey-taupe line, but CANNOT BE VALIDATED against this drawing - see notes. The drawing carries no information about stripe width, colour, placement relative to the opening edge, or whether it runs the full length.",
+      "expected": "Unknown from the blueprint; the drawing shows only the pocket path",
+      "actual": "A single light grey hairline of uniform width along the whole opening path",
+      "correction": "Keep a contrast stripe but build it as PHYSICAL PIPING: a narrow band of paler cloth about one fifth of a belt-loop width, seamed along the upper edge of the pocket opening, running the full length of the mouth and stopping cleanly at the bartack, with visible weave, a lit top face and a shadow where it meets the navy ground."
+    },
+    {
+      "severity": "minor",
+      "category": "geometry",
+      "description": "Terminal treatment. In the drawing the line stops at a defined bartack; in the render the grey line simply tapers to nothing.",
+      "expected": "A defined lower terminal",
+      "actual": "The line fades to a point with no hardware, stitching or seam",
+      "correction": "Finish the lower end with a short horizontal bartack of dense dark thread across the opening, roughly one third of a belt-loop width wide."
     }
   ],
-  "verdict": "PASS",
+  "verdict": "FAIL",
   "waiver": null,
-  "correction": null,
-  "notes": "Illustration: trouser three-quarter front with belt-looped waistband, a plain besom on the far hip, and the subject marked as a long steeply-slanted (about 12 degrees off vertical) opening running from the waistband down to roughly a third of the hip depth, ending in a bartack, positioned just inboard of the front crease. The candidate matches this closely — measured start point, angle (about 10 degrees) and length (about 30% of frame height, vs about 31% in the drawing) all track the drawing. Because the option's own label names a stripe, a real contrast material is correct here: it is rendered as a fine ecru piping along the opening edge, not as literal red, so the annotation-colour rule is respected. Besom, belt loops and crease all reproduced as drawn. Two minor composition findings only; geometry is clean.",
-  "checkedAt": "2026-07-31T20:08:46.418Z"
+  "correction": {
+    "errors": [
+      {
+        "severity": "major",
+        "category": "construction",
+        "error": "THE POCKET MOUTH IS NOT BUILT. Along the entire marked path the render shows only a fine uniform light-grey hairline lying on an UNBROKEN cloth surface: no cut opening, no welt or facing lip, no shadow line where the two edges of the opening part, and no bartack at either terminal. The drawing terminates the opening in a small dark bartack wedge at its lower end, present in the sibling drawing 3104 as well.",
+        "expected": "A genuine slant pocket mouth running from the waistband seam down to a reinforced lower end, with a cut opening, a facing lip and a bartack closing the bottom",
+        "actual": "A closed panel of cloth with a flat grey line drawn along the pocket path - the trouser front is effectively pocketless",
+        "correction": "Render an OPEN slant pocket mouth: the cloth parts along the marked line into a clean folded-edge opening about one fifth of a waistband depth wide at its centre, the under-facing visible as a darker recess inside, the upper lip catching the light and casting a soft shadow onto the facing, a compact bartack of dense thread closing the lower terminal, and the contrast piping applied as a narrow strip of cloth sitting proud along the opening edge with its own highlight and cast shadow."
+      }
+    ],
+    "lockedFeatures": [
+      "Pocket-opening angle about 10 degrees off vertical against about 11.5 drawn - essentially exact, and this is what distinguishes this option from its wider-slant siblings",
+      "Opening origin flush with the waistband seam, exactly as drawn",
+      "Opening sits inboard of the pressed front crease and converges toward it as it descends, matching the drawing's relationship between those two lines",
+      "Back jetted welt present, horizontal, with a vertical dart running up to the waistband - the drawing's back-hip arrangement reproduced correctly",
+      "Plain waistband with belt loops extending below the lower waistband edge",
+      "Three-quarter hip crop, navy worsted, neutral grey ground, no props",
+      "A contrast stripe is present"
+    ],
+    "forbiddenChanges": [
+      "do not alter any checklist item this attempt already passed",
+      "do not change the camera crop, composition, or accessories unless the error is itself a composition error",
+      "do not change the garment part, orientation, or any other option's geometry"
+    ]
+  },
+  "notes": "NEW BLUEPRINT COLLISION, and it is the reason blueprint-match is scored low. 90f739dcde96__3124.jpg is THE SAME DRAWING as the plain '2.5 cm Slant Pocket' option's illustration (1c5aed3c1ce4__3104), differing only in that the pocket line is overprinted in red. Red here marks WHERE the pocket sits, not that anything is coloured - so the drawing depicts the NON-STRIPE option exactly and neither confirms, sizes nor positions the contrast stripe. Everything about the stripe comes from catalog text alone.\n\nNO CENTIMETRES WERE INVENTED: this drawing carries zero dimension callouts - no numbers, no leader lines, no ruler ticks - so any absolute figure would be an assumed real-world size multiplied by a pixel ratio. The '2.5 cm' in the label is unverifiable from the blueprint. Two independent ratio normalisations were used instead and they agree.\n\nNOT measurable: absolute lip width of the stripe; whether the pocket is bagged or on-seam behind the opening; the far-side front pocket, which is only a short edge-on line in the drawing.\n\nThe stripe as rendered is a flat perfectly uniform hairline with no thickness or shadow, so it sits uncomfortably close to reading as a DRAWN LINE rather than cloth - which is the main reason construction scores 42.",
+  "checkedAt": "2026-08-01T07:00:47.132Z"
 }

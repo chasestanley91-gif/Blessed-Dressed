@@ -1,42 +1,56 @@
 {
   "scores": {
-    "shape": 98,
-    "geometry": 98,
-    "dimensions": 98,
-    "angles": 98,
-    "construction": 99,
-    "placement": 98,
-    "symmetry": 99,
-    "composition": 98,
-    "blueprint-match": 98
+    "shape": 85,
+    "geometry": 83,
+    "dimensions": 80,
+    "angles": 73,
+    "construction": 82,
+    "placement": 78,
+    "symmetry": 85,
+    "composition": 86,
+    "blueprint-match": 79
   },
   "errors": [
     {
       "severity": "minor",
-      "category": "placement",
-      "description": "The buttonhole sits slightly lower on the lapel and further from the outer edge than the red slash in the drawing.",
-      "expected": "high on the lapel just below the gorge notch and close to the lapel's outer edge",
-      "actual": "about two fifths down the visible lapel and roughly centred across the lapel width",
-      "correction": "Move the buttonhole up toward the gorge notch and closer to the lapel's outer folded edge."
+      "category": "angles",
+      "description": "Buttonhole inclination. The drawing's red dash sits at roughly 25-30 degrees below horizontal; the render places it at about 17.",
+      "expected": "About 25-30 degrees below horizontal, running downhill toward the lapel's outer edge",
+      "actual": "About 17 degrees",
+      "correction": "Tilt the buttonhole about ten degrees steeper so it lies more nearly parallel to the lapel's outer edge, dropping clearly as it runs outboard."
     },
     {
       "severity": "minor",
-      "category": "composition",
-      "description": "A little of the shoulder area remains at the top-right corner; the FRAMING LOCK asked for the shoulder to be cropped out.",
-      "expected": "no shoulder in frame",
-      "actual": "a small wedge of the shoulder/collar area at the top-right; no face, chin, mouth or hair anywhere",
-      "correction": "Shift the frame down and left so the shoulder falls outside the right edge."
+      "category": "construction",
+      "description": "OPENNESS. The option is 'Real' - hand-worked and cut through. This render shows the purl stitching cleanly but the interior reads as a raised SOLID BAR rather than a parted slit; there is no dark recess or shadow between the two lips.",
+      "expected": "A worked buttonhole that is genuinely cut, the two stitched lips separated by a visible dark opening",
+      "actual": "A dense stitched bar whose centre reads closed",
+      "correction": "Part the two lips slightly so a narrow dark opening runs down the centre for roughly half its length, with the cloth edge on the upper lip catching light and casting a fine shadow into the gap, and dense bar ends squaring off both terminals."
+    },
+    {
+      "severity": "minor",
+      "category": "placement",
+      "description": "Lapel-point to buttonhole-centre distance, normalised by buttonhole length: drawing about 1.9, render about 2.3.",
+      "expected": "About 1.9 of its own lengths from the lapel point",
+      "actual": "About 2.3 - slightly low and deep",
+      "correction": "Move the buttonhole about one fifth of its own length up toward the lapel point so it tucks closer beneath the point."
+    },
+    {
+      "severity": "minor",
+      "category": "geometry",
+      "description": "Lapel style at the gorge, same finding as the suit-3pc twin. The drawing's lapel corner sits at or just below the collar end with a small wedge between; the render shows a pronounced peak rising above the gorge. The blueprint's scale leaves this genuinely ambiguous, so it is logged as an uncertainty.",
+      "expected": "Not resolvable from the blueprint",
+      "actual": "A pronounced peak lapel with an acute point",
+      "correction": "Bring the lapel point down so its outer corner finishes level with the collar end, leaving a small open wedge of gorge between the two."
     }
   ],
   "lockedFeatures": [
-    "exactly ONE buttonhole, on the frame-right lapel as drawn, with the shirt visible beyond on the frame-left",
-    "straight buttonhole finished with a plain bar at each end - no keyhole eye, no eyelet",
-    "fine raised silk lips of equal width either side of a cut-through slit, individual hand-worked purl stitches visible",
-    "buttonhole slanted about 20 degrees below horizontal running down toward the lapel's outer edge, matching the drawing's slash",
-    "buttonhole spans roughly a fifth of the frame width so stitches are countable",
-    "full lapel width in frame, no tie, no flower, no lapel pin, no face or skin anywhere",
-    "navy wool with visible weave, plain neutral background",
-    "zero red or blue marks, no magnifier oval, no leader line, no numeral, no text anywhere in frame"
+    "Exactly ONE buttonhole on the wearer's left lapel, matching the drawing",
+    "STRAIGHT buttonhole with square bar ends and no keyhole eye - the defining characteristic, correct",
+    "Clearly hand-worked: individual purl stitches legible along both lips",
+    "Buttonhole length about 0.44 of local lapel width against 0.39 drawn - proportionally correct",
+    "TIGHT UNDISTRACTED CROP with the buttonhole large in frame and no tie competing - the better composition of the two candidates for this option",
+    "Neutral grey ground, soft directional light, fine wool suiting with legible weave"
   ],
-  "notes": "Same drawing as the suit-3pc twin: lapel and collar front, one small red slash high on the frame-right lapel, plus a red magnifier oval containing an enlarged red-and-blue buttonhole - oval and colours are annotation only. Candidate: one hand-worked straight real buttonhole on the frame-right lapel, equal fine raised lips either side of a cut slit, plain bar at each end, purl stitches individually resolvable, no rounded keyhole eye, no flat machine look, no fake stitch line with no opening. No red, no blue, no oval, no leader line, no numerals, no text. No tie, no boutonniere, no lapel pin, no face or skin in frame. Crop shows the full lapel width with shirt beyond. Buttonhole is larger in frame and the crop is cleaner than the suit-3pc twin; the two remain consistent in geometry."
+  "notes": "Same option id and same drawing as the suit-3pc row, generated separately. Graded on its own merits it EDGES AHEAD on composition - no necktie, closer crop, buttonhole larger and more legible - but falls behind on construction, because its buttonhole reads as a CLOSED stitched bar rather than a genuinely cut opening, which matters for an option whose whole name is 'Real'.\n\nSame blueprint limitation as the twin: the crop is too tight to establish whether the host garment is a waistcoat or a sleeved coat, so the waistcoat rendering is neither confirmed nor refuted and BLUEPRINT_CONFLICT was not raised.\n\nNOT measurable: the '0.5 cm lip' - no dimension callouts anywhere on the drawing. The magnified red inset is schematic: its red is the stitched footprint and the blue the slit, so it fixes the buttonhole as straight with a defined lip around a shorter cut, but its rotation on the page carries no positional meaning and was NOT treated as an angle reference.\n\nINTERCHANGEABILITY: yes. No differentiating value in keeping both; this one is the stronger frame, the suit-3pc one the stronger buttonhole."
 }

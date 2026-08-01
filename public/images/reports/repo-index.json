@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-01T06:35:45.659Z",
+  "generatedAt": "2026-08-01T07:05:39.454Z",
   "count": 2862,
   "records": [
     {
@@ -35488,15 +35488,25 @@
           "generation": true,
           "qc": true
         },
-        "verdict": "PASS",
-        "attempt": 1,
-        "lowestScore": 98,
-        "belowMin": [],
+        "verdict": "FAIL",
+        "attempt": 2,
+        "lowestScore": 42,
+        "belowMin": [
+          "shape",
+          "geometry",
+          "dimensions",
+          "angles",
+          "construction",
+          "placement",
+          "symmetry",
+          "composition",
+          "blueprint-match"
+        ],
         "candidates": 2,
         "needsReverify": false,
-        "checkedAt": "2026-07-31T20:08:46.418Z"
+        "checkedAt": "2026-08-01T07:00:47.132Z"
       },
-      "stage": "shipped"
+      "stage": "failed-retry-due"
     },
     {
       "key": "suit-2pc/slant-32-stripe",
@@ -50645,15 +50655,25 @@
           "generation": true,
           "qc": true
         },
-        "verdict": "PASS",
-        "attempt": 1,
-        "lowestScore": 98,
-        "belowMin": [],
+        "verdict": "FAIL",
+        "attempt": 2,
+        "lowestScore": 72,
+        "belowMin": [
+          "shape",
+          "geometry",
+          "dimensions",
+          "angles",
+          "construction",
+          "placement",
+          "symmetry",
+          "composition",
+          "blueprint-match"
+        ],
         "candidates": 2,
         "needsReverify": false,
-        "checkedAt": "2026-07-31T19:30:48.791Z"
+        "checkedAt": "2026-08-01T07:00:47.297Z"
       },
-      "stage": "shipped"
+      "stage": "failed-retry-due"
     },
     {
       "key": "suit-3pc/vest-collar-felt-match",
@@ -50903,9 +50923,9 @@
           "generation": true,
           "qc": true
         },
-        "verdict": "FAIL",
-        "attempt": 2,
-        "lowestScore": 64,
+        "verdict": "UNMET",
+        "attempt": 3,
+        "lowestScore": 48,
         "belowMin": [
           "shape",
           "geometry",
@@ -50919,9 +50939,9 @@
         ],
         "candidates": 3,
         "needsReverify": false,
-        "checkedAt": "2026-08-01T04:54:38.611Z"
+        "checkedAt": "2026-08-01T07:00:47.559Z"
       },
-      "stage": "failed-retry-due"
+      "stage": "unmet"
     },
     {
       "key": "suit-3pc/vest-chest-both-besom-flap",
@@ -64268,15 +64288,25 @@
           "generation": true,
           "qc": true
         },
-        "verdict": "PASS",
-        "attempt": 1,
-        "lowestScore": 98,
-        "belowMin": [],
+        "verdict": "FAIL",
+        "attempt": 2,
+        "lowestScore": 73,
+        "belowMin": [
+          "shape",
+          "geometry",
+          "dimensions",
+          "angles",
+          "construction",
+          "placement",
+          "symmetry",
+          "composition",
+          "blueprint-match"
+        ],
         "candidates": 2,
         "needsReverify": false,
-        "checkedAt": "2026-07-31T19:38:57.166Z"
+        "checkedAt": "2026-08-01T07:00:47.426Z"
       },
-      "stage": "shipped"
+      "stage": "failed-retry-due"
     },
     {
       "key": "vest/vest-collar-felt-match",

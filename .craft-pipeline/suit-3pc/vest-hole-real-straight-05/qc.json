@@ -2,44 +2,168 @@
   "addr": "suit-3pc > vest-hole-real-straight-05",
   "productId": "suit-3pc",
   "optionId": "vest-hole-real-straight-05",
-  "attempt": 1,
+  "attempt": 2,
   "maxAttempts": 3,
   "scores": {
-    "shape": 98,
-    "geometry": 98,
-    "dimensions": 98,
-    "angles": 98,
-    "construction": 98,
-    "placement": 98,
-    "symmetry": 99,
-    "composition": 98,
-    "blueprint-match": 98
+    "shape": 84,
+    "geometry": 82,
+    "dimensions": 80,
+    "angles": 72,
+    "construction": 88,
+    "placement": 78,
+    "symmetry": 84,
+    "composition": 80,
+    "blueprint-match": 78
   },
   "scoreMin": 98,
   "waiverMin": 95,
-  "belowMinCategories": [],
-  "belowWaiverMinCategories": [],
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
   "errors": [
     {
       "severity": "minor",
-      "category": "composition",
-      "description": "A thin sliver of the model's neck/jaw skin appears in the top-left corner; the FRAMING LOCK asked for the face area to be cropped out entirely.",
-      "expected": "no chin, mouth, face or hair anywhere in frame",
-      "actual": "a narrow band of neck skin above the shirt collar in the top-left corner; no chin, mouth or hair",
-      "correction": "Raise the crop's top edge no higher than the collar band so no skin enters the frame."
+      "category": "angles",
+      "description": "Buttonhole inclination. The drawing's red position dash on the lapel lies at roughly 25-30 degrees below horizontal, inboard end high, outboard end low. The render lies at about 17 degrees - same sense, noticeably shallower.",
+      "expected": "About 25-30 degrees below horizontal",
+      "actual": "About 17 degrees",
+      "correction": "Tilt the buttonhole about ten degrees steeper so it runs more decisively downhill toward the lapel edge, tracking the line of the lapel's outer edge rather than the horizontal."
+    },
+    {
+      "severity": "minor",
+      "category": "placement",
+      "description": "Distance from lapel point to buttonhole centre, normalised by buttonhole length. Drawing about 1.9 buttonhole lengths; render about 2.3.",
+      "expected": "About 1.9 of its own lengths down-and-inboard from the lapel point",
+      "actual": "About 2.3 - sitting slightly low and deep on the lapel",
+      "correction": "Raise the buttonhole about one fifth of its own length toward the lapel point, so it sits closer under the point with a clear band of empty cloth below it."
+    },
+    {
+      "severity": "minor",
+      "category": "geometry",
+      "description": "Lapel style at the gorge. The drawing's collar leaf and lapel meet in a small wedge with the lapel's outer corner at or slightly below the collar end; the render shows a distinctly PEAKED lapel whose point rises up and out. At the blueprint's scale this cannot be resolved with confidence, so it is recorded as an uncertainty rather than a scored failure.",
+      "expected": "Not resolvable from the blueprint - the drawn corner reads as either a shallow peak or a small notch",
+      "actual": "A pronounced peak lapel with an acute point rising above the gorge line",
+      "correction": "Soften the lapel point so its outer corner sits level with the collar end rather than rising above it, leaving a small wedge of open gorge between collar leaf and lapel."
     },
     {
       "severity": "minor",
       "category": "composition",
-      "description": "The buttonhole is slightly smaller in the frame than specified.",
-      "expected": "buttonhole occupies roughly a quarter of the picture width",
-      "actual": "occupies about one sixth of the picture width; individual purl stitches are still resolvable",
-      "correction": "Tighten in so the buttonhole spans about a quarter of the frame width."
+      "description": "A necktie occupies the left third of the frame and the model's jaw enters the top edge. Neither obscures the buttonhole, but both compete with a very small subject.",
+      "expected": "The buttonhole as sole subject - the drawing isolates it with a magnified inset",
+      "actual": "The buttonhole occupies a small fraction of frame while a tie knot, shirt collar and jaw draw the eye",
+      "correction": "Push the crop in on the upper lapel so the buttonhole occupies a substantially larger share of the frame, with the shirt collar reading only as a quiet white margin and the tie out of frame."
     }
   ],
-  "verdict": "PASS",
+  "verdict": "FAIL",
   "waiver": null,
-  "correction": null,
-  "notes": "Drawing: lapel and collar front with shoulder/sleeve seams, one small red slash high on the frame-right lapel slanted roughly 30 degrees below horizontal, plus a red magnifier oval containing an enlarged red-and-blue buttonhole. The oval, the red and the blue are annotation only. Candidate: a single hand-worked straight buttonhole on the frame-right lapel, fine equal raised lips either side of a cut slit, plain bar at each end, no keyhole eye, no machine-flat look, no fake stitch line. Slant matches the drawing's slash rather than the prompt's looser 'parallel to the lapel edge' wording - the drawing wins and the drawing agrees with the render. No red, no blue, no magnifier oval, no annotation, no tie, no boutonniere. Framing shows the full lapel width with shirt beyond. Note for upstream: the option sits on waistcoat products but the source drawing itself carries jacket shoulder and sleevehead seams, so the jacket-style lapel in the render is faithful to the blueprint, not a substitution.",
-  "checkedAt": "2026-07-31T19:30:48.791Z"
+  "correction": {
+    "errors": [
+      {
+        "severity": "minor",
+        "category": "shape",
+        "error": "score-card category \"shape\" scored 84 (< 98)",
+        "expected": ">= 98",
+        "actual": "84",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"shape\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "geometry",
+        "error": "score-card category \"geometry\" scored 82 (< 98)",
+        "expected": ">= 98",
+        "actual": "82",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"geometry\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "dimensions",
+        "error": "score-card category \"dimensions\" scored 80 (< 98)",
+        "expected": ">= 98",
+        "actual": "80",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"dimensions\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "angles",
+        "error": "score-card category \"angles\" scored 72 (< 98)",
+        "expected": ">= 98",
+        "actual": "72",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"angles\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "construction",
+        "error": "score-card category \"construction\" scored 88 (< 98)",
+        "expected": ">= 98",
+        "actual": "88",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"construction\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "placement",
+        "error": "score-card category \"placement\" scored 78 (< 98)",
+        "expected": ">= 98",
+        "actual": "78",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"placement\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "symmetry",
+        "error": "score-card category \"symmetry\" scored 84 (< 98)",
+        "expected": ">= 98",
+        "actual": "84",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"symmetry\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "composition",
+        "error": "score-card category \"composition\" scored 80 (< 98)",
+        "expected": ">= 98",
+        "actual": "80",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"composition\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "blueprint-match",
+        "error": "score-card category \"blueprint-match\" scored 78 (< 98)",
+        "expected": ">= 98",
+        "actual": "78",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"blueprint-match\" and regenerate."
+      }
+    ],
+    "lockedFeatures": [
+      "Exactly ONE buttonhole, on the wearer's left lapel, matching the single red dash on the drawing",
+      "STRAIGHT buttonhole: square-ended at both ends with no keyhole eye - this is the whole point of the option and it is correct",
+      "Hand-worked appearance with visible purl edging along both lips and defined bar ends",
+      "READS AS A REAL CUT-THROUGH BUTTONHOLE - a dark open slit is visible inside the stitching, which is what 'Real' means here, and this is the clearer of the two candidates on that point",
+      "Buttonhole length relative to local lapel width 0.42 against 0.39 drawn - proportionally correct",
+      "Clean neutral grey ground, fine wool suiting with legible weave, no props"
+    ],
+    "forbiddenChanges": [
+      "do not alter any checklist item this attempt already passed",
+      "do not change the camera crop, composition, or accessories unless the error is itself a composition error",
+      "do not change the garment part, orientation, or any other option's geometry"
+    ]
+  },
+  "notes": "The blueprint is a tight square crop showing a collar, two lapels forming a deep V onto a single low button, and shoulder lines running off both frame edges with NO ARMHOLE VISIBLE. That crop is too tight to determine whether the host garment is a waistcoat or a sleeved coat, so the render's waistcoat interpretation is neither confirmed nor refuted by the drawing - it comes from the catalog addressing (vest product, Vest-lapel-neckline section), which is acceptable. BLUEPRINT_CONFLICT deliberately NOT raised for that reason.\n\nNOT measurable: the '0.5 cm lip' in the spec is unverifiable - this drawing carries no dimension callouts at all, so only ratios were used. Also not verifiable: the vest's back, hem and button count, all outside both crops.\n\nINTERCHANGEABILITY WITH THE vest/ TWIN: effectively interchangeable - same navy basketweave waistcoat, same peaked lapel, same buttonhole treatment, same shirt, ground, lighting, focal length and near-identical crop scale. They differ only in that this one adds a necktie and shows more jaw and collar. Neither carries information the other lacks. Permissible since it is genuinely one option id under two products, but SHIPPING BOTH BUYS NOTHING. This one has the better buttonhole; the vest/ one has the better frame.",
+  "checkedAt": "2026-08-01T07:00:47.297Z"
 }
