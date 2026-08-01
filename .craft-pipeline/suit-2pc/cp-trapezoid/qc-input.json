@@ -1,0 +1,47 @@
+{
+  "scores": {
+    "shape": 90,
+    "geometry": 88,
+    "dimensions": 78,
+    "angles": 82,
+    "construction": 92,
+    "placement": 93,
+    "symmetry": 85,
+    "composition": 84,
+    "blueprint-match": 85
+  },
+  "errors": [
+    {
+      "severity": "major",
+      "category": "dimensions",
+      "description": "The taper MAGNITUDE is unverified and appears exaggerated. The drawing, measured on the supplier's own red overlay (which is the welt itself, so no thresholding is involved), gives a taper ratio of 1.15 with depth/run running 0.274 to 0.314 - a gentle convergence. The render's ratio could not be measured: the local-contrast detector returned 290 of 290 columns usable, a suspiciously perfect rate whose cause is that the lapel edge runs diagonally through the measurement box and gets paired with the welt edge. By eye the render's convergence looks more pronounced than 1.15.",
+      "expected": "A restrained taper of about 1.15 - the welt roughly a seventh deeper at the outboard end than at the inboard one, reading as a gentle convergence rather than a wedge.",
+      "actual": "Direction correct, magnitude unmeasured and visually stronger than the drawn 1.15.",
+      "correction": "Measure the render's taper against a box that excludes the lapel edge entirely - start the box outboard of where the lapel edge crosses, and verify the detector is finding the welt's own two edges before trusting any ratio. If the taper is confirmed above roughly 1.3, soften it toward the drawn 1.15 while keeping the deep end at the armhole side."
+    },
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "A necktie is present in frame although the prompt never asked for one - the jacket-chest-pocket styling is 'worn on a male model' with no accessory clause. The tie does not occlude the welt, which sits on the opposite side of the frame, so this is a composition note rather than a coverage failure.",
+      "expected": "Composition existing only to isolate the chest welt.",
+      "actual": "An unrequested necktie occupies the left third of the frame.",
+      "correction": "Add an explicit no-accessory clause to jacket-chest-pocket styling. Silence is not a prohibition - the model's prior supplies a tie by default, which is exactly why the NO NECKTIE wording added to collar, lapel and vest parts is load-bearing."
+    },
+    {
+      "severity": "minor",
+      "category": "angles",
+      "description": "The rake of the welt relative to horizontal was not measured in either drawing or render, so the option's diagonal set is unverified. This is a gap in the grading, not an observed defect.",
+      "expected": "The welt's run set at the angle the drawing gives it.",
+      "actual": "Unmeasured.",
+      "correction": "Measure the welt's run angle in the drawing from the red overlay's principal axis, and in the render against the shoulder seam or lapel edge as an internal perspective control, before approving."
+    }
+  ],
+  "lockedFeatures": [
+    "TAPER DIRECTION CORRECT - the welt is deeper at its outboard/armhole end and narrows inboard toward centre front, matching the drawing. This is the fix that worked: attempt 1 had it reversed, and the only change was rewriting the description to name the ends of the run rather than 'top vs bottom'. Keep the current wording.",
+    "The welt reads as a genuine standing welt with clean, unbroken top and bottom edges along its full length",
+    "The opening is empty - no pocket square, so the full length of the welt and both its edges are visible end to end",
+    "Correctly placed on the wearer's left breast",
+    "No annotation, no numbers, no red guide marks anywhere in frame - the drawing's red overlay was correctly read as notation rather than cloth"
+  ],
+  "notes": "Attempt 2. Graded on DIRECTION only; magnitude is explicitly not certified and is the reason this does not pass.\n\nMethod note, recorded because it cost four attempts on this single option: the drawing was eventually measured on the supplier's red overlay, which IS the welt, removing all thresholding guesswork. Three earlier measurements were discarded - (1) a raw threshold on the render returned 139px of depth inside a 140px crop box, saturated because navy-on-navy has almost no absolute contrast; (2) a raw threshold on the drawing gave taper 2.31 deeper-at-left and (3) local contrast on the same drawing gave 1.18 deeper-at-right. The disagreement in DIRECTION is what forced the question rather than a choice between them, and the answer was that both were reading lapel edges at x 560-860 when the welt is at x 693-921. Cropping and looking settled it in one glance.\n\nThe render measurement remains contaminated by the same class of error, which is why magnitude is reported as unmeasured rather than estimated."
+}
