@@ -1,0 +1,51 @@
+{
+  "schema": "garment-spec/v1",
+  "addr": "suit-2pc > lapel > lapel-style > lapel-notch-removable-shawl",
+  "productId": "suit-2pc",
+  "sectionId": "lapel",
+  "fieldId": "lapel-style",
+  "optionId": "lapel-notch-removable-shawl",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\suit-2pc.json",
+  "source": "json",
+  "label": "Notch + Removable Shawl",
+  "description": "The notch lapel with a removable shawl conversion extends the same dual-identity concept to the more relaxed notch lapel family, allowing a standard suit jacket to moonlight as a dinner jacket by attaching a shawl collar piece at the gorge. The result when the shawl is applied is a dinner jacket of conventional, smooth formality; when removed the jacket returns to everyday business suit territory. This construction is favoured by clients who attend formal occasions frequently enough to justify the engineering but not frequently enough to commission a dedicated tuxedo.",
+  "fieldLabel": "Lapel Style",
+  "sectionLabel": "Lapel",
+  "part": "jacket-lapel",
+  "garment": {
+    "noun": "navy bespoke suit jacket",
+    "fabric": "fine wool suiting with visible weave"
+  },
+  "view": {
+    "orientation": "front",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": false,
+  "measured": {
+    "dimensions": [],
+    "angles": [],
+    "counts": [],
+    "shapes": [
+      "notch lapel",
+      "shawl lapel"
+    ],
+    "negatedShapes": [],
+    "spread": [],
+    "flags": []
+  },
+  "illustration": {
+    "path": "/images/lapel/lapel-notch-removable-shawl-989419bb-11e9-4688-b750-4c7ae20e6609.png",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\lapel\\lapel-notch-removable-shawl-989419bb-11e9-4688-b750-4c7ae20e6609.png",
+    "exists": true,
+    "remote": false
+  },
+  "forbidden": [
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-08-02T09:07:54.804Z"
+}

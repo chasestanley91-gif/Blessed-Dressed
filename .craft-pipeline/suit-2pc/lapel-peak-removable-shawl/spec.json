@@ -1,0 +1,54 @@
+{
+  "schema": "garment-spec/v1",
+  "addr": "suit-2pc > lapel > lapel-style > lapel-peak-removable-shawl",
+  "productId": "suit-2pc",
+  "sectionId": "lapel",
+  "fieldId": "lapel-style",
+  "optionId": "lapel-peak-removable-shawl",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\suit-2pc.json",
+  "source": "json",
+  "label": "Peak + Removable Shawl",
+  "description": "The peak lapel with a removable shawl conversion is a bespoke engineering feat that allows a single jacket to present two entirely different formal personae: the assertive, structured peak lapel for daytime and semi-formal occasions, and the smooth, flowing shawl for black-tie events. The shawl element attaches over the peak — usually via hidden buttons or hand-worked hooks at the gorge — and when fitted gives no outward sign of the mechanism beneath. This is the ultimate expression of sartorial versatility, a garment that adapts to the occasion rather than the other way around.",
+  "fieldLabel": "Lapel Style",
+  "sectionLabel": "Lapel",
+  "part": "jacket-lapel",
+  "garment": {
+    "noun": "navy bespoke suit jacket",
+    "fabric": "fine wool suiting with visible weave"
+  },
+  "view": {
+    "orientation": "front",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": false,
+  "measured": {
+    "dimensions": [],
+    "angles": [],
+    "counts": [],
+    "shapes": [
+      "peak lapel",
+      "shawl lapel"
+    ],
+    "negatedShapes": [],
+    "spread": [],
+    "flags": [
+      "hidden button fastening",
+      "hand-worked buttonhole"
+    ]
+  },
+  "illustration": {
+    "path": "/images/lapel/lapel-peak-removable-shawl-c0da5bee-6fbe-4c1e-aed8-21f230f21126.png",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\lapel\\lapel-peak-removable-shawl-c0da5bee-6fbe-4c1e-aed8-21f230f21126.png",
+    "exists": true,
+    "remote": false
+  },
+  "forbidden": [
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-08-02T09:07:55.122Z"
+}

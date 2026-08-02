@@ -39,3 +39,9 @@ for this geometry: images follow the drawn rake (high front, dropping to side se
 sentence is a legacy-text conflict — flagged for the owner; not silently dropped. Note this drawn rake
 is also opposite the classic equestrian hacking-pocket convention, which may mean the supplier drawing
 itself is unconventional — owner may wish to confirm with the factory.
+
+## 2026-08-02 — lapel-notch-removable-shawl / lapel-peak-removable-shawl (suit-2pc + fan-out)
+Catalog descriptions say the shawl attaches "usually via hidden buttons or hand-worked hooks at the gorge";
+both illustrations explicitly draw PRESS-STUD SNAPS (labelled "attached with hidden snaps", snap close-up panel).
+Owner drafting spec is silent on the removable-shawl family, so the drawing is law: SNAPS rendered.
+Illustrations are annotated infographics (not supplier line drawings) — vision-checked 2026-08-02, construction unambiguous.

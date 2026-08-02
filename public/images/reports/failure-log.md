@@ -964,3 +964,11 @@ Spend: 17 generations / 8.5 credits for 13 shipped primaries (1.31 attempts-per-
 - LESSON (now standing policy for every ladder family): normalize ordering tiles by an option-independent anchor (jacket shoulder span at the shoulder line — measure JUST below shoulder top; chest/waist rows saturate to frame width) BEFORE any visual ordering judgement. Raw crops are inadmissible as a set gate.
 - Round-1 true failures after normalization (4 retries, 2.0 credits): 101 over-rendered (strongest of set + dropped gorge), 105 under-rendered (gentlest of set), 115 marginal inversion vs 114, 120-curved not maximal + saber curve absent. All four FAIL verdicts logged before regenerating; corrections appended to prompt.json.
 - Round 2: all four fixed on first retry. 105-vs-107 zoom pair check: tie-or-correct, no inversion. Set gate PASS; categoricals verified (curve 103/120, straight 108, low gorge 110-low, roll-line sweep 102-rl).
+
+## 2026-08-02 — Removable-shawl pair (lapel-notch/-peak-removable-shawl, 3-row fan-out each)
+
+Spend: 3 generations / 1.5 credits for 2 shipped primaries (1.5 attempts-per-ship).
+- Illustrations are annotated INFOGRAPHICS (not supplier line drawings) — vision-checked before spend; construction unambiguous (satin shawl overlay on hidden press-stud snaps). Snaps-vs-"buttons/hooks" description divergence logged in spec-conflicts (drawing wins, spec silent).
+- Composition: single-frame conversion state (shawl attached one side, unsnapped other side) per the drawing's middle panel.
+- notch attempt 1 FAIL: the revealed side rendered as a FLAT lapel-less front with snaps — the notch itself was missing. LESSON: for convertible/overlay options, the prompt must state that the layer BENEATH is a complete formed component, or the generator omits it. Fixed at attempt 2.
+- peak attempt 1 PASS first try.
