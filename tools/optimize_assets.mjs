@@ -112,8 +112,13 @@ async function main() {
     const target = master.replace(/\.png$/i, '.webp');
     const rel = path.relative(REPO, master);
 
-    if (fs.existsSync(target) && !FORCE) {
-      results.skipped.push({ master: rel, reason: 'derivative already exists' });
+    // Skip only when the derivative is CURRENT. A webp older than its master
+    // means the master was replaced (allow-swap ship over a legacy image) and
+    // the customer would silently keep seeing the OLD bytes — the staleness
+    // hazard found 2026-08-02 (11 stale webps, incl. certified ladder rungs).
+    if (fs.existsSync(target) && !FORCE
+        && fs.statSync(target).mtimeMs >= fs.statSync(master).mtimeMs - 1000) {
+      results.skipped.push({ master: rel, reason: 'derivative up to date' });
       continue;
     }
     processed += 1;

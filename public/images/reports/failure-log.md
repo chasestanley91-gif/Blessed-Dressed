@@ -935,3 +935,14 @@ back-seam-no-bartack (drawn, absence proven with full back context) + back-seam-
 to FRONT view against a back-view subject; corrected before generating (profile gap noted for a
 future camera.mjs orientation-aware fix).
 Session: 71 generations / 58 primaries shipped / 35.5 credits = 1.22 att/shipped. ~759 remain.
+
+## 2026-08-02 — STALENESS HAZARD FOUND AND FIXED: optimizer never reconverted existing webps (0 cr)
+
+While verifying the back-seam pair ship, found back-seam-no-bartack's webp dated Jul 30 against
+an Aug 2 verified master: optimize_assets.mjs skipped whenever the derivative EXISTED, regardless
+of the master being replaced. Tree audit found ELEVEN stale webps — including this session's
+certified wband-45/wband-50 ladder rungs, adjuster-both, ext-curved, a vest buttonhole and five
+shirt collars — all silently serving pre-replacement bytes to customers. FIX: skip only when the
+derivative mtime >= master mtime; all 11 reconverted, tree verified zero-stale. Every allow-swap
+ship from now on gets fresh derivatives automatically.
+LESSON: verify the SERVED file, not just the master — the publish gate checked webp EXISTENCE only.
