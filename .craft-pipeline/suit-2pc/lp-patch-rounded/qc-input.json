@@ -1,0 +1,29 @@
+{
+ "scores": {
+  "shape": 98,
+  "geometry": 94,
+  "dimensions": 95,
+  "angles": 98,
+  "construction": 98,
+  "placement": 93,
+  "symmetry": 98,
+  "composition": 98,
+  "blueprint-match": 94
+ },
+ "errors": [
+  {
+   "severity": "major",
+   "category": "placement",
+   "description": "The patch pocket bottom curve descends nearly to the jacket front hem and visually merges with the hem sweep — in the drawing the patch is a clearly separate component with visible jacket cloth between its curved bottom edge and the hem band below.",
+   "expected": "Patch height roughly 1.4x its width, its rounded bottom edge terminating a clear margin ABOVE the jacket hem, the hem band running independently below with jacket cloth visible between them.",
+   "actual": "An overly tall patch whose curved bottom reaches the hem line, the two edges nearly continuous, exaggerating the drawn proportions.",
+   "correction": "Draw the patch as its own component: height about 1.4 times its width, top edge just below the waist button, and the rounded bottom edge finishing clearly ABOVE the jacket hem so a band of plain jacket cloth separates patch from hem; the jacket hem sweep runs independently below the pocket."
+  }
+ ],
+ "lockedFeatures": [
+  "applied PATCH construction with visible edge topstitching — not jetted, not flapped",
+  "generously ROUNDED bottom corners with a continuous curved lower edge (tasca a pignata)",
+  "navy herringbone cloth, clean studio, no annotations"
+ ],
+ "notes": "Attempt 1. The option-defining rounded-patch construction reads perfectly; the failure is proportion/placement — patch merged toward the hem."
+}
