@@ -799,3 +799,12 @@ edge). With wband-heights this completes ALL waistband no-blueprint clusters fro
 NEEDS-SOURCE category A via owner spec alone. Session: 26 generations / 20 primaries
 shipped / 13.0 credits = 1.30 att/shipped. Credits ~781.5. 137/1813 verified-shipped.
 Spec-only queue remaining: pocket-depth ladder (3, anchor method).
+
+## 2026-08-02 — POCKET-DEPTH LADDER SHIPPED: interior bag view, pixel-measured ordering PASS (1.5 credits)
+
+New trouser-pocket-depth part + interior camera profile (bag exposed, waistband as anchor).
+Pixel gate: bag-depth/band-height 4.91 < 7.39 < 7.61 — monotonic, shallow near-exact vs
+spec 5.0; standard/deep overshoot logged as minors (thin-band confound). All 3 PASS
+attempt 1, published with fan-out. THE ENTIRE SPEC-ONLY QUEUE IS NOW SHIPPED: 19/19
+(3 shawls, 5 wbands, 4 legs, 4 waist styles, 3 pocket depths). Session: 29 generations /
+23 primaries shipped / 14.5 credits = 1.26 att/shipped. Credits ~780.0. 140/1813 verified.

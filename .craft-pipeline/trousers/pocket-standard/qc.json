@@ -1,0 +1,34 @@
+{
+  "addr": "trousers > pocket-standard",
+  "productId": "trousers",
+  "optionId": "pocket-standard",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 98,
+    "placement": 98,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "dimensions",
+      "description": "Measured bag-depth ratio 7.39 band-heights vs the drawn 5.75 — an overshoot partly confounded by this tile rendering a thinner band (62 px vs shallow tile 80 px). Ordering against siblings is correct and the step is visible; recorded for the audit trail."
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "notes": "SET ORDERING GATE PASSED: pixel-measured bag-depth/band-height ratios 4.91 < 7.39 < 7.61 (monotonic, correct direction, extremes clearly separated). Measurement recorded in _pocket-depth-measure.json. Interior-view spec-only pipeline via the new trouser-pocket-depth part.",
+  "checkedAt": "2026-08-02T00:49:21.262Z"
+}

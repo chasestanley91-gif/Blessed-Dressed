@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-02T00:28:02.469Z",
+  "at": "2026-08-02T00:49:22.170Z",
   "settings": {
     "maxWidth": 1400,
     "quality": 82,
@@ -7,63 +7,52 @@
   },
   "applied": true,
   "counts": {
-    "masters": 705,
-    "converted": 4,
-    "skipped": 701,
+    "masters": 708,
+    "converted": 3,
+    "skipped": 705,
     "failed": 0,
     "repointed": 0
   },
   "bytes": {
-    "before": 8686917,
-    "after": 662014,
-    "savedPct": 92.4
+    "before": 6721110,
+    "after": 549508,
+    "savedPct": 91.8
   },
   "note": "targetSha1 is the derivative; sourceSha1 is the PNG master QC graded. The master and publish_approved.mjs byte-identity gate are untouched.",
   "results": {
     "ok": [
       {
-        "master": "public\\images\\generated\\trousers\\waist-double.png",
-        "masterBytes": 1945282,
-        "sourceSha1": "0fba3fbac646a98c212d28a1f1e28b54d11065cf",
-        "target": "public\\images\\generated\\trousers\\waist-double.webp",
-        "targetBytes": 130108,
-        "targetSha1": "f80a9682793e4725a1faab3c597caa146d80efd2",
+        "master": "public\\images\\generated\\trousers\\pocket-deep.png",
+        "masterBytes": 2262254,
+        "sourceSha1": "86ef11866ae93e0577d6c554db5e6adb30f80c5a",
+        "target": "public\\images\\generated\\trousers\\pocket-deep.webp",
+        "targetBytes": 183362,
+        "targetSha1": "f093de819507943a3fd93e0c18656c18bbd16c58",
         "quality": 82,
         "width": 1400,
-        "web": "/images/generated/trousers/waist-double.webp"
+        "web": "/images/generated/trousers/pocket-deep.webp"
       },
       {
-        "master": "public\\images\\generated\\trousers\\waist-elasticated.png",
-        "masterBytes": 2488871,
-        "sourceSha1": "33d8ef87aff1311eae998f35976e955cd86f9c45",
-        "target": "public\\images\\generated\\trousers\\waist-elasticated.webp",
-        "targetBytes": 200750,
-        "targetSha1": "0dad5271efa6b35cdec1ee839c6cda5be6a123ef",
+        "master": "public\\images\\generated\\trousers\\pocket-shallow.png",
+        "masterBytes": 2516035,
+        "sourceSha1": "e743ae4a2c763a1f918f657a46bfe4d4bee80b6e",
+        "target": "public\\images\\generated\\trousers\\pocket-shallow.webp",
+        "targetBytes": 238370,
+        "targetSha1": "54efafa84a564c9ca484e427dfbb1a486f62d5f9",
         "quality": 82,
         "width": 1400,
-        "web": "/images/generated/trousers/waist-elasticated.webp"
+        "web": "/images/generated/trousers/pocket-shallow.webp"
       },
       {
-        "master": "public\\images\\generated\\trousers\\waist-extended-tab.png",
-        "masterBytes": 1873120,
-        "sourceSha1": "4aa012af7680910dc89747e78ccddd99b6ccdf4a",
-        "target": "public\\images\\generated\\trousers\\waist-extended-tab.webp",
-        "targetBytes": 121706,
-        "targetSha1": "48e8993ed0f97ba01a73a07d418be1103895e54e",
+        "master": "public\\images\\generated\\trousers\\pocket-standard.png",
+        "masterBytes": 1942821,
+        "sourceSha1": "1a08f58aad230d82b076d2c7e8560b95f4f0859e",
+        "target": "public\\images\\generated\\trousers\\pocket-standard.webp",
+        "targetBytes": 127776,
+        "targetSha1": "b80f5acf140d336c802a34ba2c076b10e320b1de",
         "quality": 82,
         "width": 1400,
-        "web": "/images/generated/trousers/waist-extended-tab.webp"
-      },
-      {
-        "master": "public\\images\\generated\\trousers\\waist-no-band.png",
-        "masterBytes": 2379644,
-        "sourceSha1": "3ccbcfbdb41f4b833dd674574bdf60836eba9b55",
-        "target": "public\\images\\generated\\trousers\\waist-no-band.webp",
-        "targetBytes": 209450,
-        "targetSha1": "b2a9260921d58ea4256acddb7dd5e58ad11b7064",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/trousers/waist-no-band.webp"
+        "web": "/images/generated/trousers/pocket-standard.webp"
       }
     ],
     "skipped": [
@@ -2477,6 +2466,22 @@
       },
       {
         "master": "public\\images\\generated\\trousers\\waist-detail-square-tab.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\trousers\\waist-double.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\trousers\\waist-elasticated.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\trousers\\waist-extended-tab.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\trousers\\waist-no-band.png",
         "reason": "derivative already exists"
       },
       {

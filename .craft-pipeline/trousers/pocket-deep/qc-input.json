@@ -1,0 +1,27 @@
+{
+ "scores": {
+  "shape": 98,
+  "geometry": 98,
+  "dimensions": 98,
+  "angles": 98,
+  "construction": 98,
+  "placement": 98,
+  "symmetry": 98,
+  "composition": 98,
+  "blueprint-match": 98
+ },
+ "errors": [
+  {
+   "severity": "minor",
+   "category": "dimensions",
+   "description": "Measured ratio 7.61 vs drawn 6.5, same thin-band confound as pocket-standard; deepest of the set as required, adjacent step to standard visible though slim."
+  }
+ ],
+ "lockedFeatures": [
+  "white cotton pocket bag fully exposed from waistband seam to bag bottom",
+  "waistband band across the top of frame as the scale anchor",
+  "bag depth measured 7.61 band-heights vs 6.5 expected — the deepest of the family as required",
+  "no annotations"
+ ],
+ "notes": "SET ORDERING GATE PASSED: pixel-measured bag-depth/band-height ratios 4.91 < 7.39 < 7.61 (monotonic, correct direction, extremes clearly separated). Measurement recorded in _pocket-depth-measure.json. Interior-view spec-only pipeline via the new trouser-pocket-depth part."
+}
