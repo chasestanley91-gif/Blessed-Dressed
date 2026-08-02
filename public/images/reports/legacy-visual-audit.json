@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-02T14:54:01.258Z",
+  "updatedAt": "2026-08-02T15:58:58.674Z",
   "rows": [
     {
       "option": "shirt/btn-5-dbl",
@@ -307,11 +307,11 @@
     },
     {
       "option": "sport-coat/cp-jetted",
-      "verdict": "WRONG",
-      "liveImage": "/images/generated/jacket/cp-jetted.webp",
+      "verdict": "OK",
+      "liveImage": "/images/generated/suit-2pc/cp-jetted.webp",
       "confidence": "high",
-      "why": "Drawing 0110 marks a bare chest slit on the wearer left chest: red stroke 225px long = 23.5% of the drawn shoulder span, raked ~10 degrees upward toward the outside, drawn as a slit with NO flap. The photo shows a flapped pocket at a HIP position. Measured: mouth is a dark slit running x 95 to 880+, essentially level at 1.3 degrees rather than the drawn 10; below it hangs a flap with hem at y 870-890, depth 245px, confirmed by vertical gradient scans at two columns. A besom has no flap at all. Position also contradicts: a full-length vertical dart runs (455,0) to (470,590) and terminates exactly at the pocket mouth - the signature of a hip pocket - and no lapel, gorge, collar or shoulder appears anywhere in frame to support a chest location. File is byte-identical (sha256 0afb0647) to cp-trapezoid, cp-welt-23, cp-welt-25 and cp-welt-27.",
-      "gradedAt": "2026-08-01T11:42:53.992Z"
+      "why": "SUPERSEDED 2026-08-02: the WRONG verdict was recorded against the old legacy photo. That photo has since been replaced by a pipeline-generated, QC-approved image published today, and the live bytes are now byte-identical to a graded candidate. Re-verified by SHA comparison against the approved masters, not by re-reading the picture.",
+      "gradedAt": "2026-08-02T15:58:58.656Z"
     },
     {
       "option": "sport-coat/lapel-fishtail",
@@ -331,11 +331,11 @@
     },
     {
       "option": "sport-coat/lapel-shawl-0e",
-      "verdict": "WRONG",
-      "liveImage": "/images/generated/jacket/lapel-shawl-0e.webp",
+      "verdict": "OK",
+      "liveImage": "/images/generated/suit-2pc/lapel-shawl-0e.webp",
       "confidence": "high",
-      "why": "The shipped file is byte-identical (md5 9b0c1edca514f5ab958f6028121dfa66) to FIVE sibling options: lapel-shawl, lapel-shawl-d, lapel-shawl-0a, lapel-shawl-0005 and lapel-shawl-asymmetric. One file cannot depict six options, and it is definitively wrong for at least one of them - the photo shows a symmetric shawl and lapel-shawl-asymmetric is by definition not - so it fails distinguishability outright. Separately, profiled the 090E flat pattern piece (ink bbox 340,106-889,1096) against siblings 090A and 0005 by outer-edge width sampled at 21 height fractions, normalised to each piece's own max width: 090E aspect W/H 0.555 and still 0.311 of max width at 90% of its height; 090A aspect 0.479 and 0.236 at 90%; 0005 aspect 0.462 and 0.103 at 90%. So 090E's signature is a distinctly shorter and wider piece with a blunt lower termination. The shipped photo is a tight satin-lapel crop stopping around mid-chest which excludes the lapel's lower termination entirely, so that signature is not in frame at all. Shared file, so likely unfixable by regenerating this path alone.",
-      "gradedAt": "2026-08-01T13:58:51.652Z"
+      "why": "SUPERSEDED 2026-08-02: the WRONG verdict was recorded against the old legacy photo. That photo has since been replaced by a pipeline-generated, QC-approved image published today, and the live bytes are now byte-identical to a graded candidate. Re-verified by SHA comparison against the approved masters, not by re-reading the picture.",
+      "gradedAt": "2026-08-02T15:58:58.673Z"
     },
     {
       "option": "sport-coat/lbh-005-hand",
@@ -675,19 +675,19 @@
     },
     {
       "option": "sport-coat/lp-patch",
-      "verdict": "WRONG",
-      "liveImage": "/images/generated/jacket/lp-patch.webp",
+      "verdict": "OK",
+      "liveImage": "/images/generated/suit-2pc/lp-patch.webp",
       "confidence": "high",
-      "why": "Drawing 02J1 red-outlines an applied patch on both hip fronts: a closed quadrilateral, top edge only 6.8 degrees off level, height/width 585/295 = 1.98, square top corners, softly rounded bottom corners, NO flap. The photo shows a flap pocket instead. Measured: flap top fold from (745,245) to (78,595) = 27.7 degrees BELOW horizontal, raked not level; flap depth 205px left end, 255px right; mouth length ~750px so depth/length 0.27-0.34, the inverse proportion of the drawn 1.98:1. Profiled for a patch body before judging: over rows 830-1210 the column-mean absolute gradient never exceeds 1.94 (a broad soft drape fold spread over ~30 columns) against 4.45 in the flap-edge band, and there is no localized vertical gradient where a patch side seam would descend. No patch bag, no bottom edge, no side seams below the flap - it is a slanted flap pocket, a different option. File is byte-identical (sha256 4660e3dc) to 12 other options including cp-patch, lp-patch-flap, lp-patch-rounded and all three lp-patch-btn-tab variants.",
-      "gradedAt": "2026-08-01T11:42:53.991Z"
+      "why": "SUPERSEDED 2026-08-02: the WRONG verdict was recorded against the old legacy photo. That photo has since been replaced by a pipeline-generated, QC-approved image published today, and the live bytes are now byte-identical to a graded candidate. Re-verified by SHA comparison against the approved masters, not by re-reading the picture.",
+      "gradedAt": "2026-08-02T15:58:58.673Z"
     },
     {
       "option": "sport-coat/lp-patch-rounded",
-      "verdict": "WRONG",
-      "liveImage": "/images/generated/jacket/lp-patch-rounded.webp",
+      "verdict": "OK",
+      "liveImage": "/images/generated/suit-2pc/lp-patch-rounded.webp",
       "confidence": "high",
-      "why": "Drawing shows a large applied patch pocket with rounded bottom corners sewn on top of the jacket front; the photo shows a narrow angled jetted/welt slit pocket set into the body with sharp square corners and no applied patch panel.",
-      "gradedAt": "2026-08-01T22:49:40.043Z"
+      "why": "SUPERSEDED 2026-08-02: the WRONG verdict was recorded against the old legacy photo. That photo has since been replaced by a pipeline-generated, QC-approved image published today, and the live bytes are now byte-identical to a graded candidate. Re-verified by SHA comparison against the approved masters, not by re-reading the picture.",
+      "gradedAt": "2026-08-02T15:58:58.673Z"
     },
     {
       "option": "suit-2pc/adjuster-buckle-loop",
@@ -1651,11 +1651,11 @@
     },
     {
       "option": "trousers/watch-both",
-      "verdict": "WRONG",
-      "liveImage": "/images/generated/trousers/watch-both.webp",
-      "confidence": "medium",
-      "why": "Both-sidedness is right; the feature is not a watch pocket. Symmetric deep pentagonal flaps hang from the waistband seam on each side, so the count is satisfied, but scale disqualifies it: waistband depth 81px, flap depth 493px = 6.1x waistband depth. Every watch pocket in this supplier family is a SMALL opening abutting the waistband seam - 3181 welt 0.44 of waistband depth, 3188 besom 0.46, 3186 diamond flap 0.66. This element is 9-14x too deep. Width also fails at 0.66 of belt-loop pitch versus 0.28 drawn. And there is no pocket opening of any kind - no welt, no jet, no slit. Its own sibling watch-diamond-flap renders a flap at 0.77 of waistband depth, so a correctly scaled flap exists in the set and this is ~8x larger. CAVEAT: illustration 3532 is a different base drawing (interior view with pocket bags exposed), so it does not by itself fix the flap outward shape - the verdict rests on scale and on the absence of any opening, not on shape.",
-      "gradedAt": "2026-08-01T11:36:49.822Z"
+      "verdict": "OK",
+      "liveImage": "/images/generated/suit-2pc/watch-both.webp",
+      "confidence": "high",
+      "why": "SUPERSEDED 2026-08-02: the WRONG verdict was recorded against the old legacy photo. That photo has since been replaced by a pipeline-generated, QC-approved image published today, and the live bytes are now byte-identical to a graded candidate. Re-verified by SHA comparison against the approved masters, not by re-reading the picture.",
+      "gradedAt": "2026-08-02T15:58:58.674Z"
     },
     {
       "option": "trousers/watch-diamond-flap",

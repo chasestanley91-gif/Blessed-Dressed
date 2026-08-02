@@ -449,3 +449,33 @@ Owner options for each: (a) authorise a budget reset so the pipeline may try aga
 corrections, (b) accept a sibling record's image where the drawing and label genuinely match
 (hem-single-turnup is the clear candidate), or (c) leave as-is and revisit after the baoxiniao harvest
 supplies better drawings.
+
+## K. The two BLOCKING findings are gated on missing drawings, not on effort (2026-08-02)
+
+I checked every option in both blocking findings against the index. The result is unambiguous and it
+changes how the FACTORY_USER / FACTORY_PASS request should be prioritised.
+
+DISTINCT_OPTION_IMAGE_COLLISION — 8 groups, 38 option slots. Of those 38, **37 have no illustration at
+all** (illustration: null, blueprint: none). They are all already inside category A above. The eight
+groups are legacy photos, each wired to many distinct options, and they cannot be separated because
+there is nothing to photograph the separate options FROM:
+
+  f7fa88b7d6d1  9 options — chest/lower patch + inverted-pleat pockets   0 drawings
+  d3e9123ef264  6 options — slanted flap / straight jetted rungs         3 drawings (all 3 owner-held, category F)
+  277a61bd89f8  6 options — large slanted family                         0 drawings
+  bd8b61e8d40d  6 options — inverted / box pleat flap family             0 drawings
+  8559bce7d538  4 options — jetted-4 + welt 10/12/15                     1 drawing (lp-jetted-4, category H)
+  a673d2f8828c  3 options — british / turnback cuffs                     0 drawings
+  55116eb64714  2 options — angled / square cuffs                        0 drawings
+  0634a8c204cd  2 options — loops-standard + loops-5                     1 drawing (loops-standard only)
+
+SHIPPED_IMAGE_REUSED — 1 finding: loops-5 displays the loops-standard photo. Category D already records
+that this needs a 5-loop drawing. Generating loops-standard again does NOT clear it, because loops-5
+would still be pointing at that same file; the finding only clears when loops-5 gets its own image, and
+a belt-loop COUNT is precisely the kind of detail a customer verifies at delivery, so it must not be
+guessed.
+
+**Bottom line: no amount of further autonomous work clears either blocking finding.** Both are waiting
+on supplier drawings. That makes the mtm.baoxiniao.co credentials the single highest-value thing you
+can hand over — they would unblock these 2 blocking findings, the ~25 options behind the polluted
+/images/jacket/ namespace (category G), and the original 91-drawing want list (category A), all at once.
