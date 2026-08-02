@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-01T23:55:02.204Z",
+  "at": "2026-08-02T00:12:12.735Z",
   "settings": {
     "maxWidth": 1400,
     "quality": 82,
@@ -7,52 +7,63 @@
   },
   "applied": true,
   "counts": {
-    "masters": 697,
-    "converted": 3,
-    "skipped": 694,
+    "masters": 701,
+    "converted": 4,
+    "skipped": 697,
     "failed": 0,
     "repointed": 0
   },
   "bytes": {
-    "before": 7621122,
-    "after": 784736,
-    "savedPct": 89.7
+    "before": 4939188,
+    "after": 113158,
+    "savedPct": 97.7
   },
   "note": "targetSha1 is the derivative; sourceSha1 is the PNG master QC graded. The master and publish_approved.mjs byte-identity gate are untouched.",
   "results": {
     "ok": [
       {
-        "master": "public\\images\\generated\\trousers\\wband-35.png",
-        "masterBytes": 2718181,
-        "sourceSha1": "e246fd012b8a5bcc3616caa59dc65d64a88853d8",
-        "target": "public\\images\\generated\\trousers\\wband-35.webp",
-        "targetBytes": 298560,
-        "targetSha1": "61d30516fd2cab4c50362fc3753856661f7d59a1",
+        "master": "public\\images\\generated\\trousers\\leg-slim.png",
+        "masterBytes": 1186672,
+        "sourceSha1": "15f10c56b5b6e349534175e75d24863c4cba7cfb",
+        "target": "public\\images\\generated\\trousers\\leg-slim.webp",
+        "targetBytes": 22240,
+        "targetSha1": "7993faea6057571602a67a8ce0fcad4401d225de",
         "quality": 82,
         "width": 1400,
-        "web": "/images/generated/trousers/wband-35.webp"
+        "web": "/images/generated/trousers/leg-slim.webp"
       },
       {
-        "master": "public\\images\\generated\\trousers\\wband-38.png",
-        "masterBytes": 2545958,
-        "sourceSha1": "7641f05e12c40472d5f3ec03f4d29b79019fa87b",
-        "target": "public\\images\\generated\\trousers\\wband-38.webp",
-        "targetBytes": 267862,
-        "targetSha1": "0715f22b094b2b986a2e4253a9206dd257eba9ae",
+        "master": "public\\images\\generated\\trousers\\leg-straight.png",
+        "masterBytes": 1195798,
+        "sourceSha1": "711901099b91cd474662415314bddf99291f6dc4",
+        "target": "public\\images\\generated\\trousers\\leg-straight.webp",
+        "targetBytes": 22266,
+        "targetSha1": "af4905664f103ff8056add38d4da57befb4e77e8",
         "quality": 82,
         "width": 1400,
-        "web": "/images/generated/trousers/wband-38.webp"
+        "web": "/images/generated/trousers/leg-straight.webp"
       },
       {
-        "master": "public\\images\\generated\\trousers\\wband-40.png",
-        "masterBytes": 2356983,
-        "sourceSha1": "86526402f1904b38c039219788c6f41bcb5793c0",
-        "target": "public\\images\\generated\\trousers\\wband-40.webp",
-        "targetBytes": 218314,
-        "targetSha1": "191cf54dd6bccd2637196956d9ec6291e606a5fb",
+        "master": "public\\images\\generated\\trousers\\leg-tapered.png",
+        "masterBytes": 1247457,
+        "sourceSha1": "5fe0114db06c859f4b003bcdfc8b11ccd4258b55",
+        "target": "public\\images\\generated\\trousers\\leg-tapered.webp",
+        "targetBytes": 28820,
+        "targetSha1": "1316af592d29f0d3234b4f55d07c8c2692f83937",
         "quality": 82,
         "width": 1400,
-        "web": "/images/generated/trousers/wband-40.webp"
+        "web": "/images/generated/trousers/leg-tapered.webp"
+      },
+      {
+        "master": "public\\images\\generated\\trousers\\leg-wide.png",
+        "masterBytes": 1309261,
+        "sourceSha1": "924204b1f0c54774462c6f9b513f59e9e353c4f3",
+        "target": "public\\images\\generated\\trousers\\leg-wide.webp",
+        "targetBytes": 39832,
+        "targetSha1": "66e9e95cb543829d5981c4423424c3daa7f266fa",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/trousers/leg-wide.webp"
       }
     ],
     "skipped": [
@@ -2474,6 +2485,18 @@
       },
       {
         "master": "public\\images\\generated\\trousers\\watch-right-welt.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\trousers\\wband-35.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\trousers\\wband-38.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\trousers\\wband-40.png",
         "reason": "derivative already exists"
       },
       {

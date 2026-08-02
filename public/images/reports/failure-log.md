@@ -781,3 +781,12 @@ preserved as qc-attempt1-FAIL.json. project_state now treats spec-only identitie
 IN SCOPE (owner ruling reached the stage machine; identity-level exemption).
 Session: 18 generations / 12 primaries shipped / 9.0 credits = 1.5 att/shipped overall.
 Credits ~785.5. FIRST cm-LADDER EVER SHIPPED by this project.
+
+## 2026-08-02 — LEG-SHAPE FAMILY SHIPPED: 4 spec-only, all PASS attempt 1 (2.0 credits)
+
+straight/tapered/slim/wide generated full-length from the owner leg-shape formulas
+(KW/HW reductions). 4-up cross-check: all four taper classes instantly distinguishable
+and correctly ordered. Published with fan-out to suit-2pc/suit-3pc. The entire
+leg-shape no-blueprint cluster from NEEDS-SOURCE category A is now resolved without a
+supplier drawing — the owner spec was sufficient. Session: 22 generations / 16 primaries
+shipped / 11.0 credits = 1.375 att/shipped. Credits ~783.5. 133/1813 verified-shipped.
