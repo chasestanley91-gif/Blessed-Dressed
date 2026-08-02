@@ -834,3 +834,14 @@ The base patch (02J1): open top, topstitched edges, no flap/tab/buttons, level s
 corner radii. The legacy live image it replaces was graded WRONG (raked flap pocket, no
 patch bag). Fourth member out of the 13-option patch collision. Session: 34 generations /
 27 primaries shipped / 17.0 credits = 1.26 att/shipped. Credits ~777.5. 144/1813.
+
+## 2026-08-02 — cp-patch SHIPPED PASS attempt 1 (0.5 cr); 9 patch siblings routed to NEEDS-SOURCE
+
+cp-patch chest patch vs the 0150 drawing: applied panel, open top, rounded corners, empty,
+wearer-left. FIFTH member out of the 13-option collision. The other NINE members have
+illustration:null and no per-variant owner spec — held per the never-invent rule, named in
+NEEDS-SOURCE.md category E for the baoxiniao harvest. cp-patch description reworded (the
+fabric-swatch classifier trap again — piece of fabric -> piece of cloth + shape keyword).
+Patch family now maximally resolved pending drawings: 5 shipped, 9 named-held.
+Session: 35 generations / 28 primaries shipped / 17.5 credits = 1.25 att/shipped.
+Credits ~777.0. 145/1813.

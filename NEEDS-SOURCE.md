@@ -335,3 +335,21 @@ Not added unilaterally: adding a shape term changes what every matching descript
 2,658 rows, and the pocket/jeans/neckline families added today were only safe because the blast radius
 was measured first (39 changed, 0 emptied, 0 gained). The same measurement should be run before adding
 any lapel term.
+
+
+## E — patch-collision members with NO drawing (added 2026-08-02)
+
+Nine members of the f7fa88b7d6d1 collision family have `illustration: null` and their
+variant geometry (tab terminal shape round/straight/angled, pleat count, water-drop
+profile) is not in the owner drafting specs. Per the never-invent rule they are HELD for
+the baoxiniao harvest or per-option owner specs:
+
+- `cp-patch-angled`
+- `cp-patch-multi`
+- `lp-patch-flap-btn`
+- `lp-patch-btn-tab-round`
+- `lp-patch-btn-tab-straight`
+- `lp-patch-btn-tab-angled`
+- `lp-water-drop`
+- `cp-inverted-pleat-flap`
+- `cp-inverted-pleat-2flap`

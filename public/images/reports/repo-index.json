@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-02T02:43:56.906Z",
+  "generatedAt": "2026-08-02T03:11:03.052Z",
   "count": 2862,
   "records": [
     {
@@ -21595,17 +21595,17 @@
       "label": "Patch Pocket",
       "part": "jacket-chest-pocket",
       "kind": "structural",
-      "excluded": "fabric",
-      "inScope": false,
+      "excluded": null,
+      "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/supplier/05a23ba11482__0150__Patch.jpg",
-      "liveImage": "/images/generated/jacket/cp-patch.webp",
+      "liveImage": "/images/generated/suit-2pc/cp-patch.webp",
       "shipped": true,
-      "shippedPath": "/images/generated/jacket/cp-patch.webp",
-      "shippedBytes": 203348,
-      "shippedSha1": "f7fa88b7d6d1076383d4f982881c6a34a8b69669",
+      "shippedPath": "/images/generated/suit-2pc/cp-patch.webp",
+      "shippedBytes": 165256,
+      "shippedSha1": "f8c07f8d57636f415b95f7342bc7b0ba08649e9c",
       "pipeline": null,
-      "stage": "excluded-swatch"
+      "stage": "legacy-shipped-unverified"
     },
     {
       "key": "sport-coat/cp-patch-round",
@@ -30236,17 +30236,33 @@
       "label": "Patch Pocket",
       "part": "jacket-chest-pocket",
       "kind": "structural",
-      "excluded": "fabric",
-      "inScope": false,
+      "excluded": null,
+      "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/supplier/05a23ba11482__0150__Patch.jpg",
-      "liveImage": "/images/generated/jacket/cp-patch.webp",
+      "liveImage": "/images/generated/suit-2pc/cp-patch.webp",
       "shipped": true,
-      "shippedPath": "/images/generated/jacket/cp-patch.webp",
-      "shippedBytes": 203348,
-      "shippedSha1": "f7fa88b7d6d1076383d4f982881c6a34a8b69669",
-      "pipeline": null,
-      "stage": "excluded-swatch"
+      "shippedPath": "/images/generated/suit-2pc/cp-patch.webp",
+      "shippedBytes": 165256,
+      "shippedSha1": "f8c07f8d57636f415b95f7342bc7b0ba08649e9c",
+      "pipeline": {
+        "dir": ".craft-pipeline/suit-2pc/cp-patch",
+        "have": {
+          "spec": true,
+          "prompt": true,
+          "generation": true,
+          "qc": true
+        },
+        "verdict": "PASS",
+        "attempt": 1,
+        "lowestScore": 98,
+        "belowMin": [],
+        "candidates": 1,
+        "needsReverify": false,
+        "specOnly": false,
+        "checkedAt": "2026-08-02T03:10:50.684Z"
+      },
+      "stage": "shipped"
     },
     {
       "key": "suit-2pc/cp-patch-round",
@@ -44545,17 +44561,17 @@
       "label": "Patch Pocket",
       "part": "jacket-chest-pocket",
       "kind": "structural",
-      "excluded": "fabric",
-      "inScope": false,
+      "excluded": null,
+      "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/supplier/05a23ba11482__0150__Patch.jpg",
-      "liveImage": "/images/generated/jacket/cp-patch.webp",
+      "liveImage": "/images/generated/suit-2pc/cp-patch.webp",
       "shipped": true,
-      "shippedPath": "/images/generated/jacket/cp-patch.webp",
-      "shippedBytes": 203348,
-      "shippedSha1": "f7fa88b7d6d1076383d4f982881c6a34a8b69669",
+      "shippedPath": "/images/generated/suit-2pc/cp-patch.webp",
+      "shippedBytes": 165256,
+      "shippedSha1": "f8c07f8d57636f415b95f7342bc7b0ba08649e9c",
       "pipeline": null,
-      "stage": "excluded-swatch"
+      "stage": "legacy-shipped-unverified"
     },
     {
       "key": "suit-3pc/cp-patch-round",

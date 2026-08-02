@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-02T02:43:46.406Z",
+  "at": "2026-08-02T03:10:52.257Z",
   "settings": {
     "maxWidth": 1400,
     "quality": 82,
@@ -7,30 +7,30 @@
   },
   "applied": true,
   "counts": {
-    "masters": 712,
+    "masters": 713,
     "converted": 1,
-    "skipped": 711,
+    "skipped": 712,
     "failed": 0,
     "repointed": 0
   },
   "bytes": {
-    "before": 2337772,
-    "after": 204594,
-    "savedPct": 91.2
+    "before": 2109814,
+    "after": 165256,
+    "savedPct": 92.2
   },
   "note": "targetSha1 is the derivative; sourceSha1 is the PNG master QC graded. The master and publish_approved.mjs byte-identity gate are untouched.",
   "results": {
     "ok": [
       {
-        "master": "public\\images\\generated\\suit-2pc\\lp-patch.png",
-        "masterBytes": 2337772,
-        "sourceSha1": "e00ad68341557fecf35f0bd44aca79495f406a76",
-        "target": "public\\images\\generated\\suit-2pc\\lp-patch.webp",
-        "targetBytes": 204594,
-        "targetSha1": "21c5bec53eb5026862fceb470bda0a23ce5fcf5f",
+        "master": "public\\images\\generated\\suit-2pc\\cp-patch.png",
+        "masterBytes": 2109814,
+        "sourceSha1": "092337a844154d42f07dd1136db1d257b87f5343",
+        "target": "public\\images\\generated\\suit-2pc\\cp-patch.webp",
+        "targetBytes": 165256,
+        "targetSha1": "f8c07f8d57636f415b95f7342bc7b0ba08649e9c",
         "quality": 82,
         "width": 1400,
-        "web": "/images/generated/suit-2pc/lp-patch.webp"
+        "web": "/images/generated/suit-2pc/cp-patch.webp"
       }
     ],
     "skipped": [
@@ -1792,6 +1792,10 @@
       },
       {
         "master": "public\\images\\generated\\suit-2pc\\lp-patch-rounded.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\lp-patch.png",
         "reason": "derivative already exists"
       },
       {
