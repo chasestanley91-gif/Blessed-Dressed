@@ -1,0 +1,68 @@
+{
+  "addr": "trousers > jeans-diamond",
+  "productId": "trousers",
+  "optionId": "jeans-diamond",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 62,
+    "geometry": 65,
+    "dimensions": 99,
+    "angles": 99,
+    "construction": 70,
+    "placement": 99,
+    "symmetry": 99,
+    "composition": 99,
+    "blueprint-match": 64
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "construction",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "shape",
+    "geometry",
+    "construction",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "major",
+      "category": "shape",
+      "description": "MATCHED PAIR GATE FAILURE. Indistinguishable from its arc sibling - both render a plain straight horizontal welt opening. The drawn discriminators are absent: the roughly twice-as-steep slope, the sharp angular V elbow turning down against the seam, and the ABSENCE of a topstitch line where the arc has one.",
+      "expected": "a mouth dropping about twice as steeply as the arc, ending in a hard angular V at the side seam, with no parallel topstitch inside the band",
+      "actual": "a plain straight horizontal welt pocket, visually identical to the arc option",
+      "correction": "Describe the mouth as an explicit vertex path with a sharp unrounded corner at the seam end, and state that no topstitch may appear. Shoot arc and diamond as a pair and reject unless both separate."
+    }
+  ],
+  "verdict": "FAIL",
+  "waiver": null,
+  "correction": {
+    "errors": [
+      {
+        "severity": "major",
+        "category": "shape",
+        "error": "MATCHED PAIR GATE FAILURE. Indistinguishable from its arc sibling - both render a plain straight horizontal welt opening. The drawn discriminators are absent: the roughly twice-as-steep slope, the sharp angular V elbow turning down against the seam, and the ABSENCE of a topstitch line where the arc has one.",
+        "expected": "a mouth dropping about twice as steeply as the arc, ending in a hard angular V at the side seam, with no parallel topstitch inside the band",
+        "actual": "a plain straight horizontal welt pocket, visually identical to the arc option",
+        "correction": "Describe the mouth as an explicit vertex path with a sharp unrounded corner at the seam end, and state that no topstitch may appear. Shoot arc and diamond as a pair and reject unless both separate."
+      }
+    ],
+    "lockedFeatures": [
+      "fine wool trouser cloth",
+      "three-quarter-front hip framing",
+      "seamless light-grey studio background"
+    ],
+    "forbiddenChanges": [
+      "do not alter any checklist item this attempt already passed",
+      "do not change the camera crop, composition, or accessories unless the error is itself a composition error",
+      "do not change the garment part, orientation, or any other option's geometry"
+    ]
+  },
+  "notes": "Graded as a set with trousers/jeans-arc. Per the ladder rule, neither member ships unless the pair separates.",
+  "checkedAt": "2026-08-02T17:03:14.343Z"
+}

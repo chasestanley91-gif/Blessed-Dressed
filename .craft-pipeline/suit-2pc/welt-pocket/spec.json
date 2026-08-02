@@ -1,0 +1,50 @@
+{
+  "schema": "garment-spec/v1",
+  "addr": "suit-2pc > Trousers-front-pockets > front-pocket-style > welt-pocket",
+  "productId": "suit-2pc",
+  "sectionId": "Trousers-front-pockets",
+  "fieldId": "front-pocket-style",
+  "optionId": "welt-pocket",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\suit-2pc.json",
+  "source": "json",
+  "label": "Welt Front Pocket",
+  "description": "Welt front pocket — the opening framed by a welt strip, more dimensional than a jetted cut with more visible craftsmanship. The pocket becomes an intentional bespoke detail.",
+  "fieldLabel": "Front Pocket Style",
+  "sectionLabel": "Trousers — Front & Pockets",
+  "part": "trouser-detail",
+  "garment": {
+    "noun": "pair of bespoke wool tailored trousers",
+    "fabric": "fine wool trouser cloth with visible weave"
+  },
+  "view": {
+    "orientation": "three-quarter-front",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": false,
+  "measured": {
+    "dimensions": [],
+    "angles": [],
+    "counts": [],
+    "shapes": [
+      "welt pocket"
+    ],
+    "negatedShapes": [],
+    "spread": [],
+    "flags": []
+  },
+  "illustration": {
+    "path": "/images/blueprints/remote/01dc8f37109e__3132.jpg",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\remote\\01dc8f37109e__3132.jpg",
+    "exists": true,
+    "remote": false
+  },
+  "forbidden": [
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-08-02T16:24:55.246Z"
+}

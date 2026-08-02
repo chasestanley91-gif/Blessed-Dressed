@@ -1,0 +1,51 @@
+{
+  "schema": "garment-spec/v1",
+  "addr": "trousers > front-pockets > watch-pocket > watch-right-welt",
+  "productId": "trousers",
+  "sectionId": "front-pockets",
+  "fieldId": "watch-pocket",
+  "optionId": "watch-right-welt",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\trousers.json",
+  "source": "json",
+  "label": "Right Welt",
+  "description": "Miniature welt watch pocket on the right — a luxury framed opening; a subtle bespoke signal.",
+  "fieldLabel": "Watch Pocket",
+  "sectionLabel": "Front & Pockets",
+  "part": "trouser-small-pocket",
+  "garment": {
+    "noun": "pair of bespoke wool tailored trousers",
+    "fabric": "fine wool trouser cloth with visible weave"
+  },
+  "view": {
+    "orientation": "three-quarter-front",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": false,
+  "measured": {
+    "dimensions": [],
+    "angles": [],
+    "counts": [],
+    "shapes": [
+      "welt pocket",
+      "watch pocket"
+    ],
+    "negatedShapes": [],
+    "spread": [],
+    "flags": []
+  },
+  "illustration": {
+    "path": "/images/blueprints/remote/9f85b09eb9d0__3181.jpg",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\remote\\9f85b09eb9d0__3181.jpg",
+    "exists": true,
+    "remote": false
+  },
+  "forbidden": [
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-08-02T16:24:57.391Z"
+}

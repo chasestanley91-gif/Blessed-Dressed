@@ -1,0 +1,66 @@
+{
+  "addr": "trousers > watch-right-welt",
+  "productId": "trousers",
+  "optionId": "watch-right-welt",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 72,
+    "geometry": 99,
+    "dimensions": 99,
+    "angles": 99,
+    "construction": 70,
+    "placement": 99,
+    "symmetry": 99,
+    "composition": 99,
+    "blueprint-match": 74
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "construction",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "shape",
+    "construction",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "major",
+      "category": "construction",
+      "description": "MATCHED PAIR GATE FAILURE. Indistinguishable from the besom sibling - both read as a thin double-jetted line under the waistband. The welt strip that should fill and frame the mouth is not readable.",
+      "expected": "a welt strip filling the mouth and standing proud of the panel, with its own pressed top edge and a shadow line along it",
+      "actual": "a thin jetted line, indistinguishable from the besom sibling",
+      "correction": "Shoot the pair together. For the welt, make the strip unmistakably raised and filling the opening, with a visible thickness and its own cast shadow along the top edge, against the besom which must read as an empty dark slot."
+    }
+  ],
+  "verdict": "FAIL",
+  "waiver": null,
+  "correction": {
+    "errors": [
+      {
+        "severity": "major",
+        "category": "construction",
+        "error": "MATCHED PAIR GATE FAILURE. Indistinguishable from the besom sibling - both read as a thin double-jetted line under the waistband. The welt strip that should fill and frame the mouth is not readable.",
+        "expected": "a welt strip filling the mouth and standing proud of the panel, with its own pressed top edge and a shadow line along it",
+        "actual": "a thin jetted line, indistinguishable from the besom sibling",
+        "correction": "Shoot the pair together. For the welt, make the strip unmistakably raised and filling the opening, with a visible thickness and its own cast shadow along the top edge, against the besom which must read as an empty dark slot."
+      }
+    ],
+    "lockedFeatures": [
+      "fine wool trouser cloth",
+      "waistband-to-hip front framing",
+      "seamless light-grey studio background"
+    ],
+    "forbiddenChanges": [
+      "do not alter any checklist item this attempt already passed",
+      "do not change the camera crop, composition, or accessories unless the error is itself a composition error",
+      "do not change the garment part, orientation, or any other option's geometry"
+    ]
+  },
+  "notes": "Side is correct - wearer right, rendered on the viewer left, despite the mirrored croquis. Graded as a set with trousers/watch-right-besom; neither ships unless the pair separates.",
+  "checkedAt": "2026-08-02T17:03:14.674Z"
+}

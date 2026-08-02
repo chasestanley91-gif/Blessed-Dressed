@@ -1,0 +1,52 @@
+{
+  "schema": "garment-spec/v1",
+  "addr": "shirt > collar > lapel > collar-hexagon-stand",
+  "productId": "shirt",
+  "sectionId": "collar",
+  "fieldId": "lapel",
+  "optionId": "collar-hexagon-stand",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\shirt.json",
+  "source": "json",
+  "label": "Hexagon Stand Collar",
+  "description": "A band-style stand collar finished with a faceted, six-sided geometric profile at the closure. The hexagonal detailing turns a simple upright band into a sculptural, fashion-forward focal point.",
+  "fieldLabel": "Collar Style",
+  "sectionLabel": "Collar",
+  "part": "shirt-collar",
+  "garment": {
+    "noun": "white bespoke cotton dress shirt",
+    "fabric": "crisp cotton poplin"
+  },
+  "view": {
+    "orientation": "front",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": false,
+  "measured": {
+    "dimensions": [],
+    "angles": [],
+    "counts": [],
+    "shapes": [
+      "point",
+      "hexagon pocket"
+    ],
+    "negatedShapes": [],
+    "spread": [],
+    "flags": []
+  },
+  "illustration": {
+    "path": "/images/techpacks/shirt/lapel/hexagon-stand-collar.jpg",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\techpacks\\shirt\\lapel\\hexagon-stand-collar.jpg",
+    "exists": true,
+    "remote": false
+  },
+  "forbidden": [
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)",
+    "collar leaves ending in a squared/blunt flat edge, or in a rounded club tip — this option's collar point termination is a straight acute point"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-08-02T16:24:53.941Z"
+}

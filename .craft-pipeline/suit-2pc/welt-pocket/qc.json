@@ -1,0 +1,68 @@
+{
+  "addr": "suit-2pc > welt-pocket",
+  "productId": "suit-2pc",
+  "optionId": "welt-pocket",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 99,
+    "geometry": 48,
+    "dimensions": 99,
+    "angles": 40,
+    "construction": 99,
+    "placement": 60,
+    "symmetry": 99,
+    "composition": 99,
+    "blueprint-match": 45
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "geometry",
+    "angles",
+    "placement",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "geometry",
+    "angles",
+    "placement",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "critical",
+      "category": "geometry",
+      "description": "The welt is oriented 90 degrees away from the drawing. The red marker in the reference is a tall, narrow, VERTICAL rectangle on the front panel below the waistband; the render produced a wide HORIZONTAL welt across the hip.",
+      "expected": "a vertical welt opening running down the front panel, taller than it is wide",
+      "actual": "a horizontal welt across the hip, wider than it is tall",
+      "correction": "State explicitly that the pocket mouth runs VERTICALLY down the front panel - its long axis parallel to the leg, not across it - and that a horizontal opening is a failure. Keep the welt strip standing proud with its pressed edge along the long side."
+    }
+  ],
+  "verdict": "FAIL",
+  "waiver": null,
+  "correction": {
+    "errors": [
+      {
+        "severity": "critical",
+        "category": "geometry",
+        "error": "The welt is oriented 90 degrees away from the drawing. The red marker in the reference is a tall, narrow, VERTICAL rectangle on the front panel below the waistband; the render produced a wide HORIZONTAL welt across the hip.",
+        "expected": "a vertical welt opening running down the front panel, taller than it is wide",
+        "actual": "a horizontal welt across the hip, wider than it is tall",
+        "correction": "State explicitly that the pocket mouth runs VERTICALLY down the front panel - its long axis parallel to the leg, not across it - and that a horizontal opening is a failure. Keep the welt strip standing proud with its pressed edge along the long side."
+      }
+    ],
+    "lockedFeatures": [
+      "fine wool trouser cloth",
+      "three-quarter-front hip framing",
+      "seamless light-grey studio background"
+    ],
+    "forbiddenChanges": [
+      "do not alter any checklist item this attempt already passed",
+      "do not change the camera crop, composition, or accessories unless the error is itself a composition error",
+      "do not change the garment part, orientation, or any other option's geometry"
+    ]
+  },
+  "notes": "The welt construction itself is well rendered - real thickness, crisp pressed edge, bar tacks. Only the axis is wrong, but the axis is the geometry.",
+  "checkedAt": "2026-08-02T17:03:14.032Z"
+}

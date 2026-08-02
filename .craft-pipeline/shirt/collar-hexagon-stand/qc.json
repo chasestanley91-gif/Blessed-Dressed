@@ -1,0 +1,68 @@
+{
+  "addr": "shirt > collar-hexagon-stand",
+  "productId": "shirt",
+  "optionId": "collar-hexagon-stand",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 40,
+    "geometry": 45,
+    "dimensions": 99,
+    "angles": 99,
+    "construction": 70,
+    "placement": 99,
+    "symmetry": 99,
+    "composition": 99,
+    "blueprint-match": 42
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "construction",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "shape",
+    "geometry",
+    "construction",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "critical",
+      "category": "shape",
+      "description": "The defining hexagonal leaf outline is entirely absent. The drawing gives each collar leaf a stepped outer edge - an outer point, then the edge turns back inward along a near-straight run to a shallow notch, then drops to the deep centre-front point, so the two leaves together read as a six-sided silhouette. The render produced a plain triangular point collar with a single straight outer edge and no facets at all.",
+      "expected": "stepped, faceted, six-sided leaf outline with a visible notch on each outer edge",
+      "actual": "ordinary straight-edged point collar - a generic-category substitution",
+      "correction": "Describe the leaf outline as an explicit vertex path rather than by the word hexagon: from the band, out to an outer corner, then back inward along a straight run to a shallow inward notch, then down and inward to the long centre-front point. State that the outer edge of each leaf must change direction at least twice and that a single straight edge from band to tip is a failure."
+    }
+  ],
+  "verdict": "FAIL",
+  "waiver": null,
+  "correction": {
+    "errors": [
+      {
+        "severity": "critical",
+        "category": "shape",
+        "error": "The defining hexagonal leaf outline is entirely absent. The drawing gives each collar leaf a stepped outer edge - an outer point, then the edge turns back inward along a near-straight run to a shallow notch, then drops to the deep centre-front point, so the two leaves together read as a six-sided silhouette. The render produced a plain triangular point collar with a single straight outer edge and no facets at all.",
+        "expected": "stepped, faceted, six-sided leaf outline with a visible notch on each outer edge",
+        "actual": "ordinary straight-edged point collar - a generic-category substitution",
+        "correction": "Describe the leaf outline as an explicit vertex path rather than by the word hexagon: from the band, out to an outer corner, then back inward along a straight run to a shallow inward notch, then down and inward to the long centre-front point. State that the outer edge of each leaf must change direction at least twice and that a single straight edge from band to tip is a failure."
+      }
+    ],
+    "lockedFeatures": [
+      "white cotton poplin",
+      "tight collar crop",
+      "seamless light-grey studio background"
+    ],
+    "forbiddenChanges": [
+      "do not alter any checklist item this attempt already passed",
+      "do not change the camera crop, composition, or accessories unless the error is itself a composition error",
+      "do not change the garment part, orientation, or any other option's geometry"
+    ]
+  },
+  "notes": "The whole red outline in the drawing traces the collar being specified. Attempt 1 read it as a plain point collar. This is the classic generic-category substitution failure the prompt scaffolding is meant to prevent - the word \"hexagon\" alone did not carry the geometry.",
+  "checkedAt": "2026-08-02T17:03:13.410Z"
+}

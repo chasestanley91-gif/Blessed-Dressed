@@ -1,0 +1,37 @@
+{
+  "addr": "vest > vest-chest-both-welt",
+  "productId": "vest",
+  "optionId": "vest-chest-both-welt",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 99,
+    "geometry": 99,
+    "dimensions": 99,
+    "angles": 98,
+    "construction": 99,
+    "placement": 99,
+    "symmetry": 99,
+    "composition": 99,
+    "blueprint-match": 99
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "angles",
+      "description": "The welts read as essentially horizontal, whereas the drawing tilts each so the outer armhole end sits higher than the inner end.",
+      "expected": "outer end visibly higher than inner end, as drawn",
+      "actual": "near-horizontal welts",
+      "correction": "Tilt each welt so the armhole end is visibly higher."
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "notes": "Two flat welt strips stitched in flush, symmetric, sitting above the top button. Correctly not flaps and correctly not empty besom slits - the three-way distinction across the chest-pocket family holds.",
+  "checkedAt": "2026-08-02T17:01:39.494Z"
+}

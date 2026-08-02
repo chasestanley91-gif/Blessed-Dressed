@@ -1037,3 +1037,79 @@ Verdicts: 3 PASS (trousers/slant-25-stripe, trousers/flat-front, suit-2pc/back-l
   naming the shoe as a fixed real-world size reference. The pair ORDERS CORRECTLY (4.4 is genuinely
   deeper after normalising for scale) but the generator still framed the deep rung ~1.15x tighter, so
   the scale match is imperfect and both carry that as a logged minor.
+
+---
+
+## 2026-08-02 — WRONG-queue regeneration wave (24 options, 12 credits)
+
+24 of the 30 options whose live photo had been graded WRONG were re-shot after a full
+reference re-read. All 24 jobs completed on the first submission. **15 PASS, 9 FAIL —
+a 62.5 % first-attempt rate**, against the historical 1.75 attempts per shipped image
+(≈57 %). Six of the original 30 were never shot at all and are held in NEEDS-SOURCE L.
+
+### What the 9 failures teach
+
+**1. Naming a shape does not draw it.** `collar-hexagon-stand` came back as an ordinary
+point collar. The prompt said "hexagonal", "faceted", "six-sided", "stepped" and named
+every facet — and still got a plain straight leaf edge. The word for a shape is not the
+shape. **New rule: for any non-standard outline, specify it as an explicit vertex path**
+("from the band, out to a corner, back inward along a straight run to a shallow notch,
+then down to the long point") **and state the failure condition** ("a single straight edge
+from band to tip is a failure"). Adjectives are not geometry.
+
+**2. Two features on the same axis merge.** `pleat-no-single-dart` rendered its darts as a
+continuation of the pressed leg creases, so no dart was readable. Where a small feature
+shares an axis with a large one, the prompt has to force a **gap**: say where the small
+feature stops, and start the large one visibly below it.
+
+**3. A macro feature needs a macro frame — and that fights MATCHED FRAMING.**
+`pocket-stitch-015` documents a 0.15 cm hairline stitch and was shot at full-hip framing,
+where the stitch is about one pixel. MATCHED FRAMING correctly forbids moving closer for
+one member of a measurement family. **The resolution is to move the whole family to the
+tighter distance, not to exempt one member.** Logged because the same tension will recur
+on every stitch-pitch and edge-distance family.
+
+**4. Axis errors are geometry errors.** `welt-pocket` was drawn as a tall narrow VERTICAL
+rectangle and rendered as a wide horizontal welt. The welt construction itself was good —
+thickness, pressed edge, bar tacks — but rotated 90°. **State the long axis explicitly**
+("its long axis parallel to the leg, not across it") whenever an opening is not in its
+conventional orientation.
+
+**5. Two matched pairs failed the pair gate, and neither member shipped.**
+- `jeans-arc` vs `jeans-diamond`: both rendered a plain horizontal welt. All three drawn
+  discriminators vanished — the vertical leg at the fly end, the rounded-versus-angular
+  elbow, and the presence-versus-absence of the parallel topstitch.
+- `watch-right-besom` vs `watch-right-welt`: both rendered as the same thin jetted line.
+
+  Per the ladder rule these were graded as sets, not individually, and rejected as sets.
+  A photograph that is individually plausible but indistinguishable from its sibling is
+  still a failure, because the catalog's job is telling those two apart.
+
+### What worked, and is worth repeating
+
+- **SPEC LOCK over a defective reference.** `vest-bottom-point` shipped a correct
+  single-breasted V point from a reference that showed a *curved* hem on a *double-breasted*
+  body. Naming what is wrong with the reference, and instructing the render to ignore
+  specific named elements of it, beats hoping the drawing gets overridden implicitly.
+- **Same for a reference that omits the feature.** `collar-button-down-78`'s drawing has no
+  anchor buttons at all; the spec supplied them and the image shipped correct.
+- **Prompt-defect triage before spending.** `sleeve-head-regular`'s generated prompt framed
+  the *shirt front* and listed *placket* geometry for a sleeve-head option — almost certainly
+  why the original graded WRONG. Catching that by reading the prompt, before generating, cost
+  nothing and turned a probable repeat failure into a pass. **Read the generated prompt for
+  subject/framing mismatch as a standing pre-spend check.**
+- **Three-way shape families separate cleanly.** notch/peak/shawl collar-stands and the
+  four-way vest chest-pocket family (besom / welt / flap / single-left) all came back
+  unmistakable. Shape families do not need the blind-ordering gate that measurement families
+  do — but they do need a set-consistency pass (see below).
+
+### Minor finding worth fixing at source
+
+The three collar-stand siblings carried a MATCHED SET LOCK and still came back on three
+different cloths with three different underlayers (charcoal over bare skin, navy over a navy
+shirt, navy over bare skin). The lapel shape is unmistakable in each, so all three passed,
+but a customer comparing them sees three different garments. Same for the two stripe options,
+where one stripe is cream and the other tonal navy. **A matched-set instruction inside a
+single-image prompt is weak** — the model has no view of its siblings. Where set consistency
+matters, pin the concrete values (exact cloth colour, exact underlayer, exact crop) into every
+member's prompt rather than asking for consistency in the abstract.

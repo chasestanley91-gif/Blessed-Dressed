@@ -98,3 +98,45 @@ divergence is recorded here rather than silently dropped.
   `vest-bottom-round` depicts — inside a soft, upscaled crop of a larger tech-pack sheet
   that also shows an unrelated double-breasted closure with two columns of four buttons.
 - **Resolution**: the reference is simply the wrong crop. Shoot per spec: a 5–8 cm V point.
+
+### REVERSAL (same day, 2026-08-02) — items 2–4 above: the DRAWINGS govern the slant family
+
+The adjudication above resolved `slant-20`, `slant-20-stripe` and `slant-51-stripe` per the spec
+(near-horizontal). A closer read of the drawings, with pixel measurements, reverses that. Recording
+the reversal rather than quietly re-deciding:
+
+**The evidence that changed it.** Measured endpoints in the 1200×1200 reference files:
+
+| option | mouth run (px) | angle off vertical | cm label |
+|---|---|---|---|
+| `slant-20`        | 82 h / 505 v  | 9.2°  | 2.0 cm |
+| `slant-20-stripe` | 86 h / 511 v  | 9.6°  | 2.0 cm |
+| `slant-51-stripe` | 205 h / 466 v | 23.7° | 5.1 cm |
+
+The drawn horizontal-offset ratio between the 5.1 cm and 2.0 cm members is **2.6×**, against an
+expected **2.55×** from the labels. The drawings therefore encode the centimetre value *exactly*, as a
+forward offset over a vertical run, and the family is drawn in correct, internally consistent order.
+Geometrically this is the standard trouser slant pocket — mouth running from the waistband seam down
+and outward to the side seam — which is what these garments actually are. The near-horizontal reading
+describes a frogmouth/western pocket, a different pocket.
+
+**Why the spec does not govern here.** The ruling makes the spec law, but the spec is *internally
+inconsistent on this one attribute*: its `slant-20` entry draws `____/` (horizontal) while its own
+siblings `slant-pockets` 3.2 cm and `quarter-top` 2.5 cm both draw backslashes (steep), and its stated
+angles (15–20°, 22–28°) reconcile with neither reading on a common run. An authority that contradicts
+itself on an attribute cannot be law for that attribute; per the ruling, the illustration governs where
+the spec is silent or unusable. The spec's *ordering* (larger cm ⇒ more aggressive) is retained and
+agrees with the drawings.
+
+**Note on the catalog description.** "2.0 cm drop over a 15 cm run, nearly horizontal at about 7.6°"
+uses the same 2:15 ratio as the drawing but with rise and run transposed — 9.2° off vertical versus
+7.6° off horizontal is the same triangle, rotated. The description is a transposition error, not an
+independent second authority, so the "two authorities beat one" argument made above does not hold.
+
+**Consequence.** The three slant options are shot per drawing: a near-vertical mouth from the waistband
+seam to the side seam, ~9° off vertical at 2.0 cm and ~24° at 5.1 cm.
+
+**Cost of the earlier reading.** `suit-2pc/quarter-top` was already generated (job
+`d1901a55-e293-4cfd-b3fd-eb20aae1d55b`, 0.5 credits) under the superseded near-horizontal spec lock.
+It is left in flight and sent to QC on its merits; if it fails on pocket angle it is retried per drawing.
+Logged here so the spend and the reason are on the record.

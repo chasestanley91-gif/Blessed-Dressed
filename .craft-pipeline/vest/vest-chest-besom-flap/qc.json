@@ -1,0 +1,37 @@
+{
+  "addr": "vest > vest-chest-besom-flap",
+  "productId": "vest",
+  "optionId": "vest-chest-besom-flap",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 99,
+    "geometry": 99,
+    "dimensions": 99,
+    "angles": 99,
+    "construction": 99,
+    "placement": 99,
+    "symmetry": 99,
+    "composition": 98,
+    "blueprint-match": 99
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "The garment sits off-centre in the frame, so the plain opposite chest is only partly shown.",
+      "expected": "both chests centred and fully in frame so the absent second pocket is unmissable",
+      "actual": "vest shifted toward the right of frame; the opposite chest is partially cropped",
+      "correction": "Centre the garment so both chests are equally visible."
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "notes": "Count discriminator satisfied: exactly one chest pocket, flapped, with the opposite chest plain. Side is correct in both conventions - the wearer left chest, which is the viewer right half of a front view.",
+  "checkedAt": "2026-08-02T17:01:39.000Z"
+}

@@ -1,0 +1,65 @@
+{
+  "addr": "suit-2pc > pocket-stitch-015",
+  "productId": "suit-2pc",
+  "optionId": "pocket-stitch-015",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 99,
+    "geometry": 99,
+    "dimensions": 85,
+    "angles": 99,
+    "construction": 88,
+    "placement": 99,
+    "symmetry": 99,
+    "composition": 70,
+    "blueprint-match": 99
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "dimensions",
+    "construction",
+    "composition"
+  ],
+  "belowWaiverMinCategories": [
+    "dimensions",
+    "construction",
+    "composition"
+  ],
+  "errors": [
+    {
+      "severity": "major",
+      "category": "composition",
+      "description": "The subject of this option is a 0.15 cm hairline topstitch, and the frame is a wide hip shot in which that stitch spans roughly a pixel. The feature the photograph exists to document is not legible, so the option cannot be compared against its siblings, which differ from it only by stitch distance.",
+      "expected": "a macro frame in which the stitch reads as an individual line of thread with visible needle penetrations",
+      "actual": "full-hip framing; the stitch line is essentially invisible",
+      "correction": "Crop far tighter - the pocket mouth edge should span most of the frame width, with only a few centimetres of cloth either side, so a 0.15 cm stitch offset is measurable against the folded edge. Keep the raking sidelight so each stitch throws a shadow."
+    }
+  ],
+  "verdict": "FAIL",
+  "waiver": null,
+  "correction": {
+    "errors": [
+      {
+        "severity": "major",
+        "category": "composition",
+        "error": "The subject of this option is a 0.15 cm hairline topstitch, and the frame is a wide hip shot in which that stitch spans roughly a pixel. The feature the photograph exists to document is not legible, so the option cannot be compared against its siblings, which differ from it only by stitch distance.",
+        "expected": "a macro frame in which the stitch reads as an individual line of thread with visible needle penetrations",
+        "actual": "full-hip framing; the stitch line is essentially invisible",
+        "correction": "Crop far tighter - the pocket mouth edge should span most of the frame width, with only a few centimetres of cloth either side, so a 0.15 cm stitch offset is measurable against the folded edge. Keep the raking sidelight so each stitch throws a shadow."
+      }
+    ],
+    "lockedFeatures": [
+      "fine wool trouser cloth",
+      "seamless light-grey studio background"
+    ],
+    "forbiddenChanges": [
+      "do not alter any checklist item this attempt already passed",
+      "do not change the camera crop, composition, or accessories unless the error is itself a composition error",
+      "do not change the garment part, orientation, or any other option's geometry"
+    ]
+  },
+  "notes": "Note the tension with MATCHED FRAMING, which asks every member of a measurement family to be shot at the same distance. The resolution is to move the whole family to the tighter macro distance, not to single this one out.",
+  "checkedAt": "2026-08-02T17:03:13.718Z"
+}

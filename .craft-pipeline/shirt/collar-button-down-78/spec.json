@@ -1,0 +1,54 @@
+{
+  "schema": "garment-spec/v1",
+  "addr": "shirt > collar > lapel > collar-button-down-78",
+  "productId": "shirt",
+  "sectionId": "collar",
+  "fieldId": "lapel",
+  "optionId": "collar-button-down-78",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\shirt.json",
+  "source": "json",
+  "label": "Button-Down 7.8 cm Stand",
+  "description": "The Button-Down collar at 7.8cm stand is the quintessential American shirt collar, featuring small buttons at each point that fasten to the shirt front to maintain the signature soft roll over a tie knot. This rolling of the collar creates a casual, lived-in elegance that is the calling card of Oxford Cloth Button-Down shirts and Ivy League dressing. Without a tie it produces a natural, unfussy frame for the neck that works from weekend brunches to smart casual office environments.",
+  "fieldLabel": "Collar Style",
+  "sectionLabel": "Collar",
+  "part": "shirt-collar",
+  "garment": {
+    "noun": "white bespoke cotton dress shirt",
+    "fabric": "crisp cotton poplin"
+  },
+  "view": {
+    "orientation": "front",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": false,
+  "measured": {
+    "dimensions": [
+      "7.8 cm"
+    ],
+    "angles": [],
+    "counts": [],
+    "shapes": [
+      "button-down point",
+      "point"
+    ],
+    "negatedShapes": [],
+    "spread": [],
+    "flags": []
+  },
+  "illustration": {
+    "path": "/images/techpacks/shirt/lapel/button-down-collar-with-78cm-stand.jpg",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\techpacks\\shirt\\lapel\\button-down-collar-with-78cm-stand.jpg",
+    "exists": true,
+    "remote": false
+  },
+  "forbidden": [
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)",
+    "collar leaves ending in a squared/blunt flat edge, or in a rounded club tip — this option's collar point termination is a straight acute point"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-08-02T16:24:53.750Z"
+}

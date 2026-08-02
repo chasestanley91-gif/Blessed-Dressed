@@ -1,0 +1,111 @@
+{
+  "addr": "suit-2pc > Trousers-pleats-structure > pleat-style > pleat-no-single-dart",
+  "label": "Flat Front, Single Dart",
+  "part": "trouser-pleat",
+  "orientation": "front",
+  "excluded": null,
+  "generate": true,
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\suit-2pc.json",
+  "source": "json",
+  "illustration": "/images/blueprints/remote/f0e67f33563a__302M.jpg",
+  "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\remote\\f0e67f33563a__302M.jpg",
+  "illustrationExists": true,
+  "illustrationRemote": false,
+  "profile": {
+    "addr": "suit-2pc > Trousers-pleats-structure > pleat-style > pleat-no-single-dart",
+    "product": "suit-2pc",
+    "field": "Pleat Style",
+    "option": "Flat Front, Single Dart",
+    "part": "trouser-pleat",
+    "garment": "pair of bespoke wool tailored trousers",
+    "orientation": "front",
+    "absence": false,
+    "distinguishingDetail": "A flat front with a single dart adds one short, stitched-down dart on each side of the front to shape the waist into the hip without an open pleat. It keeps the smooth flat-front look while improving the fit over a curved seat and thigh. The dart removes excess cloth cleanly rather than letting it fold.",
+    "measured": {
+      "dimensions": [],
+      "angles": [],
+      "counts": [],
+      "shapes": [],
+      "spread": [],
+      "flags": []
+    },
+    "reproduceFromIllustration": [
+      "pleat/dart count and direction",
+      "pleat depth",
+      "fall to the knee"
+    ],
+    "composition": {
+      "crop": "the clean trouser front, the pleats falling from the waistband the clear focal point",
+      "dominanceTarget": "40–80% of frame",
+      "identifyWithin": "1 second"
+    },
+    "forbidden": [
+      "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+      "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+      "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+    ],
+    "excluded": null,
+    "generate": true
+  },
+  "requiredTokens": [],
+  "checklist": [
+    "distinguishing detail present: A flat front with a single dart adds one short, stitched-down dart on each side of the front to shape the waist into the hip without an open pleat. It keeps the smooth flat-front look while improving the fit over a curved seat and thigh. The dart removes excess cloth cleanly rather than letting it fold.",
+    "reproduced from the illustration: pleat/dart count and direction",
+    "reproduced from the illustration: pleat depth",
+    "reproduced from the illustration: fall to the knee",
+    "orientation matches the illustration: front",
+    "the Pleat Style dominates the frame (40–80%), identifiable within one second, framed the clean trouser front, the pleats falling from the waistband the clear focal point",
+    "silhouette, proportions, seam & stitch placement match the illustration; left/right symmetry correct",
+    "NO generic-category substitution — this exact option, not a typical one",
+    "a real photograph of the exact drawn option — not the line-art, no stylisation"
+  ],
+  "scoreCard": [
+    {
+      "category": "shape",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "geometry",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "dimensions",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "angles",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "construction",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "placement",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "symmetry",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "composition",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "blueprint-match",
+      "score": null,
+      "min": 98
+    }
+  ],
+  "prompt": "Ultra-photorealistic luxury menswear product photography.\n\nA single-subject craft DOCUMENTATION photograph: the Pleat Style is the dominant subject, filling 40–80% of the frame and identifiable within one second.\n\nA premium pair of bespoke wool tailored trousers featuring a precise Flat Front, Single Dart (Pleat Style).\n\nDistinguishing construction detail (reproduce exactly as drawn): A flat front with a single dart adds one short, stitched-down dart on each side of the front to shape the waist into the hip without an open pleat. It keeps the smooth flat-front look while improving the fit over a curved seat and thigh. The dart removes excess cloth cleanly rather than letting it fold.\n\nReproduce the \"Flat Front, Single Dart\" detail exactly as drawn.\n\nMANDATORY GEOMETRY COVERAGE — reproduce from the illustration, exactly and without assumption, every one of these: pleat/dart count and direction, pleat depth, fall to the knee. Match each to the drawing.\n\nVIEW — this illustration is the front of the garment. Photograph the same face; never substitute a different face of the garment.\n\nBLUEPRINT LOCK — THE DRAWING IS LAW: the attached technical illustration is the manufacturing blueprint for this exact craft option and the SOLE authority for the image. Reproduce its geometry precisely — point/edge shape, lengths, widths, depths, angles, curvature, roll lines, symmetry, button/tab/stay positions, seam and stitch placement, and proportions — within less than 2% deviation. Assume NOTHING from tailoring/menswear/fashion convention or model priors; every visible characteristic must come from the drawing. Do not redesign, reinterpret, substitute a similar commercial style, stylise, or \"improve\" it. Do NOT fall back to a generic version of this category — reproduce THIS option, not a typical one. If convention conflicts with the drawing, the drawing wins. Accuracy over aesthetics. ANNOTATIONS ARE NOT THE GARMENT: the technical drawing may carry measurement callouts — dimension numbers (\"2.5cm\", \"9cm\", \"115°\"), tick / leader / dimension lines, arrows, red or coloured guide marks, and text labels. These are manufacturing documentation, NOT features of the cloth. Reproduce ONLY the finished garment: never render any number, unit, arrow, callout, leader line, measurement mark, or text anywhere in the photograph. The final image is a clean garment photo with zero annotation. COLOUR IN THE DRAWING IS NOTATION, NOT CLOTH: any red, orange or otherwise highlighted region marks WHERE the craft option sits — it is a position marker, never a colour specification. Flat grey or tinted shading marks the EXTENT of a panel, lining or facing, not its shade. Render every one of those areas in the garment's own cloth and thread, in the natural colour that tailoring would use there. There must be no red, no highlighter tint and no flat unshaded grey panel anywhere in the photograph unless the option's own label explicitly names that colour.\n\nPhotographed on a male model, front view of the trousers from waistband to knee.\n\nFrame the clean trouser front, the pleats falling from the waistband the clear focal point; the detail must read clearly and sharply.\n\nPROVE THE ABSENCE — this option is told apart from its siblings by what is NOT there, so the picture has to show that. Frame the exact place where the missing feature would sit, large enough that a viewer could not miss one were it there, with enough surrounding construction — seams, edges, the matching position on the opposite side — to recognise where they are looking. Light it so the feature, if present, would break the plane or throw a shadow: a flatly-lit surface proves nothing, because the feature would be invisible there whether or not it existed.\n\nSavile Row and high-end Italian sartorial aesthetic. STRONG RAKING SIDELIGHT skimming low and almost parallel across the cloth, across the run of the feature, so every fold, pressed edge and line of stitching throws its own distinct shadow and reads as real depth — this feature has no colour and no outline of its own, and flat frontal light would erase it from its own photograph. Phase One IQ4 medium-format camera, 150MP detail, shallow depth of field, magazine-quality editorial menswear photography. Authentic bespoke craftsmanship, fine hand stitching, premium finishing. SET — shot in a clean luxury photographic studio against a seamless, plain, neutral light-grey background with clear separation between garment and background: no location, no architecture, no furniture, no scenery, no props and no environmental context of any kind competing with the garment.\n\nExtremely realistic fine wool trouser cloth with visible weave texture, fine stitching.\n\nAvoid: any GENERIC menswear substitution (a generic spread collar, generic notch/peak lapel, generic pocket/pleat/vent/cuff/waistband in place of the drawn one), illustration or line-art style, CGI or 3D-render look, cartoon, mannequin, fashion sketch, inaccurate geometry, altered proportions, missing construction details, asymmetry, watermark, AI-art appearance, AND any text or annotation traced from the drawing: NO measurement numbers, units (cm/mm/°), dimension or leader lines, arrows, callouts, red/coloured guide marks, ruler ticks, or labels anywhere in the frame. This is real garment photography of the exact drawn option — clean cloth only, nothing else.\n\nFORBIDDEN FOR THIS OPTION — do not render: a generic version of this part standing in for the exact drawn option (generic-category substitution); any feature, count, or geometry borrowed from a neighboring craft option on the same field; a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion).",
+  "builtAt": "2026-08-02T16:25:10.114Z"
+}

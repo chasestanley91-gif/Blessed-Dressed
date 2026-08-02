@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-02T16:24:04.438Z",
+  "generatedAt": "2026-08-02T17:06:39.193Z",
   "count": 2862,
   "records": [
     {
@@ -1423,8 +1423,29 @@
       "shippedPath": "/images/generated/shirt/collar-hexagon-stand.webp",
       "shippedBytes": 69986,
       "shippedSha1": "9033e6fc3d8642a9079084390bc5631903afc5fe",
-      "pipeline": null,
-      "stage": "legacy-shipped-unverified"
+      "pipeline": {
+        "dir": ".craft-pipeline/shirt/collar-hexagon-stand",
+        "have": {
+          "spec": true,
+          "prompt": true,
+          "generation": true,
+          "qc": true
+        },
+        "verdict": "FAIL",
+        "attempt": 1,
+        "lowestScore": 40,
+        "belowMin": [
+          "shape",
+          "geometry",
+          "construction",
+          "blueprint-match"
+        ],
+        "candidates": 1,
+        "needsReverify": false,
+        "specOnly": false,
+        "checkedAt": "2026-08-02T17:03:13.410Z"
+      },
+      "stage": "failed-retry-due"
     },
     {
       "key": "shirt/collar-sq-stand-no-btn",
@@ -1663,10 +1684,26 @@
       "liveImage": "/images/generated/shirt/collar-button-down-78.webp",
       "shipped": true,
       "shippedPath": "/images/generated/shirt/collar-button-down-78.webp",
-      "shippedBytes": 76250,
-      "shippedSha1": "c54fe9db54bbc6a1591ad065125a8e13ad320d3e",
-      "pipeline": null,
-      "stage": "legacy-shipped-unverified"
+      "shippedBytes": 32180,
+      "shippedSha1": "e3b3d8bbb034ff8f532e310146cd4dbff6f3d299",
+      "pipeline": {
+        "dir": ".craft-pipeline/shirt/collar-button-down-78",
+        "have": {
+          "spec": true,
+          "prompt": true,
+          "generation": true,
+          "qc": true
+        },
+        "verdict": "PASS",
+        "attempt": 1,
+        "lowestScore": 98,
+        "belowMin": [],
+        "candidates": 1,
+        "needsReverify": false,
+        "specOnly": false,
+        "checkedAt": "2026-08-02T17:01:37.221Z"
+      },
+      "stage": "shipped"
     },
     {
       "key": "shirt/collar-frog-mandarin",
@@ -3659,10 +3696,26 @@
       "liveImage": "/images/generated/shirt/cs-round-2btn.webp",
       "shipped": true,
       "shippedPath": "/images/generated/shirt/cs-round-2btn.webp",
-      "shippedBytes": 119800,
-      "shippedSha1": "921bf70025133dab40bceb70d93f85bc140bbcd3",
-      "pipeline": null,
-      "stage": "legacy-shipped-unverified"
+      "shippedBytes": 39342,
+      "shippedSha1": "68117bd6b565ef243c033d6b36738bd6a4ed8bf4",
+      "pipeline": {
+        "dir": ".craft-pipeline/shirt/cs-round-2btn",
+        "have": {
+          "spec": true,
+          "prompt": true,
+          "generation": true,
+          "qc": true
+        },
+        "verdict": "PASS",
+        "attempt": 1,
+        "lowestScore": 99,
+        "belowMin": [],
+        "candidates": 1,
+        "needsReverify": false,
+        "specOnly": false,
+        "checkedAt": "2026-08-02T17:01:37.387Z"
+      },
+      "stage": "shipped"
     },
     {
       "key": "shirt/cs-square",
@@ -7752,10 +7805,26 @@
       "liveImage": "/images/generated/shirt/sleeve-head-regular.webp",
       "shipped": true,
       "shippedPath": "/images/generated/shirt/sleeve-head-regular.webp",
-      "shippedBytes": 53882,
-      "shippedSha1": "6b83a94a1bf8544d3c179b8aed9fe59e747cb084",
-      "pipeline": null,
-      "stage": "legacy-shipped-unverified"
+      "shippedBytes": 23280,
+      "shippedSha1": "f1f1f0f4c40c68bef23769e36b6218e52756d634",
+      "pipeline": {
+        "dir": ".craft-pipeline/shirt/sleeve-head-regular",
+        "have": {
+          "spec": true,
+          "prompt": true,
+          "generation": true,
+          "qc": true
+        },
+        "verdict": "PASS",
+        "attempt": 1,
+        "lowestScore": 98,
+        "belowMin": [],
+        "candidates": 1,
+        "needsReverify": false,
+        "specOnly": false,
+        "checkedAt": "2026-08-02T17:01:37.550Z"
+      },
+      "stage": "shipped"
     },
     {
       "key": "shirt/placket-plain",
@@ -36285,8 +36354,29 @@
       "shippedPath": "/images/generated/jacket/quarter-top.webp",
       "shippedBytes": 200926,
       "shippedSha1": "b3364d0966b8315755a33629eb8e414d54cd6529",
-      "pipeline": null,
-      "stage": "legacy-shipped-unverified"
+      "pipeline": {
+        "dir": ".craft-pipeline/suit-2pc/quarter-top",
+        "have": {
+          "spec": true,
+          "prompt": true,
+          "generation": true,
+          "qc": true
+        },
+        "verdict": "FAIL",
+        "attempt": 1,
+        "lowestScore": 35,
+        "belowMin": [
+          "shape",
+          "geometry",
+          "angles",
+          "blueprint-match"
+        ],
+        "candidates": 1,
+        "needsReverify": false,
+        "specOnly": false,
+        "checkedAt": "2026-08-02T17:03:13.876Z"
+      },
+      "stage": "failed-retry-due"
     },
     {
       "key": "suit-2pc/no-front-pockets",
@@ -36362,11 +36452,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/remote/4017b96761a3__3100.jpg",
-      "liveImage": "/images/generated/jacket/slant-20.webp",
+      "liveImage": "/images/generated/trousers/slant-20.webp",
       "shipped": true,
-      "shippedPath": "/images/generated/jacket/slant-20.webp",
-      "shippedBytes": 173446,
-      "shippedSha1": "b84f2d42739624a5905c7339d6d30df7dbbbee1d",
+      "shippedPath": "/images/generated/trousers/slant-20.webp",
+      "shippedBytes": 166106,
+      "shippedSha1": "30c7b2a647fb76b83862a9a197eb1b82c114b3c9",
       "pipeline": null,
       "stage": "legacy-shipped-unverified"
     },
@@ -36411,8 +36501,29 @@
       "shippedPath": "/images/generated/jacket/welt-pocket.webp",
       "shippedBytes": 177928,
       "shippedSha1": "8e5259217f01e309a4e056e9575c3366b7ef2010",
-      "pipeline": null,
-      "stage": "legacy-shipped-unverified"
+      "pipeline": {
+        "dir": ".craft-pipeline/suit-2pc/welt-pocket",
+        "have": {
+          "spec": true,
+          "prompt": true,
+          "generation": true,
+          "qc": true
+        },
+        "verdict": "FAIL",
+        "attempt": 1,
+        "lowestScore": 40,
+        "belowMin": [
+          "geometry",
+          "angles",
+          "placement",
+          "blueprint-match"
+        ],
+        "candidates": 1,
+        "needsReverify": false,
+        "specOnly": false,
+        "checkedAt": "2026-08-02T17:03:14.032Z"
+      },
+      "stage": "failed-retry-due"
     },
     {
       "key": "suit-2pc/slant-20-stripe",
@@ -36428,11 +36539,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/remote/cac83d873411__3120.jpg",
-      "liveImage": "/images/generated/jacket/slant-20-stripe.webp",
+      "liveImage": "/images/generated/trousers/slant-20-stripe.webp",
       "shipped": true,
-      "shippedPath": "/images/generated/jacket/slant-20-stripe.webp",
-      "shippedBytes": 114440,
-      "shippedSha1": "f4d755940d9637512b744dbae90afd30bac480db",
+      "shippedPath": "/images/generated/trousers/slant-20-stripe.webp",
+      "shippedBytes": 197810,
+      "shippedSha1": "ca4bcd6c5398570d22ca1cf6ebcb3f6b737304be",
       "pipeline": null,
       "stage": "legacy-shipped-unverified"
     },
@@ -36512,11 +36623,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/remote/91eb56a23d7e__3122.jpg",
-      "liveImage": "/images/generated/jacket/slant-51-stripe.webp",
+      "liveImage": "/images/generated/trousers/slant-51-stripe.webp",
       "shipped": true,
-      "shippedPath": "/images/generated/jacket/slant-51-stripe.webp",
-      "shippedBytes": 201168,
-      "shippedSha1": "ac5fc096545065fd0d26966519c2c725bb7459b6",
+      "shippedPath": "/images/generated/trousers/slant-51-stripe.webp",
+      "shippedBytes": 150082,
+      "shippedSha1": "13939220941eb517d3475770244bb9bb2ff11cc8",
       "pipeline": null,
       "stage": "legacy-shipped-unverified"
     },
@@ -36881,8 +36992,28 @@
       "shippedPath": "/images/generated/trousers/pocket-stitch-015.webp",
       "shippedBytes": 251106,
       "shippedSha1": "132cb1bf2406659f6f6c7c3caec195c9d93edacc",
-      "pipeline": null,
-      "stage": "legacy-shipped-unverified"
+      "pipeline": {
+        "dir": ".craft-pipeline/suit-2pc/pocket-stitch-015",
+        "have": {
+          "spec": true,
+          "prompt": true,
+          "generation": true,
+          "qc": true
+        },
+        "verdict": "FAIL",
+        "attempt": 1,
+        "lowestScore": 70,
+        "belowMin": [
+          "dimensions",
+          "construction",
+          "composition"
+        ],
+        "candidates": 1,
+        "needsReverify": false,
+        "specOnly": false,
+        "checkedAt": "2026-08-02T17:03:13.718Z"
+      },
+      "stage": "failed-retry-due"
     },
     {
       "key": "suit-2pc/pocket-stitch-pick-06",
@@ -38668,8 +38799,28 @@
       "shippedPath": "/images/generated/trousers/pleat-no-single-dart.webp",
       "shippedBytes": 119256,
       "shippedSha1": "33cde2fcf8af3f9c8851c73ad1cdb31aa12b324c",
-      "pipeline": null,
-      "stage": "legacy-shipped-unverified"
+      "pipeline": {
+        "dir": ".craft-pipeline/suit-2pc/pleat-no-single-dart",
+        "have": {
+          "spec": true,
+          "prompt": true,
+          "generation": true,
+          "qc": true
+        },
+        "verdict": "FAIL",
+        "attempt": 1,
+        "lowestScore": 84,
+        "belowMin": [
+          "geometry",
+          "construction",
+          "blueprint-match"
+        ],
+        "candidates": 1,
+        "needsReverify": false,
+        "specOnly": false,
+        "checkedAt": "2026-08-02T17:03:13.561Z"
+      },
+      "stage": "failed-retry-due"
     },
     {
       "key": "suit-2pc/pleat-no-double-dart",
@@ -40306,11 +40457,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/remote/6ddcbc615b71__3608.jpg",
-      "liveImage": "/images/blueprints/remote/6ddcbc615b71__3608.jpg",
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/trousers/hem-machine-plain.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/trousers/hem-machine-plain.webp",
+      "shippedBytes": 119532,
+      "shippedSha1": "d75471e14d5d03a6534f32ac962da700da81d63f",
       "pipeline": {
         "dir": ".craft-pipeline/suit-2pc/hem-machine-plain",
         "have": {
@@ -50879,13 +51030,13 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/options/vest/vest-bottom-point.jpg",
-      "liveImage": "/images/options/vest/vest-bottom-point.jpg",
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/vest/vest-bottom-point.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/vest/vest-bottom-point.webp",
+      "shippedBytes": 116112,
+      "shippedSha1": "9af00f9ec9582f0d1020fd8f25e8ff0590ae66bc",
       "pipeline": null,
-      "stage": "not-started"
+      "stage": "legacy-shipped-unverified"
     },
     {
       "key": "suit-3pc/vest-bh-machine",
@@ -51295,13 +51446,29 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/options/vest/lapel-collar-stand.jpg",
-      "liveImage": "/images/generated/jacket/lapel-collar-stand.webp",
+      "liveImage": "/images/generated/suit-3pc/lapel-collar-stand.webp",
       "shipped": true,
-      "shippedPath": "/images/generated/jacket/lapel-collar-stand.webp",
-      "shippedBytes": 197938,
-      "shippedSha1": "fff8a2a8b8f5f4c2ec7f34760a072ee596b617b6",
-      "pipeline": null,
-      "stage": "legacy-shipped-unverified"
+      "shippedPath": "/images/generated/suit-3pc/lapel-collar-stand.webp",
+      "shippedBytes": 271286,
+      "shippedSha1": "0776d9b6e63d41729d1bc9170732fba4bc12858e",
+      "pipeline": {
+        "dir": ".craft-pipeline/suit-3pc/lapel-collar-stand",
+        "have": {
+          "spec": true,
+          "prompt": true,
+          "generation": true,
+          "qc": true
+        },
+        "verdict": "PASS",
+        "attempt": 1,
+        "lowestScore": 98,
+        "belowMin": [],
+        "candidates": 1,
+        "needsReverify": false,
+        "specOnly": false,
+        "checkedAt": "2026-08-02T17:01:37.709Z"
+      },
+      "stage": "shipped"
     },
     {
       "key": "suit-3pc/peak-collar-stand",
@@ -51317,13 +51484,29 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/options/vest/peak-collar-stand.jpg",
-      "liveImage": "/images/generated/jacket/peak-collar-stand.webp",
+      "liveImage": "/images/generated/suit-3pc/peak-collar-stand.webp",
       "shipped": true,
-      "shippedPath": "/images/generated/jacket/peak-collar-stand.webp",
-      "shippedBytes": 186280,
-      "shippedSha1": "e7277bf95fba1240dc080a9c2aaec21a48150a02",
-      "pipeline": null,
-      "stage": "legacy-shipped-unverified"
+      "shippedPath": "/images/generated/suit-3pc/peak-collar-stand.webp",
+      "shippedBytes": 269476,
+      "shippedSha1": "1c0e2f41b80738e58b0efd39652bfcf81b4d70d7",
+      "pipeline": {
+        "dir": ".craft-pipeline/suit-3pc/peak-collar-stand",
+        "have": {
+          "spec": true,
+          "prompt": true,
+          "generation": true,
+          "qc": true
+        },
+        "verdict": "PASS",
+        "attempt": 1,
+        "lowestScore": 98,
+        "belowMin": [],
+        "candidates": 1,
+        "needsReverify": false,
+        "specOnly": false,
+        "checkedAt": "2026-08-02T17:01:37.876Z"
+      },
+      "stage": "shipped"
     },
     {
       "key": "suit-3pc/shawl-collar-stand",
@@ -51339,13 +51522,29 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/options/vest/shawl-collar-stand.jpg",
-      "liveImage": "/images/generated/jacket/shawl-collar-stand.webp",
+      "liveImage": "/images/generated/suit-3pc/shawl-collar-stand.webp",
       "shipped": true,
-      "shippedPath": "/images/generated/jacket/shawl-collar-stand.webp",
-      "shippedBytes": 106452,
-      "shippedSha1": "f61f5867eacd09fe5f2cc9313a0ac4c48d7c9385",
-      "pipeline": null,
-      "stage": "legacy-shipped-unverified"
+      "shippedPath": "/images/generated/suit-3pc/shawl-collar-stand.webp",
+      "shippedBytes": 242344,
+      "shippedSha1": "44faa3967d72e23658f03cdd9d8b6c7f96bbdcab",
+      "pipeline": {
+        "dir": ".craft-pipeline/suit-3pc/shawl-collar-stand",
+        "have": {
+          "spec": true,
+          "prompt": true,
+          "generation": true,
+          "qc": true
+        },
+        "verdict": "PASS",
+        "attempt": 1,
+        "lowestScore": 98,
+        "belowMin": [],
+        "candidates": 1,
+        "needsReverify": false,
+        "specOnly": false,
+        "checkedAt": "2026-08-02T17:01:38.039Z"
+      },
+      "stage": "shipped"
     },
     {
       "key": "suit-3pc/vest-lapel-narrow",
@@ -51843,11 +52042,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/options/vest/vest-chest-both-besom.jpg",
-      "liveImage": "/images/options/vest/vest-chest-both-besom.jpg",
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/vest/vest-chest-both-besom.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/vest/vest-chest-both-besom.webp",
+      "shippedBytes": 187302,
+      "shippedSha1": "c8dce38027f3acb316796dda998136416ab7fd53",
       "pipeline": {
         "dir": ".craft-pipeline/suit-3pc/vest-chest-both-besom",
         "have": {
@@ -54179,11 +54378,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/remote/4017b96761a3__3100.jpg",
-      "liveImage": "/images/generated/jacket/slant-20.webp",
+      "liveImage": "/images/generated/trousers/slant-20.webp",
       "shipped": true,
-      "shippedPath": "/images/generated/jacket/slant-20.webp",
-      "shippedBytes": 173446,
-      "shippedSha1": "b84f2d42739624a5905c7339d6d30df7dbbbee1d",
+      "shippedPath": "/images/generated/trousers/slant-20.webp",
+      "shippedBytes": 166106,
+      "shippedSha1": "30c7b2a647fb76b83862a9a197eb1b82c114b3c9",
       "pipeline": null,
       "stage": "legacy-shipped-unverified"
     },
@@ -54245,11 +54444,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/remote/cac83d873411__3120.jpg",
-      "liveImage": "/images/generated/jacket/slant-20-stripe.webp",
+      "liveImage": "/images/generated/trousers/slant-20-stripe.webp",
       "shipped": true,
-      "shippedPath": "/images/generated/jacket/slant-20-stripe.webp",
-      "shippedBytes": 114440,
-      "shippedSha1": "f4d755940d9637512b744dbae90afd30bac480db",
+      "shippedPath": "/images/generated/trousers/slant-20-stripe.webp",
+      "shippedBytes": 197810,
+      "shippedSha1": "ca4bcd6c5398570d22ca1cf6ebcb3f6b737304be",
       "pipeline": null,
       "stage": "legacy-shipped-unverified"
     },
@@ -54311,11 +54510,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/remote/91eb56a23d7e__3122.jpg",
-      "liveImage": "/images/generated/jacket/slant-51-stripe.webp",
+      "liveImage": "/images/generated/trousers/slant-51-stripe.webp",
       "shipped": true,
-      "shippedPath": "/images/generated/jacket/slant-51-stripe.webp",
-      "shippedBytes": 201168,
-      "shippedSha1": "ac5fc096545065fd0d26966519c2c725bb7459b6",
+      "shippedPath": "/images/generated/trousers/slant-51-stripe.webp",
+      "shippedBytes": 150082,
+      "shippedSha1": "13939220941eb517d3475770244bb9bb2ff11cc8",
       "pipeline": null,
       "stage": "legacy-shipped-unverified"
     },
@@ -57370,13 +57569,13 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/remote/6ddcbc615b71__3608.jpg",
-      "liveImage": "/images/blueprints/remote/6ddcbc615b71__3608.jpg",
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/trousers/hem-machine-plain.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/trousers/hem-machine-plain.webp",
+      "shippedBytes": 119532,
+      "shippedSha1": "d75471e14d5d03a6534f32ac962da700da81d63f",
       "pipeline": null,
-      "stage": "not-started"
+      "stage": "legacy-shipped-unverified"
     },
     {
       "key": "suit-3pc/hem-76",
@@ -59167,10 +59366,26 @@
       "liveImage": "/images/generated/trousers/slant-20.webp",
       "shipped": true,
       "shippedPath": "/images/generated/trousers/slant-20.webp",
-      "shippedBytes": 169012,
-      "shippedSha1": "a46c4cc5b7c4857616847f0645510086d359af6e",
-      "pipeline": null,
-      "stage": "legacy-shipped-unverified"
+      "shippedBytes": 166106,
+      "shippedSha1": "30c7b2a647fb76b83862a9a197eb1b82c114b3c9",
+      "pipeline": {
+        "dir": ".craft-pipeline/trousers/slant-20",
+        "have": {
+          "spec": true,
+          "prompt": true,
+          "generation": true,
+          "qc": true
+        },
+        "verdict": "PASS",
+        "attempt": 1,
+        "lowestScore": 98,
+        "belowMin": [],
+        "candidates": 1,
+        "needsReverify": false,
+        "specOnly": false,
+        "checkedAt": "2026-08-02T17:01:38.529Z"
+      },
+      "stage": "shipped"
     },
     {
       "key": "trousers/slant-51",
@@ -59233,10 +59448,26 @@
       "liveImage": "/images/generated/trousers/slant-20-stripe.webp",
       "shipped": true,
       "shippedPath": "/images/generated/trousers/slant-20-stripe.webp",
-      "shippedBytes": 82900,
-      "shippedSha1": "e526ce127daa4a2541f354084174c0152ff40c6f",
-      "pipeline": null,
-      "stage": "legacy-shipped-unverified"
+      "shippedBytes": 197810,
+      "shippedSha1": "ca4bcd6c5398570d22ca1cf6ebcb3f6b737304be",
+      "pipeline": {
+        "dir": ".craft-pipeline/trousers/slant-20-stripe",
+        "have": {
+          "spec": true,
+          "prompt": true,
+          "generation": true,
+          "qc": true
+        },
+        "verdict": "PASS",
+        "attempt": 1,
+        "lowestScore": 98,
+        "belowMin": [],
+        "candidates": 1,
+        "needsReverify": false,
+        "specOnly": false,
+        "checkedAt": "2026-08-02T17:01:38.367Z"
+      },
+      "stage": "shipped"
     },
     {
       "key": "trousers/slant-25-stripe",
@@ -59315,10 +59546,26 @@
       "liveImage": "/images/generated/trousers/slant-51-stripe.webp",
       "shipped": true,
       "shippedPath": "/images/generated/trousers/slant-51-stripe.webp",
-      "shippedBytes": 158340,
-      "shippedSha1": "d3dd9fd7f47c76c3ab9670d85e675b5e13b7ea28",
-      "pipeline": null,
-      "stage": "legacy-shipped-unverified"
+      "shippedBytes": 150082,
+      "shippedSha1": "13939220941eb517d3475770244bb9bb2ff11cc8",
+      "pipeline": {
+        "dir": ".craft-pipeline/trousers/slant-51-stripe",
+        "have": {
+          "spec": true,
+          "prompt": true,
+          "generation": true,
+          "qc": true
+        },
+        "verdict": "PASS",
+        "attempt": 1,
+        "lowestScore": 98,
+        "belowMin": [],
+        "candidates": 1,
+        "needsReverify": false,
+        "specOnly": false,
+        "checkedAt": "2026-08-02T17:01:38.685Z"
+      },
+      "stage": "shipped"
     },
     {
       "key": "trousers/jeans-square",
@@ -59361,8 +59608,29 @@
       "shippedPath": "/images/generated/trousers/jeans-diamond.webp",
       "shippedBytes": 153572,
       "shippedSha1": "3c40e45a26b4137910be830b78b292212f3b4249",
-      "pipeline": null,
-      "stage": "legacy-shipped-unverified"
+      "pipeline": {
+        "dir": ".craft-pipeline/trousers/jeans-diamond",
+        "have": {
+          "spec": true,
+          "prompt": true,
+          "generation": true,
+          "qc": true
+        },
+        "verdict": "FAIL",
+        "attempt": 1,
+        "lowestScore": 62,
+        "belowMin": [
+          "shape",
+          "geometry",
+          "construction",
+          "blueprint-match"
+        ],
+        "candidates": 1,
+        "needsReverify": false,
+        "specOnly": false,
+        "checkedAt": "2026-08-02T17:03:14.343Z"
+      },
+      "stage": "failed-retry-due"
     },
     {
       "key": "trousers/jeans-arc",
@@ -59383,8 +59651,29 @@
       "shippedPath": "/images/generated/trousers/jeans-arc.webp",
       "shippedBytes": 151604,
       "shippedSha1": "b67ea87e1aa363a0e155cb79669fb8c60489388d",
-      "pipeline": null,
-      "stage": "legacy-shipped-unverified"
+      "pipeline": {
+        "dir": ".craft-pipeline/trousers/jeans-arc",
+        "have": {
+          "spec": true,
+          "prompt": true,
+          "generation": true,
+          "qc": true
+        },
+        "verdict": "FAIL",
+        "attempt": 1,
+        "lowestScore": 62,
+        "belowMin": [
+          "shape",
+          "geometry",
+          "construction",
+          "blueprint-match"
+        ],
+        "candidates": 1,
+        "needsReverify": false,
+        "specOnly": false,
+        "checkedAt": "2026-08-02T17:03:14.188Z"
+      },
+      "stage": "failed-retry-due"
     },
     {
       "key": "trousers/jeans-round",
@@ -59809,8 +60098,28 @@
       "shippedPath": "/images/generated/trousers/watch-right-welt.webp",
       "shippedBytes": 272442,
       "shippedSha1": "6c1b3df9c85b175db7655205c6aede7978379cd5",
-      "pipeline": null,
-      "stage": "legacy-shipped-unverified"
+      "pipeline": {
+        "dir": ".craft-pipeline/trousers/watch-right-welt",
+        "have": {
+          "spec": true,
+          "prompt": true,
+          "generation": true,
+          "qc": true
+        },
+        "verdict": "FAIL",
+        "attempt": 1,
+        "lowestScore": 70,
+        "belowMin": [
+          "shape",
+          "construction",
+          "blueprint-match"
+        ],
+        "candidates": 1,
+        "needsReverify": false,
+        "specOnly": false,
+        "checkedAt": "2026-08-02T17:03:14.674Z"
+      },
+      "stage": "failed-retry-due"
     },
     {
       "key": "trousers/watch-right-besom",
@@ -59831,8 +60140,28 @@
       "shippedPath": "/images/generated/trousers/watch-right-besom.webp",
       "shippedBytes": 171148,
       "shippedSha1": "bef36408c3cba5ef6c1f807d2fb133e8306e1c7f",
-      "pipeline": null,
-      "stage": "legacy-shipped-unverified"
+      "pipeline": {
+        "dir": ".craft-pipeline/trousers/watch-right-besom",
+        "have": {
+          "spec": true,
+          "prompt": true,
+          "generation": true,
+          "qc": true
+        },
+        "verdict": "FAIL",
+        "attempt": 1,
+        "lowestScore": 70,
+        "belowMin": [
+          "shape",
+          "construction",
+          "blueprint-match"
+        ],
+        "candidates": 1,
+        "needsReverify": false,
+        "specOnly": false,
+        "checkedAt": "2026-08-02T17:03:14.508Z"
+      },
+      "stage": "failed-retry-due"
     },
     {
       "key": "trousers/watch-left-besom",
@@ -62825,10 +63154,26 @@
       "liveImage": "/images/generated/trousers/hem-machine-plain.webp",
       "shipped": true,
       "shippedPath": "/images/generated/trousers/hem-machine-plain.webp",
-      "shippedBytes": 192286,
-      "shippedSha1": "69395aec96df5253de803aafad6d8af2eecb1ea6",
-      "pipeline": null,
-      "stage": "legacy-shipped-unverified"
+      "shippedBytes": 119532,
+      "shippedSha1": "d75471e14d5d03a6534f32ac962da700da81d63f",
+      "pipeline": {
+        "dir": ".craft-pipeline/trousers/hem-machine-plain",
+        "have": {
+          "spec": true,
+          "prompt": true,
+          "generation": true,
+          "qc": true
+        },
+        "verdict": "PASS",
+        "attempt": 1,
+        "lowestScore": 99,
+        "belowMin": [],
+        "candidates": 1,
+        "needsReverify": false,
+        "specOnly": false,
+        "checkedAt": "2026-08-02T17:01:38.198Z"
+      },
+      "stage": "shipped"
     },
     {
       "key": "trousers/hem-76",
@@ -64829,10 +65174,26 @@
       "liveImage": "/images/generated/vest/vest-bottom-point.webp",
       "shipped": true,
       "shippedPath": "/images/generated/vest/vest-bottom-point.webp",
-      "shippedBytes": 80992,
-      "shippedSha1": "b728b0167667d672f3f4069da1d12a79d6b8c2fa",
-      "pipeline": null,
-      "stage": "legacy-shipped-unverified"
+      "shippedBytes": 116112,
+      "shippedSha1": "9af00f9ec9582f0d1020fd8f25e8ff0590ae66bc",
+      "pipeline": {
+        "dir": ".craft-pipeline/vest/vest-bottom-point",
+        "have": {
+          "spec": true,
+          "prompt": true,
+          "generation": true,
+          "qc": true
+        },
+        "verdict": "PASS",
+        "attempt": 1,
+        "lowestScore": 98,
+        "belowMin": [],
+        "candidates": 1,
+        "needsReverify": false,
+        "specOnly": false,
+        "checkedAt": "2026-08-02T17:01:38.838Z"
+      },
+      "stage": "shipped"
     },
     {
       "key": "vest/vest-bh-machine",
@@ -65210,11 +65571,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/options/vest/lapel-collar-stand.jpg",
-      "liveImage": "/images/generated/vest/lapel-collar-stand.webp",
+      "liveImage": "/images/generated/suit-3pc/lapel-collar-stand.webp",
       "shipped": true,
-      "shippedPath": "/images/generated/vest/lapel-collar-stand.webp",
-      "shippedBytes": 197938,
-      "shippedSha1": "fff8a2a8b8f5f4c2ec7f34760a072ee596b617b6",
+      "shippedPath": "/images/generated/suit-3pc/lapel-collar-stand.webp",
+      "shippedBytes": 271286,
+      "shippedSha1": "0776d9b6e63d41729d1bc9170732fba4bc12858e",
       "pipeline": null,
       "stage": "legacy-shipped-unverified"
     },
@@ -65232,11 +65593,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/options/vest/peak-collar-stand.jpg",
-      "liveImage": "/images/generated/vest/peak-collar-stand.webp",
+      "liveImage": "/images/generated/suit-3pc/peak-collar-stand.webp",
       "shipped": true,
-      "shippedPath": "/images/generated/vest/peak-collar-stand.webp",
-      "shippedBytes": 186280,
-      "shippedSha1": "e7277bf95fba1240dc080a9c2aaec21a48150a02",
+      "shippedPath": "/images/generated/suit-3pc/peak-collar-stand.webp",
+      "shippedBytes": 269476,
+      "shippedSha1": "1c0e2f41b80738e58b0efd39652bfcf81b4d70d7",
       "pipeline": null,
       "stage": "legacy-shipped-unverified"
     },
@@ -65254,11 +65615,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/options/vest/shawl-collar-stand.jpg",
-      "liveImage": "/images/generated/vest/shawl-collar-stand.webp",
+      "liveImage": "/images/generated/suit-3pc/shawl-collar-stand.webp",
       "shipped": true,
-      "shippedPath": "/images/generated/vest/shawl-collar-stand.webp",
-      "shippedBytes": 106452,
-      "shippedSha1": "f61f5867eacd09fe5f2cc9313a0ac4c48d7c9385",
+      "shippedPath": "/images/generated/suit-3pc/shawl-collar-stand.webp",
+      "shippedBytes": 242344,
+      "shippedSha1": "44faa3967d72e23658f03cdd9d8b6c7f96bbdcab",
       "pipeline": null,
       "stage": "legacy-shipped-unverified"
     },
@@ -65644,13 +66005,29 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/options/vest/vest-chest-besom-flap.jpg",
-      "liveImage": "/images/generated/vest/vest-chest-besom-flap.webp",
+      "liveImage": "/images/generated/suit-3pc/vest-chest-besom-flap.webp",
       "shipped": true,
-      "shippedPath": "/images/generated/vest/vest-chest-besom-flap.webp",
-      "shippedBytes": 130922,
-      "shippedSha1": "fffb1054c42cd0ef73c75c754d7ea99ed6921071",
-      "pipeline": null,
-      "stage": "legacy-shipped-unverified"
+      "shippedPath": "/images/generated/suit-3pc/vest-chest-besom-flap.webp",
+      "shippedBytes": 268356,
+      "shippedSha1": "40afa7113ddad1cc114c9864b241f6218eaf719d",
+      "pipeline": {
+        "dir": ".craft-pipeline/vest/vest-chest-besom-flap",
+        "have": {
+          "spec": true,
+          "prompt": true,
+          "generation": true,
+          "qc": true
+        },
+        "verdict": "PASS",
+        "attempt": 1,
+        "lowestScore": 98,
+        "belowMin": [],
+        "candidates": 1,
+        "needsReverify": false,
+        "specOnly": false,
+        "checkedAt": "2026-08-02T17:01:39.000Z"
+      },
+      "stage": "shipped"
     },
     {
       "key": "vest/vest-chest-left-patch",
@@ -65688,13 +66065,29 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/options/vest/vest-chest-both-welt.jpg",
-      "liveImage": "/images/generated/vest/vest-chest-both-welt.webp",
+      "liveImage": "/images/generated/suit-3pc/vest-chest-both-welt.webp",
       "shipped": true,
-      "shippedPath": "/images/generated/vest/vest-chest-both-welt.webp",
-      "shippedBytes": 283398,
-      "shippedSha1": "c69516feb907279fcfc4e2e87818e8ff4e2f5278",
-      "pipeline": null,
-      "stage": "legacy-shipped-unverified"
+      "shippedPath": "/images/generated/suit-3pc/vest-chest-both-welt.webp",
+      "shippedBytes": 144624,
+      "shippedSha1": "e8046b081819b4041658068e00256cc58b59ee66",
+      "pipeline": {
+        "dir": ".craft-pipeline/vest/vest-chest-both-welt",
+        "have": {
+          "spec": true,
+          "prompt": true,
+          "generation": true,
+          "qc": true
+        },
+        "verdict": "PASS",
+        "attempt": 1,
+        "lowestScore": 98,
+        "belowMin": [],
+        "candidates": 1,
+        "needsReverify": false,
+        "specOnly": false,
+        "checkedAt": "2026-08-02T17:01:39.494Z"
+      },
+      "stage": "shipped"
     },
     {
       "key": "vest/vest-chest-both-besom",
@@ -65713,10 +66106,26 @@
       "liveImage": "/images/generated/vest/vest-chest-both-besom.webp",
       "shipped": true,
       "shippedPath": "/images/generated/vest/vest-chest-both-besom.webp",
-      "shippedBytes": 155508,
-      "shippedSha1": "ab1eaf633648a54703f68c48031ab5a58bdd4ba5",
-      "pipeline": null,
-      "stage": "legacy-shipped-unverified"
+      "shippedBytes": 187302,
+      "shippedSha1": "c8dce38027f3acb316796dda998136416ab7fd53",
+      "pipeline": {
+        "dir": ".craft-pipeline/vest/vest-chest-both-besom",
+        "have": {
+          "spec": true,
+          "prompt": true,
+          "generation": true,
+          "qc": true
+        },
+        "verdict": "PASS",
+        "attempt": 1,
+        "lowestScore": 99,
+        "belowMin": [],
+        "candidates": 1,
+        "needsReverify": false,
+        "specOnly": false,
+        "checkedAt": "2026-08-02T17:01:39.343Z"
+      },
+      "stage": "shipped"
     },
     {
       "key": "vest/vest-chest-both-besom-flap",
@@ -65732,13 +66141,29 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/options/vest/vest-chest-both-besom-flap.jpg",
-      "liveImage": "/images/generated/vest/vest-chest-both-besom-flap.webp",
+      "liveImage": "/images/generated/suit-3pc/vest-chest-both-besom-flap.webp",
       "shipped": true,
-      "shippedPath": "/images/generated/vest/vest-chest-both-besom-flap.webp",
-      "shippedBytes": 111470,
-      "shippedSha1": "02418c230904ae0df73307ff968fe73fe34d761f",
-      "pipeline": null,
-      "stage": "legacy-shipped-unverified"
+      "shippedPath": "/images/generated/suit-3pc/vest-chest-both-besom-flap.webp",
+      "shippedBytes": 57988,
+      "shippedSha1": "709d4d3f677b35bb0965a2a8c5c95c39d05e8acc",
+      "pipeline": {
+        "dir": ".craft-pipeline/vest/vest-chest-both-besom-flap",
+        "have": {
+          "spec": true,
+          "prompt": true,
+          "generation": true,
+          "qc": true
+        },
+        "verdict": "PASS",
+        "attempt": 1,
+        "lowestScore": 99,
+        "belowMin": [],
+        "candidates": 1,
+        "needsReverify": false,
+        "specOnly": false,
+        "checkedAt": "2026-08-02T17:01:39.159Z"
+      },
+      "stage": "shipped"
     },
     {
       "key": "vest/vest-chest-both-patch",

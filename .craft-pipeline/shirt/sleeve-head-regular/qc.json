@@ -1,0 +1,28 @@
+{
+  "addr": "shirt > sleeve-head-regular",
+  "productId": "shirt",
+  "optionId": "sleeve-head-regular",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 99,
+    "geometry": 99,
+    "dimensions": 99,
+    "angles": 99,
+    "construction": 99,
+    "placement": 99,
+    "symmetry": 99,
+    "composition": 98,
+    "blueprint-match": 99
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "notes": "Focus correction worked. build_prompt had emitted shirt-front framing and placket geometry tokens for a sleeve-head option, which is the likely cause of the original WRONG grading; the corrected prompt reframed to the shoulder. The result shows a plain set-in cap seated on the natural shoulder point, smooth and unroped, with no gathering or padding and the seam running as a straight gentle downward slope. The bilateral red marker line was correctly read as notation and not rendered.",
+  "checkedAt": "2026-08-02T17:01:37.550Z"
+}

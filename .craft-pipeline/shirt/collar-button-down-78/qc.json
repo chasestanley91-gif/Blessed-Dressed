@@ -1,0 +1,37 @@
+{
+  "addr": "shirt > collar-button-down-78",
+  "productId": "shirt",
+  "optionId": "collar-button-down-78",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 99,
+    "geometry": 99,
+    "dimensions": 99,
+    "angles": 98,
+    "construction": 99,
+    "placement": 99,
+    "symmetry": 99,
+    "composition": 99,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "Collar is shown closed at the throat; the prompt asked for the top button open.",
+      "expected": "top button open, no tie",
+      "actual": "collar closed at the throat",
+      "correction": "Open the top button so the band and the roll under the anchored points are fully exposed."
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "notes": "SPEC LOCK honoured. Both collar points are anchored by their own button roughly 1.5 cm back from the tip, with a worked buttonhole in the point, and each point lifts into a soft rolling wave between band and tip. Point spread reads about 90 degrees as dimensioned. The band is a normal height rather than the 7.8 cm the mislabelled catalog text implies - 7.8 cm is the point length. No blue leader lines or numerals bled through from the drawing.",
+  "checkedAt": "2026-08-02T17:01:37.221Z"
+}

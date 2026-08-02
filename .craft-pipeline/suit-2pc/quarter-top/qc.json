@@ -1,0 +1,68 @@
+{
+  "addr": "suit-2pc > quarter-top",
+  "productId": "suit-2pc",
+  "optionId": "quarter-top",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 50,
+    "geometry": 45,
+    "dimensions": 99,
+    "angles": 35,
+    "construction": 99,
+    "placement": 99,
+    "symmetry": 99,
+    "composition": 99,
+    "blueprint-match": 40
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "angles",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "shape",
+    "geometry",
+    "angles",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "critical",
+      "category": "angles",
+      "description": "The pocket mouth was rendered near-horizontal. A zoomed three-way comparison of the drawings (quarter-top 3104, slant-20 3100, slant-51-stripe 3122) shows all three draw a NEAR-VERTICAL mouth running from the waistband seam down and outward to the side seam; the horizontal rectangle visible in every one of those croquis is an unmarked back pocket, not the front pocket.",
+      "expected": "near-vertical mouth, waistband seam to side seam, about 2.5 cm of forward offset - slightly more raked than the 2.0 cm sibling and clearly less than the 5.1 cm one",
+      "actual": "near-horizontal frogmouth-style opening high on the hip",
+      "correction": "Shoot per the drawing, matching slant-20 and slant-51-stripe: near-vertical mouth from the waistband seam to the side seam with about 2.5 cm of forward travel. Explicitly warn that the horizontal rectangle in the croquis is a back pocket and is not the option."
+    }
+  ],
+  "verdict": "FAIL",
+  "waiver": null,
+  "correction": {
+    "errors": [
+      {
+        "severity": "critical",
+        "category": "angles",
+        "error": "The pocket mouth was rendered near-horizontal. A zoomed three-way comparison of the drawings (quarter-top 3104, slant-20 3100, slant-51-stripe 3122) shows all three draw a NEAR-VERTICAL mouth running from the waistband seam down and outward to the side seam; the horizontal rectangle visible in every one of those croquis is an unmarked back pocket, not the front pocket.",
+        "expected": "near-vertical mouth, waistband seam to side seam, about 2.5 cm of forward offset - slightly more raked than the 2.0 cm sibling and clearly less than the 5.1 cm one",
+        "actual": "near-horizontal frogmouth-style opening high on the hip",
+        "correction": "Shoot per the drawing, matching slant-20 and slant-51-stripe: near-vertical mouth from the waistband seam to the side seam with about 2.5 cm of forward travel. Explicitly warn that the horizontal rectangle in the croquis is a back pocket and is not the option."
+      }
+    ],
+    "lockedFeatures": [
+      "fine wool trouser cloth",
+      "three-quarter-front hip framing",
+      "seamless light-grey studio background"
+    ],
+    "forbiddenChanges": [
+      "do not alter any checklist item this attempt already passed",
+      "do not change the camera crop, composition, or accessories unless the error is itself a composition error",
+      "do not change the garment part, orientation, or any other option's geometry"
+    ]
+  },
+  "notes": "This spend is directly attributable to the superseded near-horizontal spec lock, applied before the slant-family reversal was established. The reversal and its pixel evidence are recorded in data-store/drafting-specs/spec-conflicts.log.md; this option was generated under the old reading and is retried under the new one.",
+  "checkedAt": "2026-08-02T17:03:13.876Z"
+}

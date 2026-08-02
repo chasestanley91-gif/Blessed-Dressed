@@ -1,0 +1,66 @@
+{
+  "addr": "suit-2pc > pleat-no-single-dart",
+  "productId": "suit-2pc",
+  "optionId": "pleat-no-single-dart",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 99,
+    "geometry": 88,
+    "dimensions": 99,
+    "angles": 99,
+    "construction": 84,
+    "placement": 99,
+    "symmetry": 99,
+    "composition": 99,
+    "blueprint-match": 88
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "geometry",
+    "construction",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "geometry",
+    "construction",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "major",
+      "category": "construction",
+      "description": "The darts are not distinguishable from the pressed leg creases. The drawing marks one short tapering dart per front panel, beginning at the waistband seam directly under a belt loop and dying out about a quarter of the way down the hip, with the leg crease starting separately much lower. In the render the vertical lines run continuously from the waistband down the leg, so no dart is readable as a distinct feature.",
+      "expected": "two short darts, one per front panel, clearly terminating high on the hip with a visible gap before the crease begins",
+      "actual": "continuous crease lines from waistband to hem; no separately readable dart",
+      "correction": "Render each dart as a stitched, slightly puckered seam with a visible taper that stops dead about a quarter down the hip, and start the pressed crease well below where the dart ends so a clear unbroken span of plain cloth separates them. Light across the darts so each throws its own shadow."
+    }
+  ],
+  "verdict": "FAIL",
+  "waiver": null,
+  "correction": {
+    "errors": [
+      {
+        "severity": "major",
+        "category": "construction",
+        "error": "The darts are not distinguishable from the pressed leg creases. The drawing marks one short tapering dart per front panel, beginning at the waistband seam directly under a belt loop and dying out about a quarter of the way down the hip, with the leg crease starting separately much lower. In the render the vertical lines run continuously from the waistband down the leg, so no dart is readable as a distinct feature.",
+        "expected": "two short darts, one per front panel, clearly terminating high on the hip with a visible gap before the crease begins",
+        "actual": "continuous crease lines from waistband to hem; no separately readable dart",
+        "correction": "Render each dart as a stitched, slightly puckered seam with a visible taper that stops dead about a quarter down the hip, and start the pressed crease well below where the dart ends so a clear unbroken span of plain cloth separates them. Light across the darts so each throws its own shadow."
+      }
+    ],
+    "lockedFeatures": [
+      "fine wool trouser cloth",
+      "waistband-to-knee front framing",
+      "seamless light-grey studio background"
+    ],
+    "forbiddenChanges": [
+      "do not alter any checklist item this attempt already passed",
+      "do not change the camera crop, composition, or accessories unless the error is itself a composition error",
+      "do not change the garment part, orientation, or any other option's geometry"
+    ]
+  },
+  "notes": "The flat front is proved correctly - no pleat anywhere. The failure is only on the dart, which is the discriminator against the no-dart sibling.",
+  "checkedAt": "2026-08-02T17:03:13.561Z"
+}

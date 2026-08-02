@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-02T15:44:47.538Z",
+  "at": "2026-08-02T17:03:37.525Z",
   "settings": {
     "maxWidth": 1400,
     "quality": 82,
@@ -7,30 +7,184 @@
   },
   "applied": true,
   "counts": {
-    "masters": 778,
-    "converted": 1,
-    "skipped": 777,
+    "masters": 781,
+    "converted": 15,
+    "skipped": 766,
     "failed": 0,
     "repointed": 0
   },
   "bytes": {
-    "before": 2054254,
-    "after": 159996,
-    "savedPct": 92.2
+    "before": 31398115,
+    "after": 2411582,
+    "savedPct": 92.3
   },
   "note": "targetSha1 is the derivative; sourceSha1 is the PNG master QC graded. The master and publish_approved.mjs byte-identity gate are untouched.",
   "results": {
     "ok": [
       {
-        "master": "public\\images\\generated\\suit-2pc\\back-left-welt.png",
-        "masterBytes": 2054254,
-        "sourceSha1": "5db311dec8f7d7639739c0be6f6ffcc01127e419",
-        "target": "public\\images\\generated\\suit-2pc\\back-left-welt.webp",
-        "targetBytes": 159996,
-        "targetSha1": "07ba539444213d1a8a11b7ccd6f764b1a1794349",
+        "master": "public\\images\\generated\\shirt\\collar-button-down-78.png",
+        "masterBytes": 1406840,
+        "sourceSha1": "d568a4b290a363207465568fce12b4076229c60b",
+        "target": "public\\images\\generated\\shirt\\collar-button-down-78.webp",
+        "targetBytes": 32180,
+        "targetSha1": "e3b3d8bbb034ff8f532e310146cd4dbff6f3d299",
         "quality": 82,
         "width": 1400,
-        "web": "/images/generated/suit-2pc/back-left-welt.webp"
+        "web": "/images/generated/shirt/collar-button-down-78.webp"
+      },
+      {
+        "master": "public\\images\\generated\\shirt\\cs-round-2btn.png",
+        "masterBytes": 1436540,
+        "sourceSha1": "6019577d4575887d23f52076d78ae3a9348795f1",
+        "target": "public\\images\\generated\\shirt\\cs-round-2btn.webp",
+        "targetBytes": 39342,
+        "targetSha1": "68117bd6b565ef243c033d6b36738bd6a4ed8bf4",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/shirt/cs-round-2btn.webp"
+      },
+      {
+        "master": "public\\images\\generated\\shirt\\sleeve-head-regular.png",
+        "masterBytes": 1270011,
+        "sourceSha1": "7f604f62f4f294b8d734213da1d7e5b4f1a48193",
+        "target": "public\\images\\generated\\shirt\\sleeve-head-regular.webp",
+        "targetBytes": 23280,
+        "targetSha1": "f1f1f0f4c40c68bef23769e36b6218e52756d634",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/shirt/sleeve-head-regular.webp"
+      },
+      {
+        "master": "public\\images\\generated\\suit-3pc\\lapel-collar-stand.png",
+        "masterBytes": 2736851,
+        "sourceSha1": "b952ab44d7b207ad704ffd0f895f0386f6bc1bdc",
+        "target": "public\\images\\generated\\suit-3pc\\lapel-collar-stand.webp",
+        "targetBytes": 271286,
+        "targetSha1": "0776d9b6e63d41729d1bc9170732fba4bc12858e",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/suit-3pc/lapel-collar-stand.webp"
+      },
+      {
+        "master": "public\\images\\generated\\suit-3pc\\peak-collar-stand.png",
+        "masterBytes": 2676971,
+        "sourceSha1": "e330879064fd2df56461875b479f841af7dc88ec",
+        "target": "public\\images\\generated\\suit-3pc\\peak-collar-stand.webp",
+        "targetBytes": 269476,
+        "targetSha1": "1c0e2f41b80738e58b0efd39652bfcf81b4d70d7",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/suit-3pc/peak-collar-stand.webp"
+      },
+      {
+        "master": "public\\images\\generated\\suit-3pc\\shawl-collar-stand.png",
+        "masterBytes": 2503403,
+        "sourceSha1": "b2ffbb7e0bad98dcbb9c25d0de5a56d8558029f6",
+        "target": "public\\images\\generated\\suit-3pc\\shawl-collar-stand.webp",
+        "targetBytes": 242344,
+        "targetSha1": "44faa3967d72e23658f03cdd9d8b6c7f96bbdcab",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/suit-3pc/shawl-collar-stand.webp"
+      },
+      {
+        "master": "public\\images\\generated\\trousers\\hem-machine-plain.png",
+        "masterBytes": 1782410,
+        "sourceSha1": "e6c69141ef36b1cc7d3afc04d96733a76ecf723d",
+        "target": "public\\images\\generated\\trousers\\hem-machine-plain.webp",
+        "targetBytes": 119532,
+        "targetSha1": "d75471e14d5d03a6534f32ac962da700da81d63f",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/trousers/hem-machine-plain.webp"
+      },
+      {
+        "master": "public\\images\\generated\\trousers\\slant-20-stripe.png",
+        "masterBytes": 2236193,
+        "sourceSha1": "409acb92b4fc4cdc2f4ab269a570e2776f5d6b3c",
+        "target": "public\\images\\generated\\trousers\\slant-20-stripe.webp",
+        "targetBytes": 197810,
+        "targetSha1": "ca4bcd6c5398570d22ca1cf6ebcb3f6b737304be",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/trousers/slant-20-stripe.webp"
+      },
+      {
+        "master": "public\\images\\generated\\trousers\\slant-20.png",
+        "masterBytes": 2137118,
+        "sourceSha1": "3d35ce777e5b972a6eacb13db3ad864a716a4910",
+        "target": "public\\images\\generated\\trousers\\slant-20.webp",
+        "targetBytes": 166106,
+        "targetSha1": "30c7b2a647fb76b83862a9a197eb1b82c114b3c9",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/trousers/slant-20.webp"
+      },
+      {
+        "master": "public\\images\\generated\\trousers\\slant-51-stripe.png",
+        "masterBytes": 2030059,
+        "sourceSha1": "0b85f7581b17390ce912c0cef74bf1f3d0776322",
+        "target": "public\\images\\generated\\trousers\\slant-51-stripe.webp",
+        "targetBytes": 150082,
+        "targetSha1": "13939220941eb517d3475770244bb9bb2ff11cc8",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/trousers/slant-51-stripe.webp"
+      },
+      {
+        "master": "public\\images\\generated\\vest\\vest-bottom-point.png",
+        "masterBytes": 1927993,
+        "sourceSha1": "f90c911974bc48f9d4fea6ddf1a4b9efdf410e4d",
+        "target": "public\\images\\generated\\vest\\vest-bottom-point.webp",
+        "targetBytes": 116112,
+        "targetSha1": "9af00f9ec9582f0d1020fd8f25e8ff0590ae66bc",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/vest/vest-bottom-point.webp"
+      },
+      {
+        "master": "public\\images\\generated\\vest\\vest-chest-besom-flap.png",
+        "masterBytes": 2363815,
+        "sourceSha1": "10a2e35e0c4f1f519e8a52ed716ce925cfade44d",
+        "target": "public\\images\\generated\\vest\\vest-chest-besom-flap.webp",
+        "targetBytes": 205838,
+        "targetSha1": "084bf5eae7b44dcbf76406d4e2c8791293ac94de",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/vest/vest-chest-besom-flap.webp"
+      },
+      {
+        "master": "public\\images\\generated\\vest\\vest-chest-both-besom-flap.png",
+        "masterBytes": 2385890,
+        "sourceSha1": "e3a8b4695c0696fc863eff2f3b4337cfe0ba3dcf",
+        "target": "public\\images\\generated\\vest\\vest-chest-both-besom-flap.webp",
+        "targetBytes": 197190,
+        "targetSha1": "f86ed146b0985683e91f7f904eef7a76d7c7c137",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/vest/vest-chest-both-besom-flap.webp"
+      },
+      {
+        "master": "public\\images\\generated\\vest\\vest-chest-both-besom.png",
+        "masterBytes": 2188781,
+        "sourceSha1": "2a98f97794dc59e159469edab8435eb36ec98356",
+        "target": "public\\images\\generated\\vest\\vest-chest-both-besom.webp",
+        "targetBytes": 187302,
+        "targetSha1": "c8dce38027f3acb316796dda998136416ab7fd53",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/vest/vest-chest-both-besom.webp"
+      },
+      {
+        "master": "public\\images\\generated\\vest\\vest-chest-both-welt.png",
+        "masterBytes": 2315240,
+        "sourceSha1": "2727c749f202582ae81199036dd207aedc75142d",
+        "target": "public\\images\\generated\\vest\\vest-chest-both-welt.webp",
+        "targetBytes": 193702,
+        "targetSha1": "171867433987ee6f8f11c16bae74350dca9acdd7",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/vest/vest-chest-both-welt.webp"
       }
     ],
     "skipped": [
@@ -1043,10 +1197,6 @@
         "reason": "derivative up to date"
       },
       {
-        "master": "public\\images\\generated\\shirt\\collar-button-down-78.png",
-        "reason": "derivative up to date"
-      },
-      {
         "master": "public\\images\\generated\\shirt\\collar-cuban.png",
         "reason": "derivative up to date"
       },
@@ -1283,10 +1433,6 @@
         "reason": "derivative up to date"
       },
       {
-        "master": "public\\images\\generated\\shirt\\cs-round-2btn.png",
-        "reason": "derivative up to date"
-      },
-      {
         "master": "public\\images\\generated\\shirt\\cs-round-v2.png",
         "reason": "derivative up to date"
       },
@@ -1384,10 +1530,6 @@
       },
       {
         "master": "public\\images\\generated\\shirt\\pw-40.png",
-        "reason": "derivative up to date"
-      },
-      {
-        "master": "public\\images\\generated\\shirt\\sleeve-head-regular.png",
         "reason": "derivative up to date"
       },
       {
@@ -1656,6 +1798,10 @@
       },
       {
         "master": "public\\images\\generated\\suit-2pc\\back-left-patch.png",
+        "reason": "derivative up to date"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\back-left-welt.png",
         "reason": "derivative up to date"
       },
       {
@@ -2499,10 +2645,6 @@
         "reason": "derivative up to date"
       },
       {
-        "master": "public\\images\\generated\\trousers\\hem-machine-plain.png",
-        "reason": "derivative up to date"
-      },
-      {
         "master": "public\\images\\generated\\trousers\\hem-no-cuff.png",
         "reason": "derivative up to date"
       },
@@ -2679,23 +2821,11 @@
         "reason": "derivative up to date"
       },
       {
-        "master": "public\\images\\generated\\trousers\\slant-20-stripe.png",
-        "reason": "derivative up to date"
-      },
-      {
-        "master": "public\\images\\generated\\trousers\\slant-20.png",
-        "reason": "derivative up to date"
-      },
-      {
         "master": "public\\images\\generated\\trousers\\slant-25-stripe.png",
         "reason": "derivative up to date"
       },
       {
         "master": "public\\images\\generated\\trousers\\slant-32-stripe.png",
-        "reason": "derivative up to date"
-      },
-      {
-        "master": "public\\images\\generated\\trousers\\slant-51-stripe.png",
         "reason": "derivative up to date"
       },
       {
@@ -2883,10 +3013,6 @@
         "reason": "derivative up to date"
       },
       {
-        "master": "public\\images\\generated\\vest\\vest-bottom-point.png",
-        "reason": "derivative up to date"
-      },
-      {
         "master": "public\\images\\generated\\vest\\vest-bottom-regular.png",
         "reason": "derivative up to date"
       },
@@ -2923,23 +3049,7 @@
         "reason": "derivative up to date"
       },
       {
-        "master": "public\\images\\generated\\vest\\vest-chest-besom-flap.png",
-        "reason": "derivative up to date"
-      },
-      {
-        "master": "public\\images\\generated\\vest\\vest-chest-both-besom-flap.png",
-        "reason": "derivative up to date"
-      },
-      {
-        "master": "public\\images\\generated\\vest\\vest-chest-both-besom.png",
-        "reason": "derivative up to date"
-      },
-      {
         "master": "public\\images\\generated\\vest\\vest-chest-both-patch.png",
-        "reason": "derivative up to date"
-      },
-      {
-        "master": "public\\images\\generated\\vest\\vest-chest-both-welt.png",
         "reason": "derivative up to date"
       },
       {

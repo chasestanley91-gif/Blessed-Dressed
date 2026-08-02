@@ -1,0 +1,37 @@
+{
+  "addr": "trousers > slant-51-stripe",
+  "productId": "trousers",
+  "optionId": "slant-51-stripe",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 99,
+    "geometry": 99,
+    "dimensions": 99,
+    "angles": 98,
+    "construction": 98,
+    "placement": 99,
+    "symmetry": 99,
+    "composition": 99,
+    "blueprint-match": 99
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "construction",
+      "description": "The contrast stripe is navy on navy and reads mainly by sheen, whereas the 2.0 cm stripe sibling used a high-contrast cream stripe, so the two stripe options are not styled consistently with each other.",
+      "expected": "a stripe legible at a glance and consistent with the sibling stripe option",
+      "actual": "tonal navy stripe - legible, but subtle",
+      "correction": "Fix one stripe treatment and apply it to both stripe options."
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "notes": "Mouth angle matches the drawn 24 degrees off vertical, roughly 2.6 times the forward travel of the 2.0 cm member, which is exactly the ratio measured in the drawings. The arrowhead annotation at the lower end of the red stroke was correctly not rendered.",
+  "checkedAt": "2026-08-02T17:01:38.685Z"
+}

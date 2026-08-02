@@ -1,0 +1,68 @@
+{
+  "addr": "trousers > jeans-arc",
+  "productId": "trousers",
+  "optionId": "jeans-arc",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 62,
+    "geometry": 65,
+    "dimensions": 99,
+    "angles": 99,
+    "construction": 70,
+    "placement": 99,
+    "symmetry": 99,
+    "composition": 99,
+    "blueprint-match": 64
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "construction",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "shape",
+    "geometry",
+    "construction",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "major",
+      "category": "shape",
+      "description": "MATCHED PAIR GATE FAILURE. The arc and diamond photographs are effectively indistinguishable: both render a plain straight horizontal welt opening. None of the three drawn discriminators survived - the short vertical leg dropping from the waistband, the smooth rounded elbow at the side seam, and the parallel topstitch line just inside the band.",
+      "expected": "an L-shaped mouth: a short vertical leg under the belt loop, a small-radius squared corner, a near-level run, then a smooth ROUNDED turn down at the seam, with a parallel topstitch line inside the band",
+      "actual": "a plain straight horizontal welt pocket with no vertical leg, no rounded elbow and no topstitch",
+      "correction": "Describe the mouth as an explicit vertex path with the corner radii named, and require the topstitch to be visible as a separate parallel line. Shoot arc and diamond as a pair and reject unless the rounded-versus-angular elbow and the presence-versus-absence of the topstitch are both readable."
+    }
+  ],
+  "verdict": "FAIL",
+  "waiver": null,
+  "correction": {
+    "errors": [
+      {
+        "severity": "major",
+        "category": "shape",
+        "error": "MATCHED PAIR GATE FAILURE. The arc and diamond photographs are effectively indistinguishable: both render a plain straight horizontal welt opening. None of the three drawn discriminators survived - the short vertical leg dropping from the waistband, the smooth rounded elbow at the side seam, and the parallel topstitch line just inside the band.",
+        "expected": "an L-shaped mouth: a short vertical leg under the belt loop, a small-radius squared corner, a near-level run, then a smooth ROUNDED turn down at the seam, with a parallel topstitch line inside the band",
+        "actual": "a plain straight horizontal welt pocket with no vertical leg, no rounded elbow and no topstitch",
+        "correction": "Describe the mouth as an explicit vertex path with the corner radii named, and require the topstitch to be visible as a separate parallel line. Shoot arc and diamond as a pair and reject unless the rounded-versus-angular elbow and the presence-versus-absence of the topstitch are both readable."
+      }
+    ],
+    "lockedFeatures": [
+      "fine wool trouser cloth",
+      "three-quarter-front hip framing",
+      "seamless light-grey studio background"
+    ],
+    "forbiddenChanges": [
+      "do not alter any checklist item this attempt already passed",
+      "do not change the camera crop, composition, or accessories unless the error is itself a composition error",
+      "do not change the garment part, orientation, or any other option's geometry"
+    ]
+  },
+  "notes": "Graded as a set with trousers/jeans-diamond. Per the ladder rule, neither member ships unless the pair separates.",
+  "checkedAt": "2026-08-02T17:03:14.188Z"
+}

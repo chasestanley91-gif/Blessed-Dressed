@@ -1,0 +1,37 @@
+{
+  "addr": "suit-3pc > lapel-collar-stand",
+  "productId": "suit-3pc",
+  "optionId": "lapel-collar-stand",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 99,
+    "geometry": 99,
+    "dimensions": 99,
+    "angles": 99,
+    "construction": 99,
+    "placement": 99,
+    "symmetry": 99,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "Set consistency: the three collar-stand siblings were shot on different cloth and different underlayers (notch = charcoal over bare skin, peak = navy over a navy shirt, shawl = navy over bare skin) despite a MATCHED SET LOCK in each prompt. This one is the notch member.",
+      "expected": "identical cloth, underlayer, subject distance and framing across notch/peak/shawl",
+      "actual": "three visibly different garments",
+      "correction": "On any re-shoot, fix one cloth and one underlayer across all three members."
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "notes": "Notch reads correctly: squared collar-leaf point, blunt square-cut lapel corner, an open wedge gap between them, deep V, one button at the base. Distinguishable at a glance from both siblings, which is the bar for a SHAPE family - members differ by shape rather than by a measurement, so no blind-ordering ladder gate applies.",
+  "checkedAt": "2026-08-02T17:01:37.709Z"
+}
