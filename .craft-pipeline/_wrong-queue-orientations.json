@@ -1,0 +1,216 @@
+{
+ "generatedAt": "2026-08-02T16:18:31.493Z",
+ "runId": "wf_3e3ceff6-8db",
+ "rows": [
+  {
+   "key": "shirt/collar-button-down-78",
+   "orientation": "front",
+   "isRealDrawing": true,
+   "discriminator": "A two-piece turndown collar drawn straight-on with the included angle between the two collar-point tips dimensioned at exactly 90.00 degrees, and both points lying loose and unfastened against the shirt front.",
+   "drawnNotes": "One dimension only: a blue \"90.00°\" text with two blue leader lines/arrowheads landing on the tip of each collar point, measuring the spread angle between the points. A single small open circle in the collar V is the top placket button. CONTRADICTS THE LABEL TWICE: (1) no button and no buttonhole is drawn at either collar point, so the drawing does not depict a button-down collar at all — the points are free; (2) there is no 7/8 cm (or any) stand-height callout — the only measurement present is a spread angle, not a stand. Also filed under a \".../shirt/lapel/\" folder even though it is a shirt collar."
+  },
+  {
+   "key": "shirt/collar-hexagon-stand",
+   "orientation": "front",
+   "isRealDrawing": true,
+   "discriminator": "Each collar leaf is cut with an angular stepped outer edge — an outer point, then the edge turns back inward along a near-straight run to a shallow notch/apex before dropping to the deep centre-front point — so the two leaves together read as a six-sided (hexagonal) silhouette rather than a plain triangular point.",
+   "drawnNotes": "No numeric callouts, no arrows, no text. Red is used as a highlight: the entire collar outline (both leaves plus the standing back-neck edge) is traced in red to mark the component being specified; the black lines are the shirt body, the doubled black curve at top is the inner back-neck/band line, and the black vertical line below the V is the front edge. Worth flagging against the label: the option is called a \"stand\" collar but no stand height is dimensioned and the front is drawn fully open — no neckband, button or buttonhole at the throat, the collar opening runs to a deep V."
+  },
+  {
+   "key": "shirt/cs-round-2btn",
+   "orientation": "front",
+   "isRealDrawing": true,
+   "discriminator": "The exposed collar band at centre front carries TWO buttons stacked vertically one above the other on the stand (not one), inside a stand whose upper edge is drawn as a rounded arch rather than a straight or pointed edge.",
+   "drawnNotes": "No numeric callouts. Red is used as position marking: the exposed collar-stand panel is outlined in red (rounded/domed top edge, straight horizontal bottom edge where it meets the placket), and two red filled circles mark the two stand button positions, upper and lower, on the centreline. One separate black button is drawn lower down on the placket — that is a normal front button, not part of this option, and should not be counted as a third stand button. The count drawn (2 stand buttons) agrees with the label; nothing contradicts the id."
+  },
+  {
+   "key": "shirt/sleeve-head-regular",
+   "orientation": "front",
+   "isRealDrawing": true,
+   "discriminator": "The sleeve-head line sits exactly on the natural shoulder point and continues from it as a straight, gently downward-sloping line with no raised, roped, gathered or extended cap — a plain set-in sleeve head.",
+   "drawnNotes": "No numeric callouts or text. Red is used as position marking on BOTH sides symmetrically: on each side a red line runs from the neck point along the top of the shoulder seam to the shoulder end point, then continues down and outward past the body silhouette to trace the top line of the sleeve cap. The shirt body is deliberately drawn sleeveless (armhole in black, no sleeve) so the red sleeve-head line is the only sleeve indication. Nothing contradicts the label; the marking is bilateral, so there is no left/right ambiguity."
+  },
+  {
+   "key": "sport-coat/lbh-no1-dc-straight",
+   "orientation": "detail",
+   "isRealDrawing": false,
+   "discriminator": "A single hand-worked keyhole lapel buttonhole stitched in two thread colours with the colour split running lengthwise — yellow forming the upper lip along the straight bar and pink forming the lower lip and the full ring around the keyhole eye — with the buttonhole axis dead straight (no upward or downward arc) and the eye at one end.",
+   "drawnNotes": "NOT A LINE DRAWING — this is a high-magnification colour PHOTOGRAPH of real stitching on white twill cloth (visible weave, thread fibres, shadow). Overlaid annotations: red circled numeral ① with its leader pointing at the yellow thread (colour order position 1, the straight upper lip/bar) and red circled numeral ② pointing at the pink thread at the keyhole-eye end (colour order position 2). No dimensions, no cm/degree values, no garment context — no lapel, no jacket face cloth is visible, only an isolated buttonhole on flat fabric. PATH DISCREPANCY: the supplied path \".../e346a69313a8__055R__No.1_Double_color_straight.jpg\" does not exist; the file actually read was the same hash and supplier code 055R at \".../public/images/blueprints/supplier/e346a69313a8__055R__No.1_Double_color_handmade_straight_lapel_buttonhole_H.jpg\" (the supplier's full name adds \"handmade ... Handmade only, appoint colour order 1-2\"). The drawn content otherwise agrees with the label: two colours, straight, colour order 1 then 2."
+  },
+  {
+   "key": "sport-coat/lbh-no1-tc-arc",
+   "orientation": "detail",
+   "isRealDrawing": false,
+   "discriminator": "A single hand-worked lapel buttonhole bowed in an upward arc, with its gimp broken into three sequential colour zones along the length and the rounded eye/return at the right-hand end (siblings are straight-shank or two-zone versions).",
+   "drawnNotes": "Three red circled numerals — 1, 2, 3 — float above the buttonhole (red pixels bbox x269-919, y456-660) marking the colour-order positions left to right: zone 1 = left shank, zone 2 = the short centre band, zone 3 = right shank running into the eye. No dimensions, arrows or written text anywhere. THREE CONTRADICTIONS TO FLAG: (1) the option is labelled tri-/triple-colour but only TWO distinct threads are actually rendered — colour sampling along the buttonhole gives green (RGB ~150,200,163) for zone 1, pink (RGB ~250,140,180) for zone 2, and the SAME green (RGB ~157,205,170) for zone 3, so shooting faithfully to this reference yields a two-colour buttonhole; (2) the file is NOT a technical line drawing — it is a colour macro photograph of real embroidery on white woven cloth, with visible weave, thread fibre fuzz and a cast shadow (mean saturation 4.0, ~14k green px, ~15k red px), so it cannot be used as a line-geometry reference; (3) the path given in the brief (…a1cc16870a6b__055Y__No.1_Tri-color_arc.jpg) does not exist on disk — the file actually read was …/supplier/a1cc16870a6b__055Y__No.1_Triple_color_arc_lapel_buttonhole_Handmade_Only_a.jpg (same hash prefix and 055Y code)."
+  },
+  {
+   "key": "suit-2pc/pleat-no-single-dart",
+   "orientation": "front",
+   "isRealDrawing": true,
+   "discriminator": "The front is completely flat/pleatless — no fold line runs out of the waistband — and each front panel carries exactly one short waist dart, drawn in red directly beneath a belt loop.",
+   "drawnNotes": "Exactly two red marks, one per front panel (red pixels bbox x368-831, y180-323 of a 1200px frame). Each is a short tapering vertical line that begins at the waistband bottom seam and dies out roughly a quarter of the way down the hip — dart geometry, not a pleat. Critically, the black leg crease lines start much lower down and are separate strokes, NOT continuations of the red marks, which confirms these are darts and that the front carries no pleat. No numeric callouts, arrows or text of any kind. Nothing contradicts the label provided 'single dart' is read as one dart per side; note the drawing marks two darts in total (one left, one right), so the photograph must show both, symmetrically. Fly (centre-front line plus J-shaped topstitch), belt loops and slanted side-seam pockets are drawn in plain black as unmarked context and are not the option."
+  },
+  {
+   "key": "suit-2pc/pocket-stitch-015",
+   "orientation": "front",
+   "isRealDrawing": true,
+   "discriminator": "Both slanted front hip-pocket openings are traced in red along their entire length, from the waistband down to the side seam — the option is the stitch line running the pocket mouth, marked on the left and right sides equally.",
+   "drawnNotes": "Two long red lines, left and right (red pixels bbox x86-1119, y172-651), each laid exactly on top of the slanted pocket-opening edge and running the full opening from the waistband corner down to the side seam. A faint cyan/teal line (~470 px) runs alongside the red on both sides, reading as a second parallel stitch line just inside the opening. NO numbers, dimensions, arrows or text appear anywhere — the '015' (i.e. 0.15 cm) stitch gauge in the option id is NOT drawn or dimensioned, so the stitch width cannot be verified from this reference and must be confirmed from the spec, not the image. Also flag: the markers sit ONLY on the front slant pockets and the drawing contains no back pocket at all, so this must not be re-shot as a back-pocket stitch. Front waist darts and the fly are present in black as unmarked context."
+  },
+  {
+   "key": "suit-2pc/quarter-top",
+   "orientation": "three-quarter-front",
+   "isRealDrawing": true,
+   "discriminator": "The pocket mouth is a straight diagonal that cuts the corner off the hip — it starts at the waistband seam and runs down and outward to die into the outseam — rather than being a slot set within the body of the front panel.",
+   "drawnNotes": "Completely clean: zero coloured pixels in the file (mean saturation 0.0) — no red markers, no arrows, no dimension lines, no text. The '2.5 cm' in the filename is NOT drawn or dimensioned anywhere, so the slant depth cannot be verified from the reference. A small black bar-tack tick is drawn at the point where the diagonal meets the outseam. Orientation evidence, since this is not a flat front view: the waistband terminates in a squared end with a belt loop at the extreme left of frame and the fly drops just below it (= centre front); a long vertical line runs down the middle of the frame (= the outseam); to the right of that line sits the BACK panel, carrying a single-line waist dart that runs from the waistband down into the top edge of a horizontal besom back pocket. So the shot must be an angled hip view that wraps from centre front round to the back, not a flat front. Only ONE hip is drawn (by standard projection the wearer's left), so the quarter-top pocket appears once, not as a pair, and no side is stated in the label. Path note: the brief's path (…3104__2.5cm_slanted.jpg) does not exist; the real file is …/factory/1c5aed3c1ce4__3104__2.5cm_slant.jpg."
+  },
+  {
+   "key": "suit-2pc/welt-pocket",
+   "orientation": "three-quarter-front",
+   "isRealDrawing": true,
+   "discriminator": "The pocket is a single closed, near-vertical rounded slot (a welt/besom mouth) set into the front panel just forward of the outseam, clear of the waistband — it never touches the waistband and there is no diagonal corner cut.",
+   "drawnNotes": "Exactly one red marker (red pixels bbox x424-498, y273-758 of a 1200px frame): an elongated rounded-rectangle outline tracing the welt opening, spanning roughly 40% of the frame height, beginning about one waistband-depth below the waistband seam and leaning very slightly so its lower end sits nearer the outseam. Rounded at both ends, outline only — no welt-lip shading, no button, no tab. No numbers, dimensions, arrows or text: neither the welt length nor its width is called out. This is the same base illustration as 3104 with the quarter-top diagonal removed and this red slot substituted in the same region, confirming both are FRONT hip-pocket options (the marker sits forward of the outseam). Orientation evidence: waistband squared end plus fly at the extreme left (= centre front), outseam running down the centre of frame, and the BACK panel to the right carrying a waist dart that runs into a horizontal besom back pocket — so the frame wraps from front round to back and must be shot as an angled hip view, not a flat front. Only one hip / one welt pocket is drawn. Nothing in the drawing contradicts the 'welt pocket' label."
+  },
+  {
+   "key": "suit-3pc/lapel-collar-stand",
+   "orientation": "detail",
+   "isRealDrawing": true,
+   "discriminator": "At the collar/lapel junction the drawing shows an open stepped NOTCH: the collar leaf ends in a squared point and the lapel's upper corner is a blunt, near-horizontal square-cut edge projecting outward, separated from the collar point by a visible wedge gap (no upward peak, no continuous edge).",
+   "drawnNotes": "None — clean black-and-white line art with no dimensions, arrows, red/coloured markers or text anywhere. Content notes for the re-shoot: straight-on frontal close-up of the neckline only (shoulder lines drawn as short double-line stubs, no body, no hem); a distinct standing collar band plus collar leaf is drawn at the neck (this is the 'stand' the option name refers to, and it reads visually like a shirt collar band — do NOT let a shirt collar stand in for it); a single centre-front line runs the full depth of the V; exactly one round button is drawn at the bottom point of the V (the drawing does not depict the vest's full button count, so do not infer a count from it). Nothing in the drawing contradicts the 'lapel' (notch) label."
+  },
+  {
+   "key": "suit-3pc/peak-collar-stand",
+   "orientation": "detail",
+   "isRealDrawing": true,
+   "discriminator": "The lapel's upper corner sweeps up and outward into a sharp arrowhead PEAK aimed back toward the shoulder, with only a narrow V slit cut between the collar-leaf point and the peak — the same neckline as its siblings but with pointed, upswept lapel tips instead of a square notch or an unbroken edge.",
+   "drawnNotes": "None — clean line art, no measurement callouts, no arrows, no coloured markers, no text. Content notes: identical base illustration to lapel-collar-stand (frontal straight-on neckline close-up, shoulder-line stubs only, standing collar band + collar leaf at the neck, single centre-front line, one round button at the bottom of the V); the ONLY drawn change versus the notch sibling is the peaked lapel tip, so the photograph must isolate that junction. Peaks are drawn symmetrically on both sides. Nothing contradicts the 'peak' label."
+  },
+  {
+   "key": "suit-3pc/shawl-collar-stand",
+   "orientation": "detail",
+   "isRealDrawing": true,
+   "discriminator": "Collar and lapel are drawn as ONE continuous unbroken edge sweeping from the neck band straight down to the button — there is no notch, no peak, and no gorge seam anywhere along the edge, and the collar leaf does not overlap the shoulder as it does in the notch/peak siblings.",
+   "drawnNotes": "None — clean line art, no dimensions, no arrows, no coloured markers, no text. Content notes: same frontal straight-on neckline crop as the other two, but the collar is drawn noticeably narrower at the neck, the V is slightly narrower overall, and the shoulder line meets the collar directly at the neck point; a collar band is still drawn across the neck (the 'stand'); one round button at the base of the V. Nothing contradicts the 'shawl' label."
+  },
+  {
+   "key": "suit-3pc/vest-canvas-half",
+   "orientation": "interior",
+   "isRealDrawing": true,
+   "discriminator": "The chest zone of the exposed interior is filled with a dense, fine brick-dash hatch — measurably heavier canvas fill than the sibling file (~25-30% more ink over the identical area, e.g. 11,546 vs 8,888 dark px in the y=290 band), while the coverage outline itself is the same.",
+   "drawnNotes": "Cutaway/peel-back construction view: left half of the frame is the plain unfilled outer panel (face cloth, shoulder upper-left, hem at bottom), a double-line front-edge strip runs vertically down the middle, and the right half is opened up to show interior layers — a fine brick-dash hatch over the chest and a coarse diagonal cross-hatch down the front-edge/hem zone, plus a plain rectangle low on the front that reads as a pocket bag/welt. THREE leader-line callouts are present (a small mark near the top of the front edge, one at mid-chest pointing into the fine hatch, one lower-left pointing into the coarse hatch) but every label is rendered at roughly 10px and is ILLEGIBLE at the file's 1200x1200 raster — no numeric measurement can be read. No red or coloured markers (pure B/W). CONTRADICTION FLAG: nothing legibly reads 'half', and the drawn canvas EXTENT is identical to vest-canvas-single (same ink bounding box 214-994 x 45-1156, same zone boundaries, same pocket, same callout placement) — the two files differ only in hatch density, not in how far the canvas runs. Since 'half vs full canvas' is normally read from coverage extent, this drawing does not encode the half/single distinction; confirm against the written spec before shooting. Also note the forepart reads as a generic suit forepart — no vest-specific cue (deep V neckline, vest points, back strap) is visible."
+  },
+  {
+   "key": "suit-3pc/vest-canvas-single",
+   "orientation": "interior",
+   "isRealDrawing": true,
+   "discriminator": "Same interior cutaway as the half-canvas sibling but the chest zone carries a visibly sparser, more open hatch (reads as a single canvas layer), with the coarse cross-hatch of the front-edge/hem zone essentially unchanged.",
+   "drawnNotes": "Same cutaway as vest-canvas-half: plain outer panel on the left, double-line front-edge strip through the centre, interior on the right with a chest hatch zone, a coarse diagonal cross-hatch front-edge/hem zone, and a plain pocket-bag rectangle low on the front. THREE leader-line callouts in the same positions (top of front edge, mid-chest into the chest hatch, lower-left into the coarse hatch); all label text is ILLEGIBLE at 1200x1200 — no readable dimensions. No red or coloured markers; pure B/W line art. CONTRADICTION FLAG: this is a distinct file from vest-canvas-half (different bytes/hash, 65,704 vs 67,240 bytes) but geometrically near-identical — same ink bounding box (208-993 x 45-1156), same zone boundaries, same pocket, same callouts; the only measurable difference is that the chest hatch is ~25-30% lighter here. So 'single' is conveyed by hatch density (layer count/thickness), NOT by canvas extent, and a photograph shot from this drawing alone cannot be told apart from the half-canvas option. Verify the intended construction from the spec before re-shooting. As with the sibling, no vest-specific cue (V neckline, vest points, back strap) is drawn."
+  },
+  {
+   "key": "suit-3pc/vest-canvas-uncon",
+   "orientation": "interior",
+   "isRealDrawing": true,
+   "discriminator": "The right half of the drawing is a cut-away in which the face cloth is peeled back to expose the vest front's internal build-up — a stippled full-front interlining plus a separate cross-hatched teardrop chest piece — so the distinguishing feature is the exposed inner canvas structure, not any outside styling.",
+   "drawnNotes": "Layout: left half is a clean outline of a vest front panel (shoulder, armhole, straight front edge, hem) with no internal detail; right half is the same panel opened up, with a curled peeled-back flap of cloth at the top, a stippled (dotted) field covering the whole front = interlining, a darker cross-hatched teardrop over the chest = chest piece / haircloth, a heavy double line running from the neck point down the front edge (reads as edge tape / bridle or the folded facing), a welt pocket at lower centre and the vest's pointed hem at bottom right. Markings: one tiny caption of roughly three glyphs at approx. (565,600) in the 1200x1200 file with a leader line running down-right into the stippled interlining area — it is NOT legible even at 8x, so it must not be treated as a measurement. No numeric dimensions, no red or coloured markers, no arrows elsewhere. CONTRADICTION WITH THE LABEL: the option id says 'uncon' (unconstructed / uncanvassed) but the drawing depicts a fully interlined, canvassed front with a discrete chest-piece shape and taped front edge. Nothing in the drawing indicates the ABSENCE of canvas. Either this drawing belongs to a canvassed sibling, or the intended 'unconstructed' reading is only the plain, layer-free left half. Resolve with the supplier before re-shooting."
+  },
+  {
+   "key": "suit-3pc/vest-contrast-specify-seam",
+   "orientation": "front",
+   "isRealDrawing": true,
+   "discriminator": "Two horizontal jetted/welt lower pockets — one on each front, set at matching height — are the only features ringed in heavy red; that pair of ringed pocket openings is what the drawing singles out.",
+   "drawnNotes": "Markings: thick red rectangular highlight rings drawn around both lower welt pockets, each welt rendered inside as a grey-gradient bar; each red ring crosses the vertical front dart/seam line of its panel. No numbers, no arrows, no text anywhere. Other drawn detail: centre front edge with 2 round buttons and one short solid horizontal bar (buttonhole / bar tack) below the lower button, and a double-point (V-notch) hem where the two fronts meet. Frame is cropped to the lower half of the vest — no neckline, lapels, shoulders or armholes are in view. CONTRADICTION WITH THE LABEL: the id says 'contrast … seam', but no seam is marked and no contrast treatment is drawn — no contrast piping, no contrast thread, no colour break on any seam line. The red markers sit squarely on the two pocket mouths. If the option really is about a contrast seam, this reference points the photographer at the wrong component."
+  },
+  {
+   "key": "trousers/hem-machine-plain",
+   "orientation": "detail",
+   "isRealDrawing": true,
+   "discriminator": "In the magnified box the leg finishes as a plain, straight, un-turned-up opening with one single line marking the hem about one hem-depth above the raw edge — no cuff/turn-up band and no second fold line.",
+   "drawnNotes": "Markings: exactly one red element — a straight horizontal line spanning the full width of the leg inside the magnified inset, sitting roughly 95 px above the bottom edge of the leg in the 1200x1200 file (i.e. about one hem allowance up). A vertical crease line runs down the middle of the inset. Composition: the frame contains BOTH a small three-quarter-front trouser flat (waistband with an extension tab, three belt loops, a curved fly line, and a short vertical line dropping from the waistband into a heavy dark bar-shaped pocket on the right) AND a large rectangular blow-up of the leg bottom overlaid on it — the blow-up occupies most of the frame and carries the red marker, which is why this is a detail, not a whole-garment view. There is a dark blob-plus-stroke element around (600-760, 155-185) that looks like a leader/arrow with a caption; at 6x it does not resolve into readable text, so do not treat it as a dimension callout. No numeric measurements anywhere. CAVEAT ON THE LABEL: nothing in the drawing distinguishes machine from hand finishing — no stitches of any kind are drawn — so the only thing this reference actually supports is 'plain hem, no cuff'; the 'machine' half of the option name is not depicted and cannot be verified from this drawing."
+  },
+  {
+   "key": "trousers/jeans-arc",
+   "orientation": "three-quarter-front",
+   "isRealDrawing": true,
+   "discriminator": "The red-marked pocket opening runs almost level across the hip — measured drop of only ~13 px over 270 px, slope ~0.05 — and turns down at the seam end through a smooth rounded elbow, with a lighter dashed/dotted red line running parallel just inside the marked band (topstitching).",
+   "drawnNotes": "Markings: red only, no text and no numbers. The red traces a single pocket mouth: a short vertical leg dropping from the waistband (approx. y 240 to y 370) directly under the leftmost belt loop, a squared corner with a small radius, then a long near-level run rightwards to the vertical seam at x≈510 where it hooks downward through a rounded bend. Band width between the two red lines is constant at ~21-27 px along the whole run. A second, fainter dotted red line runs parallel below the band. Context (all unmarked): waistband continuous across the whole frame with squared ends and three belt loops and NO fly opening in view; on the viewer's right an unmarked horizontal jetted pocket with a dart running from the waistband down into its top edge — that is back-panel anatomy. So the drawing is a hip block with the front panel at the viewer's left (where the marked pocket is), the side seam running down mid-frame at x≈510, and the back panel wrapping into view at the right; the right silhouette bulges (seat), the left edge is straight. Photograph the FRONT hip, angled so the side seam and a little of the seat are visible. No contradiction with the label found; note only that the option is marked on one side of the garment only."
+  },
+  {
+   "key": "trousers/jeans-diamond",
+   "orientation": "three-quarter-front",
+   "isRealDrawing": true,
+   "discriminator": "The red-marked pocket opening drops roughly twice as steeply across the hip — ~28 px over 300 px, slope ~0.09 — and finishes in a sharp angular point/V where it turns down at the seam, with no dashed topstitch line inside the band.",
+   "drawnNotes": "Markings: red only, no text and no numbers. The red traces one pocket mouth: a vertical leg dropping from the waistband (approx. y 250 to y 350) under the leftmost belt loop, a corner, then a distinctly downward-sloping run rightwards to the vertical seam at x≈510, ending in an angular V-shaped elbow that turns down against the seam. Band width between the two red lines is ~19-26 px; no parallel dotted line is present. Context (all unmarked): same base flat as the arc file — continuous waistband with squared ends and three belt loops, no fly in view, an unmarked jetted pocket with a dart running from the waistband into it on the viewer's right (back-panel anatomy), side seam down mid-frame at x≈510, front panel at the viewer's left. IMPORTANT FOR RE-SHOOTING: this file and trousers/jeans-arc are different files (SHA-256 differs; the garment here is drawn slightly larger and shifted) but the base flat is otherwise the same drawing — the entire arc/diamond distinction rests on the slope of the marked opening and whether its far elbow is rounded (arc) or pointed (diamond), plus the dotted topstitch line present only in the arc file. Because the difference is that subtle, confirm the intended pocket geometry with the supplier before shooting, or the two photographs will not read as different options."
+  },
+  {
+   "key": "trousers/slant-20",
+   "orientation": "three-quarter-front",
+   "isRealDrawing": true,
+   "discriminator": "The front pocket mouth is drawn as an almost-vertical slash running from the waistband seam down to the side seam with only about 2 cm of forward offset (measured ~9 degrees off vertical) — the shallowest opening in the slant family, and with no stripe on it.",
+   "drawnNotes": "Clean drawing: zero red/coloured pixels, no text, no dimension callouts. Only marks are small bartack ticks at each end of the pocket mouth — top at the waistband seam, bottom where the mouth converges into the side seam (measured endpoints approx (443,235) to (525,740) in the 1200x1200 file, i.e. 82 px horizontal over 505 px vertical = 9.2 deg off vertical). CONTRADICTION with the option text: the catalog label/description says '2.0 cm drop over a 15 cm run, nearly horizontal at about 7.6 deg' — the drawing is NOT nearly horizontal; the mouth is near-vertical and the 2.0 cm is the horizontal offset over a roughly 15 cm VERTICAL run. Second flag: the line art here is geometrically identical to slant-20-stripe (3120); the only difference between the two references is the red stroke in 3120, so the pair is very easy to confuse. Base croquis (shared by all five files) also shows the fly topstitch near centre front, three belt loops, the front crease line, and a wide back besom pocket wrapping into view on the far side — none of these are the option; do not let the back besom read as the subject."
+  },
+  {
+   "key": "trousers/slant-20-stripe",
+   "orientation": "three-quarter-front",
+   "isRealDrawing": true,
+   "discriminator": "Same shallow, near-vertical pocket mouth as plain slant-20 (~9-10 degrees off vertical, waistband seam down to side seam), but the entire opening is overdrawn with a contrast stripe — the stripe is the only feature separating it from its plain sibling.",
+   "drawnNotes": "One coloured mark: a red stroke running the full length of the pocket mouth, from (453,225) at the waistband seam to (539,736) at the side seam (86 px horizontal over 511 px vertical = 9.6 deg off vertical); bartack ticks at both ends. No text, numbers or arrows. AMBIGUITY to flag: this supplier uses the same red purely as a position highlight elsewhere in the pack (see 3188/3181, where red marks the watch pocket), so the red here could be a highlight rather than real piping — but it traces the mouth exactly and the option is literally labelled 'with Stripe', so shoot it as a contrast stripe/piping along the opening. Same label contradiction as slant-20: the description's 'near-horizontal mouth' does not match the drawing, where the mouth is near-vertical with a 2.0 cm forward offset. Underlying black line art is identical to 3100 (slant-20)."
+  },
+  {
+   "key": "trousers/slant-51-stripe",
+   "orientation": "three-quarter-front",
+   "isRealDrawing": true,
+   "discriminator": "The striped pocket mouth is far more angled than the 2.0 cm options — the opening travels roughly 2.5x further forward across the hip (drawn ~24 degrees off vertical versus ~9 degrees) on its run from the waistband seam down to the side seam.",
+   "drawnNotes": "One red stroke from (327,241) just under the waistband seam to (532,707) at the side seam (205 px horizontal over 466 px vertical = 23.7 deg off vertical), with a clear ARROWHEAD at the lower end pointing at the junction where the mouth meets the side seam, and a bartack tick at the top end. No text or numeric callouts. The drawn offset ratio versus slant-20 is 2.6x, matching the stated 5.1 cm vs 2.0 cm ratio (2.55x), which confirms the numbers are horizontal offset over a vertical run. CONTRADICTION with the option text: the description calls it 'an 18.8 deg mouth climbing toward the waistband' as if near-horizontal; the drawing shows a near-vertical mouth canted about 19-24 deg OFF VERTICAL. Also note the non-stripe sibling slant-51 uses a different file (3102), so this drawing is specifically the striped variant. Back besom pocket and fly in the croquis are base garment, not the option."
+  },
+  {
+   "key": "trousers/watch-right-besom",
+   "orientation": "three-quarter-front",
+   "isRealDrawing": true,
+   "discriminator": "The watch pocket is drawn as a deep, solidly filled narrow slot set into the waistband seam — a double-jetted besom with no welt frame, visibly deeper and heavier than the plain 'Regular Right' slit and with none of the outlined welt patch of the welt version.",
+   "drawnNotes": "One red marker: a solid-filled rounded rectangle at x 760-882, y 187-234, hanging just below the waistband seam on the front panel, between the top of the front pocket mouth and the fly; roughly 8-9 cm wide at the drawn scale (catalog states 6-8 cm). No text, dimensions or arrows. ORIENTATION WARNING: this croquis is the MIRROR of the slant files — the fly and front panel are on the viewer's RIGHT here and the wide back besom pocket bar is on the viewer's LEFT; that back bar is base garment, not the option. Side check: the supplier's own sibling file named '3180__Regular_right' places its red mark on identical pixel coordinates (x 761-885, y 181-207), so this marked position is the supplier's 'right' watch pocket and the id is consistent — but be aware the mirrored croquis alone makes the anatomical side ambiguous. Minor text-vs-drawing mismatch: the description says 'nested inside the right front pocket', while the drawing places it as its own separate mini-slit in the waistband seam adjacent to, not inside, the front pocket mouth."
+  },
+  {
+   "key": "trousers/watch-right-welt",
+   "orientation": "three-quarter-front",
+   "isRealDrawing": true,
+   "discriminator": "The watch pocket is drawn as an outlined rectangle with an open, light interior and its own inner line — a welt strip framing the mouth — instead of the solid filled slot used for the besom version.",
+   "drawnNotes": "One red marker: an outlined (not filled) rounded rectangle at x 760-885, y 181-225, sitting hard against the waistband seam roughly 5 px higher and shallower than the besom marker, same width and same location on the front panel between the top of the front pocket mouth and the fly. No text, dimensions or arrows. Same mirrored croquis as 3188 — fly/front panel on the viewer's right, wide back besom pocket bar on the viewer's left (base garment, not the option); the front pocket mouth drawn here is the generic default (about 18 deg off vertical), not a specified option. Side check: identical marker coordinates to the supplier's '3180__Regular_right' file, so the placement agrees with the 'right' in the id. CRITICAL for re-shoot: this drawing and watch-right-besom (3188) are otherwise identical — the ONLY difference is the marker being an open, framed rectangle here versus a solid slot there, so the photograph must clearly show the raised welt strip and its edge. Minor text-vs-drawing mismatch: catalog text elsewhere describes the watch pocket as nested inside the front pocket, but the drawing shows a separate waistband-seam opening."
+  },
+  {
+   "key": "vest/vest-bottom-point",
+   "orientation": "detail",
+   "isRealDrawing": true,
+   "discriminator": "The bottom hem line itself — but as drawn it is a single broad, shallow curve running off both frame edges, lowest near centre front, with NO angular V/point at the centre-front closure.",
+   "drawnNotes": "No measurement callouts, no arrows, no text, and — unlike every other file in this set — no red or coloured marker anywhere, so nothing in the drawing actually highlights the hem the option is named for. CONTRADICTION with the label/id \"bottom point\": the hem is drawn as a smooth shallow curve, not a point; either this is the wrong reference or the pointed terminations fall outside the crop. Also note the frame is a zoomed, soft/upscaled crop of a larger tech-pack sheet — a stray fragment of an unrelated vertical line intrudes at the right edge (roughly mid-height) — and the crop shows content unrelated to the hem option that will mislead a photographer if copied literally: a DOUBLE-BREASTED closure with two converging columns of 4 buttons each (8 total) and a pair of horizontal welt/flap hip pockets, one on each forepart."
+  },
+  {
+   "key": "vest/vest-chest-besom-flap",
+   "orientation": "front",
+   "isRealDrawing": true,
+   "discriminator": "Exactly ONE red-marked chest pocket — on the wearer's left chest (right side of the drawing) — where the sibling \"both\" options mark two.",
+   "drawnNotes": "Single red marker: an open (unfilled) outline rectangle on the wearer's left chest, sitting just above the top button and tilted so its outer/armhole end is higher than its inner end. No dimensions, no arrows, no text. Base line drawing shows a single-breasted V-neck vest, 3 buttons visible on the button stand before the bottom crop, and one front dart per side. AMBIGUITY to flag: the marker is drawn as a plain open rectangle in the same style used for \"both-welt\" and \"both-besom-flap\" — no separate flap edge, flap shadow or flap corner is drawn — so the drawing does not visually prove a flap; the only feature that reliably separates it from its siblings here is the pocket COUNT (one) and its side (wearer's left). No contradiction between the drawn count/side and the id."
+  },
+  {
+   "key": "vest/vest-chest-both-besom",
+   "orientation": "front",
+   "isRealDrawing": true,
+   "discriminator": "Two red markers drawn as SOLID FILLED thin slits (not open rectangles) — a flapless jetted/besom mouth on each chest, matching left and right.",
+   "drawnNotes": "Two red markers, one per chest, symmetric about the centre front and set just above the top button; each is filled solid and very shallow, angled with the outer/armhole end slightly higher. No measurements, arrows or text. Base drawing: single-breasted V-neck vest, 3 visible buttons on the stand, one dart per forepart. No contradiction — count (two) and the flapless solid-slit rendering both agree with \"both besom\". The filled-vs-outline distinction is the ONLY thing separating this file from vest-chest-both-besom-flap and vest-chest-both-welt, so it must be preserved in the photograph as a clean flapless double-jetted slit."
+  },
+  {
+   "key": "vest/vest-chest-both-besom-flap",
+   "orientation": "front",
+   "isRealDrawing": true,
+   "discriminator": "Two red markers drawn as OPEN, comparatively DEEP rectangles with a slightly bowed lower edge — i.e. a flap hanging over each besom, one per chest.",
+   "drawnNotes": "Two red outline rectangles, one per chest, symmetric, just above the top button, outer ends higher. No measurement callouts, arrows or text. WARNING for re-shooting: this drawing is very nearly identical to vest-chest-both-welt — the files are genuinely different (distinct hashes), and the only drawn difference is that these rectangles are somewhat deeper (roughly 1.2x the depth) and slightly wider, with a faintly bowed lower edge, whereas the welt version's rectangles are shallower and read as flat parallelograms. Nothing in the line work explicitly renders a flap's free edge or under-shadow, so the drawing under-specifies the flap; the photograph must make the flap unmistakably a separate hanging piece over a besom mouth or it will be indistinguishable from the welt option. No count/side contradiction with the label."
+  },
+  {
+   "key": "vest/vest-chest-both-welt",
+   "orientation": "front",
+   "isRealDrawing": true,
+   "discriminator": "Two red markers drawn as OPEN, SHALLOW flat parallelograms — a stitched-up welt on each chest, shallower than the flap version and unfilled unlike the besom version.",
+   "drawnNotes": "Two red outline shapes, one per chest, symmetric about the centre front, positioned just above the top button and tilted with the outer/armhole end higher; lower edge runs essentially parallel to the upper edge (flat, no bow). No dimensions, arrows or text. Base drawing: single-breasted V-neck vest, 3 visible buttons, one dart per forepart, bottom of the vest cropped by the frame. No contradiction with the label. Same warning as its sibling: this file and vest-chest-both-besom-flap are near-twins, differing only in the depth/bow of the red rectangles, so the replacement photograph must lean on the welt being a single upstanding stitched welt with no flap."
+  }
+ ]
+}

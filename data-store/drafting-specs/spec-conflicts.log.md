@@ -50,3 +50,51 @@ Illustrations are annotated infographics (not supplier line drawings) — vision
 Catalog description: leaves 'overlap and sweep across the throat... asymmetric wrap'.
 Supplier drawing (wrap-collar-in-75cm.jpg): SYMMETRIC collar with double-outlined (bound/layered) leaf edges and a small stud at each tip. No asymmetric overlap drawn.
 Owner drafting spec silent -> drawing is law: shipped image follows the drawing (symmetric, tip studs). Description flagged for owner review.
+
+---
+
+## 2026-08-02 — WRONG-queue orientation pass: 5 spec-vs-drawing conflicts
+
+Thirty options whose live catalog photo was graded WRONG were re-read against their
+supplier references before re-shooting. Five carry a genuine conflict between the
+owner's drafting specification and the drawing. Per the ruling of 2026-08-01 the
+**specification is LAW and the drawing AIDS**, so all five are shot per spec and the
+divergence is recorded here rather than silently dropped.
+
+### 1. `shirt/collar-button-down-78` — drawing omits the defining feature
+- **Spec** (`shirt-collars.md`, BUTTON DOWN COLLAR): point length 7–8 cm; button offset
+  1.5 cm from tip; tips anchored to the shirt body; points develop a rolling wave;
+  avoid rigid interlining.
+- **Drawing**: no button and no buttonhole at either collar point — the points are
+  drawn loose. It therefore does not depict a button-down collar at all. It carries no
+  stand callout either; its only dimension is a 90.00° included angle between the tips.
+- **Resolution**: shoot per spec, with anchor buttons 1.5 cm from each tip and a soft
+  roll. The drawing's 90° point spread is retained as the aid it is.
+- **Label note**: the catalog label reads "Button-Down 7.8 cm Stand". 7.8 cm is the
+  POINT LENGTH (matching spec 7–8 cm and the option id `-78`); a 7.8 cm collar stand is
+  not a real garment. The word "Stand" in the label is an error.
+
+### 2–4. `trousers/slant-20`, `slant-20-stripe`, `slant-51-stripe` — inverted geometry
+- **Spec** (`trouser-pockets.md`, FRONT POCKET STYLES): the cm value is the RISE and the
+  angle is measured OFF HORIZONTAL. The spec's own siblings fix the direction —
+  `quarter-top` 2.5 cm = 15–20°, "closer to horizontal"; `slant-pockets` 3.2 cm = 22–28°;
+  `slant-20` = "minimal rise, nearly horizontal" (draft `____/`); `slant-51` = "aggressive
+  rise, climbs dramatically" (draft `/ / /`). Larger cm ⇒ steeper.
+- **Drawing**: reads as a NEAR-VERTICAL pocket mouth, with the cm value as a horizontal
+  offset over a ~15 cm vertical run — the opposite orientation.
+- **Resolution**: shoot per spec. The spec and the catalog description agree with each
+  other ("2.0 cm drop over a 15 cm run, nearly horizontal at about 7.6°"; "18.8° climbing
+  toward the waistband") and disagree with the drawing; two independent authorities beat
+  one. Getting this backwards would ship a four-member ladder in reverse order.
+- **Second flag**: `slant-20` (3100) and `slant-20-stripe` (3120) are geometrically
+  identical line art — the only difference between the two reference files is the red
+  stroke marking the stripe. Easy to confuse; the stripe is the sole discriminator.
+
+### 5. `vest/vest-bottom-point` — wrong reference file
+- **Spec** (`waistcoat-drafting-system.md`, FRONT EDGE SHAPE): LARGE POINT projects 5–8 cm
+  below the waistline on a V draft. Sibling `vest-bottom-small` already owns the spec's
+  SMALL POINT (2–4 cm), so "Slant / Point" is the large one.
+- **Drawing**: a smooth shallow CURVE — which is precisely what the separate sibling
+  `vest-bottom-round` depicts — inside a soft, upscaled crop of a larger tech-pack sheet
+  that also shows an unrelated double-breasted closure with two columns of four buttons.
+- **Resolution**: the reference is simply the wrong crop. Shoot per spec: a 5–8 cm V point.

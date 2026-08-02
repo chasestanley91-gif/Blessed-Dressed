@@ -479,3 +479,67 @@ guessed.
 on supplier drawings. That makes the mtm.baoxiniao.co credentials the single highest-value thing you
 can hand over — they would unblock these 2 blocking findings, the ~25 options behind the polluted
 /images/jacket/ namespace (category G), and the original 91-drawing want list (category A), all at once.
+
+---
+
+## L. WRONG-queue holds — 6 options whose reference cannot support a re-shoot (2026-08-02)
+
+Thirty options whose live photo was graded WRONG were re-read against their references
+before re-shooting. Twenty-four proceeded (five of them rescued by the drafting specs,
+logged in `data-store/drafting-specs/spec-conflicts.log.md`). These six did not, and
+are held rather than shot, because shooting them would reproduce the same WRONG verdict
+at real credit cost.
+
+### L1. Waistcoat canvas construction — 3 options, no authority and no separation
+`suit-3pc|vest / vest-canvas-half`, `vest-canvas-single`, `vest-canvas-uncon`
+
+- The drafting-spec library contains **no waistcoat canvas content at all** — the ruling's
+  first authority is simply absent for this field.
+- `vest-canvas-half` and `vest-canvas-single` are **different files with near-identical
+  geometry**: same ink bounding box (≈208–994 × 45–1156), same zone boundaries, same
+  pocket, same callout placement. The only measurable difference is that the chest hatch
+  is 25–30 % lighter in `single`. Canvas half-vs-full is normally read from *coverage
+  extent*, and these drawings do not differ in extent — so two photographs shot from them
+  could not be told apart, which is the whole test this catalog has to pass.
+- `vest-canvas-uncon` ("Unconstructed Chest") **contradicts its own label**: the drawing
+  shows a fully interlined, canvassed front with a discrete chest-piece shape and a taped
+  front edge. Nothing in it indicates the absence of canvas.
+- Compounding this, all three are interior-construction options: a photograph of a finished
+  waistcoat front cannot show what is inside it. These need a cutaway or interior view, and
+  a decision on what each of the five levels (full / half / uncon / single / fused) actually
+  looks like in the factory's construction.
+- **Owner input needed**: the construction definition for each of the five canvas levels, or
+  confirmation that this field is not photographable and should be excluded.
+
+### L2. `suit-3pc|vest / vest-contrast-specify-seam` — a placeholder, not a geometry
+Label "Specify Seam" in field `contrast-pocket-vest`. This is a customer-specifies option
+with no determinate geometry — there is no single seam to photograph. The reference marks
+the two pocket mouths. **Recommend excluding it** alongside the other `None`/placeholder
+options, unless the owner intends a specific default seam.
+
+### L3. Lapel buttonholes — a 56-option family referenced by photographs
+`sport-coat|suit-2pc|suit-3pc / lbh-no1-dc-straight`, `lbh-no1-tc-arc`
+
+Both were in the WRONG queue; both are held, and the reason generalises to the whole
+`lapel-bh-style` field, which carries **56 options** across three products:
+
+- Their references are **high-magnification colour photographs of real embroidery**, not
+  line drawings. For hand-worked decorative buttonholes ("Rose Shaped Round", "Musical
+  Note", "Dragon Horn", "Angel of Happiness") a macro photograph is arguably the *correct*
+  manufacturing reference — but it is exactly what `blueprint_triage` classifies
+  `NOT_A_DRAWING`, and what `wave_queue` refuses. The family needs one policy decision, not
+  56 individual overrides.
+- **Both register paths are stale.** The paths on file
+  (`…e346a69313a8__055R__No.1_Double_color_straight.jpg`,
+  `…a1cc16870a6b__055Y__No.1_Tri-color_arc.jpg`) do not exist; the real files were found only
+  by hash prefix under longer supplier names. The whole family likely needs a blueprint
+  repoint before anything is shot.
+- `lbh-no1-tc-arc` additionally **contradicts its label**: it is "Triple-Color Arc", but
+  colour sampling along the buttonhole returns green → pink → **green** — only two distinct
+  threads. Shot faithfully, a three-colour option would ship as a two-colour photograph.
+- Several options in this family are separated from their siblings **only by thread colour
+  count** (Double-Color vs Triple-Color at the same shape). The mission excludes thread
+  colours; the straight-vs-arc axis is genuine geometry. The owner should rule on where the
+  line falls before 56 × 3 rows are worked.
+- **Owner input needed**: (a) may photograph-type references be used for this family;
+  (b) repoint the stale supplier paths; (c) are colour-count-only variants in or out of scope.
