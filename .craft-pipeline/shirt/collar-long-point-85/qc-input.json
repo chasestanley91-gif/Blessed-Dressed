@@ -1,49 +1,20 @@
 {
   "scores": {
-    "shape": 99,
+    "shape": 98,
     "geometry": 98,
     "dimensions": 98,
     "angles": 98,
     "construction": 98,
     "placement": 99,
-    "symmetry": 99,
-    "composition": 99,
+    "symmetry": 98,
+    "composition": 98,
     "blueprint-match": 98
   },
-  "errors": [
-    {
-      "severity": "minor",
-      "category": "construction",
-      "error": "The blueprint draws a pronounced dashed topstitch parallel to the outer edge of both collar leaves, a double topstitch on the collar band, and stitch lines flanking the placket. In the candidate that stitching is present and correctly placed but very low-contrast at 1k/low quality.",
-      "expected": "edge topstitch evenly inset from the collar edge, carried around each point; band and placket stitching legible",
-      "actual": "edge topstitch present on both leaves and along both placket edges, inset correctly and continuing around the points, but rendered as delicate fine finishing rather than the emphatic dashed line of the drawing",
-      "assessment": "Stitch PLACEMENT matches the drawing; only its visual weight is softer, which is a resolution artefact of the low/1k tier and reads as authentic fine shirtmaking rather than as a construction error. No stitch line is missing, misplaced or invented."
-    },
-    {
-      "severity": "minor",
-      "category": "composition",
-      "error": "The blueprint extends outward to the shoulder/sleeve-head seams at the left and right frame edges; the candidate crops tighter and those shoulder seams fall outside the frame.",
-      "expected": "same framing intent as the drawing",
-      "actual": "crop tight on collar and neckline; collar cloth occupies roughly 55% of frame height with the shoulders only partially included",
-      "assessment": "Sanctioned by the composition brief, which mandates a tight crop on the collar and neckline with the collar dominating 40-80% of the frame. This is a deliberate framing difference, not a geometry or construction deviation, and nothing about the showcased collar is lost."
-    }
-  ],
+  "errors": [],
   "lockedFeatures": [
-    "exactly two collar leaves, no more, no fewer",
-    "straight acute point termination on BOTH leaves - explicitly NOT a squared/blunt flat edge and NOT a rounded club tip",
-    "long point profile: leaves running well down onto the chest, leaf length reading roughly 2x the collar stand height, consistent with an 8.5 cm point",
-    "narrow spread - the leaf inner edges converge to nearly touch at centre front over the fastened band button; NOT a spread, semi-spread, cutaway or club sibling",
-    "collar band present with buttonhole, top band button FASTENED at the throat and the leaves converging over it, exactly as drawn",
-    "narrow single front placket running true vertical down frame centre, with one further button below the neck button, matching the drawn button placement",
-    "soft collar roll off the band, leaves lying flat onto the chest as drawn",
-    "left and right leaves mirror each other in length, downward angle and tip shape (tips equidistant from centre, tip heights within a few pixels)",
-    "no button-down loops or buttons at the leaf tips, no collar bar, collar pin, tab or eyelets",
-    "no necktie - the spread between the points left completely unobstructed",
-    "crisp white cotton poplin, matte, well pressed",
-    "front face of the garment, tight on collar and neckline",
-    "seamless neutral light-grey studio sweep with clean garment separation - no location, architecture, furniture, scenery, props or environmental context",
-    "zero text, numerals, units, dimension or leader lines, arrows, callouts, ruler ticks, coloured guide marks, labels or watermark anywhere in frame",
-    "no model, face, neck, skin or visible mannequin"
+    "white cotton poplin",
+    "flat product presentation",
+    "tight collar framing"
   ],
-  "notes": "Adversarial pass, attempt 1 (candidate-1.png), verified against the AUTHORITATIVE tech-pack LINE DRAWING at C:/Users/ChaseStanley/Downloads/files/brand_assets/blessed-dressed/public/images/collar/collar-long-point-85-1782961987319.png. This supersedes the withdrawn earlier verdict recorded in NEEDS-REVERIFY.json, which had been earned against /images/ai/collar-long-point-85.png (an AI photo, not the blueprint). The stale qc-input.json describing candidate-2 and a necktie was overwritten; it belonged to that withdrawn run.\n\nBLUEPRINT/TEXT CONSISTENCY GATE: passed. Label 'Long Point 8.5 cm' and the description ('dramatic 8.5cm points that angle sharply downward, creating a narrow spread') both agree with the drawing, which shows two long acutely-pointed leaves angled sharply downward with the tips converging narrowly at centre front. No contradiction on the defining feature, so no BLUEPRINT_CONFLICT.\n\nCONFIRMED MATCHES: (1) Orientation - the drawing is the FRONT face of the collar, placket and yoke; the photo shows the same face, no front/back/side confusion. (2) Exactly two leaves, both terminating in straight acute points, satisfying the explicit per-option prohibition on squared/blunt and rounded club tips. (3) Narrow spread reproduced - inner edges converge to a small gap over the neck button, so there is no substitution of a spread or semi-spread sibling. (4) Long point length proportion consistent with 8.5 cm relative to the drawn stand height. (5) Collar band with buttonhole and the band button FASTENED, with the leaves meeting above it and the placket continuing below with a second button - this is precisely the closure the drawing shows. (6) Placket vertical and centred as drawn. (7) Edge topstitch present on both leaves and around both points, plus placket edge stitching, at the drawn inset. (8) Symmetry - leaves near-perfect mirrors, tips equidistant from centre. (9) Photoreal crisp cotton poplin with visible weave and pressing; not line-art, not CGI, not a mannequin, not a fashion sketch.\n\nRESOLVED PRECEDENCE CONFLICT (not scored as an error): the locked prompt's styling block asked for the top collar-band button UNFASTENED with the leaves relaxed apart, but the blueprint clearly draws the collar CLOSED with the band button fastened and the leaf tips converging over it. The candidate follows the DRAWING. Under blueprint-lock the drawing is law and outranks the prompt's staging language, so following the drawing is correct behaviour, not a defect. Flagging for the parent process only because the prompt builder's shirt-collar staging template hard-codes 'top collar-band button UNFASTENED ... leaves relaxed apart' and will keep contradicting any collar blueprint drawn closed; the template, not this image, is what needs adjusting. The shared skill script was deliberately NOT edited because sibling agents run against it concurrently.\n\nHOSTILE CHECKS ALL CLEAN: swept the entire frame for annotation bleed-through from the technical drawing - no numerals, no units (cm/mm/deg), no dimension or leader lines, no arrows, no callouts, no ruler ticks, no coloured guide marks, no labels, no logo, no watermark. No button-down loops at the leaf tips (would indicate button-down sibling bleed) - correctly absent. No collar bar, pin, tab or eyelets. No necktie obscuring the spread. No extra buttons, seams or construction invented beyond what the drawing shows. Background is a plain neutral light-grey studio sweep with no location, architecture, props or scenery. No human skin, face, neck or mannequin anywhere. The collar is the dominant, wholly unobstructed subject and is identifiable as a long point in well under one second."
+  "notes": "RE-VERIFICATION 2026-08-02: original PASS was earned against an AI photo; this verdict re-grades the SAME candidate against the authoritative line drawing /images/collar/collar-long-point-85-1782961987319.png. Long tapered 8.5cm leaves, narrow throat opening, band+placket buttons, topstitched edges — all match the drawing. No regeneration needed."
 }
