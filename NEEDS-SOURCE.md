@@ -424,7 +424,7 @@ family). The TROUSER-side knot family (knot-i/d/dash, bartack-standard, back-sea
 the real /images/blueprints/ namespaces and remains generable.
 
 ## I. Git pack warning (2026-08-02) — owner FYI, no action taken
- prints "unknown object type 0 at offset ... pack-2230b4e3..." during some operations.
- shows HEAD history fully reachable (only normal dangling blobs), and commits continue to succeed.
-The bad region appears to hold only unreachable objects. Recommended when convenient: back up .git, then  to rewrite packs.
+git prints "unknown object type 0 at offset ... pack-2230b4e3..." during some operations.
+"git fsck --connectivity-only" shows HEAD history fully reachable (only normal dangling blobs), and commits continue to succeed.
+The bad region appears to hold only unreachable objects. Recommended when convenient: back up the .git folder, then run "git repack -ad" to rewrite packs.
 Not attempted autonomously mid-campaign.
