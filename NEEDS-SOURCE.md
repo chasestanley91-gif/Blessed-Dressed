@@ -422,3 +422,9 @@ GRIDS (paisley/printed linings, FB26xxxx codes). Blocks the jacket bartack famil
 bartack-d, bartack-i, bartack-x, bartack-1 (5) and inner-pocket-closure ipc-d/i/x (3, same folder
 family). The TROUSER-side knot family (knot-i/d/dash, bartack-standard, back-seam-no-bartack) uses
 the real /images/blueprints/ namespaces and remains generable.
+
+## I. Git pack warning (2026-08-02) — owner FYI, no action taken
+ prints "unknown object type 0 at offset ... pack-2230b4e3..." during some operations.
+ shows HEAD history fully reachable (only normal dangling blobs), and commits continue to succeed.
+The bad region appears to hold only unreachable objects. Recommended when convenient: back up .git, then  to rewrite packs.
+Not attempted autonomously mid-campaign.
