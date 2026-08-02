@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-02T14:58:51.188Z",
+  "generatedAt": "2026-08-02T15:44:53.147Z",
   "count": 2862,
   "records": [
     {
@@ -18588,11 +18588,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/factory/9fd6de75414f__060K__Regular.jpg",
-      "liveImage": "/images/blueprints/factory/9fd6de75414f__060K__Regular.jpg",
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/sport-coat/pad-05-soft.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/sport-coat/pad-05-soft.webp",
+      "shippedBytes": 147238,
+      "shippedSha1": "10edbc63c4f969e02e73b9b3a6793a7189913112",
       "pipeline": {
         "dir": ".craft-pipeline/sport-coat/pad-05-soft",
         "have": {
@@ -18601,26 +18601,18 @@
           "generation": true,
           "qc": true
         },
-        "verdict": "FAIL",
-        "attempt": 2,
-        "lowestScore": 70,
+        "verdict": "PASS_WAIVED",
+        "attempt": 3,
+        "lowestScore": 96,
         "belowMin": [
-          "shape",
-          "geometry",
-          "dimensions",
-          "angles",
-          "construction",
-          "placement",
-          "symmetry",
-          "composition",
-          "blueprint-match"
+          "composition"
         ],
-        "candidates": 2,
+        "candidates": 3,
         "needsReverify": false,
         "specOnly": false,
-        "checkedAt": "2026-08-01T04:36:42.864Z"
+        "checkedAt": "2026-08-02T15:35:34.246Z"
       },
-      "stage": "failed-retry-due"
+      "stage": "shipped-waived"
     },
     {
       "key": "sport-coat/pad-05-structured",
@@ -27262,13 +27254,13 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/factory/9fd6de75414f__060K__Regular.jpg",
-      "liveImage": "/images/blueprints/factory/9fd6de75414f__060K__Regular.jpg",
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/sport-coat/pad-05-soft.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/sport-coat/pad-05-soft.webp",
+      "shippedBytes": 147238,
+      "shippedSha1": "10edbc63c4f969e02e73b9b3a6793a7189913112",
       "pipeline": null,
-      "stage": "not-started"
+      "stage": "legacy-shipped-unverified"
     },
     {
       "key": "suit-2pc/pad-05-structured",
@@ -36461,8 +36453,8 @@
       "liveImage": "/images/generated/suit-2pc/slant-25-stripe.webp",
       "shipped": true,
       "shippedPath": "/images/generated/suit-2pc/slant-25-stripe.webp",
-      "shippedBytes": 97388,
-      "shippedSha1": "74338103f6d1d1fc33040f612b647fb171dede4b",
+      "shippedBytes": 83416,
+      "shippedSha1": "75036f17b379c1c7feb6d0098cfdafc18c12d19e",
       "pipeline": {
         "dir": ".craft-pipeline/suit-2pc/slant-25-stripe",
         "have": {
@@ -36471,26 +36463,18 @@
           "generation": true,
           "qc": true
         },
-        "verdict": "FAIL",
-        "attempt": 2,
-        "lowestScore": 42,
+        "verdict": "PASS_WAIVED",
+        "attempt": 3,
+        "lowestScore": 96,
         "belowMin": [
-          "shape",
-          "geometry",
-          "dimensions",
-          "angles",
-          "construction",
-          "placement",
-          "symmetry",
-          "composition",
-          "blueprint-match"
+          "construction"
         ],
-        "candidates": 2,
+        "candidates": 3,
         "needsReverify": false,
         "specOnly": false,
-        "checkedAt": "2026-08-01T07:00:47.132Z"
+        "checkedAt": "2026-08-02T15:35:33.925Z"
       },
-      "stage": "failed-retry-due"
+      "stage": "shipped-waived"
     },
     {
       "key": "suit-2pc/slant-32-stripe",
@@ -37072,11 +37056,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/factory/88f95280e442__3532__Left_right.jpg",
-      "liveImage": "/images/blueprints/factory/88f95280e442__3532__Left_right.jpg",
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/suit-2pc/watch-both.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/suit-2pc/watch-both.webp",
+      "shippedBytes": 178008,
+      "shippedSha1": "42b095b9e6ebcdf3215596a72044086314babe07",
       "pipeline": {
         "dir": ".craft-pipeline/suit-2pc/watch-both",
         "have": {
@@ -37085,26 +37069,19 @@
           "generation": true,
           "qc": true
         },
-        "verdict": "FAIL",
-        "attempt": 2,
-        "lowestScore": 57,
+        "verdict": "PASS_WAIVED",
+        "attempt": 3,
+        "lowestScore": 96,
         "belowMin": [
-          "shape",
-          "geometry",
           "dimensions",
-          "angles",
-          "construction",
-          "placement",
-          "symmetry",
-          "composition",
-          "blueprint-match"
+          "placement"
         ],
-        "candidates": 2,
+        "candidates": 3,
         "needsReverify": false,
         "specOnly": false,
-        "checkedAt": "2026-08-01T04:36:43.172Z"
+        "checkedAt": "2026-08-02T15:35:34.576Z"
       },
-      "stage": "failed-retry-due"
+      "stage": "shipped-waived"
     },
     {
       "key": "suit-2pc/watch-right-welt",
@@ -38648,11 +38625,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/factory/edc7138c802f__302L__No_pleat_no_dart.jpg",
-      "liveImage": "/images/generated/suit-2pc/flat-front.webp",
+      "liveImage": "/images/generated/trousers/flat-front.webp",
       "shipped": true,
-      "shippedPath": "/images/generated/suit-2pc/flat-front.webp",
-      "shippedBytes": 146290,
-      "shippedSha1": "06b0d158b5510a1c76cbda736c581d588dfce5c0",
+      "shippedPath": "/images/generated/trousers/flat-front.webp",
+      "shippedBytes": 83300,
+      "shippedSha1": "cb4fc3f16f415ff5ec3afa1aef2a27ee9f1c5168",
       "pipeline": {
         "dir": ".craft-pipeline/suit-2pc/flat-front",
         "have": {
@@ -39510,11 +39487,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/factory/2aaa7a83011b__3221__Welt_with_bttn.jpg",
-      "liveImage": "/images/blueprints/factory/2aaa7a83011b__3221__Welt_with_bttn.jpg",
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/suit-2pc/back-left-welt.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/suit-2pc/back-left-welt.webp",
+      "shippedBytes": 159996,
+      "shippedSha1": "07ba539444213d1a8a11b7ccd6f764b1a1794349",
       "pipeline": {
         "dir": ".craft-pipeline/suit-2pc/back-left-welt",
         "have": {
@@ -39523,26 +39500,16 @@
           "generation": true,
           "qc": true
         },
-        "verdict": "FAIL",
-        "attempt": 1,
-        "lowestScore": 38,
-        "belowMin": [
-          "shape",
-          "geometry",
-          "dimensions",
-          "angles",
-          "construction",
-          "placement",
-          "symmetry",
-          "composition",
-          "blueprint-match"
-        ],
-        "candidates": 1,
+        "verdict": "PASS",
+        "attempt": 3,
+        "lowestScore": 98,
+        "belowMin": [],
+        "candidates": 3,
         "needsReverify": false,
         "specOnly": false,
-        "checkedAt": "2026-08-01T08:09:39.170Z"
+        "checkedAt": "2026-08-02T15:44:46.854Z"
       },
-      "stage": "failed-retry-due"
+      "stage": "shipped"
     },
     {
       "key": "suit-2pc/back-both-welt",
@@ -40261,8 +40228,8 @@
       "liveImage": "/images/generated/suit-3pc/hem-single-turnup.webp",
       "shipped": true,
       "shippedPath": "/images/generated/suit-3pc/hem-single-turnup.webp",
-      "shippedBytes": 159836,
-      "shippedSha1": "f7963995ff1fb030f176ef3c6d1faccbfc9b6331",
+      "shippedBytes": 115722,
+      "shippedSha1": "97f2491704a1185ca63623a40a6f21117099f08c",
       "pipeline": {
         "dir": ".craft-pipeline/suit-2pc/hem-single-turnup",
         "have": {
@@ -40456,8 +40423,8 @@
       "liveImage": "/images/generated/suit-2pc/hem-cuff-32.webp",
       "shipped": true,
       "shippedPath": "/images/generated/suit-2pc/hem-cuff-32.webp",
-      "shippedBytes": 167252,
-      "shippedSha1": "af810c2a2f0af198ecbcb2a24751b3de9538b5ec",
+      "shippedBytes": 128586,
+      "shippedSha1": "a3e2cb72e5c2b4753da3cacf727ea3e0d720222c",
       "pipeline": {
         "dir": ".craft-pipeline/suit-2pc/hem-cuff-32",
         "have": {
@@ -40466,26 +40433,18 @@
           "generation": true,
           "qc": true
         },
-        "verdict": "FAIL",
-        "attempt": 2,
-        "lowestScore": 82,
+        "verdict": "PASS_WAIVED",
+        "attempt": 3,
+        "lowestScore": 95,
         "belowMin": [
-          "shape",
-          "geometry",
-          "dimensions",
-          "angles",
-          "construction",
-          "placement",
-          "symmetry",
-          "composition",
-          "blueprint-match"
+          "composition"
         ],
         "candidates": 3,
         "needsReverify": false,
         "specOnly": false,
-        "checkedAt": "2026-08-01T07:22:55.253Z"
+        "checkedAt": "2026-08-02T15:35:34.871Z"
       },
-      "stage": "failed-retry-due"
+      "stage": "shipped-waived"
     },
     {
       "key": "suit-2pc/hem-cuff-38",
@@ -42471,13 +42430,13 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/factory/9fd6de75414f__060K__Regular.jpg",
-      "liveImage": "/images/blueprints/factory/9fd6de75414f__060K__Regular.jpg",
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/sport-coat/pad-05-soft.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/sport-coat/pad-05-soft.webp",
+      "shippedBytes": 147238,
+      "shippedSha1": "10edbc63c4f969e02e73b9b3a6793a7189913112",
       "pipeline": null,
-      "stage": "not-started"
+      "stage": "legacy-shipped-unverified"
     },
     {
       "key": "suit-3pc/pad-05-structured",
@@ -54311,8 +54270,8 @@
       "liveImage": "/images/generated/suit-2pc/slant-25-stripe.webp",
       "shipped": true,
       "shippedPath": "/images/generated/suit-2pc/slant-25-stripe.webp",
-      "shippedBytes": 97388,
-      "shippedSha1": "74338103f6d1d1fc33040f612b647fb171dede4b",
+      "shippedBytes": 83416,
+      "shippedSha1": "75036f17b379c1c7feb6d0098cfdafc18c12d19e",
       "pipeline": null,
       "stage": "legacy-shipped-unverified"
     },
@@ -54726,13 +54685,13 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/factory/88f95280e442__3532__Left_right.jpg",
-      "liveImage": "/images/blueprints/factory/88f95280e442__3532__Left_right.jpg",
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/suit-2pc/watch-both.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/suit-2pc/watch-both.webp",
+      "shippedBytes": 178008,
+      "shippedSha1": "42b095b9e6ebcdf3215596a72044086314babe07",
       "pipeline": null,
-      "stage": "not-started"
+      "stage": "legacy-shipped-unverified"
     },
     {
       "key": "suit-3pc/watch-right-welt",
@@ -56094,11 +56053,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/factory/edc7138c802f__302L__No_pleat_no_dart.jpg",
-      "liveImage": "/images/generated/suit-2pc/flat-front.webp",
+      "liveImage": "/images/generated/trousers/flat-front.webp",
       "shipped": true,
-      "shippedPath": "/images/generated/suit-2pc/flat-front.webp",
-      "shippedBytes": 146290,
-      "shippedSha1": "06b0d158b5510a1c76cbda736c581d588dfce5c0",
+      "shippedPath": "/images/generated/trousers/flat-front.webp",
+      "shippedBytes": 83300,
+      "shippedSha1": "cb4fc3f16f415ff5ec3afa1aef2a27ee9f1c5168",
       "pipeline": null,
       "stage": "legacy-shipped-unverified"
     },
@@ -56732,13 +56691,13 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/factory/2aaa7a83011b__3221__Welt_with_bttn.jpg",
-      "liveImage": "/images/blueprints/factory/2aaa7a83011b__3221__Welt_with_bttn.jpg",
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/suit-2pc/back-left-welt.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/suit-2pc/back-left-welt.webp",
+      "shippedBytes": 159996,
+      "shippedSha1": "07ba539444213d1a8a11b7ccd6f764b1a1794349",
       "pipeline": null,
-      "stage": "not-started"
+      "stage": "legacy-shipped-unverified"
     },
     {
       "key": "suit-3pc/back-both-welt",
@@ -57351,8 +57310,8 @@
       "liveImage": "/images/generated/suit-3pc/hem-single-turnup.webp",
       "shipped": true,
       "shippedPath": "/images/generated/suit-3pc/hem-single-turnup.webp",
-      "shippedBytes": 159836,
-      "shippedSha1": "f7963995ff1fb030f176ef3c6d1faccbfc9b6331",
+      "shippedBytes": 115722,
+      "shippedSha1": "97f2491704a1185ca63623a40a6f21117099f08c",
       "pipeline": {
         "dir": ".craft-pipeline/suit-3pc/hem-single-turnup",
         "have": {
@@ -57361,26 +57320,19 @@
           "generation": true,
           "qc": true
         },
-        "verdict": "FAIL",
-        "attempt": 2,
-        "lowestScore": 80,
+        "verdict": "PASS_WAIVED",
+        "attempt": 3,
+        "lowestScore": 95,
         "belowMin": [
-          "shape",
-          "geometry",
           "dimensions",
-          "angles",
-          "construction",
-          "placement",
-          "symmetry",
-          "composition",
-          "blueprint-match"
+          "composition"
         ],
         "candidates": 3,
         "needsReverify": false,
         "specOnly": false,
-        "checkedAt": "2026-08-01T07:22:55.448Z"
+        "checkedAt": "2026-08-02T15:35:35.200Z"
       },
-      "stage": "failed-retry-due"
+      "stage": "shipped-waived"
     },
     {
       "key": "suit-3pc/hem-double-turnup",
@@ -57487,8 +57439,8 @@
       "liveImage": "/images/generated/suit-2pc/hem-cuff-32.webp",
       "shipped": true,
       "shippedPath": "/images/generated/suit-2pc/hem-cuff-32.webp",
-      "shippedBytes": 167252,
-      "shippedSha1": "af810c2a2f0af198ecbcb2a24751b3de9538b5ec",
+      "shippedBytes": 128586,
+      "shippedSha1": "a3e2cb72e5c2b4753da3cacf727ea3e0d720222c",
       "pipeline": null,
       "stage": "legacy-shipped-unverified"
     },
@@ -59303,8 +59255,8 @@
       "liveImage": "/images/generated/suit-2pc/slant-25-stripe.webp",
       "shipped": true,
       "shippedPath": "/images/generated/suit-2pc/slant-25-stripe.webp",
-      "shippedBytes": 97388,
-      "shippedSha1": "74338103f6d1d1fc33040f612b647fb171dede4b",
+      "shippedBytes": 83416,
+      "shippedSha1": "75036f17b379c1c7feb6d0098cfdafc18c12d19e",
       "pipeline": {
         "dir": ".craft-pipeline/trousers/slant-25-stripe",
         "have": {
@@ -59313,26 +59265,16 @@
           "generation": true,
           "qc": true
         },
-        "verdict": "FAIL",
-        "attempt": 2,
-        "lowestScore": 68,
-        "belowMin": [
-          "shape",
-          "geometry",
-          "dimensions",
-          "angles",
-          "construction",
-          "placement",
-          "symmetry",
-          "composition",
-          "blueprint-match"
-        ],
-        "candidates": 2,
+        "verdict": "PASS",
+        "attempt": 3,
+        "lowestScore": 98,
+        "belowMin": [],
+        "candidates": 3,
         "needsReverify": false,
         "specOnly": false,
-        "checkedAt": "2026-08-01T04:36:43.321Z"
+        "checkedAt": "2026-08-02T15:35:33.300Z"
       },
-      "stage": "failed-retry-due"
+      "stage": "shipped"
     },
     {
       "key": "trousers/slant-32-stripe",
@@ -59840,11 +59782,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/factory/88f95280e442__3532__Left_right.jpg",
-      "liveImage": "/images/generated/trousers/watch-both.webp",
+      "liveImage": "/images/generated/suit-2pc/watch-both.webp",
       "shipped": true,
-      "shippedPath": "/images/generated/trousers/watch-both.webp",
-      "shippedBytes": 220376,
-      "shippedSha1": "fbcc821f8522858ab399767b494cc059b2077cad",
+      "shippedPath": "/images/generated/suit-2pc/watch-both.webp",
+      "shippedBytes": 178008,
+      "shippedSha1": "42b095b9e6ebcdf3215596a72044086314babe07",
       "pipeline": null,
       "stage": "legacy-shipped-unverified"
     },
@@ -61406,11 +61348,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/factory/edc7138c802f__302L__No_pleat_no_dart.jpg",
-      "liveImage": "/images/generated/suit-2pc/flat-front.webp",
+      "liveImage": "/images/generated/trousers/flat-front.webp",
       "shipped": true,
-      "shippedPath": "/images/generated/suit-2pc/flat-front.webp",
-      "shippedBytes": 146290,
-      "shippedSha1": "06b0d158b5510a1c76cbda736c581d588dfce5c0",
+      "shippedPath": "/images/generated/trousers/flat-front.webp",
+      "shippedBytes": 83300,
+      "shippedSha1": "cb4fc3f16f415ff5ec3afa1aef2a27ee9f1c5168",
       "pipeline": {
         "dir": ".craft-pipeline/trousers/flat-front",
         "have": {
@@ -61419,26 +61361,16 @@
           "generation": true,
           "qc": true
         },
-        "verdict": "FAIL",
-        "attempt": 2,
-        "lowestScore": 70,
-        "belowMin": [
-          "shape",
-          "geometry",
-          "dimensions",
-          "angles",
-          "construction",
-          "placement",
-          "symmetry",
-          "composition",
-          "blueprint-match"
-        ],
-        "candidates": 2,
+        "verdict": "PASS",
+        "attempt": 3,
+        "lowestScore": 98,
+        "belowMin": [],
+        "candidates": 3,
         "needsReverify": false,
         "specOnly": false,
-        "checkedAt": "2026-08-01T04:36:43.621Z"
+        "checkedAt": "2026-08-02T15:35:33.608Z"
       },
-      "stage": "failed-retry-due"
+      "stage": "shipped"
     },
     {
       "key": "trousers/pleat-no-single-dart",
@@ -62182,13 +62114,13 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/factory/2aaa7a83011b__3221__Welt_with_bttn.jpg",
-      "liveImage": "/images/blueprints/factory/2aaa7a83011b__3221__Welt_with_bttn.jpg",
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/suit-2pc/back-left-welt.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/suit-2pc/back-left-welt.webp",
+      "shippedBytes": 159996,
+      "shippedSha1": "07ba539444213d1a8a11b7ccd6f764b1a1794349",
       "pipeline": null,
-      "stage": "not-started"
+      "stage": "legacy-shipped-unverified"
     },
     {
       "key": "trousers/back-both-welt",
@@ -62849,8 +62781,8 @@
       "liveImage": "/images/generated/suit-3pc/hem-single-turnup.webp",
       "shipped": true,
       "shippedPath": "/images/generated/suit-3pc/hem-single-turnup.webp",
-      "shippedBytes": 159836,
-      "shippedSha1": "f7963995ff1fb030f176ef3c6d1faccbfc9b6331",
+      "shippedBytes": 115722,
+      "shippedSha1": "97f2491704a1185ca63623a40a6f21117099f08c",
       "pipeline": null,
       "stage": "legacy-shipped-unverified"
     },
@@ -62956,11 +62888,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/remote/7eca44df7089__3602.jpg",
-      "liveImage": "/images/generated/trousers/hem-cuff-32.webp",
+      "liveImage": "/images/generated/suit-2pc/hem-cuff-32.webp",
       "shipped": true,
-      "shippedPath": "/images/generated/trousers/hem-cuff-32.webp",
-      "shippedBytes": 79180,
-      "shippedSha1": "ad734f4957f3b0b83a54d7a9e5deddf1f41a1094",
+      "shippedPath": "/images/generated/suit-2pc/hem-cuff-32.webp",
+      "shippedBytes": 128586,
+      "shippedSha1": "a3e2cb72e5c2b4753da3cacf727ea3e0d720222c",
       "pipeline": null,
       "stage": "legacy-shipped-unverified"
     },

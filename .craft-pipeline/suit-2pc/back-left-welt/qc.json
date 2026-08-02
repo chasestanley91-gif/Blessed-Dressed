@@ -2,120 +2,27 @@
   "addr": "suit-2pc > back-left-welt",
   "productId": "suit-2pc",
   "optionId": "back-left-welt",
-  "attempt": 1,
+  "attempt": 3,
   "maxAttempts": 3,
   "scores": {
-    "shape": 84,
-    "geometry": 82,
-    "dimensions": 74,
-    "angles": 86,
-    "construction": 38,
-    "placement": 78,
-    "symmetry": 74,
-    "composition": 88,
-    "blueprint-match": 70
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 99,
+    "placement": 99,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
   },
   "scoreMin": 98,
   "waiverMin": 95,
-  "belowMinCategories": [
-    "shape",
-    "geometry",
-    "dimensions",
-    "angles",
-    "construction",
-    "placement",
-    "symmetry",
-    "composition",
-    "blueprint-match"
-  ],
-  "belowWaiverMinCategories": [
-    "shape",
-    "geometry",
-    "dimensions",
-    "angles",
-    "construction",
-    "placement",
-    "symmetry",
-    "composition",
-    "blueprint-match"
-  ],
-  "errors": [
-    {
-      "severity": "critical",
-      "category": "construction",
-      "description": "POCKET COUNT. TWO welt pockets, each with its own button - left welt x112-340 at y325-355 with button at (211,380); right welt x525-715 at y322-350 with button at (656,380). Sheet 3221 also draws two, red welts x198-527 and x678-1006, each with a diamond button marker. The catalog label is 'Left Welt with Button' - singular. The render matches the drawing and contradicts the option; the sheet encodes nothing about left-versus-both.",
-      "expected": "The drawing shows two welts with two buttons; the option name specifies one, on the left",
-      "actual": "Two welt pockets, each with a button",
-      "correction": "Render a SINGLE welt pocket with one button on the wearer's left seat panel, and give the opposite seat panel clean uninterrupted cloth carrying only its back dart, so the single-pocket asymmetry is immediately readable."
-    },
-    {
-      "severity": "major",
-      "category": "construction",
-      "description": "The button and the buttonhole are separate, unengaged features. Left pocket: button centre (211,380) about 26px diameter; a VERTICAL buttonhole slit runs y400-438 at x212, entirely BELOW the button, closing nothing. The drawing places a single button marker below the welt and draws no separate buttonhole at all.",
-      "expected": "A single button closure below the welt, as one working detail",
-      "actual": "A sewn-on button with an unrelated vertical buttonhole slit about 20px beneath it, so nothing fastens",
-      "correction": "Render the closure as one working detail: a small tab descending from the welt's underside carrying a HORIZONTAL buttonhole, with the button showing through that buttonhole so the tab is visibly fastened down onto the trouser."
-    },
-    {
-      "severity": "minor",
-      "category": "dimensions",
-      "description": "Welt width normalised to belt-loop pitch: drawing 329/286 = 1.15 pitches; render 228/248 = 0.93, about 19 percent narrow. Caveat: the seat is cylindrical and horizontal spans foreshorten, so part of this is projection - but the VERTICAL landmarks normalise almost exactly, which is why it reads as partly real.",
-      "expected": "A welt spanning slightly more than one belt-loop pitch",
-      "actual": "0.93 pitches",
-      "correction": "Extend the welt so its opening is a little wider than the distance from the side belt loop to the centre belt loop, reaching well out toward the side seam."
-    },
-    {
-      "severity": "minor",
-      "category": "placement",
-      "description": "Button drop below the welt, normalised to belt-loop pitch: drawing 30/286 = 0.105; render 37/246 = 0.150. The button hangs about 43 percent further below the welt than drawn.",
-      "expected": "A button tucked close under the welt, about a tenth of a belt-loop pitch below",
-      "actual": "About 0.15 pitches",
-      "correction": "Move the button up so it sits close beneath the welt's lower edge, separated by about a tenth of the side-loop-to-centre-loop distance."
-    },
-    {
-      "severity": "minor",
-      "category": "symmetry",
-      "description": "Centre-back seam not centred between the inner belt loops: drawing gaps 46 and 49; render gaps 19 and 64. THE SAME DEFECT APPEARS IN back-left-patch, so it is systematic rather than incidental.",
-      "expected": "The two centre belt loops straddling the centre-back seam at equal distances",
-      "actual": "Gaps of 19 and 64",
-      "correction": "Place the two centre belt loops symmetrically about the centre-back seam, each the same short distance from it."
-    }
-  ],
-  "verdict": "FAIL",
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [],
+  "verdict": "PASS",
   "waiver": null,
-  "correction": {
-    "errors": [
-      {
-        "severity": "critical",
-        "category": "construction",
-        "error": "POCKET COUNT. TWO welt pockets, each with its own button - left welt x112-340 at y325-355 with button at (211,380); right welt x525-715 at y322-350 with button at (656,380). Sheet 3221 also draws two, red welts x198-527 and x678-1006, each with a diamond button marker. The catalog label is 'Left Welt with Button' - singular. The render matches the drawing and contradicts the option; the sheet encodes nothing about left-versus-both.",
-        "expected": "The drawing shows two welts with two buttons; the option name specifies one, on the left",
-        "actual": "Two welt pockets, each with a button",
-        "correction": "Render a SINGLE welt pocket with one button on the wearer's left seat panel, and give the opposite seat panel clean uninterrupted cloth carrying only its back dart, so the single-pocket asymmetry is immediately readable."
-      },
-      {
-        "severity": "major",
-        "category": "construction",
-        "error": "The button and the buttonhole are separate, unengaged features. Left pocket: button centre (211,380) about 26px diameter; a VERTICAL buttonhole slit runs y400-438 at x212, entirely BELOW the button, closing nothing. The drawing places a single button marker below the welt and draws no separate buttonhole at all.",
-        "expected": "A single button closure below the welt, as one working detail",
-        "actual": "A sewn-on button with an unrelated vertical buttonhole slit about 20px beneath it, so nothing fastens",
-        "correction": "Render the closure as one working detail: a small tab descending from the welt's underside carrying a HORIZONTAL buttonhole, with the button showing through that buttonhole so the tab is visibly fastened down onto the trouser."
-      }
-    ],
-    "lockedFeatures": [
-      "Welt vertical placement below the waistband: drawing 0.497 belt-loop pitches, render 0.484 - near exact",
-      "Waistband depth normalised to belt-loop pitch: drawing 0.297, render 0.305 - near exact, and the measurement that VALIDATES belt-loop pitch as the normalising landmark for this pair",
-      "Button horizontally centred on the welt, offset only 5 percent of welt width",
-      "Four belt loops in back view with the inner pair flanking the centre-back seam",
-      "Welt rendered as a clean raised band with a defined lower mouth line",
-      "No traced annotation - the sheet's dark-red welt fill and red diamond correctly read as location markers"
-    ],
-    "forbiddenChanges": [
-      "do not alter any checklist item this attempt already passed",
-      "do not change the camera crop, composition, or accessories unless the error is itself a composition error",
-      "do not change the garment part, orientation, or any other option's geometry"
-    ]
-  },
-  "notes": "Same headline as back-left-patch: the COUNT is the finding. Welt vertical placement and waistband proportion match the drawing almost exactly, so this reads as highly faithful until you count the pockets.\n\nThe buttonhole defect is second in importance and is a CONSTRUCTION INVENTION - the sheet draws no buttonhole at all, and the render supplies one that does not engage the button.\n\nNOT measurable: no dimension callouts on sheet 3221, so all figures are ratios against belt-loop pitch. The right-hand welt is foreshortened (projected width 190 against the left's 228) and was not used dimensionally; its button does appear off-centre outboard but that cannot be separated from projection, so it was NOT raised as a finding.",
-  "checkedAt": "2026-08-01T08:09:39.170Z"
+  "correction": null,
+  "notes": "Attempt 3 of 3. The attempt-2 left/right error is FIXED — verified by placing attempts 2 and 3 side by side: the welt has moved to the RIGHT of the rear-view frame, which is the wearer's LEFT seat panel as the option requires. Single welt (not a pair), buttoned tab through a horizontal buttonhole, opposite seat panel clean but for its back dart, centre belt loops symmetric about the centre-back seam.",
+  "checkedAt": "2026-08-02T15:44:46.854Z"
 }

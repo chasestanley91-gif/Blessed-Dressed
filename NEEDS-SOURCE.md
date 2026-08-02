@@ -428,3 +428,24 @@ git prints "unknown object type 0 at offset ... pack-2230b4e3..." during some op
 "git fsck --connectivity-only" shows HEAD history fully reachable (only normal dangling blobs), and commits continue to succeed.
 The bad region appears to hold only unreachable objects. Recommended when convenient: back up the .git folder, then run "git repack -ad" to rewrite packs.
 Not attempted autonomously mid-campaign.
+
+## J. Terminal UNMET options (2026-08-02) — owner decision needed, 8 options
+These exhausted the 3-attempt budget without reaching either the >=98 pass bar or the >=95 minor-only
+waiver bar. The pipeline treats UNMET as terminal, so they will not be retried automatically. They are
+NOT unpublished — each keeps serving whatever image it had, because a flawed photo still beats none.
+
+  shirt/collar-small-sq-50
+  shirt/collar-sq-65-btn
+  shirt/stitch-01-inner-plain
+  sport-coat/quarter-canvas
+  suit-2pc/back-left-patch
+  suit-2pc/hem-single-turnup   (NOTE: the suit-3pc twin of this option shipped successfully today
+                                against the same drawing — this record simply ran out of attempts
+                                first. Cheapest fix of the eight.)
+  suit-3pc/vest-chest-both-besom
+  suit-3pc/coin-left           (also the known divergent-blueprint case — two coin rows, two drawings)
+
+Owner options for each: (a) authorise a budget reset so the pipeline may try again with fresh
+corrections, (b) accept a sibling record's image where the drawing and label genuinely match
+(hem-single-turnup is the clear candidate), or (c) leave as-is and revisit after the baoxiniao harvest
+supplies better drawings.

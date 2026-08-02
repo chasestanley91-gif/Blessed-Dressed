@@ -1012,3 +1012,28 @@ Ledger now 251 graded: 199 OK / 35 WRONG / 17 UNSURE.
   the shipped photo is a three-quarter hero shot that never shows that seam. Queued for regeneration.
 - The clean rate here (98%) is far better than the earlier trouser-heavy sample (8-of-12 wrong).
   Defect rate really is family-dependent; do not extrapolate one batch's rate to the catalog.
+
+## 2026-08-02 — Final retry-queue sweep (9 generations / 4.5 credits, 8 shipped)
+
+Cleared every remaining actionable failed-retry-due option outside the three owner-held flap rungs.
+Verdicts: 3 PASS (trousers/slant-25-stripe, trousers/flat-front, suit-2pc/back-left-welt),
+5 PASS_WAIVED, 1 FAIL-then-fixed. Retry-due queue is now 4 — three of them blocked on owner input.
+
+- NEW STANDING PRE-SPEND CHECK: after uploading blueprints, FETCH each confirmed media URL back from
+  the CDN and compare its byte length against the local file. I hand-transcribed seven presigned URLs
+  this round; a mangled signature would have produced a silent 403 or a truncated object, and the
+  generator would then have rendered from text alone with no reference. All 7 verified byte-identical
+  before a single credit moved. Cost: one fetch each. Cheap insurance against an invisible failure.
+- MCP proxy returned a 502 mid-batch on suit-2pc/back-left-welt. Did NOT blind-retry: listed recent
+  generations first and confirmed no job had been created, so the POST died before reaching the
+  generator. Only then re-fired. LESSON: a 5xx on a generate call is ambiguous — always check the
+  generation list before retrying, or you pay twice and create a duplicate candidate.
+- LEFT/RIGHT ERROR CAUGHT: suit-2pc/back-left-welt attempt 2 put the single welt on the wearer's RIGHT.
+  In a REAR-VIEW photograph the wearer's left is the RIGHT-HAND side of the frame — the render had it
+  mirrored, which made a 'Left Welt' option indistinguishable from its right-welt sibling. Fixed at
+  attempt 3 and verified by a 2-vs-3 side-by-side. LESSON: for any left/right option shot from behind,
+  state the side in FRAME terms as well as wearer terms; 'wearer's left' alone gets mirrored.
+- MATCHED-PAIR GATE applied to the two turn-up depths (3.2 vs 4.4 cm): both got an explicit pair-lock
+  naming the shoe as a fixed real-world size reference. The pair ORDERS CORRECTLY (4.4 is genuinely
+  deeper after normalising for scale) but the generator still framed the deep rung ~1.15x tighter, so
+  the scale match is imperfect and both carry that as a logged minor.

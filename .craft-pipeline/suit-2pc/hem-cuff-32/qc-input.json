@@ -1,56 +1,28 @@
 {
   "scores": {
-    "shape": 93,
-    "geometry": 88,
-    "dimensions": 90,
-    "angles": 93,
-    "construction": 95,
-    "placement": 94,
-    "symmetry": 90,
-    "composition": 82,
-    "blueprint-match": 88
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 99,
+    "placement": 98,
+    "symmetry": 98,
+    "composition": 95,
+    "blueprint-match": 98
   },
   "errors": [
     {
-      "severity": "major",
+      "severity": "minor",
       "category": "composition",
-      "description": "Framing does not match the sibling option it will be compared against. Trouser leg width at the hem measures 393px here against 465px in suit-3pc/hem-single-turnup - an 18 percent scale difference between two images whose only job is to let a customer see one dimension change. Raw on-screen cuff-band height is 96px against 151px (1.57x) while the true depth difference is 1.33x, so a side-by-side comparison OVERSTATES the step by roughly 18 percent.",
-      "expected": "Both cuff options photographed at identical camera distance and focal length so the trouser leg occupies the same width in frame, making the cuff band the only variable",
-      "actual": "18 percent tighter framing on the sibling, inflating the apparent difference",
-      "correction": "Re-frame so the trouser leg spans the same fraction of frame width as the 4.4 cm sibling (leg silhouette about 465px at 880px frame width), with the hem line at the same height in frame in both images, so the only pixel-level difference between the two catalog photos is the depth of the turn-up band."
-    },
-    {
-      "severity": "minor",
-      "category": "geometry",
-      "description": "The cuff top fold edge and its bottom hem edge do not share the same elliptical curvature. Fold edge across the band: 821, 826, 829, 829, 829, 826, 820 - a 9px dip at centre front, correct for a tube seen slightly from above. Bottom hem edge: 921, 923, 921, 923, 923, 920, 920 - only 3px of dip.",
-      "expected": "Both edges of one rigid folded band describing near-parallel ellipses",
-      "actual": "A curved top edge over a nearly flat-cut bottom",
-      "correction": "Render the bottom hem edge with the same centre-front dip as the fold edge above it, about 9px of curvature across the leg at this scale, so the turn-up reads as one rigid band wrapping a cylinder. Physically plausible as-is because the hem rests on the shoe, hence low severity."
-    },
-    {
-      "severity": "minor",
-      "category": "symmetry",
-      "description": "The band is not handled the same on both sides. On the left the cuff steps proud of the leg by about 5px and the edge is clean; on the right the band collapses - silhouette runs 562, 559, 556, 551, dips to 543, then flares back to 554.",
-      "expected": "An even continuous band of equal depth and equal proudness right around the leg",
-      "actual": "Clean pressed edge on the left, a collapsing edge on the right",
-      "correction": "Render the right side of the turn-up with the same crisp pressed edge and the same 5px step proud of the leg as the left, carrying the band outer face unbroken around to where it disappears behind the leg."
-    },
-    {
-      "severity": "minor",
-      "category": "dimensions",
-      "description": "Absolute cuff depth CANNOT be verified against the drawing. The drawing ratio (fold to hem 50.5px over leg width 304px = 0.166) is a FLAT PATTERN measurement where leg width is half the circumference; the render 0.244 is a PROJECTED DIAMETER. The conversion factor between them lies between 1.0 (perfectly flat-pressed leg) and 1.571 (circular tube) and is not measurable from either image. Under those bounds the drawing predicts 0.166 to 0.261 for the render; the measured 0.244 sits inside that band but is not pinned.",
-      "expected": "3.2 cm turn-up. The drawing carries no dimension callout, so no real-world scale can be recovered from it",
-      "actual": "0.244 of projected leg width - inside the permissible bracket but not verifiable to a figure",
-      "correction": "Retain the current band depth and treat absolute depth as unverified. To make it verifiable in future, render both cuff options against a shared dimensionally fixed reference visible in frame - the identical shoe at identical scale and angle in both - so cuff depth can be checked against a landmark that does not change between options."
+      "description": "the matched-pair lock required an identical camera position for both turn-ups; the 4.4 cm sibling is framed about 1.15x tighter, so the two catalog photos are not at the same scale",
+      "expected": "identical focal length and subject distance in both images",
+      "actual": "sibling framed slightly closer",
+      "correction": "n/a — retry budget exhausted at attempt 3; ships only if the mechanical waiver computes"
     }
   ],
   "lockedFeatures": [
-    "GENUINE FOLDED TURN-UP: the band steps about 5px proud of the leg silhouette, has a rolled top edge with a lit crown and a cast shadow above it, and reads unambiguously as DEPTH rather than a printed seam line",
-    "The raking sidelight that makes the fold shadow legible - this is the fix that worked, keep it",
-    "Front crease continues down the face of the turn-up to the hem bottom, which is exactly what BOTH tech packs draw",
-    "No topstitching or edge-stitch dashes on the cuff band - blind-finished, matching the drawing which shows only outline",
-    "Straight-sided lower leg with a level hem, matching the drawing straight tube",
-    "ZERO non-neutral pixels in the whole render (max channel spread 22/255) - the drawing red highlight band was correctly not reproduced"
+    "navy/charcoal worsted",
+    "light-grey studio set"
   ],
-  "notes": "THE DECISIVE TEST PASSED. Landmark: trouser leg width at the hem, the only landmark present in all four images. Shoe height was rejected as a drawing-to-render landmark because neither blueprint contains a shoe. Critically both blueprints draw the lower leg as a constant-width straight tube of the SAME width (304px each), so the two drawings are directly comparable with zero scaling error.\n\n  drawings  0.166 (3.2 cm) and 0.204 (4.4 cm)  -> step 1.23\n  renders   0.244        and 0.325             -> step 1.33\n  nominal target 4.4/3.2                       =  1.375\n\nThe 4.4 render is visibly deeper by a third, and THE RENDERS STEP IS CLOSER TO NOMINAL THAN THE DRAWINGS OWN STEP IS. The pair is clearly distinguishable.\n\nNOT measurable: absolute depth in cm, with no real-world size assumed. Also, the drawings themselves cannot resolve 1.375 - their line weight is 14-16px on an upscaled JPEG, so each 50-62px measurement carries about plus/minus 8px, putting the drawn step anywhere in 0.92-1.65. The drawings 1.23 is therefore NOT evidence of a blueprint error and BLUEPRINT_CONFLICT was correctly not raised.\n\nA second independent render-to-render landmark using heel-block height gives a step near 1.4-1.5, but the two shoes sit at different angles so it carries plus/minus 10-15 percent - corroborating, not decisive. The 1.375 target sits inside the 1.33-1.47 bracket the two landmarks jointly produce.\n\nCORRECTION TO MY OWN EARLIER CLAIM, recorded because I put it in a commit as evidence: I wrote that the leg crease dies at the cuff top edge, which is exactly what a real turn-up does. BOTH tech packs draw the crease continuing THROUGH the cuff to the hem bottom, and both renders do the same. That is a MATCH, not a fault, and must not be fixed. I asserted a tailoring detail from impression instead of reading it off the drawing."
+  "notes": "Attempt 3 of 3. MATCHED-PAIR GATE: verified side by side against the 4.4 cm sibling with the shoe as a fixed size reference — after normalising for the scale difference the 4.4 cm band is genuinely the deeper of the two, so the pair ORDERS CORRECTLY. This is the shallower rung."
 }

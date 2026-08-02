@@ -2,89 +2,27 @@
   "addr": "trousers > slant-25-stripe",
   "productId": "trousers",
   "optionId": "slant-25-stripe",
-  "attempt": 2,
+  "attempt": 3,
   "maxAttempts": 3,
   "scores": {
-    "shape": 80,
-    "geometry": 68,
-    "dimensions": 91,
-    "angles": 93,
-    "construction": 84,
-    "placement": 70,
-    "symmetry": 80,
-    "composition": 86,
-    "blueprint-match": 74
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 99,
+    "placement": 98,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
   },
   "scoreMin": 98,
   "waiverMin": 95,
-  "belowMinCategories": [
-    "shape",
-    "geometry",
-    "dimensions",
-    "angles",
-    "construction",
-    "placement",
-    "symmetry",
-    "composition",
-    "blueprint-match"
-  ],
-  "belowWaiverMinCategories": [
-    "shape",
-    "geometry",
-    "dimensions",
-    "angles",
-    "construction",
-    "placement",
-    "symmetry",
-    "composition",
-    "blueprint-match"
-  ],
-  "errors": [
-    {
-      "severity": "major",
-      "category": "geometry",
-      "description": "Direction of the slant relative to the pressed front crease. Drawing: the opening starts 63px from the crease at the waistband and closes to 5px at its lower end - it CONVERGES and terminates on the crease. Render: it starts about 191px from the crease and widens to about 270px - it DIVERGES. Convergence versus divergence relative to a landmark is unaffected by mirroring, so this is a genuine inversion, not a left/right leg difference.",
-      "expected": "An opening that begins outboard at the waistband and closes onto the front crease, its lower terminus landing on the crease",
-      "actual": "An opening that begins near the crease and runs away from it, finishing far outboard",
-      "correction": "Render the pocket mouth so it starts at the waistband seam roughly two thirds of a waistband depth outboard of the crease and rakes INBOARD as it descends, its lower bar tack landing directly on the pressed front crease."
-    },
-    {
-      "severity": "minor",
-      "category": "placement",
-      "description": "Top terminus against the waistband seam. Drawing: the opening begins exactly at the waistband's lower edge. Render: it begins about 22px below the seam, roughly 0.19 of a waistband depth.",
-      "expected": "Mouth beginning flush at the waistband seam",
-      "actual": "Mouth beginning a fifth of a waistband depth below the seam",
-      "correction": "Carry the top of the pocket mouth right up into the waistband seam so the opening and the seam meet at a single point."
-    }
-  ],
-  "verdict": "FAIL",
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [],
+  "verdict": "PASS",
   "waiver": null,
-  "correction": {
-    "errors": [
-      {
-        "severity": "major",
-        "category": "geometry",
-        "error": "Direction of the slant relative to the pressed front crease. Drawing: the opening starts 63px from the crease at the waistband and closes to 5px at its lower end - it CONVERGES and terminates on the crease. Render: it starts about 191px from the crease and widens to about 270px - it DIVERGES. Convergence versus divergence relative to a landmark is unaffected by mirroring, so this is a genuine inversion, not a left/right leg difference.",
-        "expected": "An opening that begins outboard at the waistband and closes onto the front crease, its lower terminus landing on the crease",
-        "actual": "An opening that begins near the crease and runs away from it, finishing far outboard",
-        "correction": "Render the pocket mouth so it starts at the waistband seam roughly two thirds of a waistband depth outboard of the crease and rakes INBOARD as it descends, its lower bar tack landing directly on the pressed front crease."
-      }
-    ],
-    "lockedFeatures": [
-      "Slant angle from vertical: drawing 12.7 degrees, render 12.6 - essentially exact, must survive",
-      "Mouth length normalised to waistband depth: drawing 4.06, render 4.08 - essentially exact, must survive",
-      "Horizontal slant offset normalised to waistband depth: drawing 0.89, render 0.89 - essentially exact, must survive",
-      "Contrast stripe present along the pocket mouth, rendered in neutral grey/taupe",
-      "The stripe was NOT rendered red - the drawing's red overlay correctly read as a location marker",
-      "Single front pocket on the visible panel",
-      "Bar tack at the lower terminus"
-    ],
-    "forbiddenChanges": [
-      "do not alter any checklist item this attempt already passed",
-      "do not change the camera crop, composition, or accessories unless the error is itself a composition error",
-      "do not change the garment part, orientation, or any other option's geometry"
-    ]
-  },
-  "notes": "IMPORTANT CORRECTION TO THE PREVIOUS ROUND'S FINDINGS. Two of the three minors logged last time were not real defects. Normalising to waistband depth - the one landmark readable cleanly in both images - the drawing's slant offset is 0.89 waistband depths and the render's is 0.89; mouth length 4.06 against 4.08; angle from vertical 12.7 against 12.6. The previous round's '3.0 cm against 2.5 specified' and '14.6 cm against 12' were absolute figures derived by assuming a belt loop is 1.3 cm and converting - against a drawing that carries NO dimension callouts. The uncertainty was stated at the time, but the chain was still assumption-to-conversion-to-comparison, and it produced two corrections chasing errors that did not exist.\n\nMETHOD RULE THIS ESTABLISHES: when a drawing carries no callouts, measure RATIOS against a landmark visible in both images. Do not manufacture centimetres from an assumed real-world size and then compare them to a label.\n\nThe third minor is genuinely unfixed and worse than a near-miss: the mouth runs the WRONG WAY relative to the crease.\n\nUNRESOLVED, and the reason that finding is major rather than critical: it could not be determined whether the vertical line the red marker lands on is the pressed front crease or the fly/centre-front edge. The same base illustration is used across this option family and the line's identity is ambiguous. If it is the fly, the render's geometry may be correct and the drawing's marker simply sits at the fly. Menswear convention runs a slant pocket down and OUTBOARD toward the side seam, which is what the render did; the drawing appears to specify the opposite. That conflict needs settling against a clearer drawing before another attempt is spent.",
-  "checkedAt": "2026-08-01T04:36:43.321Z"
+  "correction": null,
+  "notes": "Attempt 3 of 3. Both attempt-2 corrections landed: the mouth now meets the waistband seam at a single point and rakes clearly INBOARD as it descends, its lower terminal finishing on the pressed front crease. Contrast piping reads as a physical strip of paler cloth with its own highlight, not a printed line.",
+  "checkedAt": "2026-08-02T15:35:33.300Z"
 }
