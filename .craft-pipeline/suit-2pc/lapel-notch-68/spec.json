@@ -1,0 +1,55 @@
+{
+  "schema": "garment-spec/v1",
+  "addr": "suit-2pc > lapel > lapel-style > lapel-notch-68",
+  "productId": "suit-2pc",
+  "sectionId": "lapel",
+  "fieldId": "lapel-style",
+  "optionId": "lapel-notch-68",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\suit-2pc.json",
+  "source": "json",
+  "label": "Notch 68° (Curved Gorge)",
+  "description": "Notch lapel with a 68° opening and a curved gorge — the notch sweeps through a 0.8 cm to 1.5 cm radius instead of a straight excavation. Less mechanical, more handmade; Florentine and Neapolitan character.",
+  "fieldLabel": "Lapel Style",
+  "sectionLabel": "Lapel",
+  "part": "jacket-lapel",
+  "garment": {
+    "noun": "navy bespoke suit jacket",
+    "fabric": "fine wool suiting with visible weave"
+  },
+  "view": {
+    "orientation": "front",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": false,
+  "measured": {
+    "dimensions": [
+      "0.8 cm",
+      "1.5 cm"
+    ],
+    "angles": [
+      "68°"
+    ],
+    "counts": [],
+    "shapes": [
+      "notch lapel"
+    ],
+    "negatedShapes": [],
+    "spread": [],
+    "flags": []
+  },
+  "illustration": {
+    "path": "/images/blueprints/factory/877a05ce586e__0689__Notch_with_high_gorge.jpg",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\factory\\877a05ce586e__0689__Notch_with_high_gorge.jpg",
+    "exists": true,
+    "remote": false
+  },
+  "forbidden": [
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-08-02T07:49:20.934Z"
+}

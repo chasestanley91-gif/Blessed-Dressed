@@ -1,0 +1,30 @@
+{
+ "createdAt": "2026-08-02",
+ "method": "ANGLE ladder (framing-invariant): owner-spec notch openings 45/50/55/65/68/73 deg are law; drawings 0003(45)/0001(50,55,65,73)/0689(68) aid form",
+ "media": {
+  "0001-generic": "2be822a9-0e2b-4e58-9f86-6b2092d94d66",
+  "0003-semi": "44ac0c56-4801-41e0-965c-cebf5e5c437f",
+  "0689-highgorge": "d2d7aece-2dc5-40a0-810a-1e29a02c48a7"
+ },
+ "rungs": {
+  "lapel-notch-45": 45,
+  "lapel-notch-50": 50,
+  "lapel-notch-55": 55,
+  "lapel-notch-65": 65,
+  "lapel-notch-68": 68,
+  "lapel-notch-73": 73
+ },
+ "discriminators": {
+  "45": "shallow rounded semi-notch",
+  "50": "0.5-0.8cm deeper excavation",
+  "55": "benchmark 55/35 edges",
+  "65": "steep upper edge, power",
+  "68": "CURVED gorge 0.8-1.5cm radius",
+  "73": "very open STRAIGHT"
+ },
+ "jobs": {
+  "lapel-notch-55": "329405a2-e2c6-4121-a3ec-4c6b32936769"
+ },
+ "gate": "blind visual angle ordering on notch close-crops + per-image spec QC",
+ "testResult": "55-benchmark PASSED framing test: full lapel run + termination in frame, balanced symmetric notch, no tie, clean. Batch of remaining 5 rungs next; QC verdicts deferred to the set gate per ladder protocol."
+}
