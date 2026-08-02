@@ -334,6 +334,9 @@ function resolvePart({ productId: rawProductId, sectionId, fieldId, fieldLabel, 
   // TROUSERS -----------------------------------------------------------
   if (productId === 'trousers') {
     if (s === 'front-pockets' && /front-pocket|^pocket-style/.test(f)) return 'trouser-front-pocket';
+    // pocket DEPTH is an interior dimension — routed to its own part so the
+    // camera profile shoots the BAG (interior view) with the waistband as anchor.
+    if (/pocket-depth/.test(f)) return 'trouser-pocket-depth';
     if (s === 'front-pockets' && /(watch|coin)/.test(f)) return 'trouser-small-pocket';
     if (/^pleat|pleat-style|pleat-depth/.test(f)) return 'trouser-pleat';
     if (/fly/.test(f)) return 'trouser-fly';
