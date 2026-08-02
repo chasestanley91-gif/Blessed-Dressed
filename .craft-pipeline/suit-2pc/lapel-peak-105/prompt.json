@@ -1,0 +1,138 @@
+{
+  "addr": "suit-2pc > lapel > lapel-style > lapel-peak-105",
+  "label": "Peak 105°",
+  "part": "jacket-lapel",
+  "orientation": "front",
+  "excluded": null,
+  "generate": true,
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\suit-2pc.json",
+  "source": "json",
+  "illustration": "/images/blueprints/supplier/ec013dda688e__0002__Peak.jpg",
+  "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\supplier\\ec013dda688e__0002__Peak.jpg",
+  "illustrationExists": true,
+  "illustrationRemote": false,
+  "profile": {
+    "addr": "suit-2pc > lapel > lapel-style > lapel-peak-105",
+    "product": "suit-2pc",
+    "field": "Lapel Style",
+    "option": "Peak 105°",
+    "part": "jacket-lapel",
+    "garment": "navy bespoke suit jacket",
+    "orientation": "front",
+    "absence": false,
+    "distinguishingDetail": "Assertive peak lapel at 105°, projecting 2 cm to 3 cm beyond the collar line. Visually raises the chest, broadens the shoulders and narrows the perceived waist.",
+    "measured": {
+      "dimensions": [
+        "2 cm",
+        "3 cm"
+      ],
+      "angles": [
+        "105°"
+      ],
+      "counts": [],
+      "shapes": [
+        "peak lapel"
+      ],
+      "spread": [],
+      "flags": []
+    },
+    "reproduceFromIllustration": [
+      "lapel width at its widest point",
+      "peak/notch/shawl geometry",
+      "gorge position",
+      "lapel roll and edge stitch",
+      "the lower end of the lapel and the exact point at which its edges terminate, completely unobstructed"
+    ],
+    "composition": {
+      "crop": "waist-up, the lapel dominating the frame with the ENTIRE lapel run visible — from the collar down to the exact point where the two front edges meet at the closure, the termination fully inside the frame, never cropped",
+      "dominanceTarget": "40–80% of frame",
+      "identifyWithin": "1 second"
+    },
+    "forbidden": [
+      "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+      "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+      "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+    ],
+    "excluded": null,
+    "generate": true
+  },
+  "requiredTokens": [
+    "2 cm",
+    "3 cm",
+    "105°",
+    "peak lapel"
+  ],
+  "checklist": [
+    "length/width matches exactly: 2 cm",
+    "length/width matches exactly: 3 cm",
+    "angle matches exactly: 105°",
+    "shape reads as drawn: peak lapel",
+    "distinguishing detail present: Assertive peak lapel at 105°, projecting 2 cm to 3 cm beyond the collar line. Visually raises the chest, broadens the shoulders and narrows the perceived waist.",
+    "reproduced from the illustration: lapel width at its widest point",
+    "reproduced from the illustration: peak/notch/shawl geometry",
+    "reproduced from the illustration: gorge position",
+    "reproduced from the illustration: lapel roll and edge stitch",
+    "reproduced from the illustration: the lower end of the lapel and the exact point at which its edges terminate, completely unobstructed",
+    "orientation matches the illustration: front",
+    "the Lapel Style dominates the frame (40–80%), identifiable within one second, framed waist-up, the lapel dominating the frame with the ENTIRE lapel run visible — from the collar down to the exact point where the two front edges meet at the closure, the termination fully inside the frame, never cropped",
+    "silhouette, proportions, seam & stitch placement match the illustration; left/right symmetry correct",
+    "NO generic-category substitution — this exact option, not a typical one",
+    "a real photograph of the exact drawn option — not the line-art, no stylisation",
+    "peak ladder: 105 deg, rung 6/13"
+  ],
+  "scoreCard": [
+    {
+      "category": "shape",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "geometry",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "dimensions",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "angles",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "construction",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "placement",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "symmetry",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "composition",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "blueprint-match",
+      "score": null,
+      "min": 98
+    }
+  ],
+  "prompt": "Ultra-photorealistic luxury menswear product photography.\n\nA single-subject craft DOCUMENTATION photograph: the Lapel Style is the dominant subject, filling 40–80% of the frame and identifiable within one second.\n\nA premium navy bespoke suit jacket featuring a precise Peak 105° (Lapel Style).\n\nDistinguishing construction detail (reproduce exactly as drawn): Assertive peak lapel at 105°, projecting 2 cm to 3 cm beyond the collar line. Visually raises the chest, broadens the shoulders and narrows the perceived waist.\n\nExact specification — peak lapel shape; measuring exactly 2 cm, 3 cm; at 105° — matching the illustration precisely.\n\nMANDATORY GEOMETRY COVERAGE — reproduce from the illustration, exactly and without assumption, every one of these: lapel width at its widest point, peak/notch/shawl geometry, gorge position, lapel roll and edge stitch, the lower end of the lapel and the exact point at which its edges terminate, completely unobstructed. Match each to the drawing.\n\nVIEW — this illustration is the front of the garment. Photograph the same face; never substitute a different face of the garment.\n\nBLUEPRINT LOCK — THE DRAWING IS LAW: the attached technical illustration is the manufacturing blueprint for this exact craft option and the SOLE authority for the image. Reproduce its geometry precisely — point/edge shape, lengths, widths, depths, angles, curvature, roll lines, symmetry, button/tab/stay positions, seam and stitch placement, and proportions — within less than 2% deviation. Assume NOTHING from tailoring/menswear/fashion convention or model priors; every visible characteristic must come from the drawing. Do not redesign, reinterpret, substitute a similar commercial style, stylise, or \"improve\" it. Do NOT fall back to a generic version of this category — reproduce THIS option, not a typical one. If convention conflicts with the drawing, the drawing wins. Accuracy over aesthetics. ANNOTATIONS ARE NOT THE GARMENT: the technical drawing may carry measurement callouts — dimension numbers (\"2.5cm\", \"9cm\", \"115°\"), tick / leader / dimension lines, arrows, red or coloured guide marks, and text labels. These are manufacturing documentation, NOT features of the cloth. Reproduce ONLY the finished garment: never render any number, unit, arrow, callout, leader line, measurement mark, or text anywhere in the photograph. The final image is a clean garment photo with zero annotation. COLOUR IN THE DRAWING IS NOTATION, NOT CLOTH: any red, orange or otherwise highlighted region marks WHERE the craft option sits — it is a position marker, never a colour specification. Flat grey or tinted shading marks the EXTENT of a panel, lining or facing, not its shade. Render every one of those areas in the garment's own cloth and thread, in the natural colour that tailoring would use there. There must be no red, no highlighter tint and no flat unshaded grey panel anywhere in the photograph unless the option's own label explicitly names that colour.\n\nPhotographed worn on a male model over a crisp white dress shirt with NO necktie and nothing at the throat, the jacket worn open just enough to read the gorge and lapel roll.\n\nFrame waist-up, the lapel dominating the frame with the ENTIRE lapel run visible — from the collar down to the exact point where the two front edges meet at the closure, the termination fully inside the frame, never cropped; the detail must read clearly and sharply.\n\nMATCHED FRAMING — this option belongs to a family whose members differ from one another only by a measurement, so this photograph will be shown beside its siblings and compared directly. TWO SEPARATE REQUIREMENTS, and both must hold. FIRST, THE GARMENT: build the feature at exactly the size the drawing gives it — no larger. Do not exaggerate the dimension to make this option look more distinct from its siblings; the difference between them is small in real tailoring and must stay small here, because a customer choosing on these numbers is ordering a real garment. SECOND, THE CAMERA: frame the shot the way every member of the family must be framed — the garment part square to camera, centred, at a standard distance that leaves the whole garment occupying the same share of the picture no matter which value this option carries. Do not move closer for a small measurement or pull back for a large one. Getting one of these right while getting the other wrong is still a failure: an accurate feature shot at the wrong distance, or a matched frame containing an exaggerated feature, both mislead a customer comparing two pictures side by side.\n\nSavile Row and high-end Italian sartorial aesthetic. Natural daylight studio lighting, Phase One IQ4 medium-format camera, 150MP detail, shallow depth of field, magazine-quality editorial menswear photography. Authentic bespoke craftsmanship, fine hand stitching, premium finishing. SET — shot in a clean luxury photographic studio against a seamless, plain, neutral light-grey background with clear separation between garment and background: no location, no architecture, no furniture, no scenery, no props and no environmental context of any kind competing with the garment.\n\nExtremely realistic fine wool suiting with visible weave texture, fine stitching.\n\nAvoid: any GENERIC menswear substitution (a generic spread collar, generic notch/peak lapel, generic pocket/pleat/vent/cuff/waistband in place of the drawn one), illustration or line-art style, CGI or 3D-render look, cartoon, mannequin, fashion sketch, inaccurate geometry, altered proportions, missing construction details, asymmetry, watermark, AI-art appearance, AND any text or annotation traced from the drawing: NO measurement numbers, units (cm/mm/°), dimension or leader lines, arrows, callouts, red/coloured guide marks, ruler ticks, or labels anywhere in the frame. This is real garment photography of the exact drawn option — clean cloth only, nothing else.\n\nANGLE LADDER — GRADUATED PEAK FAMILY (this image ships only if its peak orders correctly against its twelve siblings):\n- This is rung 6 of 13: the peak angle is EXACTLY 105 DEGREES, and the stated PROJECTION is the primary visible size cue. The specification is the law; hold it.\n- Rung character (from the owner drafting specification): ASSERTIVE peak projecting 2-3 cm beyond the collar line — visually raises the chest, broadens the shoulders, narrows the perceived waist.\nMATCHED FRAMING (identical for all thirteen rungs): waist-up front view, jacket buttoned, NO necktie, shirt open at the collar; the ENTIRE lapel run from gorge to termination in frame on both sides, the upswept PEAK POINTS sharp and dominant — the peak tips and how far they project toward the shoulders are what a customer reads first. Even lighting so both peak edges are crisp. No pocket square, no annotations, no printed measurements.\n\nFORBIDDEN FOR THIS OPTION — do not render: a generic version of this part standing in for the exact drawn option (generic-category substitution); any feature, count, or geometry borrowed from a neighboring craft option on the same field; a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion).",
+  "builtAt": "2026-08-02T08:17:42.768Z",
+  "ladder": {
+    "family": "lapel-peak",
+    "angleDeg": 105,
+    "rung": 6,
+    "source": "owner drafting spec (jacket-lapels): angles+projections law; 0002/0004 aid"
+  }
+}
