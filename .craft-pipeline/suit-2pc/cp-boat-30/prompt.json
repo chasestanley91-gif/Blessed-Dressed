@@ -1,0 +1,134 @@
+{
+  "addr": "suit-2pc > suit-pockets > chest-pocket > cp-boat-30",
+  "label": "Boat-shaped 3.0 cm",
+  "part": "jacket-chest-pocket",
+  "orientation": "front",
+  "excluded": null,
+  "generate": true,
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\suit-2pc.json",
+  "source": "json",
+  "illustration": "/images/blueprints/supplier/10a39e6e3662__0103__Ship_shape.jpg",
+  "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\supplier\\10a39e6e3662__0103__Ship_shape.jpg",
+  "illustrationExists": true,
+  "illustrationRemote": false,
+  "profile": {
+    "addr": "suit-2pc > suit-pockets > chest-pocket > cp-boat-30",
+    "product": "suit-2pc",
+    "field": "Chest Pocket",
+    "option": "Boat-shaped 3.0 cm",
+    "part": "jacket-chest-pocket",
+    "garment": "navy bespoke suit jacket",
+    "orientation": "front",
+    "absence": false,
+    "distinguishingDetail": "At 3.0 cm the boat-shaped breast pocket reaches a generous, full-bodied dimension that transforms it into one of the most visually commanding details on the jacket's front. This is the widest barchetta regularly specified, associated with the most expressive and relaxed Italian tailoring traditions — particularly soft, deconstructed Neapolitan jackets in substantial cloths. The extra width means the curvature of the welt sweeps over a broader arc, making it visible even at a distance and serving as the defining design feature of the jacket.",
+    "measured": {
+      "dimensions": [
+        "3.0 cm"
+      ],
+      "angles": [],
+      "counts": [],
+      "shapes": [
+        "barchetta (boat) welt",
+        "arc buttonhole"
+      ],
+      "spread": [],
+      "flags": []
+    },
+    "reproduceFromIllustration": [
+      "breast pocket shape (barchetta/welt)",
+      "curve",
+      "pattern match",
+      "the empty opening with both its edges visible end to end"
+    ],
+    "composition": {
+      "crop": "on the left breast pocket",
+      "dominanceTarget": "40–80% of frame",
+      "identifyWithin": "1 second"
+    },
+    "forbidden": [
+      "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+      "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+      "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+    ],
+    "excluded": null,
+    "generate": true
+  },
+  "requiredTokens": [
+    "3.0 cm",
+    "barchetta (boat) welt",
+    "arc buttonhole"
+  ],
+  "checklist": [
+    "length/width matches exactly: 3.0 cm",
+    "shape reads as drawn: barchetta (boat) welt",
+    "shape reads as drawn: arc buttonhole",
+    "distinguishing detail present: At 3.0 cm the boat-shaped breast pocket reaches a generous, full-bodied dimension that transforms it into one of the most visually commanding details on the jacket's front. This is the widest barchetta regularly specified, associated with the most expressive and relaxed Italian tailoring traditions — particularly soft, deconstructed Neapolitan jackets in substantial cloths. The extra width means the curvature of the welt sweeps over a broader arc, making it visible even at a distance and serving as the defining design feature of the jacket.",
+    "reproduced from the illustration: breast pocket shape (barchetta/welt)",
+    "reproduced from the illustration: curve",
+    "reproduced from the illustration: pattern match",
+    "reproduced from the illustration: the empty opening with both its edges visible end to end",
+    "orientation matches the illustration: front",
+    "the Chest Pocket dominates the frame (40–80%), identifiable within one second, framed on the left breast pocket",
+    "silhouette, proportions, seam & stitch placement match the illustration; left/right symmetry correct",
+    "NO generic-category substitution — this exact option, not a typical one",
+    "a real photograph of the exact drawn option — not the line-art, no stylisation",
+    "ladder: boat band 3cm — 3.5x longer than tall",
+    "boat form: steep tilt, tapered hull ends"
+  ],
+  "scoreCard": [
+    {
+      "category": "shape",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "geometry",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "dimensions",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "angles",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "construction",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "placement",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "symmetry",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "composition",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "blueprint-match",
+      "score": null,
+      "min": 98
+    }
+  ],
+  "prompt": "Ultra-photorealistic luxury menswear product photography.\n\nA single-subject craft DOCUMENTATION photograph: the Chest Pocket is the dominant subject, filling 40–80% of the frame and identifiable within one second.\n\nA premium navy bespoke suit jacket featuring a precise Boat-shaped 3.0 cm (Chest Pocket).\n\nDistinguishing construction detail (reproduce exactly as drawn): At 3.0 cm the boat-shaped breast pocket reaches a generous, full-bodied dimension that transforms it into one of the most visually commanding details on the jacket's front. This is the widest barchetta regularly specified, associated with the most expressive and relaxed Italian tailoring traditions — particularly soft, deconstructed Neapolitan jackets in substantial cloths. The extra width means the curvature of the welt sweeps over a broader arc, making it visible even at a distance and serving as the defining design feature of the jacket.\n\nExact specification — barchetta (boat) welt, arc buttonhole shape; measuring exactly 3.0 cm — matching the illustration precisely.\n\nMANDATORY GEOMETRY COVERAGE — reproduce from the illustration, exactly and without assumption, every one of these: breast pocket shape (barchetta/welt), curve, pattern match, the empty opening with both its edges visible end to end. Match each to the drawing.\n\nVIEW — this illustration is the front of the garment. Photograph the same face; never substitute a different face of the garment.\n\nBLUEPRINT LOCK — THE DRAWING IS LAW: the attached technical illustration is the manufacturing blueprint for this exact craft option and the SOLE authority for the image. Reproduce its geometry precisely — point/edge shape, lengths, widths, depths, angles, curvature, roll lines, symmetry, button/tab/stay positions, seam and stitch placement, and proportions — within less than 2% deviation. Assume NOTHING from tailoring/menswear/fashion convention or model priors; every visible characteristic must come from the drawing. Do not redesign, reinterpret, substitute a similar commercial style, stylise, or \"improve\" it. Do NOT fall back to a generic version of this category — reproduce THIS option, not a typical one. If convention conflicts with the drawing, the drawing wins. Accuracy over aesthetics. ANNOTATIONS ARE NOT THE GARMENT: the technical drawing may carry measurement callouts — dimension numbers (\"2.5cm\", \"9cm\", \"115°\"), tick / leader / dimension lines, arrows, red or coloured guide marks, and text labels. These are manufacturing documentation, NOT features of the cloth. Reproduce ONLY the finished garment: never render any number, unit, arrow, callout, leader line, measurement mark, or text anywhere in the photograph. The final image is a clean garment photo with zero annotation. COLOUR IN THE DRAWING IS NOTATION, NOT CLOTH: any red, orange or otherwise highlighted region marks WHERE the craft option sits — it is a position marker, never a colour specification. Flat grey or tinted shading marks the EXTENT of a panel, lining or facing, not its shade. Render every one of those areas in the garment's own cloth and thread, in the natural colour that tailoring would use there. There must be no red, no highlighter tint and no flat unshaded grey panel anywhere in the photograph unless the option's own label explicitly names that colour.\n\nPhotographed worn on a male model, with NO pocket square and nothing tucked into or protruding from the pocket, and no necktie.\n\nFrame on the left breast pocket; the detail must read clearly and sharply.\n\nMATCHED FRAMING — this option belongs to a family whose members differ from one another only by a measurement, so this photograph will be shown beside its siblings and compared directly. TWO SEPARATE REQUIREMENTS, and both must hold. FIRST, THE GARMENT: build the feature at exactly the size the drawing gives it — no larger. Do not exaggerate the dimension to make this option look more distinct from its siblings; the difference between them is small in real tailoring and must stay small here, because a customer choosing on these numbers is ordering a real garment. SECOND, THE CAMERA: frame the shot the way every member of the family must be framed — the garment part square to camera, centred, at a standard distance that leaves the whole garment occupying the same share of the picture no matter which value this option carries. Do not move closer for a small measurement or pull back for a large one. Getting one of these right while getting the other wrong is still a failure: an accurate feature shot at the wrong distance, or a matched frame containing an exaggerated feature, both mislead a customer comparing two pictures side by side.\n\nSavile Row and high-end Italian sartorial aesthetic. Natural daylight studio lighting, Phase One IQ4 medium-format camera, 150MP detail, shallow depth of field, magazine-quality editorial menswear photography. Authentic bespoke craftsmanship, fine hand stitching, premium finishing. SET — shot in a clean luxury photographic studio against a seamless, plain, neutral light-grey background with clear separation between garment and background: no location, no architecture, no furniture, no scenery, no props and no environmental context of any kind competing with the garment.\n\nExtremely realistic fine wool suiting with visible weave texture, fine stitching.\n\nAvoid: any GENERIC menswear substitution (a generic spread collar, generic notch/peak lapel, generic pocket/pleat/vent/cuff/waistband in place of the drawn one), illustration or line-art style, CGI or 3D-render look, cartoon, mannequin, fashion sketch, inaccurate geometry, altered proportions, missing construction details, asymmetry, watermark, AI-art appearance, AND any text or annotation traced from the drawing: NO measurement numbers, units (cm/mm/°), dimension or leader lines, arrows, callouts, red/coloured guide marks, ruler ticks, or labels anywhere in the frame. This is real garment photography of the exact drawn option — clean cloth only, nothing else.\n\nFORBIDDEN FOR THIS OPTION — do not render: a generic version of this part standing in for the exact drawn option (generic-category substitution); any feature, count, or geometry borrowed from a neighboring craft option on the same field; a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion).\n\nLADDER SET — GRADUATED HEIGHT FAMILY (this image ships only if its height orders correctly against its sibling):\n- This boat welt is the TALLER rung of its two-height set: band height EXACTLY 3.0 cm.\n- The welt LENGTH is the standard drawn length, identical for both rungs; only the height varies. At 3.0 cm the band reads about 3.5 times LONGER than it is tall — hold this proportion precisely.\n- Form: a BOAT-SHAPED (ship-shape) breast welt: the band TILTS steeply upward toward the shoulder, both ends TAPERING like a boat hull, the outboard end riding high — noticeably steeper and more sculpted than a gently curved barchetta. Exactly as drawn.\nMATCHED FRAMING (identical for both rungs): straight-on close crop of the left breast, the full welt spanning roughly two-thirds of the frame width with both tapered ends in frame, the lapel edge entering at the left for context. Nothing in the pocket, no pocket square, no annotations, no printed measurements.",
+  "builtAt": "2026-08-02T05:23:16.355Z",
+  "ladder": {
+    "family": "cp-boat",
+    "heightCm": 3,
+    "lengthConstantCm": 10.5,
+    "aspectHL": 0.286,
+    "source": "drawing 0103 aspect 0.273 + label heights (law)"
+  }
+}

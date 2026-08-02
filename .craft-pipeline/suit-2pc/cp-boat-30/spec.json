@@ -1,0 +1,53 @@
+{
+  "schema": "garment-spec/v1",
+  "addr": "suit-2pc > suit-pockets > chest-pocket > cp-boat-30",
+  "productId": "suit-2pc",
+  "sectionId": "suit-pockets",
+  "fieldId": "chest-pocket",
+  "optionId": "cp-boat-30",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\suit-2pc.json",
+  "source": "json",
+  "label": "Boat-shaped 3.0 cm",
+  "description": "At 3.0 cm the boat-shaped breast pocket reaches a generous, full-bodied dimension that transforms it into one of the most visually commanding details on the jacket's front. This is the widest barchetta regularly specified, associated with the most expressive and relaxed Italian tailoring traditions — particularly soft, deconstructed Neapolitan jackets in substantial cloths. The extra width means the curvature of the welt sweeps over a broader arc, making it visible even at a distance and serving as the defining design feature of the jacket.",
+  "fieldLabel": "Chest Pocket",
+  "sectionLabel": "Pockets",
+  "part": "jacket-chest-pocket",
+  "garment": {
+    "noun": "navy bespoke suit jacket",
+    "fabric": "fine wool suiting with visible weave"
+  },
+  "view": {
+    "orientation": "front",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": false,
+  "measured": {
+    "dimensions": [
+      "3.0 cm"
+    ],
+    "angles": [],
+    "counts": [],
+    "shapes": [
+      "barchetta (boat) welt",
+      "arc buttonhole"
+    ],
+    "negatedShapes": [],
+    "spread": [],
+    "flags": []
+  },
+  "illustration": {
+    "path": "/images/blueprints/supplier/10a39e6e3662__0103__Ship_shape.jpg",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\supplier\\10a39e6e3662__0103__Ship_shape.jpg",
+    "exists": true,
+    "remote": false
+  },
+  "forbidden": [
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-08-02T05:23:15.228Z"
+}

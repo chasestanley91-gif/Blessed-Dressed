@@ -884,3 +884,12 @@ strips are the trusted instrument; (2) the slanted family rake CONFLICT (descrip
 drawing measures high-at-front) resolved per ruling: drawing wins where spec silent, logged in
 spec-conflicts; (3) test-first caught the composition before the batch.
 Session: 59 generations / 46 primaries shipped / 29.5 credits = 1.28 att/shipped. ~765 remain. 163/1816 (9.0%).
+
+## 2026-08-02 — cp-boat pair + cp-jetted SHIPPED 3/3 PASS@1 (1.5 cr) — chest-pocket field nearly closed
+
+Boat pair (0103, 2.8/3.0 — 2mm rung) gated as a two-rung set with the aspect anchor: internal
+h/L 0.25 -> 0.28, ascending, both with the drawn steep tilt + tapered hull ends. cp-jetted (0110)
+shipped with an explicit JETTED-NOT-WELT discriminator: thin double-lip slit ~7x longer than tall
+— reads instantly against the 9 welt/boat bands now live. Chest-pocket field: 12 of 13 drawn
+options verified (cp-none absence option remains); 4 drawing-less patch variants held in NEEDS-SOURCE.
+Session: 62 generations / 49 primaries shipped / 31.0 credits = 1.27 att/shipped. ~763.5 remain. 166/1816 (9.1%).
