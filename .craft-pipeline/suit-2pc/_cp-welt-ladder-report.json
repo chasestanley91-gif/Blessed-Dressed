@@ -1,0 +1,35 @@
+{
+ "date": "2026-08-02",
+ "gate": "blind visual ordering on native-res matched crops (trusted, per qc_ladder discipline) + per-column auto-measure (advisory)",
+ "straight": {
+  "order": [
+   "cp-welt-23",
+   "cp-welt-25",
+   "cp-welt-27"
+  ],
+  "visual": "PASS 23<25<27, all sheared bands, matched composition",
+  "auto": {
+   "cp-welt-23": 0.1333,
+   "cp-welt-25": "0.18-0.23 (constrained re-measure; generous-ROI run contaminated L=604)",
+   "cp-welt-27": 0.3243
+  },
+  "verdict": "ORDERED"
+ },
+ "curved": {
+  "order": [
+   "cp-welt-curved-23",
+   "cp-welt-curved-25",
+   "cp-welt-curved-27",
+   "cp-welt-curved-29"
+  ],
+  "visual": "PASS 23<25<27<29, continuous upward arcs, tapered ends",
+  "auto": {
+   "cp-welt-curved-23": 0.3175,
+   "cp-welt-curved-25": 0.3636,
+   "cp-welt-curved-27": 0.5233,
+   "cp-welt-curved-29": 0.725
+  },
+  "verdict": "ORDERED"
+ },
+ "note": "aspect-ratio internal anchor (h vs welt own length) is framing-drift-immune; first ladder gated without an external object anchor"
+}

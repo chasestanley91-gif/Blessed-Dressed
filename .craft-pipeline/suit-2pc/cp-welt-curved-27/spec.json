@@ -1,0 +1,53 @@
+{
+  "schema": "garment-spec/v1",
+  "addr": "suit-2pc > suit-pockets > chest-pocket > cp-welt-curved-27",
+  "productId": "suit-2pc",
+  "sectionId": "suit-pockets",
+  "fieldId": "chest-pocket",
+  "optionId": "cp-welt-curved-27",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\suit-2pc.json",
+  "source": "json",
+  "label": "Curved Welt 2.7 cm",
+  "description": "At 2.7 cm the curved welt becomes a statement in its own right: the wider arc sweeps more dramatically across the chest, emphasising breadth and giving the jacket a distinctly Italian generosity of character. This specification is typical of Neapolitan soft tailoring, where the chest is not heavily structured and the broader barchetta adds architectural interest in place of padding. It is an ideal choice on unlined or half-lined jackets in summer cloths where the pocket's curve echoes the soft, natural roll of the lapels.",
+  "fieldLabel": "Chest Pocket",
+  "sectionLabel": "Pockets",
+  "part": "jacket-chest-pocket",
+  "garment": {
+    "noun": "navy bespoke suit jacket",
+    "fabric": "fine wool suiting with visible weave"
+  },
+  "view": {
+    "orientation": "front",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": false,
+  "measured": {
+    "dimensions": [
+      "2.7 cm"
+    ],
+    "angles": [],
+    "counts": [],
+    "shapes": [
+      "welt pocket",
+      "arc buttonhole"
+    ],
+    "negatedShapes": [],
+    "spread": [],
+    "flags": []
+  },
+  "illustration": {
+    "path": "/images/blueprints/supplier/6936f1b18876__0102__Arc.jpg",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\supplier\\6936f1b18876__0102__Arc.jpg",
+    "exists": true,
+    "remote": false
+  },
+  "forbidden": [
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-08-02T03:27:01.795Z"
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "garment-spec/v1",
+  "addr": "suit-2pc > suit-pockets > chest-pocket > cp-welt-27",
+  "productId": "suit-2pc",
+  "sectionId": "suit-pockets",
+  "fieldId": "chest-pocket",
+  "optionId": "cp-welt-27",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\suit-2pc.json",
+  "source": "json",
+  "label": "Straight Welt 2.7 cm",
+  "description": "A 2.7 cm straight welt is a deliberately wider reading of the English breast pocket, giving the chest a slightly bolder, more pronounced horizontal accent. It is often chosen on roomy hopsack or tweed sport jackets where a thicker welt is proportionally in keeping with a more textured cloth. The opening is left completely empty so the 2.7 cm depth reads at a glance, the welt standing as a single clean horizontal band across the chest.",
+  "fieldLabel": "Chest Pocket",
+  "sectionLabel": "Pockets",
+  "part": "jacket-chest-pocket",
+  "garment": {
+    "noun": "navy bespoke suit jacket",
+    "fabric": "fine wool suiting with visible weave"
+  },
+  "view": {
+    "orientation": "front",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": false,
+  "measured": {
+    "dimensions": [
+      "2.7 cm"
+    ],
+    "angles": [],
+    "counts": [],
+    "shapes": [
+      "welt pocket"
+    ],
+    "negatedShapes": [],
+    "spread": [],
+    "flags": []
+  },
+  "illustration": {
+    "path": "/images/blueprints/supplier/f8f05045ab36__0101__Normal.jpg",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\supplier\\f8f05045ab36__0101__Normal.jpg",
+    "exists": true,
+    "remote": false
+  },
+  "forbidden": [
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-08-02T03:27:00.526Z"
+}

@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-02T03:10:52.257Z",
+  "at": "2026-08-02T04:11:48.337Z",
   "settings": {
     "maxWidth": 1400,
     "quality": 82,
@@ -7,30 +7,96 @@
   },
   "applied": true,
   "counts": {
-    "masters": 713,
-    "converted": 1,
-    "skipped": 712,
+    "masters": 720,
+    "converted": 7,
+    "skipped": 713,
     "failed": 0,
     "repointed": 0
   },
   "bytes": {
-    "before": 2109814,
-    "after": 165256,
-    "savedPct": 92.2
+    "before": 14790158,
+    "after": 1144758,
+    "savedPct": 92.3
   },
   "note": "targetSha1 is the derivative; sourceSha1 is the PNG master QC graded. The master and publish_approved.mjs byte-identity gate are untouched.",
   "results": {
     "ok": [
       {
-        "master": "public\\images\\generated\\suit-2pc\\cp-patch.png",
-        "masterBytes": 2109814,
-        "sourceSha1": "092337a844154d42f07dd1136db1d257b87f5343",
-        "target": "public\\images\\generated\\suit-2pc\\cp-patch.webp",
-        "targetBytes": 165256,
-        "targetSha1": "f8c07f8d57636f415b95f7342bc7b0ba08649e9c",
+        "master": "public\\images\\generated\\suit-2pc\\cp-welt-23.png",
+        "masterBytes": 2213540,
+        "sourceSha1": "8d4cdf44c170a9b4bd98b68edf6df8ba720ffd26",
+        "target": "public\\images\\generated\\suit-2pc\\cp-welt-23.webp",
+        "targetBytes": 170698,
+        "targetSha1": "acfd32ba379ed0a0d1f7f7b840b1273bf28a99fa",
         "quality": 82,
         "width": 1400,
-        "web": "/images/generated/suit-2pc/cp-patch.webp"
+        "web": "/images/generated/suit-2pc/cp-welt-23.webp"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\cp-welt-25.png",
+        "masterBytes": 2119698,
+        "sourceSha1": "442157496431cd644db6268c9eb8a10ff87992ba",
+        "target": "public\\images\\generated\\suit-2pc\\cp-welt-25.webp",
+        "targetBytes": 150722,
+        "targetSha1": "c8892aa33fe29156dc3bb1267724b4d0d6b6a1d7",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/suit-2pc/cp-welt-25.webp"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\cp-welt-27.png",
+        "masterBytes": 2019435,
+        "sourceSha1": "f497e078541644fc6b7379f2aef0f545381364f9",
+        "target": "public\\images\\generated\\suit-2pc\\cp-welt-27.webp",
+        "targetBytes": 138018,
+        "targetSha1": "7acc5715538da6167c70114f5cf44cf147ee703e",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/suit-2pc/cp-welt-27.webp"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\cp-welt-curved-23.png",
+        "masterBytes": 1938507,
+        "sourceSha1": "1951be351b14414ded9c71a7af00fee7c827abd9",
+        "target": "public\\images\\generated\\suit-2pc\\cp-welt-curved-23.webp",
+        "targetBytes": 123368,
+        "targetSha1": "d277b5014239136f128425556b9958e6a52f22c2",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/suit-2pc/cp-welt-curved-23.webp"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\cp-welt-curved-25.png",
+        "masterBytes": 2367825,
+        "sourceSha1": "e5fd2613587ce5587b7f43b0e53118b83ff2279c",
+        "target": "public\\images\\generated\\suit-2pc\\cp-welt-curved-25.webp",
+        "targetBytes": 223344,
+        "targetSha1": "2737046a5111be80cf1410d7c67454676ee349d9",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/suit-2pc/cp-welt-curved-25.webp"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\cp-welt-curved-27.png",
+        "masterBytes": 2103954,
+        "sourceSha1": "67c0199e6d825794c30927526cc2ad2b2af50869",
+        "target": "public\\images\\generated\\suit-2pc\\cp-welt-curved-27.webp",
+        "targetBytes": 165436,
+        "targetSha1": "958a6fafe0105356d8df0a4d311b8420554e6c9b",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/suit-2pc/cp-welt-curved-27.webp"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\cp-welt-curved-29.png",
+        "masterBytes": 2027199,
+        "sourceSha1": "a2675b6673f3cccf6f3618070112f43efd961047",
+        "target": "public\\images\\generated\\suit-2pc\\cp-welt-curved-29.webp",
+        "targetBytes": 173172,
+        "targetSha1": "b10003ec99a55b66222f8443a1ac812380762b7c",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/suit-2pc/cp-welt-curved-29.webp"
       }
     ],
     "skipped": [
@@ -1664,6 +1730,10 @@
       },
       {
         "master": "public\\images\\generated\\suit-2pc\\coin-none.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\cp-patch.png",
         "reason": "derivative already exists"
       },
       {

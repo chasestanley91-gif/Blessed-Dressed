@@ -845,3 +845,15 @@ fabric-swatch classifier trap again — piece of fabric -> piece of cloth + shap
 Patch family now maximally resolved pending drawings: 5 shipped, 9 named-held.
 Session: 35 generations / 28 primaries shipped / 17.5 credits = 1.25 att/shipped.
 Credits ~777.0. 145/1813.
+
+## 2026-08-02 — BOTH chest-welt ladders SHIPPED, 7/7 PASS attempt 1 (3.5 cr)
+
+Straight 2.3/2.5/2.7 (0101) + curved barchetta 2.3/2.5/2.7/2.9 (0102), 2mm steps, gated as
+SETS. New anchor variant proven: the welt band ASPECT RATIO (height vs its own length) is
+framing-drift-immune — no external object anchor needed. Blind visual ordering PASSED both
+families on native-res matched strips; advisory auto-measure ordered curved outright and
+straight after a constrained re-measure of rung 25 (generous-ROI detector had grabbed a
+604px false length — LESSON: constrain the ROI to the feature before trusting auto L).
+Mandatory single-rung test (cp-welt-25) validated framing before the 6-rung batch.
+Session: 42 generations / 35 primaries shipped / 21.0 credits = 1.20 att/shipped.
+Credits ~773.5. 152/1816 (8.4%).
