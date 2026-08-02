@@ -127,7 +127,9 @@ for (const specPath of specPaths) {
     web: spec.illustration,
     disk: spec.illustrationDisk,
     remote: spec.illustrationRemote,
-    allowMissingIllu: args['allow-missing-illustration'],
+    // spec-only records (owner ruling 2026-08-01) are generable WITHOUT a
+    // drawing by design — the missing blueprint is a warning, never a failure.
+    allowMissingIllu: args['allow-missing-illustration'] || record.specOnly === true,
   }, spec);
   if (warns.length || fails.length) {
     console.log(`\n${spec.addr}  [${spec.part}]`);

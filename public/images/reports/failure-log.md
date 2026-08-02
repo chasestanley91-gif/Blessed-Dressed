@@ -917,3 +917,12 @@ Thin one-line descriptions were augmented with DRAWN GEOMETRY blocks restating e
 detail (bar-across / capital-D with bowing arc / short hyphen) + matched macro framing with raking
 sidelight — the lbh-motif recipe generalizes to tack motifs. Three-way set separable at a glance.
 Session: 66 generations / 53 primaries shipped / 33.0 credits = 1.25 att/shipped. ~761.5 remain. 170/1816 (9.4%).
+
+## 2026-08-02 — knot-hip-i + bartack-standard + bartack-none SHIPPED 3/3 PASS@1 (1.5 cr) — 173/1819 (9.5%)
+
+Hip I-tack (vertical bar at horizontal opening end), standard front-pocket bartack (factory 3191),
+and the bar-tack ABSENCE option shipped spec-only with proven-absence framing (clean raking-lit
+corner + context). TOOL FIX: validate_prompt.mjs now auto-waives the missing-illustration failure
+for record.specOnly — the durable version of the --allow-missing-illustration flag; snapshotted.
+The pocket-knot field is COMPLETE (i/d/dash/hip-i) and the bar-tack pair is complete.
+Session: 69 generations / 56 primaries shipped / 34.5 credits = 1.23 att/shipped. ~760 remain. 173/1819 (9.5%).

@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-02T07:01:45.212Z",
+  "at": "2026-08-02T07:23:51.390Z",
   "settings": {
     "maxWidth": 1400,
     "quality": 82,
@@ -7,52 +7,52 @@
   },
   "applied": true,
   "counts": {
-    "masters": 738,
+    "masters": 741,
     "converted": 3,
-    "skipped": 735,
+    "skipped": 738,
     "failed": 0,
     "repointed": 0
   },
   "bytes": {
-    "before": 6267890,
-    "after": 581878,
-    "savedPct": 90.7
+    "before": 6274528,
+    "after": 579106,
+    "savedPct": 90.8
   },
   "note": "targetSha1 is the derivative; sourceSha1 is the PNG master QC graded. The master and publish_approved.mjs byte-identity gate are untouched.",
   "results": {
     "ok": [
       {
-        "master": "public\\images\\generated\\suit-2pc\\knot-d.png",
-        "masterBytes": 2335030,
-        "sourceSha1": "8c6580b78a2df6e8a6b56cd5ee5132221aafa8b6",
-        "target": "public\\images\\generated\\suit-2pc\\knot-d.webp",
-        "targetBytes": 254782,
-        "targetSha1": "433dfecdb9026dec866a6d68e0167cd57c1220e6",
+        "master": "public\\images\\generated\\suit-2pc\\knot-hip-i.png",
+        "masterBytes": 1892395,
+        "sourceSha1": "357a9d0dbbcde6b6ebd05f8f85581dc5b283989b",
+        "target": "public\\images\\generated\\suit-2pc\\knot-hip-i.webp",
+        "targetBytes": 162646,
+        "targetSha1": "b90df6e14f837d37db4a6d4527c34b0a3be784a3",
         "quality": 82,
         "width": 1400,
-        "web": "/images/generated/suit-2pc/knot-d.webp"
+        "web": "/images/generated/suit-2pc/knot-hip-i.webp"
       },
       {
-        "master": "public\\images\\generated\\suit-2pc\\knot-dash.png",
-        "masterBytes": 2015946,
-        "sourceSha1": "c0405ce93889b4485f8c057660cf4ca7ea6b184b",
-        "target": "public\\images\\generated\\suit-2pc\\knot-dash.webp",
-        "targetBytes": 176272,
-        "targetSha1": "e631df36632b18371103c3032257b122f267729a",
+        "master": "public\\images\\generated\\trousers\\bartack-none.png",
+        "masterBytes": 2394381,
+        "sourceSha1": "0dba1ba445938ce19e61aae5007dc382f0fcae16",
+        "target": "public\\images\\generated\\trousers\\bartack-none.webp",
+        "targetBytes": 240312,
+        "targetSha1": "fb97b487759a279928a9ec6f5bc77833aadf4d41",
         "quality": 82,
         "width": 1400,
-        "web": "/images/generated/suit-2pc/knot-dash.webp"
+        "web": "/images/generated/trousers/bartack-none.webp"
       },
       {
-        "master": "public\\images\\generated\\suit-2pc\\knot-i.png",
-        "masterBytes": 1916914,
-        "sourceSha1": "fbf30c46d9688a55a4578c0797bd075a5b2fc68f",
-        "target": "public\\images\\generated\\suit-2pc\\knot-i.webp",
-        "targetBytes": 150824,
-        "targetSha1": "312cc826e8eb0773d3cc01c39a11cdf1cb3c5a4d",
+        "master": "public\\images\\generated\\trousers\\bartack-standard.png",
+        "masterBytes": 1987752,
+        "sourceSha1": "4e63ab4224232a548e051060146c1be9f06146c5",
+        "target": "public\\images\\generated\\trousers\\bartack-standard.webp",
+        "targetBytes": 176148,
+        "targetSha1": "37da0ba452d1414f8d556dc7a15e484d7ba28589",
         "quality": 82,
         "width": 1400,
-        "web": "/images/generated/suit-2pc/knot-i.webp"
+        "web": "/images/generated/trousers/bartack-standard.webp"
       }
     ],
     "skipped": [
@@ -1830,6 +1830,18 @@
       },
       {
         "master": "public\\images\\generated\\suit-2pc\\jeans-round.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\knot-d.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\knot-dash.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\knot-i.png",
         "reason": "derivative already exists"
       },
       {
