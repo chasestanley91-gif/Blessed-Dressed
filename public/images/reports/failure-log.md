@@ -956,3 +956,11 @@ gorge radius, 73 = straight + widest), so the top end never depended on 3-5 deg 
 Six-way order certified on the strip; fan-out x3 products (18 rows). The lapel field now has 12
 verified options (6 shawls + 6 notches); the peak family (13) is next with the same recipe.
 Session: 77 generations / 64 primaries shipped / 39.0 credits = 1.20 att/shipped. ~755.5 remain. 181/1822 (9.9%).
+## 2026-08-02 — Peak lapel 13-rung ladder (suit-2pc, fan-out sport-coat/suit-3pc)
+
+Spend: 17 generations / 8.5 credits for 13 shipped primaries (1.31 attempts-per-ship).
+
+- Round 1 (13 gens incl. 107 test): two blind ordering passes run. FIRST PASS USED RAW FIXED-PERCENTAGE CROPS AND LIED — vertical head position varies rung-to-rung (shoulderTopY 136-464px) while garment scale is nearly constant (shoulder span 543-597px, 1.10x). Raw tiles made close-cropped rungs look extreme (103-curved read "most extreme of 13") and pulled-back rungs look gentle (114 read second-gentlest).
+- LESSON (now standing policy for every ladder family): normalize ordering tiles by an option-independent anchor (jacket shoulder span at the shoulder line — measure JUST below shoulder top; chest/waist rows saturate to frame width) BEFORE any visual ordering judgement. Raw crops are inadmissible as a set gate.
+- Round-1 true failures after normalization (4 retries, 2.0 credits): 101 over-rendered (strongest of set + dropped gorge), 105 under-rendered (gentlest of set), 115 marginal inversion vs 114, 120-curved not maximal + saber curve absent. All four FAIL verdicts logged before regenerating; corrections appended to prompt.json.
+- Round 2: all four fixed on first retry. 105-vs-107 zoom pair check: tie-or-correct, no inversion. Set gate PASS; categoricals verified (curve 103/120, straight 108, low gorge 110-low, roll-line sweep 102-rl).

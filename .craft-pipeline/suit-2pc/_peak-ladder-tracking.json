@@ -1,41 +1,100 @@
 {
- "createdAt": "2026-08-02",
- "method": "13-rung ANGLE+PROJECTION ladder; owner-spec angles/projections law; 0002 Peak + 0004 Semi-peak aid",
- "media": {
-  "0002-peak": "e6bba627-317c-4b4a-a219-e5a48da6382e",
-  "0004-semi": "64eed27c-ca5d-4c02-8433-7d89d9b3a9a5"
- },
- "semiPeakRungs": [
-  "lapel-peak-99",
-  "lapel-peak-114"
- ],
- "rungOrder": [
-  "lapel-peak-99",
-  "lapel-peak-101",
-  "lapel-peak-102",
-  "lapel-peak-102-rl",
-  "lapel-peak-103-curved",
-  "lapel-peak-105",
-  "lapel-peak-107",
-  "lapel-peak-108",
-  "lapel-peak-110",
-  "lapel-peak-110-low",
-  "lapel-peak-114",
-  "lapel-peak-115",
-  "lapel-peak-120-curved"
- ],
- "categoricals": {
-  "lapel-peak-102-rl": "softened roll-line sweep",
-  "lapel-peak-103-curved": "saber curve",
-  "lapel-peak-108": "dead straight",
-  "lapel-peak-110-low": "gorge 2-4cm lower",
-  "lapel-peak-114": "semi-peak drawing",
-  "lapel-peak-120-curved": "extreme saber + 5-7cm projection"
- },
- "forewarned": "plan: 101 vs 102 separated by 3-5mm projection — inside render error, survives only as monotonic set; expect holds on pure-projection micro-pairs",
- "jobs": {
-  "lapel-peak-107": "5b9942ed-91c3-4218-b388-4a85ef624596"
- },
- "gate": "13-way strip: projection/aggressiveness ordering + categorical verification per rung",
- "testResult": "107 mid-rung PASSED framing test: sharp upswept peaks, natural sweep, full lapel run + termination in frame, matched styling with the notch set. Batch of remaining 12 next; QC verdicts deferred to the 13-way set gate."
+  "createdAt": "2026-08-02",
+  "method": "13-rung ANGLE+PROJECTION ladder; owner-spec angles/projections law; 0002 Peak + 0004 Semi-peak aid",
+  "media": {
+    "0002-peak": "e6bba627-317c-4b4a-a219-e5a48da6382e",
+    "0004-semi": "64eed27c-ca5d-4c02-8433-7d89d9b3a9a5"
+  },
+  "semiPeakRungs": [
+    "lapel-peak-99",
+    "lapel-peak-114"
+  ],
+  "rungOrder": [
+    "lapel-peak-99",
+    "lapel-peak-101",
+    "lapel-peak-102",
+    "lapel-peak-102-rl",
+    "lapel-peak-103-curved",
+    "lapel-peak-105",
+    "lapel-peak-107",
+    "lapel-peak-108",
+    "lapel-peak-110",
+    "lapel-peak-110-low",
+    "lapel-peak-114",
+    "lapel-peak-115",
+    "lapel-peak-120-curved"
+  ],
+  "categoricals": {
+    "lapel-peak-102-rl": "softened roll-line sweep",
+    "lapel-peak-103-curved": "saber curve",
+    "lapel-peak-108": "dead straight",
+    "lapel-peak-110-low": "gorge 2-4cm lower",
+    "lapel-peak-114": "semi-peak drawing",
+    "lapel-peak-120-curved": "extreme saber + 5-7cm projection"
+  },
+  "forewarned": "plan: 101 vs 102 separated by 3-5mm projection — inside render error, survives only as monotonic set; expect holds on pure-projection micro-pairs",
+  "jobs": {
+    "lapel-peak-107": "5b9942ed-91c3-4218-b388-4a85ef624596",
+    "lapel-peak-99": "0190ea56-c55f-41fe-a003-8165fc898b27",
+    "lapel-peak-101": "558b93e8-a242-4fab-8d96-96b62dc240c1",
+    "lapel-peak-102": "696bc91b-de53-4253-a6e7-24712717da2d",
+    "lapel-peak-102-rl": "2efa1089-4ea6-4117-abb8-9f05e8a88b0e",
+    "lapel-peak-103-curved": "e858fa7e-7971-4d59-a9e3-08c51bf9059c",
+    "lapel-peak-105": "84bfba6b-ce90-458f-b5a5-6d67ac5959db",
+    "lapel-peak-108": "5e356676-4bd7-40c2-928a-5db0575000e6",
+    "lapel-peak-110": "9a182b66-3f31-4712-8a56-d8509f22a383",
+    "lapel-peak-110-low": "e8f01618-1238-4290-b9cb-acbdd06535d7",
+    "lapel-peak-114": "8f5e2051-e546-4c7b-8006-0d7e8a3e1b3e",
+    "lapel-peak-115": "5c231b13-02c4-40df-a503-516562c87bf9",
+    "lapel-peak-120-curved": "84df9798-fe1f-4f4d-9ed3-e8c7f921da12"
+  },
+  "gate": "13-way strip: projection/aggressiveness ordering + categorical verification per rung",
+  "testResult": "107 mid-rung PASSED framing test: sharp upswept peaks, natural sweep, full lapel run + termination in frame, matched styling with the notch set. Batch of remaining 12 next; QC verdicts deferred to the 13-way set gate.",
+  "batchFiredAt": "2026-08-02",
+  "note": "All 13 rungs generated (107 test + 12 batch). 6.5 credits total for the family. QC verdicts defer to the 13-way ordering set gate.",
+  "retryJobs": {
+    "lapel-peak-101": "b13d9287-5608-4681-9406-b65e1bbeefff",
+    "lapel-peak-105": "3102ca2b-c50d-46e0-b17d-a21156f44835",
+    "lapel-peak-115": "37c8ccdd-6437-4a67-b4c4-338f90fca111",
+    "lapel-peak-120-curved": "0f9003c3-6ca2-427e-a0f7-54415b8b14da"
+  },
+  "setGateRound1": {
+    "passed": [
+      "lapel-peak-99",
+      "lapel-peak-102",
+      "lapel-peak-102-rl",
+      "lapel-peak-103-curved",
+      "lapel-peak-107",
+      "lapel-peak-108",
+      "lapel-peak-110",
+      "lapel-peak-110-low",
+      "lapel-peak-114"
+    ],
+    "failed": {
+      "lapel-peak-101": "over-rendered: strongest peak of set + dropped gorge",
+      "lapel-peak-105": "under-rendered: gentlest of set (inverts vs entry tier)",
+      "lapel-peak-115": "mild inversion vs 114 (1-degree pair)",
+      "lapel-peak-120-curved": "maximum rung read mid-pack; saber curve absent"
+    },
+    "method": "two blind passes (raw + shoulder-span-normalized 543-597px band, spread 1.10x) + ordered diagnostic strips",
+    "lesson": "raw-crop tiles lied: vertical head position varies (shoulderTopY 136-464) while garment scale is constant — normalize crops by shoulder span BEFORE any ladder ordering judgement"
+  },
+  "setGateRound2": {
+    "date": "2026-08-02",
+    "verdict": "PASS",
+    "retriesFixed": [
+      "lapel-peak-101",
+      "lapel-peak-105",
+      "lapel-peak-115",
+      "lapel-peak-120-curved"
+    ],
+    "pairChecks": {
+      "105-vs-107": "tie-or-correct at zoom, no inversion",
+      "114-vs-115": "115@2 ties-or-exceeds 114"
+    },
+    "shipped": 13,
+    "credits": 8.5,
+    "attemptsPerShip": 1.31
+  },
+  "status": "SHIPPED"
 }
