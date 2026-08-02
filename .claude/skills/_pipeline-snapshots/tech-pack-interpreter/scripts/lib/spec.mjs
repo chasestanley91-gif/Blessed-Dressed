@@ -252,6 +252,15 @@ function classifyExcluded(t) {
   if (/sewing button|button sewing|button style|button choice|covered button|placket button(?!hole)|suspender|brace button|stay button|inner waistband.*button/.test(t) &&
       !/position|count|distance|spacing|stance|config|number|direction|orientation/.test(t))
     return 'button';
+  // 2b) a button PICKER field. `t` begins with the fieldId, so anchoring at ^ means
+  //     this fires only when the FIELD ITSELF is "button on <part>" — never on a
+  //     description that happens to mention a button on something. Every option in
+  //     such a field is a supplier button code (FK321201, BK267/FKE01678, "None"),
+  //     which carries no geometry: it is a button swatch like any other and the
+  //     mission excludes it. Found 2026-08-02: shirt/button_on_collar_stand had 140
+  //     SKU rows sitting in scope, queued for photography that must not happen.
+  if (/^button on (the )?(collar stand|collar|cuff|placket|front|sleeve|waistband)\b/.test(t))
+    return 'button';
   // 3) fabric / lining-colour swatches — KEEP geometry (coverage/shape/craft/
   //    placement) and interlining. Collar/undercollar FELT is a melton colour swatch.
   // Note: cut-out FABRIC options are bare fabric codes (swatches), so cut-out is
