@@ -946,3 +946,13 @@ shirt collars — all silently serving pre-replacement bytes to customers. FIX: 
 derivative mtime >= master mtime; all 11 reconverted, tree verified zero-stale. Every allow-swap
 ship from now on gets fresh derivatives automatically.
 LESSON: verify the SERVED file, not just the master — the publish gate checked webp EXISTENCE only.
+
+## 2026-08-02 — NOTCH ANGLE-LADDER SHIPPED 6/6 PASS@1 (3.0 cr) — 181/1822 knocks on 10%
+
+The first owner-spec ANGLE ladder: 45/50/55/65/68/73-deg notch openings, angles as law, drawings
+0003/0001/0689 as form aids. Angle proved the best ladder anchor yet — framing-invariant by nature,
+and the spec pre-built categorical discriminators exactly where the angle steps tighten (68 = curved
+gorge radius, 73 = straight + widest), so the top end never depended on 3-5 deg render precision.
+Six-way order certified on the strip; fan-out x3 products (18 rows). The lapel field now has 12
+verified options (6 shawls + 6 notches); the peak family (13) is next with the same recipe.
+Session: 77 generations / 64 primaries shipped / 39.0 credits = 1.20 att/shipped. ~755.5 remain. 181/1822 (9.9%).
