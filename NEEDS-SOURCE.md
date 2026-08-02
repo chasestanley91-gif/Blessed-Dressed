@@ -413,3 +413,12 @@ share drawing 0231 and construction-identical descriptions (flapless double-jet 
 No authority explains the 4 cm: the owner drafting spec gives jetted OPENING 13-15cm and jet
 width 0.8-1.2cm — neither is 4cm. Cannot photograph a distinction that no source defines;
 lp-straight-jetted shipped, lp-jetted-4 HELD pending the owner's definition (or merge/retire).
+
+
+### G (extension, 2026-08-02): jacket pocket-bartack + inner-pocket-closure also polluted
+
+Vision-confirmed: /images/jacket/pocket-bartack/d-bartack.jpg and x-bartack.jpg are LINING SWATCH
+GRIDS (paisley/printed linings, FB26xxxx codes). Blocks the jacket bartack family: bartack-none,
+bartack-d, bartack-i, bartack-x, bartack-1 (5) and inner-pocket-closure ipc-d/i/x (3, same folder
+family). The TROUSER-side knot family (knot-i/d/dash, bartack-standard, back-seam-no-bartack) uses
+the real /images/blueprints/ namespaces and remains generable.
