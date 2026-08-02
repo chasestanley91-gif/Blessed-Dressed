@@ -376,3 +376,31 @@ OWNER OPTIONS: (1) accept the attempt-2 images with a waiver (attempt 3 + >=95 w
 (2) reduce the catalog to fewer visually-distinct depth steps (e.g. 4.0 / 5.0 / 6.0 or shallow-classic-deep);
 (3) supply per-rung supplier drawings with drawn depth differences to trace. Nothing was shipped for
 these three rungs; their shipped neighbours all order correctly against each other.
+
+
+## G. POLLUTED BLUEPRINT NAMESPACE — /images/jacket/ assets are not all drawings (2026-08-02)
+
+VISION-CONFIRMED: the ticket-pocket family's referenced "drawings" are MIS-MAPPED FABRIC SWATCH
+CARDS (jacquard swatches, Chinese labels, FB1662xx codes) — public/images/jacket/ticket-pocket/
+jetted.jpg, welt.jpg, none.jpg all verified by eye. Also confirmed: columbia-piping/none.jpg is a
+CATEGORY-PAGE SCREENSHOT GRID (it shows the real drawings as thumbnails — proof they exist
+upstream at mtm.baoxiniao.co), and coin-pocket/right.jpg is a swatch grid with a NO IMAGE cell.
+
+Mechanical census: 432 catalog rows reference 129 distinct /images/jacket/ files across 25 fields.
+Heuristic classifier (white-fraction + saturation): 99 LIKELY_DRAWING / 16 SUSPECT / 14 NOT_A_DRAWING
+— register at public/images/reports/jacket-asset-triage-2026-08-02.json. The classifier UNDER-flags
+(swatch cards have white backgrounds), so the binding CAMPAIGN POLICY is now:
+
+> Any option whose only illustration lives under /images/jacket/ gets a one-Read VISION CHECK of
+> the file before any credit is spent. A swatch card, screenshot grid, or photo blocks generation
+> and routes the option here.
+
+BLOCKED pending harvest (vision-confirmed junk blueprints):
+- tp-none, tp-jetted, tp-welt, tp-card-italian, tp-card-formal, tp-rl-card, tp-flap-40/45/50/55/60 (11)
+- itp-none, itp-left, itp-right, itp-both (4, same folder family — spot-check on harvest)
+- cp-none (columbia-piping/none.jpg is a screenshot grid)
+- jacket-section coin-pocket identity (coin-pocket/*.jpg swatch grids) — trouser-section coin rows
+  are already verified from real 353x drawings and unaffected
+
+These join the harvest want-list; the 0d2d49e supplier-mapping restoration should be re-checked
+against this register when credentials arrive.

@@ -893,3 +893,12 @@ shipped with an explicit JETTED-NOT-WELT discriminator: thin double-lip slit ~7x
 — reads instantly against the 9 welt/boat bands now live. Chest-pocket field: 12 of 13 drawn
 options verified (cp-none absence option remains); 4 drawing-less patch variants held in NEEDS-SOURCE.
 Session: 62 generations / 49 primaries shipped / 31.0 credits = 1.27 att/shipped. ~763.5 remain. 166/1816 (9.1%).
+
+## 2026-08-02 — CAUGHT PRE-SPEND: ticket-pocket "drawings" are fabric swatches; /images/jacket/ namespace polluted (0 cr)
+
+About to build the tp family (11 options) when the mandatory drawing view revealed swatch cards
+at the blueprint paths. Widened to a census: 432 rows / 129 files under /images/jacket/; classifier
+flags 30, vision confirms the classifier UNDER-flags. New campaign policy: vision-check every
+/images/jacket/ blueprint before spending. ~17 options re-routed from ready-queue to NEEDS-SOURCE G.
+ZERO credits wasted — the drawing-view-first discipline paid for itself here.
+LESSON: DISK-exists is not DRAWING-exists; the wave-1 era localized screenshots into blueprint paths.
