@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-02T00:49:22.170Z",
+  "at": "2026-08-02T02:05:48.679Z",
   "settings": {
     "maxWidth": 1400,
     "quality": 82,
@@ -7,52 +7,30 @@
   },
   "applied": true,
   "counts": {
-    "masters": 708,
-    "converted": 3,
-    "skipped": 705,
+    "masters": 709,
+    "converted": 1,
+    "skipped": 708,
     "failed": 0,
     "repointed": 0
   },
   "bytes": {
-    "before": 6721110,
-    "after": 549508,
-    "savedPct": 91.8
+    "before": 1871094,
+    "after": 126552,
+    "savedPct": 93.2
   },
   "note": "targetSha1 is the derivative; sourceSha1 is the PNG master QC graded. The master and publish_approved.mjs byte-identity gate are untouched.",
   "results": {
     "ok": [
       {
-        "master": "public\\images\\generated\\trousers\\pocket-deep.png",
-        "masterBytes": 2262254,
-        "sourceSha1": "86ef11866ae93e0577d6c554db5e6adb30f80c5a",
-        "target": "public\\images\\generated\\trousers\\pocket-deep.webp",
-        "targetBytes": 183362,
-        "targetSha1": "f093de819507943a3fd93e0c18656c18bbd16c58",
+        "master": "public\\images\\generated\\suit-2pc\\lp-patch-rounded.png",
+        "masterBytes": 1871094,
+        "sourceSha1": "c3e6dfb4e46fdfe250f2c3fa01e40206e2600628",
+        "target": "public\\images\\generated\\suit-2pc\\lp-patch-rounded.webp",
+        "targetBytes": 126552,
+        "targetSha1": "ac9f06963c0622715937a3af6dce8f1be94cfcd7",
         "quality": 82,
         "width": 1400,
-        "web": "/images/generated/trousers/pocket-deep.webp"
-      },
-      {
-        "master": "public\\images\\generated\\trousers\\pocket-shallow.png",
-        "masterBytes": 2516035,
-        "sourceSha1": "e743ae4a2c763a1f918f657a46bfe4d4bee80b6e",
-        "target": "public\\images\\generated\\trousers\\pocket-shallow.webp",
-        "targetBytes": 238370,
-        "targetSha1": "54efafa84a564c9ca484e427dfbb1a486f62d5f9",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/trousers/pocket-shallow.webp"
-      },
-      {
-        "master": "public\\images\\generated\\trousers\\pocket-standard.png",
-        "masterBytes": 1942821,
-        "sourceSha1": "1a08f58aad230d82b076d2c7e8560b95f4f0859e",
-        "target": "public\\images\\generated\\trousers\\pocket-standard.webp",
-        "targetBytes": 127776,
-        "targetSha1": "b80f5acf140d336c802a34ba2c076b10e320b1de",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/trousers/pocket-standard.webp"
+        "web": "/images/generated/suit-2pc/lp-patch-rounded.webp"
       }
     ],
     "skipped": [
@@ -2390,6 +2368,18 @@
       },
       {
         "master": "public\\images\\generated\\trousers\\pleat-no-single-dart.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\trousers\\pocket-deep.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\trousers\\pocket-shallow.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\trousers\\pocket-standard.png",
         "reason": "derivative already exists"
       },
       {

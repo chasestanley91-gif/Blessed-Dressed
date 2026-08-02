@@ -2,66 +2,27 @@
   "addr": "suit-2pc > lp-patch-rounded",
   "productId": "suit-2pc",
   "optionId": "lp-patch-rounded",
-  "attempt": 1,
+  "attempt": 2,
   "maxAttempts": 3,
   "scores": {
     "shape": 98,
-    "geometry": 94,
-    "dimensions": 95,
+    "geometry": 98,
+    "dimensions": 98,
     "angles": 98,
     "construction": 98,
-    "placement": 93,
+    "placement": 98,
     "symmetry": 98,
     "composition": 98,
-    "blueprint-match": 94
+    "blueprint-match": 98
   },
   "scoreMin": 98,
   "waiverMin": 95,
-  "belowMinCategories": [
-    "geometry",
-    "dimensions",
-    "placement",
-    "blueprint-match"
-  ],
-  "belowWaiverMinCategories": [
-    "geometry",
-    "placement",
-    "blueprint-match"
-  ],
-  "errors": [
-    {
-      "severity": "major",
-      "category": "placement",
-      "description": "The patch pocket bottom curve descends nearly to the jacket front hem and visually merges with the hem sweep — in the drawing the patch is a clearly separate component with visible jacket cloth between its curved bottom edge and the hem band below.",
-      "expected": "Patch height roughly 1.4x its width, its rounded bottom edge terminating a clear margin ABOVE the jacket hem, the hem band running independently below with jacket cloth visible between them.",
-      "actual": "An overly tall patch whose curved bottom reaches the hem line, the two edges nearly continuous, exaggerating the drawn proportions.",
-      "correction": "Draw the patch as its own component: height about 1.4 times its width, top edge just below the waist button, and the rounded bottom edge finishing clearly ABOVE the jacket hem so a band of plain jacket cloth separates patch from hem; the jacket hem sweep runs independently below the pocket."
-    }
-  ],
-  "verdict": "FAIL",
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [],
+  "verdict": "PASS",
   "waiver": null,
-  "correction": {
-    "errors": [
-      {
-        "severity": "major",
-        "category": "placement",
-        "error": "The patch pocket bottom curve descends nearly to the jacket front hem and visually merges with the hem sweep — in the drawing the patch is a clearly separate component with visible jacket cloth between its curved bottom edge and the hem band below.",
-        "expected": "Patch height roughly 1.4x its width, its rounded bottom edge terminating a clear margin ABOVE the jacket hem, the hem band running independently below with jacket cloth visible between them.",
-        "actual": "An overly tall patch whose curved bottom reaches the hem line, the two edges nearly continuous, exaggerating the drawn proportions.",
-        "correction": "Draw the patch as its own component: height about 1.4 times its width, top edge just below the waist button, and the rounded bottom edge finishing clearly ABOVE the jacket hem so a band of plain jacket cloth separates patch from hem; the jacket hem sweep runs independently below the pocket."
-      }
-    ],
-    "lockedFeatures": [
-      "applied PATCH construction with visible edge topstitching — not jetted, not flapped",
-      "generously ROUNDED bottom corners with a continuous curved lower edge (tasca a pignata)",
-      "navy herringbone cloth, clean studio, no annotations"
-    ],
-    "forbiddenChanges": [
-      "do not alter any checklist item this attempt already passed",
-      "do not change the camera crop, composition, or accessories unless the error is itself a composition error",
-      "do not change the garment part, orientation, or any other option's geometry"
-    ]
-  },
-  "notes": "Attempt 1. The option-defining rounded-patch construction reads perfectly; the failure is proportion/placement — patch merged toward the hem.",
-  "checkedAt": "2026-08-02T01:59:54.379Z"
+  "correction": null,
+  "notes": "Attempt 2 after the placement correction — the hem-separation instruction landed precisely. Matches the 02K0 drawing: patch position, angled top edge, rounded bottom. First member broken out of the f7fa88b7d6d1 13-option collision group.",
+  "checkedAt": "2026-08-02T02:05:48.028Z"
 }

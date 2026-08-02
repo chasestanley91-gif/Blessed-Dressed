@@ -808,3 +808,13 @@ spec 5.0; standard/deep overshoot logged as minors (thin-band confound). All 3 P
 attempt 1, published with fan-out. THE ENTIRE SPEC-ONLY QUEUE IS NOW SHIPPED: 19/19
 (3 shawls, 5 wbands, 4 legs, 4 waist styles, 3 pocket depths). Session: 29 generations /
 23 primaries shipped / 14.5 credits = 1.26 att/shipped. Credits ~780.0. 140/1813 verified.
+
+## 2026-08-02 — lp-patch-rounded SHIPPED: PASS attempt 2 after hem-separation correction (1.0 credits)
+
+Attempt 1 FAILed honestly (patch bottom merged toward the jacket hem vs the drawn separate
+component); the corrective description (own component, ~1.4x height:width, bottom clearly
+above hem with plain cloth between) landed exactly on attempt 2. Published with fan-out —
+FIRST member broken out of the f7fa88b7d6d1 13-option patch-pocket collision, the largest
+blocking group. Blueprint trio media cached in _lp-patch-trio-tracking.json (lp-patch-flap
+and lp-jetted-btn-tab uploaded and ready to fire). Session: 31 generations / 24 primaries
+shipped / 15.5 credits = 1.29 att/shipped. Credits ~779.0. 141/1813 verified.

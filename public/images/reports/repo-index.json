@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-02T00:49:28.140Z",
+  "generatedAt": "2026-08-02T02:05:54.274Z",
   "count": 2862,
   "records": [
     {
@@ -22413,11 +22413,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/supplier/a8da948466fd__02K0__Curved_patch.jpg",
-      "liveImage": "/images/generated/jacket/lp-patch-rounded.webp",
+      "liveImage": "/images/generated/suit-2pc/lp-patch-rounded.webp",
       "shipped": true,
-      "shippedPath": "/images/generated/jacket/lp-patch-rounded.webp",
-      "shippedBytes": 203348,
-      "shippedSha1": "f7fa88b7d6d1076383d4f982881c6a34a8b69669",
+      "shippedPath": "/images/generated/suit-2pc/lp-patch-rounded.webp",
+      "shippedBytes": 126552,
+      "shippedSha1": "ac9f06963c0622715937a3af6dce8f1be94cfcd7",
       "pipeline": null,
       "stage": "legacy-shipped-unverified"
     },
@@ -31118,29 +31118,29 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/supplier/a8da948466fd__02K0__Curved_patch.jpg",
-      "liveImage": "/images/generated/jacket/lp-patch-rounded.webp",
+      "liveImage": "/images/generated/suit-2pc/lp-patch-rounded.webp",
       "shipped": true,
-      "shippedPath": "/images/generated/jacket/lp-patch-rounded.webp",
-      "shippedBytes": 203348,
-      "shippedSha1": "f7fa88b7d6d1076383d4f982881c6a34a8b69669",
+      "shippedPath": "/images/generated/suit-2pc/lp-patch-rounded.webp",
+      "shippedBytes": 126552,
+      "shippedSha1": "ac9f06963c0622715937a3af6dce8f1be94cfcd7",
       "pipeline": {
         "dir": ".craft-pipeline/suit-2pc/lp-patch-rounded",
         "have": {
           "spec": true,
           "prompt": true,
-          "generation": false,
-          "qc": false
+          "generation": true,
+          "qc": true
         },
-        "verdict": null,
-        "attempt": null,
-        "lowestScore": null,
+        "verdict": "PASS",
+        "attempt": 2,
+        "lowestScore": 98,
         "belowMin": [],
-        "candidates": 0,
+        "candidates": 2,
         "needsReverify": false,
         "specOnly": false,
-        "checkedAt": null
+        "checkedAt": "2026-08-02T02:05:48.028Z"
       },
-      "stage": "prompt-built"
+      "stage": "shipped"
     },
     {
       "key": "suit-2pc/lp-patch-flap",
@@ -45347,11 +45347,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/supplier/a8da948466fd__02K0__Curved_patch.jpg",
-      "liveImage": "/images/generated/jacket/lp-patch-rounded.webp",
+      "liveImage": "/images/generated/suit-2pc/lp-patch-rounded.webp",
       "shipped": true,
-      "shippedPath": "/images/generated/jacket/lp-patch-rounded.webp",
-      "shippedBytes": 203348,
-      "shippedSha1": "f7fa88b7d6d1076383d4f982881c6a34a8b69669",
+      "shippedPath": "/images/generated/suit-2pc/lp-patch-rounded.webp",
+      "shippedBytes": 126552,
+      "shippedSha1": "ac9f06963c0622715937a3af6dce8f1be94cfcd7",
       "pipeline": null,
       "stage": "legacy-shipped-unverified"
     },
