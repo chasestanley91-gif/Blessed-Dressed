@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-02T10:03:08.981Z",
+  "at": "2026-08-02T14:58:45.687Z",
   "settings": {
     "maxWidth": 1400,
     "quality": 82,
@@ -7,20 +7,32 @@
   },
   "applied": true,
   "counts": {
-    "masters": 763,
-    "converted": 0,
-    "skipped": 763,
+    "masters": 773,
+    "converted": 1,
+    "skipped": 772,
     "failed": 0,
     "repointed": 0
   },
   "bytes": {
-    "before": 0,
-    "after": 0,
-    "savedPct": 0
+    "before": 2623006,
+    "after": 302504,
+    "savedPct": 88.5
   },
   "note": "targetSha1 is the derivative; sourceSha1 is the PNG master QC graded. The master and publish_approved.mjs byte-identity gate are untouched.",
   "results": {
-    "ok": [],
+    "ok": [
+      {
+        "master": "public\\images\\generated\\vest\\vest-hole-real-straight-05.png",
+        "masterBytes": 2623006,
+        "sourceSha1": "afe77e19445b3d5006b1110031cef31585650dd1",
+        "target": "public\\images\\generated\\vest\\vest-hole-real-straight-05.webp",
+        "targetBytes": 302504,
+        "targetSha1": "37f8142c8600690cb26c19bcd021580de04e0240",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/vest/vest-hole-real-straight-05.webp"
+      }
+    ],
     "skipped": [
       {
         "master": "public\\images\\generated\\jacket\\back-besom-btn.png",
@@ -2035,6 +2047,10 @@
         "reason": "derivative up to date"
       },
       {
+        "master": "public\\images\\generated\\suit-3pc\\db-4x2.png",
+        "reason": "derivative up to date"
+      },
+      {
         "master": "public\\images\\generated\\suit-3pc\\db-6x2.png",
         "reason": "derivative up to date"
       },
@@ -2051,6 +2067,10 @@
         "reason": "derivative up to date"
       },
       {
+        "master": "public\\images\\generated\\suit-3pc\\sb-3.png",
+        "reason": "derivative up to date"
+      },
+      {
         "master": "public\\images\\generated\\suit-3pc\\sb-4.png",
         "reason": "derivative up to date"
       },
@@ -2063,11 +2083,19 @@
         "reason": "derivative up to date"
       },
       {
+        "master": "public\\images\\generated\\suit-3pc\\u-neckline.png",
+        "reason": "derivative up to date"
+      },
+      {
         "master": "public\\images\\generated\\suit-3pc\\v-neckline.png",
         "reason": "derivative up to date"
       },
       {
         "master": "public\\images\\generated\\suit-3pc\\vest-back-belt-3cm.png",
+        "reason": "derivative up to date"
+      },
+      {
+        "master": "public\\images\\generated\\suit-3pc\\vest-back-strap-buckle.png",
         "reason": "derivative up to date"
       },
       {
@@ -2107,6 +2135,10 @@
         "reason": "derivative up to date"
       },
       {
+        "master": "public\\images\\generated\\suit-3pc\\vest-contrast-collar-1cm-specify.png",
+        "reason": "derivative up to date"
+      },
+      {
         "master": "public\\images\\generated\\suit-3pc\\vest-hole-real-straight-05.png",
         "reason": "derivative up to date"
       },
@@ -2135,6 +2167,10 @@
         "reason": "derivative up to date"
       },
       {
+        "master": "public\\images\\generated\\suit-3pc\\vest-lower-slant-flap.png",
+        "reason": "derivative up to date"
+      },
+      {
         "master": "public\\images\\generated\\suit-3pc\\vest-lower-slanted.png",
         "reason": "derivative up to date"
       },
@@ -2159,7 +2195,19 @@
         "reason": "derivative up to date"
       },
       {
+        "master": "public\\images\\generated\\suit-3pc\\vest-ticket-diamond-flap.png",
+        "reason": "derivative up to date"
+      },
+      {
         "master": "public\\images\\generated\\suit-3pc\\vest-ticket-lr-slant-welt.png",
+        "reason": "derivative up to date"
+      },
+      {
+        "master": "public\\images\\generated\\suit-3pc\\vest-ticket-right.png",
+        "reason": "derivative up to date"
+      },
+      {
+        "master": "public\\images\\generated\\suit-3pc\\vest-ticket-slant-besom.png",
         "reason": "derivative up to date"
       },
       {
@@ -2795,6 +2843,10 @@
         "reason": "derivative up to date"
       },
       {
+        "master": "public\\images\\generated\\vest\\shawl-lapel-vest.png",
+        "reason": "derivative up to date"
+      },
+      {
         "master": "public\\images\\generated\\vest\\u-neckline.png",
         "reason": "derivative up to date"
       },
@@ -2948,10 +3000,6 @@
       },
       {
         "master": "public\\images\\generated\\vest\\vest-extra-satin-wrap.png",
-        "reason": "derivative up to date"
-      },
-      {
-        "master": "public\\images\\generated\\vest\\vest-hole-real-straight-05.png",
         "reason": "derivative up to date"
       },
       {

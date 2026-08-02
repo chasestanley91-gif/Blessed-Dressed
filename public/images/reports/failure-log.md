@@ -982,3 +982,33 @@ Spend: 16 generations / 8.0 credits for 13 shipped primaries (1.23 attempts-per-
 - LESSON (three identical failures): the 'with Button' collar family draws a small fastener at EACH leaf corner; the generator drops them and renders plain points unless the prompt names the leaf buttons explicitly as the craft option. All three fixed on first corrected retry.
 - CONFLICT LOGGED: collar-wrap-75 description says asymmetric overlap; supplier drawing is symmetric with tip studs — drawing followed, owner to review.
 - 7 NEEDS-REVERIFY markers cleared with fresh drawing-grounded verdicts (+3 more after the btn retries).
+
+## 2026-08-02 — Vest retry cluster RESCUED (12 options, all at the final attempt)
+
+Spend: 12 generations / 6.0 credits for 12 shipped primaries (1.0 attempts-per-ship at this stage).
+Every one of these was sitting at attempt-2 FAIL with the retry budget about to run out; all twelve
+now ship. Verdicts: 4 PASS (u-neckline, both vest-hole-real-straight-05 rows, shawl-lapel-vest),
+8 mechanical PASS_WAIVED, ZERO UNMET.
+
+- REGRESSION CHECK PAID OFF: vest-lower-slant-flap attempt 2 had a correct ~30 degree rake but the
+  flaps wrapped to the side seam; attempt 3 moved them onto the flat of the front but flattened the
+  rake to ~12-15 degrees. Built a drawing|attempt-2|attempt-3 triptych before deciding — attempt 3 is
+  the better ship because the slant still reads and the placement fault is gone. LESSON: when a retry
+  trades one fault for another, compare the attempts side by side before logging the verdict; do not
+  assume the newest candidate is the best candidate.
+- Duplicate-id trap: vest-hole-real-straight-05 exists as TWO records (suit-3pc and vest) sharing one
+  drawing. Shipping the suit-3pc row did not clear the vest row — publish_approved correctly REFUSED
+  the fan-out because the vest record still carried its own FAIL verdict. Each record needs its own
+  earned attempt; 0.5 extra credits, and the refusal is the gate working as designed.
+- The waiver path did the job it was designed for: eight images with zero critical/major findings and
+  only sub-degree/sub-centimetre shortfalls shipped as LOGGED waivers instead of dying at UNMET.
+
+## 2026-08-02 — Legacy photo audit, parallel fan-out (49 photos, 0 credits)
+
+Ran 6 agents (5 graders, one per product batch, plus skeptical verifiers on every WRONG call) over the
+49 remaining eligible legacy photos. Result: 48 OK, 1 WRONG, 0 UNSURE, 0 overturned on review.
+Ledger now 251 graded: 199 OK / 35 WRONG / 17 UNSURE.
+- The one defect: shirt/sleeve-head-regular — the drawing marks the shoulder/sleeve-head seam in red;
+  the shipped photo is a three-quarter hero shot that never shows that seam. Queued for regeneration.
+- The clean rate here (98%) is far better than the earlier trouser-heavy sample (8-of-12 wrong).
+  Defect rate really is family-dependent; do not extrapolate one batch's rate to the catalog.

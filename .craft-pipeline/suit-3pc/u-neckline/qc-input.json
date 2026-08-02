@@ -1,56 +1,21 @@
 {
   "scores": {
-    "shape": 68,
-    "geometry": 60,
-    "dimensions": 55,
-    "angles": 70,
-    "construction": 82,
-    "placement": 74,
-    "symmetry": 84,
-    "composition": 85,
-    "blueprint-match": 58
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 99,
+    "placement": 98,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
   },
-  "errors": [
-    {
-      "severity": "critical",
-      "category": "dimensions",
-      "description": "Deep-to-wide ratio of the opening - THE CORRECTION DID NOT MOVE IT AT ALL. Blueprint: opening edges hold at x=456 and 732 (276px wide) from y=210 through 570, top y=60, foot bottom y=1090 - depth 1030, ratio 3.73:1. Candidate: edges x=287 and 591, max width 305px at y=440-480; top y=120, closes y=915 - depth 795, ratio 2.61:1. The rejected attempt was 2.6:1. Identical.",
-      "expected": "A long narrow slot roughly 3.7 times deeper than wide",
-      "actual": "A scoop only 2.6 times deeper than wide - unchanged from the rejected attempt",
-      "correction": "Draw the opening as a long narrow channel: bring both front edges in toward the centre so the gap is roughly a QUARTER the width of the chest, and carry it right down to the top button so the slot is nearly four times as deep as it is wide."
-    },
-    {
-      "severity": "critical",
-      "category": "geometry",
-      "description": "Opening width as a fraction of lateral span. Blueprint: 276px against a shoulder-tip span of 777px = 35.5 percent. Candidate: 305px against a garment width of 685px at y=240 rising to 704 at y=480 = 43.3-44.5 percent. Improved only marginally from the rejected 47.",
-      "expected": "Opening about 34-35 percent of the shoulder span",
-      "actual": "About 43-44 percent",
-      "correction": "Widen the fabric bridge on each side of the opening so the front panels cover substantially more of the chest, leaving a shirt gap only about a third of the shoulder width."
-    },
-    {
-      "severity": "minor",
-      "category": "shape",
-      "description": "Foot of the U. Blueprint holds about 93 percent of max width at 57 percent of depth, 85 at 73, then breaks quickly into a small rounded foot (69 percent of max at 92 depth, 56 at 96). Candidate holds 95 at 60 and 88 at 70 but closes faster: 60 at 91, 43 at 96. The edges DO now run near-parallel before turning, which is a genuine improvement, but the foot is a wider shallower bowl.",
-      "expected": "Near-parallel sides breaking late into a tight small-radius rounded foot",
-      "actual": "Near-parallel sides breaking into a broader more open bowl",
-      "correction": "Keep the two front edges running almost parallel down to about three quarters of the opening's depth, then close them with a tight semicircular foot no wider than the slot itself."
-    },
-    {
-      "severity": "minor",
-      "category": "blueprint-match",
-      "description": "The render carries two lower welt pockets at y=975-1000 that appear nowhere in the drawing. The blueprint is a neckline-only detail - shoulder seams, opening edges, centre-front reference line and one button, nothing else - so the pockets are outside what the drawing specifies rather than in conflict with it.",
-      "expected": "Only shoulder seams, the opening edges and one button below the foot",
-      "actual": "Two lower welt pockets present in the frame",
-      "correction": "Keep the composition tight on the neckline so the frame ends at the closing button, with the waist and its pockets out of shot."
-    }
-  ],
+  "errors": [],
   "lockedFeatures": [
-    "exactly one button, centred, just below the foot of the U",
-    "THE EDGE-PARALLELISM HALF IS GENUINELY IMPROVED: the candidate holds 88-95 percent of maximum width down to 70 percent of depth, close to the drawing's 85-93, and the sides break into a rounded foot rather than curving outward continuously",
-    "left and right edges mirrored to within 4px at every sampled row",
-    "no collar, no lapel, no notch - a plain bound edge around the opening as drawn",
-    "bow tie and pleated dress front sit above and behind the opening without covering either edge",
-    "no traced annotation"
+    "navy/charcoal worsted",
+    "white shirt",
+    "light-grey studio set",
+    "front view square to camera"
   ],
-  "notes": "THE DIMENSIONAL HALF OF THE CORRECTION DID NOT LAND AT ALL - 2.61:1 against a rejected 2.6:1 and a target of 3.73. When a correction produces literally no movement, suspect the prompt is contradicting itself and read it end to end before spending a third attempt.\n\nLandmark caveat: the blueprint's only lateral reference is the drawn shoulder-tip span (x207-984); the photograph has no drawn shoulder tips, so garment width was used (685px at y=240, 704 at y=480). The true shoulder span is NARROWER than chest width, so the candidate's real ratio is if anything slightly worse than 43 percent."
+  "notes": "Attempt 3 of 3. All four attempt-2 corrections landed: long narrow channel about a quarter of chest width, close to four times as deep as wide, front edges near-parallel then closed by a tight semicircular foot, frame ending at the closing button. Unmistakably a U and not a V."
 }

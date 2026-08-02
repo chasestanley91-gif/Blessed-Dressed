@@ -1,6 +1,14 @@
 {
-  "updatedAt": "2026-08-01T22:49:40.048Z",
+  "updatedAt": "2026-08-02T14:54:01.258Z",
   "rows": [
+    {
+      "option": "shirt/btn-5-dbl",
+      "verdict": "OK",
+      "liveImage": "/images/generated/shirt/btn-5-dbl.webp",
+      "confidence": "medium",
+      "why": "The defining feature is buttons arranged in doubled pairs down the front placket rather than evenly spaced singles. Upscaling the drawing shows one collar button at the placket top followed by five tightly-spaced PAIRS. The photo shows the same construction: a neck button, then three complete pairs (two buttons nearly touching, ~50px apart, with ~300px between groups) plus the first button of a fourth pair at the bottom crop line. That grouping is unmistakable and cannot be confused with siblings btn-6/7/8/9, which are all single-button plackets. Confidence is medium only because the mid-chest crop cuts off groups 4 and 5, so the literal count of five is inferred rather than seen; the visible spacing is consistent with five, and nothing contradicts the drawing. Noted but not disqualifying: the buttons are sewn with red cross-stitch thread, which literalizes the drawing's red annotation markers - a styling quirk, not a construction mismatch.",
+      "gradedAt": "2026-08-02T14:54:01.254Z"
+    },
     {
       "option": "shirt/collar-af1-70",
       "verdict": "OK",
@@ -136,6 +144,14 @@
       "confidence": "medium",
       "why": "The defining feature is two buttons stacked vertically on a tall rounded collar stand (both marked in red at centre front). The photo shows a standard-height band carrying a single visible button at the throat, with the second button position covered by a necktie knot; the button count that defines this option is not depicted and the visible stand reads as an ordinary one-button band rather than a tall round two-button stand.",
       "gradedAt": "2026-08-01T22:49:39.036Z"
+    },
+    {
+      "option": "shirt/sleeve-head-regular",
+      "verdict": "WRONG",
+      "liveImage": "/images/generated/shirt/sleeve-head-regular.webp",
+      "confidence": "high",
+      "why": "The drawing highlights in red exactly one thing: the shoulder/sleeve-head seam, running from the neck point out across the shoulder and curving down the outer arm where the sleeve cap is set into the armhole. The shipped photo is a tight three-quarter hero shot of the COLLAR - collar band, collar leaf, point, edge topstitching and the neck button on the placket. I contrast-boosted the file to hunt for the armhole and there is no armhole seam, no sleeve cap, and no set-in sleeve anywhere in the frame; the sleeve head is entirely off-camera. The showcased feature is absent and the image depicts a different garment part. [upheld on skeptical re-check: Verified independently. The drawing's red highlight runs from the neck point along the shoulder and then arcs outward past the body silhouette as the sleeve-cap contour; that arc is the only thing that distinguishes a sleeve-head option. The s",
+      "gradedAt": "2026-08-02T14:54:01.254Z"
     },
     {
       "option": "shirt/splice-15cm-from-point",
@@ -346,6 +362,30 @@
       "gradedAt": "2026-08-01T11:42:53.992Z"
     },
     {
+      "option": "sport-coat/lbh-2c-curved-barge",
+      "verdict": "OK",
+      "liveImage": "/images/generated/jacket/lbh-2c-curved-barge.webp",
+      "confidence": "high",
+      "why": "Counted colour segments on the curved barge buttonhole: the drawing labels exactly two, turquoise along the curved body and orange over the rounded eye at the right end. The zoomed photo shows precisely two colours with the orange confined to the eye loop, so it reads apart from the 3-colour sibling.",
+      "gradedAt": "2026-08-02T14:54:01.253Z"
+    },
+    {
+      "option": "sport-coat/lbh-3c-curved-barge",
+      "verdict": "OK",
+      "liveImage": "/images/generated/jacket/lbh-3c-curved-barge.webp",
+      "confidence": "high",
+      "why": "Counted colour segments: the drawing labels three along the curved barge — salmon body, olive mid-section, tan eye loop. The 4x crop of the photo resolves the same three zones in the same order with the eye loop at the right end, giving it one more colour break than the 2-colour sibling.",
+      "gradedAt": "2026-08-02T14:54:01.253Z"
+    },
+    {
+      "option": "sport-coat/lbh-angel",
+      "verdict": "OK",
+      "liveImage": "/images/generated/jacket/lbh-angel.webp",
+      "confidence": "high",
+      "why": "Checked the daisy-and-stem composition: white radiating petals around a solid yellow satin-stitch centre on the left, with a green stem sweeping right and closing in a rounded loop at its tip. The shipped photo reproduces the petal head, the yellow core and the looped stem terminal in the same left-to-right orientation.",
+      "gradedAt": "2026-08-02T14:54:01.253Z"
+    },
+    {
       "option": "sport-coat/lbh-antler",
       "verdict": "OK",
       "liveImage": "/images/generated/jacket/lbh-antler.webp",
@@ -360,6 +400,14 @@
       "confidence": "high",
       "why": "Two colour zones, green left / pink right, eye at right, gentle arch up - all matching. Signed sagitta/chord: drawing 055H = +0.1214 over the full 715px run, rows restricted to y 578-800 to exclude the annotation ring which had merged into the component and pushed a contaminated +0.179; shipped photo = +0.0993 over a 293px run matching the visually-confirmed extent. IMPORTANT CORRECTION, because it changes a conclusion: the first drawing pass captured only 514px of the 716px run because the pink half renders faintly and fell below threshold, putting the green-to-pink boundary at 0.60. Re-measured over the validated full extent the drawn boundary is at 0.47 - and the photo's is at 0.48. Near-exact, where the truncated measurement had suggested a 12% error. Colour ORDER also correct, green first.",
       "gradedAt": "2026-08-01T13:58:51.652Z"
+    },
+    {
+      "option": "sport-coat/lbh-brave-winds",
+      "verdict": "OK",
+      "liveImage": "/images/generated/jacket/lbh-brave-winds.webp",
+      "confidence": "high",
+      "why": "Feature checked is the ascending two-peak script wave: drawing has a small up-hook at the left start, a lower first peak, a taller second peak, then a long descending stroke ending in a J-hook. The zoomed photo shows exactly that stroke order, both terminal hooks included, in blue thread on the navy lapel.",
+      "gradedAt": "2026-08-02T14:54:01.253Z"
     },
     {
       "option": "sport-coat/lbh-bright-future",
@@ -386,12 +434,28 @@
       "gradedAt": "2026-08-01T22:49:40.045Z"
     },
     {
+      "option": "sport-coat/lbh-christmas-antler",
+      "verdict": "OK",
+      "liveImage": "/images/generated/jacket/lbh-christmas-antler.webp",
+      "confidence": "high",
+      "why": "Counted the tines: the drawing shows a stem with exactly two branches, an elongated loop tine off the upper right and a shorter hooked tine off the lower left. The zoomed photo shows the same two-tine, opposite-side arrangement in violet outline thread, which is what separates it from the single-tine Dragon Horn.",
+      "gradedAt": "2026-08-02T14:54:01.253Z"
+    },
+    {
       "option": "sport-coat/lbh-cloud",
       "verdict": "OK",
       "liveImage": "/images/generated/jacket/lbh-cloud.webp",
       "confidence": "high",
       "why": "Matches drawing d316bedda294: a green undulating double line running left to right, tapering to a fine point at the LEFT end, cresting at roughly 0.40 of the run, descending, then rising at the RIGHT end into a closed loop. The photo reproduces all four features in the same order and the same green. Signed sagitta/chord of the drawn run is -0.088 over 699px with a chord slope of -11.3 degrees, the crest-then-descend profile, and the photo shows the same silhouette. ONE MINOR DIFFERENCE called out rather than failed: the drawn terminal loop is a rounded rectangle, the shipped one a circle. NOT MEASURED: no number was put on the loop aspect ratio - the drawn loop is only ~120px across and partly open at the frame edge of the ink bbox, so a ratio from it would not be trustworthy.",
       "gradedAt": "2026-08-01T13:58:51.652Z"
+    },
+    {
+      "option": "sport-coat/lbh-dragon-horn",
+      "verdict": "OK",
+      "liveImage": "/images/generated/jacket/lbh-dragon-horn.webp",
+      "confidence": "high",
+      "why": "Checked the single-tine horn silhouette: drawing is one vertical stem, a closed loop curling right off the upper stem, an angular zigzag notch beneath it, and a flared/splayed foot. Zoomed crop of the photo reproduces all four in orange outline thread; it has no lower-left tine, so it cannot be confused with the Christmas Antler sibling.",
+      "gradedAt": "2026-08-02T14:54:01.253Z"
     },
     {
       "option": "sport-coat/lbh-glory-rays",
@@ -408,6 +472,30 @@
       "confidence": "high",
       "why": "Both show a red open-outline heart above two sweeping strokes that cross in an X below it, with the longer tail continuing down to the lower right; stroke count, crossing point and single color match.",
       "gradedAt": "2026-08-01T22:49:40.045Z"
+    },
+    {
+      "option": "sport-coat/lbh-happiness",
+      "verdict": "OK",
+      "liveImage": "/images/generated/jacket/lbh-happiness.webp",
+      "confidence": "high",
+      "why": "Checked the elongated cloud outline: pointed left tip, one smooth unbroken upper edge, and a scalloped lower edge of two shallow bumps rising to a hooked right end. The 5x crop of the shipped photo matches that asymmetry bump-for-bump in chartreuse thread, and it is nothing like the arc or heart siblings.",
+      "gradedAt": "2026-08-02T14:54:01.253Z"
+    },
+    {
+      "option": "sport-coat/lbh-head-eye",
+      "verdict": "OK",
+      "liveImage": "/images/generated/jacket/lbh-head-eye.webp",
+      "confidence": "high",
+      "why": "Checked the terminal eye: the drawing is a single long shallow S-stroke that ends on the right in a tight closed spiral (the eye), with the opposite end tapering to a bare point. The photo shows the same single-line sweep and the tight right-hand spiral in orange, the only motif in this batch with that spiral-on-a-tail form.",
+      "gradedAt": "2026-08-02T14:54:01.253Z"
+    },
+    {
+      "option": "sport-coat/lbh-heart-to-heart",
+      "verdict": "OK",
+      "liveImage": "/images/generated/jacket/lbh-heart-to-heart.webp",
+      "confidence": "high",
+      "why": "Feature checked is the open-topped heart formed by two inward spiral curls over a V base — no closed lobes. The photo shows both terminal spirals and the pointed V bottom in red thread, matching the drawing and clearly separable from the closed, crossed-notch Work as One heart.",
+      "gradedAt": "2026-08-02T14:54:01.253Z"
     },
     {
       "option": "sport-coat/lbh-lumi",
@@ -474,12 +562,28 @@
       "gradedAt": "2026-08-01T13:58:51.652Z"
     },
     {
+      "option": "sport-coat/lbh-open-minded",
+      "verdict": "OK",
+      "liveImage": "/images/generated/jacket/lbh-open-minded.webp",
+      "confidence": "high",
+      "why": "The drawing numbers six stacked cords in the arc plus white knot accents. A 4x crop of the photo resolves six distinct parallel cords in the same order (two navy, royal blue, cyan, white, silver-grey) with three raised white French knots, so the band count and colour sequence both hold.",
+      "gradedAt": "2026-08-02T14:54:01.253Z"
+    },
+    {
       "option": "sport-coat/lbh-pinpoint",
       "verdict": "OK",
       "liveImage": "/images/generated/jacket/lbh-pinpoint.webp",
       "confidence": "high",
       "why": "Drawing 00ED is a lilac macro: uniform-width bar, squared end at the left, plain rounded end at the right, NO enlarged eye, dead straight. Masked-thread principal-axis profiling gives photo L/W 5.77 against drawing 5.63 - a 2.5% agreement, the tightest of the set. Both straight (sagitta/L +0.003 photo, +0.006 drawing). Width profiles near-uniform in both with only a slight swell toward the right: max/min 1.31 photo vs 1.26 drawing, i.e. no keyhole eye in either, which is precisely what separates this from lbh-005 (eye/bar 1.52) and lbh-017 (1.73). File hash unique.",
       "gradedAt": "2026-08-01T11:42:53.992Z"
+    },
+    {
+      "option": "sport-coat/lbh-qingyun",
+      "verdict": "OK",
+      "liveImage": "/images/generated/jacket/lbh-qingyun.webp",
+      "confidence": "high",
+      "why": "Checked the auspicious-cloud outline plus its inner curl: the drawing is a rounded triangular hump with the apex left of centre and a small closed loop sitting on the baseline below it. The zoomed photo shows the same hump proportion and, critically, the interior loop resting on the lower edge, in pale blue thread.",
+      "gradedAt": "2026-08-02T14:54:01.253Z"
     },
     {
       "option": "sport-coat/lbh-rising-sun",
@@ -562,6 +666,14 @@
       "gradedAt": "2026-08-01T22:49:40.045Z"
     },
     {
+      "option": "sport-coat/lbh-work-as-one",
+      "verdict": "OK",
+      "liveImage": "/images/generated/jacket/lbh-work-as-one.webp",
+      "confidence": "high",
+      "why": "The identifying feature is the crossed top notch of a closed heart, not a plain heart. Zoomed crop confirms the left lobe stroke sweeps down past centre and ends in a short tail while the right lobe ends in a separate short vertical tick, exactly as drawn — and the closed lobes distinguish it from the open Heart to Heart sibling.",
+      "gradedAt": "2026-08-02T14:54:01.253Z"
+    },
+    {
       "option": "sport-coat/lp-patch",
       "verdict": "WRONG",
       "liveImage": "/images/generated/jacket/lp-patch.webp",
@@ -592,6 +704,86 @@
       "confidence": "high",
       "why": "Drawing 3349 shows a plain waistband with no side-adjuster hardware and a single side belt loop; the photo navy waistband is likewise bare of any buckle, strap or tab and carries one plain loop, so the no-adjuster construction matches.",
       "gradedAt": "2026-08-01T22:49:39.817Z"
+    },
+    {
+      "option": "suit-2pc/back-besom-btn",
+      "verdict": "OK",
+      "liveImage": "/images/generated/jacket/back-besom-btn.webp",
+      "confidence": "high",
+      "why": "Feature checked: BOTH trouser back pockets as double-welt besoms, each with a button on a tab below the welt, exactly as the drawing marks with a red welt bar plus diamond button below on each side. Photo shows two matching besom welts with a buttoned tab under each, no flap and no zip, so it is clearly distinct from the decorative, zip and flap siblings.",
+      "gradedAt": "2026-08-02T14:54:01.253Z"
+    },
+    {
+      "option": "suit-2pc/back-besom-decorative",
+      "verdict": "OK",
+      "liveImage": "/images/generated/jacket/back-besom-decorative.webp",
+      "confidence": "medium",
+      "why": "Feature checked: two plain double-welt besoms with no button and no zip, drawn as sealed outlined rectangles. Zoomed inspection shows both welts pressed closed against each other with no opening gap, no button tab, no zipper hardware, which is the correct external reading of a decorative besom. The 'no bag' part is interior construction and is inherently unphotographable from outside, which is the only reason confidence is not high.",
+      "gradedAt": "2026-08-02T14:54:01.253Z"
+    },
+    {
+      "option": "suit-2pc/back-besom-no-right",
+      "verdict": "OK",
+      "liveImage": "/images/generated/jacket/back-besom-no-right.webp",
+      "confidence": "high",
+      "why": "Feature checked: besom pocket on the wearer's LEFT only, no right pocket. The drawing mirrors back-right-besom-only, putting the single red welt on the image-left side. Photo (back view) shows one besom welt on the left hip and a completely plain right hip, so the handedness is right and it reads as the mirror of the right-besom-only sibling.",
+      "gradedAt": "2026-08-02T14:54:01.253Z"
+    },
+    {
+      "option": "suit-2pc/back-both-besom-right-btn",
+      "verdict": "OK",
+      "liveImage": "/images/generated/jacket/back-both-besom-right-btn.webp",
+      "confidence": "high",
+      "why": "Feature checked: two besom pockets but a button on the RIGHT one only. Drawing shows both welts highlighted with the diamond button appearing solely under the image-right welt. Photo matches precisely: a plain besom welt on the left hip and a besom welt with a buttoned tab on the right hip, so it separates cleanly from back-besom-btn, which carries a button on both.",
+      "gradedAt": "2026-08-02T14:54:01.253Z"
+    },
+    {
+      "option": "suit-2pc/back-pointed-flap-btn",
+      "verdict": "OK",
+      "liveImage": "/images/generated/jacket/back-pointed-flap-btn.webp",
+      "confidence": "high",
+      "why": "Feature checked: flap whose bottom edge descends to a centre POINT with the button set on that point. Zoomed photo shows the flap edge angling down from both cut corners into a pronounced central pointed tab that carries the button, matching the V-shaped centre in the drawing. The point depth and angled corners make it plainly distinguishable from the regular flap and the plain rounded flap siblings.",
+      "gradedAt": "2026-08-02T14:54:01.253Z"
+    },
+    {
+      "option": "suit-2pc/back-regular-flap",
+      "verdict": "OK",
+      "liveImage": "/images/generated/jacket/back-regular-flap.webp",
+      "confidence": "medium",
+      "why": "Feature checked: flap pocket with a button, drawn as a rectangular flap with a small circle button at its centre. Photo shows both back pockets under a flap with a real buttonhole and button through the centre, so the option identity is present. Deduction: on zoom the flap bottom edge is not perfectly straight, it takes a shallow step down at the button, a minor drift from the drawn rectangle, but it is far shallower than the pointed-flap sibling and still reads as a regular flap.",
+      "gradedAt": "2026-08-02T14:54:01.253Z"
+    },
+    {
+      "option": "suit-2pc/back-right-besom-btn",
+      "verdict": "OK",
+      "liveImage": "/images/generated/jacket/back-right-besom-btn.webp",
+      "confidence": "high",
+      "why": "Feature checked: a SINGLE besom pocket on the wearer's right only, with a button below it; the drawing shows one red welt with a diamond button on the image-right side and only a plain dart on the left. Photo (back view, so image right equals wearer right) shows exactly one besom welt on the right hip with a buttoned tab beneath, left hip bare. Correctly differs from back-right-besom-only, which has no button.",
+      "gradedAt": "2026-08-02T14:54:01.253Z"
+    },
+    {
+      "option": "suit-2pc/back-right-besom-only",
+      "verdict": "OK",
+      "liveImage": "/images/generated/jacket/back-right-besom-only.webp",
+      "confidence": "high",
+      "why": "Feature checked: one besom pocket on the wearer's right with NO button, drawing shows a single red welt on the image-right side and no diamond button anywhere. Photo shows a single clean besom welt on the right hip, no button, no tab, and a bare left hip carrying only the back dart. Correctly contrasts with back-right-besom-btn, which adds a button.",
+      "gradedAt": "2026-08-02T14:54:01.253Z"
+    },
+    {
+      "option": "suit-2pc/back-welt-zip",
+      "verdict": "OK",
+      "liveImage": "/images/generated/jacket/back-welt-zip.webp",
+      "confidence": "high",
+      "why": "Feature checked: welt back pocket closed by a zipper on both sides, drawn as a red welt with a small pull tick at the outer end of each. Photo shows both back pockets fitted with a contrast red zipper running the full welt, pull tab at the outer end on each side. Unmistakable against every besom and flap sibling in this batch.",
+      "gradedAt": "2026-08-02T14:54:01.253Z"
+    },
+    {
+      "option": "suit-2pc/back-with-flap",
+      "verdict": "OK",
+      "liveImage": "/images/generated/trousers/back-with-flap.webp",
+      "confidence": "high",
+      "why": "Feature checked: besom pocket covered by a flap with NO button, drawn as a rounded-corner rectangle over each pocket with no button marker. Zoomed photo shows both back pockets with a rounded-corner rectangular flap, straight bottom edge and no button or buttonhole anywhere. That absent button is exactly what separates it from back-regular-flap.",
+      "gradedAt": "2026-08-02T14:54:01.253Z"
     },
     {
       "option": "suit-2pc/cb-1",
@@ -770,6 +962,22 @@
       "gradedAt": "2026-08-01T20:27:22.695Z"
     },
     {
+      "option": "suit-2pc/pleat-32",
+      "verdict": "OK",
+      "liveImage": "/images/generated/trousers/pleat-32.webp",
+      "confidence": "medium",
+      "why": "Feature checked: single forward pleat per leg at the waistband, the element the drawing highlights in red. Photo shows exactly one forward-facing pleat each side of the fly with a shallow fold, plus the slanted side pocket the drawing shows. The 3.2 cm depth value itself cannot be adjudicated because the 302F illustration is byte-identical (same MD5) to the 302G drawing used for pleat-38, but nothing in the photo contradicts it and its fold reads shallower than the 3.8 sibling.",
+      "gradedAt": "2026-08-02T14:54:01.253Z"
+    },
+    {
+      "option": "suit-2pc/pleat-38",
+      "verdict": "OK",
+      "liveImage": "/images/generated/trousers/pleat-38.webp",
+      "confidence": "medium",
+      "why": "Feature checked: single forward pleat depth. Photo shows one forward pleat per leg with a visibly deeper fold underlay than the pleat-32 sibling, so the pair is distinguishable in the correct direction, and the slanted side pocket matches the drawing. Exact 3.8 cm cannot be measured from the photo and the supplier illustration is identical to the 3.2 cm one, so the absolute value is unverifiable, but no construction contradiction exists.",
+      "gradedAt": "2026-08-02T14:54:01.253Z"
+    },
+    {
       "option": "suit-2pc/pleat-no-double-dart",
       "verdict": "OK",
       "liveImage": "/images/generated/trousers/pleat-no-double-dart.webp",
@@ -866,6 +1074,22 @@
       "gradedAt": "2026-08-01T11:41:40.168Z"
     },
     {
+      "option": "suit-3pc/back-both-jetted",
+      "verdict": "OK",
+      "liveImage": "/images/generated/suit-2pc/back-both-jetted.webp",
+      "confidence": "high",
+      "why": "Checked the welt count on each rear pocket: the drawing highlights both hip pockets as double besom, and a zoom of the photo shows a distinct upper AND lower jetting on each mouth, no flap, on both left and right sides.",
+      "gradedAt": "2026-08-02T14:54:01.253Z"
+    },
+    {
+      "option": "suit-3pc/back-left-patch",
+      "verdict": "OK",
+      "liveImage": "/images/generated/suit-2pc/back-left-patch.webp",
+      "confidence": "high",
+      "why": "Checked the pocket shape and side: the drawing shows a patch pocket with a pointed (chevron) bottom, and the photo shows exactly one applied patch with a V-pointed base on the wearer's left (viewer's left in a back view), the right hip left plain.",
+      "gradedAt": "2026-08-02T14:54:01.253Z"
+    },
+    {
       "option": "suit-3pc/back-stretch-vest",
       "verdict": "OK",
       "liveImage": "/images/generated/jacket/back-stretch-vest.webp",
@@ -898,6 +1122,14 @@
       "gradedAt": "2026-08-01T22:49:39.311Z"
     },
     {
+      "option": "suit-3pc/hem-double-turnup",
+      "verdict": "OK",
+      "liveImage": "/images/generated/suit-2pc/hem-double-turnup.webp",
+      "confidence": "medium",
+      "why": "Checked the hem finish: drawing marks a turn-up band at the leg opening, and the photo shows a clearly folded, pressed cuff with the fold edge and top edge both visible. Measured depth reads slightly deep (~6 cm against a ~19.5 cm hem) but the turn-up construction itself is unmistakable.",
+      "gradedAt": "2026-08-02T14:54:01.253Z"
+    },
+    {
       "option": "suit-3pc/lapel-collar-stand",
       "verdict": "WRONG",
       "liveImage": "/images/generated/jacket/lapel-collar-stand.webp",
@@ -906,12 +1138,28 @@
       "gradedAt": "2026-08-01T13:42:15.476Z"
     },
     {
+      "option": "suit-3pc/no-front-pockets",
+      "verdict": "OK",
+      "liveImage": "/images/generated/suit-2pc/no-front-pockets.webp",
+      "confidence": "high",
+      "why": "Checked for the absence of any hip pocket mouth: drawing 313C shows the front with no slant or on-seam opening, and the photo shows the full front hip and side-seam area clean, only belt loops and the front crease, no welt or bar tack anywhere.",
+      "gradedAt": "2026-08-02T14:54:01.253Z"
+    },
+    {
       "option": "suit-3pc/notch-lapel-vest",
       "verdict": "OK",
       "liveImage": "/images/generated/jacket/notch-lapel-vest.webp",
       "confidence": "high",
       "why": "Drawing shows a notch lapel and, at the back neck, a single neckline curve: sampling the centre column x=600 returns one continuous ink run from y=75 downward, i.e. no collar band, where the band siblings return two runs at the same column. Photo shows a navy waistcoat with a clear step notch on both fronts, no standing band, and the shirt collar sitting free around the neck. Confirmed waistcoat rather than jacket: the left edge shows the topstitched armhole with a white shirt sleeve behind it. Distinguishable from the peak and shawl siblings by lapel shape and from lapel-collar-stand by the absent band. COULD NOT MEASURE: no printed dimension callout, so no cm lapel width or notch angle - shape class only.",
       "gradedAt": "2026-08-01T13:42:15.492Z"
+    },
+    {
+      "option": "suit-3pc/on-seam-pockets",
+      "verdict": "OK",
+      "liveImage": "/images/generated/suit-2pc/on-seam-pockets.webp",
+      "confidence": "high",
+      "why": "Checked whether the mouth sits in the seam: drawing 3130 marks a vertical red opening on the side seam, and the photo shows a near-vertical opening with bar tacks at both ends and the seam line continuing above and below it, clearly not the angled slant sibling.",
+      "gradedAt": "2026-08-02T14:54:01.253Z"
     },
     {
       "option": "suit-3pc/peak-collar-stand",
@@ -960,6 +1208,46 @@
       "confidence": "medium",
       "why": "Drawing marks exactly one pleat line per front panel with the magnified callout showing the fold turning toward the fly; the photo shows one pleat per leg, correct count, with each pleat open wedge flaring toward the centre fly rather than outward toward the side pocket, consistent with a forward pleat.",
       "gradedAt": "2026-08-01T22:49:39.311Z"
+    },
+    {
+      "option": "suit-3pc/slant-25-stripe",
+      "verdict": "OK",
+      "liveImage": "/images/generated/suit-2pc/slant-25-stripe.webp",
+      "confidence": "high",
+      "why": "Checked for contrast piping on the slant mouth: drawing 3124 adds a red line alongside the slant pocket line, and a zoom of the photo shows an ivory contrast strip piped along the full slant opening, which is exactly what separates it from the plain 3.2 cm slant sibling.",
+      "gradedAt": "2026-08-02T14:54:01.253Z"
+    },
+    {
+      "option": "suit-3pc/slant-pockets",
+      "verdict": "OK",
+      "liveImage": "/images/generated/suit-2pc/slant-pockets.webp",
+      "confidence": "medium",
+      "why": "Checked the pocket mouth angle: drawing 3101 draws a long bold slanted opening dropping forward from the waistband, and the photo shows an angled welt opening (about 13 degrees off vertical) set forward of the side seam with self-fabric edges and no contrast stripe.",
+      "gradedAt": "2026-08-02T14:54:01.253Z"
+    },
+    {
+      "option": "suit-3pc/trouser-contrast-pocket",
+      "verdict": "OK",
+      "liveImage": "/images/generated/suit-2pc/trouser-contrast-pocket.webp",
+      "confidence": "high",
+      "why": "Checked the contrast pocket bag: drawing fills a red triangular wedge where the front pocket bag shows through at the fly/pleat area, and the photo reproduces that exact tapering red wedge in the same position on navy cloth.",
+      "gradedAt": "2026-08-02T14:54:01.253Z"
+    },
+    {
+      "option": "suit-3pc/trouser-contrast-side",
+      "verdict": "OK",
+      "liveImage": "/images/generated/suit-2pc/trouser-contrast-side.webp",
+      "confidence": "medium",
+      "why": "Checked the contrast placement: drawing runs a red line down the side seam from waistband to hem, and the photo shows a satin braid running the full length of the side seam on black cloth. Stripe width reads roughly 2 cm against the drawing's 1.2 cm callout, but position and construction match.",
+      "gradedAt": "2026-08-02T14:54:01.253Z"
+    },
+    {
+      "option": "suit-3pc/trouser-contrast-waist",
+      "verdict": "OK",
+      "liveImage": "/images/generated/suit-2pc/trouser-contrast-waist.webp",
+      "confidence": "high",
+      "why": "Checked the contrast band location: drawing colors the entire waistband red with the body left plain, and the photo shows a full-width red contrast waistband above navy trousers, distinct from the pocket-bag and side-seam siblings.",
+      "gradedAt": "2026-08-02T14:54:01.253Z"
     },
     {
       "option": "suit-3pc/vest-bh-hand",
@@ -1210,6 +1498,22 @@
       "gradedAt": "2026-08-01T14:02:39.039Z"
     },
     {
+      "option": "suit-3pc/watch-none",
+      "verdict": "OK",
+      "liveImage": "/images/generated/suit-2pc/watch-none.webp",
+      "confidence": "medium",
+      "why": "Checked the waistband band area where a watch pocket welt would sit: drawing 3169 carries no waistband marker, and the photo shows the whole waistband and upper front unobstructed with no small jetted welt, so the absence is verifiable rather than merely cropped out.",
+      "gradedAt": "2026-08-02T14:54:01.253Z"
+    },
+    {
+      "option": "suit-3pc/watch-right",
+      "verdict": "OK",
+      "liveImage": "/images/generated/suit-2pc/watch-right.webp",
+      "confidence": "medium",
+      "why": "Checked for a small welt just under the waistband: drawing 3180 puts a red marker at the waistband on the frame-right side plus the constant hip welt at frame-left, and a zoom of the photo shows exactly that layout, a short jetted watch-pocket welt tight under the waistband inboard of the side seam on the same side. The fly is out of frame so absolute handedness relies on matching the drawing's own layout.",
+      "gradedAt": "2026-08-02T14:54:01.254Z"
+    },
+    {
       "option": "trousers/hem-76",
       "verdict": "OK",
       "liveImage": "/images/generated/trousers/hem-76.webp",
@@ -1458,6 +1762,22 @@
       "gradedAt": "2026-08-01T09:46:55.708Z"
     },
     {
+      "option": "vest/vest-back-belt-3cm",
+      "verdict": "OK",
+      "liveImage": "/images/generated/vest/vest-back-belt-3cm.webp",
+      "confidence": "medium",
+      "why": "Option identity is belt WIDTH (3 cm) with buckle. I measured the band against back width in both back photos: this belt is about 10 percent of back width versus about 8 percent for the strap sibling, so it is genuinely the wider, chunkier band with a correspondingly larger buckle, matching the drawn belt. Medium only because absolute width cannot be pinned to 3 cm from the photo and framing is near-identical to its sibling.",
+      "gradedAt": "2026-08-02T14:54:01.254Z"
+    },
+    {
+      "option": "vest/vest-back-strap-buckle",
+      "verdict": "OK",
+      "liveImage": "/images/generated/vest/vest-back-strap-buckle.webp",
+      "confidence": "high",
+      "why": "Drawing is a back view with a narrow horizontal band crossing the waist and a small buckle on the centre-back seam. Photo shows the vest back with a self-fabric strap at the waistline and a metal buckle centred on the centre-back seam; measured band height is about 8 percent of back width, i.e. roughly the 2-3 cm the spec calls for.",
+      "gradedAt": "2026-08-02T14:54:01.254Z"
+    },
+    {
       "option": "vest/vest-bottom-point",
       "verdict": "WRONG",
       "liveImage": "/images/generated/vest/vest-bottom-point.webp",
@@ -1554,6 +1874,14 @@
       "gradedAt": "2026-08-01T12:37:50.660Z"
     },
     {
+      "option": "vest/vest-lining-artistic",
+      "verdict": "OK",
+      "liveImage": "/images/generated/suit-3pc/vest-lining-artistic.webp",
+      "confidence": "medium",
+      "why": "Drawing shades the whole lining area of the vest to indicate where the placement lining lands. Photo shows a large-scale artistic acanthus/floral placement print in satin, deliberately mirrored and centred on the centre-back seam and framed by self-fabric edges — the placement print is the showcased feature and dominates the frame. Medium because the drawing depicts the interior spread open while the photo shows only the back panel area.",
+      "gradedAt": "2026-08-02T14:54:01.254Z"
+    },
+    {
       "option": "vest/vest-lower-besom-flap",
       "verdict": "OK",
       "liveImage": "/images/generated/vest/vest-lower-besom-flap.webp",
@@ -1616,6 +1944,70 @@
       "confidence": "high",
       "why": "Same discriminator, mirrored. Drawing: on a mark-free placket row (y520-580) the only dark columns are x=621-633 at full height, establishing the CF edge there; on the buttonhole rows the dash spans x=537-604, entirely to the LEFT of that edge with a 16px gap. 3 dashes, and notably NO button rings are drawn. Photo at 3x (crop x320-560): the overlap edge is at x~460 with its cast shadow falling right, so the viewer-LEFT panel lies on top = wearer's right over left; the 3 buttonholes span x~388-433, entirely left of that edge, each with the bar-tack eye at the RIGHT end nearest the edge - the exact mirror of the left-over-right photo, which is the second independent check. NOTED: the photo shows buttonholes with no buttons through them, faithfully reproducing the drawing (also holes only) but not how the garment would fasten.",
       "gradedAt": "2026-08-01T12:37:50.660Z"
+    },
+    {
+      "option": "vest/vest-stitch-top-06",
+      "verdict": "OK",
+      "liveImage": "/images/generated/suit-3pc/vest-stitch-top-06.webp",
+      "confidence": "high",
+      "why": "Drawing traces a red stitch line set just inside the neckline, front edge, hem points and pocket welts. Zoomed crop of the photo shows a clean single machine topstitch running parallel to the V-neck and front button edge at a narrow, consistent setback, and a matching stitch along the top of the welt pocket — the topstitch itself, not just a clean edge, is visible.",
+      "gradedAt": "2026-08-02T14:54:01.254Z"
+    },
+    {
+      "option": "vest/vest-ticket-besom",
+      "verdict": "OK",
+      "liveImage": "/images/generated/vest/vest-ticket-besom.webp",
+      "confidence": "high",
+      "why": "Drawing marks a thin solid horizontal slit at the waist with no flap and no angle. Zoomed crop of the photo shows a flat, very slim double-jetted (besom) pocket, two equal narrow lips, dead horizontal, no flap — exactly the drawn feature, and clearly unlike the flap, diamond-flap and slant siblings.",
+      "gradedAt": "2026-08-02T14:54:01.254Z"
+    },
+    {
+      "option": "vest/vest-ticket-besom-flap",
+      "verdict": "OK",
+      "liveImage": "/images/generated/vest/vest-ticket-besom-flap.webp",
+      "confidence": "high",
+      "why": "Drawing shows the besom slit closed by a rectangular flap with a straight bottom edge. Photo shows exactly a rectangular self-fabric flap with softly squared corners lying over a jetted opening — the flap, which is the whole identity of this option, occupies the frame centre and separates it plainly from the plain besom and the pointed diamond flap.",
+      "gradedAt": "2026-08-02T14:54:01.254Z"
+    },
+    {
+      "option": "vest/vest-ticket-diamond-flap",
+      "verdict": "OK",
+      "liveImage": "/images/generated/vest/vest-ticket-diamond-flap.webp",
+      "confidence": "high",
+      "why": "Drawing shows a flap whose lower edge breaks to a centred V point (diamond). The photo shows the besom welt line with a flap below terminating in a distinct centre point, straight angled sides — the pointed hem of the flap is unmistakable and is exactly what distinguishes it from the straight-bottom Besom with Flap sibling.",
+      "gradedAt": "2026-08-02T14:54:01.254Z"
+    },
+    {
+      "option": "vest/vest-ticket-left",
+      "verdict": "OK",
+      "liveImage": "/images/generated/vest/vest-ticket-left.webp",
+      "confidence": "high",
+      "why": "Drawing is the mirror of vest-ticket-right, welt on the opposite front. In the photo the button placket sits at frame left with buttonhole tails running right, so the pocket-bearing panel at frame right is the wearer's LEFT front; the model's white sleeve on the frame right confirms the wearer's left arm. Correctly mirrored against the Right Welt photo.",
+      "gradedAt": "2026-08-02T14:54:01.254Z"
+    },
+    {
+      "option": "vest/vest-ticket-lr-slant-welt",
+      "verdict": "OK",
+      "liveImage": "/images/generated/vest/vest-ticket-lr-slant-welt.webp",
+      "confidence": "high",
+      "why": "Drawing is the only full-front view in the field and shows TWO slanted welts, one per front, both rising toward centre front. Photo matches the count and the mirrored geometry: left-panel welt rises to the right, right-panel welt rises to the left, both angled, shot square-on so the pair is visible at once.",
+      "gradedAt": "2026-08-02T14:54:01.254Z"
+    },
+    {
+      "option": "vest/vest-ticket-right",
+      "verdict": "OK",
+      "liveImage": "/images/generated/vest/vest-ticket-right.webp",
+      "confidence": "medium",
+      "why": "Option identity is side (right) plus a welt. I checked handedness from the placket: the buttonhole tail runs to the frame-right of each button, so the overlapping panel at frame right is the wearer's left front, making the pocket panel the wearer's RIGHT front. The pocket also reads deeper/raised than the flat besom sibling, matching the drawing's taller outlined welt. Medium because the side cue is subtle at thumbnail size.",
+      "gradedAt": "2026-08-02T14:54:01.254Z"
+    },
+    {
+      "option": "vest/vest-ticket-slant-besom",
+      "verdict": "OK",
+      "liveImage": "/images/generated/vest/vest-ticket-slant-besom.webp",
+      "confidence": "high",
+      "why": "Drawing shows a single besom slit rotated off horizontal, rising toward centre front, no flap. Photo shows one jetted besom clearly angled upward toward the button line at roughly the drawn slant, with no flap and no second pocket — the slant angle is the showcased feature and is obvious against the horizontal Besom sibling.",
+      "gradedAt": "2026-08-02T14:54:01.254Z"
     }
   ]
 }

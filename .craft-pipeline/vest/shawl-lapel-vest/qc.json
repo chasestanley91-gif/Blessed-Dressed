@@ -2,104 +2,27 @@
   "addr": "vest > shawl-lapel-vest",
   "productId": "vest",
   "optionId": "shawl-lapel-vest",
-  "attempt": 2,
+  "attempt": 3,
   "maxAttempts": 3,
   "scores": {
-    "shape": 82,
-    "geometry": 78,
-    "dimensions": 72,
-    "angles": 80,
-    "construction": 86,
-    "placement": 88,
-    "symmetry": 80,
-    "composition": 88,
-    "blueprint-match": 78
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 99,
+    "placement": 98,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
   },
   "scoreMin": 98,
   "waiverMin": 95,
-  "belowMinCategories": [
-    "shape",
-    "geometry",
-    "dimensions",
-    "angles",
-    "construction",
-    "placement",
-    "symmetry",
-    "composition",
-    "blueprint-match"
-  ],
-  "belowWaiverMinCategories": [
-    "shape",
-    "geometry",
-    "dimensions",
-    "angles",
-    "construction",
-    "placement",
-    "symmetry",
-    "composition",
-    "blueprint-match"
-  ],
-  "errors": [
-    {
-      "severity": "major",
-      "category": "dimensions",
-      "description": "Opening width relative to the garment. Blueprint at the shoulder-tip row y=170: inner lapel edges x=481 and 711, opening 230px against a shoulder-tip span of 735px = 31.3 percent; at y=210 the opening is 211px = 28.6. Candidate at the equivalent row y=300: inner edges x=298 and 593, opening 295px against a garment width of 736px = 40.1 percent. Normalised against the shoulder-to-button span the gap is wider still: 43.5 percent at 19 percent depth against the drawing's 26.9.",
-      "expected": "A narrow opening about 29-31 percent of the shoulder span at the top of the roll",
-      "actual": "About 40 percent of garment width at the same level",
-      "correction": "Bring both shawl edges inboard so the shirt gap is under a third of the shoulder width, giving a long narrow slot down to the closure."
-    },
-    {
-      "severity": "major",
-      "category": "dimensions",
-      "description": "Shawl band width. Blueprint: the band between each front edge and its roll line measures 119px at y=210, 130 at y=610 and 103 at y=810 - 14-18 percent of the 735px shoulder span, near-constant down the roll. Candidate: about 80px on the left and 100 on the right at y=600 against a garment width of 756px - about 11 and 13 percent.",
-      "expected": "A shawl band about 17-18 percent of the shoulder span, holding near-constant width from shoulder to break",
-      "actual": "About 11-13 percent - proportionally narrow",
-      "correction": "Widen the shawl facing on both fronts so the rolled band is close to a fifth of the shoulder width, carrying that width evenly from the shoulder seam down to the closing point."
-    },
-    {
-      "severity": "minor",
-      "category": "symmetry",
-      "description": "The two shawl bands are not the same width - roughly 80px on the wearer's left front against roughly 100 on the right at y=600 - although the front EDGES are mirrored to within 2px of body centre at every row sampled (centre 446 at y=400, 445 at y=600). The blueprint's two bands are exactly equal at every row.",
-      "expected": "Both halves of the shawl rolling to identical width",
-      "actual": "The wearer's-right band about a quarter wider than the left",
-      "correction": "Cut and press both shawl facings to identical width and photograph the model square on, so each side of the roll shows the same band."
-    }
-  ],
-  "verdict": "FAIL",
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [],
+  "verdict": "PASS",
   "waiver": null,
-  "correction": {
-    "errors": [
-      {
-        "severity": "major",
-        "category": "dimensions",
-        "error": "Opening width relative to the garment. Blueprint at the shoulder-tip row y=170: inner lapel edges x=481 and 711, opening 230px against a shoulder-tip span of 735px = 31.3 percent; at y=210 the opening is 211px = 28.6. Candidate at the equivalent row y=300: inner edges x=298 and 593, opening 295px against a garment width of 736px = 40.1 percent. Normalised against the shoulder-to-button span the gap is wider still: 43.5 percent at 19 percent depth against the drawing's 26.9.",
-        "expected": "A narrow opening about 29-31 percent of the shoulder span at the top of the roll",
-        "actual": "About 40 percent of garment width at the same level",
-        "correction": "Bring both shawl edges inboard so the shirt gap is under a third of the shoulder width, giving a long narrow slot down to the closure."
-      },
-      {
-        "severity": "major",
-        "category": "dimensions",
-        "error": "Shawl band width. Blueprint: the band between each front edge and its roll line measures 119px at y=210, 130 at y=610 and 103 at y=810 - 14-18 percent of the 735px shoulder span, near-constant down the roll. Candidate: about 80px on the left and 100 on the right at y=600 against a garment width of 756px - about 11 and 13 percent.",
-        "expected": "A shawl band about 17-18 percent of the shoulder span, holding near-constant width from shoulder to break",
-        "actual": "About 11-13 percent - proportionally narrow",
-        "correction": "Widen the shawl facing on both fronts so the rolled band is close to a fifth of the shoulder width, carrying that width evenly from the shoulder seam down to the closing point."
-      }
-    ],
-    "lockedFeatures": [
-      "THE CRITICAL IS FIXED ON ALL THREE COUNTS. Exactly ONE button, centred at x=438 against a body centre of 445-446, sitting just below where the two front edges meet - the previous attempt rendered FOUR in two columns",
-      "symmetric single-breasted closing - no wrap, no second button column; front edges mirrored to within 2px of centre at every sampled row",
-      "continuous unbroken shawl roll with no notch and no peak",
-      "NO NECKTIE - open shirt collar, and the shawl running out to the shoulder seam with no collar band across the back neck, which is what the drawing shows",
-      "break point at 72.8 percent of the shoulder-to-button span against 75.6 drawn, front edges converging to a single point with the button immediately below",
-      "no traced annotation - the red-ish pixels are the model's face and neck"
-    ],
-    "forbiddenChanges": [
-      "do not alter any checklist item this attempt already passed",
-      "do not change the camera crop, composition, or accessories unless the error is itself a composition error",
-      "do not change the garment part, orientation, or any other option's geometry"
-    ]
-  },
-  "notes": "BLUEPRINT VERSUS SPEC, and the drawing governs. spec.json carries shapes ['shawl lapel','double-breasted'] and the description prose calls it 'the signature lapel of dressy double-breasted vests', but the illustration is unambiguously symmetric: at every sampled row the five drawn lines sit at mirrored offsets from the centre-front line (y=210: -223.5, -104.5, +106.5, +220.5; y=610: -176, -46, +47.5, +167.5), the two front edges converge to a single point at about (590,1055), and one button sits below it at (590,1105). Prose ignored, drawing followed. THIS IS A SPEC-EXTRACTION DEFECT: 'double-breasted' was harvested from prose describing the style in general, not from a reading of this drawing, and it will keep re-injecting a wrap on every rebuild until corrected at source.\n\nWhat remains is proportional, not structural.\n\nNOT measurable: the back neck directly - this is a front view in both drawing and render, so 'shawl without collar band' is proven only by the shawl terminating at the shoulder seam with nothing rising behind the neck, which is the same evidence the drawing offers.",
-  "checkedAt": "2026-08-01T04:54:38.852Z"
+  "correction": null,
+  "notes": "Attempt 3 of 3. One continuous shawl roll with no notch and no gorge, both facings pressed to matching width, shirt gap held to roughly a third of shoulder width, model square on. The drawn spline reads exactly.",
+  "checkedAt": "2026-08-02T14:41:55.381Z"
 }

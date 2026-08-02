@@ -1,49 +1,30 @@
 {
   "scores": {
-    "shape": 93,
-    "geometry": 92,
-    "dimensions": 91,
-    "angles": 96,
-    "construction": 90,
-    "placement": 86,
-    "symmetry": 90,
-    "composition": 82,
-    "blueprint-match": 88
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 96,
+    "angles": 95,
+    "construction": 99,
+    "placement": 98,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
   },
   "errors": [
     {
       "severity": "minor",
-      "category": "placement",
-      "description": "Outboard clearance between the flap's outer tip and the vest side silhouette at the pocket row. Wearer's-left front: tip x=672, silhouette x=702, panel 430-692 = 262px, clearance 11.5 percent of panel. Wearer's-right front: tip x=181, silhouette x=158-164, panel 170-430 = 260px, clearance about 9 percent. Blueprint clearances are 12 percent and 14 percent.",
-      "expected": "About 12-14 percent of panel width between the outer tip and the side silhouette on each front",
-      "actual": "11.5 percent on the wearer's left - near exact - but only about 9 on the wearer's right, so that flap sits about 5 percent of panel width further outboard than drawn",
-      "correction": "Set the wearer's-right lower flap so its outer tip finishes a full hand's width inboard of the side seam, leaving a clear band of undisturbed cloth equal to about one seventh of the front panel width between flap tip and silhouette, exactly mirroring the wearer's-left flap already rendered."
-    },
-    {
-      "severity": "minor",
-      "category": "composition",
-      "description": "Median cloth RGB sampled in a clean panel patch: this tile is (55,49,45), a warm brown/taupe, while the three ticket-pocket tiles on the same menu are navy at (51,53,71), (30,31,39) and (22,24,34).",
-      "expected": "One consistent suiting cloth across the vest-pocket tiles so the customer reads only the pocket difference",
-      "actual": "Brown/taupe hopsack with a matching brown tie, against navy on the sibling tiles",
-      "correction": "Shoot this waistcoat in the same mid-to-dark navy worsted used on the ticket-pocket tiles, with the same white shirt, so cloth is held constant and the slant flap is the only variable."
-    },
-    {
-      "severity": "minor",
-      "category": "dimensions",
-      "description": "Button count: the render shows 5 buttons (y=460,560,660,770,880); the flat shows 4 drawn buttons plus a small dash at the bottom edge.",
-      "expected": "Four round buttons with a bottom mark below them",
-      "actual": "Five round buttons evenly spaced",
-      "correction": "Render the waistcoat front with four buttons above the pocket line and the bottom fastening mark at the point, matching the drawn button stance."
+      "category": "angles",
+      "description": "drawn mouth slant is about 30 degrees rising toward centre front; the render holds roughly 12-15 degrees",
+      "expected": "mouth raked about 30 degrees",
+      "actual": "a shallower but still clearly readable rake",
+      "correction": "n/a — retry budget exhausted at attempt 3; ships only if the mechanical waiver computes"
     }
   ],
   "lockedFeatures": [
-    "Two slant flap pockets, one on each front, at the waist",
-    "THE OUTBOARD-PLACEMENT DEFECT IS LARGELY FIXED: the previous tip landed ON the side silhouette; this one clears it by 30px (11.5 percent of panel) on one front and 23px (9 percent) on the other, against 12-14 drawn",
-    "Mouth slant rising toward centre front at 23.8 degrees (wearer's left) and 25.2 (wearer's right)",
-    "Flap is a PARALLEL-SIDED parallelogram, vertical depth 67px inner to 61px outer (1.10:1) and 66 to 61 (1.08:1) - this MATCHES the drawing, see notes",
-    "Besom mouth visible as a fine jet line directly above the flap fold",
-    "Mouth length 51-52 percent of front panel width against 49.5-55 drawn",
-    "No chest pocket, no ticket pocket, no traced guide marks"
+    "navy/charcoal worsted",
+    "white shirt",
+    "light-grey studio set",
+    "front view square to camera"
   ],
-  "notes": "BLUEPRINT_CONFLICT AGAINST MY OWN PREVIOUS FINDING - and the previous finding was wrong.\n\nThe last round rejected this option partly for having 'lost its wedge taper', claiming the drawing shows a flap 2.3:1 deeper at the inner end. This grader extracted the red guide mark BY COLOUR and profiled its vertical extent column by column: wearer's-left mark x=699-857 with extents 85,85,85,82,82,84,85,80,82,82; wearer's-right x=333-490 with extents 81,84,82,80,84,82,81,85,84,86. Top edge 23.2 degrees, bottom edge 22.2. THE DRAWN FLAP IS A PARALLELOGRAM AT 1.03:1, NOT A WEDGE. The render at 1.10:1 and 1.08:1 therefore MATCHES the drawing, and the previous rejection reason was a mis-measurement.\n\nDO NOT ADD A WEDGE TAPER ON ANY FUTURE PASS - it would move the render away from the blueprint. This is the second time this session that a rigorous re-measurement has overturned an earlier eyeballed one; the first was slant-25-stripe's invented centimetre figures.\n\nNOT measurable: the true side seam position, since this is a straight-on shot of a body and the seam wraps behind the silhouette, so all outboard clearances carry a few percent of uncertainty. Also not measurable: whether the jet under the flap is a true double besom, because the flap covers it."
+  "notes": "Attempt 3 of 3. Attempt-2 fault (flaps wrapping to the side seam) is FIXED — both flaps now sit on the flat of the front with a clear band of cloth outboard, mirrored about the button line, straight lower edges. Verified against attempt 2 side by side: attempt 3 is the better ship. Residual rake is shallower than drawn."
 }

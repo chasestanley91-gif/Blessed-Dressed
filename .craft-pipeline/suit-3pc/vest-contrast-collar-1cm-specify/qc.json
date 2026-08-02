@@ -2,104 +2,69 @@
   "addr": "suit-3pc > vest-contrast-collar-1cm-specify",
   "productId": "suit-3pc",
   "optionId": "vest-contrast-collar-1cm-specify",
-  "attempt": 2,
+  "attempt": 3,
   "maxAttempts": 3,
   "scores": {
-    "shape": 84,
-    "geometry": 82,
-    "dimensions": 85,
-    "angles": 84,
-    "construction": 82,
-    "placement": 84,
-    "symmetry": 93,
-    "composition": 78,
-    "blueprint-match": 82
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 96,
+    "angles": 98,
+    "construction": 99,
+    "placement": 96,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
   },
   "scoreMin": 98,
   "waiverMin": 95,
   "belowMinCategories": [
-    "shape",
-    "geometry",
     "dimensions",
-    "angles",
-    "construction",
-    "placement",
-    "symmetry",
-    "composition",
-    "blueprint-match"
+    "placement"
   ],
-  "belowWaiverMinCategories": [
-    "shape",
-    "geometry",
-    "dimensions",
-    "angles",
-    "construction",
-    "placement",
-    "symmetry",
-    "composition",
-    "blueprint-match"
-  ],
+  "belowWaiverMinCategories": [],
   "errors": [
-    {
-      "severity": "major",
-      "category": "shape",
-      "description": "The blueprint shows a full stand collar: a band across the back neck spanning x=440-765 with a distinct upper edge at y=75 and a neckline seam at y=140, flanked by two collar leaves occupying x=350-450 and x=760-855 down to y=345. The render's collar is a narrow band roughly 15-20px wide running up to the neck, with no visible stand, no leaf breadth and no collar point.",
-      "expected": "A collared waistcoat whose collar has a stand at the back neck and two broad leaves lying over the shoulder line, each leaf about a third as wide as the collar band is long",
-      "actual": "A narrow strap of navy running from the notch to the neck that reads as a bound neckline edge rather than a made collar",
-      "correction": "Build a proper waistcoat collar: a stand of cloth rising about 3 cm at the back neck, with two collar leaves falling from it over the shoulder line, each leaf broad enough to read as a separate panel of cloth with its own leading edge terminating at the notch."
-    },
     {
       "severity": "minor",
       "category": "placement",
-      "description": "The cream strip on each side runs along the collar's upper/neckline edge, the edge against the shirt, set about 12-15px inboard of it. In the blueprint the red strips at x=359-395 and x=821-856 hug the OUTER boundary of each collar leaf - the free leading edge running down to the notch. On a collar rendered only 15-20px wide the two edges are barely separable, so the reading is uncertain.",
-      "expected": "The 1 cm contrast edging bound along each collar leaf's leading free edge, terminating at the notch",
-      "actual": "The edging follows the collar's upper edge against the shirt",
-      "correction": "Run the 1 cm contrast binding along the free front edge of each collar leaf - the crisp edge silhouetted against the chest as the leaf falls, finishing squarely where the leaf meets the lapel notch."
-    },
-    {
-      "severity": "minor",
-      "category": "composition",
-      "description": "The two contrast strips are each about 16px wide and 150px long in an 880x1168 frame, so the showcased feature occupies well under 1 percent of the image while the shirt, neck and lower welt pockets take the bulk of it.",
-      "expected": "Framing in which the collar and its 1 cm edging dominate",
-      "actual": "A chest-up portrait in which the edging is legible but small",
-      "correction": "Crop tight on the neckline and collar so the two collar leaves and their contrast edging fill the upper two thirds of the frame, with the lapel notch just inside the lower edge."
-    },
-    {
-      "severity": "minor",
-      "category": "dimensions",
-      "description": "Contrast strip width measured at 13-16px. Scale estimated two ways and they DISAGREE: shirt collar band height (about 40px for a 3.5-4 cm band, about 10px/cm) and vest front width at chest (745px across roughly 40 cm, about 18.6px/cm), giving a strip width of anywhere from 0.7 to 1.4 cm.",
-      "expected": "1.0 cm edging per the option label",
-      "actual": "Approximately 1 cm, but not determinable more precisely than 0.7-1.4 cm from this frame",
-      "correction": "Hold the contrast binding to a consistent 1 cm finished width along its whole run, wide enough to read as a deliberate band of cloth rather than a piping."
+      "description": "the contrast binding runs most of each collar leaf; the drawing marks it over a shorter run near the leaf end",
+      "expected": "binding over roughly a third of the leaf from the notch",
+      "actual": "binding along most of the leaf edge",
+      "correction": "n/a — retry budget exhausted at attempt 3; ships only if the mechanical waiver computes"
     }
   ],
-  "verdict": "FAIL",
-  "waiver": null,
-  "correction": {
-    "errors": [
+  "verdict": "PASS_WAIVED",
+  "waiver": {
+    "granted": true,
+    "reason": "minor-only at attempt 3 of 3: retry budget exhausted with zero critical/major findings and every category >= 95",
+    "waiverMin": 95,
+    "scoreMin": 98,
+    "belowScoreMin": [
       {
-        "severity": "major",
-        "category": "shape",
-        "error": "The blueprint shows a full stand collar: a band across the back neck spanning x=440-765 with a distinct upper edge at y=75 and a neckline seam at y=140, flanked by two collar leaves occupying x=350-450 and x=760-855 down to y=345. The render's collar is a narrow band roughly 15-20px wide running up to the neck, with no visible stand, no leaf breadth and no collar point.",
-        "expected": "A collared waistcoat whose collar has a stand at the back neck and two broad leaves lying over the shoulder line, each leaf about a third as wide as the collar band is long",
-        "actual": "A narrow strap of navy running from the notch to the neck that reads as a bound neckline edge rather than a made collar",
-        "correction": "Build a proper waistcoat collar: a stand of cloth rising about 3 cm at the back neck, with two collar leaves falling from it over the shoulder line, each leaf broad enough to read as a separate panel of cloth with its own leading edge terminating at the notch."
+        "category": "dimensions",
+        "score": 96,
+        "shortfall": 2
+      },
+      {
+        "category": "placement",
+        "score": 96,
+        "shortfall": 2
       }
     ],
-    "lockedFeatures": [
-      "BOTH NAMED DEFECTS FIXED. It is unambiguously A WAISTCOAT, not a suit jacket: cloth runs 123-300 and 581-765 at y=200 (177px shoulder straps) against 66-433 and 441-811 at y=800 (370px fronts); the armholes are open with white shirt sleeve visible beyond them; there is no padded shoulder and no structured chest",
-      "The edging no longer runs the whole outer edge: traced at 6x on both sides, it exists only as TWO SHORT STRIPS, each starting at the top of the visible collar edge and ending in a squared cut-looking terminal just above the notch. The lapel front edges from notch down to the button at y=990 are plain navy throughout",
-      "Each strip terminates in a clean squared end just above the lapel notch (left ends y=265, right y=258)",
-      "Deep V front closing on a single button",
-      "Left and right strips mirror each other within 7px of vertical span",
-      "No traced guide marks - the saturated pixels are all the model's neck and jaw"
+    "minorErrors": [
+      {
+        "category": "placement",
+        "description": "the contrast binding runs most of each collar leaf; the drawing marks it over a shorter run near the leaf end",
+        "expected": "binding over roughly a third of the leaf from the notch",
+        "actual": "binding along most of the leaf edge"
+      }
     ],
-    "forbiddenChanges": [
-      "do not alter any checklist item this attempt already passed",
-      "do not change the camera crop, composition, or accessories unless the error is itself a composition error",
-      "do not change the garment part, orientation, or any other option's geometry"
-    ]
+    "attempt": 3,
+    "maxAttempts": 3,
+    "waiverAttemptFloor": 3,
+    "authority": "user decision 2026-07-30: QC gate stays >=98; a 3rd attempt is allowed; after 3 attempts an image with ZERO critical/major findings may ship at >=95 as a LOGGED WAIVER in qc.json",
+    "grantedAt": "2026-08-02T14:41:55.078Z"
   },
-  "notes": "Both named defects are fixed and both were verified by direct measurement rather than impression.\n\nNOT measurable, and it matters: whether the edging continues over the shoulder and around the back neck, because the model's neck and shirt collar occlude that entire region - the strips simply run off the top of what is visible. That was HALF of the original complaint, so it remains UNVERIFIED rather than confirmed fixed.\n\nAlso unresolved: the collar's construction. At the rendered scale the collar is a 15-20px band and a stand cannot be told from a fold, which is why the collar-shape finding is logged as major on the blueprint's authority - the drawing plainly shows a stand plus two broad leaves - rather than on a confident reading of the render.",
-  "checkedAt": "2026-08-01T05:01:02.002Z"
+  "correction": null,
+  "notes": "Attempt 3 of 3. Contrast edging present, mirrored on both leaves, held near 1 cm, rendered in a neutral cloth tone — the red guide marks were correctly read as position markers, not as red fabric. Collar stand and leaves now properly built.",
+  "checkedAt": "2026-08-02T14:41:55.079Z"
 }

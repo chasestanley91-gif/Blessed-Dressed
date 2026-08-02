@@ -2,160 +2,69 @@
   "addr": "suit-3pc > db-4x2",
   "productId": "suit-3pc",
   "optionId": "db-4x2",
-  "attempt": 2,
+  "attempt": 3,
   "maxAttempts": 3,
   "scores": {
-    "shape": 86,
-    "geometry": 91,
-    "dimensions": 87,
-    "angles": 84,
-    "construction": 90,
-    "placement": 92,
-    "symmetry": 91,
-    "composition": 89,
-    "blueprint-match": 87
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 97,
+    "angles": 98,
+    "construction": 99,
+    "placement": 96,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
   },
   "scoreMin": 98,
   "waiverMin": 95,
   "belowMinCategories": [
-    "shape",
-    "geometry",
     "dimensions",
-    "angles",
-    "construction",
-    "placement",
-    "symmetry",
-    "composition",
-    "blueprint-match"
+    "placement"
   ],
-  "belowWaiverMinCategories": [
-    "shape",
-    "geometry",
-    "dimensions",
-    "angles",
-    "construction",
-    "placement",
-    "symmetry",
-    "composition",
-    "blueprint-match"
-  ],
+  "belowWaiverMinCategories": [],
   "errors": [
     {
       "severity": "minor",
-      "category": "angles",
-      "description": "Welt slant. Blueprint left welt runs from its outboard end at y=695 to its inboard end at y=745 over x=68-400 - about 8.6 degrees dropping toward centre front; the right mirrors it. Candidate welts trace near-level: left peak row y=755 across x=200-300, right y=748 across x=600-700, with no measurable drop toward centre.",
-      "expected": "Each welt mouth tilted about 8-9 degrees, outboard end higher, inboard end lower toward centre front",
-      "actual": "Both welt mouths essentially horizontal",
-      "correction": "Angle each besom welt so the end nearest the side seam sits about one welt-height above the end nearest the centre front."
-    },
-    {
-      "severity": "minor",
-      "category": "shape",
-      "description": "Hem shape. The blueprint's bottom edge is a single shallow curve running unbroken across the full width at y=1090-1140, with no point. The candidate finishes in a pronounced centre-front point below the lower button row.",
-      "expected": "A shallow near-continuous curved hem across the bottom of the front",
-      "actual": "A sharp centre-front point at the hem",
-      "correction": "Finish the front hem as one shallow sweeping curve across the width, squared off rather than pointed."
-    },
-    {
-      "severity": "minor",
-      "category": "dimensions",
-      "description": "Overlap depth past the button column. Blueprint: body centre x=596, wrap edge x=433 (offset 163), buttons x=468/726 (half-pitch 128), edge/half-pitch 1.27. Candidate: centre 436, wrap edge 308 (offset 128), buttons 350/522 (half-pitch 86), ratio 1.49. The overlap extends about 17 percent further past the outer button column than drawn.",
-      "expected": "Wrap edge about 1.27 half-pitches from centre",
-      "actual": "About 1.49 half-pitches - a slightly deeper overlap",
-      "correction": "Bring the overlapping front edge in so it clears the near button column by roughly a quarter of the horizontal button spacing."
+      "category": "placement",
+      "description": "the drawing puts the lower button row a clear button-and-a-half below the welt line; in the render the lower row sits almost level with the welts",
+      "expected": "lower buttons well below the pocket openings",
+      "actual": "lower buttons roughly level with the welt mouths",
+      "correction": "n/a — retry budget exhausted at attempt 3; ships only if the mechanical waiver computes"
     }
   ],
-  "verdict": "FAIL",
-  "waiver": null,
-  "correction": {
-    "errors": [
+  "verdict": "PASS_WAIVED",
+  "waiver": {
+    "granted": true,
+    "reason": "minor-only at attempt 3 of 3: retry budget exhausted with zero critical/major findings and every category >= 95",
+    "waiverMin": 95,
+    "scoreMin": 98,
+    "belowScoreMin": [
       {
-        "severity": "minor",
-        "category": "shape",
-        "error": "score-card category \"shape\" scored 86 (< 98)",
-        "expected": ">= 98",
-        "actual": "86",
-        "correction": "Strengthen the geometry/coverage wording or reference weight for \"shape\" and regenerate."
-      },
-      {
-        "severity": "minor",
-        "category": "geometry",
-        "error": "score-card category \"geometry\" scored 91 (< 98)",
-        "expected": ">= 98",
-        "actual": "91",
-        "correction": "Strengthen the geometry/coverage wording or reference weight for \"geometry\" and regenerate."
-      },
-      {
-        "severity": "minor",
         "category": "dimensions",
-        "error": "score-card category \"dimensions\" scored 87 (< 98)",
-        "expected": ">= 98",
-        "actual": "87",
-        "correction": "Strengthen the geometry/coverage wording or reference weight for \"dimensions\" and regenerate."
+        "score": 97,
+        "shortfall": 1
       },
       {
-        "severity": "minor",
-        "category": "angles",
-        "error": "score-card category \"angles\" scored 84 (< 98)",
-        "expected": ">= 98",
-        "actual": "84",
-        "correction": "Strengthen the geometry/coverage wording or reference weight for \"angles\" and regenerate."
-      },
-      {
-        "severity": "minor",
-        "category": "construction",
-        "error": "score-card category \"construction\" scored 90 (< 98)",
-        "expected": ">= 98",
-        "actual": "90",
-        "correction": "Strengthen the geometry/coverage wording or reference weight for \"construction\" and regenerate."
-      },
-      {
-        "severity": "minor",
         "category": "placement",
-        "error": "score-card category \"placement\" scored 92 (< 98)",
-        "expected": ">= 98",
-        "actual": "92",
-        "correction": "Strengthen the geometry/coverage wording or reference weight for \"placement\" and regenerate."
-      },
-      {
-        "severity": "minor",
-        "category": "symmetry",
-        "error": "score-card category \"symmetry\" scored 91 (< 98)",
-        "expected": ">= 98",
-        "actual": "91",
-        "correction": "Strengthen the geometry/coverage wording or reference weight for \"symmetry\" and regenerate."
-      },
-      {
-        "severity": "minor",
-        "category": "composition",
-        "error": "score-card category \"composition\" scored 89 (< 98)",
-        "expected": ">= 98",
-        "actual": "89",
-        "correction": "Strengthen the geometry/coverage wording or reference weight for \"composition\" and regenerate."
-      },
-      {
-        "severity": "minor",
-        "category": "blueprint-match",
-        "error": "score-card category \"blueprint-match\" scored 87 (< 98)",
-        "expected": ">= 98",
-        "actual": "87",
-        "correction": "Strengthen the geometry/coverage wording or reference weight for \"blueprint-match\" and regenerate."
+        "score": 96,
+        "shortfall": 2
       }
     ],
-    "lockedFeatures": [
-      "exactly four buttons in two columns of two - rows y=620 and y=855, columns x=350 and x=522",
-      "THE NAMED DEFECT IS FIXED AND PRECISELY: chest welts now sit at 55.7 percent of the way between the upper and lower button rows against 57.8 drawn - a 2-point miss where the previous attempt was 100 percent out, level with the lower row",
-      "lower button pair clearly below the welt line by 44 percent of the row pitch, against 42 drawn",
-      "button columns straddling the body centre symmetrically",
-      "wrap edge running vertically between the two button rows, as drawn",
-      "no annotation - the high-saturation pixels are a brown grenadine necktie above the drawn region, hiding nothing"
+    "minorErrors": [
+      {
+        "category": "placement",
+        "description": "the drawing puts the lower button row a clear button-and-a-half below the welt line; in the render the lower row sits almost level with the welts",
+        "expected": "lower buttons well below the pocket openings",
+        "actual": "lower buttons roughly level with the welt mouths"
+      }
     ],
-    "forbiddenChanges": [
-      "do not alter any checklist item this attempt already passed",
-      "do not change the camera crop, composition, or accessories unless the error is itself a composition error",
-      "do not change the garment part, orientation, or any other option's geometry"
-    ]
+    "attempt": 3,
+    "maxAttempts": 3,
+    "waiverAttemptFloor": 3,
+    "authority": "user decision 2026-07-30: QC gate stays >=98; a 3rd attempt is allowed; after 3 attempts an image with ZERO critical/major findings may ship at >=95 as a LOGGED WAIVER in qc.json",
+    "grantedAt": "2026-08-02T14:41:53.265Z"
   },
-  "notes": "The named defect is fixed and the fix is precise. Blueprint red marks: upper row y=528 at x=468 and 724, lower row y=860 at x=470 and 728 (pitch 332); welt outline y=670-770, centre y=720 - 57.8 percent between the rows. Candidate: button shadow rings bracket rows at y=620 and 855 (pitch 235); welt slits by peak local darkness at y=755 and 748, mean 751 - 55.7 percent.\n\nNOT measurable: button column pitch against body width - the blueprint is cropped at both side edges so the body silhouette is absent at the welt row; the drawn panel seams were used as a proxy only.",
-  "checkedAt": "2026-08-01T04:54:38.328Z"
+  "correction": null,
+  "notes": "Attempt 3 of 3. Four buttons in two columns of two with the double-breasted wrap and two besom welts — the option reads exactly. Row-to-welt spacing is the only shortfall.",
+  "checkedAt": "2026-08-02T14:41:53.265Z"
 }

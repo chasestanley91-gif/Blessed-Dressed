@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-02T10:03:14.452Z",
+  "generatedAt": "2026-08-02T14:58:51.188Z",
   "count": 2862,
   "records": [
     {
@@ -50457,11 +50457,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/options/vest/sb-3.jpg",
-      "liveImage": "/images/options/vest/sb-3.jpg",
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/suit-3pc/sb-3.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/suit-3pc/sb-3.webp",
+      "shippedBytes": 96042,
+      "shippedSha1": "4877ccb472731f6cfa41c32791d57159de46587d",
       "pipeline": {
         "dir": ".craft-pipeline/suit-3pc/sb-3",
         "have": {
@@ -50470,26 +50470,20 @@
           "generation": true,
           "qc": true
         },
-        "verdict": "FAIL",
-        "attempt": 2,
-        "lowestScore": 55,
+        "verdict": "PASS_WAIVED",
+        "attempt": 3,
+        "lowestScore": 96,
         "belowMin": [
-          "shape",
-          "geometry",
           "dimensions",
-          "angles",
-          "construction",
           "placement",
-          "symmetry",
-          "composition",
           "blueprint-match"
         ],
-        "candidates": 2,
+        "candidates": 3,
         "needsReverify": false,
         "specOnly": false,
-        "checkedAt": "2026-08-01T04:54:38.174Z"
+        "checkedAt": "2026-08-02T14:41:52.901Z"
       },
-      "stage": "failed-retry-due"
+      "stage": "shipped-waived"
     },
     {
       "key": "suit-3pc/sb-4",
@@ -50619,11 +50613,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/options/vest/db-4x2.jpg",
-      "liveImage": "/images/options/vest/db-4x2.jpg",
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/suit-3pc/db-4x2.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/suit-3pc/db-4x2.webp",
+      "shippedBytes": 146968,
+      "shippedSha1": "58ba56ff2e897363799c3f6e976d893294b21c76",
       "pipeline": {
         "dir": ".craft-pipeline/suit-3pc/db-4x2",
         "have": {
@@ -50632,26 +50626,19 @@
           "generation": true,
           "qc": true
         },
-        "verdict": "FAIL",
-        "attempt": 2,
-        "lowestScore": 84,
+        "verdict": "PASS_WAIVED",
+        "attempt": 3,
+        "lowestScore": 96,
         "belowMin": [
-          "shape",
-          "geometry",
           "dimensions",
-          "angles",
-          "construction",
-          "placement",
-          "symmetry",
-          "composition",
-          "blueprint-match"
+          "placement"
         ],
-        "candidates": 2,
+        "candidates": 3,
         "needsReverify": false,
         "specOnly": false,
-        "checkedAt": "2026-08-01T04:54:38.328Z"
+        "checkedAt": "2026-08-02T14:41:53.265Z"
       },
-      "stage": "failed-retry-due"
+      "stage": "shipped-waived"
     },
     {
       "key": "suit-3pc/db-6x2",
@@ -51245,11 +51232,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/options/vest/u-neckline.jpg",
-      "liveImage": "/images/options/vest/u-neckline.jpg",
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/suit-3pc/u-neckline.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/suit-3pc/u-neckline.webp",
+      "shippedBytes": 152180,
+      "shippedSha1": "60126aa54ee5ed537cdd79ff2fc179d33bbf5a30",
       "pipeline": {
         "dir": ".craft-pipeline/suit-3pc/u-neckline",
         "have": {
@@ -51258,26 +51245,16 @@
           "generation": true,
           "qc": true
         },
-        "verdict": "FAIL",
-        "attempt": 2,
-        "lowestScore": 55,
-        "belowMin": [
-          "shape",
-          "geometry",
-          "dimensions",
-          "angles",
-          "construction",
-          "placement",
-          "symmetry",
-          "composition",
-          "blueprint-match"
-        ],
-        "candidates": 2,
+        "verdict": "PASS",
+        "attempt": 3,
+        "lowestScore": 98,
+        "belowMin": [],
+        "candidates": 3,
         "needsReverify": false,
         "specOnly": false,
-        "checkedAt": "2026-08-01T04:54:38.479Z"
+        "checkedAt": "2026-08-02T14:41:52.266Z"
       },
-      "stage": "failed-retry-due"
+      "stage": "shipped"
     },
     {
       "key": "suit-3pc/notch-lapel-vest",
@@ -51337,11 +51314,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/options/vest/shawl-lapel-vest.jpg",
-      "liveImage": "/images/generated/jacket/shawl-lapel-vest.webp",
+      "liveImage": "/images/generated/vest/shawl-lapel-vest.webp",
       "shipped": true,
-      "shippedPath": "/images/generated/jacket/shawl-lapel-vest.webp",
-      "shippedBytes": 83702,
-      "shippedSha1": "f49d0a3fcaaf2d284e1a8c159a2372da9f5bcf30",
+      "shippedPath": "/images/generated/vest/shawl-lapel-vest.webp",
+      "shippedBytes": 72796,
+      "shippedSha1": "1b0c7053f24fa31ae643d3cd1559ae6d7be0246d",
       "pipeline": null,
       "stage": "legacy-shipped-unverified"
     },
@@ -51645,11 +51622,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/options/vest/vest-hole-real-straight-05.jpg",
-      "liveImage": "/images/generated/suit-3pc/vest-hole-real-straight-05.webp",
+      "liveImage": "/images/generated/vest/vest-hole-real-straight-05.webp",
       "shipped": true,
-      "shippedPath": "/images/generated/suit-3pc/vest-hole-real-straight-05.webp",
-      "shippedBytes": 184638,
-      "shippedSha1": "f196a8af5ed622b572015bbd630e61d50468b8d1",
+      "shippedPath": "/images/generated/vest/vest-hole-real-straight-05.webp",
+      "shippedBytes": 302504,
+      "shippedSha1": "37f8142c8600690cb26c19bcd021580de04e0240",
       "pipeline": {
         "dir": ".craft-pipeline/suit-3pc/vest-hole-real-straight-05",
         "have": {
@@ -51658,26 +51635,16 @@
           "generation": true,
           "qc": true
         },
-        "verdict": "FAIL",
-        "attempt": 2,
-        "lowestScore": 72,
-        "belowMin": [
-          "shape",
-          "geometry",
-          "dimensions",
-          "angles",
-          "construction",
-          "placement",
-          "symmetry",
-          "composition",
-          "blueprint-match"
-        ],
-        "candidates": 2,
+        "verdict": "PASS",
+        "attempt": 3,
+        "lowestScore": 98,
+        "belowMin": [],
+        "candidates": 3,
         "needsReverify": false,
         "specOnly": false,
-        "checkedAt": "2026-08-01T07:00:47.297Z"
+        "checkedAt": "2026-08-02T14:41:52.587Z"
       },
-      "stage": "failed-retry-due"
+      "stage": "shipped"
     },
     {
       "key": "suit-3pc/vest-collar-felt-match",
@@ -52313,11 +52280,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/options/vest/vest-lower-slant-flap.jpg",
-      "liveImage": "/images/options/vest/vest-lower-slant-flap.jpg",
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/suit-3pc/vest-lower-slant-flap.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/suit-3pc/vest-lower-slant-flap.webp",
+      "shippedBytes": 87142,
+      "shippedSha1": "682339982809428d50053b4426d91a13c25589b3",
       "pipeline": {
         "dir": ".craft-pipeline/suit-3pc/vest-lower-slant-flap",
         "have": {
@@ -52326,26 +52293,19 @@
           "generation": true,
           "qc": true
         },
-        "verdict": "FAIL",
-        "attempt": 2,
-        "lowestScore": 82,
+        "verdict": "PASS_WAIVED",
+        "attempt": 3,
+        "lowestScore": 95,
         "belowMin": [
-          "shape",
-          "geometry",
           "dimensions",
-          "angles",
-          "construction",
-          "placement",
-          "symmetry",
-          "composition",
-          "blueprint-match"
+          "angles"
         ],
-        "candidates": 2,
+        "candidates": 3,
         "needsReverify": false,
         "specOnly": false,
-        "checkedAt": "2026-08-01T05:01:01.437Z"
+        "checkedAt": "2026-08-02T14:41:53.557Z"
       },
-      "stage": "failed-retry-due"
+      "stage": "shipped-waived"
     },
     {
       "key": "suit-3pc/vest-ticket-none",
@@ -52421,11 +52381,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/options/vest/vest-ticket-right.jpg",
-      "liveImage": "/images/options/vest/vest-ticket-right.jpg",
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/suit-3pc/vest-ticket-right.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/suit-3pc/vest-ticket-right.webp",
+      "shippedBytes": 245338,
+      "shippedSha1": "e466b5faae123ae6d399b72f445fb8cb34fa61d9",
       "pipeline": {
         "dir": ".craft-pipeline/suit-3pc/vest-ticket-right",
         "have": {
@@ -52434,26 +52394,19 @@
           "generation": true,
           "qc": true
         },
-        "verdict": "FAIL",
-        "attempt": 2,
-        "lowestScore": 84,
+        "verdict": "PASS_WAIVED",
+        "attempt": 3,
+        "lowestScore": 95,
         "belowMin": [
-          "shape",
-          "geometry",
           "dimensions",
-          "angles",
-          "construction",
-          "placement",
-          "symmetry",
-          "composition",
-          "blueprint-match"
+          "angles"
         ],
-        "candidates": 2,
+        "candidates": 3,
         "needsReverify": false,
         "specOnly": false,
-        "checkedAt": "2026-08-01T05:01:01.562Z"
+        "checkedAt": "2026-08-02T14:41:53.860Z"
       },
-      "stage": "failed-retry-due"
+      "stage": "shipped-waived"
     },
     {
       "key": "suit-3pc/vest-ticket-left",
@@ -52545,11 +52498,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/options/vest/vest-ticket-diamond-flap.jpg",
-      "liveImage": "/images/options/vest/vest-ticket-diamond-flap.jpg",
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/suit-3pc/vest-ticket-diamond-flap.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/suit-3pc/vest-ticket-diamond-flap.webp",
+      "shippedBytes": 135720,
+      "shippedSha1": "ae3033de9662fb8f29782612a33e2f08912fbef3",
       "pipeline": {
         "dir": ".craft-pipeline/suit-3pc/vest-ticket-diamond-flap",
         "have": {
@@ -52558,26 +52511,18 @@
           "generation": true,
           "qc": true
         },
-        "verdict": "FAIL",
-        "attempt": 2,
-        "lowestScore": 82,
+        "verdict": "PASS_WAIVED",
+        "attempt": 3,
+        "lowestScore": 96,
         "belowMin": [
-          "shape",
-          "geometry",
-          "dimensions",
-          "angles",
-          "construction",
-          "placement",
-          "symmetry",
-          "composition",
-          "blueprint-match"
+          "angles"
         ],
-        "candidates": 2,
+        "candidates": 3,
         "needsReverify": false,
         "specOnly": false,
-        "checkedAt": "2026-08-01T05:01:01.749Z"
+        "checkedAt": "2026-08-02T14:41:54.162Z"
       },
-      "stage": "failed-retry-due"
+      "stage": "shipped-waived"
     },
     {
       "key": "suit-3pc/vest-ticket-slant-besom",
@@ -52593,11 +52538,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/options/vest/vest-ticket-slant-besom.jpg",
-      "liveImage": "/images/options/vest/vest-ticket-slant-besom.jpg",
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/suit-3pc/vest-ticket-slant-besom.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/suit-3pc/vest-ticket-slant-besom.webp",
+      "shippedBytes": 126312,
+      "shippedSha1": "d65452ed718a5ab91b54a0010fe370f8e371616a",
       "pipeline": {
         "dir": ".craft-pipeline/suit-3pc/vest-ticket-slant-besom",
         "have": {
@@ -52606,25 +52551,18 @@
           "generation": true,
           "qc": true
         },
-        "verdict": "FAIL",
-        "attempt": 2,
-        "lowestScore": 85,
+        "verdict": "PASS_WAIVED",
+        "attempt": 3,
+        "lowestScore": 96,
         "belowMin": [
-          "shape",
-          "geometry",
-          "dimensions",
-          "construction",
-          "placement",
-          "symmetry",
-          "composition",
-          "blueprint-match"
+          "angles"
         ],
-        "candidates": 2,
+        "candidates": 3,
         "needsReverify": false,
         "specOnly": false,
-        "checkedAt": "2026-08-01T05:01:01.877Z"
+        "checkedAt": "2026-08-02T14:41:54.469Z"
       },
-      "stage": "failed-retry-due"
+      "stage": "shipped-waived"
     },
     {
       "key": "suit-3pc/vest-ticket-lr-slant-welt",
@@ -52876,11 +52814,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/options/vest/vest-back-strap-buckle.jpg",
-      "liveImage": "/images/options/vest/vest-back-strap-buckle.jpg",
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/suit-3pc/vest-back-strap-buckle.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/suit-3pc/vest-back-strap-buckle.webp",
+      "shippedBytes": 51848,
+      "shippedSha1": "aa37a941b9393b2a21f1374122c9b429f88a193d",
       "pipeline": {
         "dir": ".craft-pipeline/suit-3pc/vest-back-strap-buckle",
         "have": {
@@ -52889,26 +52827,19 @@
           "generation": true,
           "qc": true
         },
-        "verdict": "FAIL",
-        "attempt": 2,
-        "lowestScore": 88,
+        "verdict": "PASS_WAIVED",
+        "attempt": 3,
+        "lowestScore": 96,
         "belowMin": [
-          "shape",
-          "geometry",
           "dimensions",
-          "angles",
-          "construction",
-          "placement",
-          "symmetry",
-          "composition",
-          "blueprint-match"
+          "construction"
         ],
-        "candidates": 2,
+        "candidates": 3,
         "needsReverify": false,
         "specOnly": false,
-        "checkedAt": "2026-08-01T04:54:38.732Z"
+        "checkedAt": "2026-08-02T14:41:54.777Z"
       },
-      "stage": "failed-retry-due"
+      "stage": "shipped-waived"
     },
     {
       "key": "suit-3pc/vest-back-belt-3cm",
@@ -53094,11 +53025,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/options/vest/vest-contrast-collar-1cm-specify.jpg",
-      "liveImage": "/images/options/vest/vest-contrast-collar-1cm-specify.jpg",
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/suit-3pc/vest-contrast-collar-1cm-specify.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/suit-3pc/vest-contrast-collar-1cm-specify.webp",
+      "shippedBytes": 162478,
+      "shippedSha1": "83b00a9e4a0680d9436ac2924854e6fa314909d8",
       "pipeline": {
         "dir": ".craft-pipeline/suit-3pc/vest-contrast-collar-1cm-specify",
         "have": {
@@ -53107,26 +53038,19 @@
           "generation": true,
           "qc": true
         },
-        "verdict": "FAIL",
-        "attempt": 2,
-        "lowestScore": 78,
+        "verdict": "PASS_WAIVED",
+        "attempt": 3,
+        "lowestScore": 96,
         "belowMin": [
-          "shape",
-          "geometry",
           "dimensions",
-          "angles",
-          "construction",
-          "placement",
-          "symmetry",
-          "composition",
-          "blueprint-match"
+          "placement"
         ],
-        "candidates": 2,
+        "candidates": 3,
         "needsReverify": false,
         "specOnly": false,
-        "checkedAt": "2026-08-01T05:01:02.002Z"
+        "checkedAt": "2026-08-02T14:41:55.079Z"
       },
-      "stage": "failed-retry-due"
+      "stage": "shipped-waived"
     },
     {
       "key": "suit-3pc/vest-contrast-pocket-none",
@@ -64706,11 +64630,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/options/vest/sb-3.jpg",
-      "liveImage": "/images/generated/vest/sb-3.webp",
+      "liveImage": "/images/generated/suit-3pc/sb-3.webp",
       "shipped": true,
-      "shippedPath": "/images/generated/vest/sb-3.webp",
-      "shippedBytes": 45472,
-      "shippedSha1": "49b031b7ed71a9ed3a74183dd3c888bc299d9941",
+      "shippedPath": "/images/generated/suit-3pc/sb-3.webp",
+      "shippedBytes": 96042,
+      "shippedSha1": "4877ccb472731f6cfa41c32791d57159de46587d",
       "pipeline": null,
       "stage": "legacy-shipped-unverified"
     },
@@ -64794,11 +64718,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/options/vest/db-4x2.jpg",
-      "liveImage": "/images/generated/vest/db-4x2.webp",
+      "liveImage": "/images/generated/suit-3pc/db-4x2.webp",
       "shipped": true,
-      "shippedPath": "/images/generated/vest/db-4x2.webp",
-      "shippedBytes": 134058,
-      "shippedSha1": "d105b84a9f376d7dd77eaf1c75ddf702396c4444",
+      "shippedPath": "/images/generated/suit-3pc/db-4x2.webp",
+      "shippedBytes": 146968,
+      "shippedSha1": "58ba56ff2e897363799c3f6e976d893294b21c76",
       "pipeline": null,
       "stage": "legacy-shipped-unverified"
     },
@@ -65234,11 +65158,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/options/vest/u-neckline.jpg",
-      "liveImage": "/images/generated/vest/u-neckline.webp",
+      "liveImage": "/images/generated/suit-3pc/u-neckline.webp",
       "shipped": true,
-      "shippedPath": "/images/generated/vest/u-neckline.webp",
-      "shippedBytes": 153922,
-      "shippedSha1": "860f363bed21ec219083b2ec8cf40f57348d9e50",
+      "shippedPath": "/images/generated/suit-3pc/u-neckline.webp",
+      "shippedBytes": 152180,
+      "shippedSha1": "60126aa54ee5ed537cdd79ff2fc179d33bbf5a30",
       "pipeline": null,
       "stage": "legacy-shipped-unverified"
     },
@@ -65316,11 +65240,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/options/vest/shawl-lapel-vest.jpg",
-      "liveImage": "/images/options/vest/shawl-lapel-vest.jpg",
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/vest/shawl-lapel-vest.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/vest/shawl-lapel-vest.webp",
+      "shippedBytes": 72796,
+      "shippedSha1": "1b0c7053f24fa31ae643d3cd1559ae6d7be0246d",
       "pipeline": {
         "dir": ".craft-pipeline/vest/shawl-lapel-vest",
         "have": {
@@ -65329,26 +65253,16 @@
           "generation": true,
           "qc": true
         },
-        "verdict": "FAIL",
-        "attempt": 2,
-        "lowestScore": 72,
-        "belowMin": [
-          "shape",
-          "geometry",
-          "dimensions",
-          "angles",
-          "construction",
-          "placement",
-          "symmetry",
-          "composition",
-          "blueprint-match"
-        ],
-        "candidates": 2,
+        "verdict": "PASS",
+        "attempt": 3,
+        "lowestScore": 98,
+        "belowMin": [],
+        "candidates": 3,
         "needsReverify": false,
         "specOnly": false,
-        "checkedAt": "2026-08-01T04:54:38.852Z"
+        "checkedAt": "2026-08-02T14:41:55.381Z"
       },
-      "stage": "failed-retry-due"
+      "stage": "shipped"
     },
     {
       "key": "vest/lapel-collar-stand",
@@ -65650,11 +65564,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/options/vest/vest-hole-real-straight-05.jpg",
-      "liveImage": "/images/generated/suit-3pc/vest-hole-real-straight-05.webp",
+      "liveImage": "/images/generated/vest/vest-hole-real-straight-05.webp",
       "shipped": true,
-      "shippedPath": "/images/generated/suit-3pc/vest-hole-real-straight-05.webp",
-      "shippedBytes": 184638,
-      "shippedSha1": "f196a8af5ed622b572015bbd630e61d50468b8d1",
+      "shippedPath": "/images/generated/vest/vest-hole-real-straight-05.webp",
+      "shippedBytes": 302504,
+      "shippedSha1": "37f8142c8600690cb26c19bcd021580de04e0240",
       "pipeline": {
         "dir": ".craft-pipeline/vest/vest-hole-real-straight-05",
         "have": {
@@ -65663,26 +65577,16 @@
           "generation": true,
           "qc": true
         },
-        "verdict": "FAIL",
-        "attempt": 2,
-        "lowestScore": 73,
-        "belowMin": [
-          "shape",
-          "geometry",
-          "dimensions",
-          "angles",
-          "construction",
-          "placement",
-          "symmetry",
-          "composition",
-          "blueprint-match"
-        ],
-        "candidates": 2,
+        "verdict": "PASS",
+        "attempt": 3,
+        "lowestScore": 98,
+        "belowMin": [],
+        "candidates": 3,
         "needsReverify": false,
         "specOnly": false,
-        "checkedAt": "2026-08-01T07:00:47.426Z"
+        "checkedAt": "2026-08-02T14:58:44.994Z"
       },
-      "stage": "failed-retry-due"
+      "stage": "shipped"
     },
     {
       "key": "vest/vest-collar-felt-match",
@@ -66116,11 +66020,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/options/vest/vest-lower-slant-flap.jpg",
-      "liveImage": "/images/generated/vest/vest-lower-slant-flap.webp",
+      "liveImage": "/images/generated/suit-3pc/vest-lower-slant-flap.webp",
       "shipped": true,
-      "shippedPath": "/images/generated/vest/vest-lower-slant-flap.webp",
-      "shippedBytes": 217172,
-      "shippedSha1": "114b1797d3a6222fb357fd469cdd0a91c7226d1a",
+      "shippedPath": "/images/generated/suit-3pc/vest-lower-slant-flap.webp",
+      "shippedBytes": 87142,
+      "shippedSha1": "682339982809428d50053b4426d91a13c25589b3",
       "pipeline": null,
       "stage": "legacy-shipped-unverified"
     },
@@ -66182,11 +66086,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/options/vest/vest-ticket-right.jpg",
-      "liveImage": "/images/generated/vest/vest-ticket-right.webp",
+      "liveImage": "/images/generated/suit-3pc/vest-ticket-right.webp",
       "shipped": true,
-      "shippedPath": "/images/generated/vest/vest-ticket-right.webp",
-      "shippedBytes": 224630,
-      "shippedSha1": "16d4277ae7e39c857650e50e36a1517057592a96",
+      "shippedPath": "/images/generated/suit-3pc/vest-ticket-right.webp",
+      "shippedBytes": 245338,
+      "shippedSha1": "e466b5faae123ae6d399b72f445fb8cb34fa61d9",
       "pipeline": null,
       "stage": "legacy-shipped-unverified"
     },
@@ -66248,11 +66152,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/options/vest/vest-ticket-diamond-flap.jpg",
-      "liveImage": "/images/generated/vest/vest-ticket-diamond-flap.webp",
+      "liveImage": "/images/generated/suit-3pc/vest-ticket-diamond-flap.webp",
       "shipped": true,
-      "shippedPath": "/images/generated/vest/vest-ticket-diamond-flap.webp",
-      "shippedBytes": 150702,
-      "shippedSha1": "7bfa0ce21bca7e829f7a8e12989f33cd942a36eb",
+      "shippedPath": "/images/generated/suit-3pc/vest-ticket-diamond-flap.webp",
+      "shippedBytes": 135720,
+      "shippedSha1": "ae3033de9662fb8f29782612a33e2f08912fbef3",
       "pipeline": null,
       "stage": "legacy-shipped-unverified"
     },
@@ -66270,11 +66174,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/options/vest/vest-ticket-slant-besom.jpg",
-      "liveImage": "/images/generated/vest/vest-ticket-slant-besom.webp",
+      "liveImage": "/images/generated/suit-3pc/vest-ticket-slant-besom.webp",
       "shipped": true,
-      "shippedPath": "/images/generated/vest/vest-ticket-slant-besom.webp",
-      "shippedBytes": 172196,
-      "shippedSha1": "f7e36b9434bcbe41b3fb2594f2e1343d955b0aa3",
+      "shippedPath": "/images/generated/suit-3pc/vest-ticket-slant-besom.webp",
+      "shippedBytes": 126312,
+      "shippedSha1": "d65452ed718a5ab91b54a0010fe370f8e371616a",
       "pipeline": null,
       "stage": "legacy-shipped-unverified"
     },
@@ -66512,11 +66416,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/options/vest/vest-back-strap-buckle.jpg",
-      "liveImage": "/images/generated/vest/vest-back-strap-buckle.webp",
+      "liveImage": "/images/generated/suit-3pc/vest-back-strap-buckle.webp",
       "shipped": true,
-      "shippedPath": "/images/generated/vest/vest-back-strap-buckle.webp",
-      "shippedBytes": 58832,
-      "shippedSha1": "16c6dbd2894fecb159a34a5c7020ccbc2b09c08e",
+      "shippedPath": "/images/generated/suit-3pc/vest-back-strap-buckle.webp",
+      "shippedBytes": 51848,
+      "shippedSha1": "aa37a941b9393b2a21f1374122c9b429f88a193d",
       "pipeline": null,
       "stage": "legacy-shipped-unverified"
     },
@@ -66688,13 +66592,13 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/options/vest/vest-contrast-collar-1cm-specify.jpg",
-      "liveImage": "/images/options/vest/vest-contrast-collar-1cm-specify.jpg",
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/suit-3pc/vest-contrast-collar-1cm-specify.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/suit-3pc/vest-contrast-collar-1cm-specify.webp",
+      "shippedBytes": 162478,
+      "shippedSha1": "83b00a9e4a0680d9436ac2924854e6fa314909d8",
       "pipeline": null,
-      "stage": "not-started"
+      "stage": "legacy-shipped-unverified"
     },
     {
       "key": "vest/vest-contrast-pocket-none",

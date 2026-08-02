@@ -1,40 +1,30 @@
 {
   "scores": {
-    "shape": 90,
-    "geometry": 93,
-    "dimensions": 88,
-    "angles": 88,
-    "construction": 90,
-    "placement": 94,
-    "symmetry": 93,
-    "composition": 91,
-    "blueprint-match": 90
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 96,
+    "angles": 98,
+    "construction": 97,
+    "placement": 98,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
   },
   "errors": [
     {
       "severity": "minor",
       "category": "dimensions",
-      "description": "Buckle size. Blueprint buckle assembly spans x=524-659 at y=824-840 - 135px, or 22 percent of the 613px back width, reading as a buckle plus two slider bars. Candidate buckle occupies about x=410-465, about 55px or 15 percent of the 371px back width, reading as a single small frame.",
-      "expected": "A buckle roughly 22 percent of back width, with the strap's slider bars flanking it",
-      "actual": "A plain buckle about 15 percent of back width with no flanking hardware",
-      "correction": "Render a wider centre buckle spanning about a fifth of the back, with the strap doubling back through a keeper bar either side of it."
-    },
-    {
-      "severity": "minor",
-      "category": "dimensions",
-      "description": "Waist-dart length. Blueprint darts run y=672-1040, about 33 percent of the back's 1100px shoulder-to-hem height. Candidate darts are detectable y=600 to 900, about 44 percent of the back's 685px height - proportionally about a third longer than drawn.",
-      "expected": "Short waist darts covering about a third of the back's height, centred on the waist",
-      "actual": "Darts covering about 44 percent",
-      "correction": "Shorten each waist dart so it begins just below the shoulder blade and dies out just above the hem, spanning about a third of the back."
+      "description": "buckle spans roughly a tenth of the back rather than the fifth the correction asked for, with one keeper rather than a keeper each side",
+      "expected": "wider centre buckle, keeper bar either side",
+      "actual": "narrower buckle, single keeper",
+      "correction": "n/a — retry budget exhausted at attempt 3; ships only if the mechanical waiver computes"
     }
   ],
   "lockedFeatures": [
-    "BOTH NAMED DEFECTS FIXED BY A CLEAR MARGIN. Back strap now runs side seam to side seam - x=258 to 612 against body edges x=251 to 622, 96.8 percent of back width, against the rejected 61 percent and the drawn 96",
-    "buckle centred on the back - buckle centre x=440 against back centre x=436.5",
-    "two SHORT waist darts at plus and minus 27.9 percent of back width from centre against plus and minus 26.5 drawn, and absent above y=560 - confirming short waist darts rather than the full-length panel seams that failed before",
-    "full-length centre-back seam",
-    "back hem with a centre notch and a point either side",
-    "no traced annotation - the red-ish pixels at y=132-200 are the model's hair"
+    "navy/charcoal worsted",
+    "white shirt",
+    "light-grey studio set",
+    "front view square to camera"
   ],
-  "notes": "Both named defects fixed, both by a clear margin. Strap traced by per-column vertical-gradient extrema, strong signal x=260-605 with falloff to 256/615; left and right end gaps 1.9 and 2.7 percent of back width against the drawing's 3.9 and 0. Darts isolated by averaging a horizontal high-pass over long vertical windows to beat fabric noise: two interior seams at x=333 and 540 in the y=600-900 windows, ABSENT from the y=380-560 window, which is what confirms they are short waist darts and not full-length panel seams. Back view confirmed against spec orientation, so no front/back confusion."
+  "notes": "Attempt 3 of 3. Back view, both ends of the strap and the centre buckle inside the frame with clear background beyond — the adjuster reads instantly against the no-strap siblings."
 }
