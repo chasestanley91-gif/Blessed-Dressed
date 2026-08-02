@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-02T07:23:51.390Z",
+  "at": "2026-08-02T07:37:16.980Z",
   "settings": {
     "maxWidth": 1400,
     "quality": 82,
@@ -7,52 +7,30 @@
   },
   "applied": true,
   "counts": {
-    "masters": 741,
-    "converted": 3,
-    "skipped": 738,
+    "masters": 742,
+    "converted": 1,
+    "skipped": 741,
     "failed": 0,
     "repointed": 0
   },
   "bytes": {
-    "before": 6274528,
-    "after": 579106,
-    "savedPct": 90.8
+    "before": 2226241,
+    "after": 186206,
+    "savedPct": 91.6
   },
   "note": "targetSha1 is the derivative; sourceSha1 is the PNG master QC graded. The master and publish_approved.mjs byte-identity gate are untouched.",
   "results": {
     "ok": [
       {
-        "master": "public\\images\\generated\\suit-2pc\\knot-hip-i.png",
-        "masterBytes": 1892395,
-        "sourceSha1": "357a9d0dbbcde6b6ebd05f8f85581dc5b283989b",
-        "target": "public\\images\\generated\\suit-2pc\\knot-hip-i.webp",
-        "targetBytes": 162646,
-        "targetSha1": "b90df6e14f837d37db4a6d4527c34b0a3be784a3",
+        "master": "public\\images\\generated\\trousers\\back-seam-standard.png",
+        "masterBytes": 2226241,
+        "sourceSha1": "16f5ed7ba54aa8e60f2c9c87f3e78e92eb519e38",
+        "target": "public\\images\\generated\\trousers\\back-seam-standard.webp",
+        "targetBytes": 186206,
+        "targetSha1": "64b8c7eb01efaa91bbd6f6c053db428c7b6b9d10",
         "quality": 82,
         "width": 1400,
-        "web": "/images/generated/suit-2pc/knot-hip-i.webp"
-      },
-      {
-        "master": "public\\images\\generated\\trousers\\bartack-none.png",
-        "masterBytes": 2394381,
-        "sourceSha1": "0dba1ba445938ce19e61aae5007dc382f0fcae16",
-        "target": "public\\images\\generated\\trousers\\bartack-none.webp",
-        "targetBytes": 240312,
-        "targetSha1": "fb97b487759a279928a9ec6f5bc77833aadf4d41",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/trousers/bartack-none.webp"
-      },
-      {
-        "master": "public\\images\\generated\\trousers\\bartack-standard.png",
-        "masterBytes": 1987752,
-        "sourceSha1": "4e63ab4224232a548e051060146c1be9f06146c5",
-        "target": "public\\images\\generated\\trousers\\bartack-standard.webp",
-        "targetBytes": 176148,
-        "targetSha1": "37da0ba452d1414f8d556dc7a15e484d7ba28589",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/trousers/bartack-standard.webp"
+        "web": "/images/generated/trousers/back-seam-standard.webp"
       }
     ],
     "skipped": [
@@ -1841,6 +1819,10 @@
         "reason": "derivative already exists"
       },
       {
+        "master": "public\\images\\generated\\suit-2pc\\knot-hip-i.png",
+        "reason": "derivative already exists"
+      },
+      {
         "master": "public\\images\\generated\\suit-2pc\\knot-i.png",
         "reason": "derivative already exists"
       },
@@ -2190,6 +2172,14 @@
       },
       {
         "master": "public\\images\\generated\\trousers\\back-with-flap.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\trousers\\bartack-none.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\trousers\\bartack-standard.png",
         "reason": "derivative already exists"
       },
       {

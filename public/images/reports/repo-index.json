@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-02T07:23:57.795Z",
+  "generatedAt": "2026-08-02T07:37:22.836Z",
   "count": 2862,
   "records": [
     {
@@ -41808,16 +41808,16 @@
       "part": "trouser-waistband",
       "kind": "structural",
       "excluded": null,
-      "inScope": false,
+      "inScope": true,
       "blueprint": "none",
       "illustration": null,
-      "liveImage": null,
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/trousers/back-seam-standard.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/trousers/back-seam-standard.webp",
+      "shippedBytes": 186206,
+      "shippedSha1": "64b8c7eb01efaa91bbd6f6c053db428c7b6b9d10",
       "pipeline": null,
-      "stage": "no-blueprint"
+      "stage": "legacy-shipped-unverified"
     },
     {
       "key": "suit-2pc/back-seam-no-bartack",
@@ -58767,16 +58767,16 @@
       "part": "trouser-waistband",
       "kind": "structural",
       "excluded": null,
-      "inScope": false,
+      "inScope": true,
       "blueprint": "none",
       "illustration": null,
-      "liveImage": null,
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/trousers/back-seam-standard.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/trousers/back-seam-standard.webp",
+      "shippedBytes": 186206,
+      "shippedSha1": "64b8c7eb01efaa91bbd6f6c053db428c7b6b9d10",
       "pipeline": null,
-      "stage": "no-blueprint"
+      "stage": "legacy-shipped-unverified"
     },
     {
       "key": "suit-3pc/back-seam-no-bartack",
@@ -64319,16 +64319,32 @@
       "part": "trouser-waistband",
       "kind": "structural",
       "excluded": null,
-      "inScope": false,
+      "inScope": true,
       "blueprint": "none",
       "illustration": null,
-      "liveImage": null,
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
-      "pipeline": null,
-      "stage": "no-blueprint"
+      "liveImage": "/images/generated/trousers/back-seam-standard.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/trousers/back-seam-standard.webp",
+      "shippedBytes": 186206,
+      "shippedSha1": "64b8c7eb01efaa91bbd6f6c053db428c7b6b9d10",
+      "pipeline": {
+        "dir": ".craft-pipeline/trousers/back-seam-standard",
+        "have": {
+          "spec": true,
+          "prompt": true,
+          "generation": true,
+          "qc": true
+        },
+        "verdict": "PASS",
+        "attempt": 1,
+        "lowestScore": 98,
+        "belowMin": [],
+        "candidates": 1,
+        "needsReverify": false,
+        "specOnly": true,
+        "checkedAt": "2026-08-02T07:37:16.409Z"
+      },
+      "stage": "shipped"
     },
     {
       "key": "trousers/back-seam-no-bartack",
@@ -64349,8 +64365,24 @@
       "shippedPath": "/images/generated/trousers/back-seam-no-bartack.webp",
       "shippedBytes": 149780,
       "shippedSha1": "67f44d6f8c0b8364566eaf01225ef5854abc7140",
-      "pipeline": null,
-      "stage": "legacy-shipped-unverified"
+      "pipeline": {
+        "dir": ".craft-pipeline/trousers/back-seam-no-bartack",
+        "have": {
+          "spec": true,
+          "prompt": true,
+          "generation": true,
+          "qc": true
+        },
+        "verdict": "PASS",
+        "attempt": 1,
+        "lowestScore": 98,
+        "belowMin": [],
+        "candidates": 1,
+        "needsReverify": false,
+        "specOnly": false,
+        "checkedAt": "2026-08-02T07:37:16.113Z"
+      },
+      "stage": "shipped"
     },
     {
       "key": "vest/sb-3",

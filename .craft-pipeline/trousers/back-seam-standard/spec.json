@@ -1,0 +1,49 @@
+{
+  "schema": "garment-spec/v1",
+  "specOnly": true,
+  "addr": "trousers > extras > waistband-back-seam > back-seam-standard",
+  "productId": "trousers",
+  "sectionId": "extras",
+  "fieldId": "waistband-back-seam",
+  "optionId": "back-seam-standard",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\trousers.json",
+  "source": "json",
+  "label": "With Bartack (Standard)",
+  "description": "Standard bartack reinforcement at back waistband seam.",
+  "fieldLabel": "Back Waistband Seam Bartack",
+  "sectionLabel": "Extras",
+  "part": "trouser-waistband",
+  "garment": {
+    "noun": "pair of bespoke wool tailored trousers",
+    "fabric": "fine wool trouser cloth with visible weave"
+  },
+  "view": {
+    "orientation": "back",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": false,
+  "measured": {
+    "dimensions": [],
+    "angles": [],
+    "counts": [],
+    "shapes": [],
+    "negatedShapes": [],
+    "spread": [],
+    "flags": []
+  },
+  "illustration": {
+    "path": null,
+    "disk": null,
+    "exists": false,
+    "remote": false
+  },
+  "forbidden": [
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-08-02T07:28:10.520Z"
+}

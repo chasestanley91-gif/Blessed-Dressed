@@ -926,3 +926,12 @@ corner + context). TOOL FIX: validate_prompt.mjs now auto-waives the missing-ill
 for record.specOnly — the durable version of the --allow-missing-illustration flag; snapshotted.
 The pocket-knot field is COMPLETE (i/d/dash/hip-i) and the bar-tack pair is complete.
 Session: 69 generations / 56 primaries shipped / 34.5 credits = 1.23 att/shipped. ~760 remain. 173/1819 (9.5%).
+
+## 2026-08-02 — back-seam pair SHIPPED 2/2 PASS@1 (1.0 cr) — waistband-back-seam field complete
+
+back-seam-no-bartack (drawn, absence proven with full back context) + back-seam-standard
+(spec-only presence, short vertical tack straddling the CB junction). Matched back-view framing
+— pair contrast instant. CAUGHT PRE-SPEND: the waistband camera profile defaulted both prompts
+to FRONT view against a back-view subject; corrected before generating (profile gap noted for a
+future camera.mjs orientation-aware fix).
+Session: 71 generations / 58 primaries shipped / 35.5 credits = 1.22 att/shipped. ~759 remain.
