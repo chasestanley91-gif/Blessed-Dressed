@@ -870,3 +870,17 @@ Stale parallel trousers/coin-both FAIL record superseded (same identity, same dr
 serves the row). Jacket-section coin rows remain a separate identity (different tech pack) —
 correctly refused by the divergence guard, still open.
 Session: 44 generations / 37 primaries shipped / 22.0 credits = 1.19 att/shipped. ~772.5 remain. 154/1816 (8.5%).
+
+## 2026-08-02 — FLAP-DEPTH LADDERS: 9/12 shipped, 3 held to OWNER after anchored round-2 (7.5 cr total)
+
+Two 6-rung hip-flap ladders (slanted 02A1 + straight 0201, 4.0-6.5cm in 5mm steps), owner-spec
+anchored (flap 4-6.5 classic 5; opening 13-15 -> W=14 framing constant). Nine rungs certified by
+blind visual ordering on near-native pair strips and SHIPPED (fan-out x3 products). Three rungs
+failed adjacent-pair ordering, took targeted round-2 corrections, and still landed inside noise:
+MEASURED RESOLUTION FLOOR — the generator renders ~3 distinct flap depths, not 6; 5mm ~= 3.6% of
+flap width. Held and reported to owner (NEEDS-SOURCE F) per protocol, never shipped ambiguous pairs.
+LESSONS: (1) auto-detectors unreliable on hip fields (jacket-hem line confound) — near-native pair
+strips are the trusted instrument; (2) the slanted family rake CONFLICT (description says high-at-back,
+drawing measures high-at-front) resolved per ruling: drawing wins where spec silent, logged in
+spec-conflicts; (3) test-first caught the composition before the batch.
+Session: 59 generations / 46 primaries shipped / 29.5 credits = 1.28 att/shipped. ~765 remain. 163/1816 (9.0%).

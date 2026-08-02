@@ -27,3 +27,15 @@ _The owner's drafting spec is LAW; conflicts are recorded here, never silently d
   0A middle, 0005 narrowest) does not contradict it and was folded into the descriptions
   ("wide foot" on 0E, "narrow foot" on 0005). Keep the no-tie styling rule for this family —
   the foot is the discriminator and a necktie across the lapel opening hides it.
+
+
+## 2026-08-02 — lp-slanted-flap family: description vs drawing RAKE CONFLICT
+
+Catalog descriptions say the slanted (hacking) pocket "sits higher at the back than at the front".
+Drawing 02A1, measured per-column: BOTH pockets HIGH at the center-front end (top-edge y~378) and
+LOW at the side-seam end (y~524/560) — the opposite rake. Owner drafting spec (jacket-geometry-system)
+gives flap depths but is silent on rake direction, so per the 2026-08-01 ruling the ILLUSTRATION is law
+for this geometry: images follow the drawn rake (high front, dropping to side seam). The description
+sentence is a legacy-text conflict — flagged for the owner; not silently dropped. Note this drawn rake
+is also opposite the classic equestrian hacking-pocket convention, which may mean the supplier drawing
+itself is unconventional — owner may wish to confirm with the factory.

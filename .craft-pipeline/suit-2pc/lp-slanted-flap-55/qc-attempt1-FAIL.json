@@ -1,0 +1,70 @@
+{
+  "addr": "suit-2pc > lp-slanted-flap-55",
+  "productId": "suit-2pc",
+  "optionId": "lp-slanted-flap-55",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 96,
+    "geometry": 92,
+    "dimensions": 88,
+    "angles": 96,
+    "construction": 96,
+    "placement": 96,
+    "symmetry": 96,
+    "composition": 96,
+    "blueprint-match": 92
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "geometry",
+    "dimensions",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "major",
+      "category": "dimensions",
+      "description": "depth reads ~equal to the 5.0 sibling (internal d/W ~0.32-0.37 vs 0.33-0.38) — blind ordering cannot separate the pair",
+      "expected": "monotonic depth ordering within the six-rung set",
+      "actual": "ordering failure at this rung",
+      "correction": "must land clearly BETWEEN the 5.0 and 6.0 siblings"
+    }
+  ],
+  "verdict": "FAIL",
+  "waiver": null,
+  "correction": {
+    "errors": [
+      {
+        "severity": "major",
+        "category": "dimensions",
+        "error": "depth reads ~equal to the 5.0 sibling (internal d/W ~0.32-0.37 vs 0.33-0.38) — blind ordering cannot separate the pair",
+        "expected": "monotonic depth ordering within the six-rung set",
+        "actual": "ordering failure at this rung",
+        "correction": "must land clearly BETWEEN the 5.0 and 6.0 siblings"
+      }
+    ],
+    "lockedFeatures": [
+      "flap construction and style are correct — only the DEPTH ordering failed"
+    ],
+    "forbiddenChanges": [
+      "do not alter any checklist item this attempt already passed",
+      "do not change the camera crop, composition, or accessories unless the error is itself a composition error",
+      "do not change the garment part, orientation, or any other option's geometry"
+    ]
+  },
+  "notes": "FAIL attempt 1 on the ladder ordering gate (construction itself correct). Round-2 anchored retry per wband precedent.",
+  "checkedAt": "2026-08-02T05:08:27.971Z"
+}

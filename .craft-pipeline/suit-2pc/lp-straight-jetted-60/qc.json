@@ -1,0 +1,68 @@
+{
+  "addr": "suit-2pc > lp-straight-jetted-60",
+  "productId": "suit-2pc",
+  "optionId": "lp-straight-jetted-60",
+  "attempt": 2,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 97,
+    "geometry": 95,
+    "dimensions": 90,
+    "angles": 97,
+    "construction": 97,
+    "placement": 97,
+    "symmetry": 97,
+    "composition": 97,
+    "blueprint-match": 95
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "dimensions"
+  ],
+  "errors": [
+    {
+      "severity": "major",
+      "category": "dimensions",
+      "description": "Round 2 remains ambiguous against BOTH neighbours (0.39 vs 5.5 at 0.40 and 6.5 at 0.41) — the model saturates near d/W 0.40 for every rung at or above 5.5 cm.",
+      "expected": "unambiguous monotonic ordering against both adjacent siblings",
+      "actual": "adjacent-pair separation inside render noise (~2-4% of flap width per 5mm rung)",
+      "correction": "OWNER DECISION REQUIRED — see NEEDS-SOURCE.md ladder-pair report; render resolution floor reached after anchored round-2"
+    }
+  ],
+  "verdict": "FAIL",
+  "waiver": null,
+  "correction": {
+    "errors": [
+      {
+        "severity": "major",
+        "category": "dimensions",
+        "error": "Round 2 remains ambiguous against BOTH neighbours (0.39 vs 5.5 at 0.40 and 6.5 at 0.41) — the model saturates near d/W 0.40 for every rung at or above 5.5 cm.",
+        "expected": "unambiguous monotonic ordering against both adjacent siblings",
+        "actual": "adjacent-pair separation inside render noise (~2-4% of flap width per 5mm rung)",
+        "correction": "OWNER DECISION REQUIRED — see NEEDS-SOURCE.md ladder-pair report; render resolution floor reached after anchored round-2"
+      }
+    ],
+    "lockedFeatures": [
+      "construction, style, rake/level and framing all correct — only adjacent-rung separation fails"
+    ],
+    "forbiddenChanges": [
+      "do not alter any checklist item this attempt already passed",
+      "do not change the camera crop, composition, or accessories unless the error is itself a composition error",
+      "do not change the garment part, orientation, or any other option's geometry"
+    ]
+  },
+  "notes": "FAIL attempt 2 on the ordering gate. Reported to owner per ladder protocol: 5mm flap-depth rungs sit at the model resolution floor; effective render resolution is ~3 depth levels (shallow/middling/deep) across a 6-rung family.",
+  "checkedAt": "2026-08-02T05:19:17.463Z"
+}

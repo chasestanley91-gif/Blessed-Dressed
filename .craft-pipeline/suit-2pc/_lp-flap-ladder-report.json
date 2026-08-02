@@ -1,0 +1,33 @@
+{
+ "date": "2026-08-02",
+ "gate": "blind visual ordering on near-native pair strips (trusted); auto-detectors unreliable on this field (hem-line confound — LESSON logged)",
+ "slanted": {
+  "shipped": [
+   "40",
+   "45",
+   "50",
+   "60",
+   "65"
+  ],
+  "held": "55 (ambiguous vs 50: internal d/W 0.32-0.37 vs 0.33-0.38)",
+  "verdict": "5/6 ORDERED, 1 retry"
+ },
+ "straight": {
+  "shipped": [
+   "40",
+   "45",
+   "55",
+   "65"
+  ],
+  "held": "50 (overshot 0.42 > 55 at 0.39), 60 (undershot 0.36 < 55 at 0.39)",
+  "verdict": "4/6 ORDERED, 2 retries"
+ },
+ "anchor": "owner spec flap 4-6.5cm classic 5, opening 13-15cm; W=14 framing constant; internal d/W ratios",
+ "retryPlan": "round-2 targeted corrections per wband precedent; retried rungs gate against SHIPPED siblings on arrival",
+ "round2": {
+  "date": "2026-08-02",
+  "result": "s55 cleared lower boundary only; j50 cleared lower boundary only; j60 ambiguous both ways",
+  "finding": "generator resolves ~3 depth levels across a 6-rung 5mm family; adjacent-pair separation ~2-4% of width is inside render noise",
+  "disposition": "3 rungs HELD, reported to owner in NEEDS-SOURCE.md section F per ladder protocol"
+ }
+}

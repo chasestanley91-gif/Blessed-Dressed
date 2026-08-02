@@ -1,0 +1,28 @@
+{
+ "attempt": 2,
+ "scores": {
+  "shape": 97,
+  "geometry": 95,
+  "dimensions": 90,
+  "angles": 97,
+  "construction": 97,
+  "placement": 97,
+  "symmetry": 97,
+  "composition": 97,
+  "blueprint-match": 95
+ },
+ "errors": [
+  {
+   "severity": "major",
+   "category": "dimensions",
+   "description": "Round 2 cleared the LOWER boundary decisively (0.42 vs 5.0-sibling 0.38) but is ambiguous against the shipped 6.0 sibling (0.42 vs 0.41-0.44).",
+   "expected": "unambiguous monotonic ordering against both adjacent siblings",
+   "actual": "adjacent-pair separation inside render noise (~2-4% of flap width per 5mm rung)",
+   "correction": "OWNER DECISION REQUIRED — see NEEDS-SOURCE.md ladder-pair report; render resolution floor reached after anchored round-2"
+  }
+ ],
+ "lockedFeatures": [
+  "construction, style, rake/level and framing all correct — only adjacent-rung separation fails"
+ ],
+ "notes": "FAIL attempt 2 on the ordering gate. Reported to owner per ladder protocol: 5mm flap-depth rungs sit at the model resolution floor; effective render resolution is ~3 depth levels (shallow/middling/deep) across a 6-rung family."
+}

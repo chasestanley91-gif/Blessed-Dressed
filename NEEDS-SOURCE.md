@@ -353,3 +353,26 @@ the baoxiniao harvest or per-option owner specs:
 - `lp-water-drop`
 - `cp-inverted-pleat-flap`
 - `cp-inverted-pleat-2flap`
+
+
+## F. OWNER DECISION — flap-depth ladder pairs at the render resolution floor (2026-08-02)
+
+The two hip-flap ladders (slanted 02A1, straight 0201; depths 4.0-6.5 cm in 5 mm rungs) were shot as
+anchored SETS. Nine of twelve rungs certified and shipped: the sets order cleanly at coarse grain
+(shallow < middling < deep). Three rungs FAILED the adjacent-pair blind-ordering gate after an
+anchored round-2 retry and are HELD unshipped per ladder protocol:
+
+| rung | vs lower sibling | vs upper sibling | held because |
+|---|---|---|---|
+| lp-slanted-flap-55 (att 2) | CLEAR (d/W 0.42 vs 5.0 at 0.38) | AMBIGUOUS (0.42 vs 6.0 at 0.41-0.44) | upper pair inside noise |
+| lp-straight-jetted-50 (att 2) | CLEAR (0.40 vs 4.5 at 0.35) | AMBIGUOUS (0.40 vs 5.5 at 0.40) | upper pair inside noise |
+| lp-straight-jetted-60 (att 2) | AMBIGUOUS (0.39 vs 5.5 at 0.40) | AMBIGUOUS (vs 6.5 at 0.41) | model saturates ~0.40 for all rungs >= 5.5 |
+
+MEASURED FINDING: the generator resolves roughly THREE flap-depth levels (shallow ~0.35, middling
+~0.38-0.40, deep ~0.41-0.44), not six. A 5 mm rung is ~3.6% of the flap width — at/below the render
+noise floor, exactly the regime the project plan predicted for 2 mm-1 cm families.
+
+OWNER OPTIONS: (1) accept the attempt-2 images with a waiver (attempt 3 + >=95 waiver path exists);
+(2) reduce the catalog to fewer visually-distinct depth steps (e.g. 4.0 / 5.0 / 6.0 or shallow-classic-deep);
+(3) supply per-rung supplier drawings with drawn depth differences to trace. Nothing was shipped for
+these three rungs; their shipped neighbours all order correctly against each other.
