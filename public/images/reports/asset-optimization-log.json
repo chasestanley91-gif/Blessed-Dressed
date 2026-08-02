@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-02T09:18:34.352Z",
+  "at": "2026-08-02T09:59:57.454Z",
   "settings": {
     "maxWidth": 1400,
     "quality": 82,
@@ -8,40 +8,51 @@
   "applied": true,
   "counts": {
     "masters": 763,
-    "converted": 2,
-    "skipped": 761,
+    "converted": 3,
+    "skipped": 760,
     "failed": 0,
     "repointed": 0
   },
   "bytes": {
-    "before": 3215268,
-    "after": 143104,
-    "savedPct": 95.5
+    "before": 5532921,
+    "after": 291888,
+    "savedPct": 94.7
   },
   "note": "targetSha1 is the derivative; sourceSha1 is the PNG master QC graded. The master and publish_approved.mjs byte-identity gate are untouched.",
   "results": {
     "ok": [
       {
-        "master": "public\\images\\generated\\suit-2pc\\lapel-notch-removable-shawl.png",
-        "masterBytes": 1825472,
-        "sourceSha1": "376053cb3edb53c063590ed54c09c73152d56af3",
-        "target": "public\\images\\generated\\suit-2pc\\lapel-notch-removable-shawl.webp",
-        "targetBytes": 101464,
-        "targetSha1": "c2f9684d16c6b0f1db0c57d84f34326f2e1083df",
+        "master": "public\\images\\generated\\shirt\\collar-point-58-btn.png",
+        "masterBytes": 1697671,
+        "sourceSha1": "d7b9694cde87adf72cf6f4d6ad1ec6f0d58bf4e5",
+        "target": "public\\images\\generated\\shirt\\collar-point-58-btn.webp",
+        "targetBytes": 69218,
+        "targetSha1": "e7dffcf09c7b3feb41a406f9bae116176793c7f5",
         "quality": 82,
         "width": 1400,
-        "web": "/images/generated/suit-2pc/lapel-notch-removable-shawl.webp"
+        "web": "/images/generated/shirt/collar-point-58-btn.webp"
       },
       {
-        "master": "public\\images\\generated\\suit-2pc\\lapel-peak-removable-shawl.png",
-        "masterBytes": 1389796,
-        "sourceSha1": "ec05b35344709f5541110df4426cfcadb93e7200",
-        "target": "public\\images\\generated\\suit-2pc\\lapel-peak-removable-shawl.webp",
-        "targetBytes": 41640,
-        "targetSha1": "d5ae0a15aa22405d4a2c5659e5e7fbeeb8ff6205",
+        "master": "public\\images\\generated\\shirt\\collar-point-70-btn.png",
+        "masterBytes": 1979705,
+        "sourceSha1": "791d66c219155ab2406880a91bdde3c9840bd022",
+        "target": "public\\images\\generated\\shirt\\collar-point-70-btn.webp",
+        "targetBytes": 128552,
+        "targetSha1": "34a32d1ad76d556f0ed6b11e260a03834f0fa952",
         "quality": 82,
         "width": 1400,
-        "web": "/images/generated/suit-2pc/lapel-peak-removable-shawl.webp"
+        "web": "/images/generated/shirt/collar-point-70-btn.webp"
+      },
+      {
+        "master": "public\\images\\generated\\shirt\\collar-point-95-btn.png",
+        "masterBytes": 1855545,
+        "sourceSha1": "be568ca7ad53a6b4001b38501c5bdd5e96ee7c1c",
+        "target": "public\\images\\generated\\shirt\\collar-point-95-btn.webp",
+        "targetBytes": 94118,
+        "targetSha1": "7b8199abf18d47a05c3f82e748b964c3fccf2300",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/shirt/collar-point-95-btn.webp"
       }
     ],
     "skipped": [
@@ -1166,15 +1177,7 @@
         "reason": "derivative up to date"
       },
       {
-        "master": "public\\images\\generated\\shirt\\collar-point-58-btn.png",
-        "reason": "derivative up to date"
-      },
-      {
         "master": "public\\images\\generated\\shirt\\collar-point-58-zigzag.png",
-        "reason": "derivative up to date"
-      },
-      {
-        "master": "public\\images\\generated\\shirt\\collar-point-70-btn.png",
         "reason": "derivative up to date"
       },
       {
@@ -1191,10 +1194,6 @@
       },
       {
         "master": "public\\images\\generated\\shirt\\collar-point-85-btn.png",
-        "reason": "derivative up to date"
-      },
-      {
-        "master": "public\\images\\generated\\shirt\\collar-point-95-btn.png",
         "reason": "derivative up to date"
       },
       {
@@ -1862,6 +1861,10 @@
         "reason": "derivative up to date"
       },
       {
+        "master": "public\\images\\generated\\suit-2pc\\lapel-notch-removable-shawl.png",
+        "reason": "derivative up to date"
+      },
+      {
         "master": "public\\images\\generated\\suit-2pc\\lapel-peak-101.png",
         "reason": "derivative up to date"
       },
@@ -1911,6 +1914,10 @@
       },
       {
         "master": "public\\images\\generated\\suit-2pc\\lapel-peak-99.png",
+        "reason": "derivative up to date"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\lapel-peak-removable-shawl.png",
         "reason": "derivative up to date"
       },
       {

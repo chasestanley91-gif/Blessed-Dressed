@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-02T09:18:40.374Z",
+  "generatedAt": "2026-08-02T10:00:03.604Z",
   "count": 2862,
   "records": [
     {
@@ -57,8 +57,8 @@
       "liveImage": "/images/generated/shirt/collar-fashion-point-58.webp",
       "shipped": true,
       "shippedPath": "/images/generated/shirt/collar-fashion-point-58.webp",
-      "shippedBytes": 112504,
-      "shippedSha1": "fef84d941f95610712baf21de6850636b76362b8",
+      "shippedBytes": 57428,
+      "shippedSha1": "0cb72c15d0cc641eacaac5dc69baa28d971c9858",
       "pipeline": {
         "dir": ".craft-pipeline/shirt/collar-fashion-point-58",
         "have": {
@@ -67,26 +67,16 @@
           "generation": true,
           "qc": true
         },
-        "verdict": "FAIL",
-        "attempt": 2,
-        "lowestScore": 74,
-        "belowMin": [
-          "shape",
-          "geometry",
-          "dimensions",
-          "angles",
-          "construction",
-          "placement",
-          "symmetry",
-          "composition",
-          "blueprint-match"
-        ],
-        "candidates": 2,
+        "verdict": "PASS",
+        "attempt": 3,
+        "lowestScore": 98,
+        "belowMin": [],
+        "candidates": 3,
         "needsReverify": false,
         "specOnly": false,
-        "checkedAt": "2026-08-01T05:01:02.329Z"
+        "checkedAt": "2026-08-02T09:51:11.122Z"
       },
-      "stage": "failed-retry-due"
+      "stage": "shipped"
     },
     {
       "key": "shirt/collar-regular-22",
@@ -102,29 +92,29 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/techpacks/shirt/lapel/regular-collar-22.jpg",
-      "liveImage": "/images/techpacks/shirt/lapel/regular-collar-22.jpg",
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/shirt/collar-regular-22.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/shirt/collar-regular-22.webp",
+      "shippedBytes": 50666,
+      "shippedSha1": "e5d3120b73a7768a8d87c385d4a7390178a3f332",
       "pipeline": {
         "dir": ".craft-pipeline/shirt/collar-regular-22",
         "have": {
           "spec": true,
           "prompt": true,
-          "generation": false,
-          "qc": false
+          "generation": true,
+          "qc": true
         },
-        "verdict": null,
-        "attempt": null,
-        "lowestScore": null,
+        "verdict": "PASS",
+        "attempt": 1,
+        "lowestScore": 98,
         "belowMin": [],
-        "candidates": 0,
-        "needsReverify": true,
+        "candidates": 1,
+        "needsReverify": false,
         "specOnly": false,
-        "checkedAt": null
+        "checkedAt": "2026-08-02T09:51:09.188Z"
       },
-      "stage": "needs-reverify"
+      "stage": "shipped"
     },
     {
       "key": "shirt/collar-point-58-btn",
@@ -140,29 +130,29 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/techpacks/shirt/lapel/point-in-58cm-with-button.jpg",
-      "liveImage": "/images/techpacks/shirt/lapel/point-in-58cm-with-button.jpg",
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/shirt/collar-point-58-btn.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/shirt/collar-point-58-btn.webp",
+      "shippedBytes": 69218,
+      "shippedSha1": "e7dffcf09c7b3feb41a406f9bae116176793c7f5",
       "pipeline": {
         "dir": ".craft-pipeline/shirt/collar-point-58-btn",
         "have": {
           "spec": true,
           "prompt": true,
-          "generation": false,
-          "qc": false
+          "generation": true,
+          "qc": true
         },
-        "verdict": null,
-        "attempt": null,
-        "lowestScore": null,
+        "verdict": "PASS",
+        "attempt": 2,
+        "lowestScore": 98,
         "belowMin": [],
-        "candidates": 0,
-        "needsReverify": true,
+        "candidates": 2,
+        "needsReverify": false,
         "specOnly": false,
-        "checkedAt": null
+        "checkedAt": "2026-08-02T09:59:55.535Z"
       },
-      "stage": "needs-reverify"
+      "stage": "shipped"
     },
     {
       "key": "shirt/collar-point-70",
@@ -225,26 +215,26 @@
       "liveImage": "/images/generated/shirt/collar-point-70-btn.webp",
       "shipped": true,
       "shippedPath": "/images/generated/shirt/collar-point-70-btn.webp",
-      "shippedBytes": 47042,
-      "shippedSha1": "a34389c3578378b9ec46ed562ecc555497c86622",
+      "shippedBytes": 128552,
+      "shippedSha1": "34a32d1ad76d556f0ed6b11e260a03834f0fa952",
       "pipeline": {
         "dir": ".craft-pipeline/shirt/collar-point-70-btn",
         "have": {
           "spec": true,
           "prompt": true,
-          "generation": false,
-          "qc": false
+          "generation": true,
+          "qc": true
         },
-        "verdict": null,
-        "attempt": null,
-        "lowestScore": null,
+        "verdict": "PASS",
+        "attempt": 2,
+        "lowestScore": 98,
         "belowMin": [],
-        "candidates": 0,
-        "needsReverify": true,
+        "candidates": 2,
+        "needsReverify": false,
         "specOnly": false,
-        "checkedAt": null
+        "checkedAt": "2026-08-02T09:59:56.016Z"
       },
-      "stage": "needs-reverify"
+      "stage": "shipped"
     },
     {
       "key": "shirt/collar-point-70-hidden-btn",
@@ -305,26 +295,26 @@
       "liveImage": "/images/generated/shirt/collar-curve-point-75.webp",
       "shipped": true,
       "shippedPath": "/images/generated/shirt/collar-curve-point-75.webp",
-      "shippedBytes": 46850,
-      "shippedSha1": "98d2b1b867fbe0dba4b5d44e3cbcb791f727d21f",
+      "shippedBytes": 61668,
+      "shippedSha1": "32f162c1aec006a5423a6ae5ba5860b76b1c0c0a",
       "pipeline": {
         "dir": ".craft-pipeline/shirt/collar-curve-point-75",
         "have": {
           "spec": true,
           "prompt": true,
-          "generation": false,
-          "qc": false
+          "generation": true,
+          "qc": true
         },
-        "verdict": null,
-        "attempt": null,
-        "lowestScore": null,
+        "verdict": "PASS",
+        "attempt": 1,
+        "lowestScore": 98,
         "belowMin": [],
-        "candidates": 0,
-        "needsReverify": true,
+        "candidates": 1,
+        "needsReverify": false,
         "specOnly": false,
-        "checkedAt": null
+        "checkedAt": "2026-08-02T09:51:09.483Z"
       },
-      "stage": "needs-reverify"
+      "stage": "shipped"
     },
     {
       "key": "shirt/collar-point-95-btn",
@@ -340,29 +330,29 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/techpacks/shirt/lapel/point-in-95cm-with-button.jpg",
-      "liveImage": "/images/techpacks/shirt/lapel/point-in-95cm-with-button.jpg",
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/shirt/collar-point-95-btn.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/shirt/collar-point-95-btn.webp",
+      "shippedBytes": 94118,
+      "shippedSha1": "7b8199abf18d47a05c3f82e748b964c3fccf2300",
       "pipeline": {
         "dir": ".craft-pipeline/shirt/collar-point-95-btn",
         "have": {
           "spec": true,
           "prompt": true,
-          "generation": false,
-          "qc": false
+          "generation": true,
+          "qc": true
         },
-        "verdict": null,
-        "attempt": null,
-        "lowestScore": null,
+        "verdict": "PASS",
+        "attempt": 2,
+        "lowestScore": 98,
         "belowMin": [],
-        "candidates": 0,
-        "needsReverify": true,
+        "candidates": 2,
+        "needsReverify": false,
         "specOnly": false,
-        "checkedAt": null
+        "checkedAt": "2026-08-02T09:59:56.429Z"
       },
-      "stage": "needs-reverify"
+      "stage": "shipped"
     },
     {
       "key": "shirt/collar-regular-85-tab",
@@ -403,26 +393,26 @@
       "liveImage": "/images/generated/shirt/collar-point-58-zigzag.webp",
       "shipped": true,
       "shippedPath": "/images/generated/shirt/collar-point-58-zigzag.webp",
-      "shippedBytes": 26878,
-      "shippedSha1": "db61db500458e1f521cd9238a9952410180ecc84",
+      "shippedBytes": 40144,
+      "shippedSha1": "2736e2ea8ca7e9fa35dd61b5a8cafc63264057af",
       "pipeline": {
         "dir": ".craft-pipeline/shirt/collar-point-58-zigzag",
         "have": {
           "spec": true,
           "prompt": true,
-          "generation": false,
-          "qc": false
+          "generation": true,
+          "qc": true
         },
-        "verdict": null,
-        "attempt": null,
-        "lowestScore": null,
+        "verdict": "PASS",
+        "attempt": 1,
+        "lowestScore": 98,
         "belowMin": [],
-        "candidates": 0,
-        "needsReverify": true,
+        "candidates": 1,
+        "needsReverify": false,
         "specOnly": false,
-        "checkedAt": null
+        "checkedAt": "2026-08-02T09:51:09.738Z"
       },
-      "stage": "needs-reverify"
+      "stage": "shipped"
     },
     {
       "key": "shirt/collar-round-point-70",
@@ -479,26 +469,26 @@
       "liveImage": "/images/generated/shirt/collar-round-point-70-holes.webp",
       "shipped": true,
       "shippedPath": "/images/generated/shirt/collar-round-point-70-holes.webp",
-      "shippedBytes": 64098,
-      "shippedSha1": "81ceae070291da1819483a3a4ebfd4f645d60ad4",
+      "shippedBytes": 48148,
+      "shippedSha1": "c1067875ed8ae60fe3d1b129becb116c3ea8f914",
       "pipeline": {
         "dir": ".craft-pipeline/shirt/collar-round-point-70-holes",
         "have": {
           "spec": true,
           "prompt": true,
-          "generation": false,
-          "qc": false
+          "generation": true,
+          "qc": true
         },
-        "verdict": null,
-        "attempt": null,
-        "lowestScore": null,
+        "verdict": "PASS",
+        "attempt": 1,
+        "lowestScore": 98,
         "belowMin": [],
-        "candidates": 0,
-        "needsReverify": true,
+        "candidates": 1,
+        "needsReverify": false,
         "specOnly": false,
-        "checkedAt": null
+        "checkedAt": "2026-08-02T09:51:10.039Z"
       },
-      "stage": "needs-reverify"
+      "stage": "shipped"
     },
     {
       "key": "shirt/collar-point-75-holes",
@@ -514,29 +504,29 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/techpacks/shirt/lapel/point-collar-in-75cm-with-small-holes.jpg",
-      "liveImage": "/images/techpacks/shirt/lapel/point-collar-in-75cm-with-small-holes.jpg",
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/shirt/collar-point-75-holes.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/shirt/collar-point-75-holes.webp",
+      "shippedBytes": 36754,
+      "shippedSha1": "0bd1ca7e081318cf0188f3f1c3c0733c7e41d576",
       "pipeline": {
         "dir": ".craft-pipeline/shirt/collar-point-75-holes",
         "have": {
           "spec": true,
           "prompt": true,
-          "generation": false,
-          "qc": false
+          "generation": true,
+          "qc": true
         },
-        "verdict": null,
-        "attempt": null,
-        "lowestScore": null,
+        "verdict": "PASS",
+        "attempt": 1,
+        "lowestScore": 98,
         "belowMin": [],
-        "candidates": 0,
-        "needsReverify": true,
+        "candidates": 1,
+        "needsReverify": false,
         "specOnly": false,
-        "checkedAt": null
+        "checkedAt": "2026-08-02T09:51:10.297Z"
       },
-      "stage": "needs-reverify"
+      "stage": "shipped"
     },
     {
       "key": "shirt/collar-point-75-tri",
@@ -574,29 +564,29 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/techpacks/shirt/lapel/hidden-button-collar-in-75cm.jpg",
-      "liveImage": "/images/techpacks/shirt/lapel/hidden-button-collar-in-75cm.jpg",
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/shirt/collar-hidden-btn-75.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/shirt/collar-hidden-btn-75.webp",
+      "shippedBytes": 83236,
+      "shippedSha1": "ff3e89f4ea9dcd4d8700281cfbb80614790b0bd9",
       "pipeline": {
         "dir": ".craft-pipeline/shirt/collar-hidden-btn-75",
         "have": {
           "spec": true,
           "prompt": true,
-          "generation": false,
-          "qc": false
+          "generation": true,
+          "qc": true
         },
-        "verdict": null,
-        "attempt": null,
-        "lowestScore": null,
+        "verdict": "PASS",
+        "attempt": 1,
+        "lowestScore": 98,
         "belowMin": [],
-        "candidates": 0,
-        "needsReverify": true,
+        "candidates": 1,
+        "needsReverify": false,
         "specOnly": false,
-        "checkedAt": null
+        "checkedAt": "2026-08-02T09:51:10.530Z"
       },
-      "stage": "needs-reverify"
+      "stage": "shipped"
     },
     {
       "key": "shirt/collar-wrap-75",
@@ -612,29 +602,29 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/techpacks/shirt/lapel/wrap-collar-in-75cm.jpg",
-      "liveImage": "/images/techpacks/shirt/lapel/wrap-collar-in-75cm.jpg",
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/shirt/collar-wrap-75.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/shirt/collar-wrap-75.webp",
+      "shippedBytes": 89670,
+      "shippedSha1": "23452695186f2c7116834fcfc68f16be4dce5d13",
       "pipeline": {
         "dir": ".craft-pipeline/shirt/collar-wrap-75",
         "have": {
           "spec": true,
           "prompt": true,
-          "generation": false,
-          "qc": false
+          "generation": true,
+          "qc": true
         },
-        "verdict": null,
-        "attempt": null,
-        "lowestScore": null,
+        "verdict": "PASS",
+        "attempt": 1,
+        "lowestScore": 98,
         "belowMin": [],
-        "candidates": 0,
-        "needsReverify": true,
+        "candidates": 1,
+        "needsReverify": false,
         "specOnly": false,
-        "checkedAt": null
+        "checkedAt": "2026-08-02T09:51:10.835Z"
       },
-      "stage": "needs-reverify"
+      "stage": "shipped"
     },
     {
       "key": "shirt/collar-small-sq-50-btn",
@@ -777,8 +767,8 @@
       "liveImage": "/images/generated/shirt/collar-sq-65.webp",
       "shipped": true,
       "shippedPath": "/images/generated/shirt/collar-sq-65.webp",
-      "shippedBytes": 142020,
-      "shippedSha1": "55ce268b809d9119dd5327210aad42688ef5e71c",
+      "shippedBytes": 47418,
+      "shippedSha1": "ec323479eae35f92bdaf4b3f38879c2948b2f7e4",
       "pipeline": {
         "dir": ".craft-pipeline/shirt/collar-sq-65",
         "have": {
@@ -787,26 +777,18 @@
           "generation": true,
           "qc": true
         },
-        "verdict": "FAIL",
-        "attempt": 2,
-        "lowestScore": 56,
+        "verdict": "PASS_WAIVED",
+        "attempt": 3,
+        "lowestScore": 95,
         "belowMin": [
-          "shape",
-          "geometry",
-          "dimensions",
-          "angles",
-          "construction",
-          "placement",
-          "symmetry",
-          "composition",
-          "blueprint-match"
+          "shape"
         ],
-        "candidates": 2,
+        "candidates": 3,
         "needsReverify": false,
         "specOnly": false,
-        "checkedAt": "2026-08-01T05:01:02.606Z"
+        "checkedAt": "2026-08-02T09:51:11.774Z"
       },
-      "stage": "failed-retry-due"
+      "stage": "shipped-waived"
     },
     {
       "key": "shirt/collar-sq-65-btn",
@@ -870,11 +852,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/techpacks/shirt/lapel/regular-collar-20.jpg",
-      "liveImage": "/images/techpacks/shirt/lapel/regular-collar-20.jpg",
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/shirt/collar-regular-20.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/shirt/collar-regular-20.webp",
+      "shippedBytes": 43960,
+      "shippedSha1": "31d7a4c784bc503043ac63f8418eb710d9d66f4a",
       "pipeline": {
         "dir": ".craft-pipeline/shirt/collar-regular-20",
         "have": {
@@ -883,26 +865,16 @@
           "generation": true,
           "qc": true
         },
-        "verdict": "FAIL",
-        "attempt": 2,
-        "lowestScore": 76,
-        "belowMin": [
-          "shape",
-          "geometry",
-          "dimensions",
-          "angles",
-          "construction",
-          "placement",
-          "symmetry",
-          "composition",
-          "blueprint-match"
-        ],
-        "candidates": 2,
+        "verdict": "PASS",
+        "attempt": 3,
+        "lowestScore": 98,
+        "belowMin": [],
+        "candidates": 3,
         "needsReverify": false,
         "specOnly": false,
-        "checkedAt": "2026-08-01T05:01:02.899Z"
+        "checkedAt": "2026-08-02T09:51:11.439Z"
       },
-      "stage": "failed-retry-due"
+      "stage": "shipped"
     },
     {
       "key": "shirt/collar-af1-70",

@@ -972,3 +972,13 @@ Spend: 3 generations / 1.5 credits for 2 shipped primaries (1.5 attempts-per-shi
 - Composition: single-frame conversion state (shawl attached one side, unsnapped other side) per the drawing's middle panel.
 - notch attempt 1 FAIL: the revealed side rendered as a FLAT lapel-less front with snaps — the notch itself was missing. LESSON: for convertible/overlay options, the prompt must state that the layer BENEATH is a complete formed component, or the generator omits it. Fixed at attempt 2.
 - peak attempt 1 PASS first try.
+
+## 2026-08-02 — Shirt-collar reverify wave (13 options vs restored supplier drawings)
+
+Spend: 16 generations / 8.0 credits for 13 shipped primaries (1.23 attempts-per-ship).
+- Context: 10 approvals revoked 2026-07-30 (verdicts earned vs AI photos before supplier tech packs were restored, commit 0d2d49e) + 3 failed-retry-due at attempt 2.
+- First-pass QC vs drawings: 9 PASS. Standouts: both eyelet options rendered real metal eyelets with no pin (drawing note honoured); hidden-btn-75 reproduced the drawing's lifted-corner reveal; regular-20@3 landed the folded-back leaf + collar-stay reveal after two failures.
+- collar-sq-65@3: square termination present but weak — mechanical PASS_WAIVED (attempt 3, minor-only, >=95). First waiver in this wave.
+- LESSON (three identical failures): the 'with Button' collar family draws a small fastener at EACH leaf corner; the generator drops them and renders plain points unless the prompt names the leaf buttons explicitly as the craft option. All three fixed on first corrected retry.
+- CONFLICT LOGGED: collar-wrap-75 description says asymmetric overlap; supplier drawing is symmetric with tip studs — drawing followed, owner to review.
+- 7 NEEDS-REVERIFY markers cleared with fresh drawing-grounded verdicts (+3 more after the btn retries).

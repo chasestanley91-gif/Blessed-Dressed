@@ -93,5 +93,26 @@
     }
   ],
   "mechanics": "batch media_upload -> hf_put -> media_confirm; generate gpt_image_2/low/1k/3:4 medias mandatory; record_generation (retries derive attempt from FAIL qc.json — fashion-point-58/sq-65/regular-20 already have FAIL logged so next record = attempt+1); QC strips; log_qc_result; optimize; publish --allow-swap; project_state; failure-log; rm NEEDS-REVERIFY.json after fresh verdict; commit",
-  "educationalRules": "shirt collars: NO tie, top button OPEN, collar fully visible; button-down variants must show the collar buttons; hidden-button variant shows the concealed placket effect; zigzag shows stitch detail; holes variants show eyelets"
+  "educationalRules": "shirt collars: NO tie, top button OPEN, collar fully visible; button-down variants must show the collar buttons; hidden-button variant shows the concealed placket effect; zigzag shows stitch detail; holes variants show eyelets",
+  "jobs": {
+    "collar-regular-22": "2ea662ff-d26b-49ae-8514-5218335a22d7",
+    "collar-point-58-btn": "5d2a9c9f-8297-4834-80e4-648b0ea8e2e8",
+    "collar-point-70-btn": "6d1edffb-4702-4085-88f9-24ce2754fc18",
+    "collar-curve-point-75": "a1c9c768-56a5-4b6c-a3de-6b6db0b489a2",
+    "collar-point-95-btn": "2d4a2cd8-4bce-4bb1-9e1b-776fa97dc041",
+    "collar-point-58-zigzag": "2d0c8dc5-de4e-48c6-bb0e-89591ec47d8b",
+    "collar-round-point-70-holes": "d68ead20-d408-47ca-b779-26faeb352e82",
+    "collar-point-75-holes": "6681c197-e05a-489e-b451-df6ec02e7831",
+    "collar-hidden-btn-75": "b3a886b6-26d1-41cc-99b7-06252ef4823a",
+    "collar-wrap-75": "f49652b8-ca89-4694-acb3-7021cacbe37a",
+    "collar-fashion-point-58": "4dc5d55f-c2b7-452c-b4b9-ee1b9d733412",
+    "collar-sq-65": "e115c495-a48d-412d-9a2e-e2cb8f44086a",
+    "collar-regular-20": "61ea3a58-a933-4bba-a0cb-fa225651863f"
+  },
+  "allFiredAt": "2026-08-02",
+  "retryJobs": {
+    "collar-point-58-btn": "b3113800-330b-4ebd-8b23-bf97f207caeb",
+    "collar-point-70-btn": "485f3f58-b9a9-4ab9-b877-402966585fb6",
+    "collar-point-95-btn": "79160e21-03b9-4121-bb33-69ee4a640e44"
+  }
 }

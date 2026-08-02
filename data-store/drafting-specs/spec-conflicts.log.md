@@ -45,3 +45,8 @@ Catalog descriptions say the shawl attaches "usually via hidden buttons or hand-
 both illustrations explicitly draw PRESS-STUD SNAPS (labelled "attached with hidden snaps", snap close-up panel).
 Owner drafting spec is silent on the removable-shawl family, so the drawing is law: SNAPS rendered.
 Illustrations are annotated infographics (not supplier line drawings) — vision-checked 2026-08-02, construction unambiguous.
+
+## 2026-08-02 — collar-wrap-75 (shirt)
+Catalog description: leaves 'overlap and sweep across the throat... asymmetric wrap'.
+Supplier drawing (wrap-collar-in-75cm.jpg): SYMMETRIC collar with double-outlined (bound/layered) leaf edges and a small stud at each tip. No asymmetric overlap drawn.
+Owner drafting spec silent -> drawing is law: shipped image follows the drawing (symmetric, tip studs). Description flagged for owner review.

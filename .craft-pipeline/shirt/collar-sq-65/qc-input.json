@@ -1,47 +1,30 @@
 {
   "scores": {
-    "shape": 56,
-    "geometry": 72,
-    "dimensions": 73,
-    "angles": 77,
-    "construction": 84,
-    "placement": 85,
-    "symmetry": 87,
-    "composition": 92,
-    "blueprint-match": 60
+    "shape": 95,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 99,
+    "placement": 99,
+    "symmetry": 98,
+    "composition": 99,
+    "blueprint-match": 98
   },
   "errors": [
     {
-      "severity": "critical",
+      "severity": "minor",
       "category": "shape",
-      "description": "3x magnification of the left tip shows a single converging vertex with a small edge radius - the same termination rendered on the fashion-point option. No flat facet, no corner pair.",
-      "expected": "A flat squared terminal edge on each leaf per the label 'Square 6.5 cm', the description and spec.forbidden",
-      "actual": "A rounded point - the option's defining feature is absent",
-      "correction": "Close each leaf with a straight flat edge roughly 10-12 mm long cut square across the leaf axis, so the outer edge and the front edge each land on that flat at a sharp corner and the edgestitch turns two corners at the leaf end."
-    },
-    {
-      "severity": "major",
-      "category": "angles",
-      "description": "Apex (455,543); left tip (205,793), right tip (690,785). Half-angles 45.0 and 44.2, total 89.2 degrees. The drawing PRINTS 80.00 and measures about 83 apex-to-tip.",
-      "expected": "80 degrees printed, about 83 as drawn",
-      "actual": "89 degrees - about 9 over, pushing this toward cutaway territory",
-      "correction": "Set each leaf front edge 40 degrees off vertical from the centre-front vertex so the pair encloses 80 degrees; at a 250px drop each tip should sit about 210px out from centre rather than the present 250."
-    },
-    {
-      "severity": "major",
-      "category": "dimensions",
-      "description": "Point length over centre-front collar height: candidate 345/333 = 1.04; blueprint 42.5/49 = 0.87. The leaf tips drop BELOW the level of the shoulder line, which the drawing does not do.",
-      "expected": "0.87 of the centre-front collar height",
-      "actual": "1.04 - roughly 19 percent long",
-      "correction": "Draw each leaf back about 55px along its axis so the tip finishes at 0.87 of the vertex-to-top-edge distance, sitting clearly above the shoulder line as in the drawing."
+      "description": "square leaf termination present but weak: right tip shows a clear short flat, left tip only slightly blunted",
+      "expected": "10-12mm straight flat cut square across each leaf axis with two sharp corners",
+      "actual": "subtle truncation, softer on the left leaf",
+      "correction": "n/a — retry budget exhausted at attempt 3; ships only if the mechanical waiver computes"
     }
   ],
   "lockedFeatures": [
-    "SQUARE-ON FRONTAL CAMERA with both leaves equally presented - the oblique staging that collapsed one leaf is gone and the spread is now measurable at all",
-    "Good left/right symmetry, half-angles 45.0 against 44.2",
-    "No necktie; collar band, spread and throat button fully exposed",
-    "Top button fastened with the placket button visible in the V",
-    "No traced annotation - max chroma 15/255"
+    "white cotton poplin",
+    "open collar no tie",
+    "tight collar framing",
+    "light-grey studio set"
   ],
-  "notes": "Two of three named items fixed - staging is frontal and the spread is readable - but it reads 89 degrees where the drawing prints 80, and the tips are still not squared, so the defect is not fixed.\n\nFAMILY-CONSISTENCY PROBLEM, not a defect in either image alone: this option and collar-sq-65-btn print IDENTICAL 80.00 degree spreads and now render 19 degrees apart (89 against 70)."
+  "notes": "Attempt 3 of 3. Square read is present but soft; zero critical/major findings."
 }
