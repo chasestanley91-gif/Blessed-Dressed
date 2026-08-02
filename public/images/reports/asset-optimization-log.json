@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-02T05:56:19.480Z",
+  "at": "2026-08-02T07:01:45.212Z",
   "settings": {
     "maxWidth": 1400,
     "quality": 82,
@@ -7,30 +7,52 @@
   },
   "applied": true,
   "counts": {
-    "masters": 735,
-    "converted": 1,
-    "skipped": 734,
+    "masters": 738,
+    "converted": 3,
+    "skipped": 735,
     "failed": 0,
     "repointed": 0
   },
   "bytes": {
-    "before": 1791052,
-    "after": 90138,
-    "savedPct": 95
+    "before": 6267890,
+    "after": 581878,
+    "savedPct": 90.7
   },
   "note": "targetSha1 is the derivative; sourceSha1 is the PNG master QC graded. The master and publish_approved.mjs byte-identity gate are untouched.",
   "results": {
     "ok": [
       {
-        "master": "public\\images\\generated\\suit-2pc\\lp-straight-jetted.png",
-        "masterBytes": 1791052,
-        "sourceSha1": "07ddd658b4ca1426d95877560902d8b331d29723",
-        "target": "public\\images\\generated\\suit-2pc\\lp-straight-jetted.webp",
-        "targetBytes": 90138,
-        "targetSha1": "f259a850559857641fe606636bd507d6492437d3",
+        "master": "public\\images\\generated\\suit-2pc\\knot-d.png",
+        "masterBytes": 2335030,
+        "sourceSha1": "8c6580b78a2df6e8a6b56cd5ee5132221aafa8b6",
+        "target": "public\\images\\generated\\suit-2pc\\knot-d.webp",
+        "targetBytes": 254782,
+        "targetSha1": "433dfecdb9026dec866a6d68e0167cd57c1220e6",
         "quality": 82,
         "width": 1400,
-        "web": "/images/generated/suit-2pc/lp-straight-jetted.webp"
+        "web": "/images/generated/suit-2pc/knot-d.webp"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\knot-dash.png",
+        "masterBytes": 2015946,
+        "sourceSha1": "c0405ce93889b4485f8c057660cf4ca7ea6b184b",
+        "target": "public\\images\\generated\\suit-2pc\\knot-dash.webp",
+        "targetBytes": 176272,
+        "targetSha1": "e631df36632b18371103c3032257b122f267729a",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/suit-2pc/knot-dash.webp"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\knot-i.png",
+        "masterBytes": 1916914,
+        "sourceSha1": "fbf30c46d9688a55a4578c0797bd075a5b2fc68f",
+        "target": "public\\images\\generated\\suit-2pc\\knot-i.webp",
+        "targetBytes": 150824,
+        "targetSha1": "312cc826e8eb0773d3cc01c39a11cdf1cb3c5a4d",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/suit-2pc/knot-i.webp"
       }
     ],
     "skipped": [
@@ -1884,6 +1906,10 @@
       },
       {
         "master": "public\\images\\generated\\suit-2pc\\lp-straight-jetted-65.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\lp-straight-jetted.png",
         "reason": "derivative already exists"
       },
       {

@@ -909,3 +909,11 @@ Flapless double-jet hip pocket (0231) ships clean at attempt 1 — completes the
 drawn constructions alongside the 9 flap rungs. lp-jetted-4 HELD (NEEDS-SOURCE H): identical
 construction text + shared drawing + an unexplained 4cm token no authority defines — never invent.
 Session: 63 generations / 50 primaries shipped / 31.5 credits = 1.26 att/shipped. ~763 remain. 167/1816 (9.2%).
+
+## 2026-08-02 — pocket-knot trio SHIPPED 3/3 PASS@1 (1.5 cr) — 170/1816 crosses 9.4%
+
+knot-i / knot-d / knot-dash from real remote-namespace schematic drawings (slit + magnified tack).
+Thin one-line descriptions were augmented with DRAWN GEOMETRY blocks restating each magnifier
+detail (bar-across / capital-D with bowing arc / short hyphen) + matched macro framing with raking
+sidelight — the lbh-motif recipe generalizes to tack motifs. Three-way set separable at a glance.
+Session: 66 generations / 53 primaries shipped / 33.0 credits = 1.25 att/shipped. ~761.5 remain. 170/1816 (9.4%).
