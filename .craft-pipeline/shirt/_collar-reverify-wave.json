@@ -1,0 +1,97 @@
+{
+  "createdAt": "2026-08-02",
+  "wave": "shirt-collar-reverify-wave",
+  "credits": "13 x 0.5 = 6.5 planned",
+  "generate": [
+    {
+      "option": "collar-regular-22",
+      "drawing": "/images/techpacks/shirt/lapel/regular-collar-22.jpg",
+      "reason": "approval revoked 2026-07-30 (verdict earned vs AI photo); pipeline reset; regenerate vs supplier drawing"
+    },
+    {
+      "option": "collar-point-58-btn",
+      "drawing": "/images/techpacks/shirt/lapel/point-in-58cm-with-button.jpg",
+      "reason": "approval revoked 2026-07-30 (verdict earned vs AI photo); pipeline reset; regenerate vs supplier drawing"
+    },
+    {
+      "option": "collar-point-70-btn",
+      "drawing": "/images/techpacks/shirt/lapel/point-in-7cm-with-button.jpg",
+      "reason": "approval revoked 2026-07-30 (verdict earned vs AI photo); pipeline reset; regenerate vs supplier drawing"
+    },
+    {
+      "option": "collar-curve-point-75",
+      "drawing": "/images/techpacks/shirt/lapel/curve-point-collar-in-75cm.jpg",
+      "reason": "approval revoked 2026-07-30 (verdict earned vs AI photo); pipeline reset; regenerate vs supplier drawing"
+    },
+    {
+      "option": "collar-point-95-btn",
+      "drawing": "/images/techpacks/shirt/lapel/point-in-95cm-with-button.jpg",
+      "reason": "approval revoked 2026-07-30 (verdict earned vs AI photo); pipeline reset; regenerate vs supplier drawing"
+    },
+    {
+      "option": "collar-point-58-zigzag",
+      "drawing": "/images/techpacks/shirt/lapel/point-in-58cm-with-zigzag-stitching.jpg",
+      "reason": "approval revoked 2026-07-30 (verdict earned vs AI photo); pipeline reset; regenerate vs supplier drawing"
+    },
+    {
+      "option": "collar-round-point-70-holes",
+      "drawing": "/images/techpacks/shirt/lapel/round-point-collar-in-7cm-with-small-holes.jpg",
+      "reason": "approval revoked 2026-07-30 (verdict earned vs AI photo); pipeline reset; regenerate vs supplier drawing"
+    },
+    {
+      "option": "collar-point-75-holes",
+      "drawing": "/images/techpacks/shirt/lapel/point-collar-in-75cm-with-small-holes.jpg",
+      "reason": "approval revoked 2026-07-30 (verdict earned vs AI photo); pipeline reset; regenerate vs supplier drawing"
+    },
+    {
+      "option": "collar-hidden-btn-75",
+      "drawing": "/images/techpacks/shirt/lapel/hidden-button-collar-in-75cm.jpg",
+      "reason": "approval revoked 2026-07-30 (verdict earned vs AI photo); pipeline reset; regenerate vs supplier drawing"
+    },
+    {
+      "option": "collar-wrap-75",
+      "drawing": "/images/techpacks/shirt/lapel/wrap-collar-in-75cm.jpg",
+      "reason": "approval revoked 2026-07-30 (verdict earned vs AI photo); pipeline reset; regenerate vs supplier drawing"
+    }
+  ],
+  "retries": [
+    {
+      "option": "collar-fashion-point-58",
+      "attempt": 2,
+      "verdict": "FAIL",
+      "corrections": [
+        "Set each leaf front edge 30 degrees off vertical from the centre-front vertex so the two edges enclose a tight 60 degree wedge; with a 250px vertical drop from the vertex each tip lands about 145px out from centre, leaving a narrow keyhole opening with the leaves close-cut against the throat.",
+        "Mirror the left and right leaf front edges exactly about the placket centreline so both tips sit at equal horizontal offset and equal height.",
+        "Shorten each leaf by roughly 15px along its axis so the tip sits at 0.81 of the vertex-to-top-edge distance, keeping the short neat fashion-point proportion."
+      ]
+    },
+    {
+      "option": "collar-sq-65",
+      "attempt": 2,
+      "verdict": "FAIL",
+      "corrections": [
+        "Close each leaf with a straight flat edge roughly 10-12 mm long cut square across the leaf axis, so the outer edge and the front edge each land on that flat at a sharp corner and the edgestitch turns two corners at the leaf end.",
+        "Set each leaf front edge 40 degrees off vertical from the centre-front vertex so the pair encloses 80 degrees; at a 250px drop each tip should sit about 210px out from centre rather than the present 250.",
+        "Draw each leaf back about 55px along its axis so the tip finishes at 0.87 of the vertex-to-top-edge distance, sitting clearly above the shoulder line as in the drawing."
+      ]
+    },
+    {
+      "option": "collar-regular-20",
+      "attempt": 2,
+      "verdict": "FAIL",
+      "corrections": [
+        "Render the left collar point folded back on itself along a straight horizontal fold, so the underside of the point faces the camera as a triangular panel with the collar stay visible as a slim vertical bar in its pocket, and the shirt-body button exposed on the placket just below the fold, while the right point stays down and buttoned.",
+        "Give the triangular panel a crisp stitched base line joining both lower corners and a clearly defined slim vertical stay centred inside it, so the panel reads as an enclosed shape rather than a chevron.",
+        "Finish the left leaf about 17 percent shorter along its axis than the right, ending at a straight horizontal edge, so the asymmetry the drawing carries is visible."
+      ]
+    }
+  ],
+  "reverifyOnly": [
+    {
+      "option": "collar-long-point-85",
+      "note": "2 candidates + PASS earned vs AI photo; RE-VERIFY existing candidate against /images/collar/collar-long-point-85-1782961987319.png before spending; regenerate only on mismatch"
+    }
+  ],
+  "mechanics": "batch media_upload -> hf_put -> media_confirm; generate gpt_image_2/low/1k/3:4 medias mandatory; record_generation (retries derive attempt from FAIL qc.json — fashion-point-58/sq-65/regular-20 already have FAIL logged so next record = attempt+1); QC strips; log_qc_result; optimize; publish --allow-swap; project_state; failure-log; rm NEEDS-REVERIFY.json after fresh verdict; commit",
+  "educationalRules": "shirt collars: NO tie, top button OPEN, collar fully visible; button-down variants must show the collar buttons; hidden-button variant shows the concealed placket effect; zigzag shows stitch detail; holes variants show eyelets"
+}
