@@ -857,3 +857,16 @@ straight after a constrained re-measure of rung 25 (generous-ROI detector had gr
 Mandatory single-rung test (cp-welt-25) validated framing before the 6-rung batch.
 Session: 42 generations / 35 primaries shipped / 21.0 credits = 1.20 att/shipped.
 Credits ~773.5. 152/1816 (8.4%).
+
+## 2026-08-02 — coin cluster CLOSED: coin-right PASS@1 (0 new cr), coin-both PASS@2 (1.0 cr)
+
+coin-right: an earlier wave left an unQC-d candidate; QC completed now — literal drawing-side
+convention confirmed against shipped coin-left (3531/3530 viewer-side fidelity). Replaced the
+unverified legacy image. coin-both attempt 1 FAILED: both bags dark tone-on-tone with NO visible
+coin patch — the showcased option absent. Correction (cream pocketing + explicit per-bag patch)
+PASSED attempt 2. LESSON: when a craft option lives ON the pocket bag, the bag cloth colour is
+load-bearing — dark bags hide everything; family presentation (cream 353x bags) is now locked.
+Stale parallel trousers/coin-both FAIL record superseded (same identity, same drawing; fan-out
+serves the row). Jacket-section coin rows remain a separate identity (different tech pack) —
+correctly refused by the divergence guard, still open.
+Session: 44 generations / 37 primaries shipped / 22.0 credits = 1.19 att/shipped. ~772.5 remain. 154/1816 (8.5%).

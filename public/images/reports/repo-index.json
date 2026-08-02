@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-02T04:11:56.758Z",
+  "generatedAt": "2026-08-02T04:31:07.939Z",
   "count": 2862,
   "records": [
     {
@@ -36684,29 +36684,29 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/remote/1d73941a4932__3530.jpg",
-      "liveImage": "/images/blueprints/remote/1d73941a4932__3530.jpg",
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/suit-2pc/coin-right.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/suit-2pc/coin-right.webp",
+      "shippedBytes": 128146,
+      "shippedSha1": "7661b3899a4f7f9b7e7906b17dc79fc944b367b8",
       "pipeline": {
         "dir": ".craft-pipeline/suit-2pc/coin-right",
         "have": {
           "spec": true,
           "prompt": true,
           "generation": true,
-          "qc": false
+          "qc": true
         },
-        "verdict": null,
+        "verdict": "PASS",
         "attempt": 1,
-        "lowestScore": null,
+        "lowestScore": 98,
         "belowMin": [],
         "candidates": 1,
         "needsReverify": false,
         "specOnly": false,
-        "checkedAt": null
+        "checkedAt": "2026-08-02T04:17:25.120Z"
       },
-      "stage": "generated-awaiting-qc"
+      "stage": "shipped"
     },
     {
       "key": "suit-2pc/coin-left",
@@ -36760,29 +36760,29 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/remote/7f475092fe8b__3532.jpg",
-      "liveImage": "/images/blueprints/remote/7f475092fe8b__3532.jpg",
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/suit-2pc/coin-both.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/suit-2pc/coin-both.webp",
+      "shippedBytes": 145754,
+      "shippedSha1": "6326d5d9ed79727d70fe715483c7aaeeb3b464b4",
       "pipeline": {
         "dir": ".craft-pipeline/suit-2pc/coin-both",
         "have": {
           "spec": true,
           "prompt": true,
-          "generation": false,
-          "qc": false
+          "generation": true,
+          "qc": true
         },
-        "verdict": null,
-        "attempt": null,
-        "lowestScore": null,
+        "verdict": "PASS",
+        "attempt": 2,
+        "lowestScore": 98,
         "belowMin": [],
-        "candidates": 0,
+        "candidates": 2,
         "needsReverify": false,
         "specOnly": false,
-        "checkedAt": null
+        "checkedAt": "2026-08-02T04:27:37.876Z"
       },
-      "stage": "prompt-built"
+      "stage": "shipped"
     },
     {
       "key": "suit-2pc/knot-i",
@@ -54308,13 +54308,13 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/remote/1d73941a4932__3530.jpg",
-      "liveImage": "/images/blueprints/remote/1d73941a4932__3530.jpg",
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/suit-2pc/coin-right.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/suit-2pc/coin-right.webp",
+      "shippedBytes": 128146,
+      "shippedSha1": "7661b3899a4f7f9b7e7906b17dc79fc944b367b8",
       "pipeline": null,
-      "stage": "not-started"
+      "stage": "legacy-shipped-unverified"
     },
     {
       "key": "suit-3pc/coin-left",
@@ -54378,13 +54378,13 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/remote/7f475092fe8b__3532.jpg",
-      "liveImage": "/images/blueprints/remote/7f475092fe8b__3532.jpg",
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/suit-2pc/coin-both.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/suit-2pc/coin-both.webp",
+      "shippedBytes": 145754,
+      "shippedSha1": "6326d5d9ed79727d70fe715483c7aaeeb3b464b4",
       "pipeline": null,
-      "stage": "not-started"
+      "stage": "legacy-shipped-unverified"
     },
     {
       "key": "suit-3pc/knot-i",
@@ -59422,11 +59422,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/remote/1d73941a4932__3530.jpg",
-      "liveImage": "/images/generated/trousers/coin-right.webp",
+      "liveImage": "/images/generated/suit-2pc/coin-right.webp",
       "shipped": true,
-      "shippedPath": "/images/generated/trousers/coin-right.webp",
-      "shippedBytes": 223568,
-      "shippedSha1": "0d7f98c7d85fc4242682c769c8d055e4ab4a62c7",
+      "shippedPath": "/images/generated/suit-2pc/coin-right.webp",
+      "shippedBytes": 128146,
+      "shippedSha1": "7661b3899a4f7f9b7e7906b17dc79fc944b367b8",
       "pipeline": null,
       "stage": "legacy-shipped-unverified"
     },
@@ -59466,39 +59466,29 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/remote/7f475092fe8b__3532.jpg",
-      "liveImage": "/images/blueprints/remote/7f475092fe8b__3532.jpg",
-      "shipped": false,
-      "shippedPath": null,
-      "shippedBytes": null,
-      "shippedSha1": null,
+      "liveImage": "/images/generated/suit-2pc/coin-both.webp",
+      "shipped": true,
+      "shippedPath": "/images/generated/suit-2pc/coin-both.webp",
+      "shippedBytes": 145754,
+      "shippedSha1": "6326d5d9ed79727d70fe715483c7aaeeb3b464b4",
       "pipeline": {
         "dir": ".craft-pipeline/trousers/coin-both",
         "have": {
           "spec": true,
           "prompt": true,
           "generation": true,
-          "qc": true
+          "qc": false
         },
-        "verdict": "FAIL",
+        "verdict": null,
         "attempt": 2,
-        "lowestScore": 44,
-        "belowMin": [
-          "shape",
-          "geometry",
-          "dimensions",
-          "angles",
-          "construction",
-          "placement",
-          "symmetry",
-          "composition",
-          "blueprint-match"
-        ],
+        "lowestScore": null,
+        "belowMin": [],
         "candidates": 2,
         "needsReverify": false,
         "specOnly": false,
-        "checkedAt": "2026-08-01T04:36:43.489Z"
+        "checkedAt": null
       },
-      "stage": "failed-retry-due"
+      "stage": "generated-awaiting-qc"
     },
     {
       "key": "trousers/knot-i",

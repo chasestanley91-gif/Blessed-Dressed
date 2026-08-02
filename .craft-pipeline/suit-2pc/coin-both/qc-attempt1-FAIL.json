@@ -1,0 +1,91 @@
+{
+  "addr": "suit-2pc > coin-both",
+  "productId": "suit-2pc",
+  "optionId": "coin-both",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 92,
+    "geometry": 92,
+    "dimensions": 92,
+    "angles": 95,
+    "construction": 88,
+    "placement": 90,
+    "symmetry": 95,
+    "composition": 92,
+    "blueprint-match": 70
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "construction",
+    "placement",
+    "composition",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "critical",
+      "category": "blueprint-match",
+      "description": "The drawing marks a small open-top coin patch (red U) on EACH pocket bag; the candidate shows two plain bags with NO coin patch visible on either",
+      "expected": "a small square open-top coin patch clearly stitched low on each of the two exposed pocket bags",
+      "actual": "plain unadorned bag panels — the showcased craft option is absent/invisible",
+      "correction": "render each pocket bag with a clearly visible small square coin patch, open top, topstitched on three sides, positioned low on the bag as drawn"
+    },
+    {
+      "severity": "major",
+      "category": "construction",
+      "description": "pocket bags rendered in dark charcoal cloth, tone-on-tone with the trouser",
+      "expected": "natural cream/ecru cotton pocketing like the shipped coin-left and coin-right siblings, so the patch reads instantly",
+      "actual": "dark grey bags that hide any detail",
+      "correction": "use light natural cotton pocketing cloth for both exposed bags, matching the family presentation"
+    }
+  ],
+  "verdict": "FAIL",
+  "waiver": null,
+  "correction": {
+    "errors": [
+      {
+        "severity": "critical",
+        "category": "blueprint-match",
+        "error": "The drawing marks a small open-top coin patch (red U) on EACH pocket bag; the candidate shows two plain bags with NO coin patch visible on either",
+        "expected": "a small square open-top coin patch clearly stitched low on each of the two exposed pocket bags",
+        "actual": "plain unadorned bag panels — the showcased craft option is absent/invisible",
+        "correction": "render each pocket bag with a clearly visible small square coin patch, open top, topstitched on three sides, positioned low on the bag as drawn"
+      },
+      {
+        "severity": "major",
+        "category": "construction",
+        "error": "pocket bags rendered in dark charcoal cloth, tone-on-tone with the trouser",
+        "expected": "natural cream/ecru cotton pocketing like the shipped coin-left and coin-right siblings, so the patch reads instantly",
+        "actual": "dark grey bags that hide any detail",
+        "correction": "use light natural cotton pocketing cloth for both exposed bags, matching the family presentation"
+      }
+    ],
+    "lockedFeatures": [
+      "interior presentation with both bags flipped out over the front",
+      "fly area treatment matching the 353x family drawings"
+    ],
+    "forbiddenChanges": [
+      "do not alter any checklist item this attempt already passed",
+      "do not change the camera crop, composition, or accessories unless the error is itself a composition error",
+      "do not change the garment part, orientation, or any other option's geometry"
+    ]
+  },
+  "notes": "FAIL attempt 1 — craft option not identifiable. Family consistency requires cream pocketing (3529-3531 convention, already shipped).",
+  "checkedAt": "2026-08-02T04:22:24.355Z"
+}
