@@ -818,3 +818,12 @@ FIRST member broken out of the f7fa88b7d6d1 13-option patch-pocket collision, th
 blocking group. Blueprint trio media cached in _lp-patch-trio-tracking.json (lp-patch-flap
 and lp-jetted-btn-tab uploaded and ready to fire). Session: 31 generations / 24 primaries
 shipped / 15.5 credits = 1.29 att/shipped. Credits ~779.0. 141/1813 verified.
+
+## 2026-08-02 — PATCH TRIO COMPLETE: lp-patch-flap + lp-jetted-btn-tab PASS attempt 1 (1.0 credits)
+
+Both blueprint-referenced via the batched media upload (media_upload files[] +
+media_confirm media_ids[] — first use of the array forms, 2 calls instead of 6).
+lp-patch-flap: patch + straight overhanging flap, no button, hem separation held without
+being asked (the sibling correction generalized). lp-jetted-btn-tab: besom + centred
+rounded tab with one button, the sole differentiator crisp. Session: 33 generations /
+26 primaries shipped / 16.5 credits = 1.27 att/shipped. Credits ~778.0. 143/1813.

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-02T02:05:54.274Z",
+  "generatedAt": "2026-08-02T02:23:42.397Z",
   "count": 2862,
   "records": [
     {
@@ -22435,11 +22435,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/supplier/dedd5aef23db__02L2__Patch_with_flap.jpg",
-      "liveImage": "/images/generated/jacket/lp-patch-flap.webp",
+      "liveImage": "/images/generated/suit-2pc/lp-patch-flap.webp",
       "shipped": true,
-      "shippedPath": "/images/generated/jacket/lp-patch-flap.webp",
-      "shippedBytes": 203348,
-      "shippedSha1": "f7fa88b7d6d1076383d4f982881c6a34a8b69669",
+      "shippedPath": "/images/generated/suit-2pc/lp-patch-flap.webp",
+      "shippedBytes": 135164,
+      "shippedSha1": "b79d544ca49c178e3793ff42d7b486e53cecd5cc",
       "pipeline": null,
       "stage": "legacy-shipped-unverified"
     },
@@ -22611,11 +22611,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/supplier/b390170669a3__02M1__Besom_with_tab_and_button.jpg",
-      "liveImage": "/images/generated/jacket/lp-jetted-btn-tab.webp",
+      "liveImage": "/images/generated/suit-2pc/lp-jetted-btn-tab.webp",
       "shipped": true,
-      "shippedPath": "/images/generated/jacket/lp-jetted-btn-tab.webp",
-      "shippedBytes": 107226,
-      "shippedSha1": "8559bce7d538cbf0418438a4f4760c4e4ad115cb",
+      "shippedPath": "/images/generated/suit-2pc/lp-jetted-btn-tab.webp",
+      "shippedBytes": 171332,
+      "shippedSha1": "be1cf29d5f829c2ee8d5b01362338b2c5a1947f9",
       "pipeline": null,
       "stage": "legacy-shipped-unverified"
     },
@@ -31156,29 +31156,29 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/supplier/dedd5aef23db__02L2__Patch_with_flap.jpg",
-      "liveImage": "/images/generated/jacket/lp-patch-flap.webp",
+      "liveImage": "/images/generated/suit-2pc/lp-patch-flap.webp",
       "shipped": true,
-      "shippedPath": "/images/generated/jacket/lp-patch-flap.webp",
-      "shippedBytes": 203348,
-      "shippedSha1": "f7fa88b7d6d1076383d4f982881c6a34a8b69669",
+      "shippedPath": "/images/generated/suit-2pc/lp-patch-flap.webp",
+      "shippedBytes": 135164,
+      "shippedSha1": "b79d544ca49c178e3793ff42d7b486e53cecd5cc",
       "pipeline": {
         "dir": ".craft-pipeline/suit-2pc/lp-patch-flap",
         "have": {
           "spec": true,
           "prompt": true,
-          "generation": false,
-          "qc": false
+          "generation": true,
+          "qc": true
         },
-        "verdict": null,
-        "attempt": null,
-        "lowestScore": null,
+        "verdict": "PASS",
+        "attempt": 1,
+        "lowestScore": 98,
         "belowMin": [],
-        "candidates": 0,
+        "candidates": 1,
         "needsReverify": false,
         "specOnly": false,
-        "checkedAt": null
+        "checkedAt": "2026-08-02T02:16:18.852Z"
       },
-      "stage": "prompt-built"
+      "stage": "shipped"
     },
     {
       "key": "suit-2pc/lp-patch-flap-btn",
@@ -31348,29 +31348,29 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/supplier/b390170669a3__02M1__Besom_with_tab_and_button.jpg",
-      "liveImage": "/images/generated/jacket/lp-jetted-btn-tab.webp",
+      "liveImage": "/images/generated/suit-2pc/lp-jetted-btn-tab.webp",
       "shipped": true,
-      "shippedPath": "/images/generated/jacket/lp-jetted-btn-tab.webp",
-      "shippedBytes": 107226,
-      "shippedSha1": "8559bce7d538cbf0418438a4f4760c4e4ad115cb",
+      "shippedPath": "/images/generated/suit-2pc/lp-jetted-btn-tab.webp",
+      "shippedBytes": 171332,
+      "shippedSha1": "be1cf29d5f829c2ee8d5b01362338b2c5a1947f9",
       "pipeline": {
         "dir": ".craft-pipeline/suit-2pc/lp-jetted-btn-tab",
         "have": {
           "spec": true,
           "prompt": true,
-          "generation": false,
-          "qc": false
+          "generation": true,
+          "qc": true
         },
-        "verdict": null,
-        "attempt": null,
-        "lowestScore": null,
+        "verdict": "PASS",
+        "attempt": 1,
+        "lowestScore": 98,
         "belowMin": [],
-        "candidates": 0,
+        "candidates": 1,
         "needsReverify": false,
         "specOnly": false,
-        "checkedAt": null
+        "checkedAt": "2026-08-02T02:23:36.686Z"
       },
-      "stage": "prompt-built"
+      "stage": "shipped"
     },
     {
       "key": "suit-2pc/lp-box-pleat-flap",
@@ -45369,11 +45369,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/supplier/dedd5aef23db__02L2__Patch_with_flap.jpg",
-      "liveImage": "/images/generated/jacket/lp-patch-flap.webp",
+      "liveImage": "/images/generated/suit-2pc/lp-patch-flap.webp",
       "shipped": true,
-      "shippedPath": "/images/generated/jacket/lp-patch-flap.webp",
-      "shippedBytes": 203348,
-      "shippedSha1": "f7fa88b7d6d1076383d4f982881c6a34a8b69669",
+      "shippedPath": "/images/generated/suit-2pc/lp-patch-flap.webp",
+      "shippedBytes": 135164,
+      "shippedSha1": "b79d544ca49c178e3793ff42d7b486e53cecd5cc",
       "pipeline": null,
       "stage": "legacy-shipped-unverified"
     },
@@ -45545,11 +45545,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/supplier/b390170669a3__02M1__Besom_with_tab_and_button.jpg",
-      "liveImage": "/images/generated/jacket/lp-jetted-btn-tab.webp",
+      "liveImage": "/images/generated/suit-2pc/lp-jetted-btn-tab.webp",
       "shipped": true,
-      "shippedPath": "/images/generated/jacket/lp-jetted-btn-tab.webp",
-      "shippedBytes": 107226,
-      "shippedSha1": "8559bce7d538cbf0418438a4f4760c4e4ad115cb",
+      "shippedPath": "/images/generated/suit-2pc/lp-jetted-btn-tab.webp",
+      "shippedBytes": 171332,
+      "shippedSha1": "be1cf29d5f829c2ee8d5b01362338b2c5a1947f9",
       "pipeline": null,
       "stage": "legacy-shipped-unverified"
     },
