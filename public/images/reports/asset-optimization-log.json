@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-01T23:14:32.734Z",
+  "at": "2026-08-01T23:55:02.204Z",
   "settings": {
     "maxWidth": 1400,
     "quality": 82,
@@ -7,30 +7,52 @@
   },
   "applied": true,
   "counts": {
-    "masters": 694,
-    "converted": 1,
-    "skipped": 693,
+    "masters": 697,
+    "converted": 3,
+    "skipped": 694,
     "failed": 0,
     "repointed": 0
   },
   "bytes": {
-    "before": 1403311,
-    "after": 28788,
-    "savedPct": 97.9
+    "before": 7621122,
+    "after": 784736,
+    "savedPct": 89.7
   },
   "note": "targetSha1 is the derivative; sourceSha1 is the PNG master QC graded. The master and publish_approved.mjs byte-identity gate are untouched.",
   "results": {
     "ok": [
       {
-        "master": "public\\images\\generated\\suit-2pc\\lapel-shawl-asymmetric.png",
-        "masterBytes": 1403311,
-        "sourceSha1": "c49827cb9e3efea239fbc85bd24fb250234e59f7",
-        "target": "public\\images\\generated\\suit-2pc\\lapel-shawl-asymmetric.webp",
-        "targetBytes": 28788,
-        "targetSha1": "2fc6dacd0f8269f0635411456301b831a44b8a4a",
+        "master": "public\\images\\generated\\trousers\\wband-35.png",
+        "masterBytes": 2718181,
+        "sourceSha1": "e246fd012b8a5bcc3616caa59dc65d64a88853d8",
+        "target": "public\\images\\generated\\trousers\\wband-35.webp",
+        "targetBytes": 298560,
+        "targetSha1": "61d30516fd2cab4c50362fc3753856661f7d59a1",
         "quality": 82,
         "width": 1400,
-        "web": "/images/generated/suit-2pc/lapel-shawl-asymmetric.webp"
+        "web": "/images/generated/trousers/wband-35.webp"
+      },
+      {
+        "master": "public\\images\\generated\\trousers\\wband-38.png",
+        "masterBytes": 2545958,
+        "sourceSha1": "7641f05e12c40472d5f3ec03f4d29b79019fa87b",
+        "target": "public\\images\\generated\\trousers\\wband-38.webp",
+        "targetBytes": 267862,
+        "targetSha1": "0715f22b094b2b986a2e4253a9206dd257eba9ae",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/trousers/wband-38.webp"
+      },
+      {
+        "master": "public\\images\\generated\\trousers\\wband-40.png",
+        "masterBytes": 2356983,
+        "sourceSha1": "86526402f1904b38c039219788c6f41bcb5793c0",
+        "target": "public\\images\\generated\\trousers\\wband-40.webp",
+        "targetBytes": 218314,
+        "targetSha1": "191cf54dd6bccd2637196956d9ec6291e606a5fb",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/trousers/wband-40.webp"
       }
     ],
     "skipped": [
@@ -1768,6 +1790,10 @@
       },
       {
         "master": "public\\images\\generated\\suit-2pc\\lapel-shawl-0e.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\lapel-shawl-asymmetric.png",
         "reason": "derivative already exists"
       },
       {

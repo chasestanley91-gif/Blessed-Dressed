@@ -1,0 +1,66 @@
+{
+  "addr": "trousers > wband-50",
+  "productId": "trousers",
+  "optionId": "wband-50",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 90,
+    "angles": 98,
+    "construction": 98,
+    "placement": 98,
+    "symmetry": 98,
+    "composition": 90,
+    "blueprint-match": 92
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "dimensions",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "dimensions",
+    "composition",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "major",
+      "category": "dimensions",
+      "description": "SET-LEVEL ordering failure: the five wband renders are not orderable — automated band-fraction measure non-monotonic (extremes identical) because camera distance drifted per tile despite MATCHED FRAMING, confounding band height with zoom.",
+      "expected": "Band height certifiably 5.0 cm relative to an in-frame scale reference, orderable against all four siblings.",
+      "actual": "In-frame band height confounded with zoom; no internal scale reference to normalize against.",
+      "correction": "Include an INTERNAL SCALE REFERENCE: a standard 1.5 cm horn fly button sits centred on the band extension just below the top edge, fully visible. The band height equals exactly 3.33 button-diameters (5.0 cm against the 1.5 cm button). Keep the identical matched framing: band square to camera, centred, band top edge at one-third frame height, camera distance identical to every sibling in this family."
+    }
+  ],
+  "verdict": "FAIL",
+  "waiver": null,
+  "correction": {
+    "errors": [
+      {
+        "severity": "major",
+        "category": "dimensions",
+        "error": "SET-LEVEL ordering failure: the five wband renders are not orderable — automated band-fraction measure non-monotonic (extremes identical) because camera distance drifted per tile despite MATCHED FRAMING, confounding band height with zoom.",
+        "expected": "Band height certifiably 5.0 cm relative to an in-frame scale reference, orderable against all four siblings.",
+        "actual": "In-frame band height confounded with zoom; no internal scale reference to normalize against.",
+        "correction": "Include an INTERNAL SCALE REFERENCE: a standard 1.5 cm horn fly button sits centred on the band extension just below the top edge, fully visible. The band height equals exactly 3.33 button-diameters (5.0 cm against the 1.5 cm button). Keep the identical matched framing: band square to camera, centred, band top edge at one-third frame height, camera distance identical to every sibling in this family."
+      }
+    ],
+    "lockedFeatures": [
+      "clean fully-fastened waistband macro, flat and pressed",
+      "no annotations, no measurement text anywhere",
+      "front view, tucked shirt above, no jacket"
+    ],
+    "forbiddenChanges": [
+      "do not alter any checklist item this attempt already passed",
+      "do not change the camera crop, composition, or accessories unless the error is itself a composition error",
+      "do not change the garment part, orientation, or any other option's geometry"
+    ]
+  },
+  "notes": "Set-level FAIL shared by all five rungs (see .craft-pipeline/trousers/_wband-ladder-report.json). Individual render quality was good; the failure is cross-image comparability.",
+  "checkedAt": "2026-08-01T23:31:37.184Z"
+}

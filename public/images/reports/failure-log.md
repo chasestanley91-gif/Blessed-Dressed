@@ -768,3 +768,16 @@ Retry round 2 planned with the button anchor; on a second ordering failure the f
 goes to the owner with both measurement rounds.
 
 [TOOL GAP] apply_correction.mjs rebuilds prompts WITHOUT the spec-only SPEC LOCK transform (it has its own rebuild path that bypasses build_prompt --write specOnly branch). One-off transformed the 5 wband round-2 prompts by hand; the durable fix is to route apply_correction through build_prompt or duplicate the transform there.
+
+## 2026-08-01 — WBAND LADDER SHIPPED: round 2 button anchor PASSES blind ordering (2.5 credits)
+
+All five rungs regenerated with the 1.5 cm fly-button internal scale reference. Visual
+blind-ordering against the anchor: strictly increasing ~2.3<2.5<2.7<3.0<3.3
+button-diameters, extremes unmistakable; the 2 mm pair (3.8/4.0) is subtle-but-readable,
+as real tailoring at that step is, and carries a logged minor on both rungs. Automated
+detector was INCONCLUSIVE (edge mis-location; per qc_ladder, auto cannot PASS alone).
+All five PASS attempt 2, published with fan-out to suit-2pc/suit-3pc. Round-1 FAILs
+preserved as qc-attempt1-FAIL.json. project_state now treats spec-only identities as
+IN SCOPE (owner ruling reached the stage machine; identity-level exemption).
+Session: 18 generations / 12 primaries shipped / 9.0 credits = 1.5 att/shipped overall.
+Credits ~785.5. FIRST cm-LADDER EVER SHIPPED by this project.

@@ -139,6 +139,8 @@ function scanPipeline() {
         // SECTIONS (suit-2pc coin-pocket exists in suit-pockets AND
         // Trousers-front-pockets, drawn against different tech packs).
         sectionId: spec ? spec.sectionId || null : null,
+        // owner ruling: spec-only options are generable with NO drawing by design
+        specOnly: spec ? !!spec.specOnly : false,
         dir: rel(odir),
         have,
         candidates: files.filter((f) => /^candidate-\d+\.png$/i.test(f)).length,
@@ -249,6 +251,7 @@ for (const inv of inventory) {
           belowMin: pipe.belowMin,
           candidates: pipe.candidates,
           needsReverify: pipe.needsReverify,
+          specOnly: pipe.specOnly || false,
           checkedAt: pipe.checkedAt,
         }
       : null,
@@ -279,6 +282,12 @@ function deriveStage(r) {
   if (r.shipped) return 'legacy-shipped-unverified';
   return 'not-started';
 }
+// Owner ruling (2026-08-01): a spec-only pipeline record makes its option fully
+// in scope — the missing drawing is waived, not disqualifying.
+const specOnlyIdentities = new Set(
+  records.filter((r) => r.pipeline && r.pipeline.specOnly).map((r) => r.field + "/" + r.option)
+);
+for (const r of records) if (specOnlyIdentities.has(r.field + "/" + r.option)) r.inScope = true;
 for (const r of records) r.stage = deriveStage(r);
 
 // addr -> "field/option": lets the reuse audit collapse the same craft option
