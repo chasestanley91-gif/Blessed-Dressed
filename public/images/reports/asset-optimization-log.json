@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-02T02:23:37.254Z",
+  "at": "2026-08-02T02:43:46.406Z",
   "settings": {
     "maxWidth": 1400,
     "quality": 82,
@@ -7,30 +7,30 @@
   },
   "applied": true,
   "counts": {
-    "masters": 711,
+    "masters": 712,
     "converted": 1,
-    "skipped": 710,
+    "skipped": 711,
     "failed": 0,
     "repointed": 0
   },
   "bytes": {
-    "before": 2285000,
-    "after": 171332,
-    "savedPct": 92.5
+    "before": 2337772,
+    "after": 204594,
+    "savedPct": 91.2
   },
   "note": "targetSha1 is the derivative; sourceSha1 is the PNG master QC graded. The master and publish_approved.mjs byte-identity gate are untouched.",
   "results": {
     "ok": [
       {
-        "master": "public\\images\\generated\\suit-2pc\\lp-jetted-btn-tab.png",
-        "masterBytes": 2285000,
-        "sourceSha1": "9631336b2543edf03283f40e2436e19a96b250cb",
-        "target": "public\\images\\generated\\suit-2pc\\lp-jetted-btn-tab.webp",
-        "targetBytes": 171332,
-        "targetSha1": "be1cf29d5f829c2ee8d5b01362338b2c5a1947f9",
+        "master": "public\\images\\generated\\suit-2pc\\lp-patch.png",
+        "masterBytes": 2337772,
+        "sourceSha1": "e00ad68341557fecf35f0bd44aca79495f406a76",
+        "target": "public\\images\\generated\\suit-2pc\\lp-patch.webp",
+        "targetBytes": 204594,
+        "targetSha1": "21c5bec53eb5026862fceb470bda0a23ce5fcf5f",
         "quality": 82,
         "width": 1400,
-        "web": "/images/generated/suit-2pc/lp-jetted-btn-tab.webp"
+        "web": "/images/generated/suit-2pc/lp-patch.webp"
       }
     ],
     "skipped": [
@@ -1780,6 +1780,10 @@
       },
       {
         "master": "public\\images\\generated\\suit-2pc\\lapel-shawl.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\lp-jetted-btn-tab.png",
         "reason": "derivative already exists"
       },
       {

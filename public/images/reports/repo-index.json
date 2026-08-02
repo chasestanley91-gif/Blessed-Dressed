@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-02T02:23:42.397Z",
+  "generatedAt": "2026-08-02T02:43:56.906Z",
   "count": 2862,
   "records": [
     {
@@ -22391,11 +22391,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/supplier/59c3e6007dd6__02J1__Patch.jpg",
-      "liveImage": "/images/generated/jacket/lp-patch.webp",
+      "liveImage": "/images/generated/suit-2pc/lp-patch.webp",
       "shipped": true,
-      "shippedPath": "/images/generated/jacket/lp-patch.webp",
-      "shippedBytes": 203348,
-      "shippedSha1": "f7fa88b7d6d1076383d4f982881c6a34a8b69669",
+      "shippedPath": "/images/generated/suit-2pc/lp-patch.webp",
+      "shippedBytes": 204594,
+      "shippedSha1": "21c5bec53eb5026862fceb470bda0a23ce5fcf5f",
       "pipeline": null,
       "stage": "legacy-shipped-unverified"
     },
@@ -31096,13 +31096,29 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/supplier/59c3e6007dd6__02J1__Patch.jpg",
-      "liveImage": "/images/generated/jacket/lp-patch.webp",
+      "liveImage": "/images/generated/suit-2pc/lp-patch.webp",
       "shipped": true,
-      "shippedPath": "/images/generated/jacket/lp-patch.webp",
-      "shippedBytes": 203348,
-      "shippedSha1": "f7fa88b7d6d1076383d4f982881c6a34a8b69669",
-      "pipeline": null,
-      "stage": "legacy-shipped-unverified"
+      "shippedPath": "/images/generated/suit-2pc/lp-patch.webp",
+      "shippedBytes": 204594,
+      "shippedSha1": "21c5bec53eb5026862fceb470bda0a23ce5fcf5f",
+      "pipeline": {
+        "dir": ".craft-pipeline/suit-2pc/lp-patch",
+        "have": {
+          "spec": true,
+          "prompt": true,
+          "generation": true,
+          "qc": true
+        },
+        "verdict": "PASS",
+        "attempt": 1,
+        "lowestScore": 98,
+        "belowMin": [],
+        "candidates": 1,
+        "needsReverify": false,
+        "specOnly": false,
+        "checkedAt": "2026-08-02T02:43:45.214Z"
+      },
+      "stage": "shipped"
     },
     {
       "key": "suit-2pc/lp-patch-rounded",
@@ -45325,11 +45341,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/supplier/59c3e6007dd6__02J1__Patch.jpg",
-      "liveImage": "/images/generated/jacket/lp-patch.webp",
+      "liveImage": "/images/generated/suit-2pc/lp-patch.webp",
       "shipped": true,
-      "shippedPath": "/images/generated/jacket/lp-patch.webp",
-      "shippedBytes": 203348,
-      "shippedSha1": "f7fa88b7d6d1076383d4f982881c6a34a8b69669",
+      "shippedPath": "/images/generated/suit-2pc/lp-patch.webp",
+      "shippedBytes": 204594,
+      "shippedSha1": "21c5bec53eb5026862fceb470bda0a23ce5fcf5f",
       "pipeline": null,
       "stage": "legacy-shipped-unverified"
     },

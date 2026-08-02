@@ -827,3 +827,10 @@ lp-patch-flap: patch + straight overhanging flap, no button, hem separation held
 being asked (the sibling correction generalized). lp-jetted-btn-tab: besom + centred
 rounded tab with one button, the sole differentiator crisp. Session: 33 generations /
 26 primaries shipped / 16.5 credits = 1.27 att/shipped. Credits ~778.0. 143/1813.
+
+## 2026-08-02 — lp-patch SHIPPED: PASS attempt 1, replaces a graded-WRONG legacy image (0.5 credits)
+
+The base patch (02J1): open top, topstitched edges, no flap/tab/buttons, level set, tight
+corner radii. The legacy live image it replaces was graded WRONG (raked flap pocket, no
+patch bag). Fourth member out of the 13-option patch collision. Session: 34 generations /
+27 primaries shipped / 17.0 credits = 1.26 att/shipped. Credits ~777.5. 144/1813.

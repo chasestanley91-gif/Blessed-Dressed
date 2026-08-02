@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-08-02T02:23:42.397Z",
+  "generatedAt": "2026-08-02T02:43:56.906Z",
   "generatedBy": "tools/project_state.mjs",
   "repo": ".",
   "catalog": "data-store/options",
   "totals": {
     "total": 2862,
     "inScope": 1813,
-    "shipped": 128,
+    "shipped": 129,
     "shipped-waived": 15,
     "passed-not-shipped": 0,
     "waived-not-shipped": 0,
@@ -16,7 +16,7 @@
     "generated-awaiting-qc": 4,
     "prompt-built": 26,
     "spec-only": 1,
-    "legacy-shipped-unverified": 896,
+    "legacy-shipped-unverified": 895,
     "not-started": 700,
     "no-blueprint": 346,
     "excluded-swatch": 703,
@@ -64,7 +64,7 @@
     "suit-2pc": {
       "total": 600,
       "inScope": 423,
-      "shipped": 47,
+      "shipped": 48,
       "shipped-waived": 3,
       "passed-not-shipped": 0,
       "waived-not-shipped": 0,
@@ -74,7 +74,7 @@
       "generated-awaiting-qc": 3,
       "prompt-built": 13,
       "spec-only": 0,
-      "legacy-shipped-unverified": 226,
+      "legacy-shipped-unverified": 225,
       "not-started": 125,
       "no-blueprint": 103,
       "excluded-swatch": 74,
@@ -138,12 +138,12 @@
       "out-of-scope": 0
     }
   },
-  "verifiedShipped": 143,
-  "verifiedShippedClean": 128,
+  "verifiedShipped": 144,
+  "verifiedShippedClean": 129,
   "verifiedShippedWaived": 15,
   "verifiedShippedPct": "7.9",
-  "pipelineDirs": 220,
-  "generatedFiles": 1422,
+  "pipelineDirs": 221,
+  "generatedFiles": 1424,
   "sharedBlueprintIllustrations": 448,
   "sharedBlueprintOptions": 1409,
   "credits": {
@@ -169,9 +169,9 @@
       "message": "Byte-identical images ship for craft options that must look different from each other.",
       "count": 13,
       "items": [
-        "f7fa88b7d6d1 — 11 options share 1 image (11 filename(s)): chest-pocket/cp-patch | chest-pocket/cp-patch-angled | chest-pocket/cp-patch-multi | chest-pocket/cp-inverted-pleat-2flap | chest-pocket/cp-inverted-pleat-flap | lower-pocket/lp-patch | lower-pocket/lp-patch-flap-btn | lower-pocket/lp-patch-btn-tab-round | lower-pocket/lp-patch-btn-tab-straight | lower-pocket/lp-patch-btn-tab-angled | lower-pocket/lp-water-drop",
         "d3e9123ef264 — 11 options share 1 image (11 filename(s)): lower-pocket/lp-slanted-flap-55 | lower-pocket/lp-slanted-flap-65 | lower-pocket/lp-large-slanted-55 | lower-pocket/lp-large-slanted-65 | lower-pocket/lp-straight-jetted-40 | lower-pocket/lp-straight-jetted-45 | lower-pocket/lp-straight-jetted-50 | lower-pocket/lp-straight-jetted-55 | lower-pocket/lp-straight-jetted-60 | lower-pocket/lp-straight-jetted-65 | lower-pocket/lp-rl-flat-55",
         "45bf967028e7 — 10 options share 1 image (10 filename(s)): lapel-style/lapel-peak-101 | lapel-style/lapel-peak-102 | lapel-style/lapel-peak-102-rl | lapel-style/lapel-peak-103-curved | lapel-style/lapel-peak-105 | lapel-style/lapel-peak-107 | lapel-style/lapel-peak-108 | lapel-style/lapel-peak-110 | lapel-style/lapel-peak-110-low | lapel-style/lapel-peak-115",
+        "f7fa88b7d6d1 — 10 options share 1 image (10 filename(s)): chest-pocket/cp-patch | chest-pocket/cp-patch-angled | chest-pocket/cp-patch-multi | chest-pocket/cp-inverted-pleat-2flap | chest-pocket/cp-inverted-pleat-flap | lower-pocket/lp-patch-flap-btn | lower-pocket/lp-patch-btn-tab-round | lower-pocket/lp-patch-btn-tab-straight | lower-pocket/lp-patch-btn-tab-angled | lower-pocket/lp-water-drop",
         "277a61bd89f8 — 10 options share 1 image (10 filename(s)): lower-pocket/lp-slanted-flap-40 | lower-pocket/lp-slanted-flap-45 | lower-pocket/lp-slanted-flap-50 | lower-pocket/lp-slanted-flap-60 | lower-pocket/lp-large-slanted-40 | lower-pocket/lp-large-slanted-45 | lower-pocket/lp-large-slanted-50 | lower-pocket/lp-large-slanted-60 | lower-pocket/lp-slanted-jetted | lower-pocket/lp-large-slanted-jetted",
         "bd8b61e8d40d — 6 options share 1 image (6 filename(s)): lower-pocket/lp-inverted-flap | lower-pocket/lp-inverted-flap-btn | lower-pocket/lp-inverted-angled-flap-btn | lower-pocket/lp-box-pleat-flap | lower-pocket/lp-angled-box-pleat | lower-pocket/lp-multi-pleat",
         "5580d6e85db4 — 5 options share 1 image (5 filename(s)): lapel-style/lapel-notch-50 | lapel-style/lapel-notch-55 | lapel-style/lapel-notch-65 | lapel-style/lapel-notch-73 | lapel-style/lapel-notch-tab-basic",
@@ -246,7 +246,7 @@
       "severity": "warning",
       "code": "SHIPPED_WITHOUT_QC",
       "message": "Catalog shows a generated image with no qc.json to back it (legacy output).",
-      "count": 896,
+      "count": 895,
       "items": [
         "shirt > collar > lapel > collar-af1-70",
         "shirt > collar > lapel > collar-mid-cutaway-70",
@@ -304,7 +304,7 @@
       "severity": "warning",
       "code": "ORPHAN_IMAGE_FILE",
       "message": "Generated image on disk is not referenced by any catalog option, and has no wired .png/.webp counterpart.",
-      "count": 250,
+      "count": 252,
       "items": [
         "/images/generated/jacket/cp-trapezoid.png",
         "/images/generated/jacket/cp-trapezoid.webp",
@@ -332,6 +332,8 @@
         "/images/generated/jacket/lp-patch-flap.webp",
         "/images/generated/jacket/lp-patch-rounded.png",
         "/images/generated/jacket/lp-patch-rounded.webp",
+        "/images/generated/jacket/lp-patch.png",
+        "/images/generated/jacket/lp-patch.webp",
         "/images/generated/jacket/slant-32-stripe.png",
         "/images/generated/jacket/slant-32-stripe.webp",
         "/images/generated/jacket/slant-51.png",
@@ -353,9 +355,7 @@
         "/images/generated/shirt/back-napoli-no-dart.png",
         "/images/generated/shirt/back-napoli-no-dart.webp",
         "/images/generated/shirt/back-side-pleats-dbl-darts.png",
-        "/images/generated/shirt/back-side-pleats-dbl-darts.webp",
-        "/images/generated/shirt/bias-inner-collar-stand-v2.png",
-        "/images/generated/shirt/bias-inner-collar-stand-v2.webp"
+        "/images/generated/shirt/back-side-pleats-dbl-darts.webp"
       ]
     },
     {
