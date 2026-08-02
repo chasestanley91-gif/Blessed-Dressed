@@ -404,3 +404,12 @@ BLOCKED pending harvest (vision-confirmed junk blueprints):
 
 These join the harvest want-list; the 0d2d49e supplier-mapping restoration should be re-checked
 against this register when credentials arrive.
+
+
+## H. OWNER QUESTION — lp-jetted-4: what does the "4 cm" denote? (2026-08-02)
+
+lp-jetted-4 ("Straight Jetted Pocket 4 cm") and lp-straight-jetted ("Straight Jetted Pocket")
+share drawing 0231 and construction-identical descriptions (flapless double-jet hip pocket).
+No authority explains the 4 cm: the owner drafting spec gives jetted OPENING 13-15cm and jet
+width 0.8-1.2cm — neither is 4cm. Cannot photograph a distinction that no source defines;
+lp-straight-jetted shipped, lp-jetted-4 HELD pending the owner's definition (or merge/retire).

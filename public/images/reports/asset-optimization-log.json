@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-02T05:34:34.942Z",
+  "at": "2026-08-02T05:56:19.480Z",
   "settings": {
     "maxWidth": 1400,
     "quality": 82,
@@ -7,52 +7,30 @@
   },
   "applied": true,
   "counts": {
-    "masters": 734,
-    "converted": 3,
-    "skipped": 731,
+    "masters": 735,
+    "converted": 1,
+    "skipped": 734,
     "failed": 0,
     "repointed": 0
   },
   "bytes": {
-    "before": 6920309,
-    "after": 597442,
-    "savedPct": 91.4
+    "before": 1791052,
+    "after": 90138,
+    "savedPct": 95
   },
   "note": "targetSha1 is the derivative; sourceSha1 is the PNG master QC graded. The master and publish_approved.mjs byte-identity gate are untouched.",
   "results": {
     "ok": [
       {
-        "master": "public\\images\\generated\\suit-2pc\\cp-boat-28.png",
-        "masterBytes": 2302428,
-        "sourceSha1": "89b022c43c0b76defb4a219038f72ba845ce8eff",
-        "target": "public\\images\\generated\\suit-2pc\\cp-boat-28.webp",
-        "targetBytes": 200840,
-        "targetSha1": "17d0807afb12659396064b2a5a7f499903fbb12e",
+        "master": "public\\images\\generated\\suit-2pc\\lp-straight-jetted.png",
+        "masterBytes": 1791052,
+        "sourceSha1": "07ddd658b4ca1426d95877560902d8b331d29723",
+        "target": "public\\images\\generated\\suit-2pc\\lp-straight-jetted.webp",
+        "targetBytes": 90138,
+        "targetSha1": "f259a850559857641fe606636bd507d6492437d3",
         "quality": 82,
         "width": 1400,
-        "web": "/images/generated/suit-2pc/cp-boat-28.webp"
-      },
-      {
-        "master": "public\\images\\generated\\suit-2pc\\cp-boat-30.png",
-        "masterBytes": 2387035,
-        "sourceSha1": "d163f1ce27d57d05f346182520ad77905ea6175b",
-        "target": "public\\images\\generated\\suit-2pc\\cp-boat-30.webp",
-        "targetBytes": 210868,
-        "targetSha1": "57915843ecdcc8ded08c82c889973ff702bd3476",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/suit-2pc/cp-boat-30.webp"
-      },
-      {
-        "master": "public\\images\\generated\\suit-2pc\\cp-jetted.png",
-        "masterBytes": 2230846,
-        "sourceSha1": "b1f524dca2b69c76858532971169073a3025e555",
-        "target": "public\\images\\generated\\suit-2pc\\cp-jetted.webp",
-        "targetBytes": 185734,
-        "targetSha1": "752618e601b2d76332576530301e2d33272a5cf9",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/suit-2pc/cp-jetted.webp"
+        "web": "/images/generated/suit-2pc/lp-straight-jetted.webp"
       }
     ],
     "skipped": [
@@ -1694,6 +1672,18 @@
       },
       {
         "master": "public\\images\\generated\\suit-2pc\\coin-right.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\cp-boat-28.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\cp-boat-30.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\cp-jetted.png",
         "reason": "derivative already exists"
       },
       {

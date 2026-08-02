@@ -902,3 +902,10 @@ flags 30, vision confirms the classifier UNDER-flags. New campaign policy: visio
 /images/jacket/ blueprint before spending. ~17 options re-routed from ready-queue to NEEDS-SOURCE G.
 ZERO credits wasted — the drawing-view-first discipline paid for itself here.
 LESSON: DISK-exists is not DRAWING-exists; the wave-1 era localized screenshots into blueprint paths.
+
+## 2026-08-02 — lp-straight-jetted SHIPPED PASS@1 (0.5 cr); lp-jetted-4 held on undefined 4cm; tp family blocked pre-spend
+
+Flapless double-jet hip pocket (0231) ships clean at attempt 1 — completes the lower-pocket field's
+drawn constructions alongside the 9 flap rungs. lp-jetted-4 HELD (NEEDS-SOURCE H): identical
+construction text + shared drawing + an unexplained 4cm token no authority defines — never invent.
+Session: 63 generations / 50 primaries shipped / 31.5 credits = 1.26 att/shipped. ~763 remain. 167/1816 (9.2%).
