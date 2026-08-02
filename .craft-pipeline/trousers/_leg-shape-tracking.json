@@ -1,0 +1,17 @@
+{
+ "schema": "gen-batch-tracking/v1",
+ "family": "leg-shape",
+ "firedAt": "2026-08-02T00:07:22.920Z",
+ "jobs": {
+  "leg-straight": "15d4ab5f-9cd4-4ea3-90e4-2e1b7c592146",
+  "leg-tapered": "276b2a1c-2699-4479-b331-23f6999a9c26",
+  "leg-slim": "8f2c4d47-05b2-43ab-95df-b9085fb565c1",
+  "leg-wide": "e3740ebc-bcd4-46d5-b900-d6512c68f706"
+ },
+ "next": [
+  "poll each (sync), record_generation attempt 1",
+  "per-image QC via compare_prep --spec-only: taper class must read (straight parallel seams; tapered 3-5cm; slim aggressive 5-7cm; wide columnar)",
+  "cross-check the four side by side: taper ordering straight<tapered<slim, wide distinct",
+  "ship via optimize+publish"
+ ]
+}
