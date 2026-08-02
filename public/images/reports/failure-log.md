@@ -790,3 +790,12 @@ and correctly ordered. Published with fan-out to suit-2pc/suit-3pc. The entire
 leg-shape no-blueprint cluster from NEEDS-SOURCE category A is now resolved without a
 supplier drawing — the owner spec was sufficient. Session: 22 generations / 16 primaries
 shipped / 11.0 credits = 1.375 att/shipped. Credits ~783.5. 133/1813 verified-shipped.
+
+## 2026-08-02 — WAIST-STYLE FAMILY SHIPPED: 4 spec-only, all PASS attempt 1 (2.0 credits)
+
+extended-tab/elasticated/double/no-band, all instantly distinguishable on the 4-up sheet.
+no-band used the PROVE THE ABSENCE block (raking light, no band seam, pleats to the top
+edge). With wband-heights this completes ALL waistband no-blueprint clusters from
+NEEDS-SOURCE category A via owner spec alone. Session: 26 generations / 20 primaries
+shipped / 13.0 credits = 1.30 att/shipped. Credits ~781.5. 137/1813 verified-shipped.
+Spec-only queue remaining: pocket-depth ladder (3, anchor method).

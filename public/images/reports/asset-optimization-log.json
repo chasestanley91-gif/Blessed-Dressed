@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-02T00:12:12.735Z",
+  "at": "2026-08-02T00:28:02.469Z",
   "settings": {
     "maxWidth": 1400,
     "quality": 82,
@@ -7,63 +7,63 @@
   },
   "applied": true,
   "counts": {
-    "masters": 701,
+    "masters": 705,
     "converted": 4,
-    "skipped": 697,
+    "skipped": 701,
     "failed": 0,
     "repointed": 0
   },
   "bytes": {
-    "before": 4939188,
-    "after": 113158,
-    "savedPct": 97.7
+    "before": 8686917,
+    "after": 662014,
+    "savedPct": 92.4
   },
   "note": "targetSha1 is the derivative; sourceSha1 is the PNG master QC graded. The master and publish_approved.mjs byte-identity gate are untouched.",
   "results": {
     "ok": [
       {
-        "master": "public\\images\\generated\\trousers\\leg-slim.png",
-        "masterBytes": 1186672,
-        "sourceSha1": "15f10c56b5b6e349534175e75d24863c4cba7cfb",
-        "target": "public\\images\\generated\\trousers\\leg-slim.webp",
-        "targetBytes": 22240,
-        "targetSha1": "7993faea6057571602a67a8ce0fcad4401d225de",
+        "master": "public\\images\\generated\\trousers\\waist-double.png",
+        "masterBytes": 1945282,
+        "sourceSha1": "0fba3fbac646a98c212d28a1f1e28b54d11065cf",
+        "target": "public\\images\\generated\\trousers\\waist-double.webp",
+        "targetBytes": 130108,
+        "targetSha1": "f80a9682793e4725a1faab3c597caa146d80efd2",
         "quality": 82,
         "width": 1400,
-        "web": "/images/generated/trousers/leg-slim.webp"
+        "web": "/images/generated/trousers/waist-double.webp"
       },
       {
-        "master": "public\\images\\generated\\trousers\\leg-straight.png",
-        "masterBytes": 1195798,
-        "sourceSha1": "711901099b91cd474662415314bddf99291f6dc4",
-        "target": "public\\images\\generated\\trousers\\leg-straight.webp",
-        "targetBytes": 22266,
-        "targetSha1": "af4905664f103ff8056add38d4da57befb4e77e8",
+        "master": "public\\images\\generated\\trousers\\waist-elasticated.png",
+        "masterBytes": 2488871,
+        "sourceSha1": "33d8ef87aff1311eae998f35976e955cd86f9c45",
+        "target": "public\\images\\generated\\trousers\\waist-elasticated.webp",
+        "targetBytes": 200750,
+        "targetSha1": "0dad5271efa6b35cdec1ee839c6cda5be6a123ef",
         "quality": 82,
         "width": 1400,
-        "web": "/images/generated/trousers/leg-straight.webp"
+        "web": "/images/generated/trousers/waist-elasticated.webp"
       },
       {
-        "master": "public\\images\\generated\\trousers\\leg-tapered.png",
-        "masterBytes": 1247457,
-        "sourceSha1": "5fe0114db06c859f4b003bcdfc8b11ccd4258b55",
-        "target": "public\\images\\generated\\trousers\\leg-tapered.webp",
-        "targetBytes": 28820,
-        "targetSha1": "1316af592d29f0d3234b4f55d07c8c2692f83937",
+        "master": "public\\images\\generated\\trousers\\waist-extended-tab.png",
+        "masterBytes": 1873120,
+        "sourceSha1": "4aa012af7680910dc89747e78ccddd99b6ccdf4a",
+        "target": "public\\images\\generated\\trousers\\waist-extended-tab.webp",
+        "targetBytes": 121706,
+        "targetSha1": "48e8993ed0f97ba01a73a07d418be1103895e54e",
         "quality": 82,
         "width": 1400,
-        "web": "/images/generated/trousers/leg-tapered.webp"
+        "web": "/images/generated/trousers/waist-extended-tab.webp"
       },
       {
-        "master": "public\\images\\generated\\trousers\\leg-wide.png",
-        "masterBytes": 1309261,
-        "sourceSha1": "924204b1f0c54774462c6f9b513f59e9e353c4f3",
-        "target": "public\\images\\generated\\trousers\\leg-wide.webp",
-        "targetBytes": 39832,
-        "targetSha1": "66e9e95cb543829d5981c4423424c3daa7f266fa",
+        "master": "public\\images\\generated\\trousers\\waist-no-band.png",
+        "masterBytes": 2379644,
+        "sourceSha1": "3ccbcfbdb41f4b833dd674574bdf60836eba9b55",
+        "target": "public\\images\\generated\\trousers\\waist-no-band.webp",
+        "targetBytes": 209450,
+        "targetSha1": "b2a9260921d58ea4256acddb7dd5e58ad11b7064",
         "quality": 82,
         "width": 1400,
-        "web": "/images/generated/trousers/leg-wide.webp"
+        "web": "/images/generated/trousers/waist-no-band.webp"
       }
     ],
     "skipped": [
@@ -2313,6 +2313,22 @@
       },
       {
         "master": "public\\images\\generated\\trousers\\knot-i.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\trousers\\leg-slim.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\trousers\\leg-straight.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\trousers\\leg-tapered.png",
+        "reason": "derivative already exists"
+      },
+      {
+        "master": "public\\images\\generated\\trousers\\leg-wide.png",
         "reason": "derivative already exists"
       },
       {
