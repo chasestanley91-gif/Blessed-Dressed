@@ -2118,3 +2118,40 @@ Consistent with the discipline, several returned numbers were discarded rather t
 - `lapel-notch-65` again: the photo's measurable angles are 103° (collar point to gorge seam) and <15°
   (the notch slit itself). **Neither is 65**, and with no callout to say which feature the label names,
   the grader declined to assert any of them.
+
+### Correction to my own retry triage: `lp-slanted-flap-55` is NOT saturated
+
+I classified `lp-slanted-flap-55` as **saturated** — one of seven options where the generator cannot
+resolve the flap-depth ladder, on the evidence that attempt 2 "cleared the 5.0 sibling decisively
+(0.42 vs 0.38) but is ambiguous against the shipped 6.0 sibling (0.42 vs 0.41–0.44)". That reasoning
+took the *depth* as the failing dimension. It was measuring the wrong problem.
+
+The live photograph does not show a flap at all. Verified visually against its own siblings at matched
+framing:
+
+| option | photo md5 | what it shows |
+|---|---|---|
+| `lp-slanted-flap-45` | `914fe953` (unique) | **a genuine stitched flap**, rounded corners, lying over the mouth |
+| `lp-slanted-flap-55` | `f96b2ac1` | **a gaping open jetted mouth** — two lips, a dark void, no flap |
+| `lp-straight-jetted-50` | `f96b2ac1` | identical file |
+| `lp-straight-jetted-60` | `f96b2ac1` | identical file |
+
+**One render is serving a slanted-FLAP option and two straight-JETTED options** — different
+constructions, one photograph. The flap is the discriminator of the whole `slanted-flap` family, and
+it is absent.
+
+This is generatable. Drawing `02A1` is a real drawing and shows the flap clearly (closed red
+quadrilateral, ~29° rake, perpendicular depth ~132 px over a 284 px run). The option belongs in the
+**correctable** column, not the saturated one.
+
+**Corrected count: 6 saturated, not 7.**
+
+Two things I got wrong, recorded so the reasoning is auditable:
+
+1. I graded the ladder dimension and never checked the construction. A depth ratio of 0.42 vs 0.41–0.44
+   is a perfectly good measurement of a pocket that is the wrong kind of pocket. **Measuring the
+   discriminator the label names comes before measuring the dimension the label states.**
+2. The grader's corroborating claim — that the file is byte-identical to `lp-straight-jetted-40`
+   through `-65` *and* `lp-slanted-flap-65` — does not hold. Checked directly: it is shared with
+   `straight-jetted-50` and `-60` only, and `slanted-flap-65` has its own unique file (`80b477a9`).
+   The conclusion survives the correction; the supporting detail did not.
