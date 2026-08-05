@@ -1,118 +1,113 @@
 {
- "addr": "suit-2pc > Trousers-front-pockets > front-pocket-style > welt-pocket",
- "label": "Welt Front Pocket",
- "part": "trouser-detail",
- "orientation": "three-quarter-front",
- "excluded": null,
- "generate": true,
- "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\suit-2pc.json",
- "source": "json",
- "illustration": "/images/blueprints/remote/01dc8f37109e__3132.jpg",
- "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\remote\\01dc8f37109e__3132.jpg",
- "illustrationExists": true,
- "illustrationRemote": false,
- "profile": {
   "addr": "suit-2pc > Trousers-front-pockets > front-pocket-style > welt-pocket",
-  "product": "suit-2pc",
-  "field": "Front Pocket Style",
-  "option": "Welt Front Pocket",
+  "label": "Welt Front Pocket",
   "part": "trouser-detail",
-  "garment": "pair of bespoke wool tailored trousers",
   "orientation": "three-quarter-front",
-  "absence": false,
-  "distinguishingDetail": "Welt front pocket — the opening framed by a welt strip, more dimensional than a jetted cut with more visible craftsmanship. The pocket becomes an intentional bespoke detail.",
-  "measured": {
-   "dimensions": [],
-   "angles": [],
-   "counts": [],
-   "shapes": [
-    "welt pocket"
-   ],
-   "spread": [],
-   "flags": []
-  },
-  "reproduceFromIllustration": [
-   "the named detail"
-  ],
-  "composition": {
-   "crop": "macro on the detail",
-   "dominanceTarget": "40–80% of frame",
-   "identifyWithin": "1 second"
-  },
-  "forbidden": [
-   "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
-   "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
-   "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
-  ],
   "excluded": null,
-  "generate": true
- },
- "requiredTokens": [
-  "welt pocket"
- ],
- "checklist": [
-  "shape reads as drawn: welt pocket",
-  "distinguishing detail present: Welt front pocket — the opening framed by a welt strip, more dimensional than a jetted cut with more visible craftsmanship. The pocket becomes an intentional bespoke detail.",
-  "reproduced from the illustration: the named detail",
-  "orientation matches the illustration: three-quarter-front",
-  "the Front Pocket Style dominates the frame (40–80%), identifiable within one second, framed macro on the detail",
-  "silhouette, proportions, seam & stitch placement match the illustration; left/right symmetry correct",
-  "NO generic-category substitution — this exact option, not a typical one",
-  "a real photograph of the exact drawn option — not the line-art, no stylisation"
- ],
- "scoreCard": [
-  {
-   "category": "shape",
-   "score": null,
-   "min": 98
+  "generate": true,
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\suit-2pc.json",
+  "source": "json",
+  "illustration": "/images/blueprints/remote/01dc8f37109e__3132.jpg",
+  "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\remote\\01dc8f37109e__3132.jpg",
+  "illustrationExists": true,
+  "illustrationRemote": false,
+  "profile": {
+    "addr": "suit-2pc > Trousers-front-pockets > front-pocket-style > welt-pocket",
+    "product": "suit-2pc",
+    "field": "Front Pocket Style",
+    "option": "Welt Front Pocket",
+    "part": "trouser-detail",
+    "garment": "pair of bespoke wool tailored trousers",
+    "orientation": "three-quarter-front",
+    "absence": false,
+    "distinguishingDetail": "Welt front pocket — the opening framed by a welt strip, more dimensional than a jetted cut with more visible craftsmanship. The pocket becomes an intentional bespoke detail.",
+    "measured": {
+      "dimensions": [],
+      "angles": [],
+      "counts": [],
+      "shapes": [
+        "welt pocket"
+      ],
+      "spread": [],
+      "flags": []
+    },
+    "reproduceFromIllustration": [
+      "the named detail"
+    ],
+    "composition": {
+      "crop": "macro on the detail",
+      "dominanceTarget": "40–80% of frame",
+      "identifyWithin": "1 second"
+    },
+    "forbidden": [
+      "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+      "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+      "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+    ],
+    "excluded": null,
+    "generate": true
   },
-  {
-   "category": "geometry",
-   "score": null,
-   "min": 98
-  },
-  {
-   "category": "dimensions",
-   "score": null,
-   "min": 98
-  },
-  {
-   "category": "angles",
-   "score": null,
-   "min": 98
-  },
-  {
-   "category": "construction",
-   "score": null,
-   "min": 98
-  },
-  {
-   "category": "placement",
-   "score": null,
-   "min": 98
-  },
-  {
-   "category": "symmetry",
-   "score": null,
-   "min": 98
-  },
-  {
-   "category": "composition",
-   "score": null,
-   "min": 98
-  },
-  {
-   "category": "blueprint-match",
-   "score": null,
-   "min": 98
-  }
- ],
- "prompt": "Ultra-photorealistic luxury menswear product photography.\n\nA single-subject craft DOCUMENTATION photograph: the Front Pocket Style is the dominant subject, filling 40–80% of the frame and identifiable within one second.\n\nA premium pair of bespoke wool tailored trousers featuring a precise Welt Front Pocket (Front Pocket Style).\n\nDistinguishing construction detail (reproduce exactly as drawn): Welt front pocket — the opening framed by a welt strip, more dimensional than a jetted cut with more visible craftsmanship. The pocket becomes an intentional bespoke detail.\n\nExact specification — welt pocket shape — matching the illustration precisely.\n\nMANDATORY GEOMETRY COVERAGE — reproduce from the illustration, exactly and without assumption, every one of these: the named detail. Match each to the drawing.\n\nVIEW — this illustration is the three quarter front of the garment. Photograph the same face; never substitute a different face of the garment.\n\nBLUEPRINT LOCK — THE DRAWING IS LAW: the attached technical illustration is the manufacturing blueprint for this exact craft option and the SOLE authority for the image. Reproduce its geometry precisely — point/edge shape, lengths, widths, depths, angles, curvature, roll lines, symmetry, button/tab/stay positions, seam and stitch placement, and proportions — within less than 2% deviation. Assume NOTHING from tailoring/menswear/fashion convention or model priors; every visible characteristic must come from the drawing. Do not redesign, reinterpret, substitute a similar commercial style, stylise, or \"improve\" it. Do NOT fall back to a generic version of this category — reproduce THIS option, not a typical one. If convention conflicts with the drawing, the drawing wins. Accuracy over aesthetics. ANNOTATIONS ARE NOT THE GARMENT: the technical drawing may carry measurement callouts — dimension numbers (\"2.5cm\", \"9cm\", \"115°\"), tick / leader / dimension lines, arrows, red or coloured guide marks, and text labels. These are manufacturing documentation, NOT features of the cloth. Reproduce ONLY the finished garment: never render any number, unit, arrow, callout, leader line, measurement mark, or text anywhere in the photograph. The final image is a clean garment photo with zero annotation. COLOUR IN THE DRAWING IS NOTATION, NOT CLOTH: any red, orange or otherwise highlighted region marks WHERE the craft option sits — it is a position marker, never a colour specification. Flat grey or tinted shading marks the EXTENT of a panel, lining or facing, not its shade. Render every one of those areas in the garment's own cloth and thread, in the natural colour that tailoring would use there. There must be no red, no highlighter tint and no flat unshaded grey panel anywhere in the photograph unless the option's own label explicitly names that colour.\n\nPhotographed on a male model.\n\nFrame macro on the detail; the detail must read clearly and sharply.\n\nSavile Row and high-end Italian sartorial aesthetic. Natural daylight studio lighting, Phase One IQ4 medium-format camera, 150MP detail, shallow depth of field, magazine-quality editorial menswear photography. Authentic bespoke craftsmanship, fine hand stitching, premium finishing. SET — shot in a clean luxury photographic studio against a seamless, plain, neutral light-grey background with clear separation between garment and background: no location, no architecture, no furniture, no scenery, no props and no environmental context of any kind competing with the garment.\n\nExtremely realistic fine wool trouser cloth with visible weave texture, fine stitching.\n\nAvoid: any GENERIC menswear substitution (a generic spread collar, generic notch/peak lapel, generic pocket/pleat/vent/cuff/waistband in place of the drawn one), illustration or line-art style, CGI or 3D-render look, cartoon, mannequin, fashion sketch, inaccurate geometry, altered proportions, missing construction details, asymmetry, watermark, AI-art appearance, AND any text or annotation traced from the drawing: NO measurement numbers, units (cm/mm/°), dimension or leader lines, arrows, callouts, red/coloured guide marks, ruler ticks, or labels anywhere in the frame. This is real garment photography of the exact drawn option — clean cloth only, nothing else.\n\nFORBIDDEN FOR THIS OPTION — do not render: a generic version of this part standing in for the exact drawn option (generic-category substitution); any feature, count, or geometry borrowed from a neighboring craft option on the same field; a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion).\n\nCORRECTION AFTER QC FAILURE (attempt 1 rejected — obey over any conflicting earlier line): attempt 1 rendered the welt rotated 90 degrees from the drawing. The welt construction itself was right — real thickness, crisp pressed edge, bar tacks — but the axis was wrong. THE POCKET MOUTH RUNS VERTICALLY: its LONG AXIS IS PARALLEL TO THE LEG, running down the front panel from just below the waistband, TALLER THAN IT IS WIDE, exactly as the drawing marks it with a tall narrow upright rectangle. A wide horizontal opening across the hip is a rejection. Keep the welt strip standing proud of the panel with its crisp pressed edge running the length of the LONG vertical side and a bar tack closing the top and bottom ends.",
- "builtAt": "2026-08-02T16:25:10.592Z",
- "corrections": [
-  {
-   "attemptRejected": 1,
-   "appliedAt": "2026-08-02T17:08:09.339Z"
-  }
- ]
+  "requiredTokens": [
+    "welt pocket"
+  ],
+  "checklist": [
+    "shape reads as drawn: welt pocket",
+    "distinguishing detail present: Welt front pocket — the opening framed by a welt strip, more dimensional than a jetted cut with more visible craftsmanship. The pocket becomes an intentional bespoke detail.",
+    "reproduced from the illustration: the named detail",
+    "orientation matches the illustration: three-quarter-front",
+    "the Front Pocket Style dominates the frame (40–80%), identifiable within one second, framed macro on the detail",
+    "silhouette, proportions, seam & stitch placement match the illustration; left/right symmetry correct",
+    "NO generic-category substitution — this exact option, not a typical one",
+    "a real photograph of the exact drawn option — not the line-art, no stylisation"
+  ],
+  "scoreCard": [
+    {
+      "category": "shape",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "geometry",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "dimensions",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "angles",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "construction",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "placement",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "symmetry",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "composition",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "blueprint-match",
+      "score": null,
+      "min": 98
+    }
+  ],
+  "prompt": "Ultra-photorealistic luxury menswear product photography.\n\nA single-subject craft DOCUMENTATION photograph: the Front Pocket Style is the dominant subject, filling 40–80% of the frame and identifiable within one second.\n\nA premium pair of bespoke wool tailored trousers featuring a precise Welt Front Pocket (Front Pocket Style).\n\nDistinguishing construction detail (reproduce exactly as drawn): Welt front pocket — the opening framed by a welt strip, more dimensional than a jetted cut with more visible craftsmanship. The pocket becomes an intentional bespoke detail.\n\nExact specification — welt pocket shape — matching the illustration precisely.\n\nMANDATORY GEOMETRY COVERAGE — reproduce from the illustration, exactly and without assumption, every one of these: the named detail. Match each to the drawing.\n\nVIEW — this illustration is the three quarter front of the garment. Photograph the same face; never substitute a different face of the garment.\n\nBLUEPRINT LOCK — THE DRAWING IS LAW: the attached technical illustration is the manufacturing blueprint for this exact craft option and the SOLE authority for the image. Reproduce its geometry precisely — point/edge shape, lengths, widths, depths, angles, curvature, roll lines, symmetry, button/tab/stay positions, seam and stitch placement, and proportions — within less than 2% deviation. Assume NOTHING from tailoring/menswear/fashion convention or model priors; every visible characteristic must come from the drawing. Do not redesign, reinterpret, substitute a similar commercial style, stylise, or \"improve\" it. Do NOT fall back to a generic version of this category — reproduce THIS option, not a typical one. If convention conflicts with the drawing, the drawing wins. Accuracy over aesthetics. ANNOTATIONS ARE NOT THE GARMENT: the technical drawing may carry measurement callouts — dimension numbers (\"2.5cm\", \"9cm\", \"115°\"), tick / leader / dimension lines, arrows, red or coloured guide marks, and text labels. These are manufacturing documentation, NOT features of the cloth. Reproduce ONLY the finished garment: never render any number, unit, arrow, callout, leader line, measurement mark, or text anywhere in the photograph. The final image is a clean garment photo with zero annotation. COLOUR IN THE DRAWING IS NOTATION, NOT CLOTH: any red, orange or otherwise highlighted region marks WHERE the craft option sits — it is a position marker, never a colour specification. Flat grey or tinted shading marks the EXTENT of a panel, lining or facing, not its shade. Render every one of those areas in the garment's own cloth and thread, in the natural colour that tailoring would use there. There must be no red, no highlighter tint and no flat unshaded grey panel anywhere in the photograph unless the option's own label explicitly names that colour.\n\nPhotographed on a male model.\n\nFrame macro on the detail; the detail must read clearly and sharply.\n\nSavile Row and high-end Italian sartorial aesthetic. Natural daylight studio lighting, Phase One IQ4 medium-format camera, 150MP detail, shallow depth of field, magazine-quality editorial menswear photography. Authentic bespoke craftsmanship, fine hand stitching, premium finishing. SET — shot in a clean luxury photographic studio against a seamless, plain, neutral light-grey background with clear separation between garment and background: no location, no architecture, no furniture, no scenery, no props and no environmental context of any kind competing with the garment.\n\nExtremely realistic fine wool trouser cloth with visible weave texture, fine stitching.\n\nAvoid: any GENERIC menswear substitution (a generic spread collar, generic notch/peak lapel, generic pocket/pleat/vent/cuff/waistband in place of the drawn one), illustration or line-art style, CGI or 3D-render look, cartoon, mannequin, fashion sketch, inaccurate geometry, altered proportions, missing construction details, asymmetry, watermark, AI-art appearance, AND any text or annotation traced from the drawing: NO measurement numbers, units (cm/mm/°), dimension or leader lines, arrows, callouts, red/coloured guide marks, ruler ticks, or labels anywhere in the frame. This is real garment photography of the exact drawn option — clean cloth only, nothing else.\n\nFORBIDDEN FOR THIS OPTION — do not render: a generic version of this part standing in for the exact drawn option (generic-category substitution); any feature, count, or geometry borrowed from a neighboring craft option on the same field; a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion).\n\nQC CORRECTION (attempt 2) — the previous attempt was rejected. Each item below says what the drawing actually shows; render that. • State explicitly that the pocket mouth runs VERTICALLY down the front panel - its long axis parallel to the leg, not across it - and that a horizontal opening is a failure. Keep the welt strip standing proud with its pressed edge along the long side. KEEP EXACTLY AS-IS — these were measured correct on the previous attempt and must not regress: fine wool trouser cloth; three-quarter-front hip framing; seamless light-grey studio background.",
+  "builtAt": "2026-08-05T06:49:21.239Z",
+  "correctionAttempt": 2
 }

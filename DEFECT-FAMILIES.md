@@ -1778,3 +1778,62 @@ measurement of the drawing. That is the discipline working.
 - The cuff-button drawings are **schematic, not to scale**: `cb-3`'s three holes span 97% of the drawn
   sleeve width where a real 3-button cuff spans ~33%. No button diameter is recoverable from them.
   Counts are gradeable; sizes are not.
+
+---
+
+## The retry queue splits 7/7 — and the second half must not be regenerated
+
+The 14 `failed-retry-due` options were read individually rather than re-run as a batch. They divide
+cleanly, and the division is the finding.
+
+### 7 correctable — single-option geometry errors, all on attempt 1
+
+| option | what went wrong |
+|---|---|
+| `suit-2pc/welt-pocket` | welt rendered **90° from the drawing** — the reference marks a tall narrow *vertical* rectangle |
+| `trousers/coin-both` | **aspect ratio inverted** — drawn markers are 151×126 and 148×125, i.e. ~1.2:1 landscape; render came back portrait. Patch/bag depth ratio 0.42 against a drawn 0.20 |
+| `suit-2pc/quarter-top` | mouth rendered **near-horizontal**; a three-way zoom of the drawings confirms it is slanted |
+| `suit-2pc/jeans-square` | the drawn mouth is an **open path**; the render closed it into a quadrilateral panel and read as a stitched-on patch |
+| `shirt/collar-hexagon-stand` | the defining **stepped hexagonal leaf outline is entirely absent** |
+| `suit-2pc/pocket-stitch-015` | framing — a 0.15 cm hairline topstitch spans **roughly one pixel** in a wide hip shot |
+| `suit-2pc/pleat-no-single-dart` | darts **not distinguishable from the pressed leg creases** |
+
+All seven have corrections applied and pass the pre-flight gate. These are worth credits.
+
+### 7 saturated — a measured generator limit, not a prompt defect
+
+These are all on **attempt 2** and all fail the same way. The clearest statement is
+`lp-straight-jetted-60`'s:
+
+> Round 2 remains ambiguous against BOTH neighbours (0.39 vs 5.5 at 0.40 and 6.5 at 0.41) — **the model
+> saturates near d/W 0.40 for every rung at or above** that value.
+
+That is a *measurement of the generator*, not of the garment. The flap-depth ladder compresses toward a
+ceiling, so 5.0 / 5.5 / 6.0 / 6.5 cm all land within 0.01–0.02 of each other however the prompt is
+phrased. `lp-slanted-flap-55` reports the same shape: round 2 cleared the lower boundary decisively
+(0.42 vs the 5.0 sibling's 0.38) but is **ambiguous against the 6.0 sibling** (0.42 vs 0.41–0.44).
+
+| option | failure |
+|---|---|
+| `suit-2pc/lp-straight-jetted-50` | cleared the lower boundary, ambiguous against the shipped 5.5 |
+| `suit-2pc/lp-straight-jetted-60` | ambiguous against **both** neighbours; saturation stated explicitly |
+| `suit-2pc/lp-slanted-flap-55` | cleared 5.0, ambiguous against 6.0 |
+| `trousers/jeans-diamond` | MATCHED PAIR GATE — indistinguishable from its arc sibling |
+| `trousers/jeans-arc` | MATCHED PAIR GATE — same pair, other side |
+| `trousers/watch-right-welt` | MATCHED PAIR GATE — indistinguishable from the besom sibling |
+| `trousers/watch-right-besom` | MATCHED PAIR GATE — same pair, other side |
+
+**This is exactly the case the plan reserved a ruling for:** *"where it still fails, the answer is a
+merge/reprice recommendation, not annotating false numbers onto identical photos."* Three attempts have
+now been spent establishing that the top of the flap-depth ladder is not photographable at this
+generator's resolution. A fourth would buy another measurement of the same ceiling.
+
+Note the contrast with the jeans pair that *was* recovered: `jeans-arc` vs `jeans-square` separated
+cleanly once their prose was corrected (inboard travel 0 → 0.71 and 0.78 against drawn 0.75 and 0.78).
+`jeans-arc` vs `jeans-**diamond**` is a different pair and does not separate — so "the jeans pockets
+were fixed" is true of one pair and false of another. Worth stating precisely, because the earlier
+success invites over-generalising.
+
+**Recommendation to the owner, not a decision taken:** merge or reprice the flap-depth rungs at and
+above 5.0 cm, and the two matched pairs. Each retains its own catalog row and price today while showing
+a photograph a customer cannot tell from its neighbour's.
