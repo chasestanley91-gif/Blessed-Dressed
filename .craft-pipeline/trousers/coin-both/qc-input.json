@@ -1,41 +1,77 @@
 {
   "scores": {
-    "shape": 92,
-    "geometry": 88,
-    "dimensions": 82,
+    "shape": 45,
+    "geometry": 55,
+    "dimensions": 50,
     "angles": 90,
-    "construction": 94,
-    "placement": 95,
-    "symmetry": 94,
-    "composition": 93,
-    "blueprint-match": 88
+    "construction": 74,
+    "placement": 90,
+    "symmetry": 86,
+    "composition": 82,
+    "blueprint-match": 55
   },
   "errors": [
     {
+      "severity": "critical",
+      "category": "shape",
+      "description": "The aspect ratio is no longer inverted, but it has overshot the target by a larger factor than the original defect. Both shapes fitted the same way (base bar centre-to-centre for width, mean of the two branch lengths for depth, each measured in its own rotated frame): DRAWING left marker W=142.6 D=118, right marker W=141.9 D=118 - aspect 1.21, mirror-identical to 0.5 percent. RENDER left welt W=129.9 D=48.0 (aspect 2.71), right welt W=138.3 D=46.3 (aspect 2.99) - mean 2.85. That is 2.32 times the drawn ratio. For reference the previous attempt was 1:1.44 portrait, which was 1.74 times off in the other direction, so the error magnitude has grown.",
+      "expected": "A landscape outline 1.21 times as wide as it is deep - depth equal to 0.82 of the base length (drawn 118 against 142.3)",
+      "actual": "A shallow slit 2.85 times as wide as it is deep - depth equal to 0.35 of the base length (47.2 against 134.1)",
+      "correction": "Do not touch the base line, its tilt, its length or its seat - all three are correct. Extend both side branches UPWARD only, until the mean branch depth equals 0.82 x the base length. In this render that is branches of about 110 px instead of the present 47 px, which puts the pocket's top edge at 0.66 of bag depth instead of the present 0.78. The finished outline must be very nearly square - only about one fifth wider than it is deep - not a slit."
+    },
+    {
       "severity": "major",
       "category": "dimensions",
-      "description": "The coin pocket is still not at the drawn proportion, though it is no longer inverted. Drawing, measured by saturated-red component detection (the markers are the only saturated red on the sheet, so the mask is unambiguous): left marker 6192px at bbox x[170..347] y[669..808] = 178 wide by 140 deep, aspect 1.27:1; right marker 6175px at x[858..1037] y[669..808] = 180 by 140, aspect 1.29:1. Render, read off a 4x nearest-neighbour zoom gridded in original image coordinates: the left U spans a riser at x=67 running y=638 to 690, a slanted bottom descending right to x=197 y=720, and a second riser at x=197 running y=672 to 720 - bounding box 135 wide by 82 deep, aspect 1.65:1. So the render is about 30 percent flatter relative to its width than drawn.",
-      "expected": "coin pocket bounding box about 1.27:1 landscape, matching the drawn markers on both bags",
-      "actual": "about 1.65:1 - correctly landscape, but too shallow for its width",
-      "correction": "Keep the landscape orientation exactly as it now is. Deepen the pocket only: the two risers must run about four fifths as long as the mouth is wide (drawn 140 deep against 178 wide), where they currently run about half. Do not widen the pocket to correct the ratio - the width is already right relative to the bag."
+      "description": "Depth normalised to the bag-depth landmark. Landmark validated in both images before use: bag depth = waistband lower seam down to the lowest point of the flipped-out pocket bag, measured at the pocket's own x-centre. Drawing left bag 346->852 = 506 px; render left bag 283->755 = 472 px, right bag 272->752 = 480 px. Marker depth / bag depth: drawing 118/506 = 0.233; render 48.0/472 = 0.102 and 46.3/480 = 0.096. The render is at 43 percent of the drawn depth. Note this supersedes the 0.20 figure in the previous verdict, which normalised against 620 px - that span includes the waistband and is not the bag.",
+      "expected": "Coin-pocket depth about 0.23 of bag depth",
+      "actual": "0.096 to 0.102 of bag depth - well under half",
+      "correction": "Multiply the depth by 2.3 with the bottom edge pinned. Width must not change: width/bag-depth is currently 0.282 against a drawn 0.281 and is the one dimension already exact."
+    },
+    {
+      "severity": "minor",
+      "category": "construction",
+      "description": "The base of the U is rendered as a hard, crisp, continuous black line (high-pass response -8 to -14 along its whole 136 px span) with topstitching either side, which reads as a jetted welt mouth sitting at the BOTTOM of the pocket. The drawing's red U is a plain uniform outline of equal weight on all three drawn sides, with the mouth implied by the open TOP edge. As rendered, the pocket appears to open downwards.",
+      "expected": "Three stitched sides of even weight, the pocket mouth being the open top edge",
+      "actual": "A heavy jetted line along the bottom edge reading as the opening, with lighter topstitched sides",
+      "correction": "Even out the line weight: render the bottom edge as a pressed and topstitched seamed edge in the same visual weight as the two sides, and let the open top edge carry the mouth."
+    },
+    {
+      "severity": "minor",
+      "category": "symmetry",
+      "description": "The two rendered pockets are not mirror-matched as tightly as the drawing's. Base length 129.9 (left) against 138.3 (right) - 6.5 percent apart. Aspect 2.71 against 2.99 - 10 percent apart. The drawing's two markers agree to 0.5 percent on both width (142.6/141.9) and depth (118/118). Seat and tilt, by contrast, do mirror correctly.",
+      "expected": "Left and right pockets identical to within about 1 percent",
+      "actual": "6.5 percent apart on width, 10 percent apart on aspect",
+      "correction": "Match the two pockets to each other on both dimensions once the depth is corrected."
     },
     {
       "severity": "minor",
       "category": "geometry",
-      "description": "The two risers are unequal in length and the bottom edge slants. Left riser y638-690 (52px), right riser y672-720 (48px), bottom descending from y=690 at x=67 to y=720 at x=197. The drawn marker's own bottom is level and its risers equal. Some of this is legitimate - the pocket follows the bag's own angle and the bag is photographed on a body - so it is not scored as a major.",
-      "expected": "risers of equal length with a level bottom, as drawn",
-      "actual": "risers 52 and 48px with a bottom descending 30px across the mouth",
-      "correction": "Low priority. If the depth is corrected, set both risers to the same length and let the bottom follow the bag angle no more steeply than the bag's own edge."
+      "description": "The branch-length skew is mirrored the wrong way. In the drawing the LONGER branch is the inner one on both markers (left marker inner branch 135 vs outer 102; right marker inner 125 vs outer 106). In the render the longer branch is the OUTER one on both bags (left bag outer 54.1 vs inner 41.9; right bag outer 54.0 vs inner 38.5). Confidence is low - the drawn skew is plausibly hand-sketch pen-start noise rather than intent.",
+      "expected": "Inner branch slightly longer than the outer branch",
+      "actual": "Outer branch slightly longer than the inner",
+      "correction": "Do not chase this ahead of the depth fix, and do not let it perturb the base seat. If the depth correction can absorb it, bias the inner branch to be the longer of the two."
+    },
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "Each coin pocket occupies roughly 134 x 47 px in an 880 x 1168 frame - about 0.6 percent of the image each - while about 40 percent of the frame (shirt above y=110, plain trouser leg below y=780) carries no information about the option. The project standard asks the showcased pocket to occupy significant frame area.",
+      "expected": "The showcased craft option dominating the frame",
+      "actual": "Two small features occupying 0.6 percent of frame each, with 40 percent of the frame non-informative",
+      "correction": "Do NOT re-crop - the crop was locked by the previous verdict and both bags must stay in frame for a both-sides option. The 2.3x depth correction will roughly double the feature's frame area on its own; re-assess only after that."
     }
   ],
   "lockedFeatures": [
-    "COUNT IS CORRECT AND THIS IS THE OPTION'S WHOLE IDENTITY: exactly two coin pockets, one on each pocket bag, both fully in frame. The drawing carries two saturated-red markers (6192px and 6175px, bilaterally placed at the same height y669-808) and the render has two.",
-    "THE NAMED FAULT IS FIXED: the aspect ratio is no longer inverted. Attempt 2 rendered portrait; attempt 3 measures 1.65:1 LANDSCAPE against a drawn 1.27:1 - the same orientation as the drawing.",
-    "U-SHAPED OPENING, OPEN AT THE TOP: both pockets render as two risers and a bottom with no top edge, matching the drawing's U marker exactly. Verified at 4x on both bags independently. This is the same construction the coin-left grading found MISSING on its own render, where the pocket was sealed on all four sides - so this render has it right and must not regress.",
-    "Interior/cutaway presentation matching the drawing's own convention - the trousers are shown inside-out with both pocket bags exposed, which is how the blueprint draws them.",
-    "Both coin pockets sit low on their bags, near the bag's bottom edge, as drawn.",
-    "Bilateral symmetry between the two pockets: both present, both the same size within reading error, both at the same height on their respective bags.",
-    "Topstitched outline rendered as visible discrete stitching rather than a printed line."
+    "Exactly two coin pockets, one per pocket bag, one on each side - count and both-sides semantics correct",
+    "Interior view with both pocket bags flipped fully out, matching the blueprint's orientation",
+    "BOTTOM EDGE SEAT IS EXACT: base line at 0.881 (left) and 0.882 (right) of bag depth against a drawn 0.882 - do not move it",
+    "WIDTH IS EXACT: base length / bag depth = 0.275 (left) and 0.288 (right) against a drawn 0.281 - do not narrow or widen",
+    "HORIZONTAL SEAT IS CORRECT: pocket spans 0.149-0.817 (left) and 0.152-0.824 (right) of bag width measured from the outer edge, centre 0.483/0.488, against a drawn 0.155-0.854 centre 0.505",
+    "BASE TILT IS CORRECT: +10.7 deg left, -10.7 deg right, against a drawn +9.5 / -9.8 deg, correctly mirrored",
+    "OPEN-TOP U TOPOLOGY IS CORRECT: verified numerically - no fourth side exists (gradient response 6-16 along the hypothetical top edge against a 4-14 plain-cloth control, versus 47-73 along the real base). This matches the drawn red U exactly and must be preserved",
+    "Squared lower corners on both pockets",
+    "No red rendered onto the cloth",
+    "Bar tacks at the bag tops are now small flat stitched marks rather than the hard round studs of the previous attempt (one shiny bead remains at the left bag top seam, x~250 y~293)",
+    "Neutral seamless studio ground, even soft directional light, no accessories or styling competing with the pocket"
   ],
-  "notes": "Attempt 3. The named fault - inverted aspect ratio - IS FIXED, and that is the headline: attempt 2 rendered portrait, attempt 3 is landscape in the same sense as the drawing.\n\nTWO MEASUREMENTS WERE ATTEMPTED AND DISCARDED rather than reported, both because they measured the wrong feature:\n\n1. Local-background subtraction (image minus a 9px blur, keeping pixels 14/20/26 grey levels darker than their surroundings) returned 117x26 at aspect 4.50:1 on the left bag - that is the bottom stitch line alone, not the U - and on the right bag returned a 25x150 component TOUCHING THE CROP EDGE, which is the bag's own edge seam. Neither is the coin pocket.\n\n2. A column scan for the pocket bag's vertical extent, intended to normalise depth against bag depth the way the drawing was normalised (marker depth / enclosing dark extent = 0.215 on both bags), returned a longest run of y[0..111]. That is the white shirt at the top of the frame, not the bag.\n\nCOULD NOT MEASURE as a result: coin depth normalised to bag depth in the render, which is the figure that would make the dimensions finding precise rather than relative. The aspect-ratio comparison above does not depend on it and stands on its own, since both drawing and render aspect are internal to the pocket.\n\nNo centimetres are claimed anywhere: sheet 3532 carries no printed dimension callout, so no real-world scale is recoverable from it.\n\n[graded in the main loop, not by a subagent - the workflow's qc:coin-both agent died on the session limit]"
+  "notes": "VERDICT: FAIL. faultFixed = false.\n\nThe named fault was two-part and only the sign was corrected. The render is no longer portrait, so the literal inversion is gone - but the target was stated explicitly as 1.2:1 and the render lands at 2.85:1, which is 2.32x off. The previous attempt was 1.74x off in the opposite direction. Measured as error magnitude, this attempt is worse than the one it was meant to fix. Same failure mode as the last two rounds: the correction was followed in direction but not in magnitude.\n\nWHAT I MEASURED AND HOW\n- Drawn markers extracted by red mask (R>110, R-G>55, R-B>55), two connected components, 6192 and 6175 px. Each fitted as a quadrilateral in its OWN rotated frame: the two vertical strokes fitted only over rows where both clusters are under 26 px wide (so the bottom bar cannot contaminate the fit - an earlier unconstrained fit gave a spurious 62 px horizontal drift and a bogus 1.04 aspect), and the bar fitted over the middle 50 percent of the span. Branch tops taken from the topmost red row of each stroke individually (669 for the inner, 679 for the outer), not a shared value.\n- Rendered welts fitted the same way: base by minimum high-pass response per column, verticals by maximum |d/dx| of high-pass.\n- SPAN CHECKED (discipline item 2): the rendered base line carries response below -8 continuously from x=676 to x=812 on the right and x=69 to x=189 on the left, dying off within 8 px of the fitted corner intersections at 681/816.9 and 66.2/193.8. The fit is not truncated.\n- SATURATION CHECKED (item 3): each vertical was searched in a 22 px window and the located line sat interior to it; each vertical's extent was then re-scanned over a 100 px y-range and confirmed to start and stop inside that range (right-outer branch response jumps 13 -> 23 at y=630 and dies at y=692; right-inner jumps 18 -> 93 at y=670 and dies at y=722). Neither is measuring its own box.\n- LANDMARK VALIDATED (item 4): bag depth = waistband lower seam to the lowest point of the flipped-out bag, traced independently in both images by column brightness steps in the render and by ink-run scans in the drawing. Drawing 506 px, render 472/480 px. Bag proportions themselves match well (bag width/depth 0.433 drawn vs 0.440 rendered), which is what makes the ratios comparable at all. This landmark differs from the 620 px used in the previous verdict; 620 spans the waistband as well and is not the bag.\n- WRONG-EDGE CHECK (item 6): my first read of the left welt appeared to show a fourth, top side. It does not exist - that line is the pocket bag's own internal fold seam crossing the region (it passes x~76 at y=634 on the fitted fold trajectory). Directional gradient probing along the hypothetical top edge returned 6-16 against a plain-cloth control of 4-14. I discarded the false reading.\n\nSUMMARY TABLE (drawing -> render)\n  aspect W/D          1.21  ->  2.85          (2.32x too wide-for-depth)  FAIL\n  depth / bag depth   0.233 ->  0.099         (43 percent of target)      FAIL\n  width / bag depth   0.281 ->  0.282         (0.4 percent off)           PASS\n  bottom edge seat    0.882 ->  0.882         (exact)                     PASS\n  top edge seat       0.658 ->  0.780         (consequence of depth)      FAIL\n  horizontal centre   0.505 ->  0.486         (2 points off)              PASS\n  base tilt           9.5/9.8 deg -> 10.7 deg (1.2 deg off)               PASS\n  count / sides       2, one per bag -> 2, one per bag                    PASS\n\nTHE SINGLE ACTIONABLE FIX: the width, the seat, the tilt and the topology are all correct. Only the depth is wrong, and it is wrong by a clean factor. Pin the base line and lengthen both branches by 2.3x - to roughly 110 px in this render, giving a top edge at 0.66 of bag depth. Every other number should come out unchanged.\n\nNOT MEASURABLE - the drawing carries no printed dimension callouts, so no centimetre figure is recoverable for the coin pocket. Every number above is a pixel measurement or a dimensionless ratio against the bag landmark. I also could not compare thread colour, stitch density or fabric hand against the drawing, which is a plain line drawing and carries none of that information; those were not scored against the blueprint.\n\nBLUEPRINT COLLISION - RE-CONFIRMED BY HASH, and this is a catalog defect, not an image defect. public/images/blueprints/remote/7f475092fe8b__3532.jpg (coin-both) and public/images/blueprints/factory/88f95280e442__3532__Left_right.jpg (watch-both) are byte-identical: md5 87658726bf98f5322cbc719704c23291, 61437 bytes each. I verified in data-store/options/trousers.json that sections[0].fields[3].options[3] (watch-both, \"Both Sides\") and sections[0].fields[4].options[3] (coin-both, \"Both Sides\") reference them respectively. One drawing therefore backs two different craft options with markers in the same position, so the illustration alone CANNOT distinguish a coin pocket from a watch pocket - and no amount of fidelity to it will make the two catalog images differ. That needs a data fix upstream before this option can ever be considered genuinely correct, independent of anything the photography does.\n\nI made no writes to data-store/, public/images/generated/, or .craft-pipeline/. All working files went to the session scratchpad only.\n\n[SUPERSEDES a main-loop hand grading of the same candidate-3 which recorded min 82, zero criticals and faultFixed=true. That grading measured the U by its BOUNDING BOX (135x82 = 1.65:1), which includes stroke width and the unequal riser tops. This grading fits each shape in its own rotated frame - base bar centre-to-centre for width, mean of the two branch lengths for depth - giving 2.71 and 2.99, mean 2.85:1. The fitted method is the correct one and its conclusion is the opposite: the fault was two-part, sign AND magnitude, and only the sign was corrected.]"
 }

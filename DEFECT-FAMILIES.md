@@ -1979,3 +1979,62 @@ This is the third distinct mechanism by which a "fix one thing" correction has b
 (after `collar-sq-65-btn`'s spread dropping to 70° when its tip was fixed, and `vest-chest-both-besom`
 acquiring a new compositional fault). The remedy is already built and under-used: **put what currently
 works into `lockedFeatures` before correcting anything else.**
+
+---
+
+## RETRACTION: my own `coin-both` grading was too lenient, and the measurement was the reason
+
+I graded `trousers/coin-both` attempt 3 by hand in the main loop, after the workflow's grader died on
+a session limit. I recorded **min 82, zero criticals, `faultFixed = true`** — "the inversion is gone,
+only the depth is short". An independent grader re-ran the same candidate and returned **min 45, one
+critical, `faultFixed = false`**. Its grading is better supported and now stands.
+
+### Where mine went wrong
+
+I measured the U by its **bounding box**: 135 wide × 82 deep → **1.65:1**. That box includes the stroke
+width and the two risers' *unequal* tops, both of which inflate the depth term.
+
+The agent fitted each shape **in its own rotated frame** — base bar centre-to-centre for width, mean of
+the two branch lengths for depth — and constrained the riser fit to rows where both strokes are under
+26 px wide so the bottom bar cannot contaminate it. (It notes that an unconstrained fit gave a spurious
+62 px drift and a bogus 1.04 aspect, and discarded it.) Result:
+
+| | width | depth | aspect |
+|---|---|---|---|
+| drawing, left marker | 142.6 | 118 | **1.21** |
+| drawing, right marker | 141.9 | 118 | 1.21 — mirror-identical to 0.5% |
+| render, left welt | 129.9 | 48.0 | **2.71** |
+| render, right welt | 138.3 | 46.3 | **2.99** |
+
+Mean rendered aspect **2.85:1** against a drawn **1.21:1**.
+
+### And the conclusion inverts
+
+I treated the fault as one-part — *it was portrait, now it is landscape, therefore fixed*. It was
+**two-part: sign and magnitude**, and only the sign was corrected.
+
+- previous attempt: **1.74× off** the target ratio, in the portrait direction
+- this attempt: **2.32× off**, in the flat direction
+
+**Measured as error magnitude, the attempt meant to fix it is worse than the one it replaced.** Calling
+that "fixed" was wrong.
+
+The agent also corrected the depth normalisation — including the figure in the *prior* verdict:
+bag depth is the waistband lower seam down to the lowest point of the flipped-out bag, measured at the
+pocket's own x-centre (drawing 506 px, render 472 and 480). Marker depth / bag depth is **0.233 drawn
+against 0.102 and 0.096 rendered — 43% of the drawn depth.** The earlier 0.20 normalised against a
+620 px span that *includes the waistband and is not the bag*.
+
+### What this is an instance of
+
+The same failure this project keeps recording, turned on my own work: **a measurement that is not
+measuring the thing you named.** A bounding box is not a shape fit. I had already discarded two
+automated attempts on this exact option for that reason and then trusted a third that had the same
+defect in gentler form.
+
+It also isolates a real pattern in the generator worth carrying forward: **on this option the
+correction has now been followed in DIRECTION but not in MAGNITUDE three rounds running.** That is the
+same shape as the flap-depth ladder saturating at d/W 0.40 and the turn-up band that would not move off
+27% through three escalating instructions. Stating a target as a *ratio to a landmark in the frame*
+has not been enough; the next attempt on any option in this class should be treated as likely
+saturated rather than likely correctable.
