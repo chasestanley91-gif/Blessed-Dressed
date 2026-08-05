@@ -1837,3 +1837,81 @@ success invites over-generalising.
 **Recommendation to the owner, not a decision taken:** merge or reprice the flap-depth rungs at and
 above 5.0 cm, and the two matched pairs. Each retains its own catalog row and price today while showing
 a photograph a customer cannot tell from its neighbour's.
+
+---
+
+## The 8 UNMET options triaged by CAUSE — only two are worth another credit
+
+`UNMET` means the retry budget ran out without reaching the bar. Treated as one bucket it looks like
+eight failures of the same kind. Read individually, they have five distinct causes, and the cause
+decides the remedy. Only two are worth spending on.
+
+### 1 — Genuinely has an attempt left (1 option)
+
+**`shirt/stitch-01-inner-plain`** — stopped at **attempt 2 of a hard cap of 2**, while this project's
+confirmed budget is **three**. It is a full attempt short, exactly the case the plan flagged. The fault
+is specific and unambiguous: the placket is topstitched on **both** edges where the option is a single
+inner row, resolved at 8× tone-mapped magnification as two parallel runs of stitch perforations
+flanking the button line. Worth one more generation.
+
+### 2 — Specific untried correction (1 option)
+
+**`suit-3pc/coin-left`** — the coin pocket is stitched closed on all four sides, reading as a sealed
+patch. The drawing's outline is a **U: bottom edge and two vertical sides only, open at the top.** The
+correction is concrete and has not been tried in that form — *stitch only the bottom and the two sides;
+leave the top as an open, lightly relaxed mouth with a whisper of pocketing visible inside.* Scores are
+otherwise strong (placement 97, symmetry 96, angles 96). Worth one generation.
+
+### 3 — Model-prior saturation (1 option) — do NOT respend
+
+**`suit-2pc/hem-single-turnup`** — eight of nine categories at 95–99, blocked solely on `dimensions`
+93. The band measures **27% of hem opening width against the blueprint's 21%**, and QC's own note is
+decisive:
+
+> Model prior appears fixed at a deep cuff and did not respond to three progressively more explicit and
+> quantified depth instructions, **including an explicit one-fifth ratio**.
+
+Three escalating instructions produced no movement. This is the same failure shape as the flap-depth
+ladder saturating at d/W 0.40. A fourth attempt with the same approach buys another measurement of the
+same prior.
+
+### 4 — Source/blueprint limit (2 options) — needs a drawing, not a credit
+
+- **`shirt/collar-small-sq-50`** — the tips must be a flat terminal facet with two corners; they render
+  as a converging vertex with a 6–8 px radius. QC states the limit rather than resolving it: at
+  **232×244 the blueprint is roughly 1 px = 3.5 mm**, which cannot specify a square tip. Half the named
+  defect *was* fixed (leaf length), so the pipeline is working; the drawing simply does not carry the
+  information.
+- **`sport-coat/quarter-canvas`** — attempt **4**, two majors on the canvas termination line. Compounded
+  by a documented source mismatch: the illustration is titled **`Single_layer`** and carries no
+  quarter/half/full callout at all, so the label and the drawing describe **different attributes**. No
+  extent claim is recoverable from this sheet.
+
+### 5 — Regression whack-a-mole and semantics (3 options)
+
+- **`shirt/collar-sq-65-btn`** — *"The named defect is fixed outright, and verified by pixel diff rather
+  than impression. A NEW DEFECT APPEARED IN THE SAME PASS: the spread dropped to 70° where its own
+  blueprint prints 80.00."* Fixing the tip broke the spread. Worth attempting once more **only with the
+  previously-correct spread added to `lockedFeatures`**, which is precisely what that field exists for.
+- **`suit-2pc/back-left-patch`** — the render shows **two** pointed patch pockets and *the drawing also
+  draws two*, but the option is "**Left** Pointed Patch Pocket". Everything about the pocket's own shape
+  locks (point angle, depth ratio, lateral position). This is not a rendering failure — it is the same
+  **left/right semantics question already open on the coin pocket**: does a sheet drawing both sides mean
+  "both" or is it showing placement for a single-side option? **Owner ruling, not a credit.**
+- **`suit-3pc/vest-chest-both-besom`** — *"Count is right; both previous faults persist and a new
+  compositional one has appeared."* Also already logged as a live-image WRONG for cropping one of two
+  besoms out of frame.
+
+### Summary
+
+| remedy | options |
+|---|---|
+| **generate again** (2) | `stitch-01-inner-plain`, `coin-left` |
+| **generate with locked features** (1) | `collar-sq-65-btn` |
+| **needs a better drawing** (2) | `collar-small-sq-50`, `quarter-canvas` |
+| **owner ruling on left/right semantics** (1) | `back-left-patch` |
+| **saturated — stop spending** (2) | `hem-single-turnup`, `vest-chest-both-besom` |
+
+Treating all eight as "retry exhausted, move on" would have written off two options that are one
+generation from shipping. Treating all eight as "try harder" would have burned credits on a fixed model
+prior and on two drawings that do not contain the answer.
