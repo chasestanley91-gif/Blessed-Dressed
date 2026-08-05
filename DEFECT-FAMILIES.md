@@ -1915,3 +1915,67 @@ same prior.
 Treating all eight as "retry exhausted, move on" would have written off two options that are one
 generation from shipping. Treating all eight as "try harder" would have burned credits on a fixed model
 prior and on two drawings that do not contain the answer.
+
+---
+
+## Retry wave: 7 corrected options generated and graded — the corrections worked
+
+3.5 credits. All 7 generated; 6 graded before the session limit stopped the seventh
+(`trousers/coin-both`, image on disk, grading owed).
+
+**Five of six had their specific named fault fixed, and all six went from carrying criticals to
+carrying none.** That is the headline: before this wave every one of these options was depicting the
+wrong thing. Now they depict the right thing with dimensional imperfections.
+
+| option | prior fault | fixed | min score | crit / major |
+|---|---|---|---|---|
+| `pleat-no-single-dart` | darts read as leg creases | **yes** | **93** | 0 / **0** |
+| `quarter-top` | mouth near-horizontal, should slant | **yes** | **93** | 0 / 1 |
+| `welt-pocket` | welt rotated 90° from the drawing | **yes** | 82 | 0 / 2 |
+| `jeans-square` | open mouth closed into a panel | **yes** | 80 | 0 / 1 |
+| `collar-hexagon-stand` | stepped hexagonal outline absent | **yes** | 74 | 0 / 3 |
+| `pocket-stitch-015` | hairline spanned ~1 px | **no** | 10 | 2 / 4 |
+
+`pleat-no-single-dart` came back with **zero critical and zero major findings** — only minors, at min 93.
+It is the closest thing in the queue to shippable and needs a 95 on two categories, not a re-shoot.
+
+### `collar-hexagon-stand` — the fault fixed, a *different* axis exposed
+
+The defining stepped hexagonal outline is now present on both leaves and measurable: tip → straight run
+inboard → sharp apex vertex → steep descent, with the apex a genuine vertex (rounding cuts 0.014 S off
+the ideal corner against 0.016 S in the drawing). Notch position inside the leaf's own frame lands at
+(0.343, 0.372) against (0.367, 0.380) drawn — within 7% and 2%.
+
+What is wrong is **attitude, not shape**: the whole leaf sits 9–10° steeper than drawn, confirmed three
+independent ways (outer-edge upper segment 45° drawn vs 54° rendered; lower segment 68.6° vs 79–82°;
+tip-to-notch run 14.6° vs 23.5°, the last fitted over 146 and 166 columns with residual sd 0.27 and
+0.51 px). The grader separated those two things explicitly, which is what makes the next correction
+cheap: keep the outline, change only the set of the leaf.
+
+Also worth keeping: the render is **more symmetric than its own drawing** (L/R notch offsets differ by
+0.5% against the drawing's 19%), and `spec.json` explicitly requires mirrored leaves — so here the
+drawing must *not* be copied literally.
+
+### `pocket-stitch-015` — the framing fix worked and the feature vanished
+
+The macro correction did what it was told: waistband depth went **146 px → 242 px**. And the render
+then dropped the topstitch **entirely** — a perpendicular cross-section averaged over 650 samples along
+a rectified mouth line (fit rms 0.53 px, 305 inliers) contains exactly one feature, and it is not a
+stitch. The photograph is now indistinguishable from its `pocket-stitch-none` sibling in the same field.
+
+Two further defects appeared in the same pass:
+
+- **A mannequin.** A smooth seamless cream torso with a hard shoulder edge, no weave, no seams, no body
+  — while the prompt says *"worn on a male model"* and lists *"mannequin"* as an explicit negative.
+- **The cloth actively hides the feature.** Along-line FFT gives a weave cell of **4.1–4.5 px**, about
+  **0.07 cm** at this frame's scale — an open basket/hopsack. The option's subject is a **0.15 cm**
+  hairline. A weave whose cell is half the width of the feature cannot show it.
+
+**New rule, and it generalises beyond this option:** for any sub-millimetre feature the *cloth* is a
+harder constraint than the framing. Specify a fine, flat, tightly-woven worsted — not merely a closer
+camera. Zooming in on hopsack magnifies the weave along with the stitch and nets nothing.
+
+This is the third distinct mechanism by which a "fix one thing" correction has broken something else
+(after `collar-sq-65-btn`'s spread dropping to 70° when its tip was fixed, and `vest-chest-both-besom`
+acquiring a new compositional fault). The remedy is already built and under-used: **put what currently
+works into `lockedFeatures` before correcting anything else.**

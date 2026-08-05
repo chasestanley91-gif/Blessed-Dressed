@@ -1,0 +1,91 @@
+{
+  "scores": {
+    "shape": 55,
+    "geometry": 45,
+    "dimensions": 10,
+    "angles": 62,
+    "construction": 20,
+    "placement": 88,
+    "symmetry": 75,
+    "composition": 55,
+    "blueprint-match": 25
+  },
+  "errors": [
+    {
+      "severity": "critical",
+      "category": "construction",
+      "description": "There is no topstitch anywhere along the pocket mouth. I rectified the pocket-mouth edge (line fit x = -0.36034*y + 422.11, 305 inliers, rms 0.53 px, y 395-700) and averaged 650 perpendicular cross-sections. The mean profile contains exactly one feature: a shadow trough at t = -1.0 px (grey 52.2) and a specular ridge at t = +2.0 px (grey 99.9) — the signature of a bare pressed fold — then monotonic shading fall-off. In the 6-12 px band where a 0.15 cm stitch must sit (see px/cm below), the largest deviation from that fall-off is ~0.7 grey levels against a local texture sigma of ~21 grey levels (SNR 0.03). A periodicity test confirms it: high-passed along-line FFT at every offset from -40 to +40 px gives a dominant period of 4.1-4.5 px at EVERY offset — that is the weave, equally strong 40 px out in open cloth — and power in the stitch-pitch band (10-24 px = 1.7-4.0 mm) peaks at t = +34.5 px, out in plain cloth, i.e. noise. Direct 8x inspection at y = 430, 560 and 680 shows a rolled edge with zero thread and zero needle penetrations. The same test on candidate-1 also finds no stitch, so this was never rendered, not lost.",
+      "expected": "a single machine topstitch row running the full pocket mouth, set 0.15 cm (approx. 8-10 px at this frame's scale) in from the folded edge, with resolvable individual needle penetrations at roughly 2-3 mm pitch — the one feature the option exists to sell",
+      "actual": "a bare pressed pocket-mouth fold with no stitching of any kind; the discriminating feature is entirely absent",
+      "correction": "Regenerate with the stitch as the literal subject: an unbroken machine topstitch row parallel to the pocket-mouth fold, offset 0.15 cm, individual stitches visible, thread matched to the cloth. State the stitch pitch explicitly in the prompt (2.5 mm) so the model has a countable target rather than an adjective."
+    },
+    {
+      "severity": "critical",
+      "category": "blueprint-match",
+      "description": "Because no stitch is rendered, the photograph is visually indistinguishable in its discriminating feature from its sibling option pocket-stitch-none (\"No Topstitch (Hidden Stitch)\"), which lives in the same field (data-store/options/suit-2pc.json, sections[10].fields[2], six options: pocket-stitch-none, -06, -double, -015, -pick-06, -pick-015). A customer shown this image is being shown the wrong option.",
+      "expected": "an image whose pocket mouth is unmistakably topstitched, so it cannot be confused with pocket-stitch-none and can be told apart from pocket-stitch-06 (0.6 cm) by stitch offset alone",
+      "actual": "an un-topstitched pocket mouth — the exact visual definition of the neighbouring pocket-stitch-none option",
+      "correction": "Do not publish. This is a wrong-option render, not a quality shortfall. Regenerate, and at QC verify the stitch by measuring its offset from the fold, not by eye."
+    },
+    {
+      "severity": "major",
+      "category": "composition",
+      "description": "The framing fault this attempt was meant to fix is only partly corrected. Using waistband depth (top edge to waistband bottom seam) as the landmark, validated visually in both frames: candidate-1 = y30 to y176 = 146 px; candidate-2 = y105 to y347 = 242 px, both frames 880x1168. Magnification increased 1.66x (waistband depth went from 12.5% to 20.7% of frame height). But it is still a hip shot, not a macro of a stitch line: at y = 500 there are 638 px (~10.5 cm) of dead cloth to the right of the pocket mouth and only ~4 cm to the left, most of it background, so the subject sits in the left third of the frame rather than filling it. Separately, the previous QC's stated basis was itself wrong — candidate-1 was ~36.5 px/cm, so 0.15 cm spanned ~5.5 px there, not \"roughly one pixel\".",
+      "expected": "the pocket mouth edge centred and spanning most of the frame, with only a few centimetres of cloth either side, as the prior correction directed",
+      "actual": "a 1.66x tighter hip shot with the pocket mouth pushed into the left third and ~10.5 cm of empty cloth on the right",
+      "correction": "Push in another ~1.5-2x and centre the pocket-mouth run on the frame diagonal. Note the standing conflict in the prompt: MATCHED FRAMING demands a fixed family distance while the QC correction demands a tighter crop. Resolve it by moving the whole six-option family to the macro distance, not by singling this one out."
+    },
+    {
+      "severity": "major",
+      "category": "angles",
+      "description": "Pocket-mouth slant is off. In the drawing the red position markers fit x = -0.28003*y + 264.84 (left, 5777 px, bbox x[84..220] y[172..650]) and x = +0.27914*y + 937.36 (right, 5837 px) = 15.64 and 15.60 degrees from vertical, bilaterally symmetric to 0.04 deg. In candidate-2 the pocket mouth measures 19.82 deg from vertical (y 395-700, n=305, rms 0.53 px), 19.68 deg on the lower segment (y 700-1000) and 20.36 deg over the full run — a consistent +4.2 deg, or +27% relative, against a prompt tolerance of under 2%. This is not perspective: wrapping around a curved hip foreshortens horizontally and would make the line MORE vertical, not less, and camera roll is ~0 (the waistband seam is level across the frame at y=347). Candidate-1 measured 16.08 deg, so this attempt regressed on an angle the previous one had right.",
+      "expected": "pocket mouth at 15.6 deg from vertical, matching the drawing's marked run on both sides",
+      "actual": "19.8 deg from vertical, a 4.2 deg / 27% over-slant",
+      "correction": "Restore the shallower 15.6 deg slant measured off the drawing. Candidate-1's pocket geometry (16.08 deg) is the reference to return to."
+    },
+    {
+      "severity": "major",
+      "category": "construction",
+      "description": "The garment is on a dress form, not worn. The top of the frame (y 0-200) shows a smooth, seamless cream torso with a hard shoulder edge, no shirt weave, no seams and no body. The prompt says \"Photographed worn on a male model\" and lists \"mannequin\" as an explicit negative term. Candidate-1 showed a blue shirt and read as genuinely worn, so this is a regression against both the positive instruction and the negative list.",
+      "expected": "trousers worn on a male model, as in candidate-1, with the cloth under natural body tension",
+      "actual": "a cream tailor's dress form visible above the waistband; the render reads as a mannequin shot",
+      "correction": "Reinstate the worn-on-model framing from candidate-1 and keep \"mannequin\" in the negative prompt. Crop above the waistband if necessary so no support is visible at all."
+    },
+    {
+      "severity": "major",
+      "category": "construction",
+      "description": "The cloth is wrong for the option and actively hides it. The weave in candidate-2 has a 4.1-4.5 px cell (measured by along-line FFT, dominant at every perpendicular offset), i.e. roughly 0.07 cm per cell at this frame's scale — a pronounced open basket/hopsack, not the \"fine wool trouser cloth\" the spec names and the prior QC locked. It is the loudest texture in the frame and its cell size is over 40% of the 0.15 cm stitch offset, so it would camouflage the hairline stitch even if one were rendered.",
+      "expected": "fine worsted trouser cloth with a tight, quiet weave that lets a 0.15 cm stitch offset read against it (candidate-1's cloth was correct)",
+      "actual": "a coarse open hopsack/basketweave whose cell size is comparable to the feature being documented",
+      "correction": "Return to the fine worsted of candidate-1 — the locked feature was \"fine wool trouser cloth\" and this drifted. Specify a smooth plain-weave worsted explicitly and forbid hopsack/basketweave/linen texture."
+    },
+    {
+      "severity": "minor",
+      "category": "placement",
+      "description": "Run length and count cannot be verified. In the drawing the marked run is 496 px against a front waistband depth of ~89.5 px (dark rows 94-104 to 182-195), a ratio of 5.54. At the render's 242 px waistband that predicts a 1341 px run in a 1168 px frame, so the pocket mouth necessarily exits the bottom-left corner — confirmed, the edge is still tracking at y=1000. The drawn lower termination at the side seam is therefore not shown, and only one of the two pockets the drawing marks is in frame.",
+      "expected": "the full drawn run, ideally with its lower termination, or an explicit decision that a macro crop shows only a portion",
+      "actual": "the run exits frame with no visible termination; the mirrored second pocket is not shown",
+      "correction": "Acceptable collateral of a macro crop, but frame so the run's start at the waistband seam AND a bar-tacked lower end are both included if the tighter crop allows, otherwise document the choice so QC does not re-flag it."
+    },
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "Cloth colour changed between attempts — candidate-1 was charcoal, candidate-2 is navy. Colour was not in the locked list verbatim, but this family of six is shown side by side and compared directly, so a colour swap between siblings adds a confound to a comparison that is supposed to isolate stitch offset.",
+      "expected": "one cloth colour held constant across the whole pocket-stitching family",
+      "actual": "navy here, charcoal in the previous attempt of the same option",
+      "correction": "Pin a single cloth colour for all six pocket-stitching options and hold it across regenerations."
+    }
+  ],
+  "lockedFeatures": [
+    "Front face of the garment, correctly identified: front pleat sits inboard of the pocket mouth, matching the drawing's pleat-inboard-of-pocket arrangement; waistband and belt loop present",
+    "Slant front pocket of the correct kind and start point — the mouth begins immediately below the waistband seam (y=347) at the drawing's upper terminus and runs down and outboard toward the side seam",
+    "Raking sidelight is working and is the right light for this subject: it produces a 48-grey-level modulation across 3 px on the folded edge (trough 52.2 at t=-1 px, ridge 99.9 at t=+2 px). This light would have revealed a stitch if one had been rendered — keep it exactly",
+    "Seamless neutral light-grey studio background with clean garment/background separation, no location, props or environmental context",
+    "Zero annotation bleed-through: no measurement numbers, units, arrows, leader lines, callouts, ruler ticks or text anywhere in the frame",
+    "No red and no cyan anywhere in the render — the drawing's red position markers (11614 px) and cyan guide marks (508 px) were correctly read as notation, not as cloth colour",
+    "Bar-tack-style reinforcement rendered at the pocket mouth's top corner (approx. x=300, y=385) — correct construction, keep it",
+    "Photorealistic, non-CGI rendering with genuine fibre-level texture and natural drape",
+    "Crop magnification: 1.66x tighter than candidate-1 (waistband depth 242 px vs 146 px). Do not give this back — the next attempt must be tighter still, never wider"
+  ],
+  "notes": "VERDICT: FAIL — do not publish. Two critical findings.\n\nFAULT-FIXED ANSWER, MEASURED. The fault was framing, with the operative test \"a macro close-up where the stitch is plainly resolvable.\" Landmark: waistband depth (top edge to waistband bottom seam), validated by overlay in both frames. candidate-1 = 146 px (y30-y176), candidate-2 = 242 px (y105-y347), identical 880x1168 frames. Magnification rose 1.66x. Scale: the drawing carries NO printed dimension callout, so no centimetre figure is strictly recoverable from it — every cm below is derived from the tailoring convention that a bespoke trouser waistband is 3.5-4.5 cm deep, and is given as a range. On that basis candidate-2 is 54-69 px/cm, so 0.15 cm subtends 8-10 px. Independent cross-check: belt-loop outer width 75 px (x 605-680); a suit-trouser loop is 1.0-1.2 cm, giving 62-75 px/cm — consistent, and an upper bound since the loop is foreshortened on the curved waistband. So the geometric half of the fault improved: 0.15 cm went from ~5.5 px to ~9 px and is now resolvable in principle. But faultFixed = false, on two grounds: (a) the frame is still a hip shot, not a macro — the subject sits in the left third with ~10.5 cm of dead cloth on the right, against a correction that asked for \"only a few centimetres of cloth either side\"; and (b) the stitch is not plainly resolvable because there is no stitch. A frame cannot pass a \"the stitch must be legible\" test when the stitch was never rendered.\n\nCORRECTING THE PRIOR QC. Attempt 1's finding said the stitch \"spans roughly a pixel.\" Measured, candidate-1 was ~36.5 px/cm, so 0.15 cm spanned ~5.5 px there — the prior QC was wrong by about 5x, and it diagnosed a framing problem when the actual defect was a missing feature. That misdiagnosis is why attempt 2 burned credits on a crop change and shipped the same defect. The next correction must lead with the missing stitch, not the crop.\n\nWHAT I COULD NOT MEASURE. (1) No absolute centimetre scale is recoverable — the drawing has no dimension callout; all cm figures are ranges from an assumed waistband depth and are labelled as such. (2) Left/right symmetry is not assessable: the drawing marks both pockets (left 5777 px, right 5837 px, slopes 15.64 and 15.60 deg, symmetric to 0.04 deg) but only one hip is in frame — symmetry scored 75 to reflect \"unverified\", not \"passed\". (3) The drawn run length (5.54x waistband depth) cannot be checked because the mouth exits frame. (4) Stitch pitch, thread weight and thread colour are unmeasurable because no stitch exists.\n\nMETHOD NOTES. The stitch-absence finding rests on three independent checks that agree: the averaged perpendicular profile (one fold signature, nothing else, SNR 0.03 in the 6-12 px band), the along-line FFT sweep (dominant period 4.1-4.5 px at every one of 321 offsets = the weave, stitch-band power peaking at t=+34.5 px out in open cloth = noise), and direct 8x visual inspection at three points. I checked the extracted line's span rather than trusting the first fit: the initial tracker returned only 273/600 inliers, so I refit on clean segments — y395-700 gave n=305 at rms 0.53 px, and the lower segment independently agreed (19.68 vs 19.82 deg), so the angle finding is not an artefact of a partial run. I also verified I was measuring the pocket mouth and not the pleat or the side seam by overlaying the fit on the image before taking any number from it.\n\nNO WRITES were made to data-store/ or public/images/generated/. Working files are in the session scratchpad only; nothing in .craft-pipeline was modified.\n\n[workflow retry-wave-7] faultFixed=false"
+}

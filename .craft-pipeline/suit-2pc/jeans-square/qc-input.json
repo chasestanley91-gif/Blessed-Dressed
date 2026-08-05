@@ -1,45 +1,78 @@
 {
   "scores": {
-    "shape": 70,
-    "geometry": 70,
-    "dimensions": 85,
-    "angles": 78,
-    "construction": 74,
-    "placement": 96,
-    "symmetry": 98,
-    "composition": 98,
-    "blueprint-match": 72
+    "shape": 92,
+    "geometry": 93,
+    "dimensions": 80,
+    "angles": 88,
+    "construction": 94,
+    "placement": 95,
+    "symmetry": 97,
+    "composition": 90,
+    "blueprint-match": 88
   },
   "errors": [
     {
       "severity": "major",
-      "category": "geometry",
-      "description": "The drawn pocket mouth is an OPEN path; the render closed it into a quadrilateral panel.",
-      "expected": "An open pocket mouth: a short vertical drop from the waistband, a sharp corner, then a single straight slanted run terminating at the front crease. Three connected edges, open at both ends.",
-      "actual": "A fully enclosed four-sided trapezoid outlined on the face of the cloth, with a closing right-hand edge that does not exist in the illustration.",
-      "correction": "Render the pocket as an OPENING, not an outlined shape. The stitch line must terminate at the front crease and at the waistband — it must not close back on itself."
+      "category": "dimensions",
+      "description": "The vertical drop from the waistband seam to the corner is about 18 percent short relative to the only clean vertical landmark shared by both images (waistband depth). Waistband depth validated first: drawing 103.5 px (five columns: 103.5/103/103/103.5/104), render 131.5 px (132 at x=200, 131 at x=440) - stable, so it is a usable normaliser. This is a purely vertical measure and is therefore NOT explained by the render's horizontal perspective compression.",
+      "expected": "Drawn drop = waistband-seam centre (195, 249.4) to corner (195, 326.4) = 77 px = 0.744 waistband-depths. Using the red marker's own top edge (y=240) instead gives 86 px = 0.831 WD, so the drawn target band is 0.74-0.83 WD.",
+      "actual": "Rendered drop = waistband-seam (207, 226.5) to corner (205, 307) = 80.5 px = 0.612 waistband-depths. Shortfall 17.7 percent against the lower bound, 26 percent against the upper. Verified not truncated: scanning y=200..232 over x=180..262 finds no arm signal above the seam (darkest high-pass only -3 to -5), and no arm continues below the corner (darkest -9.7 or weaker for y>=336), so both endpoints are real, not crop-limited.",
+      "correction": "Lengthen only the vertical segment: the drop from the waistband seam to the bar-tacked corner must equal about 0.78 x the visible waistband depth (in this render's scale, ~103 px rather than 80 px), moving the corner down to about y=330 while leaving the corner's x, the run direction, and the crease terminus untouched."
     },
     {
-      "severity": "major",
-      "category": "construction",
-      "description": "Rendered as a stitched-on patch/panel rather than a pocket opening with a mouth.",
-      "expected": "A jeans-style front pocket opening: a visible mouth with a topstitched edge, the pocket bag concealed behind the cloth.",
-      "actual": "A flat outlined trapezoid with no readable opening; no mouth, no depth, no bag entry. The pocket bag appears drawn onto the outside of the trouser front.",
-      "correction": "Show a genuine opening with a slight natural gape and a pressed, topstitched mouth edge. The pocket bag must never be outlined on the face of the cloth."
-    },
-    {
-      "severity": "major",
+      "severity": "minor",
       "category": "angles",
-      "description": "The defining 90 degree corner transition is not readable.",
-      "expected": "A sharp, unmistakable 90 degree corner where the vertical drop from the waistband turns into the slanted run — this right angle is the entire discriminator versus the Arc Jeans Pocket sibling.",
-      "actual": "The corner is absorbed into a trapezoid whose edges meet at soft, ambiguous angles; no crisp right angle reads at one second.",
-      "correction": "Force the right angle: state that the vertical segment drops about 4 cm from the waistband seam and then turns through a hard 90 degree corner with a bar tack at the corner, and that a curved or chamfered corner is a failure."
+      "description": "The corner turn is 5.0 degrees more open than the drawing. Feature named and verified: this is the angle between the vertical arm's fitted line and the run's fitted line at their meeting point - not the run's inclination and not the waistband angle.",
+      "expected": "Drawing corner = 96.5 degrees. Derived from arm centreline dead vertical (x=195.5 at y=246, x=195.0 at y=306 -> 0.5 deg off vertical) and run centreline slope +0.1138 (y 329 at x=218 to 364.5 at x=530, residuals under 1 px over a 312 px span). Note the option label says 90 degrees; the drawing says 96.5 degrees and the drawing wins.",
+      "actual": "Render corner = 101.5 degrees (101.1-102.4 deg across two independent traces: dark slot core slope 0.323 gives 102.4 deg, bright lip ridge slope 0.299 gives 101.1 deg; arm fitted x=211 at y=232 to x=204 at y=304). Delta 5.0 deg. After normalising both to their own waistband bottom seam the gap falls to roughly 2-4 deg, so most of this is projection, not drawing error.",
+      "correction": "Close the corner by about 5 degrees so the turn reads at 96-97 deg. Do this by rotating the run slightly flatter, not by tilting the vertical arm, and keep the bar tack exactly where it is."
+    },
+    {
+      "severity": "minor",
+      "category": "angles",
+      "description": "The run descends more steeply than drawn. Raw in-image difference is 11.4 degrees, but most of that is camera perspective; normalised against the waistband bottom seam (the horizontal reference present in both images) the residual is 3.6 degrees.",
+      "expected": "Drawing: run at +6.49 deg below horizontal; waistband bottom seam at -3.55 deg over the same x-span (y 249 at x=195 to y=228 at x=533). Run-to-waistband angle = 10.0 degrees.",
+      "actual": "Render: run at +17.9 deg below horizontal (slot core) / +16.6 deg (lip ridge); waistband bottom seam at +4.29 deg over the same span (y 226 at x=200 to y=244 at x=440). Run-to-waistband angle = 13.6 degrees. Residual delta 3.6 degrees.",
+      "correction": "Flatten the run by about 3-4 degrees relative to the waistband seam. It should still descend toward the crease, just less steeply. Do not flatten it to horizontal."
+    },
+    {
+      "severity": "minor",
+      "category": "dimensions",
+      "description": "The run's absolute length is 17 percent short in belt-loop-pitch units, but three independent horizontal landmarks show this is the camera's perspective, not a pocket error - I am recording it so a regeneration does not over-correct it.",
+      "expected": "Drawing, measured in units of belt-loop pitch (loop1 right edge x=155.5 as origin, pitch loop1->loop2 = 441 px): arm at 0.090, crease at 0.854, run span 0.764 units. Cross-checks: dart 1.484, welt 1.099-1.870.",
+      "actual": "Render (origin loop1 right edge x=162, pitch 374 px): arm at 0.115, crease at 0.749, run span 0.634 units - 17 percent short. But the crease itself sits 0.105 pitch further inboard in the render, and the welt (1.011-1.773) and dart (1.398) are shifted inboard by the same ~0.09 units, so every horizontal feature compresses together. The arm's own position is only 0.025 pitch (about 11 px) inboard of drawn.",
+      "correction": "Do NOT stretch the run. It correctly starts near the drawn arm position and correctly terminates at the crease; its length is determined by those two, and the crease position is a property of this camera angle. Fixing the vertical drop is the only dimensional change needed."
+    },
+    {
+      "severity": "minor",
+      "category": "construction",
+      "description": "The context welt (the jetted pocket right of the crease, which the drawing also shows) is about half as deep as drawn, in vertical units unaffected by horizontal foreshortening.",
+      "expected": "Drawing welt lip-to-lip: at x=700 the two jet strokes centre on y=357 and y=391 -> 34 px = 0.33 waistband-depths.",
+      "actual": "Render welt: at x=650 the two jet lines fall at y=421 and y=442 -> 21 px = 0.16 waistband-depths, and 25 px at x=700. Roughly half the drawn proportion. Its length (285 px, x=540 to x=825) and inclination (6.7 deg rising to the right vs 10.4 deg drawn) are both consistent with the global perspective compression, so only the depth is genuinely off.",
+      "correction": "Deepen the jetted welt to about 0.3 x waistband depth (~40 px at this render scale). Low priority - this is context, not the showcased option, and it must not steal attention from the front pocket."
+    },
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "The showcased craft option occupies a small share of the frame, with the lower 60 percent of the image carrying no information.",
+      "expected": "Per the catalog brief, the showcased option should dominate the frame so a customer reads it in one second.",
+      "actual": "The full pocket L spans x=190-445, y=225-390, i.e. about 255 x 165 px inside an 880 x 1168 frame - roughly 3.7 percent of the image area, sitting in the upper-left quadrant. Everything below y=500 is featureless navy cloth, and the coin/back welt in the lower right competes for attention.",
+      "correction": "Optional and lower priority than the drop-length fix. If the crop is changed at all, tighten downward-and-left so the pocket L fills 12-15 percent of the frame; but the current camera angle, lens character and lighting are correct and must survive any recrop."
     }
   ],
   "lockedFeatures": [
-    "fabric: navy worsted, matte, fine twill",
-    "camera angle and hip-crop framing",
-    "the separate horizontal coin-pocket welt to the right of the fly, which matches the drawing"
+    "OPEN mouth path - the prior fault is fixed and must never regress. Closure test: sampling every 10 px from x=220 to x=420, in a band 18-115 px below the lip line, the darkest high-pass response is -3.1 to -8.5, i.e. twill-weave noise, versus -20 to -35 on the actual mouth line and -13 to -20 on the waistband seam. No fourth edge exists. Right-side closure test x=450..500 likewise finds nothing stronger than -5.4.",
+    "Genuine aperture with depth along the WHOLE path, not just a stitch line. Slot-core luminance is 8-25 along the run (x=220..420) against adjacent cloth of 26-53, and 0-22 along the vertical arm against cloth of 46-55. The arm is shallower near the waistband (12-22) and deepest at the corner (0-3), which is physically correct for a mouth pinched shut at the waistband.",
+    "Bar tack at the corner: a distinctly brighter rectangular element at x=183-201, y=298-327, peak luminance 94 against surrounding cloth mean 49.7. This was an explicit ask of the previous correction and it landed.",
+    "Hard, un-radiused corner. The arm's dark trace holds x=204-205 down to y=304, and the run's trace takes over by y=308; the turn completes inside about 10 px. The drawing turns inside about 8 px of a 29 px stroke. No chamfer, no curve.",
+    "Run is STRAIGHT - this is the entire discriminator against the jeans-arc sibling. Straight-line fit through the slot core from x=232 to x=424 has maximum residual 2.7 px over a 249 px run (about 1.0 percent sagitta). The drawing's run has under 1 px residual over 312 px. Any regeneration that introduces a sweeping curve fails the pair gate.",
+    "Run terminates exactly at the front crease and does not cross it. The run line reaches (442, 381); the crease interpolates to x=442.4 at y=381. Past x=450 the high-pass response collapses to -2 to -5 (noise). The drawing does the same: red mask max x=533, crease ink at x=530-534.",
+    "Vertical arm starts at the waistband bottom seam (arm trace top y=232, seam centre y=226.5 at x=207) and stops dead at the corner (nothing stronger than -9.7 below y=336). Three connected edges, open at both ends - exactly the drawn topology.",
+    "Correct face, correct hip, correct sense: trouser front, vertical arm outboard, run descending inboard toward the crease. Matches the drawing's red path direction.",
+    "Mouth lips are parallel and the mouth width is even: slot-core slope 0.323 vs lip-ridge slope 0.299, a 1.3 degree divergence over a 200 px span.",
+    "Pressed, rolled lower lip with a specular highlight ridge (high-pass +12 to +23) running parallel below the aperture. This is the cue that makes it read as an opening rather than a drawn outline.",
+    "Context layout reproduces the drawing within about 5 percent in belt-loop-pitch units: dart at 1.40 vs 1.48 drawn, welt spanning 1.01-1.77 vs 1.10-1.87 drawn, crease at 0.75 vs 0.85 drawn, three visible belt loops in both.",
+    "Fabric and light: navy worsted twill, matte, visible weave and fibre; soft directional light from the left; no hands, no tie, no accessory obstructing the pocket; plain neutral background; hip-level crop with the white shirt hem as the only other element."
   ],
-  "notes": "Graded against sibling suit-2pc/jeans-arc (attempt 1, PASS). The two candidates ARE mutually distinguishable — arc reads curved, square reads angular — so the pair gate does not reject the set. This option fails on its own geometry, not on collapse against its sibling. Any retry must stay clearly distinct from the arc rendering: square = hard right angle and straight runs, arc = continuous sweeping curve."
+  "notes": "VERDICT: the specific prior fault IS fixed, but the image still fails the 98 bar on dimensions.\n\nFAULT FIXED - measured, not eyeballed. Candidate-1 carried a fully enclosed four-sided trapezoid outlined on the cloth face. Candidate-2 does not: sweeping the band 18-115 px below the mouth line at every 10 px from x=220 to x=420, the strongest dark response anywhere is -8.5 high-pass, against -20 to -35 on the real mouth and -13 to -20 on the waistband seam. There is no closing edge, top, bottom or right. The mouth is also a real aperture, not a drawn line: core luminance runs 0-25 against 26-55 cloth along the entire L, including up the vertical arm. A bar tack now sits at the corner. All three of the prior errors (geometry / construction / angles) are resolved.\n\nREMAINING BLOCKER - one major, in dimensions. The vertical drop from the waistband seam to the corner is 0.612 waistband-depths where the drawing gives 0.744-0.831. That is 18-26 percent short. Waistband depth was validated as a landmark before use (drawing 103.5 px across five columns, render 131.5 px across two), and because both the drop and the normaliser are vertical, this shortfall survives the perspective correction that explains away every other size difference. Fixing it means moving the corner down roughly 23 px in this render's scale and nothing else.\n\nWHAT I CHECKED THAT TURNED OUT NOT TO BE AN ERROR. My first pass read the run as 43 percent short (1.88 waistband-depths vs 3.29 drawn) and the corner as 11 degrees too steep. Both collapsed under normalisation. Three independent horizontal landmarks - belt-loop pitch, welt length, and the crease's own position - all compress by the same 0.60-0.66 factor in the render relative to the drawing, so the run's apparent shortfall is this camera's foreshortening, not a pocket error; the arm sits only 0.025 belt-loop-pitches (about 11 px) inboard of drawn. Likewise, the raw 11.4 degree run-inclination gap falls to 3.6 degrees once measured against each image's own waistband bottom seam. I am flagging this explicitly because a regeneration that \"fixes\" the run length would break a geometry that is currently correct.\n\nMEASUREMENTS I COULD NOT MAKE. (1) No centimetre figures are recoverable. The tech pack carries no printed dimension callout, so every number above is a ratio against a shared landmark; the spec's \"90 degrees\" is a label, not a drawing callout. (2) The drawing itself measures 96.5 degrees at the corner, not 90 - the label overstates squareness by 6.5 degrees, and I graded against the drawing. (3) I could not confirm whether the mouth carries visible topstitching. The luminance profile 9 px below the slot shows a ~6.1 px periodicity, but the twill's own diagonal gives a control residual of 10.9 std against the lip's 15.0, which is not enough separation to call it. The drawing shows a plain line with no stitch marks, so nothing is demanded either way.\n\nNothing was written to data-store/ or public/images/generated/. Measurement crops saved to .craft-pipeline/suit-2pc/jeans-square/evidence/ (pocket_zoom.png, corner_zoom.png, crease_end_zoom.png, hp_pocket.png). Note that folder already contained an unrelated candidate-3.png and *-run1-UNMET.json files that I did not touch.\n\n[workflow retry-wave-7] faultFixed=true"
 }

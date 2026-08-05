@@ -1,0 +1,86 @@
+{
+  "scores": {
+    "shape": 98,
+    "geometry": 94,
+    "dimensions": 94,
+    "angles": 96,
+    "construction": 98,
+    "placement": 95,
+    "symmetry": 96,
+    "composition": 93,
+    "blueprint-match": 95
+  },
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "geometry",
+      "description": "The pressed leg crease is laterally offset OUTBOARD of the dart line, whereas the drawing puts the crease essentially collinear with (very slightly inboard of) the dart point. Measured in the drawing: left dart point x=377, crease head x=391 -> crease is 14px (0.18 waistband-depths) INBOARD; right 824 vs 809 -> 15px (0.19 wb) inboard. Measured in the render: left dart point x=238, crease x=221 at y=520 and x=192 at y=600 -> 17-46px (0.25-0.67 wb) OUTBOARD; right dart point 650 vs crease 676-682 -> 26-32px (0.38-0.47 wb) OUTBOARD. Confirmed independently by crease position across leg width: drawing puts each crease at 53% of leg width in from the outer edge (dead centre); the render puts them at 31% (left, y=1100: leg spans x108-365, crease x187) and 34% (right: leg spans x515-778, crease x689). It is symmetric and consistent with feet slightly splayed, so it is a pose artefact rather than a construction error, but it is the single largest geometric departure from the drawing and it also reads as a crease not pressed down the centre of the leg.",
+      "expected": "crease head within ~0.2 waistband-depths of the dart point and falling at ~50% of leg width (drawing: 53%)",
+      "actual": "crease head 0.25-0.67 waistband-depths outboard of the dart point, falling at 31-34% of leg width from the outer edge",
+      "correction": "Square the model's feet forward so each leg faces the camera; press the front crease through the dart line so the crease head sits within a quarter waistband-depth of the dart point and runs down the centre of each leg."
+    },
+    {
+      "severity": "minor",
+      "category": "dimensions",
+      "description": "Belt loops hang more than twice as far below the waistband bottom seam as the drawing, which pushes the dart's visible origin lower. Drawing: waistband front top edge y=78.5, bottom seam y=158.5 (depth 80px), belt loop spans y=72-177, so the loop overhangs the seam by 18.5px = 0.23 waistband-depths; loop length 105px = 1.31 wb. Render: top edge y=46, bottom seam y=114.5 (depth 68.5px), loop spans y=50-149 (bar tack at 148, brightness jumps 33->88 at y=151), overhang 34.5px = 0.50 wb; loop length 99px = 1.45 wb. Consequence: the dart's visible head sits 0.61 wb below the seam instead of 0.26 wb.",
+      "expected": "belt loop overhang 0.23 waistband-depths below the seam; loop length 1.31 waistband-depths",
+      "actual": "overhang 0.50 waistband-depths (+117%); loop length 1.45 waistband-depths (+11%)",
+      "correction": "Shorten the belt loops so the bar tack sits about a quarter of a waistband-depth below the waistband seam, exposing the head of the dart where it is caught in the seam."
+    },
+    {
+      "severity": "minor",
+      "category": "dimensions",
+      "description": "The clean span between the dart point and the start of the pressed crease is shorter than the drawing. Drawing: dart point y=324, crease head y=679 (first contiguous dark run x375-400 and x798-825, contiguous 679-1148, 470 rows, span verified) -> gap 355px = 4.44 waistband-depths. Render: left dart point y=283, crease onset y~520 -> 237px = 3.46 wb; right dart point y=288, crease onset y=508 (cross-section amplitude 19 at y=500 rising to 34 at 510, 53 at 530) -> 220px = 3.21 wb. That is 72-78% of the drawn gap, or roughly 82-88% once the render's overall ~10-20% vertical foreshortening is allowed for (the fly bottom and crease onset compress by the same factor). The gap is still unmistakable, but it is measurably tight.",
+      "expected": "gap of 4.44 waistband-depths between dart point and crease head",
+      "actual": "gap of 3.21 (right) to 3.46 (left) waistband-depths",
+      "correction": "Start the pressed crease roughly half a waistband-depth lower on each leg so the plain span between dart point and crease reaches about four waistband-depths."
+    },
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "Left-to-right lighting imbalance of 3.3-3.8:1 leaves the right dart in a very dark field. Mirrored patches about the centre-front line (x=444): y150-300 at 230-330px offset gives left mean 102.1 vs right 26.8 (3.81:1); y300-450 same offset gives 95.8 vs 28.8 (3.33:1); y150-300 at 120-220px offset gives 88.6 vs 39.1 (2.27:1). The right front panel sits at 8-12% mean luminance. The right dart still reads because it renders as a highlight rather than a shadow (cross-section amplitude 57-79 grey levels vs 68-80 on the left), but the two panels do not present the same feature equally, which works against side-by-side option comparison.",
+      "expected": "both front panels lit within roughly 1.5:1 so each dart reads with equal clarity",
+      "actual": "3.3-3.8:1 luminance ratio between mirrored left and right patches; right panel at 8-12% mean luminance",
+      "correction": "Add fill from camera right to bring the right front panel to within about 1.5:1 of the left, while keeping the left dart's shadow line intact."
+    },
+    {
+      "severity": "minor",
+      "category": "angles",
+      "description": "Dart tilt is about twice the drawn tilt. Drawing: left dart centre drifts from x=384 at y=179 to x=375.5 at y=324, i.e. 8.5px outboard over 145px = 3.4 degrees from vertical, leaning outboard at the point; right identical at 3.4 degrees (815.5 -> 824). Render: left 256 at y=152 to 238 at y=283 = 18px over 131px = 7.8 degrees; right 637 at y=155 to 650 at y=288 = 13px over 133px = 5.6 degrees. Direction is correct (outboard at the point) on both sides; magnitude is 2.2-3.3 degrees over. The two sides also differ from each other by 2.2 degrees.",
+      "expected": "3.4 degrees from vertical, leaning outboard at the point, matched left and right",
+      "actual": "7.8 degrees (left) and 5.6 degrees (right)",
+      "correction": "Bring each dart closer to vertical - about 3-4 degrees of outboard lean - and match the two sides to within a degree."
+    },
+    {
+      "severity": "minor",
+      "category": "placement",
+      "description": "Darts sit slightly outboard of their belt loop centres, where the drawing centres them exactly. Drawing: belt loop bodies at x369-397 (centre 383) and x802-831 (centre 816.5); dart head centres x=384 and x=815.5, i.e. within 1px = 0.01 waistband-depths of the loop centre. Render: left loop body x248-272 (centre 260) with dart head at x=256 -> 4px outboard = 0.06 wb; right loop body x612-645 (centre 628, lit face peaking x624-636) with dart head at x=637 -> 9px outboard = 0.13 wb. Landmark validated first: belt-loop pitch divided by waistband depth is 5.42 in the drawing (433.5/80) and 5.37 in the render (368/68.5), a 0.9% match.",
+      "expected": "dart head centred under the belt loop within 0.01 waistband-depths",
+      "actual": "0.06 waistband-depths outboard (left), 0.13 outboard (right)",
+      "correction": "Shift each dart head inboard by roughly a tenth of a waistband-depth so it is centred exactly under its belt loop."
+    },
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "About 45px of white shirt and a shirt button occupy the top of the frame above the waistband (garment cloth begins at y=46; background/shirt above that). The drawing is waistband-down only. It is a small non-garment element in a frame whose sole job is the dart, and it is the brightest thing in the picture, pulling the eye away from the feature.",
+      "expected": "frame content limited to the trouser front from the waistband down",
+      "actual": "45px band of white shirt plus one shirt button at the top edge of the frame",
+      "correction": "Crop or tuck so the frame starts at the waistband top edge, or shade the shirt down so it is not the brightest element."
+    }
+  ],
+  "lockedFeatures": [
+    "Exactly one dart per front panel, two in total, one directly under each belt loop - no more, no fewer",
+    "Dart begins at the waistband seam beneath the belt loop bar tack and terminates high on the hip: visible length 131px (left) and 133px (right) = 1.91 and 1.94 waistband-depths, against 1.81 in the drawing (+6-7%)",
+    "Dart tapers to a point rather than running out: cross-section amplitude decays 80 -> 72 -> 31 -> 26 grey levels over the final 30px (left) and 79 -> 45 -> 19 (right)",
+    "A clean, feature-free span of 3.2-3.5 waistband-depths between the dart point and the head of the pressed crease - ridge amplitude in that span is 14-33 grey levels versus 57-80 inside the dart and 58-90 inside the crease",
+    "Flat front proven: no pleat fold anywhere, and the waistband bottom seam runs unbroken across both front panels",
+    "Left/right dart symmetry: lengths 131 vs 133px (1.5% apart); head offsets from centre front 189 vs 193px (2% apart); point offsets 205 vs 207px (1% apart)",
+    "Both darts individually legible despite opposite lighting - the left renders as a shadow line, the right as a highlight line, with comparable cross-section amplitude (68-80 vs 57-79 grey levels)",
+    "Two belt loops at a pitch/waistband-depth ratio of 5.37 against the drawing's 5.42 (0.9% match) - this is the landmark the whole grade is normalised to",
+    "One slanted side pocket per side, opening set 0.53 waistband-depths inboard of the side seam (drawing 0.58), and clearly separate from the dart (94-134px of plain cloth between them)",
+    "Fly with visible J topstitch terminating just above the crease onset - 0.95 of the waistband-seam-to-crease-head distance, against 1.05 in the drawing",
+    "Front view, wearer's front face, waistband-to-knee framing, seamless neutral studio background",
+    "Fine wool trouser cloth with visible weave, charcoal value dark enough to hold the weave yet light enough on the left panel for the dart's shadow to read"
+  ],
+  "notes": "FAULT FIXED - YES, and measured rather than eyeballed. The prior failure was that the darts were indistinguishable from the pressed leg creases. I ran a contrast-normalised vertical-ridge detector (horizontal Laplacian over a vertically smoothed image, divided by local horizontal standard deviation) over the same dart bands in candidate-1 and candidate-2.\n\ncandidate-1, left band x200-330: weak and sign-flipping near the waistband (|v| 2-5), then a STRONG unbroken run of |v| 6-8.5 from y=264 straight through y=400 and on down the leg - a continuous crease, no separately readable dart. candidate-1, right band x580-700: nothing strong at all, max |v| ~6 at two isolated rows, i.e. effectively no dart on that side.\n\ncandidate-2, left: |v| 9.2-10.6 continuously from y=156 to y=284, then collapsing to <=5.2 by y=288 and staying there. candidate-2, right: |v| 8.6-9.8 from y=160 to y=292, collapsing to <=3.6 by y=296. Confirmed in raw grey levels: left dart cross-section amplitude 68/80/79/72 at y=170/210/250/270, dropping to 31 at y=285 and 26 at y=300; right 66/57/78/79 dropping to 45 at 285 and 19 at 300. Dead-zone between dart point and crease head: max ridge 4.8-5.2 sigma, mean 3.3-4.8, i.e. drape shading only. So both darts now terminate high on the hip and both are separated from the crease by a clean span. The fault is corrected on BOTH panels, where candidate-1 had it right on neither.\n\nVERDICT: still below the 98 bar. Sub-98 categories: geometry 94, dimensions 94, angles 96, placement 95, symmetry 96, composition 93, blueprint-match 95. Three sit below even the 95 waiver: geometry, dimensions, composition. There are ZERO critical and ZERO major findings - every remaining discrepancy is cosmetic and none of them would change which option a customer perceives. If the retry budget is spent, this is a defensible waiver candidate; if a retry is available, the three highest-value fixes are (1) square the feet and press the crease through the dart line, (2) shorten the belt loops, (3) fill the right panel.\n\nMEASUREMENT BASIS. No printed dimension callout exists anywhere on the illustration, so NO centimetre figure is recoverable for dart length, dart intake, waistband depth or crease position - everything above is a ratio. Landmark validated first: belt-loop pitch / waistband depth = 5.42 in the drawing (433.5px / 80px) vs 5.37 in the render (368px / 68.5px), agreeing to 0.9%, so the normaliser is sound. Waistband depth in the drawing = front top edge y=78.5 to bottom seam y=158.5; in the render = cloth top edge y=46 to the brightness trough at y=114 (profile minimum 66.2 at y=114 between plateaus of ~100). Illustration dart = the red annotation, red mask spanning y179-324, x368-393 and x807-832, bounding box checked against what is visible.\n\nWHAT I COULD NOT MEASURE. (a) Dart INTAKE - the width of cloth removed. The drawing's red overlay is a constant-width annotation stroke (15, 17, 15, 19px down its length), so it carries no taper information; I can confirm the render's dart tapers to a point but cannot check its intake against the drawing. (b) Any real-world dimension in cm, for the reason above. (c) Whether the render's side-pocket opening terminates at the side seam as the drawing's does (drawing: pocket line merges with side seam at y=500, 4.27 waistband-depths below the seam) - in the render the outer edge is too shadowed to separate pocket line from side seam below y~480. (d) Fabric drape, press quality and fibre rendering have no counterpart in a flat line drawing and were judged on tailoring plausibility only, not on blueprint match.\n\nTRAPS CHECKED. Span check: the illustration crease was verified as a contiguous 470-row run (y679-1148), not a partial mask. Saturation check: every ridge peak reported sits interior to its search window - my first right-dart trace put the peak at x=623, which is the belt loop edge, not the dart, so I re-ran it with the loop excluded and got the true dart at x637-650. Shadow-vs-edge check: the left dart reads as a shadow and the right as a highlight, so I measured both with a signed ridge response rather than a single dark threshold, which would have found the left dart and missed the right one entirely. Feature-identity check: the dart at x238-256 is 94-134px away from the side-pocket line at x114-160 at the same heights, so the two are not being confused.\n\nNo files were modified. data-store/ and public/images/generated/ were not touched; the only writes were contrast-stretched crops in the session scratchpad.\n\n[workflow retry-wave-7] faultFixed=true"
+}
