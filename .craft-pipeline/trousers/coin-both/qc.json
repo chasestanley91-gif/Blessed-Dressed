@@ -2,18 +2,18 @@
   "addr": "trousers > coin-both",
   "productId": "trousers",
   "optionId": "coin-both",
-  "attempt": 2,
+  "attempt": 3,
   "maxAttempts": 3,
   "scores": {
-    "shape": 44,
-    "geometry": 54,
-    "dimensions": 45,
-    "angles": 78,
-    "construction": 77,
-    "placement": 76,
-    "symmetry": 90,
-    "composition": 84,
-    "blueprint-match": 54
+    "shape": 92,
+    "geometry": 88,
+    "dimensions": 82,
+    "angles": 90,
+    "construction": 94,
+    "placement": 95,
+    "symmetry": 94,
+    "composition": 93,
+    "blueprint-match": 88
   },
   "scoreMin": 98,
   "waiverMin": 95,
@@ -34,72 +34,40 @@
     "dimensions",
     "angles",
     "construction",
-    "placement",
     "symmetry",
     "composition",
     "blueprint-match"
   ],
   "errors": [
     {
-      "severity": "critical",
-      "category": "shape",
-      "description": "Aspect ratio is INVERTED. The drawn markers measure 151 wide by 126 deep on the left bag and 148 by 125 on the right - about 1.2:1 landscape. The rendered patches measure about 121 wide by 175 deep on both bags - about 1:1.44, portrait. The previous attempt was near-square; this one has gone past landscape entirely and out the other side.",
-      "expected": "A landscape rectangle about 1.2 times as wide as it is deep",
-      "actual": "A portrait rectangle about 1.4 times as deep as it is wide",
-      "correction": "Render each coin pocket as a squat landscape rectangle whose depth is about four fifths of its width - measurably wider across the bag than it is tall - with squared lower corners."
-    },
-    {
       "severity": "major",
       "category": "dimensions",
-      "description": "Patch depth normalised to bag depth. Drawing: 126px patch against a 620px bag, ratio 0.20. Render: about 175px against about 415px, ratio 0.42 - more than double the drawn depth. Width is close: 0.71 of bag width drawn against 0.64 rendered.",
-      "expected": "Patch depth about one fifth of the bag's total depth",
-      "actual": "About two fifths, so its top edge climbs to mid-bag",
-      "correction": "Halve the patch depth, keeping its bottom edge at its present height so the top edge settles at roughly three quarters of the way down the bag."
+      "description": "The coin pocket is still not at the drawn proportion, though it is no longer inverted. Drawing, measured by saturated-red component detection (the markers are the only saturated red on the sheet, so the mask is unambiguous): left marker 6192px at bbox x[170..347] y[669..808] = 178 wide by 140 deep, aspect 1.27:1; right marker 6175px at x[858..1037] y[669..808] = 180 by 140, aspect 1.29:1. Render, read off a 4x nearest-neighbour zoom gridded in original image coordinates: the left U spans a riser at x=67 running y=638 to 690, a slanted bottom descending right to x=197 y=720, and a second riser at x=197 running y=672 to 720 - bounding box 135 wide by 82 deep, aspect 1.65:1. So the render is about 30 percent flatter relative to its width than drawn.",
+      "expected": "coin pocket bounding box about 1.27:1 landscape, matching the drawn markers on both bags",
+      "actual": "about 1.65:1 - correctly landscape, but too shallow for its width",
+      "correction": "Keep the landscape orientation exactly as it now is. Deepen the pocket only: the two risers must run about four fifths as long as the mouth is wide (drawn 140 deep against 178 wide), where they currently run about half. Do not widen the pocket to correct the ratio - the width is already right relative to the bag."
     },
     {
       "severity": "minor",
-      "category": "construction",
-      "description": "Small dark dots at the bag tops and along the fly render as metal studs. The drawing's filled dots at those stations denote bar tacks.",
-      "expected": "Thread reinforcement tacks at the bag corners and fly stations",
-      "actual": "Hard round dots reading as metal hardware",
-      "correction": "Render these as short dense thread bar tacks in pocketing-matched thread, lying flat in the cloth."
+      "category": "geometry",
+      "description": "The two risers are unequal in length and the bottom edge slants. Left riser y638-690 (52px), right riser y672-720 (48px), bottom descending from y=690 at x=67 to y=720 at x=197. The drawn marker's own bottom is level and its risers equal. Some of this is legitimate - the pocket follows the bag's own angle and the bag is photographed on a body - so it is not scored as a major.",
+      "expected": "risers of equal length with a level bottom, as drawn",
+      "actual": "risers 52 and 48px with a bottom descending 30px across the mouth",
+      "correction": "Low priority. If the depth is corrected, set both risers to the same length and let the bottom follow the bag angle no more steeply than the bag's own edge."
     }
   ],
-  "verdict": "FAIL",
+  "verdict": "UNMET",
   "waiver": null,
-  "correction": {
-    "errors": [
-      {
-        "severity": "critical",
-        "category": "shape",
-        "error": "Aspect ratio is INVERTED. The drawn markers measure 151 wide by 126 deep on the left bag and 148 by 125 on the right - about 1.2:1 landscape. The rendered patches measure about 121 wide by 175 deep on both bags - about 1:1.44, portrait. The previous attempt was near-square; this one has gone past landscape entirely and out the other side.",
-        "expected": "A landscape rectangle about 1.2 times as wide as it is deep",
-        "actual": "A portrait rectangle about 1.4 times as deep as it is wide",
-        "correction": "Render each coin pocket as a squat landscape rectangle whose depth is about four fifths of its width - measurably wider across the bag than it is tall - with squared lower corners."
-      },
-      {
-        "severity": "major",
-        "category": "dimensions",
-        "error": "Patch depth normalised to bag depth. Drawing: 126px patch against a 620px bag, ratio 0.20. Render: about 175px against about 415px, ratio 0.42 - more than double the drawn depth. Width is close: 0.71 of bag width drawn against 0.64 rendered.",
-        "expected": "Patch depth about one fifth of the bag's total depth",
-        "actual": "About two fifths, so its top edge climbs to mid-bag",
-        "correction": "Halve the patch depth, keeping its bottom edge at its present height so the top edge settles at roughly three quarters of the way down the bag."
-      }
-    ],
-    "lockedFeatures": [
-      "Two coin pockets, exactly one per bag, one on each side - count correct and preserved",
-      "HORIZONTAL SEAT FIXED: patches now span 22-86 percent of bag width from the outer edge against the drawn 23-94, centre at 54 against 59 - the 'shoved to the outer edge' failure is resolved",
-      "Bottom edge of each patch at 92 percent of bag depth, matching the drawing exactly",
-      "Interior view with both bags flipped out, matching blueprint orientation",
-      "Left and right patches mirror-matched to within a few pixels",
-      "No red rendered onto cloth"
-    ],
-    "forbiddenChanges": [
-      "do not alter any checklist item this attempt already passed",
-      "do not change the camera crop, composition, or accessories unless the error is itself a composition error",
-      "do not change the garment part, orientation, or any other option's geometry"
-    ]
-  },
-  "notes": "The placement half of the defect is genuinely fixed. The aspect-ratio half is not, and is now WORSE than before: the render swung from near-square past the drawn 1.2:1 into 1:1.44 portrait. Same root cause as watch-both - the correction supplied an adjective ('squat landscape') where it needed the measured ratio.\n\nBLUEPRINT COLLISION, verified by md5: this option's blueprint file (blueprints/remote/7f475092fe8b__3532.jpg) is BYTE-IDENTICAL to watch-both's (blueprints/factory/88f95280e442__3532__Left_right.jpg) - same md5 87658726bf98f5322cbc719704c23291, same 61437 bytes, two filenames in two folders. One drawing backs two different craft options, a coin pocket and a watch pocket, with markers in the same position. The illustration alone therefore CANNOT distinguish the two options, and no amount of fidelity to it will make the two images differ. Recorded as a finding.\n\nNOT measurable: centimetre dimensions - no callouts on this drawing. All figures are ratios against bag width and depth.",
-  "checkedAt": "2026-08-02T17:59:36.272Z"
+  "correction": null,
+  "lockedFeatures": [
+    "COUNT IS CORRECT AND THIS IS THE OPTION'S WHOLE IDENTITY: exactly two coin pockets, one on each pocket bag, both fully in frame. The drawing carries two saturated-red markers (6192px and 6175px, bilaterally placed at the same height y669-808) and the render has two.",
+    "THE NAMED FAULT IS FIXED: the aspect ratio is no longer inverted. Attempt 2 rendered portrait; attempt 3 measures 1.65:1 LANDSCAPE against a drawn 1.27:1 - the same orientation as the drawing.",
+    "U-SHAPED OPENING, OPEN AT THE TOP: both pockets render as two risers and a bottom with no top edge, matching the drawing's U marker exactly. Verified at 4x on both bags independently. This is the same construction the coin-left grading found MISSING on its own render, where the pocket was sealed on all four sides - so this render has it right and must not regress.",
+    "Interior/cutaway presentation matching the drawing's own convention - the trousers are shown inside-out with both pocket bags exposed, which is how the blueprint draws them.",
+    "Both coin pockets sit low on their bags, near the bag's bottom edge, as drawn.",
+    "Bilateral symmetry between the two pockets: both present, both the same size within reading error, both at the same height on their respective bags.",
+    "Topstitched outline rendered as visible discrete stitching rather than a printed line."
+  ],
+  "notes": "Attempt 3. The named fault - inverted aspect ratio - IS FIXED, and that is the headline: attempt 2 rendered portrait, attempt 3 is landscape in the same sense as the drawing.\n\nTWO MEASUREMENTS WERE ATTEMPTED AND DISCARDED rather than reported, both because they measured the wrong feature:\n\n1. Local-background subtraction (image minus a 9px blur, keeping pixels 14/20/26 grey levels darker than their surroundings) returned 117x26 at aspect 4.50:1 on the left bag - that is the bottom stitch line alone, not the U - and on the right bag returned a 25x150 component TOUCHING THE CROP EDGE, which is the bag's own edge seam. Neither is the coin pocket.\n\n2. A column scan for the pocket bag's vertical extent, intended to normalise depth against bag depth the way the drawing was normalised (marker depth / enclosing dark extent = 0.215 on both bags), returned a longest run of y[0..111]. That is the white shirt at the top of the frame, not the bag.\n\nCOULD NOT MEASURE as a result: coin depth normalised to bag depth in the render, which is the figure that would make the dimensions finding precise rather than relative. The aspect-ratio comparison above does not depend on it and stands on its own, since both drawing and render aspect are internal to the pocket.\n\nNo centimetres are claimed anywhere: sheet 3532 carries no printed dimension callout, so no real-world scale is recoverable from it.\n\n[graded in the main loop, not by a subagent - the workflow's qc:coin-both agent died on the session limit]",
+  "checkedAt": "2026-08-05T18:01:39.887Z"
 }

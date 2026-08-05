@@ -111,6 +111,18 @@
     "grantedAt": "2026-07-31T23:49:20.469Z"
   },
   "correction": null,
+  "lockedFeatures": [
+    "straight-on frontal view, square to the camera, matching the drawing",
+    "both collar leaves fully in frame and mirror images of each other",
+    "a single clean acute point on each leaf — no doubled edge, no secondary crease",
+    "no button, loop, tab or button-down anchor at or near either point",
+    "collar band with its buttonhole and button visible",
+    "no model, no face, no neck, no skin in frame",
+    "no necktie",
+    "white cotton poplin with visible weave",
+    "seamless neutral light-grey studio background",
+    "zero traced annotation: no numbers, no 60.00 degree callout, no leader lines, no arrows"
+  ],
   "notes": "ATTEMPT 3, taken after this option sat UNMET at 'attempt 2 of 2' — a full attempt short of the confirmed 3-attempt budget. Attempt 2's two MAJOR defects are both resolved and neither recurs: the pale malformed lump at the wearer-right collar point, and the doubled/ambiguous leaf edge. Both were artifacts of an extreme three-quarter viewpoint, and the square frontal view the drawing itself uses removed them together.\n\nTwo upstream defects were fixed before this attempt rather than worked around in the prompt. First, the prompt had been built from a STALE spec asserting 'button-down point' — a shape scraped from the description's comparative clause ('the sweet spot between the long traditional point and the casual button-down'). Second, and the reason the first fix was not sufficient on its own: dropping the shape stops the prompt ASSERTING a button-down, but the sentence survives verbatim inside the quoted description, so the model is still told about one. The interpreter now reports such shapes as negatedShapes and the director emits each as an explicit NEGATIVE. Across all 2,862 catalog options this fires on exactly 3 — the same 3 the failure log named, two of them HIDDEN-button options where a visible button is the precise opposite of what the option means — and on no others.\n\nAll nine categories are at or above 95 with zero Critical or Major findings, so this qualifies for the logged waiver at attempt 3 under the standing policy. The three remaining findings are minor, and two of them are limits of the format rather than faults in the render.",
   "checkedAt": "2026-07-31T23:49:20.470Z"
 }

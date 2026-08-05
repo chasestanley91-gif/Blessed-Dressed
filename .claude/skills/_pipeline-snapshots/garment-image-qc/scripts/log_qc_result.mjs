@@ -250,6 +250,19 @@ const record = {
   verdict,
   waiver,
   correction,
+  // ALWAYS record what the image got RIGHT, at the top level, whatever the
+  // verdict. Until now lockedFeatures lived only inside `correction`, and
+  // `correction` is false whenever no retry is owed — so on UNMET (and on PASS)
+  // the list was silently dropped and survived only in the raw qc-input.json.
+  //
+  // That is backwards. An UNMET option is exactly the one someone will revisit
+  // later, after a better drawing arrives or a merge ruling lands, and the first
+  // thing they need is what already works so they do not spend a credit
+  // rediscovering it. Measured on trousers/coin-both: seven measured-correct
+  // features — including that the option's whole identity, the count of two, is
+  // right, and that the U-shaped open-top mouth its coin-left sibling is MISSING
+  // is present here — would have been lost at the moment the verdict was written.
+  lockedFeatures: payload.lockedFeatures || [],
   notes: payload.notes || '',
   checkedAt: new Date().toISOString(),
 };

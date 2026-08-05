@@ -115,6 +115,17 @@
     "grantedAt": "2026-07-31T20:05:38.731Z"
   },
   "correction": null,
+  "lockedFeatures": [
+    "front face of the garment, straight on",
+    "both shoulder end points and both sleeve heads complete inside the frame with grey background outside each",
+    "notch lapels with the drawn gorge and notch geometry, lapel buttonhole present as drawn",
+    "chest welt pocket on the frame-right side as drawn",
+    "collar and collar band as drawn",
+    "textured navy wool/hopsack with visible weave",
+    "white shirt, no necktie",
+    "seamless neutral light-grey studio sweep",
+    "zero numerals, arrows, leader lines, callouts, coloured guide marks or labels; no red anywhere"
+  ],
   "notes": "ATTEMPT 3 vs /images/blueprints/factory/9fd6de75414f__060K__Regular.jpg. The Major framing error that killed attempts 1 and 2 is resolved and verified by pixel measurement of the garment silhouette, not by eye: the jacket boundary turns from the steep shoulder diagonal to the near-vertical armhole at x~55/y~665 on the left and x~832/y~670 on the right, so both shoulder ends are genuinely inside the picture with clear sweep outside. Everything the drawing marks is reproduced - notch lapel and gorge, collar, lapel buttonhole, frame-right chest welt pocket, front face, both sides padded - and no red or annotation leaked from the drawing. Only two Minor findings remain, both about polish rather than construction. The systemic cause is confirmed: build_prompt's blanket 40-80% dominance / crop-away-surrounding-garment mandate is wrong for any option whose subject is a full-width line across the garment, and it only stopped fighting the option once the correction explicitly overrode it.",
   "checkedAt": "2026-07-31T20:05:38.734Z"
 }

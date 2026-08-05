@@ -135,6 +135,17 @@
     "grantedAt": "2026-08-01T00:48:47.672Z"
   },
   "correction": null,
+  "lockedFeatures": [
+    "BOTH shoulder end points inside the frame with plain grey background beyond each — the fault that failed attempts 1, 2 and 3, now fixed",
+    "the shoulder falls from the neck point in one soft continuous slope, collapsing into the sleeve head with no squaring, no built-up corner, no roped or raised sleeve head and no ridge at the sleeve join",
+    "the shoulder end sits at the wearer's own natural shoulder point, not beyond it",
+    "notch lapel geometry with the drawn gorge and notch",
+    "chest welt pocket on the frame-right side",
+    "textured navy wool hopsack with legible weave",
+    "crisp white shirt, collar open, no necktie",
+    "seamless neutral light-grey studio background",
+    "zero traced annotation: no numerals, arrows, leader lines or callouts"
+  ],
   "notes": "ATTEMPT 4, and the first one that actually shows the option.\n\nAttempts 1-3 all put both shoulder END POINTS outside the frame, each time despite an explicit FRAMING LOCK paragraph that declared itself to outrank the close-crop mandate and told the camera to move back. The cause was not the wording of the correction: the prompt CONTRADICTED ITSELF. It opened with 'the subject filling 40-80% of the frame' and 'Frame on the shoulder and sleeve head; the detail must read clearly and sharply' — and the close-crop language won all three times. Declaring a later paragraph the winner does not make the model drop the earlier one.\n\nThe fix was to stop emitting the contradiction. For parts whose subject is a RELATIONSHIP across the garment rather than a detail in the middle of it, the dominance sentence is now replaced rather than overridden, and the framing line points OUTWARD ('completeness across the full span beats closeness; do not move in') instead of at the feature. 75 in-scope options are affected. This attempt is the first exercise of that change, and both shoulder ends are now in frame with background beyond each on the first try.\n\nThe three remaining findings are all minor. One of them — the possible second lapel buttonhole — is recorded as UNRESOLVED rather than scored either way, because at this resolution I could not tell a buttonhole from a fold and asserting a count I cannot see would be the exact failure this pipeline exists to prevent.\n\nAll nine categories at or above 95 with zero Critical or Major findings, so this qualifies for the logged waiver.",
   "checkedAt": "2026-08-01T00:48:47.678Z"
 }

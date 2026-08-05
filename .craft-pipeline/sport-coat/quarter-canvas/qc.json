@@ -68,6 +68,14 @@
   "verdict": "UNMET",
   "waiver": null,
   "correction": null,
+  "lockedFeatures": [
+    "Front-edge tape horizontal position: 0.377 of assembly width in the drawing and 0.377 in the render - an essentially EXACT match",
+    "Pocket vertical placement: top edge at 0.65 of forepart height drawn, 0.63 rendered",
+    "Overall layout and orientation: shell/forepart left, armhole scye curve top centre, canvas zone right, undercollar top right",
+    "Two visibly different interlining textures present, as the drawing's two hatch styles require",
+    "The drawing carries three annotation callouts with leader lines ('0-C', '0-C-C', and one at the collar) and the render correctly contains NONE of them",
+    "Materials rendered in cloth colours - navy shell, oatmeal hair canvas - correctly treating hatching as a location marker rather than a colour"
+  ],
   "notes": "BLUEPRINT_CONFLICT: the option label is 'Quarter Canvas' and the description says the canvas sits at 'roughly the top quarter of the front panel', but sheet 00C3 is titled 'SINGLE LAYER' - a layer-COUNT distinction, not an extent one - and its pad-stitched canvas descends to 58 percent of forepart height, which is half-canvas territory. The drawing does not depict what the label describes. Flagged rather than resolved; the drawing was used as the geometric authority.\n\n00C3 is the ONLY canvas sheet in public/images/blueprints, while the catalog carries five distinct extent options (quarter / half / light-half / ultra-thin-half / full). One sheet cannot distinguish five extents, and it is not even drawing extent.\n\nNOT measurable: no dimension callouts anywhere on this sheet, so no centimetre value for canvas depth, pocket size or tape width; every figure is a ratio against forepart height or assembly width. The identity of the coarse cross-hatched band (fusible? facing? shell turned back?) is not determinable from a 65KB JPEG at 1200px, so its EXTENT was graded but not its MATERIAL.",
   "checkedAt": "2026-08-01T08:09:39.770Z"
 }

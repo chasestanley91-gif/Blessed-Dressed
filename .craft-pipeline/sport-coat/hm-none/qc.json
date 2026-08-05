@@ -48,6 +48,17 @@
   "verdict": "PASS",
   "waiver": null,
   "correction": null,
+  "lockedFeatures": [
+    "orientation: front",
+    "NO hand pick stitching / AMF stitching anywhere on the lapel edge or front edge — this is the defining characteristic of the option",
+    "notch lapel with clean machine-finished folded edge",
+    "chest welt pocket present, as drawn",
+    "one worked lapel buttonhole, machine-made, as marked in the drawing",
+    "fabric: navy hopsack with visible basketweave, appropriate to a sport coat",
+    "styling: white dress shirt, no tie",
+    "background: seamless neutral light-grey studio sweep",
+    "zero annotation in frame"
+  ],
   "notes": "ADVERSARIAL READ vs /images/blueprints/factory/13c1b88ec1cb__0570__No.png.\n\nBLUEPRINT: whole single-breasted jacket, front view, notch lapel, chest welt pocket, hip flap pocket, two front buttons, a small mark on the lapel indicating the lapel buttonhole. Critically, NO pick-stitch dashes are drawn along any edge — this is the 'No' (standard machine) member of the handmade-type field.\n\nATTEMPTED REJECTIONS THAT FAILED:\n(1) Did it hallucinate pick stitching? This was the single highest-risk failure, because 'bespoke/Savile Row' priors and the prompt's own boilerplate phrase 'fine hand stitching' both push toward AMF dashes along the lapel edge. Examined the lapel edge, the front edge and the welt pocket edge at full resolution: the edges are clean and unbroken, with NO row of spaced pick stitches. The option is correctly depicted as an absence.\n(2) Wrong lapel family? Drawing shows a notch; render shows a notch with a stepped collar/lapel gap. No peak spike, no shawl sweep. Correct.\n(3) Chest pocket substituted? Drawing shows a welt chest pocket; render shows a welt chest pocket, not a patch and not a flap. Correct.\n(4) Annotation traced? No numbers, arrows, leader lines or text anywhere in frame.\n(5) Wrong face? Front, as drawn.\n(6) Is it a sport coat rather than a suit jacket? Yes — the cloth is a visibly open hopsack basketweave, correct for sport-coat.\n\nThe hardest judgement here is that 'Standard Machine' is inherently a low-contrast option: its photograph is defined by what is absent. The render succeeds on exactly that axis — a clean machine-finished edge presented large in frame — and adds nothing that the drawing does not show.",
   "checkedAt": "2026-07-31T05:08:48.545Z"
 }

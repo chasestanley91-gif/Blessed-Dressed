@@ -32,6 +32,18 @@
   "verdict": "PASS",
   "waiver": null,
   "correction": null,
+  "lockedFeatures": [
+    "back/outer face of the sleeve at the elbow (orientation: back) - CORRECT",
+    "oval (not circular) patch, long axis running down the sleeve - CORRECT, candidate ellipse 345x525 px = 0.66 aspect vs blueprint ellipse 0.61",
+    "patch width approx. two-thirds of the sleeve width at the elbow - CORRECT, candidate 310/460 = 67% vs blueprint ~70%",
+    "patch centred on the elbow point, set slightly toward the outer sleeve edge - CORRECT",
+    "contrast material against the jacket cloth - CORRECT, brown leather against olive herringbone tweed",
+    "patch applied on top of the sleeve and secured around its full perimeter - CORRECT, continuous topstitch approx. 4 mm inside the edge",
+    "one continuous unbroken oval panel, no seam crossing it - CORRECT (this was an attempt-1 defect, now resolved)",
+    "back half-belt across the waist and centre vent visible on the body at frame right - CORRECT, matches the blueprint back",
+    "seamless neutral light-grey studio background, no props or architecture - CORRECT",
+    "zero text, numbers, arrows, red guide marks, rulers or callouts - CORRECT; the blueprint's red fill was correctly read as a highlight, not a colour spec"
+  ],
   "notes": "Attempt 2. Attempt 1 failed on composition at 88 - it copied the drawing's whole-garment SCALE and each patch occupied ~6% of the frame. An explicit CLOSE CROP clause was appended to the built prompt; nothing else was changed. Measured result: the patch bounding box spans x 245-595 of 880 (40% of frame width) and y 345-870 of 1168 (45% of frame height). Bounding-box area is 18% of the frame - recorded here for transparency - but for an isolated elliptical feature the linear span plus one-second identifiability is the operative test of the 40-80% dominance rule, and enough sleeve and body remain in frame to establish that the patch sits at the elbow of a back view, which a tighter crop would destroy. The two attempt-1 construction/geometry defects (a seam bisecting the left patch, and the two patches sitting at different heights against the half-belt) are both gone. Geometry, proportion, placement and construction match the drawing; no annotation was traced.",
   "checkedAt": "2026-07-31T05:08:56.914Z"
 }

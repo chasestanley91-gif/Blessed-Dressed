@@ -44,6 +44,16 @@
   ],
   "verdict": "PASS",
   "correction": null,
+  "lockedFeatures": [
+    "front-face detail view of the collar region (drawing shows the collar exterior with an interlining reveal, NOT the garment turned inside out - the 'opened to show the interior' phrasing in the part profile is a suit-lining artifact and the drawing overrides it)",
+    "heavy/HARD interlining exposed on the wearer's-left collar leaf (viewer's right), same leaf and same region as the blueprint swatch",
+    "interlining material reads coarse and heavy: dark bold grid on a grey woven ground - must NOT drift toward the fine light grid of the sibling Soft option",
+    "collar leaves board-flat, knife-crisp and sharply pressed with no soft roll or buckle - the visual proof of a hard fused interlining",
+    "exactly one closure button visible at the collar-band / top of the front placket; no collar-point buttons, no hidden-button band, no collar stays or eyelets borrowed from sibling collar options",
+    "edge/top-stitching along both collar leaf outer edges and around the collar stand, as drawn dashed in the blueprint",
+    "white crisp cotton poplin shirt, seamless neutral light-grey studio background, no props/architecture/model",
+    "zero text, caption, number, unit, arrow, leader line or watermark anywhere in frame (the blueprint's Chinese/English captions are documentation and were correctly excluded)"
+  ],
   "notes": "Blueprint/text consistency gate passed before generation: the drawing is captioned 'Collar Heavy Interlining' and shows a dense dark cross-hatched swatch, while the sibling Soft blueprint shows a fine light grid captioned 'Collar Soft Interlining' - so the drawing genuinely depicts the HARD lining the label claims. FC390057 is a supplier interlining SKU and is not a depictable geometry, so it cannot conflict. Adversarial pass over candidate-1: orientation matches (front-face collar detail, not an inside-out interior); the interlining reveal is on the correct leaf (wearer's left / viewer's right) in the correct region; button count matches at 1; edge-stitching present on both leaves and the stand; no sibling features (button-down tabs, hidden-button placket, eyelets) introduced; no generic-category substitution - the exposed heavy interlining plus the rigid board-flat leaves make the option identifiable in under a second. Background is a seamless neutral light grey with no location, architecture or props. No text, callouts, dimension lines or watermarks anywhere in frame. The showcased feature dominates roughly 65 percent of the frame, unobstructed. Deviations found are all Minor and all attributable to the blueprint being a small stylised schematic (icon-scale line art), not to invented geometry: no catalog dimension, angle, count or shape was available to violate. Reference image WAS attached to the generation (medias[0] = 933e4d41-eaf3-4e55-9592-9b7326488f3a, coerced role 'image', echoed back in reference_images).",
   "checkedAt": "2026-07-30T05:38:54.004Z"
 }

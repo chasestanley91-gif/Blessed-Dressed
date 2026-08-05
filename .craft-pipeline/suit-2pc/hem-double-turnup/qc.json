@@ -40,6 +40,17 @@
   "verdict": "PASS",
   "waiver": null,
   "correction": null,
+  "lockedFeatures": [
+    "Turn-up (cuff) present at the trouser hem as a visible folded-up band - CORRECT",
+    "Cuff depth deep, reading as 5.1 cm and clearly deeper than the 4.4 cm sibling - CORRECT",
+    "Cuff bottom and top fold edges LEVEL all the way round, not slanted - CORRECT",
+    "Crisp pressed top fold edge on the turn-up - CORRECT",
+    "Pressed front crease running down the leg into the cuff - CORRECT",
+    "Garment identity is trousers, not a jacket (upstream garmentNoun bug did not propagate) - CORRECT",
+    "Detail/side orientation of the lower leg, matching the blueprint's magnified hem view - CORRECT",
+    "Red line rendered in cloth colour only, never as red cloth - CORRECT",
+    "Zero annotation: no numbers, arrows, leader lines or text - CORRECT"
+  ],
   "notes": "The blueprint's red horizontal line marks the TOP EDGE of the turn-up and is level; the render reproduces a level, deep turn-up in cloth colour with no red. Depth is the distinguishing feature against the 4.4 cm and plain-hem siblings and reads unambiguously deep. Level hem correctly distinguishes it from the slanted-hem option in the same batch.",
   "checkedAt": "2026-07-31T05:31:16.900Z"
 }
