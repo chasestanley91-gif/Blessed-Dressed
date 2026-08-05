@@ -1,0 +1,128 @@
+[
+  {
+    "option": "sport-coat/sb-1",
+    "verdict": "OK",
+    "liveImage": "/images/generated/jacket/sb-1.webp",
+    "confidence": "high",
+    "why": "Label \"SB 1 Button\". Photo shows a single-breasted jacket with exactly ONE fastening button at the waist, notch lapel rolling to it. Count matches the label. Graded against the LABEL only: this row's blueprint /images/jacket/front-style/sb-1.jpg is classified NOT_A_DRAWING by blueprint_triage (edge density 0, essentially a blank frame), so the drawing could not be used as the yardstick."
+  },
+  {
+    "option": "suit-2pc/sb-1",
+    "verdict": "OK",
+    "liveImage": "/images/generated/jacket/sb-1.webp",
+    "confidence": "high",
+    "why": "Label \"SB 1 Button\". Photo shows a single-breasted jacket with exactly ONE fastening button at the waist, notch lapel rolling to it. Count matches the label. Graded against the LABEL only: this row's blueprint /images/jacket/front-style/sb-1.jpg is classified NOT_A_DRAWING by blueprint_triage (edge density 0, essentially a blank frame), so the drawing could not be used as the yardstick."
+  },
+  {
+    "option": "suit-3pc/sb-1",
+    "verdict": "OK",
+    "liveImage": "/images/generated/jacket/sb-1.webp",
+    "confidence": "high",
+    "why": "Label \"SB 1 Button\". Photo shows a single-breasted jacket with exactly ONE fastening button at the waist, notch lapel rolling to it. Count matches the label. Graded against the LABEL only: this row's blueprint /images/jacket/front-style/sb-1.jpg is classified NOT_A_DRAWING by blueprint_triage (edge density 0, essentially a blank frame), so the drawing could not be used as the yardstick."
+  },
+  {
+    "option": "sport-coat/sb-2",
+    "verdict": "OK",
+    "liveImage": "/images/generated/jacket/sb-2.webp",
+    "confidence": "high",
+    "why": "Label \"SB 2 Buttons\". Photo shows a single-breasted front with exactly TWO fastening buttons, the lapel rolling to the upper one. Count matches the label."
+  },
+  {
+    "option": "suit-2pc/sb-2",
+    "verdict": "OK",
+    "liveImage": "/images/generated/jacket/sb-2.webp",
+    "confidence": "high",
+    "why": "Label \"SB 2 Buttons\". Photo shows a single-breasted front with exactly TWO fastening buttons, the lapel rolling to the upper one. Count matches the label."
+  },
+  {
+    "option": "suit-3pc/sb-2",
+    "verdict": "OK",
+    "liveImage": "/images/generated/jacket/sb-2.webp",
+    "confidence": "high",
+    "why": "Label \"SB 2 Buttons\". Photo shows a single-breasted front with exactly TWO fastening buttons, the lapel rolling to the upper one. Count matches the label."
+  },
+  {
+    "option": "sport-coat/sb-3",
+    "verdict": "OK",
+    "liveImage": "/images/generated/jacket/sb-3.webp",
+    "confidence": "high",
+    "why": "Label \"SB 3 Buttons\". Photo shows THREE evenly spaced fastening buttons with the lapel roll terminating above the top button (true 3-button stance, not a 3-roll-2). Count matches the label. Graded against the LABEL only: blueprint /images/jacket/front-style/sb-3.jpg is NOT_A_DRAWING (edge density 0 — a fabric-texture crop, not a technical drawing)."
+  },
+  {
+    "option": "suit-2pc/sb-3",
+    "verdict": "OK",
+    "liveImage": "/images/generated/jacket/sb-3.webp",
+    "confidence": "high",
+    "why": "Label \"SB 3 Buttons\". Photo shows THREE evenly spaced fastening buttons with the lapel roll terminating above the top button (true 3-button stance, not a 3-roll-2). Count matches the label. Graded against the LABEL only: blueprint /images/jacket/front-style/sb-3.jpg is NOT_A_DRAWING (edge density 0 — a fabric-texture crop, not a technical drawing)."
+  },
+  {
+    "option": "suit-3pc/sb-3",
+    "verdict": "OK",
+    "liveImage": "/images/generated/jacket/sb-3.webp",
+    "confidence": "high",
+    "why": "Label \"SB 3 Buttons\". Photo shows THREE evenly spaced fastening buttons with the lapel roll terminating above the top button (true 3-button stance, not a 3-roll-2). Count matches the label. Graded against the LABEL only: blueprint /images/jacket/front-style/sb-3.jpg is NOT_A_DRAWING (edge density 0 — a fabric-texture crop, not a technical drawing)."
+  },
+  {
+    "option": "sport-coat/sb-4",
+    "verdict": "WRONG",
+    "liveImage": "/images/generated/jacket/sb-4.webp",
+    "confidence": "high",
+    "why": "COUNT CONTRADICTION. Label is \"SB 4 Buttons\" but the photograph shows only THREE fastening buttons on the front edge; below the third the quarters curve open with no fourth button anywhere in frame. Button count is the entire discriminator of this field, so the image depicts the sb-3 option rather than this one. Note the blueprint /images/jacket/front-style/sb-4.jpg cannot arbitrate — blueprint_triage classifies it SUSPECT/non-drawing (a dark fabric swatch with a white stripe) — so this verdict rests on the catalog label, which is unambiguous."
+  },
+  {
+    "option": "suit-2pc/sb-4",
+    "verdict": "WRONG",
+    "liveImage": "/images/generated/jacket/sb-4.webp",
+    "confidence": "high",
+    "why": "COUNT CONTRADICTION. Label is \"SB 4 Buttons\" but the photograph shows only THREE fastening buttons on the front edge; below the third the quarters curve open with no fourth button anywhere in frame. Button count is the entire discriminator of this field, so the image depicts the sb-3 option rather than this one. Note the blueprint /images/jacket/front-style/sb-4.jpg cannot arbitrate — blueprint_triage classifies it SUSPECT/non-drawing (a dark fabric swatch with a white stripe) — so this verdict rests on the catalog label, which is unambiguous."
+  },
+  {
+    "option": "suit-3pc/sb-4",
+    "verdict": "WRONG",
+    "liveImage": "/images/generated/jacket/sb-4.webp",
+    "confidence": "high",
+    "why": "COUNT CONTRADICTION. Label is \"SB 4 Buttons\" but the photograph shows only THREE fastening buttons on the front edge; below the third the quarters curve open with no fourth button anywhere in frame. Button count is the entire discriminator of this field, so the image depicts the sb-3 option rather than this one. Note the blueprint /images/jacket/front-style/sb-4.jpg cannot arbitrate — blueprint_triage classifies it SUSPECT/non-drawing (a dark fabric swatch with a white stripe) — so this verdict rests on the catalog label, which is unambiguous."
+  },
+  {
+    "option": "sport-coat/sb-3-roll-2",
+    "verdict": "OK",
+    "liveImage": "/images/generated/jacket/sb-3-roll-2.webp",
+    "confidence": "medium",
+    "why": "Label \"SB 3 Roll 2\". Photo shows TWO visible fastening buttons with the lapel rolling down past the notional top button position, which is the correct customer-visible signature of a 3-roll-2 (third button concealed under the lapel roll by construction). Confidence held at medium because the concealed third button cannot be confirmed in-frame, and the blueprint is not a usable drawing."
+  },
+  {
+    "option": "suit-2pc/sb-3-roll-2",
+    "verdict": "OK",
+    "liveImage": "/images/generated/jacket/sb-3-roll-2.webp",
+    "confidence": "medium",
+    "why": "Label \"SB 3 Roll 2\". Photo shows TWO visible fastening buttons with the lapel rolling down past the notional top button position, which is the correct customer-visible signature of a 3-roll-2 (third button concealed under the lapel roll by construction). Confidence held at medium because the concealed third button cannot be confirmed in-frame, and the blueprint is not a usable drawing."
+  },
+  {
+    "option": "suit-3pc/sb-3-roll-2",
+    "verdict": "OK",
+    "liveImage": "/images/generated/jacket/sb-3-roll-2.webp",
+    "confidence": "medium",
+    "why": "Label \"SB 3 Roll 2\". Photo shows TWO visible fastening buttons with the lapel rolling down past the notional top button position, which is the correct customer-visible signature of a 3-roll-2 (third button concealed under the lapel roll by construction). Confidence held at medium because the concealed third button cannot be confirmed in-frame, and the blueprint is not a usable drawing."
+  },
+  {
+    "option": "sport-coat/sb-4-roll-3",
+    "verdict": "OK",
+    "liveImage": "/images/generated/jacket/sb-4-roll-3.webp",
+    "confidence": "medium",
+    "why": "Label \"SB 4 Roll 3\". Photo shows THREE visible fastening buttons with a lapel rolling to the uppermost of them, the correct visible signature of a 4-roll-3 (fourth button concealed under the roll). Confidence medium: the concealed fourth button is not verifiable in-frame, and the blueprint is not a usable drawing."
+  },
+  {
+    "option": "suit-2pc/sb-4-roll-3",
+    "verdict": "OK",
+    "liveImage": "/images/generated/jacket/sb-4-roll-3.webp",
+    "confidence": "medium",
+    "why": "Label \"SB 4 Roll 3\". Photo shows THREE visible fastening buttons with a lapel rolling to the uppermost of them, the correct visible signature of a 4-roll-3 (fourth button concealed under the roll). Confidence medium: the concealed fourth button is not verifiable in-frame, and the blueprint is not a usable drawing."
+  },
+  {
+    "option": "suit-3pc/sb-4-roll-3",
+    "verdict": "OK",
+    "liveImage": "/images/generated/jacket/sb-4-roll-3.webp",
+    "confidence": "medium",
+    "why": "Label \"SB 4 Roll 3\". Photo shows THREE visible fastening buttons with a lapel rolling to the uppermost of them, the correct visible signature of a 4-roll-3 (fourth button concealed under the roll). Confidence medium: the concealed fourth button is not verifiable in-frame, and the blueprint is not a usable drawing."
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "option": "suit-3pc/hem-cuff-32",
+    "verdict": "OK",
+    "liveImage": "/images/generated/suit-2pc/hem-cuff-32.webp",
+    "confidence": "high",
+    "why": "Label \"3.2 cm Cuff Turn-Up\". Photo shows an unmistakable turned-up cuff: a horizontal folded band at the base of the leg with a clean upper fold edge and the hem breaking on the shoe below it. Presence of a cuff is the discriminator that separates this option from every plain-hem sibling, and it reads instantly at thumbnail size."
+  },
+  {
+    "option": "suit-3pc/hem-fixed-topstitch",
+    "verdict": "OK",
+    "liveImage": "/images/generated/suit-2pc/hem-fixed-topstitch.webp",
+    "confidence": "high",
+    "why": "Label \"Fixed Bottom, 2.5 cm Topstitch\". Photo shows a plain uncuffed hem carrying a single visible topstitch line running parallel to and set up from the bottom edge — the defining feature of this option and absent from the plain-hem siblings. Both the fixed (uncuffed) bottom and the topstitch are present."
+  },
+  {
+    "option": "suit-3pc/hem-no-cuff",
+    "verdict": "UNSURE",
+    "liveImage": "/images/generated/suit-2pc/hem-no-cuff.webp",
+    "confidence": "low",
+    "why": "Correct in kind, but not separable from its siblings. The photo is a clean plain uncuffed hem, which is right for a \"Plain Hem\" option. However this option differs from hem-blind (6.4 cm) and hem-90 (9.0 cm) ONLY by the depth of the internal hem allowance — the fabric turned up inside the leg. That measurement is not visible on an exterior worn view at any focal length, so the image cannot demonstrate 5.0 cm rather than 6.4 or 9.0. Fails the ledger's \"distinguishable from siblings\" half of the OK bar for a source reason, not a generation reason. Regenerating cannot fix it; this is an ambiguous family needing a merge/reprice ruling or an interior cutaway convention."
+  },
+  {
+    "option": "suit-3pc/hem-90",
+    "verdict": "UNSURE",
+    "liveImage": "/images/generated/suit-2pc/hem-90.webp",
+    "confidence": "low",
+    "why": "Same finding as hem-no-cuff, from the other end of the range. The photo is a correct plain uncuffed hem, but 9.0 cm names an internal hem allowance that no exterior view can show. Placed side by side with hem-no-cuff (5.0 cm) the two images are indistinguishable to a customer, which is exactly the condition this field is supposed to let them choose on. Needs a ruling, not a regeneration."
+  }
+]

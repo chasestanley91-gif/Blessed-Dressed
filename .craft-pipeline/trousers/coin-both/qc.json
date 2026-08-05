@@ -1,0 +1,105 @@
+{
+  "addr": "trousers > coin-both",
+  "productId": "trousers",
+  "optionId": "coin-both",
+  "attempt": 2,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 44,
+    "geometry": 54,
+    "dimensions": 45,
+    "angles": 78,
+    "construction": 77,
+    "placement": 76,
+    "symmetry": 90,
+    "composition": 84,
+    "blueprint-match": 54
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "critical",
+      "category": "shape",
+      "description": "Aspect ratio is INVERTED. The drawn markers measure 151 wide by 126 deep on the left bag and 148 by 125 on the right - about 1.2:1 landscape. The rendered patches measure about 121 wide by 175 deep on both bags - about 1:1.44, portrait. The previous attempt was near-square; this one has gone past landscape entirely and out the other side.",
+      "expected": "A landscape rectangle about 1.2 times as wide as it is deep",
+      "actual": "A portrait rectangle about 1.4 times as deep as it is wide",
+      "correction": "Render each coin pocket as a squat landscape rectangle whose depth is about four fifths of its width - measurably wider across the bag than it is tall - with squared lower corners."
+    },
+    {
+      "severity": "major",
+      "category": "dimensions",
+      "description": "Patch depth normalised to bag depth. Drawing: 126px patch against a 620px bag, ratio 0.20. Render: about 175px against about 415px, ratio 0.42 - more than double the drawn depth. Width is close: 0.71 of bag width drawn against 0.64 rendered.",
+      "expected": "Patch depth about one fifth of the bag's total depth",
+      "actual": "About two fifths, so its top edge climbs to mid-bag",
+      "correction": "Halve the patch depth, keeping its bottom edge at its present height so the top edge settles at roughly three quarters of the way down the bag."
+    },
+    {
+      "severity": "minor",
+      "category": "construction",
+      "description": "Small dark dots at the bag tops and along the fly render as metal studs. The drawing's filled dots at those stations denote bar tacks.",
+      "expected": "Thread reinforcement tacks at the bag corners and fly stations",
+      "actual": "Hard round dots reading as metal hardware",
+      "correction": "Render these as short dense thread bar tacks in pocketing-matched thread, lying flat in the cloth."
+    }
+  ],
+  "verdict": "FAIL",
+  "waiver": null,
+  "correction": {
+    "errors": [
+      {
+        "severity": "critical",
+        "category": "shape",
+        "error": "Aspect ratio is INVERTED. The drawn markers measure 151 wide by 126 deep on the left bag and 148 by 125 on the right - about 1.2:1 landscape. The rendered patches measure about 121 wide by 175 deep on both bags - about 1:1.44, portrait. The previous attempt was near-square; this one has gone past landscape entirely and out the other side.",
+        "expected": "A landscape rectangle about 1.2 times as wide as it is deep",
+        "actual": "A portrait rectangle about 1.4 times as deep as it is wide",
+        "correction": "Render each coin pocket as a squat landscape rectangle whose depth is about four fifths of its width - measurably wider across the bag than it is tall - with squared lower corners."
+      },
+      {
+        "severity": "major",
+        "category": "dimensions",
+        "error": "Patch depth normalised to bag depth. Drawing: 126px patch against a 620px bag, ratio 0.20. Render: about 175px against about 415px, ratio 0.42 - more than double the drawn depth. Width is close: 0.71 of bag width drawn against 0.64 rendered.",
+        "expected": "Patch depth about one fifth of the bag's total depth",
+        "actual": "About two fifths, so its top edge climbs to mid-bag",
+        "correction": "Halve the patch depth, keeping its bottom edge at its present height so the top edge settles at roughly three quarters of the way down the bag."
+      }
+    ],
+    "lockedFeatures": [
+      "Two coin pockets, exactly one per bag, one on each side - count correct and preserved",
+      "HORIZONTAL SEAT FIXED: patches now span 22-86 percent of bag width from the outer edge against the drawn 23-94, centre at 54 against 59 - the 'shoved to the outer edge' failure is resolved",
+      "Bottom edge of each patch at 92 percent of bag depth, matching the drawing exactly",
+      "Interior view with both bags flipped out, matching blueprint orientation",
+      "Left and right patches mirror-matched to within a few pixels",
+      "No red rendered onto cloth"
+    ],
+    "forbiddenChanges": [
+      "do not alter any checklist item this attempt already passed",
+      "do not change the camera crop, composition, or accessories unless the error is itself a composition error",
+      "do not change the garment part, orientation, or any other option's geometry"
+    ]
+  },
+  "notes": "The placement half of the defect is genuinely fixed. The aspect-ratio half is not, and is now WORSE than before: the render swung from near-square past the drawn 1.2:1 into 1:1.44 portrait. Same root cause as watch-both - the correction supplied an adjective ('squat landscape') where it needed the measured ratio.\n\nBLUEPRINT COLLISION, verified by md5: this option's blueprint file (blueprints/remote/7f475092fe8b__3532.jpg) is BYTE-IDENTICAL to watch-both's (blueprints/factory/88f95280e442__3532__Left_right.jpg) - same md5 87658726bf98f5322cbc719704c23291, same 61437 bytes, two filenames in two folders. One drawing backs two different craft options, a coin pocket and a watch pocket, with markers in the same position. The illustration alone therefore CANNOT distinguish the two options, and no amount of fidelity to it will make the two images differ. Recorded as a finding.\n\nNOT measurable: centimetre dimensions - no callouts on this drawing. All figures are ratios against bag width and depth.",
+  "checkedAt": "2026-08-02T17:59:36.272Z"
+}

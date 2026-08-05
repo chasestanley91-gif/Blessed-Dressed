@@ -1,0 +1,105 @@
+{
+  "addr": "suit-2pc > jeans-square",
+  "productId": "suit-2pc",
+  "optionId": "jeans-square",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 70,
+    "geometry": 70,
+    "dimensions": 85,
+    "angles": 78,
+    "construction": 74,
+    "placement": 96,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 72
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "major",
+      "category": "geometry",
+      "description": "The drawn pocket mouth is an OPEN path; the render closed it into a quadrilateral panel.",
+      "expected": "An open pocket mouth: a short vertical drop from the waistband, a sharp corner, then a single straight slanted run terminating at the front crease. Three connected edges, open at both ends.",
+      "actual": "A fully enclosed four-sided trapezoid outlined on the face of the cloth, with a closing right-hand edge that does not exist in the illustration.",
+      "correction": "Render the pocket as an OPENING, not an outlined shape. The stitch line must terminate at the front crease and at the waistband — it must not close back on itself."
+    },
+    {
+      "severity": "major",
+      "category": "construction",
+      "description": "Rendered as a stitched-on patch/panel rather than a pocket opening with a mouth.",
+      "expected": "A jeans-style front pocket opening: a visible mouth with a topstitched edge, the pocket bag concealed behind the cloth.",
+      "actual": "A flat outlined trapezoid with no readable opening; no mouth, no depth, no bag entry. The pocket bag appears drawn onto the outside of the trouser front.",
+      "correction": "Show a genuine opening with a slight natural gape and a pressed, topstitched mouth edge. The pocket bag must never be outlined on the face of the cloth."
+    },
+    {
+      "severity": "major",
+      "category": "angles",
+      "description": "The defining 90 degree corner transition is not readable.",
+      "expected": "A sharp, unmistakable 90 degree corner where the vertical drop from the waistband turns into the slanted run — this right angle is the entire discriminator versus the Arc Jeans Pocket sibling.",
+      "actual": "The corner is absorbed into a trapezoid whose edges meet at soft, ambiguous angles; no crisp right angle reads at one second.",
+      "correction": "Force the right angle: state that the vertical segment drops about 4 cm from the waistband seam and then turns through a hard 90 degree corner with a bar tack at the corner, and that a curved or chamfered corner is a failure."
+    }
+  ],
+  "verdict": "FAIL",
+  "waiver": null,
+  "correction": {
+    "errors": [
+      {
+        "severity": "major",
+        "category": "geometry",
+        "error": "The drawn pocket mouth is an OPEN path; the render closed it into a quadrilateral panel.",
+        "expected": "An open pocket mouth: a short vertical drop from the waistband, a sharp corner, then a single straight slanted run terminating at the front crease. Three connected edges, open at both ends.",
+        "actual": "A fully enclosed four-sided trapezoid outlined on the face of the cloth, with a closing right-hand edge that does not exist in the illustration.",
+        "correction": "Render the pocket as an OPENING, not an outlined shape. The stitch line must terminate at the front crease and at the waistband — it must not close back on itself."
+      },
+      {
+        "severity": "major",
+        "category": "construction",
+        "error": "Rendered as a stitched-on patch/panel rather than a pocket opening with a mouth.",
+        "expected": "A jeans-style front pocket opening: a visible mouth with a topstitched edge, the pocket bag concealed behind the cloth.",
+        "actual": "A flat outlined trapezoid with no readable opening; no mouth, no depth, no bag entry. The pocket bag appears drawn onto the outside of the trouser front.",
+        "correction": "Show a genuine opening with a slight natural gape and a pressed, topstitched mouth edge. The pocket bag must never be outlined on the face of the cloth."
+      },
+      {
+        "severity": "major",
+        "category": "angles",
+        "error": "The defining 90 degree corner transition is not readable.",
+        "expected": "A sharp, unmistakable 90 degree corner where the vertical drop from the waistband turns into the slanted run — this right angle is the entire discriminator versus the Arc Jeans Pocket sibling.",
+        "actual": "The corner is absorbed into a trapezoid whose edges meet at soft, ambiguous angles; no crisp right angle reads at one second.",
+        "correction": "Force the right angle: state that the vertical segment drops about 4 cm from the waistband seam and then turns through a hard 90 degree corner with a bar tack at the corner, and that a curved or chamfered corner is a failure."
+      }
+    ],
+    "lockedFeatures": [
+      "fabric: navy worsted, matte, fine twill",
+      "camera angle and hip-crop framing",
+      "the separate horizontal coin-pocket welt to the right of the fly, which matches the drawing"
+    ],
+    "forbiddenChanges": [
+      "do not alter any checklist item this attempt already passed",
+      "do not change the camera crop, composition, or accessories unless the error is itself a composition error",
+      "do not change the garment part, orientation, or any other option's geometry"
+    ]
+  },
+  "notes": "Graded against sibling suit-2pc/jeans-arc (attempt 1, PASS). The two candidates ARE mutually distinguishable — arc reads curved, square reads angular — so the pair gate does not reject the set. This option fails on its own geometry, not on collapse against its sibling. Any retry must stay clearly distinct from the arc rendering: square = hard right angle and straight runs, arc = continuous sweeping curve.",
+  "checkedAt": "2026-08-02T17:59:35.508Z"
+}

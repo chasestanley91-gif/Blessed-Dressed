@@ -8834,6 +8834,47 @@
           ]
         }
       ]
+    },
+    {
+      "at": "2026-08-02T18:00:54.617Z",
+      "by": "tools/publish_approved.mjs",
+      "count": 0,
+      "rowCount": 0,
+      "fanout": true,
+      "options": []
+    },
+    {
+      "at": "2026-08-02T18:02:14.098Z",
+      "by": "tools/publish_approved.mjs",
+      "count": 1,
+      "rowCount": 1,
+      "fanout": true,
+      "options": [
+        {
+          "product": "suit-2pc",
+          "option": "jeans-arc",
+          "field": "front-pocket-style",
+          "identity": "front-pocket-style/jeans-arc",
+          "image": "/images/generated/suit-2pc/jeans-arc.webp",
+          "master": "/images/generated/suit-2pc/jeans-arc.png",
+          "previous": null,
+          "preservedBlueprint": null,
+          "verdict": "PASS",
+          "waived": false,
+          "qcAttempt": 1,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 98,
+          "rows": [
+            {
+              "product": "trousers",
+              "section": "front-pockets",
+              "field": "front-pocket-style",
+              "previous": "/images/generated/trousers/jeans-arc.webp",
+              "preservedBlueprint": null
+            }
+          ]
+        }
+      ]
     }
   ]
 }

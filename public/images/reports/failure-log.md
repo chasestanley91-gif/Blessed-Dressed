@@ -1113,3 +1113,193 @@ where one stripe is cream and the other tonal navy. **A matched-set instruction 
 single-image prompt is weak** — the model has no view of its siblings. Where set consistency
 matters, pin the concrete values (exact cloth colour, exact underlayer, exact crop) into every
 member's prompt rather than asking for consistency in the abstract.
+
+---
+
+## Session D — 2026-08-02. 0 credits spent. QC and measurement only.
+
+### The position was understated by 276 rows, and the cause is a join, not missing work
+
+`STATE.md` reported 846 rows as `legacy-shipped-unverified`. **276 of them are already
+serving the exact image file that a PASS/PASS_WAIVED `qc.json` approved, against the same
+blueprint.** They are verified. Nothing needs generating for them.
+
+The cause: `project_state.mjs` joins a verdict to a row by `product/option`, but a row is
+very often served by a **cluster sibling under a different product folder** — e.g.
+`sport-coat > lapel-style > lapel-notch-68` serves
+`/images/generated/suit-2pc/lapel-notch-68.webp`. The pixels are verified; the join simply
+looks in `.craft-pipeline/sport-coat/...` and finds nothing, so the row is filed as legacy.
+
+Measured across the whole index:
+
+| rows whose identity has a shippable PASS image | count |
+|---|---|
+| already serving that exact file (no-op) | 532 |
+| serving a different generated file (genuine swap, human call) | 70 |
+| serving an illustration rather than a photo (pure upgrade) | 9 |
+
+Of the 532, by the stage the tool currently assigns them: 209 `shipped`, 28
+`shipped-waived`, **280 `legacy-shipped-unverified`**, 6 `prompt-built`, 4 `no-blueprint`,
+3 `unmet`, 2 `failed-retry-due`.
+
+Blueprint agreement was then checked on those 280 rather than assumed: **276 agree, 4 do
+not.** The real unverified legacy backlog is **570, not 846**.
+
+**Fix belongs in `project_state.mjs`**: resolve the verdict by `field/option` identity plus
+blueprint agreement, not by `product/option` alone. Until then every position report
+understates progress and every queue built from stage will re-offer finished work.
+
+### The 4 that genuinely disagree are the coin pockets, again
+
+The same four rows the fan-out gate has always refused. A jacket coin-pocket photograph is
+serving a trouser coin-pocket row:
+
+- `suit-3pc > Trousers-front-pockets > coin-pocket > coin-none`
+- `suit-3pc > Trousers-front-pockets > coin-pocket > coin-right`
+- `suit-3pc > Trousers-front-pockets > coin-pocket > coin-both`
+- `trousers > front-pockets > coin-pocket > coin-right`
+
+Each is drawn against a `blueprints/remote/*` trouser drawing but serves an image graded
+against `/images/jacket/coin-pocket/*.jpg`. This is the 2026-07-30 finding reproduced from
+a different direction, which is the strongest form of confirmation available here. These
+need their own generations; they cannot be fanned out.
+
+### A generation was spent on work a sibling had already finished
+
+`trousers/watch-left` was generated and graded PASS this session — but
+`suit-2pc/watch-left` was already PASS at attempt 2 and already serving **all three**
+watch-pocket rows including the trousers one. The new image is redundant, and publishing it
+would have swapped a verified image for another verified image to no effect.
+
+**Check cluster coverage before generating, not after.** 11 of the 168 clusters in the
+current `wave-queue.json` are in this same state — about 10 credits of pure waste, and each
+one also manufactures a spurious `--allow-swap` prompt. `wave_queue.mjs` should exclude any
+cluster whose `field/option` already holds a blueprint-agreeing PASS.
+
+### The swap gate cannot currently tell a real swap from a no-op
+
+`publish_approved.mjs` refuses any row that currently points into `/images/generated/`,
+including when the path it would write is **byte-for-byte the path already there**. That
+turned a batch dry run into 83 refusals, most of which propose no change at all. Worth
+teaching the gate to compare incumbent path against target path and stay silent when they
+match — the human decision should be reserved for the 70 rows where the file actually
+changes.
+
+### QC results
+
+- `suit-2pc/jeans-arc` — **PASS** (98 lowest). Open path reproduced as an open path:
+  vertical leg, rounded elbow, shallow sweep, downturn to the crease, parallel topstitch.
+- `trousers/watch-left` — **PASS** (98 lowest), but redundant; see above.
+- `suit-2pc/jeans-square` — **FAIL**. The drawn pocket *mouth* was rendered as a closed
+  trapezoid outlined on the face of the cloth. The defining 90 degree corner is unreadable.
+  Lesson repeats: **an open path in the drawing must be stated as open in the prompt**, with
+  the closing edge named as a failure condition, or the model will complete the shape.
+- `trousers/coin-both` — **FAIL** at attempt 2, aspect ratio still inverted (drawn 1.2:1
+  landscape, rendered 1:1.44 portrait). The prior session had already measured this and
+  written `qc-input.json` but never ran `log_qc_result.mjs`, so the verdict did not exist
+  and the option sat in `generated-awaiting-qc`. **An unlogged verdict is not a verdict** —
+  and it nearly caused a second grader to pass an image a first grader had already rejected
+  on measured evidence.
+
+`suit-2pc/jeans-arc` was published with `--allow-swap`: the trousers row it replaced was
+serving an image whose own `qc.json` records **FAIL at lowest category 62**. One catalog row
+changed.
+
+## 2026-08-04 — Session E. 0 credits spent. Blueprint integrity + legacy audit.
+
+**Generation was impossible this session: the `higgsfield` CLI is not installed on this
+machine** (not on PATH, no install dir, no auth config, no `HIGGSFIELD_API_KEY`). Credits
+are untouched on the account; the machine simply cannot reach them. Everything below is
+0-credit work.
+
+**LESSON — verify the blueprint is a DRAWING before queueing a field, not per-option.**
+Auditing `button-config` by eye, `sb-3.jpg` and `sb-4.jpg` turned out to be fabric-texture
+crops, not technical drawings. Running `blueprint_triage.mjs --all` (pixel-based, no
+filenames) confirmed it across the whole catalog:
+
+  LINE_DRAWING 281 · LINE_DRAWING_SMALL 182 · SUSPECT 182 · NOT_A_DRAWING 11
+
+**433 in-scope rows sit behind a SUSPECT/NOT_A_DRAWING blueprint. 279 of those are
+`not-started` = 154 distinct images ≈ 135 credits** the next wave would have burned
+generating against fabric swatches and blank frames — and QC would have PASSED them,
+because QC scores fidelity to the drawing it is given. That is ~15% of the balance saved
+by one pixel check. `blueprint_triage.mjs --all` is now a mandatory pre-wave gate.
+
+**Legacy audit 251 → 470 graded** (0 credits):
+- +201 by propagation. New `tools/propagate_legacy_audit.mjs` carries a verdict across
+  products only when optionId + liveImage + illustration ALL match; a differing drawing
+  is refused and re-queued. Every copied row is marked `propagated:true` with its source,
+  so the ledger never claims a vision pass that did not happen.
+- +18 button-config rows graded by hand. One real defect: **`sb-4` ("SB 4 Buttons") ships a
+  photograph with only THREE buttons** — it is the sb-3 image. Graded on the LABEL, because
+  its blueprint is not a drawing. Ledger now 379 OK / 53 WRONG / 20 UNSURE.
+
+**Owed to the user, evidence assembled in `DECISIONS-OWED.md`** (new `tools/decisions_owed.mjs`):
+loops-5 showing the 7-loop photo; 11 source-limited collision families (63 rows) incl. 11
+peak-lapel options behind ONE drawing; 44 drawings reused across options that must differ;
+20 UNSURE rows where the drawing's printed callout contradicts the catalog label.
+
+**Session E continued — legacy audit 470 → 500 graded (0 credits).**
+- `button-config` field COMPLETE (36 rows). Defect: `sb-4` "SB 4 Buttons" ships a
+  three-button photograph. All six double-breasted configs verified correct on count.
+- `heel-guard` field COMPLETE (12 rows). Defect: **`heel-whole-circle` rendered the tech
+  pack's RED HIGHLIGHT OUTLINE into the customer-facing photo.** Second instance of this
+  failure mode (after `hem-machine-plain`), so it is a pattern, not a one-off: red is the
+  drawing's annotation colour and the generator keeps copying it as if it were construction.
+  Proven to be annotation bleed by sibling `heel-ribbon`, whose equivalent whole-circle band
+  is bound in black self-fabric with no red present.
+  ACTION for the next prompt wave: every prompt must explicitly negative-prompt annotation
+  artefacts (red highlight lines, leader lines, dimension callouts, measurement text).
+Ledger: 412 OK / 56 WRONG / 20 UNSURE → now 500 graded, 388 legacy rows remain.
+
+**LESSON — handedness (left vs right) is unverifiable in the current view convention.**
+Grading `coin-pocket` exposed a systemic gap. Three of the four images are interior
+cutaways of an opened trouser front; in that view there is NO dependable cue for whether
+a feature sits on the wearer's left or the viewer's left (the garment is inverted and
+splayed, so the fly-overlap convention does not apply). `coin-right` shows the correct
+COUNT (one patch) but its side cannot be settled, so it was logged UNSURE rather than a
+coin-flip WRONG. `coin-left` does not appear to depict the field at all — exterior
+three-quarter view of a flapped hip pocket, stylistically unlike its three siblings — but
+was also held at UNSURE rather than sending a live image to regeneration on an inference.
+
+SCOPE: **142 in-scope options (53 distinct ids across 40 fields) encode left/right in the
+label** — back-pocket-style, pen-pocket, watch-pocket, chest-pocket-vest, lapel-bh-position.
+By stage: 52 not-started, 59 legacy-unverified, **22 already SHIPPED (20 + 2 waived)**.
+A mirror-flipped render scores 100% against a 2D drawing, so QC cannot catch this class at
+all — it is invisible for exactly the same reason a wrong blueprint is.
+
+ACTION before any handed option is generated: fix a single view convention (recommend
+exterior, worn, wearer-facing) and state the handedness explicitly in the prompt in wearer
+terms; then re-verify the 22 already shipped against it.
+Ledger after this pass: 506 graded — 424 OK / 59 WRONG / 23 UNSURE. 382 legacy rows remain.
+
+**Built `tools/handedness_guard.mjs`** (0 credits) to make the mirror-flip class visible,
+since QC structurally cannot see it. Output: 142 in-scope rows / 53 distinct options /
+17 fields. **22 already SHIPPED and need re-verification** (incl. shirt/contrast-inner-right-placket,
+suit-2pc/watch-right + watch-left, suit-2pc/coin-right + coin-left, suit-3pc/vest-left-over-right
++ vest-right-over-left, and the vest chest pairs). 120 not yet shipped, led by
+back-pocket-style (22), pen-pocket (18), watch-pocket (15), coin-pocket (10).
+
+IMPORTANT DISTINCTION the guard surfaced: every existing spec.json DOES carry an
+orientation (0 missing) — the interpret stage's `--orientation` requirement is working.
+But orientation (front/back/side/detail/interior) is NOT handedness. Knowing the camera
+sees the front does not say whether the pocket belongs on the wearer's right or the
+viewer's right, and it is the second fact that decides these 53 options. Orientation being
+present is therefore NOT evidence that handedness was ever specified.
+Queue written to public/images/reports/handedness-queue.json.
+
+**hem-style pass (4 rows). New ambiguity sub-class: INVISIBLE-BY-CONSTRUCTION.**
+hem-cuff-32 and hem-fixed-topstitch grade OK-high — a turn-up cuff and a topstitch line
+are both unmistakable at thumbnail size. But hem-no-cuff (5.0 cm), hem-blind (6.4 cm) and
+hem-90 (9.0 cm) differ ONLY by the depth of the INTERNAL hem allowance — fabric turned up
+inside the leg. That is not a rendering failure or a shared-drawing failure: it is not
+visible on ANY exterior worn view at any focal length. Logged UNSURE against the ledger's
+"distinguishable from siblings" half of the OK bar.
+
+This is distinct from the two families already tracked. The peak-lapel case is ONE DRAWING
+for ten options (shared source). This is THREE DISTINCT DRAWINGS whose difference is
+physically unphotographable from outside. Recommend adding a third disposition alongside
+merge/reprice: shoot these as an INTERIOR CUTAWAY (the coin-pocket images already use that
+view), where the allowance depth is actually measurable — or accept they are a spec-only
+choice and drop the per-option photo.
+Ledger: 510 graded — 426 OK / 59 WRONG / 25 UNSURE. 378 legacy rows remain.

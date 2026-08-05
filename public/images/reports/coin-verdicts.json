@@ -1,0 +1,44 @@
+[
+  {
+    "option": "suit-3pc/coin-none",
+    "verdict": "OK",
+    "liveImage": "/images/generated/suit-2pc/coin-none.webp",
+    "confidence": "high",
+    "why": "Label \"None\". Interior cutaway of the opened trouser front shows both pocket bags and the fly, with NO small coin/watch pocket patch stitched to either bag. Absence is the feature of this option and absence is what is depicted; it is also clearly distinguishable from coin-both, whose two patches are plainly visible in the equivalent view."
+  },
+  {
+    "option": "trousers/coin-none",
+    "verdict": "OK",
+    "liveImage": "/images/generated/suit-2pc/coin-none.webp",
+    "confidence": "high",
+    "why": "Label \"None\". Interior cutaway of the opened trouser front shows both pocket bags and the fly, with NO small coin/watch pocket patch stitched to either bag. Absence is the feature of this option and absence is what is depicted; it is also clearly distinguishable from coin-both, whose two patches are plainly visible in the equivalent view."
+  },
+  {
+    "option": "suit-3pc/coin-both",
+    "verdict": "OK",
+    "liveImage": "/images/generated/suit-2pc/coin-both.webp",
+    "confidence": "high",
+    "why": "Label \"Both Sides\". Interior cutaway shows TWO small square coin-pocket patches, one topstitched onto each of the two pocket bags, symmetrically placed. Count is the discriminator for this option and a count of two is unambiguous from the frame regardless of which side the viewer is reading as left or right."
+  },
+  {
+    "option": "suit-3pc/coin-right",
+    "verdict": "UNSURE",
+    "liveImage": "/images/generated/suit-2pc/coin-right.webp",
+    "confidence": "low",
+    "why": "Count is right, side cannot be settled. The interior cutaway shows exactly ONE small square coin-pocket patch topstitched to a single pocket bag, which is correct for a one-sided option and correctly distinguishes it from coin-none (zero) and coin-both (two). But the patch sits on the VIEWER right, and in an opened interior cutaway there is no dependable cue for whether that is the wearer right or the wearer left — the garment is inverted and splayed, so the usual fly-overlap convention does not apply. Since \"Right Side\" vs its mirror sibling \"Left Side\" is decided entirely by that one fact, no verdict is asserted. Settling this needs the drawing read for handedness, or a consistent view convention agreed for the pair."
+  },
+  {
+    "option": "trousers/coin-right",
+    "verdict": "UNSURE",
+    "liveImage": "/images/generated/suit-2pc/coin-right.webp",
+    "confidence": "low",
+    "why": "Count is right, side cannot be settled. The interior cutaway shows exactly ONE small square coin-pocket patch topstitched to a single pocket bag, which is correct for a one-sided option and correctly distinguishes it from coin-none (zero) and coin-both (two). But the patch sits on the VIEWER right, and in an opened interior cutaway there is no dependable cue for whether that is the wearer right or the wearer left — the garment is inverted and splayed, so the usual fly-overlap convention does not apply. Since \"Right Side\" vs its mirror sibling \"Left Side\" is decided entirely by that one fact, no verdict is asserted. Settling this needs the drawing read for handedness, or a consistent view convention agreed for the pair."
+  },
+  {
+    "option": "trousers/coin-left",
+    "verdict": "UNSURE",
+    "liveImage": "/images/generated/trousers/coin-left.webp",
+    "confidence": "low",
+    "why": "The photograph does not appear to depict this field at all, but the drawing is needed to confirm before failing it. Unlike its three siblings — which are all interior cutaways on a plain ground showing the pocket bags — this is an EXTERIOR three-quarter view of a grey trouser front showing a flapped hip pocket with stud fastenings. No small coin/watch pocket is identifiable anywhere in frame. The stylistic break from the rest of the family is itself suspicious. Flagged rather than failed because the coin pocket could be present but outside the crop, and a WRONG verdict here would send a live customer-facing image to regeneration on an inference."
+  }
+]

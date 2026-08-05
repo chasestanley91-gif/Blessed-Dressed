@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-02T17:06:39.193Z",
+  "generatedAt": "2026-08-04T21:29:12.529Z",
   "count": 2862,
   "records": [
     {
@@ -1440,7 +1440,7 @@
           "construction",
           "blueprint-match"
         ],
-        "candidates": 1,
+        "candidates": 2,
         "needsReverify": false,
         "specOnly": false,
         "checkedAt": "2026-08-02T17:03:13.410Z"
@@ -36371,7 +36371,7 @@
           "angles",
           "blueprint-match"
         ],
-        "candidates": 1,
+        "candidates": 2,
         "needsReverify": false,
         "specOnly": false,
         "checkedAt": "2026-08-02T17:03:13.876Z"
@@ -36435,8 +36435,24 @@
       "shippedPath": null,
       "shippedBytes": null,
       "shippedSha1": null,
-      "pipeline": null,
-      "stage": "not-started"
+      "pipeline": {
+        "dir": ".craft-pipeline/suit-2pc/jetted-front",
+        "have": {
+          "spec": true,
+          "prompt": true,
+          "generation": false,
+          "qc": false
+        },
+        "verdict": null,
+        "attempt": null,
+        "lowestScore": null,
+        "belowMin": [],
+        "candidates": 0,
+        "needsReverify": false,
+        "specOnly": false,
+        "checkedAt": null
+      },
+      "stage": "prompt-built"
     },
     {
       "key": "suit-2pc/slant-20",
@@ -36518,7 +36534,7 @@
           "placement",
           "blueprint-match"
         ],
-        "candidates": 1,
+        "candidates": 2,
         "needsReverify": false,
         "specOnly": false,
         "checkedAt": "2026-08-02T17:03:14.032Z"
@@ -36656,18 +36672,26 @@
           "spec": true,
           "prompt": true,
           "generation": true,
-          "qc": false
+          "qc": true
         },
-        "verdict": null,
+        "verdict": "FAIL",
         "attempt": 1,
-        "lowestScore": null,
-        "belowMin": [],
+        "lowestScore": 70,
+        "belowMin": [
+          "shape",
+          "geometry",
+          "dimensions",
+          "angles",
+          "construction",
+          "placement",
+          "blueprint-match"
+        ],
         "candidates": 1,
         "needsReverify": false,
         "specOnly": false,
-        "checkedAt": null
+        "checkedAt": "2026-08-02T17:59:35.508Z"
       },
-      "stage": "generated-awaiting-qc"
+      "stage": "failed-retry-due"
     },
     {
       "key": "suit-2pc/jeans-diamond",
@@ -36724,26 +36748,26 @@
       "liveImage": "/images/generated/suit-2pc/jeans-arc.webp",
       "shipped": true,
       "shippedPath": "/images/generated/suit-2pc/jeans-arc.webp",
-      "shippedBytes": 297972,
-      "shippedSha1": "c404c9065494f5ec86cf38091543261dd6887f4b",
+      "shippedBytes": 81856,
+      "shippedSha1": "1d9d285b54a0e50ad89e2607f4a99c7759a90d28",
       "pipeline": {
         "dir": ".craft-pipeline/suit-2pc/jeans-arc",
         "have": {
           "spec": true,
           "prompt": true,
           "generation": true,
-          "qc": false
+          "qc": true
         },
-        "verdict": null,
+        "verdict": "PASS",
         "attempt": 1,
-        "lowestScore": null,
+        "lowestScore": 98,
         "belowMin": [],
         "candidates": 1,
         "needsReverify": false,
         "specOnly": false,
-        "checkedAt": null
+        "checkedAt": "2026-08-02T17:59:35.774Z"
       },
-      "stage": "generated-awaiting-qc"
+      "stage": "shipped"
     },
     {
       "key": "suit-2pc/jeans-round",
@@ -37008,7 +37032,7 @@
           "construction",
           "composition"
         ],
-        "candidates": 1,
+        "candidates": 2,
         "needsReverify": false,
         "specOnly": false,
         "checkedAt": "2026-08-02T17:03:13.718Z"
@@ -38815,7 +38839,7 @@
           "construction",
           "blueprint-match"
         ],
-        "candidates": 1,
+        "candidates": 2,
         "needsReverify": false,
         "specOnly": false,
         "checkedAt": "2026-08-02T17:03:13.561Z"
@@ -40239,8 +40263,24 @@
       "shippedPath": null,
       "shippedBytes": null,
       "shippedSha1": null,
-      "pipeline": null,
-      "stage": "not-started"
+      "pipeline": {
+        "dir": ".craft-pipeline/suit-2pc/darts-double",
+        "have": {
+          "spec": true,
+          "prompt": true,
+          "generation": false,
+          "qc": false
+        },
+        "verdict": null,
+        "attempt": null,
+        "lowestScore": null,
+        "belowMin": [],
+        "candidates": 0,
+        "needsReverify": false,
+        "specOnly": false,
+        "checkedAt": null
+      },
+      "stage": "prompt-built"
     },
     {
       "key": "suit-2pc/seam-open",
@@ -41450,8 +41490,24 @@
       "shippedPath": null,
       "shippedBytes": null,
       "shippedSha1": null,
-      "pipeline": null,
-      "stage": "not-started"
+      "pipeline": {
+        "dir": ".craft-pipeline/suit-2pc/inner-piping-snugtex",
+        "have": {
+          "spec": true,
+          "prompt": true,
+          "generation": false,
+          "qc": false
+        },
+        "verdict": null,
+        "attempt": null,
+        "lowestScore": null,
+        "belowMin": [],
+        "candidates": 0,
+        "needsReverify": false,
+        "specOnly": false,
+        "checkedAt": null
+      },
+      "stage": "prompt-built"
     },
     {
       "key": "suit-2pc/inner-lining",
@@ -54579,8 +54635,8 @@
       "liveImage": "/images/generated/suit-2pc/jeans-arc.webp",
       "shipped": true,
       "shippedPath": "/images/generated/suit-2pc/jeans-arc.webp",
-      "shippedBytes": 297972,
-      "shippedSha1": "c404c9065494f5ec86cf38091543261dd6887f4b",
+      "shippedBytes": 81856,
+      "shippedSha1": "1d9d285b54a0e50ad89e2607f4a99c7759a90d28",
       "pipeline": null,
       "stage": "legacy-shipped-unverified"
     },
@@ -59625,7 +59681,7 @@
           "construction",
           "blueprint-match"
         ],
-        "candidates": 1,
+        "candidates": 2,
         "needsReverify": false,
         "specOnly": false,
         "checkedAt": "2026-08-02T17:03:14.343Z"
@@ -59646,11 +59702,11 @@
       "inScope": true,
       "blueprint": "local",
       "illustration": "/images/blueprints/remote/3c70f95c470f__3135.jpg",
-      "liveImage": "/images/generated/trousers/jeans-arc.webp",
+      "liveImage": "/images/generated/suit-2pc/jeans-arc.webp",
       "shipped": true,
-      "shippedPath": "/images/generated/trousers/jeans-arc.webp",
-      "shippedBytes": 151604,
-      "shippedSha1": "b67ea87e1aa363a0e155cb79669fb8c60489388d",
+      "shippedPath": "/images/generated/suit-2pc/jeans-arc.webp",
+      "shippedBytes": 81856,
+      "shippedSha1": "1d9d285b54a0e50ad89e2607f4a99c7759a90d28",
       "pipeline": {
         "dir": ".craft-pipeline/trousers/jeans-arc",
         "have": {
@@ -59668,7 +59724,7 @@
           "construction",
           "blueprint-match"
         ],
-        "candidates": 1,
+        "candidates": 2,
         "needsReverify": false,
         "specOnly": false,
         "checkedAt": "2026-08-02T17:03:14.188Z"
@@ -60044,18 +60100,18 @@
           "spec": true,
           "prompt": true,
           "generation": true,
-          "qc": false
+          "qc": true
         },
-        "verdict": null,
+        "verdict": "PASS",
         "attempt": 1,
-        "lowestScore": null,
+        "lowestScore": 98,
         "belowMin": [],
         "candidates": 1,
         "needsReverify": false,
         "specOnly": false,
-        "checkedAt": null
+        "checkedAt": "2026-08-02T17:59:35.983Z"
       },
-      "stage": "generated-awaiting-qc"
+      "stage": "shipped"
     },
     {
       "key": "trousers/watch-both",
@@ -60114,7 +60170,7 @@
           "construction",
           "blueprint-match"
         ],
-        "candidates": 1,
+        "candidates": 2,
         "needsReverify": false,
         "specOnly": false,
         "checkedAt": "2026-08-02T17:03:14.674Z"
@@ -60156,7 +60212,7 @@
           "construction",
           "blueprint-match"
         ],
-        "candidates": 1,
+        "candidates": 2,
         "needsReverify": false,
         "specOnly": false,
         "checkedAt": "2026-08-02T17:03:14.508Z"
@@ -60298,18 +60354,28 @@
           "spec": true,
           "prompt": true,
           "generation": true,
-          "qc": false
+          "qc": true
         },
-        "verdict": null,
+        "verdict": "FAIL",
         "attempt": 2,
-        "lowestScore": null,
-        "belowMin": [],
+        "lowestScore": 44,
+        "belowMin": [
+          "shape",
+          "geometry",
+          "dimensions",
+          "angles",
+          "construction",
+          "placement",
+          "symmetry",
+          "composition",
+          "blueprint-match"
+        ],
         "candidates": 2,
         "needsReverify": false,
         "specOnly": false,
-        "checkedAt": null
+        "checkedAt": "2026-08-02T17:59:36.272Z"
       },
-      "stage": "generated-awaiting-qc"
+      "stage": "failed-retry-due"
     },
     {
       "key": "trousers/knot-i",

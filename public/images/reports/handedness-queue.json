@@ -1,0 +1,1292 @@
+{
+  "generatedAt": "2026-08-05T06:46:53.044Z",
+  "what": "Options whose identity is a side (left/right). A mirrored render scores 100 against a flat drawing, so garment-image-qc cannot detect this class. Shipped rows need re-verification against an agreed view convention; pending rows must state handedness in wearer terms in the prompt.",
+  "convention": "RECOMMENDED: exterior, worn, wearer-facing. State the side in WEARER terms in every prompt (\"on the wearer's right forepart\"), never in viewer terms, and never rely on the drawing alone.",
+  "counts": {
+    "total": 142,
+    "shipped": 22,
+    "pending": 120
+  },
+  "shipped": [
+    {
+      "addr": "shirt/contrast-inner-right-placket",
+      "label": "Inner Right Placket",
+      "field": "contrast_color_position",
+      "stage": "shipped",
+      "liveImage": "/images/generated/shirt/contrast-inner-right-placket.webp",
+      "illustration": "/images/contrast_color_position/inner-right-placket.jpg",
+      "spec": "orientation:set"
+    },
+    {
+      "addr": "sport-coat/lbp-left",
+      "label": "Left Lapel",
+      "field": "lapel-bh-position",
+      "stage": "shipped-waived",
+      "liveImage": "/images/generated/sport-coat/lbp-left.webp",
+      "illustration": "/images/blueprints/supplier/9e99ee8084ba__0541__Left_bttn_hole.jpg",
+      "spec": "orientation:set"
+    },
+    {
+      "addr": "sport-coat/lbp-left-double",
+      "label": "Left Double",
+      "field": "lapel-bh-position",
+      "stage": "shipped",
+      "liveImage": "/images/generated/sport-coat/lbp-left-double.webp",
+      "illustration": "/images/blueprints/supplier/fd7769c12fc9__0545__Double_left_bttn_hole.jpg",
+      "spec": "orientation:set"
+    },
+    {
+      "addr": "sport-coat/lbp-3l-1r",
+      "label": "Three Left / One Right",
+      "field": "lapel-bh-position",
+      "stage": "shipped",
+      "liveImage": "/images/generated/sport-coat/lbp-3l-1r.webp",
+      "illustration": "/images/blueprints/supplier/9ccd5722c833__054Y__3_left_bttn_hole_1_right_bttn_hole.jpg",
+      "spec": "orientation:set"
+    },
+    {
+      "addr": "suit-2pc/watch-right",
+      "label": "Regular Right",
+      "field": "watch-pocket",
+      "stage": "shipped",
+      "liveImage": "/images/generated/suit-2pc/watch-right.webp",
+      "illustration": "/images/blueprints/factory/449292155f03__3180__Regular_right.jpg",
+      "spec": "orientation:set"
+    },
+    {
+      "addr": "suit-2pc/watch-left",
+      "label": "Left Welt",
+      "field": "watch-pocket",
+      "stage": "shipped",
+      "liveImage": "/images/generated/suit-2pc/watch-left.webp",
+      "illustration": "/images/blueprints/factory/2a5f7a6c70e1__3171__Left_welt.jpg",
+      "spec": "orientation:set"
+    },
+    {
+      "addr": "suit-2pc/coin-right",
+      "label": "Right Side",
+      "field": "coin-pocket",
+      "stage": "shipped",
+      "liveImage": "/images/generated/suit-2pc/coin-right.webp",
+      "illustration": "/images/blueprints/remote/1d73941a4932__3530.jpg",
+      "spec": "orientation:set"
+    },
+    {
+      "addr": "suit-2pc/coin-left",
+      "label": "Left Side",
+      "field": "coin-pocket",
+      "stage": "shipped",
+      "liveImage": "/images/generated/suit-2pc/coin-left.webp",
+      "illustration": "/images/blueprints/remote/099818025ae9__3531.jpg",
+      "spec": "orientation:set"
+    },
+    {
+      "addr": "suit-2pc/back-left-welt",
+      "label": "Left Welt with Button",
+      "field": "back-pocket-style",
+      "stage": "shipped",
+      "liveImage": "/images/generated/suit-2pc/back-left-welt.webp",
+      "illustration": "/images/blueprints/factory/2aaa7a83011b__3221__Welt_with_bttn.jpg",
+      "spec": "orientation:set"
+    },
+    {
+      "addr": "suit-2pc/back-both-welt",
+      "label": "Both Welt Pockets (Left Button)",
+      "field": "back-pocket-style",
+      "stage": "shipped",
+      "liveImage": "/images/generated/suit-2pc/back-both-welt.webp",
+      "illustration": "/images/blueprints/factory/819f9d468b2d__320B__Right_left_besom_left_bttn.jpg",
+      "spec": "orientation:set"
+    },
+    {
+      "addr": "suit-3pc/vest-left-over-right",
+      "label": "Left over Right",
+      "field": "placket-direction",
+      "stage": "shipped",
+      "liveImage": "/images/generated/suit-3pc/vest-left-over-right.webp",
+      "illustration": "/images/options/vest/vest-left-over-right.jpg",
+      "spec": "orientation:set"
+    },
+    {
+      "addr": "suit-3pc/vest-right-over-left",
+      "label": "Right over Left",
+      "field": "placket-direction",
+      "stage": "shipped",
+      "liveImage": "/images/generated/suit-3pc/vest-right-over-left.webp",
+      "illustration": "/images/options/vest/vest-right-over-left.jpg",
+      "spec": "orientation:set"
+    },
+    {
+      "addr": "suit-3pc/vest-chest-besom-flap",
+      "label": "Left Besom with Flap",
+      "field": "chest-pocket-vest",
+      "stage": "shipped",
+      "liveImage": "/images/generated/suit-3pc/vest-chest-besom-flap.webp",
+      "illustration": "/images/options/vest/vest-chest-besom-flap.jpg",
+      "spec": "orientation:set"
+    },
+    {
+      "addr": "suit-3pc/vest-chest-left-patch",
+      "label": "Left Patch",
+      "field": "chest-pocket-vest",
+      "stage": "shipped",
+      "liveImage": "/images/generated/suit-3pc/vest-chest-left-patch.webp",
+      "illustration": "/images/options/vest/vest-chest-left-patch.jpg",
+      "spec": "orientation:set"
+    },
+    {
+      "addr": "suit-3pc/vest-chest-both-welt",
+      "label": "Right & Left Welt",
+      "field": "chest-pocket-vest",
+      "stage": "shipped",
+      "liveImage": "/images/generated/suit-3pc/vest-chest-both-welt.webp",
+      "illustration": "/images/options/vest/vest-chest-both-welt.jpg",
+      "spec": "orientation:set"
+    },
+    {
+      "addr": "suit-3pc/vest-chest-both-patch",
+      "label": "Right & Left Patch",
+      "field": "chest-pocket-vest",
+      "stage": "shipped",
+      "liveImage": "/images/generated/suit-3pc/vest-chest-both-patch.webp",
+      "illustration": "/images/options/vest/vest-chest-both-patch.jpg",
+      "spec": "orientation:set"
+    },
+    {
+      "addr": "suit-3pc/vest-ticket-right",
+      "label": "Right Welt",
+      "field": "ticket-pocket-vest",
+      "stage": "shipped-waived",
+      "liveImage": "/images/generated/suit-3pc/vest-ticket-right.webp",
+      "illustration": "/images/options/vest/vest-ticket-right.jpg",
+      "spec": "orientation:set"
+    },
+    {
+      "addr": "suit-3pc/vest-ticket-lr-slant-welt",
+      "label": "Left & Right Slant Welt",
+      "field": "ticket-pocket-vest",
+      "stage": "shipped",
+      "liveImage": "/images/generated/suit-3pc/vest-ticket-lr-slant-welt.webp",
+      "illustration": "/images/options/vest/vest-ticket-lr-slant-welt.jpg",
+      "spec": "orientation:set"
+    },
+    {
+      "addr": "trousers/watch-left",
+      "label": "Left Welt",
+      "field": "watch-pocket",
+      "stage": "shipped",
+      "liveImage": "/images/generated/suit-2pc/watch-left.webp",
+      "illustration": "/images/blueprints/factory/2a5f7a6c70e1__3171__Left_welt.jpg",
+      "spec": "orientation:set"
+    },
+    {
+      "addr": "vest/vest-chest-besom-flap",
+      "label": "Left Besom with Flap",
+      "field": "chest-pocket-vest",
+      "stage": "shipped",
+      "liveImage": "/images/generated/suit-3pc/vest-chest-besom-flap.webp",
+      "illustration": "/images/options/vest/vest-chest-besom-flap.jpg",
+      "spec": "orientation:set"
+    },
+    {
+      "addr": "vest/vest-chest-both-welt",
+      "label": "Right & Left Welt",
+      "field": "chest-pocket-vest",
+      "stage": "shipped",
+      "liveImage": "/images/generated/suit-3pc/vest-chest-both-welt.webp",
+      "illustration": "/images/options/vest/vest-chest-both-welt.jpg",
+      "spec": "orientation:set"
+    },
+    {
+      "addr": "vest/vest-chest-both-besom",
+      "label": "Right & Left Besom",
+      "field": "chest-pocket-vest",
+      "stage": "shipped",
+      "liveImage": "/images/generated/vest/vest-chest-both-besom.webp",
+      "illustration": "/images/options/vest/vest-chest-both-besom.jpg",
+      "spec": "orientation:set"
+    }
+  ],
+  "pending": [
+    {
+      "addr": "shirt/splice-single-left-placket",
+      "label": "Single Left Placket Edge",
+      "field": "collar_splicing",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/shirt/splice-single-left-placket.webp",
+      "illustration": "/images/collar_splicing/single-left-placket-edge.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "shirt/splice-double-left-placket",
+      "label": "Double Left Placket Edges",
+      "field": "collar_splicing",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/shirt/splice-double-left-placket.webp",
+      "illustration": "/images/collar_splicing/double-left-placket-edges.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "shirt/cs-left-sq-rt-rnd",
+      "label": "Left Square / Right Round",
+      "field": "collar_stand",
+      "stage": "not-started",
+      "liveImage": "/images/collar_stand/left-square-and-right-round.jpg",
+      "illustration": "/images/collar_stand/left-square-and-right-round.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "shirt/splice-single-left-placket",
+      "label": "Single Left Placket Edge",
+      "field": "placket_splicing",
+      "stage": "not-started",
+      "liveImage": "/images/collar_splicing/single-left-placket-edge.jpg",
+      "illustration": "/images/collar_splicing/single-left-placket-edge.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "shirt/splice-double-left-placket",
+      "label": "Double Left Placket Edges",
+      "field": "placket_splicing",
+      "stage": "not-started",
+      "liveImage": "/images/collar_splicing/double-left-placket-edges.jpg",
+      "illustration": "/images/collar_splicing/double-left-placket-edges.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "shirt/contrast-left-pocket",
+      "label": "Left Pocket",
+      "field": "contrast_color_position",
+      "stage": "not-started",
+      "liveImage": "/images/contrast_color_position/left-pocket.jpg",
+      "illustration": "/images/contrast_color_position/left-pocket.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "shirt/contrast-right-pocket",
+      "label": "Right Pocket",
+      "field": "contrast_color_position",
+      "stage": "not-started",
+      "liveImage": "/images/contrast_color_position/right-pocket.jpg",
+      "illustration": "/images/contrast_color_position/right-pocket.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "sport-coat/lbp-3l-2r",
+      "label": "Three Left / Two Right",
+      "field": "lapel-bh-position",
+      "stage": "not-started",
+      "liveImage": "/images/jacket/lapel-bh-pos/both-sides.svg",
+      "illustration": "/images/blueprints/supplier/b92433d52b1a__0549__Left_three_right_two.png",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "sport-coat/coin-left",
+      "label": "Left Side",
+      "field": "coin-pocket",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/suit-2pc/coin-left.webp",
+      "illustration": "/images/jacket/coin-pocket/left.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "sport-coat/coin-right",
+      "label": "Right Side",
+      "field": "coin-pocket",
+      "stage": "not-started",
+      "liveImage": "/images/jacket/coin-pocket/right.jpg",
+      "illustration": "/images/jacket/coin-pocket/right.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "sport-coat/pen-left-jetted",
+      "label": "Left Jetted",
+      "field": "pen-pocket",
+      "stage": "not-started",
+      "liveImage": "/images/jacket/pen-pocket/left-jetted.jpg",
+      "illustration": "/images/jacket/pen-pocket/left-jetted.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "sport-coat/pen-left-drop",
+      "label": "Left Drop-shape",
+      "field": "pen-pocket",
+      "stage": "not-started",
+      "liveImage": "/images/jacket/pen-pocket/left-drop.jpg",
+      "illustration": "/images/jacket/pen-pocket/left-drop.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "sport-coat/pen-left-diamond",
+      "label": "Left Diamond",
+      "field": "pen-pocket",
+      "stage": "not-started",
+      "liveImage": "/images/jacket/pen-pocket/left-diamond.jpg",
+      "illustration": "/images/jacket/pen-pocket/left-diamond.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "sport-coat/pen-right-jetted",
+      "label": "Right Jetted",
+      "field": "pen-pocket",
+      "stage": "not-started",
+      "liveImage": "/images/jacket/pen-pocket/right-jetted.jpg",
+      "illustration": "/images/jacket/pen-pocket/right-jetted.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "sport-coat/pen-right-drop",
+      "label": "Right Drop-shape",
+      "field": "pen-pocket",
+      "stage": "not-started",
+      "liveImage": "/images/jacket/pen-pocket/right-drop.jpg",
+      "illustration": "/images/jacket/pen-pocket/right-drop.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "sport-coat/pen-right-diamond",
+      "label": "Right Diamond",
+      "field": "pen-pocket",
+      "stage": "not-started",
+      "liveImage": "/images/jacket/pen-pocket/right-diamond.jpg",
+      "illustration": "/images/jacket/pen-pocket/right-diamond.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "sport-coat/nc-left",
+      "label": "Left Inner",
+      "field": "namecard-pocket",
+      "stage": "not-started",
+      "liveImage": "/images/jacket/namecard-pocket/left.jpg",
+      "illustration": "/images/jacket/namecard-pocket/left.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "sport-coat/nc-right",
+      "label": "Right Inner",
+      "field": "namecard-pocket",
+      "stage": "not-started",
+      "liveImage": "/images/jacket/namecard-pocket/right.jpg",
+      "illustration": "/images/jacket/namecard-pocket/right.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "sport-coat/itp-left",
+      "label": "Left",
+      "field": "inner-ticket-pocket",
+      "stage": "not-started",
+      "liveImage": "/images/jacket/inner-ticket-pocket/left.jpg",
+      "illustration": "/images/jacket/inner-ticket-pocket/left.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "sport-coat/itp-right",
+      "label": "Right",
+      "field": "inner-ticket-pocket",
+      "stage": "not-started",
+      "liveImage": "/images/jacket/inner-ticket-pocket/right.jpg",
+      "illustration": "/images/jacket/inner-ticket-pocket/right.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "sport-coat/itp-both",
+      "label": "Left & Right",
+      "field": "inner-ticket-pocket",
+      "stage": "not-started",
+      "liveImage": "/images/jacket/inner-ticket-pocket/left-and-right.jpg",
+      "illustration": "/images/jacket/inner-ticket-pocket/left-and-right.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "sport-coat/mp3-left",
+      "label": "Left Inner",
+      "field": "mp3-pocket",
+      "stage": "not-started",
+      "liveImage": "/images/jacket/mp3-pocket/left.jpg",
+      "illustration": "/images/jacket/mp3-pocket/left.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "sport-coat/mp3-right",
+      "label": "Right Inner",
+      "field": "mp3-pocket",
+      "stage": "not-started",
+      "liveImage": "/images/jacket/mp3-pocket/right.jpg",
+      "illustration": "/images/jacket/mp3-pocket/right.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-2pc/lbp-left",
+      "label": "Left Lapel",
+      "field": "lapel-bh-position",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/sport-coat/lbp-left.webp",
+      "illustration": "/images/blueprints/supplier/9e99ee8084ba__0541__Left_bttn_hole.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-2pc/lbp-left-double",
+      "label": "Left Double",
+      "field": "lapel-bh-position",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/sport-coat/lbp-left-double.webp",
+      "illustration": "/images/blueprints/supplier/fd7769c12fc9__0545__Double_left_bttn_hole.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-2pc/lbp-3l-2r",
+      "label": "Three Left / Two Right",
+      "field": "lapel-bh-position",
+      "stage": "not-started",
+      "liveImage": "/images/jacket/lapel-bh-pos/both-sides.svg",
+      "illustration": "/images/blueprints/supplier/b92433d52b1a__0549__Left_three_right_two.png",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-2pc/lbp-3l-1r",
+      "label": "Three Left / One Right",
+      "field": "lapel-bh-position",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/sport-coat/lbp-3l-1r.webp",
+      "illustration": "/images/blueprints/supplier/9ccd5722c833__054Y__3_left_bttn_hole_1_right_bttn_hole.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-2pc/coin-left",
+      "label": "Left Side",
+      "field": "coin-pocket",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/suit-2pc/coin-left.webp",
+      "illustration": "/images/jacket/coin-pocket/left.jpg",
+      "spec": "orientation:set"
+    },
+    {
+      "addr": "suit-2pc/coin-right",
+      "label": "Right Side",
+      "field": "coin-pocket",
+      "stage": "not-started",
+      "liveImage": "/images/jacket/coin-pocket/right.jpg",
+      "illustration": "/images/jacket/coin-pocket/right.jpg",
+      "spec": "orientation:set"
+    },
+    {
+      "addr": "suit-2pc/pen-left-jetted",
+      "label": "Left Jetted",
+      "field": "pen-pocket",
+      "stage": "not-started",
+      "liveImage": "/images/jacket/pen-pocket/left-jetted.jpg",
+      "illustration": "/images/jacket/pen-pocket/left-jetted.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-2pc/pen-left-drop",
+      "label": "Left Drop-shape",
+      "field": "pen-pocket",
+      "stage": "not-started",
+      "liveImage": "/images/jacket/pen-pocket/left-drop.jpg",
+      "illustration": "/images/jacket/pen-pocket/left-drop.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-2pc/pen-left-diamond",
+      "label": "Left Diamond",
+      "field": "pen-pocket",
+      "stage": "not-started",
+      "liveImage": "/images/jacket/pen-pocket/left-diamond.jpg",
+      "illustration": "/images/jacket/pen-pocket/left-diamond.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-2pc/pen-right-jetted",
+      "label": "Right Jetted",
+      "field": "pen-pocket",
+      "stage": "not-started",
+      "liveImage": "/images/jacket/pen-pocket/right-jetted.jpg",
+      "illustration": "/images/jacket/pen-pocket/right-jetted.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-2pc/pen-right-drop",
+      "label": "Right Drop-shape",
+      "field": "pen-pocket",
+      "stage": "not-started",
+      "liveImage": "/images/jacket/pen-pocket/right-drop.jpg",
+      "illustration": "/images/jacket/pen-pocket/right-drop.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-2pc/pen-right-diamond",
+      "label": "Right Diamond",
+      "field": "pen-pocket",
+      "stage": "not-started",
+      "liveImage": "/images/jacket/pen-pocket/right-diamond.jpg",
+      "illustration": "/images/jacket/pen-pocket/right-diamond.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-2pc/nc-left",
+      "label": "Left Inner",
+      "field": "namecard-pocket",
+      "stage": "not-started",
+      "liveImage": "/images/jacket/namecard-pocket/left.jpg",
+      "illustration": "/images/jacket/namecard-pocket/left.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-2pc/nc-right",
+      "label": "Right Inner",
+      "field": "namecard-pocket",
+      "stage": "not-started",
+      "liveImage": "/images/jacket/namecard-pocket/right.jpg",
+      "illustration": "/images/jacket/namecard-pocket/right.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-2pc/itp-left",
+      "label": "Left",
+      "field": "inner-ticket-pocket",
+      "stage": "not-started",
+      "liveImage": "/images/jacket/inner-ticket-pocket/left.jpg",
+      "illustration": "/images/jacket/inner-ticket-pocket/left.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-2pc/itp-right",
+      "label": "Right",
+      "field": "inner-ticket-pocket",
+      "stage": "not-started",
+      "liveImage": "/images/jacket/inner-ticket-pocket/right.jpg",
+      "illustration": "/images/jacket/inner-ticket-pocket/right.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-2pc/itp-both",
+      "label": "Left & Right",
+      "field": "inner-ticket-pocket",
+      "stage": "not-started",
+      "liveImage": "/images/jacket/inner-ticket-pocket/left-and-right.jpg",
+      "illustration": "/images/jacket/inner-ticket-pocket/left-and-right.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-2pc/mp3-left",
+      "label": "Left Inner",
+      "field": "mp3-pocket",
+      "stage": "not-started",
+      "liveImage": "/images/jacket/mp3-pocket/left.jpg",
+      "illustration": "/images/jacket/mp3-pocket/left.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-2pc/mp3-right",
+      "label": "Right Inner",
+      "field": "mp3-pocket",
+      "stage": "not-started",
+      "liveImage": "/images/jacket/mp3-pocket/right.jpg",
+      "illustration": "/images/jacket/mp3-pocket/right.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-2pc/watch-right-welt",
+      "label": "Right Welt",
+      "field": "watch-pocket",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/jacket/watch-right-welt.webp",
+      "illustration": "/images/blueprints/remote/9f85b09eb9d0__3181.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-2pc/watch-right-besom",
+      "label": "Right Besom",
+      "field": "watch-pocket",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/jacket/watch-right-besom.webp",
+      "illustration": "/images/blueprints/remote/50184b7abbb4__3188.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-2pc/watch-left-besom",
+      "label": "Left Besom",
+      "field": "watch-pocket",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/jacket/watch-left-besom.webp",
+      "illustration": "/images/blueprints/remote/7d7d99126a50__3178.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-2pc/watch-diamond-flap",
+      "label": "Right with Diamond Flap",
+      "field": "watch-pocket",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/jacket/watch-diamond-flap.webp",
+      "illustration": "/images/blueprints/remote/c82dba868d19__3186.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-2pc/loops-one-right",
+      "label": "One Loop Right Front Only",
+      "field": "belt-loops",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/trousers/loops-one-right.webp",
+      "illustration": "/images/blueprints/remote/b95c608b8ee6__3618.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-2pc/back-left-jetted",
+      "label": "Left Besom with Button & Buttonhole",
+      "field": "back-pocket-style",
+      "stage": "prompt-built",
+      "liveImage": "/images/blueprints/factory/7e10ed9447af__32C7__Left_besom_bttn_bttnhole.jpg",
+      "illustration": "/images/blueprints/factory/7e10ed9447af__32C7__Left_besom_bttn_bttnhole.jpg",
+      "spec": "orientation:set"
+    },
+    {
+      "addr": "suit-2pc/back-left-patch",
+      "label": "Left Pointed Patch Pocket",
+      "field": "back-pocket-style",
+      "stage": "unmet",
+      "liveImage": "/images/generated/suit-2pc/back-left-patch.webp",
+      "illustration": "/images/blueprints/factory/5e26a3e5997d__3230__Patch_with_pointed.jpg",
+      "spec": "orientation:set"
+    },
+    {
+      "addr": "suit-2pc/back-right-besom-btn",
+      "label": "Right Besom with Button Only",
+      "field": "back-pocket-style",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/jacket/back-right-besom-btn.webp",
+      "illustration": "/images/blueprints/remote/a4c36785c1cf__165732950101655.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-2pc/back-both-besom-right-btn",
+      "label": "Both Besom (Right Button)",
+      "field": "back-pocket-style",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/jacket/back-both-besom-right-btn.webp",
+      "illustration": "/images/blueprints/remote/d11c489532aa__165732942214395.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-2pc/back-right-besom-only",
+      "label": "Right Besom Only",
+      "field": "back-pocket-style",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/jacket/back-right-besom-only.webp",
+      "illustration": "/images/blueprints/remote/d0eba06d5db4__165732951339318.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-2pc/back-besom-no-right",
+      "label": "Left Besom Only (No Right)",
+      "field": "back-pocket-style",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/jacket/back-besom-no-right.webp",
+      "illustration": "/images/blueprints/remote/ae7613e6e895__165732952700067.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-3pc/lbp-left",
+      "label": "Left Lapel",
+      "field": "lapel-bh-position",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/sport-coat/lbp-left.webp",
+      "illustration": "/images/blueprints/supplier/9e99ee8084ba__0541__Left_bttn_hole.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-3pc/lbp-left-double",
+      "label": "Left Double",
+      "field": "lapel-bh-position",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/sport-coat/lbp-left-double.webp",
+      "illustration": "/images/blueprints/supplier/fd7769c12fc9__0545__Double_left_bttn_hole.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-3pc/lbp-3l-2r",
+      "label": "Three Left / Two Right",
+      "field": "lapel-bh-position",
+      "stage": "not-started",
+      "liveImage": "/images/jacket/lapel-bh-pos/both-sides.svg",
+      "illustration": "/images/blueprints/supplier/b92433d52b1a__0549__Left_three_right_two.png",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-3pc/lbp-3l-1r",
+      "label": "Three Left / One Right",
+      "field": "lapel-bh-position",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/sport-coat/lbp-3l-1r.webp",
+      "illustration": "/images/blueprints/supplier/9ccd5722c833__054Y__3_left_bttn_hole_1_right_bttn_hole.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-3pc/coin-left",
+      "label": "Left Side",
+      "field": "coin-pocket",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/suit-2pc/coin-left.webp",
+      "illustration": "/images/jacket/coin-pocket/left.jpg",
+      "spec": "orientation:set"
+    },
+    {
+      "addr": "suit-3pc/coin-right",
+      "label": "Right Side",
+      "field": "coin-pocket",
+      "stage": "not-started",
+      "liveImage": "/images/jacket/coin-pocket/right.jpg",
+      "illustration": "/images/jacket/coin-pocket/right.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-3pc/pen-left-jetted",
+      "label": "Left Jetted",
+      "field": "pen-pocket",
+      "stage": "not-started",
+      "liveImage": "/images/jacket/pen-pocket/left-jetted.jpg",
+      "illustration": "/images/jacket/pen-pocket/left-jetted.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-3pc/pen-left-drop",
+      "label": "Left Drop-shape",
+      "field": "pen-pocket",
+      "stage": "not-started",
+      "liveImage": "/images/jacket/pen-pocket/left-drop.jpg",
+      "illustration": "/images/jacket/pen-pocket/left-drop.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-3pc/pen-left-diamond",
+      "label": "Left Diamond",
+      "field": "pen-pocket",
+      "stage": "not-started",
+      "liveImage": "/images/jacket/pen-pocket/left-diamond.jpg",
+      "illustration": "/images/jacket/pen-pocket/left-diamond.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-3pc/pen-right-jetted",
+      "label": "Right Jetted",
+      "field": "pen-pocket",
+      "stage": "not-started",
+      "liveImage": "/images/jacket/pen-pocket/right-jetted.jpg",
+      "illustration": "/images/jacket/pen-pocket/right-jetted.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-3pc/pen-right-drop",
+      "label": "Right Drop-shape",
+      "field": "pen-pocket",
+      "stage": "not-started",
+      "liveImage": "/images/jacket/pen-pocket/right-drop.jpg",
+      "illustration": "/images/jacket/pen-pocket/right-drop.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-3pc/pen-right-diamond",
+      "label": "Right Diamond",
+      "field": "pen-pocket",
+      "stage": "not-started",
+      "liveImage": "/images/jacket/pen-pocket/right-diamond.jpg",
+      "illustration": "/images/jacket/pen-pocket/right-diamond.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-3pc/nc-left",
+      "label": "Left Inner",
+      "field": "namecard-pocket",
+      "stage": "not-started",
+      "liveImage": "/images/jacket/namecard-pocket/left.jpg",
+      "illustration": "/images/jacket/namecard-pocket/left.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-3pc/nc-right",
+      "label": "Right Inner",
+      "field": "namecard-pocket",
+      "stage": "not-started",
+      "liveImage": "/images/jacket/namecard-pocket/right.jpg",
+      "illustration": "/images/jacket/namecard-pocket/right.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-3pc/itp-left",
+      "label": "Left",
+      "field": "inner-ticket-pocket",
+      "stage": "not-started",
+      "liveImage": "/images/jacket/inner-ticket-pocket/left.jpg",
+      "illustration": "/images/jacket/inner-ticket-pocket/left.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-3pc/itp-right",
+      "label": "Right",
+      "field": "inner-ticket-pocket",
+      "stage": "not-started",
+      "liveImage": "/images/jacket/inner-ticket-pocket/right.jpg",
+      "illustration": "/images/jacket/inner-ticket-pocket/right.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-3pc/itp-both",
+      "label": "Left & Right",
+      "field": "inner-ticket-pocket",
+      "stage": "not-started",
+      "liveImage": "/images/jacket/inner-ticket-pocket/left-and-right.jpg",
+      "illustration": "/images/jacket/inner-ticket-pocket/left-and-right.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-3pc/mp3-left",
+      "label": "Left Inner",
+      "field": "mp3-pocket",
+      "stage": "not-started",
+      "liveImage": "/images/jacket/mp3-pocket/left.jpg",
+      "illustration": "/images/jacket/mp3-pocket/left.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-3pc/mp3-right",
+      "label": "Right Inner",
+      "field": "mp3-pocket",
+      "stage": "not-started",
+      "liveImage": "/images/jacket/mp3-pocket/right.jpg",
+      "illustration": "/images/jacket/mp3-pocket/right.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-3pc/vest-lapel-bh-left",
+      "label": "Left",
+      "field": "lapel-buttonhole-vest",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/vest/vest-lapel-bh-left.webp",
+      "illustration": "/images/options/vest/vest-lapel-bh-left.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-3pc/vest-lapel-bh-left-two",
+      "label": "Left Two",
+      "field": "lapel-buttonhole-vest",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/vest/vest-lapel-bh-left-two.webp",
+      "illustration": "/images/options/vest/vest-lapel-bh-left-two.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-3pc/vest-lapel-bh-both",
+      "label": "Right & Left",
+      "field": "lapel-buttonhole-vest",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/vest/vest-lapel-bh-both.webp",
+      "illustration": "/images/options/vest/vest-lapel-bh-both.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-3pc/vest-chest-both-besom",
+      "label": "Right & Left Besom",
+      "field": "chest-pocket-vest",
+      "stage": "unmet",
+      "liveImage": "/images/generated/vest/vest-chest-both-besom.webp",
+      "illustration": "/images/options/vest/vest-chest-both-besom.jpg",
+      "spec": "orientation:set"
+    },
+    {
+      "addr": "suit-3pc/vest-ticket-left",
+      "label": "Left Welt",
+      "field": "ticket-pocket-vest",
+      "stage": "prompt-built",
+      "liveImage": "/images/options/vest/vest-ticket-left.jpg",
+      "illustration": "/images/options/vest/vest-ticket-left.jpg",
+      "spec": "orientation:set"
+    },
+    {
+      "addr": "suit-3pc/watch-right",
+      "label": "Regular Right",
+      "field": "watch-pocket",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/suit-2pc/watch-right.webp",
+      "illustration": "/images/blueprints/factory/449292155f03__3180__Regular_right.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-3pc/watch-left",
+      "label": "Left Welt",
+      "field": "watch-pocket",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/suit-2pc/watch-left.webp",
+      "illustration": "/images/blueprints/factory/2a5f7a6c70e1__3171__Left_welt.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-3pc/watch-right-welt",
+      "label": "Right Welt",
+      "field": "watch-pocket",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/jacket/watch-right-welt.webp",
+      "illustration": "/images/blueprints/remote/9f85b09eb9d0__3181.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-3pc/watch-right-besom",
+      "label": "Right Besom",
+      "field": "watch-pocket",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/jacket/watch-right-besom.webp",
+      "illustration": "/images/blueprints/remote/50184b7abbb4__3188.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-3pc/watch-left-besom",
+      "label": "Left Besom",
+      "field": "watch-pocket",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/jacket/watch-left-besom.webp",
+      "illustration": "/images/blueprints/remote/7d7d99126a50__3178.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-3pc/watch-diamond-flap",
+      "label": "Right with Diamond Flap",
+      "field": "watch-pocket",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/jacket/watch-diamond-flap.webp",
+      "illustration": "/images/blueprints/remote/c82dba868d19__3186.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-3pc/coin-right",
+      "label": "Right Side",
+      "field": "coin-pocket",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/suit-2pc/coin-right.webp",
+      "illustration": "/images/blueprints/remote/1d73941a4932__3530.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-3pc/coin-left",
+      "label": "Left Side",
+      "field": "coin-pocket",
+      "stage": "unmet",
+      "liveImage": "/images/generated/suit-2pc/coin-left.webp",
+      "illustration": "/images/blueprints/remote/099818025ae9__3531.jpg",
+      "spec": "orientation:set"
+    },
+    {
+      "addr": "suit-3pc/loops-one-right",
+      "label": "One Loop Right Front Only",
+      "field": "belt-loops",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/trousers/loops-one-right.webp",
+      "illustration": "/images/blueprints/remote/b95c608b8ee6__3618.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-3pc/back-left-welt",
+      "label": "Left Welt with Button",
+      "field": "back-pocket-style",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/suit-2pc/back-left-welt.webp",
+      "illustration": "/images/blueprints/factory/2aaa7a83011b__3221__Welt_with_bttn.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-3pc/back-both-welt",
+      "label": "Both Welt Pockets (Left Button)",
+      "field": "back-pocket-style",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/suit-2pc/back-both-welt.webp",
+      "illustration": "/images/blueprints/factory/819f9d468b2d__320B__Right_left_besom_left_bttn.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-3pc/back-left-jetted",
+      "label": "Left Besom with Button & Buttonhole",
+      "field": "back-pocket-style",
+      "stage": "not-started",
+      "liveImage": "/images/blueprints/factory/7e10ed9447af__32C7__Left_besom_bttn_bttnhole.jpg",
+      "illustration": "/images/blueprints/factory/7e10ed9447af__32C7__Left_besom_bttn_bttnhole.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-3pc/back-left-patch",
+      "label": "Left Pointed Patch Pocket",
+      "field": "back-pocket-style",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/suit-2pc/back-left-patch.webp",
+      "illustration": "/images/blueprints/factory/5e26a3e5997d__3230__Patch_with_pointed.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-3pc/back-right-besom-btn",
+      "label": "Right Besom with Button Only",
+      "field": "back-pocket-style",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/jacket/back-right-besom-btn.webp",
+      "illustration": "/images/blueprints/remote/a4c36785c1cf__165732950101655.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-3pc/back-both-besom-right-btn",
+      "label": "Both Besom (Right Button)",
+      "field": "back-pocket-style",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/jacket/back-both-besom-right-btn.webp",
+      "illustration": "/images/blueprints/remote/d11c489532aa__165732942214395.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-3pc/back-right-besom-only",
+      "label": "Right Besom Only",
+      "field": "back-pocket-style",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/jacket/back-right-besom-only.webp",
+      "illustration": "/images/blueprints/remote/d0eba06d5db4__165732951339318.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "suit-3pc/back-besom-no-right",
+      "label": "Left Besom Only (No Right)",
+      "field": "back-pocket-style",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/jacket/back-besom-no-right.webp",
+      "illustration": "/images/blueprints/remote/ae7613e6e895__165732952700067.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "trousers/watch-right",
+      "label": "Regular Right",
+      "field": "watch-pocket",
+      "stage": "prompt-built",
+      "liveImage": "/images/generated/suit-2pc/watch-right.webp",
+      "illustration": "/images/blueprints/factory/449292155f03__3180__Regular_right.jpg",
+      "spec": "orientation:set"
+    },
+    {
+      "addr": "trousers/watch-right-welt",
+      "label": "Right Welt",
+      "field": "watch-pocket",
+      "stage": "failed-retry-due",
+      "liveImage": "/images/generated/trousers/watch-right-welt.webp",
+      "illustration": "/images/blueprints/remote/9f85b09eb9d0__3181.jpg",
+      "spec": "orientation:set"
+    },
+    {
+      "addr": "trousers/watch-right-besom",
+      "label": "Right Besom",
+      "field": "watch-pocket",
+      "stage": "failed-retry-due",
+      "liveImage": "/images/generated/trousers/watch-right-besom.webp",
+      "illustration": "/images/blueprints/remote/50184b7abbb4__3188.jpg",
+      "spec": "orientation:set"
+    },
+    {
+      "addr": "trousers/watch-left-besom",
+      "label": "Left Besom",
+      "field": "watch-pocket",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/jacket/watch-left-besom.webp",
+      "illustration": "/images/blueprints/remote/7d7d99126a50__3178.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "trousers/watch-diamond-flap",
+      "label": "Right with Diamond Flap",
+      "field": "watch-pocket",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/trousers/watch-diamond-flap.webp",
+      "illustration": "/images/blueprints/remote/c82dba868d19__3186.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "trousers/coin-right",
+      "label": "Right Side",
+      "field": "coin-pocket",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/suit-2pc/coin-right.webp",
+      "illustration": "/images/blueprints/remote/1d73941a4932__3530.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "trousers/coin-left",
+      "label": "Left Side",
+      "field": "coin-pocket",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/trousers/coin-left.webp",
+      "illustration": "/images/blueprints/remote/099818025ae9__3531.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "trousers/loops-one-right",
+      "label": "One Loop Right Front Only",
+      "field": "belt-loops",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/trousers/loops-one-right.webp",
+      "illustration": "/images/blueprints/remote/b95c608b8ee6__3618.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "trousers/back-left-welt",
+      "label": "Left Welt with Button",
+      "field": "back-pocket-style",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/suit-2pc/back-left-welt.webp",
+      "illustration": "/images/blueprints/factory/2aaa7a83011b__3221__Welt_with_bttn.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "trousers/back-both-welt",
+      "label": "Both Welt Pockets (Left Button)",
+      "field": "back-pocket-style",
+      "stage": "prompt-built",
+      "liveImage": "/images/generated/suit-2pc/back-both-welt.webp",
+      "illustration": "/images/blueprints/factory/819f9d468b2d__320B__Right_left_besom_left_bttn.jpg",
+      "spec": "orientation:set"
+    },
+    {
+      "addr": "trousers/back-left-jetted",
+      "label": "Left Besom with Button & Buttonhole",
+      "field": "back-pocket-style",
+      "stage": "not-started",
+      "liveImage": "/images/blueprints/factory/7e10ed9447af__32C7__Left_besom_bttn_bttnhole.jpg",
+      "illustration": "/images/blueprints/factory/7e10ed9447af__32C7__Left_besom_bttn_bttnhole.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "trousers/back-left-patch",
+      "label": "Left Pointed Patch Pocket",
+      "field": "back-pocket-style",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/suit-2pc/back-left-patch.webp",
+      "illustration": "/images/blueprints/factory/5e26a3e5997d__3230__Patch_with_pointed.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "trousers/back-right-besom-btn",
+      "label": "Right Besom with Button Only",
+      "field": "back-pocket-style",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/trousers/back-right-besom-btn.webp",
+      "illustration": "/images/blueprints/remote/a4c36785c1cf__165732950101655.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "trousers/back-both-besom-right-btn",
+      "label": "Both Besom (Right Button)",
+      "field": "back-pocket-style",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/trousers/back-both-besom-right-btn.webp",
+      "illustration": "/images/blueprints/remote/d11c489532aa__165732942214395.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "trousers/back-right-besom-only",
+      "label": "Right Besom Only",
+      "field": "back-pocket-style",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/trousers/back-right-besom-only.webp",
+      "illustration": "/images/blueprints/remote/d0eba06d5db4__165732951339318.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "trousers/back-besom-no-right",
+      "label": "Left Besom Only (No Right)",
+      "field": "back-pocket-style",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/trousers/back-besom-no-right.webp",
+      "illustration": "/images/blueprints/remote/ae7613e6e895__165732952700067.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "vest/vest-left-over-right",
+      "label": "Left over Right",
+      "field": "placket-direction",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/vest/vest-left-over-right.webp",
+      "illustration": "/images/options/vest/vest-left-over-right.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "vest/vest-right-over-left",
+      "label": "Right over Left",
+      "field": "placket-direction",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/vest/vest-right-over-left.webp",
+      "illustration": "/images/options/vest/vest-right-over-left.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "vest/vest-lapel-bh-left",
+      "label": "Left",
+      "field": "lapel-buttonhole-vest",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/vest/vest-lapel-bh-left.webp",
+      "illustration": "/images/options/vest/vest-lapel-bh-left.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "vest/vest-lapel-bh-left-two",
+      "label": "Left Two",
+      "field": "lapel-buttonhole-vest",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/vest/vest-lapel-bh-left-two.webp",
+      "illustration": "/images/options/vest/vest-lapel-bh-left-two.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "vest/vest-lapel-bh-both",
+      "label": "Right & Left",
+      "field": "lapel-buttonhole-vest",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/vest/vest-lapel-bh-both.webp",
+      "illustration": "/images/options/vest/vest-lapel-bh-both.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "vest/vest-chest-left-patch",
+      "label": "Left Patch",
+      "field": "chest-pocket-vest",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/vest/vest-chest-left-patch.webp",
+      "illustration": "/images/options/vest/vest-chest-left-patch.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "vest/vest-chest-both-patch",
+      "label": "Right & Left Patch",
+      "field": "chest-pocket-vest",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/vest/vest-chest-both-patch.webp",
+      "illustration": "/images/options/vest/vest-chest-both-patch.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "vest/vest-ticket-right",
+      "label": "Right Welt",
+      "field": "ticket-pocket-vest",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/suit-3pc/vest-ticket-right.webp",
+      "illustration": "/images/options/vest/vest-ticket-right.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "vest/vest-ticket-left",
+      "label": "Left Welt",
+      "field": "ticket-pocket-vest",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/vest/vest-ticket-left.webp",
+      "illustration": "/images/options/vest/vest-ticket-left.jpg",
+      "spec": "no-spec"
+    },
+    {
+      "addr": "vest/vest-ticket-lr-slant-welt",
+      "label": "Left & Right Slant Welt",
+      "field": "ticket-pocket-vest",
+      "stage": "legacy-shipped-unverified",
+      "liveImage": "/images/generated/vest/vest-ticket-lr-slant-welt.webp",
+      "illustration": "/images/options/vest/vest-ticket-lr-slant-welt.jpg",
+      "spec": "no-spec"
+    }
+  ]
+}

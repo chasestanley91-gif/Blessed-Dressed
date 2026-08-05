@@ -1,0 +1,86 @@
+[
+  {
+    "option": "suit-2pc/heel-none",
+    "verdict": "OK",
+    "liveImage": "/images/generated/trousers/heel-none.webp",
+    "confidence": "high",
+    "why": "Label \"No Heel Guard\". Photo is a clean pressed trouser hem with a turned edge and NO guard, tape, ribbon or reinforcing patch anywhere on the hem circumference. Absence is the feature and absence is what is depicted; it is also clearly distinguishable from all three siblings, which each carry a visible guard."
+  },
+  {
+    "option": "suit-3pc/heel-none",
+    "verdict": "OK",
+    "liveImage": "/images/generated/trousers/heel-none.webp",
+    "confidence": "high",
+    "why": "Label \"No Heel Guard\". Photo is a clean pressed trouser hem with a turned edge and NO guard, tape, ribbon or reinforcing patch anywhere on the hem circumference. Absence is the feature and absence is what is depicted; it is also clearly distinguishable from all three siblings, which each carry a visible guard."
+  },
+  {
+    "option": "trousers/heel-none",
+    "verdict": "OK",
+    "liveImage": "/images/generated/trousers/heel-none.webp",
+    "confidence": "high",
+    "why": "Label \"No Heel Guard\". Photo is a clean pressed trouser hem with a turned edge and NO guard, tape, ribbon or reinforcing patch anywhere on the hem circumference. Absence is the feature and absence is what is depicted; it is also clearly distinguishable from all three siblings, which each carry a visible guard."
+  },
+  {
+    "option": "suit-2pc/heel-standard",
+    "verdict": "OK",
+    "liveImage": "/images/generated/trousers/heel-standard.webp",
+    "confidence": "high",
+    "why": "Label \"Heel Guard\". Photo shows a single self-fabric reinforcing patch stitched to the back portion of the hem only — a clearly bounded rectangle with its own topstitched outline, occupying part of the hem circumference rather than all of it. That partial coverage is exactly what separates this option from the two whole-circle siblings."
+  },
+  {
+    "option": "suit-3pc/heel-standard",
+    "verdict": "OK",
+    "liveImage": "/images/generated/trousers/heel-standard.webp",
+    "confidence": "high",
+    "why": "Label \"Heel Guard\". Photo shows a single self-fabric reinforcing patch stitched to the back portion of the hem only — a clearly bounded rectangle with its own topstitched outline, occupying part of the hem circumference rather than all of it. That partial coverage is exactly what separates this option from the two whole-circle siblings."
+  },
+  {
+    "option": "trousers/heel-standard",
+    "verdict": "OK",
+    "liveImage": "/images/generated/trousers/heel-standard.webp",
+    "confidence": "high",
+    "why": "Label \"Heel Guard\". Photo shows a single self-fabric reinforcing patch stitched to the back portion of the hem only — a clearly bounded rectangle with its own topstitched outline, occupying part of the hem circumference rather than all of it. That partial coverage is exactly what separates this option from the two whole-circle siblings."
+  },
+  {
+    "option": "suit-2pc/heel-whole-circle",
+    "verdict": "WRONG",
+    "liveImage": "/images/generated/trousers/heel-whole-circle.webp",
+    "confidence": "high",
+    "why": "ANNOTATION RENDERED INTO A CUSTOMER-FACING PHOTO. The guard band runs the full hem width (correct for \"Whole Circle\"), but it is enclosed by a bright RED outline on all four sides. Red is the tech-pack highlight colour used to mark the feature being specified — it is manufacturing documentation, not garment construction, and must never appear in a shipped photograph (standing rule; same defect already logged for trousers/hem-machine-plain). Confirmed as annotation bleed rather than a design feature by the sibling heel-ribbon, whose equivalent whole-circle band is bound in black self-fabric with no red anywhere. Construction is otherwise plausible, so this needs a regeneration with the red suppressed, not a re-interpretation."
+  },
+  {
+    "option": "suit-3pc/heel-whole-circle",
+    "verdict": "WRONG",
+    "liveImage": "/images/generated/trousers/heel-whole-circle.webp",
+    "confidence": "high",
+    "why": "ANNOTATION RENDERED INTO A CUSTOMER-FACING PHOTO. The guard band runs the full hem width (correct for \"Whole Circle\"), but it is enclosed by a bright RED outline on all four sides. Red is the tech-pack highlight colour used to mark the feature being specified — it is manufacturing documentation, not garment construction, and must never appear in a shipped photograph (standing rule; same defect already logged for trousers/hem-machine-plain). Confirmed as annotation bleed rather than a design feature by the sibling heel-ribbon, whose equivalent whole-circle band is bound in black self-fabric with no red anywhere. Construction is otherwise plausible, so this needs a regeneration with the red suppressed, not a re-interpretation."
+  },
+  {
+    "option": "trousers/heel-whole-circle",
+    "verdict": "WRONG",
+    "liveImage": "/images/generated/trousers/heel-whole-circle.webp",
+    "confidence": "high",
+    "why": "ANNOTATION RENDERED INTO A CUSTOMER-FACING PHOTO. The guard band runs the full hem width (correct for \"Whole Circle\"), but it is enclosed by a bright RED outline on all four sides. Red is the tech-pack highlight colour used to mark the feature being specified — it is manufacturing documentation, not garment construction, and must never appear in a shipped photograph (standing rule; same defect already logged for trousers/hem-machine-plain). Confirmed as annotation bleed rather than a design feature by the sibling heel-ribbon, whose equivalent whole-circle band is bound in black self-fabric with no red anywhere. Construction is otherwise plausible, so this needs a regeneration with the red suppressed, not a re-interpretation."
+  },
+  {
+    "option": "suit-2pc/heel-ribbon",
+    "verdict": "OK",
+    "liveImage": "/images/generated/trousers/heel-ribbon.webp",
+    "confidence": "high",
+    "why": "Label \"Whole Circle (Finished Ribbon)\". Photo shows a pale contrast ribbon running the entire hem circumference, finished along both long edges with a dark bound edge — the \"finished ribbon\" treatment that distinguishes this from the plain whole-circle guard. Full-width coverage and the bound finish are both present, and no annotation colour appears."
+  },
+  {
+    "option": "suit-3pc/heel-ribbon",
+    "verdict": "OK",
+    "liveImage": "/images/generated/trousers/heel-ribbon.webp",
+    "confidence": "high",
+    "why": "Label \"Whole Circle (Finished Ribbon)\". Photo shows a pale contrast ribbon running the entire hem circumference, finished along both long edges with a dark bound edge — the \"finished ribbon\" treatment that distinguishes this from the plain whole-circle guard. Full-width coverage and the bound finish are both present, and no annotation colour appears."
+  },
+  {
+    "option": "trousers/heel-ribbon",
+    "verdict": "OK",
+    "liveImage": "/images/generated/trousers/heel-ribbon.webp",
+    "confidence": "high",
+    "why": "Label \"Whole Circle (Finished Ribbon)\". Photo shows a pale contrast ribbon running the entire hem circumference, finished along both long edges with a dark bound edge — the \"finished ribbon\" treatment that distinguishes this from the plain whole-circle guard. Full-width coverage and the bound finish are both present, and no annotation colour appears."
+  }
+]
