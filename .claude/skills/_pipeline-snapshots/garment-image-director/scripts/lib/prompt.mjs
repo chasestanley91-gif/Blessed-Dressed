@@ -608,6 +608,38 @@ export function buildPrompt(spec) {
       + `them and the difference reads in one second. Fine stitching, legible weave.`
     : `Extremely realistic ${spec.fabric} texture, fine stitching.`;
 
+  // A HAIRLINE FEATURE IS INVISIBLE ON COARSE CLOTH — the same failure as the
+  // grain rule above, on the other axis. A grain direction needs a pattern to
+  // run along; a sub-millimetre feature needs a weave FINER THAN ITSELF.
+  //
+  // Measured 2026-08-05 on suit-2pc/pocket-stitch-015 ("0.15 cm Topstitch").
+  // Attempt 1 failed for framing: the stitch spanned roughly one pixel in a wide
+  // hip shot. Attempt 2 corrected the framing and it worked — waistband depth
+  // went 146 px to 242 px — and the render then dropped the topstitch ENTIRELY.
+  // A perpendicular cross-section averaged over 650 samples along a rectified
+  // mouth line (fit rms 0.53 px, 305 inliers) contained exactly one feature, and
+  // it was not a stitch. The photograph became indistinguishable from its
+  // pocket-stitch-none sibling in the same field.
+  //
+  // The cause was the cloth, not the camera. Along-line FFT gave a weave cell of
+  // 4.1-4.5 px — about 0.07 cm at that frame's scale, an open basket/hopsack —
+  // against a 0.15 cm subject. A weave whose cell is half the width of the
+  // feature cannot show it, and zooming closer magnifies the weave along with
+  // the stitch, netting nothing. Framing alone can never fix this.
+  const HAIRLINE_CM = 1.0;
+  const cmInLabel = String(spec.label || '').match(/(\d+(?:\.\d+)?)\s*cm/i);
+  const isHairline = Boolean(cmInLabel) && parseFloat(cmInLabel[1]) < HAIRLINE_CM
+    && /stitch|topstitch|pick|edge|seam|piping|hairline/i.test(`${spec.optionId || ''} ${spec.field || ''} ${spec.label || ''}`);
+  const hairlineCloth = isHairline
+    ? `CLOTH MUST BE FINER THAN THE FEATURE — this option's whole subject measures ${cmInLabel[1]} cm, `
+      + `which is smaller than the weave cell of any textured cloth. Render it on a SMOOTH, FLAT, `
+      + `TIGHTLY-WOVEN fine worsted with a close even surface: no hopsack, no basketweave, no tweed, `
+      + `no open or slubby weave, no pronounced texture of any kind. On coarse cloth this feature `
+      + `photographs as nothing at all, and moving the camera closer only magnifies the weave along `
+      + `with it. The stitch line must be the finest repeating detail in the frame — nothing in the `
+      + `cloth itself may be as small as, or smaller than, the stitch.`
+    : null;
+
   // Waistband-family micro-craft lock (Primary Craft / Hardware Lock / Single
   // State / Flatness) — '' for every other part, so it filters out.
   const craft = craftLock(spec);
@@ -652,6 +684,11 @@ export function buildPrompt(spec) {
     matchedFraming,
     photoBlockFor(spec),
     texture,
+    // AFTER texture, deliberately: texture names the cloth, this constrains it.
+    // A constraint placed before the thing it constrains loses — the ordering
+    // lesson from lapel-notch-68, where a correction that contradicted an
+    // earlier paragraph was simply ignored.
+    hairlineCloth,
     NEGATIVE,
     forbiddenBlock,
   ].filter(Boolean).join('\n\n');
