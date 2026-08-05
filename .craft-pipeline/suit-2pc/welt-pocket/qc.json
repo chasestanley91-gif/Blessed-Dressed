@@ -2,18 +2,18 @@
   "addr": "suit-2pc > welt-pocket",
   "productId": "suit-2pc",
   "optionId": "welt-pocket",
-  "attempt": 2,
+  "attempt": 3,
   "maxAttempts": 3,
   "scores": {
-    "shape": 96,
-    "geometry": 95,
-    "dimensions": 82,
-    "angles": 99,
-    "construction": 92,
-    "placement": 91,
+    "shape": 84,
+    "geometry": 85,
+    "dimensions": 78,
+    "angles": 95,
+    "construction": 80,
+    "placement": 92,
     "symmetry": 97,
-    "composition": 85,
-    "blueprint-match": 87
+    "composition": 90,
+    "blueprint-match": 84
   },
   "scoreMin": 98,
   "waiverMin": 95,
@@ -21,6 +21,7 @@
     "shape",
     "geometry",
     "dimensions",
+    "angles",
     "construction",
     "placement",
     "symmetry",
@@ -28,6 +29,8 @@
     "blueprint-match"
   ],
   "belowWaiverMinCategories": [
+    "shape",
+    "geometry",
     "dimensions",
     "construction",
     "placement",
@@ -37,97 +40,76 @@
   "errors": [
     {
       "severity": "major",
-      "category": "dimensions",
-      "description": "The showcased vertical welt is materially SHORT. Normalised to the one landmark present in both images (waistband depth: drawing 103.3px perpendicular at x=460, from top edge centre y=124.5 to bottom-seam centre y=227.5; render 106.8px perpendicular at x=350, top edge y=71 to bottom-seam centre y=178.5 — the render seam was verified across x=200..800 with a consistent 97-110px depth, so it is not a one-column artifact), the welt runs 4.71 waistband-depths outer / 4.56 centreline in the drawing but only 3.85 / 3.81 in the render. Endpoint span was checked against the full run, not a crop: the render's two welt edge lines were traced over y=200..700 (crop 500px tall, feature 411px — not saturating) and fade at y=243±4 and y=650±4.",
-      "expected": "welt length = 4.56-4.71 x waistband depth (471-486px of a 103.3px band); aspect 18.2:1",
-      "actual": "welt length = 3.81-3.85 x waistband depth (407-411px of a 106.8px band); aspect 16.5:1 — 16.4% to 18.2% short depending on edge convention",
-      "correction": "Lengthen the vertical welt opening by ~17% so it spans 4.6 waistband-depths, extending the bottom terminus downward (the top position is already close); keep strip width unchanged.",
-      "severity_note": ""
+      "category": "construction",
+      "description": "REGRESSION against locked feature 6. The context hip welt on the right-hand panel has collapsed to roughly half its drawn depth and no longer reads as a welt at all. Measured identically in all three images (the two strong parallel lines bounding a lit strip face, calibrated against attempt 2 which returned the locked 0.338): drawing upper/lower lines fitted over x=650..975, mean separation 34.15px perpendicular against a 102.99px waistband; attempt 2, 35.4px against a 106.0px band = 0.334; attempt 3, 17.2px against a 120.1px band measured locally under the hip welt (x=600..765, seam fit resid 0.97px) = 0.143. Averaged perpendicular profile at x=640..680 shows the identical structure to attempt 2 (dark trough 6.0 at y=312, lit face 45-49 across y=314..326, dark trough 11.6 at y=329) simply halved in depth. This is a vertical-axis dimension sharing an axis with the waistband-depth landmark, so oblique foreshortening (which compresses horizontal dimensions only) cannot explain it. Cross-checked without any normaliser: hip-welt depth divided by vertical-welt strip width is 1.32 in the drawing, 1.43 in attempt 2, 0.64 here.",
+      "expected": "hip welt strip depth = 0.332-0.338 x waistband depth (34.2px of a 103px band; 40px of this render's 120px band), reading as a dimensional welt strip like the one it sits beside",
+      "actual": "0.143 x waistband depth (17.2px of a 120.1px band) - 57% too shallow; it now reads as a thin double-jetted slit, which is the exact construction this option is sold as NOT being",
+      "correction": "Restore the hip welt's strip depth to 0.33 waistband-depths (about 40px at this render's scale) - roughly double its current depth. Do not change its angle, position or the vertical welt.",
+      "severity_note": "regression against locked feature: 'The second, near-horizontal welt pocket ... its strip depth normalised to waistband depth is 0.338 vs 0.332 (within 1.9%). Keep it.'"
     },
     {
       "severity": "major",
-      "category": "composition",
-      "description": "Two welt pockets carry near-equal visual weight and nothing identifies which one is the option being sold. The drawing marks the VERTICAL welt in red and draws the horizontal hip welt in plain black — i.e. one is the subject and one is context. The render gives the horizontal welt the more central, higher-contrast position (centre x=636 of an 880px frame, 288px long, strong specular highlight on the welt fold) while the subject vertical welt sits at x=350 (40% across) crowded toward the left frame edge. A customer scanning the thumbnail is at least as likely to read this as a horizontal welt pocket option.",
-      "expected": "the vertical front welt dominates the frame as the unambiguous subject, the horizontal hip welt present but subordinate (as in the drawing, where red vs black establishes the hierarchy)",
-      "actual": "vertical welt at 40% frame width, off-centre-left; horizontal welt more centrally placed and higher contrast; no depth-of-field, crop or lighting separation between them",
-      "correction": "Recompose so the vertical welt sits near the optical centre and occupies more frame height, and let the horizontal hip welt fall further right / softer in focus. Do not delete it — it is in the drawing."
-    },
-    {
-      "severity": "minor",
-      "category": "placement",
-      "description": "Vertical start point of the welt sits lower than drawn. Measured as the perpendicular gap from the waistband bottom seam to the welt's top cap, at the welt's own x.",
-      "expected": "welt top begins 0.45 x waistband depth below the waistband seam (46.7px / 103.3px); welt bottom ends 5.18 depths below it",
-      "actual": "welt top begins 0.55 x waistband depth below the seam (58.6px / 106.8px, +21%); welt bottom ends 4.43 depths below it (-15%)",
-      "correction": "Raise the welt's top terminus by roughly 0.10 waistband-depths and extend the bottom terminus by ~0.75 depths."
+      "category": "dimensions",
+      "description": "REGRESSION against locked feature 4. The showcased vertical welt's strip WIDTH narrowed further while its length was being corrected - the one change the lock explicitly forbade. Sub-pixel trace of both long edges over y=210..860 (feature runs y=226..815, so 589px of a 650px window - not saturating, 16px headroom above and 45px below): fitted gap 27.05px at y=260 falling to 26.53px at y=800, perpendicular width 26.78px against a 128.09px waistband depth = 0.209. Drawing = 26.0px stroke-centreline-to-centreline (measured at eight heights, 26.0-26.5) perpendicular 25.93px against 102.99px = 0.252. Attempt 2 was 0.231. Confirmed by a normaliser-free cross-check: welt aspect ratio is 22.09:1 here versus 18.08:1 in the drawing and 16.5:1 in attempt 2 - the strip is now too narrow for its (now correct) length.",
+      "expected": "welt strip width = 0.252 x waistband depth (32.3px at this render's scale); aspect ratio 18.1:1",
+      "actual": "0.209 x waistband depth (26.78px); aspect ratio 22.09:1 - 17% narrow, up from 8% narrow in attempt 2",
+      "correction": "Widen the vertical welt strip by about 20% (to roughly 32px at this scale) WITHOUT changing its length, its two endpoints, or its orientation. Length and both end positions are now correct to within 2% and must be preserved exactly.",
+      "severity_note": "regression against locked feature: 'Welt strip WIDTH normalised to waistband depth: drawing 0.251, render 0.231 - within 8%. Do not narrow or widen the strip when fixing the length.'"
     },
     {
       "severity": "minor",
       "category": "construction",
-      "description": "The belt loop at the right silhouette (image x 792-830, y 128-262) renders as a thin free-floating outlined ring standing clear of the waistband, with background light visible through it and a hard black contour. It reads as a wire hoop rather than a pressed, bar-tacked cloth loop. Not the showcased feature, but it is a visible craftsmanship failure in a luxury catalog frame.",
-      "expected": "a pressed worsted belt loop lying against the waistband, bar-tacked top and bottom, same cloth and weave as the band",
-      "actual": "a detached thin ring with an unnaturally hard outline and daylight showing through the gap",
-      "correction": "Regenerate with the right-hand belt loop lying flat against the waistband, or crop it out of frame."
+      "description": "Carried over from attempt 2 and NOT fixed. The right-hand belt loop (image x 762-844, y 60-215) still renders as a thin, smooth, free-floating hoop standing clear of the waistband with light-grey background clearly visible through the gap (7,866 pixels above 150 grey inside the loop's bounding box) and a hard rounded contour. It now also hangs below the waistband's bottom edge with its lower end unattached to any cloth. It reads as a wire ring, not a pressed cloth loop. The left belt loop by contrast is correct - a pressed worsted loop lying flat on the band, visible weave, bar-tacked - which proves the render can do it right.",
+      "expected": "a pressed worsted belt loop lying against the waistband, bar-tacked top and bottom, same cloth and weave as the band (as the left loop already is)",
+      "actual": "a detached smooth ring standing off the band with daylight showing through and its lower end unattached",
+      "correction": "Regenerate with the right-hand belt loop lying flat against the waistband like the left one, or crop it out of frame.",
+      "severity_note": ""
+    },
+    {
+      "severity": "minor",
+      "category": "dimensions",
+      "description": "The hip welt is also short along its length, compounding the depth loss. Its two strong bounding lines run x=520..815 in the render (295px horizontal, 295.5px along its own axis) = 2.46 waistband-depths against the local 120.1px band. The drawing's hip welt runs x=627..980 (358.9px along axis) = 3.485 depths. Part of this is legitimately explained by the tighter, more turned crop compressing horizontal distances on the right-hand panel - the drawing is also internally inconsistent on horizontal secondary features - so this is scored minor, not major. But together with the depth loss the whole hip pocket is now roughly two-thirds scale.",
+      "expected": "hip welt length approx 3.49 x waistband depth",
+      "actual": "2.46 x waistband depth (-29%)",
+      "correction": "Lengthen the hip welt toward the outside of the panel as its depth is restored; treat as secondary to the depth fix.",
+      "severity_note": ""
+    },
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "The attempt-2 composition major is substantially but not fully resolved. Subject dominance is genuinely fixed: the vertical welt now spans 597px = 51.1% of the 1168px frame height (was 35%), is 2.02x the hip welt's length (was 1.43x) and 3.2x its ink-area (was 0.98x, i.e. dead equal), and it is the sharpest region in frame (gradient energy 21.3 vs 17.8 on plain cloth). What did not change is the horizontal placement: the subject welt's centre is still at x=347 of 880 = 39.4% across (attempt 2: 40%), so it remains off-centre-left, and there is still no depth-of-field, lighting or tonal separation between the two pockets. Additionally the garment now bleeds off the right frame edge continuously from y=470 to y=840.",
+      "expected": "vertical welt near the optical centre of the frame with the hip welt subordinate in placement AND separation",
+      "actual": "vertical welt centred at 39.4% frame width, unmoved from attempt 2; both pockets rendered at identical sharpness and contrast; garment clipped by the right frame edge across the subject's whole height",
+      "correction": "Shift the framing right by roughly 90px so the vertical welt sits near 50% frame width, keeping its current height coverage. Optionally let the hip welt fall a little softer in focus. Do not shrink the subject back down.",
+      "severity_note": ""
     },
     {
       "severity": "minor",
       "category": "technical",
-      "description": "Master file is 880 x 1168 px. The catalog standard calls for an ultra-high-resolution master; at this size the pick-stitch and weave detail is already at the sampling limit (the welt strip is only ~25px wide, so its edge finishing cannot be resolved).",
+      "description": "Master file is still 880 x 1168 px, 2.2 MB PNG - byte-for-byte the same dimensions as attempt 2, so the attempt-3 correction block's 'upscale or regenerate at higher resolution before any write-back' precondition is unmet. At this size the welt strip is 26.8px wide, so its edge finishing, pick stitching and thread detail cannot be resolved. IMPORTANT: resolution is NOT the binding limit on this attempt. The two majors above are geometry errors of 17% and 57% that are plainly visible and measurable at 880px and would be equally wrong at 4K. Resolution should be raised on the same pass that fixes the geometry, not instead of it.",
       "expected": "high-resolution master suitable for a luxury catalog crop",
-      "actual": "880 x 1168 px, 2.2 MB PNG",
-      "correction": "Upscale or regenerate at higher resolution before any write-back."
+      "actual": "880 x 1168 px, unchanged from attempt 2",
+      "correction": "Regenerate at higher resolution in the same pass that widens the vertical welt strip and restores the hip welt depth.",
+      "severity_note": ""
     }
   ],
-  "verdict": "FAIL",
+  "verdict": "UNMET",
   "waiver": null,
-  "correction": {
-    "errors": [
-      {
-        "severity": "major",
-        "category": "dimensions",
-        "error": "The showcased vertical welt is materially SHORT. Normalised to the one landmark present in both images (waistband depth: drawing 103.3px perpendicular at x=460, from top edge centre y=124.5 to bottom-seam centre y=227.5; render 106.8px perpendicular at x=350, top edge y=71 to bottom-seam centre y=178.5 — the render seam was verified across x=200..800 with a consistent 97-110px depth, so it is not a one-column artifact), the welt runs 4.71 waistband-depths outer / 4.56 centreline in the drawing but only 3.85 / 3.81 in the render. Endpoint span was checked against the full run, not a crop: the render's two welt edge lines were traced over y=200..700 (crop 500px tall, feature 411px — not saturating) and fade at y=243±4 and y=650±4.",
-        "expected": "welt length = 4.56-4.71 x waistband depth (471-486px of a 103.3px band); aspect 18.2:1",
-        "actual": "welt length = 3.81-3.85 x waistband depth (407-411px of a 106.8px band); aspect 16.5:1 — 16.4% to 18.2% short depending on edge convention",
-        "correction": "Lengthen the vertical welt opening by ~17% so it spans 4.6 waistband-depths, extending the bottom terminus downward (the top position is already close); keep strip width unchanged."
-      },
-      {
-        "severity": "major",
-        "category": "composition",
-        "error": "Two welt pockets carry near-equal visual weight and nothing identifies which one is the option being sold. The drawing marks the VERTICAL welt in red and draws the horizontal hip welt in plain black — i.e. one is the subject and one is context. The render gives the horizontal welt the more central, higher-contrast position (centre x=636 of an 880px frame, 288px long, strong specular highlight on the welt fold) while the subject vertical welt sits at x=350 (40% across) crowded toward the left frame edge. A customer scanning the thumbnail is at least as likely to read this as a horizontal welt pocket option.",
-        "expected": "the vertical front welt dominates the frame as the unambiguous subject, the horizontal hip welt present but subordinate (as in the drawing, where red vs black establishes the hierarchy)",
-        "actual": "vertical welt at 40% frame width, off-centre-left; horizontal welt more centrally placed and higher contrast; no depth-of-field, crop or lighting separation between them",
-        "correction": "Recompose so the vertical welt sits near the optical centre and occupies more frame height, and let the horizontal hip welt fall further right / softer in focus. Do not delete it — it is in the drawing."
-      }
-    ],
-    "lockedFeatures": [
-      "ORIENTATION (the fault under test): the welt's long axis is 87.50 deg from the locally fitted waistband seam; the drawing is 88.43 deg. Delta 0.93 deg. Both are perpendicular-to-waistband, i.e. VERTICAL on the garment. This must not regress.",
-      "Welt sits on the front panel INBOARD of (to the left of) the trouser crease line, exactly as drawn. Crease traced independently in both (drawing 1.92 deg from vertical, render 4.13 deg) and confirmed to run the full leg height, so it is a crease, not the pocket.",
-      "Welt long edges are parallel and the strip width is uniform: render edge slopes -0.0794 vs -0.0782 dx/dy (0.07 deg divergence), gap 24.47px at y=260 to 24.92px at y=620 = 1.8% taper over 360px. Drawing gap 25.5-26.5px over 400px. Line fits residual 0.15-0.51px.",
-      "Welt strip WIDTH normalised to waistband depth: drawing 0.251, render 0.231 — within 8%. Do not narrow or widen the strip when fixing the length.",
-      "Construction reads as a true WELT (a raised, dimensional strip with a lit fold edge and a cast shadow under it) and not a jetted/besom cut — this is exactly what the option description demands.",
-      "The second, near-horizontal welt pocket on the right-hand panel at hip level is present and correctly angled: tilt relative to the waistband is 3.81 deg in the render vs 4.45 deg in the drawing (delta 0.64 deg), and its strip depth normalised to waistband depth is 0.338 vs 0.332 (within 1.9%). Keep it.",
-      "The single seam/loop line descending from the waistband to meet the top edge of the horizontal welt is reproduced (drawing x approx 790, y 200-345; render x approx 685, y 220-350). Keep it.",
-      "Relative horizontal placement of the two pockets is faithful: distance from the right silhouette edge, vertical welt : horizontal welt = 2.72 in the drawing, 2.80 in the render.",
-      "Waistband with three cloth belt loops plus the descending seam line — same structural inventory as the drawing.",
-      "Clean neutral light-grey studio background, dark worsted with visible weave, welt region in sharp focus, no tie/hand/prop occluding the pocket."
-    ],
-    "forbiddenChanges": [
-      "do not alter any checklist item this attempt already passed",
-      "do not change the camera crop, composition, or accessories unless the error is itself a composition error",
-      "do not change the garment part, orientation, or any other option's geometry"
-    ]
-  },
+  "correction": null,
   "lockedFeatures": [
-    "ORIENTATION (the fault under test): the welt's long axis is 87.50 deg from the locally fitted waistband seam; the drawing is 88.43 deg. Delta 0.93 deg. Both are perpendicular-to-waistband, i.e. VERTICAL on the garment. This must not regress.",
-    "Welt sits on the front panel INBOARD of (to the left of) the trouser crease line, exactly as drawn. Crease traced independently in both (drawing 1.92 deg from vertical, render 4.13 deg) and confirmed to run the full leg height, so it is a crease, not the pocket.",
-    "Welt long edges are parallel and the strip width is uniform: render edge slopes -0.0794 vs -0.0782 dx/dy (0.07 deg divergence), gap 24.47px at y=260 to 24.92px at y=620 = 1.8% taper over 360px. Drawing gap 25.5-26.5px over 400px. Line fits residual 0.15-0.51px.",
-    "Welt strip WIDTH normalised to waistband depth: drawing 0.251, render 0.231 — within 8%. Do not narrow or widen the strip when fixing the length.",
-    "Construction reads as a true WELT (a raised, dimensional strip with a lit fold edge and a cast shadow under it) and not a jetted/besom cut — this is exactly what the option description demands.",
-    "The second, near-horizontal welt pocket on the right-hand panel at hip level is present and correctly angled: tilt relative to the waistband is 3.81 deg in the render vs 4.45 deg in the drawing (delta 0.64 deg), and its strip depth normalised to waistband depth is 0.338 vs 0.332 (within 1.9%). Keep it.",
-    "The single seam/loop line descending from the waistband to meet the top edge of the horizontal welt is reproduced (drawing x approx 790, y 200-345; render x approx 685, y 220-350). Keep it.",
-    "Relative horizontal placement of the two pockets is faithful: distance from the right silhouette edge, vertical welt : horizontal welt = 2.72 in the drawing, 2.80 in the render.",
-    "Waistband with three cloth belt loops plus the descending seam line — same structural inventory as the drawing.",
-    "Clean neutral light-grey studio background, dark worsted with visible weave, welt region in sharp focus, no tie/hand/prop occluding the pocket."
+    "VERTICAL WELT LENGTH (the fault fixed this attempt): cap-centre to cap-centre = 591.6px along the welt's own axis (top cap centre y=226.33, bottom cap centre y=817.74, located by a horizontal line-strength operator averaged across the strip) = 4.619 x waistband perpendicular depth, where waistband depth = 128.09px at x=341 (fitted top edge y=31.50, fitted bottom seam y=159.66). Drawing = 4.552 (468.83px centreline of a 102.99px band). Within 1.5%. Do not shorten and do not lengthen.",
+    "ORIENTATION: the welt's long axis is 88.34 deg from image +x; the locally fitted waistband bottom seam is -1.90 to -2.11 deg across five independent fit windows (x=200..480); welt-to-seam angle 89.7 +/- 0.2 deg versus the drawing's 88.24 deg. Perpendicular to the waistband, i.e. VERTICAL on the garment. This must not rotate - attempt 1 had it 90 deg out.",
+    "WELT LONG EDGES parallel with uniform strip width: fitted slopes dx/dy 0.02935 (left edge) and 0.02837 (right edge), divergence 0.06 deg; gap 27.05px at y=260 tapering to 26.53px at y=800 = 1.9% over 540px; line-fit residual RMS 1.20px and 1.16px over 580 and 577 accepted rows. Keep the edges parallel when widening the strip.",
+    "VERTICAL PLACEMENT relative to the waistband: the welt's top cap centre sits 66.99px perpendicular = 0.523 waistband-depths below the waistband bottom seam (drawing 0.532, delta -1.7%), and the bottom cap centre sits 658.40px = 5.140 depths below it (drawing 5.082, delta +1.1%). Both endpoints are now correct; do not move either when widening the strip.",
+    "WELT IS INBOARD (to the left) of the trouser crease: the crease traces as one continuous vertical line from x=413 at y=200 to x=421 at y=1100, at full strength (22-31) over the entire frame height, so it is a crease and not part of the pocket; the welt edges sit at x=325-369. Drawing equivalent: crease x=518 at y=300 to x=544 at y=1100, red welt x=423-499.",
+    "CONSTRUCTION reads as a true raised WELT, not a jetted or besom cut. Perpendicular grey profile averaged over 500 rows (y=280..780): surrounding cloth 49-51, dark opening line 19.4 at -14px from strip centre, welt face rising to 51.8 (BRIGHTER than the surrounding cloth) at +6px, dark fold line 18.2 at +12px, then an asymmetric cast-shadow band of 20-35 from +14 to +20 before returning to 49 at +24. This lit-fold-plus-cast-shadow signature is exactly what the option description demands and is stronger here than in attempt 2.",
+    "THE VERTICAL WELT IS THE SHARPEST REGION IN FRAME: gradient energy 21.3 on the welt region (x 315-380, y 250-800) versus 18.8 on the hip welt, 17.8 on plain cloth and 19.3 on the lower leg. Keep the showcased welt in the focal plane.",
+    "SUBJECT DOMINANCE, newly gained this attempt: the vertical welt spans 597px = 51.1% of the 1168px frame height, is 2.02x the hip welt's length and 3.2x its ink-area. Attempt 2 was 35% of frame height, 1.43x length and 0.98x area (dead equal), which is why it failed composition. Do not shrink the subject back down when re-centring it.",
+    "HIP WELT ANGLE: its two bounding lines fit slopes -0.0554 and -0.0646, i.e. tilt -3.43 deg from image horizontal = 6.05 deg relative to the local waistband seam (drawing 4.36 deg) and 91.8 deg relative to the vertical welt's axis (drawing 96.1 deg). It rises toward the outside of the panel as drawn. Keep this angle while restoring its depth.",
+    "LEFT BELT LOOP construction is correct: a pressed cloth loop lying flat against the waistband, same weave as the band, bar-tacked, no background visible behind it. Only the RIGHT loop is wrong - do not degrade the left one while fixing the right.",
+    "STRUCTURAL INVENTORY matches the drawing: waistband plus three cloth belt loops (render x approx 85-120, 475-508, 780-815; drawing x approx 85-140, 565-600, 940-980) plus one seam line descending from the waistband toward the top edge of the hip welt (render traced x=651 at y=180 to x=666 at y=285; drawing x approx 790, y 200-345). No fourth loop, no extra pocket.",
+    "BACKGROUND AND FRAMING HYGIENE: flat neutral light-grey studio background, mean grey 197.4 with standard deviation 0.6-1.3 measured in three corners and along the strip x=855-879, y=200-350; dark worsted with visible weave; no tie, hand, belt or prop occluding either pocket."
   ],
-  "notes": "VERDICT: the specific fault IS fixed, but the image still fails the 98 bar on 8 of 9 categories, chiefly on length and composition.\n\nFAULT UNDER TEST — measured, not eyeballed. Last attempt put the welt 90 deg out. Method: fit the welt's long axis and the waistband bottom seam independently in each image, then take the angle between them (a landmark-relative measure, so it is immune to how the garment happens to be rotated in frame — the drawing's waistband rises 5.83 deg to the right while the render's falls ~7 deg, which would have poisoned any raw image-vertical comparison).\n- Drawing: red marker PCA long axis vs fitted waistband bottom edge (717 sampled columns, x=157-934, residual 6.3px) = 88.43 deg.\n- Render: welt edge lines A and B traced sub-pixel over y=250-640 (350 and 388 accepted rows, residuals 0.15 and 0.33px) vs waistband seam sampled at x=300/350/400/450 = 87.50 deg.\n- Delta 0.93 deg. Not 90 deg out; not even 1 deg out. faultFixed = true.\n\nWHAT I DELIBERATELY DID NOT CLAIM.\n1. No centimetre figures. The illustration carries no printed dimension callout, so no real-world size is recoverable. Everything above is a ratio against waistband depth.\n2. I nearly made the \"measured the wrong feature\" mistake. The red marker's raw bounding box is 75 x 486px and its PCA minor-axis extent is 45px — but the red is a THICK annotation stroke (13-18px each side) around a ~10px white interior. Using 45px as \"welt width\" would have made the render look 47% too narrow. The correct comparable is the stroke centreline-to-centreline distance, 26.0px horizontal / 25.9px perpendicular, which matches the render within 8%. The 45px number is the annotation, not the garment.\n3. I could NOT reliably compare HORIZONTAL proportions, and no single scale factor reconciles them: render/drawing ratio is 0.92 for welt strip width, 0.68 for welt-right-edge-to-crease distance, and 1.60 for belt-loop width. Foreshortening in a strongly oblique photograph would push all three the same direction; these go opposite ways, which means the freehand sketch is not internally consistent at better than about +/-30% on horizontal secondary features. I therefore raised no finding on horizontal spacing and treat only the vertical-axis measurements (length, top/bottom gap), which share an axis with the waistband-depth landmark, as trustworthy.\n4. Saturation was checked. The render welt (411px) was measured inside a 500px-tall trace window and the illustration's black hip welt was re-measured after an initial crop clipped its bounding box at the crop edge (ymin=280 = crop boundary) and a belt-loop stroke inflated its apparent depth to 90px; edge-tracing the two long lines separately gives the true 34.3px. The first number would have been 2.6x wrong.\n5. Line C in the render (x=397 at y=440) was verified to be the trouser CREASE, not part of the pocket: its darkness persists at full strength through y=200-700 while lines A and B fade out at y=243 and y=650.\n6. Belt-loop COUNT is reported as a match (3 loops + 1 descending seam line in both) with low confidence — the drawing's leftmost loop shares a stroke with the leg silhouette and cannot be separated cleanly.\n\nRECOMMENDATION: regenerate. Two things to change and nothing else — lengthen the vertical welt by ~17% (extend downward) and recompose so it, not the hip welt, is the subject. Everything in lockedFeatures is correct now and a regeneration that loses the 87.5 deg orientation or the 0.231 strip-width ratio is a worse image than this one.\n\nNo files were written under data-store/, public/images/generated/, or .craft-pipeline/. All working files are in the session scratchpad.\n\n[workflow retry-wave-7] faultFixed=true",
-  "checkedAt": "2026-08-05T15:59:56.153Z"
+  "notes": "VERDICT: FAIL. The two attempt-2 majors are fixed, but the fix broke two locked features - the fourth time this pattern has occurred on this project.\n\nWHAT WAS FIXED. (1) Vertical welt LENGTH, the headline fault: 3.81-3.85 waistband-depths in attempt 2, now 4.619 against the drawing's 4.552, a 1.5% match. Both endpoints landed too: top gap 0.523 vs 0.532 drawn, bottom gap 5.140 vs 5.082. (2) Composition, substantially: the subject now covers 51.1% of frame height (was 35%) and carries 2.02x the hip welt's length and 3.2x its ink-area, where in attempt 2 the two pockets were of literally equal visual area. Downgraded major to minor - what remains is only that the subject sits at 39.4% frame width, unmoved from attempt 2.\n\nWHAT BROKE. The regeneration halved the hip welt's strip depth (0.338 -> 0.143 normalised, locked entry 6) and narrowed the vertical welt strip further (0.231 -> 0.209, locked entry 4, whose text explicitly said \"Do not narrow or widen the strip when fixing the length\"). Both are majors by the regression rule. The hip welt one is the more serious in substance: at 0.143 it reads as a jetted slit, and \"welt, not jetted\" is the entire selling point of this option, so the frame now contradicts itself.\n\nCALIBRATION - how I know the hip-welt reading is real and not a convention change. I measured attempt 2 with my own pipeline first and recovered 0.334 against the locked 0.338, which fixes the convention as \"the two strong lines bounding the lit strip face\". Applying that same convention to attempt 3 gives 0.143. A third, normaliser-free check agrees: hip-welt depth divided by vertical-welt strip width is 1.32 in the drawing, 1.43 in attempt 2, 0.64 here.\n\nFORESHORTENING RULED OUT. Attempt 3 is a tighter, more turned crop (waistband depth grew from 106.8 to 128.1px). Turning about a vertical axis compresses HORIZONTAL dimensions. The hip welt's strip depth is a near-vertical dimension sharing an axis with the waistband-depth landmark, so foreshortening cannot account for a 57% loss. The hip welt's LENGTH loss (-29%) is horizontal and I therefore scored that minor, not major.\n\nMEASUREMENT DISCIPLINE - what I checked and what I threw away.\n1. Landmark validated first. Waistband depth: in the drawing the two edges are genuinely parallel (fitted slopes -0.10543 and -0.10547 over 650 sampled columns) giving a constant 102.99px perpendicular. In the render the band is an ARC, not a line, so I refused a single global value and fitted it locally twice - 128.09px under the vertical welt (x=230..470, seam resid 0.90px) and 120.10px under the hip welt (x=600..765, resid 0.97px) - and used each where it applies.\n2. Span checked, not cropped. The welt edges were traced over a y=210..860 window; the feature occupies y=226..815, leaving 16px of headroom above and 45px below, so the endpoints are real fades and not window walls. The endpoint fade was then independently confirmed by locating the two horizontal end caps directly (top cap centre y=226.33 strength 38.9; bottom cap centre y=817.74 strength 27.2).\n3. Saturation checked. The bottom cap was verified to die out by y=823 with nothing below it, so 815 is not a clipped boundary.\n4. DISCARDED READING 1: the red annotation's PCA minor-axis extent, 46.40px. That is the outer envelope of a 17.4px-thick marker stroke, not the garment; using it would have made the render look 42% too narrow. The correct comparable is stroke-centreline to stroke-centreline, 26.0px, measured at eight separate heights (26.0-26.5).\n5. DISCARDED READING 2: subtracting one stroke thickness from that PCA minor extent (giving 29.0px / 0.282) - the rounded end caps inflate the minor extent, so this is also wrong. Direct centreline gap stands.\n6. DISCARDED READING 3: reading the hip welt's depth as line1-to-line3 (33px / 0.26). Line 3 is a shadow below the fold, not an edge - the attempt-2 calibration and the drawing both show a two-line strip with a lit face between. Shadow inside a fold is not an edge.\n7. NOT MEASURABLE - locked entry 8. \"Distance from the right silhouette edge, vertical welt : horizontal welt = 2.72 drawing / 2.80 render\" cannot be re-verified: the garment now bleeds off the right frame edge continuously from y=470 to y=840, so there is no right silhouette at the vertical welt's height. I have NOT counted this as a loss (I have no evidence the placement moved) but it is now unverifiable, and I substituted a crease-normalised reading: welt-centre-to-crease 0.568 depths in the render vs 0.655 drawn (0.87 ratio, better than attempt 2's 0.68). Per the standing caveat that the freehand sketch is inconsistent to about +/-30% on horizontal secondary features, I raised no finding on it.\n8. NO CENTIMETRES. The illustration carries no printed dimension callout, so no real-world size is recoverable. Every figure above is a ratio against waistband depth or a dimensionless aspect ratio.\n9. Belt loop count reported as 3 + 1 descending seam in both, at MEDIUM confidence only - the drawing's leftmost loop still shares a stroke with the leg silhouette and cannot be cleanly separated. Unchanged caveat from attempt 2.\n10. Orientation delta widened slightly, from 0.93 deg to about 1.4 deg (render 89.7 deg welt-to-seam vs drawing 88.24 deg). I tested five seam-fit windows (x=200..480) and the render figure is stable at 89.5-89.8 deg. Since the drawing's own waistband fit carries a 4.05px residual over 650px, a 0.5 deg shift is inside the drawing's noise floor and the essential property - perpendicular to the waistband, i.e. vertical - is unambiguously held. Marked HELD, not lost, with the number updated.\n\nRESOLUTION. 880 x 1168, byte-identical dimensions to attempt 2, so the attempt-3 correction block's upscale precondition is unmet and write-back is blocked on that ground alone. But resolution is NOT the binding limit here: the two majors are geometry errors of 17% and 57% that are fully visible and measurable at 880px and would be identically wrong at 4K. Raise resolution on the same pass as the geometry fix, not instead of it.\n\nRECOMMENDATION: regenerate. Exactly three changes and nothing else - (a) widen the vertical welt strip by about 20% to 0.252 waistband-depths WITHOUT touching its length or either endpoint, (b) restore the hip welt's strip depth to 0.33 waistband-depths, roughly double, keeping its current angle, (c) shift framing right by about 90px and raise output resolution. Everything in the new lockedFeatures list is correct now; a regeneration that loses the 4.619 length, the 89.7 deg orientation, the raised-welt lighting signature or the 51% frame-height subject dominance is a worse image than this one.\n\nFILE SAFETY: no files were written under data-store/, public/images/generated/, or .craft-pipeline/. All working files are in the session scratchpad. qc.json has not been updated - the orchestrator owns that write.\n\n[stage-a-close] lockedHeld=false  LOCKED LOST: Welt strip WIDTH normalised to waistband depth: drawing 0.251, render 0.231 - within 8%. Do not narrow or widen the strip when fixing the length. | The second, near-horizontal welt pocket on the right-hand panel at hip level is present and correctly angled: tilt relative to the waistband is 3.81 deg in the render vs 4.45 deg in the drawing (delta 0.64 deg), and its strip depth normalised to waistband depth is 0.338 vs 0.332 (within 1.9%). Keep it.",
+  "checkedAt": "2026-08-05T19:41:29.007Z"
 }

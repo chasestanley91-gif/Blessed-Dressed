@@ -2155,3 +2155,59 @@ Two things I got wrong, recorded so the reasoning is auditable:
    through `-65` *and* `lp-slanted-flap-65` — does not hold. Checked directly: it is shared with
    `straight-jetted-50` and `-60` only, and `slanted-flap-65` has its own unique file (`80b477a9`).
    The conclusion survives the correction; the supporting detail did not.
+
+---
+
+## MEASURED: an explicit keep-as-is block does NOT prevent regression — 4 of 5 lost locked features
+
+The `lockedFeatures` mechanism was repaired and armed specifically to stop corrections breaking what
+already worked. Five options were re-shot with an explicit **KEEP EXACTLY AS-IS** block naming 12–18
+individually measured features apiece, and every grader was told a locked-feature regression is at
+least a major finding.
+
+**Four of the five lost locked features anyway.**
+
+| option | held? | what was lost |
+|---|---|---|
+| `quarter-top` | **yes** | — (min 92, 1 major) |
+| `jeans-square` | no | the **bar tack at the corner** — a real construction element |
+| `collar-hexagon-stand` | no | the 35% outer-edge bend **and** the left/right mirror symmetry |
+| `welt-pocket` | no | welt strip width **and the entire second welt pocket** on the right panel |
+| `pleat-no-single-dart` | no | the belt-loop landmark, dart symmetry, **and** the clean feature-free span |
+
+### The clearest single case
+
+**`pleat-no-single-dart` went backwards.** It entered this wave at **min 93 with zero critical and zero
+major findings** — the closest option in the entire queue to shipping, needing two categories lifted by
+two points. It came back at **min 88 with three majors**, having lost the belt-loop pitch ratio that
+was *the landmark the whole grading normalises against* (5.37 against the drawing's 5.42, a 0.9% match).
+
+### `jeans-square` — the overcorrection is quantified
+
+The vertical drop was **18–26% short** at attempt 2. At attempt 3 it is **46–79% long**: rendered
+156.1 px = 1.359 waistband-depths against a drawn 0.760–0.824 WD, confirmed by a second independent
+normalisation needing no waistband (drop/run-span 0.584 against a drawn 0.233, predicting 0.330 after
+correcting for measured anisotropy — a 1.77× overshoot matching the 1.79× from the waistband route).
+And the corner turn flipped sign: 5.0° too **open** at attempt 2, now 5.3–8.1° too **closed**.
+
+The graders verified the span rather than assuming it — scanning above the seam and below the corner to
+prove both endpoints are real and neither arm is truncated.
+
+### What this means for the correction loop
+
+Corrections on this pipeline do not converge. They **oscillate**: each attempt hits its named target,
+overshoots it, and drops something adjacent. Three rounds of evidence now say the same thing —
+`coin-both` followed direction but not magnitude three times running; the flap ladder saturates at
+d/W 0.40; the turn-up band would not move off 27% through three escalating instructions including an
+explicit one-fifth ratio.
+
+**Consequences to act on, not just record:**
+
+1. **A third attempt is not reliably better than the second.** Before spending, compare the *current*
+   verdict against the previous one — if the option already has zero criticals, another attempt is as
+   likely to cost ground as gain it. `pleat-no-single-dart` is the proof.
+2. **Prefer waiving to re-shooting** once an option is at zero critical/major and within a few points.
+   That is what `PASS_WAIVED` exists for, and it is being under-used relative to the risk of another round.
+3. **The keep-as-is block is necessary but not sufficient.** It works as a *detector* — it caught all
+   four regressions, which is precisely why they are visible here rather than shipping unnoticed. It
+   does not work as a *preventer*.

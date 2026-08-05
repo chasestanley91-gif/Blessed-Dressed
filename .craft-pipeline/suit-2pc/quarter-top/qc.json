@@ -2,18 +2,18 @@
   "addr": "suit-2pc > quarter-top",
   "productId": "suit-2pc",
   "optionId": "quarter-top",
-  "attempt": 2,
+  "attempt": 3,
   "maxAttempts": 3,
   "scores": {
     "shape": 93,
-    "geometry": 94,
-    "dimensions": 93,
-    "angles": 94,
+    "geometry": 93,
+    "dimensions": 92,
+    "angles": 92,
     "construction": 97,
-    "placement": 95,
+    "placement": 93,
     "symmetry": 98,
-    "composition": 94,
-    "blueprint-match": 94
+    "composition": 97,
+    "blueprint-match": 93
   },
   "scoreMin": 98,
   "waiverMin": 95,
@@ -32,114 +32,74 @@
     "geometry",
     "dimensions",
     "angles",
-    "composition",
+    "placement",
     "blueprint-match"
   ],
   "errors": [
     {
       "severity": "major",
       "category": "angles",
-      "description": "The mouth is bowed rather than straight, and the bow runs the opposite way from the drawing. Split into thirds along its run, the render measures 5.6-6.5 deg / 11.4 deg / 15.5 deg from vertical (top / middle / bottom); the drawing measures 12.1-12.2 deg / 11.9 deg / 9.0 deg. The upper third is where a customer reads the 'drop' as the mouth leaves the waistband, and there it is ~6 deg too vertical. Contrast in that segment was 23-29 grey levels, among the best on the whole line, so this is a real reading and not threshold noise. The overall rake is nonetheless correct (see notes).",
-      "expected": "a near-straight mouth holding ~12 deg from vertical from the waistband seam all the way to the leg seam; drawing sagitta 9.4 px over a 412 px run, and if anything slightly STRAIGHTENING toward the bottom (9.0 deg in the last third)",
-      "actual": "a mouth that leaves the waistband at only 5.6-6.5 deg from vertical, bows outward through the middle, and rakes to 15.5 deg in the last third; sagitta -10.2 px over a ~440 px run, i.e. curvature of similar magnitude to the drawing's but reversed in sense",
-      "correction": "Keep the overall rake exactly as shot (11.0-11.3 deg from vertical is correct). Flatten the mouth: it must leave the waistband seam already at ~12 deg, not ~6 deg, and must not exceed ~12 deg near the bartack. Ask for a mouth that reads as a straight pressed line from waistband to leg seam rather than one that follows the hip curve."
+      "description": "REPEAT OF THE ATTEMPT-2 MAJOR, NOT FIXED. The mouth is still bowed rather than straight, and the bow still runs the opposite way from the drawing. Measured as local slope over consecutive 80 px windows down the run, the render gives 6.59 / 9.35 / 13.27 / 15.54 / 16.71 deg from vertical; the drawing gives 12.18 / 12.27 / 12.02 / 12.77 deg - flat to within 0.75 deg over its whole length. Signed sagitta about the chord is -11.2 px over a 373 px chord (-3.01%) in the render against +4.8 px over 352 px (+1.35%) in the drawing. I re-measured candidate-2 with the identical tracer for an apples-to-apples check: candidate-2 was -3.04% with thirds 7.08 / 11.66 / 15.57, candidate-3 is -3.01% with thirds 7.36 / 12.39 / 15.92. The curvature is the same to two decimal places. What attempt 3 actually changed was legibility (mouth contrast median rose 19.7 -> 61.7), not geometry. Robustness: search half-window 8/10/11/12 px and flank 5/7/9 px all return -2.6% to -3.1% with 0% of rows hitting a window boundary; the drawing result is stable across three different start rows.",
+      "expected": "a near-straight mouth holding 12.0-12.8 deg from vertical over its entire run from the waistband bottom seam to the bartack; drawing sagitta +1.35% of chord",
+      "actual": "a mouth that leaves the waistband seam at 6.6 deg, passes 12 deg only near mid-run, and reaches 16.7 deg approaching the bartack; sagitta -3.01% of chord, i.e. reversed in sense and about 2.2x the drawing's magnitude",
+      "correction": "Keep the overall rake exactly as shot (12.08 deg LSQ / 11.95 deg chord is correct and must not move). The mouth must leave the waistband seam ALREADY at ~12 deg and must not exceed ~13 deg near the bartack. Two attempts of prompt-wording ('flatten the mouth') have now produced geometrically identical results, so change the mechanism rather than the adjective: turn the hip a few degrees flatter to camera so the upper mouth is not rolling under the body's curve, and/or specify the mouth as a straight pressed and edge-set line drawn on the flat rather than a seam following the hip. Do not touch lighting, cloth value, crop or any other feature."
     },
     {
       "severity": "minor",
       "category": "dimensions",
-      "description": "The mouth sits further forward of the leg seam than drawn. Measured as the horizontal mouth-to-seam gap at matched heights below the waistband bottom edge, normalised to waistband depth: at h=1.2 waistband depths the drawing gives 0.435 and the render 0.545 (+25%); at h=1.0 the drawing gives 0.452 and the render 0.564 (+25%). This is the option's naming dimension (the '2.5 cm drop'), so it matters, but I could not resolve it beyond landmark uncertainty - see notes on the 22% landmark disagreement, and the gap could not be measured at the waistband itself because the render's leg seam fades below detectable contrast above y=277.",
-      "expected": "mouth-to-seam gap of 0.435-0.452 waistband depths at h=1.0-1.2 below the waistband bottom edge (drawing 3104)",
-      "actual": "0.545-0.564 waistband depths, i.e. +25%, placing the mouth roughly 27% of the way from 3104 toward its 3.2 cm sibling 3101 - not far enough to cross into that option",
-      "correction": "Move the top of the pocket mouth ~1/4 closer to the leg seam so the mouth-to-seam gap at hip level reads about 0.44 waistband depths rather than 0.55. Do not change the rake to achieve this - move the whole mouth aft, keeping its angle."
+      "description": "The mouth runs longer relative to the waistband than drawn. Chord length waistband-seam to bartack is 397 px against a render waistband depth of 100 px (3.97 depths); the drawing gives 368 px against 104.75 px (3.51 depths), about +13%. The horizontal and vertical components inflate together (+11% horizontal, +13% vertical), so this is a genuine local size difference and not a projection artefact. Both graders have now independently found roughly +12-13%.",
+      "expected": "mouth chord length 3.51 x waistband depth (waistband seam to bartack)",
+      "actual": "3.97 x waistband depth, about +13%",
+      "correction": "If the mouth is re-shot for the bow, shorten it about 10% at the same time so the bartack lands slightly higher on the side seam. Do not act on this alone."
     },
     {
       "severity": "minor",
-      "category": "geometry",
-      "description": "The mouth runs longer relative to the waistband than drawn. Waistband-seam to bartack measures 4.29-4.45 waistband depths in the render against 3.82-4.04 in the drawing, about +12%. This falls inside the +/-20-22% spread between my two candidate landmarks, so I cannot call it established.",
-      "expected": "mouth length 3.82-4.04 x waistband depth (waistband seam to bartack)",
-      "actual": "4.29-4.45 x waistband depth",
-      "correction": "If the mouth is re-shot for the bow, shorten it about 10% at the same time so the bartack lands slightly higher on the leg seam. Do not act on this alone."
-    },
-    {
-      "severity": "minor",
-      "category": "placement",
-      "description": "The back welt pocket sits high. Its slit centre is 1.27 waistband depths below the waistband bottom edge in the render against 1.44 in the drawing, about 12% high. The back welt is not the showcased option, so this is cosmetic.",
-      "expected": "back welt slit at 1.44 waistband depths below the waistband bottom edge",
-      "actual": "1.27 waistband depths",
-      "correction": "Drop the back welt about one eighth of a waistband depth. Low priority - do not risk the front pocket geometry to fix it."
+      "category": "dimensions",
+      "description": "The top of the mouth sits further forward of the side seam than drawn - this is the option's naming dimension (the '2.5 cm drop', which for a quarter-top is the inboard offset of the mouth's top from the side seam). Measured at the waistband bottom seam: drawing 62.5 px / 104.75 px waistband depth = 0.597; render 73.8 px / 100 px = 0.738, i.e. +24%. Normalised instead against the pocket's own size (mouth horizontal run, or mouth chord) the excess falls to +9-11%, because the whole pocket is ~13% oversized. I could not narrow it further - see the unresolved horizontal-scale note. It does not approach the 3.2 cm sibling 3101.",
+      "expected": "mouth-top-to-side-seam gap 0.597 waistband depths at the waistband seam (drawing 3104)",
+      "actual": "0.738 waistband depths (+24% against waistband depth, +9-11% against the pocket's own size)",
+      "correction": "Move the top of the pocket mouth slightly closer to the side seam, targeting ~0.60 waistband depths, WITHOUT changing the rake - translate the whole mouth aft, keep its angle. Low priority relative to the bow."
     },
     {
       "severity": "minor",
       "category": "placement",
-      "description": "The vertical stay/dart line above the back welt meets the welt at roughly 31% along the welt's length in the render, against roughly 46% in the drawing. Both drawings and render do carry the line, so the feature itself is present and correct.",
-      "expected": "stay/dart line meeting the back welt near its midpoint, ~46% along, at ~14.6 deg from vertical",
-      "actual": "stay line meeting the welt ~31% along, at ~10.1 deg from vertical",
-      "correction": "Shift the stay line toward the middle of the welt. Cosmetic only."
+      "description": "The back welt pocket has swung from high to low and is now ~20% short. Vertically its slit centre sits 1.96 waistband depths below the waistband bottom seam against the drawing's 1.62 (+21%); attempt 2 was 1.27 against 1.44, i.e. 12% high, so the correction overshot through correct. Its length reads 2.78 waistband depths (x 510-782) against the drawing's 3.37 (x 634-987), about -18%, though that figure sits inside the unresolved horizontal-scale band. Its horizontal placement is right: welt centre 2.58 waistband depths aft of the side seam against the drawing's 2.63. The back welt is not the showcased option, so this is cosmetic.",
+      "expected": "back welt slit centre 1.62 waistband depths below the waistband bottom seam; welt length 3.37 waistband depths",
+      "actual": "slit centre 1.96 waistband depths (+21% low); welt length 2.78 waistband depths (-18%)",
+      "correction": "Raise the back welt about one third of a waistband depth and lengthen it slightly. Cosmetic only - do not risk the front pocket geometry to fix it."
     },
     {
       "severity": "minor",
-      "category": "composition",
-      "description": "The discriminating seam is barely legible. Local contrast along the pocket mouth measures 8 to 36 grey levels out of 255, dipping to roughly 3% at its weakest, on near-black charcoal cloth. The catalog standard is that a customer identifies the option without reading, and at thumbnail size this slant is easy to miss.",
-      "expected": "the showcased mouth to be the most legible line in the frame, clearly separable from the leg crease and the back welt at a glance",
-      "actual": "a low-contrast tonal edge on dark charcoal; the back welt slit actually reads more strongly than the option being sold",
-      "correction": "Add raking light across the hip from camera left, or specify a mid-grey rather than near-black cloth, so the mouth carries at least the contrast of the back welt. Change lighting or cloth value only - do not change crop, viewpoint or geometry."
+      "category": "placement",
+      "description": "The vertical stay/dart line above the back welt is over-raked. It runs from (625,190) to (657,320) px, 13.9 deg from vertical, against the drawing's 8.3 deg (786,205)-(804,320). Where it meets the welt has improved markedly: 55% along the welt's length against the drawing's 49%, where attempt 2 met it at 31%. Contrast on this line is only 7-18 grey levels, so the angle carries roughly +/-2 deg.",
+      "expected": "stay/dart line at ~8.3 deg from vertical, meeting the back welt near its midpoint (~49% along)",
+      "actual": "13.9 deg from vertical, meeting the welt at 55% along",
+      "correction": "Bring the stay line closer to vertical. Cosmetic only, and do not disturb its meeting point, which is now correct."
     }
   ],
-  "verdict": "FAIL",
+  "verdict": "UNMET",
   "waiver": null,
-  "correction": {
-    "errors": [
-      {
-        "severity": "major",
-        "category": "angles",
-        "error": "The mouth is bowed rather than straight, and the bow runs the opposite way from the drawing. Split into thirds along its run, the render measures 5.6-6.5 deg / 11.4 deg / 15.5 deg from vertical (top / middle / bottom); the drawing measures 12.1-12.2 deg / 11.9 deg / 9.0 deg. The upper third is where a customer reads the 'drop' as the mouth leaves the waistband, and there it is ~6 deg too vertical. Contrast in that segment was 23-29 grey levels, among the best on the whole line, so this is a real reading and not threshold noise. The overall rake is nonetheless correct (see notes).",
-        "expected": "a near-straight mouth holding ~12 deg from vertical from the waistband seam all the way to the leg seam; drawing sagitta 9.4 px over a 412 px run, and if anything slightly STRAIGHTENING toward the bottom (9.0 deg in the last third)",
-        "actual": "a mouth that leaves the waistband at only 5.6-6.5 deg from vertical, bows outward through the middle, and rakes to 15.5 deg in the last third; sagitta -10.2 px over a ~440 px run, i.e. curvature of similar magnitude to the drawing's but reversed in sense",
-        "correction": "Keep the overall rake exactly as shot (11.0-11.3 deg from vertical is correct). Flatten the mouth: it must leave the waistband seam already at ~12 deg, not ~6 deg, and must not exceed ~12 deg near the bartack. Ask for a mouth that reads as a straight pressed line from waistband to leg seam rather than one that follows the hip curve."
-      }
-    ],
-    "lockedFeatures": [
-      "Pocket mouth rake: 11.04-11.34 deg from vertical (LSQ), chord 11.19 deg - against the drawing's 11.88-12.10 deg. This is THE discriminator and it is now correct within ~0.8 deg. Do not let a regeneration move it.",
-      "Mouth runs from the waistband bottom seam down-and-outward to the vertical leg seam - correct direction of travel and correct anatomical endpoints.",
-      "Mouth lower terminus lands on the vertical leg seam with a visible bartack, exactly as the drawing terminates it.",
-      "Mouth rendered as a single plain pressed seam - no jetting, no welt, no flap, no piping - matching the drawing's single-line mouth.",
-      "Exactly one front pocket on the hip shown; no second or duplicate opening.",
-      "One jetted back welt pocket on the seat side of the vertical seam, inclined -11.25 deg from horizontal against the drawing's -9.7 to -10.1 deg.",
-      "Faint vertical stay/dart line running from the waistband down to the back welt - present in the drawing and correctly reproduced.",
-      "Three belt loops, matching the drawing's count.",
-      "Plain waistband: no side adjusters, no visible closure, no extended tab.",
-      "NO side stripe - correctly distinguishes this option from 3122 (5.1 cm slant with stripe).",
-      "NO pleats on the front panel, matching the drawing.",
-      "Correct handedness and topology: front panel image-left, vertical seam centre, seat with back welt image-right - identical arrangement and side to the drawing.",
-      "Three-quarter front hip crop, waistband to mid-thigh, with the pocket mouth unobstructed and centre-left in frame.",
-      "Camera viewpoint within 1.35 deg of the drawing on back-welt inclination and 1.86 deg on waistband-edge inclination - the projection is comparable to the drawing's, so the angle comparison is apples-to-apples.",
-      "Fine charcoal wool with visible weave, natural drape, professional press, no CGI look.",
-      "Seamless neutral light-grey studio background; no props, no hands, no jacket intruding on the pocket."
-    ],
-    "forbiddenChanges": [
-      "do not alter any checklist item this attempt already passed",
-      "do not change the camera crop, composition, or accessories unless the error is itself a composition error",
-      "do not change the garment part, orientation, or any other option's geometry"
-    ]
-  },
+  "correction": null,
   "lockedFeatures": [
-    "Pocket mouth rake: 11.04-11.34 deg from vertical (LSQ), chord 11.19 deg - against the drawing's 11.88-12.10 deg. This is THE discriminator and it is now correct within ~0.8 deg. Do not let a regeneration move it.",
-    "Mouth runs from the waistband bottom seam down-and-outward to the vertical leg seam - correct direction of travel and correct anatomical endpoints.",
-    "Mouth lower terminus lands on the vertical leg seam with a visible bartack, exactly as the drawing terminates it.",
-    "Mouth rendered as a single plain pressed seam - no jetting, no welt, no flap, no piping - matching the drawing's single-line mouth.",
-    "Exactly one front pocket on the hip shown; no second or duplicate opening.",
-    "One jetted back welt pocket on the seat side of the vertical seam, inclined -11.25 deg from horizontal against the drawing's -9.7 to -10.1 deg.",
-    "Faint vertical stay/dart line running from the waistband down to the back welt - present in the drawing and correctly reproduced.",
-    "Three belt loops, matching the drawing's count.",
-    "Plain waistband: no side adjusters, no visible closure, no extended tab.",
-    "NO side stripe - correctly distinguishes this option from 3122 (5.1 cm slant with stripe).",
-    "NO pleats on the front panel, matching the drawing.",
-    "Correct handedness and topology: front panel image-left, vertical seam centre, seat with back welt image-right - identical arrangement and side to the drawing.",
-    "Three-quarter front hip crop, waistband to mid-thigh, with the pocket mouth unobstructed and centre-left in frame.",
-    "Camera viewpoint within 1.35 deg of the drawing on back-welt inclination and 1.86 deg on waistband-edge inclination - the projection is comparable to the drawing's, so the angle comparison is apples-to-apples.",
-    "Fine charcoal wool with visible weave, natural drape, professional press, no CGI look.",
-    "Seamless neutral light-grey studio background; no props, no hands, no jacket intruding on the pocket."
+    "Pocket mouth overall rake: 12.08 deg from vertical by least-squares, 11.95 deg chord, against the drawing's 12.41 deg LSQ / 11.79 deg chord - within 0.33 deg. This is THE family discriminator (3100 = 8.6 deg, 3104 = 11.9-12.4 deg, 3101 = 12.6 deg, 3122 = 22.9 deg). Must stay inside 11.5-12.8 deg. This is BETTER than attempt 2's 11.65 deg; do not let it slip back.",
+    "Mouth upper terminus lands ON the waistband bottom seam at (311, 203) px - it starts at the seam, not below it, exactly as the drawing terminates it.",
+    "Mouth lower terminus lands on the vertical side seam at (390, 592) px with a visible bartack, the tack reading roughly 15 px across the seam over y = 588-604.",
+    "Mouth is a single plain pressed seam: row scans out to +/-40 px either side return no second local ridge above 12 grey levels (the weave noise floor). No jetting, no welt, no flap, no piping, no parallel topstitch row - matching the drawing's single-line mouth.",
+    "Mouth legibility: cross-seam local contrast 46-75 grey levels (18-30% of full scale), median 62, against the back welt slit's 27-49. The showcased seam is now the strongest line in the frame at about 1.8x the back welt. Attempt 2's median was 19.7 and the back welt out-read the option - that composition fault is FIXED. Do not return to near-black cloth or flatter lighting; cloth mean near the mouth is 74/255 mid-charcoal.",
+    "Exactly one front pocket on the hip shown; no second or duplicate opening anywhere in frame.",
+    "Exactly one back welt pocket on the seat side of the side seam, double-jetted (top edge / slit / bottom edge at y = 357 / 373 / 388 at x = 540), slit inclined -9.0 deg from horizontal against the drawing's -9.8 to -10.5 deg.",
+    "Back welt horizontal placement: welt centre 2.58 waistband depths aft of the side seam against the drawing's 2.63 - correct within 2%.",
+    "Vertical stay/dart line present, running from the waistband down to the back welt and meeting it 55% along its length against the drawing's 49%. Attempt 2 met it at 31%; this is fixed and must not regress.",
+    "Three belt loops, centres at x = 155, 432, 734 px, matching the drawing's count of three. No fourth loop, no missing loop.",
+    "Plain waistband: no side adjusters, no visible closure, no extended tab. Waistband depth 100 px at the mouth, 97-102 px across the usable frame.",
+    "NO side stripe anywhere down the side seam - correctly distinguishes this option from 3122 (5.1 cm slant with stripe).",
+    "NO pleats on the front panel: no vertical fold ridge above the 12 grey-level noise floor anywhere left of the mouth, matching the drawing.",
+    "Correct handedness and topology: front panel image-left, vertical side seam at x = 385-395, seat with back welt image-right - identical arrangement and side to the drawing.",
+    "Camera viewpoint comparable to the drawing: back-welt inclination within 1.5 deg (render -9.0 vs drawing -9.8/-10.5) and waistband bottom-edge inclination within 1.0 deg (render -6.7 vs drawing -5.8). The angle comparison is therefore apples-to-apples.",
+    "Crop: three-quarter front hip, waistband (y 65-200) to mid-thigh (frame bottom y 1168), mouth unobstructed and centre-left in frame at x 311-390 of an 880 px width (35-44% across).",
+    "Fine charcoal wool with weave visible at pixel scale, natural drape, professional press, no CGI look.",
+    "Seamless neutral light-grey studio background (mean 186/255); no props, no hands, no jacket intruding on the pocket. The white shirt hem occupies only the top ~90 px, far from the pocket, unchanged from attempt 2."
   ],
-  "notes": "FAULT FIXED - YES, decisively, and measured rather than eyeballed. Attempt 1's featured pocket read 13.5 deg from HORIZONTAL (76.5 deg from vertical), i.e. near-horizontal. Attempt 2 reads 11.04-11.34 deg from VERTICAL. The mouth rotated ~65 deg and now lands within 0.8 deg of the drawing.\n\nMETHOD AND ITS VALIDATION. Sibling drawing 3122 carries a printed RED dimension callout over the pocket mouth - the one place in this family where the drawing tells you which line is the feature. Fitting the red pixels alone gives 22.96 deg from vertical. Running my blind ink-tracer on the same drawing gives 22.92 deg. A 0.04 deg agreement, so the tracer is measuring the feature it names. Applied to all four family drawings (deg from vertical): 3100 (2.0 cm) 8.63, 3104 (2.5 cm) 11.88, 3101 (3.2 cm) 12.55, 3122 (5.1 cm) 22.92 - monotonic with the labelled drop, which is a second independent confirmation that the traced line is the pocket mouth. The render at 11.04-11.34 sits unambiguously in the 3104 bracket and cannot be confused with 3122.\n\nTHE LABEL IS WRONG AND THE DRAWING WINS - RECORD THIS SO IT DOES NOT MISLEAD A THIRD ATTEMPT. spec.json's description says \"a mouth angle of 15 to 20 degrees, closer to horizontal\". The drawing measures 12.0 deg from VERTICAL. The \"15 to 20\" is degrees from VERTICAL (adjacent to the drawing's 12, and consistent with the whole family's 8.6/11.9/12.6/22.9); the trailing gloss \"closer to horizontal\" is simply false. Attempt 1 failed by trusting that gloss. Equally, the task brief handed to me called this option \"SLANTED\" as if opposed to the drawing - the drawing shows a steeply raked, near-vertical mouth, and both readings collapse to the same number once you measure: ~12 deg off vertical, ~78 deg off horizontal.\n\nWHY NOTHING SCORES 98. Every category except symmetry carries at least one measured deviation. The binding one is the bow (see the major finding): the overall rake is right but the mouth's upper third leaves the waistband ~6 deg too vertical. Dimensions is capped at 93 not because I found a 25% error but because I could not certify it either way - see the landmark problem below. With a Major open, the 95 waiver is not available; this is attempt 2 of 3, so budget remains.\n\nWHAT I COULD NOT MEASURE, HONESTLY. (1) The two landmarks present in both drawing and render disagree by 22%: waistband depth gives a render/drawing scale of 0.976, belt-loop pitch gives 0.78. Every LENGTH ratio I report therefore carries roughly +/-20% - which is why the +12% mouth length is not a finding and the +25% forward offset is only a minor one. The ANGLE comparison is unaffected, being scale-free, and is cross-checked by two independent viewpoint landmarks. (2) The mouth-to-seam gap at the waistband itself is unmeasurable in the render: the leg seam fades below detectable contrast above y=277, so I compared at h=1.0-1.2 waistband depths instead of at the waistband. (3) No centimetre figure is recoverable. The drawings carry no printed scale bar, and the relation between drawn offset and labelled cm is not linear across the family (0.257 to 0.351 waistband depths per cm), so converting would be manufacturing a number. All dimensional findings are given as ratios.\n\nSPAN AND SATURATION CHECKS PERFORMED. Three early measurements were discarded for exactly the traps in the brief: a Hough peak that locked onto the seam instead of the mouth; a tracker that ran past the mouth/seam merge and dragged the fitted angle toward vertical; and an extrapolated forward offset of 0.737 waistband depths that collapsed to 0.592 once measured directly instead of extrapolated with a global slope through a curved line. Every number reported here comes from a trace whose bounding box and per-row contrast I inspected, with the search window (+/-5 px in an 11 px corridor) verified not to be clipping the feature.\n\nREAD-ONLY CONSTRAINTS HONOURED. Nothing under data-store/ or public/images/generated/ was written, moved or deleted. No files were written at all - this verdict is returned structured only.\n\n[workflow retry-wave-7] faultFixed=true",
-  "checkedAt": "2026-08-05T15:59:55.928Z"
+  "notes": "VERDICT: FAIL. One Major is open, so the 95 waiver is not available even though the retry budget (attempt 3 of 3) is spent.\n\nFAULT FIXED? NO - and this is the decisive finding. The attempt-2 correction targeted the mouth's bow. I re-measured candidate-2 and candidate-3 with the identical tracer on identically sized images: candidate-2 sagitta -3.04% of chord, thirds 7.08 / 11.66 / 15.57; candidate-3 sagitta -3.01% of chord, thirds 7.36 / 12.39 / 15.92. The geometry is unchanged to two decimal places. What attempt 3 did change was lighting and cloth value - mouth contrast median went 19.7 -> 61.7 - which incidentally fixed the attempt-2 composition minor. But the fault it was regenerated to fix is still there.\n\nHAND-CHECKABLE EVIDENCE. Local slope from vertical over consecutive 80 px windows: drawing 12.18 / 12.27 / 12.02 / 12.77 deg (flat within 0.75 deg over its whole run); render 6.59 / 9.35 / 13.27 / 15.54 / 16.71 deg (monotonic, 10 deg of swing). Raw drawing ink left-edge x at y = 260/340/420/500/580 is 455/472/489/506/524 - three consecutive 17 px steps per 80 rows, i.e. a ruler-straight line. No threshold or tracer subtlety is doing any work here.\n\nWHY IT STILL MATTERS AT ONLY 5 DEG. The 3104 family is separated by 3-4 deg (3100 = 8.63, 3104 = 11.88-12.41, 3101 = 12.55, 3122 = 22.92 deg from vertical). The render's top third reads 6.6-7.4 deg, which lands inside 3100's (2.0 cm) bracket, and the top third is exactly where a customer reads how far the mouth drops away from the waistband. The overall rake is right, so a glance reads correctly; a comparison against 3100 does not.\n\nLOCKED FEATURES: ALL 18 HELD, none lost. Note the stored list in qc.json contains 16 entries, not the 18 the brief states. Three locks measurably IMPROVED rather than merely surviving: the rake moved 11.65 -> 12.08 deg (drawing 12.41), the stay line's meeting point moved 31% -> 55% along the welt (drawing 49%), and mouth legibility tripled. One lock's stored number changed - the back welt inclination locked at -11.25 deg now reads -9.0 deg - but it moved TOWARD the drawing's -9.8/-10.5, so the lock's intent (a correctly inclined single jetted welt) is intact, not lost.\n\nMEASUREMENT DISCIPLINE - WHAT I VERIFIED, AND WHAT I DISCARDED.\n(1) Feature identity verified before measuring. In this drawing the near-vertical centre line is the SIDE seam (it separates the front panel from the seat carrying the back welt) and the mouth is the diagonal to its left; the mouth terminates on it at a bartack. I confirmed this by enlarging the drawing 3x and reading the bartack tick directly, not by assuming which of the two centre lines was the feature.\n(2) Span and clipping checked on every reported number. The mouth trace was run at search half-windows of 8, 10, 11 and 12 px and flank widths of 5, 7 and 9 px; all agree within 0.05 deg on rake and 0.5 pp on sagitta, and 0% of rows had the argmax land on a window boundary. A half-window of 6 px was tried and DISCARDED: it loses the line entirely and returns nonsense (-5.7 deg, +8.5% sagitta). The drawing trace was run from three start rows (252/255/258) and moved 0.01 deg.\n(3) DISCARDED READING - render side seam sagitta. A per-row trace of the side seam returned -24.8 px, -5.28% of chord. It is worthless: the seam's contrast is only 3-13 grey levels and below y = 530 the tracker jumped onto the mouth (contrast 48-53) inside its own window. Replaced with a shear-matched-filter fit over y 210-530, which gives a clean unimodal peak at 1.75 deg from vertical, x = 385.0 at y = 210. Every mouth-to-seam gap I report rests on that fit and carries +/-5 px.\n(4) DISCARDED READING - render waistband depth at x = 440 read 136 px against 101 px either side. That is the belt loop's lower end, not the waistband seam. Dropped.\n(5) DISCARDED READING - I thought I saw a faint line parallel to and ~18 px left of the mouth in the enlarged crop, which would have meant topstitching and broken a lock. Row scans returned only 4-12 grey-level local maxima there, indistinguishable from the weave noise floor, against the mouth's 46-75. Not a feature; not reported.\n(6) HORIZONTAL SCALE IS NOT ESTABLISHED, and this is the honest limit of the dimensional findings. Four candidate landmarks give four different render/drawing ratios: waistband depth 0.955, back welt length 0.877, belt loop pitch 0.62-0.82, belt loop width 1.22. Belt loop pitch is unusable and I abandoned it as a landmark - the two pitches inside the same image disagree with each other (0.62 vs 0.82), which means the loops are simply placed differently rather than scaled differently; that resolves attempt 2's unexplained '22% landmark disagreement'. The root cause is that the two waistbands curve in opposite senses: the drawing's bottom edge steepens to the right (-4.5 px/100 at x 200-300, -15 px/100 at x 800-900) while the render's is steepest at the left. Their summary inclinations still agree within 1 deg, so ANGLE comparisons are unaffected; positional ratios carry roughly +/-15 percentage points. The one place the horizontal and vertical scales do agree is locally at the pocket (+11% horizontal, +13% vertical), which is why I am confident the mouth is genuinely ~13% oversized.\n(7) NO CENTIMETRE FIGURES ARE RECOVERABLE. Drawing 3104 carries no printed scale bar or dimension callout, and across the family the drawn offset per labelled centimetre is not linear (0.257 to 0.351 waistband depths per cm), so converting would be manufacturing a number. Every dimensional finding above is a ratio.\n(8) Belt loop SPACING differs from the drawing (front loop 2.38 waistband depths inboard of the side seam vs the drawing's 3.68) but I am NOT reporting it as a finding: the front panel curves away from camera in the render and I cannot separate a placement difference from foreshortening. Recorded here as unresolved.\n\nREAD-ONLY CONSTRAINTS HONOURED. Nothing under data-store/ or public/images/generated/ was written, moved, deleted or read-modified. The tech-pack illustration was opened read-only. All working files were written to the session scratchpad only; nothing was written under .craft-pipeline/ either. This verdict is returned structured only.\n\n[workflow retry-wave-7] faultFixed=false\n\n[stage-a-close] lockedHeld=true",
+  "checkedAt": "2026-08-05T19:41:29.157Z"
 }
