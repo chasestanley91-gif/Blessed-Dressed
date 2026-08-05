@@ -2038,3 +2038,83 @@ same shape as the flap-depth ladder saturating at d/W 0.40 and the turn-up band 
 27% through three escalating instructions. Stating a target as a *ratio to a landmark in the frame*
 has not been enough; the next attempt on any option in this class should be treated as likely
 saturated rather than likely correctable.
+
+---
+
+## 162-photograph legacy wave — 815 options now graded, and the UNSURE rate triples
+
+162 distinct photographs graded, then fanned across every row sharing each photograph: **675 → 815
+options graded.** Running totals: **577 OK (70.8%) · 81 WRONG (9.9%) · 157 UNSURE (19.3%)**.
+
+The headline is not the defect rate — it is that **UNSURE jumped from 13% to 44% within this batch**.
+Earlier waves graded hand-picked options with good drawings. This wave went into the tail, and the tail
+is where the drawings run out. Almost every UNSURE here is a *source* verdict, not a photo verdict.
+
+### `cp-trapezoid` — resolves a measurement I had to discard
+
+Earlier I measured the drawing's welt taper at **2.31:1 deeper at one end** but had to throw away my
+render measurement: it returned 139 px inside a 140 px crop box, i.e. it was measuring the box. I
+recorded "needs proper grading" rather than a verdict.
+
+Now measured properly, and it fails. Both welt edges tracked at 10 px steps across a 220 px run —
+top edge falling 578→536, bottom 643→599, same tilt: **depth reads 62–66 px at every single station,
+outboard/inboard ratio 1.01.** That is a parallel welt where the drawing gives a **1.39×** taper
+(66 px inboard rising to 87 px outboard, after subtracting the ~6 px stroke).
+
+Two things make this decisive rather than suggestive:
+
+- **Depth here is a vertical measurement**, and chest curvature compresses *horizontal* spans. Perspective
+  cannot conceal a 30–40% vertical taper.
+- **The whole welt is in frame** — both ends visible, gradients falling off at x≈590 with the lapel edge
+  crossing at x≈345 — so it is not a crop artefact.
+
+Sibling `cp-welt-25` shows the same parallel welt, so the pair also fails distinguishability. My
+instinct was right and my measurement was not; the verdict now rests on the measurement.
+
+### `lp-slanted-flap-55` — a photo filed on the wrong half of its own ladder
+
+Drawing 02A1 shows a **closed slanted flap**: a red quadrilateral covering the mouth, top edge
+(391,366)→(143,505) ≈ 29° rake, perpendicular depth ~132 px over a 284 px run. The shipped photo shows
+a **gaping double-jetted mouth** — two jet lips separated by a dark void, bartack at the upper end, no
+flap panel anywhere.
+
+The corroboration is what makes it actionable: this file (md5 `f96b2ac1`) is **byte-identical to
+`lp-straight-jetted-40/45/50/55/60/65` and `lp-slanted-flap-65`**, while the 4.0–6.0 cm slanted-flap
+siblings ship a *different* file (`00d3bf48`) that **does** show a stitched flap with rounded corners
+and edge stitching. One file cannot be both flap and jetted. **The flap photograph exists — it went to
+the wrong half of the ladder.** This is a re-pointing fix, not a generation job.
+
+### `coin-none` — the wrong garment entirely, and an illustration set that is not drawings
+
+`sport-coat.json` files `coin-pocket` under `suit-pockets` as "Lower Coin Pocket", a **jacket** hip
+feature. The shipped photo is **a pair of trousers** — waistband, belt loops, fly, pleat, slanted side
+pocket. For an absence option that is the exact disqualifying failure: the control region is not empty,
+it is *out of frame*.
+
+The nominal authority cannot rescue it. `/images/jacket/coin-pocket/none.jpg` **is not a drawing** — it
+is a screenshot of lining swatch tiles (`FB280BLK BLACK LINING (CUPRO)`, `FB188616`, `FB188667`…), and
+`coin-pocket/left.jpg` is another crop of the same swatch page. The whole illustration set for this
+field is broken.
+
+### `lapel-peak-120-curved` — the description is wrong, not the photograph
+
+The lapel's outer edge traced at 10 px steps over a 510 px span gives a sagitta of **+10.5 px on a
+565 px chord — a 1.9% bow, essentially straight.** That **contradicts the option's own prose** ("sweeping
+saber curve") but **agrees with the drawing**, which shows straight red edges. The drawing is the
+authority, so this is UNSURE rather than WRONG — and it is another instance of catalog prose describing
+geometry its drawing does not contain.
+
+Note the drawing is shared by **11 peak options spanning 101°–120°** and carries no angle callout, so
+neither "120" nor "curved" is checkable against it at all.
+
+### Method notes the graders recorded against themselves
+
+Consistent with the discipline, several returned numbers were discarded rather than reported:
+
+- `ext-round-dbl-btn-hook`: a max-gradient edge tracker "locked onto the buttons, returning 127 px vs
+  227 px sagitta — meaningless", so the round-vs-square call was made visually at native resolution instead.
+- `lapel-notch-65`: a gradient-orientation histogram over the notch ROI "returned only near-vertical
+  edges (78–88°), i.e. it locked onto the shoulder/background edge, not the notch" — discarded.
+- `lapel-notch-65` again: the photo's measurable angles are 103° (collar point to gorge seam) and <15°
+  (the notch slit itself). **Neither is 65**, and with no callout to say which feature the label names,
+  the grader declined to assert any of them.
