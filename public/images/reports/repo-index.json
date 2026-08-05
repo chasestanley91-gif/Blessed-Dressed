@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-04T21:29:12.529Z",
+  "generatedAt": "2026-08-05T19:44:24.644Z",
   "count": 2862,
   "records": [
     {
@@ -1431,21 +1431,26 @@
           "generation": true,
           "qc": true
         },
-        "verdict": "FAIL",
-        "attempt": 1,
-        "lowestScore": 40,
+        "verdict": "UNMET",
+        "attempt": 3,
+        "lowestScore": 74,
         "belowMin": [
           "shape",
           "geometry",
+          "dimensions",
+          "angles",
           "construction",
+          "placement",
+          "symmetry",
+          "composition",
           "blueprint-match"
         ],
-        "candidates": 2,
+        "candidates": 3,
         "needsReverify": false,
         "specOnly": false,
-        "checkedAt": "2026-08-02T17:03:13.410Z"
+        "checkedAt": "2026-08-05T19:41:28.843Z"
       },
-      "stage": "failed-retry-due"
+      "stage": "unmet"
     },
     {
       "key": "shirt/collar-sq-stand-no-btn",
@@ -36362,21 +36367,25 @@
           "generation": true,
           "qc": true
         },
-        "verdict": "FAIL",
-        "attempt": 1,
-        "lowestScore": 35,
+        "verdict": "UNMET",
+        "attempt": 3,
+        "lowestScore": 92,
         "belowMin": [
           "shape",
           "geometry",
+          "dimensions",
           "angles",
+          "construction",
+          "placement",
+          "composition",
           "blueprint-match"
         ],
-        "candidates": 2,
+        "candidates": 3,
         "needsReverify": false,
         "specOnly": false,
-        "checkedAt": "2026-08-02T17:03:13.876Z"
+        "checkedAt": "2026-08-05T19:41:29.157Z"
       },
-      "stage": "failed-retry-due"
+      "stage": "unmet"
     },
     {
       "key": "suit-2pc/no-front-pockets",
@@ -36525,21 +36534,26 @@
           "generation": true,
           "qc": true
         },
-        "verdict": "FAIL",
-        "attempt": 1,
-        "lowestScore": 40,
+        "verdict": "UNMET",
+        "attempt": 3,
+        "lowestScore": 78,
         "belowMin": [
+          "shape",
           "geometry",
+          "dimensions",
           "angles",
+          "construction",
           "placement",
+          "symmetry",
+          "composition",
           "blueprint-match"
         ],
-        "candidates": 2,
+        "candidates": 3,
         "needsReverify": false,
         "specOnly": false,
-        "checkedAt": "2026-08-02T17:03:14.032Z"
+        "checkedAt": "2026-08-05T19:41:29.007Z"
       },
-      "stage": "failed-retry-due"
+      "stage": "unmet"
     },
     {
       "key": "suit-2pc/slant-20-stripe",
@@ -36674,9 +36688,9 @@
           "generation": true,
           "qc": true
         },
-        "verdict": "FAIL",
-        "attempt": 1,
-        "lowestScore": 70,
+        "verdict": "UNMET",
+        "attempt": 3,
+        "lowestScore": 60,
         "belowMin": [
           "shape",
           "geometry",
@@ -36684,14 +36698,16 @@
           "angles",
           "construction",
           "placement",
+          "symmetry",
+          "composition",
           "blueprint-match"
         ],
-        "candidates": 1,
+        "candidates": 3,
         "needsReverify": false,
         "specOnly": false,
-        "checkedAt": "2026-08-02T17:59:35.508Z"
+        "checkedAt": "2026-08-05T19:41:28.693Z"
       },
-      "stage": "failed-retry-due"
+      "stage": "unmet"
     },
     {
       "key": "suit-2pc/jeans-diamond",
@@ -37025,17 +37041,23 @@
           "qc": true
         },
         "verdict": "FAIL",
-        "attempt": 1,
-        "lowestScore": 70,
+        "attempt": 2,
+        "lowestScore": 10,
         "belowMin": [
+          "shape",
+          "geometry",
           "dimensions",
+          "angles",
           "construction",
-          "composition"
+          "placement",
+          "symmetry",
+          "composition",
+          "blueprint-match"
         ],
         "candidates": 2,
         "needsReverify": false,
         "specOnly": false,
-        "checkedAt": "2026-08-02T17:03:13.718Z"
+        "checkedAt": "2026-08-05T15:59:56.290Z"
       },
       "stage": "failed-retry-due"
     },
@@ -38831,20 +38853,26 @@
           "generation": true,
           "qc": true
         },
-        "verdict": "FAIL",
-        "attempt": 1,
-        "lowestScore": 84,
+        "verdict": "UNMET",
+        "attempt": 3,
+        "lowestScore": 88,
         "belowMin": [
+          "shape",
           "geometry",
+          "dimensions",
+          "angles",
           "construction",
+          "placement",
+          "symmetry",
+          "composition",
           "blueprint-match"
         ],
-        "candidates": 2,
+        "candidates": 3,
         "needsReverify": false,
         "specOnly": false,
-        "checkedAt": "2026-08-02T17:03:13.561Z"
+        "checkedAt": "2026-08-05T19:41:29.315Z"
       },
-      "stage": "failed-retry-due"
+      "stage": "unmet"
     },
     {
       "key": "suit-2pc/pleat-no-double-dart",
@@ -60356,9 +60384,9 @@
           "generation": true,
           "qc": true
         },
-        "verdict": "FAIL",
-        "attempt": 2,
-        "lowestScore": 44,
+        "verdict": "UNMET",
+        "attempt": 3,
+        "lowestScore": 45,
         "belowMin": [
           "shape",
           "geometry",
@@ -60370,12 +60398,12 @@
           "composition",
           "blueprint-match"
         ],
-        "candidates": 2,
+        "candidates": 3,
         "needsReverify": false,
         "specOnly": false,
-        "checkedAt": "2026-08-02T17:59:36.272Z"
+        "checkedAt": "2026-08-05T18:35:21.170Z"
       },
-      "stage": "failed-retry-due"
+      "stage": "unmet"
     },
     {
       "key": "trousers/knot-i",
