@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { allProductDesigns } from "@/data/options";
+import { bundledDesignsSync } from "@/data/options/loader";
 import { BASE_PRICES, FABRIC_PREMIUM, MONOGRAM_EXTRA } from "@/lib/pricing-constants";
 
 export type Monogram = {
@@ -99,7 +99,11 @@ function calcPrice(
   // a known divergence; do not change one side without the other).
   const extra = monograms.length > 1 ? (monograms.length - 1) * MONOGRAM_EXTRA : 0;
 
-  const config = allProductDesigns[product];
+  // Bundled catalog arrives via an async chunk (see loader.ts); until it
+  // lands this is null and designExtra is 0 — the same as today's behavior
+  // for an unknown product. The builder page re-runs recalculatePrice()
+  // when the chunk loads.
+  const config = bundledDesignsSync()?.[product];
   let designExtra = 0;
   if (config) {
     for (const section of config.sections) {

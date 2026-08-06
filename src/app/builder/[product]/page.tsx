@@ -19,7 +19,12 @@ import {
   wearingHabitOptions,
   jacketWearingHabitOptions,
 } from "@/data/builder";
-import { allProductDesigns } from "@/data/options";
+import { loadBundledDesigns, bundledDesignsSync } from "@/data/options/loader";
+
+// Start downloading the bundled-catalog chunk the moment this page module
+// evaluates in the browser — in parallel with hydration, not on demand.
+// (Server rendering never needs it; server code uses the static import.)
+if (typeof window !== "undefined") void loadBundledDesigns();
 import type { ProductDesignConfig } from "@/data/options/types";
 import { useBuilderStore } from "@/store/builderStore";
 import { useCart } from "@/context/CartContext";
@@ -313,7 +318,8 @@ function DesignStep({ productSlug, selections, onSelect, config: liveConfig, qui
   optionsError?: boolean;
 }) {
   const { clearStyleQuizKey } = useBuilderStore();
-  const config = liveConfig ?? allProductDesigns[productSlug];
+  // The caller passes liveConfig ?? bundledFallback; no further fallback here.
+  const config = liveConfig;
   const [sectionIdx, setSectionIdx] = useState(0);
   const [showAdvanced, setShowAdvanced] = useState(false);
   const [expandedFields, setExpandedFields] = useState<Set<string>>(new Set());
@@ -1145,6 +1151,23 @@ export default function BuilderProductPage({ params }: BuilderPageProps) {
   const [activeStep, setActiveStep] = useState(2);
   const [shareCopied, setShareCopied] = useState(false);
   const [liveConfig, setLiveConfig] = useState<ProductDesignConfig | null>(null);
+  // Bundled fallback config, delivered by the preloaded async chunk (loader.ts).
+  // Starts null (matching the server render); populated by the effect below.
+  const [bundledFallback, setBundledFallback] = useState<ProductDesignConfig | null>(
+    () => bundledDesignsSync()?.[productSlug] ?? null
+  );
+
+  useEffect(() => {
+    let cancelled = false;
+    loadBundledDesigns().then((all) => {
+      if (cancelled) return;
+      setBundledFallback(all[productSlug] ?? null);
+      // A ?c= share link hydrated before the chunk landed priced without
+      // designExtra; re-run the calc now that the config is available.
+      useBuilderStore.getState().recalculatePrice();
+    });
+    return () => { cancelled = true; };
+  }, [productSlug]);
   const [activeFabrics, setActiveFabrics] = useState(fabrics);
   const [fabricsLoading, setFabricsLoading] = useState(true);
   const [fabricsError, setFabricsError] = useState(false);
@@ -1200,11 +1223,11 @@ export default function BuilderProductPage({ params }: BuilderPageProps) {
       .then((r) => { if (!r.ok) throw new Error("not found"); return r.json(); })
       .then((data: ProductDesignConfig) => {
         if (data && Array.isArray(data.sections)) setLiveConfig(data);
-        else setLiveConfig(allProductDesigns[productSlug] ?? null);
+        else setLiveConfig(null); // render sites fall back to bundledFallback
       })
       .catch(() => {
         setOptionsError(true);
-        setLiveConfig(allProductDesigns[productSlug] ?? null);
+        setLiveConfig(null); // render sites fall back to bundledFallback
       });
   }, [productSlug]);
 
@@ -1504,7 +1527,7 @@ export default function BuilderProductPage({ params }: BuilderPageProps) {
 
     /* Step 3 — Style Quiz */
     if (activeStep === 3) {
-      const quizConfig = liveConfig ?? allProductDesigns[productSlug] ?? null;
+      const quizConfig = liveConfig ?? bundledFallback ?? null;
       return (
         <StyleQuizStep
           config={quizConfig}
@@ -1523,7 +1546,7 @@ export default function BuilderProductPage({ params }: BuilderPageProps) {
           productSlug={productSlug}
           selections={designSelections}
           onSelect={setDesignSelection}
-          config={liveConfig}
+          config={liveConfig ?? bundledFallback}
           quiz={styleQuiz}
           onEditQuiz={() => setActiveStep(3)}
           optionsError={optionsError}
@@ -1548,7 +1571,7 @@ export default function BuilderProductPage({ params }: BuilderPageProps) {
 
     /* Step 8 — Review */
     if (activeStep === 8) {
-      const config = liveConfig ?? allProductDesigns[productSlug];
+      const config = liveConfig ?? bundledFallback;
       const activeFields = config?.sections?.flatMap(s => s.fields.map(f => ({
         section: s.label,
         field: f.label,
@@ -1801,7 +1824,7 @@ export default function BuilderProductPage({ params }: BuilderPageProps) {
           <div className="space-y-5 lg:sticky lg:top-36 lg:h-fit">
             {/* Live Configuration Panel */}
             {(() => {
-              const config = liveConfig ?? allProductDesigns[productSlug];
+              const config = liveConfig ?? bundledFallback;
               const chosenSections = config?.sections
                 ?.map(section => ({
                   label: section.label,
