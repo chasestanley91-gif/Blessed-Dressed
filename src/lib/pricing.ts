@@ -5,6 +5,12 @@ import { fabrics as bundledFabrics } from "@/data/builder";
 import { readyToWear, type Product } from "@/data/products";
 import { accessories as bundledAccessories, type Accessory } from "@/data/accessories";
 import type { BespokeConfig, CartItem } from "@/context/CartContext";
+import {
+  FABRIC_PREMIUM,
+  MONOGRAM_EXTRA,
+  PRICE_EPSILON,
+  BASE_PRICES,
+} from "@/lib/pricing-constants";
 
 // Server-side pricing authority.
 //
@@ -18,20 +24,8 @@ import type { BespokeConfig, CartItem } from "@/context/CartContext";
 // client-side store (src/store/builderStore.ts) still reads the bundled config;
 // where the two disagree, THIS module is correct and the mismatch is reported.
 
-export const FABRIC_PREMIUM = 150;
-export const MONOGRAM_EXTRA = 10;
-
-/** Tolerance for float comparison — prices are dollars with 2 decimals. */
-export const PRICE_EPSILON = 0.005;
-
-export const BASE_PRICES: Record<string, number> = {
-  shirt: 85,
-  trousers: 495,
-  "suit-2pc": 599.99,
-  "suit-3pc": 799.99,
-  vest: 395,
-  "sport-coat": 350,
-};
+// Re-export so existing consumers of this module's constants keep working.
+export { FABRIC_PREMIUM, MONOGRAM_EXTRA, PRICE_EPSILON, BASE_PRICES };
 
 const round2 = (n: number) => Math.round(n * 100) / 100;
 

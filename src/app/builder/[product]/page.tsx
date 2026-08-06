@@ -28,6 +28,7 @@ import FabricDiscovery from "@/components/builder/FabricDiscovery";
 import MeasuringGuide from "@/components/MeasuringGuide";
 import { rankFabrics } from "@/lib/styleDNA";
 import { rankOptions, getDNAEntries, applyDesignDNA } from "@/lib/quizEngine";
+import { FABRIC_PREMIUM, MONOGRAM_EXTRA } from "@/lib/pricing-constants";
 
 interface BuilderPageProps {
   params: Promise<{ product: string }>;
@@ -1543,7 +1544,7 @@ export default function BuilderProductPage({ params }: BuilderPageProps) {
         selected: f.options.find(o => o.id === (designSelections[f.id] ?? f.defaultValue)),
       }))) ?? [];
 
-      const totalMonogramCost = Math.max(0, monograms.filter(m => m.text).length - 1) * 10;
+      const totalMonogramCost = Math.max(0, monograms.filter(m => m.text).length - 1) * MONOGRAM_EXTRA;
 
       return (
         <div className="space-y-8">
@@ -1629,7 +1630,7 @@ export default function BuilderProductPage({ params }: BuilderPageProps) {
             <div className="space-y-2">
               <div className="flex justify-between text-sm">
                 <span className="font-sans text-muted-dark">Base price ({product.label})</span>
-                <span className="font-sans text-foreground">${(price - (fabricPremium ? 150 : 0) - totalMonogramCost).toLocaleString()}</span>
+                <span className="font-sans text-foreground">${(price - (fabricPremium ? FABRIC_PREMIUM : 0) - totalMonogramCost).toLocaleString()}</span>
               </div>
               {fabricPremium && (
                 <div className="flex justify-between text-sm">
@@ -1949,7 +1950,7 @@ export default function BuilderProductPage({ params }: BuilderPageProps) {
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
                   <span className="font-sans text-muted-dark">{product.label}</span>
-                  <span className="font-sans text-foreground">from ${activeFabrics.find(f => f.id === fabric)?.premium ? price - 150 : price}</span>
+                  <span className="font-sans text-foreground">from ${activeFabrics.find(f => f.id === fabric)?.premium ? price - FABRIC_PREMIUM : price}</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="font-sans text-muted-dark">Fabric</span>

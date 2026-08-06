@@ -1,5 +1,6 @@
 import { create } from "zustand";
 import { allProductDesigns } from "@/data/options";
+import { BASE_PRICES, FABRIC_PREMIUM, MONOGRAM_EXTRA } from "@/lib/pricing-constants";
 
 export type Monogram = {
   text: string;
@@ -86,24 +87,17 @@ export type BuilderState = {
   resetBuilder: () => void;
 };
 
-const basePrices: Record<string, number> = {
-  shirt: 85,
-  trousers: 495,
-  "suit-2pc": 599.99,
-  "suit-3pc": 799.99,
-  vest: 395,
-  "sport-coat": 350,
-};
-
 function calcPrice(
   product: string,
   fabricPremium: boolean,
   designSelections: Record<string, string>,
   monograms: Monogram[]
 ): number {
-  const base = basePrices[product] ?? 0;
-  const fabric = fabricPremium ? 150 : 0;
-  const extra = monograms.length > 1 ? (monograms.length - 1) * 10 : 0;
+  const base = BASE_PRICES[product] ?? 0;
+  const fabric = fabricPremium ? FABRIC_PREMIUM : 0;
+  // NOTE: counts ALL monogram slots (server pricing counts filled ones only —
+  // a known divergence; do not change one side without the other).
+  const extra = monograms.length > 1 ? (monograms.length - 1) * MONOGRAM_EXTRA : 0;
 
   const config = allProductDesigns[product];
   let designExtra = 0;
@@ -145,7 +139,7 @@ export const useBuilderStore = create<BuilderState>((set) => ({
   postureAdjustments: {},
   styleQuiz: {},
   discoveryQuiz: {},
-  price: basePrices.shirt + 150,
+  price: BASE_PRICES.shirt + FABRIC_PREMIUM,
 
   setProduct: (product) =>
     set((state) => ({
@@ -268,6 +262,6 @@ export const useBuilderStore = create<BuilderState>((set) => ({
       postureAdjustments: {},
       styleQuiz: {},
       discoveryQuiz: {},
-      price: basePrices.shirt + 150,
+      price: BASE_PRICES.shirt + FABRIC_PREMIUM,
     }),
 }));
