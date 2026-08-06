@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import Image from "next/image";
 import { loadDataAsync } from "@/lib/admin-data";
 import { SITE_DEFAULTS, type SiteSettings } from "@/data/site-settings";

@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 
 interface Props {
   searchParams: Promise<{ order?: string; session_id?: string }>;
