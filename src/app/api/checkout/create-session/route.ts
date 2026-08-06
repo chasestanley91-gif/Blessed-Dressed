@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { stripe } from "@/lib/stripe";
+import { SITE_URL } from "@/lib/site-url";
 import { repriceCart } from "@/lib/pricing";
 import { createBespokeOrder } from "@/lib/bespoke-orders";
 import type { CartItem } from "@/context/CartContext";
@@ -81,7 +82,7 @@ export async function POST(req: Request) {
     );
   }
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+  const siteUrl = SITE_URL;
   const customerName = `${customerInfo.firstName} ${customerInfo.lastName}`;
   const deliveryAddress = `${customerInfo.address}, ${customerInfo.city}${
     customerInfo.country ? `, ${customerInfo.country}` : ""

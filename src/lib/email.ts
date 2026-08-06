@@ -1,5 +1,6 @@
 import { Resend } from "resend";
 import type { ConsultationRequest } from "@/app/api/consultation/route";
+import { SITE_URL } from "@/lib/site-url";
 
 const TIME_LABELS: Record<string, string> = {
   "weekday-morning":   "Weekday Mornings (Mon–Fri, 9am–12pm)",
@@ -21,7 +22,7 @@ export async function sendConsultationNotification(
   const resend = new Resend(apiKey);
   const from = process.env.RESEND_FROM ?? "onboarding@resend.dev";
   const to = process.env.ADMIN_EMAIL ?? "chasestanley91@gmail.com";
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+  const siteUrl = SITE_URL;
 
   const availability = consultation.timesAvailable
     .map((id) => TIME_LABELS[id] ?? id)
