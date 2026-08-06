@@ -25,7 +25,7 @@ import { loadBundledDesigns, bundledDesignsSync } from "@/data/options/loader";
 // evaluates in the browser — in parallel with hydration, not on demand.
 // (Server rendering never needs it; server code uses the static import.)
 if (typeof window !== "undefined") void loadBundledDesigns();
-import type { ProductDesignConfig } from "@/data/options/types";
+import type { DesignOption, ProductDesignConfig } from "@/data/options/types";
 import { useBuilderStore } from "@/store/builderStore";
 import { useCart } from "@/context/CartContext";
 import StyleQuizStep from "@/components/builder/StyleQuizStep";
@@ -124,14 +124,65 @@ function StepBadge({ n, label, active, done }: { n: number; label: string; activ
   );
 }
 
-function OptionCard({ id, label, description, priceAdj, image, images, aiImage, realImage, selected, onClick, onExpand }: {
+/**
+ * Resolve an option's assets into a drawing + an ordered, de-duplicated photo
+ * list, and label each by WHICH SLOT it came from.
+ *
+ * `image` is a historically overloaded slot: it holds a tech-pack drawing for
+ * ~1,402 options and an AI photo for ~1,336. The lightbox used to hard-code
+ * slot 1 as "Illustration", so those ~1,336 options captioned a photo as the
+ * drawing; and where realImage === image (549 options) the same file appeared
+ * twice. Deriving the role from the source slot fixes both, and surfaces the
+ * `illustration` field, which the customer could never see before.
+ *
+ * The `?? []`-style fallbacks read the legacy slots directly so the component
+ * still renders correctly against a catalog that predates the migration.
+ */
+type OptionAsset = { url: string; role: "Illustration" | "Real photo" | "AI render" | "Photo" };
+
+function optionAssets(opt: DesignOption): { illustration?: string; photos: string[]; items: OptionAsset[] } {
+  const isPhotoPath = (p?: string) => !!p && /^\/images\/(generated|ai)\//i.test(p);
+
+  const illustration =
+    opt.illustration ?? (opt.image && !isPhotoPath(opt.image) ? opt.image : undefined);
+
+  const photos =
+    opt.photos ?? [
+      ...(isPhotoPath(opt.image) ? [opt.image!] : []),
+      ...(opt.realImage ? [opt.realImage] : []),
+      ...(opt.aiImage ? [opt.aiImage] : []),
+      ...(opt.images ?? []),
+    ];
+
+  const seen = new Set<string>();
+  const items: OptionAsset[] = [];
+  const push = (url: string | undefined, role: OptionAsset["role"]) => {
+    if (!url || seen.has(url)) return; // one file never appears twice
+    seen.add(url);
+    items.push({ url, role });
+  };
+
+  push(illustration, "Illustration"); // guaranteed first slide when one exists
+  for (const p of photos) {
+    push(p, p === opt.realImage ? "Real photo" : p === opt.aiImage ? "AI render" : "Photo");
+  }
+
+  return { illustration, photos: photos.filter(Boolean), items };
+}
+
+function OptionCard({ id, label, description, priceAdj, option, selected, onClick, onExpand }: {
   id?: string; label: string; description: string; priceAdj?: number;
-  image?: string; images?: string[]; aiImage?: string; realImage?: string; selected: boolean; onClick: () => void; onExpand?: () => void;
+  /** Omitted by the posture cards, which are text-only by design. */
+  option?: DesignOption; selected: boolean; onClick: () => void; onExpand?: () => void;
 }) {
-  // Thumbnail preference: real photo > AI render > extra photos > illustration drawing.
-  const photo = realImage ?? aiImage ?? images?.[0];
-  const hasPhoto = !!photo;
-  const thumb = photo ?? image;
+  const { illustration, photos } = optionAssets(option ?? ({ id: "", label, description } as DesignOption));
+  // Lead with the drawing when this option's photo is shared with a sibling and
+  // therefore cannot show what makes them differ (photoAmbiguous), or when there
+  // is no photo at all.
+  const leadWithDrawing = option?.photoAmbiguous === true || photos.length === 0;
+  const thumb = leadWithDrawing ? (illustration ?? photos[0]) : (photos[0] ?? illustration);
+  const hasPhoto = !!thumb && thumb !== illustration;
+  const image = illustration; // drawing is the onError fallback target
   return (
     // The expand control used to be a <div role="button" tabIndex={0}> INSIDE
     // this <button>. Interactive content inside a button is invalid HTML: the
@@ -171,7 +222,7 @@ function OptionCard({ id, label, description, priceAdj, image, images, aiImage, 
           />
         </div>
       )}
-      <div className={image ? "p-3" : "p-4"}>
+      <div className={thumb ? "p-3" : "p-4"}>
         <div className="flex items-start justify-between gap-2">
           <p className="font-sans text-sm font-semibold leading-snug text-foreground">{label}</p>
           <div className="flex shrink-0 items-center gap-1.5">
@@ -184,6 +235,11 @@ function OptionCard({ id, label, description, priceAdj, image, images, aiImage, 
           </div>
         </div>
         <p className="font-sans mt-1 text-xs leading-[1.6] text-muted-dark">{description}</p>
+        {!thumb && option?.illustrationStatus === "needs-source" && (
+          <p className="font-sans mt-2 text-[0.65rem] uppercase tracking-widest text-muted-dark/60">
+            Illustration coming soon
+          </p>
+        )}
       </div>
     </button>
     {onExpand && thumb && (
@@ -463,19 +519,11 @@ function DesignStep({ productSlug, selections, onSelect, config: liveConfig, qui
                         label={opt.label}
                         description={opt.description}
                         priceAdj={opt.priceAdj}
-                        image={opt.image}
-                        images={opt.images}
-                        aiImage={opt.aiImage}
-                        realImage={opt.realImage}
+                        option={opt}
                         selected={current === opt.id}
                         onClick={() => onSelect(field.id, opt.id)}
-                        onExpand={(opt.image || opt.aiImage || opt.realImage || opt.images?.length) ? () => setLightbox({
-                          items: [
-                            ...(opt.image ? [{ url: opt.image, role: "Illustration" }] : []),
-                            ...(opt.aiImage ? [{ url: opt.aiImage, role: "AI render" }] : []),
-                            ...(opt.realImage ? [{ url: opt.realImage, role: "Real photo" }] : []),
-                            ...(opt.images ?? []).map((u) => ({ url: u, role: "Photo" })),
-                          ],
+                        onExpand={optionAssets(opt).items.length ? () => setLightbox({
+                          items: optionAssets(opt).items,
                           label: opt.label,
                           description: opt.description,
                         }) : undefined}
