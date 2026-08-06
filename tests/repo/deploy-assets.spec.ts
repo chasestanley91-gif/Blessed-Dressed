@@ -66,30 +66,27 @@ function gitIgnored(repoPaths: string[]): string[] {
 }
 
 /* ══════════════════════════════════════════════════════════════════════════
- * KNOWN DEFECT — the assertion is correct and currently FAILS. `test.fail()`
- * runs it at full strength; it is not weakened and not skipped. When the bug is
- * fixed Playwright reports "expected to fail but passed" and the annotation
- * should be deleted.
+ * REGRESSION GUARD — BUG D1 is FIXED; this test now passes and must keep
+ * passing. Do not weaken it and do not re-add `test.fail()`.
  * ══════════════════════════════════════════════════════════════════════════ */
 
 test.describe("deploy integrity", () => {
   /**
-   * BUG D1 — 58 option images the catalog serves live under `public/images/factory/`,
-   * which is excluded twice over:
+   * BUG D1 (fixed) — the catalog once served 58 option images from
+   * `public/images/factory/`, which is excluded twice over:
    *
    *   .gitignore:46   /public/images/factory/
    *   .vercelignore   public/images/factory
-   *                   ("dev-only scraping reference images … not served in the app")
    *
-   * That comment is no longer true: data-store/options/*.json points suit-2pc,
-   * suit-3pc and sport-coat craft options at `/images/factory/kute/...`. `git
-   * ls-files public/images/factory` returns zero tracked files, so these assets
-   * exist only on the machine that scraped them. On a fresh clone, on CI, and in
-   * production every one of them 404s — while passing locally, because the files
-   * are sitting right there on this disk.
+   * Those files exist only on the machine that scraped them, so on a fresh
+   * clone, on CI and in production every one 404'd — while passing locally,
+   * because the files were sitting right there on this disk. The catalog now
+   * holds zero `/images/factory` references.
    *
-   * Fix by moving the referenced files into a tracked, shipped directory (and
-   * repointing the catalog), not by deleting this test.
+   * This is the class of failure localhost structurally cannot catch, which is
+   * why the check reads .gitignore and .vercelignore rather than the filesystem.
+   * If it fails again, move the referenced files into a tracked, shipped
+   * directory and repoint the catalog — never delete this test.
    */
   test(
     "every served option image is committed and included in the deploy",
