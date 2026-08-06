@@ -57,7 +57,15 @@ export async function loadDataAsync<T>(filename: string, fallback: T): Promise<T
       // Verify it actually exists (head returns metadata)
       await head(latest.url, { token: BLOB_TOKEN });
 
-      const res = await fetch(latest.url, { cache: "no-store" });
+      // The store is configured with PRIVATE access, so the blob URL is not
+      // world-readable: an unauthenticated fetch returns 403 and every load
+      // silently fell back to the bundled sample data. The token has to travel
+      // with the read. (Keeping the store private is deliberate — these
+      // documents hold customer names, emails, phones and addresses.)
+      const res = await fetch(latest.url, {
+        cache: "no-store",
+        headers: { authorization: `Bearer ${BLOB_TOKEN}` },
+      });
       if (!res.ok) return fallback;
       return (await res.json()) as T;
     } catch {
@@ -73,8 +81,15 @@ export async function saveDataAsync<T>(filename: string, data: T): Promise<void>
       const { put } = await import("@vercel/blob");
       const body = JSON.stringify(data, null, 2);
       await put(`data/${filename}.json`, body, {
-        access: "public",
+        // Must match the store's configured access. Writing "public" to a
+        // private store throws BlobError("Cannot use public access on a
+        // private store") — which is what broke every admin save.
+        access: "private",
         addRandomSuffix: false,
+        // These documents are replaced in place on every admin save. Without
+        // this the SDK rejects the second write of any key with "This blob
+        // already exists", so every edit after the first one 500'd.
+        allowOverwrite: true,
         token: BLOB_TOKEN,
         contentType: "application/json",
       });

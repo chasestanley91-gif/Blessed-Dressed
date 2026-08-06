@@ -28,6 +28,7 @@ const FILES = [
   "content",
   "fabric-book",
   "fabrics",
+  "orders",
   "products",
   "site-settings",
   "theme",
@@ -35,6 +36,8 @@ const FILES = [
   "options/sport-coat",
   "options/suit-2pc",
   "options/suit-3pc",
+  "options/trousers",
+  "options/vest",
 ];
 
 async function uploadFile(filename) {
@@ -45,9 +48,13 @@ async function uploadFile(filename) {
   }
 
   const body = readFileSync(localPath, "utf8");
+  // Must match how the app writes these (src/lib/admin-data.ts saveDataAsync)
+  // and the store's configured access: PRIVATE, no random suffix.
+  // (Reads authenticate with the token — see loadDataAsync.)
   await put(`data/${filename}.json`, body, {
     access: "private",
     addRandomSuffix: false,
+    allowOverwrite: true,
     token: TOKEN,
     contentType: "application/json",
   });
