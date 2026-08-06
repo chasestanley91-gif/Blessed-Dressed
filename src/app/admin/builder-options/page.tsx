@@ -261,6 +261,8 @@ export default function BuilderOptionsAdmin() {
   }
 
   useEffect(() => {
+    // Product switch must close any open editor before the new config loads.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setEditorTarget(null);
     fetch(`/api/admin/builder-options/${productId}`).then((r) => r.json()).then(setConfig);
   }, [productId]);

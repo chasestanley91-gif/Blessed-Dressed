@@ -1184,10 +1184,15 @@ export default function BuilderProductPage({ params }: BuilderPageProps) {
   }, []);
 
   useEffect(() => {
+    // Fetch kickoff sets a loading flag; state must start false on the server
+    // render, so this cannot move into a useState initializer.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     fetchFabrics();
   }, [fetchFabrics]);
 
   useEffect(() => {
+    // Reset the error flag before each product's options fetch.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setOptionsError(false);
     // Public, ungated options endpoint — serves the live config (with quiz
     // metadata) to customers. The admin endpoint is auth-gated (401 for guests).
@@ -1255,6 +1260,9 @@ export default function BuilderProductPage({ params }: BuilderPageProps) {
       monograms: decoded.monograms,
     });
     if (decoded.activeStep && decoded.activeStep > 2) {
+      // Share-link (?c=) hydration is a post-mount read of window.location;
+      // an initializer would mismatch the server render.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setActiveStep(decoded.activeStep);
     }
     // Remove ?c= from URL without navigating away
@@ -1305,6 +1313,9 @@ export default function BuilderProductPage({ params }: BuilderPageProps) {
     try {
       const f = JSON.parse(raw) as { id: string; label: string; detail: string; premium: boolean; image?: string };
       sessionStorage.removeItem("builder-pending-fabric");
+      // Post-mount sessionStorage read (fabric handoff from the fabric book);
+      // not available during SSR, so it cannot be an initializer.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setActiveFabrics((prev) => {
         if (prev.some((p) => p.id === f.id)) return prev;
         return [{ id: f.id, label: f.label, detail: f.detail, premium: f.premium, image: f.image }, ...prev];

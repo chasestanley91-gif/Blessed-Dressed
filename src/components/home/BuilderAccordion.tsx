@@ -55,6 +55,9 @@ export default function BuilderAccordion({ initialSteps }: { initialSteps?: Acco
   const [isEditMode, setIsEditMode] = useState(false);
 
   useEffect(() => {
+    // Post-hydration read of window.location; an initializer would mismatch
+    // the server render (edit mode must be false on first paint).
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsEditMode(new URLSearchParams(window.location.search).get("__edit") === "1");
   }, []);
 

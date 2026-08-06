@@ -158,6 +158,8 @@ export default function ImageEditorModal({
 
   // select the slot's current image whenever the slot changes
   useEffect(() => {
+    // Slot change must clear the previous slot's error before reselecting.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setError(null);
     if (currentPath && currentPath.startsWith("/")) {
       selectSource({ kind: "current", path: currentPath });
