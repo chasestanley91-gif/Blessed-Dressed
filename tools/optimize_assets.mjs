@@ -72,7 +72,6 @@ const REPOINT = has('--repoint');
 const LIMIT = Number((args.find((a) => a.startsWith('--limit=')) || '').split('=')[1]) || Infinity;
 
 const sha1 = (buf) => crypto.createHash('sha1').update(buf).digest('hex');
-const readJson = (p) => JSON.parse(fs.readFileSync(p, 'utf8'));
 
 function walk(dir) {
   if (!fs.existsSync(dir)) return [];

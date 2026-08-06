@@ -1,8 +1,6 @@
 import fs from 'fs';
 import https from 'https';
-import crypto from 'crypto';
 
-const md5 = b => crypto.createHash('md5').update(b).digest('hex');
 const work = JSON.parse(fs.readFileSync('tmp-genmap/work-list.json', 'utf8'));
 
 // category for an option: garment-specific part prefix wins; else fall back to addr section / product

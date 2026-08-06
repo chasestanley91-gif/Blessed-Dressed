@@ -313,7 +313,8 @@ export default function AdminProducts() {
   function closeDrawer() { setDrawerTarget(null); }
 
   async function save(data: Omit<Product, "id"> & { id?: string; isNew?: boolean }) {
-    const { isNew: _ignored, ...payload } = data as typeof data & { isNew?: boolean };
+    const payload = { ...(data as typeof data & { isNew?: boolean }) };
+    delete payload.isNew;
     if (payload.id) {
       await fetch(`/api/admin/products/${payload.id}`, {
         method: "PUT",

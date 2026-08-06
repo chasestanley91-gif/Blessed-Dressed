@@ -1,7 +1,6 @@
 ﻿"use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { useCart } from "@/context/CartContext";
 
@@ -31,8 +30,7 @@ const inputCls =
 const labelCls = "font-sans block text-xs uppercase tracking-[0.2em] text-muted-dark mb-1.5";
 
 export default function CheckoutPage() {
-  const router = useRouter();
-  const { items, subtotal, clearCart } = useCart();
+  const { items, subtotal } = useCart();
   const [form, setForm] = useState<FormState>(EMPTY);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");

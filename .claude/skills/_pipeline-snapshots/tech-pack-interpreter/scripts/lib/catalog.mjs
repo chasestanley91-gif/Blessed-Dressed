@@ -121,7 +121,6 @@ function readTsDesign(tsPath) {
     .replace(/\bconst\s+(\w+)\s*:\s*[^=]+=/g, 'const $1 =') // strip const type annotations
     .replace(/\(\s*(\w+)\s*:\s*[A-Za-z0-9_\[\]<>.]+\s*\)\s*=>/g, '($1) =>'); // typed arrow params
 
-  // eslint-disable-next-line no-new-func
   const design = Function('"use strict";\n' + body + '\n;return ' + name + ';')();
   if (!design || !Array.isArray(design.sections)) {
     throw new Error('TS design file did not evaluate to a design object: ' + tsPath);

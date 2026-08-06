@@ -105,7 +105,6 @@ for (const entry of col.sameFieldCollisions) {
 function separablePairs(list) {
   const out = [];
   for (const fam of list) {
-    const keys = fam.rows ? fam.rows : null;
     const opts = fam.options;
     for (let i = 0; i < opts.length; i += 1) {
       for (let j = i + 1; j < opts.length; j += 1) {

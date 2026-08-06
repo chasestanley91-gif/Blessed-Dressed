@@ -150,7 +150,7 @@ for (const job of all) {
   }
 }
 
-for (const [productId, p] of Object.entries(products)) {
+for (const [, p] of Object.entries(products)) {
   if (!p.dirty) continue;
   fs.writeFileSync(p.file, JSON.stringify(p.json, null, 2) + (p.endsWithNewline ? '\n' : ''), 'utf8');
   console.log(`\nwrote ${path.relative(REPO, p.file).split(path.sep).join('/')}`);

@@ -195,7 +195,6 @@ const pipeline = scanPipeline();
 const generated = scanGenerated();
 
 const isGeneratedPath = (s) => typeof s === 'string' && /(^|\/)images\/generated\//i.test(s);
-const isRemote = (s) => typeof s === 'string' && /^https?:\/\//i.test(s);
 
 const records = [];
 const shippedUse = new Map(); // generated path -> [addr]

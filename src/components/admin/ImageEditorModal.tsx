@@ -450,7 +450,6 @@ export default function ImageEditorModal({
                       }`}
                       title={url}
                     >
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
                         src={url}
                         alt="candidate"
@@ -542,7 +541,6 @@ export default function ImageEditorModal({
                     minWidth={10}
                     minHeight={10}
                   >
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       ref={imgRef}
                       src={workingSrc}
@@ -590,10 +588,8 @@ export default function ImageEditorModal({
                 <div className="w-60 overflow-hidden rounded-2xl border border-border-accent bg-surface-strong">
                   <div className={`${h} w-full overflow-hidden rounded-t-[calc(1rem-1px)] bg-white`}>
                     {previewUrl ? (
-                      // eslint-disable-next-line @next/next/no-img-element
                       <img src={previewUrl} alt="card preview" style={{ filter }} className="h-full w-full object-cover" />
                     ) : workingSrc && !editable ? (
-                      // eslint-disable-next-line @next/next/no-img-element
                       <img src={workingSrc} alt="card preview" className="h-full w-full object-contain" />
                     ) : (
                       <div className="h-full w-full bg-border-accent/40" />

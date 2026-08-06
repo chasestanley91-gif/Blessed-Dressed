@@ -20,7 +20,7 @@ for (const id of unmatched) {
 }
 
 fs.mkdirSync('tmp-genmap/remote', { recursive: true });
-const fetchBuf = u => new Promise((res, rej) => {
+const fetchBuf = u => new Promise((res) => {
   https.get(u, r => {
     if (r.statusCode !== 200) return res(null);
     const chunks = [];

@@ -53,7 +53,7 @@ const hashCache = new Map();
 const hashOf = f => {
   if (hashCache.has(f)) return hashCache.get(f);
   let h = null;
-  try { h = md5f(f); } catch (e) { }
+  try { h = md5f(f); } catch { }
   hashCache.set(f, h);
   return h;
 };

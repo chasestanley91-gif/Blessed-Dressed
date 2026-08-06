@@ -93,7 +93,7 @@ export default function ConsultationPage() {
   function toggleTime(id: string) {
     setForm((prev) => {
       const next = new Set(prev.timesAvailable);
-      next.has(id) ? next.delete(id) : next.add(id);
+      if (next.has(id)) next.delete(id); else next.add(id);
       return { ...prev, timesAvailable: next };
     });
   }

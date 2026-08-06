@@ -1,6 +1,6 @@
 ﻿import Link from "next/link";
 import LogoutButton from "@/components/LogoutButton";
-import { loadData, loadDataAsync } from "@/lib/admin-data";
+import { loadDataAsync } from "@/lib/admin-data";
 import { readyToWear, type Product } from "@/data/products";
 import { accessories, type Accessory } from "@/data/accessories";
 import { orders, type Order } from "@/data/orders";

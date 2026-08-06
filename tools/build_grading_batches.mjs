@@ -99,7 +99,7 @@ for (const [product, list] of [...byProduct].sort((a, b) => b[1].length - a[1].l
   console.log(`  ${product.padEnd(11)} ${String(list.length).padStart(4)} eligible   next batch ${batch.length} photos covering ${covers} catalog rows`);
   if (WRITE && batch.length) {
     const p = path.join(OUT, `${product}-${Date.now().toString(36)}.json`);
-    fs.writeFileSync(p, JSON.stringify(batch.map(({ rows, ...b }) => b), null, 1));
+    fs.writeFileSync(p, JSON.stringify(batch.map((entry) => { const b = { ...entry }; delete b.rows; return b; }), null, 1));
     console.log(`      -> ${path.relative(ROOT, p).split(path.sep).join('/')}`);
     written += 1;
   }

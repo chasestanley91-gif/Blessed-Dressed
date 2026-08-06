@@ -43,10 +43,6 @@ export default function AdminInventoryPage() {
     setTimeout(() => setToast(null), 3000);
   }
 
-  function getStock(product: Product, size: string): number {
-    return product.stockBySize.find((s) => s.size === size)?.stock ?? 0;
-  }
-
   function startEdit(productId: string, size: string, currentStock: number) {
     setEditCell({ productId, size });
     setEditValue(String(currentStock));

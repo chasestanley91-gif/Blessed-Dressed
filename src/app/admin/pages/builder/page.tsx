@@ -136,7 +136,6 @@ export default function AdminBuilderPageEditor() {
                     {/* Image column */}
                     <div className="shrink-0 flex flex-col gap-1.5 w-24">
                       <div className="relative h-28 w-24 overflow-hidden rounded-lg border border-border-accent bg-surface-deep">
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img src={card.image} alt={card.label} className="h-full w-full object-cover" />
                         <div className="absolute inset-0 flex items-end justify-center gap-1 p-1 opacity-0 hover:opacity-100 transition-opacity bg-black/50">
                           <button type="button"

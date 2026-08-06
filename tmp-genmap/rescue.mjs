@@ -1,5 +1,4 @@
 import fs from 'fs';
-import https from 'https';
 
 const gens = JSON.parse(fs.readFileSync('tmp-genmap/generations.json', 'utf8'));
 const A = JSON.parse(fs.readFileSync('tmp-genmap/assignments.json', 'utf8'));

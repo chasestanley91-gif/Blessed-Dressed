@@ -55,10 +55,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
-import { fileURLToPath } from 'node:url';
 import { REPO, loadCatalogRows, clusterIndex, resolvePipelineRows, normLabel } from './cluster_map.mjs';
 
-const HERE = path.dirname(fileURLToPath(import.meta.url));
 const PIPELINE = path.join(REPO, '.craft-pipeline');
 const PUBLIC = path.join(REPO, 'public');
 const LEDGER = path.join(PUBLIC, 'images', 'reports', 'publish-log.json');

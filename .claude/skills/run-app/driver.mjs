@@ -16,12 +16,9 @@
 
 import puppeteer from 'puppeteer-core';
 import { mkdir, readdir } from 'fs/promises';
-import { join, dirname } from 'path';
-import { fileURLToPath } from 'url';
-import { createRequire } from 'module';
+import { join } from 'path';
 import http from 'http';
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
 const BASE = 'http://localhost:3000';
 const EDGE = String.raw`C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe`;
 const SHOTS_DIR = String.raw`C:\Users\ChaseStanley\Downloads\files\temporary screenshots`;

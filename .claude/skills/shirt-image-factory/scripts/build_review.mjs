@@ -201,7 +201,7 @@ for (const [p, info] of genFiles) {
         src: p, roles: ['generated'], remote: false,
         flags: [`in generated/${info.dir}`, 'unreferenced'],
       });
-      pathOwners.get(p) || pathOwners.set(p, new Set());
+      if (!pathOwners.get(p)) pathOwners.set(p, new Set());
       pathOwners.get(p).add(c.key);
     }
   } else orphans.push(p);

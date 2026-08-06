@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { Field, FocalPointPicker, ImageBrowser, Toast, inp, lbl } from "@/components/admin/shared";
+import { Field, FocalPointPicker, ImageBrowser, Toast, inp } from "@/components/admin/shared";
 
 const TILE_SHAPES = [
   { label: "Square",    value: "1/1",  cls: "tile-aspect-sq" },
