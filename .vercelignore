@@ -1,5 +1,12 @@
 # Heavy dev-only directories — not needed for the production build
 factory-screenshots
+# QC pipeline working dirs (specs, candidate images, verdicts) — 967 MB combined,
+# live at the repo root so the app cannot serve them; they were pushing the
+# upload past the ~1 GB mark where archive deploys die server-side (2026-08-05).
+.craft-pipeline
+.regen
+tmp-genmap
+temporary screenshots
 # dev-only scraping reference images (gitignored, ~8k files / 95MB) — not served in the app
 public/images/factory
 node_modules
