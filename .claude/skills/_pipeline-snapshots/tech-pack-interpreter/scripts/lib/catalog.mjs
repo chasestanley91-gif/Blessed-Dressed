@@ -129,7 +129,7 @@ function readTsDesign(tsPath) {
 }
 
 // Files in src/data/options that are NOT single-product designs we can eval.
-const TS_SKIP = new Set(['index', 'types', 'suit']); // suit.ts exports two consts
+const TS_SKIP = new Set(['index', 'types', 'suit', 'loader']); // suit.ts exports two consts; loader.ts is the lazy-import shim
 
 // Discover the source file + loader for one product. JSON wins when present.
 export function productSource({ optionsDir, srcOptionsDir }, productId) {
