@@ -16,16 +16,12 @@ import type {
 } from "@/data/options/types";
 
 /** Categories with this many options or more earn a discovery question. */
-export const QUESTION_THRESHOLD = 5;
+const QUESTION_THRESHOLD = 5;
 
 /** Relevance score tiers. */
-export const SCORE_EXACT = 100;
-export const SCORE_RELATED = 60;
-export const SCORE_OTHER = 25;
-
-/** A category is considered "resolved" (adaptive length) when its best-match
- *  set is this small — no further prompting is worthwhile. */
-export const RESOLVED_AT = 4;
+const SCORE_EXACT = 100;
+const SCORE_RELATED = 60;
+const SCORE_OTHER = 25;
 
 export type QuizQuestion = {
   /** Field id — also the key used in the styleQuiz answer map. */
@@ -37,7 +33,7 @@ export type QuizQuestion = {
 };
 
 /** True when a field should surface a discovery question. */
-export function fieldNeedsQuestion(field: DesignField): boolean {
+function fieldNeedsQuestion(field: DesignField): boolean {
   const hasConfig =
     !!field.quiz?.question && (field.quiz?.answers?.length ?? 0) > 0;
   if (!hasConfig) return false;
@@ -68,7 +64,7 @@ export function getQuestionsForConfig(
 }
 
 /** Look up the selected answer object for a field, if any. */
-export function findAnswer(
+function findAnswer(
   field: DesignField,
   answerId: string | undefined
 ): QuizAnswer | undefined {
@@ -77,7 +73,7 @@ export function findAnswer(
 }
 
 /** Score a single option against a selected answer. */
-export function scoreOption(option: DesignOption, answer: QuizAnswer): number {
+function scoreOption(option: DesignOption, answer: QuizAnswer): number {
   const groups = answer.matchGroups ?? [];
   const tags = answer.matchTags ?? [];
   // An answer with no match criteria (e.g. "Show all") treats everything as a match.
@@ -120,15 +116,6 @@ export function rankOptions(
     bestCount: Math.max(bestCount, 1),
     filtered: bestCount < field.options.length,
   };
-}
-
-/** Adaptive length: is this category narrowed enough to skip extra prompting? */
-export function isFieldResolved(
-  field: DesignField,
-  answerId: string | undefined
-): boolean {
-  const { bestCount, filtered } = rankOptions(field, answerId);
-  return filtered && bestCount <= RESOLVED_AT;
 }
 
 /**

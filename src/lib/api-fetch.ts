@@ -21,7 +21,7 @@
  *      here it becomes an explicit, attributable failure.
  */
 
-export class ApiError extends Error {
+class ApiError extends Error {
   readonly status: number;
   readonly url: string;
   readonly body: unknown;
@@ -62,7 +62,7 @@ function messageFrom(body: unknown, fallback: string): string {
  * Fetch JSON from our API, throwing `ApiError` on any non-2xx or unparseable
  * response. Never returns a partial or empty result to paper over a failure.
  */
-export async function apiFetch<T = unknown>(
+async function apiFetch<T = unknown>(
   input: string,
   init?: RequestInit
 ): Promise<T> {
@@ -96,22 +96,4 @@ export async function apiFetch<T = unknown>(
 /** `apiFetch` for callers that only need to know it worked. */
 export async function apiSend(input: string, init?: RequestInit): Promise<void> {
   await apiFetch(input, init);
-}
-
-/**
- * For call sites that genuinely want to continue on failure — a non-critical
- * refresh, say. It returns the fallback AND reports, so "we chose to ignore
- * this" stays distinguishable from "we never noticed".
- */
-export async function apiFetchOr<T>(
-  input: string,
-  fallback: T,
-  init?: RequestInit
-): Promise<T> {
-  try {
-    return await apiFetch<T>(input, init);
-  } catch (error) {
-    console.error("[apiFetch]", input, error);
-    return fallback;
-  }
 }
