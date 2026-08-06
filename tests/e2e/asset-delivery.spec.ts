@@ -201,11 +201,13 @@ test.describe("known asset defects", () => {
    * per full catalog browse, and the failure is invisible on localhost because
    * the masters are sitting right there on disk.
    *
-   * Fix by clearing/repointing `realImage` (and `aiImage`) for every option whose
-   * `image` is already the WebP derivative. Do NOT fix it by deleting this test.
+   * FIXED 2026-08-06. The 622 realImage PNG paths were repointed to their WebP
+   * derivatives, and the thumbnail now resolves through `photos[0]` (built by
+   * tools/decompose_option_assets.mjs), which never contains a PNG master.
+   * This is now a REGRESSION GUARD — keep it passing; do not re-add test.fail().
    */
-  test.fail(
-    "[KNOWN BUG] no option's rendered thumbnail resolves to a PNG master",
+  test(
+    "no option's rendered thumbnail resolves to a PNG master",
     async ({ request }) => {
       test.setTimeout(SWEEP_TIMEOUT);
 
@@ -225,14 +227,13 @@ test.describe("known asset defects", () => {
   );
 
   /**
-   * BUG A3b — empirical confirmation of BUG A3, measured in a real browser.
-   *
-   * Walks a guest to the shirt design studio and records what the page actually
-   * downloaded. Today every `/images/generated/` request comes back
-   * `image/png`; not one WebP is fetched.
+   * BUG A3b (FIXED 2026-08-06) — empirical confirmation, measured in a real
+   * browser. Walks a guest to the shirt design studio and records what the page
+   * actually downloaded. Every `/images/generated/` request now comes back as
+   * WebP. REGRESSION GUARD — keep it passing; do not re-add test.fail().
    */
-  test.fail(
-    "[KNOWN BUG] the design studio downloads WebP, not the PNG masters",
+  test(
+    "the design studio downloads WebP, not the PNG masters",
     async ({ page }) => {
       test.setTimeout(120_000);
 
