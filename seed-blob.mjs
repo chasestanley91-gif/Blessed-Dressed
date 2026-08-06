@@ -28,7 +28,6 @@ const FILES = [
   "content",
   "fabric-book",
   "fabrics",
-  "image-overrides",
   "products",
   "site-settings",
   "theme",

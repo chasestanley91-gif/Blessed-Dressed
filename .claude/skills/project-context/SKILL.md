@@ -9,7 +9,7 @@ description: >
 
 # Blessed & Dressed — Project Context
 
-**Christian bespoke suiting brand.** Next.js 16 App Router, Tailwind CSS v4, Supabase, Stripe.
+**Christian bespoke suiting brand.** Next.js 16 App Router, Tailwind CSS v4, Vercel Blob (JSON data store — no database), Stripe.
 
 ## Project location
 
@@ -55,7 +55,6 @@ data-store/                   ← Live JSON files written by admin saves
   collections.json
   accessories.json
   theme.json
-  image-overrides.json
   fabric-book.json
   content.json
 ```
@@ -158,7 +157,7 @@ Fabric swatches and hero images are uploaded via the admin panel to `/public/ima
 | tailwindcss | ^4 | CSS-first config |
 | gsap | — | Home page animations |
 | zustand | — | Builder state |
-| @supabase/supabase-js | — | Auth + DB |
+| @vercel/blob | — | JSON data store + image storage (no database) |
 | stripe | — | Payments |
 
 ---

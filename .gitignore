@@ -37,7 +37,6 @@ yarn-error.log*
 # Runtime data-store (JSON files written by admin) — data lives in Vercel Blob on prod
 # Ignore runtime-written data files but keep option definitions (static config with descriptions/images)
 /data-store/*.json
-/data-store/image-overrides.json
 
 # vercel
 .vercel
@@ -59,3 +58,6 @@ next-env.d.ts
 
 # Catalog safety snapshots taken before batch operations
 /data-store/options.backup-*
+
+# Local archive of superseded working files (never track)
+_archive/
