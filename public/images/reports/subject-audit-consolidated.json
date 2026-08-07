@@ -1,0 +1,963 @@
+{
+ "generatedAt": "2026-08-07T04:06:48.193Z",
+ "inspected": 161,
+ "totals": {
+  "MATCH": 84,
+  "MISMATCH": 58,
+  "AMBIGUOUS": 19
+ },
+ "byDirectory": {
+  "/images/jacket": {
+   "MATCH": 3,
+   "MISMATCH": 39,
+   "AMBIGUOUS": 3
+  },
+  "/images/blueprints/factory": {
+   "MATCH": 16,
+   "MISMATCH": 6,
+   "AMBIGUOUS": 3
+  },
+  "/images/blueprints/supplier": {
+   "MATCH": 3,
+   "MISMATCH": 1,
+   "AMBIGUOUS": 1
+  },
+  "/images/blueprints/remote": {
+   "MATCH": 10,
+   "MISMATCH": 2,
+   "AMBIGUOUS": 2
+  },
+  "/images/bias_cutting": {
+   "MATCH": 1,
+   "MISMATCH": 0,
+   "AMBIGUOUS": 0
+  },
+  "/images/placket_button_position": {
+   "MATCH": 4,
+   "MISMATCH": 0,
+   "AMBIGUOUS": 0
+  },
+  "/images/buttonhole": {
+   "MATCH": 0,
+   "MISMATCH": 0,
+   "AMBIGUOUS": 2
+  },
+  "/images/placket_buttonhole_direction": {
+   "MATCH": 2,
+   "MISMATCH": 0,
+   "AMBIGUOUS": 0
+  },
+  "/images/contrast_color_position": {
+   "MATCH": 3,
+   "MISMATCH": 0,
+   "AMBIGUOUS": 0
+  },
+  "/images/epaulet": {
+   "MATCH": 1,
+   "MISMATCH": 0,
+   "AMBIGUOUS": 0
+  },
+  "/images/brand_label_position": {
+   "MATCH": 3,
+   "MISMATCH": 0,
+   "AMBIGUOUS": 0
+  },
+  "/images/fabric_label_position": {
+   "MATCH": 0,
+   "MISMATCH": 1,
+   "AMBIGUOUS": 0
+  },
+  "/images/cuff_lining": {
+   "MATCH": 1,
+   "MISMATCH": 0,
+   "AMBIGUOUS": 1
+  },
+  "/images/cuff_pleat": {
+   "MATCH": 1,
+   "MISMATCH": 0,
+   "AMBIGUOUS": 0
+  },
+  "/images/collar_splicing": {
+   "MATCH": 2,
+   "MISMATCH": 0,
+   "AMBIGUOUS": 0
+  },
+  "/images/techpacks/shirt": {
+   "MATCH": 9,
+   "MISMATCH": 7,
+   "AMBIGUOUS": 5
+  },
+  "/images/decoration_stitching_on_shoulder": {
+   "MATCH": 1,
+   "MISMATCH": 0,
+   "AMBIGUOUS": 0
+  },
+  "/images/sleeve_tab": {
+   "MATCH": 1,
+   "MISMATCH": 0,
+   "AMBIGUOUS": 0
+  },
+  "/images/back": {
+   "MATCH": 4,
+   "MISMATCH": 0,
+   "AMBIGUOUS": 0
+  },
+  "/images/collar_stand": {
+   "MATCH": 3,
+   "MISMATCH": 0,
+   "AMBIGUOUS": 0
+  },
+  "/images/collar_stay": {
+   "MATCH": 0,
+   "MISMATCH": 0,
+   "AMBIGUOUS": 1
+  },
+  "/images/lapel": {
+   "MATCH": 0,
+   "MISMATCH": 1,
+   "AMBIGUOUS": 0
+  },
+  "/images/cuff": {
+   "MATCH": 1,
+   "MISMATCH": 1,
+   "AMBIGUOUS": 0
+  },
+  "/images/front": {
+   "MATCH": 1,
+   "MISMATCH": 0,
+   "AMBIGUOUS": 0
+  },
+  "/images/hem": {
+   "MATCH": 4,
+   "MISMATCH": 0,
+   "AMBIGUOUS": 0
+  },
+  "/images/first_button_distance": {
+   "MATCH": 5,
+   "MISMATCH": 0,
+   "AMBIGUOUS": 0
+  },
+  "/images/placket": {
+   "MATCH": 2,
+   "MISMATCH": 0,
+   "AMBIGUOUS": 1
+  },
+  "/images/pocket": {
+   "MATCH": 2,
+   "MISMATCH": 0,
+   "AMBIGUOUS": 0
+  },
+  "/images/options": {
+   "MATCH": 1,
+   "MISMATCH": 0,
+   "AMBIGUOUS": 0
+  }
+ },
+ "results": [
+  {
+   "bp": "/images/jacket/sleeve-buttonhole/by-hands.jpg",
+   "v": "MISMATCH",
+   "ev": "Two jacket FRONTS (upper chest/lapel area only), captioned \"Both sides\" and \"Each side o...\". This is a lapel-buttonhole POSITION diagram. No sleeve, no cuff, no buttonhole stitching shown, and nothing expresses hand-vs-machine."
+  },
+  {
+   "bp": "/images/jacket/sleeve-buttonhole/by-machine.jpg",
+   "v": "MISMATCH",
+   "ev": "Same lapel-buttonhole position chart, off-register crop; the fully visible jacket front is captioned \"Right\". No sleeve or cuff appears; machine stitching is never depicted."
+  },
+  {
+   "bp": "/images/blueprints/factory/f1edbb42290d__302Y__No_pleat_double_darts.jpg",
+   "v": "MISMATCH",
+   "ev": "Trouser FRONT view (J-curve fly topstitch at centre front, slanted on-seam side pockets, belt loops). Four red dart marks (two per side) sit below the FRONT waistband, i.e. front darts as an alternative to pleats. Filename reads \"No_pleat_double_darts\" and data-store/image-rejections.json records the source as factory/kute/trousers/Style_Pleat_style_Pleat_style/302Y__No_pleat_double_darts.jpeg - the vendor's PLEAT STYLE chart. The catalog option describes back darts creating \"pronounced seat curvature\"; the seat/back panel is never shown."
+  },
+  {
+   "bp": "/images/blueprints/factory/edc7138c802f__302L__No_pleat_no_dart.jpg",
+   "v": "MISMATCH",
+   "ev": "Trouser FRONT view (fly J-curve, front slant pockets, belt loops), no red dart marks anywhere. It is the \"no pleat, no dart\" FRONT drawing - the same file is used in trousers.json as the techpackIllustration for pleat-style option \"Flat Front (No Dart)\" (line 1317). The option's own text says \"Flat back panel\", but no back panel or seat is depicted."
+  },
+  {
+   "bp": "/images/blueprints/factory/27e91c06ed8a__302M__No_pleat_single_dart.jpg",
+   "v": "MISMATCH",
+   "ev": "Trouser FRONT view with two red dart marks (one per side) below the FRONT waistband, either side of the fly. Filename \"No_pleat_single_dart\"; image-rejections.json records the source folder as Style_Pleat_style_Pleat_style (front pleat/dart chart) and already lists key \"trousers|back-darts|darts-single\" as rejected for the builder role. Dart count is shown, but on the wrong panel - no back view, seat or back pockets."
+  },
+  {
+   "bp": "/images/jacket/chest-dart/plus-2.jpg",
+   "v": "MISMATCH",
+   "ev": "Not a garment drawing at all - a BUTTON product sheet. Photographed 4-hole buttons with captions \"N304/FK3132BK  HORN BUTTON\" and \"NJ0...\", plus Japanese header text \"...配置\" and \"...ning\". Nothing about a chest dart or a +2 cm extension."
+  },
+  {
+   "bp": "/images/jacket/chest-dart/plus-3.jpg",
+   "v": "MISMATCH",
+   "ev": "Another crop of the same BUTTON sheet: photographed buttons captioned \"G515/FK283214  COROZO BUTTON\" and \"...06/FKE03237\". No jacket, no dart, no measurement."
+  },
+  {
+   "bp": "/images/jacket/hem/big-curve.jpg",
+   "v": "MISMATCH",
+   "ev": "A single photographed metal/horn button captioned \"BK219/FK763274\" on white. No jacket hem, no front edge, no curve."
+  },
+  {
+   "bp": "/images/jacket/hem/dr-round.jpg",
+   "v": "MISMATCH",
+   "ev": "A single photographed button captioned \"SZ215/FK763236\" (engraved ring visible on the button face). Button sheet crop, not a hem shape."
+  },
+  {
+   "bp": "/images/jacket/hem/squared.jpg",
+   "v": "MISMATCH",
+   "ev": "A single photographed button captioned \"BK223/FK763231\", with \"CUSTOM\" lettering engraved around the button rim. Button sheet crop, not a squared jacket hem."
+  },
+  {
+   "bp": "/images/jacket/columbia-piping/columbia-and-piping.jpg",
+   "v": "MISMATCH",
+   "ev": "Crop of an exterior POCKET STYLE chart: tiles captioned \"Regular Slanted Flap in 4.5cm\" and \"Regular Slanted Flap in 5cm\" with blue dimension callouts \"4.5cm\" / \"5cm\". The field is \"Interior Columbia Stitching / Piping\" - no interior, lining seam, taping or piping is shown."
+  },
+  {
+   "bp": "/images/jacket/columbia-piping/columbia.jpg",
+   "v": "MISMATCH",
+   "ev": "Same pocket-style chart, different crop: captions \"...Jetted Flap in 5cm\", \"Straight Jetted Pocket\", \"Straight Welt P...\" with callouts \"1.2cm\", \"1.5cm\", \"1cm\". Depicts hip-pocket variants, not interior Columbia stitching."
+  },
+  {
+   "bp": "/images/jacket/columbia-piping/none.jpg",
+   "v": "MISMATCH",
+   "ev": "Pocket-style chart crop: a checkmarked tile captioned \"Straight Jetted Flap in 4.5cm\" (callout \"4.5cm\"), plus \"Angled Box Pleat Patch Pocket\" and a partial third tile with \"1.2cm\". Used for TWO options: columbia-piping \"None\" (should show absence of interior stitching/piping - shows exterior pockets instead) and chest-pocket \"None\" (should show a jacket with no chest pocket - the drawing plainly shows pockets present, and they are hip/patch pockets, not a breast pocket)."
+  },
+  {
+   "bp": "/images/jacket/columbia-piping/piping.jpg",
+   "v": "MISMATCH",
+   "ev": "Same pocket chart again: captions \"...Pocket in 1.2cm\", \"Straight Welt Pocket in 1.5cm\", \"Regular Slanted Flap in ...\" with callouts \"1.5cm\", \"4cm\", \"1cm\". Shows welt/flap pocket geometry, not interior piping trim."
+  },
+  {
+   "bp": "/images/jacket/external-decoration/none.jpg",
+   "v": "MISMATCH",
+   "ev": "Crop of a LAPEL STYLE chart - six lapel line drawings captioned \"8C Notch Lapel\", \"8L Peak Lapel\", \"10° Peak Lapel\", \"Notch lapel 2\", \"Notch lapel 4\", \"Notch lapel 6\", with red Japanese annotations giving hook/spacing measurements (\"...14cm\", \"...12cm\"). The field is external decoration (siblings are front-chest horizontal/slanted button loops); no decoration or its absence is expressed."
+  },
+  {
+   "bp": "/images/jacket/handmade-decorative/full.jpg",
+   "v": "MISMATCH",
+   "ev": "Crop of the edge/top-stitch chart. The fully visible jacket front is captioned \"Top Stitch 4CM to edge\"; the half-cropped one reads \"...itching\". That chart's discriminator is stitch distance from the edge, not which areas receive hand stitching. Shoulder seam, vents, chest pocket edges and buttonholes are not called out anywhere, and the back/vents are never shown."
+  },
+  {
+   "bp": "/images/jacket/handmade-decorative/none.jpg",
+   "v": "AMBIGUOUS",
+   "ev": "Off-register crop of the same edge-stitch chart. The half-cut jacket at the left edge is captioned \"...lone\" (i.e. \"None\"), which does correspond to the label, but the dominant, fully visible jacket is a competing variant captioned \"0.15cm edge by ma[chine]\" with a blue \"0.15cm\" callout. Right subject family (a clean jacket front with no decorative lines) but the frame advertises another option, and at 240x200 no stitch line is legible either way."
+  },
+  {
+   "bp": "/images/jacket/handmade-decorative/shoulder-seam.jpg",
+   "v": "MISMATCH",
+   "ev": "Edge-stitch chart crop: the checkmarked (blue-bordered) tile is captioned \"...y machine\" (0.15cm edge by machine) and the right tile \"0.15cm edge by hand\", both with \"0.15cm\" callouts pointing at the FRONT edge/lapel. Front views only - no shoulder seam detail and no stitching at the shoulder."
+  },
+  {
+   "bp": "/images/jacket/back-vent/side-belt.jpg",
+   "v": "MISMATCH",
+   "ev": "Crop of a LAPEL WIDTH chart - jacket FRONT/chest close-ups captioned \"...7cm\" and \"7.5cm\" with a red 7.5cm measuring line drawn across the lapel. A back-vent option needs a rear view; there is no back, no vent, and no belt."
+  },
+  {
+   "bp": "/images/jacket/back-vent/side-fixed-belt.jpg",
+   "v": "MISMATCH",
+   "ev": "Same lapel-width chart, adjacent crop: front views captioned \"8cm\" and \"8.5cm\" with red lapel measuring lines, and a stray UI \"Search\" box captured at the top right (screenshot artefact). No rear view, vent or belt."
+  },
+  {
+   "bp": "/images/jacket/inner-pocket-closure/d-bartack.jpg",
+   "v": "MISMATCH",
+   "ev": "Crop of a button/buttonhole diagram: a blue-bordered selection tile that is ~70% empty white, with two round 4-hole buttons at the right edge, each with a pink/red horizontal BUTTONHOLE slit drawn beside it (siblings i-bartack.jpg and x-bartack.jpg are crops of the same button column). No inner breast pocket, no pocket corner, and no D-shaped bartack stitch anywhere."
+  },
+  {
+   "bp": "/images/jacket/inner-pocket-closure/i-bartack.jpg",
+   "v": "MISMATCH",
+   "ev": "Crop shows two round 4-hole buttons stacked vertically at the left edge beside a double vertical garment edge line - a sleeve/cuff button column. There is no inner pocket, no welt or pocket mouth, and no bartack stitch bar anywhere in frame. Decisive: its sibling x-bartack.jpg is the same button column mirrored, so the pair differs by SIDE, not by I-shaped vs X-shaped bartack. The field's discriminator is entirely absent."
+  },
+  {
+   "bp": "/images/jacket/inner-pocket-closure/none.jpg",
+   "v": "MISMATCH",
+   "ev": "Essentially blank. The whole 240x200 canvas is paper-white except one thin vertical line down the left side. No pocket, no interior facing, no garment feature at all - nothing that could depict an open (unclosed) inner pocket."
+  },
+  {
+   "bp": "/images/jacket/inner-pocket-closure/x-bartack.jpg",
+   "v": "MISMATCH",
+   "ev": "Shows two 4-hole buttons with pink/red horizontal keyhole BUTTONHOLES drawn to the left of each, against a vertical garment edge line - a cuff/placket button-and-buttonhole diagram. No X-shaped bartack, no pocket mouth, no pocket at all. Mirror image of i-bartack.jpg."
+  },
+  {
+   "bp": "/images/jacket/inner-ticket-pocket/left.jpg",
+   "v": "MISMATCH",
+   "ev": "Pure text, no drawing whatsoever. The crop is a column of Chinese hand-sewing operations: 手工封胸袋/ 手工捉袖山头里/ 手工捉袖口里/ 手工捉下摆里/ 手工捉后叉里/ 手工内珠边/ 手工套结封下口袋/ 手工捉里子肩缝/ 手工捉领底呢 (hand-close chest pocket / hand-stitch sleeve-head lining / hand-stitch cuff lining / hand-stitch hem lining / hand-stitch back-vent lining / hand inner pick-stitch edge / hand bartack closing lower pocket / hand-stitch lining shoulder seam / hand-stitch undercollar felt). This is a hand-work specification list, not a ticket pocket illustration."
+  },
+  {
+   "bp": "/images/jacket/inner-ticket-pocket/none.jpg",
+   "v": "MISMATCH",
+   "ev": "A text fragment cut mid-character. Shows a lone black glyph 工 and a red partial …准) - the tail of (以选项为准) meaning 'subject to the selected option' - against a navy table border. No garment, no pocket, no drawing."
+  },
+  {
+   "bp": "/images/jacket/inner-ticket-pocket/right.jpg",
+   "v": "MISMATCH",
+   "ev": "Crop of a table heading, cut mid-word: black 部位手… ('part / hand-work…') above red (以选项为… ('subject to the selected…'), with the navy cell border on the left. Text only - no garment and no pocket, and nothing expressing left vs right."
+  },
+  {
+   "bp": "/images/jacket/mp3-pocket/left.jpg",
+   "v": "MISMATCH",
+   "ev": "Jacket-interior line drawing captioned in English 'Diamond shape left pocket', with the neighbouring grid cell's caption 'RIGHT JET[TED]' cut off at the right edge. These are the PEN-POCKET option captions, so this is a crop of the pen-pocket option grid, a different field entirely - it does not depict an MP3/media pocket."
+  },
+  {
+   "bp": "/images/jacket/mp3-pocket/none.jpg",
+   "v": "MISMATCH",
+   "ev": "Captioned 'Left jetted pocket' inside a navy selected-state box with a large blue checkmark, alongside the neighbouring caption 'Drop shape left p[ocket]'. Wrong on two counts: it is the pen-pocket option grid rather than the MP3 pocket, and it shows a pocket PRESENT and actively selected while the label is 'None'."
+  },
+  {
+   "bp": "/images/jacket/mp3-pocket/right.jpg",
+   "v": "MISMATCH",
+   "ev": "Jacket interior captioned 'Drop shape right pen pocket', with the neighbouring cell reading 'Diamo[nd]'. The caption explicitly names the PEN pocket, not an MP3 pocket - a crop of the wrong option grid."
+  },
+  {
+   "bp": "/images/jacket/namecard-pocket/both.jpg",
+   "v": "MISMATCH",
+   "ev": "Crop of the neck/shoulder corner of a jacket front panel, with a red dashed stitch line running along the SHOULDER SEAM. No pocket, no interior facing, and only one side of the garment is in frame - so it cannot express 'both sides' either."
+  },
+  {
+   "bp": "/images/jacket/namecard-pocket/left.jpg",
+   "v": "MISMATCH",
+   "ev": "The same neckline/shoulder-corner pattern piece as both.jpg but mirrored, again with red dashed stitching along the shoulder seam, plus stray sleeve-button and thread marks clipped at the bottom edge. A shoulder-seam construction detail, not a namecard pocket."
+  },
+  {
+   "bp": "/images/jacket/namecard-pocket/none.jpg",
+   "v": "MISMATCH",
+   "ev": "Two unrelated fragments side by side: a collar/undercollar pattern piece with red hatch marks, and a sleeve-cuff corner showing a column of 4 stacked buttons against a red dash-dot vent line. A cuff-button diagram - no jacket interior and no pocket."
+  },
+  {
+   "bp": "/images/jacket/namecard-pocket/right.jpg",
+   "v": "MISMATCH",
+   "ev": "A sleeve-cuff/vent corner with 4 stacked black buttons and a red 'X' mark beneath them. This is a sleeve button diagram; there is no interior facing and no namecard pocket anywhere in frame."
+  },
+  {
+   "bp": "/images/jacket/pen-pocket/left-diamond.jpg",
+   "v": "MISMATCH",
+   "ev": "Essentially blank - white canvas with a single diagonal line near the right edge and nothing else. No pocket, no diamond-shaped welt, no identifiable garment part."
+  },
+  {
+   "bp": "/images/jacket/pen-pocket/left-drop.jpg",
+   "v": "MISMATCH",
+   "ev": "Upper-body crop showing the back neckline/collar band (double horizontal line with the centre-back seam dropping from it) and the collar-to-lapel NOTCH highlighted in red, with the lapel edge running down to the lower right. This is a gorge/notch geometry diagram, not a pen pocket, and there is no drop-shaped welt anywhere."
+  },
+  {
+   "bp": "/images/jacket/pen-pocket/left-jetted.jpg",
+   "v": "MISMATCH",
+   "ev": "The same collar-to-lapel notch highlighted in red as left-drop.jpg, mirrored to the opposite side of the frame. No jetted pocket, no welt lips, no pocket mouth - lapel/gorge geometry only."
+  },
+  {
+   "bp": "/images/jacket/pen-pocket/right-diamond.jpg",
+   "v": "MISMATCH",
+   "ev": "Again the collar band with centre-back seam plus the red-highlighted collar-to-lapel notch, with a stray diagonal line at the right of frame. Gorge/notch geometry; no diamond pocket and no pocket of any kind."
+  },
+  {
+   "bp": "/images/jacket/pen-pocket/right-drop.jpg",
+   "v": "MISMATCH",
+   "ev": "Red-highlighted collar/lapel notch positioned at the right of frame, with two heavy diagonal lines at the far left. Lapel gorge detail - no pocket of any shape is drawn."
+  },
+  {
+   "bp": "/images/jacket/pen-pocket/right-jetted.jpg",
+   "v": "MISMATCH",
+   "ev": "Essentially blank - white canvas with only two diagonal lines at the right edge. No pocket, no jetting, no identifiable garment part."
+  },
+  {
+   "bp": "/images/blueprints/supplier/b92433d52b1a__0549__Left_three_right_two.png",
+   "v": "MATCH",
+   "ev": "Clean 384x482 front-view lapel drawing (largest and clearest asset in the batch). Counted at 10x magnification: the viewer-right lapel carries exactly THREE red buttonhole dashes, the viewer-left lapel exactly TWO. In a front view the wearer's left lapel appears on the viewer's right, so this reads three buttonholes on the left lapel and two on the right - exactly the labelled 3/2 split, matching the supplier filename 'Left_three_right_two'. Both mark clusters sit on the lapel face above the notch, so the discriminator (count and side) is unambiguously drawn."
+  },
+  {
+   "bp": "/images/jacket/shoulder-head/natural.jpg",
+   "v": "AMBIGUOUS",
+   "ev": "A genuine full front-view jacket line drawing (notch lapel, chest welt pocket) with the shoulders in frame, so the garment region is correct and the subject is not wrong. But the sleeve-head expression cannot be read: the caption strip at the bottom is clipped by the crop and is illegible, and stacking the shoulder band against its three siblings (regular.jpg, con-rollino.jpg, neapolitan.jpg) shows four essentially identical plain sloping shoulder lines - no roping, no shirring, no raised sleeve head. At 240x200 nothing separates 'Natural' from roped or Neapolitan, so the discriminator is not expressible."
+  },
+  {
+   "bp": "/images/jacket/shoulder-head/neapolitan.jpg",
+   "v": "MATCH",
+   "ev": "240x200 line drawing of a jacket FRONT with both shoulder seams and sleeve-head outer seams traced in red - correct garment area for a sleeve-head option. Zoomed 22x on both shoulder points: a distinct soft gathered/puckered mass is drawn where the sleeve meets the shoulder, and the shoulder line drops steeply - a legitimate spalla camicia (shirt-shoulder) rendering, and visibly different from its sibling con-rollino.jpg (pixel diff bbox 16,4-208,200). Caption is clipped by the bottom edge of the image; only the tops of the letters survive, reading as two words beginning 'Ne...li...'. Low-resolution asset, so confidence is moderate."
+  },
+  {
+   "bp": "/images/blueprints/supplier/362519787419__0621__4_flat.jpg",
+   "v": "MISMATCH",
+   "ev": "Correct area (a sleeve/cuff tube with the cuff opening drawn as a swooping ellipse) but the COUNT is wrong, and count is the entire discriminator for cuff-button-number. Run-structure analysis of the red marks along the cuff vent edge gives a strict alternation of 9 solid bar bands and 8 hollow capsule bodies (bodies ~51-56px, separators ~13-23px) spanning y=350-936 - i.e. EIGHT evenly spaced marks, not four. No button discs are drawn anywhere. The marks also run far up the sleeve (starting at y=350, roughly halfway up the panel) rather than clustering at the cuff. Alternative reading: the red chain is simply a dashed highlight of the vent seam, which would say nothing about a button count either. Either way the drawing does not show 4 buttons. No caption text anywhere in the 1200x1200 frame (ink bbox x336-866, y44-1158)."
+  },
+  {
+   "bp": "/images/blueprints/factory/0cd41e2fb0ea__0630__2_kissing.jpg",
+   "v": "MATCH",
+   "ev": "Same sleeve/cuff base drawing as the '4 flat' sibling, but the red button marks near the cuff hem (y=727-960) are visibly STAGGERED and OVERLAPPING each other rather than sitting in a straight separated column - x spread 325-379 vs the flat sibling's tight 335-368, and the run structure is irregular where the flat sibling's is perfectly periodic. Side-by-side comparison makes the touching/overlapping arrangement obvious. That is exactly the kissing-vs-spaced discriminator this field is about. No caption text in frame."
+  },
+  {
+   "bp": "/images/jacket/back-vent/center-vent.jpg",
+   "v": "MISMATCH",
+   "ev": "Not a back view and not a vent. This is a cropped tile out of a multi-cell LAPEL / GORGE MEASUREMENT chart: jacket FRONTS on grey mannequin busts, each with a red measurement arrow across the lapel notch, and printed captions under the cells reading '5.5cm' and '6cm' (plus the red in-figure labels '5.5cm' and '6cm'). Rows of further front-view cells are cut off at the top and bottom of the crop. No jacket back, no seat, no vent of any kind appears in the image."
+  },
+  {
+   "bp": "/images/jacket/back-vent/no-vent.jpg",
+   "v": "MISMATCH",
+   "ev": "Same lapel-measurement chart as center-vent.jpg, a different crop. Two jacket FRONT cells with red gorge/notch measurement arrows and printed captions '4.5cm' and '5cm' (in-figure red labels '4.5cm' and '5cm'). This is a lapel-width diagram, not a back-vent diagram - there is no back view at all, so it cannot express 'no vent'."
+  },
+  {
+   "bp": "/images/jacket/back-vent/side-vents.jpg",
+   "v": "MISMATCH",
+   "ev": "Same lapel-measurement chart again, a third crop. Jacket FRONT cells with red measurement arrows across the lapel notch and printed captions '6.5CM' and a partially cut-off '7...' (in-figure red labels '6.5cm' and '7cm'). No back view, no side seams, no vents."
+  },
+  {
+   "bp": "/images/blueprints/factory/7e10ed9447af__32C7__Left_besom_bttn_bttnhole.jpg",
+   "v": "MATCH",
+   "ev": "Trouser BACK view (five belt loops, centre seat seam, no fly J-stitch - confirmed by comparison with the '31A0 No' sibling which is the same base drawing). A single horizontal red BESOM welt is drawn on one side of the seat (red pixels x201-513, y275-382; zero red in the opposite half), with a small red diamond-shaped mark hanging directly below the welt = the button/buttonhole tab. Single besom + button & buttonhole on one side only is exactly what the label claims. Minor caveat: the welt sits on the image-left, which on a rear view is the wearer's right - tech packs commonly label by drawing position, so 'Left' may be drawing-relative."
+  },
+  {
+   "bp": "/images/blueprints/factory/d1ec6888d1c1__31A0__No.jpg",
+   "v": "MATCH",
+   "ev": "Trouser BACK view, identical base drawing to the '32C7 Left besom' sibling (five belt loops, centre seat seam, back darts) but with the seat completely clean - zero red pixels in the whole file and no welt, no jetting, no button. Because the sibling image places a pocket in exactly this area, the empty seat reads unambiguously as 'no back pockets'."
+  },
+  {
+   "bp": "/images/blueprints/factory/8f065c084861__K.jpg",
+   "v": "MATCH",
+   "ev": "Waistband EXTENSION construction detail: waistband curtain (zigzag top edge), fly/zip area, and the extension tab outlined in red with a pointed V end, dimensioned by a red caption reading exactly '13cm'. The red tab is visibly the longest of the set, consistent with the largest value. (Unrelated boxed annotation in the drawing reads '洗水唛' = wash-care label placement.)"
+  },
+  {
+   "bp": "/images/blueprints/factory/b9c52226e508__L.jpg",
+   "v": "MATCH",
+   "ev": "Same waistband-extension detail drawing; red extension tab is the longest in the whole family and the red dimension caption reads exactly '15cm'."
+  },
+  {
+   "bp": "/images/blueprints/factory/17db92352b9c__A.jpg",
+   "v": "MATCH",
+   "ev": "Waistband-extension detail with the red-outlined extension tab and a red dimension caption reading exactly '5cm'; tab is the shortest of the set."
+  },
+  {
+   "bp": "/images/blueprints/factory/996d352c9178__B.jpg",
+   "v": "MATCH",
+   "ev": "Waistband-extension detail; red dimension caption reads '5. 5cm' (space is a rendering artefact of the source drawing), matching the 5.5 cm label. Tab length sits between the 5cm and 6cm siblings."
+  },
+  {
+   "bp": "/images/blueprints/factory/ef0fb41e2ad1__C.jpg",
+   "v": "MATCH",
+   "ev": "Waistband-extension detail; red dimension caption reads exactly '6cm', and the red extension tab is proportionally longer than the 5.5cm sibling."
+  },
+  {
+   "bp": "/images/blueprints/factory/bd9c06045808__D.jpg",
+   "v": "MATCH",
+   "ev": "Waistband-extension detail; red dimension caption reads exactly '6.5cm'."
+  },
+  {
+   "bp": "/images/blueprints/factory/a9b053b81635__E.jpg",
+   "v": "MATCH",
+   "ev": "Waistband-extension detail; red dimension caption reads exactly '7cm'."
+  },
+  {
+   "bp": "/images/blueprints/factory/2b3c7bcf74ef__31A3__0.6cm_top_stitch.jpg",
+   "v": "MISMATCH",
+   "ev": "Wrong garment part. The drawing is a trouser FRONT, but the red topstitch highlight is entirely on the two slant SIDE-POCKET openings, not on the fly: red pixels occupy x61-1125 with EXACTLY ZERO red pixels in the centre third (x450-750) where the fly sits. A 3x zoom of the left hip shows the red line running parallel and just inside a black diagonal that descends from the waistband to the hip and terminates in a bar-tack tick - a classic quarter-top/slant pocket mouth. The centre-front fly J-stitch is drawn as a plain unhighlighted black line, identical to its 'no topstitch' sibling, which proves the option family is not about the fly. Nothing curved-vs-straight about a fly is expressed."
+  },
+  {
+   "bp": "/images/blueprints/factory/10bfe4668d92__31A6__No_top_stitch_hidden_stitch.jpg",
+   "v": "AMBIGUOUS",
+   "ev": "A real, correct trouser FRONT drawing that does include the fly, and it contains zero red pixels - so 'no topstitching' is depicted by absence, which is defensible. But it cannot express that the absent stitching is on the FLY: it is the same base drawing as its two siblings (31A1/31A3), and in those siblings the red topstitch is applied to the slant side-pocket mouths, never to the fly. The fly J-curve is rendered identically as a bare black line in all three files, so a viewer has nothing here that reads as a fly-topstitch option."
+  },
+  {
+   "bp": "/images/blueprints/factory/e081e2a8c319__31A1__0.15cm_top_stitch.jpg",
+   "v": "MISMATCH",
+   "ev": "Same problem as its 0.6cm sibling: trouser FRONT with the red topstitch highlight on the two slant SIDE-POCKET openings only - red pixels x84-1120 with ZERO red in the centre third (x450-750) where the fly is. The fly J-stitch is plain black and unhighlighted. The file is a genuinely different image from the 0.6cm sibling (11,614 vs 17,431 red pixels, i.e. a thinner stitch offset matching 0.15cm vs 0.6cm), but the feature being dimensioned is pocket topstitching, not fly topstitching."
+  },
+  {
+   "bp": "/images/blueprints/factory/48f3c94b03b0__3024__Double_toward_fly.jpg",
+   "v": "MATCH",
+   "ev": "Trouser FRONT with exactly four red pleat strokes measured in the pleat band - two on the left (x369-398, x439-454) and two on the right (x723-737, x780-809) - i.e. DOUBLE pleats on each side, plainly legible. A red magnifier-circle callout at top-left enlarges the pleat fold in cross-section to indicate fold direction (toward the fly). The count discriminator is unmistakable; the forward-vs-reverse direction rests on the small inset, which is legible but modest."
+  },
+  {
+   "bp": "/images/blueprints/remote/c8538a87dffb__3441.jpg",
+   "v": "MISMATCH",
+   "ev": "Effectively a blank asset. The entire 1200x1200 file contains nothing but one long thin horizontal band (ink bbox x42-1149, y515-669): a black-outlined rectangle with a solid red stripe running edge to edge through the middle (red pixels y556-610). There is no waistband, no curtain, no piping edge, no Snugtex gripper texture, no seam, no scale, no callout and no caption - verified at 8x vertical zoom, the red stripe is a flat solid fill with no internal detail. It cannot depict any of the three things the label names."
+  },
+  {
+   "bp": "/images/jacket/shoulder-head/con-rollino.jpg",
+   "v": "AMBIGUOUS",
+   "ev": "Correct area: a 240x200 jacket FRONT with the shoulder seam and sleeve-head outer seam traced in red, and it is a genuinely distinct drawing from neapolitan.jpg. But at 20-22x zoom on both shoulder points the sleeve/shoulder junction is just a clean sharp angle with a straighter, slightly more extended shoulder line - no rollino roping, no raised sleeve-head roll is rendered, so the actual con-rollino construction cannot be read. Caption is clipped off by the bottom edge of the image; only the tops of four word-groups survive, consistent with 'Con rollino sho...' but not legible enough to quote. Too small and too under-drawn to confirm the discriminator."
+  },
+  {
+   "bp": "/images/jacket/shoulder-head/regular.jpg",
+   "v": "MATCH",
+   "ev": "Jacket front line drawing cropped to the shoulders and sleeve heads. The shoulder line runs nearly flat out from the neck and breaks at a defined shoulder point before the sleeve drops - the built-up, squared structured/English shoulder. Partial caption is visible below the drawing, cut off mid-height, beginning with 'R' (cropped 'Regular'). Not a subject error but a quality defect: this file is a UI screenshot, carrying a baked-in navy card selection border and a blue selection checkmark in the lower-right corner, with the caption sliced off at the bottom edge."
+  },
+  {
+   "bp": "/images/jacket/shoulder-head/shirt-head.jpg",
+   "v": "MATCH",
+   "ev": "Same jacket-front view as its sibling, but the shoulder line slopes downward continuously and more steeply from neck into sleeve with no built-up shoulder point - the soft, unstructured shirt-style sleeve head. Cropped caption below the drawing reads 'Shirt Head'. Confirmed a genuinely different drawing from regular.jpg (different md5; shoulder geometry visibly differs side by side), though the difference is subtle at 240x200."
+  },
+  {
+   "bp": "/images/blueprints/remote/14975407461c__3133.jpg",
+   "v": "MATCH",
+   "ev": "Trouser hip blueprint. The red highlight traces a pocket mouth that drops vertically from the waistband seam then turns at a clean right angle and runs across to the seam - the square-cornered western/jeans pocket opening. The right-angle corner is precisely what 'square' distinguishes (versus a curved scoop). The back besom pocket is drawn separately in black on the right and is left unhighlighted, so there is no confusion about which pocket is being specified."
+  },
+  {
+   "bp": "/images/blueprints/factory/9092405bd48f__3131__Besom.jpg",
+   "v": "MATCH",
+   "ev": "Same trouser hip blueprint family. The red highlight is a single long, straight, clean vertical slit on the front panel, running parallel to and just forward of the seam, with no flap, no curve and no corner - a jetted/besom slot pocket. Measured at roughly 470px of a 1200px frame against a ~95px waistband, which scales to a plausible ~20cm jetted opening. Filename also carries the factory's own '__Besom' tag."
+  },
+  {
+   "bp": "/images/blueprints/remote/692862b38427__3403.jpg",
+   "v": "MATCH",
+   "ev": "Trouser front, fly area. The base drawing shows the waistband extension tab overlapping past the fly with a buttonhole in it (small dark oval), the fly topstitch line running down, and the curved fly-J seam below. The red hand-drawn hook mark sits exactly at the junction of the waistband extension and the top of the fly - the French fly extension/hook closure, which is the defining feature of the option. The red annotation is small and crudely drawn (reads like a bracket), but it is correctly placed."
+  },
+  {
+   "bp": "/images/blueprints/remote/87f09a00ddf2__3609.jpg",
+   "v": "MATCH",
+   "ev": "Side view of trousers with the leg bottom shown enlarged. A red line runs straight across the leg roughly 87px above the leg opening, with plain uninterrupted fabric below it and no fold or turn-up band - a plain hem with the hem allowance depth marked. Row-darkness scan of the hem zone finds only two horizontal features: the red depth line (rows 1054-1073) and the leg-opening edge (rows 1137-1160). The literal 7.6 cm value is not readable from the drawing, but the 'plain' variant is correctly and unambiguously shown."
+  },
+  {
+   "bp": "/images/blueprints/remote/3817491d18ac__3603.jpg",
+   "v": "MISMATCH",
+   "ev": "No cuff or turn-up is drawn anywhere in this image. The leg bottom is identical to the 'Plain Hem' blueprint (87f09a00ddf2__3609.jpg): a row-darkness scan across the leg interior in the hem zone finds only the faint pink highlight band (rows 1091-1099) and the same leg-opening edge (rows 1137-1160, byte-for-byte the same rows as the plain-hem file). There is no second horizontal line, no fold line, and no doubled band, and the trouser crease line runs uninterrupted straight through to the bottom edge - all of which a turn-up would break. The only difference from the plain-hem drawing is that the highlight sits lower on the leg. It therefore depicts a plain hem at a shallower depth, not a 3.8 cm cuff turn-up. The highlight is also washed out to pale pink (only 118 saturated red pixels versus 4475 in the plain-hem file), making it barely visible."
+  },
+  {
+   "bp": "/images/bias_cutting/outer-collar-stand.jpg",
+   "v": "MATCH",
+   "ev": "Shirt collar front view. Red 45-degree diagonal hatching - the standard bias-grain convention - fills exactly the visible triangular front of the collar band beneath the collar points, the panel containing the collar button. That triangle is the outer collar stand as seen from outside the garment. Cross-checked against the sibling bias_cutting/inner-collar-stand.jpg, which hatches the inside band at the back of the neck instead, confirming the outer/inner discriminator is genuinely expressed by which region is hatched."
+  },
+  {
+   "bp": "/images/placket_button_position/6-buttons-not-including-collar-button.jpg",
+   "v": "MATCH",
+   "ev": "Shirt front with red button marks down the placket, counted programmatically. One red mark sits at the collar band (the collar button, which the option explicitly excludes) plus exactly 6 marks below it, at rows 42, 64, 86, 109, 131 and 153. Two sub-pixel red specks (3px and 1px) are JPEG artifacts, not buttons. Count is exact and the spacing is the widest of the four-image set, consistent with the lowest button count."
+  },
+  {
+   "bp": "/images/placket_button_position/7-buttons-not-including-collar-button.jpg",
+   "v": "MATCH",
+   "ev": "Same shirt-front drawing. One red collar-band mark (excluded per the label) plus exactly 7 red button marks below it, at rows 32, 51, 72, 92, 113, 133 and 154. Count is exact and spacing tightens correctly relative to the 6-button image."
+  },
+  {
+   "bp": "/images/placket_button_position/8-buttons-not-including-collar-button.jpg",
+   "v": "MATCH",
+   "ev": "Same shirt-front drawing. One red collar-band mark (excluded per the label) plus exactly 8 red button marks below it, at rows 32, 48, 66, 84, 101, 118, 137 and 154. Count is exact."
+  },
+  {
+   "bp": "/images/placket_button_position/9-buttons-not-including-collar-button.jpg",
+   "v": "MATCH",
+   "ev": "Same shirt-front drawing. One red collar-band mark (excluded per the label) plus exactly 9 red button marks below it, at rows 31, 47, 61, 77, 93, 109, 124, 140 and 156. Count is exact and spacing is the tightest of the set, consistent with the highest button count."
+  },
+  {
+   "bp": "/images/buttonhole/hand-made.jpg",
+   "v": "AMBIGUOUS",
+   "ev": "The drawing is of the right area - a shirt front with red vertical buttonholes marked down the placket - but at 178x267 px the hand-versus-machine distinction is a stitch-character difference that simply cannot be rendered. Decisively, this file is byte-identical to buttonhole/machine.jpg (both 7812 bytes, both md5 568e2a13d9caf35fda8461fbfb0c5dc3), so the exact same picture is serving both options and cannot discriminate between them by construction. Needs a real macro photograph of hand-worked versus machine-worked buttonholes, not a line drawing."
+  },
+  {
+   "bp": "/images/buttonhole/machine.jpg",
+   "v": "AMBIGUOUS",
+   "ev": "Identical situation to its sibling: byte-identical file to buttonhole/hand-made.jpg (same 7812 bytes, same md5 568e2a13d9caf35fda8461fbfb0c5dc3). It is a correct drawing of placket buttonholes but expresses nothing about machine versus hand construction, and cannot, since one file serves both options."
+  },
+  {
+   "bp": "/images/placket_buttonhole_direction/horizontal-second-buttonhole-from-bottom.jpg",
+   "v": "MATCH",
+   "ev": "Both halves of the claim verified. Six buttonholes run down the placket at rows 42, 63, 83, 105, 127 and 147. A magnifier balloon's pointer tail lands on the buttonhole at row 127 - counting up from the bottom (147 is 1st), that is exactly the 2nd from the bottom. Inside the balloon, the enlarged buttonhole is drawn as a red HORIZONTAL dash across the placket, while the buttonholes on the placket itself are short vertical ticks. The balloon body also happens to sit over the row-105 buttonhole, but the tail unambiguously points at row 127."
+  },
+  {
+   "bp": "/images/placket_buttonhole_direction/vertical-buttonholes-with-horizontal-buttonhole.jpg",
+   "v": "MATCH",
+   "ev": "The cleanest and largest drawing in this batch (574x802). Every buttonhole down the placket is drawn as a distinct vertical slot with its button, and a blue magnifier balloon points at the lowest buttonhole and enlarges it to show a red HORIZONTAL buttonhole. That is precisely 'vertical buttonholes with one horizontal buttonhole', with both states visible in the same frame for direct comparison."
+  },
+  {
+   "bp": "/images/contrast_color_position/cuff-tab.jpg",
+   "v": "MATCH",
+   "ev": "Sleeve shown with a turned-up/rolled hem (fold lines visible). A narrow strap with a pointed end and a button, sitting at the sleeve hem, is filled solid red - the cuff/sleeve tab. Solid-red fill is this folder's consistent convention for 'apply the contrast colour to this piece' (confirmed against contrast_color_position/outer-cuff.jpg, where the whole barrel cuff is filled red), so the fill correctly identifies which component takes the contrast fabric."
+  },
+  {
+   "bp": "/images/contrast_color_position/shoulder-epaulet.jpg",
+   "v": "MATCH",
+   "ev": "Close angled view of the neck and shoulder: the collar leaf, the collar band with its buttonhole at the rounded front end, and the front placket with its buttonhole are all identifiable, with the sleeve-head arc below. The strap running from the sleeve head up toward the collar, with a pointed free end and a button, is filled solid red - the shoulder epaulet, correctly located on the shoulder rather than on a sleeve or cuff."
+  },
+  {
+   "bp": "/images/contrast_color_position/sleeve-vent.jpg",
+   "v": "MATCH",
+   "ev": "Long sleeve terminating in a barrel cuff with its button and topstitching. The narrow gauntlet/tower placket running up the sleeve from the cuff, with its gabled pointed top and gauntlet button, is filled solid red - the sleeve vent placket. Distinct drawing and distinct garment area from the cuff-tab and shoulder-epaulet entries, so the field's positions are genuinely differentiated."
+  },
+  {
+   "bp": "/images/epaulet/pointed-shoulder-epaulet.jpg",
+   "v": "MATCH",
+   "ev": "Same base drawing as contrast_color_position/shoulder-epaulet.jpg but with the strap outlined in red rather than filled, which is the correct convention for a shape option instead of a colour option. The strap is sewn in at the sleeve head and runs up toward the collar, and its free end is clearly gabled/POINTED with a button at the point, plus dashed edge stitching down both sides - a pointed shoulder epaulet. The folder's only other option is none.jpg, so pointed is the sole shape offered and the drawing shows it."
+  },
+  {
+   "bp": "/images/brand_label_position/picture-1113.jpg",
+   "v": "MATCH",
+   "ev": "Full shirt front with a small label/tag drawn at the bottom of the front placket just above the hem; the position is marked in red with the letter 'A' plus a stroke over the tag. The position discriminator is genuinely expressed - sibling picture-1114.jpg marks 'B' higher up at the second-lowest button and picture-1115.jpg marks 'C' at the collar, so the three occupy visibly different spots. Caveat for the caller: the image's own caption is 'A', not '2'. Per data-store/options/shirt.json the 'Position N' names are auto-generated sequence labels (blp-1..blp-5), and the numbering is offset because blp-1 'Position 1' maps to picture-1112.jpg, which is not a shirt at all but a Chinese text card reading 'No Button', while blp-5 'Position 5' maps to picture-1116.jpg, which is a blank image. Those two blueprints are outside this batch but are worth flagging as broken."
+  },
+  {
+   "bp": "/images/brand_label_position/picture-1114.jpg",
+   "v": "MATCH",
+   "ev": "Shirt front technical flat with a red position marker 'B' and a leader line pointing to the bottom of the front placket at the side-vent split. It is a genuine brand-label position diagram and marks one specific spot. Sibling images confirm the scheme is offset by one: blp-2 'Position 2' = picture-1113 marked 'A' (bottom placket, slightly lower/left), blp-4 'Position 4' = picture-1115 marked 'C' (inside back neck), so Position 3 = 'B' is internally consistent."
+  },
+  {
+   "bp": "/images/brand_label_position/picture-1115.jpg",
+   "v": "MATCH",
+   "ev": "Shirt front flat with a red letter 'C' at the top-left and a small red woven label drawn inside the back neck, visible through the collar opening. A distinct label position from siblings 'A' and 'B' (both bottom-placket). Caveat worth recording: this file is byte-identical (md5 ebafd691b1862d8f482d6e964c3f9b25) to /images/fabric_label_position/picture-1111.jpg, which is assigned to a different field."
+  },
+  {
+   "bp": "/images/fabric_label_position/picture-1111.jpg",
+   "v": "MISMATCH",
+   "ev": "Byte-identical (md5 ebafd691b1862d8f482d6e964c3f9b25) to /images/brand_label_position/picture-1115.jpg, i.e. it is the BRAND label 'Position 4' drawing. The drawing carries the red letter 'C', which belongs to the brand-label A/B/C marker scheme (A=blp-2, B=blp-3, C=blp-4), not to a two-option fabric-label scheme. The field's other image, picture-1110.jpg, is likewise byte-identical (md5 240fc927f0c0b300d4d1b1db564bd232) to brand_label_position/picture-1112.jpg, which is not a diagram at all but a red text card reading '不订 / No Button'. The entire fabric_label_position image set is copied wholesale out of brand_label_position."
+  },
+  {
+   "bp": "/images/cuff_lining/cuff-lining-hard-fc390057.jpg",
+   "v": "AMBIGUOUS",
+   "ev": "Cuff drawn in perspective with an interlining swatch peeled back, captioned '袖克夫厚衬 / Cuff Heavy Interlining'. Correct family (heavy = hard), but it is the same drawing as cuff-lining-hard.jpg (225x225 vs 226x226, different bytes, visually identical) and nothing in the image identifies the FC390057 interlining code, which is the only thing separating this option from plain 'Hard'."
+  },
+  {
+   "bp": "/images/cuff_lining/cuff-lining-hard.jpg",
+   "v": "MATCH",
+   "ev": "Caption reads '袖克夫厚衬 / Cuff Heavy Interlining' with a dark cross-hatched (heavy) interlining swatch shown inside the cuff. Discriminates cleanly against its siblings, which are captioned '袖克夫标准衬 / Cuff Standard Interlining' (Normal) and '袖克夫软衬 / Cuff Soft Interlining' (Soft), each with progressively lighter swatch shading."
+  },
+  {
+   "bp": "/images/cuff_pleat/double-pleat.jpg",
+   "v": "MATCH",
+   "ev": "Sleeve with placket and cuff; TWO red pleat lines are drawn side by side running down the sleeve and terminating at the cuff seam, each hooking at the bottom. Exactly two pleats, which is the discriminator against the sibling 'Single Pleat' option."
+  },
+  {
+   "bp": "/images/collar_splicing/single-left-placket-edge.jpg",
+   "v": "MATCH",
+   "ev": "Collar/upper-front flat with ONE solid red contrast band running vertically down the LEFT edge of the front placket, starting at the collar button. Single band on the left placket edge — matches the label and discriminates against the sibling 'Double Left Placket Edges'."
+  },
+  {
+   "bp": "/images/collar_splicing/triangle-collar-point.jpg",
+   "v": "MATCH",
+   "ev": "Collar flat with solid red TRIANGLES filling both collar points, plus a blue leader line and callout reading '拼2cm' ('spliced 2 cm') pointing at the right-hand triangle. Both the shape (triangle) and the location (collar point) are explicit."
+  },
+  {
+   "bp": "/images/techpacks/shirt/decoration_stitching_on_placket/machine-01cm-top-stitching-on-inner-plain-placket.jpg",
+   "v": "AMBIGUOUS",
+   "ev": "Correct garment part: shirt front from chest to hem showing the placket with four buttons, the hem curve and the side-vent gusset. A solid red stitch line runs down the placket's left edge and a red dashed line runs parallel down its right edge, plus a red dashed line across the gusset. But there is no dimension callout anywhere, so 0.1 cm cannot be distinguished from the field's 0.3 cm and 0.5 cm siblings. Note also that this file is by its own name the 'inner plain placket' drawing, which is a separate option (stitch-01-inner-plain) in the same field."
+  },
+  {
+   "bp": "/images/decoration_stitching_on_shoulder/machine-06cm-top-stitching.jpg",
+   "v": "MATCH",
+   "ev": "Shoulder/armhole junction detail with the shoulder-seam band at upper left and the armhole curve below it. A pink/red topstitch line traces the seam, and a grey leader line carries the printed callout '0.6cm明线' — literally '0.6 cm topstitch'. The measurement discriminator is written on the drawing. (Minor caveat: the highlighted stitch line runs mostly down the armhole seam from the shoulder point rather than along the shoulder seam itself.)"
+  },
+  {
+   "bp": "/images/techpacks/shirt/decoration_stitching_on_collar/none.jpg",
+   "v": "MISMATCH",
+   "ev": "Wrong garment part. This is the COLLAR field's illustration — the path itself is decoration_stitching_on_collar/none.jpg — showing a collar, collar band and front placket, with a large circular magnifier inset blown up on the COLLAR POINT and band edge. It is assigned to shl-stitch-none in decoration_stitching_on_shoulder (Shoulder Seam Stitching). The shoulder seams appear only as incidental lines running off the left and right edges and are not the subject; the detail circle is entirely about the collar."
+  },
+  {
+   "bp": "/images/blueprints/remote/cefac731f303__31A1.jpg",
+   "v": "AMBIGUOUS",
+   "ev": "Trouser front flat (waistband, belt loops, fly, front pleats) with thick solid red lines tracing both SLANTED SIDE-POCKET MOUTHS. Right garment part for a trouser pocket-stitching option, but the red strokes mark the pocket opening, not a stitch row — there are no stitch dots and no dimension callout, so 0.15 cm cannot be told from the field's 0.6 cm topstitch / 0.1+0.7 double / pick-stitch siblings. Those siblings use factory drawings whose filenames encode the spec (31A3__0.6cm_top_stitch, 31A6__No_top_stitch_hidden_stitch, 31A9__With_0.1_0.7_top_stitching); this one (31A1) fits the same series but carries no annotation."
+  },
+  {
+   "bp": "/images/sleeve_tab/inner-sleeve-tab.jpg",
+   "v": "MATCH",
+   "ev": "Shirt flat with a short sleeve; a narrow, pointed, red-outlined TAB with a button sits at the sleeve opening on the outboard edge, drawn with a dashed inner line indicating a concealed/underside part. It is unmistakably a sleeve tab, and the field's only other option is 'None', so presence/absence is fully discriminated. The word 'Inner' itself is not stated or dimensioned in the drawing (there is no 'outer' variant in the field to contrast against)."
+  },
+  {
+   "bp": "/images/blueprints/supplier/f97bc3d4910c__0231__Besom.jpg",
+   "v": "MATCH",
+   "ev": "Jacket fronts (lower hip area, button and buttonhole marks at centre front) with both hip pockets highlighted in red as a NARROW HORIZONTAL DOUBLE-WELT band with no flap — the classic jetted/besom pocket, and the pocket mouths are level, not slanted. Filename token 'Besom' agrees. The '4 cm' figure has no dimension callout in the drawing and cannot be verified; the same file also serves the sibling 'Straight Jetted Pocket' option."
+  },
+  {
+   "bp": "/images/blueprints/supplier/b795127dc02f__02A1__Regular_slanted.jpg",
+   "v": "MATCH",
+   "ev": "Same jacket-front template with both hip pockets highlighted in red as deep quadrilateral FLAPS set on a clear diagonal (front edge noticeably higher than the side edge). Both the flap and the slant are unmistakable, and it reads distinctly against the level-flap and no-flap siblings. Filename token 'Regular_slanted' agrees. The 5.5 cm flap depth is not dimensioned."
+  },
+  {
+   "bp": "/images/blueprints/supplier/0135c80fdb4e__0201__Regular.jpg",
+   "v": "AMBIGUOUS",
+   "ev": "Correct pocket type: jacket fronts with both hip pockets highlighted in red as level, horizontal rectangular FLAPS (not slanted, not flapless). But the flap-depth discriminator cannot be expressed — this single file is the illustration for lp-straight-jetted-50, -55, -60 AND -65 in the same field, and the two options audited here (5.0 cm and 6.0 cm) point at exactly the same pixels. No dimension callout appears anywhere in the drawing."
+  },
+  {
+   "bp": "/images/techpacks/shirt/back/box-pleat-to-bottom.jpg",
+   "v": "MATCH",
+   "ev": "Shirt BACK flat showing both required features: a red centre BOX PLEAT drawn as two parallel red lines running from the yoke seam all the way down to the hem, PLUS two long curved red DART lines, one either side of the pleat. Note the filename is misleading but the catalog assignment is right — the sibling file box-pleat-to-bottom-with-double-darts.jpg actually shows the box pleat with NO darts, and that file is correctly assigned to the 'Box Pleat to Bottom' option."
+  },
+  {
+   "bp": "/images/back/inverted-center-pleats.jpg",
+   "v": "MATCH",
+   "ev": "Shirt back with two short red pleat lines that MEET at a single point on the yoke seam and splay apart as they run down, forming an inverted 'Λ'. This is the exact discriminator against the sibling center-pleats.jpg, where the same two lines drop straight down parallel and separated. Zoomed comparison of both files confirms the difference."
+  },
+  {
+   "bp": "/images/back/napoli-yoke-with-double-darts.jpg",
+   "v": "MATCH",
+   "ev": "Shirt back with a dense band of fine radiating gather lines hanging beneath the yoke seam across the full width — the Napoli/Naples gathered yoke — together with two long vertical darts running down the back panel. Both named features present."
+  },
+  {
+   "bp": "/images/back/napoli-without-dart.jpg",
+   "v": "MATCH",
+   "ev": "Identical shirt-back template with the same Napoli gathered-yoke shirring under the yoke seam, and NO dart lines anywhere on the back panel. Directly discriminates against its 'with Double Darts' sibling, which is the same drawing plus two vertical darts."
+  },
+  {
+   "bp": "/images/back/side-pleats-with-double-darts.jpg",
+   "v": "MATCH",
+   "ev": "Shirt back showing both features: two SHORT red pleat marks dropping from the yoke seam near the left and right shoulder blades (side pleats), plus two LONG red dart lines lower down the back panel. Four red marks total, correctly split between pleats and darts."
+  },
+  {
+   "bp": "/images/collar_stand/left-square-and-right-round.jpg",
+   "v": "MATCH",
+   "ev": "Front view of a shirt collar with the collar-BAND front outlined in a faint red overlay, sitting under the crossed collar leaves and above the placket button. Isolating the red channel shows an asymmetric band end: a straight vertical edge on the left meeting the bottom edge in a hard ~90 degree corner (square), while the right side sweeps up in a curve rather than a corner (round). Correct garment part and the asymmetry is legible, though the red overlay is very weak (peak red-minus-neutral only 41/255) at 224x226."
+  },
+  {
+   "bp": "/images/collar_stand/round-collar-stand.jpg",
+   "v": "MATCH",
+   "ev": "Clean 192x192 front view of a shirt collar with the collar stand front highlighted in bright red. The red outline is a smooth continuous curve on both sides forming a rounded band end, with exactly ONE button centred in it. Plainly a round collar stand."
+  },
+  {
+   "bp": "/images/collar_stand/square-collar-stand-with-2-buttons.jpg",
+   "v": "MATCH",
+   "ev": "Same 192x192 template as the round stand, but the red-highlighted stand front has a straight vertical left edge meeting the bottom in a sharp square corner, and TWO red buttons stacked vertically inside it. Both the square profile and the 2-button count are unambiguous."
+  },
+  {
+   "bp": "/images/techpacks/shirt/collar_stand/square-collar-stand-with-2-buttons.jpg",
+   "v": "MISMATCH",
+   "ev": "This file is BYTE-IDENTICAL to /images/collar_stand/square-collar-stand-with-2-buttons.jpg (md5 6455ac38074c68d4ebaed987b8b90bcd for both) and therefore shows TWO stacked buttons in the red-highlighted stand. It is being used for option cs-square 'Square Collar Stand' (catalog description: 'Square stand - structured and formal'), whose sibling cs-square-2btn is 'Square stand with two-button closure'. The button count is exactly what separates the two options, and this drawing depicts the 2-button variant - the filename itself reads 'square-collar-stand-with-2-buttons'. Side by side the two options would be pixel-for-pixel the same image."
+  },
+  {
+   "bp": "/images/collar_stay/removable.jpg",
+   "v": "AMBIGUOUS",
+   "ev": "180x180 flat/opened-out drawing of the collar and its band viewed from the underside (buttonhole at the left band end, button at the right band end). Isolating the red channel reveals a symmetric mirrored pair of narrow angled slivers, one in each collar leaf, angled toward the collar points - i.e. the two collar-stay slots. Correct garment part and correct feature location, but the discriminator against its siblings (stay-fixed 'Fixed (Permanent)', stay-none, stay-hidden-btn) is whether the pocket has an open mouth you can slide a stay out of, and at 180px with a near-invisible overlay that cannot be read."
+  },
+  {
+   "bp": "/images/techpacks/shirt/lapel/cuban-collar.jpg",
+   "v": "AMBIGUOUS",
+   "ev": "3/4 view of a shirt collar worn OPEN - leaves splayed outward and lying flat like small revers, deep V neckline, no throat button, small loop-and-button at the left front, shaded undercollar band at the back. That reads plausibly as a camp/Cuban collar. However this is a SHARED template: shape-distance to point-in-85cm-with-button.jpg is 0.027 and to dr-point-in-58cm.jpg 0.031 and to standard-collar-with-75cm-collar-stand.jpg 0.031 (true duplicates in this folder score 0.003; genuinely distinct siblings score 0.05+). Four different SKUs use the same 'collar worn open' drawing with no dimension annotation, so it cannot uniquely express the Cuban discriminator (flat revere, no band, no throat closure - the catalog's own wording), and this drawing does show a stand and a throat loop."
+  },
+  {
+   "bp": "/images/techpacks/shirt/lapel/curved-in-8cm.jpg",
+   "v": "MATCH",
+   "ev": "Proper house-style tech pack: closed shirt collar, throat button on the stand, gently concave (curved) leaf edges, annotated '115.00' degrees in blue. Red/blue outline overlay against curved-in-9cm.jpg shows real divergence at the collar tips and the dimension rays, so it is a genuinely distinct drawing, and 115 vs 125 forms a coherent pair with the 9.0 cm option. The literal '8.0 cm' point length is not annotated, but the collar is visibly shorter-pointed than its 9.0 cm sibling."
+  },
+  {
+   "bp": "/images/techpacks/shirt/lapel/curved-in-9cm.jpg",
+   "v": "MATCH",
+   "ev": "Closed shirt collar with gently concave leaf edges and a throat button, annotated '125.00' degrees - one step wider and longer-pointed than curved-in-8cm.jpg ('115.00'). Coherent within the curved family. NOTE: french-in-75cm.jpg is the same drawing with the same '125.00' annotation (see that entry); the collision is charged to the French option, not this one, because curved 115/125 is an internally consistent progression and the house's real French drawing (french-in-8cm.jpg) is '145.00'."
+  },
+  {
+   "bp": "/images/techpacks/shirt/lapel/double-cut-away-collar-in-55cm-with-button.jpg",
+   "v": "MATCH",
+   "ev": "Annotated '115.00' degrees. Zoomed in, each collar leaf plainly carries a SECOND shorter under-leaf with its own edge stitching sitting behind the outer leaf - the double-collar construction - plus a throat button on a tab below the leaf crossing and a small button on each leaf. Short points consistent with 5.5 cm. Double construction, cut-away spread and the button are all visible."
+  },
+  {
+   "bp": "/images/techpacks/shirt/lapel/dr-point-in-58cm.jpg",
+   "v": "MISMATCH",
+   "ev": "Not a point collar at all. It is the shared 'collar worn open' template - collar unbuttoned, leaves splayed flat, deep V, loop-and-button at the left front, no dimension annotation - and it registers almost exactly on cuban-collar.jpg (shape distance 0.031), standard-collar-with-75cm-collar-stand.jpg (0.025) and point-in-85cm-with-button.jpg (0.029). The house's actual 5.8 cm point collars in the same folder (fashion-point-in-58cm.jpg and point-in-58cm-with-button.jpg) are drawn CLOSED with short points and a blue '60.00' degree annotation. This drawing shows neither the 5.8 cm short point nor any dimension."
+  },
+  {
+   "bp": "/images/techpacks/shirt/lapel/french-in-75cm.jpg",
+   "v": "MISMATCH",
+   "ev": "This is the Curved 9.0 cm drawing. It is annotated '125.00' degrees - the exact same value as curved-in-9cm.jpg - and a red/blue ink overlay of the two shows them registering line-for-line (same leaf shape, same tip position, same stand front, same throat button); only resampling fringe separates them. A French collar per the catalog is 'extremely wide-spread, with points that angle dramatically toward the shoulder seams', and the house does have that drawing: french-in-8cm.jpg is annotated '145.00' degrees with a visibly much wider spread. At 125 degrees this is a curved collar, and the customer would see the identical picture on both the French 7.5 cm and Curved 9.0 cm options."
+  },
+  {
+   "bp": "/images/techpacks/shirt/lapel/hexagon-collar.jpg",
+   "v": "MATCH",
+   "ev": "Annotated '4.5cm', '3.5cm' and '90.00' degrees. Zoomed on the leaf ends, each leaf terminates in a flat horizontal cut rather than a taper to a point, so the leaf outline is faceted/multi-sided: the 4.5cm dimension runs along the angled front edge and the 3.5cm along the blunt bottom edge. That is exactly the hexagonal/chamfered leaf profile the label claims. Also the most distinctive drawing in the folder (nearest neighbour only 0.067)."
+  },
+  {
+   "bp": "/images/techpacks/shirt/lapel/large-cut-away-in-82cm.jpg",
+   "v": "MATCH",
+   "ev": "Genuine house-style spread-collar tech pack, closed with a throat button, annotated '100.00' degrees, and distinct from every sibling (nearest neighbours middle-cut-away-in-85cm.jpg 0.067 and large-cut-away-in-8cm.jpg 0.068, versus 0.003 for a true duplicate). It sits in a distinct progression within its own family (large cut-away 7.5cm='115.00', 8.0cm='105.00', 8.2cm='100.00'). Caveat: the 8.2 cm point length itself is never written on the drawing."
+  },
+  {
+   "bp": "/images/techpacks/shirt/lapel/middle-cut-away-in-85cm.jpg",
+   "v": "AMBIGUOUS",
+   "ev": "Real shirt-collar tech pack, closed, throat button, long points, annotated '90.00' degrees. But it is a near-duplicate of regular-collar-19.jpg - shape distance 0.031, the third-closest pair in the entire folder - which is also annotated '90.00' and differs only by a small triangular patch at the left collar point. Both options are live in the catalog, so the 'cut-away' claim (an outward-angled spread, wider than a regular collar) is not expressed: it is drawn at the same 90 degrees as the Regular Collar 19. The 8.5 cm point length is not annotated either."
+  },
+  {
+   "bp": "/images/techpacks/shirt/lapel/one-piece-collar-in-8cm-with-tab.jpg",
+   "v": "MISMATCH",
+   "ev": "Shows a low rounded BAND/stand collar with no fold-over leaf and no collar points at all, closed at the centre front with a single button on the band. There is no tab. The house style does draw a real tab - regular-collar-in-85cm-with-tab.jpg in the same folder shows the collar leaves open with a horizontal fabric tab strip bridging them, bar-tacked, annotated '60.00' degrees. This drawing is instead nearly the same as rolled-stand-collar.jpg (shape distance 0.059) and one-piece-collar-in-75cm-with-tab.jpg (0.040). Neither the turndown one-piece leaf nor the tab is depicted."
+  },
+  {
+   "bp": "/images/techpacks/shirt/lapel/one-piece-collar-in-85cm-with-tab.jpg",
+   "v": "MISMATCH",
+   "ev": "An upright mandarin/band collar: front edges butt together at a plain vertical seam, no fold-over leaf, no collar points, no button on the band (only a small button-and-loop further down the placket), and no tab anywhere. Line art is also washed out and low-contrast (smallest file in the folder at 4192 bytes). Compare regular-collar-in-85cm-with-tab.jpg, which shows an actual throat tab. Neither 'One-Piece' turndown construction nor 'with Tab' is depicted."
+  },
+  {
+   "bp": "/images/techpacks/shirt/lapel/one-piece-collar-in-9cm-with-tab.jpg",
+   "v": "MISMATCH",
+   "ev": "Same failure as its 8.0 and 8.5 cm siblings: an upright band/stand collar with a narrow vertical underlap strip at the centre front, no fold-over leaf, no collar points, and no throat tab. Clusters with one-piece-collar-in-85cm-with-tab.jpg (0.065) and squared-stand-collar.jpg (0.095) rather than with any tab-collar drawing. The 'with Tab' feature named in the label is absent."
+  },
+  {
+   "bp": "/images/techpacks/shirt/lapel/regular-collar-19.jpg",
+   "v": "MATCH",
+   "ev": "Closed shirt collar, throat button, moderate spread annotated '90.00' degrees, plus a small triangular reinforcement patch with an eyelet at the left collar point. Consistent with the catalog's 'moderately spread everyday collar (pattern #19)', and clearly distinguishable from Regular Collar 21 ('145.00'). Noted: it is a near-duplicate of middle-cut-away-in-85cm.jpg (0.031) apart from that triangular patch."
+  },
+  {
+   "bp": "/images/techpacks/shirt/lapel/regular-collar-21.jpg",
+   "v": "MATCH",
+   "ev": "Closed shirt collar annotated '145.00' degrees with a rounded stand front carrying a button; visibly and hugely different from Regular Collar 19 ('90.00'), so the two live options are easy to tell apart. Pattern number '21' is not independently verifiable from the drawing. Noted: it is close to french-in-8cm.jpg (0.042) and to stand-collar-5cm.jpg (0.053), which are also '145.00' - a three-file collision, but only stand-collar-5cm.jpg is wrong on its own terms (see that entry)."
+  },
+  {
+   "bp": "/images/techpacks/shirt/lapel/small-square-in-5cm-with-button.jpg",
+   "v": "MATCH",
+   "ev": "Annotated '80.00' degrees. Short collar leaves whose ends are cut blunt/square rather than tapering to a sharp point, consistent with a 5.0 cm square collar; an octagonal throat button is drawn on the stand and, unlike the plain small-square-in-5cm.jpg, this version adds a small button/eyelet at each leaf end - which is the difference the 'with Button' label refers to."
+  },
+  {
+   "bp": "/images/lapel/stand-collar-5cm.jpg",
+   "v": "MISMATCH",
+   "ev": "The catalog defines this as 'A 5.0 cm upright band collar with NO fold-over leaf, circling the neck cleanly in the Mandarin or Nehru manner.' The drawing shows the opposite: a wide-spread TURNDOWN collar with two fold-over leaves crossing at the front, a rounded stand front with a button, annotated '145.00' degrees. It is also effectively the same drawing as french-in-8cm.jpg (0.052) and regular-collar-21.jpg (0.053), both '145.00'. The folder does contain genuine band-collar drawings (rolled-stand-collar.jpg, the one-piece-collar-in-*cm files) and they look nothing like this. Note this file is byte-identical to /images/techpacks/shirt/lapel/stand-collar-5cm.jpg (md5 256fa79278d5b76b214066fce69f53d2)."
+  },
+  {
+   "bp": "/images/cuff/french-cuff-with-4-buttonholes.jpg",
+   "v": "MATCH",
+   "ev": "Sleeve placket + cuff in elevation above, and below the unfolded flat cuff: a double-height rectangle with a horizontal fold line through the middle and exactly 4 pale-blue buttonhole dashes (2 in the upper leaf, 2 in the lower leaf, left and right ends). No button glyphs anywhere — correct for a link-fastened double cuff. Corners are square. No caption text in the drawing."
+  },
+  {
+   "bp": "/images/cuff/round-cuff-with-2-buttons-and-1-buttonhole.jpg",
+   "v": "MISMATCH",
+   "ev": "Drawing shows a DOUBLE (folded) cuff with 4 buttonholes and MITRED/ANGLED corners — not a rounded barrel cuff, and no buttons at all. The flat view is a double-height rectangle with a mid fold line, V-notched (chamfered) corners at both ends, and 4 identical pale-blue buttonhole dashes; the elevation view shows a straight 45-degree cut corner, not a curve. Its mark layout is pixel-for-pixel the same configuration as its sibling french-cuff-with-4-buttonholes.jpg (same 187x244-class canvas, same non-red house style), differing only in corner treatment. Every genuine 'round cuff' sibling in this catalog (round-cuff-with-1-button-and-1-buttonhole.jpg, round-cuff-with-2-buttons-and-2-buttonholes.jpg, round-french-cuff-with-4-buttonholes.jpg) is a 192x192 drawing with a RED-highlighted flat cuff carrying distinct plus-shaped BUTTON glyphs and slot-shaped BUTTONHOLE glyphs — this file has neither red highlight nor any button glyph. Catalog text for cuff-round-2btn-1bh reads 'a barrel cuff with rounded outer corners secured by two buttons', while the sibling option cuff-hex-french-4bh is described as 'a double cuff whose folded edge is cut with an angled, mitered corner' — which is exactly what this image depicts. Wrong variant: this is a hexagon/cut-corner French cuff, not a round 2-button barrel cuff."
+  },
+  {
+   "bp": "/images/front/normal.jpg",
+   "v": "MATCH",
+   "ev": "Full front elevation of a dress shirt: point collar, plain body with no bib and no pleating, barrel cuffs, and a stitched visible button placket running the full centre front with 7 button glyphs. Matches the catalog description 'Classic visible-placket shirt front' and is plainly distinguishable from its two siblings (narrow-pleat and wide-pleat formal bibs), neither of which appears here."
+  },
+  {
+   "bp": "/images/hem/large-round-hem-with-triangle-gusset.jpg",
+   "v": "MATCH",
+   "ev": "Side-seam/hem junction with topstitch dotted line, and a clearly TRIANGULAR gusset highlighted in red (three sides, apex pointing up into the seam) sitting on a curved (round) hem. Triangle is unique among the hem options, so the drawing is unambiguously identifiable. Caveat: the 'Large' size qualifier is not expressed — measured curve rise is 0.400 of image height, statistically the same as the plain 'Round Hem with ... Gusset' drawings (0.406 and 0.422), so it is not drawn larger than the non-large variants."
+  },
+  {
+   "bp": "/images/hem/round-hem-with-hexagon-gusset.jpg",
+   "v": "MATCH",
+   "ev": "Side seam with double topstitch running down into a red-outlined six-sided HEXAGON gusset (flat top, two upper diagonals, two vertical sides, flat bottom) straddling a rounded hem curve. Red highlight (the house convention for 'this is the feature') is on the gusset. Shape count is unmistakably 6."
+  },
+  {
+   "bp": "/images/hem/round-hem-with-pentagon-gusset.jpg",
+   "v": "MATCH",
+   "ev": "Side seam running into a red-outlined five-sided PENTAGON gusset (single apex point at top, two upper diagonals, two vertical sides, flat bottom) on a rounded hem curve. Clearly 5 sides, clearly distinct from the hexagon sibling."
+  },
+  {
+   "bp": "/images/techpacks/shirt/hem/round-hem-with-pentagon-gusset.jpg",
+   "v": "AMBIGUOUS",
+   "ev": "The drawing itself is correct in kind — red pentagon gusset on a round hem at the side seam — but it cannot express the 'Small' discriminator. This file is BYTE-IDENTICAL (md5 987f605980951be27a25662d5fb6c3e8) to /images/hem/round-hem-with-pentagon-gusset.jpg, which is the image already assigned to the separate option 'Round Hem with Pentagon Gusset'. The catalog description for this option is 'Shorter rounded hem with pentagon gusset', but the hem curve is the same drawing. A distinct file /images/hem/small-round-hem-with-pentagon-gusset.jpg (md5 4fdcc92ade048a5e251e2be324f78ed2) exists on disk and is unused; when rendered side by side its curve is only marginally shallower, so even the correct file would barely express the size difference."
+  },
+  {
+   "bp": "/images/techpacks/shirt/hem/round-hem.jpg",
+   "v": "AMBIGUOUS",
+   "ev": "Shows a side seam with double topstitch meeting a red-highlighted rounded hem curve, no gusset — correct area and correct feature family, but the 'Small' size discriminator is not expressible. Measured curve rise is 0.396 of image height, the same as the plain 'Round Hem with ... Gusset' drawings (0.406 / 0.422) and the 'Large' variant (0.400). This file is also byte-identical (md5 17695cdc03d5629abfb86c99374d6053) to /images/hem/round-hem.jpg — i.e. the regular Round Hem drawing — while a distinct /images/hem/small-round-hem.jpg (md5 96a996b25f7657192f064aa54d415b28) sits unused on disk."
+  },
+  {
+   "bp": "/images/hem/squared-bottom-with-side-vents-5cm.jpg",
+   "v": "MATCH",
+   "ev": "Side seam ending in an open SIDE VENT with a solid black BARTACK bar drawn at the vent head, the vent slit splayed below it, and a level/squared bottom hem (red) rather than a shirttail curve. Vent depth is drawn distinctly deeper than the sibling /images/hem/straight-hem-with-side-vents.jpg (different file, md5 87fcf126cb731c0f6334582f7db09fa6), so the two options are visually separable. Caveat: no numeric '5 cm' callout appears in the drawing, so the exact dimension is asserted only by the label."
+  },
+  {
+   "bp": "/images/first_button_distance/4cm.jpg",
+   "v": "MATCH",
+   "ev": "Collar/neck close-up in a circular vignette with a blue dimension arrow drawn from the neck button down to the first placket button, captioned in blue: \"4cm\". Caption matches the label exactly."
+  },
+  {
+   "bp": "/images/first_button_distance/5cm.jpg",
+   "v": "MATCH",
+   "ev": "Same collar vignette with a red dimension arrow between the neck button and the first placket button, captioned in red: \"5cm\". Caption matches the label exactly; arrow is visibly longer than the 4cm drawing."
+  },
+  {
+   "bp": "/images/first_button_distance/6cm.jpg",
+   "v": "MATCH",
+   "ev": "Collar vignette with red dimension arrow from neck button to first placket button, captioned in red: \"6cm\". Caption matches the label exactly."
+  },
+  {
+   "bp": "/images/first_button_distance/65cm.jpg",
+   "v": "MATCH",
+   "ev": "Collar vignette with a red dimension bar (tick-ended) from the neck button down past the first placket button, captioned in red: \"6.5cm\". Caption matches the label exactly."
+  },
+  {
+   "bp": "/images/first_button_distance/7cm.jpg",
+   "v": "MATCH",
+   "ev": "Collar vignette with red dimension arrow from neck button to first placket button, captioned in red: \"7cm\". Caption matches the label exactly."
+  },
+  {
+   "bp": "/images/placket/half-hidden-placket.jpg",
+   "v": "AMBIGUOUS",
+   "ev": "A genuine drawing of the right garment part — the lower centre-front of the shirt where the placket meets the hem — with the placket band drawn as two parallel edge lines and a red vertical stitch line carrying evenly spaced red tick marks. But it cannot express the discriminator: the catalog defines this option as 'a hybrid construction: the upper portion of the button strip is concealed behind a [flap]', and the concealed-to-exposed TRANSITION is above the top of this crop. The frame shows one uniform strip from top to bottom, no buttons, and no caption. By contrast its sibling /images/placket/hidden-placket.jpg carries the printed caption \"Hidden Placket Bar-tack / 暗门襟套结固定\", and /images/placket/outer-placket.jpg shows a red-outlined applied band with visible button glyphs — this file has neither identifying cue."
+  },
+  {
+   "bp": "/images/placket/hidden-turn-up-placket-with-knots.jpg",
+   "v": "MATCH",
+   "ev": "Shirt front (with sleeve and barrel cuff at right) showing the centre front with NO applied placket band and NO visible buttons — the hallmark of a concealed/fly front — and a red vertical line down the centre front carrying six evenly spaced red KNOT marks. The 'hidden' and 'with knots' claims are both visually expressed; the 'turn-up' construction is consistent with the absence of a separate applied band."
+  },
+  {
+   "bp": "/images/placket/stud-hidden-placket-with-2-buttons.jpg",
+   "v": "MATCH",
+   "ev": "Full shirt front with the centre placket outlined in red. At high magnification the upper placket section carries PAIRED slot marks on both left and right of the band at four positions (stud holes — a hole each side so a formal stud passes through), and below them exactly 2 single round BUTTON glyphs. A red magnified detail circle at lower right shows a cross-section of the folded/concealed placket layers, confirming the 'hidden' construction. Matches the catalog text 'a hidden/covered placket designed specifically to accommodate formal shirt studs'."
+  },
+  {
+   "bp": "/images/pocket/hexagon-pocket.jpg",
+   "v": "MATCH",
+   "ev": "Shirt front (placket with buttons at left, sleeve at right) with the chest patch pocket outlined in RED. Pocket outline has exactly 6 sides: straight top edge, two vertical sides, two chamfered bottom corners and a flat bottom edge. Red dashed topstitching follows the outline; a red dashed hem line crosses the pocket mouth. Plainly a hexagon, plainly distinct from the triangle sibling."
+  },
+  {
+   "bp": "/images/pocket/triangle-pocket.jpg",
+   "v": "MATCH",
+   "ev": "Same shirt-front framing with the chest patch pocket outlined in RED, but the bottom converges to a single central V POINT (two diagonals meeting at an apex) instead of a flat bottom edge. Red dashed topstitching follows the point. Unambiguously the triangle/V-point pocket."
+  },
+  {
+   "bp": "/images/blueprints/factory/ffa914420c24__3351__Square_side_adjust_button.jpg",
+   "v": "MATCH",
+   "ev": "Trouser side/three-quarter view with the waistband SIDE ADJUSTER tab highlighted in solid red: a rectangular, square-ended strap lying along the waistband, with 2 round BUTTON glyphs at its forward end and red dashed topstitching along its rear section. A hip welt pocket is drawn below in plain black (not highlighted), so the red draws the eye to the adjuster only. Depicts a button-fastened square side adjuster as labelled. Note the containing field is named 'metal-adjuster' but the option itself is a button adjuster — that is a catalog field-naming quirk, not an image fault."
+  },
+  {
+   "bp": "/images/blueprints/factory/819f9d468b2d__320B__Right_left_besom_left_bttn.jpg",
+   "v": "MATCH",
+   "ev": "Trouser BACK view with belt loops, back darts and centre back seam. BOTH back pockets are drawn as double-welt (besom) slits — each a pair of tapered upper/lower welt bars — and both are highlighted in red. Exactly one of them (viewer's left) carries a red BUTTON glyph directly beneath the welt; the other has none. Filename stem itself reads 'Right_left_besom_left_bttn', consistent with both-besom plus a single button. Caveat: which physical side 'left' denotes on a back-view drawing is a convention question the image cannot settle, but the discriminator that matters (both pockets welt, one button) is plainly shown."
+  },
+  {
+   "bp": "/images/blueprints/remote/3c70f95c470f__3135.jpg",
+   "v": "MATCH",
+   "ev": "Trouser hip, 3/4 view. No caption text anywhere in the drawing. A red-outlined pocket opening runs from the waistband seam, drops vertically, turns through a smooth ROUNDED radius and sweeps across to the side seam, where it curves down in a soft hook. Same base line-art as its sibling 134adbb9c138__3134.jpg (Diamond Jeans Pocket); overlaid side by side the only difference is the corner treatment - this one is rounded/curved, the diamond one is sharply angled with a pointed dogleg. Correct garment area (front/western jeans pocket, waistband-to-side-seam) and the arc-vs-angular discriminator is present, though it is subtle and only obvious when the two are compared directly."
+  },
+  {
+   "bp": "/images/blueprints/factory/1c5aed3c1ce4__3104__2.5cm_slant.jpg",
+   "v": "AMBIGUOUS",
+   "ev": "Trouser hip, 3/4 view, no caption text. Shows a slanted front pocket opening drawn in BLACK (line runs from the waistband seam down and back to the side seam, terminating in a bar tack) plus an unrelated rear besom pocket with a dart above it. It is the right garment area and the right pocket family (a slant / quarter-top opening, no side stripe). BUT: unlike every other blueprint in this family this file has ZERO red highlight (verified programmatically: 0 red pixels), so nothing marks which feature is being sold, and the opening carries no dimension callout. The catalog has six slant variants that differ only by amount (2.0 / 2.5 / 3.2 / 5.1 cm, plus striped versions); measuring the offset against the ~4 cm waistband gives roughly 3 cm, which cannot distinguish 2.5 from 3.2. The specific 2.5 cm discriminator is not expressible from this drawing."
+  },
+  {
+   "bp": "/images/blueprints/remote/01dc8f37109e__3132.jpg",
+   "v": "MATCH",
+   "ev": "Trouser hip, 3/4 view, no caption text. A long narrow VERTICAL welt/jetted opening is outlined in red on the front thigh, just forward of the side seam (red bbox x[424-498] y[273-758] - tall and narrow, i.e. a vertical slot). Unmistakably a vertical welt front pocket and clearly distinct from the slant and jeans-pocket variants in the same family."
+  },
+  {
+   "bp": "/images/blueprints/factory/b14a71bdfdb9__3413__Round_hook_btn.jpg",
+   "v": "MATCH",
+   "ev": "Trouser waistband with the fly laid open to expose the extension tab. No caption text. The extension tab is outlined in red and its free end is plainly ROUNDED (a semicircular D-shaped end, not pointed and not square). Inside the red tab are a red ring (hook/button) and a red vertical slot (buttonhole); the matching underlap carries a red button circle and a red buttonhole slot. Round end + hook + button all shown, exactly as labelled. NOTE for the catalog (not an image fault): this label is attached to option id 'ext-pointed', and its siblings are similarly scrambled ('ext-straight' = 'Sharp...', 'ext-curved' = 'Square...') - the ids contradict the labels, the image follows the label."
+  },
+  {
+   "bp": "/images/blueprints/remote/134adbb9c138__3134.jpg",
+   "v": "MATCH",
+   "ev": "Trouser hip, 3/4 view, no caption text. Red-outlined pocket opening from the waistband seam down and across to the side seam, with SHARP angular corners: a hard bend at the top-outer corner, a straight diagonal run, and a pointed V-shaped kink where it meets the side seam. Directly compared with 3c70f95c470f__3135.jpg (Arc), the two share the identical base drawing and differ only in that this one is faceted/pointed and the arc one is rounded. Correct feature and the angular 'diamond' discriminator is present, though subtle at thumbnail size."
+  },
+  {
+   "bp": "/images/blueprints/factory/bad6c1a76bae__3607__6.4cm.jpg",
+   "v": "AMBIGUOUS",
+   "ev": "Trouser side view with the lower leg enlarged; no caption text. A single red horizontal line marks the hem-allowance depth near the bottom of the leg, and the leg bottom is PLAIN (no turn-up/cuff), which is correct for a plain hem. Measured programmatically: red line mid y=1076.5, hem edge y=1153, depth = 76.5 px on a leg-detail 646 px tall. Its sibling 6ddcbc615b71__3608.jpg (Plain Hem 7.0 cm) measures 89.5 px on a 650 px leg - so a real difference exists in the correct direction, but it is 13 px in a 1200 px image between two otherwise near-identical drawings. A 6 mm depth difference is not visually readable by a customer at catalog size. Also note the option id is 'hem-blind' (a blind-stitch vs machine-stitch idea) which a line drawing could never express at all."
+  },
+  {
+   "bp": "/images/blueprints/remote/6ddcbc615b71__3608.jpg",
+   "v": "AMBIGUOUS",
+   "ev": "Same drawing family as 3607; no caption text. Red horizontal hem-depth line, plain uncuffed leg bottom - correct for a plain hem. Measured: red line mid y=1065.5, hem edge y=1155, depth = 89.5 px vs 76.5 px for the 6.4 cm sibling, on identically scaled drawings (leg detail 650 px vs 646 px). Direction is right (7.0 cm reads deeper than 6.4 cm) but the 13 px delta is not perceptible next to its sibling. Option id is 'hem-machine-plain', implying a stitching-method discriminator the drawing cannot show."
+  },
+  {
+   "bp": "/images/blueprints/remote/f0e67f33563a__302M.jpg",
+   "v": "MATCH",
+   "ev": "Straight-on trouser front, no caption text. The front is smooth - no pleat fold lines anywhere - and exactly ONE short red tapered dart hangs from the waistband seam on each front panel (one dart per side = 'single dart'). Fly curve, crease lines and side slant pockets are drawn in black. Both halves of the label ('flat front' and 'single dart') are visible and unambiguous."
+  },
+  {
+   "bp": "/images/blueprints/remote/7f475092fe8b__3532.jpg",
+   "v": "MATCH",
+   "ev": "Trouser interior view with both front pocket bags turned out; no caption text. Two small red U-shaped pouch outlines appear, one on the LEFT bag and one on the RIGHT bag, symmetric about the centre (red bbox spans x[170-1037] - i.e. two marks at opposite ends of the frame). Two mirrored coin pockets is exactly the 'Both Sides' discriminator, and it is impossible to misread as left-only or right-only."
+  },
+  {
+   "bp": "/images/blueprints/factory/2a5f7a6c70e1__3171__Left_welt.jpg",
+   "v": "MISMATCH",
+   "ev": "NO watch pocket is depicted at all. Verified programmatically: this file contains ZERO red highlight pixels, while all three of its siblings (3180 Regular Right, 3181 Right Welt, 3188 Right Besom) carry a red-marked watch pocket at identical coordinates x[761-884] y[181-233] just under the waistband. Mirroring this image and overlaying it on 3181 (Right Welt) shows they are the SAME base line drawing, correctly aligned - and the exact spot where 3181 has its red welt pocket is completely EMPTY here. The only welt-type pocket actually present in this drawing is the rear besom pocket with a dart above it, which is a different garment part. As shipped, this image would read to a customer as 'no watch pocket'."
+  },
+  {
+   "bp": "/images/blueprints/remote/50184b7abbb4__3188.jpg",
+   "v": "MATCH",
+   "ev": "Trouser front/side, no caption text. A small pocket immediately below the waistband seam near the side seam is highlighted in red (bbox x[761-884] y[187-233]). Zoomed against its two siblings the mark is a SOLID FILLED slot - a jetted/besom opening with no raised welt piece - versus 3181 which shows an outlined raised welt lip and 3180 which shows only a thin slit line. Right-hand position and the besom construction are both expressed, though welt-vs-besom is a fine distinction at catalog thumbnail size."
+  },
+  {
+   "bp": "/images/blueprints/remote/9f85b09eb9d0__3181.jpg",
+   "v": "MATCH",
+   "ev": "Trouser front/side, no caption text. Red-highlighted small pocket under the waistband near the side seam (bbox x[761-884] y[181-225]). Zoomed, the red outline encloses a distinct raised WELT strip drawn as a separate piece below the opening - clearly taller and with an inner lip, unlike the solid filled besom in 3188 and the bare slit in 3180. Right-side placement and welt construction both readable."
+  },
+  {
+   "bp": "/images/blueprints/factory/449292155f03__3180__Regular_right.jpg",
+   "v": "MATCH",
+   "ev": "Trouser front/side, no caption text. Red highlight is a THIN horizontal bar hugging the waistband seam on the right (bbox x[761-884] y[181-207], only 26 px tall vs 44 px for the welt sibling) - a plain seam-set slit opening with no welt lip and no filled jets. That is the 'regular' watch pocket, on the right, and it is visibly the lightest-weight of the three right-hand variants."
+  },
+  {
+   "bp": "/images/options/vest/vest-ticket-left.jpg",
+   "v": "MATCH",
+   "ev": "Waistcoat front (V-neck, 5 buttons, pointed hem); no caption text. A single red-outlined horizontal WELT pocket sits on the front panel to the viewer's right of the button placket - i.e. the wearer's left front in a standard front view. Confirmed against siblings in the same folder: vest-ticket-right.jpg is the exact MIRROR of this drawing (red bbox x[499-635] with the placket on the image right, versus x[564-696] with the placket on the image left here), and vest-ticket-none.jpg has no red mark at all. The left/right side discriminator is therefore genuinely encoded, and the pocket is drawn as a welt rather than a besom or flap."
+  }
+ ]
+}

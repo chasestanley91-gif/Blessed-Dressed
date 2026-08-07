@@ -1,0 +1,132 @@
+{
+  "batch": 6,
+  "checked": 21,
+  "results": [
+    {
+      "blueprint": "/images/collar_stand/left-square-and-right-round.jpg",
+      "labels": ["Left Square / Right Round"],
+      "verdict": "MATCH",
+      "evidence": "Front view of a shirt collar with the collar-BAND front outlined in a faint red overlay, sitting under the crossed collar leaves and above the placket button. Isolating the red channel shows an asymmetric band end: a straight vertical edge on the left meeting the bottom edge in a hard ~90 degree corner (square), while the right side sweeps up in a curve rather than a corner (round). Correct garment part and the asymmetry is legible, though the red overlay is very weak (peak red-minus-neutral only 41/255) at 224x226."
+    },
+    {
+      "blueprint": "/images/collar_stand/round-collar-stand.jpg",
+      "labels": ["Round Collar Stand"],
+      "verdict": "MATCH",
+      "evidence": "Clean 192x192 front view of a shirt collar with the collar stand front highlighted in bright red. The red outline is a smooth continuous curve on both sides forming a rounded band end, with exactly ONE button centred in it. Plainly a round collar stand."
+    },
+    {
+      "blueprint": "/images/collar_stand/square-collar-stand-with-2-buttons.jpg",
+      "labels": ["Square Stand (2 Buttons)"],
+      "verdict": "MATCH",
+      "evidence": "Same 192x192 template as the round stand, but the red-highlighted stand front has a straight vertical left edge meeting the bottom in a sharp square corner, and TWO red buttons stacked vertically inside it. Both the square profile and the 2-button count are unambiguous."
+    },
+    {
+      "blueprint": "/images/techpacks/shirt/collar_stand/square-collar-stand-with-2-buttons.jpg",
+      "labels": ["Square Collar Stand"],
+      "verdict": "MISMATCH",
+      "evidence": "This file is BYTE-IDENTICAL to /images/collar_stand/square-collar-stand-with-2-buttons.jpg (md5 6455ac38074c68d4ebaed987b8b90bcd for both) and therefore shows TWO stacked buttons in the red-highlighted stand. It is being used for option cs-square 'Square Collar Stand' (catalog description: 'Square stand - structured and formal'), whose sibling cs-square-2btn is 'Square stand with two-button closure'. The button count is exactly what separates the two options, and this drawing depicts the 2-button variant - the filename itself reads 'square-collar-stand-with-2-buttons'. Side by side the two options would be pixel-for-pixel the same image."
+    },
+    {
+      "blueprint": "/images/collar_stay/removable.jpg",
+      "labels": ["Removable"],
+      "verdict": "AMBIGUOUS",
+      "evidence": "180x180 flat/opened-out drawing of the collar and its band viewed from the underside (buttonhole at the left band end, button at the right band end). Isolating the red channel reveals a symmetric mirrored pair of narrow angled slivers, one in each collar leaf, angled toward the collar points - i.e. the two collar-stay slots. Correct garment part and correct feature location, but the discriminator against its siblings (stay-fixed 'Fixed (Permanent)', stay-none, stay-hidden-btn) is whether the pocket has an open mouth you can slide a stay out of, and at 180px with a near-invisible overlay that cannot be read."
+    },
+    {
+      "blueprint": "/images/techpacks/shirt/lapel/cuban-collar.jpg",
+      "labels": ["Cuban Collar"],
+      "verdict": "AMBIGUOUS",
+      "evidence": "3/4 view of a shirt collar worn OPEN - leaves splayed outward and lying flat like small revers, deep V neckline, no throat button, small loop-and-button at the left front, shaded undercollar band at the back. That reads plausibly as a camp/Cuban collar. However this is a SHARED template: shape-distance to point-in-85cm-with-button.jpg is 0.027 and to dr-point-in-58cm.jpg 0.031 and to standard-collar-with-75cm-collar-stand.jpg 0.031 (true duplicates in this folder score 0.003; genuinely distinct siblings score 0.05+). Four different SKUs use the same 'collar worn open' drawing with no dimension annotation, so it cannot uniquely express the Cuban discriminator (flat revere, no band, no throat closure - the catalog's own wording), and this drawing does show a stand and a throat loop."
+    },
+    {
+      "blueprint": "/images/techpacks/shirt/lapel/curved-in-8cm.jpg",
+      "labels": ["Curved 8.0 cm"],
+      "verdict": "MATCH",
+      "evidence": "Proper house-style tech pack: closed shirt collar, throat button on the stand, gently concave (curved) leaf edges, annotated '115.00' degrees in blue. Red/blue outline overlay against curved-in-9cm.jpg shows real divergence at the collar tips and the dimension rays, so it is a genuinely distinct drawing, and 115 vs 125 forms a coherent pair with the 9.0 cm option. The literal '8.0 cm' point length is not annotated, but the collar is visibly shorter-pointed than its 9.0 cm sibling."
+    },
+    {
+      "blueprint": "/images/techpacks/shirt/lapel/curved-in-9cm.jpg",
+      "labels": ["Curved 9.0 cm"],
+      "verdict": "MATCH",
+      "evidence": "Closed shirt collar with gently concave leaf edges and a throat button, annotated '125.00' degrees - one step wider and longer-pointed than curved-in-8cm.jpg ('115.00'). Coherent within the curved family. NOTE: french-in-75cm.jpg is the same drawing with the same '125.00' annotation (see that entry); the collision is charged to the French option, not this one, because curved 115/125 is an internally consistent progression and the house's real French drawing (french-in-8cm.jpg) is '145.00'."
+    },
+    {
+      "blueprint": "/images/techpacks/shirt/lapel/double-cut-away-collar-in-55cm-with-button.jpg",
+      "labels": ["Double Cut-Away 5.5 cm with Button"],
+      "verdict": "MATCH",
+      "evidence": "Annotated '115.00' degrees. Zoomed in, each collar leaf plainly carries a SECOND shorter under-leaf with its own edge stitching sitting behind the outer leaf - the double-collar construction - plus a throat button on a tab below the leaf crossing and a small button on each leaf. Short points consistent with 5.5 cm. Double construction, cut-away spread and the button are all visible."
+    },
+    {
+      "blueprint": "/images/techpacks/shirt/lapel/dr-point-in-58cm.jpg",
+      "labels": ["DR Point 5.8 cm"],
+      "verdict": "MISMATCH",
+      "evidence": "Not a point collar at all. It is the shared 'collar worn open' template - collar unbuttoned, leaves splayed flat, deep V, loop-and-button at the left front, no dimension annotation - and it registers almost exactly on cuban-collar.jpg (shape distance 0.031), standard-collar-with-75cm-collar-stand.jpg (0.025) and point-in-85cm-with-button.jpg (0.029). The house's actual 5.8 cm point collars in the same folder (fashion-point-in-58cm.jpg and point-in-58cm-with-button.jpg) are drawn CLOSED with short points and a blue '60.00' degree annotation. This drawing shows neither the 5.8 cm short point nor any dimension."
+    },
+    {
+      "blueprint": "/images/techpacks/shirt/lapel/french-in-75cm.jpg",
+      "labels": ["French 7.5 cm"],
+      "verdict": "MISMATCH",
+      "evidence": "This is the Curved 9.0 cm drawing. It is annotated '125.00' degrees - the exact same value as curved-in-9cm.jpg - and a red/blue ink overlay of the two shows them registering line-for-line (same leaf shape, same tip position, same stand front, same throat button); only resampling fringe separates them. A French collar per the catalog is 'extremely wide-spread, with points that angle dramatically toward the shoulder seams', and the house does have that drawing: french-in-8cm.jpg is annotated '145.00' degrees with a visibly much wider spread. At 125 degrees this is a curved collar, and the customer would see the identical picture on both the French 7.5 cm and Curved 9.0 cm options."
+    },
+    {
+      "blueprint": "/images/techpacks/shirt/lapel/hexagon-collar.jpg",
+      "labels": ["Hexagon Collar"],
+      "verdict": "MATCH",
+      "evidence": "Annotated '4.5cm', '3.5cm' and '90.00' degrees. Zoomed on the leaf ends, each leaf terminates in a flat horizontal cut rather than a taper to a point, so the leaf outline is faceted/multi-sided: the 4.5cm dimension runs along the angled front edge and the 3.5cm along the blunt bottom edge. That is exactly the hexagonal/chamfered leaf profile the label claims. Also the most distinctive drawing in the folder (nearest neighbour only 0.067)."
+    },
+    {
+      "blueprint": "/images/techpacks/shirt/lapel/large-cut-away-in-82cm.jpg",
+      "labels": ["Large Cut-Away 8.2 cm"],
+      "verdict": "MATCH",
+      "evidence": "Genuine house-style spread-collar tech pack, closed with a throat button, annotated '100.00' degrees, and distinct from every sibling (nearest neighbours middle-cut-away-in-85cm.jpg 0.067 and large-cut-away-in-8cm.jpg 0.068, versus 0.003 for a true duplicate). It sits in a distinct progression within its own family (large cut-away 7.5cm='115.00', 8.0cm='105.00', 8.2cm='100.00'). Caveat: the 8.2 cm point length itself is never written on the drawing."
+    },
+    {
+      "blueprint": "/images/techpacks/shirt/lapel/middle-cut-away-in-85cm.jpg",
+      "labels": ["Middle Cut-Away 8.5 cm"],
+      "verdict": "AMBIGUOUS",
+      "evidence": "Real shirt-collar tech pack, closed, throat button, long points, annotated '90.00' degrees. But it is a near-duplicate of regular-collar-19.jpg - shape distance 0.031, the third-closest pair in the entire folder - which is also annotated '90.00' and differs only by a small triangular patch at the left collar point. Both options are live in the catalog, so the 'cut-away' claim (an outward-angled spread, wider than a regular collar) is not expressed: it is drawn at the same 90 degrees as the Regular Collar 19. The 8.5 cm point length is not annotated either."
+    },
+    {
+      "blueprint": "/images/techpacks/shirt/lapel/one-piece-collar-in-8cm-with-tab.jpg",
+      "labels": ["One-Piece 8.0 cm with Tab"],
+      "verdict": "MISMATCH",
+      "evidence": "Shows a low rounded BAND/stand collar with no fold-over leaf and no collar points at all, closed at the centre front with a single button on the band. There is no tab. The house style does draw a real tab - regular-collar-in-85cm-with-tab.jpg in the same folder shows the collar leaves open with a horizontal fabric tab strip bridging them, bar-tacked, annotated '60.00' degrees. This drawing is instead nearly the same as rolled-stand-collar.jpg (shape distance 0.059) and one-piece-collar-in-75cm-with-tab.jpg (0.040). Neither the turndown one-piece leaf nor the tab is depicted."
+    },
+    {
+      "blueprint": "/images/techpacks/shirt/lapel/one-piece-collar-in-85cm-with-tab.jpg",
+      "labels": ["One-Piece 8.5 cm with Tab"],
+      "verdict": "MISMATCH",
+      "evidence": "An upright mandarin/band collar: front edges butt together at a plain vertical seam, no fold-over leaf, no collar points, no button on the band (only a small button-and-loop further down the placket), and no tab anywhere. Line art is also washed out and low-contrast (smallest file in the folder at 4192 bytes). Compare regular-collar-in-85cm-with-tab.jpg, which shows an actual throat tab. Neither 'One-Piece' turndown construction nor 'with Tab' is depicted."
+    },
+    {
+      "blueprint": "/images/techpacks/shirt/lapel/one-piece-collar-in-9cm-with-tab.jpg",
+      "labels": ["One-Piece 9.0 cm with Tab"],
+      "verdict": "MISMATCH",
+      "evidence": "Same failure as its 8.0 and 8.5 cm siblings: an upright band/stand collar with a narrow vertical underlap strip at the centre front, no fold-over leaf, no collar points, and no throat tab. Clusters with one-piece-collar-in-85cm-with-tab.jpg (0.065) and squared-stand-collar.jpg (0.095) rather than with any tab-collar drawing. The 'with Tab' feature named in the label is absent."
+    },
+    {
+      "blueprint": "/images/techpacks/shirt/lapel/regular-collar-19.jpg",
+      "labels": ["Regular Collar 19"],
+      "verdict": "MATCH",
+      "evidence": "Closed shirt collar, throat button, moderate spread annotated '90.00' degrees, plus a small triangular reinforcement patch with an eyelet at the left collar point. Consistent with the catalog's 'moderately spread everyday collar (pattern #19)', and clearly distinguishable from Regular Collar 21 ('145.00'). Noted: it is a near-duplicate of middle-cut-away-in-85cm.jpg (0.031) apart from that triangular patch."
+    },
+    {
+      "blueprint": "/images/techpacks/shirt/lapel/regular-collar-21.jpg",
+      "labels": ["Regular Collar 21"],
+      "verdict": "MATCH",
+      "evidence": "Closed shirt collar annotated '145.00' degrees with a rounded stand front carrying a button; visibly and hugely different from Regular Collar 19 ('90.00'), so the two live options are easy to tell apart. Pattern number '21' is not independently verifiable from the drawing. Noted: it is close to french-in-8cm.jpg (0.042) and to stand-collar-5cm.jpg (0.053), which are also '145.00' - a three-file collision, but only stand-collar-5cm.jpg is wrong on its own terms (see that entry)."
+    },
+    {
+      "blueprint": "/images/techpacks/shirt/lapel/small-square-in-5cm-with-button.jpg",
+      "labels": ["Small Square 5.0 cm with Button"],
+      "verdict": "MATCH",
+      "evidence": "Annotated '80.00' degrees. Short collar leaves whose ends are cut blunt/square rather than tapering to a sharp point, consistent with a 5.0 cm square collar; an octagonal throat button is drawn on the stand and, unlike the plain small-square-in-5cm.jpg, this version adds a small button/eyelet at each leaf end - which is the difference the 'with Button' label refers to."
+    },
+    {
+      "blueprint": "/images/lapel/stand-collar-5cm.jpg",
+      "labels": ["Stand Collar 5.0 cm"],
+      "verdict": "MISMATCH",
+      "evidence": "The catalog defines this as 'A 5.0 cm upright band collar with NO fold-over leaf, circling the neck cleanly in the Mandarin or Nehru manner.' The drawing shows the opposite: a wide-spread TURNDOWN collar with two fold-over leaves crossing at the front, a rounded stand front with a button, annotated '145.00' degrees. It is also effectively the same drawing as french-in-8cm.jpg (0.052) and regular-collar-21.jpg (0.053), both '145.00'. The folder does contain genuine band-collar drawings (rolled-stand-collar.jpg, the one-piece-collar-in-*cm files) and they look nothing like this. Note this file is byte-identical to /images/techpacks/shirt/lapel/stand-collar-5cm.jpg (md5 256fa79278d5b76b214066fce69f53d2)."
+    }
+  ]
+}

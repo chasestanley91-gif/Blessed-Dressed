@@ -1,0 +1,132 @@
+{
+  "batch": 4,
+  "checked": 21,
+  "results": [
+    {
+      "blueprint": "/images/jacket/shoulder-head/regular.jpg",
+      "labels": ["Regular", "THE STRUCTURED / ENGLISH SHOULDER "],
+      "verdict": "MATCH",
+      "evidence": "Jacket front line drawing cropped to the shoulders and sleeve heads. The shoulder line runs nearly flat out from the neck and breaks at a defined shoulder point before the sleeve drops - the built-up, squared structured/English shoulder. Partial caption is visible below the drawing, cut off mid-height, beginning with 'R' (cropped 'Regular'). Not a subject error but a quality defect: this file is a UI screenshot, carrying a baked-in navy card selection border and a blue selection checkmark in the lower-right corner, with the caption sliced off at the bottom edge."
+    },
+    {
+      "blueprint": "/images/jacket/shoulder-head/shirt-head.jpg",
+      "labels": ["Shirt Head", "Shirt Head/THE UNSTRUCTURED "],
+      "verdict": "MATCH",
+      "evidence": "Same jacket-front view as its sibling, but the shoulder line slopes downward continuously and more steeply from neck into sleeve with no built-up shoulder point - the soft, unstructured shirt-style sleeve head. Cropped caption below the drawing reads 'Shirt Head'. Confirmed a genuinely different drawing from regular.jpg (different md5; shoulder geometry visibly differs side by side), though the difference is subtle at 240x200."
+    },
+    {
+      "blueprint": "/images/blueprints/remote/14975407461c__3133.jpg",
+      "labels": ["Square Jeans Pocket"],
+      "verdict": "MATCH",
+      "evidence": "Trouser hip blueprint. The red highlight traces a pocket mouth that drops vertically from the waistband seam then turns at a clean right angle and runs across to the seam - the square-cornered western/jeans pocket opening. The right-angle corner is precisely what 'square' distinguishes (versus a curved scoop). The back besom pocket is drawn separately in black on the right and is left unhighlighted, so there is no confusion about which pocket is being specified."
+    },
+    {
+      "blueprint": "/images/blueprints/factory/9092405bd48f__3131__Besom.jpg",
+      "labels": ["Besom / Jetted Pocket"],
+      "verdict": "MATCH",
+      "evidence": "Same trouser hip blueprint family. The red highlight is a single long, straight, clean vertical slit on the front panel, running parallel to and just forward of the seam, with no flap, no curve and no corner - a jetted/besom slot pocket. Measured at roughly 470px of a 1200px frame against a ~95px waistband, which scales to a plausible ~20cm jetted opening. Filename also carries the factory's own '__Besom' tag."
+    },
+    {
+      "blueprint": "/images/blueprints/remote/692862b38427__3403.jpg",
+      "labels": ["French Fly"],
+      "verdict": "MATCH",
+      "evidence": "Trouser front, fly area. The base drawing shows the waistband extension tab overlapping past the fly with a buttonhole in it (small dark oval), the fly topstitch line running down, and the curved fly-J seam below. The red hand-drawn hook mark sits exactly at the junction of the waistband extension and the top of the fly - the French fly extension/hook closure, which is the defining feature of the option. The red annotation is small and crudely drawn (reads like a bracket), but it is correctly placed."
+    },
+    {
+      "blueprint": "/images/blueprints/remote/87f09a00ddf2__3609.jpg",
+      "labels": ["Plain Hem 7.6 cm"],
+      "verdict": "MATCH",
+      "evidence": "Side view of trousers with the leg bottom shown enlarged. A red line runs straight across the leg roughly 87px above the leg opening, with plain uninterrupted fabric below it and no fold or turn-up band - a plain hem with the hem allowance depth marked. Row-darkness scan of the hem zone finds only two horizontal features: the red depth line (rows 1054-1073) and the leg-opening edge (rows 1137-1160). The literal 7.6 cm value is not readable from the drawing, but the 'plain' variant is correctly and unambiguously shown."
+    },
+    {
+      "blueprint": "/images/blueprints/remote/3817491d18ac__3603.jpg",
+      "labels": ["3.8 cm Cuff Turn-Up"],
+      "verdict": "MISMATCH",
+      "evidence": "No cuff or turn-up is drawn anywhere in this image. The leg bottom is identical to the 'Plain Hem' blueprint (87f09a00ddf2__3609.jpg): a row-darkness scan across the leg interior in the hem zone finds only the faint pink highlight band (rows 1091-1099) and the same leg-opening edge (rows 1137-1160, byte-for-byte the same rows as the plain-hem file). There is no second horizontal line, no fold line, and no doubled band, and the trouser crease line runs uninterrupted straight through to the bottom edge - all of which a turn-up would break. The only difference from the plain-hem drawing is that the highlight sits lower on the leg. It therefore depicts a plain hem at a shallower depth, not a 3.8 cm cuff turn-up. The highlight is also washed out to pale pink (only 118 saturated red pixels versus 4475 in the plain-hem file), making it barely visible."
+    },
+    {
+      "blueprint": "/images/bias_cutting/outer-collar-stand.jpg",
+      "labels": ["Outer Collar Stand"],
+      "verdict": "MATCH",
+      "evidence": "Shirt collar front view. Red 45-degree diagonal hatching - the standard bias-grain convention - fills exactly the visible triangular front of the collar band beneath the collar points, the panel containing the collar button. That triangle is the outer collar stand as seen from outside the garment. Cross-checked against the sibling bias_cutting/inner-collar-stand.jpg, which hatches the inside band at the back of the neck instead, confirming the outer/inner discriminator is genuinely expressed by which region is hatched."
+    },
+    {
+      "blueprint": "/images/placket_button_position/6-buttons-not-including-collar-button.jpg",
+      "labels": ["6 Buttons"],
+      "verdict": "MATCH",
+      "evidence": "Shirt front with red button marks down the placket, counted programmatically. One red mark sits at the collar band (the collar button, which the option explicitly excludes) plus exactly 6 marks below it, at rows 42, 64, 86, 109, 131 and 153. Two sub-pixel red specks (3px and 1px) are JPEG artifacts, not buttons. Count is exact and the spacing is the widest of the four-image set, consistent with the lowest button count."
+    },
+    {
+      "blueprint": "/images/placket_button_position/7-buttons-not-including-collar-button.jpg",
+      "labels": ["7 Buttons"],
+      "verdict": "MATCH",
+      "evidence": "Same shirt-front drawing. One red collar-band mark (excluded per the label) plus exactly 7 red button marks below it, at rows 32, 51, 72, 92, 113, 133 and 154. Count is exact and spacing tightens correctly relative to the 6-button image."
+    },
+    {
+      "blueprint": "/images/placket_button_position/8-buttons-not-including-collar-button.jpg",
+      "labels": ["8 Buttons"],
+      "verdict": "MATCH",
+      "evidence": "Same shirt-front drawing. One red collar-band mark (excluded per the label) plus exactly 8 red button marks below it, at rows 32, 48, 66, 84, 101, 118, 137 and 154. Count is exact."
+    },
+    {
+      "blueprint": "/images/placket_button_position/9-buttons-not-including-collar-button.jpg",
+      "labels": ["9 Buttons"],
+      "verdict": "MATCH",
+      "evidence": "Same shirt-front drawing. One red collar-band mark (excluded per the label) plus exactly 9 red button marks below it, at rows 31, 47, 61, 77, 93, 109, 124, 140 and 156. Count is exact and spacing is the tightest of the set, consistent with the highest button count."
+    },
+    {
+      "blueprint": "/images/buttonhole/hand-made.jpg",
+      "labels": ["Hand-Made"],
+      "verdict": "AMBIGUOUS",
+      "evidence": "The drawing is of the right area - a shirt front with red vertical buttonholes marked down the placket - but at 178x267 px the hand-versus-machine distinction is a stitch-character difference that simply cannot be rendered. Decisively, this file is byte-identical to buttonhole/machine.jpg (both 7812 bytes, both md5 568e2a13d9caf35fda8461fbfb0c5dc3), so the exact same picture is serving both options and cannot discriminate between them by construction. Needs a real macro photograph of hand-worked versus machine-worked buttonholes, not a line drawing."
+    },
+    {
+      "blueprint": "/images/buttonhole/machine.jpg",
+      "labels": ["Machine"],
+      "verdict": "AMBIGUOUS",
+      "evidence": "Identical situation to its sibling: byte-identical file to buttonhole/hand-made.jpg (same 7812 bytes, same md5 568e2a13d9caf35fda8461fbfb0c5dc3). It is a correct drawing of placket buttonholes but expresses nothing about machine versus hand construction, and cannot, since one file serves both options."
+    },
+    {
+      "blueprint": "/images/placket_buttonhole_direction/horizontal-second-buttonhole-from-bottom.jpg",
+      "labels": ["Horizontal (2nd from Bottom)"],
+      "verdict": "MATCH",
+      "evidence": "Both halves of the claim verified. Six buttonholes run down the placket at rows 42, 63, 83, 105, 127 and 147. A magnifier balloon's pointer tail lands on the buttonhole at row 127 - counting up from the bottom (147 is 1st), that is exactly the 2nd from the bottom. Inside the balloon, the enlarged buttonhole is drawn as a red HORIZONTAL dash across the placket, while the buttonholes on the placket itself are short vertical ticks. The balloon body also happens to sit over the row-105 buttonhole, but the tail unambiguously points at row 127."
+    },
+    {
+      "blueprint": "/images/placket_buttonhole_direction/vertical-buttonholes-with-horizontal-buttonhole.jpg",
+      "labels": ["Vertical with Horizontal Buttonhole"],
+      "verdict": "MATCH",
+      "evidence": "The cleanest and largest drawing in this batch (574x802). Every buttonhole down the placket is drawn as a distinct vertical slot with its button, and a blue magnifier balloon points at the lowest buttonhole and enlarges it to show a red HORIZONTAL buttonhole. That is precisely 'vertical buttonholes with one horizontal buttonhole', with both states visible in the same frame for direct comparison."
+    },
+    {
+      "blueprint": "/images/contrast_color_position/cuff-tab.jpg",
+      "labels": ["Cuff Tab"],
+      "verdict": "MATCH",
+      "evidence": "Sleeve shown with a turned-up/rolled hem (fold lines visible). A narrow strap with a pointed end and a button, sitting at the sleeve hem, is filled solid red - the cuff/sleeve tab. Solid-red fill is this folder's consistent convention for 'apply the contrast colour to this piece' (confirmed against contrast_color_position/outer-cuff.jpg, where the whole barrel cuff is filled red), so the fill correctly identifies which component takes the contrast fabric."
+    },
+    {
+      "blueprint": "/images/contrast_color_position/shoulder-epaulet.jpg",
+      "labels": ["Shoulder Epaulet"],
+      "verdict": "MATCH",
+      "evidence": "Close angled view of the neck and shoulder: the collar leaf, the collar band with its buttonhole at the rounded front end, and the front placket with its buttonhole are all identifiable, with the sleeve-head arc below. The strap running from the sleeve head up toward the collar, with a pointed free end and a button, is filled solid red - the shoulder epaulet, correctly located on the shoulder rather than on a sleeve or cuff."
+    },
+    {
+      "blueprint": "/images/contrast_color_position/sleeve-vent.jpg",
+      "labels": ["Sleeve Vent"],
+      "verdict": "MATCH",
+      "evidence": "Long sleeve terminating in a barrel cuff with its button and topstitching. The narrow gauntlet/tower placket running up the sleeve from the cuff, with its gabled pointed top and gauntlet button, is filled solid red - the sleeve vent placket. Distinct drawing and distinct garment area from the cuff-tab and shoulder-epaulet entries, so the field's positions are genuinely differentiated."
+    },
+    {
+      "blueprint": "/images/epaulet/pointed-shoulder-epaulet.jpg",
+      "labels": ["Pointed Shoulder Epaulet"],
+      "verdict": "MATCH",
+      "evidence": "Same base drawing as contrast_color_position/shoulder-epaulet.jpg but with the strap outlined in red rather than filled, which is the correct convention for a shape option instead of a colour option. The strap is sewn in at the sleeve head and runs up toward the collar, and its free end is clearly gabled/POINTED with a button at the point, plus dashed edge stitching down both sides - a pointed shoulder epaulet. The folder's only other option is none.jpg, so pointed is the sole shape offered and the drawing shows it."
+    },
+    {
+      "blueprint": "/images/brand_label_position/picture-1113.jpg",
+      "labels": ["Position 2"],
+      "verdict": "MATCH",
+      "evidence": "Full shirt front with a small label/tag drawn at the bottom of the front placket just above the hem; the position is marked in red with the letter 'A' plus a stroke over the tag. The position discriminator is genuinely expressed - sibling picture-1114.jpg marks 'B' higher up at the second-lowest button and picture-1115.jpg marks 'C' at the collar, so the three occupy visibly different spots. Caveat for the caller: the image's own caption is 'A', not '2'. Per data-store/options/shirt.json the 'Position N' names are auto-generated sequence labels (blp-1..blp-5), and the numbering is offset because blp-1 'Position 1' maps to picture-1112.jpg, which is not a shirt at all but a Chinese text card reading 'No Button', while blp-5 'Position 5' maps to picture-1116.jpg, which is a blank image. Those two blueprints are outside this batch but are worth flagging as broken."
+    }
+  ]
+}

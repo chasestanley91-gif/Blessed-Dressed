@@ -1,0 +1,132 @@
+{
+  "batch": 7,
+  "checked": 21,
+  "results": [
+    {
+      "blueprint": "/images/cuff/french-cuff-with-4-buttonholes.jpg",
+      "labels": ["French Cuff — 4 Buttonholes"],
+      "verdict": "MATCH",
+      "evidence": "Sleeve placket + cuff in elevation above, and below the unfolded flat cuff: a double-height rectangle with a horizontal fold line through the middle and exactly 4 pale-blue buttonhole dashes (2 in the upper leaf, 2 in the lower leaf, left and right ends). No button glyphs anywhere — correct for a link-fastened double cuff. Corners are square. No caption text in the drawing."
+    },
+    {
+      "blueprint": "/images/cuff/round-cuff-with-2-buttons-and-1-buttonhole.jpg",
+      "labels": ["Round Cuff — 2 Buttons, 1 Buttonhole"],
+      "verdict": "MISMATCH",
+      "evidence": "Drawing shows a DOUBLE (folded) cuff with 4 buttonholes and MITRED/ANGLED corners — not a rounded barrel cuff, and no buttons at all. The flat view is a double-height rectangle with a mid fold line, V-notched (chamfered) corners at both ends, and 4 identical pale-blue buttonhole dashes; the elevation view shows a straight 45-degree cut corner, not a curve. Its mark layout is pixel-for-pixel the same configuration as its sibling french-cuff-with-4-buttonholes.jpg (same 187x244-class canvas, same non-red house style), differing only in corner treatment. Every genuine 'round cuff' sibling in this catalog (round-cuff-with-1-button-and-1-buttonhole.jpg, round-cuff-with-2-buttons-and-2-buttonholes.jpg, round-french-cuff-with-4-buttonholes.jpg) is a 192x192 drawing with a RED-highlighted flat cuff carrying distinct plus-shaped BUTTON glyphs and slot-shaped BUTTONHOLE glyphs — this file has neither red highlight nor any button glyph. Catalog text for cuff-round-2btn-1bh reads 'a barrel cuff with rounded outer corners secured by two buttons', while the sibling option cuff-hex-french-4bh is described as 'a double cuff whose folded edge is cut with an angled, mitered corner' — which is exactly what this image depicts. Wrong variant: this is a hexagon/cut-corner French cuff, not a round 2-button barrel cuff."
+    },
+    {
+      "blueprint": "/images/front/normal.jpg",
+      "labels": ["Normal (Standard)"],
+      "verdict": "MATCH",
+      "evidence": "Full front elevation of a dress shirt: point collar, plain body with no bib and no pleating, barrel cuffs, and a stitched visible button placket running the full centre front with 7 button glyphs. Matches the catalog description 'Classic visible-placket shirt front' and is plainly distinguishable from its two siblings (narrow-pleat and wide-pleat formal bibs), neither of which appears here."
+    },
+    {
+      "blueprint": "/images/hem/large-round-hem-with-triangle-gusset.jpg",
+      "labels": ["Large Round Hem with Triangle Gusset"],
+      "verdict": "MATCH",
+      "evidence": "Side-seam/hem junction with topstitch dotted line, and a clearly TRIANGULAR gusset highlighted in red (three sides, apex pointing up into the seam) sitting on a curved (round) hem. Triangle is unique among the hem options, so the drawing is unambiguously identifiable. Caveat: the 'Large' size qualifier is not expressed — measured curve rise is 0.400 of image height, statistically the same as the plain 'Round Hem with ... Gusset' drawings (0.406 and 0.422), so it is not drawn larger than the non-large variants."
+    },
+    {
+      "blueprint": "/images/hem/round-hem-with-hexagon-gusset.jpg",
+      "labels": ["Round Hem with Hexagon Gusset"],
+      "verdict": "MATCH",
+      "evidence": "Side seam with double topstitch running down into a red-outlined six-sided HEXAGON gusset (flat top, two upper diagonals, two vertical sides, flat bottom) straddling a rounded hem curve. Red highlight (the house convention for 'this is the feature') is on the gusset. Shape count is unmistakably 6."
+    },
+    {
+      "blueprint": "/images/hem/round-hem-with-pentagon-gusset.jpg",
+      "labels": ["Round Hem with Pentagon Gusset"],
+      "verdict": "MATCH",
+      "evidence": "Side seam running into a red-outlined five-sided PENTAGON gusset (single apex point at top, two upper diagonals, two vertical sides, flat bottom) on a rounded hem curve. Clearly 5 sides, clearly distinct from the hexagon sibling."
+    },
+    {
+      "blueprint": "/images/techpacks/shirt/hem/round-hem-with-pentagon-gusset.jpg",
+      "labels": ["Small Round Hem with Pentagon Gusset"],
+      "verdict": "AMBIGUOUS",
+      "evidence": "The drawing itself is correct in kind — red pentagon gusset on a round hem at the side seam — but it cannot express the 'Small' discriminator. This file is BYTE-IDENTICAL (md5 987f605980951be27a25662d5fb6c3e8) to /images/hem/round-hem-with-pentagon-gusset.jpg, which is the image already assigned to the separate option 'Round Hem with Pentagon Gusset'. The catalog description for this option is 'Shorter rounded hem with pentagon gusset', but the hem curve is the same drawing. A distinct file /images/hem/small-round-hem-with-pentagon-gusset.jpg (md5 4fdcc92ade048a5e251e2be324f78ed2) exists on disk and is unused; when rendered side by side its curve is only marginally shallower, so even the correct file would barely express the size difference."
+    },
+    {
+      "blueprint": "/images/techpacks/shirt/hem/round-hem.jpg",
+      "labels": ["Small Round Hem"],
+      "verdict": "AMBIGUOUS",
+      "evidence": "Shows a side seam with double topstitch meeting a red-highlighted rounded hem curve, no gusset — correct area and correct feature family, but the 'Small' size discriminator is not expressible. Measured curve rise is 0.396 of image height, the same as the plain 'Round Hem with ... Gusset' drawings (0.406 / 0.422) and the 'Large' variant (0.400). This file is also byte-identical (md5 17695cdc03d5629abfb86c99374d6053) to /images/hem/round-hem.jpg — i.e. the regular Round Hem drawing — while a distinct /images/hem/small-round-hem.jpg (md5 96a996b25f7657192f064aa54d415b28) sits unused on disk."
+    },
+    {
+      "blueprint": "/images/hem/squared-bottom-with-side-vents-5cm.jpg",
+      "labels": ["Squared Bottom with Side Vents 5 cm"],
+      "verdict": "MATCH",
+      "evidence": "Side seam ending in an open SIDE VENT with a solid black BARTACK bar drawn at the vent head, the vent slit splayed below it, and a level/squared bottom hem (red) rather than a shirttail curve. Vent depth is drawn distinctly deeper than the sibling /images/hem/straight-hem-with-side-vents.jpg (different file, md5 87fcf126cb731c0f6334582f7db09fa6), so the two options are visually separable. Caveat: no numeric '5 cm' callout appears in the drawing, so the exact dimension is asserted only by the label."
+    },
+    {
+      "blueprint": "/images/first_button_distance/4cm.jpg",
+      "labels": ["4 cm"],
+      "verdict": "MATCH",
+      "evidence": "Collar/neck close-up in a circular vignette with a blue dimension arrow drawn from the neck button down to the first placket button, captioned in blue: \"4cm\". Caption matches the label exactly."
+    },
+    {
+      "blueprint": "/images/first_button_distance/5cm.jpg",
+      "labels": ["5 cm"],
+      "verdict": "MATCH",
+      "evidence": "Same collar vignette with a red dimension arrow between the neck button and the first placket button, captioned in red: \"5cm\". Caption matches the label exactly; arrow is visibly longer than the 4cm drawing."
+    },
+    {
+      "blueprint": "/images/first_button_distance/6cm.jpg",
+      "labels": ["6 cm"],
+      "verdict": "MATCH",
+      "evidence": "Collar vignette with red dimension arrow from neck button to first placket button, captioned in red: \"6cm\". Caption matches the label exactly."
+    },
+    {
+      "blueprint": "/images/first_button_distance/65cm.jpg",
+      "labels": ["6.5 cm"],
+      "verdict": "MATCH",
+      "evidence": "Collar vignette with a red dimension bar (tick-ended) from the neck button down past the first placket button, captioned in red: \"6.5cm\". Caption matches the label exactly."
+    },
+    {
+      "blueprint": "/images/first_button_distance/7cm.jpg",
+      "labels": ["7 cm"],
+      "verdict": "MATCH",
+      "evidence": "Collar vignette with red dimension arrow from neck button to first placket button, captioned in red: \"7cm\". Caption matches the label exactly."
+    },
+    {
+      "blueprint": "/images/placket/half-hidden-placket.jpg",
+      "labels": ["Half Hidden Placket"],
+      "verdict": "AMBIGUOUS",
+      "evidence": "A genuine drawing of the right garment part — the lower centre-front of the shirt where the placket meets the hem — with the placket band drawn as two parallel edge lines and a red vertical stitch line carrying evenly spaced red tick marks. But it cannot express the discriminator: the catalog defines this option as 'a hybrid construction: the upper portion of the button strip is concealed behind a [flap]', and the concealed-to-exposed TRANSITION is above the top of this crop. The frame shows one uniform strip from top to bottom, no buttons, and no caption. By contrast its sibling /images/placket/hidden-placket.jpg carries the printed caption \"Hidden Placket Bar-tack / 暗门襟套结固定\", and /images/placket/outer-placket.jpg shows a red-outlined applied band with visible button glyphs — this file has neither identifying cue."
+    },
+    {
+      "blueprint": "/images/placket/hidden-turn-up-placket-with-knots.jpg",
+      "labels": ["Hidden Turn-Up Placket with Knots"],
+      "verdict": "MATCH",
+      "evidence": "Shirt front (with sleeve and barrel cuff at right) showing the centre front with NO applied placket band and NO visible buttons — the hallmark of a concealed/fly front — and a red vertical line down the centre front carrying six evenly spaced red KNOT marks. The 'hidden' and 'with knots' claims are both visually expressed; the 'turn-up' construction is consistent with the absence of a separate applied band."
+    },
+    {
+      "blueprint": "/images/placket/stud-hidden-placket-with-2-buttons.jpg",
+      "labels": ["Stud Hidden Placket (2 Buttons)"],
+      "verdict": "MATCH",
+      "evidence": "Full shirt front with the centre placket outlined in red. At high magnification the upper placket section carries PAIRED slot marks on both left and right of the band at four positions (stud holes — a hole each side so a formal stud passes through), and below them exactly 2 single round BUTTON glyphs. A red magnified detail circle at lower right shows a cross-section of the folded/concealed placket layers, confirming the 'hidden' construction. Matches the catalog text 'a hidden/covered placket designed specifically to accommodate formal shirt studs'."
+    },
+    {
+      "blueprint": "/images/pocket/hexagon-pocket.jpg",
+      "labels": ["Hexagon Pocket"],
+      "verdict": "MATCH",
+      "evidence": "Shirt front (placket with buttons at left, sleeve at right) with the chest patch pocket outlined in RED. Pocket outline has exactly 6 sides: straight top edge, two vertical sides, two chamfered bottom corners and a flat bottom edge. Red dashed topstitching follows the outline; a red dashed hem line crosses the pocket mouth. Plainly a hexagon, plainly distinct from the triangle sibling."
+    },
+    {
+      "blueprint": "/images/pocket/triangle-pocket.jpg",
+      "labels": ["Triangle Pocket"],
+      "verdict": "MATCH",
+      "evidence": "Same shirt-front framing with the chest patch pocket outlined in RED, but the bottom converges to a single central V POINT (two diagonals meeting at an apex) instead of a flat bottom edge. Red dashed topstitching follows the point. Unambiguously the triangle/V-point pocket."
+    },
+    {
+      "blueprint": "/images/blueprints/factory/ffa914420c24__3351__Square_side_adjust_button.jpg",
+      "labels": ["Square Side Adjust Button"],
+      "verdict": "MATCH",
+      "evidence": "Trouser side/three-quarter view with the waistband SIDE ADJUSTER tab highlighted in solid red: a rectangular, square-ended strap lying along the waistband, with 2 round BUTTON glyphs at its forward end and red dashed topstitching along its rear section. A hip welt pocket is drawn below in plain black (not highlighted), so the red draws the eye to the adjuster only. Depicts a button-fastened square side adjuster as labelled. Note the containing field is named 'metal-adjuster' but the option itself is a button adjuster — that is a catalog field-naming quirk, not an image fault."
+    },
+    {
+      "blueprint": "/images/blueprints/factory/819f9d468b2d__320B__Right_left_besom_left_bttn.jpg",
+      "labels": ["Both Welt Pockets (Left Button)"],
+      "verdict": "MATCH",
+      "evidence": "Trouser BACK view with belt loops, back darts and centre back seam. BOTH back pockets are drawn as double-welt (besom) slits — each a pair of tapered upper/lower welt bars — and both are highlighted in red. Exactly one of them (viewer's left) carries a red BUTTON glyph directly beneath the welt; the other has none. Filename stem itself reads 'Right_left_besom_left_bttn', consistent with both-besom plus a single button. Caveat: which physical side 'left' denotes on a back-view drawing is a convention question the image cannot settle, but the discriminator that matters (both pockets welt, one button) is plainly shown."
+    }
+  ]
+}
