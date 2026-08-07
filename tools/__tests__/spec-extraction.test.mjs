@@ -75,3 +75,48 @@ test('every count the extractor emits is number-prefixed', () => {
     }
   }
 });
+
+// ── Phase 3: side detection ────────────────────────────────────────────────
+// Handedness is structurally invisible to QC — a mirror-flipped render scores
+// 100% against a flat drawing — so a lost side is a defect nothing downstream
+// can catch. These options previously extracted to byte-identical specs.
+
+test('BUG: left and right lapel options extracted to IDENTICAL specs', () => {
+  const left = spec('Left Lapel', 'Single buttonhole on left lapel — standard.');
+  const right = spec('Right Lapel', 'Single buttonhole on right lapel.');
+  assert.deepEqual(left.sides, ['left']);
+  assert.deepEqual(right.sides, ['right']);
+  assert.notDeepEqual(left.sides, right.sides, 'left and right must be distinguishable');
+});
+
+test('"each" and "both" collapse to one canonical side, never to left+right', () => {
+  const each = spec('Each Side Double', 'Two buttonholes on each lapel.');
+  assert.deepEqual(each.sides, ['both']);
+  assert.ok(!each.sides.includes('left') && !each.sides.includes('right'),
+    '"each" must not be expanded into separate left and right assertions');
+});
+
+test('an explicit left/right pair keeps BOTH sides, not a merged one', () => {
+  const s = spec('Three Left / Two Right', 'Three on left, two on right.');
+  assert.deepEqual(s.sides.slice().sort(), ['left', 'right']);
+});
+
+test('side is never invented when the text does not state one', () => {
+  // Deliberately free of every directional word — "a fused front canvas" would
+  // legitimately record "front", which is the extractor being right, not wrong.
+  const s = spec('Regular Fused', 'A fused chest canvas throughout.');
+  assert.deepEqual(s.sides, [], 'no side stated, so none may be recorded');
+});
+
+test('the full directional vocabulary is recognised', () => {
+  const cases = [
+    ['Inner Pocket', 'Set on the inside of the jacket.', 'inside'],
+    ['Outer Ticket', 'Placed on the outside seam.', 'outside'],
+    ['Centre Vent', 'A single vent at the centre back.', 'center'],
+    ['Upper Welt', 'Positioned on the upper chest.', 'upper'],
+  ];
+  for (const [label, desc, expected] of cases) {
+    const s = spec(label, desc);
+    assert.ok(s.sides.includes(expected), `"${desc}" should record side "${expected}", got ${JSON.stringify(s.sides)}`);
+  }
+});

@@ -93,7 +93,8 @@ function validateOne(entry) {
   const dims = spec.dimensions ?? [];
   const angles = spec.angles ?? [];
   const spread = spec.spread ?? [];
-  const factCount = counts.length + shapes.length + flags.length + dims.length + angles.length + spread.length;
+  const sides = spec.sides ?? [];
+  const factCount = counts.length + shapes.length + flags.length + dims.length + angles.length + spread.length + sides.length;
 
   // 1 — illustration must exist on disk and be deploy-included.
   const illus = opt.illustration ?? opt.image;
@@ -122,7 +123,8 @@ function validateOne(entry) {
   // drawing.
   const text = `${opt.label ?? ''} ${opt.description ?? ''}`;
   if (SIDE_WORDS.test(text)) {
-    const sideCaptured = counts.some((c) => /-on-/.test(c))
+    const sideCaptured = (spec.sides ?? []).length > 0
+      || counts.some((c) => /-on-/.test(c))
       || shapes.some((s) => SIDE_WORDS.test(s))
       || flags.some((f) => SIDE_WORDS.test(f));
     if (!sideCaptured) warn('SIDE_NOT_CAPTURED', `text names a side (${(text.match(SIDE_WORDS) ?? [])[0]}) but no spec value records it`);
@@ -207,6 +209,7 @@ for (const [key, group] of byField) {
       (e.spec.dimensions ?? []).slice().sort(), (e.spec.angles ?? []).slice().sort(),
       (e.spec.counts ?? []).slice().sort(), (e.spec.shapes ?? []).slice().sort(),
       (e.spec.flags ?? []).slice().sort(), (e.spec.spread ?? []).slice().sort(),
+      (e.spec.sides ?? []).slice().sort(),
     ]);
     if (!sig.has(s)) sig.set(s, []);
     sig.get(s).push(e.opt.id);
@@ -229,13 +232,33 @@ const clean = results.filter((r) => !r.findings.length);
 const byCode = {};
 for (const r of results) for (const f of r.findings) byCode[f.code] = (byCode[f.code] ?? 0) + 1;
 
+// Scope matters for the headline. Fabric, button and thread-colour swatches are
+// excluded from photography by the owner's standing instruction, and an option
+// with no blueprint cannot be generated regardless — neither is a parser defect,
+// and counting them makes the real number unreadable.
+const inScope = results.filter((r) => r.inScope);
+const inScopeBlocked = inScope.filter((r) => r.findings.some((f) => f.level === 'BLOCK'));
+const inScopeClean = inScope.filter((r) => !r.findings.length);
+const inScopeWarned = inScope.filter((r) => !r.findings.some((f) => f.level === 'BLOCK') && r.findings.length);
+const scopeByCode = {};
+for (const r of inScope) for (const f of r.findings) scopeByCode[f.code] = (scopeByCode[f.code] ?? 0) + 1;
+
 if (AS_JSON) {
-  console.log(JSON.stringify({ checked: results.length, blocked: blocked.length, warned: warned.length, clean: clean.length, byCode, results }, null, 1));
+  console.log(JSON.stringify({ checked: results.length, blocked: blocked.length, warned: warned.length, clean: clean.length, byCode, inScope: { checked: inScope.length, blocked: inScopeBlocked.length, warned: inScopeWarned.length, clean: inScopeClean.length, byCode: scopeByCode }, results }, null, 1));
 } else {
-  console.log(`SPEC VALIDATION — ${results.length} options checked`);
+  console.log(`SPEC VALIDATION — ${results.length} options checked (whole catalog)`);
   console.log(`  generation-ready : ${clean.length}`);
   console.log(`  warnings only    : ${warned.length}`);
   console.log(`  BLOCKED          : ${blocked.length}`);
+  console.log('');
+  console.log(`IN SCOPE FOR PHOTOGRAPHY — ${inScope.length} options`);
+  console.log(`  generation-ready : ${inScopeClean.length}`);
+  console.log(`  warnings only    : ${inScopeWarned.length}`);
+  console.log(`  BLOCKED          : ${inScopeBlocked.length}`);
+  console.log('  in-scope findings:');
+  for (const [code, n] of Object.entries(scopeByCode).sort((a, b) => b[1] - a[1])) {
+    console.log(`     ${String(n).padStart(5)}  ${code}`);
+  }
   console.log('');
   console.log('findings by code:');
   for (const [code, n] of Object.entries(byCode).sort((a, b) => b[1] - a[1])) {

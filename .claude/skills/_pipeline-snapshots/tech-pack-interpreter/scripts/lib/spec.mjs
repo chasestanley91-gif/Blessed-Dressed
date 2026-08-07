@@ -55,6 +55,51 @@ function garmentKeyFor(productId, sectionId) {
   return productId;
 }
 
+// ---- side / placement -----------------------------------------------------
+// SIDE IS A FIRST-CLASS FACT, NOT A DECORATION.
+//
+// Handedness is structurally invisible to QC: a mirror-flipped render scores
+// 100% against a flat 2D drawing, so nothing downstream can catch a swapped
+// side. Before this existed, side survived only when a number sat immediately
+// before it ("three on left"), which meant `lbp-left` "Single buttonhole on
+// left lapel" and `lbp-right` "Single buttonhole on right lapel" extracted to
+// BYTE-IDENTICAL specs — whichever was photographed first, the other was
+// indistinguishable. 699 in-scope options named a side the spec then dropped.
+//
+// Ordered most specific first: "both"/"each"/"either" must be tested before the
+// bare "left"/"right" they often contain in the same sentence ("one on each
+// side" mentions no side word, but "left and right" does).
+const SIDES = [
+  ['both', /\bboth\b|\beach side\b|\beither side\b|\bleft and right\b|\bright and left\b/],
+  ['each', /\beach\b/],
+  ['either', /\beither\b/],
+  ['left', /\bleft\b/],
+  ['right', /\bright\b/],
+  ['center', /\bcent(?:er|re)\b|\bcentred\b|\bcentered\b|\bmiddle\b/],
+  ['front', /\bfront\b/],
+  ['back', /\bback\b|\brear\b/],
+  ['inside', /\binside\b|\binner\b|\binterior\b/],
+  ['outside', /\boutside\b|\bouter\b|\bexterior\b/],
+  ['upper', /\bupper\b|\btop\b/],
+  ['lower', /\blower\b|\bbottom\b/],
+];
+
+/**
+ * Every directional term the text actually states, in canonical form.
+ * Never combined, never inferred — if the text does not say a side, none is
+ * recorded, because guessing handedness is exactly the failure this prevents.
+ */
+function extractSides(text) {
+  const out = [];
+  for (const [canonical, re] of SIDES) {
+    if (re.test(text) && !out.includes(canonical)) out.push(canonical);
+  }
+  // "both" subsumes the left/right it is usually written with: "left and right"
+  // is one instruction, not three. Keep the specific reading.
+  if (out.includes('both')) return out.filter((s) => s !== 'left' && s !== 'right' && s !== 'each' && s !== 'either');
+  return out;
+}
+
 const FABRIC = {
   shirt: 'crisp cotton poplin',
   'suit-2pc': 'fine wool suiting with visible weave',
@@ -678,6 +723,10 @@ export function extractSpec(opt) {
   // options: `leg-tapered` gave ["tapered leg"] standalone and [] inside a
   // suit — 107 options silently lost their entire shape vocabulary.
   const garmentKey = garmentKeyFor(opt.productId, opt.sectionId);
+  // Side is read from the catalog TEXT only (label + description + hint) — never
+  // from the filename, which frequently encodes the supplier's own side
+  // convention rather than the option's.
+  const sides = extractSides(`${textCore} ${opt.hint ?? ''}`.toLowerCase());
   const negatedShapes = [];
   const shapes = resolveExclusiveShapes(
     scanList(text, SHAPES, garmentKey), opt.label, garmentKey, negatedShapes);
@@ -749,6 +798,7 @@ export function extractSpec(opt) {
     angles,
     counts,
     spread: spreadWord,
+    sides, // explicit directional facts — never inferred, never combined
     shapes,
     negatedShapes,
     flags,
