@@ -409,6 +409,30 @@ function extractMeasures(text) {
     }
   }
   const counts = [];
+  // Counts are frequently WORDED, not digits: "Three on left, two on right" is
+  // the entire discriminator of lapel-bh-position, and a digits-only regex
+  // captured NOTHING from it. The spec then reached the prompt with an empty
+  // counts[], leaving the render free to draw any number — the silent-lie
+  // failure mode this file warns about elsewhere.
+  const WORD_NUM = { one:1, two:2, three:3, four:4, five:5, six:6, seven:7, eight:8, nine:9, ten:10, eleven:11, twelve:12 };
+  const NUM = '(\d+|' + Object.keys(WORD_NUM).join('|') + ')';
+  const toNum = (s) => (/^\d+$/.test(s) ? s : String(WORD_NUM[String(s).toLowerCase()] ?? s));
+  for (const m of text.matchAll(new RegExp(NUM + '\\s*buttonholes?\\b', 'gi'))) {
+    const v = `${toNum(m[1])}-buttonhole`;
+    if (!counts.includes(v)) counts.push(v);
+  }
+  for (const m of text.matchAll(new RegExp(NUM + '\\s*buttons?\\b', 'gi'))) {
+    const v = `${toNum(m[1])}-button`;
+    if (!counts.includes(v)) counts.push(v);
+  }
+  // Positional counts with the noun elided — "Three on left, two on right".
+  // The SIDE matters as much as the number: these options differ only by which
+  // lapel carries how many, and handedness is structurally invisible to QC.
+  for (const m of text.matchAll(new RegExp(NUM + '\\s+on\\s+(?:the\\s+)?(left|right)\\b', 'gi'))) {
+    const v = `${toNum(m[1])}-on-${m[2].toLowerCase()}`;
+    if (!counts.includes(v)) counts.push(v);
+  }
+
   // Buttonholes first (a distinct feature), then plain buttons. The \b after
   // "buttons?" already excludes "buttonhole" (n|h is not a word boundary).
   for (const m of text.matchAll(/(\d+)\s*buttonholes?\b/gi)) {
