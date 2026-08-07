@@ -58,14 +58,33 @@ const ONLY_OPTION = arg('option');
 const AS_JSON = FLAG('json');
 const QUEUE_ONLY = FLAG('queue');
 
-/** A finding that must stop generation. */
-class SpecificationValidationError extends Error {
-  constructor(code, addr, detail) {
-    super(`${code} — ${addr}: ${detail}`);
-    this.name = 'SpecificationValidationError';
-    this.code = code; this.addr = addr; this.detail = detail;
+// Findings are collected as DATA rather than thrown. Throwing would stop at the
+// first defect, and the whole value of this gate is reporting every blocked
+// option in one pass so the operator can see the true size of the problem
+// before spending anything. The parsers themselves still throw
+// SpecificationValidationError for unrecoverable input (an unrecognised number
+// token, say), and PARSER_THREW below turns that into a finding.
+
+/**
+ * The clusters an audit has actually cleared for generation.
+ *
+ * `--queue` narrows validation to these. Only `verified` is eligible: a cluster
+ * without a MATCH verdict is not generatable, because a wrong drawing is
+ * invisible to every downstream check.
+ */
+function loadVerifiedQueue() {
+  const keys = new Set();
+  const file = path.join(REPO, 'public', 'images', 'reports', 'generation-queue-verified.json');
+  const q = JSON.parse(fs.readFileSync(file, 'utf8'));
+  for (const row of q.verified ?? []) {
+    if (row?.field && row?.option) keys.add(`${row.field}|${row.option}`);
   }
+  if (keys.size === 0) {
+    throw new Error(`--queue requested but ${file} lists no verified clusters; refusing to validate an empty set and report success`);
+  }
+  return keys;
 }
+const QUEUE_KEYS = QUEUE_ONLY ? loadVerifiedQueue() : null;
 
 const { extractSpec } = await import(SPEC_LIB);
 
@@ -188,14 +207,36 @@ function validateOne(entry) {
   }
 
   // 5 — no contradictory members of a mutually exclusive family.
+  //
+  // Unless the option DECLARES the combination. "Peak + Removable Shawl" is a
+  // real bespoke construction: a shawl collar piece that attaches over a peak
+  // lapel at the gorge, so the jacket converts between business and black tie.
+  // The catalog says it is both, and refusing to photograph it because a rule
+  // says lapels are exclusive would be the rule overriding the garment.
+  const labelText = String(opt.label ?? '').toLowerCase();
+  const declaresHybrid = /\+|\band\b|\bwith\b|convertible|removable|reversible/.test(labelText);
   for (const family of EXCLUSIVE) {
     const present = family.filter((f) => shapes.includes(f));
-    if (present.length > 1) blocking('CONFLICTING_SHAPES', `mutually exclusive: ${present.join(' + ')}`);
+    if (present.length <= 1) continue;
+    // Only treat it as declared when the label actually names each member.
+    const named = present.filter((f) => f.split(/[\s/]+/).some((w) => w.length > 3 && labelText.includes(w.toLowerCase())));
+    if (declaresHybrid && named.length === present.length) {
+      warn('DECLARED_HYBRID', `label declares a combination of ${present.join(' + ')} — both must be rendered`);
+      continue;
+    }
+    blocking('CONFLICTING_SHAPES', `mutually exclusive: ${present.join(' + ')}`);
   }
 
   // 6 — an absence option must not assert the feature it denies.
-  if (spec.absence && (shapes.length || flags.length || counts.length)) {
-    warn('ABSENCE_ASSERTS_FEATURE', `absence option still carries ${JSON.stringify({ shapes, flags, counts })}`);
+  if (spec.absence) {
+    // "No Vent" -> `ventless` and "No Darts" -> `flat front` are absences
+    // expressed positively, which is what the prompt actually needs to render.
+    // Only a value asserting the PRESENCE of the denied feature is a defect.
+    const denotesLack = (v) => /ventless|flat front|clean|plain|none|no/i.test(String(v));
+    const asserted = [...shapes, ...flags, ...counts].filter((v) => !denotesLack(v));
+    if (asserted.length) {
+      warn('ABSENCE_ASSERTS_FEATURE', `absence option still asserts ${JSON.stringify(asserted)}`);
+    }
   }
 
   // 7 — no duplicates within a list.
@@ -217,6 +258,7 @@ for (const file of fs.readdirSync(OPTIONS_DIR).filter((f) => f.endsWith('.json')
     for (const f of s.fields ?? []) {
       for (const o of f.options ?? []) {
         if (ONLY_OPTION && o.id !== ONLY_OPTION) continue;
+        if (QUEUE_KEYS && !QUEUE_KEYS.has(`${f.id}|${o.id}`)) continue;
         const illus = o.illustration ?? o.image;
         const diskOk = illus && illus.startsWith('/')
           ? fs.existsSync(path.join(PUBLIC, decodeURIComponent(illus.replace(/^\//, '')).split('?')[0]))
@@ -230,10 +272,10 @@ for (const file of fs.readdirSync(OPTIONS_DIR).filter((f) => f.endsWith('.json')
             image: illus, imageExists: diskOk,
           });
         } catch (e) {
-          entries.push({ addr: `${product}|${f.id}|${o.id}`, opt: o, spec: null, throwErr: e.message, field: f.id, product });
+          entries.push({ addr: `${product}|${s.id}|${f.id}|${o.id}`, opt: o, spec: null, throwErr: e.message, section: s.id, field: f.id, product });
           continue;
         }
-        entries.push({ addr: `${product}|${f.id}|${o.id}`, opt: o, spec, field: f.id, product });
+        entries.push({ addr: `${product}|${s.id}|${f.id}|${o.id}`, opt: o, spec, section: s.id, field: f.id, product });
       }
     }
   }
@@ -245,7 +287,7 @@ for (const e of entries) {
     results.push({ addr: e.addr, label: e.opt.label, findings: [{ level: 'BLOCK', code: 'PARSER_THREW', detail: e.throwErr }], factCount: 0, inScope: true });
     continue;
   }
-  results.push({ ...validateOne(e), field: e.field, product: e.product });
+  results.push({ ...validateOne(e), section: e.section, field: e.field, product: e.product });
 }
 
 // 8 — sibling collision: two DIFFERENT options in the same product+field whose
@@ -254,7 +296,12 @@ for (const e of entries) {
 const byField = new Map();
 for (const e of entries) {
   if (!e.spec || !e.spec.generate) continue;
-  const key = `${e.product}|${e.field}`;
+  // Keyed on SECTION too, not product+field alone. suit-2pc carries a
+  // `coin-pocket` field in two different sections -- once for the jacket and
+  // once for the trousers -- so grouping by field id alone compared a jacket
+  // option against a trouser option and reported two unrelated garments as
+  // indistinguishable siblings.
+  const key = `${e.product}|${e.section}|${e.field}`;
   if (!byField.has(key)) byField.set(key, []);
   byField.get(key).push(e);
 }
@@ -281,7 +328,7 @@ for (const [key, group] of byField) {
     if (ids.length < 2) continue;
     collisions += ids.length;
     for (const id of ids) {
-      const r = results.find((x) => x.addr === `${key.split('|')[0]}|${key.split('|')[1]}|${id}`);
+      const r = results.find((x) => x.addr === `${key}|${id}`);
       if (r) r.findings.push({ level: 'BLOCK', code: 'SIBLING_COLLISION', detail: `identical measured signature to ${ids.filter((i) => i !== id).join(', ')} in the same field` });
     }
   }

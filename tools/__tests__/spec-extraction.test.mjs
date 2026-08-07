@@ -184,3 +184,130 @@ test('styleName is identity only and never masquerades as an extracted fact', ()
   assert.ok(s.styleName, 'styleName should be recorded');
   assert.equal((s.shapes ?? []).length + (s.flags ?? []).length + (s.attributes ?? []).length, 0);
 });
+
+// ── Non-assertive prose ────────────────────────────────────────────────────
+// These descriptions teach by comparison, so they NAME the options a customer
+// is choosing between. Reading those names as assertions produced garments
+// that cannot exist.
+
+test('BUG: a comparative clause made a centre vent also have side vents', () => {
+  const s = spec('Center Vent',
+    'The center vent is a single vertical slit running up the center back seam. It sits between the formality of side vents and the slickness of no-vent.');
+  assert.ok(!s.shapes.includes('double / side vents'),
+    `"sits between side vents and no-vent" is a comparison, not a feature; got ${JSON.stringify(s.shapes)}`);
+});
+
+test('BUG: "with minimal taper" made a wide leg also a tapered leg', () => {
+  const s = spec('Wide Leg', 'Wide leg — the hem approaches the thigh ratio with minimal taper; side seam and inseam run nearly parallel.');
+  assert.ok(!s.shapes.includes('tapered leg'),
+    `minimal taper is the ABSENCE of taper; got ${JSON.stringify(s.shapes)}`);
+});
+
+test('BUG: "often paired with shawl or peak lapels" put lapels on a waistcoat', () => {
+  const s = spec('DB 8 x 4', 'A double-breasted waistcoat with eight buttons of which four fasten, often paired with shawl or peak lapels.');
+  for (const ghost of ['shawl lapel', 'peak lapel']) {
+    assert.ok(!s.shapes.includes(ghost), `"often paired with" is a suggestion, not this option; got ${JSON.stringify(s.shapes)}`);
+  }
+});
+
+test('BUG: "single cufflink" matched the "single cuff" pattern', () => {
+  // A missing \b made the FRENCH cuff assert the barrel cuff family too.
+  // Cuff vocabulary is shirt-scoped, so this case only exists on a shirt.
+  const s = spec('French Cuff — 4 Buttonholes',
+    'A French cuff with four buttonholes, with two aligned holes on each leaf so a single cufflink passes cleanly through all four layers when folded.',
+    { productId: 'shirt', sectionId: 'cuff', fieldId: 'cuff', fieldLabel: 'Cuff' });
+  assert.ok(s.shapes.includes('French / double cuff'), 'the actual cuff family must survive');
+  assert.ok(!s.shapes.includes('barrel / button cuff'),
+    `a cuff cannot be both French and barrel; got ${JSON.stringify(s.shapes)}`);
+});
+
+test('a subordinate detail does not become a competing family member', () => {
+  const s = spec('Italian Fishtail Lapel',
+    'Italian fishtail peak lapel — the peak terminates in a bifurcated fish-tail profile, a secondary notch developing beneath the upper peak.');
+  assert.ok(s.shapes.includes('peak lapel'), 'the primary lapel family must survive');
+  assert.ok(!s.shapes.includes('notch lapel'),
+    `"a secondary notch beneath the upper peak" is a detail OF the peak; got ${JSON.stringify(s.shapes)}`);
+});
+
+// ── Absence purge ──────────────────────────────────────────────────────────
+// An option that denies a feature must never also assert it: the prompt would
+// render exactly the hardware the customer chose to leave off.
+
+test('BUG: "No Suspender Buttons" asserted suspender buttons', () => {
+  const s = spec('No Suspender Buttons', 'Standard — no brace attachment buttons.');
+  assert.ok(s.absence, 'this must be recognised as an absence option');
+  assert.ok(!s.flags.includes('suspender / brace buttons'),
+    `an absence option may not assert the feature it denies; got ${JSON.stringify(s.flags)}`);
+});
+
+test('BUG: "No Contrast" asserted contrast fabric', () => {
+  const s = spec('No Contrast', 'Single fabric throughout.');
+  assert.ok(!s.flags.includes('contrast fabric'), `got ${JSON.stringify(s.flags)}`);
+});
+
+test('BUG: "No Back Detail" asserted a tab fastening', () => {
+  const s = spec('No Back Detail', 'Plain back waistband — no adjustment tab.');
+  assert.ok(!s.flags.includes('tab fastening'), `got ${JSON.stringify(s.flags)}`);
+});
+
+test('an absence expressed POSITIVELY is kept — "No Vent" stays ventless', () => {
+  // The purge must not strip the value that actually tells the render what to
+  // draw. Ventless IS the specification for No Vent.
+  const s = spec('No Vent', 'A ventless back presents an unbroken, clean horizontal line across the entire hem.');
+  assert.ok(s.shapes.includes('ventless'), `got ${JSON.stringify(s.shapes)}`);
+});
+
+test('what an absence option drops is retained as an explicit negative', () => {
+  // Dropping the shape stops the prompt asserting it, but the prose still
+  // reaches the model verbatim — only an explicit negative cancels it.
+  const s = spec('No Suspender Buttons', 'Standard — no brace attachment buttons.');
+  assert.ok((s.negatedShapes ?? []).includes('suspender / brace buttons'),
+    `removed values must survive as negatives, got ${JSON.stringify(s.negatedShapes)}`);
+});
+
+// ── Sleeve head + attribute field scoping ─────────────────────────────────
+
+const sleeve = (label, description) => extractSpec({
+  productId: 'sport-coat', sectionId: 'shoulder-structure', sectionLabel: 'Shoulder',
+  fieldId: 'sleeve-head', fieldLabel: 'Sleeve Head',
+  hint: '', label, description, image: '/images/x.jpg', imageExists: true,
+});
+
+test('BUG: five distinct sleeve heads all extracted to nothing', () => {
+  // Real, nameable constructions the extractor simply had no vocabulary for,
+  // so they reached the validator as factless and blocked the verified queue.
+  const cases = [
+    ['Natural', 'Soft unpadded Italian shoulder — full drape.', 'unpadded'],
+    ['Regular', 'Standard structured sleeve head — balanced shape.', 'structured'],
+    ['Con Rollino', 'Italian rolled sleeve head — soft roll with character.', 'rolled (con rollino)'],
+    ['Neapolitan (Spalla Camicia)', 'Shirt-shoulder insertion — minimal structure, Neapolitan tradition.', 'shirt-shoulder (spalla camicia)'],
+    ['Shirt Head', 'Ultra-minimal shirt-style sleeve — lightest construction.', 'shirt-shoulder (spalla camicia)'],
+  ];
+  for (const [label, desc, expected] of cases) {
+    const values = (sleeve(label, desc).attributes ?? []).map((a) => a.value);
+    assert.ok(values.includes(expected),
+      `"${label}" should record ${expected}, got ${JSON.stringify(values)}`);
+  }
+});
+
+test('"minimal structure" survives for attributes though it is suppressed for shapes', () => {
+  // The same phrase must be read two ways: it is the SPEC of a spalla camicia
+  // sleeve head, but on a trouser leg "minimal taper" is the absence of taper.
+  const s = sleeve('Neapolitan (Spalla Camicia)', 'Shirt-shoulder insertion — minimal structure, Neapolitan tradition.');
+  assert.ok((s.attributes ?? []).some((a) => a.value === 'minimal'), 'attribute must survive');
+  const wide = spec('Wide Leg', 'Wide leg — the hem approaches the thigh ratio with minimal taper.');
+  assert.ok(!wide.shapes.includes('tapered leg'), 'shape must still be suppressed');
+});
+
+test('a triple never attaches to a feature the option is not about', () => {
+  // "handcrafted" in a LAPEL description used to attach a buttonhole.method
+  // fact to an option that has nothing to do with buttonholes.
+  const lapel = extractSpec({
+    productId: 'suit-2pc', sectionId: 'lapel', sectionLabel: 'Lapel',
+    fieldId: 'lapel-style', fieldLabel: 'Lapel Style', hint: '',
+    label: 'Peak Lapel', description: 'A handcrafted peak lapel, entirely handmade.',
+    image: '/images/x.jpg', imageExists: true,
+  });
+  assert.ok(!(lapel.attributes ?? []).some((a) => a.feature === 'buttonhole'),
+    `a lapel-style option must carry no buttonhole triples, got ${JSON.stringify(lapel.attributes)}`);
+});

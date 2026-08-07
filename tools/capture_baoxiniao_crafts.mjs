@@ -155,7 +155,6 @@ async function main() {
 
   // Ask the page itself for the craft tree, using its own loader.
   const viaApp = await page.evaluate(async () => {
-    // eslint-disable-next-line no-undef
     const A = window.App;
     if (!A) return { ok: false, why: 'no App' };
     const out = {};

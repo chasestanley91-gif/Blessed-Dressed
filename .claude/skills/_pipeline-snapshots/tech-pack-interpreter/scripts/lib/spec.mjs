@@ -121,6 +121,74 @@ const LAPELS = [...JACKET, ...VEST];
 // Each entry: [canonical, regex, scope?]. scope (optional) limits the term to
 // certain products so garment-specific words don't leak across categories
 // (e.g. a trouser "Flat Front" must not also tag the vest term "flat bottom").
+// ---- non-assertive prose --------------------------------------------------
+// NOT EVERY GARMENT NAME IN A DESCRIPTION IS A CLAIM ABOUT THIS OPTION.
+//
+// These descriptions are educational: they teach by comparison, so they name
+// the options a customer is choosing BETWEEN. The extractor read those names
+// as assertions and produced specifications that contradicted themselves:
+//
+//   "Center Vent"  ... "sits between the formality of SIDE VENTS and the
+//                       slickness of no-vent"        -> centre vent + side vents
+//   "Wide Leg"     ... "with minimal TAPER"          -> wide leg + tapered leg
+//   "DB 8 x 4"     ... "often PAIRED WITH shawl or peak lapels"
+//                                                    -> peak lapel + shawl lapel
+//
+// Each of those is a garment that cannot exist. A jacket has side vents or a
+// centre vent, never both, and a prompt asserting both invites the model to
+// invent a resolution.
+//
+// Comparative, historical, hypothetical and subordinate clauses are stripped
+// before scanning. The prose still reaches the prompt verbatim, so nothing is
+// hidden from the model — it simply stops being read as a structural fact.
+const NON_ASSERTIVE_CLAUSE = [
+  /\bsits?\s+between\b[^.;]*/gi,                     // "sits between side vents and no-vent"
+  /\bunlike\b[^.;]*/gi,
+  /\brather than\b[^.;]*/gi,
+  /\binstead of\b[^.;]*/gi,
+  /\bas opposed to\b[^.;]*/gi,
+  /\bcompared\s+(?:to|with)\b[^.;]*/gi,
+  /\bin contrast\s+(?:to|with)\b[^.;]*/gi,
+  // "often paired with shawl or peak lapels" describes what someone might ALSO
+  // order, not what this option is.
+  /\b(?:often|usually|typically|frequently|commonly|traditionally|sometimes|occasionally|generally)\s+(?:paired|worn|combined|matched|teamed|ordered|specified|seen|found|chosen)\b[^.;]*/gi,
+  /\b(?:can|may|might|could)\s+be\s+(?:paired|worn|combined|matched|ordered|specified)\b[^.;]*/gi,
+  // Historical provenance names other garments: "derived from equestrian and
+  // military tailoring", "most closely associated with Italian tailoring".
+  /\b(?:most closely\s+)?associated with\b[^.;]*/gi,
+  /\bderived from\b[^.;]*/gi,
+  /\bfavou?red by\b[^.;]*/gi,
+  // A secondary detail of the primary feature is not a competing family member:
+  // "a secondary notch developing beneath the upper peak" is a peak lapel.
+  /\b(?:a\s+)?secondary\s+\w+[^.;]*/gi,
+];
+
+// Suppressed for SHAPES ONLY.
+//
+// "with minimal taper" made a wide leg also a tapered leg, so the phrase has to
+// stop feeding the shape vocabulary. It must NOT be stripped for attributes:
+// "minimal structure" is the entire specification of a spalla camicia sleeve
+// head, and removing it would swap one silent data loss for another.
+const SHAPE_ONLY_SUPPRESSION = [
+  /\bminimal\s+\w+/gi,
+];
+
+/**
+ * The text with comparative and hypothetical clauses removed.
+ *
+ * Used for STRUCTURAL scanning only. Measurements keep the full text, because
+ * a dimension stated inside a comparison is still that dimension.
+ *
+ * `forShapes` additionally drops phrases that are only misleading to the shape
+ * families — see SHAPE_ONLY_SUPPRESSION.
+ */
+function stripNonAssertive(text, { forShapes = false } = {}) {
+  let out = String(text);
+  for (const re of NON_ASSERTIVE_CLAUSE) out = out.replace(re, ' ');
+  if (forShapes) for (const re of SHAPE_ONLY_SUPPRESSION) out = out.replace(re, ' ');
+  return out;
+}
+
 // ---- named construction attributes ---------------------------------------
 // STRUCTURAL LOCKING: a fact the prompt must not be free to choose.
 //
@@ -141,43 +209,57 @@ const LAPELS = [...JACKET, ...VEST];
 //
 // Ordered MOST SPECIFIC FIRST — the first match for a given
 // (feature, attribute) pair wins, so "round head" is read before bare "round".
+// The optional 6th element scopes an entry to the FIELDS it belongs to. Without
+// it, "handcrafted" anywhere on a jacket attached a buttonhole.method triple to
+// lapel-style and pocket options that never mentioned a buttonhole.
 const ATTRIBUTES = [
-  // [feature, attribute, value, pattern, scope]
+  // [feature, attribute, value, pattern, garmentScope, fieldPattern]
+
+  // Sleeve head — how the sleeve is set into the armhole. Real, nameable
+  // constructions whose vocabulary the extractor simply did not have, so five
+  // genuinely distinct options came out with no facts at all.
+  ['sleeve head', 'padding', 'unpadded', /\bunpadded\b|\bno padding\b|\bsoft\b/i, JACKET, /sleeve[- ]?head|shoulder/i],
+  ['sleeve head', 'padding', 'structured', /\bstructured\b/i, JACKET, /sleeve[- ]?head|shoulder/i],
+  ['sleeve head', 'insertion', 'shirt-shoulder (spalla camicia)', /spalla camicia|shirt[- ]?shoulder|shirt[- ]?style sleeve/i, JACKET, /sleeve[- ]?head|shoulder/i],
+  ['sleeve head', 'insertion', 'rolled (con rollino)', /con rollino|rolled sleeve|soft roll/i, JACKET, /sleeve[- ]?head|shoulder/i],
+  ['sleeve head', 'structure', 'minimal', /ultra[- ]?minimal|minimal structure|lightest construction/i, JACKET, /sleeve[- ]?head|shoulder/i],
+  ['sleeve head', 'drape', 'full', /full drape/i, JACKET, /sleeve[- ]?head|shoulder/i],
+
 
   // How the buttonhole is worked. This is the single biggest discriminator in
   // the jacket catalog and it was previously invisible.
-  ['buttonhole', 'method', 'hand-sewn', /handmade|hand[- ]?made|hand[- ]?sewn|hand[- ]?crafted|handcrafted|\bby hand\b/i, JACKET],
-  ['buttonhole', 'method', 'machine-sewn', /\bby machine\b|machine[- ]?(?:sewn|made|worked)|\(machine\)/i, JACKET],
+  ['buttonhole', 'method', 'hand-sewn', /handmade|hand[- ]?made|hand[- ]?sewn|hand[- ]?crafted|handcrafted|\bby hand\b/i, JACKET, /buttonhole|bh[-_]|bh/i],
+  ['buttonhole', 'method', 'machine-sewn', /\bby machine\b|machine[- ]?(?:sewn|made|worked)|\(machine\)/i, JACKET, /buttonhole|bh[-_]|bh/i],
 
   // Functional (a real cut opening) vs decorative (stitched closed). These
   // photograph completely differently and the words are always stated.
-  ['buttonhole', 'function', 'functional', /real functional|genuine functional|\bfunctional\b|\bworking\b/i, JACKET],
-  ['buttonhole', 'function', 'decorative', /\bfake\b|decorative|non[- ]?functional/i, JACKET],
+  ['buttonhole', 'function', 'functional', /real functional|genuine functional|\bfunctional\b|\bworking\b/i, JACKET, /buttonhole|bh[-_]|bh/i],
+  ['buttonhole', 'function', 'decorative', /\bfake\b|decorative|non[- ]?functional/i, JACKET, /buttonhole|bh[-_]|bh/i],
 
   // The profile of the cut: an arc's direction is a real geometric fact, and
   // "upwards" vs "downwards" is the whole difference between two options.
-  ['buttonhole', 'profile', 'arc-upward', /\bupwards?\b/i, JACKET],
-  ['buttonhole', 'profile', 'arc-downward', /\bdownwards?\b/i, JACKET],
-  ['buttonhole', 'profile', 'arc', /\barc\b/i, JACKET],
-  ['buttonhole', 'profile', 'straight', /\bstraight\b/i, JACKET],
+  ['buttonhole', 'profile', 'arc-upward', /\bupwards?\b/i, JACKET, /buttonhole|bh[-_]|bh/i],
+  ['buttonhole', 'profile', 'arc-downward', /\bdownwards?\b/i, JACKET, /buttonhole|bh[-_]|bh/i],
+  ['buttonhole', 'profile', 'arc', /\barc\b/i, JACKET, /buttonhole|bh[-_]|bh/i],
+  ['buttonhole', 'profile', 'straight', /\bstraight\b/i, JACKET, /buttonhole|bh[-_]|bh/i],
 
   // The head (the eye end of the opening).
-  ['buttonhole', 'head', 'barge-head keyhole', /barge ?head|\bkeyhole\b/i, JACKET],
-  ['buttonhole', 'head', 'water-drop', /water ?drop/i, JACKET],
-  ['buttonhole', 'head', 'round', /round ?head/i, JACKET],
-  ['buttonhole', 'head', 'square-end', /square[- ]?end/i, JACKET],
+  ['buttonhole', 'head', 'barge-head keyhole', /barge ?head|\bkeyhole\b/i, JACKET, /buttonhole|bh[-_]|bh/i],
+  ['buttonhole', 'head', 'water-drop', /water ?drop/i, JACKET, /buttonhole|bh[-_]|bh/i],
+  ['buttonhole', 'head', 'round', /round ?head/i, JACKET, /buttonhole|bh[-_]|bh/i],
+  ['buttonhole', 'head', 'square-end', /square[- ]?end/i, JACKET, /buttonhole|bh[-_]|bh/i],
 
   // Finishing details, each stated explicitly in the source text.
-  ['buttonhole', 'seal', 'unsealed', /no seal|without seal|not sealed|no sealing|without sealing/i, JACKET],
-  ['buttonhole', 'knot', 'knotted', /\bknot\b/i, JACKET],
-  ['buttonhole', 'scale', 'small', /small (?:hole|size)|\bsmall\b/i, JACKET],
+  ['buttonhole', 'seal', 'unsealed', /no seal|without seal|not sealed|no sealing|without sealing/i, JACKET, /buttonhole|bh[-_]|bh/i],
+  ['buttonhole', 'knot', 'knotted', /\bknot\b/i, JACKET, /buttonhole|bh[-_]|bh/i],
+  ['buttonhole', 'scale', 'small', /small (?:hole|size)|\bsmall\b/i, JACKET, /buttonhole|bh[-_]|bh/i],
 
   // Number of thread colours worked into the buttonhole. This is NOT the
   // excluded thread-colour swatch field — it is a structural property of the
   // buttonhole style, and it is the only thing separating "Arc Double-Color"
   // from "Arc Triple-Color".
-  ['buttonhole', 'colorway', '3-colour', /triple[- ]?colou?r|\b3 colou?rs?\b|appoint 3 colou?rs?/i, JACKET],
-  ['buttonhole', 'colorway', '2-colour', /double[- ]?colou?r|\b2 colou?rs?\b|appoint 2 colou?rs?/i, JACKET],
+  ['buttonhole', 'colorway', '3-colour', /triple[- ]?colou?r|\b3 colou?rs?\b|appoint 3 colou?rs?/i, JACKET, /buttonhole|bh[-_]|bh/i],
+  ['buttonhole', 'colorway', '2-colour', /double[- ]?colou?r|\b2 colou?rs?\b|appoint 2 colou?rs?/i, JACKET, /buttonhole|bh[-_]|bh/i],
 ];
 
 /**
@@ -188,11 +270,15 @@ const ATTRIBUTES = [
  * and the validator will hold the option rather than let the image model
  * invent one.
  */
-function extractAttributes(text, garmentKey) {
+function extractAttributes(text, garmentKey, fieldKey = '') {
   const out = [];
   const claimed = new Set();
-  for (const [feature, attribute, value, re, scope] of ATTRIBUTES) {
+  for (const [feature, attribute, value, re, scope, fieldRe] of ATTRIBUTES) {
     if (scope && garmentKey && !scope.includes(garmentKey)) continue;
+    // A triple only applies to the feature it names. Without this, the word
+    // "handcrafted" in a LAPEL description attached a buttonhole.method fact to
+    // an option that has nothing to do with buttonholes.
+    if (fieldRe && !fieldRe.test(String(fieldKey))) continue;
     if (!re.test(text)) continue;
     // One value per (feature, attribute). The table is ordered most specific
     // first, so a broader later pattern must never overwrite a precise hit --
@@ -303,7 +389,10 @@ const SHAPES = [
   ['arc buttonhole', /\barc\b/, JACKET],
   // cuffs (shirt)
   ['French / double cuff', /french cuff|double cuff/, SHIRT],
-  ['barrel / button cuff', /barrel|button cuff|single cuff/, SHIRT],
+  // \b on "single cuff" is load-bearing: without it the pattern matched
+  // "a single CUFFLINK passes cleanly through all four layers" inside the
+  // FRENCH cuff description, so the option asserted both cuff families at once.
+  ['barrel / button cuff', /\bbarrel\b|\bbutton cuff\b|\bsingle cuff\b/, SHIRT],
   ['convertible cuff', /convertible/, SHIRT],
   ['mitered corner', /miter|mitre/, SHIRT],
   // vents (jacket back)
@@ -848,13 +937,18 @@ export function extractSpec(opt) {
   // from the filename, which frequently encodes the supplier's own side
   // convention rather than the option's.
   const sides = extractSides(`${textCore} ${opt.hint ?? ''}`.toLowerCase());
+  // Structural vocabulary is read from ASSERTIONS only. Comparative and
+  // historical clauses name the options a customer is choosing between, and
+  // reading those as facts produced self-contradictory garments.
+  const assertive = stripNonAssertive(text);
   const negatedShapes = [];
   const shapes = resolveExclusiveShapes(
-    scanList(text, SHAPES, garmentKey), opt.label, garmentKey, negatedShapes);
-  const flags = scanList(text, FLAGS, garmentKey);
+    scanList(stripNonAssertive(text, { forShapes: true }), SHAPES, garmentKey), opt.label, garmentKey, negatedShapes);
+  const flags = scanList(assertive, FLAGS, garmentKey);
   // Named {feature, attribute, value} triples — the properties the prompt must
   // be told outright rather than left free to choose.
-  const attributes = extractAttributes(text, garmentKey);
+  const attributes = extractAttributes(
+    stripNonAssertive(text), garmentKey, `${opt.fieldId ?? ''} ${opt.fieldLabel ?? ''} ${part}`);
   const supplierCodes = extractSupplierCodes(textCore);
   const styleName = extractStyleName(opt.label);
 
@@ -895,6 +989,35 @@ export function extractSpec(opt) {
     if (/passant|double/.test(textCore.toLowerCase())) merge(shapes, ['double / passant loops']);
     if (/x[- ]?style|crossed/.test(textCore.toLowerCase())) merge(shapes, ['X-style crossed front loops']);
     if (/one loop|single.*loop|right front only/.test(textCore.toLowerCase())) merge(counts, ['1-loop']);
+  }
+
+  // ABSENCE PURGE — an option that denies a feature must not also assert it.
+  //
+  // `absence` was computed and reported, but nothing ever removed the positive
+  // vocabulary the scanners had already collected from the very sentence doing
+  // the denying. "No Suspender Buttons" ("Standard — no brace attachment
+  // buttons") carried flag `suspender / brace buttons`; "No Contrast" ("Single
+  // fabric throughout") carried `contrast fabric`; "No Back Detail" ("Plain
+  // back waistband — no adjustment tab") carried `tab fastening`. Each would
+  // have told the prompt to render exactly the hardware the customer chose to
+  // leave off — a phantom feature, and the most literal possible wrong image.
+  //
+  // Values that THEMSELVES denote a lack are kept: "No Vent" -> `ventless` is
+  // the correct positive encoding of an absence, not a contradiction.
+  if (absence) {
+    const denotesLack = (v) => /ventless|flat front|\bclean\b|\bplain\b|\bnone\b|\bno\b/i.test(String(v));
+    for (const list of [shapes, flags]) {
+      for (let i = list.length - 1; i >= 0; i -= 1) {
+        if (denotesLack(list[i])) continue;
+        // Keep it as an explicit NEGATIVE so the director can cancel the prose,
+        // which still quotes the description verbatim.
+        if (!negatedShapes.includes(list[i])) negatedShapes.push(list[i]);
+        list.splice(i, 1);
+      }
+    }
+    // Counts and attributes describe a feature that is not there at all.
+    counts.length = 0;
+    attributes.length = 0;
   }
 
   // Exclusion axis (buttons / thread colours / fabrics) — swatches we do not
