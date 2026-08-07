@@ -552,7 +552,21 @@ function resolvePart({ productId: rawProductId, sectionId, fieldId, fieldLabel, 
   // the forbidden[] list were all built for the wrong garment.
   const productId = garmentKeyFor(rawProductId, sectionId);
   const f = (fieldId || '').toLowerCase();
-  const s = (sectionId || '').toLowerCase();
+  // A suit hosts its trouser and vest sections under a prefix
+  // (`Trousers-front-pockets`, `Vest-lapel-neckline`). garmentKeyFor already
+  // routes those to the right BRANCH, but every section test below is an exact
+  // comparison, so the prefixed form matched none of them and fell through to
+  // the generic `*-detail` part.
+  //
+  // The consequence was that the SAME option classified differently depending
+  // on which product hosted it: front-pocket-style/welt-pocket resolved to
+  // `trouser-front-pocket` in the standalone trousers product and
+  // `trouser-detail` inside suit-2pc and suit-3pc. `part` selects the
+  // photography profile and the forbidden[] list, so one garment feature was
+  // being shot to two different sets of rules — and because `trouser-detail`
+  // is a real part rather than `generic-detail`, the coverage gate reported
+  // 100% profiled the whole time.
+  const s = (sectionId || '').toLowerCase().replace(/^(?:trousers|vest)[-_]/, '');
   const fl = (fieldLabel || '').toLowerCase();
   const lab = (label || '').toLowerCase(); // option label — for option-level routing
   const t = `${f} ${fl}`.replace(/[-_]/g, ' '); // normalised for keyword classifiers
@@ -795,10 +809,18 @@ function classifyAdjuster(text) {
   if (/square.*(button|tab)|button adjust|tab adjust|adjust(ment)? tab/.test(t)) shapes.push('square button-tab adjuster');
   if (/\bloop\b/.test(t)) shapes.push('adjuster paired with a belt loop');
   if (/\bstrap\b/.test(t)) shapes.push('strap-and-buckle adjuster');
-  if (!shapes.length) shapes.push('side-adjuster mechanism');
   if (/outseam/.test(t)) flags.push('adjuster on the outseam');
   if (/waistband|back/.test(t)) flags.push('adjuster on the waistband');
-  return { shapes, flags };
+  // No generic fallback.
+  //
+  // This used to push a bare 'side-adjuster mechanism' whenever nothing
+  // specific matched — a value that names no mechanism at all. The prompt then
+  // instructed the model to render "a side-adjuster mechanism" and left it free
+  // to invent buckle, tab or strap, which is precisely the guessed-data failure
+  // this pipeline exists to prevent. An unrecognised mechanism is a GAP, and
+  // the gate must see it as one.
+  const unresolved = shapes.length ? [] : ['adjuster mechanism not stated in the catalog text'];
+  return { shapes, flags, unresolved };
 }
 
 // ---- MUTUALLY-EXCLUSIVE SHAPE FAMILIES -----------------------------------
@@ -941,6 +963,10 @@ export function extractSpec(opt) {
   // historical clauses name the options a customer is choosing between, and
   // reading those as facts produced self-contradictory garments.
   const assertive = stripNonAssertive(text);
+  // Properties the catalog names but does not resolve to a value. These are
+  // GAPS, not facts, and the validator blocks on them -- the alternative is a
+  // generic placeholder the image model is free to interpret however it likes.
+  const unresolved = [];
   const negatedShapes = [];
   const shapes = resolveExclusiveShapes(
     scanList(stripNonAssertive(text, { forShapes: true }), SHAPES, garmentKey), opt.label, garmentKey, negatedShapes);
@@ -981,6 +1007,7 @@ export function extractSpec(opt) {
     const adj = classifyAdjuster(famText);
     merge(shapes, adj.shapes);
     merge(flags, adj.flags);
+    merge(unresolved, adj.unresolved ?? []);
     const hw = extractHardware(textCore);
     merge(counts, hw.counts);
     merge(flags, hw.flags);
@@ -1051,6 +1078,7 @@ export function extractSpec(opt) {
     attributes,     // named {feature, attribute, value} construction triples
     supplierCodes,  // the supplier's own value codes, where the catalog states them
     styleName,      // identity only — NEVER counted as an extracted fact
+    unresolved,     // named-but-unspecified properties; blocks generation
     shapes,
     negatedShapes,
     flags,

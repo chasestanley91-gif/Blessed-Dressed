@@ -311,3 +311,50 @@ test('a triple never attaches to a feature the option is not about', () => {
   assert.ok(!(lapel.attributes ?? []).some((a) => a.feature === 'buttonhole'),
     `a lapel-style option must carry no buttonhole triples, got ${JSON.stringify(lapel.attributes)}`);
 });
+
+// ── Part resolution across host products ──────────────────────────────────
+
+test('BUG: the same trouser option classified differently inside a suit', () => {
+  // A suit hosts its trouser sections under a `Trousers-` prefix. Every section
+  // test in resolvePart is an exact comparison, so the prefixed form matched
+  // none of them and fell through to a generic part. `part` selects the
+  // photography profile and the forbidden[] list, so one garment feature was
+  // being shot to two different sets of rules -- and because `trouser-detail`
+  // is a real part rather than `generic-detail`, the coverage gate reported
+  // 100% profiled throughout.
+  const base = {
+    fieldId: 'front-pocket-style', fieldLabel: 'Front Pocket Style', hint: '',
+    label: 'Welt Front Pocket', description: 'A welt front pocket.',
+    image: '/images/x.jpg', imageExists: true,
+  };
+  const standalone = extractSpec({ ...base, productId: 'trousers', sectionId: 'front-pockets', sectionLabel: 'Front Pockets' });
+  const inSuit = extractSpec({ ...base, productId: 'suit-2pc', sectionId: 'Trousers-front-pockets', sectionLabel: 'Trousers Front Pockets' });
+  assert.equal(standalone.part, 'trouser-front-pocket');
+  assert.equal(inSuit.part, standalone.part,
+    `the same option must resolve to the same part regardless of host product; got ${inSuit.part} vs ${standalone.part}`);
+});
+
+test('a suit-hosted vest section resolves to its specific vest part', () => {
+  const inSuit = extractSpec({
+    productId: 'suit-3pc', sectionId: 'Vest-lapel-neckline', sectionLabel: 'Vest Lapel',
+    fieldId: 'neckline', fieldLabel: 'Neckline', hint: '',
+    label: 'V-Neckline', description: 'A deep V neckline.',
+    image: '/images/x.jpg', imageExists: true,
+  });
+  assert.equal(inSuit.part, 'vest-lapel');
+});
+
+test('an unrecognised adjuster is a GAP, never a generic placeholder', () => {
+  // classifyAdjuster used to emit a bare 'side-adjuster mechanism' that names
+  // no mechanism, leaving the model free to invent buckle, tab or strap.
+  const s = extractSpec({
+    productId: 'trousers', sectionId: 'waistband', sectionLabel: 'Waistband',
+    fieldId: 'metal-adjuster', fieldLabel: 'Side Adjuster', hint: '',
+    label: 'Adjuster', description: 'An adjuster of an unstated kind.',
+    image: '/images/x.jpg', imageExists: true,
+  });
+  assert.ok(!(s.shapes ?? []).includes('side-adjuster mechanism'),
+    'a placeholder that names no mechanism must never be emitted as a fact');
+  assert.ok((s.unresolved ?? []).length > 0,
+    `an unrecognised mechanism must be recorded as unresolved, got ${JSON.stringify(s.unresolved)}`);
+});

@@ -87,14 +87,25 @@ for (const r of inv) if (r.excluded) exclBy[r.excluded] = (exclBy[r.excluded] ||
 // in-scope options, the hard reference cannot disambiguate them — "the drawing
 // is law" breaks. This is a catalog/data defect (each option needs its own tech
 // pack), not a skill bug, but the skill must surface it.
+//
+// Grouped by part-level IDENTITY, not by catalog address. A jacket lapel option
+// appears in suit-2pc, suit-3pc and sport-coat: three addresses, one garment
+// feature, one drawing, and one photograph. Keying on address counted that
+// correct arrangement as three different options fighting over a blueprint and
+// reported 1412 "defects" that were nothing of the kind. Only two DIFFERENT
+// identities sharing a drawing is a real defect.
+const identityOf = (r) => `${r.part}|${r.field}|${r.option}|${r.label}`;
 const byIllu = new Map();
 for (const r of inv) {
   if (!r.generate || !r.illustration) continue;
-  const list = byIllu.get(r.illustration) || [];
-  list.push(r.addr);
-  byIllu.set(r.illustration, list);
+  const set = byIllu.get(r.illustration) || new Set();
+  set.add(identityOf(r));
+  byIllu.set(r.illustration, set);
 }
-const sharedBlueprints = [...byIllu.entries()].filter(([, a]) => a.length > 1).sort((x, y) => y[1].length - x[1].length);
+const sharedBlueprints = [...byIllu.entries()]
+  .map(([illu, set]) => [illu, [...set]])
+  .filter(([, a]) => a.length > 1)
+  .sort((x, y) => y[1].length - x[1].length);
 const sharedOptionCount = sharedBlueprints.reduce((n, [, a]) => n + a.length, 0);
 
 if (args.dupes) {
@@ -161,11 +172,34 @@ if (sharedBlueprints.length) {
     `— these cannot be disambiguated by the reference (data defect). Run --dupes to list; fix the tech packs before relying on those generations.`);
 }
 
+// A gate that inspected nothing must never report success. An empty result is
+// the loudest possible signal that discovery is broken (a mistyped --product, a
+// moved options directory), and it is precisely the case where "0 problems
+// found" reads as a clean bill of health.
+if (inv.length === 0) {
+  console.log(`\n✗ COVERAGE GATE FAILED — zero options were inspected. ` +
+    `The catalog did not load, or the filters matched nothing. Refusing to report success over an empty set.`);
+  process.exit(1);
+}
+
 if (unprofiled) {
   console.log(`\n✗ COVERAGE GATE FAILED — ${unprofiled} unprofiled option(s). ` +
     `Extend classifyFinish()/resolvePart() in lib/spec.mjs. Run --gaps to list them.`);
   process.exit(1);
 }
+
+// A shared blueprint means two different options point at the SAME drawing, so
+// the reference cannot tell them apart — whichever is generated first, the
+// other is indistinguishable from it. This was printed as a warning while the
+// gate passed, which is how a known data defect stayed in the catalog through
+// several generation waves.
+if (sharedBlueprints.length) {
+  console.log(`\n✗ COVERAGE GATE FAILED — ${sharedBlueprints.length} illustration(s) back ` +
+    `${sharedOptionCount} different in-scope options. A reference that cannot distinguish two ` +
+    `options cannot specify either of them. Run --dupes to list; fix the tech packs first.`);
+  process.exit(1);
+}
+
 console.log(`\n✓ COVERAGE GATE PASSED — every option has a specific profile.`);
 console.log(`  (${g.none} option(s) have no blueprint illustration and cannot be generated — non-visual ` +
   `choices like pocket depth or thread colour; they are mapped but skipped at generation.)`);

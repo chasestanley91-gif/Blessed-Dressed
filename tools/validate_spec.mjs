@@ -189,6 +189,14 @@ function validateOne(entry) {
     }
   }
 
+  // 2b — a property the catalog names but never resolves to a value.
+  //
+  // classifyAdjuster used to emit a bare 'side-adjuster mechanism' when nothing
+  // specific matched. That reads as a fact and is not one: it names no
+  // mechanism, so the prompt left the model free to invent buckle, tab or
+  // strap. A gap must look like a gap.
+  for (const u of spec.unresolved ?? []) blocking('UNRESOLVED_PROPERTY', u);
+
   // 3 — every count must be a resolved number token. "d-button" got through here.
   for (const c of counts) {
     if (!/^\d+-/.test(c)) blocking('UNRESOLVED_COUNT', `count token "${c}" is not number-prefixed`);
@@ -305,6 +313,39 @@ for (const e of entries) {
   if (!byField.has(key)) byField.set(key, []);
   byField.get(key).push(e);
 }
+// 8b — SHARED ILLUSTRATION: one drawing backing two genuinely different options.
+//
+// Grouped by part-level IDENTITY, so the SAME jacket lapel option appearing in
+// suit-2pc, suit-3pc and sport-coat is one identity with one drawing and one
+// photograph -- that is the intended arrangement, not a defect. Only when two
+// DIFFERENT identities point at the same drawing does the reference stop being
+// able to specify either of them: the drawing shows one of the two, so
+// generating the other from it produces a confident render of the wrong option.
+{
+  const byIllu = new Map();
+  for (const e of entries) {
+    if (!e.spec?.generate) continue;
+    const illu = e.opt.illustration ?? e.opt.image;
+    if (!illu) continue;
+    const identity = `${e.spec.part}|${e.field}|${e.opt.id}|${e.opt.label}`;
+    if (!byIllu.has(illu)) byIllu.set(illu, new Map());
+    byIllu.get(illu).set(identity, e.addr);
+  }
+  for (const [illu, ids] of byIllu) {
+    if (ids.size < 2) continue;
+    const labels = [...ids.keys()].map((k) => k.split('|').pop());
+    for (const addr of ids.values()) {
+      const r = results.find((x) => x.addr === addr);
+      if (r) {
+        r.findings.push({
+          level: 'BLOCK', code: 'SHARED_ILLUSTRATION',
+          detail: `${illu} is the reference for ${ids.size} different options (${labels.join(', ')}) — it cannot specify any of them`,
+        });
+      }
+    }
+  }
+}
+
 let collisions = 0;
 for (const [key, group] of byField) {
   const sig = new Map();

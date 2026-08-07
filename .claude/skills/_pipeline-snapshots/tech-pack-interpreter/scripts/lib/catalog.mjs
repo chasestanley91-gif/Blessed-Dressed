@@ -165,18 +165,35 @@ function loadDesign(src) {
   return src.source === 'ts' ? readTsDesign(src.file) : JSON.parse(fs.readFileSync(src.file, 'utf8'));
 }
 
+/**
+ * The catalog could not be read completely.
+ *
+ * Thrown rather than warned because a partially-loaded catalog is invisible
+ * downstream: every consumer counts what it received, finds no holes in it,
+ * and reports success. Skipping one product here silently removed hundreds of
+ * options from coverage while the gate printed PASSED.
+ */
+export class CatalogIntegrityError extends Error {
+  constructor(productId, reason) {
+    super(`CatalogIntegrityError — ${productId}: ${reason}`);
+    this.name = 'CatalogIntegrityError';
+    this.productId = productId;
+  }
+}
+
 // Iterate every option, yielding a flat record with full address + source file.
 export function* iterateOptions(cat, { product } = {}) {
   const products = product ? [product] : listProducts(cat);
   for (const productId of products) {
     const src = productSource(cat, productId);
-    if (!src) continue;
+    // A product listed by the catalog but with no source file means discovery
+    // and loading disagree. Continuing would silently under-count the catalog.
+    if (!src) throw new CatalogIntegrityError(productId, 'listed as a product but has no source file');
     let data;
     try {
       data = loadDesign(src);
     } catch (e) {
-      console.error(`WARN: could not load ${productId}: ${e.message}`);
-      continue;
+      throw new CatalogIntegrityError(productId, `could not load ${src.file}: ${e.message}`);
     }
     for (const section of data.sections || []) {
       for (const field of section.fields || []) {
