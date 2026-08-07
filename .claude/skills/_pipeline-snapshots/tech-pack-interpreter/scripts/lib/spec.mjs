@@ -415,8 +415,21 @@ function extractMeasures(text) {
   // counts[], leaving the render free to draw any number — the silent-lie
   // failure mode this file warns about elsewhere.
   const WORD_NUM = { one:1, two:2, three:3, four:4, five:5, six:6, seven:7, eight:8, nine:9, ten:10, eleven:11, twelve:12 };
-  const NUM = '(\d+|' + Object.keys(WORD_NUM).join('|') + ')';
-  const toNum = (s) => (/^\d+$/.test(s) ? s : String(WORD_NUM[String(s).toLowerCase()] ?? s));
+  // String.raw, NOT a plain quoted string. In '(\d+|' the \d is not a valid JS
+  // escape, so the backslash is silently dropped and the pattern degrades to
+  // the LITERAL LETTER d — which then matches the d in "Oxford buttons" and
+  // emitted 218 garbage "d-button" counts into real specs, while every
+  // digit-form count ("3 on left") matched nothing at all. Both failures were
+  // silent. Do not convert this back to a normal string literal.
+  const NUM = String.raw`(\d+|` + Object.keys(WORD_NUM).join('|') + ')';
+  const toNum = (s) => {
+    if (/^\d+$/.test(s)) return s;
+    const n = WORD_NUM[String(s).toLowerCase()];
+    // A number word we do not know is a SPEC GAP, not a value. Returning the
+    // raw word here is what let "d" through as if it were a count.
+    if (n === undefined) throw new Error(`SpecificationValidationError: unrecognised number token "${s}" — extend WORD_NUM rather than emitting it verbatim`);
+    return String(n);
+  };
   for (const m of text.matchAll(new RegExp(NUM + '\\s*buttonholes?\\b', 'gi'))) {
     const v = `${toNum(m[1])}-buttonhole`;
     if (!counts.includes(v)) counts.push(v);
