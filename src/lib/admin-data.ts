@@ -47,7 +47,7 @@ export async function loadDataAsync<T>(filename: string, fallback: T): Promise<T
       // Dynamic import so the package isn't required for local dev
       const { list, head } = await import("@vercel/blob");
       const { blobs } = await list({ prefix: `data/${filename}.json`, token: BLOB_TOKEN });
-      if (blobs.length === 0) return fallback;
+      if (blobs.length === 0) return loadData(filename, fallback);
 
       // Sort by uploadedAt descending — take the latest blob
       const latest = blobs.sort(
@@ -66,10 +66,17 @@ export async function loadDataAsync<T>(filename: string, fallback: T): Promise<T
         cache: "no-store",
         headers: { authorization: `Bearer ${BLOB_TOKEN}` },
       });
-      if (!res.ok) return fallback;
+      if (!res.ok) return loadData(filename, fallback);
       return (await res.json()) as T;
     } catch {
-      return fallback;
+      // Blob can be unreachable for reasons that have nothing to do with the
+      // data: a suspended store (billing inactive), a quota trip, an outage.
+      // Falling straight to the bundled sample data made the storefront look
+      // wiped — the builder lost every illustration and the fabric list
+      // reverted to placeholders. The committed data-store/options/*.json ARE
+      // deployed, so read those first: the real catalog, minus only the edits
+      // made in the admin since the last commit.
+      return loadData(filename, fallback);
     }
   }
   return loadData(filename, fallback);
