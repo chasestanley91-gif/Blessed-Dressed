@@ -121,6 +121,127 @@ const LAPELS = [...JACKET, ...VEST];
 // Each entry: [canonical, regex, scope?]. scope (optional) limits the term to
 // certain products so garment-specific words don't leak across categories
 // (e.g. a trouser "Flat Front" must not also tag the vest term "flat bottom").
+// ---- named construction attributes ---------------------------------------
+// STRUCTURAL LOCKING: a fact the prompt must not be free to choose.
+//
+// shapes[] and flags[] are flat, unlabelled bags of strings. That is enough to
+// say "this garment HAS an arc buttonhole", but not enough to say WHICH
+// property of WHICH feature the value belongs to — so two options that differ
+// only in how a feature is made collapse into the same specification.
+//
+// Measured: suit-2pc/lapel-bh-style is 56 options that the flat vocabulary
+// could not tell apart. "Real Functional (Machine)" and "Handmade Lapel
+// Buttonhole" are the SAME buttonhole shape; the entire difference is the
+// method. 138 sibling collisions and 73 factless specs traced to this one
+// field, which is more than any other cause in the catalog.
+//
+// A triple names the property explicitly: {feature:'buttonhole',
+// attribute:'method', value:'hand-sewn'}. The prompt builder emits the
+// attribute as a locked instruction instead of leaving the model to pick.
+//
+// Ordered MOST SPECIFIC FIRST — the first match for a given
+// (feature, attribute) pair wins, so "round head" is read before bare "round".
+const ATTRIBUTES = [
+  // [feature, attribute, value, pattern, scope]
+
+  // How the buttonhole is worked. This is the single biggest discriminator in
+  // the jacket catalog and it was previously invisible.
+  ['buttonhole', 'method', 'hand-sewn', /handmade|hand[- ]?made|hand[- ]?sewn|hand[- ]?crafted|handcrafted|\bby hand\b/i, JACKET],
+  ['buttonhole', 'method', 'machine-sewn', /\bby machine\b|machine[- ]?(?:sewn|made|worked)|\(machine\)/i, JACKET],
+
+  // Functional (a real cut opening) vs decorative (stitched closed). These
+  // photograph completely differently and the words are always stated.
+  ['buttonhole', 'function', 'functional', /real functional|genuine functional|\bfunctional\b|\bworking\b/i, JACKET],
+  ['buttonhole', 'function', 'decorative', /\bfake\b|decorative|non[- ]?functional/i, JACKET],
+
+  // The profile of the cut: an arc's direction is a real geometric fact, and
+  // "upwards" vs "downwards" is the whole difference between two options.
+  ['buttonhole', 'profile', 'arc-upward', /\bupwards?\b/i, JACKET],
+  ['buttonhole', 'profile', 'arc-downward', /\bdownwards?\b/i, JACKET],
+  ['buttonhole', 'profile', 'arc', /\barc\b/i, JACKET],
+  ['buttonhole', 'profile', 'straight', /\bstraight\b/i, JACKET],
+
+  // The head (the eye end of the opening).
+  ['buttonhole', 'head', 'barge-head keyhole', /barge ?head|\bkeyhole\b/i, JACKET],
+  ['buttonhole', 'head', 'water-drop', /water ?drop/i, JACKET],
+  ['buttonhole', 'head', 'round', /round ?head/i, JACKET],
+  ['buttonhole', 'head', 'square-end', /square[- ]?end/i, JACKET],
+
+  // Finishing details, each stated explicitly in the source text.
+  ['buttonhole', 'seal', 'unsealed', /no seal|without seal|not sealed|no sealing|without sealing/i, JACKET],
+  ['buttonhole', 'knot', 'knotted', /\bknot\b/i, JACKET],
+  ['buttonhole', 'scale', 'small', /small (?:hole|size)|\bsmall\b/i, JACKET],
+
+  // Number of thread colours worked into the buttonhole. This is NOT the
+  // excluded thread-colour swatch field — it is a structural property of the
+  // buttonhole style, and it is the only thing separating "Arc Double-Color"
+  // from "Arc Triple-Color".
+  ['buttonhole', 'colorway', '3-colour', /triple[- ]?colou?r|\b3 colou?rs?\b|appoint 3 colou?rs?/i, JACKET],
+  ['buttonhole', 'colorway', '2-colour', /double[- ]?colou?r|\b2 colou?rs?\b|appoint 2 colou?rs?/i, JACKET],
+];
+
+/**
+ * Named construction facts the text actually states.
+ *
+ * Nothing here is inferred: every value is triggered by explicit wording. If
+ * the catalog does not say how a buttonhole is worked, no method is recorded
+ * and the validator will hold the option rather than let the image model
+ * invent one.
+ */
+function extractAttributes(text, garmentKey) {
+  const out = [];
+  const claimed = new Set();
+  for (const [feature, attribute, value, re, scope] of ATTRIBUTES) {
+    if (scope && garmentKey && !scope.includes(garmentKey)) continue;
+    if (!re.test(text)) continue;
+    // One value per (feature, attribute). The table is ordered most specific
+    // first, so a broader later pattern must never overwrite a precise hit --
+    // otherwise "round head" degrades to plain "round".
+    const slot = `${feature}|${attribute}`;
+    if (claimed.has(slot)) continue;
+    claimed.add(slot);
+    out.push({ feature, attribute, value });
+  }
+  return out;
+}
+
+/**
+ * The option's own proper name, normalised.
+ *
+ * Some options are named, not described: "Journey of Life", "Brave Winds,
+ * Break Waves", "Cow Air to the Sky" are the supplier's decorative buttonhole
+ * patterns. The words carry NO construction information whatsoever — no shape,
+ * no method, no count — so no honest parser can produce a specification from
+ * them. For these the DRAWING IS THE ONLY SPECIFICATION.
+ *
+ * This is recorded so siblings stay distinguishable, but it is deliberately
+ * NOT counted as an extracted fact. Counting it would make every option look
+ * specified and permanently blind the validator to real parser gaps — the
+ * exact silent-success failure this pipeline keeps being bitten by. The
+ * validator instead uses the combination "has a proper name, has no facts" to
+ * demand a VERIFIED illustration before any credit is spent.
+ */
+function extractStyleName(label) {
+  return String(label ?? '').trim().replace(/\s+/g, ' ') || null;
+}
+
+/**
+ * The supplier's own value code, when the catalog states one.
+ *
+ * Some options are genuinely indistinguishable in prose: "Double color
+ * straight (055T)" and "Double color straight (055S)" differ only by this
+ * code, and only the drawing shows how. Recording it keeps the two specs
+ * distinct and gives the operator a way to trace a render back to the
+ * supplier's catalogue entry.
+ */
+function extractSupplierCodes(text) {
+  const out = [];
+  for (const m of String(text).matchAll(/\(\s*([0-9]{2,3}[A-Z0-9]{1,2})\s*\)/g)) {
+    if (!out.includes(m[1])) out.push(m[1]);
+  }
+  return out;
+}
+
 const SHAPES = [
   // shirt collars
   ['double cutaway', /double cut[- ]?away/, SHIRT],
@@ -731,6 +852,11 @@ export function extractSpec(opt) {
   const shapes = resolveExclusiveShapes(
     scanList(text, SHAPES, garmentKey), opt.label, garmentKey, negatedShapes);
   const flags = scanList(text, FLAGS, garmentKey);
+  // Named {feature, attribute, value} triples — the properties the prompt must
+  // be told outright rather than left free to choose.
+  const attributes = extractAttributes(text, garmentKey);
+  const supplierCodes = extractSupplierCodes(textCore);
+  const styleName = extractStyleName(opt.label);
 
   // Absence must be resolved BEFORE family augmentation so a positive shape /
   // hardware token is never attached to an option that is the ABSENCE of a
@@ -799,6 +925,9 @@ export function extractSpec(opt) {
     counts,
     spread: spreadWord,
     sides, // explicit directional facts — never inferred, never combined
+    attributes,     // named {feature, attribute, value} construction triples
+    supplierCodes,  // the supplier's own value codes, where the catalog states them
+    styleName,      // identity only — NEVER counted as an extracted fact
     shapes,
     negatedShapes,
     flags,

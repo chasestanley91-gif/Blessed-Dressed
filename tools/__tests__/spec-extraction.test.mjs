@@ -120,3 +120,67 @@ test('the full directional vocabulary is recognised', () => {
     assert.ok(s.sides.includes(expected), `"${desc}" should record side "${expected}", got ${JSON.stringify(s.sides)}`);
   }
 });
+
+// ── Phase 4: structural locking via named attribute triples ────────────────
+// suit-2pc/lapel-bh-style is 56 options that the flat shapes[]/flags[] bags
+// could not tell apart: 138 sibling collisions and 73 factless specs, more
+// than any other cause in the catalog. The words were always there; the
+// parser had no vocabulary for them.
+
+const attrs = (s) => Object.fromEntries((s.attributes ?? []).map((a) => [a.attribute, a.value]));
+
+test('BUG: machine and handmade buttonholes were the same specification', () => {
+  const machine = spec('Real Functional (Machine)', 'Genuine functional buttonhole by machine.');
+  const hand = spec('Handmade Lapel Buttonhole', 'Standard handcrafted lapel buttonhole.');
+  assert.equal(attrs(machine).method, 'machine-sewn');
+  assert.equal(attrs(hand).method, 'hand-sewn');
+  assert.notDeepEqual(machine.attributes, hand.attributes);
+});
+
+test('functional and decorative buttonholes are distinguished', () => {
+  assert.equal(attrs(spec('Real Functional (Machine)', 'Genuine functional buttonhole by machine.')).function, 'functional');
+  assert.equal(attrs(spec('Fake Round', 'Decorative rounded buttonhole.')).function, 'decorative');
+});
+
+test('arc direction is preserved — upward and downward are different garments', () => {
+  const up = spec('Arc Upwards', 'Milanese arc upwards — handmade only.');
+  const down = spec('Arc Slight Downwards', 'Milanese arc downwards — handmade only.');
+  assert.equal(attrs(up).profile, 'arc-upward');
+  assert.equal(attrs(down).profile, 'arc-downward');
+});
+
+test('colour count separates double from triple', () => {
+  assert.equal(attrs(spec('Arc Double-Color', 'Double color arc — handmade, appoint 2 colors.')).colorway, '2-colour');
+  assert.equal(attrs(spec('Arc Triple-Color', 'Triple color arc — handmade, appoint 3 colors.')).colorway, '3-colour');
+});
+
+test('the most specific head pattern wins — "round head" never degrades to "round"', () => {
+  assert.equal(attrs(spec('Round Head, Small Hole', 'Round head, small size handmade hole.')).head, 'round');
+  assert.equal(attrs(spec('Barge Head Keyhole', 'Round head barge eye without sealing — water drop.')).head, 'barge-head keyhole');
+});
+
+test('supplier codes separate options that prose cannot', () => {
+  // These two differ by nothing a parser can read except the code itself.
+  const a = spec('Double-Color Straight A', 'Double color straight (055T) — appoint 2 colors.');
+  const b = spec('Double-Color Straight B', 'Double color straight (055S) — appoint 2 colors.');
+  assert.deepEqual(a.supplierCodes, ['055T']);
+  assert.deepEqual(b.supplierCodes, ['055S']);
+  assert.notDeepEqual(a.supplierCodes, b.supplierCodes);
+});
+
+test('a named decorative style yields NO invented construction facts', () => {
+  // "Journey of Life" describes nothing. The correct behaviour is to extract
+  // nothing and let the validator demand a verified drawing — NOT to guess.
+  const s = spec('Journey of Life', 'Journey of Life.');
+  assert.equal(s.styleName, 'Journey of Life');
+  const invented = [...(s.shapes ?? []), ...(s.flags ?? []), ...(s.counts ?? []), ...(s.attributes ?? [])];
+  assert.deepEqual(invented, [], `nothing may be inferred from a poetic name, got ${JSON.stringify(invented)}`);
+});
+
+test('styleName is identity only and never masquerades as an extracted fact', () => {
+  // If styleName were counted as a fact, every option would look specified and
+  // the validator would go permanently blind to real parser gaps.
+  const s = spec('Journey of Life', 'Journey of Life.');
+  assert.ok(s.styleName, 'styleName should be recorded');
+  assert.equal((s.shapes ?? []).length + (s.flags ?? []).length + (s.attributes ?? []).length, 0);
+});

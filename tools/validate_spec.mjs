@@ -81,6 +81,27 @@ const EXCLUSIVE = [
 
 const SIDE_WORDS = /\b(left|right|both|each|either|center|centre|front|back|inside|outside|upper|lower)\b/i;
 
+/**
+ * Subject-match verdicts, keyed by drawing path.
+ *
+ * Produced by the visual audit that read 161 blueprints and classified each as
+ * MATCH / MISMATCH / AMBIGUOUS against the option it is attached to. A drawing
+ * absent from this map is UNAUDITED — which is not the same as correct, and is
+ * treated as such wherever the drawing is the only specification.
+ */
+const SUBJECT_VERDICTS = new Map();
+try {
+  const audit = JSON.parse(fs.readFileSync(
+    path.join(REPO, 'public', 'images', 'reports', 'subject-audit-consolidated.json'), 'utf8'));
+  for (const r of audit.results ?? []) {
+    if (r?.bp) SUBJECT_VERDICTS.set(r.bp, { v: r.v, ev: r.ev });
+  }
+} catch (err) {
+  // Loudly, not silently. Running without the audit would quietly disable the
+  // only check that catches a drawing depicting the wrong garment feature.
+  console.error(`WARNING: subject-match audit unavailable (${err.message}) — drawing-subject checks are DISABLED for this run.`);
+}
+
 function validateOne(entry) {
   const { addr, opt, spec } = entry;
   const findings = [];
@@ -94,7 +115,13 @@ function validateOne(entry) {
   const angles = spec.angles ?? [];
   const spread = spec.spread ?? [];
   const sides = spec.sides ?? [];
-  const factCount = counts.length + shapes.length + flags.length + dims.length + angles.length + spread.length + sides.length;
+  const attributes = spec.attributes ?? [];
+  const supplierCodes = spec.supplierCodes ?? [];
+  // styleName is deliberately NOT counted. It is the option's own label, so
+  // counting it would make every option look specified and permanently blind
+  // this gate to real parser gaps.
+  const factCount = counts.length + shapes.length + flags.length + dims.length
+    + angles.length + spread.length + sides.length + attributes.length + supplierCodes.length;
 
   // 1 — illustration must exist on disk and be deploy-included.
   const illus = opt.illustration ?? opt.image;
@@ -107,10 +134,40 @@ function validateOne(entry) {
     }
   }
 
+  // 1b — the drawing must actually depict THIS option.
+  //
+  // The subject-match audit read 161 drawings and found 58 that show something
+  // else entirely: /images/jacket/sleeve-buttonhole/by-hands.jpg is a lapel
+  // buttonhole POSITION diagram with no sleeve, no cuff and nothing expressing
+  // hand-vs-machine. Generating from it produces a confident, high-scoring
+  // photograph of the wrong garment feature — QC grades fidelity to the
+  // reference, so a faithful render of a WRONG reference scores HIGHER.
+  // This is the only check that can catch that class of failure.
+  const verdict = illus ? SUBJECT_VERDICTS.get(illus) : undefined;
+  if (verdict?.v === 'MISMATCH') {
+    blocking('ILLUSTRATION_SUBJECT_MISMATCH', `audited drawing does not depict this option — ${verdict.ev ?? ''}`.trim());
+  } else if (verdict?.v === 'AMBIGUOUS') {
+    warn('ILLUSTRATION_SUBJECT_AMBIGUOUS', `audit could not confirm the drawing depicts this option — ${verdict.ev ?? ''}`.trim());
+  }
+
   // 2 — the parser must have produced SOMETHING. An absence option ("None") is
-  // legitimately factless; anything else is a parser gap, not a garment fact.
+  // legitimately factless; anything else is either a parser gap or an option
+  // that is NAMED rather than described.
   if (!spec.absence && factCount === 0) {
-    blocking('NO_FACTS_EXTRACTED', 'parser produced zero dimensions, angles, counts, shapes, flags or spread');
+    if (spec.styleName) {
+      // "Journey of Life", "Brave Winds, Break Waves" — the supplier's
+      // decorative pattern names. No parser can extract geometry from these
+      // words, and inventing it is precisely what this pipeline must never do.
+      // The drawing is the entire specification, so it has to be a drawing
+      // somebody has actually confirmed. An unaudited one is not evidence.
+      if (verdict?.v === 'MATCH') {
+        warn('DRAWING_IS_SOLE_SPEC', `named style with no textual facts; generation must copy the verified drawing "${illus}" exactly`);
+      } else {
+        blocking('DRAWING_IS_SOLE_SPEC', `named style "${spec.styleName}" states no construction facts, so the drawing is the only specification — but it is ${verdict ? verdict.v : 'UNAUDITED'}. Verify the drawing before spending a credit.`);
+      }
+    } else {
+      blocking('NO_FACTS_EXTRACTED', 'parser produced zero dimensions, angles, counts, shapes, flags, spread or attributes');
+    }
   }
 
   // 3 — every count must be a resolved number token. "d-button" got through here.
@@ -210,6 +267,12 @@ for (const [key, group] of byField) {
       (e.spec.counts ?? []).slice().sort(), (e.spec.shapes ?? []).slice().sort(),
       (e.spec.flags ?? []).slice().sort(), (e.spec.spread ?? []).slice().sort(),
       (e.spec.sides ?? []).slice().sort(),
+      (e.spec.attributes ?? []).map((a) => `${a.feature}.${a.attribute}=${a.value}`).sort(),
+      (e.spec.supplierCodes ?? []).slice().sort(),
+      // The option's own name is part of its identity. Two siblings that share
+      // every measured fact are still different options if the catalog names
+      // them differently -- and the drawing is what tells them apart.
+      e.spec.styleName ?? '',
     ]);
     if (!sig.has(s)) sig.set(s, []);
     sig.get(s).push(e.opt.id);
