@@ -1,0 +1,132 @@
+{
+  "batch": 3,
+  "checked": 21,
+  "results": [
+    {
+      "blueprint": "/images/jacket/shoulder-head/neapolitan.jpg",
+      "labels": ["Neapolitan (Spalla Camicia)"],
+      "verdict": "MATCH",
+      "evidence": "240x200 line drawing of a jacket FRONT with both shoulder seams and sleeve-head outer seams traced in red - correct garment area for a sleeve-head option. Zoomed 22x on both shoulder points: a distinct soft gathered/puckered mass is drawn where the sleeve meets the shoulder, and the shoulder line drops steeply - a legitimate spalla camicia (shirt-shoulder) rendering, and visibly different from its sibling con-rollino.jpg (pixel diff bbox 16,4-208,200). Caption is clipped by the bottom edge of the image; only the tops of the letters survive, reading as two words beginning 'Ne...li...'. Low-resolution asset, so confidence is moderate."
+    },
+    {
+      "blueprint": "/images/blueprints/supplier/362519787419__0621__4_flat.jpg",
+      "labels": ["4 Buttons"],
+      "verdict": "MISMATCH",
+      "evidence": "Correct area (a sleeve/cuff tube with the cuff opening drawn as a swooping ellipse) but the COUNT is wrong, and count is the entire discriminator for cuff-button-number. Run-structure analysis of the red marks along the cuff vent edge gives a strict alternation of 9 solid bar bands and 8 hollow capsule bodies (bodies ~51-56px, separators ~13-23px) spanning y=350-936 - i.e. EIGHT evenly spaced marks, not four. No button discs are drawn anywhere. The marks also run far up the sleeve (starting at y=350, roughly halfway up the panel) rather than clustering at the cuff. Alternative reading: the red chain is simply a dashed highlight of the vent seam, which would say nothing about a button count either. Either way the drawing does not show 4 buttons. No caption text anywhere in the 1200x1200 frame (ink bbox x336-866, y44-1158)."
+    },
+    {
+      "blueprint": "/images/blueprints/factory/0cd41e2fb0ea__0630__2_kissing.jpg",
+      "labels": ["Kissing Buttons"],
+      "verdict": "MATCH",
+      "evidence": "Same sleeve/cuff base drawing as the '4 flat' sibling, but the red button marks near the cuff hem (y=727-960) are visibly STAGGERED and OVERLAPPING each other rather than sitting in a straight separated column - x spread 325-379 vs the flat sibling's tight 335-368, and the run structure is irregular where the flat sibling's is perfectly periodic. Side-by-side comparison makes the touching/overlapping arrangement obvious. That is exactly the kissing-vs-spaced discriminator this field is about. No caption text in frame."
+    },
+    {
+      "blueprint": "/images/jacket/back-vent/center-vent.jpg",
+      "labels": ["Center Vent"],
+      "verdict": "MISMATCH",
+      "evidence": "Not a back view and not a vent. This is a cropped tile out of a multi-cell LAPEL / GORGE MEASUREMENT chart: jacket FRONTS on grey mannequin busts, each with a red measurement arrow across the lapel notch, and printed captions under the cells reading '5.5cm' and '6cm' (plus the red in-figure labels '5.5cm' and '6cm'). Rows of further front-view cells are cut off at the top and bottom of the crop. No jacket back, no seat, no vent of any kind appears in the image."
+    },
+    {
+      "blueprint": "/images/jacket/back-vent/no-vent.jpg",
+      "labels": ["No Vent"],
+      "verdict": "MISMATCH",
+      "evidence": "Same lapel-measurement chart as center-vent.jpg, a different crop. Two jacket FRONT cells with red gorge/notch measurement arrows and printed captions '4.5cm' and '5cm' (in-figure red labels '4.5cm' and '5cm'). This is a lapel-width diagram, not a back-vent diagram - there is no back view at all, so it cannot express 'no vent'."
+    },
+    {
+      "blueprint": "/images/jacket/back-vent/side-vents.jpg",
+      "labels": ["Side Vents"],
+      "verdict": "MISMATCH",
+      "evidence": "Same lapel-measurement chart again, a third crop. Jacket FRONT cells with red measurement arrows across the lapel notch and printed captions '6.5CM' and a partially cut-off '7...' (in-figure red labels '6.5cm' and '7cm'). No back view, no side seams, no vents."
+    },
+    {
+      "blueprint": "/images/blueprints/factory/7e10ed9447af__32C7__Left_besom_bttn_bttnhole.jpg",
+      "labels": ["Left Besom with Button & Buttonhole"],
+      "verdict": "MATCH",
+      "evidence": "Trouser BACK view (five belt loops, centre seat seam, no fly J-stitch - confirmed by comparison with the '31A0 No' sibling which is the same base drawing). A single horizontal red BESOM welt is drawn on one side of the seat (red pixels x201-513, y275-382; zero red in the opposite half), with a small red diamond-shaped mark hanging directly below the welt = the button/buttonhole tab. Single besom + button & buttonhole on one side only is exactly what the label claims. Minor caveat: the welt sits on the image-left, which on a rear view is the wearer's right - tech packs commonly label by drawing position, so 'Left' may be drawing-relative."
+    },
+    {
+      "blueprint": "/images/blueprints/factory/d1ec6888d1c1__31A0__No.jpg",
+      "labels": ["No Back Pockets"],
+      "verdict": "MATCH",
+      "evidence": "Trouser BACK view, identical base drawing to the '32C7 Left besom' sibling (five belt loops, centre seat seam, back darts) but with the seat completely clean - zero red pixels in the whole file and no welt, no jetting, no button. Because the sibling image places a pocket in exactly this area, the empty seat reads unambiguously as 'no back pockets'."
+    },
+    {
+      "blueprint": "/images/blueprints/factory/8f065c084861__K.jpg",
+      "labels": ["13 cm"],
+      "verdict": "MATCH",
+      "evidence": "Waistband EXTENSION construction detail: waistband curtain (zigzag top edge), fly/zip area, and the extension tab outlined in red with a pointed V end, dimensioned by a red caption reading exactly '13cm'. The red tab is visibly the longest of the set, consistent with the largest value. (Unrelated boxed annotation in the drawing reads '洗水唛' = wash-care label placement.)"
+    },
+    {
+      "blueprint": "/images/blueprints/factory/b9c52226e508__L.jpg",
+      "labels": ["15 cm"],
+      "verdict": "MATCH",
+      "evidence": "Same waistband-extension detail drawing; red extension tab is the longest in the whole family and the red dimension caption reads exactly '15cm'."
+    },
+    {
+      "blueprint": "/images/blueprints/factory/17db92352b9c__A.jpg",
+      "labels": ["5 cm"],
+      "verdict": "MATCH",
+      "evidence": "Waistband-extension detail with the red-outlined extension tab and a red dimension caption reading exactly '5cm'; tab is the shortest of the set."
+    },
+    {
+      "blueprint": "/images/blueprints/factory/996d352c9178__B.jpg",
+      "labels": ["5.5 cm"],
+      "verdict": "MATCH",
+      "evidence": "Waistband-extension detail; red dimension caption reads '5. 5cm' (space is a rendering artefact of the source drawing), matching the 5.5 cm label. Tab length sits between the 5cm and 6cm siblings."
+    },
+    {
+      "blueprint": "/images/blueprints/factory/ef0fb41e2ad1__C.jpg",
+      "labels": ["6 cm"],
+      "verdict": "MATCH",
+      "evidence": "Waistband-extension detail; red dimension caption reads exactly '6cm', and the red extension tab is proportionally longer than the 5.5cm sibling."
+    },
+    {
+      "blueprint": "/images/blueprints/factory/bd9c06045808__D.jpg",
+      "labels": ["6.5 cm"],
+      "verdict": "MATCH",
+      "evidence": "Waistband-extension detail; red dimension caption reads exactly '6.5cm'."
+    },
+    {
+      "blueprint": "/images/blueprints/factory/a9b053b81635__E.jpg",
+      "labels": ["7 cm"],
+      "verdict": "MATCH",
+      "evidence": "Waistband-extension detail; red dimension caption reads exactly '7cm'."
+    },
+    {
+      "blueprint": "/images/blueprints/factory/2b3c7bcf74ef__31A3__0.6cm_top_stitch.jpg",
+      "labels": ["Curved Fly Stitch"],
+      "verdict": "MISMATCH",
+      "evidence": "Wrong garment part. The drawing is a trouser FRONT, but the red topstitch highlight is entirely on the two slant SIDE-POCKET openings, not on the fly: red pixels occupy x61-1125 with EXACTLY ZERO red pixels in the centre third (x450-750) where the fly sits. A 3x zoom of the left hip shows the red line running parallel and just inside a black diagonal that descends from the waistband to the hip and terminates in a bar-tack tick - a classic quarter-top/slant pocket mouth. The centre-front fly J-stitch is drawn as a plain unhighlighted black line, identical to its 'no topstitch' sibling, which proves the option family is not about the fly. Nothing curved-vs-straight about a fly is expressed."
+    },
+    {
+      "blueprint": "/images/blueprints/factory/10bfe4668d92__31A6__No_top_stitch_hidden_stitch.jpg",
+      "labels": ["No Fly Topstitch"],
+      "verdict": "AMBIGUOUS",
+      "evidence": "A real, correct trouser FRONT drawing that does include the fly, and it contains zero red pixels - so 'no topstitching' is depicted by absence, which is defensible. But it cannot express that the absent stitching is on the FLY: it is the same base drawing as its two siblings (31A1/31A3), and in those siblings the red topstitch is applied to the slant side-pocket mouths, never to the fly. The fly J-curve is rendered identically as a bare black line in all three files, so a viewer has nothing here that reads as a fly-topstitch option."
+    },
+    {
+      "blueprint": "/images/blueprints/factory/e081e2a8c319__31A1__0.15cm_top_stitch.jpg",
+      "labels": ["Straight Fly Stitch"],
+      "verdict": "MISMATCH",
+      "evidence": "Same problem as its 0.6cm sibling: trouser FRONT with the red topstitch highlight on the two slant SIDE-POCKET openings only - red pixels x84-1120 with ZERO red in the centre third (x450-750) where the fly is. The fly J-stitch is plain black and unhighlighted. The file is a genuinely different image from the 0.6cm sibling (11,614 vs 17,431 red pixels, i.e. a thinner stitch offset matching 0.15cm vs 0.6cm), but the feature being dimensioned is pocket topstitching, not fly topstitching."
+    },
+    {
+      "blueprint": "/images/blueprints/factory/48f3c94b03b0__3024__Double_toward_fly.jpg",
+      "labels": ["Double Forward Pleats"],
+      "verdict": "MATCH",
+      "evidence": "Trouser FRONT with exactly four red pleat strokes measured in the pleat band - two on the left (x369-398, x439-454) and two on the right (x723-737, x780-809) - i.e. DOUBLE pleats on each side, plainly legible. A red magnifier-circle callout at top-left enlarges the pleat fold in cross-section to indicate fold direction (toward the fly). The count discriminator is unmistakable; the forward-vs-reverse direction rests on the small inset, which is legible but modest."
+    },
+    {
+      "blueprint": "/images/blueprints/remote/c8538a87dffb__3441.jpg",
+      "labels": ["Standard, Piping & Snugtex"],
+      "verdict": "MISMATCH",
+      "evidence": "Effectively a blank asset. The entire 1200x1200 file contains nothing but one long thin horizontal band (ink bbox x42-1149, y515-669): a black-outlined rectangle with a solid red stripe running edge to edge through the middle (red pixels y556-610). There is no waistband, no curtain, no piping edge, no Snugtex gripper texture, no seam, no scale, no callout and no caption - verified at 8x vertical zoom, the red stripe is a flat solid fill with no internal detail. It cannot depict any of the three things the label names."
+    },
+    {
+      "blueprint": "/images/jacket/shoulder-head/con-rollino.jpg",
+      "labels": ["Con Rollino", "Con Rollino/ THE CONTINENTAL SHOULDER"],
+      "verdict": "AMBIGUOUS",
+      "evidence": "Correct area: a 240x200 jacket FRONT with the shoulder seam and sleeve-head outer seam traced in red, and it is a genuinely distinct drawing from neapolitan.jpg. But at 20-22x zoom on both shoulder points the sleeve/shoulder junction is just a clean sharp angle with a straighter, slightly more extended shoulder line - no rollino roping, no raised sleeve-head roll is rendered, so the actual con-rollino construction cannot be read. Caption is clipped off by the bottom edge of the image; only the tops of four word-groups survive, consistent with 'Con rollino sho...' but not legible enough to quote. Too small and too under-drawn to confirm the discriminator."
+    }
+  ]
+}

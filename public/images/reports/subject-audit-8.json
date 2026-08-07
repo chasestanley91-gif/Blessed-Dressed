@@ -1,0 +1,90 @@
+{
+  "batch": 8,
+  "checked": 14,
+  "results": [
+    {
+      "blueprint": "/images/blueprints/remote/3c70f95c470f__3135.jpg",
+      "labels": ["Arc Jeans Pocket"],
+      "verdict": "MATCH",
+      "evidence": "Trouser hip, 3/4 view. No caption text anywhere in the drawing. A red-outlined pocket opening runs from the waistband seam, drops vertically, turns through a smooth ROUNDED radius and sweeps across to the side seam, where it curves down in a soft hook. Same base line-art as its sibling 134adbb9c138__3134.jpg (Diamond Jeans Pocket); overlaid side by side the only difference is the corner treatment - this one is rounded/curved, the diamond one is sharply angled with a pointed dogleg. Correct garment area (front/western jeans pocket, waistband-to-side-seam) and the arc-vs-angular discriminator is present, though it is subtle and only obvious when the two are compared directly."
+    },
+    {
+      "blueprint": "/images/blueprints/factory/1c5aed3c1ce4__3104__2.5cm_slant.jpg",
+      "labels": ["2.5 cm Slant Pocket"],
+      "verdict": "AMBIGUOUS",
+      "evidence": "Trouser hip, 3/4 view, no caption text. Shows a slanted front pocket opening drawn in BLACK (line runs from the waistband seam down and back to the side seam, terminating in a bar tack) plus an unrelated rear besom pocket with a dart above it. It is the right garment area and the right pocket family (a slant / quarter-top opening, no side stripe). BUT: unlike every other blueprint in this family this file has ZERO red highlight (verified programmatically: 0 red pixels), so nothing marks which feature is being sold, and the opening carries no dimension callout. The catalog has six slant variants that differ only by amount (2.0 / 2.5 / 3.2 / 5.1 cm, plus striped versions); measuring the offset against the ~4 cm waistband gives roughly 3 cm, which cannot distinguish 2.5 from 3.2. The specific 2.5 cm discriminator is not expressible from this drawing."
+    },
+    {
+      "blueprint": "/images/blueprints/remote/01dc8f37109e__3132.jpg",
+      "labels": ["Welt Front Pocket"],
+      "verdict": "MATCH",
+      "evidence": "Trouser hip, 3/4 view, no caption text. A long narrow VERTICAL welt/jetted opening is outlined in red on the front thigh, just forward of the side seam (red bbox x[424-498] y[273-758] - tall and narrow, i.e. a vertical slot). Unmistakably a vertical welt front pocket and clearly distinct from the slant and jeans-pocket variants in the same family."
+    },
+    {
+      "blueprint": "/images/blueprints/factory/b14a71bdfdb9__3413__Round_hook_btn.jpg",
+      "labels": ["Round, Hook & Button"],
+      "verdict": "MATCH",
+      "evidence": "Trouser waistband with the fly laid open to expose the extension tab. No caption text. The extension tab is outlined in red and its free end is plainly ROUNDED (a semicircular D-shaped end, not pointed and not square). Inside the red tab are a red ring (hook/button) and a red vertical slot (buttonhole); the matching underlap carries a red button circle and a red buttonhole slot. Round end + hook + button all shown, exactly as labelled. NOTE for the catalog (not an image fault): this label is attached to option id 'ext-pointed', and its siblings are similarly scrambled ('ext-straight' = 'Sharp...', 'ext-curved' = 'Square...') - the ids contradict the labels, the image follows the label."
+    },
+    {
+      "blueprint": "/images/blueprints/remote/134adbb9c138__3134.jpg",
+      "labels": ["Diamond Jeans Pocket"],
+      "verdict": "MATCH",
+      "evidence": "Trouser hip, 3/4 view, no caption text. Red-outlined pocket opening from the waistband seam down and across to the side seam, with SHARP angular corners: a hard bend at the top-outer corner, a straight diagonal run, and a pointed V-shaped kink where it meets the side seam. Directly compared with 3c70f95c470f__3135.jpg (Arc), the two share the identical base drawing and differ only in that this one is faceted/pointed and the arc one is rounded. Correct feature and the angular 'diamond' discriminator is present, though subtle at thumbnail size."
+    },
+    {
+      "blueprint": "/images/blueprints/factory/bad6c1a76bae__3607__6.4cm.jpg",
+      "labels": ["Plain Hem 6.4 cm"],
+      "verdict": "AMBIGUOUS",
+      "evidence": "Trouser side view with the lower leg enlarged; no caption text. A single red horizontal line marks the hem-allowance depth near the bottom of the leg, and the leg bottom is PLAIN (no turn-up/cuff), which is correct for a plain hem. Measured programmatically: red line mid y=1076.5, hem edge y=1153, depth = 76.5 px on a leg-detail 646 px tall. Its sibling 6ddcbc615b71__3608.jpg (Plain Hem 7.0 cm) measures 89.5 px on a 650 px leg - so a real difference exists in the correct direction, but it is 13 px in a 1200 px image between two otherwise near-identical drawings. A 6 mm depth difference is not visually readable by a customer at catalog size. Also note the option id is 'hem-blind' (a blind-stitch vs machine-stitch idea) which a line drawing could never express at all."
+    },
+    {
+      "blueprint": "/images/blueprints/remote/6ddcbc615b71__3608.jpg",
+      "labels": ["Plain Hem 7.0 cm"],
+      "verdict": "AMBIGUOUS",
+      "evidence": "Same drawing family as 3607; no caption text. Red horizontal hem-depth line, plain uncuffed leg bottom - correct for a plain hem. Measured: red line mid y=1065.5, hem edge y=1155, depth = 89.5 px vs 76.5 px for the 6.4 cm sibling, on identically scaled drawings (leg detail 650 px vs 646 px). Direction is right (7.0 cm reads deeper than 6.4 cm) but the 13 px delta is not perceptible next to its sibling. Option id is 'hem-machine-plain', implying a stitching-method discriminator the drawing cannot show."
+    },
+    {
+      "blueprint": "/images/blueprints/remote/f0e67f33563a__302M.jpg",
+      "labels": ["Flat Front, Single Dart"],
+      "verdict": "MATCH",
+      "evidence": "Straight-on trouser front, no caption text. The front is smooth - no pleat fold lines anywhere - and exactly ONE short red tapered dart hangs from the waistband seam on each front panel (one dart per side = 'single dart'). Fly curve, crease lines and side slant pockets are drawn in black. Both halves of the label ('flat front' and 'single dart') are visible and unambiguous."
+    },
+    {
+      "blueprint": "/images/blueprints/remote/7f475092fe8b__3532.jpg",
+      "labels": ["Both Sides"],
+      "verdict": "MATCH",
+      "evidence": "Trouser interior view with both front pocket bags turned out; no caption text. Two small red U-shaped pouch outlines appear, one on the LEFT bag and one on the RIGHT bag, symmetric about the centre (red bbox spans x[170-1037] - i.e. two marks at opposite ends of the frame). Two mirrored coin pockets is exactly the 'Both Sides' discriminator, and it is impossible to misread as left-only or right-only."
+    },
+    {
+      "blueprint": "/images/blueprints/factory/2a5f7a6c70e1__3171__Left_welt.jpg",
+      "labels": ["Left Welt"],
+      "verdict": "MISMATCH",
+      "evidence": "NO watch pocket is depicted at all. Verified programmatically: this file contains ZERO red highlight pixels, while all three of its siblings (3180 Regular Right, 3181 Right Welt, 3188 Right Besom) carry a red-marked watch pocket at identical coordinates x[761-884] y[181-233] just under the waistband. Mirroring this image and overlaying it on 3181 (Right Welt) shows they are the SAME base line drawing, correctly aligned - and the exact spot where 3181 has its red welt pocket is completely EMPTY here. The only welt-type pocket actually present in this drawing is the rear besom pocket with a dart above it, which is a different garment part. As shipped, this image would read to a customer as 'no watch pocket'."
+    },
+    {
+      "blueprint": "/images/blueprints/remote/50184b7abbb4__3188.jpg",
+      "labels": ["Right Besom"],
+      "verdict": "MATCH",
+      "evidence": "Trouser front/side, no caption text. A small pocket immediately below the waistband seam near the side seam is highlighted in red (bbox x[761-884] y[187-233]). Zoomed against its two siblings the mark is a SOLID FILLED slot - a jetted/besom opening with no raised welt piece - versus 3181 which shows an outlined raised welt lip and 3180 which shows only a thin slit line. Right-hand position and the besom construction are both expressed, though welt-vs-besom is a fine distinction at catalog thumbnail size."
+    },
+    {
+      "blueprint": "/images/blueprints/remote/9f85b09eb9d0__3181.jpg",
+      "labels": ["Right Welt"],
+      "verdict": "MATCH",
+      "evidence": "Trouser front/side, no caption text. Red-highlighted small pocket under the waistband near the side seam (bbox x[761-884] y[181-225]). Zoomed, the red outline encloses a distinct raised WELT strip drawn as a separate piece below the opening - clearly taller and with an inner lip, unlike the solid filled besom in 3188 and the bare slit in 3180. Right-side placement and welt construction both readable."
+    },
+    {
+      "blueprint": "/images/blueprints/factory/449292155f03__3180__Regular_right.jpg",
+      "labels": ["Regular Right"],
+      "verdict": "MATCH",
+      "evidence": "Trouser front/side, no caption text. Red highlight is a THIN horizontal bar hugging the waistband seam on the right (bbox x[761-884] y[181-207], only 26 px tall vs 44 px for the welt sibling) - a plain seam-set slit opening with no welt lip and no filled jets. That is the 'regular' watch pocket, on the right, and it is visibly the lightest-weight of the three right-hand variants."
+    },
+    {
+      "blueprint": "/images/options/vest/vest-ticket-left.jpg",
+      "labels": ["Left Welt"],
+      "verdict": "MATCH",
+      "evidence": "Waistcoat front (V-neck, 5 buttons, pointed hem); no caption text. A single red-outlined horizontal WELT pocket sits on the front panel to the viewer's right of the button placket - i.e. the wearer's left front in a standard front view. Confirmed against siblings in the same folder: vest-ticket-right.jpg is the exact MIRROR of this drawing (red bbox x[499-635] with the placket on the image right, versus x[564-696] with the placket on the image left here), and vest-ticket-none.jpg has no red mark at all. The left/right side discriminator is therefore genuinely encoded, and the pocket is drawn as a welt rather than a besom or flap."
+    }
+  ]
+}

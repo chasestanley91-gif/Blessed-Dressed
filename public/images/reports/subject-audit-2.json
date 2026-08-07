@@ -1,0 +1,132 @@
+{
+  "batch": 2,
+  "checked": 21,
+  "results": [
+    {
+      "blueprint": "/images/jacket/inner-pocket-closure/i-bartack.jpg",
+      "labels": ["I-Bartack"],
+      "verdict": "MISMATCH",
+      "evidence": "Crop shows two round 4-hole buttons stacked vertically at the left edge beside a double vertical garment edge line - a sleeve/cuff button column. There is no inner pocket, no welt or pocket mouth, and no bartack stitch bar anywhere in frame. Decisive: its sibling x-bartack.jpg is the same button column mirrored, so the pair differs by SIDE, not by I-shaped vs X-shaped bartack. The field's discriminator is entirely absent."
+    },
+    {
+      "blueprint": "/images/jacket/inner-pocket-closure/none.jpg",
+      "labels": ["None (Open)"],
+      "verdict": "MISMATCH",
+      "evidence": "Essentially blank. The whole 240x200 canvas is paper-white except one thin vertical line down the left side. No pocket, no interior facing, no garment feature at all - nothing that could depict an open (unclosed) inner pocket."
+    },
+    {
+      "blueprint": "/images/jacket/inner-pocket-closure/x-bartack.jpg",
+      "labels": ["X-Bartack"],
+      "verdict": "MISMATCH",
+      "evidence": "Shows two 4-hole buttons with pink/red horizontal keyhole BUTTONHOLES drawn to the left of each, against a vertical garment edge line - a cuff/placket button-and-buttonhole diagram. No X-shaped bartack, no pocket mouth, no pocket at all. Mirror image of i-bartack.jpg."
+    },
+    {
+      "blueprint": "/images/jacket/inner-ticket-pocket/left.jpg",
+      "labels": ["Left"],
+      "verdict": "MISMATCH",
+      "evidence": "Pure text, no drawing whatsoever. The crop is a column of Chinese hand-sewing operations: 手工封胸袋/ 手工捉袖山头里/ 手工捉袖口里/ 手工捉下摆里/ 手工捉后叉里/ 手工内珠边/ 手工套结封下口袋/ 手工捉里子肩缝/ 手工捉领底呢 (hand-close chest pocket / hand-stitch sleeve-head lining / hand-stitch cuff lining / hand-stitch hem lining / hand-stitch back-vent lining / hand inner pick-stitch edge / hand bartack closing lower pocket / hand-stitch lining shoulder seam / hand-stitch undercollar felt). This is a hand-work specification list, not a ticket pocket illustration."
+    },
+    {
+      "blueprint": "/images/jacket/inner-ticket-pocket/none.jpg",
+      "labels": ["None"],
+      "verdict": "MISMATCH",
+      "evidence": "A text fragment cut mid-character. Shows a lone black glyph 工 and a red partial …准) - the tail of (以选项为准) meaning 'subject to the selected option' - against a navy table border. No garment, no pocket, no drawing."
+    },
+    {
+      "blueprint": "/images/jacket/inner-ticket-pocket/right.jpg",
+      "labels": ["Right"],
+      "verdict": "MISMATCH",
+      "evidence": "Crop of a table heading, cut mid-word: black 部位手… ('part / hand-work…') above red (以选项为… ('subject to the selected…'), with the navy cell border on the left. Text only - no garment and no pocket, and nothing expressing left vs right."
+    },
+    {
+      "blueprint": "/images/jacket/mp3-pocket/left.jpg",
+      "labels": ["Left Inner"],
+      "verdict": "MISMATCH",
+      "evidence": "Jacket-interior line drawing captioned in English 'Diamond shape left pocket', with the neighbouring grid cell's caption 'RIGHT JET[TED]' cut off at the right edge. These are the PEN-POCKET option captions, so this is a crop of the pen-pocket option grid, a different field entirely - it does not depict an MP3/media pocket."
+    },
+    {
+      "blueprint": "/images/jacket/mp3-pocket/none.jpg",
+      "labels": ["None"],
+      "verdict": "MISMATCH",
+      "evidence": "Captioned 'Left jetted pocket' inside a navy selected-state box with a large blue checkmark, alongside the neighbouring caption 'Drop shape left p[ocket]'. Wrong on two counts: it is the pen-pocket option grid rather than the MP3 pocket, and it shows a pocket PRESENT and actively selected while the label is 'None'."
+    },
+    {
+      "blueprint": "/images/jacket/mp3-pocket/right.jpg",
+      "labels": ["Right Inner"],
+      "verdict": "MISMATCH",
+      "evidence": "Jacket interior captioned 'Drop shape right pen pocket', with the neighbouring cell reading 'Diamo[nd]'. The caption explicitly names the PEN pocket, not an MP3 pocket - a crop of the wrong option grid."
+    },
+    {
+      "blueprint": "/images/jacket/namecard-pocket/both.jpg",
+      "labels": ["Both Sides"],
+      "verdict": "MISMATCH",
+      "evidence": "Crop of the neck/shoulder corner of a jacket front panel, with a red dashed stitch line running along the SHOULDER SEAM. No pocket, no interior facing, and only one side of the garment is in frame - so it cannot express 'both sides' either."
+    },
+    {
+      "blueprint": "/images/jacket/namecard-pocket/left.jpg",
+      "labels": ["Left Inner"],
+      "verdict": "MISMATCH",
+      "evidence": "The same neckline/shoulder-corner pattern piece as both.jpg but mirrored, again with red dashed stitching along the shoulder seam, plus stray sleeve-button and thread marks clipped at the bottom edge. A shoulder-seam construction detail, not a namecard pocket."
+    },
+    {
+      "blueprint": "/images/jacket/namecard-pocket/none.jpg",
+      "labels": ["None"],
+      "verdict": "MISMATCH",
+      "evidence": "Two unrelated fragments side by side: a collar/undercollar pattern piece with red hatch marks, and a sleeve-cuff corner showing a column of 4 stacked buttons against a red dash-dot vent line. A cuff-button diagram - no jacket interior and no pocket."
+    },
+    {
+      "blueprint": "/images/jacket/namecard-pocket/right.jpg",
+      "labels": ["Right Inner"],
+      "verdict": "MISMATCH",
+      "evidence": "A sleeve-cuff/vent corner with 4 stacked black buttons and a red 'X' mark beneath them. This is a sleeve button diagram; there is no interior facing and no namecard pocket anywhere in frame."
+    },
+    {
+      "blueprint": "/images/jacket/pen-pocket/left-diamond.jpg",
+      "labels": ["Left Diamond"],
+      "verdict": "MISMATCH",
+      "evidence": "Essentially blank - white canvas with a single diagonal line near the right edge and nothing else. No pocket, no diamond-shaped welt, no identifiable garment part."
+    },
+    {
+      "blueprint": "/images/jacket/pen-pocket/left-drop.jpg",
+      "labels": ["Left Drop-shape"],
+      "verdict": "MISMATCH",
+      "evidence": "Upper-body crop showing the back neckline/collar band (double horizontal line with the centre-back seam dropping from it) and the collar-to-lapel NOTCH highlighted in red, with the lapel edge running down to the lower right. This is a gorge/notch geometry diagram, not a pen pocket, and there is no drop-shaped welt anywhere."
+    },
+    {
+      "blueprint": "/images/jacket/pen-pocket/left-jetted.jpg",
+      "labels": ["Left Jetted"],
+      "verdict": "MISMATCH",
+      "evidence": "The same collar-to-lapel notch highlighted in red as left-drop.jpg, mirrored to the opposite side of the frame. No jetted pocket, no welt lips, no pocket mouth - lapel/gorge geometry only."
+    },
+    {
+      "blueprint": "/images/jacket/pen-pocket/right-diamond.jpg",
+      "labels": ["Right Diamond"],
+      "verdict": "MISMATCH",
+      "evidence": "Again the collar band with centre-back seam plus the red-highlighted collar-to-lapel notch, with a stray diagonal line at the right of frame. Gorge/notch geometry; no diamond pocket and no pocket of any kind."
+    },
+    {
+      "blueprint": "/images/jacket/pen-pocket/right-drop.jpg",
+      "labels": ["Right Drop-shape"],
+      "verdict": "MISMATCH",
+      "evidence": "Red-highlighted collar/lapel notch positioned at the right of frame, with two heavy diagonal lines at the far left. Lapel gorge detail - no pocket of any shape is drawn."
+    },
+    {
+      "blueprint": "/images/jacket/pen-pocket/right-jetted.jpg",
+      "labels": ["Right Jetted"],
+      "verdict": "MISMATCH",
+      "evidence": "Essentially blank - white canvas with only two diagonal lines at the right edge. No pocket, no jetting, no identifiable garment part."
+    },
+    {
+      "blueprint": "/images/blueprints/supplier/b92433d52b1a__0549__Left_three_right_two.png",
+      "labels": ["Three Left / Two Right"],
+      "verdict": "MATCH",
+      "evidence": "Clean 384x482 front-view lapel drawing (largest and clearest asset in the batch). Counted at 10x magnification: the viewer-right lapel carries exactly THREE red buttonhole dashes, the viewer-left lapel exactly TWO. In a front view the wearer's left lapel appears on the viewer's right, so this reads three buttonholes on the left lapel and two on the right - exactly the labelled 3/2 split, matching the supplier filename 'Left_three_right_two'. Both mark clusters sit on the lapel face above the notch, so the discriminator (count and side) is unambiguously drawn."
+    },
+    {
+      "blueprint": "/images/jacket/shoulder-head/natural.jpg",
+      "labels": ["Natural"],
+      "verdict": "AMBIGUOUS",
+      "evidence": "A genuine full front-view jacket line drawing (notch lapel, chest welt pocket) with the shoulders in frame, so the garment region is correct and the subject is not wrong. But the sleeve-head expression cannot be read: the caption strip at the bottom is clipped by the crop and is illegible, and stacking the shoulder band against its three siblings (regular.jpg, con-rollino.jpg, neapolitan.jpg) shows four essentially identical plain sloping shoulder lines - no roping, no shirring, no raised sleeve head. At 240x200 nothing separates 'Natural' from roped or Neapolitan, so the discriminator is not expressible."
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "batch": 5,
+  "checked": 21,
+  "results": [
+    {
+      "blueprint": "/images/brand_label_position/picture-1114.jpg",
+      "labels": ["Position 3"],
+      "verdict": "MATCH",
+      "evidence": "Shirt front technical flat with a red position marker 'B' and a leader line pointing to the bottom of the front placket at the side-vent split. It is a genuine brand-label position diagram and marks one specific spot. Sibling images confirm the scheme is offset by one: blp-2 'Position 2' = picture-1113 marked 'A' (bottom placket, slightly lower/left), blp-4 'Position 4' = picture-1115 marked 'C' (inside back neck), so Position 3 = 'B' is internally consistent."
+    },
+    {
+      "blueprint": "/images/brand_label_position/picture-1115.jpg",
+      "labels": ["Position 4"],
+      "verdict": "MATCH",
+      "evidence": "Shirt front flat with a red letter 'C' at the top-left and a small red woven label drawn inside the back neck, visible through the collar opening. A distinct label position from siblings 'A' and 'B' (both bottom-placket). Caveat worth recording: this file is byte-identical (md5 ebafd691b1862d8f482d6e964c3f9b25) to /images/fabric_label_position/picture-1111.jpg, which is assigned to a different field."
+    },
+    {
+      "blueprint": "/images/fabric_label_position/picture-1111.jpg",
+      "labels": ["Position 2"],
+      "verdict": "MISMATCH",
+      "evidence": "Byte-identical (md5 ebafd691b1862d8f482d6e964c3f9b25) to /images/brand_label_position/picture-1115.jpg, i.e. it is the BRAND label 'Position 4' drawing. The drawing carries the red letter 'C', which belongs to the brand-label A/B/C marker scheme (A=blp-2, B=blp-3, C=blp-4), not to a two-option fabric-label scheme. The field's other image, picture-1110.jpg, is likewise byte-identical (md5 240fc927f0c0b300d4d1b1db564bd232) to brand_label_position/picture-1112.jpg, which is not a diagram at all but a red text card reading '不订 / No Button'. The entire fabric_label_position image set is copied wholesale out of brand_label_position."
+    },
+    {
+      "blueprint": "/images/cuff_lining/cuff-lining-hard-fc390057.jpg",
+      "labels": ["Hard FC390057"],
+      "verdict": "AMBIGUOUS",
+      "evidence": "Cuff drawn in perspective with an interlining swatch peeled back, captioned '袖克夫厚衬 / Cuff Heavy Interlining'. Correct family (heavy = hard), but it is the same drawing as cuff-lining-hard.jpg (225x225 vs 226x226, different bytes, visually identical) and nothing in the image identifies the FC390057 interlining code, which is the only thing separating this option from plain 'Hard'."
+    },
+    {
+      "blueprint": "/images/cuff_lining/cuff-lining-hard.jpg",
+      "labels": ["Hard"],
+      "verdict": "MATCH",
+      "evidence": "Caption reads '袖克夫厚衬 / Cuff Heavy Interlining' with a dark cross-hatched (heavy) interlining swatch shown inside the cuff. Discriminates cleanly against its siblings, which are captioned '袖克夫标准衬 / Cuff Standard Interlining' (Normal) and '袖克夫软衬 / Cuff Soft Interlining' (Soft), each with progressively lighter swatch shading."
+    },
+    {
+      "blueprint": "/images/cuff_pleat/double-pleat.jpg",
+      "labels": ["Double Pleat"],
+      "verdict": "MATCH",
+      "evidence": "Sleeve with placket and cuff; TWO red pleat lines are drawn side by side running down the sleeve and terminating at the cuff seam, each hooking at the bottom. Exactly two pleats, which is the discriminator against the sibling 'Single Pleat' option."
+    },
+    {
+      "blueprint": "/images/collar_splicing/single-left-placket-edge.jpg",
+      "labels": ["Single Left Placket Edge"],
+      "verdict": "MATCH",
+      "evidence": "Collar/upper-front flat with ONE solid red contrast band running vertically down the LEFT edge of the front placket, starting at the collar button. Single band on the left placket edge — matches the label and discriminates against the sibling 'Double Left Placket Edges'."
+    },
+    {
+      "blueprint": "/images/collar_splicing/triangle-collar-point.jpg",
+      "labels": ["Triangle Collar Point"],
+      "verdict": "MATCH",
+      "evidence": "Collar flat with solid red TRIANGLES filling both collar points, plus a blue leader line and callout reading '拼2cm' ('spliced 2 cm') pointing at the right-hand triangle. Both the shape (triangle) and the location (collar point) are explicit."
+    },
+    {
+      "blueprint": "/images/techpacks/shirt/decoration_stitching_on_placket/machine-01cm-top-stitching-on-inner-plain-placket.jpg",
+      "labels": ["Machine 0.1 cm Top Stitching"],
+      "verdict": "AMBIGUOUS",
+      "evidence": "Correct garment part: shirt front from chest to hem showing the placket with four buttons, the hem curve and the side-vent gusset. A solid red stitch line runs down the placket's left edge and a red dashed line runs parallel down its right edge, plus a red dashed line across the gusset. But there is no dimension callout anywhere, so 0.1 cm cannot be distinguished from the field's 0.3 cm and 0.5 cm siblings. Note also that this file is by its own name the 'inner plain placket' drawing, which is a separate option (stitch-01-inner-plain) in the same field."
+    },
+    {
+      "blueprint": "/images/decoration_stitching_on_shoulder/machine-06cm-top-stitching.jpg",
+      "labels": ["Machine 0.6 cm Top Stitching"],
+      "verdict": "MATCH",
+      "evidence": "Shoulder/armhole junction detail with the shoulder-seam band at upper left and the armhole curve below it. A pink/red topstitch line traces the seam, and a grey leader line carries the printed callout '0.6cm明线' — literally '0.6 cm topstitch'. The measurement discriminator is written on the drawing. (Minor caveat: the highlighted stitch line runs mostly down the armhole seam from the shoulder point rather than along the shoulder seam itself.)"
+    },
+    {
+      "blueprint": "/images/techpacks/shirt/decoration_stitching_on_collar/none.jpg",
+      "labels": ["None"],
+      "verdict": "MISMATCH",
+      "evidence": "Wrong garment part. This is the COLLAR field's illustration — the path itself is decoration_stitching_on_collar/none.jpg — showing a collar, collar band and front placket, with a large circular magnifier inset blown up on the COLLAR POINT and band edge. It is assigned to shl-stitch-none in decoration_stitching_on_shoulder (Shoulder Seam Stitching). The shoulder seams appear only as incidental lines running off the left and right edges and are not the subject; the detail circle is entirely about the collar."
+    },
+    {
+      "blueprint": "/images/blueprints/remote/cefac731f303__31A1.jpg",
+      "labels": ["0.15 cm Topstitch"],
+      "verdict": "AMBIGUOUS",
+      "evidence": "Trouser front flat (waistband, belt loops, fly, front pleats) with thick solid red lines tracing both SLANTED SIDE-POCKET MOUTHS. Right garment part for a trouser pocket-stitching option, but the red strokes mark the pocket opening, not a stitch row — there are no stitch dots and no dimension callout, so 0.15 cm cannot be told from the field's 0.6 cm topstitch / 0.1+0.7 double / pick-stitch siblings. Those siblings use factory drawings whose filenames encode the spec (31A3__0.6cm_top_stitch, 31A6__No_top_stitch_hidden_stitch, 31A9__With_0.1_0.7_top_stitching); this one (31A1) fits the same series but carries no annotation."
+    },
+    {
+      "blueprint": "/images/sleeve_tab/inner-sleeve-tab.jpg",
+      "labels": ["Inner Sleeve Tab"],
+      "verdict": "MATCH",
+      "evidence": "Shirt flat with a short sleeve; a narrow, pointed, red-outlined TAB with a button sits at the sleeve opening on the outboard edge, drawn with a dashed inner line indicating a concealed/underside part. It is unmistakably a sleeve tab, and the field's only other option is 'None', so presence/absence is fully discriminated. The word 'Inner' itself is not stated or dimensioned in the drawing (there is no 'outer' variant in the field to contrast against)."
+    },
+    {
+      "blueprint": "/images/blueprints/supplier/f97bc3d4910c__0231__Besom.jpg",
+      "labels": ["Straight Jetted Pocket 4 cm"],
+      "verdict": "MATCH",
+      "evidence": "Jacket fronts (lower hip area, button and buttonhole marks at centre front) with both hip pockets highlighted in red as a NARROW HORIZONTAL DOUBLE-WELT band with no flap — the classic jetted/besom pocket, and the pocket mouths are level, not slanted. Filename token 'Besom' agrees. The '4 cm' figure has no dimension callout in the drawing and cannot be verified; the same file also serves the sibling 'Straight Jetted Pocket' option."
+    },
+    {
+      "blueprint": "/images/blueprints/supplier/b795127dc02f__02A1__Regular_slanted.jpg",
+      "labels": ["Slanted Flap 5.5 cm"],
+      "verdict": "MATCH",
+      "evidence": "Same jacket-front template with both hip pockets highlighted in red as deep quadrilateral FLAPS set on a clear diagonal (front edge noticeably higher than the side edge). Both the flap and the slant are unmistakable, and it reads distinctly against the level-flap and no-flap siblings. Filename token 'Regular_slanted' agrees. The 5.5 cm flap depth is not dimensioned."
+    },
+    {
+      "blueprint": "/images/blueprints/supplier/0135c80fdb4e__0201__Regular.jpg",
+      "labels": ["Straight Jetted Flap 5.0 cm", "Straight Jetted Flap 6.0 cm"],
+      "verdict": "AMBIGUOUS",
+      "evidence": "Correct pocket type: jacket fronts with both hip pockets highlighted in red as level, horizontal rectangular FLAPS (not slanted, not flapless). But the flap-depth discriminator cannot be expressed — this single file is the illustration for lp-straight-jetted-50, -55, -60 AND -65 in the same field, and the two options audited here (5.0 cm and 6.0 cm) point at exactly the same pixels. No dimension callout appears anywhere in the drawing."
+    },
+    {
+      "blueprint": "/images/techpacks/shirt/back/box-pleat-to-bottom.jpg",
+      "labels": ["Box Pleat to Bottom with Double Darts"],
+      "verdict": "MATCH",
+      "evidence": "Shirt BACK flat showing both required features: a red centre BOX PLEAT drawn as two parallel red lines running from the yoke seam all the way down to the hem, PLUS two long curved red DART lines, one either side of the pleat. Note the filename is misleading but the catalog assignment is right — the sibling file box-pleat-to-bottom-with-double-darts.jpg actually shows the box pleat with NO darts, and that file is correctly assigned to the 'Box Pleat to Bottom' option."
+    },
+    {
+      "blueprint": "/images/back/inverted-center-pleats.jpg",
+      "labels": ["Inverted Center Pleats"],
+      "verdict": "MATCH",
+      "evidence": "Shirt back with two short red pleat lines that MEET at a single point on the yoke seam and splay apart as they run down, forming an inverted 'Λ'. This is the exact discriminator against the sibling center-pleats.jpg, where the same two lines drop straight down parallel and separated. Zoomed comparison of both files confirms the difference."
+    },
+    {
+      "blueprint": "/images/back/napoli-yoke-with-double-darts.jpg",
+      "labels": ["Napoli Yoke with Double Darts"],
+      "verdict": "MATCH",
+      "evidence": "Shirt back with a dense band of fine radiating gather lines hanging beneath the yoke seam across the full width — the Napoli/Naples gathered yoke — together with two long vertical darts running down the back panel. Both named features present."
+    },
+    {
+      "blueprint": "/images/back/napoli-without-dart.jpg",
+      "labels": ["Napoli without Dart"],
+      "verdict": "MATCH",
+      "evidence": "Identical shirt-back template with the same Napoli gathered-yoke shirring under the yoke seam, and NO dart lines anywhere on the back panel. Directly discriminates against its 'with Double Darts' sibling, which is the same drawing plus two vertical darts."
+    },
+    {
+      "blueprint": "/images/back/side-pleats-with-double-darts.jpg",
+      "labels": ["Side Pleats with Double Darts"],
+      "verdict": "MATCH",
+      "evidence": "Shirt back showing both features: two SHORT red pleat marks dropping from the yoke seam near the left and right shoulder blades (side pleats), plus two LONG red dart lines lower down the back panel. Four red marks total, correctly split between pleats and darts."
+    }
+  ]
+}
