@@ -36,7 +36,27 @@ yarn-error.log*
 
 # Runtime data-store (JSON files written by admin) — data lives in Vercel Blob on prod
 # Ignore runtime-written data files but keep option definitions (static config with descriptions/images)
-/data-store/*.json
+# Runtime data-store. Customer data NEVER enters git — orders, bespoke-orders
+# and consultations hold names, emails, phone numbers and delivery addresses.
+/data-store/orders.json
+/data-store/bespoke-orders.json
+/data-store/consultations.json
+/data-store/image-review-*.json
+/data-store/image-rejections.json
+/data-store/blueprint-repoint.json
+
+# Site CONFIGURATION is tracked on purpose. The Blob store is suspended
+# (Hobby transfer allowance exhausted), and loadDataAsync falls back to these
+# committed files, so tracking them is what lets the local admin edit -> commit
+# -> push -> deploy loop work with no Blob at all. They contain no customer data.
+!/data-store/fabrics.json
+!/data-store/fabric-book.json
+!/data-store/site-settings.json
+!/data-store/content.json
+!/data-store/products.json
+!/data-store/collections.json
+!/data-store/accessories.json
+!/data-store/theme.json
 
 # vercel
 .vercel

@@ -41,8 +41,36 @@ export function saveData<T>(filename: string, data: T): void {
 const IS_VERCEL = !!process.env.VERCEL;
 const BLOB_TOKEN = process.env.BLOB_READ_WRITE_TOKEN;
 
+/**
+ * Short-lived read cache.
+ *
+ * Every public page is force-dynamic with staleTimes:0, so each request used to
+ * re-read every store it touches — and one Blob read is three network calls
+ * (list -> head -> fetch). A single homepage view pulls site-settings, theme,
+ * content, products, collections and accessories: roughly 18 Blob operations
+ * PER VISITOR. That is what exhausted the Hobby plan's 10 GB monthly transfer
+ * allowance and got the store suspended, with only 1.73 MB of data stored.
+ *
+ * A 60-second TTL collapses that to at most one read per store per minute per
+ * running instance — a ~99% reduction — while keeping the storefront fresh
+ * enough that an admin edit is visible almost immediately. saveDataAsync
+ * invalidates the key it writes, so the operator's OWN next read is never
+ * stale; the TTL only affects other visitors, and only for up to a minute.
+ */
+const READ_TTL_MS = 60_000;
+const readCache = new Map<string, { at: number; value: unknown }>();
+
+function cacheGet<T>(key: string): T | undefined {
+  const hit = readCache.get(key);
+  if (!hit) return undefined;
+  if (Date.now() - hit.at > READ_TTL_MS) { readCache.delete(key); return undefined; }
+  return hit.value as T;
+}
+
 export async function loadDataAsync<T>(filename: string, fallback: T): Promise<T> {
   if (IS_VERCEL && BLOB_TOKEN) {
+    const cached = cacheGet<T>(filename);
+    if (cached !== undefined) return cached;
     try {
       // Dynamic import so the package isn't required for local dev
       const { list, head } = await import("@vercel/blob");
@@ -67,7 +95,9 @@ export async function loadDataAsync<T>(filename: string, fallback: T): Promise<T
         headers: { authorization: `Bearer ${BLOB_TOKEN}` },
       });
       if (!res.ok) return loadData(filename, fallback);
-      return (await res.json()) as T;
+      const value = (await res.json()) as T;
+      readCache.set(filename, { at: Date.now(), value });
+      return value;
     } catch {
       // Blob can be unreachable for reasons that have nothing to do with the
       // data: a suspended store (billing inactive), a quota trip, an outage.
@@ -83,6 +113,9 @@ export async function loadDataAsync<T>(filename: string, fallback: T): Promise<T
 }
 
 export async function saveDataAsync<T>(filename: string, data: T): Promise<void> {
+  // Drop the cached copy first, so a failed write can never leave a stale value
+  // being served as if the save had succeeded.
+  readCache.delete(filename);
   if (IS_VERCEL && BLOB_TOKEN) {
     try {
       const { put } = await import("@vercel/blob");
