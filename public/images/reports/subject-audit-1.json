@@ -1,0 +1,132 @@
+{
+  "batch": 1,
+  "checked": 21,
+  "results": [
+    {
+      "blueprint": "/images/jacket/sleeve-buttonhole/by-hands.jpg",
+      "labels": ["By Hand"],
+      "verdict": "MISMATCH",
+      "evidence": "Two jacket FRONTS (upper chest/lapel area only), captioned \"Both sides\" and \"Each side o...\". This is a lapel-buttonhole POSITION diagram. No sleeve, no cuff, no buttonhole stitching shown, and nothing expresses hand-vs-machine."
+    },
+    {
+      "blueprint": "/images/jacket/sleeve-buttonhole/by-machine.jpg",
+      "labels": ["By Machine"],
+      "verdict": "MISMATCH",
+      "evidence": "Same lapel-buttonhole position chart, off-register crop; the fully visible jacket front is captioned \"Right\". No sleeve or cuff appears; machine stitching is never depicted."
+    },
+    {
+      "blueprint": "/images/blueprints/factory/f1edbb42290d__302Y__No_pleat_double_darts.jpg",
+      "labels": ["Double Back Darts"],
+      "verdict": "MISMATCH",
+      "evidence": "Trouser FRONT view (J-curve fly topstitch at centre front, slanted on-seam side pockets, belt loops). Four red dart marks (two per side) sit below the FRONT waistband, i.e. front darts as an alternative to pleats. Filename reads \"No_pleat_double_darts\" and data-store/image-rejections.json records the source as factory/kute/trousers/Style_Pleat_style_Pleat_style/302Y__No_pleat_double_darts.jpeg - the vendor's PLEAT STYLE chart. The catalog option describes back darts creating \"pronounced seat curvature\"; the seat/back panel is never shown."
+    },
+    {
+      "blueprint": "/images/blueprints/factory/edc7138c802f__302L__No_pleat_no_dart.jpg",
+      "labels": ["No Darts"],
+      "verdict": "MISMATCH",
+      "evidence": "Trouser FRONT view (fly J-curve, front slant pockets, belt loops), no red dart marks anywhere. It is the \"no pleat, no dart\" FRONT drawing - the same file is used in trousers.json as the techpackIllustration for pleat-style option \"Flat Front (No Dart)\" (line 1317). The option's own text says \"Flat back panel\", but no back panel or seat is depicted."
+    },
+    {
+      "blueprint": "/images/blueprints/factory/27e91c06ed8a__302M__No_pleat_single_dart.jpg",
+      "labels": ["Single Back Darts"],
+      "verdict": "MISMATCH",
+      "evidence": "Trouser FRONT view with two red dart marks (one per side) below the FRONT waistband, either side of the fly. Filename \"No_pleat_single_dart\"; image-rejections.json records the source folder as Style_Pleat_style_Pleat_style (front pleat/dart chart) and already lists key \"trousers|back-darts|darts-single\" as rejected for the builder role. Dart count is shown, but on the wrong panel - no back view, seat or back pockets."
+    },
+    {
+      "blueprint": "/images/jacket/chest-dart/plus-2.jpg",
+      "labels": ["+2 cm"],
+      "verdict": "MISMATCH",
+      "evidence": "Not a garment drawing at all - a BUTTON product sheet. Photographed 4-hole buttons with captions \"N304/FK3132BK  HORN BUTTON\" and \"NJ0...\", plus Japanese header text \"...配置\" and \"...ning\". Nothing about a chest dart or a +2 cm extension."
+    },
+    {
+      "blueprint": "/images/jacket/chest-dart/plus-3.jpg",
+      "labels": ["+3 cm"],
+      "verdict": "MISMATCH",
+      "evidence": "Another crop of the same BUTTON sheet: photographed buttons captioned \"G515/FK283214  COROZO BUTTON\" and \"...06/FKE03237\". No jacket, no dart, no measurement."
+    },
+    {
+      "blueprint": "/images/jacket/hem/big-curve.jpg",
+      "labels": ["Large Curved Bottom"],
+      "verdict": "MISMATCH",
+      "evidence": "A single photographed metal/horn button captioned \"BK219/FK763274\" on white. No jacket hem, no front edge, no curve."
+    },
+    {
+      "blueprint": "/images/jacket/hem/dr-round.jpg",
+      "labels": ["DR Round Hem"],
+      "verdict": "MISMATCH",
+      "evidence": "A single photographed button captioned \"SZ215/FK763236\" (engraved ring visible on the button face). Button sheet crop, not a hem shape."
+    },
+    {
+      "blueprint": "/images/jacket/hem/squared.jpg",
+      "labels": ["Squared Bottom"],
+      "verdict": "MISMATCH",
+      "evidence": "A single photographed button captioned \"BK223/FK763231\", with \"CUSTOM\" lettering engraved around the button rim. Button sheet crop, not a squared jacket hem."
+    },
+    {
+      "blueprint": "/images/jacket/columbia-piping/columbia-and-piping.jpg",
+      "labels": ["Columbia + Piping"],
+      "verdict": "MISMATCH",
+      "evidence": "Crop of an exterior POCKET STYLE chart: tiles captioned \"Regular Slanted Flap in 4.5cm\" and \"Regular Slanted Flap in 5cm\" with blue dimension callouts \"4.5cm\" / \"5cm\". The field is \"Interior Columbia Stitching / Piping\" - no interior, lining seam, taping or piping is shown."
+    },
+    {
+      "blueprint": "/images/jacket/columbia-piping/columbia.jpg",
+      "labels": ["Columbia Stitching"],
+      "verdict": "MISMATCH",
+      "evidence": "Same pocket-style chart, different crop: captions \"...Jetted Flap in 5cm\", \"Straight Jetted Pocket\", \"Straight Welt P...\" with callouts \"1.2cm\", \"1.5cm\", \"1cm\". Depicts hip-pocket variants, not interior Columbia stitching."
+    },
+    {
+      "blueprint": "/images/jacket/columbia-piping/none.jpg",
+      "labels": ["None", "None"],
+      "verdict": "MISMATCH",
+      "evidence": "Pocket-style chart crop: a checkmarked tile captioned \"Straight Jetted Flap in 4.5cm\" (callout \"4.5cm\"), plus \"Angled Box Pleat Patch Pocket\" and a partial third tile with \"1.2cm\". Used for TWO options: columbia-piping \"None\" (should show absence of interior stitching/piping - shows exterior pockets instead) and chest-pocket \"None\" (should show a jacket with no chest pocket - the drawing plainly shows pockets present, and they are hip/patch pockets, not a breast pocket)."
+    },
+    {
+      "blueprint": "/images/jacket/columbia-piping/piping.jpg",
+      "labels": ["Piping"],
+      "verdict": "MISMATCH",
+      "evidence": "Same pocket chart again: captions \"...Pocket in 1.2cm\", \"Straight Welt Pocket in 1.5cm\", \"Regular Slanted Flap in ...\" with callouts \"1.5cm\", \"4cm\", \"1cm\". Shows welt/flap pocket geometry, not interior piping trim."
+    },
+    {
+      "blueprint": "/images/jacket/external-decoration/none.jpg",
+      "labels": ["None"],
+      "verdict": "MISMATCH",
+      "evidence": "Crop of a LAPEL STYLE chart - six lapel line drawings captioned \"8C Notch Lapel\", \"8L Peak Lapel\", \"10° Peak Lapel\", \"Notch lapel 2\", \"Notch lapel 4\", \"Notch lapel 6\", with red Japanese annotations giving hook/spacing measurements (\"...14cm\", \"...12cm\"). The field is external decoration (siblings are front-chest horizontal/slanted button loops); no decoration or its absence is expressed."
+    },
+    {
+      "blueprint": "/images/jacket/handmade-decorative/full.jpg",
+      "labels": ["Full — Shoulder, Vents, Chest Pocket, Buttonholes"],
+      "verdict": "MISMATCH",
+      "evidence": "Crop of the edge/top-stitch chart. The fully visible jacket front is captioned \"Top Stitch 4CM to edge\"; the half-cropped one reads \"...itching\". That chart's discriminator is stitch distance from the edge, not which areas receive hand stitching. Shoulder seam, vents, chest pocket edges and buttonholes are not called out anywhere, and the back/vents are never shown."
+    },
+    {
+      "blueprint": "/images/jacket/handmade-decorative/none.jpg",
+      "labels": ["None"],
+      "verdict": "AMBIGUOUS",
+      "evidence": "Off-register crop of the same edge-stitch chart. The half-cut jacket at the left edge is captioned \"...lone\" (i.e. \"None\"), which does correspond to the label, but the dominant, fully visible jacket is a competing variant captioned \"0.15cm edge by ma[chine]\" with a blue \"0.15cm\" callout. Right subject family (a clean jacket front with no decorative lines) but the frame advertises another option, and at 240x200 no stitch line is legible either way."
+    },
+    {
+      "blueprint": "/images/jacket/handmade-decorative/shoulder-seam.jpg",
+      "labels": ["Shoulder Seam Only"],
+      "verdict": "MISMATCH",
+      "evidence": "Edge-stitch chart crop: the checkmarked (blue-bordered) tile is captioned \"...y machine\" (0.15cm edge by machine) and the right tile \"0.15cm edge by hand\", both with \"0.15cm\" callouts pointing at the FRONT edge/lapel. Front views only - no shoulder seam detail and no stitching at the shoulder."
+    },
+    {
+      "blueprint": "/images/jacket/back-vent/side-belt.jpg",
+      "labels": ["Side Vents + Inner Belt"],
+      "verdict": "MISMATCH",
+      "evidence": "Crop of a LAPEL WIDTH chart - jacket FRONT/chest close-ups captioned \"...7cm\" and \"7.5cm\" with a red 7.5cm measuring line drawn across the lapel. A back-vent option needs a rear view; there is no back, no vent, and no belt."
+    },
+    {
+      "blueprint": "/images/jacket/back-vent/side-fixed-belt.jpg",
+      "labels": ["Side Vents + Fixed Belt"],
+      "verdict": "MISMATCH",
+      "evidence": "Same lapel-width chart, adjacent crop: front views captioned \"8cm\" and \"8.5cm\" with red lapel measuring lines, and a stray UI \"Search\" box captured at the top right (screenshot artefact). No rear view, vent or belt."
+    },
+    {
+      "blueprint": "/images/jacket/inner-pocket-closure/d-bartack.jpg",
+      "labels": ["D-Bartack"],
+      "verdict": "MISMATCH",
+      "evidence": "Crop of a button/buttonhole diagram: a blue-bordered selection tile that is ~70% empty white, with two round 4-hole buttons at the right edge, each with a pink/red horizontal BUTTONHOLE slit drawn beside it (siblings i-bartack.jpg and x-bartack.jpg are crops of the same button column). No inner breast pocket, no pocket corner, and no D-shaped bartack stitch anywhere."
+    }
+  ]
+}
