@@ -107,7 +107,7 @@ const SHAPES = [
   ['slant pocket', /\bslant\b/, POCKETS],
   // 'side seam' alone is a drafting DATUM ('3.2 cm drop from the side seam'),
   // not a pocket construction — only tag when the opening is IN the seam.
-  ['on-seam (side-seam) pocket', /on[- ]?seam|side[- ]?seam pocket|(?:set|cut|placed|built)s+(?:directlys+)?into the side[- ]?seam|opening coincides with the side[- ]?seam/, POCKETS],
+  ['on-seam (side-seam) pocket', /on[- ]?seam|side[- ]?seam pocket|(?:set|cut|placed|built)\s+(?:directly\s+)?into the side[- ]?seam|opening coincides with the side[- ]?seam/, POCKETS],
   ['welt pocket', /\bwelt\b/, POCKETS],
   ['flap pocket', /\bflap\b/, POCKETS],
   ['patch pocket', /\bpatch\b/, POCKETS],
@@ -671,10 +671,17 @@ export function extractSpec(opt) {
   // the prompt's description block, so the model is still told about it. The
   // director turns each of these into an explicit NEGATIVE, which is the only
   // thing that actually cancels the sentence.
+  // Scope by the SECTION-DERIVED garment, not the raw productId. A Trousers-*
+  // or Vest-* section inside suit-2pc/suit-3pc is trouser/vest work, and
+  // resolvePart already routes it that way (see garmentKeyFor). scanList did
+  // not, so every TROUSER- and VEST-scoped shape was skipped for suit-hosted
+  // options: `leg-tapered` gave ["tapered leg"] standalone and [] inside a
+  // suit — 107 options silently lost their entire shape vocabulary.
+  const garmentKey = garmentKeyFor(opt.productId, opt.sectionId);
   const negatedShapes = [];
   const shapes = resolveExclusiveShapes(
-    scanList(text, SHAPES, opt.productId), opt.label, opt.productId, negatedShapes);
-  const flags = scanList(text, FLAGS, opt.productId);
+    scanList(text, SHAPES, garmentKey), opt.label, garmentKey, negatedShapes);
+  const flags = scanList(text, FLAGS, garmentKey);
 
   // Absence must be resolved BEFORE family augmentation so a positive shape /
   // hardware token is never attached to an option that is the ABSENCE of a
@@ -777,7 +784,11 @@ export function computeForbidden(spec) {
     if (m) out.push(`any ${m[2]} count other than exactly ${m[1]}`);
   }
   if (spec.shapes.some((s) => /ventless/i.test(s))) out.push('any back vent (this option is ventless)');
-  if (spec.flags.some((f) => /no side adjuster/i.test(f))) out.push('a side adjuster of any kind');
+  // Reads SHAPES, not flags: classifyAdjuster pushes 'no side adjuster — clean
+  // plain waistband side' into shapes, so the flags predicate could never be
+  // true and the negative was never emitted — while the global FLAGS table
+  // simultaneously asserted 'side adjuster'. The spec told the model both.
+  if ((spec.shapes || []).some((x) => /no side adjuster/i.test(x))) out.push('a side adjuster of any kind');
 
   // SIBLING-SHAPE NEGATIVES. Saying what a thing IS does not stop the model
   // reaching for its training prior — a "Square 6.5 cm" collar came back with
