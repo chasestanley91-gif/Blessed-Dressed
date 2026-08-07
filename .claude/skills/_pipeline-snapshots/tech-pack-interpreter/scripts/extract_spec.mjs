@@ -125,6 +125,14 @@ if (args.write) {
       negatedShapes: spec.negatedShapes || [],
       spread: spec.spread,
       flags: spec.flags,
+      // Facts the prompt must state OUTRIGHT rather than leave to the model.
+      // Side is invisible to QC (a mirror-flipped render scores 100% against a
+      // flat drawing), and the attribute triples are the only thing separating
+      // options that share a shape and differ in how they are made.
+      sides: spec.sides || [],
+      attributes: spec.attributes || [],
+      supplierCodes: spec.supplierCodes || [],
+      unresolved: spec.unresolved || [],
     },
     illustration: {
       path: spec.illustration,

@@ -35,6 +35,10 @@ export function specFromRecord(record) {
     shapes: record.measured.shapes,
     negatedShapes: record.measured.negatedShapes || [],
     flags: record.measured.flags,
+    sides: record.measured.sides || [],
+    attributes: record.measured.attributes || [],
+    supplierCodes: record.measured.supplierCodes || [],
+    unresolved: record.measured.unresolved || [],
     illustration: record.illustration.path,
     illustrationDisk: record.illustration.disk,
     illustrationExists: record.illustration.exists,
@@ -255,8 +259,25 @@ function sentenceList(items) {
 }
 
 // The literal measured values parsed from catalog metadata.
+//
+// Everything here is stated OUTRIGHT so the image model never chooses it. A
+// fact that is extracted but not emitted is worse than one never extracted:
+// the pipeline reports the option as fully specified while the render decides
+// the value for itself.
 function measuredList(spec) {
   const parts = [];
+  // Side first, and phrased as an instruction rather than a label. Handedness
+  // is the one property QC structurally cannot check -- a mirror-flipped render
+  // scores 100% against a flat 2D drawing -- so it must be unmistakable here.
+  const sides = spec.sides || [];
+  if (sides.length) {
+    const sideText = sides.includes('both')
+      ? 'on BOTH sides, symmetrically'
+      : `on the ${sides.join(' and ')} side${sides.length > 1 ? 's' : ''} ONLY — do not mirror or swap`;
+    parts.push(sideText);
+  }
+  // Named construction triples: the property, not just the value.
+  for (const a of spec.attributes || []) parts.push(`${a.feature} ${a.attribute}: ${a.value}`);
   if (spec.shapes.length) parts.push(`${sentenceList(spec.shapes)} shape`);
   if (spec.dimensions.length) parts.push(`measuring exactly ${sentenceList(spec.dimensions)}`);
   if (spec.angles.length) parts.push(`at ${sentenceList(spec.angles)}`);
@@ -326,6 +347,12 @@ export function buildChecklist(spec, styling) {
   for (const d of spec.dimensions) items.push(`length/width matches exactly: ${d}`);
   for (const a of spec.angles) items.push(`angle matches exactly: ${a}`);
   for (const c of spec.counts || []) items.push(`exact count: ${c}`);
+  for (const sd of spec.sides || []) {
+    items.push(sd === 'both'
+      ? 'present on BOTH sides, symmetrically — neither side omitted'
+      : `on the ${sd} side, NOT mirrored or swapped (check against the drawing, not against convention)`);
+  }
+  for (const a of spec.attributes || []) items.push(`${a.feature} ${a.attribute} reads as ${a.value}`);
   for (const sh of spec.shapes) items.push(`shape reads as drawn: ${sh}`);
   for (const fl of spec.flags) items.push(`present & positioned as drawn: ${fl}`);
   const detail = cleanDetail(spec);
@@ -697,6 +724,16 @@ export function buildPrompt(spec) {
   // render a clean area and deliberately echo no positive geometry, so they
   // require none (a stray flag parsed from prose like "no adjustment tab" must
   // not be demanded of a prompt that intentionally omits it).
+  // A property the catalog NAMES but never resolves to a value cannot be
+  // rendered, only guessed. Refuse to build the prompt at all — the whole
+  // purpose of this file is that the model decides nothing.
+  if ((spec.unresolved || []).length) {
+    throw new Error(
+      `SpecificationValidationError — ${spec.addr}: cannot build a prompt from an unresolved specification: ` +
+      `${spec.unresolved.join('; ')}. Resolve it in the catalog rather than letting the render choose.`
+    );
+  }
+
   const requiredTokens = spec.absence
     ? []
     : [
@@ -705,6 +742,14 @@ export function buildPrompt(spec) {
         ...(spec.counts || []),
         ...spec.shapes,
         ...spec.flags,
+        // Attribute VALUES are required tokens: an extracted fact that the
+        // prompt does not echo is worse than one never extracted, because the
+        // option is reported as fully specified while the render picks the
+        // value itself.
+        ...(spec.attributes || []).map((a) => a.value),
+        // Side is not added as a bare token ("left" appears in too much
+        // incidental prose to be a meaningful test); buildChecklist asserts it
+        // explicitly instead, and measuredList states it as an instruction.
       ];
 
   const checklist = buildChecklist(spec, styling);
