@@ -73,6 +73,38 @@ the skill references; new lessons append here.)
   a hard error instead of an overwrite.
 
 
+## 2026-08-08 — contrast-fabric field + wardrobe
+
+- [CONTRAST FIELD — the general shading rule is exactly wrong here] BLUEPRINT_LOCK
+  tells the model that flat grey shading marks a panel's EXTENT and never its
+  shade, and that no grey panel may appear in the photograph. On a
+  contrast-fabric-position drawing the shaded region IS the second cloth, so
+  obeying the general rule renders the option in the body fabric — which is that
+  field's own "None" variant. Eight sibling options would have come back
+  identical and every one would have looked plausible. FIX: `contrastLock()` in
+  garment-image-director/lib/prompt.mjs fires on any field whose id/label/part
+  contains "contrast", states that the shaded region is the different cloth,
+  names the panel, demands a visible colour AND texture difference with a crisp
+  seam, and pins every other panel to the body cloth. Emitted AFTER
+  BLUEPRINT_LOCK so the later instruction wins. Measured: contrast-collar,
+  contrast-lapel and contrast-lower-besom all correct on attempt 1 and mutually
+  distinguishable. (2026-08-08)
+
+- [WARDROBE — "no necktie" reads as "no shirt"] contrast-collar attempt 1 got the
+  craft exactly right and was rejected on presentation: the phrase "no necktie so
+  nothing overlaps the collar" produced a model bare-chested under the jacket,
+  which is not luxury menswear presentation. FIX: name the wardrobe POSITIVELY —
+  "a crisp WHITE DRESS SHIRT under the jacket, collar open at the neck, NO
+  NECKTIE; the chest is never bare" — and add "a bare chest or missing shirt" to
+  the Avoid block. Attempt 2 passed with the contrast untouched. Never state a
+  styling requirement only as a negative. (2026-08-08)
+
+- [GCOPA field verified] The four supplier drawings behind the jacket
+  contrast-position options were read before spending: A shades the top collar,
+  B the lapels, E the lower pocket besoms, Q the lower pocket flaps. The field is
+  correctly mapped and its drawings are trustworthy. (2026-08-08)
+
+
 ## Spend
 
 | Date | Batch | Model | Images | Credits | Balance after |
@@ -600,6 +632,7 @@ Both candidates were 3/4 detail crops — an orientation in which the annotated 
 |---|---|---|---|---|---|
 | 2026-07-31 | session D — QC of 5 awaiting-verdict options | — | 0 | 0 | **928.5 (unchanged)** |
 | 2026-08-08 | lbp-3l-2r proof: a1 FAIL (4/4 symmetrised) + a2 PASS (3/2) | gpt_image_2 low/1k 3:4 | 2 | 1.0 | ~696.5 |
+| 2026-08-08 | contrast batch: collar a1(styling FAIL)+a2 PASS, lapel PASS, besom PASS | gpt_image_2 low/1k 3:4 | 4 | 2.0 | ~694.5 |
 
 ---
 
