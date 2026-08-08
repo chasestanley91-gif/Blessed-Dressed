@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-08T06:23:25.469Z",
+  "at": "2026-08-08T06:43:44.694Z",
   "settings": {
     "maxWidth": 1400,
     "quality": 82,
@@ -7,74 +7,41 @@
   },
   "applied": true,
   "counts": {
-    "masters": 793,
-    "converted": 5,
-    "skipped": 788,
+    "masters": 795,
+    "converted": 2,
+    "skipped": 793,
     "failed": 0,
     "repointed": 0
   },
   "bytes": {
-    "before": 8834151,
-    "after": 571184,
-    "savedPct": 93.5
+    "before": 3848351,
+    "after": 264586,
+    "savedPct": 93.1
   },
   "note": "targetSha1 is the derivative; sourceSha1 is the PNG master QC graded. The master and publish_approved.mjs byte-identity gate are untouched.",
   "results": {
     "ok": [
       {
-        "master": "public\\images\\generated\\sport-coat\\contrast-satin-lapel.png",
-        "masterBytes": 1706071,
-        "sourceSha1": "66f3ef2f3890d5ed597719f071200fbe2846de31",
-        "target": "public\\images\\generated\\sport-coat\\contrast-satin-lapel.webp",
-        "targetBytes": 98694,
-        "targetSha1": "8dfedee93d214c64d16086c3c9c0fc1485d4ac4d",
+        "master": "public\\images\\generated\\suit-2pc\\trouser-contrast-covered-btn.png",
+        "masterBytes": 1608365,
+        "sourceSha1": "a131aec2fb18a2fae4a649555fa29cda95b717e1",
+        "target": "public\\images\\generated\\suit-2pc\\trouser-contrast-covered-btn.webp",
+        "targetBytes": 96094,
+        "targetSha1": "f40986cded580545df1511d9529b463c7057c634",
         "quality": 82,
         "width": 1400,
-        "web": "/images/generated/sport-coat/contrast-satin-lapel.webp"
+        "web": "/images/generated/suit-2pc/trouser-contrast-covered-btn.webp"
       },
       {
-        "master": "public\\images\\generated\\sport-coat\\contrast-ticket-besom.png",
-        "masterBytes": 1576044,
-        "sourceSha1": "95c34d57aee17154959fb0f58b20b2ac5667e6c5",
-        "target": "public\\images\\generated\\sport-coat\\contrast-ticket-besom.webp",
-        "targetBytes": 80632,
-        "targetSha1": "ce2ab55531df1382baf1fcc6d0ea84b0736713c8",
+        "master": "public\\images\\generated\\suit-2pc\\trouser-contrast-loop.png",
+        "masterBytes": 2239986,
+        "sourceSha1": "ebf9464d0bf5f2e39f93b94b1861ad90958b49fb",
+        "target": "public\\images\\generated\\suit-2pc\\trouser-contrast-loop.webp",
+        "targetBytes": 168492,
+        "targetSha1": "82f7e93808b34a6ffe3f73a9ee7bdb9645ab6e02",
         "quality": 82,
         "width": 1400,
-        "web": "/images/generated/sport-coat/contrast-ticket-besom.webp"
-      },
-      {
-        "master": "public\\images\\generated\\sport-coat\\contrast-ticket-flap.png",
-        "masterBytes": 1525364,
-        "sourceSha1": "5b750b07e3ede31aea4b025f9f38b6a791b87306",
-        "target": "public\\images\\generated\\sport-coat\\contrast-ticket-flap.webp",
-        "targetBytes": 74800,
-        "targetSha1": "21d02610a54333977af332c0eae2ca403571222e",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/sport-coat/contrast-ticket-flap.webp"
-      },
-      {
-        "master": "public\\images\\generated\\suit-2pc\\trouser-contrast-back-pocket.png",
-        "masterBytes": 1926595,
-        "sourceSha1": "0f966482ae4450e5b881cd19752cd1a89beec604",
-        "target": "public\\images\\generated\\suit-2pc\\trouser-contrast-back-pocket.webp",
-        "targetBytes": 142202,
-        "targetSha1": "8bd2cb86abf103ad6660945c5aeaee9622644eed",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/suit-2pc/trouser-contrast-back-pocket.webp"
-      },
-      {
-        "master": "public\\images\\generated\\suit-2pc\\trouser-contrast-front-besom.png",
-        "masterBytes": 2100077,
-        "sourceSha1": "691c447ebdf20f6873052ed8c908ed5d4a1956dc",
-        "target": "public\\images\\generated\\suit-2pc\\trouser-contrast-front-besom.webp",
-        "targetBytes": 174856,
-        "targetSha1": "ee937da48eed2296c12639d3d6e65e6c010e34b1",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/suit-2pc/trouser-contrast-front-besom.webp"
+        "web": "/images/generated/suit-2pc/trouser-contrast-loop.webp"
       }
     ],
     "skipped": [
@@ -1631,6 +1598,18 @@
         "reason": "derivative up to date"
       },
       {
+        "master": "public\\images\\generated\\sport-coat\\contrast-satin-lapel.png",
+        "reason": "derivative up to date"
+      },
+      {
+        "master": "public\\images\\generated\\sport-coat\\contrast-ticket-besom.png",
+        "reason": "derivative up to date"
+      },
+      {
+        "master": "public\\images\\generated\\sport-coat\\contrast-ticket-flap.png",
+        "reason": "derivative up to date"
+      },
+      {
         "master": "public\\images\\generated\\sport-coat\\ep-round.png",
         "reason": "derivative up to date"
       },
@@ -2096,6 +2075,14 @@
       },
       {
         "master": "public\\images\\generated\\suit-2pc\\slant-pockets.png",
+        "reason": "derivative up to date"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\trouser-contrast-back-pocket.png",
+        "reason": "derivative up to date"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\trouser-contrast-front-besom.png",
         "reason": "derivative up to date"
       },
       {

@@ -47,6 +47,23 @@ if (QUEUE_ONLY) {
   if (!QUEUE_KEYS.size) throw new Error('--queue: no verified clusters; refusing to emit an empty worklist as if it were done work');
 }
 
+/**
+ * Does the CATALOG already serve a generated photograph for this option?
+ *
+ * The pipeline folder is not the only record of completed work. Earlier waves
+ * published photographs without leaving a qc.json behind, so an option could be
+ * live on the storefront and still look pending here. Measured 2026-08-08: two
+ * credits were spent regenerating trouser-contrast-covered-btn and
+ * trouser-contrast-loop, both of which already had live images — the publisher
+ * caught it and refused the swap, but only after the money was gone.
+ *
+ * A row already pointing at /images/generated/ is finished work.
+ */
+function alreadyPublished(opt) {
+  const served = [opt.image, opt.illustration, ...(opt.photos ?? [])].filter(Boolean);
+  return served.some((p) => typeof p === 'string' && /\/images\/generated\//.test(p));
+}
+
 /** Already photographed and graded? Then it is not work. */
 function alreadyDone(productId, optionId) {
   const qc = path.join(PIPE, productId, optionId, 'qc.json');
@@ -89,7 +106,7 @@ for (const file of fs.readdirSync(OPTIONS_DIR).filter((f) => f.endsWith('.json')
         // that shares it.
         const identity = `${spec.part}|${f.id}|${o.id}|${o.label}`;
         if (!byIdentity.has(identity)) {
-          if (alreadyDone(product, o.id)) { done += 1; byIdentity.set(identity, null); continue; }
+          if (alreadyDone(product, o.id) || alreadyPublished(o)) { done += 1; byIdentity.set(identity, null); continue; }
           byIdentity.set(identity, {
             identity, part: spec.part, product, section: s.id, field: f.id, option: o.id,
             label: o.label, orientation: null,

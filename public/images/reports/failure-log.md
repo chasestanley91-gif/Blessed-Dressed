@@ -118,6 +118,25 @@ the skill references; new lessons append here.)
   positively AND its neighbours forbidden by name. (2026-08-08)
 
 
+- [MEASURED INCREMENTS — do not shoot them one at a time] `hem-round-06`
+  ("Round Hem +0.6 cm") is a graduated-measurement option, the same class the
+  2026-07-28 stitch-ladder work proved CANNOT be resolved at full-garment
+  framing: 1 mm is about 1% of frame width, and the measured ladder came back
+  non-monotonic with the 0.5 cm rung inverted against the 0.1 cm rung. Its
+  drawing is fine; the option is simply not renderable in isolation. These must
+  be shot as a SET at extreme macro, with identical cloth, crop and scale
+  reference across every rung, and QC'd for monotonicity across the set rather
+  than per image. Skipped rather than generated. (2026-08-08)
+
+- [DRAWING AUDIT — check before every batch, not once] `jacket/hem/small-curve.jpg`
+  is a BUTTON CATALOGUE page (two buttons with codes SZ216/FK763237 and
+  SZ217/FK7...) attached to a jacket front-hem option. Caught by opening the
+  file during batch prep, before any credit was spent. Recorded as MISMATCH in
+  subject-audit-consolidated.json so validate_spec now blocks it permanently.
+  Opening every drawing in a batch costs nothing and has now caught a wrong
+  subject in two batches out of three. (2026-08-08)
+
+
 ## Spend
 
 | Date | Batch | Model | Images | Credits | Balance after |

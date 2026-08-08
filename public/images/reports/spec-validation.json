@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-08-08T00:06:42.733Z",
+  "generatedAt": "2026-08-08T06:37:10.420Z",
   "checked": 2862,
-  "blocked": 1094,
+  "blocked": 1097,
   "warned": 57,
-  "clean": 1711,
+  "clean": 1708,
   "byCode": {
     "ILLUSTRATION_SUBJECT_AMBIGUOUS": 53,
-    "ILLUSTRATION_SUBJECT_MISMATCH": 133,
+    "ILLUSTRATION_SUBJECT_MISMATCH": 136,
     "SHARED_ILLUSTRATION": 116,
     "DRAWING_IS_SOLE_SPEC": 785,
     "NO_ILLUSTRATION": 124,
@@ -9867,6 +9867,23 @@
       "product": "sport-coat"
     },
     {
+      "addr": "sport-coat|front-style|hem-gusset|hem-small-curve",
+      "label": "Small Curved Bottom",
+      "findings": [
+        {
+          "level": "BLOCK",
+          "code": "ILLUSTRATION_SUBJECT_MISMATCH",
+          "detail": "audited drawing does not depict this option — Verified by opening the file 2026-08-08. It is a BUTTON CATALOGUE page: two buttons photographed against white with the supplier product codes SZ216/FK763237 and SZ217/FK7... printed beneath them. There is no hem, no jacket and no curve anywhere in it. The option it is attached to is 'Small Curved Bottom', a jacket front-hem shape. Generating from this would have produced a confident photograph of buttons for a hem option."
+        }
+      ],
+      "factCount": 1,
+      "absence": false,
+      "inScope": true,
+      "section": "front-style",
+      "field": "hem-gusset",
+      "product": "sport-coat"
+    },
+    {
       "addr": "sport-coat|front-style|hem-gusset|hem-big-curve",
       "label": "Large Curved Bottom",
       "findings": [
@@ -11235,6 +11252,23 @@
         }
       ],
       "factCount": 0,
+      "absence": false,
+      "inScope": true,
+      "section": "front-style",
+      "field": "hem-gusset",
+      "product": "suit-2pc"
+    },
+    {
+      "addr": "suit-2pc|front-style|hem-gusset|hem-small-curve",
+      "label": "Small Curved Bottom",
+      "findings": [
+        {
+          "level": "BLOCK",
+          "code": "ILLUSTRATION_SUBJECT_MISMATCH",
+          "detail": "audited drawing does not depict this option — Verified by opening the file 2026-08-08. It is a BUTTON CATALOGUE page: two buttons photographed against white with the supplier product codes SZ216/FK763237 and SZ217/FK7... printed beneath them. There is no hem, no jacket and no curve anywhere in it. The option it is attached to is 'Small Curved Bottom', a jacket front-hem shape. Generating from this would have produced a confident photograph of buttons for a hem option."
+        }
+      ],
+      "factCount": 1,
       "absence": false,
       "inScope": true,
       "section": "front-style",
@@ -14480,6 +14514,23 @@
         }
       ],
       "factCount": 0,
+      "absence": false,
+      "inScope": true,
+      "section": "front-style",
+      "field": "hem-gusset",
+      "product": "suit-3pc"
+    },
+    {
+      "addr": "suit-3pc|front-style|hem-gusset|hem-small-curve",
+      "label": "Small Curved Bottom",
+      "findings": [
+        {
+          "level": "BLOCK",
+          "code": "ILLUSTRATION_SUBJECT_MISMATCH",
+          "detail": "audited drawing does not depict this option — Verified by opening the file 2026-08-08. It is a BUTTON CATALOGUE page: two buttons photographed against white with the supplier product codes SZ216/FK763237 and SZ217/FK7... printed beneath them. There is no hem, no jacket and no curve anywhere in it. The option it is attached to is 'Small Curved Bottom', a jacket front-hem shape. Generating from this would have produced a confident photograph of buttons for a hem option."
+        }
+      ],
+      "factCount": 1,
       "absence": false,
       "inScope": true,
       "section": "front-style",
