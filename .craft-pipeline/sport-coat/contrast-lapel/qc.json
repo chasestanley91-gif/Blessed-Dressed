@@ -1,0 +1,37 @@
+{
+  "addr": "sport-coat > contrast-lapel",
+  "productId": "sport-coat",
+  "optionId": "contrast-lapel",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 99,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 99,
+    "construction": 99,
+    "placement": 100,
+    "symmetry": 100,
+    "composition": 99,
+    "blueprint-match": 99
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "lockedFeatures": [
+    "black satin on BOTH lapels only",
+    "top collar in body cloth",
+    "chest pocket in body cloth",
+    "charcoal wool body",
+    "open-collar white shirt, no necktie",
+    "seamless neutral grey studio",
+    "no annotation or guide marks"
+  ],
+  "notes": "Attempt 1, PASS. The contrast cloth is on both lapels and ONLY the lapels: the top collar, chest pocket, sleeves and body are all charcoal wool, with a crisp seam along the lapel edge and gorge. Compared side by side against the contrast-collar and contrast-lower-besom renders from the same batch, all three are immediately distinguishable, which is the whole point of the field. The CONTRAST LOCK was decisive: BLUEPRINT_LOCK tells the model that grey shading marks a panel's extent and never its shade, which on this field would have rendered the jacket in one cloth and produced the field's own 'None' variant.",
+  "checkedAt": "2026-08-08T00:29:08.166Z"
+}

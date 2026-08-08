@@ -1,0 +1,54 @@
+{
+  "schema": "garment-spec/v1",
+  "addr": "suit-2pc > Trousers-details-contrast > contrast-positions > trouser-contrast-covered-btn",
+  "productId": "suit-2pc",
+  "sectionId": "Trousers-details-contrast",
+  "fieldId": "contrast-positions",
+  "optionId": "trouser-contrast-covered-btn",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\suit-2pc.json",
+  "source": "json",
+  "label": "Fabric Covered Buttons",
+  "description": "All buttons covered in matching outer fabric.",
+  "fieldLabel": "Contrast Fabric Positions",
+  "sectionLabel": "Trousers — Details & Contrast",
+  "part": "fin-contrast",
+  "garment": {
+    "noun": "pair of bespoke wool tailored trousers",
+    "fabric": "fine wool trouser cloth with visible weave"
+  },
+  "view": {
+    "orientation": "front",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": false,
+  "measured": {
+    "dimensions": [],
+    "angles": [],
+    "counts": [],
+    "shapes": [],
+    "negatedShapes": [],
+    "spread": [],
+    "flags": [],
+    "sides": [
+      "outside"
+    ],
+    "attributes": [],
+    "supplierCodes": [],
+    "unresolved": []
+  },
+  "illustration": {
+    "path": "/images/blueprints/remote/763fb7c721e6__169560958482161.jpg",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\remote\\763fb7c721e6__169560958482161.jpg",
+    "exists": true,
+    "remote": false
+  },
+  "forbidden": [
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-08-08T00:10:12.835Z"
+}

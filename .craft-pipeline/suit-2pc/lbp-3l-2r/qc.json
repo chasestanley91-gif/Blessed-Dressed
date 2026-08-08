@@ -1,0 +1,39 @@
+{
+  "addr": "suit-2pc > lbp-3l-2r",
+  "productId": "suit-2pc",
+  "optionId": "lbp-3l-2r",
+  "attempt": 2,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 99,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 99,
+    "construction": 99,
+    "placement": 100,
+    "symmetry": 100,
+    "composition": 99,
+    "blueprint-match": 99
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "lockedFeatures": [
+    "3 buttonholes on the wearer's left lapel (frame right)",
+    "2 buttonholes on the wearer's right lapel (frame left)",
+    "handedness matches the drawing, not mirrored",
+    "navy fine wool, visible weave",
+    "chest-up front view, both lapels in frame",
+    "no necktie - option isolated",
+    "seamless neutral light-grey studio background",
+    "no annotation, numbers, arrows or red guide marks"
+  ],
+  "notes": "Attempt 2. Verified by cropping and enlarging each lapel independently rather than eyeballing the full frame. Wearer's left lapel (right of frame) carries exactly THREE hand-worked keyhole buttonholes; wearer's right lapel (left of frame) carries exactly TWO. Total 5, matching the count lock. Handedness matches the reference drawing, which shows 3 red marks on the image-right (wearer's left) and 2 on the image-left - so the render is NOT mirrored. The red position markers in the blueprint were correctly interpreted as notation and rendered as real buttonholes in the garment's own cloth; no red, no numbers, no leader lines leaked into the photograph. Attempt 1 FAILED with FOUR buttonholes on BOTH lapels - the model symmetrised the asymmetry and overshot the count. The COUNT LOCK block (asymmetry named as the product, per-side numbers spelled out, an arithmetic total, and explicit off-by-one and symmetrised-count negatives) fixed both errors in one pass.",
+  "checkedAt": "2026-08-08T00:04:28.753Z",
+  "attemptCorrectionNote": "log_qc_result recorded attempt 1, but the approved image is candidate-2. Attempt 1 rendered FOUR buttonholes on both lapels and was rejected; attempt 2 is the 3/2 render that passed. stage_approved.mjs resolves the file as candidate-<attempt>, so leaving this at 1 would have published the rejected image."
+}

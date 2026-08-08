@@ -1,0 +1,57 @@
+{
+  "schema": "garment-spec/v1",
+  "addr": "sport-coat > suit-details > contrast-position > contrast-ticket-besom",
+  "productId": "sport-coat",
+  "sectionId": "suit-details",
+  "fieldId": "contrast-position",
+  "optionId": "contrast-ticket-besom",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\sport-coat.json",
+  "source": "json",
+  "label": "Ticket Pocket Besom",
+  "description": "Contrast on ticket pocket besom.",
+  "fieldLabel": "Contrast Fabric Position",
+  "sectionLabel": "Details & Stitching",
+  "part": "fin-contrast",
+  "garment": {
+    "noun": "bespoke sport coat",
+    "fabric": "textured wool/hopsack with visible weave"
+  },
+  "view": {
+    "orientation": "front",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": false,
+  "measured": {
+    "dimensions": [],
+    "angles": [],
+    "counts": [],
+    "shapes": [
+      "jetted / besom welt",
+      "ticket pocket"
+    ],
+    "negatedShapes": [],
+    "spread": [],
+    "flags": [
+      "contrast fabric"
+    ],
+    "sides": [],
+    "attributes": [],
+    "supplierCodes": [],
+    "unresolved": []
+  },
+  "illustration": {
+    "path": "/images/supplier-bb/GCOPA/U.jpg",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\supplier-bb\\GCOPA\\U.jpg",
+    "exists": true,
+    "remote": false
+  },
+  "forbidden": [
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-08-08T00:35:51.228Z"
+}

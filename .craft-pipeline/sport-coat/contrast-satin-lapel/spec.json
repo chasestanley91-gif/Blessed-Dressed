@@ -1,0 +1,56 @@
+{
+  "schema": "garment-spec/v1",
+  "addr": "sport-coat > suit-details > contrast-position > contrast-satin-lapel",
+  "productId": "sport-coat",
+  "sectionId": "suit-details",
+  "fieldId": "contrast-position",
+  "optionId": "contrast-satin-lapel",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\sport-coat.json",
+  "source": "json",
+  "label": "Satin Piping on Lapel",
+  "description": "Satin piping on the lapel applies a narrow ribbon or welt of high-lustre satin precisely along the lapel roll edge, creating a thin reflective line that traces the geometry of the lapel and collar with evening-wear elegance. This detail sits between a full satin facing and a plain cloth lapel, introducing just enough sheen to signal formality without converting the jacket into a conventional dinner suit. It is a refined, unusual choice particularly associated with bespoke evening wear, black-tie alternatives, and the overlap between formal suiting and theatrical dress, and it catches light beautifully in low-lit dining rooms and event spaces.",
+  "fieldLabel": "Contrast Fabric Position",
+  "sectionLabel": "Details & Stitching",
+  "part": "fin-contrast",
+  "garment": {
+    "noun": "bespoke sport coat",
+    "fabric": "textured wool/hopsack with visible weave"
+  },
+  "view": {
+    "orientation": "front",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": false,
+  "measured": {
+    "dimensions": [],
+    "angles": [],
+    "counts": [],
+    "shapes": [
+      "welt pocket"
+    ],
+    "negatedShapes": [],
+    "spread": [
+      "narrow spread"
+    ],
+    "flags": [],
+    "sides": [],
+    "attributes": [],
+    "supplierCodes": [],
+    "unresolved": []
+  },
+  "illustration": {
+    "path": "/images/jacket/contrast-pos/satin-lapel.jpg",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\jacket\\contrast-pos\\satin-lapel.jpg",
+    "exists": true,
+    "remote": false
+  },
+  "forbidden": [
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-08-08T00:10:10.181Z"
+}

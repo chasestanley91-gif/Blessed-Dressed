@@ -8875,6 +8875,167 @@
           ]
         }
       ]
+    },
+    {
+      "at": "2026-08-08T00:44:49.517Z",
+      "by": "tools/publish_approved.mjs",
+      "count": 4,
+      "rowCount": 12,
+      "fanout": true,
+      "options": [
+        {
+          "product": "sport-coat",
+          "option": "contrast-chest-pocket",
+          "field": "contrast-position",
+          "identity": "contrast-position/contrast-chest-pocket",
+          "image": "/images/generated/sport-coat/contrast-chest-pocket.webp",
+          "master": "/images/generated/sport-coat/contrast-chest-pocket.png",
+          "previous": "/images/jacket/contrast-pos/chest-pocket.jpg",
+          "preservedBlueprint": "/images/jacket/contrast-pos/chest-pocket.jpg",
+          "verdict": "PASS",
+          "waived": false,
+          "qcAttempt": 1,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 98,
+          "rows": [
+            {
+              "product": "sport-coat",
+              "section": "suit-details",
+              "field": "contrast-position",
+              "previous": "/images/jacket/contrast-pos/chest-pocket.jpg",
+              "preservedBlueprint": "/images/jacket/contrast-pos/chest-pocket.jpg"
+            },
+            {
+              "product": "suit-2pc",
+              "section": "suit-details",
+              "field": "contrast-position",
+              "previous": "/images/jacket/contrast-pos/chest-pocket.jpg",
+              "preservedBlueprint": "/images/jacket/contrast-pos/chest-pocket.jpg"
+            },
+            {
+              "product": "suit-3pc",
+              "section": "suit-details",
+              "field": "contrast-position",
+              "previous": "/images/jacket/contrast-pos/chest-pocket.jpg",
+              "preservedBlueprint": "/images/jacket/contrast-pos/chest-pocket.jpg"
+            }
+          ]
+        },
+        {
+          "product": "sport-coat",
+          "option": "contrast-collar",
+          "field": "contrast-position",
+          "identity": "contrast-position/contrast-collar",
+          "image": "/images/generated/sport-coat/contrast-collar.webp",
+          "master": "/images/generated/sport-coat/contrast-collar.png",
+          "previous": "/images/jacket/contrast-pos/top-collar.jpg",
+          "preservedBlueprint": null,
+          "verdict": "PASS",
+          "waived": false,
+          "qcAttempt": 2,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 98,
+          "rows": [
+            {
+              "product": "sport-coat",
+              "section": "suit-details",
+              "field": "contrast-position",
+              "previous": "/images/jacket/contrast-pos/top-collar.jpg",
+              "preservedBlueprint": null
+            },
+            {
+              "product": "suit-2pc",
+              "section": "suit-details",
+              "field": "contrast-position",
+              "previous": "/images/jacket/contrast-pos/top-collar.jpg",
+              "preservedBlueprint": null
+            },
+            {
+              "product": "suit-3pc",
+              "section": "suit-details",
+              "field": "contrast-position",
+              "previous": "/images/jacket/contrast-pos/top-collar.jpg",
+              "preservedBlueprint": null
+            }
+          ]
+        },
+        {
+          "product": "sport-coat",
+          "option": "contrast-lapel",
+          "field": "contrast-position",
+          "identity": "contrast-position/contrast-lapel",
+          "image": "/images/generated/sport-coat/contrast-lapel.webp",
+          "master": "/images/generated/sport-coat/contrast-lapel.png",
+          "previous": "/images/jacket/contrast-pos/lapel.jpg",
+          "preservedBlueprint": null,
+          "verdict": "PASS",
+          "waived": false,
+          "qcAttempt": 1,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 98,
+          "rows": [
+            {
+              "product": "sport-coat",
+              "section": "suit-details",
+              "field": "contrast-position",
+              "previous": "/images/jacket/contrast-pos/lapel.jpg",
+              "preservedBlueprint": null
+            },
+            {
+              "product": "suit-2pc",
+              "section": "suit-details",
+              "field": "contrast-position",
+              "previous": "/images/jacket/contrast-pos/lapel.jpg",
+              "preservedBlueprint": null
+            },
+            {
+              "product": "suit-3pc",
+              "section": "suit-details",
+              "field": "contrast-position",
+              "previous": "/images/jacket/contrast-pos/lapel.jpg",
+              "preservedBlueprint": null
+            }
+          ]
+        },
+        {
+          "product": "suit-2pc",
+          "option": "lbp-3l-2r",
+          "field": "lapel-bh-position",
+          "identity": "lapel-bh-position/lbp-3l-2r",
+          "image": "/images/generated/suit-2pc/lbp-3l-2r.webp",
+          "master": "/images/generated/suit-2pc/lbp-3l-2r.png",
+          "previous": "/images/jacket/lapel-bh-pos/both-sides.svg",
+          "preservedBlueprint": null,
+          "verdict": "PASS",
+          "waived": false,
+          "qcAttempt": 2,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 98,
+          "rows": [
+            {
+              "product": "sport-coat",
+              "section": "lapel",
+              "field": "lapel-bh-position",
+              "previous": "/images/jacket/lapel-bh-pos/both-sides.svg",
+              "preservedBlueprint": null
+            },
+            {
+              "product": "suit-2pc",
+              "section": "lapel",
+              "field": "lapel-bh-position",
+              "previous": "/images/jacket/lapel-bh-pos/both-sides.svg",
+              "preservedBlueprint": null
+            },
+            {
+              "product": "suit-3pc",
+              "section": "lapel",
+              "field": "lapel-bh-position",
+              "previous": "/images/jacket/lapel-bh-pos/both-sides.svg",
+              "preservedBlueprint": null
+            }
+          ]
+        }
+      ]
     }
   ]
 }
