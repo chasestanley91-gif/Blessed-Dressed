@@ -105,6 +105,19 @@ the skill references; new lessons append here.)
   correctly mapped and its drawings are trustworthy. (2026-08-08)
 
 
+- [CONTRAST SIBLINGS — name every panel that must stay plain] contrast-lower-flap
+  attempt 1 rendered the flaps correctly AND leaked black onto the TOP COLLAR,
+  which made it confusable with contrast-collar — the exact sibling it exists to
+  be distinguished from. "EVERY OTHER PANEL stays in the body cloth" was not
+  enough: a panel the prompt does not NAME is a panel the render may decide to
+  trim. FIX: contrastLock() now enumerates the sibling panels explicitly (top
+  collar, lapels, breast pocket welt, lower pocket flaps, lower pocket besoms,
+  ticket pocket, cuffs, buttons, body) minus the one being featured, and states
+  that contrast on any of them is a failed image. Attempt 2 was clean. Same
+  principle as the count lock: the discriminating fact must be stated
+  positively AND its neighbours forbidden by name. (2026-08-08)
+
+
 ## Spend
 
 | Date | Batch | Model | Images | Credits | Balance after |
@@ -633,6 +646,7 @@ Both candidates were 3/4 detail crops — an orientation in which the annotated 
 | 2026-07-31 | session D — QC of 5 awaiting-verdict options | — | 0 | 0 | **928.5 (unchanged)** |
 | 2026-08-08 | lbp-3l-2r proof: a1 FAIL (4/4 symmetrised) + a2 PASS (3/2) | gpt_image_2 low/1k 3:4 | 2 | 1.0 | ~696.5 |
 | 2026-08-08 | contrast batch: collar a1(styling FAIL)+a2 PASS, lapel PASS, besom PASS | gpt_image_2 low/1k 3:4 | 4 | 2.0 | ~694.5 |
+| 2026-08-08 | chest-pocket PASS a1; lower-flap a1 FAIL (collar leak) + a2 PASS | gpt_image_2 low/1k 3:4 | 3 | 1.5 | ~693.0 |
 
 ---
 

@@ -330,6 +330,50 @@ export function craftLock(spec) {
   return parts.join(' ');
 }
 
+/**
+ * The CONTRAST LOCK — the one field class where shading IS the specification.
+ *
+ * BLUEPRINT_LOCK tells the model that flat grey shading marks the EXTENT of a
+ * panel and never its shade, and that no grey panel may appear in the finished
+ * photograph. That rule is right almost everywhere and exactly wrong here: on a
+ * contrast-fabric-position drawing the shaded region IS the contrast cloth, and
+ * obeying the general rule renders the option in the body fabric — which is the
+ * option's own "None" variant. Eight sibling options would have come back
+ * identical and every one of them would have looked plausible.
+ *
+ * Emitted AFTER the blueprint lock, because an instruction placed before the
+ * thing it constrains loses (the lapel-notch-68 ordering lesson).
+ */
+function contrastLock(spec) {
+  const t = `${spec.fieldId || ''} ${spec.fieldLabel || ''} ${spec.part || ''}`.toLowerCase();
+  if (!/contrast/.test(t)) return '';
+  if (spec.absence) {
+    return 'CONTRAST LOCK — this option is the ABSENCE of contrast: every panel is the SAME single cloth ' +
+      'throughout, with no second fabric, no velvet, no piping and no differing panel anywhere in frame.';
+  }
+  const where = spec.label || 'the marked panel';
+  // Enumerate the sibling panels explicitly. "Every other panel stays in the
+  // body cloth" was not enough: contrast-lower-flap came back with the flaps
+  // correct AND black leaking onto the top collar, which made it confusable
+  // with contrast-collar — the exact sibling it has to be told apart from. A
+  // panel the prompt does not name is a panel the render may decide to trim.
+  const PANELS = ['top collar', 'lapels', 'chest / breast pocket welt', 'lower pocket flaps',
+    'lower pocket besoms', 'ticket pocket', 'sleeve cuffs', 'buttons', 'body and sleeves'];
+  const w = String(where).toLowerCase();
+  const others = PANELS.filter((pn) => !pn.split(/[\s/]+/).some((word) => word.length > 3 && w.includes(word)));
+  return `CONTRAST LOCK — OVERRIDES THE SHADING RULE ABOVE FOR THIS OPTION ONLY. On this drawing the shaded / ` +
+    `tinted region is NOT notation: it marks the panel that is cut from a DIFFERENT cloth, and that second ` +
+    `cloth is the entire product. Render "${where}" in a clearly contrasting fabric — visibly different in ` +
+    `colour and texture from the body of the garment (for example a deep black silk or velvet against a ` +
+    `navy or charcoal wool) — with a crisp, clean seam where the two cloths meet. EVERY OTHER PANEL stays ` +
+    `in the body cloth. The contrast must be obvious at a glance: if a viewer cannot instantly see which ` +
+    `part is the different fabric, the image has failed. Do NOT render the shaded area in the body cloth, ` +
+    `and do NOT spread the contrast fabric onto any panel the drawing leaves unshaded. ` +
+    `THESE PANELS MUST ALL REMAIN IN THE PLAIN BODY CLOTH, with no contrast fabric, trim, edging or ` +
+    `piping of any kind on them: ${others.join('; ')}. Any contrast on one of those is a failed image, ` +
+    `because it makes this option indistinguishable from a different option in the same field.`;
+}
+
 function sentenceList(items) {
   return items.filter(Boolean).join(', ');
 }
@@ -805,6 +849,9 @@ export function buildPrompt(spec) {
     coverage,
     viewLine,
     BLUEPRINT_LOCK,
+    // After the blueprint lock, deliberately: for contrast options the shading
+    // rule inside that block is exactly wrong, and the later instruction wins.
+    contrastLock(spec),
     presentation,
     focus,
     countScope,
