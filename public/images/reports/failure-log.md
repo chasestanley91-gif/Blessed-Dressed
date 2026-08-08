@@ -37,6 +37,42 @@ the skill references; new lessons append here.)
 - [process] review-remake-queue.json got silently reset to all-queued during a spec-factory workflow run (a subagent likely re-ran a repo script) → statuses restored from CHECKPOINT knowledge; future workflow/agent prompts must say "do NOT run repo scripts that rewrite state files (apply_review, build_review) — read-only on public/images/*.json". (2026-07-26)
 - [process] csh-50 blueprint is a NO IMAGE placeholder — draft-spec verification caught it before credits were spent; needs-source.json now blocks it. Always let the spec/verify pass inspect the blueprint file before generating. (2026-07-26)
 
+## 2026-08-07/08 — count lock + handedness (measured on suit-2pc/lbp-3l-2r)
+
+- [COUNTS — models symmetrise asymmetry AND overshoot] "Three Left / Two Right"
+  attempt 1 rendered **FOUR buttonholes on BOTH lapels** — two independent
+  errors, neither visible to anyone not counting. A symmetric lapel is
+  overwhelmingly what the training data holds, so a per-side number alone does
+  not survive the prior. FIX (now generated automatically by `countLock()` in
+  garment-image-director/lib/prompt.mjs): (a) name the asymmetry as THE PRODUCT,
+  not a detail; (b) spell each side's number in digits AND words; (c) give an
+  arithmetic TOTAL ("3 + 2 = 5 in total, not one more and not one fewer") — a
+  single checkable figure the render cannot satisfy by guessing; (d) add the
+  off-by-one neighbours and "the same number on both sides" as explicit
+  FORBIDDEN entries. Attempt 2 came back exactly 3/2. (2026-08-08)
+
+- [HANDEDNESS — "do not mirror" does not say WHOSE left] The prompt said "on the
+  left and right sides ONLY — do not mirror or swap" and never resolved that in
+  tailoring "left" means the WEARER's left, which appears on the RIGHT of a
+  front-facing photograph. A render placing the feature on the picture's left is
+  a mirror flip that scores 100% against a flat 2D drawing and is structurally
+  invisible to QC. FIX: prompt.mjs now emits an explicit HANDEDNESS clause,
+  orientation-aware (front view: wearer's left = frame right; back view:
+  wearer's left = frame left), and the checklist asserts the FRAME side by name.
+
+- [QC METHOD — never count from the full frame] Both lapels were counted by
+  cropping each one and enlarging 3–4x. At full-frame scale 4 buttonholes and 3
+  are trivially confusable, which is exactly how a wrong count ships.
+
+- [DATA LOSS — record_generation overwrote a paid candidate] The attempt number
+  derived ONLY from qc.json, so generating a second image before grading the
+  first silently replaced candidate-1. Measured here: attempt 2 overwrote
+  attempt 1, recoverable only because the result URL was still in the
+  transcript. FIX: the filesystem is now the authority — auto mode skips to the
+  first free candidate slot, and an explicit --attempt that is already taken is
+  a hard error instead of an overwrite.
+
+
 ## Spend
 
 | Date | Batch | Model | Images | Credits | Balance after |
@@ -563,6 +599,7 @@ Both candidates were 3/4 detail crops — an orientation in which the annotated 
 | Date | Batch | Model | Images | Credits | Balance after |
 |---|---|---|---|---|---|
 | 2026-07-31 | session D — QC of 5 awaiting-verdict options | — | 0 | 0 | **928.5 (unchanged)** |
+| 2026-08-08 | lbp-3l-2r proof: a1 FAIL (4/4 symmetrised) + a2 PASS (3/2) | gpt_image_2 low/1k 3:4 | 2 | 1.0 | ~696.5 |
 
 ---
 

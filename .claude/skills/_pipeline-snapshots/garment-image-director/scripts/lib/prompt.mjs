@@ -206,6 +206,82 @@ export function primaryCraft(spec) {
 const countLabel = (c) =>
   c.replace(/-hook$/, ' hook(s)').replace(/-button$/, ' button(s)').replace(/-loop$/, ' belt loop(s)');
 
+/**
+ * The COUNT LOCK — a hard, checkable arithmetic constraint.
+ *
+ * MEASURED FAILURE 2026-08-07, suit-2pc/lbp-3l-2r attempt 1: the spec said
+ * three buttonholes on the wearer's left lapel and two on the right. The render
+ * put FOUR on each. Two separate errors, and both invisible to a reader who is
+ * not counting: the model reached for a decorative stack and made the two sides
+ * match, because a symmetric lapel is overwhelmingly what its training data
+ * contains.
+ *
+ * A per-side number alone did not survive that prior. What does is (a) naming
+ * the asymmetry as the product rather than a detail, (b) forbidding the
+ * symmetric reading outright, and (c) giving a TOTAL, which is a single figure
+ * the render can be checked against and cannot satisfy by guessing.
+ */
+function countLock(spec) {
+  const counts = (spec.counts || []).filter((c) => /^\d+/.test(c));
+  if (!counts.length) return '';
+  const sided = counts.filter((c) => /-on-(left|right)$/.test(c));
+  const lines = [];
+
+  if (sided.length >= 2) {
+    const per = sided.map((c) => {
+      const [n, , side] = c.split('-');
+      return { n: Number(n), side };
+    });
+    const total = per.reduce((s, p) => s + p.n, 0);
+    const distinct = new Set(per.map((p) => p.n)).size > 1;
+    const spell = per
+      .map((p) => `EXACTLY ${p.n} on the wearer's ${p.side} (${p.n === 1 ? 'one' : p.n === 2 ? 'two' : p.n === 3 ? 'three' : p.n})`)
+      .join(', and ');
+    if (distinct) {
+      lines.push(
+        `COUNT LOCK — THE TWO SIDES DELIBERATELY CARRY DIFFERENT NUMBERS, AND THAT ASYMMETRY IS THE ENTIRE PRODUCT. ` +
+        `${spell}. Count them before finishing: ${per.map((p) => p.n).join(' + ')} = ${total} in total across the whole photograph, not one more and not one fewer. ` +
+        `Do NOT make the two sides match. Do NOT even out, balance or symmetrise the counts. ` +
+        `A version with the same number on both sides is the WRONG option and a failed image.`
+      );
+    } else {
+      lines.push(
+        `COUNT LOCK — ${spell}. Count them before finishing: ${total} in total across the whole photograph, not one more and not one fewer.`
+      );
+    }
+  } else {
+    const spell = counts.map((c) => {
+      const n = c.match(/^(\d+)/)[1];
+      const noun = c.replace(/^\d+-/, '').replace(/-/g, ' ');
+      return `EXACTLY ${n} ${noun}`;
+    }).join(', and ');
+    lines.push(
+      `COUNT LOCK — ${spell}. Count them before finishing: not one more and not one fewer. ` +
+      `Do not add a decorative extra, and do not drop one for balance.`
+    );
+  }
+  return lines.join(' ');
+}
+
+/** The forbidden counterparts of the count lock, for the Avoid block. */
+function countNegatives(spec) {
+  const counts = (spec.counts || []).filter((c) => /^\d+/.test(c));
+  if (!counts.length) return [];
+  const out = [];
+  const sided = counts.filter((c) => /-on-(left|right)$/.test(c));
+  const nums = new Set(counts.map((c) => Number(c.match(/^(\d+)/)[1])));
+  if (sided.length >= 2 && nums.size > 1) {
+    out.push('the same number of features on both sides (symmetrised counts)');
+  }
+  // The off-by-one neighbours are what actually gets rendered.
+  for (const n of nums) {
+    for (const bad of [n - 1, n + 1]) {
+      if (bad > 0 && !nums.has(bad)) out.push(`${bad} where the specification says ${n}`);
+    }
+  }
+  return out;
+}
+
 // The micro-craft lock: Primary Craft dominance + Hardware Lock + Single State +
 // Flatness. Emitted only for waistband-family parts; '' otherwise.
 export function craftLock(spec) {
@@ -271,10 +347,24 @@ function measuredList(spec) {
   // scores 100% against a flat 2D drawing -- so it must be unmistakable here.
   const sides = spec.sides || [];
   if (sides.length) {
-    const sideText = sides.includes('both')
-      ? 'on BOTH sides, symmetrically'
-      : `on the ${sides.join(' and ')} side${sides.length > 1 ? 's' : ''} ONLY — do not mirror or swap`;
-    parts.push(sideText);
+    if (sides.includes('both')) {
+      parts.push('on BOTH sides, symmetrically');
+    } else {
+      // WHOSE left? In tailoring "left" is always the WEARER's left, and on a
+      // front-facing photograph the wearer's left appears on the RIGHT of the
+      // frame. Saying only "do not mirror or swap" does not resolve that, so a
+      // render that puts the feature on the picture's left is a mirror flip
+      // that scores 100% against a flat drawing and is invisible to QC.
+      const handed = sides.filter((s) => s === 'left' || s === 'right');
+      let sideText = `on the ${sides.join(' and ')} side${sides.length > 1 ? 's' : ''} ONLY — do not mirror or swap`;
+      if (handed.length) {
+        const back = /back|rear/i.test(String(spec.orientation || ''));
+        sideText += back
+          ? `. HANDEDNESS: "left" means the WEARER'S left. This is a view of the BACK, so the wearer's left appears on the LEFT of the frame and the wearer's right on the RIGHT`
+          : `. HANDEDNESS: "left" means the WEARER'S left, which appears on the RIGHT-HAND SIDE of a front-facing photograph; the wearer's right appears on the LEFT of the frame. Copy the reference drawing exactly as drawn — it is already in wearer perspective — and do NOT flip it`;
+      }
+      parts.push(sideText);
+    }
   }
   // Named construction triples: the property, not just the value.
   for (const a of spec.attributes || []) parts.push(`${a.feature} ${a.attribute}: ${a.value}`);
@@ -348,9 +438,14 @@ export function buildChecklist(spec, styling) {
   for (const a of spec.angles) items.push(`angle matches exactly: ${a}`);
   for (const c of spec.counts || []) items.push(`exact count: ${c}`);
   for (const sd of spec.sides || []) {
-    items.push(sd === 'both'
-      ? 'present on BOTH sides, symmetrically — neither side omitted'
-      : `on the ${sd} side, NOT mirrored or swapped (check against the drawing, not against convention)`);
+    if (sd === 'both') { items.push('present on BOTH sides, symmetrically — neither side omitted'); continue; }
+    if (sd === 'left' || sd === 'right') {
+      const back = /back|rear/i.test(String(spec.orientation || ''));
+      const frameSide = back ? sd : (sd === 'left' ? 'right' : 'left');
+      items.push(`on the WEARER'S ${sd} — i.e. the ${frameSide.toUpperCase()} of the frame in this ${back ? 'back' : 'front'} view; compare against the drawing side by side, NOT against convention`);
+      continue;
+    }
+    items.push(`on the ${sd} side, NOT mirrored or swapped (check against the drawing, not against convention)`);
   }
   for (const a of spec.attributes || []) items.push(`${a.feature} ${a.attribute} reads as ${a.value}`);
   for (const sh of spec.shapes) items.push(`shape reads as drawn: ${sh}`);
@@ -688,7 +783,9 @@ export function buildPrompt(spec) {
   const negatedClause = negated.map(
     (sh) => `any ${sh} — the description mentions it only by comparison, and this option is NOT that`
   );
-  const forbiddenAll = [...(spec.forbidden || []), ...negatedClause];
+  // Off-by-one and symmetrised counts are what actually gets rendered, so they
+  // are named as exclusions rather than left implied by the positive count.
+  const forbiddenAll = [...(spec.forbidden || []), ...negatedClause, ...countNegatives(spec)];
 
   const forbiddenBlock = forbiddenAll.length
     ? `FORBIDDEN FOR THIS OPTION — do not render: ${forbiddenAll.join('; ')}.`
@@ -700,6 +797,10 @@ export function buildPrompt(spec) {
     craft,
     subject,
     detailLine,
+    // Directly after the detail line and BEFORE the blueprint lock: an
+    // instruction placed after the thing it constrains loses (the lapel-notch-68
+    // ordering lesson), and the count is the option's whole discriminator.
+    countLock(spec),
     geometry,
     coverage,
     viewLine,
