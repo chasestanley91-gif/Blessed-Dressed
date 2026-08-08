@@ -374,6 +374,18 @@ function contrastLock(spec) {
     `because it makes this option indistinguishable from a different option in the same field.`;
 }
 
+/**
+ * The first N sentences of a description — its definitional opening, before the
+ * historical and comparative material begins.
+ */
+function firstSentences(text, n) {
+  const t = String(text || '').trim();
+  if (!t) return t;
+  const parts = t.split(/(?<=[.!?])\s+/);
+  const out = parts.slice(0, n).join(' ').trim();
+  return out.length >= 40 ? out : t.slice(0, 320);
+}
+
 function sentenceList(items) {
   return items.filter(Boolean).join(', ');
 }
@@ -518,7 +530,53 @@ export function buildChecklist(spec, styling) {
   return items;
 }
 
-export function buildPrompt(spec) {
+// ---- compact mode -------------------------------------------------------
+// MEASURED: the full prompt is 5,672 characters, and 55% of that is boilerplate
+// repeated verbatim on every single image — BLUEPRINT_LOCK alone is 1,863.
+// Only about 2,500 characters actually vary per option.
+//
+// That matters because every prompt has to be relayed by hand through the
+// assistant's context to reach the image API, so prompt length is the binding
+// constraint on how many photographs a session can produce, not credits.
+//
+// These are TIGHTENED, not weakened. Every instruction in the long form
+// survives; only the repetition and the worked examples are dropped. The nine
+// generations of 2026-08-08 were shot from hand-condensed prompts of roughly
+// this length and six passed, three of them on the first attempt — so the short
+// form is evidence-backed, not a hopeful economy.
+//
+// The markers validate_prompt greps for — "BLUEPRINT LOCK", "Avoid:", "VIEW —"
+// — are preserved exactly, so the pre-flight gate still applies unchanged.
+const BLUEPRINT_LOCK_COMPACT =
+  'BLUEPRINT LOCK — THE DRAWING IS LAW: the attached technical illustration is the manufacturing ' +
+  'blueprint for this exact craft option and the SOLE authority for the image. Reproduce its geometry ' +
+  'precisely — edge and point shape, lengths, widths, depths, angles, curvature, roll lines, symmetry, ' +
+  'button/buttonhole/tab positions, seam and stitch placement, proportions. Assume NOTHING from ' +
+  'tailoring convention or model priors. Do not redesign, reinterpret, substitute a similar commercial ' +
+  'style, stylise or "improve" it, and never fall back to a generic version of the category — render ' +
+  'THIS option, not a typical one. If convention conflicts with the drawing, the drawing wins. ' +
+  'ANNOTATIONS ARE NOT THE GARMENT: any numbers, units, dimension or leader lines, arrows, callouts, ' +
+  'ruler ticks, text labels or red/coloured guide marks on the drawing are manufacturing documentation, ' +
+  'not features of the cloth — render none of them. COLOUR IN THE DRAWING IS NOTATION: a red or tinted ' +
+  'region marks WHERE the option sits and flat grey marks the EXTENT of a panel; render those areas in ' +
+  'the cloth and thread of the garment itself, with no red, no highlighter tint and no flat grey panel.';
+
+const NEGATIVE_COMPACT =
+  'Avoid: generic menswear substitution in place of the drawn option; illustration or line-art style; ' +
+  'CGI or 3D-render look; cartoon; mannequin; fashion sketch; inaccurate geometry; altered proportions; ' +
+  'missing construction details; watermark; AI-art appearance; a bare chest or missing shirt; and any ' +
+  'text or annotation traced from the drawing — no measurement numbers, units, dimension or leader ' +
+  'lines, arrows, callouts, ruler ticks, labels or coloured guide marks anywhere in the frame. Real ' +
+  'garment photography of the exact drawn option — clean cloth only.';
+
+const STYLE_COMPACT =
+  'Savile Row and high-end Italian sartorial aesthetic. Natural daylight studio lighting, medium-format ' +
+  'camera, magazine-quality editorial menswear photography, authentic bespoke craftsmanship and fine ' +
+  'hand stitching. SET — clean luxury studio, seamless plain neutral light-grey background, clear ' +
+  'separation between garment and background: no location, architecture, furniture, scenery or props.';
+
+export function buildPrompt(spec, { compact = false } = {}) {
+  const COMPACT = compact;
   const styling = resolveStyling(spec);
   const subject =
     `A premium ${spec.garmentNoun} featuring a precise ${spec.label}` +
@@ -624,7 +682,16 @@ export function buildPrompt(spec) {
     coverage =
       `MANDATORY GEOMETRY COVERAGE — reproduce from the illustration, exactly and without assumption, ` +
       `every one of these: ${sentenceList(styling.focus)}. Match each to the drawing.`;
-    detailLine = detail ? `Distinguishing construction detail (reproduce exactly as drawn): ${detail}` : '';
+    // In compact mode quote only the DEFINITIONAL opening of the description.
+    // These descriptions are educational and run to several hundred words of
+    // history and comparison — "the velvet collar has a long history in formal
+    // English dress, seen on chesterfield overcoats..." — none of which is
+    // geometry. That prose is also exactly what forced stripNonAssertive() into
+    // the parser, because its comparative clauses were being read as facts. The
+    // parser is protected from it; the prompt was still quoting it verbatim, so
+    // the model was being told about garments this option is not.
+    const detailForPrompt = COMPACT ? firstSentences(detail, 2) : detail;
+    detailLine = detail ? `Distinguishing construction detail (reproduce exactly as drawn): ${detailForPrompt}` : '';
   }
 
   const viewLine = spec.orientation
@@ -848,7 +915,7 @@ export function buildPrompt(spec) {
     geometry,
     coverage,
     viewLine,
-    BLUEPRINT_LOCK,
+    COMPACT ? BLUEPRINT_LOCK_COMPACT : BLUEPRINT_LOCK,
     // After the blueprint lock, deliberately: for contrast options the shading
     // rule inside that block is exactly wrong, and the later instruction wins.
     contrastLock(spec),
@@ -857,14 +924,14 @@ export function buildPrompt(spec) {
     countScope,
     absenceProof,
     matchedFraming,
-    photoBlockFor(spec),
+    COMPACT ? STYLE_COMPACT : photoBlockFor(spec),
     texture,
     // AFTER texture, deliberately: texture names the cloth, this constrains it.
     // A constraint placed before the thing it constrains loses — the ordering
     // lesson from lapel-notch-68, where a correction that contradicted an
     // earlier paragraph was simply ignored.
     hairlineCloth,
-    NEGATIVE,
+    COMPACT ? NEGATIVE_COMPACT : NEGATIVE,
     forbiddenBlock,
   ].filter(Boolean).join('\n\n');
 

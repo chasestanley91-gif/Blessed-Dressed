@@ -48,7 +48,7 @@ if (!fs.existsSync(specPath)) {
 
 const record = readJson(specPath);
 const spec = specFromRecord(record);
-const built = buildPrompt(spec);
+const built = buildPrompt(spec, { compact: Boolean(args.compact) });
 
 const out = {
   addr: spec.addr,
