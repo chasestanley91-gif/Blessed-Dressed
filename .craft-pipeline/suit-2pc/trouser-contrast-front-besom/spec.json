@@ -1,0 +1,58 @@
+{
+  "schema": "garment-spec/v1",
+  "addr": "suit-2pc > Trousers-details-contrast > contrast-positions > trouser-contrast-front-besom",
+  "productId": "suit-2pc",
+  "sectionId": "Trousers-details-contrast",
+  "fieldId": "contrast-positions",
+  "optionId": "trouser-contrast-front-besom",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\suit-2pc.json",
+  "source": "json",
+  "label": "Contrast Front Pocket Besom",
+  "description": "Appointed contrast fabric on front pocket besom.",
+  "fieldLabel": "Contrast Fabric Positions",
+  "sectionLabel": "Trousers — Details & Contrast",
+  "part": "fin-contrast",
+  "garment": {
+    "noun": "pair of bespoke wool tailored trousers",
+    "fabric": "fine wool trouser cloth with visible weave"
+  },
+  "view": {
+    "orientation": "front",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": false,
+  "measured": {
+    "dimensions": [],
+    "angles": [],
+    "counts": [],
+    "shapes": [
+      "jetted / besom welt"
+    ],
+    "negatedShapes": [],
+    "spread": [],
+    "flags": [
+      "contrast fabric"
+    ],
+    "sides": [
+      "front"
+    ],
+    "attributes": [],
+    "supplierCodes": [],
+    "unresolved": []
+  },
+  "illustration": {
+    "path": "/images/blueprints/remote/5c43b55a10d4__3140.jpg",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\remote\\5c43b55a10d4__3140.jpg",
+    "exists": true,
+    "remote": false
+  },
+  "forbidden": [
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-08-08T06:09:20.326Z"
+}

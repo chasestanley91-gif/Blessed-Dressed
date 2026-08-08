@@ -30,6 +30,14 @@ const OUT = path.join(REPO, 'public/images/reports/batch-payload.json');
 const arg = (k, d) => { const h = process.argv.find((a) => a.startsWith(`--${k}=`)); return h ? h.split('=').slice(1).join('=') : d; };
 const N = Number(arg('n', 12));
 const FROM = Number(arg('from', 0));
+const COMPACT = process.argv.includes('--compact');
+
+// The storefront already serves every blueprint over plain HTTPS, so the image
+// service can fetch them directly and the per-image signed-upload dance is
+// unnecessary. Confirmed 2026-08-08: all 504 worklist illustrations return 200
+// from this origin. See EXPOSURE-FINDINGS.md — this host is public whether or
+// not the pipeline uses it, so using it adds no exposure.
+const PUBLIC_ORIGIN = arg('origin', 'https://customsuits.net');
 
 const wl = JSON.parse(fs.readFileSync(WORKLIST, 'utf8'));
 
@@ -63,7 +71,7 @@ while (prepared.length < N && i < wl.work.length) {
     run(path.join(SKILL_TP, 'extract_spec.mjs'),
       [`--product=${w.product}`, `--option=${w.option}`, `--orientation=${orientation}`, '--write']);
     const built = JSON.parse(run(path.join(SKILL_GD, 'build_prompt.mjs'),
-      [`--product=${w.product}`, `--option=${w.option}`, '--json']));
+      [`--product=${w.product}`, `--option=${w.option}`, '--json', ...(COMPACT ? ['--compact'] : [])]));
     // The pre-flight gate decides, not this script.
     run(path.join(SKILL_GD, 'validate_prompt.mjs'), [`--product=${w.product}`, `--option=${w.option}`]);
     if (!built.illustrationDisk || !fs.existsSync(built.illustrationDisk)) {
@@ -76,6 +84,9 @@ while (prepared.length < N && i < wl.work.length) {
       rows: w.rows,
       illustrationDisk: built.illustrationDisk,
       filename: path.basename(built.illustrationDisk),
+      // Encode each path segment: several blueprint filenames contain spaces
+      // and parentheses, and an unencoded URL would 404 silently.
+      publicUrl: PUBLIC_ORIGIN + String(w.illustration).split('/').map(encodeURIComponent).join('/').replace(/^%2F/, '/'),
       prompt: built.prompt,
       requiredTokens: built.requiredTokens,
       checklist: built.checklist,
