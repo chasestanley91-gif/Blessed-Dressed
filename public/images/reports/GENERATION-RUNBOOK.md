@@ -1,7 +1,17 @@
 # Generation Runbook — how to continue the photography run
 
-**Status 2026-08-08.** The pipeline is proven end to end and the work list is
-built. 554 photographs remain, covering 1,231 catalog rows.
+**Status 2026-08-08.** The pipeline is proven end to end, six photographs are
+approved and published, and the work list is built. **549 photographs remain,
+covering 1,216 catalog rows.**
+
+Session result: 9 images generated, 6 approved, 3 rejected and re-shot.
+Spend 4.5 credits, balance ~693. Every rejection produced a durable fix in the
+prompt builder rather than a hand-edited one-off, so the next option in each
+class starts from the corrected prompt.
+
+A wrong image was found already LIVE: `lbp-3l-2r` was serving the render with
+four buttonholes on both lapels. It has been replaced with the verified 3/2
+image and confirmed byte-for-byte.
 
 ---
 
