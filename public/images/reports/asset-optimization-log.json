@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-08T06:43:44.694Z",
+  "at": "2026-08-08T08:00:32.875Z",
   "settings": {
     "maxWidth": 1400,
     "quality": 82,
@@ -7,41 +7,30 @@
   },
   "applied": true,
   "counts": {
-    "masters": 795,
-    "converted": 2,
-    "skipped": 793,
+    "masters": 796,
+    "converted": 1,
+    "skipped": 795,
     "failed": 0,
     "repointed": 0
   },
   "bytes": {
-    "before": 3848351,
-    "after": 264586,
-    "savedPct": 93.1
+    "before": 1805299,
+    "after": 108274,
+    "savedPct": 94
   },
   "note": "targetSha1 is the derivative; sourceSha1 is the PNG master QC graded. The master and publish_approved.mjs byte-identity gate are untouched.",
   "results": {
     "ok": [
       {
-        "master": "public\\images\\generated\\suit-2pc\\trouser-contrast-covered-btn.png",
-        "masterBytes": 1608365,
-        "sourceSha1": "a131aec2fb18a2fae4a649555fa29cda95b717e1",
-        "target": "public\\images\\generated\\suit-2pc\\trouser-contrast-covered-btn.webp",
-        "targetBytes": 96094,
-        "targetSha1": "f40986cded580545df1511d9529b463c7057c634",
+        "master": "public\\images\\generated\\sport-coat\\hem-squared.png",
+        "masterBytes": 1805299,
+        "sourceSha1": "dff8b46b5a9802c67565cca63ec757045a7f6651",
+        "target": "public\\images\\generated\\sport-coat\\hem-squared.webp",
+        "targetBytes": 108274,
+        "targetSha1": "38068d2795b831fc127a671b32d4ff61e087a89c",
         "quality": 82,
         "width": 1400,
-        "web": "/images/generated/suit-2pc/trouser-contrast-covered-btn.webp"
-      },
-      {
-        "master": "public\\images\\generated\\suit-2pc\\trouser-contrast-loop.png",
-        "masterBytes": 2239986,
-        "sourceSha1": "ebf9464d0bf5f2e39f93b94b1861ad90958b49fb",
-        "target": "public\\images\\generated\\suit-2pc\\trouser-contrast-loop.webp",
-        "targetBytes": 168492,
-        "targetSha1": "82f7e93808b34a6ffe3f73a9ee7bdb9645ab6e02",
-        "quality": 82,
-        "width": 1400,
-        "web": "/images/generated/suit-2pc/trouser-contrast-loop.webp"
+        "web": "/images/generated/sport-coat/hem-squared.webp"
       }
     ],
     "skipped": [
@@ -2082,7 +2071,15 @@
         "reason": "derivative up to date"
       },
       {
+        "master": "public\\images\\generated\\suit-2pc\\trouser-contrast-covered-btn.png",
+        "reason": "derivative up to date"
+      },
+      {
         "master": "public\\images\\generated\\suit-2pc\\trouser-contrast-front-besom.png",
+        "reason": "derivative up to date"
+      },
+      {
+        "master": "public\\images\\generated\\suit-2pc\\trouser-contrast-loop.png",
         "reason": "derivative up to date"
       },
       {

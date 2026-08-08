@@ -1,27 +1,27 @@
 {
   "schema": "garment-spec/v1",
-  "addr": "sport-coat > interior > perfume-pad > pp-none",
+  "addr": "sport-coat > front-style > hem-gusset > hem-squared",
   "productId": "sport-coat",
-  "sectionId": "interior",
-  "fieldId": "perfume-pad",
-  "optionId": "pp-none",
+  "sectionId": "front-style",
+  "fieldId": "hem-gusset",
+  "optionId": "hem-squared",
   "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\sport-coat.json",
   "source": "json",
-  "label": "None",
-  "description": "No underarm shield.",
-  "fieldLabel": "Underarm Shield",
-  "sectionLabel": "Interior & Facing",
-  "part": "fin-adjust",
+  "label": "Squared Bottom",
+  "description": "Square-cut hem — clean geometric.",
+  "fieldLabel": "Hem & Gusset",
+  "sectionLabel": "Front Style",
+  "part": "fin-gusset",
   "garment": {
     "noun": "bespoke sport coat",
     "fabric": "textured wool/hopsack with visible weave"
   },
   "view": {
-    "orientation": "interior",
+    "orientation": "front",
     "wearerPerspective": true,
     "confirmedByVisualInspection": true
   },
-  "absence": true,
+  "absence": false,
   "measured": {
     "dimensions": [],
     "angles": [],
@@ -30,24 +30,25 @@
     "negatedShapes": [],
     "spread": [],
     "flags": [],
-    "sides": [],
+    "sides": [
+      "lower"
+    ],
     "attributes": [],
     "supplierCodes": [],
     "unresolved": []
   },
   "illustration": {
-    "path": "/images/jacket/underarm-shield/none.jpg",
-    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\jacket\\underarm-shield\\none.jpg",
+    "path": "/images/supplier-bb/REQXB/Q.jpg",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\supplier-bb\\REQXB\\Q.jpg",
     "exists": true,
     "remote": false
   },
   "forbidden": [
-    "any underarm shield rendered anywhere in frame — this option is its deliberate absence",
     "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
     "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
     "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
   ],
   "excluded": null,
   "generate": true,
-  "extractedAt": "2026-08-08T07:50:03.518Z"
+  "extractedAt": "2026-08-08T07:50:04.390Z"
 }

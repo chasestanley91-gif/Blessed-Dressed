@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-08-08T06:37:10.420Z",
+  "generatedAt": "2026-08-08T07:55:10.370Z",
   "checked": 2862,
-  "blocked": 1097,
+  "blocked": 1106,
   "warned": 57,
-  "clean": 1708,
+  "clean": 1699,
   "byCode": {
     "ILLUSTRATION_SUBJECT_AMBIGUOUS": 53,
-    "ILLUSTRATION_SUBJECT_MISMATCH": 136,
+    "ILLUSTRATION_SUBJECT_MISMATCH": 145,
     "SHARED_ILLUSTRATION": 116,
     "DRAWING_IS_SOLE_SPEC": 785,
     "NO_ILLUSTRATION": 124,
@@ -10156,6 +10156,23 @@
       "product": "sport-coat"
     },
     {
+      "addr": "sport-coat|interior|facing-style|facing-1",
+      "label": "Facing 1",
+      "findings": [
+        {
+          "level": "BLOCK",
+          "code": "ILLUSTRATION_SUBJECT_MISMATCH",
+          "detail": "audited drawing does not depict this option — Opened 2026-08-08. A FABRIC SWATCH page: two rolls of lining cloth photographed on white with colour codes printed on them. No garment, no construction, no facing geometry. Attached to option 'Facing 1'."
+        }
+      ],
+      "factCount": 1,
+      "absence": false,
+      "inScope": true,
+      "section": "interior",
+      "field": "facing-style",
+      "product": "sport-coat"
+    },
+    {
       "addr": "sport-coat|interior|facing-style|facing-2",
       "label": "Facing 2",
       "findings": [
@@ -10200,6 +10217,23 @@
         }
       ],
       "factCount": 0,
+      "absence": false,
+      "inScope": true,
+      "section": "interior",
+      "field": "facing-style",
+      "product": "sport-coat"
+    },
+    {
+      "addr": "sport-coat|interior|facing-style|facing-9",
+      "label": "Facing 9",
+      "findings": [
+        {
+          "level": "BLOCK",
+          "code": "ILLUSTRATION_SUBJECT_MISMATCH",
+          "detail": "audited drawing does not depict this option — Opened 2026-08-08. A FABRIC SWATCH page: a green roll coded YZ041 and a yellow roll, on white. No garment or construction of any kind. Attached to option 'Facing 9'."
+        }
+      ],
+      "factCount": 1,
       "absence": false,
       "inScope": true,
       "section": "interior",
@@ -10697,6 +10731,23 @@
       "inScope": true,
       "section": "interior",
       "field": "perfume-pad",
+      "product": "sport-coat"
+    },
+    {
+      "addr": "sport-coat|suit-lining|lining-coverage|lc-full",
+      "label": "Full Lining",
+      "findings": [
+        {
+          "level": "BLOCK",
+          "code": "ILLUSTRATION_SUBJECT_MISMATCH",
+          "detail": "audited drawing does not depict this option — Opened 2026-08-08. A grid of TWELVE lining-fabric rolls with colour codes (YZ021, YZ006, YZ045, YZ009, 283, YZ018 ...). 'Full Lining' is a genuine construction option - how much of the jacket is lined - but this drawing shows colour choices, not lining extent, so it cannot specify it."
+        }
+      ],
+      "factCount": 4,
+      "absence": false,
+      "inScope": true,
+      "section": "suit-lining",
+      "field": "lining-coverage",
       "product": "sport-coat"
     },
     {
@@ -11548,6 +11599,23 @@
       "product": "suit-2pc"
     },
     {
+      "addr": "suit-2pc|interior|facing-style|facing-1",
+      "label": "Facing 1",
+      "findings": [
+        {
+          "level": "BLOCK",
+          "code": "ILLUSTRATION_SUBJECT_MISMATCH",
+          "detail": "audited drawing does not depict this option — Opened 2026-08-08. A FABRIC SWATCH page: two rolls of lining cloth photographed on white with colour codes printed on them. No garment, no construction, no facing geometry. Attached to option 'Facing 1'."
+        }
+      ],
+      "factCount": 1,
+      "absence": false,
+      "inScope": true,
+      "section": "interior",
+      "field": "facing-style",
+      "product": "suit-2pc"
+    },
+    {
       "addr": "suit-2pc|interior|facing-style|facing-2",
       "label": "Facing 2",
       "findings": [
@@ -11592,6 +11660,23 @@
         }
       ],
       "factCount": 0,
+      "absence": false,
+      "inScope": true,
+      "section": "interior",
+      "field": "facing-style",
+      "product": "suit-2pc"
+    },
+    {
+      "addr": "suit-2pc|interior|facing-style|facing-9",
+      "label": "Facing 9",
+      "findings": [
+        {
+          "level": "BLOCK",
+          "code": "ILLUSTRATION_SUBJECT_MISMATCH",
+          "detail": "audited drawing does not depict this option — Opened 2026-08-08. A FABRIC SWATCH page: a green roll coded YZ041 and a yellow roll, on white. No garment or construction of any kind. Attached to option 'Facing 9'."
+        }
+      ],
+      "factCount": 1,
       "absence": false,
       "inScope": true,
       "section": "interior",
@@ -12089,6 +12174,23 @@
       "inScope": true,
       "section": "interior",
       "field": "perfume-pad",
+      "product": "suit-2pc"
+    },
+    {
+      "addr": "suit-2pc|suit-lining|lining-coverage|lc-full",
+      "label": "Full Lining",
+      "findings": [
+        {
+          "level": "BLOCK",
+          "code": "ILLUSTRATION_SUBJECT_MISMATCH",
+          "detail": "audited drawing does not depict this option — Opened 2026-08-08. A grid of TWELVE lining-fabric rolls with colour codes (YZ021, YZ006, YZ045, YZ009, 283, YZ018 ...). 'Full Lining' is a genuine construction option - how much of the jacket is lined - but this drawing shows colour choices, not lining extent, so it cannot specify it."
+        }
+      ],
+      "factCount": 4,
+      "absence": false,
+      "inScope": true,
+      "section": "suit-lining",
+      "field": "lining-coverage",
       "product": "suit-2pc"
     },
     {
@@ -14815,6 +14917,23 @@
       "product": "suit-3pc"
     },
     {
+      "addr": "suit-3pc|interior|facing-style|facing-1",
+      "label": "Facing 1",
+      "findings": [
+        {
+          "level": "BLOCK",
+          "code": "ILLUSTRATION_SUBJECT_MISMATCH",
+          "detail": "audited drawing does not depict this option — Opened 2026-08-08. A FABRIC SWATCH page: two rolls of lining cloth photographed on white with colour codes printed on them. No garment, no construction, no facing geometry. Attached to option 'Facing 1'."
+        }
+      ],
+      "factCount": 1,
+      "absence": false,
+      "inScope": true,
+      "section": "interior",
+      "field": "facing-style",
+      "product": "suit-3pc"
+    },
+    {
       "addr": "suit-3pc|interior|facing-style|facing-2",
       "label": "Facing 2",
       "findings": [
@@ -14859,6 +14978,23 @@
         }
       ],
       "factCount": 0,
+      "absence": false,
+      "inScope": true,
+      "section": "interior",
+      "field": "facing-style",
+      "product": "suit-3pc"
+    },
+    {
+      "addr": "suit-3pc|interior|facing-style|facing-9",
+      "label": "Facing 9",
+      "findings": [
+        {
+          "level": "BLOCK",
+          "code": "ILLUSTRATION_SUBJECT_MISMATCH",
+          "detail": "audited drawing does not depict this option — Opened 2026-08-08. A FABRIC SWATCH page: a green roll coded YZ041 and a yellow roll, on white. No garment or construction of any kind. Attached to option 'Facing 9'."
+        }
+      ],
+      "factCount": 1,
       "absence": false,
       "inScope": true,
       "section": "interior",
@@ -15356,6 +15492,23 @@
       "inScope": true,
       "section": "interior",
       "field": "perfume-pad",
+      "product": "suit-3pc"
+    },
+    {
+      "addr": "suit-3pc|suit-lining|lining-coverage|lc-full",
+      "label": "Full Lining",
+      "findings": [
+        {
+          "level": "BLOCK",
+          "code": "ILLUSTRATION_SUBJECT_MISMATCH",
+          "detail": "audited drawing does not depict this option — Opened 2026-08-08. A grid of TWELVE lining-fabric rolls with colour codes (YZ021, YZ006, YZ045, YZ009, 283, YZ018 ...). 'Full Lining' is a genuine construction option - how much of the jacket is lined - but this drawing shows colour choices, not lining extent, so it cannot specify it."
+        }
+      ],
+      "factCount": 4,
+      "absence": false,
+      "inScope": true,
+      "section": "suit-lining",
+      "field": "lining-coverage",
       "product": "suit-3pc"
     },
     {

@@ -137,6 +137,25 @@ the skill references; new lessons append here.)
   subject in two batches out of three. (2026-08-08)
 
 
+- [SWATCH CHARTS FILED AS DRAWINGS] public/images/jacket/facing/ and
+  public/images/jacket/lining/ hold FABRIC SWATCH pages - rolls of lining cloth
+  with colour codes (YZ021, YZ041, 283 ...) - and 63 catalog rows point at them
+  as if they were construction drawings. Three were opened and confirmed
+  (facing-1, facing-9, full-lining) and are now recorded as MISMATCH. The other
+  8 files in those two directories are UNVERIFIED and still need a human or a
+  vision pass before anything is generated from them.
+  Note that "Full Lining" / "Half Lining" / "Quarter Lining" ARE real
+  construction options; it is their DRAWINGS that are wrong. Those options need
+  a lining-extent drawing sourced, not a colour chart. (2026-08-08)
+
+- [DO NOT SUBSTITUTE A HEURISTIC FOR LOOKING] An attempt to classify those
+  drawings automatically by colour saturation scored facing-9.jpg as a "line
+  drawing" when it had already been OPENED and seen to be two fabric rolls. The
+  measurement contradicted verified ground truth, so the measurement was
+  discarded, not the observation. Cheap proxies for "is this the right drawing"
+  do not work here; the only reliable check is opening the file. (2026-08-08)
+
+
 ## Spend
 
 | Date | Batch | Model | Images | Credits | Balance after |

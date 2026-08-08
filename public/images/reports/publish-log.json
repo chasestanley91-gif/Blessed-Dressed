@@ -9363,6 +9363,53 @@
       "rowCount": 0,
       "fanout": true,
       "options": []
+    },
+    {
+      "at": "2026-08-08T08:00:37.285Z",
+      "by": "tools/publish_approved.mjs",
+      "count": 1,
+      "rowCount": 3,
+      "fanout": true,
+      "options": [
+        {
+          "product": "sport-coat",
+          "option": "hem-squared",
+          "field": "hem-gusset",
+          "identity": "hem-gusset/hem-squared",
+          "image": "/images/generated/sport-coat/hem-squared.webp",
+          "master": "/images/generated/sport-coat/hem-squared.png",
+          "previous": "/images/jacket/hem/squared.jpg",
+          "preservedBlueprint": null,
+          "verdict": "PASS",
+          "waived": false,
+          "qcAttempt": 1,
+          "qcScoreMin": 98,
+          "qcMinCategoryScore": 98,
+          "rows": [
+            {
+              "product": "sport-coat",
+              "section": "front-style",
+              "field": "hem-gusset",
+              "previous": "/images/jacket/hem/squared.jpg",
+              "preservedBlueprint": null
+            },
+            {
+              "product": "suit-2pc",
+              "section": "front-style",
+              "field": "hem-gusset",
+              "previous": "/images/jacket/hem/squared.jpg",
+              "preservedBlueprint": null
+            },
+            {
+              "product": "suit-3pc",
+              "section": "front-style",
+              "field": "hem-gusset",
+              "previous": "/images/jacket/hem/squared.jpg",
+              "preservedBlueprint": null
+            }
+          ]
+        }
+      ]
     }
   ]
 }

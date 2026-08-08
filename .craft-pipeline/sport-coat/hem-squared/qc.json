@@ -1,0 +1,36 @@
+{
+  "addr": "sport-coat > hem-squared",
+  "productId": "sport-coat",
+  "optionId": "hem-squared",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 99,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 99,
+    "construction": 98,
+    "placement": 100,
+    "symmetry": 100,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "lockedFeatures": [
+    "SQUARE front hem corners, hard right angles, no rounding",
+    "both corners identical",
+    "jacket unbuttoned so both front edges are visible",
+    "both corners inside the frame with background beyond",
+    "no red line or annotation traced from the drawing",
+    "neutral grey studio background"
+  ],
+  "notes": "Attempt 1, PASS. Both front edges terminate in blunt square corners where the vertical edge meets the horizontal hem at a right angle, with no arc of any radius - and that is the whole option. The dominant risk here was tailoring convention, which overwhelmingly favours a rounded or cutaway front; the prompt named that prior explicitly and told the model the drawing wins, and it did. The red hem line in the blueprint was correctly read as a cutting-line marker and does not appear in the render. CAVEAT: the cloth came out near-black rather than the charcoal specified, which costs a little contrast against the background, but both corners remain clearly legible and the shape reads at a glance.",
+  "checkedAt": "2026-08-08T08:00:26.032Z"
+}
