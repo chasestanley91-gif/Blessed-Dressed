@@ -56,17 +56,57 @@ const LIMIT = Number(arg('limit', 0));
 const MODEL = arg('model', 'higgsfield-ai/soul/standard');
 const BASE = arg('base', 'https://platform.higgsfield.ai');
 
-const KEY = process.env.HIGGSFIELD_API_KEY;
-const SECRET = process.env.HIGGSFIELD_API_SECRET;
-if (!KEY || !SECRET) {
+/**
+ * Credentials are read from a file in the user's HOME directory, never from
+ * inside the repository.
+ *
+ * This is deliberate. The repository is PUBLIC (verified 2026-08-08) and an old
+ * supplier token is already readable in it because it was committed by
+ * accident. A credentials file living outside the working tree cannot be swept
+ * up by a stray `git add -A`, cannot be exposed by a mis-edited .gitignore, and
+ * cannot be served by the storefront.
+ *
+ * Order: environment variables first (handy for CI), then the file.
+ */
+const CRED_FILE = path.join(os.homedir(), '.higgsfield-credentials');
+
+function readCredentials() {
+  if (process.env.HIGGSFIELD_API_KEY && process.env.HIGGSFIELD_API_SECRET) {
+    return { key: process.env.HIGGSFIELD_API_KEY, secret: process.env.HIGGSFIELD_API_SECRET, from: 'environment variables' };
+  }
+  if (!fs.existsSync(CRED_FILE)) return null;
+  const out = {};
+  for (const line of fs.readFileSync(CRED_FILE, 'utf8').split(/\r?\n/)) {
+    const m = line.match(/^\s*([A-Za-z_]+)\s*[=:]\s*(.+?)\s*$/);
+    if (!m) continue;
+    // Accept KEY / SECRET, or the fuller HIGGSFIELD_API_KEY style, either way.
+    const k = m[1].toUpperCase().replace(/^HIGGSFIELD_?/, '').replace(/^API_?/, '');
+    const v = m[2].replace(/^["']|["']$/g, ''); // strip quotes people paste around a value
+    if (k === 'KEY') out.key = v;
+    if (k === 'SECRET') out.secret = v;
+  }
+  return out.key && out.secret ? { ...out, from: CRED_FILE } : null;
+}
+
+const creds = readCredentials();
+if (!creds) {
   console.error(
-    'ERROR: HIGGSFIELD_API_KEY and HIGGSFIELD_API_SECRET are not set.\n' +
-    '  Create them at https://cloud.higgsfield.ai (dashboard -> API credentials), then:\n' +
-    '    export HIGGSFIELD_API_KEY=...\n' +
-    '    export HIGGSFIELD_API_SECRET=...\n' +
+    'ERROR: no Higgsfield API credentials found.\n\n' +
+    'SET THEM UP (one time, about two minutes):\n' +
+    '  1. Go to https://cloud.higgsfield.ai and create an account.\n' +
+    '  2. In the dashboard, generate API credentials. You get a KEY and a SECRET.\n' +
+    `  3. Create this file:  ${CRED_FILE}\n` +
+    '     containing exactly two lines:\n\n' +
+    '        KEY=paste_your_key_here\n' +
+    '        SECRET=paste_your_secret_here\n\n' +
+    'That file lives in your home folder, OUTSIDE the project, so it can never be\n' +
+    'committed to the public repository by accident.\n\n' +
     'Refusing to run: without a reference drawing attached this would generate from text alone.');
   process.exit(1);
 }
+const KEY = creds.key;
+const SECRET = creds.secret;
+console.log(`credentials loaded from ${creds.from}`);
 
 const headers = {
   Authorization: `Key ${KEY}:${SECRET}`,
