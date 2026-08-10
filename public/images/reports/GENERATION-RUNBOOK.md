@@ -121,3 +121,45 @@ Then, per batch:
 | 116 | one drawing serving two genuinely different options |
 
 These need a decision or a better drawing, not a credit.
+
+---
+
+## The API key question — ANSWERED 2026-08-10
+
+**The Higgsfield API bills separately from the web subscription. The Plus
+credits do not carry over.**
+
+Tested directly. Credentials were created at cloud.higgsfield.ai and every
+generation request came back:
+
+```
+HTTP 403  {"detail":"not_enough_credits"}
+```
+
+while the web account showed **990.5 credits** before and after. Note the error:
+403 `not_enough_credits`, not 401 unauthorized — **the key authenticates fine**.
+The API-side account simply has a zero balance of its own.
+
+The probe cost nothing; every request was rejected before any work was done.
+
+### What this means
+
+| route | cost | throughput |
+|---|---|---|
+| Through the assistant (today) | uses the 990.5 credits already paid for | ~12–20 images per session |
+| Higgsfield API | needs a SECOND, separately funded balance | all 209 unattended |
+
+The remaining 209 photographs need roughly **136 credits** at the measured rate
+of ~0.65 per shipped image. The account already holds 990.5. So funding the API
+would mean paying a second time for capacity that is already owned — unless
+cloud.higgsfield.ai offers a way to link the existing subscription, which their
+public documentation does not mention either way.
+
+**Recommendation: do not fund the API account yet.** Ask Higgsfield support
+(support@higgsfield.ai) whether a Plus subscription can be used from the API. If
+it can, throughput is solved for free. If it cannot, the choice is between
+paying twice and continuing through the assistant across several sessions.
+
+Credentials live at `~/.higgsfield-credentials`, outside the repository, and are
+already wired into `tools/run_generation.mjs`. Nothing else needs setting up —
+the moment that balance is non-zero, `--probe` then `--apply` runs the lot.
