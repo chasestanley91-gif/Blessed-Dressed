@@ -1,6 +1,6 @@
 {
   "generatedAt": "2026-08-07T04:06:48.193Z",
-  "inspected": 167,
+  "inspected": 168,
   "totals": {
     "MATCH": 84,
     "MISMATCH": 58,
@@ -988,6 +988,11 @@
       "bp": "/images/jacket/front-buttonhole/by-machine.jpg",
       "v": "MISMATCH",
       "ev": "Opened 2026-08-10. The same MELTON FABRIC COLOUR GRID, headed '顺色 Matching' and '同大身面料 Same as self fabric'. It is an undercollar-cloth chooser, not a buttonhole drawing. Attached to the front-buttonhole option 'By Machine'."
+    },
+    {
+      "bp": "/images/jacket/facing/facing-7.jpg",
+      "v": "MISMATCH",
+      "ev": "Opened 2026-08-10. A FABRIC SWATCH: one roll of cloth coded YZ052, with a 'Search' input box still visible in the frame - it is a screenshot of the supplier's fabric-picker UI, not a drawing. Attached to option 'Facing 7'. Note this contradicts an automated colour-saturation check that had scored it 0.0% colourful and called it a line drawing; the heuristic was wrong and was discarded."
     }
   ]
 }

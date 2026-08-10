@@ -169,6 +169,30 @@ function validateOne(entry) {
     warn('ILLUSTRATION_SUBJECT_AMBIGUOUS', `audit could not confirm the drawing depicts this option — ${verdict.ev ?? ''}`.trim());
   }
 
+  // 1c — /images/jacket/ is distrusted by DEFAULT.
+  //
+  // It is not a drawing library. It is a pile of screenshots taken from the
+  // supplier's web UI: fabric-swatch grids with product codes, a button
+  // catalogue page, a fabric picker complete with its "Search" box, and at
+  // least one "NO IMAGE" placeholder tile. Directories confirmed by opening the
+  // files: facing/, lining/, front-buttonhole/, coin-pocket/, pocket-bartack/,
+  // hem/.
+  //
+  // The numbers settle it. Of 52 drawings audited under this tree, 46 are
+  // MISMATCH, 3 AMBIGUOUS and 3 MATCH — 5.8% usable. Finding the bad ones one
+  // at a time costs a credit and a slot in the owner's review queue each time,
+  // so the default flips: nothing here is generated unless a drawing has been
+  // opened and recorded MATCH.
+  //
+  // This BLOCKS options. It never deletes one, and the moment a drawing is
+  // verified it becomes eligible again with no code change.
+  if (illus && illus.startsWith('/images/jacket/') && verdict?.v !== 'MATCH') {
+    blocking('UNTRUSTED_DRAWING_SOURCE',
+      `/images/jacket/ is 5.8% usable (46 MISMATCH / 3 AMBIGUOUS / 3 MATCH of 52 audited) and holds ` +
+      `supplier UI screenshots rather than tech packs. "${illus}" is ${verdict ? verdict.v : 'UNAUDITED'}. ` +
+      `Open the drawing and record a MATCH verdict before generating from it.`);
+  }
+
   // 2 — the parser must have produced SOMETHING. An absence option ("None") is
   // legitimately factless; anything else is either a parser gap or an option
   // that is NAMED rather than described.

@@ -156,6 +156,23 @@ the skill references; new lessons append here.)
   do not work here; the only reliable check is opening the file. (2026-08-08)
 
 
+- [/images/jacket/ IS NOT A DRAWING LIBRARY — distrust it by default] Five more
+  directories under it were opened during batch prep and every one held
+  supplier WEB-UI SCREENSHOTS rather than tech packs: coin-pocket/ and
+  pocket-bartack/ are lining-fabric swatch grids with FB###### codes (one
+  containing a literal "NO IMAGE" placeholder tile), front-buttonhole/ is a
+  melton colour chooser, facing/ includes a fabric picker with its "Search" box
+  still in frame, hem/small-curve.jpg is a button catalogue page. Combined with
+  the earlier visual audit the tally under this tree is 46 MISMATCH / 3
+  AMBIGUOUS / 3 MATCH out of 52 audited — 5.8% usable.
+  Finding these one at a time costs a credit and a slot in the owner's review
+  queue every time, so validate_spec now BLOCKS any option whose drawing lives
+  under /images/jacket/ unless that specific file has been opened and recorded
+  MATCH. Options are blocked, never deleted, and become eligible again the
+  moment a drawing is verified. Remaining generatable work went 204 -> 165 and
+  roughly 39 credits of confidently-wrong output was avoided. (2026-08-10)
+
+
 ## Spend
 
 | Date | Batch | Model | Images | Credits | Balance after |
