@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-10T17:55:56.737Z",
+  "at": "2026-08-10T18:33:29.253Z",
   "settings": {
     "maxWidth": 1400,
     "quality": 82,
@@ -7,41 +7,63 @@
   },
   "applied": true,
   "counts": {
-    "masters": 798,
-    "converted": 2,
-    "skipped": 796,
+    "masters": 802,
+    "converted": 4,
+    "skipped": 798,
     "failed": 0,
     "repointed": 0
   },
   "bytes": {
-    "before": 3760752,
-    "after": 264418,
-    "savedPct": 93
+    "before": 6985379,
+    "after": 474448,
+    "savedPct": 93.2
   },
   "note": "targetSha1 is the derivative; sourceSha1 is the PNG master QC graded. The master and publish_approved.mjs byte-identity gate are untouched.",
   "results": {
     "ok": [
       {
-        "master": "public\\images\\generated\\sport-coat\\bv-side-fixed-belt.png",
-        "masterBytes": 1548310,
-        "sourceSha1": "ec090f0235a654266be719398e1bc58071a7fed1",
-        "target": "public\\images\\generated\\sport-coat\\bv-side-fixed-belt.webp",
-        "targetBytes": 71242,
-        "targetSha1": "c0e968455072281c6e5b53bd194b45f45e9d2ffe",
+        "master": "public\\images\\generated\\sport-coat\\bs-kissing.png",
+        "masterBytes": 1857728,
+        "sourceSha1": "df252af3a48e60376aca820874e358ee52bf1ebf",
+        "target": "public\\images\\generated\\sport-coat\\bs-kissing.webp",
+        "targetBytes": 140368,
+        "targetSha1": "a270fbfbd528a1c0c35c142f05a824e6468c3931",
         "quality": 82,
         "width": 1400,
-        "web": "/images/generated/sport-coat/bv-side-fixed-belt.webp"
+        "web": "/images/generated/sport-coat/bs-kissing.webp"
       },
       {
-        "master": "public\\images\\generated\\sport-coat\\half-canvas.png",
-        "masterBytes": 2212442,
-        "sourceSha1": "c9c8bc6f549d3408f9c6986a7270a30209ada13c",
-        "target": "public\\images\\generated\\sport-coat\\half-canvas.webp",
-        "targetBytes": 193176,
-        "targetSha1": "52dae34f1e9933adc6a430bcddee997f0626a5de",
+        "master": "public\\images\\generated\\sport-coat\\bv-center.png",
+        "masterBytes": 1456922,
+        "sourceSha1": "61b40019c28211f27eaf0efc5321010570790b6e",
+        "target": "public\\images\\generated\\sport-coat\\bv-center.webp",
+        "targetBytes": 64680,
+        "targetSha1": "da417260c2a266aebc5bc52382cc1c88fe285d9f",
         "quality": 82,
         "width": 1400,
-        "web": "/images/generated/sport-coat/half-canvas.webp"
+        "web": "/images/generated/sport-coat/bv-center.webp"
+      },
+      {
+        "master": "public\\images\\generated\\sport-coat\\bv-side.png",
+        "masterBytes": 1502361,
+        "sourceSha1": "47e6284651e0373af805de63f1fd3baa53b0b767",
+        "target": "public\\images\\generated\\sport-coat\\bv-side.webp",
+        "targetBytes": 71134,
+        "targetSha1": "c2a2dba0d772e007429f28d6195b8df41ac69d47",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/sport-coat/bv-side.webp"
+      },
+      {
+        "master": "public\\images\\generated\\sport-coat\\sleeve-neapolitan.png",
+        "masterBytes": 2168368,
+        "sourceSha1": "7dc401531fa32bedf7c97a95f4da3fe83125d830",
+        "target": "public\\images\\generated\\sport-coat\\sleeve-neapolitan.webp",
+        "targetBytes": 198266,
+        "targetSha1": "da5b618d26b945885a3ca065d8568ab203ea1ef9",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/sport-coat/sleeve-neapolitan.webp"
       }
     ],
     "skipped": [
@@ -1554,6 +1576,10 @@
         "reason": "derivative up to date"
       },
       {
+        "master": "public\\images\\generated\\sport-coat\\bv-side-fixed-belt.png",
+        "reason": "derivative up to date"
+      },
+      {
         "master": "public\\images\\generated\\sport-coat\\cb-1.png",
         "reason": "derivative up to date"
       },
@@ -1611,6 +1637,10 @@
       },
       {
         "master": "public\\images\\generated\\sport-coat\\ep-round.png",
+        "reason": "derivative up to date"
+      },
+      {
+        "master": "public\\images\\generated\\sport-coat\\half-canvas.png",
         "reason": "derivative up to date"
       },
       {

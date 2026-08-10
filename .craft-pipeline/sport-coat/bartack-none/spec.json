@@ -1,0 +1,53 @@
+{
+  "schema": "garment-spec/v1",
+  "addr": "sport-coat > suit-pockets > lower-pocket-bartack > bartack-none",
+  "productId": "sport-coat",
+  "sectionId": "suit-pockets",
+  "fieldId": "lower-pocket-bartack",
+  "optionId": "bartack-none",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\sport-coat.json",
+  "source": "json",
+  "label": "None",
+  "description": "Omitting the bartack at the pocket corner leaves the junction between pocket opening and face cloth without any additional reinforcement stitch, producing the cleanest possible finish at the pocket mouth with no ornamental stitch visible to interrupt the cloth. This is appropriate on the most minimalist bespoke work where every surface detail has been considered and found unnecessary. In practice, fine bespoke construction relies on the strength of the underlying hand-stitching to secure pocket edges without a visible bartack.",
+  "fieldLabel": "Pocket Bartack",
+  "sectionLabel": "Pockets",
+  "part": "jacket-pocket",
+  "garment": {
+    "noun": "bespoke sport coat",
+    "fabric": "textured wool/hopsack with visible weave"
+  },
+  "view": {
+    "orientation": "front",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": true,
+  "measured": {
+    "dimensions": [],
+    "angles": [],
+    "counts": [],
+    "shapes": [],
+    "negatedShapes": [],
+    "spread": [],
+    "flags": [],
+    "sides": [],
+    "attributes": [],
+    "supplierCodes": [],
+    "unresolved": []
+  },
+  "illustration": {
+    "path": "/images/jacket/pocket-bartack/none.jpg",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\jacket\\pocket-bartack\\none.jpg",
+    "exists": true,
+    "remote": false
+  },
+  "forbidden": [
+    "any pocket bartack rendered anywhere in frame — this option is its deliberate absence",
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-08-10T18:04:33.258Z"
+}

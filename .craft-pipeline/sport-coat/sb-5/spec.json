@@ -1,31 +1,33 @@
 {
   "schema": "garment-spec/v1",
-  "addr": "sport-coat > interior > perfume-pad > pp-none",
+  "addr": "sport-coat > front-style > button-config > sb-5",
   "productId": "sport-coat",
-  "sectionId": "interior",
-  "fieldId": "perfume-pad",
-  "optionId": "pp-none",
+  "sectionId": "front-style",
+  "fieldId": "button-config",
+  "optionId": "sb-5",
   "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\sport-coat.json",
   "source": "json",
-  "label": "None",
-  "description": "No underarm shield.",
-  "fieldLabel": "Underarm Shield",
-  "sectionLabel": "Interior & Facing",
-  "part": "fin-adjust",
+  "label": "SB 5 Buttons",
+  "description": "Five buttons — fashion-forward statement.",
+  "fieldLabel": "Button Configuration",
+  "sectionLabel": "Front Style",
+  "part": "jacket-front",
   "garment": {
     "noun": "bespoke sport coat",
     "fabric": "textured wool/hopsack with visible weave"
   },
   "view": {
-    "orientation": "interior",
+    "orientation": "front",
     "wearerPerspective": true,
     "confirmedByVisualInspection": true
   },
-  "absence": true,
+  "absence": false,
   "measured": {
     "dimensions": [],
     "angles": [],
-    "counts": [],
+    "counts": [
+      "5-button"
+    ],
     "shapes": [],
     "negatedShapes": [],
     "spread": [],
@@ -36,18 +38,18 @@
     "unresolved": []
   },
   "illustration": {
-    "path": "/images/jacket/underarm-shield/none.jpg",
-    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\jacket\\underarm-shield\\none.jpg",
+    "path": "/images/jacket/front-style/sb-5.jpg",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\jacket\\front-style\\sb-5.jpg",
     "exists": true,
     "remote": false
   },
   "forbidden": [
-    "any underarm shield rendered anywhere in frame — this option is its deliberate absence",
     "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
     "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
-    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)",
+    "any button count other than exactly 5"
   ],
   "excluded": null,
   "generate": true,
-  "extractedAt": "2026-08-10T18:04:20.649Z"
+  "extractedAt": "2026-08-10T18:04:26.659Z"
 }

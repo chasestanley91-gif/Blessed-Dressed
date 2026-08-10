@@ -1,0 +1,57 @@
+{
+  "schema": "garment-spec/v1",
+  "addr": "sport-coat > back-vents > back-vent-style > bv-side",
+  "productId": "sport-coat",
+  "sectionId": "back-vents",
+  "fieldId": "back-vent-style",
+  "optionId": "bv-side",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\sport-coat.json",
+  "source": "json",
+  "label": "Side Vents",
+  "description": "Side vents — two symmetrical vertical slits at the rear side seams — are the hallmark of British tailoring and the most functionally satisfying of all vent options. They allow the jacket to open evenly on both sides when the wearer sits or reaches into trouser pockets, meaning the back drapes flat and uninterrupted whether standing or moving. The double vent is considered the most refined option in classic English dress, communicating an understanding of tailoring tradition without any overt showiness, and is the standard configuration on Savile Row bespoke.",
+  "fieldLabel": "Back Vent",
+  "sectionLabel": "Back & Vents",
+  "part": "jacket-vent",
+  "garment": {
+    "noun": "bespoke sport coat",
+    "fabric": "textured wool/hopsack with visible weave"
+  },
+  "view": {
+    "orientation": "back",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": false,
+  "measured": {
+    "dimensions": [],
+    "angles": [],
+    "counts": [],
+    "shapes": [
+      "double / side vents"
+    ],
+    "negatedShapes": [],
+    "spread": [],
+    "flags": [],
+    "sides": [
+      "both",
+      "back"
+    ],
+    "attributes": [],
+    "supplierCodes": [],
+    "unresolved": []
+  },
+  "illustration": {
+    "path": "/images/supplier-bb/REQAP/C.jpg",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\supplier-bb\\REQAP\\C.jpg",
+    "exists": true,
+    "remote": false
+  },
+  "forbidden": [
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-08-10T18:15:17.894Z"
+}

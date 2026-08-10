@@ -1,49 +1,47 @@
 {
   "schema": "garment-spec/v1",
-  "addr": "suit-2pc > Trousers-back > back-pocket-style > back-left-jetted",
+  "addr": "suit-2pc > Trousers-waistband > extension-length > ext-len-15",
   "productId": "suit-2pc",
-  "sectionId": "Trousers-back",
-  "fieldId": "back-pocket-style",
-  "optionId": "back-left-jetted",
+  "sectionId": "Trousers-waistband",
+  "fieldId": "extension-length",
+  "optionId": "ext-len-15",
   "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\suit-2pc.json",
   "source": "json",
-  "label": "Left Besom with Button & Buttonhole",
-  "description": "Single left besom pocket.",
-  "fieldLabel": "Back Pocket Style",
-  "sectionLabel": "Trousers — Back",
-  "part": "trouser-back-pocket",
+  "label": "15 cm",
+  "description": "The longest 15 cm waistband extension — a full French-bearer tab spanning well past the fly, the most supported and structured closure.",
+  "fieldLabel": "Extension Length",
+  "sectionLabel": "Trousers — Waistband",
+  "part": "trouser-extension-length",
   "garment": {
     "noun": "pair of bespoke wool tailored trousers",
     "fabric": "fine wool trouser cloth with visible weave"
   },
   "view": {
-    "orientation": "back",
+    "orientation": "front",
     "wearerPerspective": true,
     "confirmedByVisualInspection": true
   },
   "absence": false,
   "measured": {
-    "dimensions": [],
+    "dimensions": [
+      "15 cm"
+    ],
     "angles": [],
     "counts": [],
-    "shapes": [
-      "jetted / besom welt"
-    ],
+    "shapes": [],
     "negatedShapes": [],
     "spread": [],
     "flags": [
-      "collar/closure button"
+      "tab fastening"
     ],
-    "sides": [
-      "left"
-    ],
+    "sides": [],
     "attributes": [],
     "supplierCodes": [],
     "unresolved": []
   },
   "illustration": {
-    "path": "/images/blueprints/factory/7e10ed9447af__32C7__Left_besom_bttn_bttnhole.jpg",
-    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\factory\\7e10ed9447af__32C7__Left_besom_bttn_bttnhole.jpg",
+    "path": "/images/blueprints/factory/b9c52226e508__L.jpg",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\factory\\b9c52226e508__L.jpg",
     "exists": true,
     "remote": false
   },
@@ -54,5 +52,5 @@
   ],
   "excluded": null,
   "generate": true,
-  "extractedAt": "2026-08-10T18:15:18.803Z"
+  "extractedAt": "2026-08-10T18:15:21.443Z"
 }
