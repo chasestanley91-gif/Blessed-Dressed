@@ -1,0 +1,55 @@
+{
+  "schema": "garment-spec/v1",
+  "addr": "sport-coat > handmade > handmade-type > hm-individual",
+  "productId": "sport-coat",
+  "sectionId": "handmade",
+  "fieldId": "handmade-type",
+  "optionId": "hm-individual",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\sport-coat.json",
+  "source": "json",
+  "label": "Individual Handmade Parts",
+  "description": "A jacket with individual handmade parts combines machine sewing for long structural seams with hand work concentrated on the areas where it matters most: pad-stitching the lapels and collar canvas, hand-setting the sleeves into the armhole, hand-finishing the buttonholes, and hand-attaching the lining at its edges. This hybrid approach is the norm for the majority of high-quality bespoke and premium made-to-measure houses and delivers much of the softness, shape retention, and sartorial character of full handmade at a more practical time investment. It is the standard most discerning wearers associate with the term 'bespoke.'",
+  "fieldLabel": "Handmade Construction",
+  "sectionLabel": "Handmade & Craftsmanship",
+  "part": "fin-stitch",
+  "garment": {
+    "noun": "bespoke sport coat",
+    "fabric": "textured wool/hopsack with visible weave"
+  },
+  "view": {
+    "orientation": "front",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": false,
+  "measured": {
+    "dimensions": [],
+    "angles": [],
+    "counts": [],
+    "shapes": [],
+    "negatedShapes": [],
+    "spread": [],
+    "flags": [
+      "eyelet holes",
+      "hand-worked buttonhole"
+    ],
+    "sides": [],
+    "attributes": [],
+    "supplierCodes": [],
+    "unresolved": []
+  },
+  "illustration": {
+    "path": "/images/blueprints/factory/01c43a2f9084__08C0__Manually_sewing_lapel.png",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\factory\\01c43a2f9084__08C0__Manually_sewing_lapel.png",
+    "exists": true,
+    "remote": false
+  },
+  "forbidden": [
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-08-10T17:46:15.148Z"
+}

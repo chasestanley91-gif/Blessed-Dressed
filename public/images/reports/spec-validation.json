@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-08-08T07:55:10.370Z",
+  "generatedAt": "2026-08-10T17:48:41.503Z",
   "checked": 2862,
-  "blocked": 1106,
+  "blocked": 1112,
   "warned": 57,
-  "clean": 1699,
+  "clean": 1693,
   "byCode": {
     "ILLUSTRATION_SUBJECT_AMBIGUOUS": 53,
-    "ILLUSTRATION_SUBJECT_MISMATCH": 145,
+    "ILLUSTRATION_SUBJECT_MISMATCH": 151,
     "SHARED_ILLUSTRATION": 116,
     "DRAWING_IS_SOLE_SPEC": 785,
     "NO_ILLUSTRATION": 124,
@@ -9833,6 +9833,40 @@
       "product": "sport-coat"
     },
     {
+      "addr": "sport-coat|front-style|front-buttonhole|fbh-machine",
+      "label": "By Machine",
+      "findings": [
+        {
+          "level": "BLOCK",
+          "code": "ILLUSTRATION_SUBJECT_MISMATCH",
+          "detail": "audited drawing does not depict this option — Opened 2026-08-10. The same MELTON FABRIC COLOUR GRID, headed '顺色 Matching' and '同大身面料 Same as self fabric'. It is an undercollar-cloth chooser, not a buttonhole drawing. Attached to the front-buttonhole option 'By Machine'."
+        }
+      ],
+      "factCount": 2,
+      "absence": false,
+      "inScope": true,
+      "section": "front-style",
+      "field": "front-buttonhole",
+      "product": "sport-coat"
+    },
+    {
+      "addr": "sport-coat|front-style|front-buttonhole|fbh-hands",
+      "label": "By Hand",
+      "findings": [
+        {
+          "level": "BLOCK",
+          "code": "ILLUSTRATION_SUBJECT_MISMATCH",
+          "detail": "audited drawing does not depict this option — Opened 2026-08-10. A MELTON FABRIC COLOUR GRID: swatch tiles labelled in Chinese and English (black melton, navy melton, heather grey melton, greyish-green melton, dark khaki melton ...) with PM0000x codes. No buttonhole, no garment, nothing expressing hand-vs-machine. Attached to the front-buttonhole option 'By Hand'."
+        }
+      ],
+      "factCount": 2,
+      "absence": false,
+      "inScope": true,
+      "section": "front-style",
+      "field": "front-buttonhole",
+      "product": "sport-coat"
+    },
+    {
       "addr": "sport-coat|front-style|chest-dart|cd-standard",
       "label": "Standard",
       "findings": [
@@ -11273,6 +11307,40 @@
       "inScope": true,
       "section": "suit-pockets",
       "field": "chest-pocket",
+      "product": "suit-2pc"
+    },
+    {
+      "addr": "suit-2pc|front-style|front-buttonhole|fbh-machine",
+      "label": "By Machine",
+      "findings": [
+        {
+          "level": "BLOCK",
+          "code": "ILLUSTRATION_SUBJECT_MISMATCH",
+          "detail": "audited drawing does not depict this option — Opened 2026-08-10. The same MELTON FABRIC COLOUR GRID, headed '顺色 Matching' and '同大身面料 Same as self fabric'. It is an undercollar-cloth chooser, not a buttonhole drawing. Attached to the front-buttonhole option 'By Machine'."
+        }
+      ],
+      "factCount": 2,
+      "absence": false,
+      "inScope": true,
+      "section": "front-style",
+      "field": "front-buttonhole",
+      "product": "suit-2pc"
+    },
+    {
+      "addr": "suit-2pc|front-style|front-buttonhole|fbh-hands",
+      "label": "By Hand",
+      "findings": [
+        {
+          "level": "BLOCK",
+          "code": "ILLUSTRATION_SUBJECT_MISMATCH",
+          "detail": "audited drawing does not depict this option — Opened 2026-08-10. A MELTON FABRIC COLOUR GRID: swatch tiles labelled in Chinese and English (black melton, navy melton, heather grey melton, greyish-green melton, dark khaki melton ...) with PM0000x codes. No buttonhole, no garment, nothing expressing hand-vs-machine. Attached to the front-buttonhole option 'By Hand'."
+        }
+      ],
+      "factCount": 2,
+      "absence": false,
+      "inScope": true,
+      "section": "front-style",
+      "field": "front-buttonhole",
       "product": "suit-2pc"
     },
     {
@@ -14518,6 +14586,40 @@
       "inScope": true,
       "section": "suit-pockets",
       "field": "ticket-pocket",
+      "product": "suit-3pc"
+    },
+    {
+      "addr": "suit-3pc|front-style|front-buttonhole|fbh-machine",
+      "label": "By Machine",
+      "findings": [
+        {
+          "level": "BLOCK",
+          "code": "ILLUSTRATION_SUBJECT_MISMATCH",
+          "detail": "audited drawing does not depict this option — Opened 2026-08-10. The same MELTON FABRIC COLOUR GRID, headed '顺色 Matching' and '同大身面料 Same as self fabric'. It is an undercollar-cloth chooser, not a buttonhole drawing. Attached to the front-buttonhole option 'By Machine'."
+        }
+      ],
+      "factCount": 2,
+      "absence": false,
+      "inScope": true,
+      "section": "front-style",
+      "field": "front-buttonhole",
+      "product": "suit-3pc"
+    },
+    {
+      "addr": "suit-3pc|front-style|front-buttonhole|fbh-hands",
+      "label": "By Hand",
+      "findings": [
+        {
+          "level": "BLOCK",
+          "code": "ILLUSTRATION_SUBJECT_MISMATCH",
+          "detail": "audited drawing does not depict this option — Opened 2026-08-10. A MELTON FABRIC COLOUR GRID: swatch tiles labelled in Chinese and English (black melton, navy melton, heather grey melton, greyish-green melton, dark khaki melton ...) with PM0000x codes. No buttonhole, no garment, nothing expressing hand-vs-machine. Attached to the front-buttonhole option 'By Hand'."
+        }
+      ],
+      "factCount": 2,
+      "absence": false,
+      "inScope": true,
+      "section": "front-style",
+      "field": "front-buttonhole",
       "product": "suit-3pc"
     },
     {

@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-08T08:00:32.875Z",
+  "at": "2026-08-10T17:55:56.737Z",
   "settings": {
     "maxWidth": 1400,
     "quality": 82,
@@ -7,30 +7,41 @@
   },
   "applied": true,
   "counts": {
-    "masters": 796,
-    "converted": 1,
-    "skipped": 795,
+    "masters": 798,
+    "converted": 2,
+    "skipped": 796,
     "failed": 0,
     "repointed": 0
   },
   "bytes": {
-    "before": 1805299,
-    "after": 108274,
-    "savedPct": 94
+    "before": 3760752,
+    "after": 264418,
+    "savedPct": 93
   },
   "note": "targetSha1 is the derivative; sourceSha1 is the PNG master QC graded. The master and publish_approved.mjs byte-identity gate are untouched.",
   "results": {
     "ok": [
       {
-        "master": "public\\images\\generated\\sport-coat\\hem-squared.png",
-        "masterBytes": 1805299,
-        "sourceSha1": "dff8b46b5a9802c67565cca63ec757045a7f6651",
-        "target": "public\\images\\generated\\sport-coat\\hem-squared.webp",
-        "targetBytes": 108274,
-        "targetSha1": "38068d2795b831fc127a671b32d4ff61e087a89c",
+        "master": "public\\images\\generated\\sport-coat\\bv-side-fixed-belt.png",
+        "masterBytes": 1548310,
+        "sourceSha1": "ec090f0235a654266be719398e1bc58071a7fed1",
+        "target": "public\\images\\generated\\sport-coat\\bv-side-fixed-belt.webp",
+        "targetBytes": 71242,
+        "targetSha1": "c0e968455072281c6e5b53bd194b45f45e9d2ffe",
         "quality": 82,
         "width": 1400,
-        "web": "/images/generated/sport-coat/hem-squared.webp"
+        "web": "/images/generated/sport-coat/bv-side-fixed-belt.webp"
+      },
+      {
+        "master": "public\\images\\generated\\sport-coat\\half-canvas.png",
+        "masterBytes": 2212442,
+        "sourceSha1": "c9c8bc6f549d3408f9c6986a7270a30209ada13c",
+        "target": "public\\images\\generated\\sport-coat\\half-canvas.webp",
+        "targetBytes": 193176,
+        "targetSha1": "52dae34f1e9933adc6a430bcddee997f0626a5de",
+        "quality": 82,
+        "width": 1400,
+        "web": "/images/generated/sport-coat/half-canvas.webp"
       }
     ],
     "skipped": [
@@ -1600,6 +1611,10 @@
       },
       {
         "master": "public\\images\\generated\\sport-coat\\ep-round.png",
+        "reason": "derivative up to date"
+      },
+      {
+        "master": "public\\images\\generated\\sport-coat\\hem-squared.png",
         "reason": "derivative up to date"
       },
       {
