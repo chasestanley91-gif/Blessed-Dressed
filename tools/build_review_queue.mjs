@@ -98,6 +98,14 @@ for (const product of fs.readdirSync(PIPE)) {
       drawingDisk: illDisk && fs.existsSync(illDisk) ? illDisk : null,
       drawingOriginalPath: illPath || null,
       promptText: typeof prompt.prompt === 'string' ? prompt.prompt : '',
+      // The owner's own rejection history for this craft, so the review screen
+      // can say "this is the retry of the one you rejected, and here is why
+      // you rejected it" instead of presenting a replacement as a stranger.
+      rejectionHistory: (prompt.ownerCorrections || []).map((c) => ({
+        attemptRejected: c.attemptRejected, decidedAt: c.decidedAt,
+        tags: c.tags || [], notes: c.notes || '', references: c.references || [],
+      })),
+      isReplacementForRejected: (prompt.ownerCorrections || []).length > 0,
       jobId: gen.jobId || (gen.attempts && gen.attempts.length
         ? gen.attempts[gen.attempts.length - 1].jobId : null),
       checklist: spec.checklist || [],
@@ -173,6 +181,8 @@ for (const r of rows) {
     drawingUrl: drawName ? `/images/review/${drawName}` : null,
     drawingOriginalPath: r.drawingOriginalPath,
     promptText: r.promptText,
+    rejectionHistory: r.rejectionHistory,
+    isReplacementForRejected: r.isReplacementForRejected,
   });
 }
 

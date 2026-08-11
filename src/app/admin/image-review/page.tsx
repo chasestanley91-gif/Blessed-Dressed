@@ -29,6 +29,8 @@ type Item = {
   drawingUrl: string | null;
   drawingOriginalPath: string | null;
   promptText: string;
+  rejectionHistory?: { attemptRejected: number; decidedAt: string; tags: string[]; notes: string; references: string[] }[];
+  isReplacementForRejected?: boolean;
 };
 
 type Decision = {
@@ -280,6 +282,22 @@ function ReviewCard({
         <p style={{ margin: "0 0 12px", color: "#444", fontSize: 14, lineHeight: 1.6, maxWidth: 1100 }}>
           {item.description}
         </p>
+      )}
+
+      {/* If this is the retry of something you rejected, say so — and show
+          your own reasons, so you can check the retry actually fixed them. */}
+      {item.isReplacementForRejected && (item.rejectionHistory?.length ?? 0) > 0 && (
+        <div style={{ margin: "0 0 12px", padding: "10px 14px", background: "#fff7ed", border: "1px solid #fdba74", borderRadius: 8, maxWidth: 1100 }}>
+          <strong style={{ fontSize: 13, color: "#9a3412" }}>
+            Replacement for a version you rejected — your reasons were:
+          </strong>
+          {item.rejectionHistory!.map((h, i) => (
+            <div key={i} style={{ fontSize: 13, color: "#7c2d12", marginTop: 4 }}>
+              attempt {h.attemptRejected}: {[...h.tags, h.notes].filter(Boolean).join(" — ")}
+              {h.references.length > 0 && ` (you attached ${h.references.length} reference photo${h.references.length > 1 ? "s" : ""})`}
+            </div>
+          ))}
+        </div>
       )}
 
       <div style={{ display: "flex", gap: 8, marginBottom: 10 }}>
