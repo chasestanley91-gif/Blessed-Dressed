@@ -1,0 +1,43 @@
+{
+  "addr": "shirt > placket-hidden-turnup",
+  "productId": "shirt",
+  "optionId": "placket-hidden-turnup",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 99,
+    "placement": 99,
+    "symmetry": 98,
+    "composition": 99,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "flap-state",
+      "description": "The drawing depicts the placket closed - a single straight vertical fold edge with the knot positions carried only as red notation behind it. The photograph shows the covering flap turned back and open so the knots are exposed, which introduces a diagonal opening edge not present in the closed drawing. This is the state the option description explicitly calls for ('visible when the flap is opened') and is required for the knots to be identifiable at all, so it is recorded rather than treated as a geometry failure.",
+      "expected": "closed vertical fold edge exactly as drawn",
+      "actual": "flap turned back to the wearer's left, exposing the knot column; opening edge runs slightly diagonal at the top"
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "lockedFeatures": [
+    "exactly 5 hand-worked knotted fabric toggles down the centre front, evenly spaced - matches the 5 knot marks on the drawing",
+    "hidden turn-up placket with the covering flap folded back to reveal the knots",
+    "knots seated against worked openings on the opposing edge (hand-worked buttonhole token satisfied)",
+    "smooth unstitched outer flap face - no conventional buttons anywhere",
+    "front view, white cotton poplin, plain grey studio background, no red notation or annotation carried over"
+  ],
+  "notes": "Counted at magnification (2.2x crop of the placket column, not from the full frame): 5 knotted fabric toggles, matching the 5 red knot marks on the drawing exactly. The knot toggles are a rare, highly specific feature - there is no generic-category substitution here; this could not be mistaken for a plain or hidden placket. Approved on attempt 1.",
+  "checkedAt": "2026-08-10T23:50:02.034Z"
+}

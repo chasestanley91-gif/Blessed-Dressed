@@ -1,0 +1,95 @@
+{
+  "addr": "shirt > placket-half-hidden",
+  "productId": "shirt",
+  "optionId": "placket-half-hidden",
+  "attempt": 3,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 97,
+    "angles": 98,
+    "construction": 97,
+    "placement": 98,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 97
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "dimensions",
+    "construction",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "edge-stitching",
+      "description": "The visible lower placket band shows a fine topstitch line along its right edge only; the left edge reads as a clean folded edge with no discernible stitch row at this resolution. The drawing bounds the placket band with two parallel edge lines, which would normally imply edge stitching on both sides.",
+      "expected": "edge stitching legible on both long edges of the visible plain-placket section",
+      "actual": "stitch row resolvable on the right edge only; left edge appears as an unstitched fold"
+    },
+    {
+      "severity": "minor",
+      "category": "count-unverified",
+      "description": "Button count could not be compared to the drawing because the two views cover different lengths of the shirt front. The drawing frames only the lower shirt front to the curved hem and carries nine notation ticks (five large alternating with four small) along the centre line; the photograph frames collar to lower ribcage and shows two full buttons plus a third cropped at the bottom edge of the frame.",
+      "expected": "button spacing matching the drawn notation over a comparable length of front",
+      "actual": "2 full buttons plus 1 cropped at frame edge, evenly spaced; drawn length not covered by the crop, so no valid count comparison"
+    }
+  ],
+  "verdict": "PASS_WAIVED",
+  "waiver": {
+    "granted": true,
+    "reason": "minor-only at attempt 3 of 3: retry budget exhausted with zero critical/major findings and every category >= 95",
+    "waiverMin": 95,
+    "scoreMin": 98,
+    "belowScoreMin": [
+      {
+        "category": "dimensions",
+        "score": 97,
+        "shortfall": 1
+      },
+      {
+        "category": "construction",
+        "score": 97,
+        "shortfall": 1
+      },
+      {
+        "category": "blueprint-match",
+        "score": 97,
+        "shortfall": 1
+      }
+    ],
+    "minorErrors": [
+      {
+        "category": "edge-stitching",
+        "description": "The visible lower placket band shows a fine topstitch line along its right edge only; the left edge reads as a clean folded edge with no discernible stitch row at this resolution. The drawing bounds the placket band with two parallel edge lines, which would normally imply edge stitching on both sides.",
+        "expected": "edge stitching legible on both long edges of the visible plain-placket section",
+        "actual": "stitch row resolvable on the right edge only; left edge appears as an unstitched fold"
+      },
+      {
+        "category": "count-unverified",
+        "description": "Button count could not be compared to the drawing because the two views cover different lengths of the shirt front. The drawing frames only the lower shirt front to the curved hem and carries nine notation ticks (five large alternating with four small) along the centre line; the photograph frames collar to lower ribcage and shows two full buttons plus a third cropped at the bottom edge of the frame.",
+        "expected": "button spacing matching the drawn notation over a comparable length of front",
+        "actual": "2 full buttons plus 1 cropped at frame edge, evenly spaced; drawn length not covered by the crop, so no valid count comparison"
+      }
+    ],
+    "attempt": 3,
+    "maxAttempts": 3,
+    "waiverAttemptFloor": 3,
+    "authority": "user decision 2026-07-30: QC gate stays >=98; a 3rd attempt is allowed; after 3 attempts an image with ZERO critical/major findings may ship at >=95 as a LOGGED WAIVER in qc.json",
+    "grantedAt": "2026-08-10T23:45:46.723Z"
+  },
+  "correction": null,
+  "lockedFeatures": [
+    "hybrid half-hidden construction: smooth concealed fly fold over the upper front with zero visible buttons",
+    "crisp horizontal transition line at mid-chest where the concealed section ends",
+    "visible conventional plain placket band below the transition with evenly spaced 4-hole mother-of-pearl buttons",
+    "placket runs continuously to the hem and never terminates in a pointed popover tab",
+    "front view, white cotton poplin, plain light-grey studio background, no annotation or red notation carried over"
+  ],
+  "notes": "Attempt 1 failed critically: it rendered a popover / short half-placket whose strip stopped at the sternum in a pointed tab end, leaving the lower front with no placket at all - a different garment. Attempt 2 fixed the construction (concealed upper, buttoned visible lower, continuous to hem) but pulled back to a full-torso shot in which the placket filled far too little of the frame. Attempt 3 kept the corrected construction and tightened the crop; the concealed-to-visible transition now sits near the centre of the frame and reads within a second. No oscillation occurred between attempts 2 and 3 - attempt 3 is strictly the better frame. Retry budget spent at 3.",
+  "checkedAt": "2026-08-10T23:45:46.750Z"
+}

@@ -1,0 +1,52 @@
+{
+  "addr": "shirt > front-narrow-pleats",
+  "productId": "shirt",
+  "optionId": "front-narrow-pleats",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 99,
+    "geometry": 99,
+    "dimensions": 98,
+    "angles": 99,
+    "construction": 98,
+    "placement": 99,
+    "symmetry": 99,
+    "composition": 99,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "placket-topstitch-read",
+      "description": "The centre placket in the render is a plain unstitched strip; no topstitched placket edge is resolvable. The drawing shows an edge line at the left of the placket, but at 138 px source I could not separate that line from the adjacent pleat fold, so I cannot assert the drawing specifies topstitching here.",
+      "expected": "Placket edge treatment as drawn (edge line at left of placket, ambiguous at source resolution)",
+      "actual": "Plain unstitched centre strip bounded by the first pleat fold on each side"
+    },
+    {
+      "severity": "minor",
+      "category": "placket-width",
+      "description": "Placket measures ~40 px against a 460 px front-face width (8.7%); the drawing reads 7 px of 98 px (7.1%). Difference is roughly one source pixel, i.e. at the measurement floor.",
+      "expected": "placket ~7.1% of front width",
+      "actual": "placket ~8.7% of front width"
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "lockedFeatures": [
+    "narrow knife pleats run FULL LENGTH from just below the collar continuously to the waist/tuck line - not a short tuxedo bib ending at the waistcoat line",
+    "pleat bands flank the centre placket symmetrically on both sides",
+    "measured 10 pleat shadow lines left band, 11 right band; drawing reads ~10-11 per side at its 2 px pitch",
+    "pleated zone spans 54% of front-face width (356-605 px of a 210-670 px body); drawing reads 56% (55 px of 98 px)",
+    "left band 99 px wide vs right band 101 px - symmetric within 2%",
+    "point collar, buttoned to the neck, no tie",
+    "white cotton poplin, plain seamless light-grey studio background, no props and no annotation text"
+  ],
+  "notes": "Attempt 1. Front-facing, correct face of the garment. The key trap for this option - substituting a generic short tuxedo pleated bib - was avoided: the pleats run the full length of the front exactly as drawn. Pleat pitch, band width ratio and left/right symmetry all measured against the drawing numerically rather than eyeballed. Counts were taken from a column-intensity profile at 4-5x magnification, not from the full frame. Two minor deviations logged, both at or near the resolution floor of the 138x193 source drawing. Framing crops at the waistband so the shirt hem drawn in the illustration is not shown; this is consistent with the brief's requirement that the front style fill 40-80% of the frame.",
+  "checkedAt": "2026-08-11T01:10:28.823Z"
+}

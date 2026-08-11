@@ -1,0 +1,142 @@
+{
+  "addr": "shirt > cuff-hex-2btn-1bh",
+  "productId": "shirt",
+  "optionId": "cuff-hex-2btn-1bh",
+  "attempt": 2,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 98,
+    "geometry": 97,
+    "dimensions": 96,
+    "angles": 98,
+    "construction": 96,
+    "placement": 97,
+    "symmetry": 97,
+    "composition": 94,
+    "blueprint-match": 96
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "geometry",
+    "dimensions",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "composition"
+  ],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "closure-not-engaged",
+      "description": "The prompt asks for the cuff closed. The linked button pair sits on the cuff face with the buttonhole at the far end left open; the cuff is presented flat rather than fastened.",
+      "expected": "Cuff fastened, the linked button unit engaged through the single buttonhole.",
+      "actual": "Cuff laid open, buttonhole unengaged."
+    },
+    {
+      "severity": "minor",
+      "category": "topstitch-rows",
+      "description": "The drawing shows a double dashed topstitch line around the cuff (an outer edge stitch plus a parallel inner row). The render carries a single fine edge-stitch row.",
+      "expected": "Two parallel topstitch rows around the cuff perimeter.",
+      "actual": "One edge-stitch row."
+    },
+    {
+      "severity": "minor",
+      "category": "frame-distraction",
+      "description": "A shirt front placket button and the model's jaw and collar are inside the frame, adding a third button to the picture and slightly diluting the count read. Cuff occupies roughly 35-40 percent of frame, at the bottom of the 40-80 percent target.",
+      "expected": "Cuff isolated, filling 40-80 percent of frame with nothing else competing.",
+      "actual": "Cuff plus collar, jaw, and one placket button in frame."
+    }
+  ],
+  "verdict": "FAIL",
+  "waiver": null,
+  "correction": {
+    "errors": [
+      {
+        "severity": "minor",
+        "category": "geometry",
+        "error": "score-card category \"geometry\" scored 97 (< 98)",
+        "expected": ">= 98",
+        "actual": "97",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"geometry\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "dimensions",
+        "error": "score-card category \"dimensions\" scored 96 (< 98)",
+        "expected": ">= 98",
+        "actual": "96",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"dimensions\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "construction",
+        "error": "score-card category \"construction\" scored 96 (< 98)",
+        "expected": ">= 98",
+        "actual": "96",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"construction\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "placement",
+        "error": "score-card category \"placement\" scored 97 (< 98)",
+        "expected": ">= 98",
+        "actual": "97",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"placement\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "symmetry",
+        "error": "score-card category \"symmetry\" scored 97 (< 98)",
+        "expected": ">= 98",
+        "actual": "97",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"symmetry\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "composition",
+        "error": "score-card category \"composition\" scored 94 (< 98)",
+        "expected": ">= 98",
+        "actual": "94",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"composition\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "blueprint-match",
+        "error": "score-card category \"blueprint-match\" scored 96 (< 98)",
+        "expected": ">= 98",
+        "actual": "96",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"blueprint-match\" and regenerate."
+      }
+    ],
+    "lockedFeatures": [
+      "exactly 2 buttons - verified at magnification",
+      "exactly 1 worked buttonhole - verified at magnification",
+      "the two buttons are JOINED to each other by a short shank bar as a single linked closure unit, exactly as drawn - this is the distinguishing detail and it is correct",
+      "mitered / chamfered hexagonal cuff corners - clearly faceted, not squared or rounded",
+      "buttonhole at one end, linked button unit at the other, matching the drawn layout",
+      "barrel (single) cuff, not French - correct",
+      "photorealistic, no line-art, no annotation or red guide marks carried over"
+    ],
+    "forbiddenChanges": [
+      "do not alter any checklist item this attempt already passed",
+      "do not change the camera crop, composition, or accessories unless the error is itself a composition error",
+      "do not change the garment part, orientation, or any other option's geometry"
+    ]
+  },
+  "lockedFeatures": [
+    "exactly 2 buttons - verified at magnification",
+    "exactly 1 worked buttonhole - verified at magnification",
+    "the two buttons are JOINED to each other by a short shank bar as a single linked closure unit, exactly as drawn - this is the distinguishing detail and it is correct",
+    "mitered / chamfered hexagonal cuff corners - clearly faceted, not squared or rounded",
+    "buttonhole at one end, linked button unit at the other, matching the drawn layout",
+    "barrel (single) cuff, not French - correct",
+    "photorealistic, no line-art, no annotation or red guide marks carried over"
+  ],
+  "notes": "2 of 3 generations used; stopped deliberately. Strongest result in this group. Attempt 1 rendered two separate independent buttons - a generic 2-button barrel cuff; attempt 2 correctly renders the linked two-button unit shown in the tech pack, which is the whole point of this option. Only minor findings remain. A third attempt was NOT spent because correction passes here have been measured to oscillate, and the linked-button detail took two attempts to obtain - risking it for a fastened pose and a second stitch row is a bad trade. Cuff depth and mitre length were NOT verified against numeric dimensions; the drawing carries none.",
+  "checkedAt": "2026-08-11T00:32:56.163Z"
+}

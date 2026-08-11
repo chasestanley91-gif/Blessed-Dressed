@@ -1,0 +1,43 @@
+{
+  "addr": "shirt > hem-round-pentagon-gusset",
+  "productId": "shirt",
+  "optionId": "hem-round-pentagon-gusset",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 99,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 99,
+    "placement": 99,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "dimensions",
+      "description": "The rendered pentagon is slightly wider than tall; the drawn pentagon is closer to regular (equal width and height).",
+      "expected": "regular pentagon, width approximately equal to height",
+      "actual": "pentagon approximately 1.15x wider than tall"
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "lockedFeatures": [
+    "five-sided pentagonal gusset patch at the base of the side seam, single apex pointing up at the seam end",
+    "two sloped upper edges, two near-vertical side edges, one flat horizontal bottom edge on the hem",
+    "topstitch line inset just inside the full pentagon perimeter, matching the dashed stitch line in the drawing",
+    "rounded shirttail hem highest at the gusset, sweeping down and away on both sides and meeting the pentagon at its lower corners",
+    "front view, white cotton poplin, plain light-grey studio background, no annotation marks"
+  ],
+  "notes": "Attempt 1 accepted. Edge count verified at magnification: five edges with a single top apex, clearly distinct from the six-edge hexagon sibling and the triangle sibling.",
+  "checkedAt": "2026-08-10T23:49:50.636Z"
+}

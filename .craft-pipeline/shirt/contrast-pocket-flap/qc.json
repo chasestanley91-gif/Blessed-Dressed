@@ -1,0 +1,101 @@
+{
+  "addr": "shirt > contrast-pocket-flap",
+  "productId": "shirt",
+  "optionId": "contrast-pocket-flap",
+  "attempt": 2,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 90,
+    "geometry": 93,
+    "dimensions": 92,
+    "angles": 88,
+    "construction": 95,
+    "placement": 95,
+    "symmetry": 93,
+    "composition": 80,
+    "blueprint-match": 90
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "major",
+      "category": "shape",
+      "description": "The flap's lower edge is rendered with cut-away corners and a shallow centre point (a chevron), not the plain straight-bottomed rectangle in the drawing.",
+      "expected": "Rectangular flap, straight bottom edge across the full pocket width, square corners.",
+      "actual": "Angled corners and a soft centre point at the bottom edge.",
+      "correction": "Render a plain rectangular flap with a straight lower edge and square corners."
+    },
+    {
+      "severity": "major",
+      "category": "frame-dominance",
+      "description": "Flap plus pocket occupy roughly 7% of the frame in a chest-and-shoulders shot.",
+      "expected": "Contrast Fabric Position fills 40-80% of the frame.",
+      "actual": "Flap about 220 x 100 px inside an 880 x 1168 frame.",
+      "correction": "Crop tighter on the pocket."
+    }
+  ],
+  "verdict": "FAIL",
+  "waiver": null,
+  "correction": {
+    "errors": [
+      {
+        "severity": "major",
+        "category": "shape",
+        "error": "The flap's lower edge is rendered with cut-away corners and a shallow centre point (a chevron), not the plain straight-bottomed rectangle in the drawing.",
+        "expected": "Rectangular flap, straight bottom edge across the full pocket width, square corners.",
+        "actual": "Angled corners and a soft centre point at the bottom edge.",
+        "correction": "Render a plain rectangular flap with a straight lower edge and square corners."
+      },
+      {
+        "severity": "major",
+        "category": "frame-dominance",
+        "error": "Flap plus pocket occupy roughly 7% of the frame in a chest-and-shoulders shot.",
+        "expected": "Contrast Fabric Position fills 40-80% of the frame.",
+        "actual": "Flap about 220 x 100 px inside an 880 x 1168 frame.",
+        "correction": "Crop tighter on the pocket."
+      }
+    ],
+    "lockedFeatures": [
+      "white cotton poplin body cloth",
+      "white square patch pocket, contrast confined to the flap only",
+      "black flap with a single dark button",
+      "wearer's left chest (frame right)",
+      "plain light-grey seamless studio background"
+    ],
+    "forbiddenChanges": [
+      "do not alter any checklist item this attempt already passed",
+      "do not change the camera crop, composition, or accessories unless the error is itself a composition error",
+      "do not change the garment part, orientation, or any other option's geometry"
+    ]
+  },
+  "lockedFeatures": [
+    "white cotton poplin body cloth",
+    "white square patch pocket, contrast confined to the flap only",
+    "black flap with a single dark button",
+    "wearer's left chest (frame right)",
+    "plain light-grey seamless studio background"
+  ],
+  "notes": "Correct division of cloths verified at magnification: only the flap is contrast, the pocket bag stays in white body cloth, and one button sits centred on the flap, all as drawn. The flap's pointed bottom edge is the one real geometry deviation. Attempt 2; no third generation spent.",
+  "checkedAt": "2026-08-11T00:46:03.381Z"
+}

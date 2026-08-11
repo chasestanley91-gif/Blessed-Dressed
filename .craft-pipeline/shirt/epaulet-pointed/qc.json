@@ -1,0 +1,93 @@
+{
+  "addr": "shirt > epaulet-pointed",
+  "productId": "shirt",
+  "optionId": "epaulet-pointed",
+  "attempt": 3,
+  "maxAttempts": 2,
+  "scores": {
+    "shape": 88,
+    "geometry": 80,
+    "dimensions": 80,
+    "angles": 88,
+    "construction": 96,
+    "placement": 78,
+    "symmetry": 90,
+    "composition": 85,
+    "blueprint-match": 75
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "major",
+      "category": "proportion-substitution",
+      "description": "The drawing's red-highlighted feature — which by the prompt's own convention marks WHERE the option sits — is a SHORT, NARROW pointed tab of roughly 1:2.5 width-to-length, topstitched around its outline, carrying ONE button close to its point. The render instead produced a full-length strap spanning the entire shoulder from collar to armhole. The pointed buttoned tab exists only as the terminal 15% of that strap. Short highlighted tab and full-span strap are not the same object.",
+      "expected": "a short narrow pointed tab, roughly 1:2.5 width-to-length, as red-highlighted in the drawing",
+      "actual": "a full-shoulder-span topstitched strap running collar to armhole, terminating in a pointed buttoned tab; verified by cropping the shoulder at 3x"
+    },
+    {
+      "severity": "major",
+      "category": "feature-orientation",
+      "description": "In the drawing the pointed tab emerges from a seam and its point faces AWAY from that seam into open cloth, with the button sitting at the point end. In the render the pointed end with the button sits at the OUTBOARD end, hard against the armhole/sleeve-head seam at the shoulder point, with the strap's plain end running inboard under the collar. The defining pointed-and-buttoned end is at the opposite end of the span from what the drawing indicates.",
+      "expected": "pointed buttoned end positioned as drawn, point directed away from the seam it springs from",
+      "actual": "pointed buttoned end at the outboard shoulder point abutting the armhole seam; plain end disappears under the collar — verified at 6x magnification"
+    },
+    {
+      "severity": "major",
+      "category": "blueprint-coverage",
+      "description": "The drawing contains, besides the red pointed tab, a wide topstitched band ending in a ROUNDED corner carrying a horizontal buttonhole, and a second long topstitched band carrying a vertical buttonhole. Neither of those elements, nor their spatial relationship to the red tab, appears anywhere in the render. Only the pointed tab was reproduced; the rest of the drawn assembly was dropped.",
+      "expected": "every drawn element reproduced — the pointed tab plus the rounded buttonholed band and the second buttonholed band, in their drawn relationship",
+      "actual": "only a pointed buttoned tab on a plain strap; no rounded buttonholed band, no second buttonholed band, no equivalent relationship"
+    },
+    {
+      "severity": "minor",
+      "category": "point-geometry",
+      "description": "The drawn tab point is a symmetric pentagon — parallel sides converging to a centred apex. The rendered point is a shallow asymmetric chamfer in which the upper edge runs nearly straight through and only the lower edge angles up to meet it.",
+      "expected": "symmetric centred point as drawn",
+      "actual": "shallow asymmetric chamfered point, apex off-centre toward the upper edge — verified at 6x"
+    },
+    {
+      "severity": "minor",
+      "category": "single-side-framing",
+      "description": "The locked prompt asked for both ends and, for a paired option, both sides in frame. Only the model's right shoulder is shown; the opposite shoulder is entirely out of frame, so left/right pairing and symmetry of the pair could not be assessed. I did not verify pair symmetry because the second shoulder is not in the picture.",
+      "expected": "both sides of a paired option visible with background beyond each",
+      "actual": "single-shoulder three-quarter crop; opposite shoulder out of frame"
+    }
+  ],
+  "verdict": "UNMET",
+  "waiver": null,
+  "correction": null,
+  "lockedFeatures": [
+    "a pointed, topstitched shoulder tab IS present — not a plain strap end",
+    "exactly ONE button on the tab, and it is a 4-hole button — counted at 6x magnification, not from the full frame",
+    "a buttonhole is present on the tab, partially concealed beneath the button — resolved only at 6x",
+    "single row of edge topstitching follows the tab outline and the strap's lower edge",
+    "photorealistic white cotton poplin on a male model — not line art, not a mannequin, not CGI",
+    "seamless plain neutral grey studio background, no props, no location",
+    "no traced annotation anywhere in frame: no numbers, leader lines, arrows, callouts, labels; no red tint and no flat grey panel carried over from the drawing",
+    "front/three-quarter face of the garment, not the back"
+  ],
+  "notes": "REJECTED FOR GENERIC-CATEGORY SUBSTITUTION. Taken on its own the render is a clean, well-built, photoreal pointed shirt epaulet — the tab is genuinely pointed, the single 4-hole button and its buttonhole were confirmed at 6x, and the edge topstitching is correct. It fails because it is a TYPICAL pointed epaulet rather than THIS drawn one: the drawing highlights a short narrow tab, the render made a full-shoulder strap; the drawn point faces away from its seam, the rendered one sits against the armhole; and two further drawn buttonholed bands are simply absent. UNRESOLVED AND ESCALATED TO A HUMAN: at 8x magnification the drawing as a whole reads far more like a sleeve CUFF plus a pointed tower placket with a gauntlet button than like a shoulder epaulet — wide band with rounded buttonholed corner, long placket band with vertical buttonhole, short pointed tab between them. The catalog labels this option 'Pointed Shoulder Epaulet' and files it under /images/epaulet/. I could not resolve this conflict from a 192x192 source and I am NOT asserting the drawing is mislabelled — but if it is, every attempt at this option has been photographing the wrong part of the shirt and no amount of prompt correction will fix it. Retry budget was already spent before this worker started (filesystem assigned attempt 3); no fourth attempt made.",
+  "checkedAt": "2026-08-10T21:40:05.639Z"
+}

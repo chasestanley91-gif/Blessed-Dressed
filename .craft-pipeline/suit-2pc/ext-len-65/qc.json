@@ -1,0 +1,85 @@
+{
+  "addr": "suit-2pc > ext-len-65",
+  "productId": "suit-2pc",
+  "optionId": "ext-len-65",
+  "attempt": 2,
+  "maxAttempts": 2,
+  "scores": {
+    "shape": 93,
+    "geometry": 84,
+    "dimensions": 52,
+    "angles": 92,
+    "construction": 82,
+    "placement": 89,
+    "symmetry": 91,
+    "composition": 85,
+    "blueprint-match": 76
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "critical",
+      "category": "ladder-monotonicity",
+      "description": "Renders SHORTER than the 6 cm rung and shorter than the 5 cm rung, inverting the series twice.",
+      "expected": "longer than 5 cm and 6 cm",
+      "actual": "~5.9 cm vs ~6.2 cm (6 rung) and ~5.7 cm (5 rung)"
+    },
+    {
+      "severity": "major",
+      "category": "set-consistency",
+      "description": "Large cream/off-white waistband curtain and lining occupy the left third of the frame; other rungs are all-grey.",
+      "expected": "identical plain mid-grey worsted presentation on every rung",
+      "actual": "prominent ecru curtain and lining panel introduce a second cloth and colour"
+    },
+    {
+      "severity": "major",
+      "category": "dimensions",
+      "description": "Stated 6.5 cm renders roughly 0.6 cm short.",
+      "expected": "6.5 cm",
+      "actual": "~5.9 cm against the in-frame rule (~69 px per cm)"
+    },
+    {
+      "severity": "minor",
+      "category": "scale-reference",
+      "description": "Rule is parallel and legible but butts against the tab underside with zero unregistered to the fly.",
+      "expected": "rule zeroed at the tab origin",
+      "actual": "origin must be inferred"
+    }
+  ],
+  "verdict": "UNMET",
+  "waiver": null,
+  "correction": null,
+  "lockedFeatures": [
+    "pointed chamfered tab end",
+    "buttonhole plus 4-hole button at tab end",
+    "second button on band",
+    "flat pressed band",
+    "front view",
+    "no annotation text traced onto cloth"
+  ],
+  "notes": "Second monotonicity break, and it also carries a large cream curtain the other rungs do not have. LADDER GRADED AS A SET. Rendered tab overhang measured against the steel rule inside each frame (tab tip minus fly/body edge): 5cm -> ~5.7, 5.5cm -> ~5.2, 6cm -> ~6.2, 6.5cm -> ~5.9, 7cm -> ~4.4, 13cm -> ~10.2, 15cm -> ~4.0. Required order 5<5.5<6<6.5<7<13<15; actual order 15<7<5.5<5<6.5<6<13. The series is severely NON-MONOTONIC after the one permitted retry (this is attempt 2). ROOT CAUSE: all seven tech-pack drawings are 221x221 px and the line art is IDENTICAL across rungs - only a red text annotation (\"5cm\" / \"13cm\" / \"15cm\") differs. The blueprint encodes tab length as text, not geometry, and the locked prompt forbids rendering annotation text, so the attached reference supplies zero visual signal for the dimension. No third attempt taken, per directive.",
+  "checkedAt": "2026-08-10T21:45:37.514Z"
+}

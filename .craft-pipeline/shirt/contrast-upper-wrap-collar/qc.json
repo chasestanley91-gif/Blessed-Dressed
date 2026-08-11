@@ -1,0 +1,94 @@
+{
+  "addr": "shirt > contrast-upper-wrap-collar",
+  "productId": "shirt",
+  "optionId": "contrast-upper-wrap-collar",
+  "attempt": 2,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 95,
+    "geometry": 94,
+    "dimensions": 90,
+    "angles": 93,
+    "construction": 95,
+    "placement": 94,
+    "symmetry": 90,
+    "composition": 92,
+    "blueprint-match": 93
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "geometry",
+    "dimensions",
+    "angles",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "major",
+      "category": "dimensions",
+      "description": "The white outer border left around the contrast zone is far wider than drawn, so the contrast panel is smaller than specified.",
+      "expected": "Drawing leaves only a narrow white band (roughly one sixth of the leaf width) along the outer edge and points; contrast covers the rest of the leaf up to the fold.",
+      "actual": "White border occupies roughly 40% of each leaf; contrast confined to the upper half.",
+      "correction": "Extend the contrast further toward the outer edge, leaving only a narrow white border and white points."
+    },
+    {
+      "severity": "minor",
+      "category": "symmetry",
+      "description": "Frame-left collar leaf shows visibly less contrast area than the frame-right leaf because the model's head is turned.",
+      "expected": "Both leaves read equally.",
+      "actual": "Left leaf partly foreshortened."
+    }
+  ],
+  "verdict": "FAIL",
+  "waiver": null,
+  "correction": {
+    "errors": [
+      {
+        "severity": "major",
+        "category": "dimensions",
+        "error": "The white outer border left around the contrast zone is far wider than drawn, so the contrast panel is smaller than specified.",
+        "expected": "Drawing leaves only a narrow white band (roughly one sixth of the leaf width) along the outer edge and points; contrast covers the rest of the leaf up to the fold.",
+        "actual": "White border occupies roughly 40% of each leaf; contrast confined to the upper half.",
+        "correction": "Extend the contrast further toward the outer edge, leaving only a narrow white border and white points."
+      }
+    ],
+    "lockedFeatures": [
+      "white cotton poplin body cloth",
+      "black contrast on the upper zone of both collar leaves",
+      "white outer edge and white collar points",
+      "button-down collar points",
+      "collar close-up framing",
+      "plain light-grey seamless studio background"
+    ],
+    "forbiddenChanges": [
+      "do not alter any checklist item this attempt already passed",
+      "do not change the camera crop, composition, or accessories unless the error is itself a composition error",
+      "do not change the garment part, orientation, or any other option's geometry"
+    ]
+  },
+  "lockedFeatures": [
+    "white cotton poplin body cloth",
+    "black contrast on the upper zone of both collar leaves",
+    "white outer edge and white collar points",
+    "button-down collar points",
+    "collar close-up framing",
+    "plain light-grey seamless studio background"
+  ],
+  "notes": "Reads correctly as the complement of Lower Wrap Collar: contrast at the top of the collar with a white outer edge, versus contrast on the outer edge with a white body. The proportion of the white border is the main deviation from the drawing. Attempt 2; no third generation spent.",
+  "checkedAt": "2026-08-11T00:47:39.675Z"
+}

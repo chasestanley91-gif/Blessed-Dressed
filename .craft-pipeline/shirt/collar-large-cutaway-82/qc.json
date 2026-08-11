@@ -1,0 +1,56 @@
+{
+  "addr": "shirt > collar-large-cutaway-82",
+  "productId": "shirt",
+  "optionId": "collar-large-cutaway-82",
+  "attempt": 3,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 95,
+    "geometry": 93,
+    "dimensions": 94,
+    "angles": 90,
+    "construction": 97,
+    "placement": 98,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 92
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "geometry",
+    "dimensions",
+    "angles",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "major",
+      "category": "spread-angle",
+      "description": "The spread between the collar points measures about 122 degrees in frame against the drawn 100 degrees. Measured against its own family this inverts the ordering: the 115-degree Double Cut-Away 5.5 cm renders at about 102 degrees, i.e. NARROWER than this 100-degree option, so a customer comparing the two photographs side by side would read the two sizes backwards. This is a relative measurement across photographs shot in the same presentation, so it does not depend on assumptions about the drawing's projection.",
+      "expected": "100 degrees, narrower than the 115-degree Double Cut-Away sibling",
+      "actual": "About 122 degrees, wider than the 115-degree sibling"
+    }
+  ],
+  "verdict": "UNMET",
+  "waiver": null,
+  "correction": null,
+  "lockedFeatures": [
+    "acute collar points, matching the drawn leaf termination",
+    "centre-front tongue-shaped tab with throat button, present and centred as drawn",
+    "leaf length proportionate to the 8.2 cm specification",
+    "front view, no model, no skin, no necktie",
+    "both leaves mirror each other in length, angle and tip shape",
+    "seamless neutral light-grey studio background, no annotations traced from the drawing"
+  ],
+  "notes": "Attempt 3 of 3. The correction improved the spread substantially - attempt 2 opened to roughly 145 degrees, a near-horizontal extreme cutaway indistinguishable from the 145-degree Regular Collar 21 - but attempt 3 still lands about 22 degrees wide of the drawn 100 degrees, and attempt 1 was already at about 125 degrees, so the three attempts oscillated rather than converged. Attempt 3 is nonetheless the best of the three. Retry budget exhausted.",
+  "checkedAt": "2026-08-11T01:06:07.374Z"
+}

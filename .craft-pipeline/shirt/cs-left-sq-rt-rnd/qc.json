@@ -1,0 +1,85 @@
+{
+  "addr": "shirt > cs-left-sq-rt-rnd",
+  "productId": "shirt",
+  "optionId": "cs-left-sq-rt-rnd",
+  "attempt": 3,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 55,
+    "geometry": 55,
+    "dimensions": 68,
+    "angles": 58,
+    "construction": 80,
+    "placement": 60,
+    "symmetry": 62,
+    "composition": 55,
+    "blueprint-match": 45
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "critical",
+      "category": "generic-category-substitution",
+      "description": "The defining asymmetry of this option was never rendered in any of the three attempts. The drawing shows a MIXED stand: the band end on the frame-left terminates in a hard square right-angled corner (verified at pixel level: a vertical red line meeting a horizontal red line at 90 degrees), while the band end on the frame-right terminates in a smooth curve (verified: a diagonal/curving run of red pixels). Every attempt rendered a single uniform band end instead.",
+      "expected": "Two visibly different band terminations in one frame - one crisply squared, one rounded - so a customer can see the square-vs-round contrast at a glance.",
+      "actual": "Attempt 1: a plain uniformly ROUNDED band end, visually identical to the separate cs-round option. Attempt 2: a single angular/chamfered band end, no rounded counterpart visible. Attempt 3: the band is almost entirely concealed behind closed collar leaves; only two leaf tips and one buttonhole tab are visible."
+    },
+    {
+      "severity": "critical",
+      "category": "craft-option-visibility",
+      "description": "In attempt 3 the collar stand - the subject of the photograph - is occluded by the collar leaves and occupies well under the required 40-80% of frame. In all attempts only ONE of the two band ends is ever visible; the other is hidden beneath the overlap, making the asymmetric option impossible to verify or to sell.",
+      "expected": "The Collar Stand Design dominant in frame, both band ends unobstructed.",
+      "actual": "Stand largely hidden; one band end at most, never both."
+    },
+    {
+      "severity": "minor",
+      "category": "notation-rendered-as-garment",
+      "description": "Attempt 1 rendered the dark filled ellipse on the drawing's placket as a literal glossy BLACK button on a white shirt. The filled ellipse is line-art notation for a button, not a colour specification. Corrected in attempts 2 and 3 (white mother-of-pearl).",
+      "expected": "White mother-of-pearl buttons throughout.",
+      "actual": "Attempt 1 only: black placket button."
+    },
+    {
+      "severity": "minor",
+      "category": "prompt-drawing-conflict",
+      "description": "The locked prompt contains two internal contradictions with the drawing. (1) HANDEDNESS clause states wearer's-left maps to the RIGHT-HAND side of frame, which would put the square end on frame-right; the drawing plainly puts the square end on frame-LEFT, and the same prompt also says 'copy the reference drawing exactly as drawn and do NOT flip it'. Graded against the drawing per BLUEPRINT LOCK. (2) The FORBIDDEN clause demands the collar LEAF points terminate in 'a flat SQUARED-OFF terminal edge'; the drawing clearly shows conventional POINTED collar leaves. The word 'square' in this option name refers to the collar BAND end, not the leaf tip - the shape token appears to have been mis-propagated by the prompt builder.",
+      "expected": "Prompt handedness and shape tokens consistent with the drawing.",
+      "actual": "Prompt contradicts the drawing on both handedness and which component the word 'square' governs."
+    }
+  ],
+  "verdict": "UNMET",
+  "waiver": null,
+  "correction": null,
+  "lockedFeatures": [
+    "front view of garment, matching illustration orientation",
+    "white bespoke cotton poplin dress shirt",
+    "no model, no face, no neck, no skin in frame",
+    "no necktie, collar open at throat",
+    "seamless neutral grey studio background, no props",
+    "no annotations, dimension lines, numbers or coloured guide marks rendered"
+  ],
+  "notes": "Retry budget fully spent (3 generations). ATTEMPT 2 IS CLEARLY BETTER THAN ATTEMPT 3 - a human should prefer candidate-2.png if any candidate is used at all, since attempt 3 lost the collar stand entirely. None of the three is shippable: all fail the option's single distinguishing feature. Root cause is staging, not prompt wording - a worn/pressed collar in front view structurally hides one band end beneath the other, so the asymmetry can never be photographed this way. Recommend re-shooting this option as a flat-lay of the fully opened collar band laid out straight, both terminal ends side by side against the background, which is the only staging in which a square-vs-round mixed stand is visible at once. Drawing itself is valid and legible (verified by red-channel isolation at 12x magnification); the failure is downstream of the drawing.",
+  "checkedAt": "2026-08-11T01:01:04.531Z"
+}

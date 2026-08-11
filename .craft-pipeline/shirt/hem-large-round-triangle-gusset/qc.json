@@ -1,0 +1,132 @@
+{
+  "addr": "shirt > hem-large-round-triangle-gusset",
+  "productId": "shirt",
+  "optionId": "hem-large-round-triangle-gusset",
+  "attempt": 3,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 97,
+    "geometry": 97,
+    "dimensions": 96,
+    "angles": 98,
+    "construction": 97,
+    "placement": 98,
+    "symmetry": 96,
+    "composition": 95,
+    "blueprint-match": 96
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "construction",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "On attempt 3 the gusset is rendered so wide and low-relief that it does not read within one second at full-frame scale; the frame also includes the front placket and two buttons plus a large area of trousers.",
+      "expected": "Hem Shape dominant, gusset identifiable within one second",
+      "actual": "gusset occupies a small, low-contrast slice of frame; reads as a plain rounded shirttail until magnified"
+    },
+    {
+      "severity": "minor",
+      "category": "symmetry",
+      "description": "The two halves of the triangular gusset are unequal in length (left half noticeably longer than right), partly from the three-quarter camera angle.",
+      "expected": "isoceles triangle, equal sides about the side seam",
+      "actual": "left side approx 1.4x the right side"
+    },
+    {
+      "severity": "minor",
+      "category": "geometry",
+      "description": "Drawn gusset sides are concave, sweeping into the hem curve; rendered sides are straight.",
+      "expected": "slightly concave sides blending into the hem curve",
+      "actual": "straight-edged triangle"
+    }
+  ],
+  "verdict": "PASS_WAIVED",
+  "waiver": {
+    "granted": true,
+    "reason": "minor-only at attempt 3 of 3: retry budget exhausted with zero critical/major findings and every category >= 95",
+    "waiverMin": 95,
+    "scoreMin": 98,
+    "belowScoreMin": [
+      {
+        "category": "shape",
+        "score": 97,
+        "shortfall": 1
+      },
+      {
+        "category": "geometry",
+        "score": 97,
+        "shortfall": 1
+      },
+      {
+        "category": "dimensions",
+        "score": 96,
+        "shortfall": 2
+      },
+      {
+        "category": "construction",
+        "score": 97,
+        "shortfall": 1
+      },
+      {
+        "category": "symmetry",
+        "score": 96,
+        "shortfall": 2
+      },
+      {
+        "category": "composition",
+        "score": 95,
+        "shortfall": 3
+      },
+      {
+        "category": "blueprint-match",
+        "score": 96,
+        "shortfall": 2
+      }
+    ],
+    "minorErrors": [
+      {
+        "category": "composition",
+        "description": "On attempt 3 the gusset is rendered so wide and low-relief that it does not read within one second at full-frame scale; the frame also includes the front placket and two buttons plus a large area of trousers.",
+        "expected": "Hem Shape dominant, gusset identifiable within one second",
+        "actual": "gusset occupies a small, low-contrast slice of frame; reads as a plain rounded shirttail until magnified"
+      },
+      {
+        "category": "symmetry",
+        "description": "The two halves of the triangular gusset are unequal in length (left half noticeably longer than right), partly from the three-quarter camera angle.",
+        "expected": "isoceles triangle, equal sides about the side seam",
+        "actual": "left side approx 1.4x the right side"
+      },
+      {
+        "category": "geometry",
+        "description": "Drawn gusset sides are concave, sweeping into the hem curve; rendered sides are straight.",
+        "expected": "slightly concave sides blending into the hem curve",
+        "actual": "straight-edged triangle"
+      }
+    ],
+    "attempt": 3,
+    "maxAttempts": 3,
+    "waiverAttemptFloor": 3,
+    "authority": "user decision 2026-07-30: QC gate stays >=98; a 3rd attempt is allowed; after 3 attempts an image with ZERO critical/major findings may ship at >=95 as a LOGGED WAIVER in qc.json",
+    "grantedAt": "2026-08-10T23:45:46.876Z"
+  },
+  "correction": null,
+  "lockedFeatures": [
+    "applied triangular gusset patch at the base of the side seam, topstitched around its perimeter",
+    "gusset apex up at the seam end, flat horizontal base on the hem edge",
+    "wide-and-low triangle proportion, roughly 2:1 width to height, matching the drawing",
+    "deep (large) rounded shirttail hem sweeping away on both sides",
+    "front view, white cotton poplin, plain light-grey studio background"
+  ],
+  "notes": "Three attempts. Attempt 1 rendered the gusset as an open triangular notch/slit rather than an applied patch (rejected). Attempt 2 produced a crisp, unmistakable topstitched triangular gusset but far too tall and narrow (apex approx 66 degrees vs approx 130 degrees drawn). Attempt 3 corrected the proportion to the drawn wide-and-low triangle but at the cost of salience. Attempt 2 (candidate-2.png) is the more usable catalogue image; attempt 3 (candidate-3.png) is the closer blueprint match. A human should choose between them. Retry budget spent.",
+  "checkedAt": "2026-08-10T23:45:46.879Z"
+}

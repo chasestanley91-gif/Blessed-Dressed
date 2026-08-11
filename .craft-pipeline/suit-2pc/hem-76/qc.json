@@ -1,0 +1,79 @@
+{
+  "addr": "suit-2pc > hem-76",
+  "productId": "suit-2pc",
+  "optionId": "hem-76",
+  "attempt": 2,
+  "maxAttempts": 2,
+  "scores": {
+    "shape": 98,
+    "geometry": 94,
+    "dimensions": 65,
+    "angles": 96,
+    "construction": 97,
+    "placement": 95,
+    "symmetry": 96,
+    "composition": 90,
+    "blueprint-match": 85
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "geometry",
+    "dimensions",
+    "composition",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "major",
+      "category": "dimension-not-demonstrated",
+      "description": "The defining specification of this option is the 7.6 cm plain hem allowance, but a plain hem's allowance is turned inside the leg and blind-stitched, so it is structurally invisible from the exterior. Attempt 2 shows a completely clean outer leg face with no indication of the allowance depth anywhere. The checklist item 'length/width matches exactly: 7.6 cm' therefore cannot be verified from this photograph, and a customer could not tell this apart from a 5 cm or 9 cm plain hem.",
+      "expected": "A visible, measurable 7.6 cm hem allowance depth that distinguishes this option from its siblings in the same measurement ladder.",
+      "actual": "No hem-depth cue of any kind on the exterior face of either leg; only the single clean bottom fold edge is visible."
+    },
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "The checklist requires the Hem Finish to dominate 40-80% of the frame. Attempt 2 is tighter than attempt 1 but the hem region still occupies roughly the lower fifth of the picture; a large share of the frame is upper leg carrying no option information.",
+      "expected": "Hem finish filling 40-80% of the frame.",
+      "actual": "Hem region approximately 17-20% of frame area; legs above the hem consume the majority."
+    },
+    {
+      "severity": "minor",
+      "category": "view-vs-drawing",
+      "description": "The locked prompt states the illustration is the 'front' of the garment and the render obeys that, but the illustration is actually a side elevation of a single leg (side seam, seat curving away rearward, waistband seen in profile). The render is a straight-on front view of both legs. This is an upstream spec description issue rather than a generation failure, and no retry with the locked prompt can resolve it.",
+      "expected": "Photographed face consistent with the illustration's actual orientation.",
+      "actual": "Front view rendered from what appears to be a side-elevation drawing."
+    },
+    {
+      "severity": "minor",
+      "category": "unverifiable-checklist-item",
+      "description": "The checklist requires the heel guard to be reproduced from the illustration. A heel guard sits on the inside rear edge of the hem and is not visible in any exterior front view; it was not verified in either attempt.",
+      "expected": "Heel guard reproduced as drawn.",
+      "actual": "Not visible and not verified; no claim made either way."
+    }
+  ],
+  "verdict": "UNMET",
+  "waiver": null,
+  "correction": null,
+  "lockedFeatures": [
+    "Plain hem confirmed on BOTH legs at high magnification: single clean bottom fold edge, no turn-up, no cuff fold line, no exterior topstitching across the leg face",
+    "No annotation bleed: the red notation line from the drawing was correctly NOT rendered onto the cloth; no numbers, arrows, leader lines or tint anywhere in frame",
+    "No generic-category substitution of a cuffed/turn-up hem, which is the sibling option this one must be told apart from",
+    "Photographic realism: genuine wool weave texture, pressed front crease, side seam, no CGI or line-art appearance",
+    "Set matches brief: seamless neutral light-grey studio background, no props beyond the shoe required by the prompt",
+    "Near-zero break at the hem, consistent with the flat straight leg termination in the drawing"
+  ],
+  "notes": "Attempt 1 (candidate-1.png) framed too loosely (mid-calf to floor, hem ~15% of frame) and carried a faint horizontal press mark across roughly the outer third of the left leg near the hem; at maximum magnification that mark was soft-edged, low-contrast, died out before the leg centre and produced no silhouette step, so it was a press/show-through impression rather than a turn-up fold - but it was ambiguous enough to be a liability on the one axis that defines this option. Attempt 2 (candidate-2.png) fixed both: tighter framing and a completely clean face on both legs, with the plain hem now unambiguous. Attempt 2 is the better image and has zero critical findings. It still fails because the option's defining measurement cannot be shown at all: a plain hem's 7.6 cm allowance is internal. This is not fixable by regeneration under the locked prompt - it needs a brief change (an interior/turned-back or cutaway view, or acceptance that this ladder's members are visually identical from outside). Flagging for human decision rather than burning a third attempt, which the guidance forbids and which measurement shows oscillates rather than converges. Separately: one generation was submitted without the medias array attached (job 4d7bde1f-b419-45ea-b783-d949fa32e919), making it a text-only render with invented geometry. That credit was spent in error. It was deliberately NOT recorded as a candidate so it can never be mistaken for a drawing-referenced image; its URL is preserved here for audit only.",
+  "checkedAt": "2026-08-10T21:06:10.521Z"
+}

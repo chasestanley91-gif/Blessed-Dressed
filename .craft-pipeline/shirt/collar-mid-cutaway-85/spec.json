@@ -1,0 +1,64 @@
+{
+  "schema": "garment-spec/v1",
+  "addr": "shirt > collar > lapel > collar-mid-cutaway-85",
+  "productId": "shirt",
+  "sectionId": "collar",
+  "fieldId": "lapel",
+  "optionId": "collar-mid-cutaway-85",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\shirt.json",
+  "source": "json",
+  "label": "Middle Cut-Away 8.5 cm",
+  "description": "The Middle Cut-Away at 8.5cm combines a longer point length with the outward-angled cutaway spread, creating a collar that is both assertive and elegant. The extra length ensures the points sit correctly over the jacket lapels without curling, while the wider spread accommodates full and half-Windsor knots with ease. This collar is favoured by Continental and Neapolitan shirtmakers for its confident balance of tradition and modernity.",
+  "fieldLabel": "Collar Style",
+  "sectionLabel": "Collar",
+  "part": "shirt-collar",
+  "garment": {
+    "noun": "white bespoke cotton dress shirt",
+    "fabric": "crisp cotton poplin"
+  },
+  "view": {
+    "orientation": "front",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": false,
+  "measured": {
+    "dimensions": [
+      "8.5 cm"
+    ],
+    "angles": [],
+    "counts": [],
+    "shapes": [
+      "cutaway / spread",
+      "spread",
+      "point"
+    ],
+    "negatedShapes": [],
+    "spread": [
+      "wide cutaway spread"
+    ],
+    "flags": [],
+    "sides": [
+      "both",
+      "center"
+    ],
+    "attributes": [],
+    "supplierCodes": [],
+    "unresolved": []
+  },
+  "illustration": {
+    "path": "/images/techpacks/shirt/lapel/middle-cut-away-in-85cm.jpg",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\techpacks\\shirt\\lapel\\middle-cut-away-in-85cm.jpg",
+    "exists": true,
+    "remote": false
+  },
+  "forbidden": [
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)",
+    "collar leaves ending in a squared/blunt flat edge, or in a rounded club tip — this option's collar point termination is a straight acute point"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-08-10T20:41:14.443Z"
+}

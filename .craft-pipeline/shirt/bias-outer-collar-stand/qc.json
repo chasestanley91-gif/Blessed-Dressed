@@ -1,0 +1,77 @@
+{
+  "addr": "shirt > bias-outer-collar-stand",
+  "productId": "shirt",
+  "optionId": "bias-outer-collar-stand",
+  "attempt": 3,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 93,
+    "geometry": 88,
+    "dimensions": 92,
+    "angles": 90,
+    "construction": 92,
+    "placement": 85,
+    "symmetry": 90,
+    "composition": 85,
+    "blueprint-match": 84
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "major",
+      "category": "panel-isolation",
+      "description": "The bias spread onto panels the drawing leaves un-hatched: BOTH collar leaves now run diagonal as well as the collar stand. The drawing hatches only the small exposed outer collar stand and leaves the collar leaves plain. With collar and stand both off-grain a customer cannot tell which panel this option is about. Attempt 2 had this correct - leaves strictly vertical, stand diagonal.",
+      "expected": "diagonal grain confined to the exposed outer collar stand; collar leaves and shirt front straight vertical",
+      "actual": "collar stand diagonal AND both collar leaves diagonal; only the shirt front below stays vertical",
+      "correction": "Keep the collar leaves and front strictly vertical; only the stand band carrying the neck button may run diagonal."
+    },
+    {
+      "severity": "major",
+      "category": "frame-fill",
+      "description": "The exposed collar stand occupies roughly 4 percent of the frame - chin, both collar leaves, chest and a second placket button all take priority over the option being sold.",
+      "expected": "bias-cut panel filling 40-80 percent of the frame",
+      "actual": "stand band roughly 4 percent of the frame; the correction clause asking for a tight neck crop was not followed"
+    },
+    {
+      "severity": "minor",
+      "category": "render-artifact",
+      "description": "A smeared, blurred patch of cloth sits on the viewer's left collar leaf where the stripes break up.",
+      "expected": "clean crisp poplin throughout",
+      "actual": "localised smear artifact on the left collar leaf"
+    }
+  ],
+  "verdict": "UNMET",
+  "waiver": null,
+  "correction": null,
+  "lockedFeatures": [
+    "front view of the buttoned neck opening, matching the drawing's viewpoint",
+    "single neck button on the collar stand, positioned as drawn",
+    "shirt front placket below the collar holds straight vertical grain",
+    "real photograph, no line-art, no annotation marks or red guide marks carried over from the drawing"
+  ],
+  "notes": "Attempt 3 of 3 and a REGRESSION - attempt 2 is materially the better artifact and should be the one a human considers. Attempt 2 had exactly the right isolation (collar leaves and shirt front strictly vertical, bias confined to the exposed stand); its only real defects were a very wide frame and a mirrored chevron in the stand. The correction clause aimed at those two defects instead spread the bias onto the collar leaves and did not tighten the crop. Attempt 1 was worse still - a back view with an invented back placket carrying two buttons. Separately: this drawing is unambiguously a FRONT view, but the locked prompt and the checklist both assert 'orientation matches the illustration: back'. That is an upstream spec error that has been pushing every attempt toward the wrong face of the garment.",
+  "checkedAt": "2026-08-11T00:27:01.843Z"
+}

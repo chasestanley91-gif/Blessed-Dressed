@@ -1,0 +1,55 @@
+{
+  "schema": "garment-spec/v1",
+  "addr": "shirt > pocket-hem > hem > hem-straight-side-vents",
+  "productId": "shirt",
+  "sectionId": "pocket-hem",
+  "fieldId": "hem",
+  "optionId": "hem-straight-side-vents",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\shirt.json",
+  "source": "json",
+  "label": "Straight Hem with Side Vents",
+  "description": "Straight hem with lateral vents.",
+  "fieldLabel": "Hem Shape",
+  "sectionLabel": "Pocket & Hem",
+  "part": "shirt-hem",
+  "garment": {
+    "noun": "white bespoke cotton dress shirt",
+    "fabric": "crisp cotton poplin"
+  },
+  "view": {
+    "orientation": "back",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": false,
+  "measured": {
+    "dimensions": [],
+    "angles": [],
+    "counts": [],
+    "shapes": [
+      "straight hem",
+      "side vents"
+    ],
+    "negatedShapes": [],
+    "spread": [],
+    "flags": [],
+    "sides": [],
+    "attributes": [],
+    "supplierCodes": [],
+    "unresolved": []
+  },
+  "illustration": {
+    "path": "/images/hem/straight-hem-with-side-vents.jpg",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\hem\\straight-hem-with-side-vents.jpg",
+    "exists": true,
+    "remote": false
+  },
+  "forbidden": [
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-08-10T20:41:26.977Z"
+}

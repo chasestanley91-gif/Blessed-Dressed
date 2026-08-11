@@ -1,0 +1,54 @@
+{
+  "addr": "shirt > front-normal",
+  "productId": "shirt",
+  "optionId": "front-normal",
+  "attempt": 2,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 99,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 99,
+    "construction": 98,
+    "placement": 99,
+    "symmetry": 99,
+    "composition": 99,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "button-spacing-ratio",
+      "description": "Button pitch reads slightly tight relative to the drawing. Three internal scale references disagree on magnitude: measured against button diameter the render is ~25% tighter, against placket width ~20% tighter, against below-collar garment length only ~10% tighter (buttons span 71% of the below-collar run vs 79% drawn). Because the drawing's buttons are only ~3 px across, a +/-1 px read swings these ratios by a third, so I state the direction but cannot state the magnitude.",
+      "expected": "button run spanning ~79% of the below-collar placket length",
+      "actual": "button run spanning ~71% of the below-collar placket length"
+    },
+    {
+      "severity": "minor",
+      "category": "placket-edge-topstitch-strength",
+      "description": "Both long edges of the placket are delineated, but asymmetrically: the left edge renders as a crisp shadowed fold (intensity 147 against 228 surround) while the right edge is only a faint stitch line (221 against 233). The drawing marks both edges, the right one dashed. The asymmetry is physically consistent with the lighting direction, but the right edge is softer than the drawing implies.",
+      "expected": "both placket long edges crisply topstitched",
+      "actual": "left edge crisp, right edge a faint stitch line"
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "lockedFeatures": [
+    "SEPARATE APPLIED VISIBLE PLACKET band present - left edge x=420, right edge x=460, buttons centred at x=440, band ~2.2 button-diameters wide vs ~2.3 drawn",
+    "NOT a French front - this was the critical failure of attempt 1 and is corrected",
+    "7 buttons total: 1 collar-band button plus 6 down the front, matching the drawing's 7",
+    "first gap (collar button to top front button) is shorter than the remaining even pitch, in both drawing and render",
+    "collar buttoned closed at the neck, no tie, as drawn",
+    "placket orientation not mirrored: strong solid edge left of the button column, faint dashed/stitch edge right, same handedness as the drawing",
+    "curved shirttail hem visible, worn untucked, matching the drawing's hem curve",
+    "plain body panels - no pleats, no bib, no chest pocket",
+    "point collar, barrel cuffs, plain seamless light-grey studio background, no props and no annotation text"
+  ],
+  "notes": "Attempt 2. Attempt 1 FAILED with a critical generic-category substitution: it rendered a plain French front with no placket band at all, for an option whose entire distinguishing feature is 'Classic visible-placket shirt front'. I confirmed the drawing's intent at 20x magnification before retrying - the drawing shows two parallel vertical lines flanking the button column, the right one dashed, i.e. a topstitched applied placket. The retry used the locked prompt verbatim plus a clause naming that specific miss and the unfastened collar. Attempt 2 corrects both, and additionally shows the curved shirttail hem and cuffs that attempt 1 cropped away. Attempt 2 is unambiguously better than attempt 1 in every category; there is no oscillation concern here. Placket edges and button positions were measured from column-intensity profiles at 3-5x magnification, not read off the full frame.",
+  "checkedAt": "2026-08-11T01:26:29.290Z"
+}

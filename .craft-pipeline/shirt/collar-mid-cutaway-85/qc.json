@@ -1,0 +1,90 @@
+{
+  "addr": "shirt > collar-mid-cutaway-85",
+  "productId": "shirt",
+  "optionId": "collar-mid-cutaway-85",
+  "attempt": 3,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 98,
+    "geometry": 97,
+    "dimensions": 97,
+    "angles": 96,
+    "construction": 98,
+    "placement": 98,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 97
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "geometry",
+    "dimensions",
+    "angles",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "spread-angle",
+      "description": "The spread between the collar points measures roughly 105 degrees in frame against the drawn 90 degrees. The correction asking for a slight narrowing did not take - attempt 2 measured about 100 degrees and attempt 3 about 105. The three options in this group that are all drawn at 90 degrees rendered at about 83, 92 and 105 degrees, so my angle estimate carries roughly plus or minus 10 degrees of noise and this reading sits at the wide end of that scatter. It is not a family-ordering inversion.",
+      "expected": "90 degrees",
+      "actual": "About 105 degrees in frame"
+    }
+  ],
+  "verdict": "PASS_WAIVED",
+  "waiver": {
+    "granted": true,
+    "reason": "minor-only at attempt 3 of 3: retry budget exhausted with zero critical/major findings and every category >= 95",
+    "waiverMin": 95,
+    "scoreMin": 98,
+    "belowScoreMin": [
+      {
+        "category": "geometry",
+        "score": 97,
+        "shortfall": 1
+      },
+      {
+        "category": "dimensions",
+        "score": 97,
+        "shortfall": 1
+      },
+      {
+        "category": "angles",
+        "score": 96,
+        "shortfall": 2
+      },
+      {
+        "category": "blueprint-match",
+        "score": 97,
+        "shortfall": 1
+      }
+    ],
+    "minorErrors": [
+      {
+        "category": "spread-angle",
+        "description": "The spread between the collar points measures roughly 105 degrees in frame against the drawn 90 degrees. The correction asking for a slight narrowing did not take - attempt 2 measured about 100 degrees and attempt 3 about 105. The three options in this group that are all drawn at 90 degrees rendered at about 83, 92 and 105 degrees, so my angle estimate carries roughly plus or minus 10 degrees of noise and this reading sits at the wide end of that scatter. It is not a family-ordering inversion.",
+        "expected": "90 degrees",
+        "actual": "About 105 degrees in frame"
+      }
+    ],
+    "attempt": 3,
+    "maxAttempts": 3,
+    "waiverAttemptFloor": 3,
+    "authority": "user decision 2026-07-30: QC gate stays >=98; a 3rd attempt is allowed; after 3 attempts an image with ZERO critical/major findings may ship at >=95 as a LOGGED WAIVER in qc.json",
+    "grantedAt": "2026-08-11T01:25:14.493Z"
+  },
+  "correction": null,
+  "lockedFeatures": [
+    "straight acute collar point terminations, as the drawing specifies and the option's forbidden list requires",
+    "long deep leaves consistent with the 8.5 cm point length",
+    "centre-front tab carrying a single throat button, present and centred as drawn",
+    "collar open at the throat, no necktie, top band button unfastened",
+    "front view, no model, no face, no neck, no skin",
+    "both leaves mirror each other in length, angle and tip shape",
+    "seamless neutral light-grey studio background, no annotations traced from the drawing"
+  ],
+  "notes": "Attempt 3 of 3. The correction was deliberately narrow - narrow the spread to 90 degrees, retain everything else - and everything else was indeed retained: acute points, deep leaves, centre throat tab and button, framing and camera distance all carried over intact. The spread did not narrow; it moved from about 100 to about 105 degrees, so on that one measure attempt 2 (candidate-2.png) is marginally the better frame and a human may prefer it. The two are otherwise equivalent and either is shippable. Retry budget exhausted.",
+  "checkedAt": "2026-08-11T01:25:14.495Z"
+}

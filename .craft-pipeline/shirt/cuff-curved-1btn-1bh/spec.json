@@ -1,0 +1,63 @@
+{
+  "schema": "garment-spec/v1",
+  "addr": "shirt > cuffs > cuff > cuff-curved-1btn-1bh",
+  "productId": "shirt",
+  "sectionId": "cuffs",
+  "fieldId": "cuff",
+  "optionId": "cuff-curved-1btn-1bh",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\shirt.json",
+  "source": "json",
+  "label": "Curved Cuff — 1 Button, 1 Buttonhole",
+  "description": "The curved one-button cuff is a barrel cuff whose outer corners are rounded off rather than left square, fastened with a single button and one buttonhole. The softened corners give the wrist a gentler, more refined silhouette than a sharp squared cuff while keeping the simplicity of a single-button closure. It is a subtle, slightly dressier take on the everyday barrel cuff.",
+  "fieldLabel": "Cuff Style",
+  "sectionLabel": "Cuffs",
+  "part": "shirt-cuff",
+  "garment": {
+    "noun": "white bespoke cotton dress shirt",
+    "fabric": "crisp cotton poplin"
+  },
+  "view": {
+    "orientation": "front",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": false,
+  "measured": {
+    "dimensions": [],
+    "angles": [],
+    "counts": [
+      "1-buttonhole",
+      "1-button"
+    ],
+    "shapes": [
+      "rounded-bottom pocket",
+      "barrel / button cuff"
+    ],
+    "negatedShapes": [],
+    "spread": [],
+    "flags": [],
+    "sides": [
+      "left",
+      "outside"
+    ],
+    "attributes": [],
+    "supplierCodes": [],
+    "unresolved": []
+  },
+  "illustration": {
+    "path": "/images/cuff/curved-cuff-with-1-button-and-1-buttonhole.jpg",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\cuff\\curved-cuff-with-1-button-and-1-buttonhole.jpg",
+    "exists": true,
+    "remote": false
+  },
+  "forbidden": [
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)",
+    "any buttonhole count other than exactly 1",
+    "any button count other than exactly 1"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-08-10T20:41:16.359Z"
+}

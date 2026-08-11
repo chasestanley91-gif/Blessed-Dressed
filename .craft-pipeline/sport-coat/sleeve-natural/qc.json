@@ -1,0 +1,76 @@
+{
+  "addr": "sport-coat > sleeve-natural",
+  "productId": "sport-coat",
+  "optionId": "sleeve-natural",
+  "attempt": 7,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 55,
+    "geometry": 40,
+    "dimensions": 40,
+    "angles": 50,
+    "construction": 30,
+    "placement": 35,
+    "symmetry": 60,
+    "composition": 25,
+    "blueprint-match": 30
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "critical",
+      "category": "subject-absent",
+      "description": "The sleeve head — the sole subject of the shot — is not in the picture. Both shoulder end points run off the left and right frame edges.",
+      "expected": "Per the locked prompt: frame WIDE so BOTH ends of the shoulder sit inside the picture with clear background beyond each; a shoulder is judged at its END POINT.",
+      "actual": "Head-and-chest portrait. Left shoulder exits the frame at the left edge, right shoulder at the right edge. No background margin beyond either shoulder end. Zero sleeve-head area visible."
+    },
+    {
+      "severity": "critical",
+      "category": "construction-not-shown",
+      "description": "Unpadded/natural sleeve-head construction cannot be read anywhere in the image because the armhole-seam transition and sleeve head are outside the crop.",
+      "expected": "Soft unpadded Italian shoulder with full drape, armhole-seam transition visible as drawn (SHSMD/A shows a smooth continuous sloping shoulder line turning into the sleeve with a soft rounded corner).",
+      "actual": "Only the neck-to-mid-shoulder span is visible; the shoulder end and sleeve head are cropped away, so padding level is unverifiable."
+    },
+    {
+      "severity": "major",
+      "category": "blueprint-match",
+      "description": "Drawing SHSMD/A depicts the whole jacket front with the shoulder and sleeve outline highlighted in red across its full span; the render reproduces neither end of that highlighted span.",
+      "expected": "Reproduce the full highlighted shoulder/sleeve span from the drawing.",
+      "actual": "Lapel, collar, chest and model's head dominate; the highlighted region is the one thing missing."
+    }
+  ],
+  "verdict": "UNMET",
+  "waiver": null,
+  "correction": null,
+  "lockedFeatures": [
+    "navy hopsack sport coat",
+    "natural daylight studio",
+    "plain light-grey seamless background",
+    "no annotations traced from drawing"
+  ],
+  "notes": "Graded candidate-7 (attempt 7 of 7 already on disk; no credits spent this session). Photographic quality is excellent and there are no traced annotations, but the image documents a lapel and a face rather than a sleeve head. candidate-1 was checked for comparison and is WORSE — tighter chest/lapel crop with a tie. Framing widened across attempts but never far enough to include a shoulder end point.",
+  "checkedAt": "2026-08-11T00:39:57.317Z"
+}

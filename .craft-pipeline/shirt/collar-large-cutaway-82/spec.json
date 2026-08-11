@@ -1,0 +1,59 @@
+{
+  "schema": "garment-spec/v1",
+  "addr": "shirt > collar > lapel > collar-large-cutaway-82",
+  "productId": "shirt",
+  "sectionId": "collar",
+  "fieldId": "lapel",
+  "optionId": "collar-large-cutaway-82",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\shirt.json",
+  "source": "json",
+  "label": "Large Cut-Away 8.2 cm",
+  "description": "The Large Cut-Away at 8.2cm is the boldest of the spread collar family, with the points spread nearly horizontally and the collar opening wide enough to frame even a large Windsor knot without crowding. It projects a thoroughly modern, Italian sensibility — worn open-necked, it creates a dramatic V-opening that feels effortlessly smart. On a formal shirt, it commands attention and pairs particularly well with a double-breasted jacket or a prominent tie knot.",
+  "fieldLabel": "Collar Style",
+  "sectionLabel": "Collar",
+  "part": "shirt-collar",
+  "garment": {
+    "noun": "white bespoke cotton dress shirt",
+    "fabric": "crisp cotton poplin"
+  },
+  "view": {
+    "orientation": "front",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": false,
+  "measured": {
+    "dimensions": [
+      "8.2 cm"
+    ],
+    "angles": [],
+    "counts": [],
+    "shapes": [
+      "cutaway / spread",
+      "spread"
+    ],
+    "negatedShapes": [],
+    "spread": [
+      "wide cutaway spread"
+    ],
+    "flags": [],
+    "sides": [],
+    "attributes": [],
+    "supplierCodes": [],
+    "unresolved": []
+  },
+  "illustration": {
+    "path": "/images/techpacks/shirt/lapel/large-cut-away-in-82cm.jpg",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\techpacks\\shirt\\lapel\\large-cut-away-in-82cm.jpg",
+    "exists": true,
+    "remote": false
+  },
+  "forbidden": [
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-08-10T20:41:14.157Z"
+}

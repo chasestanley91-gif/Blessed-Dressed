@@ -1,0 +1,43 @@
+{
+  "addr": "shirt > placket-hidden",
+  "productId": "shirt",
+  "optionId": "placket-hidden",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 99,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 99,
+    "construction": 98,
+    "placement": 99,
+    "symmetry": 99,
+    "composition": 99,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "out-of-frame-detail",
+      "description": "The drawing frames the lower shirt front and shows the bottom of the hidden placket lifted open at the hem to expose the bar-tack that secures it, annotated 'Hidden Placket Bar-tack'. The photograph is cropped at chest-to-upper-abdomen level, so neither the hem nor that bar-tack appears. The locked prompt asked for a vertical macro down the placket and did not list the bar-tack among the required features, and the option's own description defines it purely as the covered fly front, so this is logged rather than treated as a construction failure.",
+      "expected": "drawing additionally shows the placket bottom opened at the hem with a bar-tack",
+      "actual": "chest-level macro of the closed fly; hem and bar-tack outside the frame"
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "lockedFeatures": [
+    "true covered fly front - one clean cloth band from collar to bottom of frame with zero visible buttons or buttonholes",
+    "both long edges of the fly are crisp folded edges with no topstitching, which is what a hidden placket requires",
+    "unbroken smooth expanse of cloth either side of the fly",
+    "front view, white cotton poplin, plain grey studio background, no red notation, annotation text or Chinese label carried over from the drawing",
+    "placket band width proportionate to the shirt front, consistent with the drawn band"
+  ],
+  "notes": "Verified at 3x magnification of the placket column: no buttons, no buttonholes, no topstitch rows anywhere on the fly - the defining absence for this option, and the thing a generic 'plain placket' substitution would have got wrong. The drawing's red vertical lines and its 'Hidden Placket Bar-tack' caption were correctly read as notation and did not bleed into the render. Approved on attempt 1.",
+  "checkedAt": "2026-08-10T23:51:57.905Z"
+}

@@ -1,0 +1,72 @@
+{
+  "addr": "shirt > bias-inner-top-collar",
+  "productId": "shirt",
+  "optionId": "bias-inner-top-collar",
+  "attempt": 3,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 90,
+    "geometry": 95,
+    "dimensions": 94,
+    "angles": 97,
+    "construction": 95,
+    "placement": 96,
+    "symmetry": 96,
+    "composition": 90,
+    "blueprint-match": 93
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "shape",
+    "dimensions",
+    "composition",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "frame-fill",
+      "description": "The bias-cut collar band occupies roughly 14 percent of the frame; the head, neck and upper back take most of the picture. This is worse than attempt 2 despite the correction clause asking for a closer camera.",
+      "expected": "bias-cut panel filling 40-80 percent of the frame",
+      "actual": "collar band roughly 14 percent; camera pulled back rather than in"
+    },
+    {
+      "severity": "minor",
+      "category": "shape-legibility",
+      "description": "The collar is raised and cropped so no collar point, leaf edge or front geometry is visible at all - the collar reads as a plain band, so its drawn shape cannot be checked against the illustration.",
+      "expected": "collar shape verifiable against the drawing",
+      "actual": "raised band only; points and leaf edges out of frame"
+    },
+    {
+      "severity": "minor",
+      "category": "fabric-weight",
+      "description": "Stripe is a bold wide bengal stripe rather than the fine even stripe the prompt specifies.",
+      "expected": "fine even stripe",
+      "actual": "bold wide stripe"
+    }
+  ],
+  "verdict": "UNMET",
+  "waiver": null,
+  "correction": null,
+  "lockedFeatures": [
+    "single unbroken ~45 degree diagonal across the whole visible top-collar panel, matching the drawing's hatch angle, with no mirrored chevron",
+    "collar stand band directly below runs strictly vertical straight grain - the adjacent-panel spill seen in attempt 2 is fixed",
+    "yoke and back body run strictly vertical, so the grain change is isolated to the one hatched panel",
+    "collar photographed raised from behind, which is what exposes the under/inner side of the top collar",
+    "clean seamless light-grey studio background, no props, no annotation marks carried over from the drawing"
+  ],
+  "notes": "Attempt 3 of 3. Attempt 1 showed the collar folded DOWN from the back, where the visible surface is the outer top collar - wrong face. Attempt 2 raised the collar (right face) but let the collar stand run off-grain and framed at roughly 22 percent. Attempt 3 has the cleanest grain story of the three - bias confined to the top collar, everything adjacent straight - but framed the loosest and hides the collar's shape entirely. NOT INDEPENDENTLY VERIFIED: that the raised collar's camera-facing surface is the inner/under top collar rests on construction reasoning (the face that touches the shoulders when folded down), not on anything directly measurable in the photograph. Attempt 3 is the better artifact on grain; attempt 2 is the better artifact on collar shape.",
+  "checkedAt": "2026-08-11T00:27:01.670Z"
+}

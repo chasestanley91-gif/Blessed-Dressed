@@ -1,0 +1,77 @@
+{
+  "addr": "suit-2pc > double-forward",
+  "productId": "suit-2pc",
+  "optionId": "double-forward",
+  "attempt": 4,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 97,
+    "geometry": 94,
+    "dimensions": 93,
+    "angles": 97,
+    "construction": 96,
+    "placement": 97,
+    "symmetry": 93,
+    "composition": 92,
+    "blueprint-match": 94
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "geometry",
+    "dimensions",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "major",
+      "category": "pose-obstruction",
+      "description": "Both hands are inserted into the front pockets. Verified at 4x magnification on both legs: on the wearer's left a bare hand and wrist emerge from the shirt cuff directly into the pocket mouth and the outboard cloth is pulled and bulged; on the wearer's right a flesh-toned intrusion sits against the side seam with the cloth collapsed around it. The tech pack shows a clean, undisturbed trouser front with both pleats hanging straight from waistband to knee. This is the identical defect logged against attempt 1.",
+      "expected": "Clean trouser front, hands out of the pockets and clear of the cloth, pleats hanging undisturbed as drawn",
+      "actual": "Both hands buried in the pockets; outboard cloth distorted asymmetrically on both legs",
+      "correction": "Hands out of pockets and out of frame; undisturbed drape (already achieved in candidate-3 and candidate-2)"
+    },
+    {
+      "severity": "minor",
+      "category": "pocket-geometry",
+      "description": "The side pocket renders as a curved, sweeping opening. The drawing's side pocket reads as a straighter, near-vertical line running from the waistband down toward the side seam.",
+      "expected": "Straight near-vertical side-seam pocket line as drawn",
+      "actual": "Curved pocket seam sweeping outward from the waistband"
+    },
+    {
+      "severity": "minor",
+      "category": "dimensions-unverifiable",
+      "description": "The checklist requires 2.5 cm pleat depth, 10 cm hidden cloth volume, and a 4 cm to 8 cm effective upper-thigh increase. None of these are measurable from a photograph with no scale reference in frame. They were NOT verified and are NOT asserted here.",
+      "expected": "2.5 cm pleat depth, 10 cm volume, 4-8 cm thigh increase",
+      "actual": "Not measurable from the render; unverified"
+    }
+  ],
+  "verdict": "UNMET",
+  "waiver": null,
+  "correction": null,
+  "lockedFeatures": [
+    "double pleat count: exactly 2 pleats per leg, verified at 4x magnification on both legs",
+    "forward pleat direction: both legs fold toward the fly (center front), correctly mirrored",
+    "front view, waistband to below knee",
+    "fly J-stitch present at center front",
+    "belt loops on waistband",
+    "no annotations, numbers, leader lines, arrows or red guide marks rendered",
+    "real photograph, not line-art; model wearing a shirt",
+    "seamless neutral light-grey studio background"
+  ],
+  "notes": "TERMINAL — retry budget overspent: 4 generations exist for this option against a hard cap of 3. No further generation was purchased by this worker. The craft option itself is CORRECT and is NOT a generic-category substitution: 4x magnified crops of both legs resolve exactly two pressed pleats per leg, both folding toward the fly, correctly mirrored, matching the drawing's four red pleat markers (two per leg). HUMAN PICK RECOMMENDED: candidate-3.png is clearly the best of the four and is materially better than candidate-4.png, which this record grades. Candidate-3 has no hands in frame at all, an undisturbed drape, and the tightest crop on the pleats; candidate-2.png is a close second (hands at the sides, not in the pockets). Candidate-4 regressed by putting both hands back into the pockets — the same defect that failed attempt 1. If a human promotes candidate-3, this option is shippable on the merits; graded strictly as attempt 4 it is not. Pleat depth in centimetres was not verified and cannot be from a photograph.",
+  "checkedAt": "2026-08-11T01:03:03.549Z"
+}

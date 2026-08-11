@@ -1,0 +1,70 @@
+{
+  "addr": "shirt > csplice-lower-cuff",
+  "productId": "shirt",
+  "optionId": "csplice-lower-cuff",
+  "attempt": 3,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 92,
+    "geometry": 55,
+    "dimensions": 60,
+    "angles": 55,
+    "construction": 82,
+    "placement": 50,
+    "symmetry": 86,
+    "composition": 96,
+    "blueprint-match": 45
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "critical",
+      "category": "splice-orientation",
+      "description": "The cuff is spliced the wrong way. The navy/white seam runs ACROSS the band - from the sleeve-join seam straight down to the hem - so the contrast is a section of the cuff's circumference rather than the hand-side half of the band. The drawn '1/2' split runs around the wrist, parallel to the cuff's two edges.",
+      "expected": "a straight splice seam encircling the wrist at mid-height of the cuff band, with the whole LOWER (hand-side) half in contrast cloth and the upper sleeve-side half white",
+      "actual": "a seam running lengthwise across the band from the sleeve seam to the hem, with the contrast occupying the right-hand section of the cuff's circumference across the full band height",
+      "correction": "Split the cuff band into an upper and a lower half with a straight seam that runs around the wrist parallel to the cuff edges; put the contrast on the lower, hand-side half only."
+    },
+    {
+      "severity": "major",
+      "category": "blueprint-match",
+      "description": "Because the split axis is wrong, this render is indistinguishable in kind from what a generic 'contrast cuff panel' would look like, and it is NOT distinguishable from its csplice-upper-cuff sibling by the upper/lower relationship the option exists to show.",
+      "expected": "the exact drawn option: lower half of the cuff band in contrast",
+      "actual": "a contrast panel on one side of the cuff's circumference"
+    }
+  ],
+  "verdict": "UNMET",
+  "waiver": null,
+  "correction": null,
+  "lockedFeatures": [
+    "contrast fabric is present and instantly legible (navy on white) - the near-white cream of attempt 2 is fixed",
+    "cuff button placed at the splice seam, matching the drawn button-at-seam relationship",
+    "rounded cuff corner present",
+    "no notation red, no traced annotations, no '1/2' text",
+    "real photograph on a male model, clean seamless light-grey studio background, cuff dominant in frame"
+  ],
+  "notes": "Attempt 3 of 3 - UNMET, and a REGRESSION. ATTEMPT 2 (candidate-2.png) IS THE BETTER ARTIFACT AND A HUMAN SHOULD LOOK AT IT: attempt 2 has the correct geometry - a straight seam encircling the wrist at mid-band-height with the whole lower, hand-side half spliced in contrast cloth and the upper half white, button at the seam. Its only real defect is that the contrast fabric was rendered as a near-white cream that barely reads against the white shirt (a legibility problem, not a geometry problem). Attempt 3 fixed the colour and broke the geometry. Attempt 1 had the same wrong split axis as attempt 3, plus a curved seam traced from the drawing's rounded-corner line. Corrections oscillated between colour and geometry across all three attempts and never held both at once. Do not ship candidate-3.",
+  "checkedAt": "2026-08-10T23:41:31.869Z"
+}

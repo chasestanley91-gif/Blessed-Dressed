@@ -1,0 +1,90 @@
+{
+  "addr": "shirt > contrast-right-pocket",
+  "productId": "shirt",
+  "optionId": "contrast-right-pocket",
+  "attempt": 2,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 96,
+    "geometry": 94,
+    "dimensions": 90,
+    "angles": 94,
+    "construction": 95,
+    "placement": 88,
+    "symmetry": 94,
+    "composition": 72,
+    "blueprint-match": 90
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "geometry",
+    "dimensions",
+    "angles",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "major",
+      "category": "frame-dominance",
+      "description": "The contrast pocket occupies roughly 3-4% of the frame in a wide half-body shot including the waistband.",
+      "expected": "Contrast Fabric Position fills 40-80% of the frame.",
+      "actual": "Black pocket about 160 x 210 px inside an 880 x 1168 frame.",
+      "correction": "Crop tighter on the chest; a crop of this same render would satisfy the rule without regenerating."
+    },
+    {
+      "severity": "minor",
+      "category": "placement",
+      "description": "Pocket sits lower and further outboard, toward the armhole, than the drawing places it.",
+      "expected": "Pocket inner edge close to the placket, top edge at upper chest.",
+      "actual": "Pocket pushed out toward the side seam and down toward mid-chest."
+    }
+  ],
+  "verdict": "FAIL",
+  "waiver": null,
+  "correction": {
+    "errors": [
+      {
+        "severity": "major",
+        "category": "frame-dominance",
+        "error": "The contrast pocket occupies roughly 3-4% of the frame in a wide half-body shot including the waistband.",
+        "expected": "Contrast Fabric Position fills 40-80% of the frame.",
+        "actual": "Black pocket about 160 x 210 px inside an 880 x 1168 frame.",
+        "correction": "Crop tighter on the chest; a crop of this same render would satisfy the rule without regenerating."
+      }
+    ],
+    "lockedFeatures": [
+      "white cotton poplin body cloth",
+      "black square patch pocket with top hem band",
+      "wearer's right chest (frame left)",
+      "plain light-grey seamless studio background"
+    ],
+    "forbiddenChanges": [
+      "do not alter any checklist item this attempt already passed",
+      "do not change the camera crop, composition, or accessories unless the error is itself a composition error",
+      "do not change the garment part, orientation, or any other option's geometry"
+    ]
+  },
+  "lockedFeatures": [
+    "white cotton poplin body cloth",
+    "black square patch pocket with top hem band",
+    "wearer's right chest (frame left)",
+    "plain light-grey seamless studio background"
+  ],
+  "notes": "Handedness verified against the drawing: contrast pocket on the LEFT of the frame = wearer's RIGHT, correct, and correctly mirrored from the Left Pocket option. Shortfalls are framing and a slightly outboard pocket position. Attempt 2; no third generation spent.",
+  "checkedAt": "2026-08-11T00:47:38.815Z"
+}

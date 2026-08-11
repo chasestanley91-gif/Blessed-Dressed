@@ -1,0 +1,57 @@
+{
+  "schema": "garment-spec/v1",
+  "addr": "shirt > collar > collar_stay > stay-removable",
+  "productId": "shirt",
+  "sectionId": "collar",
+  "fieldId": "collar_stay",
+  "optionId": "stay-removable",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\shirt.json",
+  "source": "json",
+  "label": "Removable",
+  "description": "Removable collar stays are slim rigid strips — in metal, plastic, or mother-of-pearl — inserted into small pockets sewn into the underside of each collar point to keep the points flat and from curling upward through the day. They can be removed before laundering and reinserted afterward, giving the wearer control over how structured or relaxed the collar appears. Metal collar stays in brass or stainless steel are the choice of the careful dresser who treats his shirts as precision instruments.",
+  "fieldLabel": "Collar Stay",
+  "sectionLabel": "Collar",
+  "part": "shirt-collar-stand",
+  "garment": {
+    "noun": "white bespoke cotton dress shirt",
+    "fabric": "crisp cotton poplin"
+  },
+  "view": {
+    "orientation": "front",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": false,
+  "measured": {
+    "dimensions": [],
+    "angles": [],
+    "counts": [],
+    "shapes": [
+      "point"
+    ],
+    "negatedShapes": [],
+    "spread": [],
+    "flags": [],
+    "sides": [
+      "each"
+    ],
+    "attributes": [],
+    "supplierCodes": [],
+    "unresolved": []
+  },
+  "illustration": {
+    "path": "/images/collar_stay/removable.jpg",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\collar_stay\\removable.jpg",
+    "exists": true,
+    "remote": false
+  },
+  "forbidden": [
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)",
+    "collar leaves ending in a squared/blunt flat edge, or in a rounded club tip — this option's collar point termination is a straight acute point"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-08-10T20:41:12.413Z"
+}

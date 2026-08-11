@@ -1,0 +1,55 @@
+{
+  "addr": "shirt > cs-round",
+  "productId": "shirt",
+  "optionId": "cs-round",
+  "attempt": 2,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 99,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 98,
+    "placement": 98,
+    "symmetry": 98,
+    "composition": 99,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "occluded-counterpart",
+      "description": "Only the overlapping band end is visible; the underlying band end is concealed beneath it, so its terminal shape cannot be independently verified from this frame. This is inherent to a front-view worn collar and does not affect identification of the option, since the visible end carries the distinguishing round profile.",
+      "expected": "Both band terminations visible.",
+      "actual": "One band end visible, rendered correctly as a smooth continuous arc."
+    },
+    {
+      "severity": "minor",
+      "category": "photographic-quality",
+      "description": "Attempt 1 was washed out and low in contrast, with the white collar edge merging into the pale background and the cloth reading as coated/synthetic at magnification. Superseded by attempt 2, which corrected both the tonal separation and the fabric rendering.",
+      "expected": "Crisp matte cotton poplin with clear separation from the grey background.",
+      "actual": "Attempt 1 only: flat, glossy, low separation. Attempt 2 correct."
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "lockedFeatures": [
+    "round collar stand: band front end is a single smooth continuous rounded arc, no corner, no taper",
+    "one collar-band button, white mother-of-pearl, centred on the band with its buttonhole",
+    "collar band edge topstitching following the curve",
+    "front view of garment, matching illustration orientation",
+    "both collar leaves mirroring in length, angle and pointed tip shape",
+    "white bespoke cotton poplin dress shirt, matte weave",
+    "no model, no face, no neck, no skin in frame",
+    "no necktie, collar open at throat",
+    "seamless neutral grey studio background, no props",
+    "no annotations, dimension lines, numbers or coloured guide marks rendered"
+  ],
+  "notes": "PASS on attempt 2. Verified at magnification against the illustration: the band's front termination is an unbroken rounded curve sweeping from the top edge around to the lower edge, matching the drawing's red-marked stand whose leading corner is drawn rounded. Single stand button present, matching the single red circle in the drawing. Attempt 2 is decisively better than attempt 1 (better tonal separation from background, matte poplin texture rather than a coated sheen, band silhouette crisply defined). Sits in clear visual contrast to the cs-square-2btn option, which is the educational requirement for this field.",
+  "checkedAt": "2026-08-11T01:02:44.092Z"
+}

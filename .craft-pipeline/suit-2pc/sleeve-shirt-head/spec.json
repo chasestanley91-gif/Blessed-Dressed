@@ -1,0 +1,66 @@
+{
+  "schema": "garment-spec/v1",
+  "addr": "suit-2pc > shoulder-structure > sleeve-head > sleeve-shirt-head",
+  "productId": "suit-2pc",
+  "sectionId": "shoulder-structure",
+  "fieldId": "sleeve-head",
+  "optionId": "sleeve-shirt-head",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\suit-2pc.json",
+  "source": "json",
+  "label": "Shirt Head/THE UNSTRUCTURED ",
+  "description": "THE UNSTRUCTURED / ITALIAN SHOULDER The shoulder styles on this kind of jacket are referred to as spalla a camicia, i.e. “like a shirt” in Italian. This construction is designed to drape naturally over the shoulders and not alter a man’s shoulder line. Only a thin layer of canvas is used in the Italian suit. The fit, drape and small arm hole are meant to allow a free range of motion.  Usually worn to events with a relaxed code of dress where one would still want to look stylish, the Italian shoulder confers nonchalance but in an elegant, casual way.",
+  "fieldLabel": "Sleeve Head/Shoulder Style",
+  "sectionLabel": "Shoulder & Structure",
+  "part": "jacket-shoulder",
+  "garment": {
+    "noun": "navy bespoke suit jacket",
+    "fabric": "fine wool suiting with visible weave"
+  },
+  "view": {
+    "orientation": "front",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": false,
+  "measured": {
+    "dimensions": [],
+    "angles": [],
+    "counts": [],
+    "shapes": [],
+    "negatedShapes": [],
+    "spread": [],
+    "flags": [],
+    "sides": [
+      "each",
+      "right"
+    ],
+    "attributes": [
+      {
+        "feature": "sleeve head",
+        "attribute": "padding",
+        "value": "unpadded"
+      },
+      {
+        "feature": "sleeve head",
+        "attribute": "insertion",
+        "value": "rolled (con rollino)"
+      }
+    ],
+    "supplierCodes": [],
+    "unresolved": []
+  },
+  "illustration": {
+    "path": "/images/jacket/shoulder-head/shirt-head.jpg",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\jacket\\shoulder-head\\shirt-head.jpg",
+    "exists": true,
+    "remote": false
+  },
+  "forbidden": [
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-08-10T20:41:05.760Z"
+}

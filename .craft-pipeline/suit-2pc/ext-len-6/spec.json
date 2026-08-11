@@ -1,0 +1,58 @@
+{
+  "schema": "garment-spec/v1",
+  "addr": "suit-2pc > Trousers-waistband > extension-length > ext-len-6",
+  "productId": "suit-2pc",
+  "sectionId": "Trousers-waistband",
+  "fieldId": "extension-length",
+  "optionId": "ext-len-6",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\suit-2pc.json",
+  "source": "json",
+  "label": "6 cm",
+  "description": "A 6 cm waistband extension tab — a moderate reach past the closure, the common tailored extension length.",
+  "fieldLabel": "Extension Length",
+  "sectionLabel": "Trousers — Waistband",
+  "part": "trouser-extension-length",
+  "garment": {
+    "noun": "pair of bespoke wool tailored trousers",
+    "fabric": "fine wool trouser cloth with visible weave"
+  },
+  "view": {
+    "orientation": "front",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": false,
+  "measured": {
+    "dimensions": [
+      "6 cm"
+    ],
+    "angles": [],
+    "counts": [],
+    "shapes": [],
+    "negatedShapes": [],
+    "spread": [
+      "moderate spread"
+    ],
+    "flags": [
+      "tab fastening"
+    ],
+    "sides": [],
+    "attributes": [],
+    "supplierCodes": [],
+    "unresolved": []
+  },
+  "illustration": {
+    "path": "/images/blueprints/factory/ef0fb41e2ad1__C.jpg",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\factory\\ef0fb41e2ad1__C.jpg",
+    "exists": true,
+    "remote": false
+  },
+  "forbidden": [
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-08-10T20:40:45.931Z"
+}

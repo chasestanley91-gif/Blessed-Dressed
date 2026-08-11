@@ -2,20 +2,33 @@
   "addr": "shirt > stitch-01-inner-plain",
   "productId": "shirt",
   "optionId": "stitch-01-inner-plain",
-  "attempt": 2,
+  "attempt": 3,
+  "maxAttempts": 3,
   "scores": {
-    "shape": 70,
-    "geometry": 52,
-    "dimensions": 72,
-    "angles": 92,
-    "construction": 45,
-    "placement": 80,
-    "symmetry": 72,
+    "shape": 72,
+    "geometry": 55,
+    "dimensions": 65,
+    "angles": 90,
+    "construction": 50,
+    "placement": 45,
+    "symmetry": 85,
     "composition": 60,
-    "blueprint-match": 55
+    "blueprint-match": 50
   },
   "scoreMin": 98,
+  "waiverMin": 95,
   "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
     "shape",
     "geometry",
     "dimensions",
@@ -29,59 +42,53 @@
   "errors": [
     {
       "severity": "critical",
-      "category": "construction",
-      "description": "UNRESOLVED, IDENTICAL TO ATTEMPT 1. The placket is still topstitched on BOTH edges. Tone-mapped 8x magnification of the placket band (columns 335-415) resolves two parallel runs of discrete stitch perforations flanking the button line, at x=351 and x=390, with the buttons centred between them at x=370; the sharp dark line at x=404 is the placket's fold edge, not a third stitch. A per-column luminance analysis confirms periodic stitch modulation at x=350 (28 local minima at low variance) and at x=390, distinct from the smooth continuous edge trough at x=403.",
-      "expected": "Exactly ONE fine topstitch line, inboard of the button line on the inner placket edge - the single red DASHED vertical in the blueprint. The front centre-front edge, drawn as a SOLID red line (an edge/fold, not stitching), must be a completely clean, unstitched folded edge. One inboard line plus a clean front edge is the entire defining feature of the inner plain (French) placket.",
-      "actual": "Two parallel stitch lines, one along the front edge and one along the inner edge, buttons centred between them - the geometry of a standard double-topstitched placket, a sibling option on the same field.",
-      "correction": "Stitch the placket on ONE edge only: the inner edge, inboard of the buttons. The front edge must carry no stitching whatsoever - no needle penetration, no second line. Exactly one line of topstitching may exist anywhere on the placket."
+      "category": "stitch-placement",
+      "description": "The button placket itself carries NO stitching at all, and the one stitch line in the frame sits on the far side of the placket's shadowed free edge, on a separate cloth layer. Per-column analysis over y=350-410 finds exactly one periodic (dashed/perforated) column pair at x=482-483 (sd 10.5 against a 2-4 background); the entire placket face from x=272 to x=417 shows sd 1.8-4.0 with no periodic modulation, i.e. no needle penetration anywhere on it. The hard luminance step at x=417 (mean falls 207 -> 163 in two columns, then recovers gradually to x=471) is a free cloth edge casting a shadow to its right, so the stitch at x=482 lies on the layer beneath, roughly 0.85 cm outboard of the placket edge. Buttons sit at x=340, centred in the 1.9 cm placket band.",
+      "expected": "One fine topstitch line ON the placket, inboard of the button line, with the centre-front placket edge left as a clean unstitched fold. In the drawing (589 px wide) the solid red front edge is at x=217, the button centres at x=233, and the single dashed red stitch line at x=255 - so the order across the placket is edge, then buttons, then stitch, all on one continuous surface.",
+      "actual": "Placket face entirely unstitched; the only stitch line lies across a shadowed cloth step, about 0.85 cm beyond the placket's free edge and about 2.7 cm from the button centreline, on a different plane from the buttons.",
+      "correction": "Put the single topstitch line on the same surface as the buttons, inboard of them, with no cloth edge or shadow step between the buttons and the stitch."
     },
     {
       "severity": "major",
       "category": "geometry",
-      "description": "UNRESOLVED. The button-to-front-edge relationship still does not match the drawing.",
-      "expected": "Buttons sit hard against the clean front edge, with the single stitch line set well inboard, so each button lies between the clean front edge and the stitch line.",
-      "actual": "Buttons are centred in a wide placket band, equidistant between the two stitch lines.",
-      "correction": "Move the button line close to the clean front edge and place the single inner topstitch line clearly inboard of the buttons, reproducing the drawn offsets."
+      "description": "Button-to-edge relationship does not match the drawing. Scaling by the rendered button diameter (85 px = 1.1 cm, so 1 cm = 77 px), the buttons sit 0.88 cm from the left crease and 1.0 cm from the right free edge - centred in the band. The drawing sets the buttons hard against the front edge with the stitch line well inboard (edge-to-button 0.88 cm, edge-to-stitch 2.09 cm, a 2.4:1 ratio).",
+      "expected": "Buttons close to the clean front edge, single stitch line clearly inboard, ratio of edge-to-stitch versus edge-to-button of about 2.4:1.",
+      "actual": "Buttons centred in a plain band bounded by a soft crease on one side and a shadowed free edge on the other, with no stitch line on that band at all.",
+      "correction": "Reproduce the drawn offsets: button centre about 0.9 cm from the clean front fold, single stitch line about 2.1 cm from it."
     },
     {
       "severity": "major",
       "category": "composition",
-      "description": "Subject dominance regressed sharply relative to attempt 1. The showcased stitch now occupies a narrow vertical strip roughly 8% of the frame width; the shirt body, hem and trousers fill the rest, so the 0.1 cm stitch is not identifiable within one second at normal viewing size.",
-      "expected": "The placket topstitch dominates the frame at 40-80%, framed macro on the stitch line, identifiable within one second.",
-      "actual": "A pulled-back three-quarter-length view in which the stitch line is a thin, low-contrast strip far below the dominance target.",
-      "correction": "Tighten the crop substantially onto the lower placket run so the single stitch line and its clean front edge fill 40-80% of the frame, while still keeping the curved shirt-tail hem in shot as the lower boundary and excluding the collar."
-    },
-    {
-      "severity": "major",
-      "category": "composition",
-      "description": "Grey wool trousers were introduced and occupy roughly the bottom quarter of the frame, adding a second garment with its own crease and seam lines that the blueprint does not contain.",
-      "expected": "The blueprint shows only the shirt's lower front, its placket termination, the curved shirt-tail hem and the side seam. No second garment.",
-      "actual": "Grey trousers fill the lower ~25% of the frame beneath the shirt hem.",
-      "correction": "Crop above the trouser waist, or exclude the trousers entirely, so the shirt's lower front and hem are the only garment surfaces in frame."
+      "description": "The drawing's defining lower-front context is gone. It shows the placket running down to a square termination, the curved shirt-tail hem sweeping away, and the side seam/gusset detail at the hem. The candidate is a tight mid-placket macro containing three buttons, no placket termination, no hem and no gusset.",
+      "expected": "Lower front of the shirt: placket run, its termination, and the curved shirt-tail hem, per the illustration's extent.",
+      "actual": "Mid-run macro crop; hem, placket end and gusset all outside the frame.",
+      "correction": "Include the placket termination and the start of the curved hem as the lower boundary while keeping the stitch line large enough to read."
     },
     {
       "severity": "minor",
       "category": "dimensions",
-      "description": "The stitch gauge is credibly fine at roughly 0.1 cm, but because it is referenced to both placket edges rather than the inner edge alone, the 0.1 cm-from-the-inner-edge specification is still not demonstrated.",
-      "expected": "A 0.1 cm topstitch measured from the inner placket edge only.",
-      "actual": "Fine-gauge stitching present, anchored to two edges.",
-      "correction": "Keep the fine 0.1 cm gauge and set it 0.1 cm from the inner placket edge only."
+      "description": "The 0.1 cm specification cannot be demonstrated by this image. The stitch gauge itself is credibly fine (dash pitch about 4-5 px, roughly 7 stitches per cm at the measured scale), but 0.1 cm is a distance from a folded edge, and there is no folded edge adjacent to the stitch line at x=482 - only flat cloth. I did not verify the 0.1 cm offset; it is not resolvable in this frame.",
+      "expected": "Stitch set 0.1 cm from the inner placket fold, with that fold readable in frame so the offset is demonstrable.",
+      "actual": "Fine even stitch on flat cloth with no adjacent folded edge to measure from.",
+      "correction": "Show the folded edge the stitch follows, so the 0.1 cm offset is visible."
     }
   ],
   "verdict": "UNMET",
+  "waiver": null,
   "correction": null,
   "lockedFeatures": [
-    "exactly ONE topstitch line on the placket, on the inner edge, inboard of the button line",
-    "front/centre-front placket edge completely clean and unstitched (a plain folded edge)",
-    "0.1 cm stitch gauge measured from the inner placket edge",
-    "inner plain (French) placket - no separate applied outer placket band",
-    "lower front of the shirt: placket run, termination and curved shirt-tail hem",
+    "exactly ONE topstitch line on the placket, on the same surface as the buttons and inboard of them",
+    "centre-front placket edge completely clean and unstitched - a plain knife-pressed fold",
+    "no cloth edge, step or shadow gap between the button line and the stitch line",
+    "edge-to-button about 0.9 cm, edge-to-stitch about 2.1 cm (2.4:1), measured against an 1.1 cm button",
+    "0.1 cm stitch offset shown against a visible folded edge",
+    "lower front of the shirt: placket run, square placket termination and curved shirt-tail hem",
     "collar, collar band, neckline, shoulders and face excluded from frame",
-    "placket lying flat, closed, buttoned and pressed - no open or peeled-back fabric",
+    "placket lying flat, closed, buttoned and pressed - no peeled-back or open cloth",
     "white bespoke cotton poplin dress shirt, worn on a male model",
-    "seamless neutral light-grey studio background, no location, architecture or props",
+    "no second garment (no trousers) in frame",
     "zero text, numbers, arrows, callouts, guide marks, ruler ticks or watermark anywhere in frame"
   ],
-  "notes": "Attempt 2 of a hard cap of 2 credit-spending generations. Both generations were submitted WITH the blueprint attached as the geometry reference (media 4423eb2d-d02c-46c6-ab8c-a47e8bf3ebb2 echoed back in reference_images on both jobs), so neither was a text-only render.\n\nGENUINELY FIXED by the correction pass - all three composition/placement criticals from attempt 1 were resolved: the frame is now the LOWER front of the shirt with the curved shirt-tail hem as the lower boundary; the collar, collar band and neckline are gone; the placket lies completely flat, closed and pressed with no peeled-back or defect-like flap anywhere; and a seamless neutral light-grey studio background with clear garment separation is now present. The image remains entirely free of text, numbers, units, arrows, callouts, leader lines, coloured guide marks, ruler ticks and watermarks, and no location, architecture or props intrude. Angles and hem curvature are close to the drawing.\n\nNOT FIXED, and disqualifying: the defining feature. Despite explicit, emphatic correction wording, the placket is still topstitched on BOTH edges. Tone-mapped 8x magnification plus per-column luminance analysis resolve two separate runs of discrete stitch perforations at x=351 and x=390 flanking the buttons at x=370, with the placket fold edge as a smooth continuous trough at x=403. The blueprint specifies exactly one stitch line, inboard, with the front edge left as a clean solid fold. Double-stitching reproduces a standard topstitched placket - the geometry of a neighbouring option on the same field - and erases the only characteristic that distinguishes the inner plain placket from its siblings. A customer comparing this against the plain-placket alternatives would see no difference.\n\nDominance also regressed: pulling back to include the hem reduced the stitch to roughly 8% of frame width, well under the 40-80% target and not readable in one second, and introduced grey trousers as a second garment across the bottom quarter of the frame.\n\nHard cap reached. Not regenerating. Recommend a third attempt only under a revised director strategy, since prompt emphasis alone has now failed twice on the same axis: the model appears to have a strong prior that a shirt placket is stitched on both edges and overrides the instruction. Suggested next moves for whoever picks this up - (a) crop the attached blueprint reference down to just the placket band so the single dashed line versus the solid edge is unambiguous at reference resolution; (b) express the requirement positively and geometrically rather than as a prohibition, e.g. describe the front edge as a knife-pressed clean fold and name only one stitch line; (c) consider a higher quality/resolution tier so fine stitch placement is resolved rather than approximated. No catalog or data-store file was touched; the pipeline stopped at qc.json as instructed.",
-  "checkedAt": "2026-07-30T05:44:42.964Z"
+  "notes": "Attempt 3 of a hard cap of 3. Generated with the locked prompt byte-for-byte plus a short correction clause naming the attempt-1/attempt-2 error, and with the tech-pack drawing attached as the geometry reference (media 1c1f812b-4e5a-44af-b228-65a19540b901). Not a text-only render.\n\nGENUINELY FIXED: the critical defect of attempts 1 and 2 - the placket topstitched on BOTH edges - is gone. A full-width periodic-modulation scan at y=350-410 and again at y=300-560 resolves exactly ONE stitch line in the whole frame, at x=482-483. Subject dominance also improved sharply over attempt 2: the stitch is now resolvable at 1:1 rather than an 8%-of-width strip, and the grey trousers that filled attempt 2's lower quarter are gone. No text, numbers, units, arrows, leader lines, callouts, ruler ticks, coloured guide marks or watermark anywhere; no location, architecture or props.\n\nNOT FIXED, and disqualifying: the single stitch line ended up in the wrong place. The placket band that carries the buttons (x=272-417) is completely unstitched over its full 1.9 cm width, and the one stitch line lies beyond a hard shadowed cloth step, on the layer below. The drawing puts the stitch on the same surface as the buttons, inboard of them, with the front edge clean. I considered the alternative reading in which x=272 is the front edge and the whole zone x=272-482 is one placket - under that reading the edge/button/stitch proportions are close to the drawn 2.4:1 - but the hard luminance step and cast shadow at x=417 rule it out: no single pressed placket surface contains a free cloth edge in its middle. Under either reading the geometry does not reproduce the blueprint.\n\nComparison for a human picker: attempt 2 kept the drawing's lower-front context (placket termination, curved shirt-tail hem) but was double-stitched and showed the feature at roughly 8% of frame width. Attempt 3 is single-stitched and readable but has lost the hem context and puts the stitch on the wrong surface. Attempt 3 is the better base; neither is shippable.\n\nHard cap reached, not regenerating. If a fourth pass is ever authorised under a revised director strategy, the two things prompt emphasis has not achieved are (a) keeping the stitch on the same cloth plane as the buttons and (b) making the folded edge the stitch references visible so 0.1 cm can be measured. Cropping the attached blueprint down to the placket band, and describing the placket as a single uninterrupted pressed surface, are the untried levers. No catalog or data-store file was touched.",
+  "checkedAt": "2026-08-11T01:14:41.454Z"
 }

@@ -1,0 +1,57 @@
+{
+  "schema": "garment-spec/v1",
+  "addr": "shirt > pocket-hem > hem > hem-large-round-triangle-gusset",
+  "productId": "shirt",
+  "sectionId": "pocket-hem",
+  "fieldId": "hem",
+  "optionId": "hem-large-round-triangle-gusset",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\shirt.json",
+  "source": "json",
+  "label": "Large Round Hem with Triangle Gusset",
+  "description": "Larger rounded hem with triangle gusset.",
+  "fieldLabel": "Hem Shape",
+  "sectionLabel": "Pocket & Hem",
+  "part": "shirt-hem",
+  "garment": {
+    "noun": "white bespoke cotton dress shirt",
+    "fabric": "crisp cotton poplin"
+  },
+  "view": {
+    "orientation": "front",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": false,
+  "measured": {
+    "dimensions": [],
+    "angles": [],
+    "counts": [],
+    "shapes": [
+      "triangle pocket",
+      "rounded-bottom pocket",
+      "curved hem",
+      "pentagon gusset"
+    ],
+    "negatedShapes": [],
+    "spread": [],
+    "flags": [],
+    "sides": [],
+    "attributes": [],
+    "supplierCodes": [],
+    "unresolved": []
+  },
+  "illustration": {
+    "path": "/images/hem/large-round-hem-with-triangle-gusset.jpg",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\hem\\large-round-hem-with-triangle-gusset.jpg",
+    "exists": true,
+    "remote": false
+  },
+  "forbidden": [
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-08-10T20:41:25.157Z"
+}

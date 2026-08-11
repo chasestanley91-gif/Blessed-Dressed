@@ -1,0 +1,65 @@
+{
+  "addr": "suit-2pc > back-left-jetted",
+  "productId": "suit-2pc",
+  "optionId": "back-left-jetted",
+  "attempt": 2,
+  "maxAttempts": 2,
+  "scores": {
+    "shape": 99,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 99,
+    "construction": 96,
+    "placement": 98,
+    "symmetry": 99,
+    "composition": 97,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "construction",
+    "composition"
+  ],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "buttonhole-construction",
+      "description": "The buttonhole is a keyhole worked directly into the plain seat cloth immediately BELOW the button, so button and buttonhole do not engage each other and there is no cloth tab off the welt. On a real besom-with-button-and-buttonhole the buttonhole sits in a small tab taken off the welt that folds down over the button. Both elements are present and correctly placed relative to the welt; only their functional relationship is wrong. NOTE: the drawing's red marker for this assembly is roughly 40px within a 1200px image, so I could NOT resolve from the blueprint whether the buttonhole belongs above the button, in a tab, or below it - this finding is graded against tailoring construction, not against a resolvable drawn detail.",
+      "expected": "Button close under the besom welt with its buttonhole carried on a small tab off the welt, the two engaging.",
+      "actual": "Button close under the welt (correct), with a separate keyhole buttonhole cut into the bare seat cloth below it, engaging nothing."
+    },
+    {
+      "severity": "minor",
+      "category": "assembly-depth",
+      "description": "Measured at magnification: the button-plus-buttonhole assembly hangs 68px below the welt against a welt length of 262px, i.e. 26% of welt length. The drawing's marker extends about 18% of welt length below its bar. Attempt 1 measured 33%, so the corrective retry moved this toward the drawing but did not fully close it.",
+      "expected": "Assembly depth below the welt about 18% of welt length, marker effectively abutting the welt.",
+      "actual": "Assembly depth 26% of welt length; gap from welt underside to button top 4% of welt length."
+    },
+    {
+      "severity": "minor",
+      "category": "composition-share",
+      "description": "The pocket is the unmistakable focal point on an otherwise unbroken seat and reads in well under a second, and its welt spans about 30% of frame width (up from 23% on attempt 1). Its area share is nevertheless far below the checklist's 40-80% target. This target is in direct tension with the locked prompt's own framing sentence, 'rear view of the trousers from waistband to mid-thigh', which the render obeyed.",
+      "expected": "Craft option occupying 40-80% of the frame.",
+      "actual": "Welt spans ~30% of frame width; the pocket detail block is ~2-3% of frame area within a waistband-to-mid-thigh framing."
+    }
+  ],
+  "verdict": "UNMET",
+  "waiver": null,
+  "correction": null,
+  "lockedFeatures": [
+    "exactly ONE besom pocket, on the LEFT of the frame - matches the side the drawing marks in red",
+    "right seat panel completely clean, no second pocket",
+    "single besom welt (one welt strip), straight and horizontal, no flap",
+    "bartack / end stitching at both welt ends",
+    "4-hole button centred beneath the welt",
+    "buttonhole present below the button",
+    "4 belt loops: one each side plus a pair flanking the centre back seam",
+    "back darts present on both seat panels",
+    "back orientation, centre back seam visible",
+    "no annotations, no red highlight, no flat grey notation panel"
+  ],
+  "notes": "Attempt 2 of 2. Graded at magnification: pocket enlarged ~5.7x, welt full length ~7.9x, waistband ~2.4x, right seat panel ~3.8x. HANDEDNESS verified by direct side-by-side against the drawing rather than by convention - the drawing marks the welt on the LEFT of the frame and the render places it on the LEFT of the frame; the two agree. Belt loops counted at magnification, not from the full frame: 4, matching the drawing's 4 (one at each side, a pair flanking the centre back seam). Welt confirmed as a SINGLE besom (one welt strip bounded by the pocket mouth above and a stitch line below), not a double-jetted pair, and bartacks are visible as short vertical bars closing both welt ends. Right panel independently magnified to confirm no second pocket was hallucinated in; its back dart is visible. The corrective retry fixed the attempt-1 defect where the button floated a full button-diameter below the welt - the button now sits close under the pocket mouth. The buttonhole remains cut into the seat cloth below the button rather than carried on a tab off the welt; that is the sole substantive residual, and it is a construction nuance rather than a category error - a customer still reads 'single left besom pocket with button and buttonhole' instantly, which is exactly the option name. No Critical or Major findings. Retry budget spent.",
+  "checkedAt": "2026-08-10T21:26:33.920Z"
+}

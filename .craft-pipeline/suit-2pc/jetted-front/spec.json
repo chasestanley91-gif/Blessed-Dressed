@@ -11,13 +11,13 @@
   "description": "Jetted (besom) front pocket — a narrow 14 cm to 16 cm slit set level at 0°, the pocket bag hidden beneath. One precise incision in the cloth; architectural minimalism, cleaner front, more formal.",
   "fieldLabel": "Front Pocket Style",
   "sectionLabel": "Trousers — Front & Pockets",
-  "part": "trouser-detail",
+  "part": "trouser-front-pocket",
   "garment": {
     "noun": "pair of bespoke wool tailored trousers",
     "fabric": "fine wool trouser cloth with visible weave"
   },
   "view": {
-    "orientation": "three-quarter-front",
+    "orientation": "front",
     "wearerPerspective": true,
     "confirmedByVisualInspection": true
   },
@@ -38,7 +38,13 @@
     "spread": [
       "narrow spread"
     ],
-    "flags": []
+    "flags": [],
+    "sides": [
+      "front"
+    ],
+    "attributes": [],
+    "supplierCodes": [],
+    "unresolved": []
   },
   "illustration": {
     "path": "/images/blueprints/factory/9092405bd48f__3131__Besom.jpg",
@@ -53,5 +59,5 @@
   ],
   "excluded": null,
   "generate": true,
-  "extractedAt": "2026-08-02T17:53:42.227Z"
+  "extractedAt": "2026-08-10T20:40:48.390Z"
 }

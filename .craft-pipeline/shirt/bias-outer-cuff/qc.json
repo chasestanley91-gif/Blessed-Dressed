@@ -1,0 +1,64 @@
+{
+  "addr": "shirt > bias-outer-cuff",
+  "productId": "shirt",
+  "optionId": "bias-outer-cuff",
+  "attempt": 3,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 96,
+    "geometry": 96,
+    "dimensions": 95,
+    "angles": 94,
+    "construction": 96,
+    "placement": 97,
+    "symmetry": 95,
+    "composition": 94,
+    "blueprint-match": 95
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "angles",
+    "composition"
+  ],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "frame-fill",
+      "description": "The cuff occupies roughly 23-26 percent of the frame, below the 40-80 percent the checklist requires, though it is unmistakably the dominant subject and reads within one second.",
+      "expected": "bias-cut panel filling 40-80 percent of the frame",
+      "actual": "cuff filling roughly a quarter of the frame; forearm and background take the rest"
+    },
+    {
+      "severity": "minor",
+      "category": "grain-angle",
+      "description": "Bias runs at roughly 30-35 degrees from horizontal against the drawing's hatch at roughly 40-45 degrees.",
+      "expected": "~45 degree bias across the whole outer cuff",
+      "actual": "~30-35 degree diagonal"
+    }
+  ],
+  "verdict": "UNMET",
+  "waiver": null,
+  "correction": null,
+  "lockedFeatures": [
+    "diagonal grain covers the ENTIRE outer cuff face, exactly the extent the drawing hatches",
+    "sleeve above the cuff holds a strictly straight vertical stripe, so the two grain directions meet along the cuff seam and the difference reads instantly",
+    "single 4-hole button on the cuff, as drawn",
+    "buttoned barrel cuff with rounded corner, matching the drawing's closed cuff",
+    "no other panel off-grain - option isolation is clean",
+    "clean seamless light-grey studio background, no props, no annotation marks carried over from the drawing"
+  ],
+  "notes": "Attempt 3 of 3, and the best of the three by a wide margin: attempt 1 rendered a diagonal panel on the upper BACK YOKE (it read the prompt's erroneous 'this illustration is the back of the garment' line literally, and there is no cuff in it at all); attempt 2 had the grain right but framed the cuff at roughly 22 percent with trousers in shot. Attempt 3 is construction-correct on every count and misses only the frame-fill target. This is a near-miss worth a human look before falling back to the line drawing. The locked prompt's 'back of the garment' clause is an upstream spec error - the drawing is an isolated cuff detail view.",
+  "checkedAt": "2026-08-11T00:27:01.531Z"
+}

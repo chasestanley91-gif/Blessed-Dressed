@@ -1,0 +1,72 @@
+{
+  "addr": "shirt > csplice-strip-mid",
+  "productId": "shirt",
+  "optionId": "csplice-strip-mid",
+  "attempt": 3,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 93,
+    "geometry": 55,
+    "dimensions": 70,
+    "angles": 55,
+    "construction": 86,
+    "placement": 50,
+    "symmetry": 88,
+    "composition": 96,
+    "blueprint-match": 45
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "critical",
+      "category": "strip-orientation",
+      "description": "The contrast strip runs lengthwise down the cuff - from the sleeve-join seam straight down to the hem, perpendicular to the cuff's edges. The drawn strip runs the other way: it encircles the wrist, parallel to the cuff's two edges, centred at mid-height of the band.",
+      "expected": "a 1 cm contrast strip encircling the wrist, parallel to the cuff's two edges, centred at mid-height of the cuff band, with the cuff button sitting on the strip",
+      "actual": "a ~1 cm navy strip running across the band from the sleeve seam to the hem, the button sitting on it",
+      "correction": "Rotate the strip 90 degrees relative to the cuff: it must run around the wrist parallel to the cuff's hem and sleeve-join edges, not from one edge to the other."
+    },
+    {
+      "severity": "major",
+      "category": "blueprint-match",
+      "description": "With the strip running the wrong way the option is not distinguishable from a generic contrast placket-style stripe, and the drawn relationship - a mid-band contrast band circling the cuff - is lost.",
+      "expected": "the exact drawn option: contrast strip through the centre of the cuff, encircling it",
+      "actual": "a vertical contrast stripe crossing the cuff band"
+    }
+  ],
+  "verdict": "UNMET",
+  "waiver": null,
+  "correction": null,
+  "lockedFeatures": [
+    "strip width is close to the drawn 1 cm relative to the cuff band",
+    "cuff button sits ON the contrast strip, exactly the relationship drawn",
+    "strip is truly spliced in with a stitched seam along each long edge, not a ribbon laid on the surface",
+    "cuff otherwise entirely white, as drawn",
+    "no notation red (attempt 2 rendered this strip in the drawing's notation red); navy contrast used instead",
+    "no traced annotations: no '1cm' text, no arrow, no leader line",
+    "real photograph on a male model, clean seamless light-grey studio background, cuff dominant in frame"
+  ],
+  "notes": "Attempt 3 of 3 - UNMET, and a REGRESSION. ATTEMPT 2 (candidate-2.png) IS THE BETTER ARTIFACT AND A HUMAN SHOULD LOOK AT IT: in attempt 2 the strip correctly encircles the wrist parallel to the cuff edges at mid-band height with the button sitting on it, and the width reads close to the drawn 1 cm. Its defects are cosmetic - it was rendered in the drawing's notation red and as a satin ribbon rather than spliced cotton. Attempt 3 fixed the fabric and colour and rotated the strip the wrong way. Attempt 1 had the same wrong orientation as attempt 3. Reading of the drawing: it is a 3/4 view of an isolated cuff drum whose axis runs left-right in the image, so the drawn vertical strip runs AROUND the wrist. This is corroborated by the sibling upper/lower options, whose '1/2' division line is drawn in the same direction and must run around the wrist for 'upper portion'/'lower portion of sleeve cuff' to mean anything. Do not ship candidate-3.",
+  "checkedAt": "2026-08-10T23:41:32.107Z"
+}

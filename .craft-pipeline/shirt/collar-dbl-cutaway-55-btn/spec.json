@@ -1,0 +1,62 @@
+{
+  "schema": "garment-spec/v1",
+  "addr": "shirt > collar > lapel > collar-dbl-cutaway-55-btn",
+  "productId": "shirt",
+  "sectionId": "collar",
+  "fieldId": "lapel",
+  "optionId": "collar-dbl-cutaway-55-btn",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\shirt.json",
+  "source": "json",
+  "label": "Double Cut-Away 5.5 cm with Button",
+  "description": "A 5.5 cm cut-away with a double-layered leaf construction and throat button, adding subtle depth and structure at the collar edge. The doubling gives a crisper, more substantial roll while the button keeps the spread tidy.",
+  "fieldLabel": "Collar Style",
+  "sectionLabel": "Collar",
+  "part": "shirt-collar",
+  "garment": {
+    "noun": "white bespoke cotton dress shirt",
+    "fabric": "crisp cotton poplin"
+  },
+  "view": {
+    "orientation": "front",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": false,
+  "measured": {
+    "dimensions": [
+      "5.5 cm"
+    ],
+    "angles": [],
+    "counts": [],
+    "shapes": [
+      "double cutaway",
+      "cutaway / spread",
+      "spread"
+    ],
+    "negatedShapes": [],
+    "spread": [
+      "wide cutaway spread"
+    ],
+    "flags": [
+      "collar/closure button"
+    ],
+    "sides": [],
+    "attributes": [],
+    "supplierCodes": [],
+    "unresolved": []
+  },
+  "illustration": {
+    "path": "/images/techpacks/shirt/lapel/double-cut-away-collar-in-55cm-with-button.jpg",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\techpacks\\shirt\\lapel\\double-cut-away-collar-in-55cm-with-button.jpg",
+    "exists": true,
+    "remote": false
+  },
+  "forbidden": [
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-08-10T20:41:13.578Z"
+}

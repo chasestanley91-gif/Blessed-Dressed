@@ -1,0 +1,76 @@
+{
+  "addr": "shirt > pocket-round",
+  "productId": "shirt",
+  "optionId": "pocket-round",
+  "attempt": 3,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 90,
+    "geometry": 88,
+    "dimensions": 90,
+    "angles": 94,
+    "construction": 97,
+    "placement": 98,
+    "symmetry": 97,
+    "composition": 93,
+    "blueprint-match": 88
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "composition",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "major",
+      "category": "shape",
+      "description": "Generic-category substitution on the one feature that defines this option. The illustration draws a mostly-square patch pocket whose bottom corners are only lightly softened: corner radius measures ~10% of the pocket width, leaving a long flat bottom edge across roughly 80% of the width. The photograph renders a deep U-shaped base - corner radius ~26% of pocket width, with a flat bottom section spanning only ~42% of the width. The silhouette reads as the generic soft-bottomed patch pocket, not the specific small-radius pocket that was drawn.",
+      "expected": "Bottom corner radius ~10% of pocket width; flat bottom edge across ~80% of the width, as drawn",
+      "actual": "Bottom corner radius ~26% of pocket width; flat bottom edge across only ~42% of the width - a broad U curve"
+    },
+    {
+      "severity": "major",
+      "category": "blueprint-match",
+      "description": "Because the corner radius is over-rounded, the rendered silhouette is not distinguishable from the render produced for the sibling option pocket-round-welt. Placed side by side at magnification, the two images show effectively the same pocket. A customer comparing 'Round Pocket' against 'Round Pocket with Welt' would not be able to tell the two options apart, which defeats the educational purpose of the catalog image.",
+      "expected": "A silhouette specific enough that Round Pocket is visually separable from its sibling options",
+      "actual": "Near-identical to the pocket-round-welt render; the two options are not distinguishable side by side"
+    },
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "Pocket spans x 360-650 (33% of frame width) and y 590-890 (26% of frame height) on the 880x1168 candidate, about 9% of frame area, short of the specified 40-80% dominance.",
+      "expected": "Chest pocket fills 40-80% of the frame",
+      "actual": "Pocket spans 33% of frame width / 26% of frame height"
+    }
+  ],
+  "verdict": "UNMET",
+  "waiver": null,
+  "correction": null,
+  "lockedFeatures": [
+    "patch pocket construction with edge stitching around the full perimeter",
+    "top hem / facing seam runs straight across near the top of the pocket, as drawn",
+    "handedness correct: pocket sits on the wearer's left chest, appearing on the pocket side of the button placket exactly as the drawing places it - not mirrored or swapped",
+    "front orientation, matching the illustration",
+    "straight vertical side edges",
+    "left/right symmetric bottom corners",
+    "real photograph on a male model, white cotton poplin, no line-art or CGI look",
+    "no annotation, dimension line, arrow, label or red guide mark traced from the drawing"
+  ],
+  "notes": "Attempt 3 of 3, graded against public/images/pocket/round-pocket.jpg magnified 6x. Construction, placement and handedness are all correct; the failure is the corner radius, which is roughly 2.5x what the drawing specifies and turns a squarish patch with softened corners into a U-bottomed pouch. Attempt 2 (candidate-2.png) is measurably closer on this single defining measure - its corner radius reads ~18% of pocket width against attempt 3's ~26%, versus a drawn ~10% - but attempt 2 has a tilted pocket top edge and an odd notch at the top-right corner. Neither attempt reproduces the drawn silhouette. Recommend this option be regenerated only after the prompt is amended to state the corner radius numerically, since three attempts under the current locked prompt all drifted to the generic rounded pocket.",
+  "checkedAt": "2026-08-10T23:17:22.849Z"
+}

@@ -1,0 +1,88 @@
+{
+  "addr": "shirt > contrast-sleeve-vent",
+  "productId": "shirt",
+  "optionId": "contrast-sleeve-vent",
+  "attempt": 2,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 96,
+    "geometry": 95,
+    "dimensions": 94,
+    "angles": 95,
+    "construction": 96,
+    "placement": 95,
+    "symmetry": 95,
+    "composition": 76,
+    "blueprint-match": 94
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "dimensions",
+    "composition",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "major",
+      "category": "frame-dominance",
+      "description": "The contrast placket occupies roughly 4% of the frame; much of the picture is shirt hem, trousers and hand.",
+      "expected": "Contrast Fabric Position fills 40-80% of the frame.",
+      "actual": "Black placket about 70 x 230 px inside an 880 x 1168 frame.",
+      "correction": "Crop tighter on the sleeve end; a crop of this same render would satisfy the rule without regenerating."
+    },
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "Dark trousers enter the lower frame and compete with the black contrast cloth.",
+      "expected": "Clean neutral surroundings so the contrast panel is the only dark element.",
+      "actual": "Charcoal trousers fill the lower left quadrant."
+    }
+  ],
+  "verdict": "FAIL",
+  "waiver": null,
+  "correction": {
+    "errors": [
+      {
+        "severity": "major",
+        "category": "frame-dominance",
+        "error": "The contrast placket occupies roughly 4% of the frame; much of the picture is shirt hem, trousers and hand.",
+        "expected": "Contrast Fabric Position fills 40-80% of the frame.",
+        "actual": "Black placket about 70 x 230 px inside an 880 x 1168 frame.",
+        "correction": "Crop tighter on the sleeve end; a crop of this same render would satisfy the rule without regenerating."
+      }
+    ],
+    "lockedFeatures": [
+      "white cotton poplin body cloth",
+      "black contrast sleeve placket with pointed top and dark gauntlet button",
+      "white cuff with white button",
+      "shirt-tail hem curve at frame left, as in the drawing",
+      "plain light-grey seamless studio background"
+    ],
+    "forbiddenChanges": [
+      "do not alter any checklist item this attempt already passed",
+      "do not change the camera crop, composition, or accessories unless the error is itself a composition error",
+      "do not change the garment part, orientation, or any other option's geometry"
+    ]
+  },
+  "lockedFeatures": [
+    "white cotton poplin body cloth",
+    "black contrast sleeve placket with pointed top and dark gauntlet button",
+    "white cuff with white button",
+    "shirt-tail hem curve at frame left, as in the drawing",
+    "plain light-grey seamless studio background"
+  ],
+  "notes": "Closest blueprint match in the group: pointed contrast placket sitting above a white cuff with a dark button through it, and the curved shirt hem to the left, exactly the composition of the drawing. Only shortfall is frame dominance. Attempt 2; no third generation spent. Note this render is geometrically very close to the Cuff Tab attempt 3, so the two options may need one of them re-shot to keep them distinguishable.",
+  "checkedAt": "2026-08-11T00:47:39.476Z"
+}

@@ -1,0 +1,106 @@
+{
+  "addr": "shirt > back-inverted-center-pleats",
+  "productId": "shirt",
+  "optionId": "back-inverted-center-pleats",
+  "attempt": 3,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 98,
+    "geometry": 97,
+    "dimensions": 96,
+    "angles": 98,
+    "construction": 98,
+    "placement": 98,
+    "symmetry": 96,
+    "composition": 96,
+    "blueprint-match": 97
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "geometry",
+    "dimensions",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "feature-scale-in-frame",
+      "description": "The pleat is correct but small within the wide full-torso frame the locked prompt demanded; at catalogue thumbnail size its legibility is marginal.",
+      "expected": "Back Style readable within one second at browse size.",
+      "actual": "Pleat occupies roughly 8% of frame area; unmistakable at full size, marginal as a thumbnail."
+    },
+    {
+      "severity": "minor",
+      "category": "pleat-release-length",
+      "description": "The pleat's release runs slightly further down the back than the short tick drawn on the illustration.",
+      "expected": "Short inverted pleat notation immediately below the yoke seam.",
+      "actual": "Pleat folds are crisp for roughly the top third of the back before fading into the drape - a plausible real-cloth reading of the drawn notation, not a geometry change."
+    }
+  ],
+  "verdict": "PASS_WAIVED",
+  "waiver": {
+    "granted": true,
+    "reason": "minor-only at attempt 3 of 3: retry budget exhausted with zero critical/major findings and every category >= 95",
+    "waiverMin": 95,
+    "scoreMin": 98,
+    "belowScoreMin": [
+      {
+        "category": "geometry",
+        "score": 97,
+        "shortfall": 1
+      },
+      {
+        "category": "dimensions",
+        "score": 96,
+        "shortfall": 2
+      },
+      {
+        "category": "symmetry",
+        "score": 96,
+        "shortfall": 2
+      },
+      {
+        "category": "composition",
+        "score": 96,
+        "shortfall": 2
+      },
+      {
+        "category": "blueprint-match",
+        "score": 97,
+        "shortfall": 1
+      }
+    ],
+    "minorErrors": [
+      {
+        "category": "feature-scale-in-frame",
+        "description": "The pleat is correct but small within the wide full-torso frame the locked prompt demanded; at catalogue thumbnail size its legibility is marginal.",
+        "expected": "Back Style readable within one second at browse size.",
+        "actual": "Pleat occupies roughly 8% of frame area; unmistakable at full size, marginal as a thumbnail."
+      },
+      {
+        "category": "pleat-release-length",
+        "description": "The pleat's release runs slightly further down the back than the short tick drawn on the illustration.",
+        "expected": "Short inverted pleat notation immediately below the yoke seam.",
+        "actual": "Pleat folds are crisp for roughly the top third of the back before fading into the drape - a plausible real-cloth reading of the drawn notation, not a geometry change."
+      }
+    ],
+    "attempt": 3,
+    "maxAttempts": 3,
+    "waiverAttemptFloor": 3,
+    "authority": "user decision 2026-07-30: QC gate stays >=98; a 3rd attempt is allowed; after 3 attempts an image with ZERO critical/major findings may ship at >=95 as a LOGGED WAIVER in qc.json",
+    "grantedAt": "2026-08-11T00:27:01.082Z"
+  },
+  "correction": null,
+  "lockedFeatures": [
+    "exactly one inverted pleat, on the centreline, directly below the yoke seam",
+    "pleat folds turned inward toward the centre so the depth is concealed and the exterior stays smooth",
+    "no darts anywhere on the back",
+    "straight yoke seam, curved shirttail hem visible, back view, white cotton poplin"
+  ],
+  "notes": "Graded candidate-3 at magnification (3x level-stretched crop of the yoke region). Counted at magnification: exactly ONE pleat, not two - a single inverted fold on the centreline immediately below the yoke seam, with the two fold edges turning inward toward each other so the depth is hidden, exactly as the illustration's single centred tick specifies. Pleat sits at x=440 of an 880px frame, i.e. dead centre, aligned with the collar centre. No darts present, matching the drawing. Yoke seam straight and clean; side seams and the curved shirttail hem are both in frame. Compared against candidate-2, whose back is completely smooth with no pleat visible at all - candidate-3 is decisively better and is the correct pick. This is the strongest image in the group. Retry budget was already spent by a prior wave (attempt 3 on disk); this grading pass spent no credits.",
+  "checkedAt": "2026-08-11T00:27:01.083Z"
+}

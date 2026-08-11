@@ -1,0 +1,54 @@
+{
+  "schema": "garment-spec/v1",
+  "addr": "shirt > pocket-hem > pocket > pocket-round-welt",
+  "productId": "shirt",
+  "sectionId": "pocket-hem",
+  "fieldId": "pocket",
+  "optionId": "pocket-round-welt",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\shirt.json",
+  "source": "json",
+  "label": "Round Pocket with Welt",
+  "description": "A round pocket with a welt is a rounded patch pocket finished with a reinforced welt or pleat detail at the opening, adding structure and a more tailored look. The welt gives the pocket mouth a clean, finished edge and a touch of depth. It combines the soft rounded shape with a more sartorial, constructed appearance.",
+  "fieldLabel": "Chest Pocket",
+  "sectionLabel": "Pocket & Hem",
+  "part": "shirt-pocket",
+  "garment": {
+    "noun": "white bespoke cotton dress shirt",
+    "fabric": "crisp cotton poplin"
+  },
+  "view": {
+    "orientation": "front",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": false,
+  "measured": {
+    "dimensions": [],
+    "angles": [],
+    "counts": [],
+    "shapes": [
+      "rounded-bottom pocket"
+    ],
+    "negatedShapes": [],
+    "spread": [],
+    "flags": [],
+    "sides": [],
+    "attributes": [],
+    "supplierCodes": [],
+    "unresolved": []
+  },
+  "illustration": {
+    "path": "/images/pocket/round-pocket-with-welt.jpg",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\pocket\\round-pocket-with-welt.jpg",
+    "exists": true,
+    "remote": false
+  },
+  "forbidden": [
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-08-10T20:41:32.836Z"
+}

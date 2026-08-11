@@ -1,0 +1,76 @@
+{
+  "addr": "sport-coat > sleeve-shirt-head",
+  "productId": "sport-coat",
+  "optionId": "sleeve-shirt-head",
+  "attempt": 7,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 50,
+    "geometry": 40,
+    "dimensions": 40,
+    "angles": 50,
+    "construction": 25,
+    "placement": 32,
+    "symmetry": 60,
+    "composition": 25,
+    "blueprint-match": 28
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "critical",
+      "category": "subject-absent",
+      "description": "The sleeve head is not in the picture. Both shoulder end points run off the left and right frame edges.",
+      "expected": "Frame WIDE so both ends of the shoulder sit inside the picture with clear background beyond each.",
+      "actual": "Head-and-chest portrait cropped at both shoulders; zero sleeve-head area visible."
+    },
+    {
+      "severity": "critical",
+      "category": "defining-feature-absent",
+      "description": "No spalla camicia evidence anywhere in frame. The shirt-shoulder is defined by gathered fullness/pucker where the sleeve is set into the armhole, plus the topstitch line the drawing marks with dots — none of it is present or even in shot.",
+      "expected": "Shirt-shoulder (spalla camicia) insertion with minimal structure; drawing SHSMD/E is distinguished from SHSMD/A and /B by a dotted stitch line running down the armhole from the shoulder point, which I confirmed at 7x magnification.",
+      "actual": "Smooth navy shoulder with no gathering, no pucker and no visible sleeve-head stitching; the region that would carry it is cropped out."
+    },
+    {
+      "severity": "major",
+      "category": "blueprint-match",
+      "description": "The one drawn element that separates this option from its two siblings — the dotted sleeve-head stitch line — is not reproduced.",
+      "expected": "Reproduce the dotted armhole stitching as real thread on the cloth.",
+      "actual": "Plain unbroken shoulder and lapel; no sleeve-head seam visible at all."
+    }
+  ],
+  "verdict": "UNMET",
+  "waiver": null,
+  "correction": null,
+  "lockedFeatures": [
+    "navy hopsack sport coat",
+    "open collar no tie",
+    "natural daylight studio",
+    "plain light-grey seamless background"
+  ],
+  "notes": "Graded candidate-7 (attempt 7 of 7 already on disk; no credits spent this session). Of the three sport-coat drawings, SHSMD/E is the most clearly distinguishable — the dotted armhole stitch is unambiguous at magnification — which makes the omission a solvable problem if framing is fixed first.",
+  "checkedAt": "2026-08-11T00:41:09.816Z"
+}

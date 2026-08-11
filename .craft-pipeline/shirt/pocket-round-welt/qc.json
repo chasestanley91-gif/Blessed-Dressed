@@ -1,0 +1,79 @@
+{
+  "addr": "shirt > pocket-round-welt",
+  "productId": "shirt",
+  "optionId": "pocket-round-welt",
+  "attempt": 3,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 88,
+    "geometry": 85,
+    "dimensions": 88,
+    "angles": 92,
+    "construction": 86,
+    "placement": 78,
+    "symmetry": 78,
+    "composition": 92,
+    "blueprint-match": 70
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "critical",
+      "category": "count",
+      "description": "The illustration draws TWO pockets, not one. round-pocket-with-welt.jpg shows the shirt's front button placket running vertically down the centre of the frame with a rounded patch pocket on BOTH sides of it, at the same height - a mirrored pair, one on each front panel. The generated photograph shows a single pocket on the wearer's left chest. Counted at 6x magnification on the drawing; the two pockets are unambiguous and symmetric about the placket.",
+      "expected": "Two rounded chest pockets, one on each side of the front placket, as drawn",
+      "actual": "One rounded chest pocket on the wearer's left only"
+    },
+    {
+      "severity": "critical",
+      "category": "spec-conflict",
+      "description": "The locked prompt contradicts the illustration and cannot produce a correct image. The prompt describes a single pocket, instructs 'Frame tight on the left chest pocket', and describes the distinguishing feature as a welt at the pocket mouth. The drawing shows no welt structure - it shows a plain rounded patch pocket, duplicated on both fronts. Under 'the drawing is law' the correct subject is a pair of pockets, but the locked prompt forbids that framing. Regeneration under this prompt cannot resolve the conflict; this needs a human ruling on whether the option is mislabelled, the drawing is misfiled, or the label means something other than what is drawn.",
+      "expected": "Prompt and illustration agree on what the option is",
+      "actual": "Prompt specifies one welted pocket framed tight; illustration shows two plain rounded pockets flanking the placket"
+    },
+    {
+      "severity": "major",
+      "category": "blueprint-match",
+      "description": "No welt is rendered. The pocket mouth carries the same plain top hem seam as the sibling pocket-round render, with no reinforced welt or pleat detail giving the mouth depth. Placed side by side at magnification, this image and the pocket-round image show effectively the same pocket, so the two catalog options are not visually separable.",
+      "expected": "A visible welt or pleat at the pocket mouth distinguishing this option from a plain round pocket",
+      "actual": "Plain top hem seam only; render is near-identical to the pocket-round render"
+    }
+  ],
+  "verdict": "UNMET",
+  "waiver": null,
+  "correction": null,
+  "lockedFeatures": [
+    "patch pocket construction with edge stitching around the perimeter",
+    "rounded bottom corners present",
+    "a seam across the pocket mouth near the top edge (though rendered as a plain hem, not a welt)",
+    "front orientation, matching the illustration",
+    "real photograph on a male model, white cotton poplin, no line-art or CGI look",
+    "no annotation, dimension line, arrow, label or red guide mark traced from the drawing",
+    "the pocket that IS present sits at a correct chest height and reads cleanly"
+  ],
+  "notes": "Attempt 3 of 3, graded against public/images/pocket/round-pocket-with-welt.jpg magnified 6x. This option should NOT be regenerated as-is - it is blocked upstream, not by the image model. Two separate blockers: (1) the illustration draws a mirrored PAIR of pockets flanking the placket while the locked prompt describes and frames a single pocket, so prompt and blueprint disagree about what the option even is; (2) neither the drawing nor any of the three renders shows an actual welt, so the feature named in the label is not evidenced anywhere in the source material. Placement and symmetry are scored low because the drawn pair-about-the-placket arrangement is absent entirely, not because the single rendered pocket is badly placed. Needs a human decision on the catalog entry before any further credits are spent.",
+  "checkedAt": "2026-08-10T23:17:23.000Z"
+}

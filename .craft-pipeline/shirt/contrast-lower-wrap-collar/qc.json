@@ -1,0 +1,150 @@
+{
+  "addr": "shirt > contrast-lower-wrap-collar",
+  "productId": "shirt",
+  "optionId": "contrast-lower-wrap-collar",
+  "attempt": 2,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 97,
+    "geometry": 96,
+    "dimensions": 92,
+    "angles": 96,
+    "construction": 96,
+    "placement": 96,
+    "symmetry": 96,
+    "composition": 93,
+    "blueprint-match": 95
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "dimensions",
+    "composition"
+  ],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "dimensions",
+      "description": "The contrast edge band along the collar leaves is noticeably wider than in the drawing.",
+      "expected": "Narrow trim band hugging the outer/lower edge of each collar leaf and its point.",
+      "actual": "Band roughly two to three times the drawn width."
+    },
+    {
+      "severity": "minor",
+      "category": "frame-dominance",
+      "description": "The collar dominates the frame correctly, but the contrast band itself is a thin element within it.",
+      "expected": "Contrast Fabric Position reads at 40-80% of frame.",
+      "actual": "Collar zone about half the frame; contrast band a fraction of that."
+    }
+  ],
+  "verdict": "FAIL",
+  "waiver": null,
+  "correction": {
+    "errors": [
+      {
+        "severity": "minor",
+        "category": "shape",
+        "error": "score-card category \"shape\" scored 97 (< 98)",
+        "expected": ">= 98",
+        "actual": "97",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"shape\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "geometry",
+        "error": "score-card category \"geometry\" scored 96 (< 98)",
+        "expected": ">= 98",
+        "actual": "96",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"geometry\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "dimensions",
+        "error": "score-card category \"dimensions\" scored 92 (< 98)",
+        "expected": ">= 98",
+        "actual": "92",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"dimensions\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "angles",
+        "error": "score-card category \"angles\" scored 96 (< 98)",
+        "expected": ">= 98",
+        "actual": "96",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"angles\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "construction",
+        "error": "score-card category \"construction\" scored 96 (< 98)",
+        "expected": ">= 98",
+        "actual": "96",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"construction\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "placement",
+        "error": "score-card category \"placement\" scored 96 (< 98)",
+        "expected": ">= 98",
+        "actual": "96",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"placement\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "symmetry",
+        "error": "score-card category \"symmetry\" scored 96 (< 98)",
+        "expected": ">= 98",
+        "actual": "96",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"symmetry\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "composition",
+        "error": "score-card category \"composition\" scored 93 (< 98)",
+        "expected": ">= 98",
+        "actual": "93",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"composition\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "blueprint-match",
+        "error": "score-card category \"blueprint-match\" scored 95 (< 98)",
+        "expected": ">= 98",
+        "actual": "95",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"blueprint-match\" and regenerate."
+      }
+    ],
+    "lockedFeatures": [
+      "white cotton poplin body cloth",
+      "black contrast band on the outer/lower edge of both collar leaves",
+      "button-down collar points with white buttons plus neckband button",
+      "collar close-up framing",
+      "plain light-grey seamless studio background"
+    ],
+    "forbiddenChanges": [
+      "do not alter any checklist item this attempt already passed",
+      "do not change the camera crop, composition, or accessories unless the error is itself a composition error",
+      "do not change the garment part, orientation, or any other option's geometry"
+    ]
+  },
+  "lockedFeatures": [
+    "white cotton poplin body cloth",
+    "black contrast band on the outer/lower edge of both collar leaves",
+    "button-down collar points with white buttons plus neckband button",
+    "collar close-up framing",
+    "plain light-grey seamless studio background"
+  ],
+  "notes": "Strongest match in this group along with the Sleeve Vent. Verified against the drawing: contrast follows the outer edge of both leaves and wraps each point symmetrically, collar band and body stay white, and the two collar-point buttons plus the top button are present as drawn. Instantly distinguishable from Upper Wrap Collar, which is the complementary zone. Only shortfall is band width. Attempt 2; no third generation spent.",
+  "checkedAt": "2026-08-11T00:46:03.077Z"
+}

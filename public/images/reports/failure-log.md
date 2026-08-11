@@ -1442,3 +1442,72 @@ merge/reprice: shoot these as an INTERIOR CUTAWAY (the coin-pocket images alread
 view), where the allowance depth is actually measurable — or accept they are a spec-only
 choice and drop the per-option photo.
 Ledger: 510 graded — 426 OK / 59 WRONG / 25 UNSURE. 378 legacy rows remain.
+
+## 2026-08-10 — option-id collisions put a wrong photograph on live rows
+
+- [IDENTITY — an option id is NOT an option] 382 catalog options share an option
+  id with a DIFFERENT option inside the same product file. In shirt alone 68 ids
+  are reused: `stitch-01-top` names a collar option, a placket option AND a cuff
+  option. The pipeline stores work at `.craft-pipeline/<product>/<optionId>/`
+  (lib/util.mjs), so those three overwrite one another’s spec.json and a single
+  PASS marks all three finished. The damage is not theoretical: a TROUSER coin-
+  pocket photograph is live on three JACKET coin-pocket rows, and a 7-loop
+  waistband photograph is live on the "5 Loops" option — six wrong rows.
+  Worse, the collision DESTROYS provenance: spec.json for the surviving dir
+  described the wrong field, so a metadata-based audit reported 15 defects that
+  were false and missed both real ones. Only the WIRING can be trusted.
+  FIX (a) `tools/shared_image_check.mjs` — no generated file may serve two
+  different (garment-scope, field, option) identities; exit 1; run every
+  checkpoint. Garment scope matters because `coin-pocket` names both a jacket
+  field and a trouser field, and field id alone conflates them.
+  FIX (b) `prep_batch.mjs` now passes `--section` to extract_spec, which
+  previously refused ambiguous ids (correctly — 7 items were being dropped
+  rather than mis-specified). That refusal was the only thing preventing more
+  of this, and it should never be relaxed into a guess.
+  STILL OPEN: the pipeline directory key itself. Serial processing masks it;
+  two workers on two colliding ids in one product would still collide.
+
+- [AUDIT METHOD] When a pipeline writes the record it also reads, an audit built
+  on that record proves nothing. Verify against the artifact a customer actually
+  sees — here, which file each catalog row serves — and open the image. Reading
+  two images settled in one step what the metadata had gotten backwards.
+
+## 2026-08-10 — measured ladders are settled: SPEC-ONLY, do not generate
+
+- [MEASURED LADDERS — the prescribed fix was finally run, and it fails too]
+  The 2026-07-28 entry prescribed a fix for graduated series that had never
+  actually been executed: extreme macro, identical cloth and crop, a shared
+  scale reference, QC the set for monotonicity. Run today on the 7-rung trouser
+  extension ladder (5 / 5.5 / 6 / 6.5 / 7 / 13 / 15 cm) with a steel rule in
+  frame. EVERY RUNG FAILED: minimum category scores 20, 30, 48, 52, 55, 62, 70
+  with three or four blocking findings each. The 15 cm rung rendered an
+  extension measuring about 4 cm AGAINST ITS OWN RULER. The model also would
+  not hold crop and rule scale constant between rungs, which the whole method
+  depends on.
+  The photographs were beautiful. That is the trap — the craft reads as luxury
+  and the number is wrong.
+  THE RULER MADE IT WORSE, and this is the part worth keeping: without a scale
+  reference a wrong dimension is merely invisible; with one the error becomes
+  MEASURABLE BY THE CUSTOMER, in frame, in our own catalog. Never add a scale
+  reference to buy accuracy you have not got.
+  DECISION: measured ladders are SPEC-ONLY. 40 rungs excluded from generation
+  (, structural detection: two labels that
+  are identical once their numbers are stripped). Their tech-pack drawing
+  already carries the dimension and is the correct customer reference. Unlike a
+  shape option, where a near-miss still teaches something, a dimension IS the
+  whole content of these options, so a wrong one has no residual value.
+
+- [WAIVER FLOOR — --max-attempts=2 makes PASS_WAIVED unreachable] The runbook
+  said "prefer PASS_WAIVED to a third attempt", but log_qc_result requires
+  attempt >= max(maxAttempts, DEFAULT_MAX_ATTEMPTS=3). Running workers with
+  --max-attempts=2 therefore sent every minor-only near-miss to UNMET instead:
+  back-left-jetted scored 96-99 with zero blocking findings and still failed.
+  That guidance was never achievable as written. Use --max-attempts=3.
+
+- [RUNAWAY RETRIES] One worker reached attempt FIVE on trouser fly-french
+  despite being told to retry once. Agent instructions need a COUNTED cap
+  ("count your generate calls per option, stop at three"), not a described one.
+
+- [BAD DRAWINGS STILL IN THE QUEUE] shirt/epaulet-none was generated three times
+  against a 192x192 grey PLACEHOLDER TILE bearing a diagonal cross. Opening the
+  drawing before spending is free and is now a required worker step.

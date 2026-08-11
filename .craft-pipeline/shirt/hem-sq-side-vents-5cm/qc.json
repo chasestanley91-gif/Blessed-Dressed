@@ -1,0 +1,95 @@
+{
+  "addr": "shirt > hem-sq-side-vents-5cm",
+  "productId": "shirt",
+  "optionId": "hem-sq-side-vents-5cm",
+  "attempt": 3,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 97,
+    "angles": 97,
+    "construction": 99,
+    "placement": 99,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 97
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "dimensions",
+    "angles",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "dimensions",
+      "description": "Absolute vent length still cannot be verified from the photograph - there is no scale reference in frame. Measured against the topstitched hem allowance as a ruler the slit is about 3.2x its depth, which puts it in the 3-5 cm range, closer to the 5 cm specification than attempt 2 (about 4x) and far closer than attempt 1.",
+      "expected": "vent exactly 5 cm from bar tack to hem edge",
+      "actual": "vent reads short and discreet, estimated 3-5 cm; not independently verifiable"
+    },
+    {
+      "severity": "minor",
+      "category": "angles",
+      "description": "The right panel edge of the vent is nearly vertical; the drawing shows it angling away from the seam more distinctly. Attempt 2 rendered this diagonal closer to the drawing.",
+      "expected": "right panel vent edge flaring away on a clear diagonal",
+      "actual": "right vent edge close to vertical with only a slight flare"
+    }
+  ],
+  "verdict": "PASS_WAIVED",
+  "waiver": {
+    "granted": true,
+    "reason": "minor-only at attempt 3 of 3: retry budget exhausted with zero critical/major findings and every category >= 95",
+    "waiverMin": 95,
+    "scoreMin": 98,
+    "belowScoreMin": [
+      {
+        "category": "dimensions",
+        "score": 97,
+        "shortfall": 1
+      },
+      {
+        "category": "angles",
+        "score": 97,
+        "shortfall": 1
+      },
+      {
+        "category": "blueprint-match",
+        "score": 97,
+        "shortfall": 1
+      }
+    ],
+    "minorErrors": [
+      {
+        "category": "dimensions",
+        "description": "Absolute vent length still cannot be verified from the photograph - there is no scale reference in frame. Measured against the topstitched hem allowance as a ruler the slit is about 3.2x its depth, which puts it in the 3-5 cm range, closer to the 5 cm specification than attempt 2 (about 4x) and far closer than attempt 1.",
+        "expected": "vent exactly 5 cm from bar tack to hem edge",
+        "actual": "vent reads short and discreet, estimated 3-5 cm; not independently verifiable"
+      },
+      {
+        "category": "angles",
+        "description": "The right panel edge of the vent is nearly vertical; the drawing shows it angling away from the seam more distinctly. Attempt 2 rendered this diagonal closer to the drawing.",
+        "expected": "right panel vent edge flaring away on a clear diagonal",
+        "actual": "right vent edge close to vertical with only a slight flare"
+      }
+    ],
+    "attempt": 3,
+    "maxAttempts": 3,
+    "waiverAttemptFloor": 3,
+    "authority": "user decision 2026-07-30: QC gate stays >=98; a 3rd attempt is allowed; after 3 attempts an image with ZERO critical/major findings may ship at >=95 as a LOGGED WAIVER in qc.json",
+    "grantedAt": "2026-08-11T00:09:01.435Z"
+  },
+  "correction": null,
+  "lockedFeatures": [
+    "squared (level, straight) hem running dead flat across the full width on both sides of the vent",
+    "side vent at the side seam with a vertical left panel edge and a flaring right panel edge",
+    "rectangular bar tack stitched across the top of the vent, as drawn",
+    "topstitched hem allowance along the whole hem",
+    "matched framing: garment square to camera, whole shirt bottom at a standard distance so measurement siblings can be compared side by side"
+  ],
+  "notes": "Three attempts, budget spent. Attempt 1: vent roughly twice its drawn length, no bar tack, tight three-quarter crop - rejected. Attempt 2: bar tack restored, hems levelled, matched framing restored, vent still long - rejected by the gate on dimensions. Attempt 3: same construction retained and the slit shortened again; the vent-edge diagonal is slightly flatter than attempt 2. Attempts 2 and 3 are close in quality - attempt 3 is better on vent length and framing, attempt 2 is better on the vent-edge angle. Both candidates remain on disk for a human to choose between.",
+  "checkedAt": "2026-08-11T00:09:01.438Z"
+}

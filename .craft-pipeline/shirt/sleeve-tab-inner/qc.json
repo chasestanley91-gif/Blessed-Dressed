@@ -1,0 +1,83 @@
+{
+  "addr": "shirt > sleeve-tab-inner",
+  "productId": "shirt",
+  "optionId": "sleeve-tab-inner",
+  "attempt": 3,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 94,
+    "geometry": 95,
+    "dimensions": 92,
+    "angles": 90,
+    "construction": 96,
+    "placement": 90,
+    "symmetry": 96,
+    "composition": 55,
+    "blueprint-match": 92
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "shape",
+    "dimensions",
+    "angles",
+    "placement",
+    "composition",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "major",
+      "category": "composition",
+      "description": "The Sleeve Tab does not dominate the frame. Measured at magnification the tab polygon is roughly 90x330 px inside an 880x1168 frame, about 3 percent of the image area; the checklist requires 40-80 percent. The shot is a mid-body view that also contains black trousers, a trouser pocket and the model's hand, which the SET clause bans as distraction.",
+      "expected": "Tight documentation crop framed on the tab, tab filling 40-80 percent of frame, seamless plain neutral light-grey background with no props.",
+      "actual": "Mid-shot of the model's side and hip; cuff and tab confined to the lower-right area; black trousers, pocket and hand occupy the left half of the frame."
+    },
+    {
+      "severity": "minor",
+      "category": "shape",
+      "description": "The drawn tab is a slim ogival lozenge with slightly curved sides tapering to sharp points at both ends. The rendered tab has straight parallel sides and broader, blunter hexagonal points.",
+      "expected": "Narrow lozenge with curved sides converging to sharp top and bottom points.",
+      "actual": "Straight-sided strap with hexagonal chamfered points, wider point angles than drawn."
+    },
+    {
+      "severity": "minor",
+      "category": "dimensions",
+      "description": "The tab's lower point extends slightly past the cuff hem edge instead of terminating at it.",
+      "expected": "Lower point of the lozenge ends at the cuff hem line as drawn.",
+      "actual": "Lower point crosses the cuff hem and protrudes a few millimetres below it."
+    },
+    {
+      "severity": "minor",
+      "category": "placement",
+      "description": "NOT VERIFIED: the option is labelled Inner Sleeve Tab and the spec records side 'inside', but in the illustration the red lozenge sits on the outboard silhouette edge of the drawn sleeve. From a single exterior photograph it is impossible to confirm the tab is on the inner side rather than the outer. This inside/outside question was not resolved.",
+      "expected": "Tab on the inside side of the sleeve, not mirrored or swapped.",
+      "actual": "Tab rendered on the visible outward-facing plane of the cuff; inner-versus-outer placement unverifiable from this view and the label conflicts with the drawing's edge position."
+    }
+  ],
+  "verdict": "UNMET",
+  "waiver": null,
+  "correction": null,
+  "lockedFeatures": [
+    "narrow, vertically elongated double-pointed lozenge tab",
+    "exactly one 4-hole button at the upper end of the tab, with a vertical buttonhole",
+    "tab runs from just above the cuff seam down across the full depth of the cuff",
+    "properly finished, closed shirt cuff band with edge-stitched seams",
+    "fine edge stitching outlining the whole tab",
+    "front view of the garment, worn on a male model",
+    "white cotton poplin, no annotation marks or red guide colour rendered"
+  ],
+  "notes": "Attempt 1 (blueprint attached) failed hard: the sleeve terminated in a raw gaping opening with no cuff band at all and the bare forearm falling out; the tab floated high on the sleeve face as a generic diamond gauntlet placket. Attempt 2 was submitted by mistake WITHOUT the illustration attached (text-only) - a methodological error on my part; it nonetheless produced a correct closed cuff and a tab crossing the cuff, but the tab was a long flat-topped strip running far up the sleeve rather than the short double-pointed lozenge drawn. Attempt 3 (blueprint attached) is the best blueprint match: verified at 3x magnification, the tab is a short double-pointed lozenge with exactly ONE button at its upper end and a vertical buttonhole, edge-stitched, spanning from above the cuff seam to the cuff hem, on a properly constructed cuff band - this reproduces the drawn red lozenge rather than a generic gauntlet placket. It fails on composition only: the tab is far too small in a frame that also shows trousers and a hand. Attempt 2 is framed tighter on the cuff than attempt 3, so if a human wants a larger tab in frame, attempt 2's crop is better while attempt 3's geometry is correct. Retry budget of 3 generations is spent; no waiver applied because a Major error stands.",
+  "checkedAt": "2026-08-11T01:00:12.517Z"
+}

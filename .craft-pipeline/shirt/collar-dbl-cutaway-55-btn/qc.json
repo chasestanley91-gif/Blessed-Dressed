@@ -1,0 +1,83 @@
+{
+  "addr": "shirt > collar-dbl-cutaway-55-btn",
+  "productId": "shirt",
+  "optionId": "collar-dbl-cutaway-55-btn",
+  "attempt": 3,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 88,
+    "geometry": 84,
+    "dimensions": 85,
+    "angles": 88,
+    "construction": 78,
+    "placement": 76,
+    "symmetry": 97,
+    "composition": 97,
+    "blueprint-match": 80
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "major",
+      "category": "button-placement",
+      "description": "The single small button on each collar leaf is rendered at the leaf point, anchoring the leaf to the shirt front, which makes the collar read as a button-down. In the drawing each button sits high and inboard, close to the collar band on the visible second under-layer edge, well away from the leaf point.",
+      "expected": "One button per leaf, set high and inboard near the collar band",
+      "actual": "One button per leaf at the leaf point, button-down style"
+    },
+    {
+      "severity": "major",
+      "category": "missing-construction",
+      "description": "The double-layered leaf construction is not visible. The drawing shows a second under-collar layer whose curved edge runs across each leaf below the top leaf edge; the photograph shows a single-layer leaf with ordinary edge stitching.",
+      "expected": "Visible second under-layer edge running across each leaf",
+      "actual": "Single-layer leaf, no second edge"
+    },
+    {
+      "severity": "major",
+      "category": "spread-angle",
+      "description": "The spread between the collar points measures roughly 102 degrees in frame against the drawn 115 degrees. Measured against its own family this inverts the ordering: the 100-degree Large Cut-Away 8.2 cm renders WIDER (about 122 degrees) than this 115-degree option, so a customer comparing the two images would read the sizes backwards.",
+      "expected": "115 degrees, wider than the 100-degree Large Cut-Away sibling",
+      "actual": "About 102 degrees, narrower than the 100-degree sibling"
+    },
+    {
+      "severity": "minor",
+      "category": "leaf-length",
+      "description": "The leaves read longer than the specified 5.5 cm; the drawing shows a distinctly short leaf.",
+      "expected": "5.5 cm leaf",
+      "actual": "Leaf proportionally longer than 5.5 cm"
+    }
+  ],
+  "verdict": "UNMET",
+  "waiver": null,
+  "correction": null,
+  "lockedFeatures": [
+    "front view, matching the illustration",
+    "no model, no skin, no necktie in frame",
+    "centre-front tongue-shaped tab with throat button, present and centred as drawn",
+    "both leaves mirror each other in length, angle and tip shape",
+    "seamless neutral light-grey studio background",
+    "no annotations, numbers or guide marks traced from the drawing"
+  ],
+  "notes": "Attempt 3 of 3, and clearly the best of the three: the correction moved the spread from roughly 65 degrees at attempt 2 up to about 102 degrees, against a 115-degree target. The button placement and the double under-layer did not respond to the correction across any attempt. Retry budget exhausted.",
+  "checkedAt": "2026-08-11T01:00:36.738Z"
+}

@@ -1,0 +1,76 @@
+{
+  "addr": "shirt > collar-cuban",
+  "productId": "shirt",
+  "optionId": "collar-cuban",
+  "attempt": 3,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 70,
+    "geometry": 72,
+    "dimensions": 80,
+    "angles": 85,
+    "construction": 76,
+    "placement": 88,
+    "symmetry": 96,
+    "composition": 97,
+    "blueprint-match": 68
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "critical",
+      "category": "collar-point-termination",
+      "description": "Both collar leaves are rendered as long sharp acute points. The drawing terminates each leaf in a flat, squared-off blunt end edge (short near-vertical cut with the bottom edge running back inward) - the defining geometry of this camp/revere leaf.",
+      "expected": "Squared-off blunt leaf terminations, wide flat lapel-like leaves lying open",
+      "actual": "Long tapered acute points, identical to a conventional point collar"
+    },
+    {
+      "severity": "critical",
+      "category": "generic-category-substitution",
+      "description": "The photograph reads as a generic pointed dress-shirt collar with a full stand rather than the drawn Cuban/camp collar. A customer could not identify this option from the image.",
+      "expected": "Open, band-less camp collar with broad flat leaves as drawn",
+      "actual": "Conventional stand-and-leaf point collar"
+    },
+    {
+      "severity": "major",
+      "category": "missing-feature",
+      "description": "The small squared tab that projects from the LEFT collar leaf in the drawing is absent; only a bare thread loop remains, floating on the leaf edge with no tab behind it.",
+      "expected": "Squared fabric tab on the left leaf carrying a button loop",
+      "actual": "Thread loop only, no tab"
+    }
+  ],
+  "verdict": "UNMET",
+  "waiver": null,
+  "correction": null,
+  "lockedFeatures": [
+    "front view, matching the illustration",
+    "no model, no skin, no necktie in frame",
+    "throat open, top band button unfastened",
+    "loop detail present on the LEFT leaf only (correct side)",
+    "seamless neutral light-grey studio background",
+    "no annotations, numbers or guide marks traced from the drawing"
+  ],
+  "notes": "Attempt 3 of 3. The correction clause naming the squared-off leaf termination did not take: the model still produced acute points. Attempt 2 (candidate-2.png) rendered the squared LEFT-leaf tab plus loop correctly but also had sharp points; attempt 1 (candidate-1.png) had the bluntest leaf ends and the most open camp-collar lay but no tab or loop at all. No attempt combined blunt terminations with the tab. Retry budget exhausted; a human should pick between candidate-1 (best leaf shape) and candidate-2 (best tab detail), or the option should be re-shot with a rewritten prompt.",
+  "checkedAt": "2026-08-11T00:56:55.368Z"
+}

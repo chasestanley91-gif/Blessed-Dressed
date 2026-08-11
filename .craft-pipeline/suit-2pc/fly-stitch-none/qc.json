@@ -1,0 +1,85 @@
+{
+  "addr": "suit-2pc > fly-stitch-none",
+  "productId": "suit-2pc",
+  "optionId": "fly-stitch-none",
+  "attempt": 2,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 96,
+    "angles": 98,
+    "construction": 98,
+    "placement": 98,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 97
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "dimensions",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "fly-extension-width",
+      "description": "The curved fly extension sits slightly further from the centre-front line than the blueprint draws it. Measured at magnification on candidate-2: centre-front fold at x=442px, fly J edge at x=512px, giving a 70px extension against a 680px waistband width = 10.3%. The blueprint has the centre line at x=607 and the fly edge at x=680 on a 910px waistband = 8.0%. Attempt 2 was generated with an explicit clause asking for 8%; the measured value did not move from attempt 1 (10.7%), so this dimension is not responsive to prompt correction and a third generation was judged unlikely to converge.",
+      "expected": "fly extension edge ~8.0% of waistband width right of the centre-front line (slim fly)",
+      "actual": "fly extension edge ~10.3% of waistband width right of the centre-front line"
+    }
+  ],
+  "verdict": "FAIL",
+  "waiver": null,
+  "correction": {
+    "errors": [
+      {
+        "severity": "minor",
+        "category": "dimensions",
+        "error": "score-card category \"dimensions\" scored 96 (< 98)",
+        "expected": ">= 98",
+        "actual": "96",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"dimensions\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "blueprint-match",
+        "error": "score-card category \"blueprint-match\" scored 97 (< 98)",
+        "expected": ">= 98",
+        "actual": "97",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"blueprint-match\" and regenerate."
+      }
+    ],
+    "lockedFeatures": [
+      "ABSENCE CONFIRMED: zero topstitching anywhere on the fly - the fly edge and the J-curve are rendered as clean pressed folds/seams with no stitch line, verified at 4x magnification and again under contrast stretch",
+      "Absence is PROVED, not merely hidden: the slant side-pocket seam stitching is clearly resolved in the same lighting and at the same scale, so a fly topstitch would have been visible had it existed",
+      "Fly handedness matches the blueprint - extension and J-curve on the viewer's right of the centre-front line, terminating by rejoining the centre seam",
+      "Fly depth ratio 0.67 of waistband-to-crotch rise against 0.70 in the blueprint",
+      "Front view, waistband to upper thigh, shirt tucked, no jacket - orientation matches the blueprint",
+      "Two belt loops across the front, matching the two drawn on the blueprint waistband",
+      "Slant side pockets present on both hips, as drawn",
+      "Two pressed front folds descending from the waistband, as drawn",
+      "Seamless plain light-grey studio background, no props, no annotation or text traced from the drawing"
+    ],
+    "forbiddenChanges": [
+      "do not alter any checklist item this attempt already passed",
+      "do not change the camera crop, composition, or accessories unless the error is itself a composition error",
+      "do not change the garment part, orientation, or any other option's geometry"
+    ]
+  },
+  "lockedFeatures": [
+    "ABSENCE CONFIRMED: zero topstitching anywhere on the fly - the fly edge and the J-curve are rendered as clean pressed folds/seams with no stitch line, verified at 4x magnification and again under contrast stretch",
+    "Absence is PROVED, not merely hidden: the slant side-pocket seam stitching is clearly resolved in the same lighting and at the same scale, so a fly topstitch would have been visible had it existed",
+    "Fly handedness matches the blueprint - extension and J-curve on the viewer's right of the centre-front line, terminating by rejoining the centre seam",
+    "Fly depth ratio 0.67 of waistband-to-crotch rise against 0.70 in the blueprint",
+    "Front view, waistband to upper thigh, shirt tucked, no jacket - orientation matches the blueprint",
+    "Two belt loops across the front, matching the two drawn on the blueprint waistband",
+    "Slant side pockets present on both hips, as drawn",
+    "Two pressed front folds descending from the waistband, as drawn",
+    "Seamless plain light-grey studio background, no props, no annotation or text traced from the drawing"
+  ],
+  "notes": "Two generations spent of a budget of three; stopped deliberately at two. Attempt 1 (candidate-1.png) was already correct on the showcased craft option but had three belt loops visible against the blueprint's two, was shifted right of frame centre, and rendered the fly J so faintly that it needed contrast enhancement to trace - weak for an option whose whole purpose is to let a customer see that nothing is there. Attempt 2 (candidate-2.png) fixed the belt loop count, centred the garment, and made the fly J clearly legible unaided while keeping the fly completely free of topstitching. No feature that was correct in attempt 1 was lost in attempt 2 - this is the better image and the one to ship. The single remaining deviation is the fly extension width; it was named explicitly in the attempt-2 correction clause and did not move at all, which is evidence the model will not resolve it, so a third generation was not purchased. Verified by direct measurement at magnification: topstitch absence, fly handedness, fly depth, belt loop count, side pockets, orientation. Not independently verified: the exact number of belt loops hidden around the sides and back of the garment, which the blueprint does not show either.",
+  "checkedAt": "2026-08-11T01:20:17.374Z"
+}

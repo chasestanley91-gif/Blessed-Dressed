@@ -1,0 +1,75 @@
+{
+  "addr": "shirt > bh-machine",
+  "productId": "shirt",
+  "optionId": "bh-machine",
+  "attempt": 4,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 94,
+    "geometry": 93,
+    "dimensions": 92,
+    "angles": 96,
+    "construction": 90,
+    "placement": 95,
+    "symmetry": 95,
+    "composition": 72,
+    "blueprint-match": 85
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "construction",
+    "composition",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "critical",
+      "category": "source-drawing-not-distinguishing",
+      "description": "The tech-pack drawing for bh-machine (public/images/buttonhole/machine.jpg) is BYTE-IDENTICAL to the drawing for bh-hand (hand-made.jpg) - same MD5 568e2a13d9caf35fda8461fbfb0c5dc3. It is a whole-shirt front line drawing with red tick marks indicating buttonhole POSITIONS on the placket, carrying no information about buttonhole stitch type. The machine-vs-hand distinction this option exists to sell has no blueprint authority.",
+      "expected": "A drawing depicting a machine-stitched buttonhole, distinct from the hand-made option's drawing.",
+      "actual": "A generic full-shirt placement diagram, identical file to the hand-made option."
+    },
+    {
+      "severity": "major",
+      "category": "composition-dominance",
+      "description": "Checklist requires the Buttonhole Type to fill 40-80% of the frame, framed macro. Candidate-4 is a wide collar-and-upper-chest portrait; at 5x magnification each buttonhole measures roughly 55x70px within an 880x1168 frame, well under 1% of frame area. The craft option is not identifiable within one second at this scale.",
+      "expected": "Buttonhole dominates 40-80% of frame, macro.",
+      "actual": "Wide on-model shot; buttonhole under 1% of frame area."
+    },
+    {
+      "severity": "major",
+      "category": "construction-buttons-absent",
+      "description": "No buttons appear anywhere on the garment, yet the placket lies flat and closed. A shirt cannot be closed with empty buttonholes and no buttons.",
+      "expected": "Buttons present on the opposing placket (or plackets visibly open if unbuttoned).",
+      "actual": "Zero buttons in frame; placket reads closed with all buttonholes empty."
+    }
+  ],
+  "verdict": "UNMET",
+  "waiver": null,
+  "correction": null,
+  "lockedFeatures": [
+    "straight (non-keyhole) buttonhole - correct for a dress shirt",
+    "vertical buttonhole orientation on the front placket",
+    "horizontal buttonhole on the collar band",
+    "flat, dense, uniform machine zigzag stitching - correctly distinct from the hand option",
+    "bar tacks present at both ends",
+    "front view of garment, matching the illustration's face"
+  ],
+  "notes": "Retry budget already exhausted before this worker ran: generation.json records attempt=4 with no qc.json ever written, so 4 credits were spent against a hard cap of 3. This worker spent nothing. IMPORTANT FOR A HUMAN PICKING AN IMAGE: candidate-2.png is clearly the best of the four and is far better than the recorded candidate-4. candidate-2 is a true macro of a single machine buttonhole filling a large share of the frame, showing dense flat uniform machine zigzag with crisp bar tacks at both ends - it satisfies the macro-dominance requirement candidate-4 badly fails. Attempts 3 and 4 oscillated back to wide on-model framing and lost the macro attempt 2 had. Recommend promoting candidate-2 rather than regenerating. Side-by-side, bh-hand candidate-2 (raised irregular purl) and bh-machine candidate-2 (flat uniform zigzag) do read as genuinely different constructions, which is the educational job - but that difference is model invention, not blueprint-verified, because the source drawing does not depict stitch type.",
+  "checkedAt": "2026-08-11T00:39:30.250Z"
+}

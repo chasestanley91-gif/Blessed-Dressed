@@ -11,7 +11,7 @@
   "description": "Jeans-style front pocket with a sharp 90° corner transition — utility-oriented, masculine, structured; carpenter's-apron strength at the hip.",
   "fieldLabel": "Front Pocket Style",
   "sectionLabel": "Trousers — Front & Pockets",
-  "part": "trouser-detail",
+  "part": "trouser-front-pocket",
   "garment": {
     "noun": "pair of bespoke wool tailored trousers",
     "fabric": "fine wool trouser cloth with visible weave"
@@ -28,10 +28,18 @@
       "90°"
     ],
     "counts": [],
-    "shapes": [],
+    "shapes": [
+      "jeans square pocket"
+    ],
     "negatedShapes": [],
     "spread": [],
-    "flags": []
+    "flags": [],
+    "sides": [
+      "front"
+    ],
+    "attributes": [],
+    "supplierCodes": [],
+    "unresolved": []
   },
   "illustration": {
     "path": "/images/blueprints/remote/14975407461c__3133.jpg",
@@ -46,5 +54,5 @@
   ],
   "excluded": null,
   "generate": true,
-  "extractedAt": "2026-08-01T21:56:50.990Z"
+  "extractedAt": "2026-08-10T20:40:47.979Z"
 }

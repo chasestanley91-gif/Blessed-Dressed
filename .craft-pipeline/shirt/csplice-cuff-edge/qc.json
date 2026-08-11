@@ -1,0 +1,105 @@
+{
+  "addr": "shirt > csplice-cuff-edge",
+  "productId": "shirt",
+  "optionId": "csplice-cuff-edge",
+  "attempt": 3,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 98,
+    "geometry": 97,
+    "dimensions": 96,
+    "angles": 97,
+    "construction": 98,
+    "placement": 98,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 96
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "geometry",
+    "dimensions",
+    "angles",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "dimensions",
+      "description": "The bound trim's width cannot be resolved to the drawn 0.6 cm at this render resolution; measured against the cuff band it reads roughly 0.5-0.8 cm, so the callout figure is plausible but NOT verified.",
+      "expected": "0.6 cm contrast trim width, per the magnified detail bubble on the drawing",
+      "actual": "narrow even bound edge, apparent width ~8-12% of the cuff band height; exact figure not resolvable"
+    },
+    {
+      "severity": "minor",
+      "category": "blueprint-match",
+      "description": "In the drawing the trim arm that runs across the band (the closing edge) extends the full width of the drum; in the photograph that arm is heavily foreshortened by the worn pose and reads as a short chevron at the cuff corner rather than a full-length run.",
+      "expected": "trim visibly running the entire height of the cuff band along the closing edge, as the long arm of the drawn Y",
+      "actual": "closing-edge trim visible only over the corner region; the rest is foreshortened out of view"
+    }
+  ],
+  "verdict": "PASS_WAIVED",
+  "waiver": {
+    "granted": true,
+    "reason": "minor-only at attempt 3 of 3: retry budget exhausted with zero critical/major findings and every category >= 95",
+    "waiverMin": 95,
+    "scoreMin": 98,
+    "belowScoreMin": [
+      {
+        "category": "geometry",
+        "score": 97,
+        "shortfall": 1
+      },
+      {
+        "category": "dimensions",
+        "score": 96,
+        "shortfall": 2
+      },
+      {
+        "category": "angles",
+        "score": 97,
+        "shortfall": 1
+      },
+      {
+        "category": "blueprint-match",
+        "score": 96,
+        "shortfall": 2
+      }
+    ],
+    "minorErrors": [
+      {
+        "category": "dimensions",
+        "description": "The bound trim's width cannot be resolved to the drawn 0.6 cm at this render resolution; measured against the cuff band it reads roughly 0.5-0.8 cm, so the callout figure is plausible but NOT verified.",
+        "expected": "0.6 cm contrast trim width, per the magnified detail bubble on the drawing",
+        "actual": "narrow even bound edge, apparent width ~8-12% of the cuff band height; exact figure not resolvable"
+      },
+      {
+        "category": "blueprint-match",
+        "description": "In the drawing the trim arm that runs across the band (the closing edge) extends the full width of the drum; in the photograph that arm is heavily foreshortened by the worn pose and reads as a short chevron at the cuff corner rather than a full-length run.",
+        "expected": "trim visibly running the entire height of the cuff band along the closing edge, as the long arm of the drawn Y",
+        "actual": "closing-edge trim visible only over the corner region; the rest is foreshortened out of view"
+      }
+    ],
+    "attempt": 3,
+    "maxAttempts": 3,
+    "waiverAttemptFloor": 3,
+    "authority": "user decision 2026-07-30: QC gate stays >=98; a 3rd attempt is allowed; after 3 attempts an image with ZERO critical/major findings may ship at >=95 as a LOGGED WAIVER in qc.json",
+    "grantedAt": "2026-08-10T23:40:09.411Z"
+  },
+  "correction": null,
+  "lockedFeatures": [
+    "0.6 cm contrast trim genuinely BINDS the cuff's free edges - the cloth edge itself is contrast, not a ribbon lying on the face (this was the attempt-1 failure and is now fixed)",
+    "trim runs along the cuff's bottom hem edge, encircling the wrist",
+    "trim runs up the cuff's closing edge and meets the hem trim at the angled mitred corner - the Y/mitre junction of the drawing is reproduced",
+    "angled (cut) cuff corner present, matching the drawn diagonal",
+    "cuff body otherwise plain white; button sits on plain white cloth, off the trim, as drawn",
+    "no notation red anywhere - contrast rendered as navy woven cotton",
+    "no traced annotations: no 0.6cm text, no leader line, no detail bubble",
+    "real photograph on a male model, clean seamless light-grey studio background",
+    "cuff dominates the frame, option identifiable within one second"
+  ],
+  "notes": "Attempt 3 of 3. Attempt 1 floated the trim across the middle of the cuff face as a burgundy ribbon with plain white cloth outside it - the option was not readable and that was a critical placement failure. Attempt 2 moved the trim onto the hem and closing edges but kept the drawing's notation red and left one arm floating. Attempt 3 binds the actual cloth edge in navy with the mitred corner and is the best of the three. The drawing is a 3/4 view of an isolated cuff drum whose axis runs left-right in the image: the drawn long horizontal arm is the closing edge (running across the band height) and the vertical arm is the hem edge (running around the wrist), joined at the mitred corner. That reading is what attempt 3 renders. Residual uncertainty is dimensional only - I could not resolve the 0.6 cm trim width at this resolution and I am not asserting it.",
+  "checkedAt": "2026-08-10T23:40:09.412Z"
+}

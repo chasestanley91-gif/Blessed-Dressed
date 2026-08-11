@@ -68,8 +68,14 @@ while (prepared.length < N && i < wl.work.length) {
   }
   const orientation = orientationFor(w);
   try {
+    // --section is required, not optional: 382 options share an option id with
+    // a DIFFERENT option inside the same product (`stitch-01-top` names a
+    // collar, a placket and a cuff option). Without it extract_spec refuses,
+    // and refusing is correct — guessing would write one option's geometry
+    // into another's spec. See tools/shared_image_check.mjs for what that
+    // collision already cost: a trouser coin pocket sold as a jacket's.
     run(path.join(SKILL_TP, 'extract_spec.mjs'),
-      [`--product=${w.product}`, `--option=${w.option}`, `--orientation=${orientation}`, '--write']);
+      [`--product=${w.product}`, `--section=${w.section}`, `--option=${w.option}`, `--orientation=${orientation}`, '--write']);
     const built = JSON.parse(run(path.join(SKILL_GD, 'build_prompt.mjs'),
       [`--product=${w.product}`, `--option=${w.option}`, '--json', ...(COMPACT ? ['--compact'] : [])]));
     // The pre-flight gate decides, not this script.

@@ -1,0 +1,56 @@
+{
+  "schema": "garment-spec/v1",
+  "addr": "shirt > cuffs > long_sleeve_cuff_width > cw-5",
+  "productId": "shirt",
+  "sectionId": "cuffs",
+  "fieldId": "long_sleeve_cuff_width",
+  "optionId": "cw-5",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\shirt.json",
+  "source": "json",
+  "label": "5.0 cm",
+  "description": "A 5.0cm cuff width is a relatively narrow, compact cuff that sits close to the wrist for a trim, modern proportion. The shorter depth keeps the cuff light and unobtrusive, pairing well with slimmer sleeves and a streamlined silhouette. It is the most understated of the width options and reveals less cuff below a jacket sleeve.",
+  "fieldLabel": "Cuff Width",
+  "sectionLabel": "Cuffs",
+  "part": "shirt-cuff",
+  "garment": {
+    "noun": "white bespoke cotton dress shirt",
+    "fabric": "crisp cotton poplin"
+  },
+  "view": {
+    "orientation": "front",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": false,
+  "measured": {
+    "dimensions": [
+      "5.0 cm"
+    ],
+    "angles": [],
+    "counts": [],
+    "shapes": [],
+    "negatedShapes": [],
+    "spread": [
+      "narrow spread"
+    ],
+    "flags": [],
+    "sides": [],
+    "attributes": [],
+    "supplierCodes": [],
+    "unresolved": []
+  },
+  "illustration": {
+    "path": "/images/long_sleeve_cuff_width/cuff-width-5cm.jpg",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\long_sleeve_cuff_width\\cuff-width-5cm.jpg",
+    "exists": true,
+    "remote": false
+  },
+  "forbidden": [
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-08-10T20:41:22.266Z"
+}

@@ -1,0 +1,64 @@
+{
+  "addr": "shirt > back-box-dbl-darts",
+  "productId": "shirt",
+  "optionId": "back-box-dbl-darts",
+  "attempt": 3,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 96,
+    "geometry": 95,
+    "dimensions": 94,
+    "angles": 96,
+    "construction": 95,
+    "placement": 94,
+    "symmetry": 95,
+    "composition": 88,
+    "blueprint-match": 94
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "dimensions",
+    "placement",
+    "composition",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "major",
+      "category": "feature-truncated-by-crop",
+      "description": "The option is named 'Box Pleat to Bottom' but the shirt is worn tucked into trousers, so the pleat is cut off at the waistband and the hem is never shown. The defining claim of the option - that the pleat runs all the way to the bottom - cannot be verified from this photograph. The locked prompt explicitly required both ends of the feature inside the frame with clear background beyond each.",
+      "expected": "Box pleat visible from the yoke seam continuously down to the shirt hem, with the hem and a margin of background inside the frame (as candidate-2 achieved with an untucked shirt).",
+      "actual": "Pleat is legible from the yoke down to the trouser waistband at roughly 70% of frame height, where it disappears behind the trousers. Hem not in frame."
+    },
+    {
+      "severity": "minor",
+      "category": "dart-rendering",
+      "description": "The two darts read as soft vertical creases rather than pressed, stitched dart seams, and they run straight where the illustration draws them with a slight curve.",
+      "expected": "Two curved, crisply pressed waist darts as drawn on the illustration, one either side of the pleat.",
+      "actual": "Two straight soft vertical fold lines, left at approx x=335 and right at approx x=570 of 880px width, symmetric about centre but low in contrast."
+    }
+  ],
+  "verdict": "UNMET",
+  "waiver": null,
+  "correction": null,
+  "lockedFeatures": [
+    "yoke seam straight across the upper back",
+    "single centred box pleat with two parallel fold edges running from the yoke seam downward",
+    "two waist darts, one either side of the pleat, symmetric about centre",
+    "back view, white cotton poplin, plain light-grey studio background"
+  ],
+  "notes": "Graded candidate-3 at magnification (level-stretched 2x crops of the upper and lower back). Counted at magnification: exactly one centre box pleat, resolved as two distinct parallel fold edges roughly 50px apart in an 880px-wide frame, running from the yoke seam continuously downward; plus exactly two outboard vertical dart lines, symmetric about the shirt's centreline. So the feature count (1 pleat + 2 darts) matches the illustration. Compared against candidate-2: candidate-2 shows the full untucked shirt including the curved shirttail hem, but its centre back reads as a SINGLE crease rather than a box pleat, so the defining feature is lost. Candidate-3 is the better image on the defining feature and the correct pick of the three; its only serious flaw is the tucked-in crop. A human may prefer to re-shoot untucked rather than accept either. Retry budget was already spent by a prior wave (attempt 3 on disk); this grading pass spent no credits.",
+  "checkedAt": "2026-08-11T00:27:00.862Z"
+}

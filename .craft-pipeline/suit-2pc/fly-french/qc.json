@@ -1,0 +1,76 @@
+{
+  "addr": "suit-2pc > fly-french",
+  "productId": "suit-2pc",
+  "optionId": "fly-french",
+  "attempt": 5,
+  "maxAttempts": 2,
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 95,
+    "angles": 99,
+    "construction": 96,
+    "placement": 96,
+    "symmetry": 98,
+    "composition": 70,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "dimensions",
+    "construction",
+    "placement",
+    "composition"
+  ],
+  "belowWaiverMinCategories": [
+    "composition"
+  ],
+  "errors": [
+    {
+      "severity": "major",
+      "category": "subject-scale",
+      "description": "The ticket pocket does not dominate the frame. Measured on the 880x1168 render the welt bounding box is 170x66 px = 19% of frame width and 1.1% of frame area. The image reads as a mid-torso waistcoat portrait (tie, neckline and button column all compete with the pocket) rather than a craft-documentation photograph of the pocket. Geometry is correct; this is purely a framing/crop scale miss and is fixable by cropping the existing file without regeneration.",
+      "expected": "Ticket pocket dominant, filling 40-80% of the frame, framed on the waistcoat pocket, identifiable within one second",
+      "actual": "Welt occupies ~19% of frame width / ~1.1% of frame area in a mid-torso waistcoat shot"
+    },
+    {
+      "severity": "minor",
+      "category": "welt-depth-proportion",
+      "description": "Welt depth relative to its length is shallower than drawn. Candidate welt measures ~170 x 42 px (1:4.05). The drawing's welt, measured along the centreline of the red marker stroke, is ~126 x 37 px (1:3.4), and 1:3.0 measured to the outer edge of the stroke. The red highlighter stroke has real width, so the drawn depth is uncertain by roughly the stroke thickness; the deviation is on the order of 20-30% and I could not pin it more precisely.",
+      "expected": "Welt depth-to-length ratio approx 1:3.0-1:3.4 as drawn",
+      "actual": "Rendered welt depth-to-length ratio approx 1:4.05 (proportionally shallower)"
+    },
+    {
+      "severity": "minor",
+      "category": "inboard-end-position",
+      "description": "The welt's inboard end starts slightly further outboard than drawn. Candidate inboard end is 39% of the way from the front button edge to the side seam; the drawing places it at 31%. Vertical placement and the dart-crossing point are both correct.",
+      "expected": "Inboard end of welt approx 31% across the panel from the centre-front edge",
+      "actual": "Inboard end approx 39% across the panel"
+    },
+    {
+      "severity": "minor",
+      "category": "edge-stitch-unverified",
+      "description": "NOT VERIFIED rather than failed. The checklist requires 'edge stitch' to be reproduced. At 5x magnification the candidate's welt shows crisp pressed edges and a clean dark edge line, but I could not resolve a discrete topstitch row. The source drawing depicts the pocket as a red highlight marker outline and does not depict stitching either, so there is no drawn stitch specification to compare against. Recording as unresolved, not as a pass.",
+      "expected": "Edge stitch reproduced as drawn",
+      "actual": "Welt edge reads as cleanly pressed; discrete stitch row not resolvable at magnification, and not specified in the drawing"
+    }
+  ],
+  "verdict": "UNMET",
+  "waiver": null,
+  "correction": null,
+  "lockedFeatures": [
+    "Handedness correct: pocket sits on the WEARER'S LEFT. Verified independently of convention - the visible shirt sleeve at frame-right is the wearer's left arm, and the welt lies between the button line and that side seam. Also matches the drawing's layout (pocket to the right of the button column).",
+    "Single plain welt pocket - no flap, no button, matching the drawing.",
+    "Slant angle 8.0 degrees rising toward the outboard side; drawing measures approx 8 degrees. Near-exact.",
+    "Welt crosses the vertical front dart/seam line, with the dart intersecting at 58% along the welt's length; the drawing places the intersection at 56%. This dart-crossing is a drawing-specific signature and rules out generic-category substitution.",
+    "Vertical placement: welt centre sits just above the third button in both drawing and render.",
+    "Welt length as a fraction of panel width: 38% rendered vs 40% drawn.",
+    "Button column: 4 fastened round buttons plus a 5th open buttonhole at the bottom; the drawing shows 4 round buttons plus a dash mark at the same lowest position. Counted at 3x magnification, not from the full frame.",
+    "Deep V neckline and no lower welt pockets rendered, consistent with the drawing which shows only the single highlighted ticket welt.",
+    "Real photograph, no line-art or CGI look; no annotation, dimension line, arrow, label or red guide mark traced from the drawing; no red or flat-grey notation rendered into the cloth.",
+    "Clean seamless neutral light-grey studio background, no props or scenery."
+  ],
+  "notes": "Attempt 2. Graded against the tech-pack drawing side by side, with the pocket region magnified 5x and the drawing's pocket 7x, and the button columns at 3x for counting. Eight of nine categories are at or near the 98 bar and the drawn geometry is reproduced faithfully - including the drawing-specific dart crossing and slant, which is strong evidence this is not a generic welt substituted for the drawn one. The single blocking defect is composition: the pocket is far too small in frame against the required 40-80% dominance. No third attempt is permitted, so this closes as UNMET. Recommended human action: the existing candidate-2.png is geometrically sound and could be salvaged by a tight crop around the welt rather than by regenerating. Note also that candidate-1.png existed with no qc.json (never graded); it is an olive waistcoat whose pocket reads as a narrow double-lip besom rather than the drawn single welt, and its pocket is even smaller in frame, so candidate-2 is the better of the two.",
+  "checkedAt": "2026-08-10T22:28:11.669Z"
+}

@@ -1,0 +1,151 @@
+{
+  "addr": "shirt > cuff-french-4bh",
+  "productId": "shirt",
+  "optionId": "cuff-french-4bh",
+  "attempt": 2,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 97,
+    "geometry": 95,
+    "dimensions": 94,
+    "angles": 97,
+    "construction": 95,
+    "placement": 96,
+    "symmetry": 96,
+    "composition": 95,
+    "blueprint-match": 95
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "dimensions"
+  ],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "buttonhole-scale",
+      "description": "The four worked buttonholes are rendered oversized and coarse relative to the cuff, with wide bar-tacked loops; the drawing shows four small, neat slot buttonholes.",
+      "expected": "Four small neat slot buttonholes, two per leaf, proportionate to the cuff depth.",
+      "actual": "Four large loosely-worked buttonholes with prominent looped ends."
+    },
+    {
+      "severity": "minor",
+      "category": "hardware-threading",
+      "description": "The cufflink plate reads as sitting between the buttonhole pairs rather than visibly passing through them; the connecting post is not readable.",
+      "expected": "A single cufflink whose post passes through all four aligned layers.",
+      "actual": "Cufflink face flanked by the four holes; post not visible."
+    }
+  ],
+  "verdict": "FAIL",
+  "waiver": null,
+  "correction": {
+    "errors": [
+      {
+        "severity": "minor",
+        "category": "shape",
+        "error": "score-card category \"shape\" scored 97 (< 98)",
+        "expected": ">= 98",
+        "actual": "97",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"shape\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "geometry",
+        "error": "score-card category \"geometry\" scored 95 (< 98)",
+        "expected": ">= 98",
+        "actual": "95",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"geometry\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "dimensions",
+        "error": "score-card category \"dimensions\" scored 94 (< 98)",
+        "expected": ">= 98",
+        "actual": "94",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"dimensions\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "angles",
+        "error": "score-card category \"angles\" scored 97 (< 98)",
+        "expected": ">= 98",
+        "actual": "97",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"angles\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "construction",
+        "error": "score-card category \"construction\" scored 95 (< 98)",
+        "expected": ">= 98",
+        "actual": "95",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"construction\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "placement",
+        "error": "score-card category \"placement\" scored 96 (< 98)",
+        "expected": ">= 98",
+        "actual": "96",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"placement\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "symmetry",
+        "error": "score-card category \"symmetry\" scored 96 (< 98)",
+        "expected": ">= 98",
+        "actual": "96",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"symmetry\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "composition",
+        "error": "score-card category \"composition\" scored 95 (< 98)",
+        "expected": ">= 98",
+        "actual": "95",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"composition\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "blueprint-match",
+        "error": "score-card category \"blueprint-match\" scored 95 (< 98)",
+        "expected": ">= 98",
+        "actual": "95",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"blueprint-match\" and regenerate."
+      }
+    ],
+    "lockedFeatures": [
+      "exactly 4 buttonholes, arranged as two aligned pairs at the butted cuff ends - verified at magnification",
+      "French / double cuff with visible fold edge - correct",
+      "squared cuff corners, matching the drawing",
+      "cufflink closure, no buttons on the cuff - correct",
+      "edge topstitch present",
+      "photorealistic, no line-art, no annotation or red guide marks carried over"
+    ],
+    "forbiddenChanges": [
+      "do not alter any checklist item this attempt already passed",
+      "do not change the camera crop, composition, or accessories unless the error is itself a composition error",
+      "do not change the garment part, orientation, or any other option's geometry"
+    ]
+  },
+  "lockedFeatures": [
+    "exactly 4 buttonholes, arranged as two aligned pairs at the butted cuff ends - verified at magnification",
+    "French / double cuff with visible fold edge - correct",
+    "squared cuff corners, matching the drawing",
+    "cufflink closure, no buttons on the cuff - correct",
+    "edge topstitch present",
+    "photorealistic, no line-art, no annotation or red guide marks carried over"
+  ],
+  "notes": "2 of 3 generations used; stopped deliberately. Attempt 2 is a clear improvement on attempt 1, which showed only 2 buttonholes with the cufflink resting on plain unpierced cloth. Attempt 2 satisfies the COUNT LOCK of exactly 4 buttonholes (counted at magnification) and shows the link engaged in the closure. Falls short of 98 on buttonhole scale and link threading realism. A third attempt was not spent because the named error was fixed and correction passes in this project have been measured to oscillate and lose already-correct features.",
+  "checkedAt": "2026-08-11T00:32:55.651Z"
+}

@@ -1,0 +1,123 @@
+{
+  "addr": "shirt > blp-3",
+  "productId": "shirt",
+  "optionId": "blp-3",
+  "attempt": 2,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 92,
+    "geometry": 84,
+    "dimensions": 90,
+    "angles": 85,
+    "construction": 86,
+    "placement": 88,
+    "symmetry": 93,
+    "composition": 78,
+    "blueprint-match": 80
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "major",
+      "category": "regression",
+      "description": "Attempt 2 lost the folded-open hem flap that attempt 1 had and that drawing 1114 clearly shows; the prompt also requires the garment be opened to show the interior.",
+      "expected": "Lower front folded open to reveal the interior, per the drawing and the prompt",
+      "actual": "Flat closed shirt front; no interior revealed"
+    },
+    {
+      "severity": "major",
+      "category": "composition",
+      "description": "The sewn label occupies roughly 2% of the frame, far below the required 40-80% dominance.",
+      "expected": "Brand Label Position dominates 40-80% of frame",
+      "actual": "Label approx 110x190px in an 880x1150 frame (~2%)"
+    },
+    {
+      "severity": "major",
+      "category": "option-separation",
+      "description": "Result is near-identical to blp-2 attempt 2; the two options cannot be told apart.",
+      "expected": "blp-3's mark is drawn lower and angled, crossing toward the hem edge",
+      "actual": "Upright rectangular label in the same place as blp-2's render"
+    },
+    {
+      "severity": "minor",
+      "category": "angles",
+      "description": "Drawn red mark at x62-68,y165-172 runs at an angle down toward the hem; render is upright.",
+      "expected": "Angled label orientation",
+      "actual": "Vertical/upright label"
+    }
+  ],
+  "verdict": "FAIL",
+  "waiver": null,
+  "correction": {
+    "errors": [
+      {
+        "severity": "major",
+        "category": "regression",
+        "error": "Attempt 2 lost the folded-open hem flap that attempt 1 had and that drawing 1114 clearly shows; the prompt also requires the garment be opened to show the interior.",
+        "expected": "Lower front folded open to reveal the interior, per the drawing and the prompt",
+        "actual": "Flat closed shirt front; no interior revealed",
+        "correction": "Regenerate to fix: Attempt 2 lost the folded-open hem flap that attempt 1 had and that drawing 1114 clearly shows; the prompt also requires the garment be opened to show the interior."
+      },
+      {
+        "severity": "major",
+        "category": "composition",
+        "error": "The sewn label occupies roughly 2% of the frame, far below the required 40-80% dominance.",
+        "expected": "Brand Label Position dominates 40-80% of frame",
+        "actual": "Label approx 110x190px in an 880x1150 frame (~2%)",
+        "correction": "Regenerate to fix: The sewn label occupies roughly 2% of the frame, far below the required 40-80% dominance."
+      },
+      {
+        "severity": "major",
+        "category": "option-separation",
+        "error": "Result is near-identical to blp-2 attempt 2; the two options cannot be told apart.",
+        "expected": "blp-3's mark is drawn lower and angled, crossing toward the hem edge",
+        "actual": "Upright rectangular label in the same place as blp-2's render",
+        "correction": "Regenerate to fix: Result is near-identical to blp-2 attempt 2; the two options cannot be told apart."
+      }
+    ],
+    "lockedFeatures": [
+      "lower front placket near bottom hem",
+      "rectangular woven label",
+      "four-sided stitch frame",
+      "curved shirt hem",
+      "white cotton poplin"
+    ],
+    "forbiddenChanges": [
+      "do not alter any checklist item this attempt already passed",
+      "do not change the camera crop, composition, or accessories unless the error is itself a composition error",
+      "do not change the garment part, orientation, or any other option's geometry"
+    ]
+  },
+  "lockedFeatures": [
+    "lower front placket near bottom hem",
+    "rectangular woven label",
+    "four-sided stitch frame",
+    "curved shirt hem",
+    "white cotton poplin"
+  ],
+  "notes": "Attempt 1 kept the folded-open interior flap (correct per the drawing) but drew the label as an odd angled hexagonal beige patch with incoherent placket geometry and a stray buttonhole. Attempt 2 fixed the label to a clean rectangle but DROPPED the folded-open flap. Neither attempt is wholly correct and they fail in different places - attempt 1 is better on the opened-interior requirement, attempt 2 is better on label shape and cleanliness. A human should pick. Stopped at 2 of 3: this is exactly the oscillation pattern, and a third generation was judged likely to lose more than it gains.",
+  "checkedAt": "2026-08-11T00:00:33.643Z"
+}

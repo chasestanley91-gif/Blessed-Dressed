@@ -1,0 +1,108 @@
+{
+  "addr": "shirt > collar-regular-19",
+  "productId": "shirt",
+  "optionId": "collar-regular-19",
+  "attempt": 2,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 98,
+    "geometry": 97,
+    "dimensions": 97,
+    "angles": 98,
+    "construction": 97,
+    "placement": 97,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 96
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "geometry",
+    "dimensions",
+    "construction",
+    "placement",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "unresolved-drawing-detail",
+      "description": "The drawing carries a small triangular flap with a tiny circle beneath it at the LEFT collar point only; the photograph has nothing there. I magnified the source to the pixel level and the mark is about 15 pixels across - I could not determine whether it is a garment feature (a collar-point tab with a small button, as the Cuban Collar drawing in this same group shows more clearly) or a drawing annotation, which the locked prompt requires NOT be rendered. I did not verify which, and I deliberately did not spend the remaining generation instructing the model to add a feature I cannot read, because inventing it would be worse than omitting it.",
+      "expected": "Unknown - either a small tab and button at the left collar point, or nothing if the mark is documentation",
+      "actual": "Nothing rendered at the left collar point"
+    }
+  ],
+  "verdict": "FAIL",
+  "waiver": null,
+  "correction": {
+    "errors": [
+      {
+        "severity": "minor",
+        "category": "geometry",
+        "error": "score-card category \"geometry\" scored 97 (< 98)",
+        "expected": ">= 98",
+        "actual": "97",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"geometry\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "dimensions",
+        "error": "score-card category \"dimensions\" scored 97 (< 98)",
+        "expected": ">= 98",
+        "actual": "97",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"dimensions\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "construction",
+        "error": "score-card category \"construction\" scored 97 (< 98)",
+        "expected": ">= 98",
+        "actual": "97",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"construction\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "placement",
+        "error": "score-card category \"placement\" scored 97 (< 98)",
+        "expected": ">= 98",
+        "actual": "97",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"placement\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "blueprint-match",
+        "error": "score-card category \"blueprint-match\" scored 96 (< 98)",
+        "expected": ">= 98",
+        "actual": "96",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"blueprint-match\" and regenerate."
+      }
+    ],
+    "lockedFeatures": [
+      "spread between the collar points measures about 92 degrees in frame against the drawn 90 degrees",
+      "straight acute collar point terminations, matching the drawing",
+      "centre-front tab carrying a single throat button, present and centred as drawn",
+      "collar open at the throat, no necktie, top band button unfastened",
+      "front view, no model, no face, no neck, no skin",
+      "both leaves mirror each other in length, angle and tip shape",
+      "seamless neutral light-grey studio background, no annotations, numbers or guide marks traced from the drawing"
+    ],
+    "forbiddenChanges": [
+      "do not alter any checklist item this attempt already passed",
+      "do not change the camera crop, composition, or accessories unless the error is itself a composition error",
+      "do not change the garment part, orientation, or any other option's geometry"
+    ]
+  },
+  "lockedFeatures": [
+    "spread between the collar points measures about 92 degrees in frame against the drawn 90 degrees",
+    "straight acute collar point terminations, matching the drawing",
+    "centre-front tab carrying a single throat button, present and centred as drawn",
+    "collar open at the throat, no necktie, top band button unfastened",
+    "front view, no model, no face, no neck, no skin",
+    "both leaves mirror each other in length, angle and tip shape",
+    "seamless neutral light-grey studio background, no annotations, numbers or guide marks traced from the drawing"
+  ],
+  "notes": "Graded on attempt 2 (candidate-2.png), which is the stronger of the two existing attempts - its 92-degree spread is closer to the drawn 90 than attempt 1's 105 degrees. One generation remains in the budget but it is deliberately unspent: the only thing separating this image from a pass is a detail in the source drawing that is too small to read, and the correction it would require is a guess. A human needs to decide what the mark at the left collar point is before another generation is worth paying for. Apart from that mark the photograph is a faithful and shippable rendering of the option.",
+  "checkedAt": "2026-08-11T01:28:09.452Z"
+}

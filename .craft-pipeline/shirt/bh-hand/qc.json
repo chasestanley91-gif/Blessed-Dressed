@@ -1,0 +1,81 @@
+{
+  "addr": "shirt > bh-hand",
+  "productId": "shirt",
+  "optionId": "bh-hand",
+  "attempt": 4,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 94,
+    "geometry": 93,
+    "dimensions": 93,
+    "angles": 96,
+    "construction": 85,
+    "placement": 95,
+    "symmetry": 95,
+    "composition": 80,
+    "blueprint-match": 85
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "construction",
+    "composition",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "critical",
+      "category": "source-drawing-not-distinguishing",
+      "description": "The tech-pack drawing for bh-hand (public/images/buttonhole/hand-made.jpg) is BYTE-IDENTICAL to the drawing for bh-machine (machine.jpg) - same MD5 568e2a13d9caf35fda8461fbfb0c5dc3. It is a whole-shirt front line drawing with red tick marks indicating buttonhole POSITIONS on the placket. It carries zero information about buttonhole stitch type, so the hand-vs-machine distinction that this option exists to sell has no blueprint authority at all.",
+      "expected": "A drawing that depicts a hand-worked buttonhole (purl edge, hand stitch character) distinct from the machine option's drawing.",
+      "actual": "A generic full-shirt placement diagram, identical file to the machine option."
+    },
+    {
+      "severity": "major",
+      "category": "composition-dominance",
+      "description": "Checklist requires the Buttonhole Type to fill 40-80% of the frame, framed macro. In candidate-4 the frame is a mid-chest placket shot; each individual buttonhole occupies roughly 1-2% of the frame area.",
+      "expected": "Buttonhole dominates 40-80% of frame, macro.",
+      "actual": "Four small buttonholes down a placket, each ~1-2% of frame."
+    },
+    {
+      "severity": "major",
+      "category": "construction-buttons-absent",
+      "description": "There are no buttons anywhere on the garment, yet the placket lies flat and closed. A shirt cannot be closed with empty buttonholes and no buttons; this is physically incoherent.",
+      "expected": "Buttons present on the opposing placket (or plackets visibly open if unbuttoned).",
+      "actual": "Zero buttons in frame; placket reads closed with all buttonholes empty."
+    },
+    {
+      "severity": "major",
+      "category": "bar-tack-missing",
+      "description": "Checklist item 'thread and bar tack' is not satisfied. At 5x magnification the candidate-4 buttonholes are worked with continuous stitching around both rounded ends, with no distinct bar tack at either end.",
+      "expected": "Visible bar tack terminating the buttonhole.",
+      "actual": "Continuous rounded purl both ends, no bar tack."
+    }
+  ],
+  "verdict": "UNMET",
+  "waiver": null,
+  "correction": null,
+  "lockedFeatures": [
+    "straight (non-keyhole) buttonhole - correct for a dress shirt",
+    "vertical buttonhole orientation on the front placket",
+    "horizontal buttonhole on the collar band",
+    "raised purl/gimp edge reading as hand-worked",
+    "front view of garment, matching the illustration's face"
+  ],
+  "notes": "Retry budget already exhausted before this worker ran: generation.json records attempt=4 with no qc.json ever written, so 4 credits were spent on this option against a hard cap of 3. This worker spent nothing. IMPORTANT FOR A HUMAN PICKING AN IMAGE: candidate-2.png is clearly the best of the four and is materially better than the recorded candidate-4. candidate-2 is a true macro of a single hand-worked buttonhole filling a large share of the frame, with visible silk purl edge, slightly irregular hand-stitch spacing, and bar tacks at both ends - it satisfies both the macro-dominance and the bar-tack checklist items that candidate-4 fails. Attempts 3 and 4 oscillated back to a wide on-model framing and lost the macro that attempt 2 had already nailed. Recommend promoting candidate-2 rather than regenerating. Note that even candidate-2 cannot be blueprint-verified for hand-vs-machine, because the source drawing does not depict stitch type.",
+  "checkedAt": "2026-08-11T00:39:29.856Z"
+}

@@ -1,0 +1,54 @@
+{
+  "addr": "sport-coat > lbp-both-double",
+  "productId": "sport-coat",
+  "optionId": "lbp-both-double",
+  "attempt": 2,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 98,
+    "placement": 98,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 99
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "eyelet-orientation-consistency",
+      "description": "Within the model's-right (viewer-left) lapel pair, the two keyhole eyelets face opposite ends of their slots: the upper buttonhole's eye sits at its upper-outer end while the lower buttonhole's eye sits at its lower-inner end. The opposite lapel's pair is internally consistent (both eyes at the lower-inner end). Visible only at 9x magnification; not detectable at catalog display size.",
+      "expected": "Both buttonholes in a pair carry their eyelet at the same end, and the two pairs mirror each other across the front centre line.",
+      "actual": "One lapel's pair has mismatched eyelet ends; the two pairs therefore do not mirror perfectly in eyelet placement, though slant direction and count do mirror correctly."
+    },
+    {
+      "severity": "minor",
+      "category": "vertical-registration",
+      "description": "The viewer-left buttonhole pair sits roughly 10 px higher than the viewer-right pair in a 1168 px frame (~1%), consistent with the model's slight body rotation rather than a construction error.",
+      "expected": "Both pairs at matching height on the lapels.",
+      "actual": "~1% height difference attributable to the three-quarter body turn."
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "lockedFeatures": [
+    "exactly 2 buttonholes per lapel (4 total in frame) - verified at 9x magnification",
+    "buttonholes present on BOTH lapels, neither side omitted",
+    "eyelet / keyhole-ended worked buttonholes with gimp, not plain slit holes",
+    "slant direction mirrored left-to-right across the front centre line",
+    "compact, closely stacked pair occupying a small square footprint on the upper lapel, matching the drawing's paired red marks",
+    "front view of the garment, worn on a male model, chest-up, both lapels in frame with background margin beyond each",
+    "notch lapel, consistent with the collar/lapel junction in the drawing",
+    "plain neutral light-grey seamless background, no props or location",
+    "zero annotation artifacts: no red or pink notation, no flat grey panel, no numbers, leader lines, arrows or labels"
+  ],
+  "notes": "Attempt 2 of a 3-generation budget; stopped at 2 deliberately. Source drawing (public/images/supplier-bb/GTECP/E.jpg, 176x176) is a genuine tech pack: a flat top-down view of the collar and upper lapels splayed open, carrying two short red slash marks on each lapel. Red-pixel analysis of the drawing put the left mark cluster centred at x~26.5 and the right at x~149.5 on a 176 px width - an exact mirror about the 88 px centre line, both at the same y - confirming symmetric double placement. Each cluster measures about 10 x 13 px, so the pair is short and tightly stacked rather than long or widely separated. Attempt 1 (candidate-1.png) failed critically: it rendered the generic single boutonniere buttonhole, exactly one per lapel, which is textbook generic-category substitution on this field. A retry with a correction clause naming that error produced attempt 2, which renders two separate worked eyelet buttonholes on each lapel. Count was resolved by magnifying each lapel to 9x, not read off the full frame. Did NOT spend attempt 3: the only remaining findings are minor and cosmetic at magnification, and the measured failure mode on this field is regression back to a single buttonhole, so a third generation risked losing the feature that is now correct. Not verified: the precise buttonhole length as a ratio of lapel width, because the drawing is a flat splayed layout at 176 px and does not support a reliable panel-relative measurement transfer to a worn photograph; the pair reads as correctly short in both, but this is a visual match, not a measured one. The model wears a tie in attempt 2 (attempt 1 was open-collar); the tie does not touch or obscure either lapel buttonhole.",
+  "checkedAt": "2026-08-11T01:10:12.978Z"
+}

@@ -1,0 +1,102 @@
+{
+  "addr": "suit-2pc > jetted-front",
+  "productId": "suit-2pc",
+  "optionId": "jetted-front",
+  "attempt": 4,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 55,
+    "geometry": 45,
+    "dimensions": 40,
+    "angles": 20,
+    "construction": 88,
+    "placement": 50,
+    "symmetry": 92,
+    "composition": 90,
+    "blueprint-match": 30
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "critical",
+      "category": "angles",
+      "description": "ORIENTATION INVERTED. The drawn front pocket is a near-PLUMB slit; the recorded image (candidate-4) renders a HORIZONTAL besom welt. The two features are close to perpendicular. This is the single discriminator for this option and it is wrong, so the photograph would teach a customer the opposite of the drawing.",
+      "expected": "Drawing red mask (r>140, r-g>60, r-b>60) spans x=420-495, y=280-762. Its per-row centroid moves from cx=444.5 at y=280 to cx=471.5 at y=760, i.e. dx/dy = +0.0563 = 3.22 deg off image-vertical. Magnified 2x (scratchpad z/draw_slit.png) the red highlighter is seen to overlay a thin black drawn line, so the red marks a real opening, not an empty callout. The option description's '0 deg' therefore means 0 deg from the side seam (vertical), not 0 deg from horizontal.",
+      "actual": "Candidate-4 welt core (darkest y per column, lum<25) fitted over the clean span x=487..687: y=340 at x=487 falling to y=313 at x=687, slope dy/dx = -0.135 = 7.7 deg from HORIZONTAL, i.e. 82.3 deg from vertical. Residual against the drawing = 79.1 deg. The feature is a conventional horizontal double-jetted hip welt - textbook generic-category substitution.",
+      "correction": "Render the besom as a near-vertical slit, 3-4 deg off plumb, not a horizontal welt. Candidate-3 in this same folder already achieves this; see the notes."
+    },
+    {
+      "severity": "major",
+      "category": "regression",
+      "description": "OSCILLATION, NOT CONVERGENCE. Attempt 3 (candidate-3.png) rendered the opening VERTICAL - the correct and hardest-won feature - and attempt 4 threw it away and reverted to the generic horizontal welt that attempts 1 and 2 had produced. Attempt 4 is a strictly worse image than attempt 3 on the option's defining characteristic.",
+      "expected": "Attempt 3's vertical slit: core (lum<20, blur 1.6) runs y=263 to y=790 at x=331 down to x=293; least-squares fit dx/dy = -0.0682 = 3.90 deg off plumb with a maximum residual of 2.5 px over a 527 px span. Magnitude matches the drawing's 3.22 deg to within 0.7 deg.",
+      "actual": "Attempt 4 discarded it: 82.3 deg from vertical, per the critical finding above. Attempts 1, 2 and 4 are all horizontal welts; only attempt 3 is vertical.",
+      "correction": "Do not regenerate. Promote candidate-3 for human review instead - it is the only one of the four that gets the orientation right, and its remaining faults are placement and length, both smaller than a 79 deg orientation inversion."
+    },
+    {
+      "severity": "major",
+      "category": "dimensions",
+      "description": "The opening is far too short. Normalised to waistband depth (the only landmark shared by both images - no centimetre callout is printed anywhere on this tech pack), the recorded welt is about a third shorter than the drawn slit, on top of being rotated.",
+      "expected": "Drawn slit length = y 280 to 762 = 482 px against a drawing waistband depth of 103 px (centre-to-centre, measured at x=420/500/620/760 as 103/102.5/102.5/103), i.e. 4.68 waistband-depths. At a real 3.5-4 cm waistband that is 16-19 cm, bracketing the spec's stated 14-16 cm.",
+      "actual": "Candidate-4 welt span = x 470 to 725 = about 255 px. Waistband depth in this render is unstable (107 px at x=450, 82 at x=550, 81 at x=650 - the shirt/waistband boundary is not cleanly separable here), so taking the most generous value of 81 gives 3.1 waistband-depths, and the mid value gives about 2.8. Roughly 34-40 percent short of the drawn 4.68.",
+      "correction": "Length must reach about 4.7 waistband-depths. Candidate-3 reads 527 px / 127 px = 4.15 WD, itself 11 percent short but far closer."
+    },
+    {
+      "severity": "major",
+      "category": "placement",
+      "description": "Recorded here because it applies to candidate-3 as well and would otherwise be lost: the opening sits far too far outboard, mid-panel, instead of close inboard of the drawing's long vertical reference line. Verified with a landmark mapping rather than assumed.",
+      "expected": "Drawing at y=520: long vertical reference line at x=518.7 (traced x=507 at y=260 to x=536 at y=900), slit centroid at x=458, outboard silhouette at x=82. Slit-to-line gap = 60.7 px = 0.59 waistband-depths; panel width silhouette-to-line = 436.7 px = 4.24 WD.",
+      "actual": "Candidate-3 at y=520: front crease at x=569, slit centroid at x=310, outboard silhouette at x=54. Slit-to-crease gap = 259 px = 2.04 WD against a drawn 0.59 WD - about 1.45 WD (roughly 5-6 cm) too far outboard. The normalisation is sound because the panel width itself matches: 515 px / 127 = 4.06 WD in the render against 4.24 WD drawn, only 4 percent apart. Candidate-4's horizontal welt cannot be compared on this axis at all.",
+      "correction": "Move the slit inboard so it sits about 0.6 waistband-depths from the front crease, not 2.0. Do not change its length or its near-plumb attitude while doing so."
+    },
+    {
+      "severity": "minor",
+      "category": "angles",
+      "description": "Recorded for candidate-3 only, so a future attempt does not lose it: the lean magnitude is right but the SIGN is reversed.",
+      "expected": "Drawing: centroid x increases with y (444.5 at y=280 to 471.5 at y=760), so the slit leans toward the reference line as it descends, at 3.22 deg.",
+      "actual": "Candidate-3: centroid x decreases with y (331 at y=263 to 293 at y=790), 3.90 deg the other way. Magnitude is within 0.7 deg; only the direction is inverted, for a 7.1 deg total residual. Minor because the render is a real 3/4 body view where hip curvature can plausibly account for a few degrees.",
+      "correction": "If convenient, tilt the slit so its lower end sits slightly inboard rather than slightly outboard. Lowest priority on this option."
+    }
+  ],
+  "verdict": "UNMET",
+  "waiver": null,
+  "correction": null,
+  "lockedFeatures": [
+    "CANDIDATE-3 ONLY - vertical attitude of the opening. Core (lum<20) from y=263 to y=790, fit dx/dy=-0.0682, max residual 2.5 px over 527 px. This is the option's entire discriminator and the only attempt of four that has it. It must survive any future work.",
+    "CANDIDATE-3 ONLY - straightness. Maximum deviation from the fitted centreline is 2.5 px over a 527 px run; the drawn line is equally straight. No bowing, no curve.",
+    "CANDIDATE-3 ONLY - genuine double-jetted besom construction. At 6x magnification (scratchpad z/c3_mid.png) the perpendicular order reads: cloth, thin dark outer edge, lit upper jet face, black aperture core (lum 1-5), lit lower jet face, thin dark outer edge, cloth. Two equal jets with real depth, not a drawn line.",
+    "CANDIDATE-3 ONLY - both ends closed square with end bars. Top end (z/c3_top.png) shows a clean horizontal bar closing the slit; bottom end (z/c3_bot.png) shows both jets terminating together on a square horizontal edge. Correct besom finishing at both ends.",
+    "CANDIDATE-3 ONLY - jets parallel and the aperture width even along the whole 527 px run; no taper, no gape.",
+    "ALL CANDIDATES - correct face and correct sense: front of the trousers, waistband, three belt loops, front crease, shirt tucked. No fly substitution, no back-pocket substitution, no mirroring.",
+    "ALL CANDIDATES - no annotation bleed. No measurement numbers, units, dimension or leader lines, arrows, callouts, ruler ticks, labels, red highlighter or flat grey panel anywhere in frame. The drawing's notation was correctly read as notation.",
+    "ALL CANDIDATES - set and light: seamless plain neutral light-grey background, clean garment/background separation, soft directional daylight, no props, no architecture, no hands or accessories obstructing the pocket.",
+    "ALL CANDIDATES - material: fine charcoal worsted trouser cloth with visible weave and fibre, matte, correctly pressed; photographic, not CGI, not line-art, not a mannequin.",
+    "ALL CANDIDATES - crop: waistband to mid-thigh, front three-quarter, pocket zone unobstructed. Correct per the brief.",
+    "CANDIDATE-4 ONLY - the welt it does render is well constructed: parallel double jets, even width, clean pressed lips. The technique is right; only the orientation, length and placement are wrong."
+  ],
+  "notes": "VERDICT: UNMET, and NO NEW CREDIT WAS SPENT ON THIS OPTION.\n\nWHY NOTHING WAS GENERATED. generation.json already recorded attempt=4 (candidate-4.png, job 6241bf4e, 2026-08-10T22:19Z) with no qc.json ever written. The standing instruction is a hard cap of THREE generations per option; four were already paid for by an earlier wave that then failed to log a verdict. Generating a fifth would have been exactly the runaway the brief warns about, so this pass did the free work instead: read the drawing, measured all four existing candidates, and made the already-purchased artifacts durable by writing this record.\n\nWHAT THE DRAWING ACTUALLY SHOWS. The file is a genuine trouser tech pack (front, waistband, three belt loops), not a swatch page or a placeholder. The red highlighter marks a long, near-PLUMB slit on the front panel - x=420-495, y=280-762, 3.22 deg off vertical, 4.68 waistband-depths long, both ends free, sitting 0.45 WD below the waistband seam and 0.59 WD outboard of a long vertical reference line. Magnified 2x, the red is seen to overlay a thin black drawn line, confirming it marks a real opening. The option description's '0 deg' therefore means 0 deg from the SIDE SEAM - vertical - and not 0 deg from horizontal, which is how three of the four generations read it. The drawing also carries a separate black HORIZONTAL welt at x=628-975, y=318-398 (0.44 WD deep); the locked prompt explicitly instructs that this secondary welt be ignored, and the same welt appears in the sibling jeans-square drawing as fixed context, so its absence from the renders is correct and is not scored against them.\n\nTHE FOUR CANDIDATES. Attempts 1, 2 and 4 all render a generic horizontal besom hip welt - the drawn feature rotated by about 79 degrees. Attempt 3 is the outlier and the only good one: it renders a genuine vertical double-jetted besom, 3.90 deg off plumb against the drawn 3.22 deg, straight to within 2.5 px over 527 px, both ends closed square. Attempt 4 then discarded that and reverted to horizontal. That is oscillation, not convergence, and it is the fourth time this project has seen a correction fix its target while destroying a feature that already worked.\n\nRECOMMENDATION FOR A HUMAN. Candidate-3 is clearly the best of the four and should be reviewed for promotion. Its remaining faults are a lateral placement error of about 1.45 waistband-depths (it sits mid-panel at 2.04 WD from the crease where the drawing puts it at 0.59 WD) and a length 11 percent short (4.15 WD against 4.68 WD). Neither is close to as damaging as attempt 4's 79-degree orientation inversion, and the length is arguably defensible: at 4.15 WD it computes to 14.5-16.6 cm, which lands inside the spec's own stated 14-16 cm band, whereas the drawing's own 4.68 WD computes to 16-19 cm. Candidate-3 would still not pass the 98 gate on placement, so this is a judgement call for the owner, not an approval.\n\nWHAT I COULD NOT VERIFY, STATED PLAINLY. (1) Jet count is NOT gradeable from the drawing. The highlighter covers a single thin stroke; I cannot tell whether a single-jet or double-jet besom was intended, so candidate-3's double jet is neither credited nor penalised. (2) No centimetre figure is recoverable - the tech pack carries no printed dimension callout, so every number above is a ratio against waistband depth, which is stable in the drawing (103 px +/- 0.5 across four columns) and in candidate-3 (127 px) but NOT in candidate-4 (81-107 px, because the shirt/waistband boundary will not separate cleanly there); candidate-4's length figure is therefore quoted as a range, not a point. (3) The identity of the drawing's long vertical reference line - front crease or side seam - was not assumed. I tested it by belt-loop-pitch mapping: drawing loop-1 left edge x=125.5 to loop-2 left edge x=569.5 gives a pitch of 444 px, candidate-3 gives 138 to 578 for a pitch of 440, and mapping the drawing's x=519 line through that transform predicts render x=528 against a measured crease at x=569 - an 8 percent residual, which supports the identification as the front crease but does not prove it. The placement finding survives either reading, because under both the drawn slit sits close to that line and the render puts it far away; only the wording of the correction direction depends on it. (4) I did not attempt to grade edge-stitch presence: the charcoal twill's own weave noise dominates at this resolution in every candidate.\n\nNothing was written to data-store/ or public/images/reports/. No craft option or existing image was deleted or modified. Measurement crops were written only to the session scratchpad, not into the repo.",
+  "checkedAt": "2026-08-11T00:53:04.337Z"
+}

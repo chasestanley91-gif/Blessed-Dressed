@@ -1,0 +1,70 @@
+{
+  "addr": "shirt > contrast-inner-yoke",
+  "productId": "shirt",
+  "optionId": "contrast-inner-yoke",
+  "attempt": 3,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 86,
+    "geometry": 72,
+    "dimensions": 80,
+    "angles": 84,
+    "construction": 60,
+    "placement": 66,
+    "symmetry": 92,
+    "composition": 84,
+    "blueprint-match": 58
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "critical",
+      "category": "construction",
+      "description": "The contrast cloth is rendered as an exterior black triangular panel appliqued onto the OUTSIDE of the shirt back between the collar and the back yoke seam. That is not an inner yoke.",
+      "expected": "Contrast is the INSIDE facing of the yoke, visible through the neck opening beneath the collar, exactly as the drawing shows it (red triangle seen inside the collar opening on a front view).",
+      "actual": "Solid black triangle sits on the outer surface of the shirt back, with the whole exterior otherwise white.",
+      "correction": "Show the inside face of the yoke through the open neck, not an exterior patch."
+    },
+    {
+      "severity": "major",
+      "category": "orientation",
+      "description": "The locked prompt declares VIEW = back, but the tech-pack drawing is unambiguously a FRONT view (button placket, collar points, chest). Render followed the prompt, not the drawing.",
+      "expected": "Front view with the inner yoke visible in the neck opening, per the drawing (the drawing is law).",
+      "actual": "Back view of the shirt, model seen from behind.",
+      "correction": "Fix the upstream spec orientation field for this option from back to front, then regenerate."
+    }
+  ],
+  "verdict": "UNMET",
+  "waiver": null,
+  "correction": null,
+  "lockedFeatures": [
+    "white cotton poplin body cloth",
+    "black contrast panel",
+    "plain light-grey seamless studio background"
+  ],
+  "notes": "Attempt 3 is cleaner and better framed than attempt 2 (attempt 2 produced a lopsided butterfly-shaped exterior patch in a wide shot), but both fail the same way: an exterior applique instead of the inner yoke facing. Root cause is upstream, not the photography: the option's stored orientation says 'back' while the drawing is a front view, so no prompt-appended correction can converge. Retry budget exhausted at 3 generations.",
+  "checkedAt": "2026-08-11T00:46:02.199Z"
+}

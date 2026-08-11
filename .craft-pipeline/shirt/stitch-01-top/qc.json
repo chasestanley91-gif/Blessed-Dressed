@@ -1,0 +1,102 @@
+{
+  "addr": "shirt > stitch-01-top",
+  "productId": "shirt",
+  "optionId": "stitch-01-top",
+  "attempt": 3,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 85,
+    "geometry": 60,
+    "dimensions": 70,
+    "angles": 92,
+    "construction": 80,
+    "symmetry": 88,
+    "placement": 45,
+    "composition": 62,
+    "blueprint-match": 55
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "critical",
+      "category": "stitch-placement",
+      "description": "The single topstitch line is on the WRONG SIDE of the buttons - mirrored relative to the drawing. Measured on the gridded 5x magnification of the placket (crop x=330-530): soft inner crease at x=362, button centre x=408 with a 40 px diameter, single dashed stitch line at x=442-444, and a hard shadowed centre-front fold at x=450-455. Scaling by the 1.1 cm button (40 px = 1.1 cm, 1 cm = 36.4 px), the stitch sits only 0.25 cm inside the centre-front edge while the inboard 2.2 cm of the placket carries no stitching at all. The bottom crop confirms the hard line at x=452 is the centre-front edge: the hem topstitch runs continuously across it at the same height on both sides, and the placket band 362-452 drops below that hem line as a separate applied band.",
+      "expected": "Order across the placket from the centre front inward must be: clean unstitched front fold, then the buttons, then the single topstitch line well inboard. In the drawing (589 px wide) the solid red front edge is at x=217, button centres at x=233, and the single dashed red stitch line at x=255 - edge-to-button 0.88 cm, edge-to-stitch 2.09 cm against an 1.1 cm button.",
+      "actual": "Order is: centre-front fold at 452, stitch at 443 (0.25 cm inside it), then buttons at 408, then an unstitched 2.2 cm of placket running inboard to a bare crease at 362. The stitch and the buttons have swapped sides.",
+      "correction": "Move the single stitch line to the inboard side of the buttons, about 2.1 cm from the clean centre-front fold, and leave the front fold itself unstitched."
+    },
+    {
+      "severity": "major",
+      "category": "dimensions",
+      "description": "Button offset from the centre-front edge is oversize. Measured against the 1.1 cm button as scale, the button centre sits 1.2 cm from the front fold; the drawing places it 0.88 cm from the front edge.",
+      "expected": "Button centre about 0.88 cm from the clean centre-front fold.",
+      "actual": "About 1.2 cm - roughly 36% too far in.",
+      "correction": "Set the button line closer to the front fold, reproducing the drawn offset."
+    },
+    {
+      "severity": "major",
+      "category": "composition",
+      "description": "Subject dominance is far below target. The placket band spans x=362-452, about 90 px of an 880 px frame - roughly 10% of frame width - and the stitch line itself is a single hairline. The shirt body fills the remaining ~90%.",
+      "expected": "The Placket Decoration Stitching dominates the frame at 40-80%, framed macro on the stitch line, identifiable within one second.",
+      "actual": "A pulled-back lower-front view in which the placket occupies about 10% of frame width.",
+      "correction": "Tighten the crop substantially onto the placket run while keeping the placket termination and hem sweep as the lower boundary."
+    },
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "A solid black trouser band occupies the bottom edge of the frame, adding a second garment the blueprint does not contain. Much reduced from attempt 2 but still present.",
+      "expected": "Shirt only - lower front, placket termination and curved hem.",
+      "actual": "Dark trousers across roughly the bottom 5% of the frame.",
+      "correction": "Crop above the trouser line entirely."
+    },
+    {
+      "severity": "minor",
+      "category": "construction",
+      "description": "The placket band terminates by dropping below the hem topstitch line rather than ending square within the body of the shirt as drawn, so the hem curve is interrupted by a rectangular tab of placket cloth.",
+      "expected": "Placket terminating cleanly with the shirt-tail hem sweeping past as one smooth unbroken curve, as drawn.",
+      "actual": "The placket band projects below the hem stitch line as a square tab.",
+      "correction": "End the placket above the hem so the hem curve reads as continuous."
+    }
+  ],
+  "verdict": "UNMET",
+  "waiver": null,
+  "correction": null,
+  "lockedFeatures": [
+    "exactly ONE topstitch line on the placket - never two, never one per edge",
+    "that single stitch line INBOARD of the buttons, about 2.1 cm from the clean centre-front fold",
+    "centre-front placket edge a clean knife-pressed fold with no needle penetration",
+    "button centre about 0.88 cm from the clean centre-front fold, i.e. nearer the fold than the stitch line",
+    "fine even machine stitch pitch, roughly 7 stitches per cm",
+    "lower front of the shirt: placket run, square termination and curved shirt-tail hem",
+    "collar, collar band, neckline, shoulders and face excluded from frame",
+    "placket flat, closed, buttoned and pressed for its whole length - no peeled-back corner flap",
+    "white bespoke cotton poplin dress shirt, worn on a male model",
+    "no second garment (no trousers) in frame",
+    "zero text, numbers, arrows, callouts, guide marks, ruler ticks or watermark anywhere in frame"
+  ],
+  "notes": "Attempt 3 of a hard cap of 3. All three generations used the locked prompt byte-for-byte, with the tech-pack drawing attached as the geometry reference (media a308feab-4689-4be1-940e-991a66b09e34); none was a text-only render. Attempts 2 and 3 added a short correction clause naming the specific error found in the preceding attempt.\n\nNOTE ON THE SOURCE DRAWING: this option and its sibling shirt > stitch-01-inner-plain point at two different URLs that resolve to byte-identical files (md5 34fe5f731805212d5a3acbab84937477). One tech pack is doing duty for two catalog options. The drawing is genuine and does depict placket topstitching, so it is usable, but a human should confirm the two options are meant to share it - if they are actually different constructions, one of them has the wrong illustration and no amount of photography will fix that.\n\nTRAJECTORY. Attempt 1: collar-and-chest framing, and the placket double-topstitched with the button centred between two parallel stitch lines at x=390 and x=464 - the generic double-topstitched placket, a sibling option on the same field. Attempt 2: the correction fixed both - framing moved to the lower front with the collar excluded, and exactly ONE stitch line appeared, in the CORRECT order (front fold 240, buttons 294, stitch 338). Its remaining faults were a placket 3.0 cm wide against the drawn 2.1 cm, buttons 1.65 cm from the fold against the drawn 0.88 cm, a peeled-back triangular flap at the placket bottom, and trousers in the lower frame. Attempt 3: the flap is gone, the hem is one clean continuous curve, the trousers are down to a sliver, and edge-to-stitch is now 2.22 cm against the drawn 2.09 cm - but the stitch line moved to the wrong side of the buttons, which is a worse error than any it fixed.\n\nFOR A HUMAN PICKER: attempt 2 is better than attempt 3 on the single most important axis. Attempt 2 has the stitch on the correct side of the buttons and only proportion errors plus a bottom-corner defect; attempt 3 has clean construction and near-perfect edge-to-stitch distance but mirrors the defining relationship. This is the oscillation pattern - the correction fixed what it named and broke what it did not. Neither is shippable; if one must be chosen as a base for a future pass, choose attempt 2.\n\nWhat I did NOT verify: the literal 0.1 cm stitch-to-edge offset. In every attempt the stitch runs on flat cloth with no folded edge adjacent to it at readable scale, so the 0.1 cm dimension is not measurable from these renders and I am not asserting it. Hard cap reached, not regenerating. No catalog or data-store file was touched.",
+  "checkedAt": "2026-08-11T01:14:41.981Z"
+}

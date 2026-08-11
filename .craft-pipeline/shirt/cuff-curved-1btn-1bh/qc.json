@@ -1,0 +1,114 @@
+{
+  "addr": "shirt > cuff-curved-1btn-1bh",
+  "productId": "shirt",
+  "optionId": "cuff-curved-1btn-1bh",
+  "attempt": 2,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 93,
+    "geometry": 92,
+    "dimensions": 92,
+    "angles": 94,
+    "construction": 92,
+    "placement": 90,
+    "symmetry": 95,
+    "composition": 96,
+    "blueprint-match": 91
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "major",
+      "category": "edge-curvature",
+      "description": "In the tech pack the cuff's lower edge is a single deep convex bow running the full width of the piece (near-semicircular at the centre). Attempt 2 confines the curve to the overlapping end of the cuff; the rest of the lower hem is straight.",
+      "expected": "Full-width convex bow along the entire lower cuff edge, deepest at centre.",
+      "actual": "A large curved sweep only at the overlap end; remaining hem straight."
+    },
+    {
+      "severity": "major",
+      "category": "closure-not-engaged",
+      "description": "The prompt requires the cuff photographed closed with its button. In both attempts the single button sits beside an open, unengaged buttonhole; the cuff is not fastened.",
+      "expected": "Cuff fastened, the one button done up through the one buttonhole.",
+      "actual": "Button and buttonhole side by side, cuff open."
+    },
+    {
+      "severity": "major",
+      "category": "source-conflict",
+      "description": "The catalog description embedded in the locked prompt says the outer corners are merely rounded off, while the tech-pack drawing shows a deep full-width curved hem. The two authorities disagree, so the correct target for this option is not determinable without a human decision.",
+      "expected": "A single unambiguous specification of the cuff's lower edge.",
+      "actual": "Description says rounded corners; drawing says deep bowed hem."
+    }
+  ],
+  "verdict": "FAIL",
+  "waiver": null,
+  "correction": {
+    "errors": [
+      {
+        "severity": "major",
+        "category": "edge-curvature",
+        "error": "In the tech pack the cuff's lower edge is a single deep convex bow running the full width of the piece (near-semicircular at the centre). Attempt 2 confines the curve to the overlapping end of the cuff; the rest of the lower hem is straight.",
+        "expected": "Full-width convex bow along the entire lower cuff edge, deepest at centre.",
+        "actual": "A large curved sweep only at the overlap end; remaining hem straight.",
+        "correction": "Regenerate to fix: In the tech pack the cuff's lower edge is a single deep convex bow running the full width of the piece (near-semicircular at the centre). Attempt 2 confines the curve to the overlapping end of the cuff; the rest of the lower hem is straight."
+      },
+      {
+        "severity": "major",
+        "category": "closure-not-engaged",
+        "error": "The prompt requires the cuff photographed closed with its button. In both attempts the single button sits beside an open, unengaged buttonhole; the cuff is not fastened.",
+        "expected": "Cuff fastened, the one button done up through the one buttonhole.",
+        "actual": "Button and buttonhole side by side, cuff open.",
+        "correction": "Regenerate to fix: The prompt requires the cuff photographed closed with its button. In both attempts the single button sits beside an open, unengaged buttonhole; the cuff is not fastened."
+      },
+      {
+        "severity": "major",
+        "category": "source-conflict",
+        "error": "The catalog description embedded in the locked prompt says the outer corners are merely rounded off, while the tech-pack drawing shows a deep full-width curved hem. The two authorities disagree, so the correct target for this option is not determinable without a human decision.",
+        "expected": "A single unambiguous specification of the cuff's lower edge.",
+        "actual": "Description says rounded corners; drawing says deep bowed hem.",
+        "correction": "Regenerate to fix: The catalog description embedded in the locked prompt says the outer corners are merely rounded off, while the tech-pack drawing shows a deep full-width curved hem. The two authorities disagree, so the correct target for this option is not determinable without a human decision."
+      }
+    ],
+    "lockedFeatures": [
+      "exactly 1 button (4-hole mother-of-pearl) - verified at magnification",
+      "exactly 1 worked buttonhole - verified at magnification",
+      "barrel/button cuff (single, not French) - correct",
+      "edge topstitch present around the cuff perimeter",
+      "photorealistic, no line-art, no annotation or red guide marks carried over"
+    ],
+    "forbiddenChanges": [
+      "do not alter any checklist item this attempt already passed",
+      "do not change the camera crop, composition, or accessories unless the error is itself a composition error",
+      "do not change the garment part, orientation, or any other option's geometry"
+    ]
+  },
+  "lockedFeatures": [
+    "exactly 1 button (4-hole mother-of-pearl) - verified at magnification",
+    "exactly 1 worked buttonhole - verified at magnification",
+    "barrel/button cuff (single, not French) - correct",
+    "edge topstitch present around the cuff perimeter",
+    "photorealistic, no line-art, no annotation or red guide marks carried over"
+  ],
+  "notes": "2 of 3 generations used; stopped deliberately. Attempt 2 is clearly better than attempt 1 (attempt 1 was a generic squared barrel cuff with only softened corners - i.e. generic-category substitution; attempt 2 renders a genuinely curved cuff edge). A third attempt was not spent because the remaining target is ambiguous: the drawing and the catalog description specify different lower-edge geometry. Counts verified at 8x magnification. Cuff depth was NOT verified against any numeric dimension - the drawing carries no measurements.",
+  "checkedAt": "2026-08-11T00:32:55.050Z"
+}

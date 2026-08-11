@@ -1,0 +1,116 @@
+{
+  "addr": "suit-3pc > vest-ticket-left",
+  "productId": "suit-3pc",
+  "optionId": "vest-ticket-left",
+  "attempt": 3,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 94,
+    "geometry": 90,
+    "dimensions": 92,
+    "angles": 88,
+    "construction": 92,
+    "placement": 91,
+    "symmetry": 97,
+    "composition": 93,
+    "blueprint-match": 92
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "composition",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "major",
+      "category": "welt-slant-angle",
+      "description": "The welt slants too steeply. Measured by least-squares fit of both the pocket-mouth line and the welt bottom edge across 46 sampled columns (x=380..630) on the 880x1168 render: top line 14.22 deg, bottom line 14.54 deg. The drawing's red pocket marker was measured by isolating red pixels: stroke mid-height falls from y=793.0 at x=574 to y=774.5 at x=686, i.e. 9.38 deg; the stroke's own top edge gives 9.1 deg and its bottom edge 9.6 deg, so the drawn angle is robustly ~9.4 deg. The render overshoots by ~5 deg, about 52% steeper than drawn. Direction of rise (up toward the outboard side) is correct. Caveat: the garment is worn on a curved torso, so some apparent steepening from body curvature is possible, but not 5 deg sustained across the whole run.",
+      "expected": "Welt slant ~9.4 deg rising toward the outboard side, per red-pixel measurement of the drawing",
+      "actual": "Welt slant 14.2-14.5 deg (top and bottom edges independently agree)"
+    },
+    {
+      "severity": "major",
+      "category": "subject-scale",
+      "description": "Framing improved a great deal over attempt 2 but still misses the stated dominance band. The welt spans x=335..640 = ~305 px of an 880 px frame = 35% of frame width; its slanted bounding box is ~305 x 121 px = ~3.5% of frame area. The brief requires the ticket pocket to fill 40-80% of the frame. For reference attempt 2 measured 19% of width / 1.1% of area, so this is roughly a doubling in width terms and a tripling in area terms, but still under the 40% floor. The pocket IS now the unambiguous subject and is readable in well under a second; this is a near-miss on the numeric criterion rather than a failure of legibility.",
+      "expected": "Ticket pocket filling 40-80% of the frame",
+      "actual": "Welt spans 35% of frame width / ~3.5% of frame area"
+    },
+    {
+      "severity": "major",
+      "category": "vertical-placement-vs-buttons",
+      "description": "The pocket sits between two button positions instead of level with one. In the drawing the welt centreline (y=785) sits essentially level with the third button (dark-run centre y=800), 87% of the way down the gap from button 2 (y=681) to button 3. In the render the welt centre (y~625 at its mid-length) falls roughly midway between the second visible button (y=445) and the next position down (y=825). The tight crop makes it impossible to map rendered buttons onto drawn buttons with certainty, but the deviation holds under either candidate mapping: under no alignment does the rendered welt sit level with a button.",
+      "expected": "Welt centreline level with the third button of the front column",
+      "actual": "Welt centreline falls roughly midway between two adjacent button positions"
+    },
+    {
+      "severity": "major",
+      "category": "welt-depth-proportion",
+      "description": "The welt is proportionally shallower than drawn. Rendered depth between the pocket-mouth line and the welt's bottom edge is a consistent 57 px (median over 46 columns, range 56-75) against a length of ~305 px, i.e. 1:5.3. The drawing measured from red pixels: outer bbox 132 x 42 px (1:3.14), stroke thickness ~13.5 px per side, inner hole 16 px deep, giving a centreline welt of ~118.5 x 29 px = 1:4.09. The render is therefore ~30% shallow against the most defensible (centreline) reading. NOTE this also corrects the attempt-2 report, which put the drawn centreline ratio at 1:3.4 by eye; the red-pixel measurement says 1:4.09, which means attempt 2's measured 1:4.05 was in fact near-exact and its logged depth finding was a measurement artifact.",
+      "expected": "Welt depth-to-length ~1:4.1 (drawing centreline; 1:3.1 measured to the outer edge of the marker stroke)",
+      "actual": "Rendered welt depth-to-length 1:5.3"
+    },
+    {
+      "severity": "minor",
+      "category": "dart-crossing-position",
+      "description": "The welt crosses the vertical front dart slightly too far inboard. In the drawing the dart sits at x=632 at y=700 and x=640 at y=860, interpolating to x~636 at the pocket's height; against a welt centreline running x=571..689 that puts the crossing at 55% along the welt. In the render the dart reads at x=475 above the welt (y=530) and x=493 below it (y=730), interpolating to x~480 at welt height; against a welt running x=335..640 that is 47.5% along. A ~7 point shift. The crossing itself is present and correct in kind, which is the drawing-specific signature.",
+      "expected": "Dart crosses the welt at ~55% of its length from the inboard end",
+      "actual": "Dart crosses at ~47.5% of welt length"
+    },
+    {
+      "severity": "minor",
+      "category": "button-column-state",
+      "description": "One button position too many is left unfastened. At 3x magnification the visible front column reads: fastened button (y~142), fastened button (y~445), EMPTY keyhole buttonhole with no button (y~825), and a further buttonhole at the bottom frame edge (y~1153). The drawing shows four fastened round buttons (dark-run centres y=562, 681, 800, 916) plus a single dash mark at y~1032 representing the one open hole at the bottom. Since the crop removes the top of the column, the four visible positions should map to drawn positions 2-5, which would require buttons at the first three of them; the render has a button at only the first two. The front column is context rather than the showcased option, hence minor.",
+      "expected": "Fastened buttons at all visible column positions except the lowest, which is an open buttonhole",
+      "actual": "Two fastened buttons followed by two empty buttonholes"
+    },
+    {
+      "severity": "minor",
+      "category": "panel-width-fraction-unverified",
+      "description": "NOT VERIFIED rather than failed. In the drawing the welt centreline is 118.5 px against a panel 320 px wide (front edge x=451 to side seam x=771 at pocket height), i.e. 37% of panel width, with its inboard end 37.5% across the panel. The tight crop pushes the waistcoat's centre-front edge out of frame at pocket height, so neither the panel width nor the inboard-end offset can be measured on the render. I did not verify these two dimensions.",
+      "expected": "Welt centreline ~37% of panel width, inboard end ~37.5% across the panel from the centre-front edge",
+      "actual": "Centre-front edge cropped out of frame at pocket height; ratio not measurable"
+    },
+    {
+      "severity": "minor",
+      "category": "edge-stitch-unverified",
+      "description": "NOT VERIFIED rather than failed, carried forward from attempt 2. The checklist requires 'edge stitch' to be reproduced. At magnification the render's welt shows crisp pressed edges and a clean dark mouth line but no discrete topstitch row I could resolve. The drawing depicts the pocket only as a red highlighter outline and specifies no stitching, so there is no drawn stitch specification to compare against.",
+      "expected": "Edge stitch reproduced as drawn",
+      "actual": "Welt edge reads as cleanly pressed; no discrete stitch row resolvable, and none specified in the drawing"
+    }
+  ],
+  "verdict": "UNMET",
+  "waiver": null,
+  "correction": null,
+  "lockedFeatures": [
+    "Handedness correct: the welt is on the WEARER'S LEFT. Verified against the frame rather than convention - the front button column is at frame-left, the welt lies outboard of it, and the model's shirt sleeve/arm occupies frame-right, which is the wearer's left side. Matches the drawing's layout (pocket to the right of the button column; the drawing is already in wearer perspective).",
+    "Single plain welt pocket - one upward-facing lip, no flap, no button, no second besom lip. Matches the drawing's single closed outline.",
+    "The welt crosses the vertical front dart seam, with the dart running visibly above and below the lip. This is the drawing-specific signature for this option and rules out generic-category substitution; a stock waistcoat welt does not sit across the dart.",
+    "Slant direction correct: the welt rises toward the outboard (side-seam) side, as drawn.",
+    "Front view of the garment, as the illustration shows. No front/back/side confusion.",
+    "Welt ends are square-cut and the lip is even in depth along its length (median depth 57 px, range 56-75 across 46 sampled columns).",
+    "Real photograph - no line-art, illustration or CGI look; no mannequin.",
+    "No annotation traced from the drawing: no dimension lines, arrows, callouts, ruler ticks, numbers or labels anywhere in frame; no red highlighter tint and no flat grey notation panel rendered into the cloth.",
+    "Clean seamless neutral light-grey studio background, clear garment/background separation, no props, scenery or architecture.",
+    "Shirt present under the waistcoat (sleeve visible at frame right); no bare chest."
+  ],
+  "notes": "Attempt 3 of a hard cap of 3; retry budget now exhausted, so this closes as UNMET. Graded against the tech-pack drawing with the pocket magnified 3x and the button column 3x, and with the key numbers measured programmatically rather than by eye: the drawing's red pocket marker was isolated by red-pixel thresholding (bbox x 564-696, y 753-814, stroke ~13.5 px) and the render's welt edges were found by per-column local-minimum detection plus least-squares line fits over 46 columns. THE OSCILLATION WARNING APPLIES HERE. The single correction clause added for this attempt named only the framing error, yet the result moved on more than framing: composition improved substantially (welt 19% -> 35% of frame width, 1.1% -> 3.5% of frame area) while slant angle, welt depth proportion and vertical placement against the button column all drifted away from the drawing. Attempt 2 was recorded at 8.0 deg slant against a drawn ~9.4 deg and a depth ratio of 1:4.05 against a drawn centreline 1:4.09 - both near-exact - where attempt 3 measures 14.2 deg and 1:5.3. So candidate-2 is the geometrically faithful render with bad framing, and candidate-3 is the well-framed render with drifted geometry. Neither reaches the bar alone. RECOMMENDED HUMAN ACTION, unchanged from attempt 2 and now better supported by measurement: do not spend a fourth generation. Crop candidate-2.png tightly around its welt. Its geometry is the closest of the three to the drawing, and cropping is exactly the operation that fixes its one blocking defect without disturbing anything that is already correct. Note also that candidate-1.png was never graded; it is an olive waistcoat whose pocket reads as a narrow double-lip besom rather than the drawn single welt, so it is the weakest of the three. PROCESS NOTE: this qc.json was written twice. The first log_qc_result run at 01:27:46Z ingested another parallel worker's content because the shared scratchpad filename qc-input.json was overwritten between my write and the script's read; that run produced a record about a shirt cuff-lining option, which does not belong to this option and has been overwritten by this corrected record.",
+  "checkedAt": "2026-08-11T01:31:38.452Z"
+}

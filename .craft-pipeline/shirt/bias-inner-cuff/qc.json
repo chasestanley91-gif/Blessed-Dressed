@@ -1,0 +1,76 @@
+{
+  "addr": "shirt > bias-inner-cuff",
+  "productId": "shirt",
+  "optionId": "bias-inner-cuff",
+  "attempt": 3,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 95,
+    "geometry": 90,
+    "dimensions": 94,
+    "angles": 90,
+    "construction": 94,
+    "placement": 88,
+    "symmetry": 94,
+    "composition": 95,
+    "blueprint-match": 88
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "major",
+      "category": "face-placement",
+      "description": "Cannot verify the bias grain sits on the INNER cuff. The cuff is shown unbuttoned and splayed open, and the large panel turned toward the camera on an opened cuff is normally the OUTER face; that camera-facing panel is the one carrying the diagonal stripe. The drawing hatches the inner face only and leaves the outer face plain.",
+      "expected": "diagonal (bias) grain confined to the inner cuff facing; outer cuff face and sleeve both straight grain",
+      "actual": "diagonal grain on the camera-facing cuff panel (most plausibly the outer face); a second panel (the rounded button end) runs near-horizontal; only the sleeve is unambiguously straight",
+      "correction": "Shoot the cuff folded outward on itself so the inside surface is unambiguously the one facing the lens, with the outer face visible alongside it running straight grain for contrast."
+    },
+    {
+      "severity": "minor",
+      "category": "grain-angle",
+      "description": "The bias runs at roughly 20-25 degrees from horizontal; the drawing's hatch sits at roughly 45 degrees.",
+      "expected": "~45 degree bias, as hatched",
+      "actual": "~20-25 degree shallow diagonal"
+    },
+    {
+      "severity": "minor",
+      "category": "panel-isolation",
+      "description": "More than one cuff panel is off the straight grain, so the drawing's single-panel isolation does not read.",
+      "expected": "exactly one panel off-grain (the inner cuff)",
+      "actual": "camera-facing panel diagonal plus button end near-horizontal"
+    }
+  ],
+  "verdict": "UNMET",
+  "waiver": null,
+  "correction": null,
+  "lockedFeatures": [
+    "single 4-hole cuff button, matching the drawing's one button",
+    "rounded cuff corner as drawn",
+    "sleeve above the cuff holds a strictly straight vertical stripe, giving a clean grain reference",
+    "cuff fills roughly 45 percent of the frame, sharp, clean seamless light-grey studio background",
+    "real photograph, no line-art, no annotation marks or red guide marks carried over from the drawing"
+  ],
+  "notes": "Attempt 3 of 3. Attempts 1 and 2 (by an earlier worker) both put the diagonal squarely on the closed outer cuff face, which is unambiguously wrong for this option. Attempt 3 opens the cuff and does reveal an inner surface, and is far better framed, but the panel carrying the bias still reads as the outer face. Attempt 3 is the better artifact of the three; none of them proves inner-face placement. Note also that the locked prompt asserts 'this illustration is the back of the garment' while the drawing is in fact an isolated cuff detail view - an upstream spec error, not a generation error.",
+  "checkedAt": "2026-08-11T00:27:01.360Z"
+}

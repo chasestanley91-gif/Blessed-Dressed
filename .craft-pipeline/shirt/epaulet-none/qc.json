@@ -1,0 +1,58 @@
+{
+  "addr": "shirt > epaulet-none",
+  "productId": "shirt",
+  "optionId": "epaulet-none",
+  "attempt": 3,
+  "maxAttempts": 2,
+  "scores": {
+    "shape": 99,
+    "geometry": 99,
+    "dimensions": 98,
+    "angles": 99,
+    "construction": 99,
+    "placement": 99,
+    "symmetry": 99,
+    "composition": 70,
+    "blueprint-match": 97
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "composition"
+  ],
+  "errors": [
+    {
+      "severity": "major",
+      "category": "frame-share",
+      "description": "Attempt 3 REGRESSED to the full head-to-hip framing that attempt 1 was rejected for, discarding the corrected shoulder-line crop attempt 2 had already achieved. The model's entire head and face are in frame as a competing focal point and the clean shoulder/yoke area — the actual subject — reads at roughly 15-20% of frame area. Trousers, full torso, both cuffs and both hands are all in frame and none of them are the subject.",
+      "expected": "the clean unbroken shoulder area is the subject at 40-80% of frame, identifiable within one second",
+      "actual": "full head-to-hip model shot on grey seamless; head, full torso, arms, hands and charcoal trousers all in frame; clean shoulder/yoke area occupies roughly 15-20% of frame, far below the required band"
+    },
+    {
+      "severity": "minor",
+      "category": "reference-unavailable",
+      "description": "The source tech-pack drawing for this option is not a garment drawing. Read directly, it is a 192x192 grey placeholder tile bearing a diagonal cross and the word 'None'. There is no drawn geometry to match, so blueprint-match could only be graded on correct handling of the placeholder, not on geometric correspondence. I did not verify geometric correspondence because none exists to verify.",
+      "expected": "a tech-pack illustration showing the garment area with no epaulet",
+      "actual": "192x192 grey placeholder tile with an X and the text 'None'; the render correctly traced none of the X, the text, or the flat grey field"
+    }
+  ],
+  "verdict": "UNMET",
+  "waiver": null,
+  "correction": null,
+  "lockedFeatures": [
+    "no epaulet, strap, tab or shoulder button on either shoulder — verified by cropping the shoulder band and magnifying 3x, both shoulders inspected in the same magnified view",
+    "only the normal shoulder/yoke seam and armhole seam are present on each shoulder",
+    "front view of the garment, matching the stated orientation",
+    "photorealistic white cotton poplin dress shirt on a male model — not line art, not a mannequin, not CGI",
+    "seamless plain neutral grey studio background, no props, no location, no architecture",
+    "no traced annotation anywhere in frame: no numbers, leader lines, arrows, callouts, labels or coloured guide marks",
+    "no placeholder artifacts: neither the placeholder's diagonal cross nor the word 'None' appears in the render",
+    "both shoulder points inside the frame with clear background beyond each"
+  ],
+  "notes": "GARMENT IS CORRECT; COMPOSITION REGRESSED. The absence of the epaulet was verified at 3x magnification across both shoulders and is clean. The only defect is framing, and it is a regression: attempt 2 (candidate-2.png) had already solved this with a chin-to-waist crop and scored 96 on composition; attempt 3 threw that away and reverted to attempt 1's full-length model shot. This is the documented oscillation behaviour — the third attempt LOST a feature that was already correct. ATTEMPT 2 (candidate-2.png) IS THE BETTER ARTIFACT AND SHOULD BE PREFERRED OVER ATTEMPT 3 for any downstream use. Process note: this worker received the group fresh from batch_slice with no visibility into prior attempts, and the filesystem assigned attempt 3 only after generation; the retry budget had already been spent by an earlier run. No fourth attempt will be made.",
+  "checkedAt": "2026-08-10T21:37:47.075Z"
+}

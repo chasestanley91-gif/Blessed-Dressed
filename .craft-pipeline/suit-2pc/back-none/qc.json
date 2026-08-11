@@ -1,0 +1,51 @@
+{
+  "addr": "suit-2pc > back-none",
+  "productId": "suit-2pc",
+  "optionId": "back-none",
+  "attempt": 1,
+  "maxAttempts": 2,
+  "scores": {
+    "shape": 99,
+    "geometry": 98,
+    "dimensions": 99,
+    "angles": 99,
+    "construction": 98,
+    "placement": 99,
+    "symmetry": 99,
+    "composition": 99,
+    "blueprint-match": 99
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "belt-loop-render",
+      "description": "The two side belt loops at the extreme left and right of the waistband render as thin dark rounded outlines standing proud of the waistband rather than solid cloth loops flush to it; the two centre loops flanking the back seam are correct. Count is right (4), only the side loops' material rendering is off.",
+      "expected": "Four solid cloth belt loops as drawn: one at each side, a pair flanking the centre back seam.",
+      "actual": "Four loops in the correct positions, but the two outermost read as thin cord-like loops floating off the waistband edge."
+    },
+    {
+      "severity": "minor",
+      "category": "darts",
+      "description": "The drawing shows two short vertical back darts dropping from the waistband on each seat panel. On the worn, filled seat these are not resolvable in the photograph. Not asserted as missing - could not be verified either way at magnification.",
+      "expected": "Two short back darts below the waistband, one per seat panel.",
+      "actual": "No distinct dart lines resolvable; only soft drape shading in those positions."
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "lockedFeatures": [
+    "no back pocket anywhere in frame - seat completely clean and unbroken",
+    "rear view: centre back seam visible, waistband to mid-thigh",
+    "4 belt loops: one each side plus a pair flanking the centre back seam",
+    "tapered leg silhouette matching the drawing",
+    "clean neutral light-grey studio background, no props",
+    "no annotations, no red highlight, no flat grey notation panel"
+  ],
+  "notes": "Verified at magnification (waistband and full seat enlarged ~2.6x). The seat is entirely free of any welt, jet, flap, button or buttonhole on both panels - the deliberate absence is genuine and was not hallucinated back in. Lighting across the seat carries a soft directional gradient and visible cloth texture, so a besom welt would have broken the plane and thrown a shadow had one been present; the absence is therefore provable from the image rather than merely unshown. Orientation confirmed back (centre back seam, plain shirt back, no fly). No annotation, red notation or grey panel bleed from the drawing.",
+  "checkedAt": "2026-08-10T21:05:26.146Z"
+}

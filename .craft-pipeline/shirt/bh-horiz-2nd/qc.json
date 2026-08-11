@@ -1,0 +1,122 @@
+{
+  "addr": "shirt > bh-horiz-2nd",
+  "productId": "shirt",
+  "optionId": "bh-horiz-2nd",
+  "attempt": 2,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 96,
+    "angles": 99,
+    "construction": 98,
+    "placement": 98,
+    "symmetry": 96,
+    "composition": 96,
+    "blueprint-match": 96
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "dimensions",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "presentation-departure",
+      "description": "The drawing shows the front placket fastened, with buttons seated in the buttonholes. The photograph shows the placket unbuttoned so the worked buttonholes are visible as open slots. This was a deliberate correction: attempt 1 rendered a button and a buttonhole fused into one impossible object, and unbuttoning removed that failure mode.",
+      "expected": "Fastened front placket with buttons in the buttonholes, as drawn.",
+      "actual": "Unbuttoned placket, buttonholes shown as open worked slots, no buttons in frame."
+    },
+    {
+      "severity": "minor",
+      "category": "count-not-in-frame",
+      "description": "The drawing carries six buttonholes down the placket (measured at y=44/64/84/105/128/148 in the 194px source). The macro crop shows only the lowest three, so the full count of six is not reproducible in this frame. The three shown are the correct three: vertical, horizontal, vertical, with the hem below.",
+      "expected": "Six placket buttonholes total.",
+      "actual": "Lowest three buttonholes in frame; upper three outside the macro crop."
+    },
+    {
+      "severity": "minor",
+      "category": "buttonhole-length",
+      "description": "The horizontal buttonhole spans nearly the full width of the placket, its left bar tack sitting close to the left topstitch row. In the drawing's callout the horizontal slot sits clear of both topstitch rows with visible margin either side.",
+      "expected": "Horizontal buttonhole centred on the placket with clear margin to both topstitch rows.",
+      "actual": "Horizontal buttonhole nearly spans the placket width and sits slightly left of centre."
+    },
+    {
+      "severity": "minor",
+      "category": "frame-intrusion",
+      "description": "A dark grey trouser waistband enters the lower left of the frame. The prompt specifies a clean studio with clear separation between garment and background.",
+      "expected": "Shirt against a plain neutral light-grey ground only.",
+      "actual": "Trouser waistband visible at lower left."
+    }
+  ],
+  "verdict": "FAIL",
+  "waiver": null,
+  "correction": {
+    "errors": [
+      {
+        "severity": "minor",
+        "category": "dimensions",
+        "error": "score-card category \"dimensions\" scored 96 (< 98)",
+        "expected": ">= 98",
+        "actual": "96",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"dimensions\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "symmetry",
+        "error": "score-card category \"symmetry\" scored 96 (< 98)",
+        "expected": ">= 98",
+        "actual": "96",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"symmetry\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "composition",
+        "error": "score-card category \"composition\" scored 96 (< 98)",
+        "expected": ">= 98",
+        "actual": "96",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"composition\" and regenerate."
+      },
+      {
+        "severity": "minor",
+        "category": "blueprint-match",
+        "error": "score-card category \"blueprint-match\" scored 96 (< 98)",
+        "expected": ">= 98",
+        "actual": "96",
+        "correction": "Strengthen the geometry/coverage wording or reference weight for \"blueprint-match\" and regenerate."
+      }
+    ],
+    "lockedFeatures": [
+      "horizontal worked buttonhole is the SECOND buttonhole up from the bottom of the placket",
+      "shirt hem visible below the lowest buttonhole, establishing the ordinal position",
+      "buttonhole immediately below the horizontal one is vertical",
+      "buttonhole above the horizontal one is vertical",
+      "straight (non-keyhole) worked buttonholes, matching the drawn slot",
+      "dense buttonhole stitch on both lips with bar tacks at both ends",
+      "placket topstitching rows on both sides",
+      "white cotton poplin, front view"
+    ],
+    "forbiddenChanges": [
+      "do not alter any checklist item this attempt already passed",
+      "do not change the camera crop, composition, or accessories unless the error is itself a composition error",
+      "do not change the garment part, orientation, or any other option's geometry"
+    ]
+  },
+  "lockedFeatures": [
+    "horizontal worked buttonhole is the SECOND buttonhole up from the bottom of the placket",
+    "shirt hem visible below the lowest buttonhole, establishing the ordinal position",
+    "buttonhole immediately below the horizontal one is vertical",
+    "buttonhole above the horizontal one is vertical",
+    "straight (non-keyhole) worked buttonholes, matching the drawn slot",
+    "dense buttonhole stitch on both lips with bar tacks at both ends",
+    "placket topstitching rows on both sides",
+    "white cotton poplin, front view"
+  ],
+  "notes": "Attempt 2 of 3. Attempt 1 was a critical failure: it rendered a horizontal slot cut through the middle of a button, the button distorted into a featureless ring with tabs above and below it, i.e. the drawing's callout notation traced into the cloth as an impossible object. Attempt 2 fixed that completely. Verified at magnification against the source drawing: the source has six buttonholes and the blue leader tip bottoms at y=124, adjacent to the y=128 mark, which is the fifth of six, i.e. second from bottom. The photograph reproduces exactly that: vertical, horizontal, vertical, hem. The defining feature of this option is correct and unambiguous. Remaining gaps are presentational, not geometric. I deliberately did NOT spend the third generation: the load-bearing feature (horizontal at second-from-bottom, with the hem in frame to prove it) is already correct, and a third roll carried a real risk of losing that ordinal placement for marginal gains in centring and framing.",
+  "checkedAt": "2026-08-11T01:27:54.839Z"
+}

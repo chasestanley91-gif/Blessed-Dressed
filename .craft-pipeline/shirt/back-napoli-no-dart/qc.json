@@ -1,0 +1,67 @@
+{
+  "addr": "shirt > back-napoli-no-dart",
+  "productId": "shirt",
+  "optionId": "back-napoli-no-dart",
+  "attempt": 3,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 96,
+    "geometry": 96,
+    "dimensions": 95,
+    "angles": 96,
+    "construction": 95,
+    "placement": 96,
+    "symmetry": 96,
+    "composition": 95,
+    "blueprint-match": 93
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "major",
+      "category": "fabric-deviation",
+      "description": "The shirt is rendered in a fine blue vertical stripe. The illustration is a plain line flat with no stripe, and three of the five back-style options in this group render in plain white poplin, so a customer comparing back styles side by side sees a fabric change that is not part of the option and is exactly the kind of distraction the catalogue standard forbids.",
+      "expected": "Plain white cotton poplin, consistent with the rest of the Back Style option set.",
+      "actual": "Fine blue-on-white vertical stripe across the whole garment."
+    },
+    {
+      "severity": "minor",
+      "category": "prompt-defect-upstream",
+      "description": "The locked prompt for this option carries a GRAIN DIRECTION clause ordering a striped cloth with a diagonal stripe on the option's panel. That clause does not belong on a shirt back-yoke option and is the source of the striped fabric. The render ignored the diagonal half of the clause and kept every stripe vertical, which is the better outcome - a diagonal panel would have contradicted the drawing.",
+      "expected": "Prompt text describing plain white poplin.",
+      "actual": "Prompt contains a grain-direction/diagonal-stripe fabric clause. Flagged for the prompt builder upstream; the prompt is locked and was used byte-for-byte."
+    },
+    {
+      "severity": "minor",
+      "category": "feature-subtlety",
+      "description": "The Napoli yoke gathering is present but subtle at browse size.",
+      "expected": "Gathering below the yoke seam readable within one second.",
+      "actual": "Visible as fine puckering of the stripe under the yoke seam; clear at magnification, soft at thumbnail size."
+    }
+  ],
+  "verdict": "UNMET",
+  "waiver": null,
+  "correction": null,
+  "lockedFeatures": [
+    "Napoli yoke: gathering/shirring released immediately below the yoke seam",
+    "NO dart and NO pleat anywhere on the back - clean Neapolitan back",
+    "back view, straight yoke seam, curved shirttail hem in frame"
+  ],
+  "notes": "Graded candidate-3 at magnification (2.6x yoke crop, 2.1x re-exposed mid-back crop). Geometry is right: the Napoli yoke gathering is present as fine puckering under the yoke seam, and the back is genuinely clean - no dart, no pleat - matching the illustration. The locked prompt's PROVE THE ABSENCE requirement is unusually well satisfied here, because unbroken evenly-spaced stripes running from yoke to hem are about the strongest possible visual proof that no dart intake exists; a dart would break the stripe conspicuously. The one real defect is the striped cloth itself, which the drawing does not show and which breaks consistency with the other back options. Caution for whoever reviews this: because this image and back-napoli-dbl-darts both render a dartless striped back, they are near-identical, and the pair must NOT both ship - the darted one is the wrong one. Retry budget was already spent by a prior wave (attempt 3 on disk); this grading pass spent no credits.",
+  "checkedAt": "2026-08-11T00:29:09.927Z"
+}

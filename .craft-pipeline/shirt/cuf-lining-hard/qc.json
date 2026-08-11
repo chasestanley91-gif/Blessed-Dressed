@@ -1,0 +1,74 @@
+{
+  "addr": "shirt > cuf-lining-hard",
+  "productId": "shirt",
+  "optionId": "cuf-lining-hard",
+  "attempt": 3,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 96,
+    "geometry": 94,
+    "dimensions": 92,
+    "angles": 95,
+    "construction": 80,
+    "placement": 88,
+    "symmetry": 96,
+    "composition": 90,
+    "blueprint-match": 78
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "geometry",
+    "dimensions",
+    "construction",
+    "placement",
+    "composition",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "major",
+      "category": "craft-option-not-depicted",
+      "description": "The cuff LINING - the entire subject of this craft option - is not visible anywhere in the final image. The frame shows only the finished all-white exterior of a French cuff. A customer comparing Hard against Normal and Soft cuff lining would see three effectively identical white cuffs, so the image carries no educational value for the option it is meant to sell.",
+      "expected": "The heavy fused interlining visible as a real cloth layer, with its fabric, coverage across the cuff panel, and sheen readable - per the drawing, which devotes its central callout window to exactly this material.",
+      "actual": "An all-white exterior cuff. No interlining, no lining layer and no interior face appear at any magnification."
+    },
+    {
+      "severity": "major",
+      "category": "wrong-orientation",
+      "description": "spec.json sets view.orientation to 'interior' (confirmedByVisualInspection true) and the checklist requires the shot be framed on the interior lining. The render photographs the outside face of the cuff instead.",
+      "expected": "Interior face of the cuff, opened or turned back so the lining side is the framed subject.",
+      "actual": "Exterior face - finished outer cuff with edge-stitching and cuff-link buttonholes; the interior is never shown."
+    },
+    {
+      "severity": "minor",
+      "category": "unverified-dimensions",
+      "description": "The drawing is a schematic concept diagram for the interlining and carries no dimension lines, and spec.measured.dimensions is empty. Cuff depth, buttonhole spacing and corner radius therefore could not be checked against any stated figure.",
+      "expected": "Verifiable cuff depth and buttonhole placement figures.",
+      "actual": "No dimensional source exists; these were scored on plausibility only, not verified."
+    }
+  ],
+  "verdict": "UNMET",
+  "waiver": null,
+  "correction": null,
+  "lockedFeatures": [
+    "French / double cuff: two distinct stacked cloth layers with a crisp turnback fold - confirmed at magnification on attempt 3",
+    "Exactly one cuff-link buttonhole per layer, vertically oriented, aligned so a link passes through both - counted at magnification, two total",
+    "No notation traced into the cloth: no grey grid panel, no dash-dot drafting lines, no red tint, no Chinese or English caption text",
+    "Rigid, razor-flat pressed cuff edges and rounded corners consistent with a hard fused interlining",
+    "Clean seamless light-grey studio background with clear garment separation, no props"
+  ],
+  "notes": "Three generations spent; retry budget exhausted; verdict UNMET. IMPORTANT PROCESS DISCLOSURE: attempt 2 was submitted WITHOUT the tech-pack drawing attached (worker error - the medias array was omitted). Its geometry is therefore model prior, not blueprint-derived, and it must not be treated as verified evidence even though it renders cleanly. Attempts 1 and 3 both had the drawing attached. CORRECTIONS OSCILLATED rather than converged, exactly as warned. Attempt 1 was the only one that depicted the interlining at all - but it did so by tracing the drawing's NOTATION into the cloth: a flat grey panel covered in black dash-dot drafting grid lines, inset into a shield-shaped cut window matching the drawing's red callout region. That is forbidden annotation-as-garment. My correction clause then over-corrected: attempts 2 and 3 removed the grey panel as instructed but deleted the interlining entirely along with it. Attempt 3 is the best GEOMETRY (true double cuff, correct buttonholes, clean) but attempt 1 is the only one that gestured at the actual craft option. Neither is shippable. RECOMMENDATION for a future pass with fresh budget: keep attempt 3's locked features and change only the staging - ask for the cuff peeled open or turned back to expose a genuine white fused interlining layer between the outer cloth and the cuff facing, described as real material (crisp white fused canvas, matte, slightly thicker than the shell, visible cut edge) rather than by reference to the drawing's grey swatch. The grey grid in the drawing is notation for weave weight, not a colour to reproduce.",
+  "checkedAt": "2026-08-11T01:28:31.888Z"
+}

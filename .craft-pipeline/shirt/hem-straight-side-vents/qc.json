@@ -1,0 +1,43 @@
+{
+  "addr": "shirt > hem-straight-side-vents",
+  "productId": "shirt",
+  "optionId": "hem-straight-side-vents",
+  "attempt": 1,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 99,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 98,
+    "placement": 99,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "angles",
+      "description": "The hem of the panel to the right of the vent slopes very slightly downward to the right, where the flat-pattern drawing shows it rising slightly. Attributable to drape and perspective on a worn garment rather than to a construction error.",
+      "expected": "right-hand hem rising slightly away from the vent, as in the flat drawing",
+      "actual": "right-hand hem falling by roughly 5 degrees away from the vent"
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "lockedFeatures": [
+    "straight (uncurved) level hem on both sides of the vent, with topstitched hem allowance",
+    "side vent formed by a vertical left panel edge and a diagonal right panel edge flaring away, both topstitched, exactly as drawn",
+    "open vent gap with no gusset, no bar tack drawn and none rendered",
+    "no rounded shirttail: hem edges are straight lines, distinguishing this from the round-hem siblings",
+    "white cotton poplin, plain light-grey studio background, no annotation marks"
+  ],
+  "notes": "Attempt 1 accepted. Vent form verified at magnification against the drawing edge for edge: vertical left edge, diagonal right edge, straight level hems, no gusset. No measurement is specified for this option so vent length is unconstrained.",
+  "checkedAt": "2026-08-10T23:53:53.597Z"
+}

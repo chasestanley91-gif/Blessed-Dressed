@@ -1,0 +1,78 @@
+{
+  "addr": "shirt > pocket-triangle",
+  "productId": "shirt",
+  "optionId": "pocket-triangle",
+  "attempt": 3,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 98,
+    "geometry": 96,
+    "dimensions": 96,
+    "angles": 95,
+    "construction": 97,
+    "placement": 98,
+    "symmetry": 96,
+    "composition": 91,
+    "blueprint-match": 96
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "composition"
+  ],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "The pocket is far too small in the frame. Measured on the 880x1168 candidate: pocket spans x 385-627 (27.5% of frame width) and y 603-876 (23% of frame height), roughly 6% of frame area. The shot includes the model's chin, full collar and most of the shoulder, so it reads as a chest portrait rather than a pocket document. Attempt 2 of this same option frames the pocket at 44% of frame width and does meet the floor.",
+      "expected": "Chest pocket fills 40-80% of the frame, framed tight on the left chest pocket",
+      "actual": "Pocket spans 27.5% of frame width / 23% of frame height, about 6% of frame area"
+    },
+    {
+      "severity": "minor",
+      "category": "angles",
+      "description": "The V at the pocket base is cut deeper and sharper than drawn. In the illustration the two angled bottom edges drop about 15% of the pocket width to the apex, roughly 17 degrees below horizontal. In the photograph they drop about 20% of the pocket width, roughly 22 degrees. The option still reads unmistakably as the triangle pocket.",
+      "expected": "Bottom edges angled ~17 degrees below horizontal; apex depth ~15% of pocket width",
+      "actual": "Bottom edges angled ~22 degrees; apex depth ~20% of pocket width"
+    },
+    {
+      "severity": "minor",
+      "category": "symmetry",
+      "description": "The apex of the V sits slightly left of the pocket's horizontal centre, offset by roughly 3% of the pocket width. In the drawing the point is centred.",
+      "expected": "V apex centred on the pocket's vertical centreline",
+      "actual": "Apex offset ~3% of pocket width to the left"
+    },
+    {
+      "severity": "minor",
+      "category": "rendering-artifact",
+      "description": "The placket buttons carry dark grey/black speckles in their thread holes that do not read as clean mother-of-pearl. Not on the showcased feature, but visible at full resolution and inconsistent with the luxury standard.",
+      "expected": "Clean white/pearl buttons consistent with a premium white dress shirt",
+      "actual": "Buttons show dark speckle artifacts in the thread holes"
+    }
+  ],
+  "verdict": "UNMET",
+  "waiver": null,
+  "correction": null,
+  "lockedFeatures": [
+    "defining triangle geometry present: two straight angled bottom edges converging to a single V point at the base",
+    "straight vertical side edges, as drawn",
+    "top hem / facing seam runs straight across at ~20% of pocket height from the top edge (drawing: ~18%)",
+    "edge stitching present around the full pocket perimeter",
+    "single patch pocket on the wearer's left chest, on the pocket side of the button placket exactly as drawn",
+    "front orientation, matching the illustration",
+    "real photograph on a male model, white cotton poplin, no line-art or CGI look",
+    "no annotation, dimension line, arrow, label or red guide mark traced from the drawing",
+    "no generic-category substitution: clearly distinct from the round and hexagon siblings in this same group"
+  ],
+  "notes": "Attempt 3 of 3, graded against public/images/pocket/triangle-pocket.jpg magnified 6x. The drawn feature itself is reproduced correctly and is instantly recognisable - the failure is framing, not geometry. IMPORTANT FOR A HUMAN REVIEWER: attempt 2 (candidate-2.png) is the better picture overall. It frames the pocket at 44% of frame width, which clears the 40% composition floor that sank attempt 3, and its buttons render cleanly. Attempt 2's V is slightly deeper than attempt 3's (~25% vs ~20% of pocket width against a drawn ~15%), so it trades a small geometry regression for a large composition gain. This is the oscillation-not-convergence pattern; recommend a human compare candidate-2 against candidate-3 and adopt candidate-2 if framing is weighted above the V angle.",
+  "checkedAt": "2026-08-10T23:17:22.735Z"
+}

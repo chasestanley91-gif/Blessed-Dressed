@@ -1,0 +1,44 @@
+{
+  "addr": "shirt > placket-stud-hidden-2btn",
+  "productId": "shirt",
+  "optionId": "placket-stud-hidden-2btn",
+  "attempt": 2,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 99,
+    "construction": 99,
+    "placement": 98,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "count-unresolved",
+      "description": "Carried forward from attempt 1 and still not resolvable: at 12x magnification the drawing's placket column shows marks at six heights - four upper positions each carrying a paired left-and-right mark, and two lower positions with a single mark only. That could read as four stud positions above two ordinary buttons (the standard dinner-shirt arrangement, which would also explain the option name). The photograph shows exactly two studs, which is what the locked prompt's COUNT LOCK requires and what the catalog label '(2 Buttons)' states. I did not verify which reading of the drawing is correct and I am not asserting one; the render follows the locked specification. Flagged for a human to adjudicate against the supplier tech pack at full resolution.",
+      "expected": "drawing carries fastening marks at six heights (four paired, two single)",
+      "actual": "exactly 2 gold dome studs rendered, per the locked COUNT LOCK and the catalog label"
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "lockedFeatures": [
+    "hidden / covered placket band with studs emerging through worked eyelet openings - the defining combination for this option",
+    "exactly 2 gold dome studs, confirmed at 4x magnification of the placket column",
+    "each stud seated in a vertical corded eyelet slit worked into the covering band",
+    "studs now centred on the placket band's vertical centreline; band runs straight and truly vertical down the centre front",
+    "otherwise smooth uninterrupted white shirtfront with no ordinary buttons visible",
+    "front view, white cotton poplin, plain grey studio background, no red notation or magnifier callout carried over from the drawing"
+  ],
+  "notes": "Attempt 1 was correct in every respect except that both studs sat offset toward the left edge of the placket band by roughly a quarter of the band width. Attempt 2 applied that single correction and nothing else: the studs are now on the band centreline (residual offset about 8 percent of band width, within photographic tolerance for cloth curving over the chest), and the exact 2-count, the eyelet openings, the covered band and the crop all survived unchanged - no oscillation. Counted at 4x magnification of the placket column, not from the full frame. Approved on attempt 2 of 3.",
+  "checkedAt": "2026-08-11T00:09:22.289Z"
+}

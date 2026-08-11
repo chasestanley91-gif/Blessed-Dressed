@@ -1,0 +1,63 @@
+{
+  "addr": "shirt > cs-square-2btn",
+  "productId": "shirt",
+  "optionId": "cs-square-2btn",
+  "attempt": 2,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 99,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 99,
+    "construction": 98,
+    "placement": 99,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "occluded-counterpart",
+      "description": "Only the overlapping band end is visible; the underlying band end is concealed beneath it, so its terminal shape cannot be independently verified from this frame. Inherent to a front-view worn collar; the visible end carries the distinguishing square profile and both buttons.",
+      "expected": "Both band terminations visible.",
+      "actual": "One band end visible, rendered correctly as a crisp square termination."
+    },
+    {
+      "severity": "minor",
+      "category": "photographic-quality",
+      "description": "Slight highlight clipping in the upper-left of the frame where the white cloth blows out to pure white. Does not affect the collar band, which retains full tonal detail and visible weave.",
+      "expected": "Full tonal range retained across the garment.",
+      "actual": "Minor clipping confined to the upper-left periphery."
+    },
+    {
+      "severity": "minor",
+      "category": "prompt-drawing-conflict",
+      "description": "The locked prompt's FORBIDDEN clause demands the collar LEAF points terminate in 'a flat SQUARED-OFF terminal edge'. The drawing clearly shows conventional POINTED collar leaves; the word 'square' in this option name governs the collar BAND end, not the leaf tip. Graded against the drawing per BLUEPRINT LOCK, so the render's pointed leaves are correct. Flagged because the prompt builder appears to mis-propagate the shape token to the wrong component.",
+      "expected": "Prompt shape token scoped to the collar stand, matching the drawing.",
+      "actual": "Prompt applies 'squared-off' to the collar leaf points, contradicting the drawing."
+    }
+  ],
+  "verdict": "PASS",
+  "waiver": null,
+  "correction": null,
+  "lockedFeatures": [
+    "square collar stand: straight vertical band front edge meeting a horizontal lower edge at a crisp 90-degree corner, no rounding and no taper",
+    "EXACTLY 2 collar-band buttons, white mother-of-pearl 4-hole, stacked vertically on the band, each with its own buttonhole",
+    "tall/deep collar band proportion",
+    "collar band edge topstitching running parallel to both the vertical and horizontal band edges",
+    "front view of garment, matching illustration orientation",
+    "both collar leaves mirroring in length, angle and pointed tip shape",
+    "white bespoke cotton poplin dress shirt",
+    "no model, no face, no neck, no skin in frame",
+    "no necktie, collar open at throat",
+    "seamless neutral grey studio background, no props",
+    "no annotations, dimension lines, numbers or coloured guide marks rendered"
+  ],
+  "notes": "PASS on attempt 2. BUTTON COUNT VERIFIED AT MAGNIFICATION, not from the full frame: two 4-hole mother-of-pearl buttons stacked vertically, each paired with its own buttonhole to the right - exactly 2, matching the two red circles in the drawing. Band termination verified as a genuine square: a straight vertical front edge meeting a horizontal lower edge at a clean right angle, with topstitching tracking both edges. Attempt 2 is decisively better than attempt 1, which had softened the band into a short tapered tab with a rounded lower corner; the correction increased stand height and squared the corner while preserving the 2-button count. Sits in clear visual contrast to the cs-round option, which is the educational requirement for this field.",
+  "checkedAt": "2026-08-11T01:02:44.576Z"
+}

@@ -1,0 +1,116 @@
+{
+  "addr": "shirt > collar-hexagon",
+  "productId": "shirt",
+  "optionId": "collar-hexagon",
+  "attempt": 3,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 97,
+    "geometry": 96,
+    "dimensions": 95,
+    "angles": 96,
+    "construction": 97,
+    "placement": 98,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 96
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "facet-proportion",
+      "description": "The flat bottom edge of each leaf is short relative to the leading edge. Measured on the left leaf the leading edge runs about 263 px and the bottom edge about 148 px, a ratio near 1.8:1, where the drawing dimensions 4.5 cm and 3.5 cm give 1.29:1. The leaf therefore still reads slightly more tapered than the boxy leaf drawn.",
+      "expected": "4.5 cm leading edge to 3.5 cm bottom edge, ratio about 1.29:1",
+      "actual": "Ratio about 1.8:1, bottom edge proportionally short"
+    },
+    {
+      "severity": "minor",
+      "category": "bottom-edge-angle",
+      "description": "The bottom edge of each leaf slopes about 5 degrees off horizontal rather than sitting level as drawn.",
+      "expected": "Horizontal bottom edge",
+      "actual": "Bottom edge about 5 degrees off horizontal"
+    }
+  ],
+  "verdict": "PASS_WAIVED",
+  "waiver": {
+    "granted": true,
+    "reason": "minor-only at attempt 3 of 3: retry budget exhausted with zero critical/major findings and every category >= 95",
+    "waiverMin": 95,
+    "scoreMin": 98,
+    "belowScoreMin": [
+      {
+        "category": "shape",
+        "score": 97,
+        "shortfall": 1
+      },
+      {
+        "category": "geometry",
+        "score": 96,
+        "shortfall": 2
+      },
+      {
+        "category": "dimensions",
+        "score": 95,
+        "shortfall": 3
+      },
+      {
+        "category": "angles",
+        "score": 96,
+        "shortfall": 2
+      },
+      {
+        "category": "construction",
+        "score": 97,
+        "shortfall": 1
+      },
+      {
+        "category": "blueprint-match",
+        "score": 96,
+        "shortfall": 2
+      }
+    ],
+    "minorErrors": [
+      {
+        "category": "facet-proportion",
+        "description": "The flat bottom edge of each leaf is short relative to the leading edge. Measured on the left leaf the leading edge runs about 263 px and the bottom edge about 148 px, a ratio near 1.8:1, where the drawing dimensions 4.5 cm and 3.5 cm give 1.29:1. The leaf therefore still reads slightly more tapered than the boxy leaf drawn.",
+        "expected": "4.5 cm leading edge to 3.5 cm bottom edge, ratio about 1.29:1",
+        "actual": "Ratio about 1.8:1, bottom edge proportionally short"
+      },
+      {
+        "category": "bottom-edge-angle",
+        "description": "The bottom edge of each leaf slopes about 5 degrees off horizontal rather than sitting level as drawn.",
+        "expected": "Horizontal bottom edge",
+        "actual": "Bottom edge about 5 degrees off horizontal"
+      }
+    ],
+    "attempt": 3,
+    "maxAttempts": 3,
+    "waiverAttemptFloor": 3,
+    "authority": "user decision 2026-07-30: QC gate stays >=98; a 3rd attempt is allowed; after 3 attempts an image with ZERO critical/major findings may ship at >=95 as a LOGGED WAIVER in qc.json",
+    "grantedAt": "2026-08-11T01:03:32.168Z"
+  },
+  "correction": null,
+  "lockedFeatures": [
+    "blunt six-sided leaf outline with no downward point and no long taper",
+    "flat bottom edge present between two corners on each leaf, near-horizontal",
+    "near-vertical outer edge on each leaf",
+    "spread between the leading edges measures about 83 degrees against the drawn 90 degrees",
+    "throat button present and centred as drawn",
+    "front view, no model, no skin, no necktie",
+    "both leaves mirror each other in length, angle and tip shape",
+    "seamless neutral light-grey studio background, no annotations traced from the drawing"
+  ],
+  "notes": "Attempt 3 of 3 and by far the best of the three. Attempts 1 and 2 both produced an elongated leaf with only a small chamfer; the correction naming the 4.5 cm leading edge, horizontal 3.5 cm bottom edge and vertical outer edge produced a genuine blunt hexagonal leaf. Edge stitching follows the full outline about 6 mm in. Remaining deviations are proportional only, both Minor. Retry budget exhausted.",
+  "checkedAt": "2026-08-11T01:03:32.170Z"
+}

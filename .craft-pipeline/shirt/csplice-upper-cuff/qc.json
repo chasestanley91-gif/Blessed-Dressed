@@ -1,0 +1,93 @@
+{
+  "addr": "shirt > csplice-upper-cuff",
+  "productId": "shirt",
+  "optionId": "csplice-upper-cuff",
+  "attempt": 3,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 98,
+    "geometry": 98,
+    "dimensions": 97,
+    "angles": 98,
+    "construction": 98,
+    "placement": 99,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 97
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "dimensions",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "dimensions",
+      "description": "The splice is close to but not exactly the drawn 1/2. Measured on the near side of the cuff, the navy upper band spans about 46% of the band height and the white lower band about 54%.",
+      "expected": "1/2 splice - contrast exactly half the cuff band height, per the '1/2' callout on the drawing",
+      "actual": "navy ~46% / white ~54% of the cuff band height"
+    },
+    {
+      "severity": "minor",
+      "category": "blueprint-match",
+      "description": "The drawing shows topstitching detail along the splice join and the cuff edges; the photograph shows a clean pressed seam with only light edge stitching, so the drawn stitch emphasis is under-expressed.",
+      "expected": "visible topstitch run along the splice seam as drawn",
+      "actual": "clean seam join, stitching present but faint"
+    }
+  ],
+  "verdict": "PASS_WAIVED",
+  "waiver": {
+    "granted": true,
+    "reason": "minor-only at attempt 3 of 3: retry budget exhausted with zero critical/major findings and every category >= 95",
+    "waiverMin": 95,
+    "scoreMin": 98,
+    "belowScoreMin": [
+      {
+        "category": "dimensions",
+        "score": 97,
+        "shortfall": 1
+      },
+      {
+        "category": "blueprint-match",
+        "score": 97,
+        "shortfall": 1
+      }
+    ],
+    "minorErrors": [
+      {
+        "category": "dimensions",
+        "description": "The splice is close to but not exactly the drawn 1/2. Measured on the near side of the cuff, the navy upper band spans about 46% of the band height and the white lower band about 54%.",
+        "expected": "1/2 splice - contrast exactly half the cuff band height, per the '1/2' callout on the drawing",
+        "actual": "navy ~46% / white ~54% of the cuff band height"
+      },
+      {
+        "category": "blueprint-match",
+        "description": "The drawing shows topstitching detail along the splice join and the cuff edges; the photograph shows a clean pressed seam with only light edge stitching, so the drawn stitch emphasis is under-expressed.",
+        "expected": "visible topstitch run along the splice seam as drawn",
+        "actual": "clean seam join, stitching present but faint"
+      }
+    ],
+    "attempt": 3,
+    "maxAttempts": 3,
+    "waiverAttemptFloor": 3,
+    "authority": "user decision 2026-07-30: QC gate stays >=98; a 3rd attempt is allowed; after 3 attempts an image with ZERO critical/major findings may ship at >=95 as a LOGGED WAIVER in qc.json",
+    "grantedAt": "2026-08-10T23:40:09.891Z"
+  },
+  "correction": null,
+  "lockedFeatures": [
+    "splice seam is STRAIGHT and ENCIRCLES the wrist, exactly parallel to the cuff's two edges - the option's whole identity",
+    "contrast is on the UPPER half - the half nearest the sleeve - and NOT mirrored to the hand side (this is what separates it from its csplice-lower-cuff sibling)",
+    "contrast is carried the full way around the cuff, including across the overlapping end (the attempt-1 gap)",
+    "cuff button sits on the white lower half immediately at the splice seam, exactly as positioned in the drawing",
+    "rounded cuff corner falls in the white lower half, as drawn",
+    "contrast is instantly legible (navy on white) - readable within one second",
+    "no notation red, no flat grey notation panel",
+    "no traced annotations: no '1/2' text, no leader lines",
+    "real photograph on a male model, clean seamless light-grey studio background"
+  ],
+  "notes": "Attempt 3 of 3, and the best of the three. Attempt 1 already had the correct encircling split but left the cuff's overlapping end entirely white and the ratio uncertain. Attempt 2 was a clear REGRESSION - it split the cuff lengthwise (a seam running from the sleeve seam down to the hem) and used a near-white grey, losing both the geometry and the contrast. Attempt 3 restored the encircling split with a clearly visible navy upper half. Reading of the drawing: it is a 3/4 view of an isolated cuff drum whose axis runs left-right in the image, so the drawn vertical division line is a seam running AROUND the wrist and the drawn left/right halves are the sleeve-side (upper) and hand-side (lower) halves of the band. That reading is corroborated by the option labels ('upper portion'/'lower portion of sleeve cuff'), by the rounded cuff corner sitting in the hand-side half in both sibling drawings, and by the fact that a cuff spliced lengthwise is not a real construction.",
+  "checkedAt": "2026-08-10T23:40:09.894Z"
+}

@@ -1,0 +1,81 @@
+{
+  "addr": "shirt > csh-32",
+  "productId": "shirt",
+  "optionId": "csh-32",
+  "attempt": 3,
+  "maxAttempts": 3,
+  "scores": {
+    "shape": 70,
+    "geometry": 68,
+    "dimensions": 45,
+    "angles": 75,
+    "construction": 88,
+    "placement": 80,
+    "symmetry": 96,
+    "composition": 90,
+    "blueprint-match": 60
+  },
+  "scoreMin": 98,
+  "waiverMin": 95,
+  "belowMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "symmetry",
+    "composition",
+    "blueprint-match"
+  ],
+  "belowWaiverMinCategories": [
+    "shape",
+    "geometry",
+    "dimensions",
+    "angles",
+    "construction",
+    "placement",
+    "composition",
+    "blueprint-match"
+  ],
+  "errors": [
+    {
+      "severity": "major",
+      "category": "dimensions",
+      "description": "Collar stand height overshoots the specified 3.2 cm by a wide margin on attempt 3. Scaled against the 11 mm front placket button visible in the same frame (measured 52-55 px across at 6x magnification, giving roughly 48 px/cm), the exposed band at centre front measures between 165 px (3.4 cm, taking the leaf/band junction as the base) and 270 px (5.6 cm, taking the full visible band arc). Either reading is above spec, and the collar reads at a glance as a high structured band rather than the slim band the drawing specifies.",
+      "expected": "Band measuring exactly 3.2 cm from the neckband join seam to the top fold edge at centre front — a slim stand.",
+      "actual": "A tall stand reading roughly 3.5-5.6 cm; the exact figure could not be resolved because the neckband join seam is hidden behind the collar leaves.",
+      "correction": "Rebuild at a true 3.2 cm with the neckband join seam left visible so the dimension can be verified."
+    },
+    {
+      "severity": "major",
+      "category": "proportion",
+      "description": "The collar leaves shrank to short stubby flaps as a side effect of raising the stand, so the leaf-to-band proportion no longer matches the drawing, which pairs the band with a full-length collar leaf. The image now resembles the neighbouring high-band option on the same field rather than this one — the generic-category/neighbouring-option substitution the prompt forbids.",
+      "expected": "Full-length collar leaves as drawn, paired with a slim 3.2 cm band; leaf proportion unchanged from the blueprint.",
+      "actual": "Short triangular leaf flaps occupying roughly the lower third of the collar, dominated by the tall band above them.",
+      "correction": "Hold the leaf length and point geometry fixed while adjusting only the stand height."
+    },
+    {
+      "severity": "minor",
+      "category": "construction",
+      "description": "The interlining edge called for in the geometry-coverage list is not discernible anywhere in the frame. Band seam, top and bottom topstitch rows and the single centre-front buttonhole are all present and cleanly rendered.",
+      "expected": "A visible interlining edge within the band, per the drawing's inner dashed outline.",
+      "actual": "No interlining edge readable; the band renders as a single unbroken layer.",
+      "correction": "Light the band so the interlining edge inside it breaks the plane."
+    }
+  ],
+  "verdict": "UNMET",
+  "waiver": null,
+  "correction": null,
+  "lockedFeatures": [
+    "front view of the garment, matching the illustration",
+    "no model, no face, no neck, no skin in frame",
+    "collar open at the throat, no necktie, top band button unfastened",
+    "exactly one horizontal buttonhole, on the band at centre front",
+    "collar leaves plain — no buttonholes, buttons, stay slits or tabs",
+    "white cotton poplin, seamless neutral light-grey studio background",
+    "no annotation, dimension line, numeral or coloured guide mark rendered"
+  ],
+  "notes": "Retry budget exhausted at 3 generations; terminal UNMET. The three attempts oscillated across the target rather than converging on it, and ATTEMPT 1 IS THE BEST OF THE THREE — a human picking one should pick candidate-1.png, not the latest. Attempt 1: construction fully correct (single centre-front band buttonhole, mirrored leaf points confirmed by overlaying a flipped crop of the right tip on the left, fine edge stitching, correct leaf proportion) but the band measured only ~104 px against a ~48-50 px/cm scale from the placket width and button, i.e. roughly 2.0-2.2 cm — about 1 cm SHORT of the 3.2 cm spec. Attempt 2 is void as evidence: it was submitted without the tech-pack reference attached (an operator error on my part, a text-only render), and it invented a pair of buttonholes on the collar leaves and put the band buttonhole at the back of the neck. Attempt 3, generated correctly with the reference attached, fixed the invented buttonholes but overshot the stand height in the opposite direction. Net: attempt 1 errs ~1 cm short with correct construction; attempt 3 errs at least 0.3 cm and possibly 2.4 cm tall with degraded leaf proportion. Neither reaches the gate. Also note the source drawing is a FLAT PATTERN PIECE (the band and collar leaf laid out flat, annotated 3.2 cm in cyan with the band outlined in red), not a made-up collar, so no photograph of a worn collar can literally match its silhouette; the checkable content is the 3.2 cm band height, the perimeter topstitch, the band seam and leaf symmetry.",
+  "checkedAt": "2026-08-11T00:26:34.969Z"
+}
