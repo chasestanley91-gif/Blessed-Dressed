@@ -19,6 +19,9 @@
  *      matched by .vercelignore). This is the check that would have caught the
  *      622 PNG paths that 404'd in production.
  *   7. `illustration` is never a photo path and never an .svg glyph.
+ *   8. An `/images/jacket/` file (audited at 5.8% usable — swatch pages and
+ *      button catalogues filed as drawings) may sit in an illustration slot
+ *      only with a subject-audit MATCH verdict on record.
  *
  * Usage
  *   node tools/catalog_invariants.mjs --snapshot=data-store/options.backup-2026-08-06
@@ -45,6 +48,15 @@ const KNOWN_MISSING = new Set([
 const PHOTO_DIR = /^\/images\/(generated|ai)\//i;
 const GLYPH = /\.svg(\?|#|$)/i;
 const ASSET_KEYS = ['image', 'illustration', 'techpackIllustration', 'realImage', 'aiImage'];
+
+// Check 8's evidence: per-file verdicts from the blueprint subject audit.
+const untrustedSetVerdict = (() => {
+  try {
+    const audit = JSON.parse(fs.readFileSync(
+      path.join(REPO, 'public/images/reports/subject-audit-consolidated.json'), 'utf8'));
+    return new Map((audit.results ?? []).map((r) => [r.bp, r.v]));
+  } catch { return new Map(); }
+})();
 
 const failures = [];
 const fail = (msg) => failures.push(msg);
@@ -194,6 +206,17 @@ for (const [addr, o] of current.options) {
     if (!legitimate) fail(`ILLUSTRATION INVENTED: ${addr} -> ${o.illustration}`);
     if (PHOTO_DIR.test(o.illustration)) fail(`ILLUSTRATION IS A PHOTO: ${addr} -> ${o.illustration}`);
     if (GLYPH.test(o.illustration)) fail(`ILLUSTRATION IS AN SVG GLYPH: ${addr} -> ${o.illustration}`);
+  }
+  // 8. `/images/jacket/` is fabric-swatch pages and button catalogues filed as
+  //    drawings — audited at 5.8% usable. A file from that set may serve as an
+  //    illustration ONLY with a subject-audit MATCH verdict on record. Being in
+  //    a plausible-looking folder is not proof of anything (2026-08-10 lesson:
+  //    374 rows fell back to swatch charts because the path looked right).
+  for (const slot of ['illustration', 'techpackIllustration']) {
+    const v = o[slot];
+    if (typeof v === 'string' && v.startsWith('/images/jacket/') && untrustedSetVerdict.get(v) !== 'MATCH') {
+      fail(`ILLUSTRATION FROM UNTRUSTED SET (${slot}): ${addr} -> ${v}`);
+    }
   }
   for (const k of ASSET_KEYS) {
     const v = o[k];
