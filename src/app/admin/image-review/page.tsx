@@ -203,6 +203,9 @@ function ReviewCard({
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           key: item.key, attempt: item.attempt, verdict,
+          // The full craft address rides along because product/option alone is
+          // ambiguous for 87 keys (the suit-2pc/coin-left lesson).
+          addr: item.addr,
           notes: notes.trim(), tags, references: refs,
         }),
       });
