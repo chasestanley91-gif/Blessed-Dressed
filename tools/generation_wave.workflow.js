@@ -39,9 +39,14 @@ Ground truth to load first:
 - Its ledger record in ${REPO}/data-store/image-decision-ledger.json (crafts["${craftId}"]) for decision history.
 - Pipeline folder ${REPO}/.craft-pipeline/<product>/<option>/ — spec.json/prompt.json may or may not exist.
 
-Stages, IN ORDER:
+Stages, IN ORDER (these rules incorporate lessons from the proven reference run — suit-2pc/adjuster-both, QC PASS):
 1. If spec.json is missing or lacks this craft's sectionId, invoke the tech-pack-interpreter skill for this option first.
-2. Invoke the garment-image-director skill. The generation prompt MUST be unique to this craft and MUST encode the rejection failure data: every rejectionContext tag/note becomes an explicit locked constraint (wrong count -> lock the exact count; wrong side -> state the side and forbid the mirror; looks-identical-to-sibling -> name the discriminator that separates it). Owner reference photos listed in prompt.json ownerCorrections[].references OUTRANK the drawing. Use the tech-pack illustration as the geometry reference image via the Higgsfield MCP.
+2. Invoke the garment-image-director skill. The generation prompt MUST be unique to this craft and MUST encode the rejection failure data: every rejectionContext tag/note becomes an explicit locked constraint (wrong count -> lock the exact count; wrong side -> state the side and forbid the mirror; looks-identical-to-sibling -> name the discriminator that separates it).
+   PROVEN RULES:
+   - If prompt.json contains ownerCorrections, NEVER run build_prompt.mjs --write (it rebuilds from spec and silently DESTROYS the owner's correction block and references). Validate the on-disk prompt with validate_prompt.mjs --check-text instead.
+   - Owner reference photos in ownerCorrections[].references OUTRANK the drawing: upload and attach them BEFORE the illustration in the reference list.
+   - When owner references exist, match THEIR composition/framing; relax the spec's 40-60% frame-dominance target rather than fighting the owner's preferred framing.
+   - Use the tech-pack illustration as the geometry reference via the Higgsfield MCP; job_status with sync:true and raw_data:true is the fastest reliable way to get result_url for immediate recording.
 3. THE HAZARD RULE this project has paid for: the credit is spent at generate_image; the artifact becomes durable only at record_generation. Download the result to candidate-<N>.png and update generation.json IMMEDIATELY after generation, before QC, before anything. On any failure after generation, report jobId + result URL — NEVER regenerate.
 4. Invoke the garment-image-qc skill; write qc.json. QC is advisory (the owner decides publishes) — record the verdict either way.
 5. NEVER touch ${REPO}/data-store/options/*.json. NEVER publish. One generation attempt only — if QC fails, record the verdict and stop (the correction loop is a later, human-visible pass).
