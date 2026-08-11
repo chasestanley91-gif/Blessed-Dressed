@@ -148,13 +148,50 @@ if (SNAPSHOT && fs.existsSync(SNAPSHOT)) {
   fail(`snapshot not found: ${SNAPSHOT}`);
 }
 
+// Baseline asset values, read straight from git HEAD, for the provenance check
+// below. The address-set baseline above stores only presence flags, and
+// provenance needs the values themselves. A failure to read HEAD leaves this
+// empty, which makes the check no weaker than it was before — it only ever
+// forgives, never accuses.
+const baseAssets = new Map();
+try {
+  for (const f of fs.readdirSync(OPTIONS_DIR).filter((x) => x.endsWith('.json'))) {
+    const raw = execFileSync('git', ['show', `HEAD:data-store/options/${f}`],
+      { cwd: REPO, encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });
+    const product = f.replace(/\.json$/, '');
+    const cfg = JSON.parse(raw);
+    for (const s of cfg.sections ?? []) {
+      for (const fl of s.fields ?? []) {
+        for (const o of fl.options ?? []) {
+          baseAssets.set(`${product}|${s.id ?? s.label}|${fl.id}|${o.id}`,
+            { illustration: o.illustration, techpackIllustration: o.techpackIllustration, image: o.image });
+        }
+      }
+    }
+  }
+} catch { /* no baseline available; the check falls back to present-tense only */ }
+
 // ── 4 + 5 + 7 — per-option asset sanity ────────────────────────────────────
 const referenced = new Set();
 for (const [addr, o] of current.options) {
   if (o.illustration) {
-    if (o.illustration !== o.techpackIllustration && o.illustration !== o.image) {
-      fail(`ILLUSTRATION INVENTED: ${addr} -> ${o.illustration}`);
-    }
+    // Provenance is about where the value CAME FROM, not what still sits beside
+    // it today. `illustration` is legitimate if it matched one of the option's
+    // own asset values either now or in the baseline.
+    //
+    // Measured 2026-08-10: unwiring 788 unapproved renders deleted `image` on
+    // options where `illustration === image` and no techpackIllustration
+    // existed, and this check then called 235 untouched illustrations
+    // "invented". The illustrations had not changed at all — only the field
+    // they were being compared against had gone. A provenance rule that reads
+    // only the post-edit record cannot tell a forged value from an orphaned one.
+    const base = baseAssets.get(addr);
+    const legitimate = o.illustration === o.techpackIllustration
+      || o.illustration === o.image
+      || (base && (o.illustration === base.illustration
+        || o.illustration === base.techpackIllustration
+        || o.illustration === base.image));
+    if (!legitimate) fail(`ILLUSTRATION INVENTED: ${addr} -> ${o.illustration}`);
     if (PHOTO_DIR.test(o.illustration)) fail(`ILLUSTRATION IS A PHOTO: ${addr} -> ${o.illustration}`);
     if (GLYPH.test(o.illustration)) fail(`ILLUSTRATION IS AN SVG GLYPH: ${addr} -> ${o.illustration}`);
   }
