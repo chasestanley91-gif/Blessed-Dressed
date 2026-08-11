@@ -145,11 +145,38 @@ decides.
 5. **Rotate the Higgsfield API key** — it was pasted in chat. Also still open from
    earlier: repo visibility, the KuteTailor token file, robots.txt on `/images/`.
 
-## In flight, unfinished
+## The reference library will not substitute for generation
 
-`tools/scan_reference_photos.mjs` was still running at handoff. It classifies the
-~18,000 supplier reference images into real PHOTOGRAPHS vs technical flats, to
-find garment photos the catalog can use directly instead of paying to generate
-an imitation. Re-run it: `node tools/scan_reference_photos.mjs` →
-`public/images/reports/reference-photo-scan.json`. It is read-only and free.
-It cannot judge branding or watermarks — that needs eyes on the candidates.
+The owner asked whether the reference images already on disk could be used
+directly — real supplier photographs beat any render, and cost nothing.
+`tools/scan_reference_photos.mjs` classified all of them. The answer is no:
+
+| | |
+|---|---|
+| Scanned | **18,534** |
+| Technical flats (line art on white) | **17,366** — 93.7% |
+| **Real photographs** | **134** — 0.7% |
+| Unsure | 1,034 |
+| Unreadable | 3 |
+
+The supplier library is a *pattern library*, not a photo library. Those 17,366
+flats are exactly the tech-pack drawings the pipeline already uses as blueprints
+— they are the input, not the output.
+
+The 134 photographs are clustered in a few field codes rather than spread across
+the catalog, so they cannot cover the 120 open options:
+
+```
+16 / 34    factory-screenshots/hero-library     (47% — marketing shots)
+15 / 152   factory-screenshots/shirt/REQMA
+14 / 154   factory-screenshots/vest/REQMA
+ 9 / 105   factory-screenshots/vest/KBACZ
+ 5 / 44    factory-screenshots/suit-jacket/GTELV
+```
+
+**Worth doing anyway** (free, and real cloth always beats a render): open those
+134 plus the 1,034 unsure, discard anything carrying supplier branding or a
+watermark, and check each actually shows the option it is filed under. Whatever
+survives is a free, genuine catalog image and removes that option from the
+generation bill. Full list in `public/images/reports/reference-photo-scan.json`.
+The scan cannot judge branding or subject — that needs eyes.
