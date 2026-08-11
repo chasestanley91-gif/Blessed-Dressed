@@ -34,12 +34,37 @@ catalog that sells the garment is the only failure that matters.
 
 ---
 
-## New standing rule from the owner
+## Two standing rules from the owner
 
-**One attempt per option. No retry loops.** Generate once, then the owner
+**1. One attempt per option. No retry loops.** Generate once, then the owner
 decides from the review page. Previous behaviour — up to three attempts with
 automated re-grading — is withdrawn. It was also measured to oscillate rather
 than converge, so this costs little and saves a lot.
+
+**2. Nothing goes live without the owner's physical approval.** A QC verdict is
+evidence, not consent. `publish_approved.mjs --apply` now refuses unless
+`--owner-approved` is also passed.
+
+Rule 2 had to be applied retroactively on 2026-08-10. Of 1,364 live rows serving
+a generated image:
+
+| | |
+|---|---|
+| Kept — owner accepted the option or the file | **576** |
+| Removed — owner had **already rejected** this exact file | **263** |
+| Removed — never reviewed at all | **525** |
+
+575 of the removed rows fell back to their own tech-pack drawing, which is the
+manufacturing blueprint and cannot misrepresent the option. 213 had no drawing
+and are now empty — an empty slot is honest where a wrong photograph is not.
+
+No craft option and no image file was deleted. Every generated file is still on
+disk and `public/images/reports/unpublish-ledger.json` lists all 788 changes, so
+any of them can be re-wired with a one-line edit. Count holds at 2,862.
+
+This also cleared both defects `shared_image_check.mjs` was failing on — the
+trouser coin pocket selling three jacket rows, and the 7-loop waistband selling
+"5 Loops". **That gate now reports zero.**
 
 ---
 
