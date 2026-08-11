@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-08-10T20:40:42.063Z",
+  "generatedAt": "2026-08-11T02:38:47.179Z",
   "queueOnly": false,
   "inScopeRows": 1911,
   "blockedRows": 553,
-  "alreadyDone": 465,
-  "identities": 161,
-  "rowsCovered": 204,
+  "alreadyDone": 487,
+  "identities": 137,
+  "rowsCovered": 178,
   "work": [
     {
-      "identity": "fin-stitch|handmade-type|hm-individual|Individual Handmade Parts",
+      "identity": "fin-stitch|handmade-type|hm-individual",
       "part": "fin-stitch",
       "product": "sport-coat",
       "section": "handmade",
@@ -25,24 +25,41 @@
       ]
     },
     {
-      "identity": "jacket-lapel-bh-position|lapel-bh-position|lbp-both-double|Each Side Double",
-      "part": "jacket-lapel-bh-position",
+      "identity": "jacket-shoulder|sleeve-head|sleeve-regular",
+      "part": "jacket-shoulder",
       "product": "sport-coat",
-      "section": "lapel",
-      "field": "lapel-bh-position",
-      "option": "lbp-both-double",
-      "label": "Each Side Double",
+      "section": "shoulder-structure",
+      "field": "sleeve-head",
+      "option": "sleeve-regular",
+      "label": "Regular",
       "orientation": null,
-      "illustration": "/images/supplier-bb/GTECP/E.jpg",
-      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\supplier-bb\\GTECP\\E.jpg",
+      "illustration": "/images/supplier-bb/SHSMD/B.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\supplier-bb\\SHSMD\\B.jpg",
       "rows": [
-        "sport-coat|lapel|lapel-bh-position|lbp-both-double",
-        "suit-2pc|lapel|lapel-bh-position|lbp-both-double",
-        "suit-3pc|lapel|lapel-bh-position|lbp-both-double"
+        "sport-coat|shoulder-structure|sleeve-head|sleeve-regular",
+        "suit-2pc|shoulder-structure|sleeve-head|sleeve-regular",
+        "suit-3pc|shoulder-structure|sleeve-head|sleeve-regular"
       ]
     },
     {
-      "identity": "trouser-back-pocket|back-pocket-style|back-left-jetted|Left Besom with Button & Buttonhole",
+      "identity": "jacket-shoulder|sleeve-head|sleeve-shirt-head",
+      "part": "jacket-shoulder",
+      "product": "sport-coat",
+      "section": "shoulder-structure",
+      "field": "sleeve-head",
+      "option": "sleeve-shirt-head",
+      "label": "Shirt Head",
+      "orientation": null,
+      "illustration": "/images/supplier-bb/SHSMD/E.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\supplier-bb\\SHSMD\\E.jpg",
+      "rows": [
+        "sport-coat|shoulder-structure|sleeve-head|sleeve-shirt-head",
+        "suit-2pc|shoulder-structure|sleeve-head|sleeve-shirt-head",
+        "suit-3pc|shoulder-structure|sleeve-head|sleeve-shirt-head"
+      ]
+    },
+    {
+      "identity": "trouser-back-pocket|back-pocket-style|back-left-jetted",
       "part": "trouser-back-pocket",
       "product": "suit-2pc",
       "section": "Trousers-back",
@@ -59,24 +76,7 @@
       ]
     },
     {
-      "identity": "trouser-back-pocket|back-pocket-style|back-none|No Back Pockets",
-      "part": "trouser-back-pocket",
-      "product": "suit-2pc",
-      "section": "Trousers-back",
-      "field": "back-pocket-style",
-      "option": "back-none",
-      "label": "No Back Pockets",
-      "orientation": null,
-      "illustration": "/images/blueprints/factory/d1ec6888d1c1__31A0__No.jpg",
-      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\factory\\d1ec6888d1c1__31A0__No.jpg",
-      "rows": [
-        "suit-2pc|Trousers-back|back-pocket-style|back-none",
-        "suit-3pc|Trousers-back|back-pocket-style|back-none",
-        "trousers|back|back-pocket-style|back-none"
-      ]
-    },
-    {
-      "identity": "trouser-extension-length|extension-length|ext-len-13|13 cm",
+      "identity": "trouser-extension-length|extension-length|ext-len-13",
       "part": "trouser-extension-length",
       "product": "suit-2pc",
       "section": "Trousers-waistband",
@@ -93,7 +93,7 @@
       ]
     },
     {
-      "identity": "trouser-extension-length|extension-length|ext-len-15|15 cm",
+      "identity": "trouser-extension-length|extension-length|ext-len-15",
       "part": "trouser-extension-length",
       "product": "suit-2pc",
       "section": "Trousers-waistband",
@@ -110,7 +110,7 @@
       ]
     },
     {
-      "identity": "trouser-extension-length|extension-length|ext-len-5|5 cm",
+      "identity": "trouser-extension-length|extension-length|ext-len-5",
       "part": "trouser-extension-length",
       "product": "suit-2pc",
       "section": "Trousers-waistband",
@@ -127,7 +127,7 @@
       ]
     },
     {
-      "identity": "trouser-extension-length|extension-length|ext-len-55|5.5 cm",
+      "identity": "trouser-extension-length|extension-length|ext-len-55",
       "part": "trouser-extension-length",
       "product": "suit-2pc",
       "section": "Trousers-waistband",
@@ -144,7 +144,7 @@
       ]
     },
     {
-      "identity": "trouser-extension-length|extension-length|ext-len-6|6 cm",
+      "identity": "trouser-extension-length|extension-length|ext-len-6",
       "part": "trouser-extension-length",
       "product": "suit-2pc",
       "section": "Trousers-waistband",
@@ -161,7 +161,7 @@
       ]
     },
     {
-      "identity": "trouser-extension-length|extension-length|ext-len-65|6.5 cm",
+      "identity": "trouser-extension-length|extension-length|ext-len-65",
       "part": "trouser-extension-length",
       "product": "suit-2pc",
       "section": "Trousers-waistband",
@@ -178,7 +178,7 @@
       ]
     },
     {
-      "identity": "trouser-extension-length|extension-length|ext-len-7|7 cm",
+      "identity": "trouser-extension-length|extension-length|ext-len-7",
       "part": "trouser-extension-length",
       "product": "suit-2pc",
       "section": "Trousers-waistband",
@@ -195,7 +195,7 @@
       ]
     },
     {
-      "identity": "trouser-fly|fly-style|fly-french|French Fly",
+      "identity": "trouser-fly|fly-style|fly-french",
       "part": "trouser-fly",
       "product": "suit-2pc",
       "section": "Trousers-pleats-structure",
@@ -212,7 +212,7 @@
       ]
     },
     {
-      "identity": "trouser-front-pocket|front-pocket-style|jeans-square|Square Jeans Pocket",
+      "identity": "trouser-front-pocket|front-pocket-style|jeans-square",
       "part": "trouser-front-pocket",
       "product": "suit-2pc",
       "section": "Trousers-front-pockets",
@@ -229,7 +229,7 @@
       ]
     },
     {
-      "identity": "trouser-front-pocket|front-pocket-style|jetted-front|Besom / Jetted Pocket",
+      "identity": "trouser-front-pocket|front-pocket-style|jetted-front",
       "part": "trouser-front-pocket",
       "product": "suit-2pc",
       "section": "Trousers-front-pockets",
@@ -246,7 +246,7 @@
       ]
     },
     {
-      "identity": "trouser-hem|hem-style|hem-76|Plain Hem 7.6 cm",
+      "identity": "trouser-hem|hem-style|hem-76",
       "part": "trouser-hem",
       "product": "suit-2pc",
       "section": "Trousers-bottom-hem",
@@ -263,7 +263,7 @@
       ]
     },
     {
-      "identity": "trouser-pleat|pleat-style|double-forward|Double Forward Pleats",
+      "identity": "trouser-pleat|pleat-style|double-forward",
       "part": "trouser-pleat",
       "product": "suit-2pc",
       "section": "Trousers-pleats-structure",
@@ -280,7 +280,7 @@
       ]
     },
     {
-      "identity": "fin-dart|chest-dart|cd-plus-2|+2 cm",
+      "identity": "fin-dart|chest-dart|cd-plus-2",
       "part": "fin-dart",
       "product": "sport-coat",
       "section": "front-style",
@@ -296,7 +296,7 @@
       ]
     },
     {
-      "identity": "fin-dart|chest-dart|cd-plus-3|+3 cm",
+      "identity": "fin-dart|chest-dart|cd-plus-3",
       "part": "fin-dart",
       "product": "sport-coat",
       "section": "front-style",
@@ -312,7 +312,7 @@
       ]
     },
     {
-      "identity": "fin-lining|lining-color|bl-black|Black",
+      "identity": "fin-lining|lining-color|bl-black",
       "part": "fin-lining",
       "product": "sport-coat",
       "section": "suit-lining",
@@ -328,7 +328,7 @@
       ]
     },
     {
-      "identity": "fin-lining|lining-color|bl-charcoal|Dark Charcoal",
+      "identity": "fin-lining|lining-color|bl-charcoal",
       "part": "fin-lining",
       "product": "sport-coat",
       "section": "suit-lining",
@@ -344,7 +344,7 @@
       ]
     },
     {
-      "identity": "fin-lining|lining-color|bl-cream|Cream / Ivory",
+      "identity": "fin-lining|lining-color|bl-cream",
       "part": "fin-lining",
       "product": "sport-coat",
       "section": "suit-lining",
@@ -360,7 +360,7 @@
       ]
     },
     {
-      "identity": "fin-lining|lining-color|bl-matching|Matching to Fabric",
+      "identity": "fin-lining|lining-color|bl-matching",
       "part": "fin-lining",
       "product": "sport-coat",
       "section": "suit-lining",
@@ -376,7 +376,7 @@
       ]
     },
     {
-      "identity": "jacket-shoulder|sleeve-head|sleeve-natural|Natural",
+      "identity": "jacket-shoulder|sleeve-head|sleeve-natural",
       "part": "jacket-shoulder",
       "product": "sport-coat",
       "section": "shoulder-structure",
@@ -392,39 +392,7 @@
       ]
     },
     {
-      "identity": "jacket-shoulder|sleeve-head|sleeve-regular|Regular",
-      "part": "jacket-shoulder",
-      "product": "sport-coat",
-      "section": "shoulder-structure",
-      "field": "sleeve-head",
-      "option": "sleeve-regular",
-      "label": "Regular",
-      "orientation": null,
-      "illustration": "/images/supplier-bb/SHSMD/B.jpg",
-      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\supplier-bb\\SHSMD\\B.jpg",
-      "rows": [
-        "sport-coat|shoulder-structure|sleeve-head|sleeve-regular",
-        "suit-3pc|shoulder-structure|sleeve-head|sleeve-regular"
-      ]
-    },
-    {
-      "identity": "jacket-shoulder|sleeve-head|sleeve-shirt-head|Shirt Head",
-      "part": "jacket-shoulder",
-      "product": "sport-coat",
-      "section": "shoulder-structure",
-      "field": "sleeve-head",
-      "option": "sleeve-shirt-head",
-      "label": "Shirt Head",
-      "orientation": null,
-      "illustration": "/images/supplier-bb/SHSMD/E.jpg",
-      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\supplier-bb\\SHSMD\\E.jpg",
-      "rows": [
-        "sport-coat|shoulder-structure|sleeve-head|sleeve-shirt-head",
-        "suit-3pc|shoulder-structure|sleeve-head|sleeve-shirt-head"
-      ]
-    },
-    {
-      "identity": "trouser-fly|fly-stitching|fly-stitch-none|No Fly Topstitch",
+      "identity": "trouser-fly|fly-stitching|fly-stitch-none",
       "part": "trouser-fly",
       "product": "suit-2pc",
       "section": "Trousers-pleats-structure",
@@ -440,7 +408,7 @@
       ]
     },
     {
-      "identity": "vest-pocket|ticket-pocket-vest|vest-ticket-left|Left Welt",
+      "identity": "vest-pocket|ticket-pocket-vest|vest-ticket-left",
       "part": "vest-pocket",
       "product": "suit-3pc",
       "section": "Vest-pockets",
@@ -456,7 +424,7 @@
       ]
     },
     {
-      "identity": "fin-bias|bias_cutting|bias-inner-cuff|Inner Cuff",
+      "identity": "fin-bias|bias_cutting|bias-inner-cuff",
       "part": "fin-bias",
       "product": "shirt",
       "section": "back-structure",
@@ -471,7 +439,7 @@
       ]
     },
     {
-      "identity": "fin-bias|bias_cutting|bias-inner-top-collar|Inner Top Collar",
+      "identity": "fin-bias|bias_cutting|bias-inner-top-collar",
       "part": "fin-bias",
       "product": "shirt",
       "section": "back-structure",
@@ -486,7 +454,7 @@
       ]
     },
     {
-      "identity": "fin-bias|bias_cutting|bias-outer-collar-stand|Outer Collar Stand",
+      "identity": "fin-bias|bias_cutting|bias-outer-collar-stand",
       "part": "fin-bias",
       "product": "shirt",
       "section": "back-structure",
@@ -501,7 +469,7 @@
       ]
     },
     {
-      "identity": "fin-bias|bias_cutting|bias-outer-cuff|Outer Cuff",
+      "identity": "fin-bias|bias_cutting|bias-outer-cuff",
       "part": "fin-bias",
       "product": "shirt",
       "section": "back-structure",
@@ -516,7 +484,7 @@
       ]
     },
     {
-      "identity": "fin-button|placket_button_position|btn-6|6 Buttons",
+      "identity": "fin-button|placket_button_position|btn-6",
       "part": "fin-button",
       "product": "shirt",
       "section": "placket",
@@ -531,7 +499,7 @@
       ]
     },
     {
-      "identity": "fin-buttonhole|buttonhole|bh-hand|Hand-Made",
+      "identity": "fin-buttonhole|buttonhole|bh-hand",
       "part": "fin-buttonhole",
       "product": "shirt",
       "section": "placket",
@@ -546,7 +514,7 @@
       ]
     },
     {
-      "identity": "fin-buttonhole|buttonhole|bh-machine|Machine",
+      "identity": "fin-buttonhole|buttonhole|bh-machine",
       "part": "fin-buttonhole",
       "product": "shirt",
       "section": "placket",
@@ -561,7 +529,7 @@
       ]
     },
     {
-      "identity": "fin-buttonhole|placket_buttonhole_direction|bh-horiz-2nd|Horizontal (2nd from Bottom)",
+      "identity": "fin-buttonhole|placket_buttonhole_direction|bh-horiz-2nd",
       "part": "fin-buttonhole",
       "product": "shirt",
       "section": "placket",
@@ -576,7 +544,7 @@
       ]
     },
     {
-      "identity": "fin-buttonhole|placket_buttonhole_direction|bh-vertical-horiz|Vertical with Horizontal Buttonhole",
+      "identity": "fin-buttonhole|placket_buttonhole_direction|bh-vertical-horiz",
       "part": "fin-buttonhole",
       "product": "shirt",
       "section": "placket",
@@ -591,7 +559,7 @@
       ]
     },
     {
-      "identity": "fin-contrast|contrast_color_position|contrast-cuff-tab|Cuff Tab",
+      "identity": "fin-contrast|contrast_color_position|contrast-cuff-tab",
       "part": "fin-contrast",
       "product": "shirt",
       "section": "details-contrast",
@@ -606,7 +574,7 @@
       ]
     },
     {
-      "identity": "fin-contrast|contrast_color_position|contrast-inner-yoke|Inner Yoke",
+      "identity": "fin-contrast|contrast_color_position|contrast-inner-yoke",
       "part": "fin-contrast",
       "product": "shirt",
       "section": "details-contrast",
@@ -621,7 +589,7 @@
       ]
     },
     {
-      "identity": "fin-contrast|contrast_color_position|contrast-left-pocket|Left Pocket",
+      "identity": "fin-contrast|contrast_color_position|contrast-left-pocket",
       "part": "fin-contrast",
       "product": "shirt",
       "section": "details-contrast",
@@ -636,7 +604,7 @@
       ]
     },
     {
-      "identity": "fin-contrast|contrast_color_position|contrast-lower-wrap-collar|Lower Wrap Collar",
+      "identity": "fin-contrast|contrast_color_position|contrast-lower-wrap-collar",
       "part": "fin-contrast",
       "product": "shirt",
       "section": "details-contrast",
@@ -651,7 +619,7 @@
       ]
     },
     {
-      "identity": "fin-contrast|contrast_color_position|contrast-pocket-flap|Pocket Flap",
+      "identity": "fin-contrast|contrast_color_position|contrast-pocket-flap",
       "part": "fin-contrast",
       "product": "shirt",
       "section": "details-contrast",
@@ -666,7 +634,7 @@
       ]
     },
     {
-      "identity": "fin-contrast|contrast_color_position|contrast-right-pocket|Right Pocket",
+      "identity": "fin-contrast|contrast_color_position|contrast-right-pocket",
       "part": "fin-contrast",
       "product": "shirt",
       "section": "details-contrast",
@@ -681,7 +649,7 @@
       ]
     },
     {
-      "identity": "fin-contrast|contrast_color_position|contrast-shoulder-epaulet|Shoulder Epaulet",
+      "identity": "fin-contrast|contrast_color_position|contrast-shoulder-epaulet",
       "part": "fin-contrast",
       "product": "shirt",
       "section": "details-contrast",
@@ -696,7 +664,7 @@
       ]
     },
     {
-      "identity": "fin-contrast|contrast_color_position|contrast-sleeve-vent|Sleeve Vent",
+      "identity": "fin-contrast|contrast_color_position|contrast-sleeve-vent",
       "part": "fin-contrast",
       "product": "shirt",
       "section": "details-contrast",
@@ -711,7 +679,7 @@
       ]
     },
     {
-      "identity": "fin-contrast|contrast_color_position|contrast-upper-wrap-collar|Upper Wrap Collar",
+      "identity": "fin-contrast|contrast_color_position|contrast-upper-wrap-collar",
       "part": "fin-contrast",
       "product": "shirt",
       "section": "details-contrast",
@@ -726,7 +694,7 @@
       ]
     },
     {
-      "identity": "fin-epaulet|epaulet|epaulet-none|None",
+      "identity": "fin-epaulet|epaulet|epaulet-none",
       "part": "fin-epaulet",
       "product": "shirt",
       "section": "details-contrast",
@@ -741,7 +709,7 @@
       ]
     },
     {
-      "identity": "fin-epaulet|epaulet|epaulet-pointed|Pointed Shoulder Epaulet",
+      "identity": "fin-epaulet|epaulet|epaulet-pointed",
       "part": "fin-epaulet",
       "product": "shirt",
       "section": "details-contrast",
@@ -756,7 +724,7 @@
       ]
     },
     {
-      "identity": "fin-label|brand_label_position|blp-2|Position 2",
+      "identity": "fin-label|brand_label_position|blp-2",
       "part": "fin-label",
       "product": "shirt",
       "section": "labels",
@@ -771,7 +739,7 @@
       ]
     },
     {
-      "identity": "fin-label|brand_label_position|blp-3|Position 3",
+      "identity": "fin-label|brand_label_position|blp-3",
       "part": "fin-label",
       "product": "shirt",
       "section": "labels",
@@ -786,7 +754,7 @@
       ]
     },
     {
-      "identity": "fin-label|brand_label_position|blp-4|Position 4",
+      "identity": "fin-label|brand_label_position|blp-4",
       "part": "fin-label",
       "product": "shirt",
       "section": "labels",
@@ -801,7 +769,7 @@
       ]
     },
     {
-      "identity": "fin-lining|cuff_lining|cuf-lining-hard|Hard",
+      "identity": "fin-lining|cuff_lining|cuf-lining-hard",
       "part": "fin-lining",
       "product": "shirt",
       "section": "cuffs",
@@ -816,7 +784,7 @@
       ]
     },
     {
-      "identity": "fin-pleat-detail|cuff_pleat|cpleat-double|Double Pleat",
+      "identity": "fin-pleat-detail|cuff_pleat|cpleat-double",
       "part": "fin-pleat-detail",
       "product": "shirt",
       "section": "cuffs",
@@ -831,22 +799,7 @@
       ]
     },
     {
-      "identity": "fin-splice|cuff_splicing|csplice-cuff-edge|Cuff Edge",
-      "part": "fin-splice",
-      "product": "shirt",
-      "section": "cuffs",
-      "field": "cuff_splicing",
-      "option": "csplice-cuff-edge",
-      "label": "Cuff Edge",
-      "orientation": null,
-      "illustration": "/images/cuff_splicing/cuff-edge.jpg",
-      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\cuff_splicing\\cuff-edge.jpg",
-      "rows": [
-        "shirt|cuffs|cuff_splicing|csplice-cuff-edge"
-      ]
-    },
-    {
-      "identity": "fin-splice|cuff_splicing|csplice-lower-cuff|Lower Sleeve Cuff",
+      "identity": "fin-splice|cuff_splicing|csplice-lower-cuff",
       "part": "fin-splice",
       "product": "shirt",
       "section": "cuffs",
@@ -861,7 +814,7 @@
       ]
     },
     {
-      "identity": "fin-splice|cuff_splicing|csplice-strip-mid|Strip in Middle Cuff",
+      "identity": "fin-splice|cuff_splicing|csplice-strip-mid",
       "part": "fin-splice",
       "product": "shirt",
       "section": "cuffs",
@@ -876,22 +829,7 @@
       ]
     },
     {
-      "identity": "fin-splice|cuff_splicing|csplice-upper-cuff|Upper Sleeve Cuff",
-      "part": "fin-splice",
-      "product": "shirt",
-      "section": "cuffs",
-      "field": "cuff_splicing",
-      "option": "csplice-upper-cuff",
-      "label": "Upper Sleeve Cuff",
-      "orientation": null,
-      "illustration": "/images/cuff_splicing/upper-sleeve-cuff.jpg",
-      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\cuff_splicing\\upper-sleeve-cuff.jpg",
-      "rows": [
-        "shirt|cuffs|cuff_splicing|csplice-upper-cuff"
-      ]
-    },
-    {
-      "identity": "fin-stitch|decoration_stitching_on_cuff|stitch-01-amf|Machine 0.1 cm AMF Stitching",
+      "identity": "fin-stitch|decoration_stitching_on_cuff|stitch-01-amf",
       "part": "fin-stitch",
       "product": "shirt",
       "section": "cuffs",
@@ -906,7 +844,7 @@
       ]
     },
     {
-      "identity": "fin-stitch|decoration_stitching_on_cuff|stitch-01-top|Machine 0.1 cm Top Stitching",
+      "identity": "fin-stitch|decoration_stitching_on_cuff|stitch-01-top",
       "part": "fin-stitch",
       "product": "shirt",
       "section": "cuffs",
@@ -921,7 +859,7 @@
       ]
     },
     {
-      "identity": "fin-stitch|decoration_stitching_on_cuff|stitch-03-amf|Machine 0.3 cm AMF Stitching",
+      "identity": "fin-stitch|decoration_stitching_on_cuff|stitch-03-amf",
       "part": "fin-stitch",
       "product": "shirt",
       "section": "cuffs",
@@ -936,7 +874,7 @@
       ]
     },
     {
-      "identity": "fin-stitch|decoration_stitching_on_cuff|stitch-05-amf|Machine 0.5 cm AMF Stitching",
+      "identity": "fin-stitch|decoration_stitching_on_cuff|stitch-05-amf",
       "part": "fin-stitch",
       "product": "shirt",
       "section": "cuffs",
@@ -951,7 +889,7 @@
       ]
     },
     {
-      "identity": "fin-stitch|decoration_stitching_on_cuff|stitch-06-top|Machine 0.6 cm Top Stitching",
+      "identity": "fin-stitch|decoration_stitching_on_cuff|stitch-06-top",
       "part": "fin-stitch",
       "product": "shirt",
       "section": "cuffs",
@@ -966,7 +904,7 @@
       ]
     },
     {
-      "identity": "fin-stitch|decoration_stitching_on_placket|stitch-01-inner-plain|0.1 cm Topstitch (Inner Plain Placket)",
+      "identity": "fin-stitch|decoration_stitching_on_placket|stitch-01-inner-plain",
       "part": "fin-stitch",
       "product": "shirt",
       "section": "placket",
@@ -981,7 +919,7 @@
       ]
     },
     {
-      "identity": "fin-stitch|decoration_stitching_on_placket|stitch-01-top|Machine 0.1 cm Top Stitching",
+      "identity": "fin-stitch|decoration_stitching_on_placket|stitch-01-top",
       "part": "fin-stitch",
       "product": "shirt",
       "section": "placket",
@@ -996,7 +934,7 @@
       ]
     },
     {
-      "identity": "fin-stitch|decoration_stitching_on_shoulder|shl-stitch-06-top|Machine 0.6 cm Top Stitching",
+      "identity": "fin-stitch|decoration_stitching_on_shoulder|shl-stitch-06-top",
       "part": "fin-stitch",
       "product": "shirt",
       "section": "shoulder",
@@ -1011,7 +949,7 @@
       ]
     },
     {
-      "identity": "fin-tab|sleeve_tab|sleeve-tab-inner|Inner Sleeve Tab",
+      "identity": "fin-tab|sleeve_tab|sleeve-tab-inner",
       "part": "fin-tab",
       "product": "shirt",
       "section": "cuffs",
@@ -1026,7 +964,7 @@
       ]
     },
     {
-      "identity": "fin-tab|sleeve_tab|sleeve-tab-none|None",
+      "identity": "fin-tab|sleeve_tab|sleeve-tab-none",
       "part": "fin-tab",
       "product": "shirt",
       "section": "cuffs",
@@ -1041,7 +979,7 @@
       ]
     },
     {
-      "identity": "jacket-canvas|canvas|light-half-canvas|Light Half Canvas",
+      "identity": "jacket-canvas|canvas|light-half-canvas",
       "part": "jacket-canvas",
       "product": "suit-2pc",
       "section": "shoulder-structure",
@@ -1056,37 +994,7 @@
       ]
     },
     {
-      "identity": "jacket-shoulder|sleeve-head|sleeve-regular|THE STRUCTURED / ENGLISH SHOULDER ",
-      "part": "jacket-shoulder",
-      "product": "suit-2pc",
-      "section": "shoulder-structure",
-      "field": "sleeve-head",
-      "option": "sleeve-regular",
-      "label": "THE STRUCTURED / ENGLISH SHOULDER ",
-      "orientation": null,
-      "illustration": "/images/jacket/shoulder-head/regular.jpg",
-      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\jacket\\shoulder-head\\regular.jpg",
-      "rows": [
-        "suit-2pc|shoulder-structure|sleeve-head|sleeve-regular"
-      ]
-    },
-    {
-      "identity": "jacket-shoulder|sleeve-head|sleeve-shirt-head|Shirt Head/THE UNSTRUCTURED ",
-      "part": "jacket-shoulder",
-      "product": "suit-2pc",
-      "section": "shoulder-structure",
-      "field": "sleeve-head",
-      "option": "sleeve-shirt-head",
-      "label": "Shirt Head/THE UNSTRUCTURED ",
-      "orientation": null,
-      "illustration": "/images/jacket/shoulder-head/shirt-head.jpg",
-      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\jacket\\shoulder-head\\shirt-head.jpg",
-      "rows": [
-        "suit-2pc|shoulder-structure|sleeve-head|sleeve-shirt-head"
-      ]
-    },
-    {
-      "identity": "shirt-back|back|back-box-dbl-darts|Box Pleat to Bottom with Double Darts",
+      "identity": "shirt-back|back|back-box-dbl-darts",
       "part": "shirt-back",
       "product": "shirt",
       "section": "back-structure",
@@ -1101,22 +1009,7 @@
       ]
     },
     {
-      "identity": "shirt-back|back|back-inverted-center-pleats|Inverted Center Pleats",
-      "part": "shirt-back",
-      "product": "shirt",
-      "section": "back-structure",
-      "field": "back",
-      "option": "back-inverted-center-pleats",
-      "label": "Inverted Center Pleats",
-      "orientation": null,
-      "illustration": "/images/back/inverted-center-pleats.jpg",
-      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\back\\inverted-center-pleats.jpg",
-      "rows": [
-        "shirt|back-structure|back|back-inverted-center-pleats"
-      ]
-    },
-    {
-      "identity": "shirt-back|back|back-napoli-dbl-darts|Napoli Yoke with Double Darts",
+      "identity": "shirt-back|back|back-napoli-dbl-darts",
       "part": "shirt-back",
       "product": "shirt",
       "section": "back-structure",
@@ -1131,7 +1024,7 @@
       ]
     },
     {
-      "identity": "shirt-back|back|back-napoli-no-dart|Napoli without Dart",
+      "identity": "shirt-back|back|back-napoli-no-dart",
       "part": "shirt-back",
       "product": "shirt",
       "section": "back-structure",
@@ -1146,7 +1039,7 @@
       ]
     },
     {
-      "identity": "shirt-back|back|back-side-pleats-dbl-darts|Side Pleats with Double Darts",
+      "identity": "shirt-back|back|back-side-pleats-dbl-darts",
       "part": "shirt-back",
       "product": "shirt",
       "section": "back-structure",
@@ -1161,7 +1054,7 @@
       ]
     },
     {
-      "identity": "shirt-back|yoke|yoke-half|Half Yoke",
+      "identity": "shirt-back|yoke|yoke-half",
       "part": "shirt-back",
       "product": "shirt",
       "section": "back-structure",
@@ -1176,7 +1069,7 @@
       ]
     },
     {
-      "identity": "shirt-collar-stand|collar_stand_height|csh-30|3.0 cm (1 Button)",
+      "identity": "shirt-collar-stand|collar_stand_height|csh-30",
       "part": "shirt-collar-stand",
       "product": "shirt",
       "section": "collar",
@@ -1191,7 +1084,7 @@
       ]
     },
     {
-      "identity": "shirt-collar-stand|collar_stand_height|csh-32|Band Width 3.2 cm",
+      "identity": "shirt-collar-stand|collar_stand_height|csh-32",
       "part": "shirt-collar-stand",
       "product": "shirt",
       "section": "collar",
@@ -1206,7 +1099,7 @@
       ]
     },
     {
-      "identity": "shirt-collar-stand|collar_stand_height|csh-34|3.4 cm (1 Button)",
+      "identity": "shirt-collar-stand|collar_stand_height|csh-34",
       "part": "shirt-collar-stand",
       "product": "shirt",
       "section": "collar",
@@ -1221,7 +1114,7 @@
       ]
     },
     {
-      "identity": "shirt-collar-stand|collar_stand_height|csh-37-1|3.7 cm (1 Button)",
+      "identity": "shirt-collar-stand|collar_stand_height|csh-37-1",
       "part": "shirt-collar-stand",
       "product": "shirt",
       "section": "collar",
@@ -1236,7 +1129,7 @@
       ]
     },
     {
-      "identity": "shirt-collar-stand|collar_stand_height|csh-37-2|3.7 cm (2 Button)",
+      "identity": "shirt-collar-stand|collar_stand_height|csh-37-2",
       "part": "shirt-collar-stand",
       "product": "shirt",
       "section": "collar",
@@ -1251,7 +1144,7 @@
       ]
     },
     {
-      "identity": "shirt-collar-stand|collar_stand_height|csh-38|3.8 cm (1 Button)",
+      "identity": "shirt-collar-stand|collar_stand_height|csh-38",
       "part": "shirt-collar-stand",
       "product": "shirt",
       "section": "collar",
@@ -1266,7 +1159,7 @@
       ]
     },
     {
-      "identity": "shirt-collar-stand|collar_stand_height|csh-40|4.0 cm (2 Button)",
+      "identity": "shirt-collar-stand|collar_stand_height|csh-40",
       "part": "shirt-collar-stand",
       "product": "shirt",
       "section": "collar",
@@ -1281,7 +1174,7 @@
       ]
     },
     {
-      "identity": "shirt-collar-stand|collar_stand_height|csh-42|4.2 cm (2 Button)",
+      "identity": "shirt-collar-stand|collar_stand_height|csh-42",
       "part": "shirt-collar-stand",
       "product": "shirt",
       "section": "collar",
@@ -1296,7 +1189,7 @@
       ]
     },
     {
-      "identity": "shirt-collar-stand|collar_stand_height|csh-50|5.0 cm",
+      "identity": "shirt-collar-stand|collar_stand_height|csh-50",
       "part": "shirt-collar-stand",
       "product": "shirt",
       "section": "collar",
@@ -1311,7 +1204,7 @@
       ]
     },
     {
-      "identity": "shirt-collar-stand|collar_stand_height|csh-none|None (Collarless)",
+      "identity": "shirt-collar-stand|collar_stand_height|csh-none",
       "part": "shirt-collar-stand",
       "product": "shirt",
       "section": "collar",
@@ -1326,7 +1219,7 @@
       ]
     },
     {
-      "identity": "shirt-collar-stand|collar_stand|cs-left-sq-rt-rnd|Left Square / Right Round",
+      "identity": "shirt-collar-stand|collar_stand|cs-left-sq-rt-rnd",
       "part": "shirt-collar-stand",
       "product": "shirt",
       "section": "collar",
@@ -1341,37 +1234,7 @@
       ]
     },
     {
-      "identity": "shirt-collar-stand|collar_stand|cs-round|Round Collar Stand",
-      "part": "shirt-collar-stand",
-      "product": "shirt",
-      "section": "collar",
-      "field": "collar_stand",
-      "option": "cs-round",
-      "label": "Round Collar Stand",
-      "orientation": null,
-      "illustration": "/images/collar_stand/round-collar-stand.jpg",
-      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\collar_stand\\round-collar-stand.jpg",
-      "rows": [
-        "shirt|collar|collar_stand|cs-round"
-      ]
-    },
-    {
-      "identity": "shirt-collar-stand|collar_stand|cs-square-2btn|Square Stand (2 Buttons)",
-      "part": "shirt-collar-stand",
-      "product": "shirt",
-      "section": "collar",
-      "field": "collar_stand",
-      "option": "cs-square-2btn",
-      "label": "Square Stand (2 Buttons)",
-      "orientation": null,
-      "illustration": "/images/collar_stand/square-collar-stand-with-2-buttons.jpg",
-      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\collar_stand\\square-collar-stand-with-2-buttons.jpg",
-      "rows": [
-        "shirt|collar|collar_stand|cs-square-2btn"
-      ]
-    },
-    {
-      "identity": "shirt-collar-stand|collar_stay|stay-hidden-btn|Hidden Button (No Stay)",
+      "identity": "shirt-collar-stand|collar_stay|stay-hidden-btn",
       "part": "shirt-collar-stand",
       "product": "shirt",
       "section": "collar",
@@ -1386,7 +1249,7 @@
       ]
     },
     {
-      "identity": "shirt-collar-stand|collar_stay|stay-none|None",
+      "identity": "shirt-collar-stand|collar_stay|stay-none",
       "part": "shirt-collar-stand",
       "product": "shirt",
       "section": "collar",
@@ -1401,7 +1264,7 @@
       ]
     },
     {
-      "identity": "shirt-collar-stand|collar_stay|stay-removable|Removable",
+      "identity": "shirt-collar-stand|collar_stay|stay-removable",
       "part": "shirt-collar-stand",
       "product": "shirt",
       "section": "collar",
@@ -1416,7 +1279,7 @@
       ]
     },
     {
-      "identity": "shirt-collar|lapel|collar-cuban|Cuban Collar",
+      "identity": "shirt-collar|lapel|collar-cuban",
       "part": "shirt-collar",
       "product": "shirt",
       "section": "collar",
@@ -1431,7 +1294,7 @@
       ]
     },
     {
-      "identity": "shirt-collar|lapel|collar-curved-80|Curved 8.0 cm",
+      "identity": "shirt-collar|lapel|collar-curved-80",
       "part": "shirt-collar",
       "product": "shirt",
       "section": "collar",
@@ -1446,7 +1309,7 @@
       ]
     },
     {
-      "identity": "shirt-collar|lapel|collar-curved-90|Curved 9.0 cm",
+      "identity": "shirt-collar|lapel|collar-curved-90",
       "part": "shirt-collar",
       "product": "shirt",
       "section": "collar",
@@ -1461,7 +1324,7 @@
       ]
     },
     {
-      "identity": "shirt-collar|lapel|collar-dbl-cutaway-55-btn|Double Cut-Away 5.5 cm with Button",
+      "identity": "shirt-collar|lapel|collar-dbl-cutaway-55-btn",
       "part": "shirt-collar",
       "product": "shirt",
       "section": "collar",
@@ -1476,22 +1339,7 @@
       ]
     },
     {
-      "identity": "shirt-collar|lapel|collar-hexagon|Hexagon Collar",
-      "part": "shirt-collar",
-      "product": "shirt",
-      "section": "collar",
-      "field": "lapel",
-      "option": "collar-hexagon",
-      "label": "Hexagon Collar",
-      "orientation": null,
-      "illustration": "/images/techpacks/shirt/lapel/hexagon-collar.jpg",
-      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\techpacks\\shirt\\lapel\\hexagon-collar.jpg",
-      "rows": [
-        "shirt|collar|lapel|collar-hexagon"
-      ]
-    },
-    {
-      "identity": "shirt-collar|lapel|collar-large-cutaway-82|Large Cut-Away 8.2 cm",
+      "identity": "shirt-collar|lapel|collar-large-cutaway-82",
       "part": "shirt-collar",
       "product": "shirt",
       "section": "collar",
@@ -1506,22 +1354,7 @@
       ]
     },
     {
-      "identity": "shirt-collar|lapel|collar-mid-cutaway-85|Middle Cut-Away 8.5 cm",
-      "part": "shirt-collar",
-      "product": "shirt",
-      "section": "collar",
-      "field": "lapel",
-      "option": "collar-mid-cutaway-85",
-      "label": "Middle Cut-Away 8.5 cm",
-      "orientation": null,
-      "illustration": "/images/techpacks/shirt/lapel/middle-cut-away-in-85cm.jpg",
-      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\techpacks\\shirt\\lapel\\middle-cut-away-in-85cm.jpg",
-      "rows": [
-        "shirt|collar|lapel|collar-mid-cutaway-85"
-      ]
-    },
-    {
-      "identity": "shirt-collar|lapel|collar-regular-19|Regular Collar 19",
+      "identity": "shirt-collar|lapel|collar-regular-19",
       "part": "shirt-collar",
       "product": "shirt",
       "section": "collar",
@@ -1536,22 +1369,7 @@
       ]
     },
     {
-      "identity": "shirt-collar|lapel|collar-regular-21|Regular Collar 21",
-      "part": "shirt-collar",
-      "product": "shirt",
-      "section": "collar",
-      "field": "lapel",
-      "option": "collar-regular-21",
-      "label": "Regular Collar 21",
-      "orientation": null,
-      "illustration": "/images/techpacks/shirt/lapel/regular-collar-21.jpg",
-      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\techpacks\\shirt\\lapel\\regular-collar-21.jpg",
-      "rows": [
-        "shirt|collar|lapel|collar-regular-21"
-      ]
-    },
-    {
-      "identity": "shirt-collar|lapel|collar-rounded-stand|Rounded Stand Collar",
+      "identity": "shirt-collar|lapel|collar-rounded-stand",
       "part": "shirt-collar",
       "product": "shirt",
       "section": "collar",
@@ -1566,7 +1384,7 @@
       ]
     },
     {
-      "identity": "shirt-collar|lapel|collar-small-sq-50|Small Square 5.0 cm",
+      "identity": "shirt-collar|lapel|collar-small-sq-50",
       "part": "shirt-collar",
       "product": "shirt",
       "section": "collar",
@@ -1581,7 +1399,7 @@
       ]
     },
     {
-      "identity": "shirt-collar|lapel|collar-sq-65-btn|Square 6.5 cm with Button",
+      "identity": "shirt-collar|lapel|collar-sq-65-btn",
       "part": "shirt-collar",
       "product": "shirt",
       "section": "collar",
@@ -1596,7 +1414,7 @@
       ]
     },
     {
-      "identity": "shirt-cuff|cuff|cuff-curve-1btn-1bh|Curve Cuff — 1 Button, 1 Buttonhole",
+      "identity": "shirt-cuff|cuff|cuff-curve-1btn-1bh",
       "part": "shirt-cuff",
       "product": "shirt",
       "section": "cuffs",
@@ -1611,7 +1429,7 @@
       ]
     },
     {
-      "identity": "shirt-cuff|cuff|cuff-curved-1btn-1bh|Curved Cuff — 1 Button, 1 Buttonhole",
+      "identity": "shirt-cuff|cuff|cuff-curved-1btn-1bh",
       "part": "shirt-cuff",
       "product": "shirt",
       "section": "cuffs",
@@ -1626,7 +1444,7 @@
       ]
     },
     {
-      "identity": "shirt-cuff|cuff|cuff-curved-french-2bh|Curved French Style — 2 Buttonholes",
+      "identity": "shirt-cuff|cuff|cuff-curved-french-2bh",
       "part": "shirt-cuff",
       "product": "shirt",
       "section": "cuffs",
@@ -1641,22 +1459,7 @@
       ]
     },
     {
-      "identity": "shirt-cuff|cuff|cuff-french-4bh-v2|French Cuff — 4 Buttonholes (Variant)",
-      "part": "shirt-cuff",
-      "product": "shirt",
-      "section": "cuffs",
-      "field": "cuff",
-      "option": "cuff-french-4bh-v2",
-      "label": "French Cuff — 4 Buttonholes (Variant)",
-      "orientation": null,
-      "illustration": "/images/cuff/french-cuff-with-4-buttonholes-variant.jpg",
-      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\cuff\\french-cuff-with-4-buttonholes-variant.jpg",
-      "rows": [
-        "shirt|cuffs|cuff|cuff-french-4bh-v2"
-      ]
-    },
-    {
-      "identity": "shirt-cuff|cuff|cuff-french-4bh|French Cuff — 4 Buttonholes",
+      "identity": "shirt-cuff|cuff|cuff-french-4bh",
       "part": "shirt-cuff",
       "product": "shirt",
       "section": "cuffs",
@@ -1671,7 +1474,22 @@
       ]
     },
     {
-      "identity": "shirt-cuff|cuff|cuff-french-pleats-4bh|French Cuff with Pleats — 4 Buttonholes",
+      "identity": "shirt-cuff|cuff|cuff-french-4bh-v2",
+      "part": "shirt-cuff",
+      "product": "shirt",
+      "section": "cuffs",
+      "field": "cuff",
+      "option": "cuff-french-4bh-v2",
+      "label": "French Cuff — 4 Buttonholes (Variant)",
+      "orientation": null,
+      "illustration": "/images/cuff/french-cuff-with-4-buttonholes-variant.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\cuff\\french-cuff-with-4-buttonholes-variant.jpg",
+      "rows": [
+        "shirt|cuffs|cuff|cuff-french-4bh-v2"
+      ]
+    },
+    {
+      "identity": "shirt-cuff|cuff|cuff-french-pleats-4bh",
       "part": "shirt-cuff",
       "product": "shirt",
       "section": "cuffs",
@@ -1686,7 +1504,7 @@
       ]
     },
     {
-      "identity": "shirt-cuff|cuff|cuff-hex-1btn-1bh|Hexagon Cuff — 1 Button, 1 Buttonhole",
+      "identity": "shirt-cuff|cuff|cuff-hex-1btn-1bh",
       "part": "shirt-cuff",
       "product": "shirt",
       "section": "cuffs",
@@ -1701,7 +1519,7 @@
       ]
     },
     {
-      "identity": "shirt-cuff|cuff|cuff-hex-2btn-1bh|Hexagonal Cuff — 2 Buttons, 1 Buttonhole",
+      "identity": "shirt-cuff|cuff|cuff-hex-2btn-1bh",
       "part": "shirt-cuff",
       "product": "shirt",
       "section": "cuffs",
@@ -1716,7 +1534,7 @@
       ]
     },
     {
-      "identity": "shirt-cuff|cuff|cuff-hex-2btn-2bh|Hexagonal Cuff — 2 Buttons, 2 Buttonholes",
+      "identity": "shirt-cuff|cuff|cuff-hex-2btn-2bh",
       "part": "shirt-cuff",
       "product": "shirt",
       "section": "cuffs",
@@ -1731,7 +1549,7 @@
       ]
     },
     {
-      "identity": "shirt-cuff|cuff|cuff-hex-french-2bh|Hexagonal French Style — 2 Buttonholes",
+      "identity": "shirt-cuff|cuff|cuff-hex-french-2bh",
       "part": "shirt-cuff",
       "product": "shirt",
       "section": "cuffs",
@@ -1746,7 +1564,7 @@
       ]
     },
     {
-      "identity": "shirt-cuff|cuff|cuff-hex-french-4bh|Hexagon French Cuff — 4 Buttonholes",
+      "identity": "shirt-cuff|cuff|cuff-hex-french-4bh",
       "part": "shirt-cuff",
       "product": "shirt",
       "section": "cuffs",
@@ -1761,22 +1579,7 @@
       ]
     },
     {
-      "identity": "shirt-cuff|cuff|cuff-round-1btn-1bh-pleats|Round Cuff with Pleats — 1 Button, 1 Bh",
-      "part": "shirt-cuff",
-      "product": "shirt",
-      "section": "cuffs",
-      "field": "cuff",
-      "option": "cuff-round-1btn-1bh-pleats",
-      "label": "Round Cuff with Pleats — 1 Button, 1 Bh",
-      "orientation": null,
-      "illustration": "/images/cuff/round-cuff-with-1-button-and-1-buttonhole-with-pleats.jpg",
-      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\cuff\\round-cuff-with-1-button-and-1-buttonhole-with-pleats.jpg",
-      "rows": [
-        "shirt|cuffs|cuff|cuff-round-1btn-1bh-pleats"
-      ]
-    },
-    {
-      "identity": "shirt-cuff|cuff|cuff-round-1btn-1bh|Round Cuff — 1 Button, 1 Buttonhole",
+      "identity": "shirt-cuff|cuff|cuff-round-1btn-1bh",
       "part": "shirt-cuff",
       "product": "shirt",
       "section": "cuffs",
@@ -1791,7 +1594,22 @@
       ]
     },
     {
-      "identity": "shirt-cuff|cuff|cuff-round-2btn-2bh|Round Cuff — 2 Buttons, 2 Buttonholes",
+      "identity": "shirt-cuff|cuff|cuff-round-1btn-1bh-pleats",
+      "part": "shirt-cuff",
+      "product": "shirt",
+      "section": "cuffs",
+      "field": "cuff",
+      "option": "cuff-round-1btn-1bh-pleats",
+      "label": "Round Cuff with Pleats — 1 Button, 1 Bh",
+      "orientation": null,
+      "illustration": "/images/cuff/round-cuff-with-1-button-and-1-buttonhole-with-pleats.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\cuff\\round-cuff-with-1-button-and-1-buttonhole-with-pleats.jpg",
+      "rows": [
+        "shirt|cuffs|cuff|cuff-round-1btn-1bh-pleats"
+      ]
+    },
+    {
+      "identity": "shirt-cuff|cuff|cuff-round-2btn-2bh",
       "part": "shirt-cuff",
       "product": "shirt",
       "section": "cuffs",
@@ -1806,7 +1624,7 @@
       ]
     },
     {
-      "identity": "shirt-cuff|cuff|cuff-round-french-4bh|Round French Cuff — 4 Buttonholes",
+      "identity": "shirt-cuff|cuff|cuff-round-french-4bh",
       "part": "shirt-cuff",
       "product": "shirt",
       "section": "cuffs",
@@ -1821,7 +1639,7 @@
       ]
     },
     {
-      "identity": "shirt-cuff|cuff|cuff-rounded-1btn-1bh-pleats|Rounded Cuff with Pleats — 1 Button, 1 Bh",
+      "identity": "shirt-cuff|cuff|cuff-rounded-1btn-1bh-pleats",
       "part": "shirt-cuff",
       "product": "shirt",
       "section": "cuffs",
@@ -1836,7 +1654,7 @@
       ]
     },
     {
-      "identity": "shirt-cuff|cuff|cuff-sq-1btn-1bh|Square Cuff — 1 Button, 1 Buttonhole",
+      "identity": "shirt-cuff|cuff|cuff-sq-1btn-1bh",
       "part": "shirt-cuff",
       "product": "shirt",
       "section": "cuffs",
@@ -1851,7 +1669,7 @@
       ]
     },
     {
-      "identity": "shirt-cuff|cuff|cuff-sq-2btn-1bh|Square Cuff — 2 Buttons, 1 Buttonhole",
+      "identity": "shirt-cuff|cuff|cuff-sq-2btn-1bh",
       "part": "shirt-cuff",
       "product": "shirt",
       "section": "cuffs",
@@ -1866,7 +1684,7 @@
       ]
     },
     {
-      "identity": "shirt-cuff|cuff|cuff-sq-2btn-2bh|Square Cuff — 2 Buttons, 2 Buttonholes",
+      "identity": "shirt-cuff|cuff|cuff-sq-2btn-2bh",
       "part": "shirt-cuff",
       "product": "shirt",
       "section": "cuffs",
@@ -1881,7 +1699,7 @@
       ]
     },
     {
-      "identity": "shirt-cuff|cuff|cuff-sq-3btn-3bh|Square Cuff — 3 Buttons, 3 Buttonholes",
+      "identity": "shirt-cuff|cuff|cuff-sq-3btn-3bh",
       "part": "shirt-cuff",
       "product": "shirt",
       "section": "cuffs",
@@ -1896,7 +1714,7 @@
       ]
     },
     {
-      "identity": "shirt-cuff|long_sleeve_cuff_width|cw-5|5.0 cm",
+      "identity": "shirt-cuff|long_sleeve_cuff_width|cw-5",
       "part": "shirt-cuff",
       "product": "shirt",
       "section": "cuffs",
@@ -1911,7 +1729,7 @@
       ]
     },
     {
-      "identity": "shirt-cuff|long_sleeve_cuff_width|cw-6|6.0 cm",
+      "identity": "shirt-cuff|long_sleeve_cuff_width|cw-6",
       "part": "shirt-cuff",
       "product": "shirt",
       "section": "cuffs",
@@ -1926,7 +1744,7 @@
       ]
     },
     {
-      "identity": "shirt-cuff|long_sleeve_cuff_width|cw-65|6.5 cm",
+      "identity": "shirt-cuff|long_sleeve_cuff_width|cw-65",
       "part": "shirt-cuff",
       "product": "shirt",
       "section": "cuffs",
@@ -1941,7 +1759,7 @@
       ]
     },
     {
-      "identity": "shirt-cuff|long_sleeve_cuff_width|cw-7|7.0 cm",
+      "identity": "shirt-cuff|long_sleeve_cuff_width|cw-7",
       "part": "shirt-cuff",
       "product": "shirt",
       "section": "cuffs",
@@ -1956,7 +1774,7 @@
       ]
     },
     {
-      "identity": "shirt-cuff|long_sleeve_cuff_width|cw-8|8.0 cm",
+      "identity": "shirt-cuff|long_sleeve_cuff_width|cw-8",
       "part": "shirt-cuff",
       "product": "shirt",
       "section": "cuffs",
@@ -1971,7 +1789,7 @@
       ]
     },
     {
-      "identity": "shirt-front|canvas|canvas-none-press|None Pressing Craftsmanship",
+      "identity": "shirt-front|canvas|canvas-none-press",
       "part": "shirt-front",
       "product": "shirt",
       "section": "canvas-front",
@@ -1986,7 +1804,7 @@
       ]
     },
     {
-      "identity": "shirt-front|canvas|canvas-senior|Senior Craftsmanship",
+      "identity": "shirt-front|canvas|canvas-senior",
       "part": "shirt-front",
       "product": "shirt",
       "section": "canvas-front",
@@ -2001,7 +1819,7 @@
       ]
     },
     {
-      "identity": "shirt-front|canvas|canvas-top|Top Craftsmanship",
+      "identity": "shirt-front|canvas|canvas-top",
       "part": "shirt-front",
       "product": "shirt",
       "section": "canvas-front",
@@ -2016,97 +1834,7 @@
       ]
     },
     {
-      "identity": "shirt-front|front|front-narrow-pleats|Dress Shirt Narrow Pleats",
-      "part": "shirt-front",
-      "product": "shirt",
-      "section": "canvas-front",
-      "field": "front",
-      "option": "front-narrow-pleats",
-      "label": "Dress Shirt Narrow Pleats",
-      "orientation": null,
-      "illustration": "/images/front/dress-shirt-with-narrow-pleats.jpg",
-      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\front\\dress-shirt-with-narrow-pleats.jpg",
-      "rows": [
-        "shirt|canvas-front|front|front-narrow-pleats"
-      ]
-    },
-    {
-      "identity": "shirt-front|front|front-normal|Normal (Standard)",
-      "part": "shirt-front",
-      "product": "shirt",
-      "section": "canvas-front",
-      "field": "front",
-      "option": "front-normal",
-      "label": "Normal (Standard)",
-      "orientation": null,
-      "illustration": "/images/front/normal.jpg",
-      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\front\\normal.jpg",
-      "rows": [
-        "shirt|canvas-front|front|front-normal"
-      ]
-    },
-    {
-      "identity": "shirt-hem|hem|hem-large-round-triangle-gusset|Large Round Hem with Triangle Gusset",
-      "part": "shirt-hem",
-      "product": "shirt",
-      "section": "pocket-hem",
-      "field": "hem",
-      "option": "hem-large-round-triangle-gusset",
-      "label": "Large Round Hem with Triangle Gusset",
-      "orientation": null,
-      "illustration": "/images/hem/large-round-hem-with-triangle-gusset.jpg",
-      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\hem\\large-round-hem-with-triangle-gusset.jpg",
-      "rows": [
-        "shirt|pocket-hem|hem|hem-large-round-triangle-gusset"
-      ]
-    },
-    {
-      "identity": "shirt-hem|hem|hem-round-hexagon-gusset|Round Hem with Hexagon Gusset",
-      "part": "shirt-hem",
-      "product": "shirt",
-      "section": "pocket-hem",
-      "field": "hem",
-      "option": "hem-round-hexagon-gusset",
-      "label": "Round Hem with Hexagon Gusset",
-      "orientation": null,
-      "illustration": "/images/hem/round-hem-with-hexagon-gusset.jpg",
-      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\hem\\round-hem-with-hexagon-gusset.jpg",
-      "rows": [
-        "shirt|pocket-hem|hem|hem-round-hexagon-gusset"
-      ]
-    },
-    {
-      "identity": "shirt-hem|hem|hem-round-pentagon-gusset|Round Hem with Pentagon Gusset",
-      "part": "shirt-hem",
-      "product": "shirt",
-      "section": "pocket-hem",
-      "field": "hem",
-      "option": "hem-round-pentagon-gusset",
-      "label": "Round Hem with Pentagon Gusset",
-      "orientation": null,
-      "illustration": "/images/hem/round-hem-with-pentagon-gusset.jpg",
-      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\hem\\round-hem-with-pentagon-gusset.jpg",
-      "rows": [
-        "shirt|pocket-hem|hem|hem-round-pentagon-gusset"
-      ]
-    },
-    {
-      "identity": "shirt-hem|hem|hem-small-round-pentagon-gusset|Small Round Hem with Pentagon Gusset",
-      "part": "shirt-hem",
-      "product": "shirt",
-      "section": "pocket-hem",
-      "field": "hem",
-      "option": "hem-small-round-pentagon-gusset",
-      "label": "Small Round Hem with Pentagon Gusset",
-      "orientation": null,
-      "illustration": "/images/techpacks/shirt/hem/round-hem-with-pentagon-gusset.jpg",
-      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\techpacks\\shirt\\hem\\round-hem-with-pentagon-gusset.jpg",
-      "rows": [
-        "shirt|pocket-hem|hem|hem-small-round-pentagon-gusset"
-      ]
-    },
-    {
-      "identity": "shirt-hem|hem|hem-small-round|Small Round Hem",
+      "identity": "shirt-hem|hem|hem-small-round",
       "part": "shirt-hem",
       "product": "shirt",
       "section": "pocket-hem",
@@ -2121,37 +1849,22 @@
       ]
     },
     {
-      "identity": "shirt-hem|hem|hem-sq-side-vents-5cm|Squared Bottom with Side Vents 5 cm",
+      "identity": "shirt-hem|hem|hem-small-round-pentagon-gusset",
       "part": "shirt-hem",
       "product": "shirt",
       "section": "pocket-hem",
       "field": "hem",
-      "option": "hem-sq-side-vents-5cm",
-      "label": "Squared Bottom with Side Vents 5 cm",
+      "option": "hem-small-round-pentagon-gusset",
+      "label": "Small Round Hem with Pentagon Gusset",
       "orientation": null,
-      "illustration": "/images/hem/squared-bottom-with-side-vents-5cm.jpg",
-      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\hem\\squared-bottom-with-side-vents-5cm.jpg",
+      "illustration": "/images/techpacks/shirt/hem/round-hem-with-pentagon-gusset.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\techpacks\\shirt\\hem\\round-hem-with-pentagon-gusset.jpg",
       "rows": [
-        "shirt|pocket-hem|hem|hem-sq-side-vents-5cm"
+        "shirt|pocket-hem|hem|hem-small-round-pentagon-gusset"
       ]
     },
     {
-      "identity": "shirt-hem|hem|hem-straight-side-vents|Straight Hem with Side Vents",
-      "part": "shirt-hem",
-      "product": "shirt",
-      "section": "pocket-hem",
-      "field": "hem",
-      "option": "hem-straight-side-vents",
-      "label": "Straight Hem with Side Vents",
-      "orientation": null,
-      "illustration": "/images/hem/straight-hem-with-side-vents.jpg",
-      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\hem\\straight-hem-with-side-vents.jpg",
-      "rows": [
-        "shirt|pocket-hem|hem|hem-straight-side-vents"
-      ]
-    },
-    {
-      "identity": "shirt-placket|first_button_distance|fbd-10|10 cm",
+      "identity": "shirt-placket|first_button_distance|fbd-10",
       "part": "shirt-placket",
       "product": "shirt",
       "section": "placket",
@@ -2166,7 +1879,7 @@
       ]
     },
     {
-      "identity": "shirt-placket|first_button_distance|fbd-4|4 cm",
+      "identity": "shirt-placket|first_button_distance|fbd-4",
       "part": "shirt-placket",
       "product": "shirt",
       "section": "placket",
@@ -2181,7 +1894,7 @@
       ]
     },
     {
-      "identity": "shirt-placket|first_button_distance|fbd-5|5 cm",
+      "identity": "shirt-placket|first_button_distance|fbd-5",
       "part": "shirt-placket",
       "product": "shirt",
       "section": "placket",
@@ -2196,7 +1909,7 @@
       ]
     },
     {
-      "identity": "shirt-placket|first_button_distance|fbd-6|6 cm",
+      "identity": "shirt-placket|first_button_distance|fbd-6",
       "part": "shirt-placket",
       "product": "shirt",
       "section": "placket",
@@ -2211,7 +1924,7 @@
       ]
     },
     {
-      "identity": "shirt-placket|first_button_distance|fbd-65|6.5 cm",
+      "identity": "shirt-placket|first_button_distance|fbd-65",
       "part": "shirt-placket",
       "product": "shirt",
       "section": "placket",
@@ -2226,7 +1939,7 @@
       ]
     },
     {
-      "identity": "shirt-placket|first_button_distance|fbd-7|7 cm",
+      "identity": "shirt-placket|first_button_distance|fbd-7",
       "part": "shirt-placket",
       "product": "shirt",
       "section": "placket",
@@ -2241,7 +1954,7 @@
       ]
     },
     {
-      "identity": "shirt-placket|first_button_distance|fbd-8|8 cm",
+      "identity": "shirt-placket|first_button_distance|fbd-8",
       "part": "shirt-placket",
       "product": "shirt",
       "section": "placket",
@@ -2256,7 +1969,7 @@
       ]
     },
     {
-      "identity": "shirt-placket|first_button_distance|fbd-9|9 cm",
+      "identity": "shirt-placket|first_button_distance|fbd-9",
       "part": "shirt-placket",
       "product": "shirt",
       "section": "placket",
@@ -2271,7 +1984,7 @@
       ]
     },
     {
-      "identity": "shirt-placket|placket_width|pw-30|3.0 cm",
+      "identity": "shirt-placket|placket_width|pw-30",
       "part": "shirt-placket",
       "product": "shirt",
       "section": "placket",
@@ -2286,7 +1999,7 @@
       ]
     },
     {
-      "identity": "shirt-placket|placket_width|pw-35|3.5 cm",
+      "identity": "shirt-placket|placket_width|pw-35",
       "part": "shirt-placket",
       "product": "shirt",
       "section": "placket",
@@ -2301,7 +2014,7 @@
       ]
     },
     {
-      "identity": "shirt-placket|placket_width|pw-40|4.0 cm",
+      "identity": "shirt-placket|placket_width|pw-40",
       "part": "shirt-placket",
       "product": "shirt",
       "section": "placket",
@@ -2316,7 +2029,7 @@
       ]
     },
     {
-      "identity": "shirt-placket|placket_width|pw-45|4.5 cm",
+      "identity": "shirt-placket|placket_width|pw-45",
       "part": "shirt-placket",
       "product": "shirt",
       "section": "placket",
@@ -2331,82 +2044,7 @@
       ]
     },
     {
-      "identity": "shirt-placket|placket|placket-half-hidden|Half Hidden Placket",
-      "part": "shirt-placket",
-      "product": "shirt",
-      "section": "placket",
-      "field": "placket",
-      "option": "placket-half-hidden",
-      "label": "Half Hidden Placket",
-      "orientation": null,
-      "illustration": "/images/placket/half-hidden-placket.jpg",
-      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\placket\\half-hidden-placket.jpg",
-      "rows": [
-        "shirt|placket|placket|placket-half-hidden"
-      ]
-    },
-    {
-      "identity": "shirt-placket|placket|placket-hidden-turnup|Hidden Turn-Up Placket with Knots",
-      "part": "shirt-placket",
-      "product": "shirt",
-      "section": "placket",
-      "field": "placket",
-      "option": "placket-hidden-turnup",
-      "label": "Hidden Turn-Up Placket with Knots",
-      "orientation": null,
-      "illustration": "/images/placket/hidden-turn-up-placket-with-knots.jpg",
-      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\placket\\hidden-turn-up-placket-with-knots.jpg",
-      "rows": [
-        "shirt|placket|placket|placket-hidden-turnup"
-      ]
-    },
-    {
-      "identity": "shirt-placket|placket|placket-hidden|Hidden Placket",
-      "part": "shirt-placket",
-      "product": "shirt",
-      "section": "placket",
-      "field": "placket",
-      "option": "placket-hidden",
-      "label": "Hidden Placket",
-      "orientation": null,
-      "illustration": "/images/placket/hidden-placket.jpg",
-      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\placket\\hidden-placket.jpg",
-      "rows": [
-        "shirt|placket|placket|placket-hidden"
-      ]
-    },
-    {
-      "identity": "shirt-placket|placket|placket-stud-hidden-2btn|Stud Hidden Placket (2 Buttons)",
-      "part": "shirt-placket",
-      "product": "shirt",
-      "section": "placket",
-      "field": "placket",
-      "option": "placket-stud-hidden-2btn",
-      "label": "Stud Hidden Placket (2 Buttons)",
-      "orientation": null,
-      "illustration": "/images/placket/stud-hidden-placket-with-2-buttons.jpg",
-      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\placket\\stud-hidden-placket-with-2-buttons.jpg",
-      "rows": [
-        "shirt|placket|placket|placket-stud-hidden-2btn"
-      ]
-    },
-    {
-      "identity": "shirt-pocket|pocket|pocket-hexagon|Hexagon Pocket",
-      "part": "shirt-pocket",
-      "product": "shirt",
-      "section": "pocket-hem",
-      "field": "pocket",
-      "option": "pocket-hexagon",
-      "label": "Hexagon Pocket",
-      "orientation": null,
-      "illustration": "/images/pocket/hexagon-pocket.jpg",
-      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\pocket\\hexagon-pocket.jpg",
-      "rows": [
-        "shirt|pocket-hem|pocket|pocket-hexagon"
-      ]
-    },
-    {
-      "identity": "shirt-pocket|pocket|pocket-none|No Pocket",
+      "identity": "shirt-pocket|pocket|pocket-none",
       "part": "shirt-pocket",
       "product": "shirt",
       "section": "pocket-hem",
@@ -2421,22 +2059,7 @@
       ]
     },
     {
-      "identity": "shirt-pocket|pocket|pocket-round-welt|Round Pocket with Welt",
-      "part": "shirt-pocket",
-      "product": "shirt",
-      "section": "pocket-hem",
-      "field": "pocket",
-      "option": "pocket-round-welt",
-      "label": "Round Pocket with Welt",
-      "orientation": null,
-      "illustration": "/images/pocket/round-pocket-with-welt.jpg",
-      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\pocket\\round-pocket-with-welt.jpg",
-      "rows": [
-        "shirt|pocket-hem|pocket|pocket-round-welt"
-      ]
-    },
-    {
-      "identity": "shirt-pocket|pocket|pocket-round|Round Pocket",
+      "identity": "shirt-pocket|pocket|pocket-round",
       "part": "shirt-pocket",
       "product": "shirt",
       "section": "pocket-hem",
@@ -2451,7 +2074,22 @@
       ]
     },
     {
-      "identity": "shirt-pocket|pocket|pocket-triangle|Triangle Pocket",
+      "identity": "shirt-pocket|pocket|pocket-round-welt",
+      "part": "shirt-pocket",
+      "product": "shirt",
+      "section": "pocket-hem",
+      "field": "pocket",
+      "option": "pocket-round-welt",
+      "label": "Round Pocket with Welt",
+      "orientation": null,
+      "illustration": "/images/pocket/round-pocket-with-welt.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\pocket\\round-pocket-with-welt.jpg",
+      "rows": [
+        "shirt|pocket-hem|pocket|pocket-round-welt"
+      ]
+    },
+    {
+      "identity": "shirt-pocket|pocket|pocket-triangle",
       "part": "shirt-pocket",
       "product": "shirt",
       "section": "pocket-hem",

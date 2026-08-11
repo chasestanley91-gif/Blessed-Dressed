@@ -104,7 +104,19 @@ for (const file of fs.readdirSync(OPTIONS_DIR).filter((f) => f.endsWith('.json')
 
         // ONE photograph per garment feature, fanned out to every product row
         // that shares it.
-        const identity = `${spec.part}|${f.id}|${o.id}|${o.label}`;
+        //
+        // There are only four garments — shirt, jacket, trousers, vest. A
+        // 2-piece suit is trousers + jacket; a 3-piece adds a vest. So
+        // suit-2pc and suit-3pc contain no craft options of their own, only
+        // copies: 2,862 catalog rows are 1,530 distinct options, and the
+        // arithmetic is exact (trousers 222 x 3 = 666, vest 134 x 2 = 268).
+        //
+        // The identity deliberately EXCLUDES the label. Product files have
+        // drifted apart in wording — jacket `sleeve-head/sleeve-regular` reads
+        // "Regular" in sport-coat and suit-3pc but "THE STRUCTURED / ENGLISH
+        // SHOULDER " in suit-2pc — and keying on the label split one craft
+        // option into two queue entries that would each have been paid for.
+        const identity = `${spec.part}|${f.id}|${o.id}`;
         if (!byIdentity.has(identity)) {
           if (alreadyDone(product, o.id) || alreadyPublished(o)) { done += 1; byIdentity.set(identity, null); continue; }
           byIdentity.set(identity, {
@@ -114,7 +126,17 @@ for (const file of fs.readdirSync(OPTIONS_DIR).filter((f) => f.endsWith('.json')
             rows: [addr],
           });
         } else if (byIdentity.get(identity)) {
-          byIdentity.get(identity).rows.push(addr);
+          const entry = byIdentity.get(identity);
+          entry.rows.push(addr);
+          // Where the drifted rows disagree on the drawing, shoot from the
+          // trustworthy one. /images/jacket/ was measured 5.8% usable — 46 of
+          // 52 files are the wrong subject entirely — so a supplier drawing
+          // beats it whichever product row happened to be seen first.
+          const untrusted = (p) => typeof p === 'string' && p.startsWith('/images/jacket/');
+          if (untrusted(entry.illustration) && !untrusted(illus)) {
+            entry.product = product; entry.section = s.id; entry.label = o.label;
+            entry.illustration = illus; entry.illustrationDisk = disk;
+          }
         }
       }
     }
