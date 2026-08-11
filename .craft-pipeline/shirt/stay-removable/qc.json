@@ -2,18 +2,18 @@
   "addr": "shirt > stay-removable",
   "productId": "shirt",
   "optionId": "stay-removable",
-  "attempt": 2,
-  "maxAttempts": 3,
+  "attempt": 3,
+  "maxAttempts": 1,
   "scores": {
-    "shape": 93,
-    "geometry": 94,
-    "dimensions": 91,
-    "angles": 94,
+    "shape": 96,
+    "geometry": 92,
+    "dimensions": 93,
+    "angles": 95,
     "construction": 96,
     "placement": 95,
-    "symmetry": 86,
-    "composition": 95,
-    "blueprint-match": 91
+    "symmetry": 82,
+    "composition": 97,
+    "blueprint-match": 85
   },
   "scoreMin": 98,
   "waiverMin": 95,
@@ -29,78 +29,49 @@
     "blueprint-match"
   ],
   "belowWaiverMinCategories": [
-    "shape",
     "geometry",
     "dimensions",
-    "angles",
     "symmetry",
     "blueprint-match"
   ],
   "errors": [
     {
       "severity": "major",
-      "category": "symmetry-not-demonstrable",
-      "description": "The left collar leaf is turned back to expose the stay pocket, so the checklist requirement that both leaves mirror each other exactly in length, angle and tip shape cannot be verified from this frame. Only the right leaf is shown in its natural lie.",
-      "expected": "Both collar leaves visible, relaxed apart, mirroring each other exactly in length, angle and tip shape (illustration is a flat symmetric collar layout).",
-      "actual": "Left leaf folded back over the band showing its underside; right leaf flat with a clean acute point. No side-by-side comparison possible."
+      "category": "symmetry",
+      "description": "Only one collar leaf carries a visible removable stay and stay-pocket opening. The opposite (right) leaf shows two faint converging stitch lines running to the point but no welt/slot opening and no stay, so the viewer cannot confirm the option exists on both sides.",
+      "expected": "The tech-pack flat marks a stay channel in red at BOTH collar points; both leaves should read as stay-pocketed, mirroring each other in length, angle and tip shape.",
+      "actual": "Left leaf: mother-of-pearl stay half-inserted into a clearly stitched welt pocket. Right leaf: plain topstitched point with an interior chevron seam line only, no slot, no stay."
+    },
+    {
+      "severity": "major",
+      "category": "orientation-view",
+      "description": "The illustration is registered as a front/flat view of the whole collar (leaf above, band below, buttonhole left, button right). The render is a three-quarter close-up with the leaves folded back so the UNDERCOLLAR faces camera. This is a defensible choice (a removable stay physically lives on the underside and cannot be shown from the outside face), but it is not the drawn view.",
+      "expected": "Front face of the garment, collar presented as drawn, both leaves and the spread between them visible.",
+      "actual": "Three-quarter overhead view of the collar underside; the right leaf is seen from its outer face, the left from its inner face."
     },
     {
       "severity": "minor",
-      "category": "staging-deviation",
-      "description": "The locked prompt asks for the leaves relaxed apart with points, spread and band all unobstructed. Proving a removable stay requires exposing the underside of a point, which necessarily obstructs one leaf. This tension is structural, not fixable by prompt wording.",
-      "expected": "Leaves relaxed apart, spread and band unobstructed, same viewing angle as the reference flat.",
-      "actual": "One leaf lifted and folded back so its underside faces camera; the spread between points is partly closed by the fold."
-    },
-    {
-      "severity": "minor",
-      "category": "possible-artifact",
-      "description": "Faint low-contrast smudging in the out-of-focus inner collar band above the buttonhole. At 3x magnification it did not resolve into legible characters; it may be blurred cloth shading or may be ghost lettering. NOT VERIFIED either way.",
-      "expected": "Clean cloth only, no text, label or annotation anywhere in frame.",
-      "actual": "Blurred inner-band area contains faint irregular marks that could not be resolved at magnification."
-    },
-    {
-      "severity": "minor",
-      "category": "dimensions-unverifiable",
-      "description": "The source illustration is a 180x180 px flat thumbnail; collar stand height, leaf length and topstitch gauge cannot be measured from it to the precision the checklist implies. Photo values are plausible but were NOT verified against measured drawing values.",
-      "expected": "Collar stand height, band seam, interlining edge and topstitch reproduced to the drawing.",
-      "actual": "All four features present and well formed in the photo; exact proportions unverifiable against a 180px source."
+      "category": "blueprint-coverage",
+      "description": "Because the frame is cropped tight on one collar point, several mandatory geometry items in the drawing cannot be verified from the render.",
+      "expected": "Reproduce the unobstructed spread between the collar points and both leaves mirroring each other in length, angle and tip shape.",
+      "actual": "The full spread between points is out of frame / distorted by the fold; leaf-to-leaf length and angle comparison is not possible from this crop."
     }
   ],
-  "verdict": "FAIL",
+  "verdict": "UNMET",
   "waiver": null,
-  "correction": {
-    "errors": [
-      {
-        "severity": "major",
-        "category": "symmetry-not-demonstrable",
-        "error": "The left collar leaf is turned back to expose the stay pocket, so the checklist requirement that both leaves mirror each other exactly in length, angle and tip shape cannot be verified from this frame. Only the right leaf is shown in its natural lie.",
-        "expected": "Both collar leaves visible, relaxed apart, mirroring each other exactly in length, angle and tip shape (illustration is a flat symmetric collar layout).",
-        "actual": "Left leaf folded back over the band showing its underside; right leaf flat with a clean acute point. No side-by-side comparison possible.",
-        "correction": "Regenerate to fix: The left collar leaf is turned back to expose the stay pocket, so the checklist requirement that both leaves mirror each other exactly in length, angle and tip shape cannot be verified from this frame. Only the right leaf is shown in its natural lie."
-      }
-    ],
-    "lockedFeatures": [
-      "stitched stay pocket on the underside of the collar point, opening toward the collar band",
-      "one slim rigid removable collar stay half withdrawn from that pocket, rounded end out",
-      "straight acute collar point termination (not blunt, not rounded club)",
-      "worked horizontal buttonhole on the collar band, top band button unfastened",
-      "topstitched collar leaf edge and clean band seam",
-      "no model, no skin, no necktie, seamless neutral grey background"
-    ],
-    "forbiddenChanges": [
-      "do not alter any checklist item this attempt already passed",
-      "do not change the camera crop, composition, or accessories unless the error is itself a composition error",
-      "do not change the garment part, orientation, or any other option's geometry"
-    ]
-  },
+  "correction": null,
   "lockedFeatures": [
-    "stitched stay pocket on the underside of the collar point, opening toward the collar band",
-    "one slim rigid removable collar stay half withdrawn from that pocket, rounded end out",
-    "straight acute collar point termination (not blunt, not rounded club)",
-    "worked horizontal buttonhole on the collar band, top band button unfastened",
-    "topstitched collar leaf edge and clean band seam",
-    "no model, no skin, no necktie, seamless neutral grey background"
+    "removable collar stay physically present as a slim rigid mother-of-pearl strip",
+    "stay inserted into a sewn pocket on the underside of the collar point, welt opening visible",
+    "stay angled diagonally toward the collar point, matching the red channel direction in the flat",
+    "collar leaf terminating in a straight acute point (no club tip, no squared tip, no button-down)",
+    "collar band with band seam and topstitch, mother-of-pearl band button on one end and worked horizontal buttonhole on the other",
+    "top collar-band button UNFASTENED, band open, no necktie",
+    "no model, no face, no neck, no skin, no mannequin anywhere in frame",
+    "seamless plain neutral light-grey studio background, no props",
+    "no annotation, numbers, leader lines, arrows or red guide marks traced from the drawing",
+    "photorealistic cotton poplin weave and fine stitching, no line-art or CGI look"
   ],
-  "notes": "Attempt 1 (candidate-1.png) was a generic point collar with ZERO evidence of a removable stay and a malformed tongue of cloth hanging at the throat - unusable. Attempt 2 (candidate-2.png) is the keeper: the stay pocket and half-withdrawn stay are unmistakable at magnification and the throat artifact is gone. A third generation was deliberately NOT spent: the remaining gap is structural, not correctable by prompt. Any frame that shows both leaves mirrored hides the underside pocket (that is exactly how attempt 1 failed), and any frame that shows the pocket must fold a leaf. Spending attempt 3 would most likely oscillate back to a stay-less generic collar. Human call needed on whether proving the feature outweighs showing leaf symmetry for this option.",
-  "checkedAt": "2026-08-11T00:29:46.711Z"
+  "notes": "Single generation, nano_banana_pro @ 4k, 3:4, tech-pack attached as image reference (media 54ba2f3f-991b-494e-b296-b5e243896626). Recorded as candidate-3.png (20.9 MB, 3584x4800). Verified at magnification: left-point crop at ~3x native shows the mother-of-pearl stay half-inserted into a stitched welt pocket, unambiguous; right-point crop at ~1.3x native shows only converging stitch lines with no slot and no stay. Band crop confirms one button + one worked buttonhole, band unfastened. Photographically this is a strong, genuinely educational frame - the 'removable' idea is legible in under a second - but it does not meet the 98 bar on symmetry or blueprint-match, so it is logged UNMET for the owner to judge. No retry attempted (one-generation-per-option rule).",
+  "checkedAt": "2026-08-11T05:02:57.519Z"
 }

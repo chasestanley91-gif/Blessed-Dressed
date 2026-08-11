@@ -68,6 +68,26 @@ const GENERATED_FOLDER = {
 const ledger = readJson(LEDGER, null);
 if (!ledger) { console.error('no ledger — run: node tools/build_decision_ledger.mjs --write'); process.exit(1); }
 
+// Freshness gate. The ledger is a snapshot; the owner keeps deciding. Enacting
+// a stale snapshot can publish an approval the owner has since replaced with a
+// rejection — with no error and no record contradicting it. Refuse instead.
+{
+  const built = Date.parse(ledger.builtAt ?? 0);
+  for (const src of ['data-store/image-review-decisions.json', 'data-store/image-review-decisions-log.json']) {
+    const p = path.join(REPO, src);
+    if (fs.existsSync(p) && fs.statSync(p).mtimeMs > built) {
+      console.error(`REFUSED: ${src} is newer than the ledger (ledger built ${ledger.builtAt}).`);
+      console.error('The owner has decided since the last build. Rebuild first:');
+      console.error('  node tools/build_decision_ledger.mjs --write');
+      process.exit(2);
+    }
+  }
+}
+
+// Queue items resolve review-copy approvals back to the original asset.
+const reviewQueue = readJson(path.join(REPO, 'data-store/image-review-queue.json'), { items: [] });
+const queueByKey = new Map((reviewQueue.items ?? []).map((i) => [i.key, i]));
+
 // ── load catalog with live row handles ──────────────────────────────────────
 const files = new Map(); // product -> { cfg, touched }
 const rows = [];         // { product, sectionId, fieldId, optionId, craftId, identity, label, option }
@@ -104,6 +124,9 @@ const approvedFilesByCraft = new Map(); // craftId -> Map(sha1 -> served path)
 for (const c of Object.values(ledger.crafts)) {
   for (const e of c.events ?? []) {
     if (e.machine) continue;
+    // Admin events count only while CURRENT — a withdrawn approval's bytes are
+    // not owner-approved bytes.
+    if (e.source === 'admin-portal' && e.current !== true) continue;
     if ((e.source === 'admin-portal' && e.verdict === 'approved') || (e.source === 'july-v3' && e.verdict === 'keep-file')) {
       const shas = [e.image?.sha1, e.image?.alias?.sha1].filter(Boolean);
       if (!shas.length) continue;
@@ -139,7 +162,10 @@ const flagged = [];   // anything refused, with the reason
 const corrections = []; // rejections to fold into prompts
 
 for (const c of Object.values(ledger.crafts)) {
-  const admin = (c.events ?? []).filter((e) => e.source === 'admin-portal' && !e.event?.startsWith?.('revoked'));
+  // Only decisions the ledger marks CURRENT. A withdrawn (undone) decision
+  // stays in events as history with current:false — acting on it would
+  // resurrect exactly what the owner erased.
+  const admin = (c.events ?? []).filter((e) => e.source === 'admin-portal' && e.current === true);
   if (!admin.length) continue;
   const latest = admin[admin.length - 1];
 
@@ -155,20 +181,38 @@ for (const c of Object.values(ledger.crafts)) {
   const img = latest.image;
   if (!img?.sha1) { flagged.push({ craftId: c.craftId, reason: 'approved image has no resolvable bytes' }); continue; }
 
-  // Where are the approved bytes?
+  // Where are the approved bytes? Three spellings exist in the wild:
+  // '.craft-pipeline/...' (repo-relative), 'public/images/...' (repo-relative,
+  // written by early log entries), '/images/...' (served form).
   let srcAbs = null;
   if (img.path.startsWith('.craft-pipeline')) srcAbs = path.join(REPO, img.path);
+  else if (img.path.startsWith('public/')) srcAbs = path.join(REPO, img.path);
   else srcAbs = path.join(PUBLIC, img.path.replace(/^\//, ''));
   if (!fs.existsSync(srcAbs)) { flagged.push({ craftId: c.craftId, reason: `approved file gone: ${img.path}` }); continue; }
   if (sha1(srcAbs) !== img.sha1) { flagged.push({ craftId: c.craftId, reason: `bytes at ${img.path} changed since approval` }); continue; }
 
-  // Legacy staged approval of a formerly-live file: rewire that exact path.
-  if (img.kind === 'formerly-live' || (img.kind === 'review-copy' && !img.path.startsWith('.craft-pipeline'))) {
-    const want = img.kind === 'formerly-live' ? img.path : null;
-    if (!want) { flagged.push({ craftId: c.craftId, reason: 'review-copy approval with no formerly-live target — needs the original file' }); continue; }
-    if (row.option.image === want) { already.push({ craftId: c.craftId, served: want }); continue; }
-    plan.push({ kind: 'rewire', craftId: c.craftId, row, served: want, previous: row.option.image ?? null, sha1: img.sha1 });
-    continue;
+  // Approval of a REVIEW COPY (a staged legacy image, or a log entry that
+  // hashed the /images/review/ webp): the review file is a re-encode, never
+  // the asset itself. Resolve the original through the queue item —
+  // formerlyLiveAt for staged legacy, the pipeline candidate otherwise.
+  const isReviewCopy = /(^|\/)images\/review\//.test(img.path) || img.kind === 'formerly-live';
+  if (isReviewCopy || (img.kind === 'review-copy' && !img.path.startsWith('.craft-pipeline'))) {
+    const qi = queueByKey.get(latest.portalKey);
+    const want = img.kind === 'formerly-live' ? img.path : (qi?.formerlyLiveAt ?? null);
+    if (want) {
+      const wantAbs = path.join(PUBLIC, want.replace(/^\//, ''));
+      if (!fs.existsSync(wantAbs)) { flagged.push({ craftId: c.craftId, reason: `approved original no longer on disk: ${want}` }); continue; }
+      if (row.option.image === want) { already.push({ craftId: c.craftId, served: want }); continue; }
+      plan.push({ kind: 'rewire', craftId: c.craftId, row, served: want, previous: row.option.image ?? null, sha1: img.sha1 });
+      continue;
+    }
+    // No formerly-live original — fall through to the pipeline candidate when
+    // one exists for the judged attempt; the review copy was derived from it.
+    const cand = path.join(PIPE, row.product, latest.portalKey.split('/')[1], `candidate-${latest.attempt}.png`);
+    if (!fs.existsSync(cand)) { flagged.push({ craftId: c.craftId, reason: `review-copy approval with no original: no formerlyLiveAt and no candidate-${latest.attempt}.png` }); continue; }
+    srcAbs = cand;
+    img.sha1 = sha1(cand); // provenance: candidate -> review copy is deterministic; re-anchor identity to the real asset
+    img.path = `.craft-pipeline/${row.product}/${latest.portalKey.split('/')[1]}/candidate-${latest.attempt}.png`;
   }
 
   // Pipeline-candidate approval: master + webp under the product's folder.
@@ -197,22 +241,41 @@ for (const c of Object.values(ledger.crafts)) {
   const liveApprovedElsewhereOnly = liveMasterSha && !((approvedShaByCraft.get(c.craftId) ?? new Set()).has(liveMasterSha));
 
   // Fan-out: sibling rows that are provably the same craft. A sibling serving
-  // bytes approved for ITS OWN craft keeps them.
+  // bytes approved for ITS OWN craft keeps them; a sibling whose latest owner
+  // word is a REJECTION is left for its own regeneration, not papered over.
+  // Every exclusion is recorded — silence here is how drift hides.
+  const latestAdminOf = (craftId) => {
+    const evs = (ledger.crafts[craftId]?.events ?? []).filter((e) => e.source === 'admin-portal' && e.current === true);
+    return evs[evs.length - 1] ?? null;
+  };
   const targets = [row];
+  const excluded = [];
   for (const sib of rowsByIdentity.get(row.identity) ?? []) {
     if (sib === row) continue;
-    if (normLabel(sib.label) !== normLabel(row.label)) continue;
+    if (normLabel(sib.label) !== normLabel(row.label)) { excluded.push({ craftId: sib.craftId, reason: `label drift: ${JSON.stringify(sib.label)}` }); continue; }
     const a = blueprintOf(sib), b = blueprintOf(row);
-    if (b && a !== b) continue;
+    if (b && a !== b) { excluded.push({ craftId: sib.craftId, reason: `blueprint drift: ${a ?? '(none)'}` }); continue; }
+    if (latestAdminOf(sib.craftId)?.verdict === 'rejected') { excluded.push({ craftId: sib.craftId, reason: 'owner rejected this craft — awaiting its own regeneration' }); continue; }
     const sibLive = sib.option.image && isGenerated(sib.option.image) ? masterShaOfServed(sib.option.image) : null;
-    if (sibLive && (approvedShaByCraft.get(sib.craftId) ?? new Set()).has(sibLive) && sibLive !== img.sha1) continue;
+    if (sibLive && (approvedShaByCraft.get(sib.craftId) ?? new Set()).has(sibLive) && sibLive !== img.sha1) { excluded.push({ craftId: sib.craftId, reason: 'keeps bytes approved for its own craft' }); continue; }
     targets.push(sib);
   }
 
+  // Honest provenance for the plan artifact: say exactly who (if anyone)
+  // approved the outgoing bytes. "Not approved for this craft" and "approved
+  // for a sibling" are different claims; a consent document must not blur them.
+  let note;
+  if (liveApprovedElsewhereOnly) {
+    const owners = [...approvedShaByCraft.entries()].filter(([, set]) => set.has(liveMasterSha)).map(([id]) => id);
+    note = owners.length
+      ? `previous bytes are owner-approved for: ${owners.join('; ')}`
+      : 'previous bytes are owner-approved for NO craft';
+  }
+
   plan.push({
-    kind: 'publish', craftId: c.craftId, row, targets, master, served, srcAbs,
-    sha1: img.sha1, attempt: latest.attempt, previous: row.option.image ?? null,
-    note: liveApprovedElsewhereOnly ? `previous file was approved for a sibling craft, not this one` : undefined,
+    kind: 'publish', craftId: c.craftId, row, targets, targetsExcluded: excluded.length ? excluded : undefined,
+    master, served, srcAbs,
+    sha1: img.sha1, attempt: latest.attempt, previous: row.option.image ?? null, note,
   });
 }
 
@@ -232,14 +295,31 @@ for (const c of Object.values(ledger.crafts)) {
   }
   for (const p of [...plan.filter((x) => x.kind === 'publish')]) {
     const targetSet = new Set(p.targets.map((t) => t.craftId));
+    const liveSha = masterShaOfServed(p.served);
+    const bytesChange = liveSha && liveSha !== p.sha1;
+    if (!bytesChange) continue;
+    // Primary-slot users outside the fan-out: hard stop — their DISPLAYED
+    // image would change with no decision for their craft.
     const outside = rows.filter((r) => r.option.image === p.served && !targetSet.has(r.craftId));
     if (outside.length) {
-      const liveSha = masterShaOfServed(p.served);
-      if (liveSha && liveSha !== p.sha1) {
-        flagged.push({ craftId: p.craftId, reason: `${p.served} is served by ${outside.length} row(s) outside the fan-out (${outside.slice(0, 3).map((r) => r.craftId).join('; ')}${outside.length > 3 ? '…' : ''}) — changing its bytes would silently change what they show` });
-        plan.splice(plan.indexOf(p), 1);
+      flagged.push({ craftId: p.craftId, reason: `${p.served} is served by ${outside.length} row(s) outside the fan-out (${outside.slice(0, 3).map((r) => r.craftId).join('; ')}${outside.length > 3 ? '…' : ''}) — changing its bytes would silently change what they show` });
+      plan.splice(plan.indexOf(p), 1);
+      continue;
+    }
+    // Gallery users outside the fan-out: the entry is legacy cross-craft
+    // spill (it was never approved for that craft — if it had been, the
+    // sibling rule would have kept it as their image). Detach it, logged,
+    // rather than silently changing what their gallery shows.
+    p.galleryDetach = [];
+    for (const r of rows) {
+      if (targetSet.has(r.craftId)) continue;
+      for (const arrKey of ['photos', 'images']) {
+        if (Array.isArray(r.option[arrKey]) && r.option[arrKey].includes(p.served)) {
+          p.galleryDetach.push({ craftId: r.craftId, arrKey, path: p.served });
+        }
       }
     }
+    if (!p.galleryDetach.length) delete p.galleryDetach;
   }
 }
 
@@ -261,6 +341,8 @@ fs.writeFileSync(path.join(REPO, 'public/images/reports/apply-owner-approvals-pl
     kind: p.kind, craftId: p.craftId, master: p.master ?? null, served: p.served,
     sha1: p.sha1, attempt: p.attempt ?? null, previous: p.previous, note: p.note,
     targets: p.targets ? p.targets.map((t) => t.craftId) : [p.craftId],
+    targetsExcluded: p.targetsExcluded,
+    galleryDetach: p.galleryDetach,
   })),
 }, null, 1) + '\n', 'utf8');
 
@@ -268,19 +350,37 @@ fs.writeFileSync(path.join(REPO, 'public/images/reports/apply-owner-approvals-pl
 if (APPLY) {
   const log = { appliedAt: new Date().toISOString(), tool: 'tools/apply_owner_approvals.mjs', published: [], rewired: [], corrections: [], flagged };
 
+  const failures = [];
   for (const p of plan) {
+    try {
     if (p.kind === 'rewire') {
       p.row.option.image = p.served;
       files.get(p.row.product).touched = true;
       log.rewired.push({ craftId: p.craftId, served: p.served, previous: p.previous });
       continue;
     }
-    // Stage the master only when the bytes differ from what is already there.
+    // Derivative FIRST, master second: if sharp fails, nothing has changed;
+    // if the master copy fails after, a re-run sees the sha mismatch and
+    // redoes both. (Master-first left a window where the tool certified a
+    // stale webp as "already live exactly".) The outgoing master's sha is
+    // logged so the audit trail can say what bytes were replaced.
     const masterAbs = path.join(PUBLIC, p.master.replace(/^\//, ''));
     fs.mkdirSync(path.dirname(masterAbs), { recursive: true });
-    if (!fs.existsSync(masterAbs) || sha1(masterAbs) !== p.sha1) fs.copyFileSync(p.srcAbs, masterAbs);
+    p.previousMasterSha1 = fs.existsSync(masterAbs) ? sha1(masterAbs) : null;
     const servedAbs = path.join(PUBLIC, p.served.replace(/^\//, ''));
-    await sharp(masterAbs).resize({ width: 1400, withoutEnlargement: true }).webp({ quality: 82 }).toFile(servedAbs);
+    await sharp(p.srcAbs).resize({ width: 1400, withoutEnlargement: true }).webp({ quality: 82 }).toFile(servedAbs);
+    if (p.previousMasterSha1 !== p.sha1) fs.copyFileSync(p.srcAbs, masterAbs);
+
+    // Detach this path from galleries of crafts outside the fan-out — their
+    // gallery would otherwise silently change bytes. Logged per row.
+    for (const d of p.galleryDetach ?? []) {
+      const r = rowByCraft.get(d.craftId);
+      if (!r || !Array.isArray(r.option[d.arrKey])) continue;
+      r.option[d.arrKey] = r.option[d.arrKey].filter((x) => x !== d.path);
+      files.get(r.product).touched = true;
+      log.galleryDetached = log.galleryDetached ?? [];
+      log.galleryDetached.push(d);
+    }
 
     for (const t of p.targets) {
       // Preserve an outgoing drawing exactly as publish_approved.mjs would.
@@ -299,19 +399,50 @@ if (APPLY) {
       if (rest.length || Array.isArray(t.option.photos)) t.option.photos = [p.served, ...rest];
       files.get(t.product).touched = true;
     }
-    log.published.push({ craftId: p.craftId, served: p.served, sha1: p.sha1, attempt: p.attempt, rows: p.targets.map((t) => t.craftId), previous: p.previous });
+    log.published.push({ craftId: p.craftId, served: p.served, sha1: p.sha1, previousMasterSha1: p.previousMasterSha1, attempt: p.attempt, rows: p.targets.map((t) => t.craftId), targetsExcluded: p.targetsExcluded, previous: p.previous, note: p.note });
+    } catch (err) {
+      failures.push({ craftId: p.craftId, error: String(err?.message ?? err) });
+    }
   }
 
-  // Rejected files leave the galleries of the craft they were rejected for.
+  // Rejected files leave the galleries and image slot of the craft they were
+  // rejected for — matched by BYTES, not just by path spelling: the rejected
+  // event records a pipeline or review path while galleries hold the served
+  // /images/generated/ spelling of the same picture.
   for (const { craftId, e } of corrections) {
     const row = rowByCraft.get(craftId);
     if (!row) continue;
-    const bad = new Set([e.image?.path, e.image?.alias?.path].filter(Boolean));
+    const badPaths = new Set([e.image?.path, e.image?.alias?.path].filter(Boolean)
+      .map((p) => p.startsWith('public/') ? '/' + p.slice('public/'.length) : p));
+    const badSha = e.image?.sha1 ?? null;
+    const isRejectedEntry = (x) => {
+      if (typeof x !== 'string') return false;
+      if (badPaths.has(x)) return true;
+      if (!badSha || !x.startsWith('/images/')) return false;
+      const abs = path.join(PUBLIC, x.replace(/^\//, ''));
+      const png = abs.replace(/\.webp$/i, '.png');
+      try {
+        if (fs.existsSync(abs) && sha1(abs) === badSha) return true;
+        if (png !== abs && fs.existsSync(png) && sha1(png) === badSha) return true;
+      } catch { /* unreadable — keep it */ }
+      return false;
+    };
     for (const arrKey of ['photos', 'images']) {
       if (Array.isArray(row.option[arrKey])) {
-        const kept = row.option[arrKey].filter((x) => !bad.has(x));
-        if (kept.length !== row.option[arrKey].length) { row.option[arrKey] = kept; files.get(row.product).touched = true; }
+        const kept = row.option[arrKey].filter((x) => !isRejectedEntry(x));
+        if (kept.length !== row.option[arrKey].length) {
+          log.rejectedPurged = log.rejectedPurged ?? [];
+          log.rejectedPurged.push({ craftId, arrKey, removed: row.option[arrKey].filter((x) => isRejectedEntry(x)) });
+          row.option[arrKey] = kept; files.get(row.product).touched = true;
+        }
       }
+    }
+    // A rejected image must not stay as the DISPLAYED image either.
+    if (isRejectedEntry(row.option.image)) {
+      log.rejectedPurged = log.rejectedPurged ?? [];
+      log.rejectedPurged.push({ craftId, arrKey: 'image', removed: [row.option.image] });
+      delete row.option.image;
+      files.get(row.product).touched = true;
     }
   }
 
@@ -320,12 +451,23 @@ if (APPLY) {
   }
 
   // Owner corrections into prompt.json — idempotent on (attemptRejected, decidedAt).
+  // A correction that cannot be folded is the owner's retry instruction; losing
+  // it silently means the next attempt repeats the rejected mistake. Every
+  // skip is recorded and surfaced.
   let folded = 0;
+  log.correctionsSkipped = [];
   for (const { craftId, e } of corrections) {
-    const [product, , , option] = craftId.split('|');
+    const [product] = craftId.split('|');
     const pFile = path.join(PIPE, product, e.portalKey.split('/')[1], 'prompt.json');
-    if (!fs.existsSync(pFile)) continue;
-    const prompt = readJson(pFile, {});
+    if (!fs.existsSync(pFile)) {
+      log.correctionsSkipped.push({ craftId, reason: 'no prompt.json yet — fold when tech-pack-interpreter builds it', tags: e.tags, notes: e.notes, references: e.references, attempt: e.attempt, decidedAt: e.decidedAt });
+      continue;
+    }
+    const prompt = readJson(pFile, null);
+    if (!prompt || typeof prompt.prompt !== 'string') {
+      log.correctionsSkipped.push({ craftId, reason: `prompt.json unreadable or malformed — NOT overwriting it`, attempt: e.attempt, decidedAt: e.decidedAt });
+      continue;
+    }
     const dup = (prompt.ownerCorrections || []).some((x) => x.attemptRejected === e.attempt && x.decidedAt === e.decidedAt);
     if (dup) continue;
     const parts = [];
@@ -344,10 +486,16 @@ if (APPLY) {
     log.corrections.push({ craftId, attemptRejected: e.attempt });
   }
 
+  log.failures = failures;
   fs.writeFileSync(LOG, JSON.stringify(log, null, 1) + '\n', 'utf8');
   console.log(`\nAPPLIED: ${log.published.length} published, ${log.rewired.length} rewired, ${folded} corrections folded`);
+  if (log.correctionsSkipped.length) console.log(`corrections NOT folded (no/bad prompt.json — owner's reasons preserved in the log): ${log.correctionsSkipped.length}`);
+  if ((log.galleryDetached ?? []).length) console.log(`gallery entries detached from non-target crafts: ${log.galleryDetached.length}`);
+  if ((log.rejectedPurged ?? []).length) console.log(`rejected files purged from rows: ${log.rejectedPurged.length}`);
+  if (failures.length) { console.log(`FAILED entries: ${failures.length}`); for (const f of failures) console.log(`  ${f.craftId}: ${f.error}`); }
   console.log(`log -> ${path.relative(REPO, LOG).split(path.sep).join('/')}`);
-  console.log('now run: node tools/catalog_invariants.mjs && node tools/build_decision_ledger.mjs --write');
+  console.log('now run: node tools/build_decision_ledger.mjs --write && node tools/catalog_invariants.mjs');
+  if (failures.length) process.exitCode = 1;
 } else {
   console.log('\ndry run — nothing written. Re-run with --apply.');
 }

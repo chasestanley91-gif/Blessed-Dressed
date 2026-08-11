@@ -1,45 +1,45 @@
 {
- "builtAt": "2026-08-11T07:50:40.744Z",
- "ledgerBuiltAt": "2026-08-11T06:43:11.506Z",
+ "builtAt": "2026-08-11T08:44:50.656Z",
+ "ledgerBuiltAt": "2026-08-11T08:44:24.607Z",
  "totals": {
   "crafts": 2862,
-  "excluded_X": 1477,
-  "missingIllustration_A": 143,
+  "excluded_X": 1540,
+  "missingIllustration_A": 80,
   "needsGeneration_B": 7,
-  "replaceRejected_C": 256,
+  "replaceRejected_C": 253,
   "awaitingApproval_D": 145,
-  "complete_E": 834
+  "complete_E": 837
  },
  "decisions": {
   "crafts": 2862,
-  "adminBound": 291,
+  "adminBound": 297,
   "julyEvents": 8097,
   "historyEvents": 938,
   "qcEvents": 376,
-  "approvedCrafts": 1985,
-  "photoApproved": 1762,
-  "illustrationKeptOnly": 223,
-  "rejectedOnly": 728,
+  "approvedCrafts": 1986,
+  "photoApproved": 1765,
+  "illustrationKeptOnly": 221,
+  "rejectedOnly": 727,
   "conflicted": 0,
   "undecided": 149,
   "illustration": {
    "verifiedMatch": 395,
    "drawingUnverified": 1631,
-   "suspectMismatch": 43,
+   "suspectMismatch": 0,
    "suspectAmbiguous": 46,
-   "bannedJacket": 328,
+   "bannedJacket": 0,
    "needsSource": 0,
-   "missing": 419
+   "missing": 790
   }
  },
  "illustrations": {
   "verifiedMatch": 395,
   "drawingUnverified": 1631,
-  "suspectMismatch": 43,
+  "suspectMismatch": 0,
   "suspectAmbiguous": 46,
-  "bannedJacket": 328,
+  "bannedJacket": 0,
   "needsSource": 0,
-  "missing": 419
+  "missing": 790
  },
  "conflicts": 0,
  "unresolved": 0,
@@ -1023,15 +1023,15 @@
   {
    "craftId": "shirt|collar|lapel|collar-french-75",
    "state": "A",
-   "why": "illustration suspect-mismatch",
+   "why": "illustration missing",
    "product": "shirt",
    "sectionId": "collar",
    "fieldId": "lapel",
    "optionId": "collar-french-75",
    "label": "French 7.5 cm",
    "illustration": {
-    "path": "/images/techpacks/shirt/lapel/french-in-75cm.jpg",
-    "status": "suspect-mismatch"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -1104,16 +1104,16 @@
   },
   {
    "craftId": "shirt|collar|lapel|collar-stand-50",
-   "state": "A",
-   "why": "illustration suspect-mismatch",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "shirt",
    "sectionId": "collar",
    "fieldId": "lapel",
    "optionId": "collar-stand-50",
    "label": "Stand Collar 5.0 cm",
    "illustration": {
-    "path": "/images/lapel/stand-collar-5cm.jpg",
-    "status": "suspect-mismatch"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -1306,45 +1306,45 @@
   {
    "craftId": "shirt|collar|lapel|collar-one-piece-80-tab",
    "state": "A",
-   "why": "illustration suspect-mismatch",
+   "why": "illustration missing",
    "product": "shirt",
    "sectionId": "collar",
    "fieldId": "lapel",
    "optionId": "collar-one-piece-80-tab",
    "label": "One-Piece 8.0 cm with Tab",
    "illustration": {
-    "path": "/images/techpacks/shirt/lapel/one-piece-collar-in-8cm-with-tab.jpg",
-    "status": "suspect-mismatch"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
   {
    "craftId": "shirt|collar|lapel|collar-one-piece-85-tab",
    "state": "A",
-   "why": "illustration suspect-mismatch",
+   "why": "illustration missing",
    "product": "shirt",
    "sectionId": "collar",
    "fieldId": "lapel",
    "optionId": "collar-one-piece-85-tab",
    "label": "One-Piece 8.5 cm with Tab",
    "illustration": {
-    "path": "/images/techpacks/shirt/lapel/one-piece-collar-in-85cm-with-tab.jpg",
-    "status": "suspect-mismatch"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
   {
    "craftId": "shirt|collar|lapel|collar-one-piece-90-tab",
    "state": "A",
-   "why": "illustration suspect-mismatch",
+   "why": "illustration missing",
    "product": "shirt",
    "sectionId": "collar",
    "fieldId": "lapel",
    "optionId": "collar-one-piece-90-tab",
    "label": "One-Piece 9.0 cm with Tab",
    "illustration": {
-    "path": "/images/techpacks/shirt/lapel/one-piece-collar-in-9cm-with-tab.jpg",
-    "status": "suspect-mismatch"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -1415,15 +1415,15 @@
   {
    "craftId": "shirt|collar|lapel|collar-dr-point-58",
    "state": "A",
-   "why": "illustration suspect-mismatch",
+   "why": "illustration missing",
    "product": "shirt",
    "sectionId": "collar",
    "fieldId": "lapel",
    "optionId": "collar-dr-point-58",
    "label": "DR Point 5.8 cm",
    "illustration": {
-    "path": "/images/techpacks/shirt/lapel/dr-point-in-58cm.jpg",
-    "status": "suspect-mismatch"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -3083,15 +3083,15 @@
   {
    "craftId": "shirt|collar|collar_stand|cs-square",
    "state": "A",
-   "why": "illustration suspect-mismatch",
+   "why": "illustration missing",
    "product": "shirt",
    "sectionId": "collar",
    "fieldId": "collar_stand",
    "optionId": "cs-square",
    "label": "Square Collar Stand",
    "illustration": {
-    "path": "/images/techpacks/shirt/collar_stand/square-collar-stand-with-2-buttons.jpg",
-    "status": "suspect-mismatch"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -9744,15 +9744,15 @@
   {
    "craftId": "shirt|shoulder|decoration_stitching_on_shoulder|shl-stitch-none",
    "state": "A",
-   "why": "illustration suspect-mismatch",
+   "why": "illustration missing",
    "product": "shirt",
    "sectionId": "shoulder",
    "fieldId": "decoration_stitching_on_shoulder",
    "optionId": "shl-stitch-none",
    "label": "None",
    "illustration": {
-    "path": "/images/techpacks/shirt/decoration_stitching_on_collar/none.jpg",
-    "status": "suspect-mismatch"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -9930,15 +9930,15 @@
   {
    "craftId": "shirt|cuffs|cuff|cuff-round-2btn-1bh",
    "state": "A",
-   "why": "illustration suspect-mismatch",
+   "why": "illustration missing",
    "product": "shirt",
    "sectionId": "cuffs",
    "fieldId": "cuff",
    "optionId": "cuff-round-2btn-1bh",
    "label": "Round Cuff — 2 Buttons, 1 Buttonhole",
    "illustration": {
-    "path": "/images/cuff/round-cuff-with-2-buttons-and-1-buttonhole.jpg",
-    "status": "suspect-mismatch"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -13729,15 +13729,15 @@
   {
    "craftId": "shirt|labels|fabric_label_position|flp-2",
    "state": "A",
-   "why": "illustration suspect-mismatch",
+   "why": "illustration missing",
    "product": "shirt",
    "sectionId": "labels",
    "fieldId": "fabric_label_position",
    "optionId": "flp-2",
    "label": "Position 2",
    "illustration": {
-    "path": "/images/fabric_label_position/picture-1111.jpg",
-    "status": "suspect-mismatch"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -13891,8 +13891,8 @@
    "optionId": "sleeve-con-rollino",
    "label": "Con Rollino",
    "illustration": {
-    "path": "/images/jacket/shoulder-head/con-rollino.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -14011,8 +14011,8 @@
    "optionId": "full-canvas",
    "label": "Full Canvas (Floating)",
    "illustration": {
-    "path": "/images/jacket/canvas/full-canvas.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -14158,8 +14158,8 @@
   },
   {
    "craftId": "sport-coat|lapel|lapel-style|lapel-notch-50",
-   "state": "C",
-   "why": "carries owner rejection/remake history",
+   "state": "E",
+   "why": "owner-approved image live",
    "product": "sport-coat",
    "sectionId": "lapel",
    "fieldId": "lapel-style",
@@ -14169,34 +14169,12 @@
     "path": "/images/blueprints/supplier/a8b481235ced__0001__Notch.jpg",
     "status": "drawing-unverified"
    },
-   "pipeline": null,
-   "rejectionContext": [
-    {
-     "source": "july-v3",
-     "verdict": "reject-file"
-    },
-    {
-     "source": "july-v3",
-     "verdict": "reject-file"
-    },
-    {
-     "source": "july-v3",
-     "verdict": "reject-file"
-    },
-    {
-     "source": "july-v3",
-     "verdict": "reject-file"
-    },
-    {
-     "source": "july-v3",
-     "verdict": "reject-file"
-    }
-   ]
+   "pipeline": null
   },
   {
    "craftId": "sport-coat|lapel|lapel-style|lapel-notch-55",
-   "state": "C",
-   "why": "carries owner rejection/remake history",
+   "state": "E",
+   "why": "owner-approved image live",
    "product": "sport-coat",
    "sectionId": "lapel",
    "fieldId": "lapel-style",
@@ -14206,42 +14184,12 @@
     "path": "/images/blueprints/supplier/a8b481235ced__0001__Notch.jpg",
     "status": "drawing-unverified"
    },
-   "pipeline": null,
-   "rejectionContext": [
-    {
-     "source": "july-v3",
-     "verdict": "remake"
-    },
-    {
-     "source": "july-v3",
-     "verdict": "reject-file"
-    },
-    {
-     "source": "july-v3",
-     "verdict": "reject-file"
-    },
-    {
-     "source": "july-v3",
-     "verdict": "reject-file"
-    },
-    {
-     "source": "july-v3",
-     "verdict": "reject-file"
-    },
-    {
-     "source": "july-v3",
-     "verdict": "reject-file"
-    },
-    {
-     "source": "july-v3",
-     "verdict": "reject-file"
-    }
-   ]
+   "pipeline": null
   },
   {
    "craftId": "sport-coat|lapel|lapel-style|lapel-notch-65",
-   "state": "C",
-   "why": "carries owner rejection/remake history",
+   "state": "E",
+   "why": "owner-approved image live",
    "product": "sport-coat",
    "sectionId": "lapel",
    "fieldId": "lapel-style",
@@ -14251,37 +14199,7 @@
     "path": "/images/blueprints/supplier/a8b481235ced__0001__Notch.jpg",
     "status": "drawing-unverified"
    },
-   "pipeline": null,
-   "rejectionContext": [
-    {
-     "source": "july-v3",
-     "verdict": "reject-file"
-    },
-    {
-     "source": "july-v3",
-     "verdict": "reject-file"
-    },
-    {
-     "source": "july-v3",
-     "verdict": "reject-file"
-    },
-    {
-     "source": "july-v3",
-     "verdict": "reject-file"
-    },
-    {
-     "source": "july-v3",
-     "verdict": "reject-file"
-    },
-    {
-     "source": "july-v3",
-     "verdict": "reject-file"
-    },
-    {
-     "source": "july-v3",
-     "verdict": "reject-file"
-    }
-   ]
+   "pipeline": null
   },
   {
    "craftId": "sport-coat|lapel|lapel-style|lapel-notch-68",
@@ -16091,8 +16009,8 @@
    "optionId": "cp-none",
    "label": "None",
    "illustration": {
-    "path": "/images/jacket/columbia-piping/none.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -16991,8 +16909,8 @@
    "optionId": "bartack-none",
    "label": "None",
    "illustration": {
-    "path": "/images/jacket/pocket-bartack/none.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": {
     "spec": true,
@@ -17011,8 +16929,8 @@
    "optionId": "bartack-d",
    "label": "D-Bartack",
    "illustration": {
-    "path": "/images/jacket/pocket-bartack/d-bartack.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": {
     "spec": true,
@@ -17031,8 +16949,8 @@
    "optionId": "bartack-i",
    "label": "I-Bartack",
    "illustration": {
-    "path": "/images/jacket/pocket-bartack/i-bartack.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": {
     "spec": true,
@@ -17051,8 +16969,8 @@
    "optionId": "bartack-x",
    "label": "X-Bartack",
    "illustration": {
-    "path": "/images/jacket/pocket-bartack/x-bartack.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -17066,8 +16984,8 @@
    "optionId": "bartack-1",
    "label": "1-Bartack",
    "illustration": {
-    "path": "/images/jacket/pocket-bartack/i-bartack.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -17081,38 +16999,38 @@
    "optionId": "tp-none",
    "label": "None",
    "illustration": {
-    "path": "/images/jacket/ticket-pocket/none.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
   {
    "craftId": "sport-coat|suit-pockets|ticket-pocket|tp-jetted",
-   "state": "A",
-   "why": "illustration banned-jacket-unverified",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "sport-coat",
    "sectionId": "suit-pockets",
    "fieldId": "ticket-pocket",
    "optionId": "tp-jetted",
    "label": "Jetted Ticket Pocket",
    "illustration": {
-    "path": "/images/jacket/ticket-pocket/jetted.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
   {
    "craftId": "sport-coat|suit-pockets|ticket-pocket|tp-welt",
-   "state": "A",
-   "why": "illustration banned-jacket-unverified",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "sport-coat",
    "sectionId": "suit-pockets",
    "fieldId": "ticket-pocket",
    "optionId": "tp-welt",
    "label": "Welt Ticket Pocket",
    "illustration": {
-    "path": "/images/jacket/ticket-pocket/welt.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -17126,8 +17044,8 @@
    "optionId": "tp-card-italian",
    "label": "Italian Card Slot",
    "illustration": {
-    "path": "/images/jacket/ticket-pocket/jetted.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -17141,8 +17059,8 @@
    "optionId": "tp-card-formal",
    "label": "Formal Card Holder",
    "illustration": {
-    "path": "/images/jacket/ticket-pocket/jetted.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -17156,8 +17074,8 @@
    "optionId": "tp-rl-card",
    "label": "RL Card Pocket",
    "illustration": {
-    "path": "/images/jacket/ticket-pocket/jetted.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -17171,8 +17089,8 @@
    "optionId": "tp-flap-40",
    "label": "Flap 4.0 cm",
    "illustration": {
-    "path": "/images/jacket/ticket-pocket/flap-40.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -17186,8 +17104,8 @@
    "optionId": "tp-flap-45",
    "label": "Flap 4.5 cm",
    "illustration": {
-    "path": "/images/jacket/ticket-pocket/flap.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -17201,8 +17119,8 @@
    "optionId": "tp-flap-50",
    "label": "Flap 5.0 cm",
    "illustration": {
-    "path": "/images/jacket/ticket-pocket/flap-50.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -17216,8 +17134,8 @@
    "optionId": "tp-flap-55",
    "label": "Flap 5.5 cm",
    "illustration": {
-    "path": "/images/jacket/ticket-pocket/flap-55.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -17231,38 +17149,38 @@
    "optionId": "tp-flap-60",
    "label": "Flap 6.0 cm",
    "illustration": {
-    "path": "/images/jacket/ticket-pocket/flap-60.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
   {
    "craftId": "sport-coat|suit-pockets|coin-pocket|coin-none",
-   "state": "A",
-   "why": "illustration banned-jacket-unverified",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "sport-coat",
    "sectionId": "suit-pockets",
    "fieldId": "coin-pocket",
    "optionId": "coin-none",
    "label": "None",
    "illustration": {
-    "path": "/images/jacket/coin-pocket/none.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
   {
    "craftId": "sport-coat|suit-pockets|coin-pocket|coin-left",
-   "state": "A",
-   "why": "illustration banned-jacket-unverified",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "sport-coat",
    "sectionId": "suit-pockets",
    "fieldId": "coin-pocket",
    "optionId": "coin-left",
    "label": "Left Side",
    "illustration": {
-    "path": "/images/jacket/coin-pocket/left.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -17276,8 +17194,8 @@
    "optionId": "coin-right",
    "label": "Right Side",
    "illustration": {
-    "path": "/images/jacket/coin-pocket/right.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": {
     "spec": true,
@@ -17296,8 +17214,8 @@
    "optionId": "coin-both",
    "label": "Both Sides",
    "illustration": {
-    "path": "/images/jacket/coin-pocket/both.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": {
     "spec": true,
@@ -17421,8 +17339,8 @@
    "optionId": "sb-5",
    "label": "SB 5 Buttons",
    "illustration": {
-    "path": "/images/jacket/front-style/sb-5.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": {
     "spec": true,
@@ -17433,91 +17351,91 @@
   },
   {
    "craftId": "sport-coat|front-style|button-config|db-2x1",
-   "state": "A",
-   "why": "illustration banned-jacket-unverified",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "sport-coat",
    "sectionId": "front-style",
    "fieldId": "button-config",
    "optionId": "db-2x1",
    "label": "DB 2 × 1",
    "illustration": {
-    "path": "/images/jacket/front-style/db-2x1.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
   {
    "craftId": "sport-coat|front-style|button-config|db-4x1",
-   "state": "A",
-   "why": "illustration banned-jacket-unverified",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "sport-coat",
    "sectionId": "front-style",
    "fieldId": "button-config",
    "optionId": "db-4x1",
    "label": "DB 4 × 1",
    "illustration": {
-    "path": "/images/jacket/front-style/db-4x1.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
   {
    "craftId": "sport-coat|front-style|button-config|db-4x2",
-   "state": "A",
-   "why": "illustration banned-jacket-unverified",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "sport-coat",
    "sectionId": "front-style",
    "fieldId": "button-config",
    "optionId": "db-4x2",
    "label": "DB 4 × 2",
    "illustration": {
-    "path": "/images/jacket/front-style/db-4x2.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
   {
    "craftId": "sport-coat|front-style|button-config|db-6x1",
-   "state": "A",
-   "why": "illustration banned-jacket-unverified",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "sport-coat",
    "sectionId": "front-style",
    "fieldId": "button-config",
    "optionId": "db-6x1",
    "label": "DB 6 × 1",
    "illustration": {
-    "path": "/images/jacket/front-style/db-6x1.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
   {
    "craftId": "sport-coat|front-style|button-config|db-6x2",
-   "state": "A",
-   "why": "illustration banned-jacket-unverified",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "sport-coat",
    "sectionId": "front-style",
    "fieldId": "button-config",
    "optionId": "db-6x2",
    "label": "DB 6 × 2",
    "illustration": {
-    "path": "/images/jacket/front-style/db-6x2.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
   {
    "craftId": "sport-coat|front-style|button-config|db-6x3",
-   "state": "A",
-   "why": "illustration banned-jacket-unverified",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "sport-coat",
    "sectionId": "front-style",
    "fieldId": "button-config",
    "optionId": "db-6x3",
    "label": "DB 6 × 3",
    "illustration": {
-    "path": "/images/jacket/front-style/db-6x3.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -17531,8 +17449,8 @@
    "optionId": "fbh-machine",
    "label": "By Machine",
    "illustration": {
-    "path": "/images/jacket/front-buttonhole/by-machine.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": {
     "spec": true,
@@ -17551,8 +17469,8 @@
    "optionId": "fbh-hands",
    "label": "By Hand",
    "illustration": {
-    "path": "/images/jacket/front-buttonhole/by-hands.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": {
     "spec": true,
@@ -17747,8 +17665,8 @@
    "optionId": "hem-small-curve",
    "label": "Small Curved Bottom",
    "illustration": {
-    "path": "/images/jacket/hem/small-curve.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": {
     "spec": true,
@@ -17767,8 +17685,8 @@
    "optionId": "hem-big-curve",
    "label": "Large Curved Bottom",
    "illustration": {
-    "path": "/images/jacket/hem/big-curve.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -17803,8 +17721,8 @@
    "optionId": "sv-none",
    "label": "None",
    "illustration": {
-    "path": "/images/jacket/sleeve-vent/none.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -17818,8 +17736,8 @@
    "optionId": "sv-mock",
    "label": "Mock / Show Vent",
    "illustration": {
-    "path": "/images/jacket/sleeve-vent/mock.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -17833,8 +17751,8 @@
    "optionId": "sv-functional",
    "label": "Functional (Working)",
    "illustration": {
-    "path": "/images/jacket/sleeve-vent/functional.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -17848,8 +17766,8 @@
    "optionId": "sv-functional-mock",
    "label": "Functional + Mock Vent",
    "illustration": {
-    "path": "/images/jacket/sleeve-vent/functional-mock.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -17863,8 +17781,8 @@
    "optionId": "sv-functional-no-bh",
    "label": "Functional (No Buttonhole)",
    "illustration": {
-    "path": "/images/jacket/sleeve-vent/functional-no-bh.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -18040,16 +17958,16 @@
   },
   {
    "craftId": "sport-coat|sleeves-cuffs|cuff-button-number|cb-4",
-   "state": "A",
-   "why": "illustration suspect-mismatch",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "sport-coat",
    "sectionId": "sleeves-cuffs",
    "fieldId": "cuff-button-number",
    "optionId": "cb-4",
    "label": "4 Buttons",
    "illustration": {
-    "path": "/images/blueprints/supplier/362519787419__0621__4_flat.jpg",
-    "status": "suspect-mismatch"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": {
     "spec": true,
@@ -18221,8 +18139,8 @@
    "optionId": "bv-none",
    "label": "No Vent",
    "illustration": {
-    "path": "/images/jacket/back-vent/no-vent.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -18276,8 +18194,8 @@
    "optionId": "bv-side-belt",
    "label": "Side Vents + Inner Belt",
    "illustration": {
-    "path": "/images/jacket/back-vent/side-belt.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -18361,38 +18279,38 @@
    "optionId": "ext-none",
    "label": "None",
    "illustration": {
-    "path": "/images/jacket/external-decoration/none.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
   {
    "craftId": "sport-coat|back-vents|external-decoration|ext-loop-flat",
-   "state": "A",
-   "why": "illustration banned-jacket-unverified",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "sport-coat",
    "sectionId": "back-vents",
    "fieldId": "external-decoration",
    "optionId": "ext-loop-flat",
    "label": "Front Chest Horizontal Button Loop",
    "illustration": {
-    "path": "/images/jacket/external-decoration/front-chest-horizontal-button-loop.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
   {
    "craftId": "sport-coat|back-vents|external-decoration|ext-loop-slanted",
-   "state": "A",
-   "why": "illustration banned-jacket-unverified",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "sport-coat",
    "sectionId": "back-vents",
    "fieldId": "external-decoration",
    "optionId": "ext-loop-slanted",
    "label": "Front Chest Slanted Button Loop",
    "illustration": {
-    "path": "/images/jacket/external-decoration/front-chest-slanted-button-loop.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -18487,8 +18405,8 @@
    "optionId": "hmd-none",
    "label": "None",
    "illustration": {
-    "path": "/images/jacket/handmade-decorative/none.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": {
     "spec": true,
@@ -18507,8 +18425,8 @@
    "optionId": "hmd-shoulder",
    "label": "Shoulder Seam Only",
    "illustration": {
-    "path": "/images/jacket/handmade-decorative/shoulder-seam.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -18522,8 +18440,8 @@
    "optionId": "hmd-shoulder-vent",
    "label": "Shoulder + Sleeve/Back Vent",
    "illustration": {
-    "path": "/images/jacket/handmade-decorative/shoulder-vent.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -18537,8 +18455,8 @@
    "optionId": "hmd-full",
    "label": "Full — Shoulder, Vents, Chest Pocket, Buttonholes",
    "illustration": {
-    "path": "/images/jacket/handmade-decorative/full.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -18552,8 +18470,8 @@
    "optionId": "sbs-machine",
    "label": "Regular Machine Sewing",
    "illustration": {
-    "path": "/images/jacket/sewing-style/regular-machine.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -18567,8 +18485,8 @@
    "optionId": "sbs-cross-hand",
    "label": "Crossing Stitch by Hand (X)",
    "illustration": {
-    "path": "/images/jacket/sewing-style/cross-stitch.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -18582,8 +18500,8 @@
    "optionId": "sbs-down-hand",
    "label": "\"↓\" Stitch by Hand",
    "illustration": {
-    "path": "/images/jacket/sewing-style/down-stitch.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -18597,8 +18515,8 @@
    "optionId": "sbs-eq-hand",
    "label": "\"=\" Stitch by Hand",
    "illustration": {
-    "path": "/images/jacket/sewing-style/eq-stitch.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -18612,8 +18530,8 @@
    "optionId": "sbs-sq-hand",
    "label": "\"□\" Stitch by Hand",
    "illustration": {
-    "path": "/images/jacket/sewing-style/sq-stitch.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -18627,8 +18545,8 @@
    "optionId": "sbs-under-hand",
    "label": "Button Under Layer by Hand",
    "illustration": {
-    "path": "/images/jacket/sewing-style/under-layer.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -18642,8 +18560,8 @@
    "optionId": "slbh-machine",
    "label": "By Machine",
    "illustration": {
-    "path": "/images/jacket/sleeve-buttonhole/by-machine.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -18657,8 +18575,8 @@
    "optionId": "slbh-hands",
    "label": "By Hand",
    "illustration": {
-    "path": "/images/jacket/sleeve-buttonhole/by-hands.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -18884,16 +18802,16 @@
   },
   {
    "craftId": "sport-coat|suit-details|contrast-position|contrast-chest-pocket",
-   "state": "A",
-   "why": "illustration banned-jacket-unverified",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "sport-coat",
    "sectionId": "suit-details",
    "fieldId": "contrast-position",
    "optionId": "contrast-chest-pocket",
    "label": "Chest Pocket Trim",
    "illustration": {
-    "path": "/images/jacket/contrast-pos/chest-pocket.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": {
     "spec": true,
@@ -18999,16 +18917,16 @@
   },
   {
    "craftId": "sport-coat|suit-details|contrast-position|contrast-satin-lapel",
-   "state": "A",
-   "why": "illustration banned-jacket-unverified",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "sport-coat",
    "sectionId": "suit-details",
    "fieldId": "contrast-position",
    "optionId": "contrast-satin-lapel",
    "label": "Satin Piping on Lapel",
    "illustration": {
-    "path": "/images/jacket/contrast-pos/satin-lapel.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": {
     "spec": true,
@@ -19027,8 +18945,8 @@
    "optionId": "cp-none",
    "label": "None",
    "illustration": {
-    "path": "/images/jacket/columbia-piping/none.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -19042,8 +18960,8 @@
    "optionId": "cp-columbia",
    "label": "Columbia Stitching",
    "illustration": {
-    "path": "/images/jacket/columbia-piping/columbia.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -19057,8 +18975,8 @@
    "optionId": "cp-piping",
    "label": "Piping",
    "illustration": {
-    "path": "/images/jacket/columbia-piping/piping.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -19072,8 +18990,8 @@
    "optionId": "cp-both",
    "label": "Columbia + Piping",
    "illustration": {
-    "path": "/images/jacket/columbia-piping/columbia-and-piping.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -19087,8 +19005,8 @@
    "optionId": "facing-1",
    "label": "Facing 1",
    "illustration": {
-    "path": "/images/jacket/facing/facing-1.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": {
     "spec": true,
@@ -19107,8 +19025,8 @@
    "optionId": "facing-2",
    "label": "Facing 2",
    "illustration": {
-    "path": "/images/jacket/facing/facing-2.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -19122,8 +19040,8 @@
    "optionId": "facing-4",
    "label": "Facing 4",
    "illustration": {
-    "path": "/images/jacket/facing/facing-4.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -19137,8 +19055,8 @@
    "optionId": "facing-5",
    "label": "Facing 5",
    "illustration": {
-    "path": "/images/jacket/facing/facing-5.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -19152,8 +19070,8 @@
    "optionId": "facing-7",
    "label": "Facing 7",
    "illustration": {
-    "path": "/images/jacket/facing/facing-7.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": {
     "spec": true,
@@ -19172,8 +19090,8 @@
    "optionId": "facing-9",
    "label": "Facing 9",
    "illustration": {
-    "path": "/images/jacket/facing/facing-9.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": {
     "spec": true,
@@ -19192,8 +19110,8 @@
    "optionId": "facing-half",
    "label": "For Half Lining",
    "illustration": {
-    "path": "/images/jacket/facing/facing-half.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -19207,23 +19125,23 @@
    "optionId": "facing-none",
    "label": "For No Lining",
    "illustration": {
-    "path": "/images/jacket/facing/facing-none.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
   {
    "craftId": "sport-coat|interior|pen-pocket|pen-none",
-   "state": "A",
-   "why": "illustration banned-jacket-unverified",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "sport-coat",
    "sectionId": "interior",
    "fieldId": "pen-pocket",
    "optionId": "pen-none",
    "label": "None",
    "illustration": {
-    "path": "/images/jacket/pen-pocket/none.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": {
     "spec": true,
@@ -19242,8 +19160,8 @@
    "optionId": "pen-left-jetted",
    "label": "Left Jetted",
    "illustration": {
-    "path": "/images/jacket/pen-pocket/left-jetted.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -19257,8 +19175,8 @@
    "optionId": "pen-left-drop",
    "label": "Left Drop-shape",
    "illustration": {
-    "path": "/images/jacket/pen-pocket/left-drop.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -19272,8 +19190,8 @@
    "optionId": "pen-left-diamond",
    "label": "Left Diamond",
    "illustration": {
-    "path": "/images/jacket/pen-pocket/left-diamond.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -19287,8 +19205,8 @@
    "optionId": "pen-right-jetted",
    "label": "Right Jetted",
    "illustration": {
-    "path": "/images/jacket/pen-pocket/right-jetted.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -19302,8 +19220,8 @@
    "optionId": "pen-right-drop",
    "label": "Right Drop-shape",
    "illustration": {
-    "path": "/images/jacket/pen-pocket/right-drop.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -19317,8 +19235,8 @@
    "optionId": "pen-right-diamond",
    "label": "Right Diamond",
    "illustration": {
-    "path": "/images/jacket/pen-pocket/right-diamond.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -19332,8 +19250,8 @@
    "optionId": "nc-none",
    "label": "None",
    "illustration": {
-    "path": "/images/jacket/namecard-pocket/none.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -19347,8 +19265,8 @@
    "optionId": "nc-left",
    "label": "Left Inner",
    "illustration": {
-    "path": "/images/jacket/namecard-pocket/left.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -19362,8 +19280,8 @@
    "optionId": "nc-right",
    "label": "Right Inner",
    "illustration": {
-    "path": "/images/jacket/namecard-pocket/right.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -19377,8 +19295,8 @@
    "optionId": "nc-both",
    "label": "Both Sides",
    "illustration": {
-    "path": "/images/jacket/namecard-pocket/both.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -19392,8 +19310,8 @@
    "optionId": "itp-none",
    "label": "None",
    "illustration": {
-    "path": "/images/jacket/inner-ticket-pocket/none.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -19407,8 +19325,8 @@
    "optionId": "itp-left",
    "label": "Left",
    "illustration": {
-    "path": "/images/jacket/inner-ticket-pocket/left.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -19422,8 +19340,8 @@
    "optionId": "itp-right",
    "label": "Right",
    "illustration": {
-    "path": "/images/jacket/inner-ticket-pocket/right.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -19437,8 +19355,8 @@
    "optionId": "itp-both",
    "label": "Left & Right",
    "illustration": {
-    "path": "/images/jacket/inner-ticket-pocket/left-and-right.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": {
     "spec": true,
@@ -19457,8 +19375,8 @@
    "optionId": "mp3-none",
    "label": "None",
    "illustration": {
-    "path": "/images/jacket/mp3-pocket/none.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -19472,8 +19390,8 @@
    "optionId": "mp3-left",
    "label": "Left Inner",
    "illustration": {
-    "path": "/images/jacket/mp3-pocket/left.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -19487,8 +19405,8 @@
    "optionId": "mp3-right",
    "label": "Right Inner",
    "illustration": {
-    "path": "/images/jacket/mp3-pocket/right.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -19502,8 +19420,8 @@
    "optionId": "ipc-none",
    "label": "None (Open)",
    "illustration": {
-    "path": "/images/jacket/inner-pocket-closure/none.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -19580,8 +19498,8 @@
    "optionId": "pp-none",
    "label": "None",
    "illustration": {
-    "path": "/images/jacket/underarm-shield/none.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": {
     "spec": true,
@@ -19600,8 +19518,8 @@
    "optionId": "pp-triangle",
    "label": "Triangle Underarm Shield",
    "illustration": {
-    "path": "/images/jacket/underarm-shield/triangle.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -19615,8 +19533,8 @@
    "optionId": "pp-round-1",
    "label": "Round Shield 1",
    "illustration": {
-    "path": "/images/jacket/underarm-shield/round-1.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -19630,8 +19548,8 @@
    "optionId": "pp-round-2",
    "label": "Round Shield 2",
    "illustration": {
-    "path": "/images/jacket/underarm-shield/round-2.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -19645,8 +19563,8 @@
    "optionId": "pp-round-3",
    "label": "Round Shield 3",
    "illustration": {
-    "path": "/images/jacket/underarm-shield/round-3.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -19660,8 +19578,8 @@
    "optionId": "pp-u-1",
    "label": "U-Shield 1",
    "illustration": {
-    "path": "/images/jacket/underarm-shield/u-1.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -19675,8 +19593,8 @@
    "optionId": "pp-u-2",
    "label": "U-Shield 2",
    "illustration": {
-    "path": "/images/jacket/underarm-shield/u-2.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -19690,8 +19608,8 @@
    "optionId": "pp-u-3",
    "label": "U-Shield 3",
    "illustration": {
-    "path": "/images/jacket/underarm-shield/u-3.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -19705,8 +19623,8 @@
    "optionId": "lc-full",
    "label": "Full Lining",
    "illustration": {
-    "path": "/images/jacket/lining/full-lining.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": {
     "spec": true,
@@ -19725,8 +19643,8 @@
    "optionId": "lc-half",
    "label": "Half Lining",
    "illustration": {
-    "path": "/images/jacket/lining/half-lining.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -19740,8 +19658,8 @@
    "optionId": "lc-quarter",
    "label": "Quarter Lining",
    "illustration": {
-    "path": "/images/jacket/lining/half-lining.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -19770,8 +19688,8 @@
    "optionId": "hls-standard",
    "label": "Standard Half Lining",
    "illustration": {
-    "path": "/images/jacket/lining/half-lining.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -19785,38 +19703,38 @@
    "optionId": "hls-small-cutaway",
    "label": "Small Cut-away",
    "illustration": {
-    "path": "/images/jacket/lining/half-lining.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
   {
    "craftId": "sport-coat|suit-lining|half-lining-shape|hls-half",
-   "state": "A",
-   "why": "illustration banned-jacket-unverified",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "sport-coat",
    "sectionId": "suit-lining",
    "fieldId": "half-lining-shape",
    "optionId": "hls-half",
    "label": "1/2 Lining",
    "illustration": {
-    "path": "/images/jacket/lining/half-lining.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
   {
    "craftId": "sport-coat|suit-lining|half-lining-shape|hls-third-cutaway",
-   "state": "A",
-   "why": "illustration banned-jacket-unverified",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "sport-coat",
    "sectionId": "suit-lining",
    "fieldId": "half-lining-shape",
    "optionId": "hls-third-cutaway",
    "label": "1/3 Cut-away",
    "illustration": {
-    "path": "/images/jacket/lining/half-lining.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -19830,23 +19748,23 @@
    "optionId": "hls-third",
    "label": "1/3 Lining",
    "illustration": {
-    "path": "/images/jacket/lining/half-lining.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
   {
    "craftId": "sport-coat|suit-lining|half-lining-shape|hls-quarter-cutaway",
-   "state": "A",
-   "why": "illustration banned-jacket-unverified",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "sport-coat",
    "sectionId": "suit-lining",
    "fieldId": "half-lining-shape",
    "optionId": "hls-quarter-cutaway",
    "label": "1/4 Cut-away",
    "illustration": {
-    "path": "/images/jacket/lining/half-lining.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -19860,8 +19778,8 @@
    "optionId": "hlc-binding",
    "label": "Binding Seam",
    "illustration": {
-    "path": "/images/jacket/lining/half-lining.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -19875,8 +19793,8 @@
    "optionId": "hlc-french",
    "label": "French Seam",
    "illustration": {
-    "path": "/images/jacket/lining/half-lining.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -19890,8 +19808,8 @@
    "optionId": "hlc-joining",
    "label": "Joining Seam",
    "illustration": {
-    "path": "/images/jacket/lining/half-lining.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -20239,8 +20157,8 @@
    "optionId": "sleeve-natural",
    "label": "Natural",
    "illustration": {
-    "path": "/images/jacket/shoulder-head/natural.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -20274,8 +20192,8 @@
    "optionId": "sleeve-con-rollino",
    "label": "Con Rollino/ THE CONTINENTAL SHOULDER",
    "illustration": {
-    "path": "/images/jacket/shoulder-head/con-rollino.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -20389,8 +20307,8 @@
    "optionId": "full-canvas",
    "label": "Full Canvas (Floating)",
    "illustration": {
-    "path": "/images/jacket/canvas/full-canvas.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -22539,8 +22457,8 @@
    "optionId": "cp-none",
    "label": "None",
    "illustration": {
-    "path": "/images/jacket/columbia-piping/none.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -23617,8 +23535,8 @@
    "optionId": "bartack-none",
    "label": "None",
    "illustration": {
-    "path": "/images/jacket/pocket-bartack/none.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -23632,8 +23550,8 @@
    "optionId": "bartack-d",
    "label": "D-Bartack",
    "illustration": {
-    "path": "/images/jacket/pocket-bartack/d-bartack.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -23647,8 +23565,8 @@
    "optionId": "bartack-i",
    "label": "I-Bartack",
    "illustration": {
-    "path": "/images/jacket/pocket-bartack/i-bartack.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -23662,8 +23580,8 @@
    "optionId": "bartack-x",
    "label": "X-Bartack",
    "illustration": {
-    "path": "/images/jacket/pocket-bartack/x-bartack.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -23677,8 +23595,8 @@
    "optionId": "bartack-1",
    "label": "1-Bartack",
    "illustration": {
-    "path": "/images/jacket/pocket-bartack/i-bartack.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -23692,38 +23610,38 @@
    "optionId": "tp-none",
    "label": "None",
    "illustration": {
-    "path": "/images/jacket/ticket-pocket/none.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
   {
    "craftId": "suit-2pc|suit-pockets|ticket-pocket|tp-jetted",
-   "state": "A",
-   "why": "illustration banned-jacket-unverified",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "suit-2pc",
    "sectionId": "suit-pockets",
    "fieldId": "ticket-pocket",
    "optionId": "tp-jetted",
    "label": "Jetted Ticket Pocket",
    "illustration": {
-    "path": "/images/jacket/ticket-pocket/jetted.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
   {
    "craftId": "suit-2pc|suit-pockets|ticket-pocket|tp-welt",
-   "state": "A",
-   "why": "illustration banned-jacket-unverified",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "suit-2pc",
    "sectionId": "suit-pockets",
    "fieldId": "ticket-pocket",
    "optionId": "tp-welt",
    "label": "Welt Ticket Pocket",
    "illustration": {
-    "path": "/images/jacket/ticket-pocket/welt.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -23737,8 +23655,8 @@
    "optionId": "tp-card-italian",
    "label": "Italian Card Slot",
    "illustration": {
-    "path": "/images/jacket/ticket-pocket/jetted.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -23752,8 +23670,8 @@
    "optionId": "tp-card-formal",
    "label": "Formal Card Holder",
    "illustration": {
-    "path": "/images/jacket/ticket-pocket/jetted.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -23767,8 +23685,8 @@
    "optionId": "tp-rl-card",
    "label": "RL Card Pocket",
    "illustration": {
-    "path": "/images/jacket/ticket-pocket/jetted.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -23782,8 +23700,8 @@
    "optionId": "tp-flap-40",
    "label": "Flap 4.0 cm",
    "illustration": {
-    "path": "/images/jacket/ticket-pocket/flap-40.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -23797,8 +23715,8 @@
    "optionId": "tp-flap-45",
    "label": "Flap 4.5 cm",
    "illustration": {
-    "path": "/images/jacket/ticket-pocket/flap.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -23812,8 +23730,8 @@
    "optionId": "tp-flap-50",
    "label": "Flap 5.0 cm",
    "illustration": {
-    "path": "/images/jacket/ticket-pocket/flap-50.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -23827,8 +23745,8 @@
    "optionId": "tp-flap-55",
    "label": "Flap 5.5 cm",
    "illustration": {
-    "path": "/images/jacket/ticket-pocket/flap-55.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -23842,23 +23760,23 @@
    "optionId": "tp-flap-60",
    "label": "Flap 6.0 cm",
    "illustration": {
-    "path": "/images/jacket/ticket-pocket/flap-60.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
   {
    "craftId": "suit-2pc|suit-pockets|coin-pocket|coin-none",
-   "state": "A",
-   "why": "illustration banned-jacket-unverified",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "suit-2pc",
    "sectionId": "suit-pockets",
    "fieldId": "coin-pocket",
    "optionId": "coin-none",
    "label": "None",
    "illustration": {
-    "path": "/images/jacket/coin-pocket/none.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": {
     "spec": true,
@@ -23869,16 +23787,16 @@
   },
   {
    "craftId": "suit-2pc|suit-pockets|coin-pocket|coin-left",
-   "state": "A",
-   "why": "illustration banned-jacket-unverified",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "suit-2pc",
    "sectionId": "suit-pockets",
    "fieldId": "coin-pocket",
    "optionId": "coin-left",
    "label": "Left Side",
    "illustration": {
-    "path": "/images/jacket/coin-pocket/left.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": {
     "spec": true,
@@ -23897,8 +23815,8 @@
    "optionId": "coin-right",
    "label": "Right Side",
    "illustration": {
-    "path": "/images/jacket/coin-pocket/right.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": {
     "spec": true,
@@ -23917,8 +23835,8 @@
    "optionId": "coin-both",
    "label": "Both Sides",
    "illustration": {
-    "path": "/images/jacket/coin-pocket/both.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": {
     "spec": true,
@@ -24042,98 +23960,98 @@
    "optionId": "sb-5",
    "label": "SB 5 Buttons",
    "illustration": {
-    "path": "/images/jacket/front-style/sb-5.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
   {
    "craftId": "suit-2pc|front-style|button-config|db-2x1",
-   "state": "A",
-   "why": "illustration banned-jacket-unverified",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "suit-2pc",
    "sectionId": "front-style",
    "fieldId": "button-config",
    "optionId": "db-2x1",
    "label": "DB 2 × 1",
    "illustration": {
-    "path": "/images/jacket/front-style/db-2x1.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
   {
    "craftId": "suit-2pc|front-style|button-config|db-4x1",
-   "state": "A",
-   "why": "illustration banned-jacket-unverified",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "suit-2pc",
    "sectionId": "front-style",
    "fieldId": "button-config",
    "optionId": "db-4x1",
    "label": "DB 4 × 1",
    "illustration": {
-    "path": "/images/jacket/front-style/db-4x1.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
   {
    "craftId": "suit-2pc|front-style|button-config|db-4x2",
-   "state": "A",
-   "why": "illustration banned-jacket-unverified",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "suit-2pc",
    "sectionId": "front-style",
    "fieldId": "button-config",
    "optionId": "db-4x2",
    "label": "DB 4 × 2",
    "illustration": {
-    "path": "/images/jacket/front-style/db-4x2.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
   {
    "craftId": "suit-2pc|front-style|button-config|db-6x1",
-   "state": "A",
-   "why": "illustration banned-jacket-unverified",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "suit-2pc",
    "sectionId": "front-style",
    "fieldId": "button-config",
    "optionId": "db-6x1",
    "label": "DB 6 × 1",
    "illustration": {
-    "path": "/images/jacket/front-style/db-6x1.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
   {
    "craftId": "suit-2pc|front-style|button-config|db-6x2",
-   "state": "A",
-   "why": "illustration banned-jacket-unverified",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "suit-2pc",
    "sectionId": "front-style",
    "fieldId": "button-config",
    "optionId": "db-6x2",
    "label": "DB 6 × 2",
    "illustration": {
-    "path": "/images/jacket/front-style/db-6x2.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
   {
    "craftId": "suit-2pc|front-style|button-config|db-6x3",
-   "state": "A",
-   "why": "illustration banned-jacket-unverified",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "suit-2pc",
    "sectionId": "front-style",
    "fieldId": "button-config",
    "optionId": "db-6x3",
    "label": "DB 6 × 3",
    "illustration": {
-    "path": "/images/jacket/front-style/db-6x3.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -24147,8 +24065,8 @@
    "optionId": "fbh-machine",
    "label": "By Machine",
    "illustration": {
-    "path": "/images/jacket/front-buttonhole/by-machine.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -24162,8 +24080,8 @@
    "optionId": "fbh-hands",
    "label": "By Hand",
    "illustration": {
-    "path": "/images/jacket/front-buttonhole/by-hands.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -24315,8 +24233,8 @@
    "optionId": "hem-small-curve",
    "label": "Small Curved Bottom",
    "illustration": {
-    "path": "/images/jacket/hem/small-curve.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -24330,8 +24248,8 @@
    "optionId": "hem-big-curve",
    "label": "Large Curved Bottom",
    "illustration": {
-    "path": "/images/jacket/hem/big-curve.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -24366,8 +24284,8 @@
    "optionId": "sv-none",
    "label": "None",
    "illustration": {
-    "path": "/images/jacket/sleeve-vent/none.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -24381,8 +24299,8 @@
    "optionId": "sv-mock",
    "label": "Mock / Show Vent",
    "illustration": {
-    "path": "/images/jacket/sleeve-vent/mock.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -24396,8 +24314,8 @@
    "optionId": "sv-functional",
    "label": "Functional (Working)",
    "illustration": {
-    "path": "/images/jacket/sleeve-vent/functional.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -24411,8 +24329,8 @@
    "optionId": "sv-functional-mock",
    "label": "Functional + Mock Vent",
    "illustration": {
-    "path": "/images/jacket/sleeve-vent/functional-mock.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -24426,8 +24344,8 @@
    "optionId": "sv-functional-no-bh",
    "label": "Functional (No Buttonhole)",
    "illustration": {
-    "path": "/images/jacket/sleeve-vent/functional-no-bh.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -24583,16 +24501,16 @@
   },
   {
    "craftId": "suit-2pc|sleeves-cuffs|cuff-button-number|cb-4",
-   "state": "A",
-   "why": "illustration suspect-mismatch",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "suit-2pc",
    "sectionId": "sleeves-cuffs",
    "fieldId": "cuff-button-number",
    "optionId": "cb-4",
    "label": "4 Buttons",
    "illustration": {
-    "path": "/images/blueprints/supplier/362519787419__0621__4_flat.jpg",
-    "status": "suspect-mismatch"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -24696,8 +24614,8 @@
    "optionId": "bv-none",
    "label": "No Vent",
    "illustration": {
-    "path": "/images/jacket/back-vent/no-vent.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -24741,8 +24659,8 @@
    "optionId": "bv-side-belt",
    "label": "Side Vents + Inner Belt",
    "illustration": {
-    "path": "/images/jacket/back-vent/side-belt.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -24816,38 +24734,38 @@
    "optionId": "ext-none",
    "label": "None",
    "illustration": {
-    "path": "/images/jacket/external-decoration/none.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
   {
    "craftId": "suit-2pc|back-vents|external-decoration|ext-loop-flat",
-   "state": "A",
-   "why": "illustration banned-jacket-unverified",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "suit-2pc",
    "sectionId": "back-vents",
    "fieldId": "external-decoration",
    "optionId": "ext-loop-flat",
    "label": "Front Chest Horizontal Button Loop",
    "illustration": {
-    "path": "/images/jacket/external-decoration/front-chest-horizontal-button-loop.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
   {
    "craftId": "suit-2pc|back-vents|external-decoration|ext-loop-slanted",
-   "state": "A",
-   "why": "illustration banned-jacket-unverified",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "suit-2pc",
    "sectionId": "back-vents",
    "fieldId": "external-decoration",
    "optionId": "ext-loop-slanted",
    "label": "Front Chest Slanted Button Loop",
    "illustration": {
-    "path": "/images/jacket/external-decoration/front-chest-slanted-button-loop.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -24932,8 +24850,8 @@
    "optionId": "hmd-none",
    "label": "None",
    "illustration": {
-    "path": "/images/jacket/handmade-decorative/none.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -24947,8 +24865,8 @@
    "optionId": "hmd-shoulder",
    "label": "Shoulder Seam Only",
    "illustration": {
-    "path": "/images/jacket/handmade-decorative/shoulder-seam.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -24962,8 +24880,8 @@
    "optionId": "hmd-shoulder-vent",
    "label": "Shoulder + Sleeve/Back Vent",
    "illustration": {
-    "path": "/images/jacket/handmade-decorative/shoulder-vent.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -24977,8 +24895,8 @@
    "optionId": "hmd-full",
    "label": "Full — Shoulder, Vents, Chest Pocket, Buttonholes",
    "illustration": {
-    "path": "/images/jacket/handmade-decorative/full.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -24992,8 +24910,8 @@
    "optionId": "sbs-machine",
    "label": "Regular Machine Sewing",
    "illustration": {
-    "path": "/images/jacket/sewing-style/regular-machine.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -25007,8 +24925,8 @@
    "optionId": "sbs-cross-hand",
    "label": "Crossing Stitch by Hand (X)",
    "illustration": {
-    "path": "/images/jacket/sewing-style/cross-stitch.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -25022,8 +24940,8 @@
    "optionId": "sbs-down-hand",
    "label": "\"↓\" Stitch by Hand",
    "illustration": {
-    "path": "/images/jacket/sewing-style/down-stitch.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -25037,8 +24955,8 @@
    "optionId": "sbs-eq-hand",
    "label": "\"=\" Stitch by Hand",
    "illustration": {
-    "path": "/images/jacket/sewing-style/eq-stitch.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -25052,8 +24970,8 @@
    "optionId": "sbs-sq-hand",
    "label": "\"□\" Stitch by Hand",
    "illustration": {
-    "path": "/images/jacket/sewing-style/sq-stitch.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -25067,8 +24985,8 @@
    "optionId": "sbs-under-hand",
    "label": "Button Under Layer by Hand",
    "illustration": {
-    "path": "/images/jacket/sewing-style/under-layer.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -25082,8 +25000,8 @@
    "optionId": "slbh-machine",
    "label": "By Machine",
    "illustration": {
-    "path": "/images/jacket/sleeve-buttonhole/by-machine.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -25097,8 +25015,8 @@
    "optionId": "slbh-hands",
    "label": "By Hand",
    "illustration": {
-    "path": "/images/jacket/sleeve-buttonhole/by-hands.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -25314,16 +25232,16 @@
   },
   {
    "craftId": "suit-2pc|suit-details|contrast-position|contrast-chest-pocket",
-   "state": "A",
-   "why": "illustration banned-jacket-unverified",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "suit-2pc",
    "sectionId": "suit-details",
    "fieldId": "contrast-position",
    "optionId": "contrast-chest-pocket",
    "label": "Chest Pocket Trim",
    "illustration": {
-    "path": "/images/jacket/contrast-pos/chest-pocket.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -25389,16 +25307,16 @@
   },
   {
    "craftId": "suit-2pc|suit-details|contrast-position|contrast-satin-lapel",
-   "state": "A",
-   "why": "illustration banned-jacket-unverified",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "suit-2pc",
    "sectionId": "suit-details",
    "fieldId": "contrast-position",
    "optionId": "contrast-satin-lapel",
    "label": "Satin Piping on Lapel",
    "illustration": {
-    "path": "/images/jacket/contrast-pos/satin-lapel.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -25412,8 +25330,8 @@
    "optionId": "cp-none",
    "label": "None",
    "illustration": {
-    "path": "/images/jacket/columbia-piping/none.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -25427,8 +25345,8 @@
    "optionId": "cp-columbia",
    "label": "Columbia Stitching",
    "illustration": {
-    "path": "/images/jacket/columbia-piping/columbia.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -25442,8 +25360,8 @@
    "optionId": "cp-piping",
    "label": "Piping",
    "illustration": {
-    "path": "/images/jacket/columbia-piping/piping.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -25457,8 +25375,8 @@
    "optionId": "cp-both",
    "label": "Columbia + Piping",
    "illustration": {
-    "path": "/images/jacket/columbia-piping/columbia-and-piping.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -25472,8 +25390,8 @@
    "optionId": "facing-1",
    "label": "Facing 1",
    "illustration": {
-    "path": "/images/jacket/facing/facing-1.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -25487,8 +25405,8 @@
    "optionId": "facing-2",
    "label": "Facing 2",
    "illustration": {
-    "path": "/images/jacket/facing/facing-2.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -25502,8 +25420,8 @@
    "optionId": "facing-4",
    "label": "Facing 4",
    "illustration": {
-    "path": "/images/jacket/facing/facing-4.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -25517,8 +25435,8 @@
    "optionId": "facing-5",
    "label": "Facing 5",
    "illustration": {
-    "path": "/images/jacket/facing/facing-5.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -25532,8 +25450,8 @@
    "optionId": "facing-7",
    "label": "Facing 7",
    "illustration": {
-    "path": "/images/jacket/facing/facing-7.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -25547,8 +25465,8 @@
    "optionId": "facing-9",
    "label": "Facing 9",
    "illustration": {
-    "path": "/images/jacket/facing/facing-9.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -25562,8 +25480,8 @@
    "optionId": "facing-half",
    "label": "For Half Lining",
    "illustration": {
-    "path": "/images/jacket/facing/facing-half.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -25577,23 +25495,23 @@
    "optionId": "facing-none",
    "label": "For No Lining",
    "illustration": {
-    "path": "/images/jacket/facing/facing-none.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
   {
    "craftId": "suit-2pc|interior|pen-pocket|pen-none",
-   "state": "A",
-   "why": "illustration banned-jacket-unverified",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "suit-2pc",
    "sectionId": "interior",
    "fieldId": "pen-pocket",
    "optionId": "pen-none",
    "label": "None",
    "illustration": {
-    "path": "/images/jacket/pen-pocket/none.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -25607,8 +25525,8 @@
    "optionId": "pen-left-jetted",
    "label": "Left Jetted",
    "illustration": {
-    "path": "/images/jacket/pen-pocket/left-jetted.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -25622,8 +25540,8 @@
    "optionId": "pen-left-drop",
    "label": "Left Drop-shape",
    "illustration": {
-    "path": "/images/jacket/pen-pocket/left-drop.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -25637,8 +25555,8 @@
    "optionId": "pen-left-diamond",
    "label": "Left Diamond",
    "illustration": {
-    "path": "/images/jacket/pen-pocket/left-diamond.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -25652,8 +25570,8 @@
    "optionId": "pen-right-jetted",
    "label": "Right Jetted",
    "illustration": {
-    "path": "/images/jacket/pen-pocket/right-jetted.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -25667,8 +25585,8 @@
    "optionId": "pen-right-drop",
    "label": "Right Drop-shape",
    "illustration": {
-    "path": "/images/jacket/pen-pocket/right-drop.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -25682,8 +25600,8 @@
    "optionId": "pen-right-diamond",
    "label": "Right Diamond",
    "illustration": {
-    "path": "/images/jacket/pen-pocket/right-diamond.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -25697,8 +25615,8 @@
    "optionId": "nc-none",
    "label": "None",
    "illustration": {
-    "path": "/images/jacket/namecard-pocket/none.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -25712,8 +25630,8 @@
    "optionId": "nc-left",
    "label": "Left Inner",
    "illustration": {
-    "path": "/images/jacket/namecard-pocket/left.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -25727,8 +25645,8 @@
    "optionId": "nc-right",
    "label": "Right Inner",
    "illustration": {
-    "path": "/images/jacket/namecard-pocket/right.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -25742,8 +25660,8 @@
    "optionId": "nc-both",
    "label": "Both Sides",
    "illustration": {
-    "path": "/images/jacket/namecard-pocket/both.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -25757,8 +25675,8 @@
    "optionId": "itp-none",
    "label": "None",
    "illustration": {
-    "path": "/images/jacket/inner-ticket-pocket/none.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -25772,8 +25690,8 @@
    "optionId": "itp-left",
    "label": "Left",
    "illustration": {
-    "path": "/images/jacket/inner-ticket-pocket/left.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -25787,8 +25705,8 @@
    "optionId": "itp-right",
    "label": "Right",
    "illustration": {
-    "path": "/images/jacket/inner-ticket-pocket/right.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -25802,8 +25720,8 @@
    "optionId": "itp-both",
    "label": "Left & Right",
    "illustration": {
-    "path": "/images/jacket/inner-ticket-pocket/left-and-right.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -25817,8 +25735,8 @@
    "optionId": "mp3-none",
    "label": "None",
    "illustration": {
-    "path": "/images/jacket/mp3-pocket/none.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -25832,8 +25750,8 @@
    "optionId": "mp3-left",
    "label": "Left Inner",
    "illustration": {
-    "path": "/images/jacket/mp3-pocket/left.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -25847,8 +25765,8 @@
    "optionId": "mp3-right",
    "label": "Right Inner",
    "illustration": {
-    "path": "/images/jacket/mp3-pocket/right.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -25862,8 +25780,8 @@
    "optionId": "ipc-none",
    "label": "None (Open)",
    "illustration": {
-    "path": "/images/jacket/inner-pocket-closure/none.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -25940,8 +25858,8 @@
    "optionId": "pp-none",
    "label": "None",
    "illustration": {
-    "path": "/images/jacket/underarm-shield/none.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -25955,8 +25873,8 @@
    "optionId": "pp-triangle",
    "label": "Triangle Underarm Shield",
    "illustration": {
-    "path": "/images/jacket/underarm-shield/triangle.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -25970,8 +25888,8 @@
    "optionId": "pp-round-1",
    "label": "Round Shield 1",
    "illustration": {
-    "path": "/images/jacket/underarm-shield/round-1.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -25985,8 +25903,8 @@
    "optionId": "pp-round-2",
    "label": "Round Shield 2",
    "illustration": {
-    "path": "/images/jacket/underarm-shield/round-2.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -26000,8 +25918,8 @@
    "optionId": "pp-round-3",
    "label": "Round Shield 3",
    "illustration": {
-    "path": "/images/jacket/underarm-shield/round-3.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -26015,8 +25933,8 @@
    "optionId": "pp-u-1",
    "label": "U-Shield 1",
    "illustration": {
-    "path": "/images/jacket/underarm-shield/u-1.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -26030,8 +25948,8 @@
    "optionId": "pp-u-2",
    "label": "U-Shield 2",
    "illustration": {
-    "path": "/images/jacket/underarm-shield/u-2.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -26045,8 +25963,8 @@
    "optionId": "pp-u-3",
    "label": "U-Shield 3",
    "illustration": {
-    "path": "/images/jacket/underarm-shield/u-3.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -26060,8 +25978,8 @@
    "optionId": "lc-full",
    "label": "Full Lining",
    "illustration": {
-    "path": "/images/jacket/lining/full-lining.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -26075,8 +25993,8 @@
    "optionId": "lc-half",
    "label": "Half Lining",
    "illustration": {
-    "path": "/images/jacket/lining/half-lining.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -26090,8 +26008,8 @@
    "optionId": "lc-quarter",
    "label": "Quarter Lining",
    "illustration": {
-    "path": "/images/jacket/lining/half-lining.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -26120,8 +26038,8 @@
    "optionId": "hls-standard",
    "label": "Standard Half Lining",
    "illustration": {
-    "path": "/images/jacket/lining/half-lining.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -26135,38 +26053,38 @@
    "optionId": "hls-small-cutaway",
    "label": "Small Cut-away",
    "illustration": {
-    "path": "/images/jacket/lining/half-lining.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
   {
    "craftId": "suit-2pc|suit-lining|half-lining-shape|hls-half",
-   "state": "A",
-   "why": "illustration banned-jacket-unverified",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "suit-2pc",
    "sectionId": "suit-lining",
    "fieldId": "half-lining-shape",
    "optionId": "hls-half",
    "label": "1/2 Lining",
    "illustration": {
-    "path": "/images/jacket/lining/half-lining.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
   {
    "craftId": "suit-2pc|suit-lining|half-lining-shape|hls-third-cutaway",
-   "state": "A",
-   "why": "illustration banned-jacket-unverified",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "suit-2pc",
    "sectionId": "suit-lining",
    "fieldId": "half-lining-shape",
    "optionId": "hls-third-cutaway",
    "label": "1/3 Cut-away",
    "illustration": {
-    "path": "/images/jacket/lining/half-lining.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -26180,23 +26098,23 @@
    "optionId": "hls-third",
    "label": "1/3 Lining",
    "illustration": {
-    "path": "/images/jacket/lining/half-lining.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
   {
    "craftId": "suit-2pc|suit-lining|half-lining-shape|hls-quarter-cutaway",
-   "state": "A",
-   "why": "illustration banned-jacket-unverified",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "suit-2pc",
    "sectionId": "suit-lining",
    "fieldId": "half-lining-shape",
    "optionId": "hls-quarter-cutaway",
    "label": "1/4 Cut-away",
    "illustration": {
-    "path": "/images/jacket/lining/half-lining.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -26210,8 +26128,8 @@
    "optionId": "hlc-binding",
    "label": "Binding Seam",
    "illustration": {
-    "path": "/images/jacket/lining/half-lining.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -26225,8 +26143,8 @@
    "optionId": "hlc-french",
    "label": "French Seam",
    "illustration": {
-    "path": "/images/jacket/lining/half-lining.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -26240,8 +26158,8 @@
    "optionId": "hlc-joining",
    "label": "Joining Seam",
    "illustration": {
-    "path": "/images/jacket/lining/half-lining.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -27069,16 +26987,16 @@
   },
   {
    "craftId": "suit-2pc|Trousers-front-pockets|pocket-stitching|pocket-stitch-06",
-   "state": "A",
-   "why": "illustration suspect-mismatch",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "suit-2pc",
    "sectionId": "Trousers-front-pockets",
    "fieldId": "pocket-stitching",
    "optionId": "pocket-stitch-06",
    "label": "0.6 cm Topstitch",
    "illustration": {
-    "path": "/images/blueprints/factory/2b3c7bcf74ef__31A3__0.6cm_top_stitch.jpg",
-    "status": "suspect-mismatch"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": {
     "spec": true,
@@ -27229,15 +27147,15 @@
   {
    "craftId": "suit-2pc|Trousers-front-pockets|watch-pocket|watch-left",
    "state": "A",
-   "why": "illustration suspect-mismatch",
+   "why": "illustration missing",
    "product": "suit-2pc",
    "sectionId": "Trousers-front-pockets",
    "fieldId": "watch-pocket",
    "optionId": "watch-left",
    "label": "Left Welt",
    "illustration": {
-    "path": "/images/blueprints/factory/2a5f7a6c70e1__3171__Left_welt.jpg",
-    "status": "suspect-mismatch"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": {
     "spec": true,
@@ -28738,16 +28656,16 @@
   },
   {
    "craftId": "suit-2pc|Trousers-pleats-structure|pleat-style|flat-front",
-   "state": "A",
-   "why": "illustration suspect-mismatch",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "suit-2pc",
    "sectionId": "Trousers-pleats-structure",
    "fieldId": "pleat-style",
    "optionId": "flat-front",
    "label": "Flat Front (No Dart)",
    "illustration": {
-    "path": "/images/blueprints/factory/edc7138c802f__302L__No_pleat_no_dart.jpg",
-    "status": "suspect-mismatch"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": {
     "spec": true,
@@ -29337,30 +29255,30 @@
   {
    "craftId": "suit-2pc|Trousers-pleats-structure|fly-stitching|fly-stitch-curved",
    "state": "A",
-   "why": "illustration suspect-mismatch",
+   "why": "illustration missing",
    "product": "suit-2pc",
    "sectionId": "Trousers-pleats-structure",
    "fieldId": "fly-stitching",
    "optionId": "fly-stitch-curved",
    "label": "Curved Fly Stitch",
    "illustration": {
-    "path": "/images/blueprints/factory/2b3c7bcf74ef__31A3__0.6cm_top_stitch.jpg",
-    "status": "suspect-mismatch"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
   {
    "craftId": "suit-2pc|Trousers-pleats-structure|fly-stitching|fly-stitch-straight",
    "state": "A",
-   "why": "illustration suspect-mismatch",
+   "why": "illustration missing",
    "product": "suit-2pc",
    "sectionId": "Trousers-pleats-structure",
    "fieldId": "fly-stitching",
    "optionId": "fly-stitch-straight",
    "label": "Straight Fly Stitch",
    "illustration": {
-    "path": "/images/blueprints/factory/e081e2a8c319__31A1__0.15cm_top_stitch.jpg",
-    "status": "suspect-mismatch"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -29827,45 +29745,45 @@
   {
    "craftId": "suit-2pc|Trousers-back|back-darts|darts-none",
    "state": "A",
-   "why": "illustration suspect-mismatch",
+   "why": "illustration missing",
    "product": "suit-2pc",
    "sectionId": "Trousers-back",
    "fieldId": "back-darts",
    "optionId": "darts-none",
    "label": "No Darts",
    "illustration": {
-    "path": "/images/blueprints/factory/edc7138c802f__302L__No_pleat_no_dart.jpg",
-    "status": "suspect-mismatch"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
   {
    "craftId": "suit-2pc|Trousers-back|back-darts|darts-single",
    "state": "A",
-   "why": "illustration suspect-mismatch",
+   "why": "illustration missing",
    "product": "suit-2pc",
    "sectionId": "Trousers-back",
    "fieldId": "back-darts",
    "optionId": "darts-single",
    "label": "Single Back Darts",
    "illustration": {
-    "path": "/images/blueprints/factory/27e91c06ed8a__302M__No_pleat_single_dart.jpg",
-    "status": "suspect-mismatch"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
   {
    "craftId": "suit-2pc|Trousers-back|back-darts|darts-double",
    "state": "A",
-   "why": "illustration suspect-mismatch",
+   "why": "illustration missing",
    "product": "suit-2pc",
    "sectionId": "Trousers-back",
    "fieldId": "back-darts",
    "optionId": "darts-double",
    "label": "Double Back Darts",
    "illustration": {
-    "path": "/images/blueprints/factory/f1edbb42290d__302Y__No_pleat_double_darts.jpg",
-    "status": "suspect-mismatch"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": {
     "spec": true,
@@ -30158,15 +30076,15 @@
   {
    "craftId": "suit-2pc|Trousers-bottom-hem|hem-style|hem-cuff-38",
    "state": "A",
-   "why": "illustration suspect-mismatch",
+   "why": "illustration missing",
    "product": "suit-2pc",
    "sectionId": "Trousers-bottom-hem",
    "fieldId": "hem-style",
    "optionId": "hem-cuff-38",
    "label": "3.8 cm Cuff Turn-Up",
    "illustration": {
-    "path": "/images/blueprints/remote/3817491d18ac__3603.jpg",
-    "status": "suspect-mismatch"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": {
     "spec": true,
@@ -30751,15 +30669,15 @@
   {
    "craftId": "suit-2pc|Trousers-lining-internal|inner-waist|inner-piping-snugtex",
    "state": "A",
-   "why": "illustration suspect-mismatch",
+   "why": "illustration missing",
    "product": "suit-2pc",
    "sectionId": "Trousers-lining-internal",
    "fieldId": "inner-waist",
    "optionId": "inner-piping-snugtex",
    "label": "Standard, Piping & Snugtex",
    "illustration": {
-    "path": "/images/blueprints/remote/c8538a87dffb__3441.jpg",
-    "status": "suspect-mismatch"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": {
     "spec": true,
@@ -31392,8 +31310,8 @@
    "optionId": "sleeve-con-rollino",
    "label": "Con Rollino",
    "illustration": {
-    "path": "/images/jacket/shoulder-head/con-rollino.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -31497,8 +31415,8 @@
    "optionId": "full-canvas",
    "label": "Full Canvas (Floating)",
    "illustration": {
-    "path": "/images/jacket/canvas/full-canvas.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -33395,8 +33313,8 @@
    "optionId": "cp-none",
    "label": "None",
    "illustration": {
-    "path": "/images/jacket/columbia-piping/none.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -34295,8 +34213,8 @@
    "optionId": "bartack-none",
    "label": "None",
    "illustration": {
-    "path": "/images/jacket/pocket-bartack/none.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -34310,8 +34228,8 @@
    "optionId": "bartack-d",
    "label": "D-Bartack",
    "illustration": {
-    "path": "/images/jacket/pocket-bartack/d-bartack.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -34325,8 +34243,8 @@
    "optionId": "bartack-i",
    "label": "I-Bartack",
    "illustration": {
-    "path": "/images/jacket/pocket-bartack/i-bartack.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -34340,8 +34258,8 @@
    "optionId": "bartack-x",
    "label": "X-Bartack",
    "illustration": {
-    "path": "/images/jacket/pocket-bartack/x-bartack.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -34355,8 +34273,8 @@
    "optionId": "bartack-1",
    "label": "1-Bartack",
    "illustration": {
-    "path": "/images/jacket/pocket-bartack/i-bartack.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -34370,38 +34288,38 @@
    "optionId": "tp-none",
    "label": "None",
    "illustration": {
-    "path": "/images/jacket/ticket-pocket/none.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
   {
    "craftId": "suit-3pc|suit-pockets|ticket-pocket|tp-jetted",
-   "state": "A",
-   "why": "illustration banned-jacket-unverified",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "suit-3pc",
    "sectionId": "suit-pockets",
    "fieldId": "ticket-pocket",
    "optionId": "tp-jetted",
    "label": "Jetted Ticket Pocket",
    "illustration": {
-    "path": "/images/jacket/ticket-pocket/jetted.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
   {
    "craftId": "suit-3pc|suit-pockets|ticket-pocket|tp-welt",
-   "state": "A",
-   "why": "illustration banned-jacket-unverified",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "suit-3pc",
    "sectionId": "suit-pockets",
    "fieldId": "ticket-pocket",
    "optionId": "tp-welt",
    "label": "Welt Ticket Pocket",
    "illustration": {
-    "path": "/images/jacket/ticket-pocket/welt.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -34415,8 +34333,8 @@
    "optionId": "tp-card-italian",
    "label": "Italian Card Slot",
    "illustration": {
-    "path": "/images/jacket/ticket-pocket/jetted.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -34430,8 +34348,8 @@
    "optionId": "tp-card-formal",
    "label": "Formal Card Holder",
    "illustration": {
-    "path": "/images/jacket/ticket-pocket/jetted.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -34445,8 +34363,8 @@
    "optionId": "tp-rl-card",
    "label": "RL Card Pocket",
    "illustration": {
-    "path": "/images/jacket/ticket-pocket/jetted.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -34460,8 +34378,8 @@
    "optionId": "tp-flap-40",
    "label": "Flap 4.0 cm",
    "illustration": {
-    "path": "/images/jacket/ticket-pocket/flap-40.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -34475,8 +34393,8 @@
    "optionId": "tp-flap-45",
    "label": "Flap 4.5 cm",
    "illustration": {
-    "path": "/images/jacket/ticket-pocket/flap.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -34490,8 +34408,8 @@
    "optionId": "tp-flap-50",
    "label": "Flap 5.0 cm",
    "illustration": {
-    "path": "/images/jacket/ticket-pocket/flap-50.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -34505,8 +34423,8 @@
    "optionId": "tp-flap-55",
    "label": "Flap 5.5 cm",
    "illustration": {
-    "path": "/images/jacket/ticket-pocket/flap-55.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -34520,38 +34438,38 @@
    "optionId": "tp-flap-60",
    "label": "Flap 6.0 cm",
    "illustration": {
-    "path": "/images/jacket/ticket-pocket/flap-60.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
   {
    "craftId": "suit-3pc|suit-pockets|coin-pocket|coin-none",
-   "state": "A",
-   "why": "illustration banned-jacket-unverified",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "suit-3pc",
    "sectionId": "suit-pockets",
    "fieldId": "coin-pocket",
    "optionId": "coin-none",
    "label": "None",
    "illustration": {
-    "path": "/images/jacket/coin-pocket/none.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
   {
    "craftId": "suit-3pc|suit-pockets|coin-pocket|coin-left",
-   "state": "A",
-   "why": "illustration banned-jacket-unverified",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "suit-3pc",
    "sectionId": "suit-pockets",
    "fieldId": "coin-pocket",
    "optionId": "coin-left",
    "label": "Left Side",
    "illustration": {
-    "path": "/images/jacket/coin-pocket/left.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": {
     "spec": true,
@@ -34570,8 +34488,8 @@
    "optionId": "coin-right",
    "label": "Right Side",
    "illustration": {
-    "path": "/images/jacket/coin-pocket/right.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -34585,8 +34503,8 @@
    "optionId": "coin-both",
    "label": "Both Sides",
    "illustration": {
-    "path": "/images/jacket/coin-pocket/both.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -34715,8 +34633,8 @@
    "optionId": "sb-5",
    "label": "SB 5 Buttons",
    "illustration": {
-    "path": "/images/jacket/front-style/sb-5.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": {
     "spec": true,
@@ -34727,46 +34645,46 @@
   },
   {
    "craftId": "suit-3pc|front-style|button-config|db-2x1",
-   "state": "A",
-   "why": "illustration banned-jacket-unverified",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "suit-3pc",
    "sectionId": "front-style",
    "fieldId": "button-config",
    "optionId": "db-2x1",
    "label": "DB 2 × 1",
    "illustration": {
-    "path": "/images/jacket/front-style/db-2x1.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
   {
    "craftId": "suit-3pc|front-style|button-config|db-4x1",
-   "state": "A",
-   "why": "illustration banned-jacket-unverified",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "suit-3pc",
    "sectionId": "front-style",
    "fieldId": "button-config",
    "optionId": "db-4x1",
    "label": "DB 4 × 1",
    "illustration": {
-    "path": "/images/jacket/front-style/db-4x1.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
   {
    "craftId": "suit-3pc|front-style|button-config|db-4x2",
-   "state": "A",
-   "why": "illustration banned-jacket-unverified",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "suit-3pc",
    "sectionId": "front-style",
    "fieldId": "button-config",
    "optionId": "db-4x2",
    "label": "DB 4 × 2",
    "illustration": {
-    "path": "/images/jacket/front-style/db-4x2.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": {
     "spec": true,
@@ -34777,31 +34695,31 @@
   },
   {
    "craftId": "suit-3pc|front-style|button-config|db-6x1",
-   "state": "A",
-   "why": "illustration banned-jacket-unverified",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "suit-3pc",
    "sectionId": "front-style",
    "fieldId": "button-config",
    "optionId": "db-6x1",
    "label": "DB 6 × 1",
    "illustration": {
-    "path": "/images/jacket/front-style/db-6x1.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
   {
    "craftId": "suit-3pc|front-style|button-config|db-6x2",
-   "state": "A",
-   "why": "illustration banned-jacket-unverified",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "suit-3pc",
    "sectionId": "front-style",
    "fieldId": "button-config",
    "optionId": "db-6x2",
    "label": "DB 6 × 2",
    "illustration": {
-    "path": "/images/jacket/front-style/db-6x2.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": {
     "spec": true,
@@ -34812,16 +34730,16 @@
   },
   {
    "craftId": "suit-3pc|front-style|button-config|db-6x3",
-   "state": "A",
-   "why": "illustration banned-jacket-unverified",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "suit-3pc",
    "sectionId": "front-style",
    "fieldId": "button-config",
    "optionId": "db-6x3",
    "label": "DB 6 × 3",
    "illustration": {
-    "path": "/images/jacket/front-style/db-6x3.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": {
     "spec": true,
@@ -34840,8 +34758,8 @@
    "optionId": "fbh-machine",
    "label": "By Machine",
    "illustration": {
-    "path": "/images/jacket/front-buttonhole/by-machine.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -34855,8 +34773,8 @@
    "optionId": "fbh-hands",
    "label": "By Hand",
    "illustration": {
-    "path": "/images/jacket/front-buttonhole/by-hands.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -35008,8 +34926,8 @@
    "optionId": "hem-small-curve",
    "label": "Small Curved Bottom",
    "illustration": {
-    "path": "/images/jacket/hem/small-curve.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -35023,8 +34941,8 @@
    "optionId": "hem-big-curve",
    "label": "Large Curved Bottom",
    "illustration": {
-    "path": "/images/jacket/hem/big-curve.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -35059,8 +34977,8 @@
    "optionId": "sv-none",
    "label": "None",
    "illustration": {
-    "path": "/images/jacket/sleeve-vent/none.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -35074,8 +34992,8 @@
    "optionId": "sv-mock",
    "label": "Mock / Show Vent",
    "illustration": {
-    "path": "/images/jacket/sleeve-vent/mock.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -35089,8 +35007,8 @@
    "optionId": "sv-functional",
    "label": "Functional (Working)",
    "illustration": {
-    "path": "/images/jacket/sleeve-vent/functional.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -35104,8 +35022,8 @@
    "optionId": "sv-functional-mock",
    "label": "Functional + Mock Vent",
    "illustration": {
-    "path": "/images/jacket/sleeve-vent/functional-mock.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -35119,8 +35037,8 @@
    "optionId": "sv-functional-no-bh",
    "label": "Functional (No Buttonhole)",
    "illustration": {
-    "path": "/images/jacket/sleeve-vent/functional-no-bh.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -35276,16 +35194,16 @@
   },
   {
    "craftId": "suit-3pc|sleeves-cuffs|cuff-button-number|cb-4",
-   "state": "A",
-   "why": "illustration suspect-mismatch",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "suit-3pc",
    "sectionId": "sleeves-cuffs",
    "fieldId": "cuff-button-number",
    "optionId": "cb-4",
    "label": "4 Buttons",
    "illustration": {
-    "path": "/images/blueprints/supplier/362519787419__0621__4_flat.jpg",
-    "status": "suspect-mismatch"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -35389,8 +35307,8 @@
    "optionId": "bv-none",
    "label": "No Vent",
    "illustration": {
-    "path": "/images/jacket/back-vent/no-vent.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -35434,8 +35352,8 @@
    "optionId": "bv-side-belt",
    "label": "Side Vents + Inner Belt",
    "illustration": {
-    "path": "/images/jacket/back-vent/side-belt.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -35509,38 +35427,38 @@
    "optionId": "ext-none",
    "label": "None",
    "illustration": {
-    "path": "/images/jacket/external-decoration/none.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
   {
    "craftId": "suit-3pc|back-vents|external-decoration|ext-loop-flat",
-   "state": "A",
-   "why": "illustration banned-jacket-unverified",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "suit-3pc",
    "sectionId": "back-vents",
    "fieldId": "external-decoration",
    "optionId": "ext-loop-flat",
    "label": "Front Chest Horizontal Button Loop",
    "illustration": {
-    "path": "/images/jacket/external-decoration/front-chest-horizontal-button-loop.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
   {
    "craftId": "suit-3pc|back-vents|external-decoration|ext-loop-slanted",
-   "state": "A",
-   "why": "illustration banned-jacket-unverified",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "suit-3pc",
    "sectionId": "back-vents",
    "fieldId": "external-decoration",
    "optionId": "ext-loop-slanted",
    "label": "Front Chest Slanted Button Loop",
    "illustration": {
-    "path": "/images/jacket/external-decoration/front-chest-slanted-button-loop.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -35625,8 +35543,8 @@
    "optionId": "hmd-none",
    "label": "None",
    "illustration": {
-    "path": "/images/jacket/handmade-decorative/none.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -35640,8 +35558,8 @@
    "optionId": "hmd-shoulder",
    "label": "Shoulder Seam Only",
    "illustration": {
-    "path": "/images/jacket/handmade-decorative/shoulder-seam.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -35655,8 +35573,8 @@
    "optionId": "hmd-shoulder-vent",
    "label": "Shoulder + Sleeve/Back Vent",
    "illustration": {
-    "path": "/images/jacket/handmade-decorative/shoulder-vent.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -35670,8 +35588,8 @@
    "optionId": "hmd-full",
    "label": "Full — Shoulder, Vents, Chest Pocket, Buttonholes",
    "illustration": {
-    "path": "/images/jacket/handmade-decorative/full.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -35685,8 +35603,8 @@
    "optionId": "sbs-machine",
    "label": "Regular Machine Sewing",
    "illustration": {
-    "path": "/images/jacket/sewing-style/regular-machine.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -35700,8 +35618,8 @@
    "optionId": "sbs-cross-hand",
    "label": "Crossing Stitch by Hand (X)",
    "illustration": {
-    "path": "/images/jacket/sewing-style/cross-stitch.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -35715,8 +35633,8 @@
    "optionId": "sbs-down-hand",
    "label": "\"↓\" Stitch by Hand",
    "illustration": {
-    "path": "/images/jacket/sewing-style/down-stitch.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -35730,8 +35648,8 @@
    "optionId": "sbs-eq-hand",
    "label": "\"=\" Stitch by Hand",
    "illustration": {
-    "path": "/images/jacket/sewing-style/eq-stitch.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -35745,8 +35663,8 @@
    "optionId": "sbs-sq-hand",
    "label": "\"□\" Stitch by Hand",
    "illustration": {
-    "path": "/images/jacket/sewing-style/sq-stitch.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -35760,8 +35678,8 @@
    "optionId": "sbs-under-hand",
    "label": "Button Under Layer by Hand",
    "illustration": {
-    "path": "/images/jacket/sewing-style/under-layer.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -35775,8 +35693,8 @@
    "optionId": "slbh-machine",
    "label": "By Machine",
    "illustration": {
-    "path": "/images/jacket/sleeve-buttonhole/by-machine.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -35790,8 +35708,8 @@
    "optionId": "slbh-hands",
    "label": "By Hand",
    "illustration": {
-    "path": "/images/jacket/sleeve-buttonhole/by-hands.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -36007,16 +35925,16 @@
   },
   {
    "craftId": "suit-3pc|suit-details|contrast-position|contrast-chest-pocket",
-   "state": "A",
-   "why": "illustration banned-jacket-unverified",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "suit-3pc",
    "sectionId": "suit-details",
    "fieldId": "contrast-position",
    "optionId": "contrast-chest-pocket",
    "label": "Chest Pocket Trim",
    "illustration": {
-    "path": "/images/jacket/contrast-pos/chest-pocket.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -36082,16 +36000,16 @@
   },
   {
    "craftId": "suit-3pc|suit-details|contrast-position|contrast-satin-lapel",
-   "state": "A",
-   "why": "illustration banned-jacket-unverified",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "suit-3pc",
    "sectionId": "suit-details",
    "fieldId": "contrast-position",
    "optionId": "contrast-satin-lapel",
    "label": "Satin Piping on Lapel",
    "illustration": {
-    "path": "/images/jacket/contrast-pos/satin-lapel.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -36105,8 +36023,8 @@
    "optionId": "cp-none",
    "label": "None",
    "illustration": {
-    "path": "/images/jacket/columbia-piping/none.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -36120,8 +36038,8 @@
    "optionId": "cp-columbia",
    "label": "Columbia Stitching",
    "illustration": {
-    "path": "/images/jacket/columbia-piping/columbia.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -36135,8 +36053,8 @@
    "optionId": "cp-piping",
    "label": "Piping",
    "illustration": {
-    "path": "/images/jacket/columbia-piping/piping.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -36150,8 +36068,8 @@
    "optionId": "cp-both",
    "label": "Columbia + Piping",
    "illustration": {
-    "path": "/images/jacket/columbia-piping/columbia-and-piping.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -36165,8 +36083,8 @@
    "optionId": "facing-1",
    "label": "Facing 1",
    "illustration": {
-    "path": "/images/jacket/facing/facing-1.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -36180,8 +36098,8 @@
    "optionId": "facing-2",
    "label": "Facing 2",
    "illustration": {
-    "path": "/images/jacket/facing/facing-2.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -36195,8 +36113,8 @@
    "optionId": "facing-4",
    "label": "Facing 4",
    "illustration": {
-    "path": "/images/jacket/facing/facing-4.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -36210,8 +36128,8 @@
    "optionId": "facing-5",
    "label": "Facing 5",
    "illustration": {
-    "path": "/images/jacket/facing/facing-5.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -36225,8 +36143,8 @@
    "optionId": "facing-7",
    "label": "Facing 7",
    "illustration": {
-    "path": "/images/jacket/facing/facing-7.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -36240,8 +36158,8 @@
    "optionId": "facing-9",
    "label": "Facing 9",
    "illustration": {
-    "path": "/images/jacket/facing/facing-9.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -36255,8 +36173,8 @@
    "optionId": "facing-half",
    "label": "For Half Lining",
    "illustration": {
-    "path": "/images/jacket/facing/facing-half.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -36270,23 +36188,23 @@
    "optionId": "facing-none",
    "label": "For No Lining",
    "illustration": {
-    "path": "/images/jacket/facing/facing-none.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
   {
    "craftId": "suit-3pc|interior|pen-pocket|pen-none",
-   "state": "A",
-   "why": "illustration banned-jacket-unverified",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "suit-3pc",
    "sectionId": "interior",
    "fieldId": "pen-pocket",
    "optionId": "pen-none",
    "label": "None",
    "illustration": {
-    "path": "/images/jacket/pen-pocket/none.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -36300,8 +36218,8 @@
    "optionId": "pen-left-jetted",
    "label": "Left Jetted",
    "illustration": {
-    "path": "/images/jacket/pen-pocket/left-jetted.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -36315,8 +36233,8 @@
    "optionId": "pen-left-drop",
    "label": "Left Drop-shape",
    "illustration": {
-    "path": "/images/jacket/pen-pocket/left-drop.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -36330,8 +36248,8 @@
    "optionId": "pen-left-diamond",
    "label": "Left Diamond",
    "illustration": {
-    "path": "/images/jacket/pen-pocket/left-diamond.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -36345,8 +36263,8 @@
    "optionId": "pen-right-jetted",
    "label": "Right Jetted",
    "illustration": {
-    "path": "/images/jacket/pen-pocket/right-jetted.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -36360,8 +36278,8 @@
    "optionId": "pen-right-drop",
    "label": "Right Drop-shape",
    "illustration": {
-    "path": "/images/jacket/pen-pocket/right-drop.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -36375,8 +36293,8 @@
    "optionId": "pen-right-diamond",
    "label": "Right Diamond",
    "illustration": {
-    "path": "/images/jacket/pen-pocket/right-diamond.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -36390,8 +36308,8 @@
    "optionId": "nc-none",
    "label": "None",
    "illustration": {
-    "path": "/images/jacket/namecard-pocket/none.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -36405,8 +36323,8 @@
    "optionId": "nc-left",
    "label": "Left Inner",
    "illustration": {
-    "path": "/images/jacket/namecard-pocket/left.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -36420,8 +36338,8 @@
    "optionId": "nc-right",
    "label": "Right Inner",
    "illustration": {
-    "path": "/images/jacket/namecard-pocket/right.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -36435,8 +36353,8 @@
    "optionId": "nc-both",
    "label": "Both Sides",
    "illustration": {
-    "path": "/images/jacket/namecard-pocket/both.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -36450,8 +36368,8 @@
    "optionId": "itp-none",
    "label": "None",
    "illustration": {
-    "path": "/images/jacket/inner-ticket-pocket/none.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -36465,8 +36383,8 @@
    "optionId": "itp-left",
    "label": "Left",
    "illustration": {
-    "path": "/images/jacket/inner-ticket-pocket/left.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -36480,8 +36398,8 @@
    "optionId": "itp-right",
    "label": "Right",
    "illustration": {
-    "path": "/images/jacket/inner-ticket-pocket/right.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -36495,8 +36413,8 @@
    "optionId": "itp-both",
    "label": "Left & Right",
    "illustration": {
-    "path": "/images/jacket/inner-ticket-pocket/left-and-right.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -36510,8 +36428,8 @@
    "optionId": "mp3-none",
    "label": "None",
    "illustration": {
-    "path": "/images/jacket/mp3-pocket/none.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -36525,8 +36443,8 @@
    "optionId": "mp3-left",
    "label": "Left Inner",
    "illustration": {
-    "path": "/images/jacket/mp3-pocket/left.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -36540,8 +36458,8 @@
    "optionId": "mp3-right",
    "label": "Right Inner",
    "illustration": {
-    "path": "/images/jacket/mp3-pocket/right.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -36555,8 +36473,8 @@
    "optionId": "ipc-none",
    "label": "None (Open)",
    "illustration": {
-    "path": "/images/jacket/inner-pocket-closure/none.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -36633,8 +36551,8 @@
    "optionId": "pp-none",
    "label": "None",
    "illustration": {
-    "path": "/images/jacket/underarm-shield/none.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -36648,8 +36566,8 @@
    "optionId": "pp-triangle",
    "label": "Triangle Underarm Shield",
    "illustration": {
-    "path": "/images/jacket/underarm-shield/triangle.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -36663,8 +36581,8 @@
    "optionId": "pp-round-1",
    "label": "Round Shield 1",
    "illustration": {
-    "path": "/images/jacket/underarm-shield/round-1.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -36678,8 +36596,8 @@
    "optionId": "pp-round-2",
    "label": "Round Shield 2",
    "illustration": {
-    "path": "/images/jacket/underarm-shield/round-2.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -36693,8 +36611,8 @@
    "optionId": "pp-round-3",
    "label": "Round Shield 3",
    "illustration": {
-    "path": "/images/jacket/underarm-shield/round-3.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -36708,8 +36626,8 @@
    "optionId": "pp-u-1",
    "label": "U-Shield 1",
    "illustration": {
-    "path": "/images/jacket/underarm-shield/u-1.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -36723,8 +36641,8 @@
    "optionId": "pp-u-2",
    "label": "U-Shield 2",
    "illustration": {
-    "path": "/images/jacket/underarm-shield/u-2.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -36738,8 +36656,8 @@
    "optionId": "pp-u-3",
    "label": "U-Shield 3",
    "illustration": {
-    "path": "/images/jacket/underarm-shield/u-3.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -36753,8 +36671,8 @@
    "optionId": "lc-full",
    "label": "Full Lining",
    "illustration": {
-    "path": "/images/jacket/lining/full-lining.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -36768,8 +36686,8 @@
    "optionId": "lc-half",
    "label": "Half Lining",
    "illustration": {
-    "path": "/images/jacket/lining/half-lining.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -36783,8 +36701,8 @@
    "optionId": "lc-quarter",
    "label": "Quarter Lining",
    "illustration": {
-    "path": "/images/jacket/lining/half-lining.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -36813,8 +36731,8 @@
    "optionId": "hls-standard",
    "label": "Standard Half Lining",
    "illustration": {
-    "path": "/images/jacket/lining/half-lining.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -36828,38 +36746,38 @@
    "optionId": "hls-small-cutaway",
    "label": "Small Cut-away",
    "illustration": {
-    "path": "/images/jacket/lining/half-lining.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
   {
    "craftId": "suit-3pc|suit-lining|half-lining-shape|hls-half",
-   "state": "A",
-   "why": "illustration banned-jacket-unverified",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "suit-3pc",
    "sectionId": "suit-lining",
    "fieldId": "half-lining-shape",
    "optionId": "hls-half",
    "label": "1/2 Lining",
    "illustration": {
-    "path": "/images/jacket/lining/half-lining.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
   {
    "craftId": "suit-3pc|suit-lining|half-lining-shape|hls-third-cutaway",
-   "state": "A",
-   "why": "illustration banned-jacket-unverified",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "suit-3pc",
    "sectionId": "suit-lining",
    "fieldId": "half-lining-shape",
    "optionId": "hls-third-cutaway",
    "label": "1/3 Cut-away",
    "illustration": {
-    "path": "/images/jacket/lining/half-lining.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -36873,23 +36791,23 @@
    "optionId": "hls-third",
    "label": "1/3 Lining",
    "illustration": {
-    "path": "/images/jacket/lining/half-lining.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
   {
    "craftId": "suit-3pc|suit-lining|half-lining-shape|hls-quarter-cutaway",
-   "state": "A",
-   "why": "illustration banned-jacket-unverified",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "suit-3pc",
    "sectionId": "suit-lining",
    "fieldId": "half-lining-shape",
    "optionId": "hls-quarter-cutaway",
    "label": "1/4 Cut-away",
    "illustration": {
-    "path": "/images/jacket/lining/half-lining.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -36903,8 +36821,8 @@
    "optionId": "hlc-binding",
    "label": "Binding Seam",
    "illustration": {
-    "path": "/images/jacket/lining/half-lining.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -36918,8 +36836,8 @@
    "optionId": "hlc-french",
    "label": "French Seam",
    "illustration": {
-    "path": "/images/jacket/lining/half-lining.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -36933,8 +36851,8 @@
    "optionId": "hlc-joining",
    "label": "Joining Seam",
    "illustration": {
-    "path": "/images/jacket/lining/half-lining.jpg",
-    "status": "banned-jacket-unverified"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -39983,15 +39901,15 @@
   {
    "craftId": "suit-3pc|Trousers-front-pockets|pocket-stitching|pocket-stitch-06",
    "state": "A",
-   "why": "illustration suspect-mismatch",
+   "why": "illustration missing",
    "product": "suit-3pc",
    "sectionId": "Trousers-front-pockets",
    "fieldId": "pocket-stitching",
    "optionId": "pocket-stitch-06",
    "label": "0.6 cm Topstitch",
    "illustration": {
-    "path": "/images/blueprints/factory/2b3c7bcf74ef__31A3__0.6cm_top_stitch.jpg",
-    "status": "suspect-mismatch"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -40102,15 +40020,15 @@
   {
    "craftId": "suit-3pc|Trousers-front-pockets|watch-pocket|watch-left",
    "state": "A",
-   "why": "illustration suspect-mismatch",
+   "why": "illustration missing",
    "product": "suit-3pc",
    "sectionId": "Trousers-front-pockets",
    "fieldId": "watch-pocket",
    "optionId": "watch-left",
    "label": "Left Welt",
    "illustration": {
-    "path": "/images/blueprints/factory/2a5f7a6c70e1__3171__Left_welt.jpg",
-    "status": "suspect-mismatch"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -41348,16 +41266,16 @@
   },
   {
    "craftId": "suit-3pc|Trousers-pleats-structure|pleat-style|flat-front",
-   "state": "A",
-   "why": "illustration suspect-mismatch",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "suit-3pc",
    "sectionId": "Trousers-pleats-structure",
    "fieldId": "pleat-style",
    "optionId": "flat-front",
    "label": "Flat Front (No Dart)",
    "illustration": {
-    "path": "/images/blueprints/factory/edc7138c802f__302L__No_pleat_no_dart.jpg",
-    "status": "suspect-mismatch"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -41679,30 +41597,30 @@
   {
    "craftId": "suit-3pc|Trousers-pleats-structure|fly-stitching|fly-stitch-curved",
    "state": "A",
-   "why": "illustration suspect-mismatch",
+   "why": "illustration missing",
    "product": "suit-3pc",
    "sectionId": "Trousers-pleats-structure",
    "fieldId": "fly-stitching",
    "optionId": "fly-stitch-curved",
    "label": "Curved Fly Stitch",
    "illustration": {
-    "path": "/images/blueprints/factory/2b3c7bcf74ef__31A3__0.6cm_top_stitch.jpg",
-    "status": "suspect-mismatch"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
   {
    "craftId": "suit-3pc|Trousers-pleats-structure|fly-stitching|fly-stitch-straight",
    "state": "A",
-   "why": "illustration suspect-mismatch",
+   "why": "illustration missing",
    "product": "suit-3pc",
    "sectionId": "Trousers-pleats-structure",
    "fieldId": "fly-stitching",
    "optionId": "fly-stitch-straight",
    "label": "Straight Fly Stitch",
    "illustration": {
-    "path": "/images/blueprints/factory/e081e2a8c319__31A1__0.15cm_top_stitch.jpg",
-    "status": "suspect-mismatch"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -42129,45 +42047,45 @@
   {
    "craftId": "suit-3pc|Trousers-back|back-darts|darts-none",
    "state": "A",
-   "why": "illustration suspect-mismatch",
+   "why": "illustration missing",
    "product": "suit-3pc",
    "sectionId": "Trousers-back",
    "fieldId": "back-darts",
    "optionId": "darts-none",
    "label": "No Darts",
    "illustration": {
-    "path": "/images/blueprints/factory/edc7138c802f__302L__No_pleat_no_dart.jpg",
-    "status": "suspect-mismatch"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
   {
    "craftId": "suit-3pc|Trousers-back|back-darts|darts-single",
    "state": "A",
-   "why": "illustration suspect-mismatch",
+   "why": "illustration missing",
    "product": "suit-3pc",
    "sectionId": "Trousers-back",
    "fieldId": "back-darts",
    "optionId": "darts-single",
    "label": "Single Back Darts",
    "illustration": {
-    "path": "/images/blueprints/factory/27e91c06ed8a__302M__No_pleat_single_dart.jpg",
-    "status": "suspect-mismatch"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
   {
    "craftId": "suit-3pc|Trousers-back|back-darts|darts-double",
    "state": "A",
-   "why": "illustration suspect-mismatch",
+   "why": "illustration missing",
    "product": "suit-3pc",
    "sectionId": "Trousers-back",
    "fieldId": "back-darts",
    "optionId": "darts-double",
    "label": "Double Back Darts",
    "illustration": {
-    "path": "/images/blueprints/factory/f1edbb42290d__302Y__No_pleat_double_darts.jpg",
-    "status": "suspect-mismatch"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -42329,15 +42247,15 @@
   {
    "craftId": "suit-3pc|Trousers-bottom-hem|hem-style|hem-cuff-38",
    "state": "A",
-   "why": "illustration suspect-mismatch",
+   "why": "illustration missing",
    "product": "suit-3pc",
    "sectionId": "Trousers-bottom-hem",
    "fieldId": "hem-style",
    "optionId": "hem-cuff-38",
    "label": "3.8 cm Cuff Turn-Up",
    "illustration": {
-    "path": "/images/blueprints/remote/3817491d18ac__3603.jpg",
-    "status": "suspect-mismatch"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -42876,15 +42794,15 @@
   {
    "craftId": "suit-3pc|Trousers-lining-internal|inner-waist|inner-piping-snugtex",
    "state": "A",
-   "why": "illustration suspect-mismatch",
+   "why": "illustration missing",
    "product": "suit-3pc",
    "sectionId": "Trousers-lining-internal",
    "fieldId": "inner-waist",
    "optionId": "inner-piping-snugtex",
    "label": "Standard, Piping & Snugtex",
    "illustration": {
-    "path": "/images/blueprints/remote/c8538a87dffb__3441.jpg",
-    "status": "suspect-mismatch"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -43862,15 +43780,15 @@
   {
    "craftId": "trousers|front-pockets|pocket-stitching|pocket-stitch-06",
    "state": "A",
-   "why": "illustration suspect-mismatch",
+   "why": "illustration missing",
    "product": "trousers",
    "sectionId": "front-pockets",
    "fieldId": "pocket-stitching",
    "optionId": "pocket-stitch-06",
    "label": "0.6 cm Topstitch",
    "illustration": {
-    "path": "/images/blueprints/factory/2b3c7bcf74ef__31A3__0.6cm_top_stitch.jpg",
-    "status": "suspect-mismatch"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -43991,15 +43909,15 @@
   {
    "craftId": "trousers|front-pockets|watch-pocket|watch-left",
    "state": "A",
-   "why": "illustration suspect-mismatch",
+   "why": "illustration missing",
    "product": "trousers",
    "sectionId": "front-pockets",
    "fieldId": "watch-pocket",
    "optionId": "watch-left",
    "label": "Left Welt",
    "illustration": {
-    "path": "/images/blueprints/factory/2a5f7a6c70e1__3171__Left_welt.jpg",
-    "status": "suspect-mismatch"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": {
     "spec": true,
@@ -45333,16 +45251,16 @@
   },
   {
    "craftId": "trousers|pleats-structure|pleat-style|flat-front",
-   "state": "A",
-   "why": "illustration suspect-mismatch",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "trousers",
    "sectionId": "pleats-structure",
    "fieldId": "pleat-style",
    "optionId": "flat-front",
    "label": "Flat Front (No Dart)",
    "illustration": {
-    "path": "/images/blueprints/factory/edc7138c802f__302L__No_pleat_no_dart.jpg",
-    "status": "suspect-mismatch"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": {
     "spec": true,
@@ -45763,30 +45681,30 @@
   {
    "craftId": "trousers|pleats-structure|fly-stitching|fly-stitch-curved",
    "state": "A",
-   "why": "illustration suspect-mismatch",
+   "why": "illustration missing",
    "product": "trousers",
    "sectionId": "pleats-structure",
    "fieldId": "fly-stitching",
    "optionId": "fly-stitch-curved",
    "label": "Curved Fly Stitch",
    "illustration": {
-    "path": "/images/blueprints/factory/2b3c7bcf74ef__31A3__0.6cm_top_stitch.jpg",
-    "status": "suspect-mismatch"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
   {
    "craftId": "trousers|pleats-structure|fly-stitching|fly-stitch-straight",
    "state": "A",
-   "why": "illustration suspect-mismatch",
+   "why": "illustration missing",
    "product": "trousers",
    "sectionId": "pleats-structure",
    "fieldId": "fly-stitching",
    "optionId": "fly-stitch-straight",
    "label": "Straight Fly Stitch",
    "illustration": {
-    "path": "/images/blueprints/factory/e081e2a8c319__31A1__0.15cm_top_stitch.jpg",
-    "status": "suspect-mismatch"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -46238,45 +46156,45 @@
   {
    "craftId": "trousers|back|back-darts|darts-none",
    "state": "A",
-   "why": "illustration suspect-mismatch",
+   "why": "illustration missing",
    "product": "trousers",
    "sectionId": "back",
    "fieldId": "back-darts",
    "optionId": "darts-none",
    "label": "No Darts",
    "illustration": {
-    "path": "/images/blueprints/factory/edc7138c802f__302L__No_pleat_no_dart.jpg",
-    "status": "suspect-mismatch"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
   {
    "craftId": "trousers|back|back-darts|darts-single",
    "state": "A",
-   "why": "illustration suspect-mismatch",
+   "why": "illustration missing",
    "product": "trousers",
    "sectionId": "back",
    "fieldId": "back-darts",
    "optionId": "darts-single",
    "label": "Single Back Darts",
    "illustration": {
-    "path": "/images/blueprints/factory/27e91c06ed8a__302M__No_pleat_single_dart.jpg",
-    "status": "suspect-mismatch"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
   {
    "craftId": "trousers|back|back-darts|darts-double",
    "state": "A",
-   "why": "illustration suspect-mismatch",
+   "why": "illustration missing",
    "product": "trousers",
    "sectionId": "back",
    "fieldId": "back-darts",
    "optionId": "darts-double",
    "label": "Double Back Darts",
    "illustration": {
-    "path": "/images/blueprints/factory/f1edbb42290d__302Y__No_pleat_double_darts.jpg",
-    "status": "suspect-mismatch"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -46442,16 +46360,16 @@
   },
   {
    "craftId": "trousers|bottom-hem|hem-style|hem-cuff-38",
-   "state": "A",
-   "why": "illustration suspect-mismatch",
+   "state": "X",
+   "why": "marked non-generatable",
    "product": "trousers",
    "sectionId": "bottom-hem",
    "fieldId": "hem-style",
    "optionId": "hem-cuff-38",
    "label": "3.8 cm Cuff Turn-Up",
    "illustration": {
-    "path": "/images/blueprints/remote/3817491d18ac__3603.jpg",
-    "status": "suspect-mismatch"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },
@@ -47032,15 +46950,15 @@
   {
    "craftId": "trousers|lining-internal|inner-waist|inner-piping-snugtex",
    "state": "A",
-   "why": "illustration suspect-mismatch",
+   "why": "illustration missing",
    "product": "trousers",
    "sectionId": "lining-internal",
    "fieldId": "inner-waist",
    "optionId": "inner-piping-snugtex",
    "label": "Standard, Piping & Snugtex",
    "illustration": {
-    "path": "/images/blueprints/remote/c8538a87dffb__3441.jpg",
-    "status": "suspect-mismatch"
+    "path": null,
+    "status": "missing"
    },
    "pipeline": null
   },

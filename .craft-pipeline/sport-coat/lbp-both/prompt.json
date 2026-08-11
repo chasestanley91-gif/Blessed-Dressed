@@ -1,113 +1,130 @@
 {
+ "addr": "sport-coat > lapel > lapel-bh-position > lbp-both",
+ "label": "Both Sides",
+ "part": "jacket-lapel-bh-position",
+ "orientation": "front",
+ "excluded": null,
+ "generate": true,
+ "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\sport-coat.json",
+ "source": "json",
+ "illustration": "/images/blueprints/supplier/68b420f69832__0543__Right_Left_bttn_hole.jpg",
+ "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\supplier\\68b420f69832__0543__Right_Left_bttn_hole.jpg",
+ "illustrationExists": true,
+ "illustrationRemote": false,
+ "profile": {
   "addr": "sport-coat > lapel > lapel-bh-position > lbp-both",
-  "label": "Both Sides",
+  "product": "sport-coat",
+  "field": "Lapel Buttonhole Position",
+  "option": "Both Sides",
   "part": "jacket-lapel-bh-position",
+  "garment": "bespoke sport coat",
   "orientation": "front",
-  "excluded": null,
-  "generate": true,
-  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\sport-coat.json",
-  "source": "json",
-  "illustration": "/images/blueprints/supplier/68b420f69832__0543__Right_Left_bttn_hole.jpg",
-  "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\supplier\\68b420f69832__0543__Right_Left_bttn_hole.jpg",
-  "illustrationExists": true,
-  "illustrationRemote": false,
-  "profile": {
-    "addr": "sport-coat > lapel > lapel-bh-position > lbp-both",
-    "product": "sport-coat",
-    "field": "Lapel Buttonhole Position",
-    "option": "Both Sides",
-    "part": "jacket-lapel-bh-position",
-    "garment": "bespoke sport coat",
-    "orientation": "front",
-    "absence": false,
-    "distinguishingDetail": "One buttonhole on each lapel.",
-    "measured": {
-      "dimensions": [],
-      "angles": [],
-      "counts": [],
-      "shapes": [],
-      "spread": [],
-      "flags": []
-    },
-    "reproduceFromIllustration": [
-      "buttonhole count per lapel",
-      "left/right placement as drawn",
-      "symmetry between sides"
-    ],
-    "composition": {
-      "crop": "chest-up, both lapels in frame",
-      "dominanceTarget": "40–80% of frame",
-      "identifyWithin": "1 second"
-    },
-    "forbidden": [
-      "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
-      "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
-      "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
-    ],
-    "excluded": null,
-    "generate": true
+  "absence": false,
+  "distinguishingDetail": "One buttonhole on each lapel.",
+  "measured": {
+   "dimensions": [],
+   "angles": [],
+   "counts": [],
+   "shapes": [],
+   "spread": [],
+   "flags": []
   },
-  "requiredTokens": [],
-  "checklist": [
-    "distinguishing detail present: One buttonhole on each lapel.",
-    "reproduced from the illustration: buttonhole count per lapel",
-    "reproduced from the illustration: left/right placement as drawn",
-    "reproduced from the illustration: symmetry between sides",
-    "orientation matches the illustration: front",
-    "the Lapel Buttonhole Position dominates the frame (40–80%), identifiable within one second, framed chest-up, both lapels in frame",
-    "silhouette, proportions, seam & stitch placement match the illustration; left/right symmetry correct",
-    "NO generic-category substitution — this exact option, not a typical one",
-    "a real photograph of the exact drawn option — not the line-art, no stylisation"
+  "reproduceFromIllustration": [
+   "buttonhole count per lapel",
+   "left/right placement as drawn",
+   "symmetry between sides"
   ],
-  "scoreCard": [
-    {
-      "category": "shape",
-      "score": null,
-      "min": 98
-    },
-    {
-      "category": "geometry",
-      "score": null,
-      "min": 98
-    },
-    {
-      "category": "dimensions",
-      "score": null,
-      "min": 98
-    },
-    {
-      "category": "angles",
-      "score": null,
-      "min": 98
-    },
-    {
-      "category": "construction",
-      "score": null,
-      "min": 98
-    },
-    {
-      "category": "placement",
-      "score": null,
-      "min": 98
-    },
-    {
-      "category": "symmetry",
-      "score": null,
-      "min": 98
-    },
-    {
-      "category": "composition",
-      "score": null,
-      "min": 98
-    },
-    {
-      "category": "blueprint-match",
-      "score": null,
-      "min": 98
-    }
+  "composition": {
+   "crop": "chest-up, both lapels in frame",
+   "dominanceTarget": "40–80% of frame",
+   "identifyWithin": "1 second"
+  },
+  "forbidden": [
+   "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+   "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+   "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
   ],
-  "prompt": "Ultra-photorealistic luxury menswear product photography.\n\nA single-subject craft DOCUMENTATION photograph: the Lapel Buttonhole Position is the dominant subject, filling 40–80% of the frame and identifiable within one second.\n\nA premium bespoke sport coat featuring a precise Both Sides (Lapel Buttonhole Position).\n\nDistinguishing construction detail (reproduce exactly as drawn): One buttonhole on each lapel.\n\nReproduce the \"Both Sides\" detail exactly as drawn.\n\nMANDATORY GEOMETRY COVERAGE — reproduce from the illustration, exactly and without assumption, every one of these: buttonhole count per lapel, left/right placement as drawn, symmetry between sides. Match each to the drawing.\n\nVIEW — this illustration is the front of the garment. Photograph the same face; never substitute a different face of the garment.\n\nBLUEPRINT LOCK — THE DRAWING IS LAW: the attached technical illustration is the manufacturing blueprint for this exact craft option and the SOLE authority for the image. Reproduce its geometry precisely — point/edge shape, lengths, widths, depths, angles, curvature, roll lines, symmetry, button/tab/stay positions, seam and stitch placement, and proportions — within less than 2% deviation. Assume NOTHING from tailoring/menswear/fashion convention or model priors; every visible characteristic must come from the drawing. Do not redesign, reinterpret, substitute a similar commercial style, stylise, or \"improve\" it. Do NOT fall back to a generic version of this category — reproduce THIS option, not a typical one. If convention conflicts with the drawing, the drawing wins. Accuracy over aesthetics. ANNOTATIONS ARE NOT THE GARMENT: the technical drawing may carry measurement callouts — dimension numbers (\"2.5cm\", \"9cm\", \"115°\"), tick / leader / dimension lines, arrows, red or coloured guide marks, and text labels. These are manufacturing documentation, NOT features of the cloth. Reproduce ONLY the finished garment: never render any number, unit, arrow, callout, leader line, measurement mark, or text anywhere in the photograph. The final image is a clean garment photo with zero annotation.\n\nPhotographed worn on a male model, chest-up showing both lapels.\n\nFrame chest-up, both lapels in frame; the detail must read clearly and sharply.\n\nSavile Row and high-end Italian sartorial aesthetic. Natural daylight studio lighting, Phase One IQ4 medium-format camera, 150MP detail, shallow depth of field, magazine-quality editorial menswear photography. Authentic bespoke craftsmanship, fine hand stitching, premium finishing. SET — shot in a clean luxury photographic studio against a seamless, plain, neutral light-grey background with clear separation between garment and background: no location, no architecture, no furniture, no scenery, no props and no environmental context of any kind competing with the garment.\n\nExtremely realistic textured wool/hopsack with visible weave texture, fine stitching.\n\nAvoid: any GENERIC menswear substitution (a generic spread collar, generic notch/peak lapel, generic pocket/pleat/vent/cuff/waistband in place of the drawn one), illustration or line-art style, CGI or 3D-render look, cartoon, mannequin, fashion sketch, inaccurate geometry, altered proportions, missing construction details, asymmetry, watermark, AI-art appearance, AND any text or annotation traced from the drawing: NO measurement numbers, units (cm/mm/°), dimension or leader lines, arrows, callouts, red/coloured guide marks, ruler ticks, or labels anywhere in the frame. This is real garment photography of the exact drawn option — clean cloth only, nothing else.\n\nFORBIDDEN FOR THIS OPTION — do not render: a generic version of this part standing in for the exact drawn option (generic-category substitution); any feature, count, or geometry borrowed from a neighboring craft option on the same field; a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion).\n\nCLOSE-CROP LOCK — DO NOT COPY THE DRAWING'S SCALE: the attached technical drawing may depict a large part of the garment, but this photograph must NOT be a whole-garment shot. Move the camera in close. The worked buttonhole on each of the two lapels must occupy 40–80% of the image area and be unmistakable within one second. Crop away everything not needed to read it: photograph only the collar and lapel pair around the gorge at close range. Reproduce the drawing's geometry exactly, but never its framing or scale.\n\nQC CORRECTION (attempt 2) — THE RED IN THE DRAWING IS A POSITION MARKER, NOT A COLOUR. Attempt 1 traced the blueprint's red highlight marks into the cloth and produced two saturated red buttonholes that looked like applied plastic tags. The small red marks in the technical drawing mean ONLY \"a buttonhole belongs here\"; they specify position, never colour or material. Render both lapel buttonholes as genuine hand-worked buttonholes stitched in NAVY thread that matches the navy hopsack cloth, so they read as fine stitched cloth and are almost tonal. NO red, no coloured thread, no coloured trim, no tag or label anywhere on the garment. ALSO CROP FAR TIGHTER: remove the necktie completely and exclude the chin, neck and tie knot; frame a horizontal band across BOTH lapel faces at buttonhole height, with only a narrow strip of plain shirt visible between the lapels, so the two buttonholes are the dominant subject. Change NOTHING else: exactly one buttonhole per lapel, left and right, at equal height, bilaterally symmetric, notch lapel, navy hopsack with visible basketweave, seamless neutral light-grey studio background, and absolutely no numbers, arrows, leader lines or text anywhere.",
-  "builtAt": "2026-07-31T04:41:55.914Z",
-  "closeCropPatched": true,
-  "qcCorrectionAttempt": 2
+  "excluded": null,
+  "generate": true
+ },
+ "requiredTokens": [],
+ "checklist": [
+  "distinguishing detail present: One buttonhole on each lapel.",
+  "reproduced from the illustration: buttonhole count per lapel",
+  "reproduced from the illustration: left/right placement as drawn",
+  "reproduced from the illustration: symmetry between sides",
+  "orientation matches the illustration: front",
+  "the Lapel Buttonhole Position dominates the frame (40–80%), identifiable within one second, framed chest-up, both lapels in frame",
+  "silhouette, proportions, seam & stitch placement match the illustration; left/right symmetry correct",
+  "NO generic-category substitution — this exact option, not a typical one",
+  "a real photograph of the exact drawn option — not the line-art, no stylisation"
+ ],
+ "scoreCard": [
+  {
+   "category": "shape",
+   "score": null,
+   "min": 98
+  },
+  {
+   "category": "geometry",
+   "score": null,
+   "min": 98
+  },
+  {
+   "category": "dimensions",
+   "score": null,
+   "min": 98
+  },
+  {
+   "category": "angles",
+   "score": null,
+   "min": 98
+  },
+  {
+   "category": "construction",
+   "score": null,
+   "min": 98
+  },
+  {
+   "category": "placement",
+   "score": null,
+   "min": 98
+  },
+  {
+   "category": "symmetry",
+   "score": null,
+   "min": 98
+  },
+  {
+   "category": "composition",
+   "score": null,
+   "min": 98
+  },
+  {
+   "category": "blueprint-match",
+   "score": null,
+   "min": 98
+  }
+ ],
+ "prompt": "Ultra-photorealistic luxury menswear product photography.\n\nA single-subject craft DOCUMENTATION photograph: the Lapel Buttonhole Position is the dominant subject, filling 40–80% of the frame and identifiable within one second.\n\nA premium bespoke sport coat featuring a precise Both Sides (Lapel Buttonhole Position).\n\nDistinguishing construction detail (reproduce exactly as drawn): One buttonhole on each lapel.\n\nReproduce the \"Both Sides\" detail exactly as drawn.\n\nMANDATORY GEOMETRY COVERAGE — reproduce from the illustration, exactly and without assumption, every one of these: buttonhole count per lapel, left/right placement as drawn, symmetry between sides. Match each to the drawing.\n\nVIEW — this illustration is the front of the garment. Photograph the same face; never substitute a different face of the garment.\n\nBLUEPRINT LOCK — THE DRAWING IS LAW: the attached technical illustration is the manufacturing blueprint for this exact craft option and the SOLE authority for the image. Reproduce its geometry precisely — point/edge shape, lengths, widths, depths, angles, curvature, roll lines, symmetry, button/tab/stay positions, seam and stitch placement, and proportions — within less than 2% deviation. Assume NOTHING from tailoring/menswear/fashion convention or model priors; every visible characteristic must come from the drawing. Do not redesign, reinterpret, substitute a similar commercial style, stylise, or \"improve\" it. Do NOT fall back to a generic version of this category — reproduce THIS option, not a typical one. If convention conflicts with the drawing, the drawing wins. Accuracy over aesthetics. ANNOTATIONS ARE NOT THE GARMENT: the technical drawing may carry measurement callouts — dimension numbers (\"2.5cm\", \"9cm\", \"115°\"), tick / leader / dimension lines, arrows, red or coloured guide marks, and text labels. These are manufacturing documentation, NOT features of the cloth. Reproduce ONLY the finished garment: never render any number, unit, arrow, callout, leader line, measurement mark, or text anywhere in the photograph. The final image is a clean garment photo with zero annotation.\n\nPhotographed worn on a male model, chest-up showing both lapels.\n\nFrame chest-up, both lapels in frame; the detail must read clearly and sharply.\n\nSavile Row and high-end Italian sartorial aesthetic. Natural daylight studio lighting, Phase One IQ4 medium-format camera, 150MP detail, shallow depth of field, magazine-quality editorial menswear photography. Authentic bespoke craftsmanship, fine hand stitching, premium finishing. SET — shot in a clean luxury photographic studio against a seamless, plain, neutral light-grey background with clear separation between garment and background: no location, no architecture, no furniture, no scenery, no props and no environmental context of any kind competing with the garment.\n\nExtremely realistic textured wool/hopsack with visible weave texture, fine stitching.\n\nAvoid: any GENERIC menswear substitution (a generic spread collar, generic notch/peak lapel, generic pocket/pleat/vent/cuff/waistband in place of the drawn one), illustration or line-art style, CGI or 3D-render look, cartoon, mannequin, fashion sketch, inaccurate geometry, altered proportions, missing construction details, asymmetry, watermark, AI-art appearance, AND any text or annotation traced from the drawing: NO measurement numbers, units (cm/mm/°), dimension or leader lines, arrows, callouts, red/coloured guide marks, ruler ticks, or labels anywhere in the frame. This is real garment photography of the exact drawn option — clean cloth only, nothing else.\n\nFORBIDDEN FOR THIS OPTION — do not render: a generic version of this part standing in for the exact drawn option (generic-category substitution); any feature, count, or geometry borrowed from a neighboring craft option on the same field; a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion).\n\nCLOSE-CROP LOCK — DO NOT COPY THE DRAWING'S SCALE: the attached technical drawing may depict a large part of the garment, but this photograph must NOT be a whole-garment shot. Move the camera in close. The worked buttonhole on each of the two lapels must occupy 40–80% of the image area and be unmistakable within one second. Crop away everything not needed to read it: photograph only the collar and lapel pair around the gorge at close range. Reproduce the drawing's geometry exactly, but never its framing or scale.\n\nQC CORRECTION (attempt 2) — THE RED IN THE DRAWING IS A POSITION MARKER, NOT A COLOUR. Attempt 1 traced the blueprint's red highlight marks into the cloth and produced two saturated red buttonholes that looked like applied plastic tags. The small red marks in the technical drawing mean ONLY \"a buttonhole belongs here\"; they specify position, never colour or material. Render both lapel buttonholes as genuine hand-worked buttonholes stitched in NAVY thread that matches the navy hopsack cloth, so they read as fine stitched cloth and are almost tonal. NO red, no coloured thread, no coloured trim, no tag or label anywhere on the garment. ALSO CROP FAR TIGHTER: remove the necktie completely and exclude the chin, neck and tie knot; frame a horizontal band across BOTH lapel faces at buttonhole height, with only a narrow strip of plain shirt visible between the lapels, so the two buttonholes are the dominant subject. Change NOTHING else: exactly one buttonhole per lapel, left and right, at equal height, bilaterally symmetric, notch lapel, navy hopsack with visible basketweave, seamless neutral light-grey studio background, and absolutely no numbers, arrows, leader lines or text anywhere.\n\nOWNER CORRECTION AFTER REVIEW (attempt 2 was rejected by the owner — obey this over any conflicting earlier line, including the BLUEPRINT LOCK): What is wrong with it: Wrong shape / outline. buttonhole is to far down the lapel The owner has supplied 3 reference photograph(s) of what this option should actually look like. Those photographs are attached and OUTRANK the supplier line drawing wherever the two disagree: match the construction, proportion and finish shown in them. Use the line drawing only for anything the photographs do not show.",
+ "builtAt": "2026-07-31T04:41:55.914Z",
+ "closeCropPatched": true,
+ "qcCorrectionAttempt": 2,
+ "ownerCorrections": [
+  {
+   "attemptRejected": 2,
+   "decidedAt": "2026-08-10T22:33:43.528Z",
+   "tags": [
+    "Wrong shape / outline"
+   ],
+   "notes": "buttonhole is to far down the lapel",
+   "references": [
+    "/images/review-refs/sport-coat/lbp-both/1786400897710-j6ncj5.jpg",
+    "/images/review-refs/sport-coat/lbp-both/1786400909351-rwc25c.jpg",
+    "/images/review-refs/sport-coat/lbp-both/1786400917142-kufs1y.jpg"
+   ],
+   "appliedAt": "2026-08-11T08:43:35.436Z",
+   "craftId": "sport-coat|lapel|lapel-bh-position|lbp-both"
+  }
+ ]
 }

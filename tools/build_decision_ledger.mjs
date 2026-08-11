@@ -186,7 +186,12 @@ function bindAdmin(key, d, explicitAddr) {
 function adminImage(key, d) {
   const [product, option] = key.split('/');
   if (d.imagePath && d.imageSha1) {
-    return { path: d.imagePath.startsWith('.craft-pipeline') || d.imagePath.startsWith('public/') ? d.imagePath : norm(d.imagePath), sha1: d.imageSha1, exists: true, kind: 'logged-at-decision-time' };
+    // The log writes repo-relative paths ('public/images/review/x.webp').
+    // Normalize the public/ spelling to the served form ('/images/...') so
+    // every reader resolves it the same one way; pipeline paths stay as-is.
+    const p = d.imagePath.startsWith('public/') ? '/' + d.imagePath.slice('public/'.length)
+      : d.imagePath.startsWith('.craft-pipeline') ? d.imagePath : norm(d.imagePath);
+    return { path: p, sha1: d.imageSha1, exists: true, kind: 'logged-at-decision-time' };
   }
   const qi = queueByKey.get(key);
   const candidateAbs = path.join(PIPE, product, option, `candidate-${d.attempt}.png`);
@@ -240,8 +245,19 @@ for (const [key, d] of Object.entries(portal)) {
   adminBound += 1;
 }
 
-// Withdrawn decisions must not count toward approval or rejection.
+// Withdrawn decisions must not count toward approval or rejection — and that
+// currency must SURVIVE serialization: a reader of the ledger JSON (the
+// applier) has to be able to tell a live decision from a superseded or revoked
+// one without replaying the log itself. Verified failure mode 2026-08-11: the
+// applier filtered out only the tombstone EVENT and then took the last admin
+// event, which was the withdrawn decision — publishing an approval the owner
+// had undone. Every admin event now carries current: true/false in the JSON.
 const currentAdminEvents = new Set(adminCurrent.values());
+for (const c of crafts.values()) {
+  for (const e of c.events) {
+    if (e.source === 'admin-portal') e.current = currentAdminEvents.has(e);
+  }
+}
 
 // ── 3b. July 2026-07-30 review export — the owner's bulk review ─────────────
 let julyEvents = 0;
@@ -383,6 +399,37 @@ for (const c of crafts.values()) {
   else stats.undecided += 1;
 }
 
+// ── 4b. illustration verification map — which drawing, and how sure are we ──
+// The audit verdict is per blueprint FILE. A MATCH file shared by many sibling
+// crafts still cannot distinguish them, so the share count rides along.
+const auditVerdict = new Map((subjectAudit.results ?? []).map((r) => [r.bp, r.v]));
+const illustrationUsers = new Map(); // path -> count of crafts using it
+for (const c of crafts.values()) {
+  const p = c.current.illustration ?? c.current.techpackIllustration;
+  if (p) illustrationUsers.set(p, (illustrationUsers.get(p) ?? 0) + 1);
+}
+stats.illustration = { verifiedMatch: 0, drawingUnverified: 0, suspectMismatch: 0, suspectAmbiguous: 0, bannedJacket: 0, needsSource: 0, missing: 0 };
+for (const c of crafts.values()) {
+  const p = c.current.illustration ?? c.current.techpackIllustration ?? null;
+  const v = p ? auditVerdict.get(p) : undefined;
+  let status;
+  if (!p) status = 'missing';
+  else if (p.startsWith('/images/jacket/') && v !== 'MATCH') status = 'banned-jacket-unverified';
+  else if (v === 'MISMATCH') status = 'suspect-mismatch';
+  else if (v === 'AMBIGUOUS') status = 'suspect-ambiguous';
+  else if (v === 'MATCH' || c.current.verification) status = 'verified-match';
+  else if (c.current.illustrationStatus === 'needs-source') status = 'needs-source';
+  else status = 'drawing-unverified';
+  c.illustration = {
+    path: p, status,
+    auditVerdict: v ?? null,
+    sharedWith: p ? illustrationUsers.get(p) - 1 : null,
+    sha1: p ? (imageIdentity(p)?.sha1 ?? null) : null,
+  };
+  const k = { 'verified-match': 'verifiedMatch', 'drawing-unverified': 'drawingUnverified', 'suspect-mismatch': 'suspectMismatch', 'suspect-ambiguous': 'suspectAmbiguous', 'banned-jacket-unverified': 'bannedJacket', 'needs-source': 'needsSource', missing: 'missing' }[status];
+  stats.illustration[k] += 1;
+}
+
 // ── 5. write ────────────────────────────────────────────────────────────────
 const ledger = {
   version: 1,
@@ -413,6 +460,7 @@ console.log(`crafts with only rejections        : ${stats.rejectedOnly}`);
 console.log(`crafts undecided                   : ${stats.undecided}`);
 console.log(`TRUE conflicts (same image, both)  : ${stats.conflicted}`);
 console.log(`unresolved references              : ${unresolved.length}`);
+console.log(`illustrations                      : ${JSON.stringify(stats.illustration)}`);
 
 if (WRITE) {
   fs.writeFileSync(LEDGER_OUT, JSON.stringify(ledger, null, 1) + '\n', 'utf8');

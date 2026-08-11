@@ -1,113 +1,128 @@
 {
+ "addr": "suit-2pc > Trousers-front-pockets > front-pocket-style > jeans-square",
+ "label": "Square Jeans Pocket",
+ "part": "trouser-detail",
+ "orientation": "front",
+ "excluded": null,
+ "generate": true,
+ "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\suit-2pc.json",
+ "source": "json",
+ "illustration": "/images/blueprints/remote/14975407461c__3133.jpg",
+ "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\remote\\14975407461c__3133.jpg",
+ "illustrationExists": true,
+ "illustrationRemote": false,
+ "profile": {
   "addr": "suit-2pc > Trousers-front-pockets > front-pocket-style > jeans-square",
-  "label": "Square Jeans Pocket",
+  "product": "suit-2pc",
+  "field": "Front Pocket Style",
+  "option": "Square Jeans Pocket",
   "part": "trouser-detail",
+  "garment": "pair of bespoke wool tailored trousers",
   "orientation": "front",
-  "excluded": null,
-  "generate": true,
-  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\suit-2pc.json",
-  "source": "json",
-  "illustration": "/images/blueprints/remote/14975407461c__3133.jpg",
-  "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\remote\\14975407461c__3133.jpg",
-  "illustrationExists": true,
-  "illustrationRemote": false,
-  "profile": {
-    "addr": "suit-2pc > Trousers-front-pockets > front-pocket-style > jeans-square",
-    "product": "suit-2pc",
-    "field": "Front Pocket Style",
-    "option": "Square Jeans Pocket",
-    "part": "trouser-detail",
-    "garment": "pair of bespoke wool tailored trousers",
-    "orientation": "front",
-    "absence": false,
-    "distinguishingDetail": "Jeans-style front pocket with a sharp 90° corner transition — utility-oriented, masculine, structured; carpenter's-apron strength at the hip.",
-    "measured": {
-      "dimensions": [],
-      "angles": [
-        "90°"
-      ],
-      "counts": [],
-      "shapes": [],
-      "spread": [],
-      "flags": []
-    },
-    "reproduceFromIllustration": [
-      "the named detail"
-    ],
-    "composition": {
-      "crop": "macro on the detail",
-      "dominanceTarget": "40–80% of frame",
-      "identifyWithin": "1 second"
-    },
-    "forbidden": [
-      "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
-      "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
-      "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
-    ],
-    "excluded": null,
-    "generate": true
-  },
-  "requiredTokens": [
+  "absence": false,
+  "distinguishingDetail": "Jeans-style front pocket with a sharp 90° corner transition — utility-oriented, masculine, structured; carpenter's-apron strength at the hip.",
+  "measured": {
+   "dimensions": [],
+   "angles": [
     "90°"
+   ],
+   "counts": [],
+   "shapes": [],
+   "spread": [],
+   "flags": []
+  },
+  "reproduceFromIllustration": [
+   "the named detail"
   ],
-  "checklist": [
-    "angle matches exactly: 90°",
-    "distinguishing detail present: Jeans-style front pocket with a sharp 90° corner transition — utility-oriented, masculine, structured; carpenter's-apron strength at the hip.",
-    "reproduced from the illustration: the named detail",
-    "orientation matches the illustration: front",
-    "the Front Pocket Style dominates the frame (40–80%), identifiable within one second, framed macro on the detail",
-    "silhouette, proportions, seam & stitch placement match the illustration; left/right symmetry correct",
-    "NO generic-category substitution — this exact option, not a typical one",
-    "a real photograph of the exact drawn option — not the line-art, no stylisation"
+  "composition": {
+   "crop": "macro on the detail",
+   "dominanceTarget": "40–80% of frame",
+   "identifyWithin": "1 second"
+  },
+  "forbidden": [
+   "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+   "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+   "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
   ],
-  "scoreCard": [
-    {
-      "category": "shape",
-      "score": null,
-      "min": 98
-    },
-    {
-      "category": "geometry",
-      "score": null,
-      "min": 98
-    },
-    {
-      "category": "dimensions",
-      "score": null,
-      "min": 98
-    },
-    {
-      "category": "angles",
-      "score": null,
-      "min": 98
-    },
-    {
-      "category": "construction",
-      "score": null,
-      "min": 98
-    },
-    {
-      "category": "placement",
-      "score": null,
-      "min": 98
-    },
-    {
-      "category": "symmetry",
-      "score": null,
-      "min": 98
-    },
-    {
-      "category": "composition",
-      "score": null,
-      "min": 98
-    },
-    {
-      "category": "blueprint-match",
-      "score": null,
-      "min": 98
-    }
-  ],
-  "prompt": "Ultra-photorealistic luxury menswear product photography.\n\nA single-subject craft DOCUMENTATION photograph: the Front Pocket Style is the dominant subject, filling 40–80% of the frame and identifiable within one second.\n\nA premium pair of bespoke wool tailored trousers featuring a precise Square Jeans Pocket (Front Pocket Style).\n\nDistinguishing construction detail (reproduce exactly as drawn): Jeans-style front pocket with a sharp 90° corner transition — utility-oriented, masculine, structured; carpenter's-apron strength at the hip.\n\nExact specification — at 90° — matching the illustration precisely.\n\nMANDATORY GEOMETRY COVERAGE — reproduce from the illustration, exactly and without assumption, every one of these: the named detail. Match each to the drawing.\n\nVIEW — this illustration is the front of the garment. Photograph the same face; never substitute a different face of the garment.\n\nBLUEPRINT LOCK — THE DRAWING IS LAW: the attached technical illustration is the manufacturing blueprint for this exact craft option and the SOLE authority for the image. Reproduce its geometry precisely — point/edge shape, lengths, widths, depths, angles, curvature, roll lines, symmetry, button/tab/stay positions, seam and stitch placement, and proportions — within less than 2% deviation. Assume NOTHING from tailoring/menswear/fashion convention or model priors; every visible characteristic must come from the drawing. Do not redesign, reinterpret, substitute a similar commercial style, stylise, or \"improve\" it. Do NOT fall back to a generic version of this category — reproduce THIS option, not a typical one. If convention conflicts with the drawing, the drawing wins. Accuracy over aesthetics. ANNOTATIONS ARE NOT THE GARMENT: the technical drawing may carry measurement callouts — dimension numbers (\"2.5cm\", \"9cm\", \"115°\"), tick / leader / dimension lines, arrows, red or coloured guide marks, and text labels. These are manufacturing documentation, NOT features of the cloth. Reproduce ONLY the finished garment: never render any number, unit, arrow, callout, leader line, measurement mark, or text anywhere in the photograph. The final image is a clean garment photo with zero annotation. COLOUR IN THE DRAWING IS NOTATION, NOT CLOTH: any red, orange or otherwise highlighted region marks WHERE the craft option sits — it is a position marker, never a colour specification. Flat grey or tinted shading marks the EXTENT of a panel, lining or facing, not its shade. Render every one of those areas in the garment's own cloth and thread, in the natural colour that tailoring would use there. There must be no red, no highlighter tint and no flat unshaded grey panel anywhere in the photograph unless the option's own label explicitly names that colour.\n\nPhotographed on a male model.\n\nFrame macro on the detail; the detail must read clearly and sharply.\n\nSavile Row and high-end Italian sartorial aesthetic. Natural daylight studio lighting, Phase One IQ4 medium-format camera, 150MP detail, shallow depth of field, magazine-quality editorial menswear photography. Authentic bespoke craftsmanship, fine hand stitching, premium finishing. SET — shot in a clean luxury photographic studio against a seamless, plain, neutral light-grey background with clear separation between garment and background: no location, no architecture, no furniture, no scenery, no props and no environmental context of any kind competing with the garment.\n\nExtremely realistic fine wool trouser cloth with visible weave texture, fine stitching.\n\nAvoid: any GENERIC menswear substitution (a generic spread collar, generic notch/peak lapel, generic pocket/pleat/vent/cuff/waistband in place of the drawn one), illustration or line-art style, CGI or 3D-render look, cartoon, mannequin, fashion sketch, inaccurate geometry, altered proportions, missing construction details, asymmetry, watermark, AI-art appearance, AND any text or annotation traced from the drawing: NO measurement numbers, units (cm/mm/°), dimension or leader lines, arrows, callouts, red/coloured guide marks, ruler ticks, or labels anywhere in the frame. This is real garment photography of the exact drawn option — clean cloth only, nothing else.\n\nFORBIDDEN FOR THIS OPTION — do not render: a generic version of this part standing in for the exact drawn option (generic-category substitution); any feature, count, or geometry borrowed from a neighboring craft option on the same field; a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion).\n\nQC CORRECTION (attempt 3) — the previous attempt was rejected. Each item below says what the drawing actually shows; render that. • Lengthen only the vertical segment: the drop from the waistband seam to the bar-tacked corner must equal about 0.78 x the visible waistband depth (in this render's scale, ~103 px rather than 80 px), moving the corner down to about y=330 while leaving the corner's x, the run direction, and the crease terminus untouched. • Close the corner by about 5 degrees so the turn reads at 96-97 deg. Do this by rotating the run slightly flatter, not by tilting the vertical arm, and keep the bar tack exactly where it is. • Flatten the run by about 3-4 degrees relative to the waistband seam. It should still descend toward the crease, just less steeply. Do not flatten it to horizontal. • Do NOT stretch the run. It correctly starts near the drawn arm position and correctly terminates at the crease; its length is determined by those two, and the crease position is a property of this camera angle. Fixing the vertical drop is the only dimensional change needed. • Deepen the jetted welt to about 0.3 x waistband depth (~40 px at this render scale). Low priority - this is context, not the showcased option, and it must not steal attention from the front pocket. • Optional and lower priority than the drop-length fix. If the crop is changed at all, tighten downward-and-left so the pocket L fills 12-15 percent of the frame; but the current camera angle, lens character and lighting are correct and must survive any recrop. KEEP EXACTLY AS-IS — these were measured correct on the previous attempt and must not regress: OPEN mouth path - the prior fault is fixed and must never regress. Closure test: sampling every 10 px from x=220 to x=420, in a band 18-115 px below the lip line, the darkest high-pass response is -3.1 to -8.5, i.e. twill-weave noise, versus -20 to -35 on the actual mouth line and -13 to -20 on the waistband seam. No fourth edge exists. Right-side closure test x=450..500 likewise finds nothing stronger than -5.4.; Genuine aperture with depth along the WHOLE path, not just a stitch line. Slot-core luminance is 8-25 along the run (x=220..420) against adjacent cloth of 26-53, and 0-22 along the vertical arm against cloth of 46-55. The arm is shallower near the waistband (12-22) and deepest at the corner (0-3), which is physically correct for a mouth pinched shut at the waistband.; Bar tack at the corner: a distinctly brighter rectangular element at x=183-201, y=298-327, peak luminance 94 against surrounding cloth mean 49.7. This was an explicit ask of the previous correction and it landed.; Hard, un-radiused corner. The arm's dark trace holds x=204-205 down to y=304, and the run's trace takes over by y=308; the turn completes inside about 10 px. The drawing turns inside about 8 px of a 29 px stroke. No chamfer, no curve.; Run is STRAIGHT - this is the entire discriminator against the jeans-arc sibling. Straight-line fit through the slot core from x=232 to x=424 has maximum residual 2.7 px over a 249 px run (about 1.0 percent sagitta). The drawing's run has under 1 px residual over 312 px. Any regeneration that introduces a sweeping curve fails the pair gate.; Run terminates exactly at the front crease and does not cross it. The run line reaches (442, 381); the crease interpolates to x=442.4 at y=381. Past x=450 the high-pass response collapses to -2 to -5 (noise). The drawing does the same: red mask max x=533, crease ink at x=530-534.; Vertical arm starts at the waistband bottom seam (arm trace top y=232, seam centre y=226.5 at x=207) and stops dead at the corner (nothing stronger than -9.7 below y=336). Three connected edges, open at both ends - exactly the drawn topology.; Correct face, correct hip, correct sense: trouser front, vertical arm outboard, run descending inboard toward the crease. Matches the drawing's red path direction.; Mouth lips are parallel and the mouth width is even: slot-core slope 0.323 vs lip-ridge slope 0.299, a 1.3 degree divergence over a 200 px span.; Pressed, rolled lower lip with a specular highlight ridge (high-pass +12 to +23) running parallel below the aperture. This is the cue that makes it read as an opening rather than a drawn outline.; Context layout reproduces the drawing within about 5 percent in belt-loop-pitch units: dart at 1.40 vs 1.48 drawn, welt spanning 1.01-1.77 vs 1.10-1.87 drawn, crease at 0.75 vs 0.85 drawn, three visible belt loops in both.; Fabric and light: navy worsted twill, matte, visible weave and fibre; soft directional light from the left; no hands, no tie, no accessory obstructing the pocket; plain neutral background; hip-level crop with the white shirt hem as the only other element..",
-  "builtAt": "2026-08-05T16:09:08.945Z",
-  "correctionAttempt": 3
+  "excluded": null,
+  "generate": true
+ },
+ "requiredTokens": [
+  "90°"
+ ],
+ "checklist": [
+  "angle matches exactly: 90°",
+  "distinguishing detail present: Jeans-style front pocket with a sharp 90° corner transition — utility-oriented, masculine, structured; carpenter's-apron strength at the hip.",
+  "reproduced from the illustration: the named detail",
+  "orientation matches the illustration: front",
+  "the Front Pocket Style dominates the frame (40–80%), identifiable within one second, framed macro on the detail",
+  "silhouette, proportions, seam & stitch placement match the illustration; left/right symmetry correct",
+  "NO generic-category substitution — this exact option, not a typical one",
+  "a real photograph of the exact drawn option — not the line-art, no stylisation"
+ ],
+ "scoreCard": [
+  {
+   "category": "shape",
+   "score": null,
+   "min": 98
+  },
+  {
+   "category": "geometry",
+   "score": null,
+   "min": 98
+  },
+  {
+   "category": "dimensions",
+   "score": null,
+   "min": 98
+  },
+  {
+   "category": "angles",
+   "score": null,
+   "min": 98
+  },
+  {
+   "category": "construction",
+   "score": null,
+   "min": 98
+  },
+  {
+   "category": "placement",
+   "score": null,
+   "min": 98
+  },
+  {
+   "category": "symmetry",
+   "score": null,
+   "min": 98
+  },
+  {
+   "category": "composition",
+   "score": null,
+   "min": 98
+  },
+  {
+   "category": "blueprint-match",
+   "score": null,
+   "min": 98
+  }
+ ],
+ "prompt": "Ultra-photorealistic luxury menswear product photography.\n\nA single-subject craft DOCUMENTATION photograph: the Front Pocket Style is the dominant subject, filling 40–80% of the frame and identifiable within one second.\n\nA premium pair of bespoke wool tailored trousers featuring a precise Square Jeans Pocket (Front Pocket Style).\n\nDistinguishing construction detail (reproduce exactly as drawn): Jeans-style front pocket with a sharp 90° corner transition — utility-oriented, masculine, structured; carpenter's-apron strength at the hip.\n\nExact specification — at 90° — matching the illustration precisely.\n\nMANDATORY GEOMETRY COVERAGE — reproduce from the illustration, exactly and without assumption, every one of these: the named detail. Match each to the drawing.\n\nVIEW — this illustration is the front of the garment. Photograph the same face; never substitute a different face of the garment.\n\nBLUEPRINT LOCK — THE DRAWING IS LAW: the attached technical illustration is the manufacturing blueprint for this exact craft option and the SOLE authority for the image. Reproduce its geometry precisely — point/edge shape, lengths, widths, depths, angles, curvature, roll lines, symmetry, button/tab/stay positions, seam and stitch placement, and proportions — within less than 2% deviation. Assume NOTHING from tailoring/menswear/fashion convention or model priors; every visible characteristic must come from the drawing. Do not redesign, reinterpret, substitute a similar commercial style, stylise, or \"improve\" it. Do NOT fall back to a generic version of this category — reproduce THIS option, not a typical one. If convention conflicts with the drawing, the drawing wins. Accuracy over aesthetics. ANNOTATIONS ARE NOT THE GARMENT: the technical drawing may carry measurement callouts — dimension numbers (\"2.5cm\", \"9cm\", \"115°\"), tick / leader / dimension lines, arrows, red or coloured guide marks, and text labels. These are manufacturing documentation, NOT features of the cloth. Reproduce ONLY the finished garment: never render any number, unit, arrow, callout, leader line, measurement mark, or text anywhere in the photograph. The final image is a clean garment photo with zero annotation. COLOUR IN THE DRAWING IS NOTATION, NOT CLOTH: any red, orange or otherwise highlighted region marks WHERE the craft option sits — it is a position marker, never a colour specification. Flat grey or tinted shading marks the EXTENT of a panel, lining or facing, not its shade. Render every one of those areas in the garment's own cloth and thread, in the natural colour that tailoring would use there. There must be no red, no highlighter tint and no flat unshaded grey panel anywhere in the photograph unless the option's own label explicitly names that colour.\n\nPhotographed on a male model.\n\nFrame macro on the detail; the detail must read clearly and sharply.\n\nSavile Row and high-end Italian sartorial aesthetic. Natural daylight studio lighting, Phase One IQ4 medium-format camera, 150MP detail, shallow depth of field, magazine-quality editorial menswear photography. Authentic bespoke craftsmanship, fine hand stitching, premium finishing. SET — shot in a clean luxury photographic studio against a seamless, plain, neutral light-grey background with clear separation between garment and background: no location, no architecture, no furniture, no scenery, no props and no environmental context of any kind competing with the garment.\n\nExtremely realistic fine wool trouser cloth with visible weave texture, fine stitching.\n\nAvoid: any GENERIC menswear substitution (a generic spread collar, generic notch/peak lapel, generic pocket/pleat/vent/cuff/waistband in place of the drawn one), illustration or line-art style, CGI or 3D-render look, cartoon, mannequin, fashion sketch, inaccurate geometry, altered proportions, missing construction details, asymmetry, watermark, AI-art appearance, AND any text or annotation traced from the drawing: NO measurement numbers, units (cm/mm/°), dimension or leader lines, arrows, callouts, red/coloured guide marks, ruler ticks, or labels anywhere in the frame. This is real garment photography of the exact drawn option — clean cloth only, nothing else.\n\nFORBIDDEN FOR THIS OPTION — do not render: a generic version of this part standing in for the exact drawn option (generic-category substitution); any feature, count, or geometry borrowed from a neighboring craft option on the same field; a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion).\n\nQC CORRECTION (attempt 3) — the previous attempt was rejected. Each item below says what the drawing actually shows; render that. • Lengthen only the vertical segment: the drop from the waistband seam to the bar-tacked corner must equal about 0.78 x the visible waistband depth (in this render's scale, ~103 px rather than 80 px), moving the corner down to about y=330 while leaving the corner's x, the run direction, and the crease terminus untouched. • Close the corner by about 5 degrees so the turn reads at 96-97 deg. Do this by rotating the run slightly flatter, not by tilting the vertical arm, and keep the bar tack exactly where it is. • Flatten the run by about 3-4 degrees relative to the waistband seam. It should still descend toward the crease, just less steeply. Do not flatten it to horizontal. • Do NOT stretch the run. It correctly starts near the drawn arm position and correctly terminates at the crease; its length is determined by those two, and the crease position is a property of this camera angle. Fixing the vertical drop is the only dimensional change needed. • Deepen the jetted welt to about 0.3 x waistband depth (~40 px at this render scale). Low priority - this is context, not the showcased option, and it must not steal attention from the front pocket. • Optional and lower priority than the drop-length fix. If the crop is changed at all, tighten downward-and-left so the pocket L fills 12-15 percent of the frame; but the current camera angle, lens character and lighting are correct and must survive any recrop. KEEP EXACTLY AS-IS — these were measured correct on the previous attempt and must not regress: OPEN mouth path - the prior fault is fixed and must never regress. Closure test: sampling every 10 px from x=220 to x=420, in a band 18-115 px below the lip line, the darkest high-pass response is -3.1 to -8.5, i.e. twill-weave noise, versus -20 to -35 on the actual mouth line and -13 to -20 on the waistband seam. No fourth edge exists. Right-side closure test x=450..500 likewise finds nothing stronger than -5.4.; Genuine aperture with depth along the WHOLE path, not just a stitch line. Slot-core luminance is 8-25 along the run (x=220..420) against adjacent cloth of 26-53, and 0-22 along the vertical arm against cloth of 46-55. The arm is shallower near the waistband (12-22) and deepest at the corner (0-3), which is physically correct for a mouth pinched shut at the waistband.; Bar tack at the corner: a distinctly brighter rectangular element at x=183-201, y=298-327, peak luminance 94 against surrounding cloth mean 49.7. This was an explicit ask of the previous correction and it landed.; Hard, un-radiused corner. The arm's dark trace holds x=204-205 down to y=304, and the run's trace takes over by y=308; the turn completes inside about 10 px. The drawing turns inside about 8 px of a 29 px stroke. No chamfer, no curve.; Run is STRAIGHT - this is the entire discriminator against the jeans-arc sibling. Straight-line fit through the slot core from x=232 to x=424 has maximum residual 2.7 px over a 249 px run (about 1.0 percent sagitta). The drawing's run has under 1 px residual over 312 px. Any regeneration that introduces a sweeping curve fails the pair gate.; Run terminates exactly at the front crease and does not cross it. The run line reaches (442, 381); the crease interpolates to x=442.4 at y=381. Past x=450 the high-pass response collapses to -2 to -5 (noise). The drawing does the same: red mask max x=533, crease ink at x=530-534.; Vertical arm starts at the waistband bottom seam (arm trace top y=232, seam centre y=226.5 at x=207) and stops dead at the corner (nothing stronger than -9.7 below y=336). Three connected edges, open at both ends - exactly the drawn topology.; Correct face, correct hip, correct sense: trouser front, vertical arm outboard, run descending inboard toward the crease. Matches the drawing's red path direction.; Mouth lips are parallel and the mouth width is even: slot-core slope 0.323 vs lip-ridge slope 0.299, a 1.3 degree divergence over a 200 px span.; Pressed, rolled lower lip with a specular highlight ridge (high-pass +12 to +23) running parallel below the aperture. This is the cue that makes it read as an opening rather than a drawn outline.; Context layout reproduces the drawing within about 5 percent in belt-loop-pitch units: dart at 1.40 vs 1.48 drawn, welt spanning 1.01-1.77 vs 1.10-1.87 drawn, crease at 0.75 vs 0.85 drawn, three visible belt loops in both.; Fabric and light: navy worsted twill, matte, visible weave and fibre; soft directional light from the left; no hands, no tie, no accessory obstructing the pocket; plain neutral background; hip-level crop with the white shirt hem as the only other element..\n\nOWNER CORRECTION AFTER REVIEW (attempt 3 was rejected by the owner — obey this over any conflicting earlier line, including the BLUEPRINT LOCK): What is wrong with it: Wrong side or orientation. The owner has supplied 1 reference photograph(s) of what this option should actually look like. Those photographs are attached and OUTRANK the supplier line drawing wherever the two disagree: match the construction, proportion and finish shown in them. Use the line drawing only for anything the photographs do not show.",
+ "builtAt": "2026-08-05T16:09:08.945Z",
+ "correctionAttempt": 3,
+ "ownerCorrections": [
+  {
+   "attemptRejected": 3,
+   "decidedAt": "2026-08-10T18:21:38.856Z",
+   "tags": [
+    "Wrong side or orientation"
+   ],
+   "notes": "",
+   "references": [
+    "/images/review-refs/suit-2pc/jeans-square/1786386069215-2s45i7.webp"
+   ],
+   "appliedAt": "2026-08-11T08:43:35.447Z",
+   "craftId": "suit-2pc|Trousers-front-pockets|front-pocket-style|jeans-square"
+  }
+ ]
 }

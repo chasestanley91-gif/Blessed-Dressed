@@ -1,110 +1,125 @@
 {
+ "addr": "suit-3pc > Vest-front-style > button-stance > db-6x2",
+ "label": "DB 6 × 2",
+ "part": "vest-detail",
+ "orientation": "front",
+ "excluded": null,
+ "generate": true,
+ "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\suit-3pc.json",
+ "source": "json",
+ "illustration": "/images/options/vest/db-6x2.png",
+ "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\options\\vest\\db-6x2.png",
+ "illustrationExists": true,
+ "illustrationRemote": false,
+ "profile": {
   "addr": "suit-3pc > Vest-front-style > button-stance > db-6x2",
-  "label": "DB 6 × 2",
+  "product": "suit-3pc",
+  "field": "Button Stance",
+  "option": "DB 6 × 2",
   "part": "vest-detail",
+  "garment": "bespoke tailored waistcoat",
   "orientation": "front",
-  "excluded": null,
-  "generate": true,
-  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\suit-3pc.json",
-  "source": "json",
-  "illustration": "/images/options/vest/db-6x2.png",
-  "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\options\\vest\\db-6x2.png",
-  "illustrationExists": true,
-  "illustrationRemote": false,
-  "profile": {
-    "addr": "suit-3pc > Vest-front-style > button-stance > db-6x2",
-    "product": "suit-3pc",
-    "field": "Button Stance",
-    "option": "DB 6 × 2",
-    "part": "vest-detail",
-    "garment": "bespoke tailored waistcoat",
-    "orientation": "front",
-    "absence": false,
-    "distinguishingDetail": "A double-breasted waistcoat with six buttons of which two fasten, leaving the lower two buttons decorative on the cutaway. The arrangement creates a longer overlapping front with a slim fastening point, balancing the boldness of a DB front with a clean line. It is a refined choice for formal three-piece looks.",
-    "measured": {
-      "dimensions": [],
-      "angles": [],
-      "counts": [],
-      "shapes": [],
-      "spread": [
-        "wide cutaway spread"
-      ],
-      "flags": []
-    },
-    "reproduceFromIllustration": [
-      "the named detail"
-    ],
-    "composition": {
-      "crop": "macro on the detail",
-      "dominanceTarget": "40–80% of frame",
-      "identifyWithin": "1 second"
-    },
-    "forbidden": [
-      "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
-      "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
-      "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
-    ],
-    "excluded": null,
-    "generate": true
+  "absence": false,
+  "distinguishingDetail": "A double-breasted waistcoat with six buttons of which two fasten, leaving the lower two buttons decorative on the cutaway. The arrangement creates a longer overlapping front with a slim fastening point, balancing the boldness of a DB front with a clean line. It is a refined choice for formal three-piece looks.",
+  "measured": {
+   "dimensions": [],
+   "angles": [],
+   "counts": [],
+   "shapes": [],
+   "spread": [
+    "wide cutaway spread"
+   ],
+   "flags": []
   },
-  "requiredTokens": [],
-  "checklist": [
-    "distinguishing detail present: A double-breasted waistcoat with six buttons of which two fasten, leaving the lower two buttons decorative on the cutaway. The arrangement creates a longer overlapping front with a slim fastening point, balancing the boldness of a DB front with a clean line. It is a refined choice for formal three-piece looks.",
-    "reproduced from the illustration: the named detail",
-    "orientation matches the illustration: front",
-    "the Button Stance dominates the frame (40–80%), identifiable within one second, framed macro on the detail",
-    "silhouette, proportions, seam & stitch placement match the illustration; left/right symmetry correct",
-    "NO generic-category substitution — this exact option, not a typical one",
-    "a real photograph of the exact drawn option — not the line-art, no stylisation"
+  "reproduceFromIllustration": [
+   "the named detail"
   ],
-  "scoreCard": [
-    {
-      "category": "shape",
-      "score": null,
-      "min": 98
-    },
-    {
-      "category": "geometry",
-      "score": null,
-      "min": 98
-    },
-    {
-      "category": "dimensions",
-      "score": null,
-      "min": 98
-    },
-    {
-      "category": "angles",
-      "score": null,
-      "min": 98
-    },
-    {
-      "category": "construction",
-      "score": null,
-      "min": 98
-    },
-    {
-      "category": "placement",
-      "score": null,
-      "min": 98
-    },
-    {
-      "category": "symmetry",
-      "score": null,
-      "min": 98
-    },
-    {
-      "category": "composition",
-      "score": null,
-      "min": 98
-    },
-    {
-      "category": "blueprint-match",
-      "score": null,
-      "min": 98
-    }
+  "composition": {
+   "crop": "macro on the detail",
+   "dominanceTarget": "40–80% of frame",
+   "identifyWithin": "1 second"
+  },
+  "forbidden": [
+   "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+   "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+   "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
   ],
-  "prompt": "Ultra-photorealistic luxury menswear product photography.\n\nA single-subject craft DOCUMENTATION photograph: the Button Stance is the dominant subject, filling 40–80% of the frame and identifiable within one second.\n\nA premium bespoke tailored waistcoat featuring a precise DB 6 × 2 (Button Stance).\n\nDistinguishing construction detail (reproduce exactly as drawn): A double-breasted waistcoat with six buttons of which two fasten, leaving the lower two buttons decorative on the cutaway. The arrangement creates a longer overlapping front with a slim fastening point, balancing the boldness of a DB front with a clean line. It is a refined choice for formal three-piece looks.\n\nExact specification — wide cutaway spread — matching the illustration precisely.\n\nMANDATORY GEOMETRY COVERAGE — reproduce from the illustration, exactly and without assumption, every one of these: the named detail. Match each to the drawing.\n\nVIEW — this illustration is the front of the garment. Photograph the same face; never substitute a different face of the garment.\n\nBLUEPRINT LOCK — THE DRAWING IS LAW: the attached technical illustration is the manufacturing blueprint for this exact craft option and the SOLE authority for the image. Reproduce its geometry precisely — point/edge shape, lengths, widths, depths, angles, curvature, roll lines, symmetry, button/tab/stay positions, seam and stitch placement, and proportions — within less than 2% deviation. Assume NOTHING from tailoring/menswear/fashion convention or model priors; every visible characteristic must come from the drawing. Do not redesign, reinterpret, substitute a similar commercial style, stylise, or \"improve\" it. Do NOT fall back to a generic version of this category — reproduce THIS option, not a typical one. If convention conflicts with the drawing, the drawing wins. Accuracy over aesthetics. ANNOTATIONS ARE NOT THE GARMENT: the technical drawing may carry measurement callouts — dimension numbers (\"2.5cm\", \"9cm\", \"115°\"), tick / leader / dimension lines, arrows, red or coloured guide marks, and text labels. These are manufacturing documentation, NOT features of the cloth. Reproduce ONLY the finished garment: never render any number, unit, arrow, callout, leader line, measurement mark, or text anywhere in the photograph. The final image is a clean garment photo with zero annotation. COLOUR IN THE DRAWING IS NOTATION, NOT CLOTH: any red, orange or otherwise highlighted region marks WHERE the craft option sits — it is a position marker, never a colour specification. Flat grey or tinted shading marks the EXTENT of a panel, lining or facing, not its shade. Render every one of those areas in the garment's own cloth and thread, in the natural colour that tailoring would use there. There must be no red, no highlighter tint and no flat unshaded grey panel anywhere in the photograph unless the option's own label explicitly names that colour.\n\nPhotographed worn on a male model.\n\nFrame macro on the detail; the detail must read clearly and sharply.\n\nSavile Row and high-end Italian sartorial aesthetic. Natural daylight studio lighting, Phase One IQ4 medium-format camera, 150MP detail, shallow depth of field, magazine-quality editorial menswear photography. Authentic bespoke craftsmanship, fine hand stitching, premium finishing. SET — shot in a clean luxury photographic studio against a seamless, plain, neutral light-grey background with clear separation between garment and background: no location, no architecture, no furniture, no scenery, no props and no environmental context of any kind competing with the garment.\n\nExtremely realistic fine wool suiting texture, fine stitching.\n\nAvoid: any GENERIC menswear substitution (a generic spread collar, generic notch/peak lapel, generic pocket/pleat/vent/cuff/waistband in place of the drawn one), illustration or line-art style, CGI or 3D-render look, cartoon, mannequin, fashion sketch, inaccurate geometry, altered proportions, missing construction details, asymmetry, watermark, AI-art appearance, AND any text or annotation traced from the drawing: NO measurement numbers, units (cm/mm/°), dimension or leader lines, arrows, callouts, red/coloured guide marks, ruler ticks, or labels anywhere in the frame. This is real garment photography of the exact drawn option — clean cloth only, nothing else.\n\nFORBIDDEN FOR THIS OPTION — do not render: a generic version of this part standing in for the exact drawn option (generic-category substitution); any feature, count, or geometry borrowed from a neighboring craft option on the same field; a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion).\n\nFRAMING LOCK — THIS IS A WIDE SHOT, NOT A DETAIL CROP; THIS PARAGRAPH OUTRANKS THE CLOSE-CROP MANDATE. Six buttons in two columns cannot be counted from a close crop, so MOVE THE CAMERA BACK. Photograph the waistcoat from directly in front, level. TOP edge of the picture just above the top of the double-breasted wrap, where the front edge begins its diagonal. BOTTOM edge just below the bottom hem, with a margin of plain background beneath. LEFT and RIGHT edges just outside both side seams, with a margin of background beyond each, so the entire front of the waistcoat is in frame and ALL SIX buttons are complete and countable at a glance. CROP OUT entirely: the model's chin, mouth, face and hair; the arms; the trousers below the hem.\n\nGEOMETRY LOCK — exactly SIX buttons, arranged in TWO vertical columns of THREE, symmetrically placed either side of the centre front — three on the left column, three on the right column, at three matched heights. The front is DOUBLE-BREASTED: the overlapping front edge crosses the body diagonally from the neckline down to the inner column of buttons. The two middle buttons are the working closures. The vertical spacing between rows is even, and the horizontal gap between the two columns is about one and a half times the width of a column. Two horizontal lower welt pockets, one on each front, sit below the middle row. Negative: NOT single-breasted, NOT four buttons, NOT eight, NOT two columns of two — exactly three per column, six in total.",
-  "builtAt": "2026-07-31T18:56:01.195Z",
-  "framingApplied": true
+  "excluded": null,
+  "generate": true
+ },
+ "requiredTokens": [],
+ "checklist": [
+  "distinguishing detail present: A double-breasted waistcoat with six buttons of which two fasten, leaving the lower two buttons decorative on the cutaway. The arrangement creates a longer overlapping front with a slim fastening point, balancing the boldness of a DB front with a clean line. It is a refined choice for formal three-piece looks.",
+  "reproduced from the illustration: the named detail",
+  "orientation matches the illustration: front",
+  "the Button Stance dominates the frame (40–80%), identifiable within one second, framed macro on the detail",
+  "silhouette, proportions, seam & stitch placement match the illustration; left/right symmetry correct",
+  "NO generic-category substitution — this exact option, not a typical one",
+  "a real photograph of the exact drawn option — not the line-art, no stylisation"
+ ],
+ "scoreCard": [
+  {
+   "category": "shape",
+   "score": null,
+   "min": 98
+  },
+  {
+   "category": "geometry",
+   "score": null,
+   "min": 98
+  },
+  {
+   "category": "dimensions",
+   "score": null,
+   "min": 98
+  },
+  {
+   "category": "angles",
+   "score": null,
+   "min": 98
+  },
+  {
+   "category": "construction",
+   "score": null,
+   "min": 98
+  },
+  {
+   "category": "placement",
+   "score": null,
+   "min": 98
+  },
+  {
+   "category": "symmetry",
+   "score": null,
+   "min": 98
+  },
+  {
+   "category": "composition",
+   "score": null,
+   "min": 98
+  },
+  {
+   "category": "blueprint-match",
+   "score": null,
+   "min": 98
+  }
+ ],
+ "prompt": "Ultra-photorealistic luxury menswear product photography.\n\nA single-subject craft DOCUMENTATION photograph: the Button Stance is the dominant subject, filling 40–80% of the frame and identifiable within one second.\n\nA premium bespoke tailored waistcoat featuring a precise DB 6 × 2 (Button Stance).\n\nDistinguishing construction detail (reproduce exactly as drawn): A double-breasted waistcoat with six buttons of which two fasten, leaving the lower two buttons decorative on the cutaway. The arrangement creates a longer overlapping front with a slim fastening point, balancing the boldness of a DB front with a clean line. It is a refined choice for formal three-piece looks.\n\nExact specification — wide cutaway spread — matching the illustration precisely.\n\nMANDATORY GEOMETRY COVERAGE — reproduce from the illustration, exactly and without assumption, every one of these: the named detail. Match each to the drawing.\n\nVIEW — this illustration is the front of the garment. Photograph the same face; never substitute a different face of the garment.\n\nBLUEPRINT LOCK — THE DRAWING IS LAW: the attached technical illustration is the manufacturing blueprint for this exact craft option and the SOLE authority for the image. Reproduce its geometry precisely — point/edge shape, lengths, widths, depths, angles, curvature, roll lines, symmetry, button/tab/stay positions, seam and stitch placement, and proportions — within less than 2% deviation. Assume NOTHING from tailoring/menswear/fashion convention or model priors; every visible characteristic must come from the drawing. Do not redesign, reinterpret, substitute a similar commercial style, stylise, or \"improve\" it. Do NOT fall back to a generic version of this category — reproduce THIS option, not a typical one. If convention conflicts with the drawing, the drawing wins. Accuracy over aesthetics. ANNOTATIONS ARE NOT THE GARMENT: the technical drawing may carry measurement callouts — dimension numbers (\"2.5cm\", \"9cm\", \"115°\"), tick / leader / dimension lines, arrows, red or coloured guide marks, and text labels. These are manufacturing documentation, NOT features of the cloth. Reproduce ONLY the finished garment: never render any number, unit, arrow, callout, leader line, measurement mark, or text anywhere in the photograph. The final image is a clean garment photo with zero annotation. COLOUR IN THE DRAWING IS NOTATION, NOT CLOTH: any red, orange or otherwise highlighted region marks WHERE the craft option sits — it is a position marker, never a colour specification. Flat grey or tinted shading marks the EXTENT of a panel, lining or facing, not its shade. Render every one of those areas in the garment's own cloth and thread, in the natural colour that tailoring would use there. There must be no red, no highlighter tint and no flat unshaded grey panel anywhere in the photograph unless the option's own label explicitly names that colour.\n\nPhotographed worn on a male model.\n\nFrame macro on the detail; the detail must read clearly and sharply.\n\nSavile Row and high-end Italian sartorial aesthetic. Natural daylight studio lighting, Phase One IQ4 medium-format camera, 150MP detail, shallow depth of field, magazine-quality editorial menswear photography. Authentic bespoke craftsmanship, fine hand stitching, premium finishing. SET — shot in a clean luxury photographic studio against a seamless, plain, neutral light-grey background with clear separation between garment and background: no location, no architecture, no furniture, no scenery, no props and no environmental context of any kind competing with the garment.\n\nExtremely realistic fine wool suiting texture, fine stitching.\n\nAvoid: any GENERIC menswear substitution (a generic spread collar, generic notch/peak lapel, generic pocket/pleat/vent/cuff/waistband in place of the drawn one), illustration or line-art style, CGI or 3D-render look, cartoon, mannequin, fashion sketch, inaccurate geometry, altered proportions, missing construction details, asymmetry, watermark, AI-art appearance, AND any text or annotation traced from the drawing: NO measurement numbers, units (cm/mm/°), dimension or leader lines, arrows, callouts, red/coloured guide marks, ruler ticks, or labels anywhere in the frame. This is real garment photography of the exact drawn option — clean cloth only, nothing else.\n\nFORBIDDEN FOR THIS OPTION — do not render: a generic version of this part standing in for the exact drawn option (generic-category substitution); any feature, count, or geometry borrowed from a neighboring craft option on the same field; a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion).\n\nFRAMING LOCK — THIS IS A WIDE SHOT, NOT A DETAIL CROP; THIS PARAGRAPH OUTRANKS THE CLOSE-CROP MANDATE. Six buttons in two columns cannot be counted from a close crop, so MOVE THE CAMERA BACK. Photograph the waistcoat from directly in front, level. TOP edge of the picture just above the top of the double-breasted wrap, where the front edge begins its diagonal. BOTTOM edge just below the bottom hem, with a margin of plain background beneath. LEFT and RIGHT edges just outside both side seams, with a margin of background beyond each, so the entire front of the waistcoat is in frame and ALL SIX buttons are complete and countable at a glance. CROP OUT entirely: the model's chin, mouth, face and hair; the arms; the trousers below the hem.\n\nGEOMETRY LOCK — exactly SIX buttons, arranged in TWO vertical columns of THREE, symmetrically placed either side of the centre front — three on the left column, three on the right column, at three matched heights. The front is DOUBLE-BREASTED: the overlapping front edge crosses the body diagonally from the neckline down to the inner column of buttons. The two middle buttons are the working closures. The vertical spacing between rows is even, and the horizontal gap between the two columns is about one and a half times the width of a column. Two horizontal lower welt pockets, one on each front, sit below the middle row. Negative: NOT single-breasted, NOT four buttons, NOT eight, NOT two columns of two — exactly three per column, six in total.\n\nOWNER CORRECTION AFTER REVIEW (attempt 1 was rejected by the owner — obey this over any conflicting earlier line, including the BLUEPRINT LOCK): the fact the shirt isn't tucked in looks crazy The owner has supplied 3 reference photograph(s) of what this option should actually look like. Those photographs are attached and OUTRANK the supplier line drawing wherever the two disagree: match the construction, proportion and finish shown in them. Use the line drawing only for anything the photographs do not show.",
+ "builtAt": "2026-07-31T18:56:01.195Z",
+ "framingApplied": true,
+ "ownerCorrections": [
+  {
+   "attemptRejected": 1,
+   "decidedAt": "2026-08-11T00:17:45.826Z",
+   "tags": [],
+   "notes": "the fact the shirt isn't tucked in looks crazy",
+   "references": [
+    "/images/review-refs/suit-3pc/db-6x2/1786407371096-a6dwgd.webp",
+    "/images/review-refs/suit-3pc/db-6x2/1786407388776-5wz2r6.webp",
+    "/images/review-refs/suit-3pc/db-6x2/1786407460056-v8x5qc.avif"
+   ],
+   "appliedAt": "2026-08-11T08:43:35.482Z",
+   "craftId": "suit-3pc|Vest-front-style|button-stance|db-6x2"
+  }
+ ]
 }

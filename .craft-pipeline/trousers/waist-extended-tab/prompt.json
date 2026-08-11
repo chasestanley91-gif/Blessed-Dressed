@@ -1,130 +1,146 @@
 {
+ "addr": "trousers > waistband > waistband-style > waist-extended-tab",
+ "label": "Extended Tab Waistband",
+ "part": "trouser-waistband",
+ "orientation": "front",
+ "excluded": null,
+ "generate": true,
+ "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\trousers.json",
+ "source": "json",
+ "illustration": null,
+ "illustrationDisk": null,
+ "illustrationExists": false,
+ "illustrationRemote": false,
+ "profile": {
   "addr": "trousers > waistband > waistband-style > waist-extended-tab",
-  "label": "Extended Tab Waistband",
+  "product": "trousers",
+  "field": "Waistband Style",
+  "option": "Extended Tab Waistband",
   "part": "trouser-waistband",
+  "garment": "pair of bespoke wool tailored trousers",
   "orientation": "front",
-  "excluded": null,
-  "generate": true,
-  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\trousers.json",
-  "source": "json",
-  "illustration": null,
-  "illustrationDisk": null,
-  "illustrationExists": false,
-  "illustrationRemote": false,
-  "profile": {
-    "addr": "trousers > waistband > waistband-style > waist-extended-tab",
-    "product": "trousers",
-    "field": "Waistband Style",
-    "option": "Extended Tab Waistband",
-    "part": "trouser-waistband",
-    "garment": "pair of bespoke wool tailored trousers",
-    "orientation": "front",
-    "absence": false,
-    "distinguishingDetail": "Extended tab waistband — one side projects 5 cm to 15 cm beyond center front and overlaps the opposite side, so closure sits away from the fly. The front waist becomes one uninterrupted line; Florentine bespoke character.",
-    "measured": {
-      "dimensions": [
-        "5 cm",
-        "15 cm"
-      ],
-      "angles": [],
-      "counts": [],
-      "shapes": [
-        "extended-tab waistband"
-      ],
-      "spread": [],
-      "flags": [
-        "tab fastening",
-        "extended waistband tab"
-      ]
-    },
-    "reproduceFromIllustration": [
-      "waistband style/width",
-      "closure (hook & button)",
-      "side adjusters/belt loops/extended tab"
-    ],
-    "composition": {
-      "crop": "the waistband across the front of the trousers as the clear focal point",
-      "dominanceTarget": "40–80% of frame",
-      "identifyWithin": "1 second"
-    },
-    "forbidden": [
-      "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
-      "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
-      "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
-    ],
-    "excluded": null,
-    "generate": true
-  },
-  "requiredTokens": [
+  "absence": false,
+  "distinguishingDetail": "Extended tab waistband — one side projects 5 cm to 15 cm beyond center front and overlaps the opposite side, so closure sits away from the fly. The front waist becomes one uninterrupted line; Florentine bespoke character.",
+  "measured": {
+   "dimensions": [
     "5 cm",
-    "15 cm",
-    "extended-tab waistband",
+    "15 cm"
+   ],
+   "angles": [],
+   "counts": [],
+   "shapes": [
+    "extended-tab waistband"
+   ],
+   "spread": [],
+   "flags": [
     "tab fastening",
     "extended waistband tab"
+   ]
+  },
+  "reproduceFromIllustration": [
+   "waistband style/width",
+   "closure (hook & button)",
+   "side adjusters/belt loops/extended tab"
   ],
-  "checklist": [
-    "length/width matches exactly: 5 cm",
-    "length/width matches exactly: 15 cm",
-    "shape reads as drawn: extended-tab waistband",
-    "present & positioned as drawn: tab fastening",
-    "present & positioned as drawn: extended waistband tab",
-    "distinguishing detail present: Extended tab waistband — one side projects 5 cm to 15 cm beyond center front and overlaps the opposite side, so closure sits away from the fly. The front waist becomes one uninterrupted line; Florentine bespoke character.",
-    "reproduced from the specification: waistband style/width",
-    "reproduced from the specification: closure (hook & button)",
-    "reproduced from the specification: side adjusters/belt loops/extended tab",
-    "orientation matches the specification: front",
-    "the Waistband Style dominates the frame (40–80%), identifiable within one second, framed the waistband across the front of the trousers as the clear focal point",
-    "silhouette, proportions, seam & stitch placement match the specification; left/right symmetry correct",
-    "NO generic-category substitution — this exact option, not a typical one",
-    "a real photograph of the exact drawn option — not an illustration, no stylisation"
+  "composition": {
+   "crop": "the waistband across the front of the trousers as the clear focal point",
+   "dominanceTarget": "40–80% of frame",
+   "identifyWithin": "1 second"
+  },
+  "forbidden": [
+   "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+   "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+   "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
   ],
-  "scoreCard": [
-    {
-      "category": "shape",
-      "score": null,
-      "min": 98
-    },
-    {
-      "category": "geometry",
-      "score": null,
-      "min": 98
-    },
-    {
-      "category": "dimensions",
-      "score": null,
-      "min": 98
-    },
-    {
-      "category": "angles",
-      "score": null,
-      "min": 98
-    },
-    {
-      "category": "construction",
-      "score": null,
-      "min": 98
-    },
-    {
-      "category": "placement",
-      "score": null,
-      "min": 98
-    },
-    {
-      "category": "symmetry",
-      "score": null,
-      "min": 98
-    },
-    {
-      "category": "composition",
-      "score": null,
-      "min": 98
-    },
-    {
-      "category": "blueprint-match",
-      "score": null,
-      "min": 98
-    }
-  ],
-  "prompt": "Ultra-photorealistic luxury menswear product photography.\n\nA single-subject craft DOCUMENTATION photograph: the Waistband Style is the dominant subject, filling 40–80% of the frame and identifiable within one second.\n\nA premium pair of bespoke wool tailored trousers featuring a precise Extended Tab Waistband (Waistband Style).\n\nDistinguishing construction detail ((reproduce exactly as specified)): Extended tab waistband — one side projects 5 cm to 15 cm beyond center front and overlaps the opposite side, so closure sits away from the fly. The front waist becomes one uninterrupted line; Florentine bespoke character.\n\nExact specification — extended-tab waistband shape; measuring exactly 5 cm, 15 cm; tab fastening, extended waistband tab — matching the specification precisely.\n\nMANDATORY GEOMETRY COVERAGE — reproduce from the specification, exactly and without assumption, every one of these: waistband style/width, closure (hook & button), side adjusters/belt loops/extended tab. Match each to the specification.\n\nVIEW — photograph the front of the garment; never substitute a different face of the garment.\n\nSPECIFICATION LOCK — THE DRAFTING SPECIFICATION IS LAW: this option has no manufacturing drawing; the written specification above is the SOLE authority for the image. Reproduce every stated dimension, radius, angle, count and construction exactly as written. Assume NOTHING from tailoring/menswear/fashion convention or model priors beyond what the specification states; do not redesign, reinterpret, substitute a similar commercial style, stylise, or \"improve\" it. Do NOT fall back to a generic version of this category — reproduce THIS option as specified, not a typical one. Accuracy over aesthetics. Never render any measurement number, unit, arrow, callout, or text anywhere in the photograph.\n\nPhotographed on a male model, front view of the trousers from waistband to hip, shirt tucked, no jacket, so the waistband and closure read clearly.\n\nFrame the waistband across the front of the trousers as the clear focal point; the detail must read clearly and sharply.\n\nSavile Row and high-end Italian sartorial aesthetic. Natural daylight studio lighting, Phase One IQ4 medium-format camera, 150MP detail, shallow depth of field, magazine-quality editorial menswear photography. Authentic bespoke craftsmanship, fine hand stitching, premium finishing. SET — shot in a clean luxury photographic studio against a seamless, plain, neutral light-grey background with clear separation between garment and background: no location, no architecture, no furniture, no scenery, no props and no environmental context of any kind competing with the garment.\n\nExtremely realistic fine wool trouser cloth with visible weave texture, fine stitching.\n\nAvoid: any GENERIC menswear substitution (a generic spread collar, generic notch/peak lapel, generic pocket/pleat/vent/cuff/waistband in place of the drawn one), illustration or line-art style, CGI or 3D-render look, cartoon, mannequin, fashion sketch, inaccurate geometry, altered proportions, missing construction details, asymmetry, watermark, AI-art appearance, AND any text or annotation traced from the drawing: NO measurement numbers, units (cm/mm/°), dimension or leader lines, arrows, callouts, red/coloured guide marks, ruler ticks, or labels anywhere in the frame. This is real garment photography of the exact drawn option — clean cloth only, nothing else.\n\nFORBIDDEN FOR THIS OPTION — do not render: a generic version of this part standing in for the exact drawn option (generic-category substitution); any feature, count, or geometry borrowed from a neighboring craft option on the same field; a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion).",
-  "builtAt": "2026-08-01T23:17:05.932Z"
+  "excluded": null,
+  "generate": true
+ },
+ "requiredTokens": [
+  "5 cm",
+  "15 cm",
+  "extended-tab waistband",
+  "tab fastening",
+  "extended waistband tab"
+ ],
+ "checklist": [
+  "length/width matches exactly: 5 cm",
+  "length/width matches exactly: 15 cm",
+  "shape reads as drawn: extended-tab waistband",
+  "present & positioned as drawn: tab fastening",
+  "present & positioned as drawn: extended waistband tab",
+  "distinguishing detail present: Extended tab waistband — one side projects 5 cm to 15 cm beyond center front and overlaps the opposite side, so closure sits away from the fly. The front waist becomes one uninterrupted line; Florentine bespoke character.",
+  "reproduced from the specification: waistband style/width",
+  "reproduced from the specification: closure (hook & button)",
+  "reproduced from the specification: side adjusters/belt loops/extended tab",
+  "orientation matches the specification: front",
+  "the Waistband Style dominates the frame (40–80%), identifiable within one second, framed the waistband across the front of the trousers as the clear focal point",
+  "silhouette, proportions, seam & stitch placement match the specification; left/right symmetry correct",
+  "NO generic-category substitution — this exact option, not a typical one",
+  "a real photograph of the exact drawn option — not an illustration, no stylisation"
+ ],
+ "scoreCard": [
+  {
+   "category": "shape",
+   "score": null,
+   "min": 98
+  },
+  {
+   "category": "geometry",
+   "score": null,
+   "min": 98
+  },
+  {
+   "category": "dimensions",
+   "score": null,
+   "min": 98
+  },
+  {
+   "category": "angles",
+   "score": null,
+   "min": 98
+  },
+  {
+   "category": "construction",
+   "score": null,
+   "min": 98
+  },
+  {
+   "category": "placement",
+   "score": null,
+   "min": 98
+  },
+  {
+   "category": "symmetry",
+   "score": null,
+   "min": 98
+  },
+  {
+   "category": "composition",
+   "score": null,
+   "min": 98
+  },
+  {
+   "category": "blueprint-match",
+   "score": null,
+   "min": 98
+  }
+ ],
+ "prompt": "Ultra-photorealistic luxury menswear product photography.\n\nA single-subject craft DOCUMENTATION photograph: the Waistband Style is the dominant subject, filling 40–80% of the frame and identifiable within one second.\n\nA premium pair of bespoke wool tailored trousers featuring a precise Extended Tab Waistband (Waistband Style).\n\nDistinguishing construction detail ((reproduce exactly as specified)): Extended tab waistband — one side projects 5 cm to 15 cm beyond center front and overlaps the opposite side, so closure sits away from the fly. The front waist becomes one uninterrupted line; Florentine bespoke character.\n\nExact specification — extended-tab waistband shape; measuring exactly 5 cm, 15 cm; tab fastening, extended waistband tab — matching the specification precisely.\n\nMANDATORY GEOMETRY COVERAGE — reproduce from the specification, exactly and without assumption, every one of these: waistband style/width, closure (hook & button), side adjusters/belt loops/extended tab. Match each to the specification.\n\nVIEW — photograph the front of the garment; never substitute a different face of the garment.\n\nSPECIFICATION LOCK — THE DRAFTING SPECIFICATION IS LAW: this option has no manufacturing drawing; the written specification above is the SOLE authority for the image. Reproduce every stated dimension, radius, angle, count and construction exactly as written. Assume NOTHING from tailoring/menswear/fashion convention or model priors beyond what the specification states; do not redesign, reinterpret, substitute a similar commercial style, stylise, or \"improve\" it. Do NOT fall back to a generic version of this category — reproduce THIS option as specified, not a typical one. Accuracy over aesthetics. Never render any measurement number, unit, arrow, callout, or text anywhere in the photograph.\n\nPhotographed on a male model, front view of the trousers from waistband to hip, shirt tucked, no jacket, so the waistband and closure read clearly.\n\nFrame the waistband across the front of the trousers as the clear focal point; the detail must read clearly and sharply.\n\nSavile Row and high-end Italian sartorial aesthetic. Natural daylight studio lighting, Phase One IQ4 medium-format camera, 150MP detail, shallow depth of field, magazine-quality editorial menswear photography. Authentic bespoke craftsmanship, fine hand stitching, premium finishing. SET — shot in a clean luxury photographic studio against a seamless, plain, neutral light-grey background with clear separation between garment and background: no location, no architecture, no furniture, no scenery, no props and no environmental context of any kind competing with the garment.\n\nExtremely realistic fine wool trouser cloth with visible weave texture, fine stitching.\n\nAvoid: any GENERIC menswear substitution (a generic spread collar, generic notch/peak lapel, generic pocket/pleat/vent/cuff/waistband in place of the drawn one), illustration or line-art style, CGI or 3D-render look, cartoon, mannequin, fashion sketch, inaccurate geometry, altered proportions, missing construction details, asymmetry, watermark, AI-art appearance, AND any text or annotation traced from the drawing: NO measurement numbers, units (cm/mm/°), dimension or leader lines, arrows, callouts, red/coloured guide marks, ruler ticks, or labels anywhere in the frame. This is real garment photography of the exact drawn option — clean cloth only, nothing else.\n\nFORBIDDEN FOR THIS OPTION — do not render: a generic version of this part standing in for the exact drawn option (generic-category substitution); any feature, count, or geometry borrowed from a neighboring craft option on the same field; a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion).\n\nOWNER CORRECTION AFTER REVIEW (attempt 1 was rejected by the owner — obey this over any conflicting earlier line, including the BLUEPRINT LOCK): What is wrong with it: Unrealistic / AI look. The owner has supplied 2 reference photograph(s) of what this option should actually look like. Those photographs are attached and OUTRANK the supplier line drawing wherever the two disagree: match the construction, proportion and finish shown in them. Use the line drawing only for anything the photographs do not show.",
+ "builtAt": "2026-08-01T23:17:05.932Z",
+ "ownerCorrections": [
+  {
+   "attemptRejected": 1,
+   "decidedAt": "2026-08-10T23:59:22.198Z",
+   "tags": [
+    "Unrealistic / AI look"
+   ],
+   "notes": "",
+   "references": [
+    "/images/review-refs/trousers/waist-extended-tab/1786406324386-1lisub.jpg",
+    "/images/review-refs/trousers/waist-extended-tab/1786406357362-qcains.webp"
+   ],
+   "appliedAt": "2026-08-11T08:43:35.501Z",
+   "craftId": "trousers|waistband|waistband-style|waist-extended-tab"
+  }
+ ]
 }

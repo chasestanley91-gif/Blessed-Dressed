@@ -1,148 +1,165 @@
 {
+ "addr": "suit-2pc > Trousers-waistband > waistband-extension > ext-curved",
+ "label": "Square, Hook & Button",
+ "part": "trouser-extension",
+ "orientation": "detail",
+ "excluded": null,
+ "generate": true,
+ "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\suit-2pc.json",
+ "source": "json",
+ "illustration": "/images/blueprints/factory/83fb9e94e989__342A__Square_hook_btn.png",
+ "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\factory\\83fb9e94e989__342A__Square_hook_btn.png",
+ "illustrationExists": true,
+ "illustrationRemote": false,
+ "profile": {
   "addr": "suit-2pc > Trousers-waistband > waistband-extension > ext-curved",
-  "label": "Square, Hook & Button",
+  "product": "suit-2pc",
+  "field": "Extension & Closure",
+  "option": "Square, Hook & Button",
   "part": "trouser-extension",
+  "garment": "pair of bespoke wool tailored trousers",
   "orientation": "detail",
-  "excluded": null,
-  "generate": true,
-  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\suit-2pc.json",
-  "source": "json",
-  "illustration": "/images/blueprints/factory/83fb9e94e989__342A__Square_hook_btn.png",
-  "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\factory\\83fb9e94e989__342A__Square_hook_btn.png",
-  "illustrationExists": true,
-  "illustrationRemote": false,
-  "profile": {
-    "addr": "suit-2pc > Trousers-waistband > waistband-extension > ext-curved",
-    "product": "suit-2pc",
-    "field": "Extension & Closure",
-    "option": "Square, Hook & Button",
-    "part": "trouser-extension",
-    "garment": "pair of bespoke wool tailored trousers",
-    "orientation": "detail",
-    "absence": false,
-    "distinguishingDetail": "Curved waistband extension — a radius sweep of 3 cm to 6 cm whose curve meets the waistband edge at 0° for a perfectly smooth closure.",
-    "measured": {
-      "dimensions": [
-        "3 cm",
-        "6 cm"
-      ],
-      "angles": [
-        "0°"
-      ],
-      "counts": [
-        "1-hook",
-        "1-button"
-      ],
-      "shapes": [
-        "square extension tab"
-      ],
-      "spread": [],
-      "flags": [
-        "hook & button closure"
-      ]
-    },
-    "reproduceFromIllustration": [
-      "extension tab outline / point / corner geometry as drawn",
-      "exact hook and button count, placement, orientation and spacing",
-      "tab termination point",
-      "flat, pressed, symmetrical closure"
-    ],
-    "primaryCraft": "the extension tab geometry and its closure hardware",
-    "composition": {
-      "crop": "a tight macro on the fully-fastened extension tab and its closure hardware, filling 40–60% of the frame; fly and legs excluded",
-      "dominanceTarget": "40–60% of frame",
-      "identifyWithin": "1 second"
-    },
-    "forbidden": [
-      "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
-      "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
-      "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)",
-      "any hook count other than exactly 1",
-      "any button count other than exactly 1"
-    ],
-    "excluded": null,
-    "generate": true
-  },
-  "requiredTokens": [
+  "absence": false,
+  "distinguishingDetail": "Curved waistband extension — a radius sweep of 3 cm to 6 cm whose curve meets the waistband edge at 0° for a perfectly smooth closure.",
+  "measured": {
+   "dimensions": [
     "3 cm",
-    "6 cm",
-    "0°",
+    "6 cm"
+   ],
+   "angles": [
+    "0°"
+   ],
+   "counts": [
     "1-hook",
-    "1-button",
-    "square extension tab",
+    "1-button"
+   ],
+   "shapes": [
+    "square extension tab"
+   ],
+   "spread": [],
+   "flags": [
     "hook & button closure"
+   ]
+  },
+  "reproduceFromIllustration": [
+   "extension tab outline / point / corner geometry as drawn",
+   "exact hook and button count, placement, orientation and spacing",
+   "tab termination point",
+   "flat, pressed, symmetrical closure"
   ],
-  "checklist": [
-    "length/width matches exactly: 3 cm",
-    "length/width matches exactly: 6 cm",
-    "angle matches exactly: 0°",
-    "exact count: 1-hook",
-    "exact count: 1-button",
-    "shape reads as drawn: square extension tab",
-    "present & positioned as drawn: hook & button closure",
-    "distinguishing detail present: Curved waistband extension — a radius sweep of 3 cm to 6 cm whose curve meets the waistband edge at 0° for a perfectly smooth closure.",
-    "reproduced from the illustration: extension tab outline / point / corner geometry as drawn",
-    "reproduced from the illustration: exact hook and button count, placement, orientation and spacing",
-    "reproduced from the illustration: tab termination point",
-    "reproduced from the illustration: flat, pressed, symmetrical closure",
-    "PRIMARY CRAFT — the extension tab geometry and its closure hardware dominates the frame (40–60%), identifiable in one second; the trouser is context only",
-    "HARDWARE — exactly 1 hook present; none invented, duplicated, mirrored, removed or relocated",
-    "HARDWARE — exactly 1 button present; count matches the drawing",
-    "closure shown FULLY FASTENED — single state, not partially open",
-    "band/tab flat, symmetrical, pressed; no curl, float, twist or hanging curtain",
-    "orientation matches the illustration: detail",
-    "the Extension & Closure dominates the frame (40–60%), identifiable within one second, framed a tight macro on the fully-fastened extension tab and its closure hardware, filling 40–60% of the frame; fly and legs excluded",
-    "silhouette, proportions, seam & stitch placement match the illustration; left/right symmetry correct",
-    "NO generic-category substitution — this exact option, not a typical one",
-    "a real photograph of the exact drawn option — not the line-art, no stylisation"
+  "primaryCraft": "the extension tab geometry and its closure hardware",
+  "composition": {
+   "crop": "a tight macro on the fully-fastened extension tab and its closure hardware, filling 40–60% of the frame; fly and legs excluded",
+   "dominanceTarget": "40–60% of frame",
+   "identifyWithin": "1 second"
+  },
+  "forbidden": [
+   "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+   "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+   "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)",
+   "any hook count other than exactly 1",
+   "any button count other than exactly 1"
   ],
-  "scoreCard": [
-    {
-      "category": "shape",
-      "score": null,
-      "min": 98
-    },
-    {
-      "category": "geometry",
-      "score": null,
-      "min": 98
-    },
-    {
-      "category": "dimensions",
-      "score": null,
-      "min": 98
-    },
-    {
-      "category": "angles",
-      "score": null,
-      "min": 98
-    },
-    {
-      "category": "construction",
-      "score": null,
-      "min": 98
-    },
-    {
-      "category": "placement",
-      "score": null,
-      "min": 98
-    },
-    {
-      "category": "symmetry",
-      "score": null,
-      "min": 98
-    },
-    {
-      "category": "composition",
-      "score": null,
-      "min": 98
-    },
-    {
-      "category": "blueprint-match",
-      "score": null,
-      "min": 98
-    }
-  ],
-  "prompt": "Ultra-photorealistic luxury menswear product photography.\n\nA single-subject craft DOCUMENTATION photograph: the Extension & Closure is the dominant subject, filling 40–60% of the frame and identifiable within one second.\n\nPRIMARY CRAFT — the extension tab geometry and its closure hardware IS the product and the hero subject: it must fill 40–60% of the frame and be identifiable within one second. The trouser is context only — crop away the knees, lower leg, model pose, jacket and every styling element; photograph this like a luxury-watch macro of the component, not a fashion shot of trousers. HARDWARE LOCK — reproduce exactly 1 hook(s) and exactly 1 button(s), as drawn. Match the count, placement, orientation and spacing in the illustration EXACTLY. Do NOT invent, duplicate, mirror, remove or relocate any hook, button, buckle or loop. SINGLE STATE — show the closure FULLY FASTENED, one state only; never partially open, and never an interior curtain and a closed exterior at the same time. FLATNESS — the band and tab are flat, symmetrical, pressed and tension-balanced; no curled tab, floating extension, twisted band or hanging curtain.\n\nA premium pair of bespoke wool tailored trousers featuring a precise Square, Hook & Button (Extension & Closure).\n\nDistinguishing construction detail (reproduce exactly as drawn): Curved waistband extension — a radius sweep of 3 cm to 6 cm whose curve meets the waistband edge at 0° for a perfectly smooth closure.\n\nExact specification — square extension tab shape; measuring exactly 3 cm, 6 cm; at 0°; 1-hook, 1-button; hook & button closure — matching the illustration precisely.\n\nMANDATORY GEOMETRY COVERAGE — reproduce from the illustration, exactly and without assumption, every one of these: extension tab outline / point / corner geometry as drawn, exact hook and button count, placement, orientation and spacing, tab termination point, flat, pressed, symmetrical closure. Match each to the drawing.\n\nVIEW — this illustration is the detail of the garment. Photograph the same face; never substitute a different face of the garment.\n\nBLUEPRINT LOCK — THE DRAWING IS LAW: the attached technical illustration is the manufacturing blueprint for this exact craft option and the SOLE authority for the image. Reproduce its geometry precisely — point/edge shape, lengths, widths, depths, angles, curvature, roll lines, symmetry, button/tab/stay positions, seam and stitch placement, and proportions — within less than 2% deviation. Assume NOTHING from tailoring/menswear/fashion convention or model priors; every visible characteristic must come from the drawing. Do not redesign, reinterpret, substitute a similar commercial style, stylise, or \"improve\" it. Do NOT fall back to a generic version of this category — reproduce THIS option, not a typical one. If convention conflicts with the drawing, the drawing wins. Accuracy over aesthetics. ANNOTATIONS ARE NOT THE GARMENT: the technical drawing may carry measurement callouts — dimension numbers (\"2.5cm\", \"9cm\", \"115°\"), tick / leader / dimension lines, arrows, red or coloured guide marks, and text labels. These are manufacturing documentation, NOT features of the cloth. Reproduce ONLY the finished garment: never render any number, unit, arrow, callout, leader line, measurement mark, or text anywhere in the photograph. The final image is a clean garment photo with zero annotation. COLOUR IN THE DRAWING IS NOTATION, NOT CLOTH: any red, orange or otherwise highlighted region marks WHERE the craft option sits — it is a position marker, never a colour specification. Flat grey or tinted shading marks the EXTENT of a panel, lining or facing, not its shade. Render every one of those areas in the garment's own cloth and thread, in the natural colour that tailoring would use there. There must be no red, no highlighter tint and no flat unshaded grey panel anywhere in the photograph unless the option's own label explicitly names that colour.\n\nPhotographed as a macro of the waistband CLOSURE area only — the extension tab and its hardware — the trouser cropped to just the band end and the upper edge of the front pocket for context, shirt tucked, no jacket; the trousers cropped tight to the waistband only so the differentiating component is the entire subject — no knees, lower leg, model pose, jacket or styling element anywhere in frame.\n\nFrame a tight macro on the fully-fastened extension tab and its closure hardware, filling 40–60% of the frame; fly and legs excluded; the detail must read clearly and sharply.\n\nSavile Row and high-end Italian sartorial aesthetic. Natural daylight studio lighting, Phase One IQ4 medium-format camera, 150MP detail, shallow depth of field, magazine-quality editorial menswear photography. Authentic bespoke craftsmanship, fine hand stitching, premium finishing. SET — shot in a clean luxury photographic studio against a seamless, plain, neutral light-grey background with clear separation between garment and background: no location, no architecture, no furniture, no scenery, no props and no environmental context of any kind competing with the garment.\n\nExtremely realistic fine wool trouser cloth with visible weave texture, fine stitching.\n\nAvoid: any GENERIC menswear substitution (a generic spread collar, generic notch/peak lapel, generic pocket/pleat/vent/cuff/waistband in place of the drawn one), illustration or line-art style, CGI or 3D-render look, cartoon, mannequin, fashion sketch, inaccurate geometry, altered proportions, missing construction details, asymmetry, watermark, AI-art appearance, AND any text or annotation traced from the drawing: NO measurement numbers, units (cm/mm/°), dimension or leader lines, arrows, callouts, red/coloured guide marks, ruler ticks, or labels anywhere in the frame. This is real garment photography of the exact drawn option — clean cloth only, nothing else.\n\nFORBIDDEN FOR THIS OPTION — do not render: a generic version of this part standing in for the exact drawn option (generic-category substitution); any feature, count, or geometry borrowed from a neighboring craft option on the same field; a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion); any hook count other than exactly 1; any button count other than exactly 1.",
-  "builtAt": "2026-08-01T21:56:47.369Z"
+  "excluded": null,
+  "generate": true
+ },
+ "requiredTokens": [
+  "3 cm",
+  "6 cm",
+  "0°",
+  "1-hook",
+  "1-button",
+  "square extension tab",
+  "hook & button closure"
+ ],
+ "checklist": [
+  "length/width matches exactly: 3 cm",
+  "length/width matches exactly: 6 cm",
+  "angle matches exactly: 0°",
+  "exact count: 1-hook",
+  "exact count: 1-button",
+  "shape reads as drawn: square extension tab",
+  "present & positioned as drawn: hook & button closure",
+  "distinguishing detail present: Curved waistband extension — a radius sweep of 3 cm to 6 cm whose curve meets the waistband edge at 0° for a perfectly smooth closure.",
+  "reproduced from the illustration: extension tab outline / point / corner geometry as drawn",
+  "reproduced from the illustration: exact hook and button count, placement, orientation and spacing",
+  "reproduced from the illustration: tab termination point",
+  "reproduced from the illustration: flat, pressed, symmetrical closure",
+  "PRIMARY CRAFT — the extension tab geometry and its closure hardware dominates the frame (40–60%), identifiable in one second; the trouser is context only",
+  "HARDWARE — exactly 1 hook present; none invented, duplicated, mirrored, removed or relocated",
+  "HARDWARE — exactly 1 button present; count matches the drawing",
+  "closure shown FULLY FASTENED — single state, not partially open",
+  "band/tab flat, symmetrical, pressed; no curl, float, twist or hanging curtain",
+  "orientation matches the illustration: detail",
+  "the Extension & Closure dominates the frame (40–60%), identifiable within one second, framed a tight macro on the fully-fastened extension tab and its closure hardware, filling 40–60% of the frame; fly and legs excluded",
+  "silhouette, proportions, seam & stitch placement match the illustration; left/right symmetry correct",
+  "NO generic-category substitution — this exact option, not a typical one",
+  "a real photograph of the exact drawn option — not the line-art, no stylisation"
+ ],
+ "scoreCard": [
+  {
+   "category": "shape",
+   "score": null,
+   "min": 98
+  },
+  {
+   "category": "geometry",
+   "score": null,
+   "min": 98
+  },
+  {
+   "category": "dimensions",
+   "score": null,
+   "min": 98
+  },
+  {
+   "category": "angles",
+   "score": null,
+   "min": 98
+  },
+  {
+   "category": "construction",
+   "score": null,
+   "min": 98
+  },
+  {
+   "category": "placement",
+   "score": null,
+   "min": 98
+  },
+  {
+   "category": "symmetry",
+   "score": null,
+   "min": 98
+  },
+  {
+   "category": "composition",
+   "score": null,
+   "min": 98
+  },
+  {
+   "category": "blueprint-match",
+   "score": null,
+   "min": 98
+  }
+ ],
+ "prompt": "Ultra-photorealistic luxury menswear product photography.\n\nA single-subject craft DOCUMENTATION photograph: the Extension & Closure is the dominant subject, filling 40–60% of the frame and identifiable within one second.\n\nPRIMARY CRAFT — the extension tab geometry and its closure hardware IS the product and the hero subject: it must fill 40–60% of the frame and be identifiable within one second. The trouser is context only — crop away the knees, lower leg, model pose, jacket and every styling element; photograph this like a luxury-watch macro of the component, not a fashion shot of trousers. HARDWARE LOCK — reproduce exactly 1 hook(s) and exactly 1 button(s), as drawn. Match the count, placement, orientation and spacing in the illustration EXACTLY. Do NOT invent, duplicate, mirror, remove or relocate any hook, button, buckle or loop. SINGLE STATE — show the closure FULLY FASTENED, one state only; never partially open, and never an interior curtain and a closed exterior at the same time. FLATNESS — the band and tab are flat, symmetrical, pressed and tension-balanced; no curled tab, floating extension, twisted band or hanging curtain.\n\nA premium pair of bespoke wool tailored trousers featuring a precise Square, Hook & Button (Extension & Closure).\n\nDistinguishing construction detail (reproduce exactly as drawn): Curved waistband extension — a radius sweep of 3 cm to 6 cm whose curve meets the waistband edge at 0° for a perfectly smooth closure.\n\nExact specification — square extension tab shape; measuring exactly 3 cm, 6 cm; at 0°; 1-hook, 1-button; hook & button closure — matching the illustration precisely.\n\nMANDATORY GEOMETRY COVERAGE — reproduce from the illustration, exactly and without assumption, every one of these: extension tab outline / point / corner geometry as drawn, exact hook and button count, placement, orientation and spacing, tab termination point, flat, pressed, symmetrical closure. Match each to the drawing.\n\nVIEW — this illustration is the detail of the garment. Photograph the same face; never substitute a different face of the garment.\n\nBLUEPRINT LOCK — THE DRAWING IS LAW: the attached technical illustration is the manufacturing blueprint for this exact craft option and the SOLE authority for the image. Reproduce its geometry precisely — point/edge shape, lengths, widths, depths, angles, curvature, roll lines, symmetry, button/tab/stay positions, seam and stitch placement, and proportions — within less than 2% deviation. Assume NOTHING from tailoring/menswear/fashion convention or model priors; every visible characteristic must come from the drawing. Do not redesign, reinterpret, substitute a similar commercial style, stylise, or \"improve\" it. Do NOT fall back to a generic version of this category — reproduce THIS option, not a typical one. If convention conflicts with the drawing, the drawing wins. Accuracy over aesthetics. ANNOTATIONS ARE NOT THE GARMENT: the technical drawing may carry measurement callouts — dimension numbers (\"2.5cm\", \"9cm\", \"115°\"), tick / leader / dimension lines, arrows, red or coloured guide marks, and text labels. These are manufacturing documentation, NOT features of the cloth. Reproduce ONLY the finished garment: never render any number, unit, arrow, callout, leader line, measurement mark, or text anywhere in the photograph. The final image is a clean garment photo with zero annotation. COLOUR IN THE DRAWING IS NOTATION, NOT CLOTH: any red, orange or otherwise highlighted region marks WHERE the craft option sits — it is a position marker, never a colour specification. Flat grey or tinted shading marks the EXTENT of a panel, lining or facing, not its shade. Render every one of those areas in the garment's own cloth and thread, in the natural colour that tailoring would use there. There must be no red, no highlighter tint and no flat unshaded grey panel anywhere in the photograph unless the option's own label explicitly names that colour.\n\nPhotographed as a macro of the waistband CLOSURE area only — the extension tab and its hardware — the trouser cropped to just the band end and the upper edge of the front pocket for context, shirt tucked, no jacket; the trousers cropped tight to the waistband only so the differentiating component is the entire subject — no knees, lower leg, model pose, jacket or styling element anywhere in frame.\n\nFrame a tight macro on the fully-fastened extension tab and its closure hardware, filling 40–60% of the frame; fly and legs excluded; the detail must read clearly and sharply.\n\nSavile Row and high-end Italian sartorial aesthetic. Natural daylight studio lighting, Phase One IQ4 medium-format camera, 150MP detail, shallow depth of field, magazine-quality editorial menswear photography. Authentic bespoke craftsmanship, fine hand stitching, premium finishing. SET — shot in a clean luxury photographic studio against a seamless, plain, neutral light-grey background with clear separation between garment and background: no location, no architecture, no furniture, no scenery, no props and no environmental context of any kind competing with the garment.\n\nExtremely realistic fine wool trouser cloth with visible weave texture, fine stitching.\n\nAvoid: any GENERIC menswear substitution (a generic spread collar, generic notch/peak lapel, generic pocket/pleat/vent/cuff/waistband in place of the drawn one), illustration or line-art style, CGI or 3D-render look, cartoon, mannequin, fashion sketch, inaccurate geometry, altered proportions, missing construction details, asymmetry, watermark, AI-art appearance, AND any text or annotation traced from the drawing: NO measurement numbers, units (cm/mm/°), dimension or leader lines, arrows, callouts, red/coloured guide marks, ruler ticks, or labels anywhere in the frame. This is real garment photography of the exact drawn option — clean cloth only, nothing else.\n\nFORBIDDEN FOR THIS OPTION — do not render: a generic version of this part standing in for the exact drawn option (generic-category substitution); any feature, count, or geometry borrowed from a neighboring craft option on the same field; a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion); any hook count other than exactly 1; any button count other than exactly 1.\n\nOWNER CORRECTION AFTER REVIEW (attempt 1 was rejected by the owner — obey this over any conflicting earlier line, including the BLUEPRINT LOCK): What is wrong with it: Unrealistic / AI look. The owner has supplied 3 reference photograph(s) of what this option should actually look like. Those photographs are attached and OUTRANK the supplier line drawing wherever the two disagree: match the construction, proportion and finish shown in them. Use the line drawing only for anything the photographs do not show.",
+ "builtAt": "2026-08-01T21:56:47.369Z",
+ "ownerCorrections": [
+  {
+   "attemptRejected": 1,
+   "decidedAt": "2026-08-11T00:31:11.954Z",
+   "tags": [
+    "Unrealistic / AI look"
+   ],
+   "notes": "",
+   "references": [
+    "/images/review-refs/suit-2pc/ext-curved/1786408245497-zohvld.webp",
+    "/images/review-refs/suit-2pc/ext-curved/1786408252690-fznr2q.webp",
+    "/images/review-refs/suit-2pc/ext-curved/1786408265159-11i8c0.webp"
+   ],
+   "appliedAt": "2026-08-11T08:43:35.460Z",
+   "craftId": "suit-2pc|Trousers-waistband|waistband-extension|ext-curved"
+  }
+ ]
 }

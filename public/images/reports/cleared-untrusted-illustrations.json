@@ -1,0 +1,3082 @@
+{
+ "appliedAt": "2026-08-11T08:44:19.385Z",
+ "rule": "jacket-set requires MATCH; MISMATCH cleared anywhere; AMBIGUOUS outside the jacket set kept + flagged",
+ "changes": [
+  {
+   "addr": "shirt|collar|lapel|collar-french-75",
+   "slot": "illustration",
+   "removed": "/images/techpacks/shirt/lapel/french-in-75cm.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "shirt|collar|lapel|collar-french-75",
+   "slot": "techpackIllustration",
+   "removed": "/images/techpacks/shirt/lapel/french-in-75cm.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "shirt|collar|lapel|collar-stand-50",
+   "slot": "illustration",
+   "removed": "/images/lapel/stand-collar-5cm.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "shirt|collar|lapel|collar-stand-50",
+   "slot": "techpackIllustration",
+   "removed": "/images/lapel/stand-collar-5cm.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "shirt|collar|lapel|collar-one-piece-80-tab",
+   "slot": "illustration",
+   "removed": "/images/techpacks/shirt/lapel/one-piece-collar-in-8cm-with-tab.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "shirt|collar|lapel|collar-one-piece-80-tab",
+   "slot": "techpackIllustration",
+   "removed": "/images/techpacks/shirt/lapel/one-piece-collar-in-8cm-with-tab.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "shirt|collar|lapel|collar-one-piece-85-tab",
+   "slot": "illustration",
+   "removed": "/images/techpacks/shirt/lapel/one-piece-collar-in-85cm-with-tab.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "shirt|collar|lapel|collar-one-piece-85-tab",
+   "slot": "techpackIllustration",
+   "removed": "/images/techpacks/shirt/lapel/one-piece-collar-in-85cm-with-tab.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "shirt|collar|lapel|collar-one-piece-90-tab",
+   "slot": "illustration",
+   "removed": "/images/techpacks/shirt/lapel/one-piece-collar-in-9cm-with-tab.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "shirt|collar|lapel|collar-one-piece-90-tab",
+   "slot": "techpackIllustration",
+   "removed": "/images/techpacks/shirt/lapel/one-piece-collar-in-9cm-with-tab.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "shirt|collar|lapel|collar-dr-point-58",
+   "slot": "illustration",
+   "removed": "/images/techpacks/shirt/lapel/dr-point-in-58cm.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "shirt|collar|lapel|collar-dr-point-58",
+   "slot": "techpackIllustration",
+   "removed": "/images/techpacks/shirt/lapel/dr-point-in-58cm.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "shirt|collar|collar_stand|cs-square",
+   "slot": "illustration",
+   "removed": "/images/techpacks/shirt/collar_stand/square-collar-stand-with-2-buttons.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "shirt|shoulder|decoration_stitching_on_shoulder|shl-stitch-none",
+   "slot": "illustration",
+   "removed": "/images/techpacks/shirt/decoration_stitching_on_collar/none.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "shirt|cuffs|cuff|cuff-round-2btn-1bh",
+   "slot": "illustration",
+   "removed": "/images/cuff/round-cuff-with-2-buttons-and-1-buttonhole.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "shirt|labels|fabric_label_position|flp-2",
+   "slot": "illustration",
+   "removed": "/images/fabric_label_position/picture-1111.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "sport-coat|shoulder-structure|sleeve-head|sleeve-con-rollino",
+   "slot": "illustration",
+   "removed": "/images/jacket/shoulder-head/con-rollino.jpg",
+   "verdict": "AMBIGUOUS"
+  },
+  {
+   "addr": "sport-coat|shoulder-structure|canvas|full-canvas",
+   "slot": "illustration",
+   "removed": "/images/jacket/canvas/full-canvas.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|suit-pockets|chest-pocket|cp-none",
+   "slot": "illustration",
+   "removed": "/images/jacket/columbia-piping/none.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "sport-coat|suit-pockets|lower-pocket-bartack|bartack-none",
+   "slot": "illustration",
+   "removed": "/images/jacket/pocket-bartack/none.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|suit-pockets|lower-pocket-bartack|bartack-d",
+   "slot": "illustration",
+   "removed": "/images/jacket/pocket-bartack/d-bartack.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|suit-pockets|lower-pocket-bartack|bartack-i",
+   "slot": "illustration",
+   "removed": "/images/jacket/pocket-bartack/i-bartack.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|suit-pockets|lower-pocket-bartack|bartack-x",
+   "slot": "illustration",
+   "removed": "/images/jacket/pocket-bartack/x-bartack.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|suit-pockets|lower-pocket-bartack|bartack-1",
+   "slot": "illustration",
+   "removed": "/images/jacket/pocket-bartack/i-bartack.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|suit-pockets|ticket-pocket|tp-none",
+   "slot": "illustration",
+   "removed": "/images/jacket/ticket-pocket/none.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|suit-pockets|ticket-pocket|tp-jetted",
+   "slot": "illustration",
+   "removed": "/images/jacket/ticket-pocket/jetted.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|suit-pockets|ticket-pocket|tp-jetted",
+   "slot": "techpackIllustration",
+   "removed": "/images/jacket/ticket-pocket/jetted.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|suit-pockets|ticket-pocket|tp-welt",
+   "slot": "illustration",
+   "removed": "/images/jacket/ticket-pocket/welt.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|suit-pockets|ticket-pocket|tp-welt",
+   "slot": "techpackIllustration",
+   "removed": "/images/jacket/ticket-pocket/welt.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|suit-pockets|ticket-pocket|tp-card-italian",
+   "slot": "illustration",
+   "removed": "/images/jacket/ticket-pocket/jetted.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|suit-pockets|ticket-pocket|tp-card-formal",
+   "slot": "illustration",
+   "removed": "/images/jacket/ticket-pocket/jetted.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|suit-pockets|ticket-pocket|tp-rl-card",
+   "slot": "illustration",
+   "removed": "/images/jacket/ticket-pocket/jetted.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|suit-pockets|ticket-pocket|tp-flap-40",
+   "slot": "illustration",
+   "removed": "/images/jacket/ticket-pocket/flap-40.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|suit-pockets|ticket-pocket|tp-flap-45",
+   "slot": "illustration",
+   "removed": "/images/jacket/ticket-pocket/flap.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|suit-pockets|ticket-pocket|tp-flap-50",
+   "slot": "illustration",
+   "removed": "/images/jacket/ticket-pocket/flap-50.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|suit-pockets|ticket-pocket|tp-flap-55",
+   "slot": "illustration",
+   "removed": "/images/jacket/ticket-pocket/flap-55.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|suit-pockets|ticket-pocket|tp-flap-60",
+   "slot": "illustration",
+   "removed": "/images/jacket/ticket-pocket/flap-60.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|suit-pockets|coin-pocket|coin-none",
+   "slot": "illustration",
+   "removed": "/images/jacket/coin-pocket/none.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|suit-pockets|coin-pocket|coin-none",
+   "slot": "techpackIllustration",
+   "removed": "/images/jacket/coin-pocket/none.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|suit-pockets|coin-pocket|coin-left",
+   "slot": "illustration",
+   "removed": "/images/jacket/coin-pocket/left.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|suit-pockets|coin-pocket|coin-left",
+   "slot": "techpackIllustration",
+   "removed": "/images/jacket/coin-pocket/left.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|suit-pockets|coin-pocket|coin-right",
+   "slot": "illustration",
+   "removed": "/images/jacket/coin-pocket/right.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|suit-pockets|coin-pocket|coin-both",
+   "slot": "illustration",
+   "removed": "/images/jacket/coin-pocket/both.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|front-style|button-config|sb-5",
+   "slot": "illustration",
+   "removed": "/images/jacket/front-style/sb-5.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|front-style|button-config|db-2x1",
+   "slot": "illustration",
+   "removed": "/images/jacket/front-style/db-2x1.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|front-style|button-config|db-2x1",
+   "slot": "techpackIllustration",
+   "removed": "/images/jacket/front-style/db-2x1.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|front-style|button-config|db-4x1",
+   "slot": "illustration",
+   "removed": "/images/jacket/front-style/db-4x1.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|front-style|button-config|db-4x1",
+   "slot": "techpackIllustration",
+   "removed": "/images/jacket/front-style/db-4x1.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|front-style|button-config|db-4x2",
+   "slot": "illustration",
+   "removed": "/images/jacket/front-style/db-4x2.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|front-style|button-config|db-4x2",
+   "slot": "techpackIllustration",
+   "removed": "/images/jacket/front-style/db-4x2.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|front-style|button-config|db-6x1",
+   "slot": "illustration",
+   "removed": "/images/jacket/front-style/db-6x1.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|front-style|button-config|db-6x1",
+   "slot": "techpackIllustration",
+   "removed": "/images/jacket/front-style/db-6x1.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|front-style|button-config|db-6x2",
+   "slot": "illustration",
+   "removed": "/images/jacket/front-style/db-6x2.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|front-style|button-config|db-6x2",
+   "slot": "techpackIllustration",
+   "removed": "/images/jacket/front-style/db-6x2.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|front-style|button-config|db-6x3",
+   "slot": "illustration",
+   "removed": "/images/jacket/front-style/db-6x3.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|front-style|button-config|db-6x3",
+   "slot": "techpackIllustration",
+   "removed": "/images/jacket/front-style/db-6x3.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|front-style|front-buttonhole|fbh-machine",
+   "slot": "illustration",
+   "removed": "/images/jacket/front-buttonhole/by-machine.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "sport-coat|front-style|front-buttonhole|fbh-hands",
+   "slot": "illustration",
+   "removed": "/images/jacket/front-buttonhole/by-hands.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "sport-coat|front-style|hem-gusset|hem-small-curve",
+   "slot": "illustration",
+   "removed": "/images/jacket/hem/small-curve.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "sport-coat|front-style|hem-gusset|hem-big-curve",
+   "slot": "illustration",
+   "removed": "/images/jacket/hem/big-curve.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "sport-coat|sleeves-cuffs|sleeve-vent|sv-none",
+   "slot": "illustration",
+   "removed": "/images/jacket/sleeve-vent/none.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|sleeves-cuffs|sleeve-vent|sv-mock",
+   "slot": "illustration",
+   "removed": "/images/jacket/sleeve-vent/mock.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|sleeves-cuffs|sleeve-vent|sv-functional",
+   "slot": "illustration",
+   "removed": "/images/jacket/sleeve-vent/functional.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|sleeves-cuffs|sleeve-vent|sv-functional-mock",
+   "slot": "illustration",
+   "removed": "/images/jacket/sleeve-vent/functional-mock.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|sleeves-cuffs|sleeve-vent|sv-functional-no-bh",
+   "slot": "illustration",
+   "removed": "/images/jacket/sleeve-vent/functional-no-bh.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|sleeves-cuffs|cuff-button-number|cb-4",
+   "slot": "illustration",
+   "removed": "/images/blueprints/supplier/362519787419__0621__4_flat.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "sport-coat|sleeves-cuffs|cuff-button-number|cb-4",
+   "slot": "techpackIllustration",
+   "removed": "/images/blueprints/supplier/362519787419__0621__4_flat.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "sport-coat|back-vents|back-vent-style|bv-none",
+   "slot": "illustration",
+   "removed": "/images/jacket/back-vent/no-vent.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "sport-coat|back-vents|back-vent-style|bv-side-belt",
+   "slot": "illustration",
+   "removed": "/images/jacket/back-vent/side-belt.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "sport-coat|back-vents|external-decoration|ext-none",
+   "slot": "illustration",
+   "removed": "/images/jacket/external-decoration/none.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "sport-coat|back-vents|external-decoration|ext-loop-flat",
+   "slot": "illustration",
+   "removed": "/images/jacket/external-decoration/front-chest-horizontal-button-loop.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|back-vents|external-decoration|ext-loop-flat",
+   "slot": "techpackIllustration",
+   "removed": "/images/jacket/external-decoration/front-chest-horizontal-button-loop.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|back-vents|external-decoration|ext-loop-slanted",
+   "slot": "illustration",
+   "removed": "/images/jacket/external-decoration/front-chest-slanted-button-loop.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|back-vents|external-decoration|ext-loop-slanted",
+   "slot": "techpackIllustration",
+   "removed": "/images/jacket/external-decoration/front-chest-slanted-button-loop.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|handmade|handmade-decorative|hmd-none",
+   "slot": "illustration",
+   "removed": "/images/jacket/handmade-decorative/none.jpg",
+   "verdict": "AMBIGUOUS"
+  },
+  {
+   "addr": "sport-coat|handmade|handmade-decorative|hmd-shoulder",
+   "slot": "illustration",
+   "removed": "/images/jacket/handmade-decorative/shoulder-seam.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "sport-coat|handmade|handmade-decorative|hmd-shoulder-vent",
+   "slot": "illustration",
+   "removed": "/images/jacket/handmade-decorative/shoulder-vent.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|handmade|handmade-decorative|hmd-full",
+   "slot": "illustration",
+   "removed": "/images/jacket/handmade-decorative/full.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "sport-coat|handmade|sewing-button-style|sbs-machine",
+   "slot": "illustration",
+   "removed": "/images/jacket/sewing-style/regular-machine.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|handmade|sewing-button-style|sbs-cross-hand",
+   "slot": "illustration",
+   "removed": "/images/jacket/sewing-style/cross-stitch.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|handmade|sewing-button-style|sbs-down-hand",
+   "slot": "illustration",
+   "removed": "/images/jacket/sewing-style/down-stitch.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|handmade|sewing-button-style|sbs-eq-hand",
+   "slot": "illustration",
+   "removed": "/images/jacket/sewing-style/eq-stitch.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|handmade|sewing-button-style|sbs-sq-hand",
+   "slot": "illustration",
+   "removed": "/images/jacket/sewing-style/sq-stitch.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|handmade|sewing-button-style|sbs-under-hand",
+   "slot": "illustration",
+   "removed": "/images/jacket/sewing-style/under-layer.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|handmade|sleeve-buttonhole-type|slbh-machine",
+   "slot": "illustration",
+   "removed": "/images/jacket/sleeve-buttonhole/by-machine.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "sport-coat|handmade|sleeve-buttonhole-type|slbh-hands",
+   "slot": "illustration",
+   "removed": "/images/jacket/sleeve-buttonhole/by-hands.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "sport-coat|suit-details|contrast-position|contrast-chest-pocket",
+   "slot": "illustration",
+   "removed": "/images/jacket/contrast-pos/chest-pocket.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|suit-details|contrast-position|contrast-chest-pocket",
+   "slot": "techpackIllustration",
+   "removed": "/images/jacket/contrast-pos/chest-pocket.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|suit-details|contrast-position|contrast-satin-lapel",
+   "slot": "illustration",
+   "removed": "/images/jacket/contrast-pos/satin-lapel.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|suit-details|contrast-position|contrast-satin-lapel",
+   "slot": "techpackIllustration",
+   "removed": "/images/jacket/contrast-pos/satin-lapel.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|suit-details|columbia-piping|cp-none",
+   "slot": "illustration",
+   "removed": "/images/jacket/columbia-piping/none.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "sport-coat|suit-details|columbia-piping|cp-columbia",
+   "slot": "illustration",
+   "removed": "/images/jacket/columbia-piping/columbia.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "sport-coat|suit-details|columbia-piping|cp-piping",
+   "slot": "illustration",
+   "removed": "/images/jacket/columbia-piping/piping.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "sport-coat|suit-details|columbia-piping|cp-both",
+   "slot": "illustration",
+   "removed": "/images/jacket/columbia-piping/columbia-and-piping.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "sport-coat|interior|facing-style|facing-1",
+   "slot": "illustration",
+   "removed": "/images/jacket/facing/facing-1.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "sport-coat|interior|facing-style|facing-2",
+   "slot": "illustration",
+   "removed": "/images/jacket/facing/facing-2.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|interior|facing-style|facing-4",
+   "slot": "illustration",
+   "removed": "/images/jacket/facing/facing-4.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|interior|facing-style|facing-5",
+   "slot": "illustration",
+   "removed": "/images/jacket/facing/facing-5.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|interior|facing-style|facing-7",
+   "slot": "illustration",
+   "removed": "/images/jacket/facing/facing-7.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "sport-coat|interior|facing-style|facing-9",
+   "slot": "illustration",
+   "removed": "/images/jacket/facing/facing-9.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "sport-coat|interior|facing-style|facing-half",
+   "slot": "illustration",
+   "removed": "/images/jacket/facing/facing-half.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|interior|facing-style|facing-none",
+   "slot": "illustration",
+   "removed": "/images/jacket/facing/facing-none.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|interior|pen-pocket|pen-none",
+   "slot": "illustration",
+   "removed": "/images/jacket/pen-pocket/none.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|interior|pen-pocket|pen-none",
+   "slot": "techpackIllustration",
+   "removed": "/images/jacket/pen-pocket/none.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|interior|pen-pocket|pen-left-jetted",
+   "slot": "illustration",
+   "removed": "/images/jacket/pen-pocket/left-jetted.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "sport-coat|interior|pen-pocket|pen-left-drop",
+   "slot": "illustration",
+   "removed": "/images/jacket/pen-pocket/left-drop.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "sport-coat|interior|pen-pocket|pen-left-diamond",
+   "slot": "illustration",
+   "removed": "/images/jacket/pen-pocket/left-diamond.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "sport-coat|interior|pen-pocket|pen-right-jetted",
+   "slot": "illustration",
+   "removed": "/images/jacket/pen-pocket/right-jetted.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "sport-coat|interior|pen-pocket|pen-right-drop",
+   "slot": "illustration",
+   "removed": "/images/jacket/pen-pocket/right-drop.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "sport-coat|interior|pen-pocket|pen-right-diamond",
+   "slot": "illustration",
+   "removed": "/images/jacket/pen-pocket/right-diamond.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "sport-coat|interior|namecard-pocket|nc-none",
+   "slot": "illustration",
+   "removed": "/images/jacket/namecard-pocket/none.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "sport-coat|interior|namecard-pocket|nc-left",
+   "slot": "illustration",
+   "removed": "/images/jacket/namecard-pocket/left.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "sport-coat|interior|namecard-pocket|nc-right",
+   "slot": "illustration",
+   "removed": "/images/jacket/namecard-pocket/right.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "sport-coat|interior|namecard-pocket|nc-both",
+   "slot": "illustration",
+   "removed": "/images/jacket/namecard-pocket/both.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "sport-coat|interior|inner-ticket-pocket|itp-none",
+   "slot": "illustration",
+   "removed": "/images/jacket/inner-ticket-pocket/none.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "sport-coat|interior|inner-ticket-pocket|itp-left",
+   "slot": "illustration",
+   "removed": "/images/jacket/inner-ticket-pocket/left.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "sport-coat|interior|inner-ticket-pocket|itp-right",
+   "slot": "illustration",
+   "removed": "/images/jacket/inner-ticket-pocket/right.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "sport-coat|interior|inner-ticket-pocket|itp-both",
+   "slot": "illustration",
+   "removed": "/images/jacket/inner-ticket-pocket/left-and-right.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|interior|mp3-pocket|mp3-none",
+   "slot": "illustration",
+   "removed": "/images/jacket/mp3-pocket/none.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "sport-coat|interior|mp3-pocket|mp3-left",
+   "slot": "illustration",
+   "removed": "/images/jacket/mp3-pocket/left.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "sport-coat|interior|mp3-pocket|mp3-right",
+   "slot": "illustration",
+   "removed": "/images/jacket/mp3-pocket/right.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "sport-coat|interior|inner-pocket-closure|ipc-none",
+   "slot": "illustration",
+   "removed": "/images/jacket/inner-pocket-closure/none.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "sport-coat|interior|perfume-pad|pp-none",
+   "slot": "illustration",
+   "removed": "/images/jacket/underarm-shield/none.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|interior|perfume-pad|pp-triangle",
+   "slot": "illustration",
+   "removed": "/images/jacket/underarm-shield/triangle.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|interior|perfume-pad|pp-round-1",
+   "slot": "illustration",
+   "removed": "/images/jacket/underarm-shield/round-1.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|interior|perfume-pad|pp-round-2",
+   "slot": "illustration",
+   "removed": "/images/jacket/underarm-shield/round-2.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|interior|perfume-pad|pp-round-3",
+   "slot": "illustration",
+   "removed": "/images/jacket/underarm-shield/round-3.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|interior|perfume-pad|pp-u-1",
+   "slot": "illustration",
+   "removed": "/images/jacket/underarm-shield/u-1.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|interior|perfume-pad|pp-u-2",
+   "slot": "illustration",
+   "removed": "/images/jacket/underarm-shield/u-2.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|interior|perfume-pad|pp-u-3",
+   "slot": "illustration",
+   "removed": "/images/jacket/underarm-shield/u-3.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|suit-lining|lining-coverage|lc-full",
+   "slot": "illustration",
+   "removed": "/images/jacket/lining/full-lining.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "sport-coat|suit-lining|lining-coverage|lc-half",
+   "slot": "illustration",
+   "removed": "/images/jacket/lining/half-lining.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|suit-lining|lining-coverage|lc-quarter",
+   "slot": "illustration",
+   "removed": "/images/jacket/lining/half-lining.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|suit-lining|half-lining-shape|hls-standard",
+   "slot": "illustration",
+   "removed": "/images/jacket/lining/half-lining.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|suit-lining|half-lining-shape|hls-small-cutaway",
+   "slot": "illustration",
+   "removed": "/images/jacket/lining/half-lining.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|suit-lining|half-lining-shape|hls-half",
+   "slot": "illustration",
+   "removed": "/images/jacket/lining/half-lining.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|suit-lining|half-lining-shape|hls-half",
+   "slot": "techpackIllustration",
+   "removed": "/images/jacket/lining/half-lining.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|suit-lining|half-lining-shape|hls-third-cutaway",
+   "slot": "illustration",
+   "removed": "/images/jacket/lining/half-lining.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|suit-lining|half-lining-shape|hls-third-cutaway",
+   "slot": "techpackIllustration",
+   "removed": "/images/jacket/lining/half-lining.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|suit-lining|half-lining-shape|hls-third",
+   "slot": "illustration",
+   "removed": "/images/jacket/lining/half-lining.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|suit-lining|half-lining-shape|hls-quarter-cutaway",
+   "slot": "illustration",
+   "removed": "/images/jacket/lining/half-lining.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|suit-lining|half-lining-shape|hls-quarter-cutaway",
+   "slot": "techpackIllustration",
+   "removed": "/images/jacket/lining/half-lining.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|suit-lining|half-lining-craft|hlc-binding",
+   "slot": "illustration",
+   "removed": "/images/jacket/lining/half-lining.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|suit-lining|half-lining-craft|hlc-french",
+   "slot": "illustration",
+   "removed": "/images/jacket/lining/half-lining.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "sport-coat|suit-lining|half-lining-craft|hlc-joining",
+   "slot": "illustration",
+   "removed": "/images/jacket/lining/half-lining.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|shoulder-structure|sleeve-head|sleeve-natural",
+   "slot": "illustration",
+   "removed": "/images/jacket/shoulder-head/natural.jpg",
+   "verdict": "AMBIGUOUS"
+  },
+  {
+   "addr": "suit-2pc|shoulder-structure|sleeve-head|sleeve-con-rollino",
+   "slot": "illustration",
+   "removed": "/images/jacket/shoulder-head/con-rollino.jpg",
+   "verdict": "AMBIGUOUS"
+  },
+  {
+   "addr": "suit-2pc|shoulder-structure|canvas|full-canvas",
+   "slot": "illustration",
+   "removed": "/images/jacket/canvas/full-canvas.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|suit-pockets|chest-pocket|cp-none",
+   "slot": "illustration",
+   "removed": "/images/jacket/columbia-piping/none.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-2pc|suit-pockets|lower-pocket-bartack|bartack-none",
+   "slot": "illustration",
+   "removed": "/images/jacket/pocket-bartack/none.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|suit-pockets|lower-pocket-bartack|bartack-d",
+   "slot": "illustration",
+   "removed": "/images/jacket/pocket-bartack/d-bartack.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|suit-pockets|lower-pocket-bartack|bartack-i",
+   "slot": "illustration",
+   "removed": "/images/jacket/pocket-bartack/i-bartack.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|suit-pockets|lower-pocket-bartack|bartack-x",
+   "slot": "illustration",
+   "removed": "/images/jacket/pocket-bartack/x-bartack.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|suit-pockets|lower-pocket-bartack|bartack-1",
+   "slot": "illustration",
+   "removed": "/images/jacket/pocket-bartack/i-bartack.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|suit-pockets|ticket-pocket|tp-none",
+   "slot": "illustration",
+   "removed": "/images/jacket/ticket-pocket/none.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|suit-pockets|ticket-pocket|tp-jetted",
+   "slot": "illustration",
+   "removed": "/images/jacket/ticket-pocket/jetted.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|suit-pockets|ticket-pocket|tp-jetted",
+   "slot": "techpackIllustration",
+   "removed": "/images/jacket/ticket-pocket/jetted.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|suit-pockets|ticket-pocket|tp-welt",
+   "slot": "illustration",
+   "removed": "/images/jacket/ticket-pocket/welt.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|suit-pockets|ticket-pocket|tp-welt",
+   "slot": "techpackIllustration",
+   "removed": "/images/jacket/ticket-pocket/welt.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|suit-pockets|ticket-pocket|tp-card-italian",
+   "slot": "illustration",
+   "removed": "/images/jacket/ticket-pocket/jetted.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|suit-pockets|ticket-pocket|tp-card-formal",
+   "slot": "illustration",
+   "removed": "/images/jacket/ticket-pocket/jetted.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|suit-pockets|ticket-pocket|tp-rl-card",
+   "slot": "illustration",
+   "removed": "/images/jacket/ticket-pocket/jetted.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|suit-pockets|ticket-pocket|tp-flap-40",
+   "slot": "illustration",
+   "removed": "/images/jacket/ticket-pocket/flap-40.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|suit-pockets|ticket-pocket|tp-flap-45",
+   "slot": "illustration",
+   "removed": "/images/jacket/ticket-pocket/flap.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|suit-pockets|ticket-pocket|tp-flap-50",
+   "slot": "illustration",
+   "removed": "/images/jacket/ticket-pocket/flap-50.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|suit-pockets|ticket-pocket|tp-flap-55",
+   "slot": "illustration",
+   "removed": "/images/jacket/ticket-pocket/flap-55.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|suit-pockets|ticket-pocket|tp-flap-60",
+   "slot": "illustration",
+   "removed": "/images/jacket/ticket-pocket/flap-60.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|suit-pockets|coin-pocket|coin-none",
+   "slot": "illustration",
+   "removed": "/images/jacket/coin-pocket/none.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|suit-pockets|coin-pocket|coin-none",
+   "slot": "techpackIllustration",
+   "removed": "/images/jacket/coin-pocket/none.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|suit-pockets|coin-pocket|coin-left",
+   "slot": "illustration",
+   "removed": "/images/jacket/coin-pocket/left.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|suit-pockets|coin-pocket|coin-left",
+   "slot": "techpackIllustration",
+   "removed": "/images/jacket/coin-pocket/left.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|suit-pockets|coin-pocket|coin-right",
+   "slot": "illustration",
+   "removed": "/images/jacket/coin-pocket/right.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|suit-pockets|coin-pocket|coin-both",
+   "slot": "illustration",
+   "removed": "/images/jacket/coin-pocket/both.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|front-style|button-config|sb-5",
+   "slot": "illustration",
+   "removed": "/images/jacket/front-style/sb-5.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|front-style|button-config|db-2x1",
+   "slot": "illustration",
+   "removed": "/images/jacket/front-style/db-2x1.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|front-style|button-config|db-2x1",
+   "slot": "techpackIllustration",
+   "removed": "/images/jacket/front-style/db-2x1.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|front-style|button-config|db-4x1",
+   "slot": "illustration",
+   "removed": "/images/jacket/front-style/db-4x1.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|front-style|button-config|db-4x1",
+   "slot": "techpackIllustration",
+   "removed": "/images/jacket/front-style/db-4x1.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|front-style|button-config|db-4x2",
+   "slot": "illustration",
+   "removed": "/images/jacket/front-style/db-4x2.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|front-style|button-config|db-4x2",
+   "slot": "techpackIllustration",
+   "removed": "/images/jacket/front-style/db-4x2.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|front-style|button-config|db-6x1",
+   "slot": "illustration",
+   "removed": "/images/jacket/front-style/db-6x1.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|front-style|button-config|db-6x1",
+   "slot": "techpackIllustration",
+   "removed": "/images/jacket/front-style/db-6x1.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|front-style|button-config|db-6x2",
+   "slot": "illustration",
+   "removed": "/images/jacket/front-style/db-6x2.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|front-style|button-config|db-6x2",
+   "slot": "techpackIllustration",
+   "removed": "/images/jacket/front-style/db-6x2.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|front-style|button-config|db-6x3",
+   "slot": "illustration",
+   "removed": "/images/jacket/front-style/db-6x3.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|front-style|button-config|db-6x3",
+   "slot": "techpackIllustration",
+   "removed": "/images/jacket/front-style/db-6x3.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|front-style|front-buttonhole|fbh-machine",
+   "slot": "illustration",
+   "removed": "/images/jacket/front-buttonhole/by-machine.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-2pc|front-style|front-buttonhole|fbh-hands",
+   "slot": "illustration",
+   "removed": "/images/jacket/front-buttonhole/by-hands.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-2pc|front-style|hem-gusset|hem-small-curve",
+   "slot": "illustration",
+   "removed": "/images/jacket/hem/small-curve.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-2pc|front-style|hem-gusset|hem-big-curve",
+   "slot": "illustration",
+   "removed": "/images/jacket/hem/big-curve.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-2pc|sleeves-cuffs|sleeve-vent|sv-none",
+   "slot": "illustration",
+   "removed": "/images/jacket/sleeve-vent/none.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|sleeves-cuffs|sleeve-vent|sv-mock",
+   "slot": "illustration",
+   "removed": "/images/jacket/sleeve-vent/mock.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|sleeves-cuffs|sleeve-vent|sv-functional",
+   "slot": "illustration",
+   "removed": "/images/jacket/sleeve-vent/functional.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|sleeves-cuffs|sleeve-vent|sv-functional-mock",
+   "slot": "illustration",
+   "removed": "/images/jacket/sleeve-vent/functional-mock.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|sleeves-cuffs|sleeve-vent|sv-functional-no-bh",
+   "slot": "illustration",
+   "removed": "/images/jacket/sleeve-vent/functional-no-bh.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|sleeves-cuffs|cuff-button-number|cb-4",
+   "slot": "illustration",
+   "removed": "/images/blueprints/supplier/362519787419__0621__4_flat.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-2pc|sleeves-cuffs|cuff-button-number|cb-4",
+   "slot": "techpackIllustration",
+   "removed": "/images/blueprints/supplier/362519787419__0621__4_flat.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-2pc|back-vents|back-vent-style|bv-none",
+   "slot": "illustration",
+   "removed": "/images/jacket/back-vent/no-vent.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-2pc|back-vents|back-vent-style|bv-side-belt",
+   "slot": "illustration",
+   "removed": "/images/jacket/back-vent/side-belt.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-2pc|back-vents|external-decoration|ext-none",
+   "slot": "illustration",
+   "removed": "/images/jacket/external-decoration/none.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-2pc|back-vents|external-decoration|ext-loop-flat",
+   "slot": "illustration",
+   "removed": "/images/jacket/external-decoration/front-chest-horizontal-button-loop.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|back-vents|external-decoration|ext-loop-flat",
+   "slot": "techpackIllustration",
+   "removed": "/images/jacket/external-decoration/front-chest-horizontal-button-loop.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|back-vents|external-decoration|ext-loop-slanted",
+   "slot": "illustration",
+   "removed": "/images/jacket/external-decoration/front-chest-slanted-button-loop.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|back-vents|external-decoration|ext-loop-slanted",
+   "slot": "techpackIllustration",
+   "removed": "/images/jacket/external-decoration/front-chest-slanted-button-loop.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|handmade|handmade-decorative|hmd-none",
+   "slot": "illustration",
+   "removed": "/images/jacket/handmade-decorative/none.jpg",
+   "verdict": "AMBIGUOUS"
+  },
+  {
+   "addr": "suit-2pc|handmade|handmade-decorative|hmd-shoulder",
+   "slot": "illustration",
+   "removed": "/images/jacket/handmade-decorative/shoulder-seam.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-2pc|handmade|handmade-decorative|hmd-shoulder-vent",
+   "slot": "illustration",
+   "removed": "/images/jacket/handmade-decorative/shoulder-vent.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|handmade|handmade-decorative|hmd-full",
+   "slot": "illustration",
+   "removed": "/images/jacket/handmade-decorative/full.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-2pc|handmade|sewing-button-style|sbs-machine",
+   "slot": "illustration",
+   "removed": "/images/jacket/sewing-style/regular-machine.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|handmade|sewing-button-style|sbs-cross-hand",
+   "slot": "illustration",
+   "removed": "/images/jacket/sewing-style/cross-stitch.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|handmade|sewing-button-style|sbs-down-hand",
+   "slot": "illustration",
+   "removed": "/images/jacket/sewing-style/down-stitch.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|handmade|sewing-button-style|sbs-eq-hand",
+   "slot": "illustration",
+   "removed": "/images/jacket/sewing-style/eq-stitch.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|handmade|sewing-button-style|sbs-sq-hand",
+   "slot": "illustration",
+   "removed": "/images/jacket/sewing-style/sq-stitch.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|handmade|sewing-button-style|sbs-under-hand",
+   "slot": "illustration",
+   "removed": "/images/jacket/sewing-style/under-layer.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|handmade|sleeve-buttonhole-type|slbh-machine",
+   "slot": "illustration",
+   "removed": "/images/jacket/sleeve-buttonhole/by-machine.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-2pc|handmade|sleeve-buttonhole-type|slbh-hands",
+   "slot": "illustration",
+   "removed": "/images/jacket/sleeve-buttonhole/by-hands.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-2pc|suit-details|contrast-position|contrast-chest-pocket",
+   "slot": "illustration",
+   "removed": "/images/jacket/contrast-pos/chest-pocket.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|suit-details|contrast-position|contrast-chest-pocket",
+   "slot": "techpackIllustration",
+   "removed": "/images/jacket/contrast-pos/chest-pocket.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|suit-details|contrast-position|contrast-satin-lapel",
+   "slot": "illustration",
+   "removed": "/images/jacket/contrast-pos/satin-lapel.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|suit-details|contrast-position|contrast-satin-lapel",
+   "slot": "techpackIllustration",
+   "removed": "/images/jacket/contrast-pos/satin-lapel.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|suit-details|columbia-piping|cp-none",
+   "slot": "illustration",
+   "removed": "/images/jacket/columbia-piping/none.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-2pc|suit-details|columbia-piping|cp-columbia",
+   "slot": "illustration",
+   "removed": "/images/jacket/columbia-piping/columbia.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-2pc|suit-details|columbia-piping|cp-piping",
+   "slot": "illustration",
+   "removed": "/images/jacket/columbia-piping/piping.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-2pc|suit-details|columbia-piping|cp-both",
+   "slot": "illustration",
+   "removed": "/images/jacket/columbia-piping/columbia-and-piping.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-2pc|interior|facing-style|facing-1",
+   "slot": "illustration",
+   "removed": "/images/jacket/facing/facing-1.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-2pc|interior|facing-style|facing-2",
+   "slot": "illustration",
+   "removed": "/images/jacket/facing/facing-2.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|interior|facing-style|facing-4",
+   "slot": "illustration",
+   "removed": "/images/jacket/facing/facing-4.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|interior|facing-style|facing-5",
+   "slot": "illustration",
+   "removed": "/images/jacket/facing/facing-5.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|interior|facing-style|facing-7",
+   "slot": "illustration",
+   "removed": "/images/jacket/facing/facing-7.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-2pc|interior|facing-style|facing-9",
+   "slot": "illustration",
+   "removed": "/images/jacket/facing/facing-9.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-2pc|interior|facing-style|facing-half",
+   "slot": "illustration",
+   "removed": "/images/jacket/facing/facing-half.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|interior|facing-style|facing-none",
+   "slot": "illustration",
+   "removed": "/images/jacket/facing/facing-none.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|interior|pen-pocket|pen-none",
+   "slot": "illustration",
+   "removed": "/images/jacket/pen-pocket/none.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|interior|pen-pocket|pen-none",
+   "slot": "techpackIllustration",
+   "removed": "/images/jacket/pen-pocket/none.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|interior|pen-pocket|pen-left-jetted",
+   "slot": "illustration",
+   "removed": "/images/jacket/pen-pocket/left-jetted.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-2pc|interior|pen-pocket|pen-left-drop",
+   "slot": "illustration",
+   "removed": "/images/jacket/pen-pocket/left-drop.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-2pc|interior|pen-pocket|pen-left-diamond",
+   "slot": "illustration",
+   "removed": "/images/jacket/pen-pocket/left-diamond.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-2pc|interior|pen-pocket|pen-right-jetted",
+   "slot": "illustration",
+   "removed": "/images/jacket/pen-pocket/right-jetted.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-2pc|interior|pen-pocket|pen-right-drop",
+   "slot": "illustration",
+   "removed": "/images/jacket/pen-pocket/right-drop.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-2pc|interior|pen-pocket|pen-right-diamond",
+   "slot": "illustration",
+   "removed": "/images/jacket/pen-pocket/right-diamond.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-2pc|interior|namecard-pocket|nc-none",
+   "slot": "illustration",
+   "removed": "/images/jacket/namecard-pocket/none.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-2pc|interior|namecard-pocket|nc-left",
+   "slot": "illustration",
+   "removed": "/images/jacket/namecard-pocket/left.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-2pc|interior|namecard-pocket|nc-right",
+   "slot": "illustration",
+   "removed": "/images/jacket/namecard-pocket/right.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-2pc|interior|namecard-pocket|nc-both",
+   "slot": "illustration",
+   "removed": "/images/jacket/namecard-pocket/both.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-2pc|interior|inner-ticket-pocket|itp-none",
+   "slot": "illustration",
+   "removed": "/images/jacket/inner-ticket-pocket/none.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-2pc|interior|inner-ticket-pocket|itp-left",
+   "slot": "illustration",
+   "removed": "/images/jacket/inner-ticket-pocket/left.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-2pc|interior|inner-ticket-pocket|itp-right",
+   "slot": "illustration",
+   "removed": "/images/jacket/inner-ticket-pocket/right.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-2pc|interior|inner-ticket-pocket|itp-both",
+   "slot": "illustration",
+   "removed": "/images/jacket/inner-ticket-pocket/left-and-right.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|interior|mp3-pocket|mp3-none",
+   "slot": "illustration",
+   "removed": "/images/jacket/mp3-pocket/none.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-2pc|interior|mp3-pocket|mp3-left",
+   "slot": "illustration",
+   "removed": "/images/jacket/mp3-pocket/left.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-2pc|interior|mp3-pocket|mp3-right",
+   "slot": "illustration",
+   "removed": "/images/jacket/mp3-pocket/right.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-2pc|interior|inner-pocket-closure|ipc-none",
+   "slot": "illustration",
+   "removed": "/images/jacket/inner-pocket-closure/none.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-2pc|interior|perfume-pad|pp-none",
+   "slot": "illustration",
+   "removed": "/images/jacket/underarm-shield/none.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|interior|perfume-pad|pp-triangle",
+   "slot": "illustration",
+   "removed": "/images/jacket/underarm-shield/triangle.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|interior|perfume-pad|pp-round-1",
+   "slot": "illustration",
+   "removed": "/images/jacket/underarm-shield/round-1.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|interior|perfume-pad|pp-round-2",
+   "slot": "illustration",
+   "removed": "/images/jacket/underarm-shield/round-2.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|interior|perfume-pad|pp-round-3",
+   "slot": "illustration",
+   "removed": "/images/jacket/underarm-shield/round-3.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|interior|perfume-pad|pp-u-1",
+   "slot": "illustration",
+   "removed": "/images/jacket/underarm-shield/u-1.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|interior|perfume-pad|pp-u-2",
+   "slot": "illustration",
+   "removed": "/images/jacket/underarm-shield/u-2.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|interior|perfume-pad|pp-u-3",
+   "slot": "illustration",
+   "removed": "/images/jacket/underarm-shield/u-3.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|suit-lining|lining-coverage|lc-full",
+   "slot": "illustration",
+   "removed": "/images/jacket/lining/full-lining.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-2pc|suit-lining|lining-coverage|lc-half",
+   "slot": "illustration",
+   "removed": "/images/jacket/lining/half-lining.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|suit-lining|lining-coverage|lc-quarter",
+   "slot": "illustration",
+   "removed": "/images/jacket/lining/half-lining.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|suit-lining|half-lining-shape|hls-standard",
+   "slot": "illustration",
+   "removed": "/images/jacket/lining/half-lining.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|suit-lining|half-lining-shape|hls-small-cutaway",
+   "slot": "illustration",
+   "removed": "/images/jacket/lining/half-lining.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|suit-lining|half-lining-shape|hls-half",
+   "slot": "illustration",
+   "removed": "/images/jacket/lining/half-lining.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|suit-lining|half-lining-shape|hls-half",
+   "slot": "techpackIllustration",
+   "removed": "/images/jacket/lining/half-lining.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|suit-lining|half-lining-shape|hls-third-cutaway",
+   "slot": "illustration",
+   "removed": "/images/jacket/lining/half-lining.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|suit-lining|half-lining-shape|hls-third-cutaway",
+   "slot": "techpackIllustration",
+   "removed": "/images/jacket/lining/half-lining.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|suit-lining|half-lining-shape|hls-third",
+   "slot": "illustration",
+   "removed": "/images/jacket/lining/half-lining.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|suit-lining|half-lining-shape|hls-quarter-cutaway",
+   "slot": "illustration",
+   "removed": "/images/jacket/lining/half-lining.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|suit-lining|half-lining-shape|hls-quarter-cutaway",
+   "slot": "techpackIllustration",
+   "removed": "/images/jacket/lining/half-lining.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|suit-lining|half-lining-craft|hlc-binding",
+   "slot": "illustration",
+   "removed": "/images/jacket/lining/half-lining.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|suit-lining|half-lining-craft|hlc-french",
+   "slot": "illustration",
+   "removed": "/images/jacket/lining/half-lining.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|suit-lining|half-lining-craft|hlc-joining",
+   "slot": "illustration",
+   "removed": "/images/jacket/lining/half-lining.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-2pc|Trousers-front-pockets|pocket-stitching|pocket-stitch-06",
+   "slot": "illustration",
+   "removed": "/images/blueprints/factory/2b3c7bcf74ef__31A3__0.6cm_top_stitch.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-2pc|Trousers-front-pockets|pocket-stitching|pocket-stitch-06",
+   "slot": "techpackIllustration",
+   "removed": "/images/blueprints/factory/2b3c7bcf74ef__31A3__0.6cm_top_stitch.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-2pc|Trousers-front-pockets|watch-pocket|watch-left",
+   "slot": "illustration",
+   "removed": "/images/blueprints/factory/2a5f7a6c70e1__3171__Left_welt.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-2pc|Trousers-front-pockets|watch-pocket|watch-left",
+   "slot": "techpackIllustration",
+   "removed": "/images/blueprints/factory/2a5f7a6c70e1__3171__Left_welt.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-2pc|Trousers-pleats-structure|pleat-style|flat-front",
+   "slot": "illustration",
+   "removed": "/images/blueprints/factory/edc7138c802f__302L__No_pleat_no_dart.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-2pc|Trousers-pleats-structure|pleat-style|flat-front",
+   "slot": "techpackIllustration",
+   "removed": "/images/blueprints/factory/edc7138c802f__302L__No_pleat_no_dart.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-2pc|Trousers-pleats-structure|fly-stitching|fly-stitch-curved",
+   "slot": "illustration",
+   "removed": "/images/blueprints/factory/2b3c7bcf74ef__31A3__0.6cm_top_stitch.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-2pc|Trousers-pleats-structure|fly-stitching|fly-stitch-straight",
+   "slot": "illustration",
+   "removed": "/images/blueprints/factory/e081e2a8c319__31A1__0.15cm_top_stitch.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-2pc|Trousers-back|back-darts|darts-none",
+   "slot": "illustration",
+   "removed": "/images/blueprints/factory/edc7138c802f__302L__No_pleat_no_dart.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-2pc|Trousers-back|back-darts|darts-single",
+   "slot": "illustration",
+   "removed": "/images/blueprints/factory/27e91c06ed8a__302M__No_pleat_single_dart.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-2pc|Trousers-back|back-darts|darts-double",
+   "slot": "illustration",
+   "removed": "/images/blueprints/factory/f1edbb42290d__302Y__No_pleat_double_darts.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-2pc|Trousers-bottom-hem|hem-style|hem-cuff-38",
+   "slot": "illustration",
+   "removed": "/images/blueprints/remote/3817491d18ac__3603.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-2pc|Trousers-lining-internal|inner-waist|inner-piping-snugtex",
+   "slot": "illustration",
+   "removed": "/images/blueprints/remote/c8538a87dffb__3441.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-3pc|shoulder-structure|sleeve-head|sleeve-con-rollino",
+   "slot": "illustration",
+   "removed": "/images/jacket/shoulder-head/con-rollino.jpg",
+   "verdict": "AMBIGUOUS"
+  },
+  {
+   "addr": "suit-3pc|shoulder-structure|canvas|full-canvas",
+   "slot": "illustration",
+   "removed": "/images/jacket/canvas/full-canvas.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|suit-pockets|chest-pocket|cp-none",
+   "slot": "illustration",
+   "removed": "/images/jacket/columbia-piping/none.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-3pc|suit-pockets|lower-pocket-bartack|bartack-none",
+   "slot": "illustration",
+   "removed": "/images/jacket/pocket-bartack/none.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|suit-pockets|lower-pocket-bartack|bartack-d",
+   "slot": "illustration",
+   "removed": "/images/jacket/pocket-bartack/d-bartack.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|suit-pockets|lower-pocket-bartack|bartack-i",
+   "slot": "illustration",
+   "removed": "/images/jacket/pocket-bartack/i-bartack.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|suit-pockets|lower-pocket-bartack|bartack-x",
+   "slot": "illustration",
+   "removed": "/images/jacket/pocket-bartack/x-bartack.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|suit-pockets|lower-pocket-bartack|bartack-1",
+   "slot": "illustration",
+   "removed": "/images/jacket/pocket-bartack/i-bartack.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|suit-pockets|ticket-pocket|tp-none",
+   "slot": "illustration",
+   "removed": "/images/jacket/ticket-pocket/none.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|suit-pockets|ticket-pocket|tp-jetted",
+   "slot": "illustration",
+   "removed": "/images/jacket/ticket-pocket/jetted.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|suit-pockets|ticket-pocket|tp-jetted",
+   "slot": "techpackIllustration",
+   "removed": "/images/jacket/ticket-pocket/jetted.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|suit-pockets|ticket-pocket|tp-welt",
+   "slot": "illustration",
+   "removed": "/images/jacket/ticket-pocket/welt.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|suit-pockets|ticket-pocket|tp-welt",
+   "slot": "techpackIllustration",
+   "removed": "/images/jacket/ticket-pocket/welt.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|suit-pockets|ticket-pocket|tp-card-italian",
+   "slot": "illustration",
+   "removed": "/images/jacket/ticket-pocket/jetted.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|suit-pockets|ticket-pocket|tp-card-formal",
+   "slot": "illustration",
+   "removed": "/images/jacket/ticket-pocket/jetted.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|suit-pockets|ticket-pocket|tp-rl-card",
+   "slot": "illustration",
+   "removed": "/images/jacket/ticket-pocket/jetted.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|suit-pockets|ticket-pocket|tp-flap-40",
+   "slot": "illustration",
+   "removed": "/images/jacket/ticket-pocket/flap-40.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|suit-pockets|ticket-pocket|tp-flap-45",
+   "slot": "illustration",
+   "removed": "/images/jacket/ticket-pocket/flap.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|suit-pockets|ticket-pocket|tp-flap-50",
+   "slot": "illustration",
+   "removed": "/images/jacket/ticket-pocket/flap-50.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|suit-pockets|ticket-pocket|tp-flap-55",
+   "slot": "illustration",
+   "removed": "/images/jacket/ticket-pocket/flap-55.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|suit-pockets|ticket-pocket|tp-flap-60",
+   "slot": "illustration",
+   "removed": "/images/jacket/ticket-pocket/flap-60.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|suit-pockets|coin-pocket|coin-none",
+   "slot": "illustration",
+   "removed": "/images/jacket/coin-pocket/none.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|suit-pockets|coin-pocket|coin-none",
+   "slot": "techpackIllustration",
+   "removed": "/images/jacket/coin-pocket/none.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|suit-pockets|coin-pocket|coin-left",
+   "slot": "illustration",
+   "removed": "/images/jacket/coin-pocket/left.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|suit-pockets|coin-pocket|coin-left",
+   "slot": "techpackIllustration",
+   "removed": "/images/jacket/coin-pocket/left.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|suit-pockets|coin-pocket|coin-right",
+   "slot": "illustration",
+   "removed": "/images/jacket/coin-pocket/right.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|suit-pockets|coin-pocket|coin-both",
+   "slot": "illustration",
+   "removed": "/images/jacket/coin-pocket/both.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|front-style|button-config|sb-5",
+   "slot": "illustration",
+   "removed": "/images/jacket/front-style/sb-5.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|front-style|button-config|db-2x1",
+   "slot": "illustration",
+   "removed": "/images/jacket/front-style/db-2x1.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|front-style|button-config|db-2x1",
+   "slot": "techpackIllustration",
+   "removed": "/images/jacket/front-style/db-2x1.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|front-style|button-config|db-4x1",
+   "slot": "illustration",
+   "removed": "/images/jacket/front-style/db-4x1.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|front-style|button-config|db-4x1",
+   "slot": "techpackIllustration",
+   "removed": "/images/jacket/front-style/db-4x1.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|front-style|button-config|db-4x2",
+   "slot": "illustration",
+   "removed": "/images/jacket/front-style/db-4x2.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|front-style|button-config|db-4x2",
+   "slot": "techpackIllustration",
+   "removed": "/images/jacket/front-style/db-4x2.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|front-style|button-config|db-6x1",
+   "slot": "illustration",
+   "removed": "/images/jacket/front-style/db-6x1.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|front-style|button-config|db-6x1",
+   "slot": "techpackIllustration",
+   "removed": "/images/jacket/front-style/db-6x1.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|front-style|button-config|db-6x2",
+   "slot": "illustration",
+   "removed": "/images/jacket/front-style/db-6x2.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|front-style|button-config|db-6x2",
+   "slot": "techpackIllustration",
+   "removed": "/images/jacket/front-style/db-6x2.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|front-style|button-config|db-6x3",
+   "slot": "illustration",
+   "removed": "/images/jacket/front-style/db-6x3.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|front-style|button-config|db-6x3",
+   "slot": "techpackIllustration",
+   "removed": "/images/jacket/front-style/db-6x3.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|front-style|front-buttonhole|fbh-machine",
+   "slot": "illustration",
+   "removed": "/images/jacket/front-buttonhole/by-machine.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-3pc|front-style|front-buttonhole|fbh-hands",
+   "slot": "illustration",
+   "removed": "/images/jacket/front-buttonhole/by-hands.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-3pc|front-style|hem-gusset|hem-small-curve",
+   "slot": "illustration",
+   "removed": "/images/jacket/hem/small-curve.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-3pc|front-style|hem-gusset|hem-big-curve",
+   "slot": "illustration",
+   "removed": "/images/jacket/hem/big-curve.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-3pc|sleeves-cuffs|sleeve-vent|sv-none",
+   "slot": "illustration",
+   "removed": "/images/jacket/sleeve-vent/none.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|sleeves-cuffs|sleeve-vent|sv-mock",
+   "slot": "illustration",
+   "removed": "/images/jacket/sleeve-vent/mock.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|sleeves-cuffs|sleeve-vent|sv-functional",
+   "slot": "illustration",
+   "removed": "/images/jacket/sleeve-vent/functional.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|sleeves-cuffs|sleeve-vent|sv-functional-mock",
+   "slot": "illustration",
+   "removed": "/images/jacket/sleeve-vent/functional-mock.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|sleeves-cuffs|sleeve-vent|sv-functional-no-bh",
+   "slot": "illustration",
+   "removed": "/images/jacket/sleeve-vent/functional-no-bh.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|sleeves-cuffs|cuff-button-number|cb-4",
+   "slot": "illustration",
+   "removed": "/images/blueprints/supplier/362519787419__0621__4_flat.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-3pc|sleeves-cuffs|cuff-button-number|cb-4",
+   "slot": "techpackIllustration",
+   "removed": "/images/blueprints/supplier/362519787419__0621__4_flat.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-3pc|back-vents|back-vent-style|bv-none",
+   "slot": "illustration",
+   "removed": "/images/jacket/back-vent/no-vent.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-3pc|back-vents|back-vent-style|bv-side-belt",
+   "slot": "illustration",
+   "removed": "/images/jacket/back-vent/side-belt.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-3pc|back-vents|external-decoration|ext-none",
+   "slot": "illustration",
+   "removed": "/images/jacket/external-decoration/none.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-3pc|back-vents|external-decoration|ext-loop-flat",
+   "slot": "illustration",
+   "removed": "/images/jacket/external-decoration/front-chest-horizontal-button-loop.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|back-vents|external-decoration|ext-loop-flat",
+   "slot": "techpackIllustration",
+   "removed": "/images/jacket/external-decoration/front-chest-horizontal-button-loop.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|back-vents|external-decoration|ext-loop-slanted",
+   "slot": "illustration",
+   "removed": "/images/jacket/external-decoration/front-chest-slanted-button-loop.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|back-vents|external-decoration|ext-loop-slanted",
+   "slot": "techpackIllustration",
+   "removed": "/images/jacket/external-decoration/front-chest-slanted-button-loop.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|handmade|handmade-decorative|hmd-none",
+   "slot": "illustration",
+   "removed": "/images/jacket/handmade-decorative/none.jpg",
+   "verdict": "AMBIGUOUS"
+  },
+  {
+   "addr": "suit-3pc|handmade|handmade-decorative|hmd-shoulder",
+   "slot": "illustration",
+   "removed": "/images/jacket/handmade-decorative/shoulder-seam.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-3pc|handmade|handmade-decorative|hmd-shoulder-vent",
+   "slot": "illustration",
+   "removed": "/images/jacket/handmade-decorative/shoulder-vent.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|handmade|handmade-decorative|hmd-full",
+   "slot": "illustration",
+   "removed": "/images/jacket/handmade-decorative/full.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-3pc|handmade|sewing-button-style|sbs-machine",
+   "slot": "illustration",
+   "removed": "/images/jacket/sewing-style/regular-machine.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|handmade|sewing-button-style|sbs-cross-hand",
+   "slot": "illustration",
+   "removed": "/images/jacket/sewing-style/cross-stitch.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|handmade|sewing-button-style|sbs-down-hand",
+   "slot": "illustration",
+   "removed": "/images/jacket/sewing-style/down-stitch.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|handmade|sewing-button-style|sbs-eq-hand",
+   "slot": "illustration",
+   "removed": "/images/jacket/sewing-style/eq-stitch.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|handmade|sewing-button-style|sbs-sq-hand",
+   "slot": "illustration",
+   "removed": "/images/jacket/sewing-style/sq-stitch.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|handmade|sewing-button-style|sbs-under-hand",
+   "slot": "illustration",
+   "removed": "/images/jacket/sewing-style/under-layer.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|handmade|sleeve-buttonhole-type|slbh-machine",
+   "slot": "illustration",
+   "removed": "/images/jacket/sleeve-buttonhole/by-machine.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-3pc|handmade|sleeve-buttonhole-type|slbh-hands",
+   "slot": "illustration",
+   "removed": "/images/jacket/sleeve-buttonhole/by-hands.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-3pc|suit-details|contrast-position|contrast-chest-pocket",
+   "slot": "illustration",
+   "removed": "/images/jacket/contrast-pos/chest-pocket.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|suit-details|contrast-position|contrast-chest-pocket",
+   "slot": "techpackIllustration",
+   "removed": "/images/jacket/contrast-pos/chest-pocket.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|suit-details|contrast-position|contrast-satin-lapel",
+   "slot": "illustration",
+   "removed": "/images/jacket/contrast-pos/satin-lapel.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|suit-details|contrast-position|contrast-satin-lapel",
+   "slot": "techpackIllustration",
+   "removed": "/images/jacket/contrast-pos/satin-lapel.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|suit-details|columbia-piping|cp-none",
+   "slot": "illustration",
+   "removed": "/images/jacket/columbia-piping/none.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-3pc|suit-details|columbia-piping|cp-columbia",
+   "slot": "illustration",
+   "removed": "/images/jacket/columbia-piping/columbia.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-3pc|suit-details|columbia-piping|cp-piping",
+   "slot": "illustration",
+   "removed": "/images/jacket/columbia-piping/piping.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-3pc|suit-details|columbia-piping|cp-both",
+   "slot": "illustration",
+   "removed": "/images/jacket/columbia-piping/columbia-and-piping.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-3pc|interior|facing-style|facing-1",
+   "slot": "illustration",
+   "removed": "/images/jacket/facing/facing-1.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-3pc|interior|facing-style|facing-2",
+   "slot": "illustration",
+   "removed": "/images/jacket/facing/facing-2.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|interior|facing-style|facing-4",
+   "slot": "illustration",
+   "removed": "/images/jacket/facing/facing-4.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|interior|facing-style|facing-5",
+   "slot": "illustration",
+   "removed": "/images/jacket/facing/facing-5.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|interior|facing-style|facing-7",
+   "slot": "illustration",
+   "removed": "/images/jacket/facing/facing-7.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-3pc|interior|facing-style|facing-9",
+   "slot": "illustration",
+   "removed": "/images/jacket/facing/facing-9.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-3pc|interior|facing-style|facing-half",
+   "slot": "illustration",
+   "removed": "/images/jacket/facing/facing-half.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|interior|facing-style|facing-none",
+   "slot": "illustration",
+   "removed": "/images/jacket/facing/facing-none.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|interior|pen-pocket|pen-none",
+   "slot": "illustration",
+   "removed": "/images/jacket/pen-pocket/none.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|interior|pen-pocket|pen-none",
+   "slot": "techpackIllustration",
+   "removed": "/images/jacket/pen-pocket/none.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|interior|pen-pocket|pen-left-jetted",
+   "slot": "illustration",
+   "removed": "/images/jacket/pen-pocket/left-jetted.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-3pc|interior|pen-pocket|pen-left-drop",
+   "slot": "illustration",
+   "removed": "/images/jacket/pen-pocket/left-drop.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-3pc|interior|pen-pocket|pen-left-diamond",
+   "slot": "illustration",
+   "removed": "/images/jacket/pen-pocket/left-diamond.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-3pc|interior|pen-pocket|pen-right-jetted",
+   "slot": "illustration",
+   "removed": "/images/jacket/pen-pocket/right-jetted.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-3pc|interior|pen-pocket|pen-right-drop",
+   "slot": "illustration",
+   "removed": "/images/jacket/pen-pocket/right-drop.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-3pc|interior|pen-pocket|pen-right-diamond",
+   "slot": "illustration",
+   "removed": "/images/jacket/pen-pocket/right-diamond.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-3pc|interior|namecard-pocket|nc-none",
+   "slot": "illustration",
+   "removed": "/images/jacket/namecard-pocket/none.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-3pc|interior|namecard-pocket|nc-left",
+   "slot": "illustration",
+   "removed": "/images/jacket/namecard-pocket/left.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-3pc|interior|namecard-pocket|nc-right",
+   "slot": "illustration",
+   "removed": "/images/jacket/namecard-pocket/right.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-3pc|interior|namecard-pocket|nc-both",
+   "slot": "illustration",
+   "removed": "/images/jacket/namecard-pocket/both.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-3pc|interior|inner-ticket-pocket|itp-none",
+   "slot": "illustration",
+   "removed": "/images/jacket/inner-ticket-pocket/none.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-3pc|interior|inner-ticket-pocket|itp-left",
+   "slot": "illustration",
+   "removed": "/images/jacket/inner-ticket-pocket/left.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-3pc|interior|inner-ticket-pocket|itp-right",
+   "slot": "illustration",
+   "removed": "/images/jacket/inner-ticket-pocket/right.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-3pc|interior|inner-ticket-pocket|itp-both",
+   "slot": "illustration",
+   "removed": "/images/jacket/inner-ticket-pocket/left-and-right.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|interior|mp3-pocket|mp3-none",
+   "slot": "illustration",
+   "removed": "/images/jacket/mp3-pocket/none.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-3pc|interior|mp3-pocket|mp3-left",
+   "slot": "illustration",
+   "removed": "/images/jacket/mp3-pocket/left.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-3pc|interior|mp3-pocket|mp3-right",
+   "slot": "illustration",
+   "removed": "/images/jacket/mp3-pocket/right.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-3pc|interior|inner-pocket-closure|ipc-none",
+   "slot": "illustration",
+   "removed": "/images/jacket/inner-pocket-closure/none.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-3pc|interior|perfume-pad|pp-none",
+   "slot": "illustration",
+   "removed": "/images/jacket/underarm-shield/none.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|interior|perfume-pad|pp-triangle",
+   "slot": "illustration",
+   "removed": "/images/jacket/underarm-shield/triangle.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|interior|perfume-pad|pp-round-1",
+   "slot": "illustration",
+   "removed": "/images/jacket/underarm-shield/round-1.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|interior|perfume-pad|pp-round-2",
+   "slot": "illustration",
+   "removed": "/images/jacket/underarm-shield/round-2.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|interior|perfume-pad|pp-round-3",
+   "slot": "illustration",
+   "removed": "/images/jacket/underarm-shield/round-3.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|interior|perfume-pad|pp-u-1",
+   "slot": "illustration",
+   "removed": "/images/jacket/underarm-shield/u-1.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|interior|perfume-pad|pp-u-2",
+   "slot": "illustration",
+   "removed": "/images/jacket/underarm-shield/u-2.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|interior|perfume-pad|pp-u-3",
+   "slot": "illustration",
+   "removed": "/images/jacket/underarm-shield/u-3.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|suit-lining|lining-coverage|lc-full",
+   "slot": "illustration",
+   "removed": "/images/jacket/lining/full-lining.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-3pc|suit-lining|lining-coverage|lc-half",
+   "slot": "illustration",
+   "removed": "/images/jacket/lining/half-lining.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|suit-lining|lining-coverage|lc-quarter",
+   "slot": "illustration",
+   "removed": "/images/jacket/lining/half-lining.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|suit-lining|half-lining-shape|hls-standard",
+   "slot": "illustration",
+   "removed": "/images/jacket/lining/half-lining.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|suit-lining|half-lining-shape|hls-small-cutaway",
+   "slot": "illustration",
+   "removed": "/images/jacket/lining/half-lining.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|suit-lining|half-lining-shape|hls-half",
+   "slot": "illustration",
+   "removed": "/images/jacket/lining/half-lining.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|suit-lining|half-lining-shape|hls-half",
+   "slot": "techpackIllustration",
+   "removed": "/images/jacket/lining/half-lining.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|suit-lining|half-lining-shape|hls-third-cutaway",
+   "slot": "illustration",
+   "removed": "/images/jacket/lining/half-lining.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|suit-lining|half-lining-shape|hls-third-cutaway",
+   "slot": "techpackIllustration",
+   "removed": "/images/jacket/lining/half-lining.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|suit-lining|half-lining-shape|hls-third",
+   "slot": "illustration",
+   "removed": "/images/jacket/lining/half-lining.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|suit-lining|half-lining-shape|hls-quarter-cutaway",
+   "slot": "illustration",
+   "removed": "/images/jacket/lining/half-lining.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|suit-lining|half-lining-shape|hls-quarter-cutaway",
+   "slot": "techpackIllustration",
+   "removed": "/images/jacket/lining/half-lining.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|suit-lining|half-lining-craft|hlc-binding",
+   "slot": "illustration",
+   "removed": "/images/jacket/lining/half-lining.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|suit-lining|half-lining-craft|hlc-french",
+   "slot": "illustration",
+   "removed": "/images/jacket/lining/half-lining.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|suit-lining|half-lining-craft|hlc-joining",
+   "slot": "illustration",
+   "removed": "/images/jacket/lining/half-lining.jpg",
+   "verdict": "never-audited"
+  },
+  {
+   "addr": "suit-3pc|Trousers-front-pockets|pocket-stitching|pocket-stitch-06",
+   "slot": "illustration",
+   "removed": "/images/blueprints/factory/2b3c7bcf74ef__31A3__0.6cm_top_stitch.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-3pc|Trousers-front-pockets|pocket-stitching|pocket-stitch-06",
+   "slot": "techpackIllustration",
+   "removed": "/images/blueprints/factory/2b3c7bcf74ef__31A3__0.6cm_top_stitch.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-3pc|Trousers-front-pockets|watch-pocket|watch-left",
+   "slot": "illustration",
+   "removed": "/images/blueprints/factory/2a5f7a6c70e1__3171__Left_welt.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-3pc|Trousers-front-pockets|watch-pocket|watch-left",
+   "slot": "techpackIllustration",
+   "removed": "/images/blueprints/factory/2a5f7a6c70e1__3171__Left_welt.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-3pc|Trousers-pleats-structure|pleat-style|flat-front",
+   "slot": "illustration",
+   "removed": "/images/blueprints/factory/edc7138c802f__302L__No_pleat_no_dart.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-3pc|Trousers-pleats-structure|pleat-style|flat-front",
+   "slot": "techpackIllustration",
+   "removed": "/images/blueprints/factory/edc7138c802f__302L__No_pleat_no_dart.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-3pc|Trousers-pleats-structure|fly-stitching|fly-stitch-curved",
+   "slot": "illustration",
+   "removed": "/images/blueprints/factory/2b3c7bcf74ef__31A3__0.6cm_top_stitch.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-3pc|Trousers-pleats-structure|fly-stitching|fly-stitch-straight",
+   "slot": "illustration",
+   "removed": "/images/blueprints/factory/e081e2a8c319__31A1__0.15cm_top_stitch.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-3pc|Trousers-back|back-darts|darts-none",
+   "slot": "illustration",
+   "removed": "/images/blueprints/factory/edc7138c802f__302L__No_pleat_no_dart.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-3pc|Trousers-back|back-darts|darts-single",
+   "slot": "illustration",
+   "removed": "/images/blueprints/factory/27e91c06ed8a__302M__No_pleat_single_dart.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-3pc|Trousers-back|back-darts|darts-double",
+   "slot": "illustration",
+   "removed": "/images/blueprints/factory/f1edbb42290d__302Y__No_pleat_double_darts.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-3pc|Trousers-bottom-hem|hem-style|hem-cuff-38",
+   "slot": "illustration",
+   "removed": "/images/blueprints/remote/3817491d18ac__3603.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "suit-3pc|Trousers-lining-internal|inner-waist|inner-piping-snugtex",
+   "slot": "illustration",
+   "removed": "/images/blueprints/remote/c8538a87dffb__3441.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "trousers|front-pockets|pocket-stitching|pocket-stitch-06",
+   "slot": "illustration",
+   "removed": "/images/blueprints/factory/2b3c7bcf74ef__31A3__0.6cm_top_stitch.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "trousers|front-pockets|pocket-stitching|pocket-stitch-06",
+   "slot": "techpackIllustration",
+   "removed": "/images/blueprints/factory/2b3c7bcf74ef__31A3__0.6cm_top_stitch.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "trousers|front-pockets|watch-pocket|watch-left",
+   "slot": "illustration",
+   "removed": "/images/blueprints/factory/2a5f7a6c70e1__3171__Left_welt.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "trousers|front-pockets|watch-pocket|watch-left",
+   "slot": "techpackIllustration",
+   "removed": "/images/blueprints/factory/2a5f7a6c70e1__3171__Left_welt.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "trousers|pleats-structure|pleat-style|flat-front",
+   "slot": "illustration",
+   "removed": "/images/blueprints/factory/edc7138c802f__302L__No_pleat_no_dart.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "trousers|pleats-structure|pleat-style|flat-front",
+   "slot": "techpackIllustration",
+   "removed": "/images/blueprints/factory/edc7138c802f__302L__No_pleat_no_dart.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "trousers|pleats-structure|fly-stitching|fly-stitch-curved",
+   "slot": "illustration",
+   "removed": "/images/blueprints/factory/2b3c7bcf74ef__31A3__0.6cm_top_stitch.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "trousers|pleats-structure|fly-stitching|fly-stitch-straight",
+   "slot": "illustration",
+   "removed": "/images/blueprints/factory/e081e2a8c319__31A1__0.15cm_top_stitch.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "trousers|back|back-darts|darts-none",
+   "slot": "illustration",
+   "removed": "/images/blueprints/factory/edc7138c802f__302L__No_pleat_no_dart.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "trousers|back|back-darts|darts-single",
+   "slot": "illustration",
+   "removed": "/images/blueprints/factory/27e91c06ed8a__302M__No_pleat_single_dart.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "trousers|back|back-darts|darts-double",
+   "slot": "illustration",
+   "removed": "/images/blueprints/factory/f1edbb42290d__302Y__No_pleat_double_darts.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "trousers|bottom-hem|hem-style|hem-cuff-38",
+   "slot": "illustration",
+   "removed": "/images/blueprints/remote/3817491d18ac__3603.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "trousers|bottom-hem|hem-style|hem-cuff-38",
+   "slot": "techpackIllustration",
+   "removed": "/images/blueprints/remote/3817491d18ac__3603.jpg",
+   "verdict": "MISMATCH"
+  },
+  {
+   "addr": "trousers|lining-internal|inner-waist|inner-piping-snugtex",
+   "slot": "illustration",
+   "removed": "/images/blueprints/remote/c8538a87dffb__3441.jpg",
+   "verdict": "MISMATCH"
+  }
+ ],
+ "ambiguousKept": [
+  {
+   "addr": "shirt|collar|lapel|collar-mid-cutaway-85",
+   "slot": "illustration",
+   "path": "/images/techpacks/shirt/lapel/middle-cut-away-in-85cm.jpg"
+  },
+  {
+   "addr": "shirt|collar|lapel|collar-mid-cutaway-85",
+   "slot": "techpackIllustration",
+   "path": "/images/techpacks/shirt/lapel/middle-cut-away-in-85cm.jpg"
+  },
+  {
+   "addr": "shirt|collar|lapel|collar-cuban",
+   "slot": "illustration",
+   "path": "/images/techpacks/shirt/lapel/cuban-collar.jpg"
+  },
+  {
+   "addr": "shirt|collar|lapel|collar-cuban",
+   "slot": "techpackIllustration",
+   "path": "/images/techpacks/shirt/lapel/cuban-collar.jpg"
+  },
+  {
+   "addr": "shirt|collar|collar_stay|stay-removable",
+   "slot": "illustration",
+   "path": "/images/collar_stay/removable.jpg"
+  },
+  {
+   "addr": "shirt|collar|collar_stay|stay-removable",
+   "slot": "techpackIllustration",
+   "path": "/images/collar_stay/removable.jpg"
+  },
+  {
+   "addr": "shirt|placket|placket|placket-half-hidden",
+   "slot": "illustration",
+   "path": "/images/placket/half-hidden-placket.jpg"
+  },
+  {
+   "addr": "shirt|placket|decoration_stitching_on_placket|stitch-01-top",
+   "slot": "illustration",
+   "path": "/images/techpacks/shirt/decoration_stitching_on_placket/machine-01cm-top-stitching-on-inner-plain-placket.jpg"
+  },
+  {
+   "addr": "shirt|placket|buttonhole|bh-machine",
+   "slot": "illustration",
+   "path": "/images/buttonhole/machine.jpg"
+  },
+  {
+   "addr": "shirt|placket|buttonhole|bh-hand",
+   "slot": "illustration",
+   "path": "/images/buttonhole/hand-made.jpg"
+  },
+  {
+   "addr": "shirt|pocket-hem|hem|hem-small-round",
+   "slot": "illustration",
+   "path": "/images/techpacks/shirt/hem/round-hem.jpg"
+  },
+  {
+   "addr": "shirt|pocket-hem|hem|hem-small-round-pentagon-gusset",
+   "slot": "illustration",
+   "path": "/images/techpacks/shirt/hem/round-hem-with-pentagon-gusset.jpg"
+  },
+  {
+   "addr": "shirt|cuffs|cuff_lining|cuf-lining-hard-fc390057",
+   "slot": "illustration",
+   "path": "/images/cuff_lining/cuff-lining-hard-fc390057.jpg"
+  },
+  {
+   "addr": "sport-coat|suit-pockets|lower-pocket|lp-straight-jetted-40",
+   "slot": "illustration",
+   "path": "/images/blueprints/supplier/0135c80fdb4e__0201__Regular.jpg"
+  },
+  {
+   "addr": "sport-coat|suit-pockets|lower-pocket|lp-straight-jetted-40",
+   "slot": "techpackIllustration",
+   "path": "/images/blueprints/supplier/0135c80fdb4e__0201__Regular.jpg"
+  },
+  {
+   "addr": "sport-coat|suit-pockets|lower-pocket|lp-straight-jetted-45",
+   "slot": "illustration",
+   "path": "/images/blueprints/supplier/0135c80fdb4e__0201__Regular.jpg"
+  },
+  {
+   "addr": "sport-coat|suit-pockets|lower-pocket|lp-straight-jetted-45",
+   "slot": "techpackIllustration",
+   "path": "/images/blueprints/supplier/0135c80fdb4e__0201__Regular.jpg"
+  },
+  {
+   "addr": "sport-coat|suit-pockets|lower-pocket|lp-straight-jetted-50",
+   "slot": "illustration",
+   "path": "/images/blueprints/supplier/0135c80fdb4e__0201__Regular.jpg"
+  },
+  {
+   "addr": "sport-coat|suit-pockets|lower-pocket|lp-straight-jetted-50",
+   "slot": "techpackIllustration",
+   "path": "/images/blueprints/supplier/0135c80fdb4e__0201__Regular.jpg"
+  },
+  {
+   "addr": "sport-coat|suit-pockets|lower-pocket|lp-straight-jetted-55",
+   "slot": "illustration",
+   "path": "/images/blueprints/supplier/0135c80fdb4e__0201__Regular.jpg"
+  },
+  {
+   "addr": "sport-coat|suit-pockets|lower-pocket|lp-straight-jetted-55",
+   "slot": "techpackIllustration",
+   "path": "/images/blueprints/supplier/0135c80fdb4e__0201__Regular.jpg"
+  },
+  {
+   "addr": "sport-coat|suit-pockets|lower-pocket|lp-straight-jetted-60",
+   "slot": "illustration",
+   "path": "/images/blueprints/supplier/0135c80fdb4e__0201__Regular.jpg"
+  },
+  {
+   "addr": "sport-coat|suit-pockets|lower-pocket|lp-straight-jetted-60",
+   "slot": "techpackIllustration",
+   "path": "/images/blueprints/supplier/0135c80fdb4e__0201__Regular.jpg"
+  },
+  {
+   "addr": "sport-coat|suit-pockets|lower-pocket|lp-straight-jetted-65",
+   "slot": "illustration",
+   "path": "/images/blueprints/supplier/0135c80fdb4e__0201__Regular.jpg"
+  },
+  {
+   "addr": "sport-coat|suit-pockets|lower-pocket|lp-straight-jetted-65",
+   "slot": "techpackIllustration",
+   "path": "/images/blueprints/supplier/0135c80fdb4e__0201__Regular.jpg"
+  },
+  {
+   "addr": "suit-2pc|suit-pockets|lower-pocket|lp-straight-jetted-40",
+   "slot": "illustration",
+   "path": "/images/blueprints/supplier/0135c80fdb4e__0201__Regular.jpg"
+  },
+  {
+   "addr": "suit-2pc|suit-pockets|lower-pocket|lp-straight-jetted-40",
+   "slot": "techpackIllustration",
+   "path": "/images/blueprints/supplier/0135c80fdb4e__0201__Regular.jpg"
+  },
+  {
+   "addr": "suit-2pc|suit-pockets|lower-pocket|lp-straight-jetted-45",
+   "slot": "illustration",
+   "path": "/images/blueprints/supplier/0135c80fdb4e__0201__Regular.jpg"
+  },
+  {
+   "addr": "suit-2pc|suit-pockets|lower-pocket|lp-straight-jetted-45",
+   "slot": "techpackIllustration",
+   "path": "/images/blueprints/supplier/0135c80fdb4e__0201__Regular.jpg"
+  },
+  {
+   "addr": "suit-2pc|suit-pockets|lower-pocket|lp-straight-jetted-50",
+   "slot": "illustration",
+   "path": "/images/blueprints/supplier/0135c80fdb4e__0201__Regular.jpg"
+  },
+  {
+   "addr": "suit-2pc|suit-pockets|lower-pocket|lp-straight-jetted-50",
+   "slot": "techpackIllustration",
+   "path": "/images/blueprints/supplier/0135c80fdb4e__0201__Regular.jpg"
+  },
+  {
+   "addr": "suit-2pc|suit-pockets|lower-pocket|lp-straight-jetted-55",
+   "slot": "illustration",
+   "path": "/images/blueprints/supplier/0135c80fdb4e__0201__Regular.jpg"
+  },
+  {
+   "addr": "suit-2pc|suit-pockets|lower-pocket|lp-straight-jetted-55",
+   "slot": "techpackIllustration",
+   "path": "/images/blueprints/supplier/0135c80fdb4e__0201__Regular.jpg"
+  },
+  {
+   "addr": "suit-2pc|suit-pockets|lower-pocket|lp-straight-jetted-60",
+   "slot": "illustration",
+   "path": "/images/blueprints/supplier/0135c80fdb4e__0201__Regular.jpg"
+  },
+  {
+   "addr": "suit-2pc|suit-pockets|lower-pocket|lp-straight-jetted-60",
+   "slot": "techpackIllustration",
+   "path": "/images/blueprints/supplier/0135c80fdb4e__0201__Regular.jpg"
+  },
+  {
+   "addr": "suit-2pc|suit-pockets|lower-pocket|lp-straight-jetted-65",
+   "slot": "illustration",
+   "path": "/images/blueprints/supplier/0135c80fdb4e__0201__Regular.jpg"
+  },
+  {
+   "addr": "suit-2pc|suit-pockets|lower-pocket|lp-straight-jetted-65",
+   "slot": "techpackIllustration",
+   "path": "/images/blueprints/supplier/0135c80fdb4e__0201__Regular.jpg"
+  },
+  {
+   "addr": "suit-2pc|Trousers-front-pockets|front-pocket-style|quarter-top",
+   "slot": "illustration",
+   "path": "/images/blueprints/factory/1c5aed3c1ce4__3104__2.5cm_slant.jpg"
+  },
+  {
+   "addr": "suit-2pc|Trousers-front-pockets|front-pocket-style|quarter-top",
+   "slot": "techpackIllustration",
+   "path": "/images/blueprints/factory/1c5aed3c1ce4__3104__2.5cm_slant.jpg"
+  },
+  {
+   "addr": "suit-2pc|Trousers-front-pockets|pocket-stitching|pocket-stitch-none",
+   "slot": "illustration",
+   "path": "/images/blueprints/factory/10bfe4668d92__31A6__No_top_stitch_hidden_stitch.jpg"
+  },
+  {
+   "addr": "suit-2pc|Trousers-front-pockets|pocket-stitching|pocket-stitch-none",
+   "slot": "techpackIllustration",
+   "path": "/images/blueprints/factory/10bfe4668d92__31A6__No_top_stitch_hidden_stitch.jpg"
+  },
+  {
+   "addr": "suit-2pc|Trousers-front-pockets|pocket-stitching|pocket-stitch-015",
+   "slot": "illustration",
+   "path": "/images/blueprints/remote/cefac731f303__31A1.jpg"
+  },
+  {
+   "addr": "suit-2pc|Trousers-front-pockets|pocket-stitching|pocket-stitch-015",
+   "slot": "techpackIllustration",
+   "path": "/images/blueprints/remote/cefac731f303__31A1.jpg"
+  },
+  {
+   "addr": "suit-2pc|Trousers-pleats-structure|fly-stitching|fly-stitch-none",
+   "slot": "illustration",
+   "path": "/images/blueprints/factory/10bfe4668d92__31A6__No_top_stitch_hidden_stitch.jpg"
+  },
+  {
+   "addr": "suit-2pc|Trousers-bottom-hem|hem-style|hem-blind",
+   "slot": "illustration",
+   "path": "/images/blueprints/factory/bad6c1a76bae__3607__6.4cm.jpg"
+  },
+  {
+   "addr": "suit-2pc|Trousers-bottom-hem|hem-style|hem-blind",
+   "slot": "techpackIllustration",
+   "path": "/images/blueprints/factory/bad6c1a76bae__3607__6.4cm.jpg"
+  },
+  {
+   "addr": "suit-2pc|Trousers-bottom-hem|hem-style|hem-machine-plain",
+   "slot": "illustration",
+   "path": "/images/blueprints/remote/6ddcbc615b71__3608.jpg"
+  },
+  {
+   "addr": "suit-2pc|Trousers-bottom-hem|hem-style|hem-machine-plain",
+   "slot": "techpackIllustration",
+   "path": "/images/blueprints/remote/6ddcbc615b71__3608.jpg"
+  },
+  {
+   "addr": "suit-3pc|suit-pockets|lower-pocket|lp-straight-jetted-40",
+   "slot": "illustration",
+   "path": "/images/blueprints/supplier/0135c80fdb4e__0201__Regular.jpg"
+  },
+  {
+   "addr": "suit-3pc|suit-pockets|lower-pocket|lp-straight-jetted-40",
+   "slot": "techpackIllustration",
+   "path": "/images/blueprints/supplier/0135c80fdb4e__0201__Regular.jpg"
+  },
+  {
+   "addr": "suit-3pc|suit-pockets|lower-pocket|lp-straight-jetted-45",
+   "slot": "illustration",
+   "path": "/images/blueprints/supplier/0135c80fdb4e__0201__Regular.jpg"
+  },
+  {
+   "addr": "suit-3pc|suit-pockets|lower-pocket|lp-straight-jetted-45",
+   "slot": "techpackIllustration",
+   "path": "/images/blueprints/supplier/0135c80fdb4e__0201__Regular.jpg"
+  },
+  {
+   "addr": "suit-3pc|suit-pockets|lower-pocket|lp-straight-jetted-50",
+   "slot": "illustration",
+   "path": "/images/blueprints/supplier/0135c80fdb4e__0201__Regular.jpg"
+  },
+  {
+   "addr": "suit-3pc|suit-pockets|lower-pocket|lp-straight-jetted-50",
+   "slot": "techpackIllustration",
+   "path": "/images/blueprints/supplier/0135c80fdb4e__0201__Regular.jpg"
+  },
+  {
+   "addr": "suit-3pc|suit-pockets|lower-pocket|lp-straight-jetted-55",
+   "slot": "illustration",
+   "path": "/images/blueprints/supplier/0135c80fdb4e__0201__Regular.jpg"
+  },
+  {
+   "addr": "suit-3pc|suit-pockets|lower-pocket|lp-straight-jetted-55",
+   "slot": "techpackIllustration",
+   "path": "/images/blueprints/supplier/0135c80fdb4e__0201__Regular.jpg"
+  },
+  {
+   "addr": "suit-3pc|suit-pockets|lower-pocket|lp-straight-jetted-60",
+   "slot": "illustration",
+   "path": "/images/blueprints/supplier/0135c80fdb4e__0201__Regular.jpg"
+  },
+  {
+   "addr": "suit-3pc|suit-pockets|lower-pocket|lp-straight-jetted-60",
+   "slot": "techpackIllustration",
+   "path": "/images/blueprints/supplier/0135c80fdb4e__0201__Regular.jpg"
+  },
+  {
+   "addr": "suit-3pc|suit-pockets|lower-pocket|lp-straight-jetted-65",
+   "slot": "illustration",
+   "path": "/images/blueprints/supplier/0135c80fdb4e__0201__Regular.jpg"
+  },
+  {
+   "addr": "suit-3pc|suit-pockets|lower-pocket|lp-straight-jetted-65",
+   "slot": "techpackIllustration",
+   "path": "/images/blueprints/supplier/0135c80fdb4e__0201__Regular.jpg"
+  },
+  {
+   "addr": "suit-3pc|Trousers-front-pockets|front-pocket-style|quarter-top",
+   "slot": "illustration",
+   "path": "/images/blueprints/factory/1c5aed3c1ce4__3104__2.5cm_slant.jpg"
+  },
+  {
+   "addr": "suit-3pc|Trousers-front-pockets|front-pocket-style|quarter-top",
+   "slot": "techpackIllustration",
+   "path": "/images/blueprints/factory/1c5aed3c1ce4__3104__2.5cm_slant.jpg"
+  },
+  {
+   "addr": "suit-3pc|Trousers-front-pockets|pocket-stitching|pocket-stitch-none",
+   "slot": "illustration",
+   "path": "/images/blueprints/factory/10bfe4668d92__31A6__No_top_stitch_hidden_stitch.jpg"
+  },
+  {
+   "addr": "suit-3pc|Trousers-front-pockets|pocket-stitching|pocket-stitch-none",
+   "slot": "techpackIllustration",
+   "path": "/images/blueprints/factory/10bfe4668d92__31A6__No_top_stitch_hidden_stitch.jpg"
+  },
+  {
+   "addr": "suit-3pc|Trousers-front-pockets|pocket-stitching|pocket-stitch-015",
+   "slot": "illustration",
+   "path": "/images/blueprints/remote/cefac731f303__31A1.jpg"
+  },
+  {
+   "addr": "suit-3pc|Trousers-front-pockets|pocket-stitching|pocket-stitch-015",
+   "slot": "techpackIllustration",
+   "path": "/images/blueprints/remote/cefac731f303__31A1.jpg"
+  },
+  {
+   "addr": "suit-3pc|Trousers-pleats-structure|fly-stitching|fly-stitch-none",
+   "slot": "illustration",
+   "path": "/images/blueprints/factory/10bfe4668d92__31A6__No_top_stitch_hidden_stitch.jpg"
+  },
+  {
+   "addr": "suit-3pc|Trousers-bottom-hem|hem-style|hem-blind",
+   "slot": "illustration",
+   "path": "/images/blueprints/factory/bad6c1a76bae__3607__6.4cm.jpg"
+  },
+  {
+   "addr": "suit-3pc|Trousers-bottom-hem|hem-style|hem-blind",
+   "slot": "techpackIllustration",
+   "path": "/images/blueprints/factory/bad6c1a76bae__3607__6.4cm.jpg"
+  },
+  {
+   "addr": "suit-3pc|Trousers-bottom-hem|hem-style|hem-machine-plain",
+   "slot": "illustration",
+   "path": "/images/blueprints/remote/6ddcbc615b71__3608.jpg"
+  },
+  {
+   "addr": "suit-3pc|Trousers-bottom-hem|hem-style|hem-machine-plain",
+   "slot": "techpackIllustration",
+   "path": "/images/blueprints/remote/6ddcbc615b71__3608.jpg"
+  },
+  {
+   "addr": "trousers|front-pockets|front-pocket-style|quarter-top",
+   "slot": "illustration",
+   "path": "/images/blueprints/factory/1c5aed3c1ce4__3104__2.5cm_slant.jpg"
+  },
+  {
+   "addr": "trousers|front-pockets|front-pocket-style|quarter-top",
+   "slot": "techpackIllustration",
+   "path": "/images/blueprints/factory/1c5aed3c1ce4__3104__2.5cm_slant.jpg"
+  },
+  {
+   "addr": "trousers|front-pockets|pocket-stitching|pocket-stitch-none",
+   "slot": "illustration",
+   "path": "/images/blueprints/factory/10bfe4668d92__31A6__No_top_stitch_hidden_stitch.jpg"
+  },
+  {
+   "addr": "trousers|front-pockets|pocket-stitching|pocket-stitch-none",
+   "slot": "techpackIllustration",
+   "path": "/images/blueprints/factory/10bfe4668d92__31A6__No_top_stitch_hidden_stitch.jpg"
+  },
+  {
+   "addr": "trousers|front-pockets|pocket-stitching|pocket-stitch-015",
+   "slot": "illustration",
+   "path": "/images/blueprints/remote/cefac731f303__31A1.jpg"
+  },
+  {
+   "addr": "trousers|front-pockets|pocket-stitching|pocket-stitch-015",
+   "slot": "techpackIllustration",
+   "path": "/images/blueprints/remote/cefac731f303__31A1.jpg"
+  },
+  {
+   "addr": "trousers|pleats-structure|fly-stitching|fly-stitch-none",
+   "slot": "illustration",
+   "path": "/images/blueprints/factory/10bfe4668d92__31A6__No_top_stitch_hidden_stitch.jpg"
+  },
+  {
+   "addr": "trousers|bottom-hem|hem-style|hem-blind",
+   "slot": "illustration",
+   "path": "/images/blueprints/factory/bad6c1a76bae__3607__6.4cm.jpg"
+  },
+  {
+   "addr": "trousers|bottom-hem|hem-style|hem-blind",
+   "slot": "techpackIllustration",
+   "path": "/images/blueprints/factory/bad6c1a76bae__3607__6.4cm.jpg"
+  },
+  {
+   "addr": "trousers|bottom-hem|hem-style|hem-machine-plain",
+   "slot": "illustration",
+   "path": "/images/blueprints/remote/6ddcbc615b71__3608.jpg"
+  },
+  {
+   "addr": "trousers|bottom-hem|hem-style|hem-machine-plain",
+   "slot": "techpackIllustration",
+   "path": "/images/blueprints/remote/6ddcbc615b71__3608.jpg"
+  }
+ ]
+}
