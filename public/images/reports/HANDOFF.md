@@ -108,7 +108,7 @@ decision, and it is the owner's.
 cd blessed-dressed
 node tools/build_generation_queue.mjs        # rebuild the worklist
 node tools/prep_batch.mjs --n=200 --compact  # ~4 min; writes batch-payload.json
-node tools/batch_slice.mjs --list            # 120 shootable, 40 excluded
+node tools/batch_slice.mjs --list            # 96 shootable, 40 rungs excluded
 ```
 
 Then per group: `node tools/batch_slice.mjs --group="<part>::<field>" --skip-rungs`
