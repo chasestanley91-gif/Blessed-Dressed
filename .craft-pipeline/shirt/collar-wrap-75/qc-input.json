@@ -10,12 +10,32 @@
     "composition": 99,
     "blueprint-match": 98
   },
-  "errors": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "geometry",
+      "description": "Collar point tips lift very slightly off the shirt front, where the drawing presents the points perfectly flat.",
+      "expected": "Points lying fully flat against the shirt front as drawn",
+      "actual": "A few millimetres of natural drape lift at each tip",
+      "correction": "If regenerating: state 'points pressed perfectly flat against the shirt front'"
+    },
+    {
+      "severity": "minor",
+      "category": "placement",
+      "description": "Stud position sits roughly two-thirds down each leaf toward the point; the drawing's stud circles are too small to verify placement to the millimetre.",
+      "expected": "Stud near each point exactly as drawn",
+      "actual": "Stud near each point, symmetric, position plausible but not millimetre-verifiable",
+      "correction": "None required unless the owner flags stud placement"
+    }
+  ],
   "lockedFeatures": [
+    "symmetric closed leaves meeting over the fastened top button (narrow inverted-V notch)",
+    "doubled wrap edge on both leaves",
+    "one small stud near each collar point",
+    "moderate 7.5 cm points angled outward-downward, approx 65 degree spread",
     "white cotton poplin",
-    "open collar no tie",
     "tight collar framing",
     "light-grey studio set"
   ],
-  "notes": "Follows the DRAWING (symmetric double-edged collar with tip studs). Catalog description claims asymmetric overlap — description-vs-drawing conflict LOGGED in spec-conflicts; drawing wins per owner ruling."
+  "notes": "Attempt 2 after owner rejection of attempt 1 (Wrong shape / outline). The corrected SHAPE LOCK landed: symmetric CLOSED point collar replacing attempt 1's tall open tab-collar silhouette with elongated vertical points and exposed band button. Doubled wrap edge and tip studs both render clearly, matching the drawing; catalog prose claiming an asymmetric overlapping sweep remains overruled by the drawing (descriptionHazards NO_GEOMETRY, drawing wins per owner ruling). QC here is advisory for the unattended wave: NO catalog write-back performed regardless of verdict - the owner decides publishes."
 }

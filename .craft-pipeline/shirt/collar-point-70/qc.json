@@ -2,127 +2,51 @@
   "addr": "shirt > collar-point-70",
   "productId": "shirt",
   "optionId": "collar-point-70",
-  "attempt": 3,
+  "attempt": 4,
   "maxAttempts": 3,
   "scores": {
-    "shape": 98,
+    "shape": 100,
     "geometry": 98,
-    "dimensions": 96,
-    "angles": 96,
-    "construction": 96,
-    "placement": 98,
-    "symmetry": 99,
-    "composition": 97,
-    "blueprint-match": 97
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 100,
+    "placement": 100,
+    "symmetry": 98,
+    "composition": 100,
+    "blueprint-match": 98
   },
   "scoreMin": 98,
   "waiverMin": 95,
-  "belowMinCategories": [
-    "dimensions",
-    "angles",
-    "construction",
-    "composition",
-    "blueprint-match"
-  ],
+  "belowMinCategories": [],
   "belowWaiverMinCategories": [],
   "errors": [
     {
       "severity": "minor",
-      "category": "angles",
-      "description": "The V between the inner edges of the two leaves reads slightly wider than the 60 degrees the drawing annotates — closer to a moderate spread than the drawn narrow point.",
-      "expected": "about 60 degrees between the inner edges of the leaves, as annotated on the drawing",
-      "actual": "a somewhat wider opening, perhaps 65-70 degrees",
-      "correction": "Accepted. This option's rung is a POINT LENGTH of 7.0 cm, not a spread angle; the leaves are unambiguously a point collar and no sibling in this field is separated by this amount of spread, so the difference misleads nobody."
-    },
-    {
-      "severity": "minor",
-      "category": "construction",
-      "description": "The edge stitching along the collar leaves is present but very faint at the 1k tier — legible on inspection, not at a glance.",
-      "expected": "a visible topstitch line following the collar edge, as dashed on the drawing",
-      "actual": "a subtle low-contrast stitch line, white thread on white poplin",
-      "correction": "Accepted. This is at the limit of what the 1k tier resolves; the line is present and correctly placed."
+      "category": "symmetry",
+      "description": "Slight garment rotation in the presentation: the right collar tip sits marginally lower (~5% of point length) than the left. Presentation/camera artifact, not a construction difference — both leaves match in length, angle and tip shape.",
+      "expected": "Both tips at identical drop, dead-frontal presentation as in the drawing",
+      "actual": "Right tip approximately 5% of point length lower due to a slight clockwise garment rotation",
+      "correction": "If regenerated: request a dead-frontal, unrotated presentation with both tips at equal height"
     },
     {
       "severity": "minor",
       "category": "dimensions",
-      "description": "The 7.0 cm point length cannot be verified absolutely from an isolated collar with no scale reference in frame.",
-      "expected": "collar points measuring 7.0 cm",
-      "actual": "point length proportionate to the collar band and consistent with 7.0 cm, but not independently measurable",
-      "correction": "Accepted as a limit of the format rather than a defect of the render. Recorded so the claim is not overstated."
+      "description": "Exact 7.0 cm point length cannot be proven from a photograph; the points read as classic moderate length, proportionally consistent with 7.0 cm against the collar band and button scale.",
+      "expected": "Point length exactly 7.0 cm",
+      "actual": "Visually moderate/classic point length consistent with 7.0 cm; not measurable to the millimetre",
+      "correction": "None required; measurement is within visual tolerance"
     }
   ],
-  "verdict": "PASS_WAIVED",
-  "waiver": {
-    "granted": true,
-    "reason": "minor-only at attempt 3 of 3: retry budget exhausted with zero critical/major findings and every category >= 95",
-    "waiverMin": 95,
-    "scoreMin": 98,
-    "belowScoreMin": [
-      {
-        "category": "dimensions",
-        "score": 96,
-        "shortfall": 2
-      },
-      {
-        "category": "angles",
-        "score": 96,
-        "shortfall": 2
-      },
-      {
-        "category": "construction",
-        "score": 96,
-        "shortfall": 2
-      },
-      {
-        "category": "composition",
-        "score": 97,
-        "shortfall": 1
-      },
-      {
-        "category": "blueprint-match",
-        "score": 97,
-        "shortfall": 1
-      }
-    ],
-    "minorErrors": [
-      {
-        "category": "angles",
-        "description": "The V between the inner edges of the two leaves reads slightly wider than the 60 degrees the drawing annotates — closer to a moderate spread than the drawn narrow point.",
-        "expected": "about 60 degrees between the inner edges of the leaves, as annotated on the drawing",
-        "actual": "a somewhat wider opening, perhaps 65-70 degrees"
-      },
-      {
-        "category": "construction",
-        "description": "The edge stitching along the collar leaves is present but very faint at the 1k tier — legible on inspection, not at a glance.",
-        "expected": "a visible topstitch line following the collar edge, as dashed on the drawing",
-        "actual": "a subtle low-contrast stitch line, white thread on white poplin"
-      },
-      {
-        "category": "dimensions",
-        "description": "The 7.0 cm point length cannot be verified absolutely from an isolated collar with no scale reference in frame.",
-        "expected": "collar points measuring 7.0 cm",
-        "actual": "point length proportionate to the collar band and consistent with 7.0 cm, but not independently measurable"
-      }
-    ],
-    "attempt": 3,
-    "maxAttempts": 3,
-    "waiverAttemptFloor": 3,
-    "authority": "user decision 2026-07-30: QC gate stays >=98; a 3rd attempt is allowed; after 3 attempts an image with ZERO critical/major findings may ship at >=95 as a LOGGED WAIVER in qc.json",
-    "grantedAt": "2026-07-31T23:49:20.469Z"
-  },
+  "verdict": "PASS",
+  "waiver": null,
   "correction": null,
   "lockedFeatures": [
-    "straight-on frontal view, square to the camera, matching the drawing",
-    "both collar leaves fully in frame and mirror images of each other",
-    "a single clean acute point on each leaf — no doubled edge, no secondary crease",
-    "no button, loop, tab or button-down anchor at or near either point",
-    "collar band with its buttonhole and button visible",
-    "no model, no face, no neck, no skin in frame",
-    "no necktie",
-    "white cotton poplin with visible weave",
-    "seamless neutral light-grey studio background",
-    "zero traced annotation: no numbers, no 60.00 degree callout, no leader lines, no arrows"
+    "collar-band button FASTENED at the throat, leaves converging close over the closed band (the attempt-3 cutaway splay is corrected — owner's rejection addressed)",
+    "narrow ~60-degree spread, tips aimed downward, never outward",
+    "straight acute point tips (no club, no squared edge, no button-down)",
+    "clean detail crop, no model/skin/tie, no annotations or text, neutral light-grey studio background",
+    "crisp cotton poplin texture with fine even edge stitching and horizontal band buttonhole"
   ],
-  "notes": "ATTEMPT 3, taken after this option sat UNMET at 'attempt 2 of 2' — a full attempt short of the confirmed 3-attempt budget. Attempt 2's two MAJOR defects are both resolved and neither recurs: the pale malformed lump at the wearer-right collar point, and the doubled/ambiguous leaf edge. Both were artifacts of an extreme three-quarter viewpoint, and the square frontal view the drawing itself uses removed them together.\n\nTwo upstream defects were fixed before this attempt rather than worked around in the prompt. First, the prompt had been built from a STALE spec asserting 'button-down point' — a shape scraped from the description's comparative clause ('the sweet spot between the long traditional point and the casual button-down'). Second, and the reason the first fix was not sufficient on its own: dropping the shape stops the prompt ASSERTING a button-down, but the sentence survives verbatim inside the quoted description, so the model is still told about one. The interpreter now reports such shapes as negatedShapes and the director emits each as an explicit NEGATIVE. Across all 2,862 catalog options this fires on exactly 3 — the same 3 the failure log named, two of them HIDDEN-button options where a visible button is the precise opposite of what the option means — and on no others.\n\nAll nine categories are at or above 95 with zero Critical or Major findings, so this qualifies for the logged waiver at attempt 3 under the standing policy. The three remaining findings are minor, and two of them are limits of the format rather than faults in the render.",
-  "checkedAt": "2026-07-31T23:49:20.470Z"
+  "notes": "Attempt 4 after owner rejection of attempt 3 ('TO MUCH OF A CUTAWAY AT THE BAND'). The rejection driver is corrected: the band is buttoned and the leaves meet close together over it, forming the narrow inverted-V of the drawing's 60.00-degree annotation; if anything the candidate errs marginally narrower than the drawing, the safe side of the owner's correction. All 14 checklist items pass; all four forbidden conditions absent. QC is advisory in this wave — owner decides the publish; no catalog write-back performed.",
+  "checkedAt": "2026-08-11T09:17:23.523Z"
 }

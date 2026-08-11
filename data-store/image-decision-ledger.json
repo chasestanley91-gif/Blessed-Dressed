@@ -1,12 +1,12 @@
 {
  "version": 1,
- "builtAt": "2026-08-11T08:44:24.607Z",
+ "builtAt": "2026-08-11T23:31:07.925Z",
  "builder": "tools/build_decision_ledger.mjs",
  "note": "Canonical merged decision ledger. Downstream tools read THIS, not the individual sources. Machine events (machine:true) are evidence, never approval.",
  "sources": {
   "admin-portal": {
    "path": "data-store/image-review-decisions.json",
-   "decisions": 297
+   "decisions": 392
   },
   "july-v3": {
    "path": "public/images/reports/review-decisions-v3-2026-07-30.json",
@@ -33,16 +33,16 @@
  },
  "stats": {
   "crafts": 2862,
-  "adminBound": 297,
+  "adminBound": 392,
   "julyEvents": 8097,
   "historyEvents": 938,
   "qcEvents": 376,
-  "approvedCrafts": 1986,
-  "photoApproved": 1765,
-  "illustrationKeptOnly": 221,
-  "rejectedOnly": 727,
+  "approvedCrafts": 1987,
+  "photoApproved": 1773,
+  "illustrationKeptOnly": 214,
+  "rejectedOnly": 731,
   "conflicted": 0,
-  "undecided": 149,
+  "undecided": 144,
   "illustration": {
    "verifiedMatch": 395,
    "drawingUnverified": 1631,
@@ -794,11 +794,11 @@
     {
      "source": "qc",
      "machine": true,
-     "verdict": "PASS_WAIVED",
-     "attempt": 3,
+     "verdict": "PASS",
+     "attempt": 4,
      "image": {
-      "path": ".craft-pipeline/shirt/collar-point-70/candidate-3.png",
-      "sha1": "caf4da6d623e8f62f9f5d2e13d051ad95d5b39b3",
+      "path": ".craft-pipeline/shirt/collar-point-70/candidate-4.png",
+      "sha1": "a2b97ebb9501e1df64541692c000f02d1784aa4e",
       "exists": true,
       "kind": "pipeline-candidate"
      }
@@ -1179,10 +1179,10 @@
      "source": "qc",
      "machine": true,
      "verdict": "PASS",
-     "attempt": 1,
+     "attempt": 2,
      "image": {
-      "path": ".craft-pipeline/shirt/collar-curve-point-75/candidate-1.png",
-      "sha1": "728e25fb974d53155da051d1f5eb9f85b57c8e09",
+      "path": ".craft-pipeline/shirt/collar-curve-point-75/candidate-2.png",
+      "sha1": "e95fb54a5b1d437935847a6a30f79b3c58d169fc",
       "exists": true,
       "kind": "pipeline-candidate"
      }
@@ -2036,7 +2036,7 @@
       "kind": "was-live",
       "alias": {
        "path": "/images/generated/shirt/collar-hidden-btn-75.png",
-       "sha1": "26184cf5a6a43a32cbea06d242e01ceaf5d5a922"
+       "sha1": "2227f5d34388d9aece38ee78e6ec5f3be030202b"
       }
      },
      "replacedWith": "/images/techpacks/shirt/lapel/hidden-button-collar-in-75cm.jpg",
@@ -2046,10 +2046,10 @@
      "source": "qc",
      "machine": true,
      "verdict": "PASS",
-     "attempt": 1,
+     "attempt": 2,
      "image": {
-      "path": ".craft-pipeline/shirt/collar-hidden-btn-75/candidate-1.png",
-      "sha1": "26184cf5a6a43a32cbea06d242e01ceaf5d5a922",
+      "path": ".craft-pipeline/shirt/collar-hidden-btn-75/candidate-2.png",
+      "sha1": "2227f5d34388d9aece38ee78e6ec5f3be030202b",
       "exists": true,
       "kind": "pipeline-candidate"
      }
@@ -2168,7 +2168,7 @@
       "kind": "was-live",
       "alias": {
        "path": "/images/generated/shirt/collar-wrap-75.png",
-       "sha1": "f1fb6c5c4d9aaf8024df1924379f32b41bb81fa1"
+       "sha1": "4a4cb5af46ec627995984e73346a9d9da863401f"
       }
      },
      "replacedWith": "/images/techpacks/shirt/lapel/wrap-collar-in-75cm.jpg",
@@ -2178,10 +2178,10 @@
      "source": "qc",
      "machine": true,
      "verdict": "PASS",
-     "attempt": 1,
+     "attempt": 2,
      "image": {
-      "path": ".craft-pipeline/shirt/collar-wrap-75/candidate-1.png",
-      "sha1": "f1fb6c5c4d9aaf8024df1924379f32b41bb81fa1",
+      "path": ".craft-pipeline/shirt/collar-wrap-75/candidate-2.png",
+      "sha1": "4a4cb5af46ec627995984e73346a9d9da863401f",
       "exists": true,
       "kind": "pipeline-candidate"
      }
@@ -2303,17 +2303,22 @@
    "events": [
     {
      "source": "admin-portal",
-     "via": "map",
+     "via": "log",
+     "event": "decision",
      "verdict": "approved",
-     "attempt": 3,
+     "attempt": 4,
      "image": {
-      "path": ".craft-pipeline/shirt/collar-small-sq-50/candidate-3.png",
-      "sha1": "c595d495e687c4419ef5b7010a690a2cfbd4802d",
+      "path": ".craft-pipeline/shirt/collar-small-sq-50/candidate-4.png",
+      "sha1": "6a791d8f47661a91f5709df3b1519d6e234d200c",
       "exists": true,
-      "kind": "pipeline-candidate"
+      "kind": "logged-at-decision-time"
      },
-     "decidedAt": "2026-08-10T18:26:09.980Z",
-     "boundBy": "pipeline-spec",
+     "notes": "not the correct collar spread angle. If you mean a **small square collar** with:\n\n* **Collar point length:** 5.0 cm\n* **Spread:** 80° included angle between the two collar points\n\nThen the geometry is:\n\ngenui{\"plane_coordinate_geometry_learning_block\":{\"type_id\":\"DISTANCE_FORMULA\",\"content\":\"d=\\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}\"}}\n\n### 1. Half-angle\n\nThe 80° spread is split equally:\n\n[\n80^\\circ \\div 2 = 40^\\circ\n]\n\nEach collar point is therefore **40° from the center line**.\n\n### 2. Width across the collar points\n\nWith each point being 5.0 cm long:\n\n[\nW=2(5.0)\\sin(40^\\circ)\n]\n\n[\nW=6.43\\text{ cm}\n]\n\n### Result\n\n**5.0 cm point length + 80° spread = approximately 6.43 cm tip-to-tip width.**\n\nSo for your tech-pack specification, you could write:\n\n> **Small Square Collar — 5.0 cm Point Length, 80° Spread, 6.43 cm Tip-to-Tip**\n\nIf by **\"80° spread\"** you mean the *angle of each collar side relative to the centerline* rather than the included angle, the calculation is different. d=\\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}",
+     "references": [
+      "/images/review-refs/shirt/collar-small-sq-50/1786484058707-hnmrvj.png"
+     ],
+     "decidedAt": "2026-08-11T21:34:25.299Z",
+     "boundBy": "explicit-addr",
      "portalKey": "shirt/collar-small-sq-50",
      "current": true
     },
@@ -2616,17 +2621,18 @@
    "events": [
     {
      "source": "admin-portal",
-     "via": "map",
+     "via": "log",
+     "event": "decision",
      "verdict": "approved",
-     "attempt": 3,
+     "attempt": 4,
      "image": {
-      "path": ".craft-pipeline/shirt/collar-sq-65-btn/candidate-3.png",
-      "sha1": "934f2a2655c41b6395640d28b224f23f76c46777",
+      "path": ".craft-pipeline/shirt/collar-sq-65-btn/candidate-4.png",
+      "sha1": "81c10dbfb1427b47c7dde4dbb36534d94015a724",
       "exists": true,
-      "kind": "pipeline-candidate"
+      "kind": "logged-at-decision-time"
      },
-     "decidedAt": "2026-08-10T18:26:03.284Z",
-     "boundBy": "pipeline-spec",
+     "decidedAt": "2026-08-11T21:18:55.611Z",
+     "boundBy": "explicit-addr",
      "portalKey": "shirt/collar-sq-65-btn",
      "current": true
     },
@@ -2884,12 +2890,29 @@
    "label": "Hexagon Collar",
    "scope": "shirt",
    "current": {
-    "image": "/images/techpacks/shirt/lapel/hexagon-collar.jpg",
+    "image": "/images/generated/shirt/collar-hexagon.webp",
     "techpackIllustration": "/images/techpacks/shirt/lapel/hexagon-collar.jpg",
     "illustration": "/images/techpacks/shirt/lapel/hexagon-collar.jpg",
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 3,
+     "image": {
+      "path": ".craft-pipeline/shirt/collar-hexagon/candidate-3.png",
+      "sha1": "cc0fec7bcb361eff16d1498b6b1ec7580f5cfed7",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-08-11T22:48:20.444Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/collar-hexagon",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -2958,8 +2981,8 @@
      }
     }
    ],
-   "state": "illustration-kept-only",
-   "approvedPhotoEvents": 0,
+   "state": "has-owner-photo-approval",
+   "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 1,
    "rejectionEvents": 2,
    "illustration": {
@@ -3161,6 +3184,24 @@
    },
    "events": [
     {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 3,
+     "image": {
+      "path": ".craft-pipeline/shirt/collar-regular-19/candidate-3.png",
+      "sha1": "efd2f3f1f3d2f9905fd20dbf10ffae1dc283032a",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "notes": "supposed to be a button down with a hidden button under each collar point Yes — this illustration is showing a **90° included collar spread**, measured between the two collar-point directions.\n\nIf we use your previous **5.0 cm collar point length**, the math is:\n\n### 1. Split the 90° spread in half\n\n[\n90^\\circ \\div 2 = 45^\\circ\n]\n\nEach collar point extends **45° from the center line**.\n\n### 2. Calculate the tip-to-tip width\n\nWith each collar point = **5.0 cm**:\n\n[\nW = 2L\\sin(\\theta/2)\n]\n\n[\nW = 2(5.0)\\sin(45^\\circ)\n]\n\n[\nW = 10(0.7071)\n]\n\n[\n\\boxed{W = 7.07\\text{ cm}}\n]\n\n### So this collar is:\n\n| Specification                  | Measurement |\n| ------------------------------ | ----------: |\n| Collar point length            |  **5.0 cm** |\n| Included spread                |     **90°** |\n| Half angle                     |     **45°** |\n| Point-to-point geometric width | **7.07 cm** |\n\n**For your tech-pack/image-generation specification:**\n\n> **Small Square Collar — 5.0 cm collar point length, 90° included spread. Collar points extend symmetrically at 45° from the centerline, producing approximately 7.07 cm tip-to-tip geometric spread.**\n\nThe important part for your image-generation pipeline is that **90° is the included angle between the two collar points**, not 90° for each side.",
+     "decidedAt": "2026-08-11T22:14:45.655Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/collar-regular-19",
+     "current": true
+    },
+    {
      "source": "july-v3",
      "verdict": "remake",
      "julyKey": "shirt|lapel|collar-regular-19",
@@ -3290,7 +3331,7 @@
    "state": "illustration-kept-only",
    "approvedPhotoEvents": 0,
    "illustrationKeepEvents": 1,
-   "rejectionEvents": 2,
+   "rejectionEvents": 3,
    "illustration": {
     "path": "/images/techpacks/shirt/lapel/regular-collar-19.jpg",
     "status": "verified-match",
@@ -3308,7 +3349,7 @@
    "label": "Middle Cut-Away 8.5 cm",
    "scope": "shirt",
    "current": {
-    "image": "/images/techpacks/shirt/lapel/middle-cut-away-in-85cm.jpg",
+    "image": "/images/generated/shirt/collar-mid-cutaway-85.webp",
     "techpackIllustration": "/images/techpacks/shirt/lapel/middle-cut-away-in-85cm.jpg",
     "illustration": "/images/techpacks/shirt/lapel/middle-cut-away-in-85cm.jpg",
     "illustrationStatus": "drawing",
@@ -3316,6 +3357,23 @@
     "aiImage": "/images/ai/collar-mid-cutaway-85-1786161613033.jpg"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 3,
+     "image": {
+      "path": ".craft-pipeline/shirt/collar-mid-cutaway-85/candidate-3.png",
+      "sha1": "fd65ad0420538c285c717a060c0f38cd528a1e39",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-08-11T22:48:16.908Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/collar-mid-cutaway-85",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -3459,8 +3517,8 @@
      }
     }
    ],
-   "state": "illustration-kept-only",
-   "approvedPhotoEvents": 0,
+   "state": "has-owner-photo-approval",
+   "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 1,
    "rejectionEvents": 7,
    "illustration": {
@@ -3658,12 +3716,29 @@
    "label": "Large Cut-Away 8.2 cm",
    "scope": "shirt",
    "current": {
-    "image": "/images/techpacks/shirt/lapel/large-cut-away-in-82cm.jpg",
+    "image": "/images/generated/shirt/collar-large-cutaway-82.webp",
     "techpackIllustration": "/images/techpacks/shirt/lapel/large-cut-away-in-82cm.jpg",
     "illustration": "/images/techpacks/shirt/lapel/large-cut-away-in-82cm.jpg",
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 4,
+     "image": {
+      "path": ".craft-pipeline/shirt/collar-large-cutaway-82/candidate-4.png",
+      "sha1": "c8540f322932a220853636abe972b97ebe472b00",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-08-11T21:19:15.626Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/collar-large-cutaway-82",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -3732,8 +3807,8 @@
      }
     }
    ],
-   "state": "illustration-kept-only",
-   "approvedPhotoEvents": 0,
+   "state": "has-owner-photo-approval",
+   "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 1,
    "rejectionEvents": 2,
    "illustration": {
@@ -4021,6 +4096,34 @@
    },
    "events": [
     {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 4,
+     "image": {
+      "path": ".craft-pipeline/shirt/collar-dbl-cutaway-55-btn/candidate-4.png",
+      "sha1": "4aa9cfa009ec0b140b43ce16ee66ee2b366c8593",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Generic version, not this option"
+     ],
+     "references": [
+      "/images/review-refs/shirt/collar-dbl-cutaway-55-btn/1786483062110-2bjw75.jpg",
+      "/images/review-refs/shirt/collar-dbl-cutaway-55-btn/1786483069019-2m6ush.jpg",
+      "/images/review-refs/shirt/collar-dbl-cutaway-55-btn/1786483075421-czdpnz.jpg",
+      "/images/review-refs/shirt/collar-dbl-cutaway-55-btn/1786483082234-2ti210.webp",
+      "/images/review-refs/shirt/collar-dbl-cutaway-55-btn/1786483094335-kwwzlc.webp",
+      "/images/review-refs/shirt/collar-dbl-cutaway-55-btn/1786483118244-a1vbto.webp"
+     ],
+     "decidedAt": "2026-08-11T21:18:43.837Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/collar-dbl-cutaway-55-btn",
+     "current": true
+    },
+    {
      "source": "july-v3",
      "verdict": "remake",
      "julyKey": "shirt|lapel|collar-dbl-cutaway-55-btn",
@@ -4091,7 +4194,7 @@
    "state": "illustration-kept-only",
    "approvedPhotoEvents": 0,
    "illustrationKeepEvents": 1,
-   "rejectionEvents": 2,
+   "rejectionEvents": 3,
    "illustration": {
     "path": "/images/techpacks/shirt/lapel/double-cut-away-collar-in-55cm-with-button.jpg",
     "status": "verified-match",
@@ -4673,12 +4776,29 @@
    "label": "Regular Collar 21",
    "scope": "shirt",
    "current": {
-    "image": "/images/techpacks/shirt/lapel/regular-collar-21.jpg",
+    "image": "/images/generated/shirt/collar-regular-21.webp",
     "techpackIllustration": "/images/techpacks/shirt/lapel/regular-collar-21.jpg",
     "illustration": "/images/techpacks/shirt/lapel/regular-collar-21.jpg",
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 2,
+     "image": {
+      "path": ".craft-pipeline/shirt/collar-regular-21/candidate-2.png",
+      "sha1": "c3274e15561dbd7f38cc24930f369de582589f2a",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-08-11T22:53:40.172Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/collar-regular-21",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -4747,8 +4867,8 @@
      }
     }
    ],
-   "state": "illustration-kept-only",
-   "approvedPhotoEvents": 0,
+   "state": "has-owner-photo-approval",
+   "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 1,
    "rejectionEvents": 2,
    "illustration": {
@@ -5620,10 +5740,10 @@
      "source": "qc",
      "machine": true,
      "verdict": "UNMET",
-     "attempt": 3,
+     "attempt": 4,
      "image": {
-      "path": ".craft-pipeline/shirt/collar-hexagon-stand/candidate-3.png",
-      "sha1": "98020005b5b470f1351d292accf1cbb8001ae04b",
+      "path": ".craft-pipeline/shirt/collar-hexagon-stand/candidate-4.png",
+      "sha1": "272ddd6741c4e5897564515d887f327ea1f4b69e",
       "exists": true,
       "kind": "pipeline-candidate"
      }
@@ -6394,6 +6514,29 @@
    },
    "events": [
     {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 4,
+     "image": {
+      "path": ".craft-pipeline/shirt/collar-cuban/candidate-4.png",
+      "sha1": "58baa824ea53ad95b551f0c36b67dc08adf25020",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "notes": "the collar should fade back a 1/3 of the way back. collar fold shouldn't go all the way around follow style in illustration",
+     "references": [
+      "/images/review-refs/shirt/collar-cuban/1786485090820-7rbwax.webp",
+      "/images/review-refs/shirt/collar-cuban/1786485211503-y9ujcb.webp",
+      "/images/review-refs/shirt/collar-cuban/1786485221508-3vr0up.webp"
+     ],
+     "decidedAt": "2026-08-11T21:57:45.885Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/collar-cuban",
+     "current": true
+    },
+    {
      "source": "july-v3",
      "verdict": "approved",
      "binding": "row-as-of-2026-07-30",
@@ -6464,7 +6607,7 @@
    "state": "has-owner-photo-approval",
    "approvedPhotoEvents": 2,
    "illustrationKeepEvents": 1,
-   "rejectionEvents": 1,
+   "rejectionEvents": 2,
    "illustration": {
     "path": "/images/techpacks/shirt/lapel/cuban-collar.jpg",
     "status": "suspect-ambiguous",
@@ -10288,6 +10431,27 @@
    },
    "events": [
     {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 3,
+     "image": {
+      "path": ".craft-pipeline/shirt/stay-removable/candidate-3.png",
+      "sha1": "3b439bfb6a9bd0db51096158ed75195f59d234f6",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Wrong shape / outline",
+      "Wrong side or orientation"
+     ],
+     "decidedAt": "2026-08-11T22:17:25.680Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/stay-removable",
+     "current": true
+    },
+    {
      "source": "july-v3",
      "verdict": "approved",
      "binding": "row-as-of-2026-07-30",
@@ -10417,7 +10581,7 @@
    "state": "has-owner-photo-approval",
    "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 3,
-   "rejectionEvents": 4,
+   "rejectionEvents": 5,
    "illustration": {
     "path": "/images/collar_stay/removable.jpg",
     "status": "suspect-ambiguous",
@@ -11051,6 +11215,29 @@
    },
    "events": [
     {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 4,
+     "image": {
+      "path": ".craft-pipeline/shirt/csh-32/candidate-4.png",
+      "sha1": "0a1775303051582759bc54d5bc9c8f9add85e756",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Wrong shape / outline",
+      "Wrong side or orientation",
+      "Feature not visible / too small in frame",
+      "Wrong garment or wrong part"
+     ],
+     "decidedAt": "2026-08-11T22:08:30.299Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/csh-32",
+     "current": true
+    },
+    {
      "source": "july-v3",
      "verdict": "approved",
      "binding": "row-as-of-2026-07-30",
@@ -11073,7 +11260,7 @@
    "state": "has-owner-photo-approval",
    "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 0,
-   "rejectionEvents": 0,
+   "rejectionEvents": 1,
    "illustration": {
     "path": "/images/collar_stand_height/collar-band-width-32cm.jpg",
     "status": "drawing-unverified",
@@ -11496,7 +11683,7 @@
    "label": "Round Collar Stand",
    "scope": "shirt",
    "current": {
-    "image": "/images/collar_stand/round-collar-stand.jpg",
+    "image": "/images/generated/shirt/cs-round.webp",
     "techpackIllustration": "/images/collar_stand/round-collar-stand.jpg",
     "illustration": "/images/collar_stand/round-collar-stand.jpg",
     "illustrationStatus": "drawing",
@@ -11504,6 +11691,23 @@
     "aiImage": "/images/ai/cs-round-1786160904537.jpg"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 2,
+     "image": {
+      "path": ".craft-pipeline/shirt/cs-round/candidate-2.png",
+      "sha1": "8a4d3579a0a508f883b3a4514ae3f5e2987a9cb3",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-08-11T22:49:13.975Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/cs-round",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -11571,8 +11775,8 @@
      }
     }
    ],
-   "state": "illustration-kept-only",
-   "approvedPhotoEvents": 0,
+   "state": "has-owner-photo-approval",
+   "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 1,
    "rejectionEvents": 2,
    "illustration": {
@@ -11669,10 +11873,10 @@
      "source": "qc",
      "machine": true,
      "verdict": "PASS",
-     "attempt": 1,
+     "attempt": 2,
      "image": {
-      "path": ".craft-pipeline/shirt/cs-round-2btn/candidate-1.png",
-      "sha1": "6019577d4575887d23f52076d78ae3a9348795f1",
+      "path": ".craft-pipeline/shirt/cs-round-2btn/candidate-2.png",
+      "sha1": "ecc886e84ce66af501afc8b9c273af7d3d235e4c",
       "exists": true,
       "kind": "pipeline-candidate"
      }
@@ -11766,13 +11970,30 @@
    "label": "Square Stand (2 Buttons)",
    "scope": "shirt",
    "current": {
-    "image": "/images/collar_stand/square-collar-stand-with-2-buttons.jpg",
-    "techpackIllustration": null,
+    "image": "/images/generated/shirt/cs-square-2btn.webp",
+    "techpackIllustration": "/images/collar_stand/square-collar-stand-with-2-buttons.jpg",
     "illustration": "/images/collar_stand/square-collar-stand-with-2-buttons.jpg",
     "illustrationStatus": "drawing",
     "aiImage": "/images/ai/cs-square-2btn-1786161533233.jpg"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 2,
+     "image": {
+      "path": ".craft-pipeline/shirt/cs-square-2btn/candidate-2.png",
+      "sha1": "4ecced33d1f8fa9c3d67388e34b4a78045637801",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-08-11T22:49:11.228Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/cs-square-2btn",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -11810,7 +12031,7 @@
     }
    ],
    "state": "has-owner-photo-approval",
-   "approvedPhotoEvents": 1,
+   "approvedPhotoEvents": 2,
    "illustrationKeepEvents": 0,
    "rejectionEvents": 0,
    "illustration": {
@@ -11837,6 +12058,30 @@
    },
    "events": [
     {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 3,
+     "image": {
+      "path": ".craft-pipeline/shirt/cs-left-sq-rt-rnd/candidate-3.png",
+      "sha1": "0ea64d8db1cc35a44c8f6475d88d1e52aeb72ceb",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Wrong feature entirely",
+      "Wrong shape / outline"
+     ],
+     "references": [
+      "/images/review-refs/shirt/cs-left-sq-rt-rnd/1786486865851-kndrsk.jpg"
+     ],
+     "decidedAt": "2026-08-11T22:24:48.585Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/cs-left-sq-rt-rnd",
+     "current": true
+    },
+    {
      "source": "july-v3",
      "verdict": "remake",
      "julyKey": "shirt|collar_stand|cs-left-sq-rt-rnd",
@@ -11856,10 +12101,10 @@
      }
     }
    ],
-   "state": "undecided",
+   "state": "rejected-only",
    "approvedPhotoEvents": 0,
    "illustrationKeepEvents": 0,
-   "rejectionEvents": 0,
+   "rejectionEvents": 1,
    "illustration": {
     "path": "/images/collar_stand/left-square-and-right-round.jpg",
     "status": "verified-match",
@@ -18357,12 +18602,29 @@
    "label": "Normal (Standard)",
    "scope": "shirt",
    "current": {
-    "image": "/images/front/normal.jpg",
-    "techpackIllustration": null,
+    "image": "/images/generated/shirt/front-normal.webp",
+    "techpackIllustration": "/images/front/normal.jpg",
     "illustration": "/images/front/normal.jpg",
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 2,
+     "image": {
+      "path": ".craft-pipeline/shirt/front-normal/candidate-2.png",
+      "sha1": "26d34448953c76525a14f2cf16f627a6a49c8842",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-08-11T22:49:03.866Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/front-normal",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -18415,7 +18677,7 @@
     }
    ],
    "state": "has-owner-photo-approval",
-   "approvedPhotoEvents": 1,
+   "approvedPhotoEvents": 2,
    "illustrationKeepEvents": 0,
    "rejectionEvents": 1,
    "illustration": {
@@ -18435,12 +18697,29 @@
    "label": "Dress Shirt Narrow Pleats",
    "scope": "shirt",
    "current": {
-    "image": "/images/front/dress-shirt-with-narrow-pleats.jpg",
-    "techpackIllustration": null,
+    "image": "/images/generated/shirt/front-narrow-pleats.webp",
+    "techpackIllustration": "/images/front/dress-shirt-with-narrow-pleats.jpg",
     "illustration": "/images/front/dress-shirt-with-narrow-pleats.jpg",
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 1,
+     "image": {
+      "path": ".craft-pipeline/shirt/front-narrow-pleats/candidate-1.png",
+      "sha1": "1f0ef19681482bc512d2f02e21e70fe51ca453c7",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-08-11T22:53:43.381Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/front-narrow-pleats",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -18478,7 +18757,7 @@
     }
    ],
    "state": "has-owner-photo-approval",
-   "approvedPhotoEvents": 1,
+   "approvedPhotoEvents": 2,
    "illustrationKeepEvents": 0,
    "rejectionEvents": 0,
    "illustration": {
@@ -18996,11 +19275,12 @@
    "label": "Hidden Placket",
    "scope": "shirt",
    "current": {
-    "image": "/images/placket/hidden-placket.jpg",
+    "image": "/images/generated/shirt/placket-hidden.webp",
     "techpackIllustration": "/images/placket/hidden-placket.jpg",
     "illustration": "/images/placket/hidden-placket.jpg",
     "illustrationStatus": "drawing",
     "photos": [
+     "/images/generated/shirt/placket-hidden.webp",
      "https://propercloth.com/reference/wp-content/uploads/2013/11/covered_placket1.png",
      "https://propercloth.com/reference/wp-content/uploads/2013/11/placket_tuxedo.png"
     ],
@@ -19010,6 +19290,23 @@
     ]
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 1,
+     "image": {
+      "path": ".craft-pipeline/shirt/placket-hidden/candidate-1.png",
+      "sha1": "5cbf4a17859f1d3341a2f3214fe0cad21be819ff",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-08-11T22:53:54.341Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/placket-hidden",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "approved",
@@ -19168,7 +19465,7 @@
     }
    ],
    "state": "has-owner-photo-approval",
-   "approvedPhotoEvents": 1,
+   "approvedPhotoEvents": 2,
    "illustrationKeepEvents": 3,
    "rejectionEvents": 6,
    "illustration": {
@@ -19195,6 +19492,29 @@
     "images": []
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 2,
+     "image": {
+      "path": ".craft-pipeline/shirt/placket-stud-hidden-2btn/candidate-2.png",
+      "sha1": "60a109fa3c02386bfabf45f57376e79f68cd4c4e",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "notes": "This image shows a Stud Hidden Placket (2 Buttons) dress shirt front. The outer placket folds over and conceals the visible buttons, leaving only the top collar button and sometimes the lowest fastening point visible.\n\nHidden Placket Geometry\nFinished Visible Front Placket Width\n\nTypical bespoke measurement:\n\nPW=3.0 cm to 3.5 cmPW = 3.0\\text{ cm to }3.5\\text{ cm}\nHidden Fly Extension\n\nThe concealed layer behind the placket is usually:\n\nHE=PW+2.0 cmHE = PW + 2.0\\text{ cm}\n\nFor a 3 cm finished placket:\n\nHE=3+2=5 cmHE = 3 + 2 = 5\\text{ cm}\nTotal Cut Width\n\nFor a classic hidden placket:\n\nCW=(PW×2)+HECW = (PW \\times 2) + HE\n\nExample:\n\nCW=(3×2)+5CW = (3 \\times 2) + 5 CW=11 cmCW = 11\\text{ cm}\n\nMany bespoke shirtmakers round this to:\n\n10.5−11.5 cm10.5 - 11.5\\text{ cm}\nTwo-Stud Placement\n\nFor a formal hidden placket with only 2 visible studs:\n\nTop Stud\n\nPlaced below the collar stand seam:\n\nS1=7.5 cmS_1 = 7.5\\text{ cm}\nSecond Stud\nS2=S1+8.5 cmS_2 = S_1 + 8.5\\text{ cm}\n\nResult:\n\nStud\tPosition from Neck Seam1\t7.5 cm\n2\t16.0 cm\nFold Lines\n\nFor a 3 cm finished placket:\n\nCF\n│\n\n0 cm    Center Front\n\n3 cm    First Fold\n\n6 cm    Visible Edge\n\n11 cm   Cut Edge\n\n\nOr mathematically:\n\nF1=PWF_1 = PW F2=2PWF_2 = 2PW CE=CWCE = CW\nFormal Bespoke Hidden Placket Formula\n\nFor any desired finished placket width PP:\n\nHidden extension:\n\nH=P+2H = P + 2\n\nTotal cut width:\n\nC=3P+2C = 3P + 2\n\nExample with 3.5 cm placket:\n\nC=(3×3.5)+2C = (3 \\times 3.5)+2 C=12.5 cmC = 12.5\\text{ cm}\nRecommended Bespoke Measurements\n\nFor a luxury MTM or bespoke dress shirt:\n\nFinished placket width: 3.0 cm\nHidden extension: 5.0 cm\nTotal cut width: 11.0 cm\nFirst visible stud: 7.5 cm below collar seam\nStud spacing: 8.5-9.0 cm\nInterlining width: 2.8 cm\n\nThis produces the concealed \"fly-front\" look shown in your image, suitable for tuxedo, formal, and contemporary bespoke shirts.",
+     "tags": [
+      "Wrong side or orientation",
+      "Wrong shape / outline",
+      "Generic version, not this option"
+     ],
+     "decidedAt": "2026-08-11T22:53:31.563Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/placket-stud-hidden-2btn",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "approved",
@@ -19340,7 +19660,7 @@
    "state": "has-owner-photo-approval",
    "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 2,
-   "rejectionEvents": 6,
+   "rejectionEvents": 7,
    "illustration": {
     "path": "/images/placket/stud-hidden-placket-with-2-buttons.jpg",
     "status": "verified-match",
@@ -19358,13 +19678,30 @@
    "label": "Hidden Turn-Up Placket with Knots",
    "scope": "shirt",
    "current": {
-    "image": "/images/placket/hidden-turn-up-placket-with-knots.jpg",
-    "techpackIllustration": null,
+    "image": "/images/generated/shirt/placket-hidden-turnup.webp",
+    "techpackIllustration": "/images/placket/hidden-turn-up-placket-with-knots.jpg",
     "illustration": "/images/placket/hidden-turn-up-placket-with-knots.jpg",
     "illustrationStatus": "drawing",
     "images": []
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 1,
+     "image": {
+      "path": ".craft-pipeline/shirt/placket-hidden-turnup/candidate-1.png",
+      "sha1": "bf110babe9d3a9ba0573658b22f2090948216873",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-08-11T22:54:02.390Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/placket-hidden-turnup",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -19477,7 +19814,7 @@
     }
    ],
    "state": "has-owner-photo-approval",
-   "approvedPhotoEvents": 1,
+   "approvedPhotoEvents": 2,
    "illustrationKeepEvents": 0,
    "rejectionEvents": 5,
    "illustration": {
@@ -19504,6 +19841,26 @@
     "images": []
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 3,
+     "image": {
+      "path": ".craft-pipeline/shirt/placket-half-hidden/candidate-3.png",
+      "sha1": "5eaf2255b3224bb3c07c110d036f7ecd0f22ea3e",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Unrealistic / AI look"
+     ],
+     "decidedAt": "2026-08-11T22:48:29.260Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/placket-half-hidden",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -19633,7 +19990,7 @@
    "state": "has-owner-photo-approval",
    "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 0,
-   "rejectionEvents": 6,
+   "rejectionEvents": 7,
    "illustration": {
     "path": "/images/placket/half-hidden-placket.jpg",
     "status": "suspect-ambiguous",
@@ -19931,12 +20288,29 @@
    "label": "6 Buttons",
    "scope": "shirt",
    "current": {
-    "image": "/images/placket_button_position/6-buttons-not-including-collar-button.jpg",
-    "techpackIllustration": null,
+    "image": "/images/generated/shirt/btn-6.webp",
+    "techpackIllustration": "/images/placket_button_position/6-buttons-not-including-collar-button.jpg",
     "illustration": "/images/placket_button_position/6-buttons-not-including-collar-button.jpg",
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 3,
+     "image": {
+      "path": ".craft-pipeline/shirt/btn-6/candidate-3.png",
+      "sha1": "eaf885ef97d2b1b2fa630a7fbff72b94dfe2cb1a",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-08-11T20:58:27.686Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/btn-6",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "approved",
@@ -19962,7 +20336,7 @@
     }
    ],
    "state": "has-owner-photo-approval",
-   "approvedPhotoEvents": 2,
+   "approvedPhotoEvents": 3,
    "illustrationKeepEvents": 0,
    "rejectionEvents": 0,
    "illustration": {
@@ -20364,12 +20738,30 @@
    "label": "Machine 0.1 cm Top Stitching",
    "scope": "shirt",
    "current": {
-    "image": "/images/techpacks/shirt/decoration_stitching_on_placket/machine-01cm-top-stitching-on-inner-plain-placket.jpg",
-    "techpackIllustration": null,
+    "image": "/images/generated/shirt/stitch-01-top__decoration_stitching_on_placket.webp",
+    "techpackIllustration": "/images/techpacks/shirt/decoration_stitching_on_placket/machine-01cm-top-stitching-on-inner-plain-placket.jpg",
     "illustration": "/images/techpacks/shirt/decoration_stitching_on_placket/machine-01cm-top-stitching-on-inner-plain-placket.jpg",
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 3,
+     "image": {
+      "path": ".craft-pipeline/shirt/stitch-01-top/candidate-3.png",
+      "sha1": "91eabbcbf5f23af9ac1f6bf82d86c63b60c53c4b",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-08-11T22:17:36.678Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/stitch-01-top",
+     "ambiguousKey": true,
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "approved",
@@ -20436,7 +20828,7 @@
     }
    ],
    "state": "has-owner-photo-approval",
-   "approvedPhotoEvents": 1,
+   "approvedPhotoEvents": 2,
    "illustrationKeepEvents": 1,
    "rejectionEvents": 2,
    "illustration": {
@@ -20626,17 +21018,21 @@
    "events": [
     {
      "source": "admin-portal",
-     "via": "map",
-     "verdict": "approved",
-     "attempt": 2,
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 3,
      "image": {
-      "path": ".craft-pipeline/shirt/stitch-01-inner-plain/candidate-2.png",
-      "sha1": "13451f149a6f915c95aa5f77e66d109b594d6f1c",
+      "path": ".craft-pipeline/shirt/stitch-01-inner-plain/candidate-3.png",
+      "sha1": "2df94fc9224a7809b9640d26258c9cf73ee11213",
       "exists": true,
-      "kind": "pipeline-candidate"
+      "kind": "logged-at-decision-time"
      },
-     "decidedAt": "2026-08-10T18:41:53.094Z",
-     "boundBy": "pipeline-spec",
+     "tags": [
+      "Unrealistic / AI look"
+     ],
+     "decidedAt": "2026-08-11T22:24:53.595Z",
+     "boundBy": "explicit-addr",
      "portalKey": "shirt/stitch-01-inner-plain",
      "current": true
     },
@@ -20677,9 +21073,9 @@
     }
    ],
    "state": "has-owner-photo-approval",
-   "approvedPhotoEvents": 3,
+   "approvedPhotoEvents": 2,
    "illustrationKeepEvents": 0,
-   "rejectionEvents": 0,
+   "rejectionEvents": 1,
    "illustration": {
     "path": "/images/decoration_stitching_on_placket/machine-01cm-top-stitching-on-inner-plain-placket.jpg",
     "status": "drawing-unverified",
@@ -25285,12 +25681,29 @@
    "label": "Vertical with Horizontal Buttonhole",
    "scope": "shirt",
    "current": {
-    "image": "/images/placket_buttonhole_direction/vertical-buttonholes-with-horizontal-buttonhole.jpg",
-    "techpackIllustration": null,
+    "image": "/images/generated/shirt/bh-vertical-horiz.webp",
+    "techpackIllustration": "/images/placket_buttonhole_direction/vertical-buttonholes-with-horizontal-buttonhole.jpg",
     "illustration": "/images/placket_buttonhole_direction/vertical-buttonholes-with-horizontal-buttonhole.jpg",
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 3,
+     "image": {
+      "path": ".craft-pipeline/shirt/bh-vertical-horiz/candidate-3.png",
+      "sha1": "0c520d12d2c273879e4709820cf43dbf3bc587e6",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-08-11T20:59:52.201Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/bh-vertical-horiz",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -25316,7 +25729,7 @@
     }
    ],
    "state": "has-owner-photo-approval",
-   "approvedPhotoEvents": 1,
+   "approvedPhotoEvents": 2,
    "illustrationKeepEvents": 0,
    "rejectionEvents": 0,
    "illustration": {
@@ -25336,12 +25749,29 @@
    "label": "Horizontal (2nd from Bottom)",
    "scope": "shirt",
    "current": {
-    "image": "/images/placket_buttonhole_direction/horizontal-second-buttonhole-from-bottom.jpg",
-    "techpackIllustration": null,
+    "image": "/images/generated/shirt/bh-horiz-2nd.webp",
+    "techpackIllustration": "/images/placket_buttonhole_direction/horizontal-second-buttonhole-from-bottom.jpg",
     "illustration": "/images/placket_buttonhole_direction/horizontal-second-buttonhole-from-bottom.jpg",
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 2,
+     "image": {
+      "path": ".craft-pipeline/shirt/bh-horiz-2nd/candidate-2.png",
+      "sha1": "7e58799f21467c399189235a00cb3832fdcb513b",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-08-11T22:25:35.506Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/bh-horiz-2nd",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -25430,7 +25860,7 @@
     }
    ],
    "state": "has-owner-photo-approval",
-   "approvedPhotoEvents": 1,
+   "approvedPhotoEvents": 2,
    "illustrationKeepEvents": 0,
    "rejectionEvents": 0,
    "illustration": {
@@ -25456,6 +25886,30 @@
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 4,
+     "image": {
+      "path": ".craft-pipeline/shirt/bh-machine/candidate-4.png",
+      "sha1": "a8c5e729582e39d97ebfc7744fea431b50773e2c",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "notes": "so a black buttonhole thread on white shirt so the optioin stands out",
+     "tags": [
+      "Wrong side or orientation",
+      "Wrong shape / outline",
+      "Feature not visible / too small in frame",
+      "Unrealistic / AI look"
+     ],
+     "decidedAt": "2026-08-11T22:09:15.346Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/bh-machine",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -25495,7 +25949,7 @@
    "state": "has-owner-photo-approval",
    "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 0,
-   "rejectionEvents": 0,
+   "rejectionEvents": 1,
    "illustration": {
     "path": "/images/buttonhole/machine.jpg",
     "status": "suspect-ambiguous",
@@ -25519,6 +25973,28 @@
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 4,
+     "image": {
+      "path": ".craft-pipeline/shirt/bh-hand/candidate-4.png",
+      "sha1": "995559dfcbb1ee8f56b43c6c0a4c3095063788e8",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "notes": "use black buttonhole thread collar to make the option stand out against the white shirt",
+     "tags": [
+      "Wrong shape / outline",
+      "Feature not visible / too small in frame"
+     ],
+     "decidedAt": "2026-08-11T22:10:05.961Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/bh-hand",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -25558,7 +26034,7 @@
    "state": "has-owner-photo-approval",
    "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 0,
-   "rejectionEvents": 0,
+   "rejectionEvents": 1,
    "illustration": {
     "path": "/images/buttonhole/hand-made.jpg",
     "status": "suspect-ambiguous",
@@ -28595,11 +29071,12 @@
    "label": "No Pocket",
    "scope": "shirt",
    "current": {
-    "image": "/images/pocket/none.jpg",
-    "techpackIllustration": null,
+    "image": "/images/generated/shirt/pocket-none.webp",
+    "techpackIllustration": "/images/pocket/none.jpg",
     "illustration": "/images/pocket/none.jpg",
     "illustrationStatus": "drawing",
     "photos": [
+     "/images/generated/shirt/pocket-none.webp",
      "https://turnbullandasser.com/cdn/shop/files/52ca5256-f30a-4f94-9cd3-8ac5210c5c9c.jpg?v=1722869884&width=1500"
     ],
     "images": [
@@ -28607,6 +29084,23 @@
     ]
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 3,
+     "image": {
+      "path": ".craft-pipeline/shirt/pocket-none/candidate-3.png",
+      "sha1": "c9a6088794d2b72e36a2f466c8570529a4a29c6c",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-08-11T20:59:58.042Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/pocket-none",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -28721,7 +29215,7 @@
     }
    ],
    "state": "has-owner-photo-approval",
-   "approvedPhotoEvents": 1,
+   "approvedPhotoEvents": 2,
    "illustrationKeepEvents": 1,
    "rejectionEvents": 5,
    "illustration": {
@@ -28741,11 +29235,12 @@
    "label": "Round Pocket",
    "scope": "shirt",
    "current": {
-    "image": "/images/pocket/round-pocket.jpg",
-    "techpackIllustration": null,
+    "image": "/images/generated/shirt/pocket-round.webp",
+    "techpackIllustration": "/images/pocket/round-pocket.jpg",
     "illustration": "/images/pocket/round-pocket.jpg",
     "illustrationStatus": "drawing",
     "photos": [
+     "/images/generated/shirt/pocket-round.webp",
      "https://propercloth.com/reference/wp-content/uploads/2014/08/Rounded-Pocket-1.jpg",
      "https://propercloth.com/reference/wp-content/uploads/2014/08/XL-Rounded-Pocket.jpg"
     ],
@@ -28755,6 +29250,23 @@
     ]
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 4,
+     "image": {
+      "path": ".craft-pipeline/shirt/pocket-round/candidate-4.png",
+      "sha1": "e21c5f6fa74ab0677c64974cb86d8772b0353357",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-08-11T22:08:13.001Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/pocket-round",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "approved",
@@ -28882,7 +29394,7 @@
     }
    ],
    "state": "has-owner-photo-approval",
-   "approvedPhotoEvents": 2,
+   "approvedPhotoEvents": 3,
    "illustrationKeepEvents": 2,
    "rejectionEvents": 4,
    "illustration": {
@@ -28902,13 +29414,30 @@
    "label": "Hexagon Pocket",
    "scope": "shirt",
    "current": {
-    "image": "/images/pocket/hexagon-pocket.jpg",
-    "techpackIllustration": null,
+    "image": "/images/generated/shirt/pocket-hexagon.webp",
+    "techpackIllustration": "/images/pocket/hexagon-pocket.jpg",
     "illustration": "/images/pocket/hexagon-pocket.jpg",
     "illustrationStatus": "drawing",
     "images": []
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 3,
+     "image": {
+      "path": ".craft-pipeline/shirt/pocket-hexagon/candidate-3.png",
+      "sha1": "dc5bd9ac041ac2cd1061f04b41dc73fcb7f44e38",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-08-11T22:48:49.678Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/pocket-hexagon",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -29021,7 +29550,7 @@
     }
    ],
    "state": "has-owner-photo-approval",
-   "approvedPhotoEvents": 1,
+   "approvedPhotoEvents": 2,
    "illustrationKeepEvents": 0,
    "rejectionEvents": 5,
    "illustration": {
@@ -29041,11 +29570,12 @@
    "label": "Triangle Pocket",
    "scope": "shirt",
    "current": {
-    "image": "/images/pocket/triangle-pocket.jpg",
-    "techpackIllustration": null,
+    "image": "/images/generated/shirt/pocket-triangle.webp",
+    "techpackIllustration": "/images/pocket/triangle-pocket.jpg",
     "illustration": "/images/pocket/triangle-pocket.jpg",
     "illustrationStatus": "drawing",
     "photos": [
+     "/images/generated/shirt/pocket-triangle.webp",
      "https://propercloth.com/reference/wp-content/uploads/2014/08/Angled-Chest-1.jpg"
     ],
     "images": [
@@ -29053,6 +29583,23 @@
     ]
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 4,
+     "image": {
+      "path": ".craft-pipeline/shirt/pocket-triangle/candidate-4.png",
+      "sha1": "9dfc5145a483024f4bafc073a34dc009880ad05e",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-08-11T22:03:34.471Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/pocket-triangle",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "approved",
@@ -29165,7 +29712,7 @@
     }
    ],
    "state": "has-owner-photo-approval",
-   "approvedPhotoEvents": 2,
+   "approvedPhotoEvents": 3,
    "illustrationKeepEvents": 1,
    "rejectionEvents": 4,
    "illustration": {
@@ -29192,6 +29739,26 @@
     "images": []
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 4,
+     "image": {
+      "path": ".craft-pipeline/shirt/pocket-round-welt/candidate-4.png",
+      "sha1": "d0e0bc77bbeec5d54873038c19cedb190b51acdb",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Wrong side or orientation"
+     ],
+     "decidedAt": "2026-08-11T21:19:06.314Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/pocket-round-welt",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -29321,7 +29888,7 @@
    "state": "rejected-only",
    "approvedPhotoEvents": 0,
    "illustrationKeepEvents": 0,
-   "rejectionEvents": 7,
+   "rejectionEvents": 8,
    "illustration": {
     "path": "/images/pocket/round-pocket-with-welt.jpg",
     "status": "drawing-unverified",
@@ -29879,12 +30446,29 @@
    "label": "Squared Bottom with Side Vents 5 cm",
    "scope": "shirt",
    "current": {
-    "image": "/images/hem/squared-bottom-with-side-vents-5cm.jpg",
-    "techpackIllustration": null,
+    "image": "/images/generated/shirt/hem-sq-side-vents-5cm.webp",
+    "techpackIllustration": "/images/hem/squared-bottom-with-side-vents-5cm.jpg",
     "illustration": "/images/hem/squared-bottom-with-side-vents-5cm.jpg",
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 3,
+     "image": {
+      "path": ".craft-pipeline/shirt/hem-sq-side-vents-5cm/candidate-3.png",
+      "sha1": "cbee8dc5c85d295e1e4830ea457f0664ac7496ee",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-08-11T22:48:25.838Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/hem-sq-side-vents-5cm",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -29922,7 +30506,7 @@
     }
    ],
    "state": "has-owner-photo-approval",
-   "approvedPhotoEvents": 1,
+   "approvedPhotoEvents": 2,
    "illustrationKeepEvents": 0,
    "rejectionEvents": 0,
    "illustration": {
@@ -29942,12 +30526,29 @@
    "label": "Straight Hem with Side Vents",
    "scope": "shirt",
    "current": {
-    "image": "/images/hem/straight-hem-with-side-vents.jpg",
-    "techpackIllustration": null,
+    "image": "/images/generated/shirt/hem-straight-side-vents.webp",
+    "techpackIllustration": "/images/hem/straight-hem-with-side-vents.jpg",
     "illustration": "/images/hem/straight-hem-with-side-vents.jpg",
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 1,
+     "image": {
+      "path": ".craft-pipeline/shirt/hem-straight-side-vents/candidate-1.png",
+      "sha1": "da3f0563559ba7f190b7779aa57bead3954063f8",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-08-11T22:54:05.440Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/hem-straight-side-vents",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -30000,7 +30601,7 @@
     }
    ],
    "state": "has-owner-photo-approval",
-   "approvedPhotoEvents": 1,
+   "approvedPhotoEvents": 2,
    "illustrationKeepEvents": 0,
    "rejectionEvents": 1,
    "illustration": {
@@ -30020,12 +30621,29 @@
    "label": "Round Hem with Pentagon Gusset",
    "scope": "shirt",
    "current": {
-    "image": "/images/hem/round-hem-with-pentagon-gusset.jpg",
-    "techpackIllustration": null,
+    "image": "/images/generated/shirt/hem-round-pentagon-gusset.webp",
+    "techpackIllustration": "/images/hem/round-hem-with-pentagon-gusset.jpg",
     "illustration": "/images/hem/round-hem-with-pentagon-gusset.jpg",
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 1,
+     "image": {
+      "path": ".craft-pipeline/shirt/hem-round-pentagon-gusset/candidate-1.png",
+      "sha1": "b81e88901fce4b3b1fb27323556c869f8fb7c85a",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-08-11T22:54:08.088Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/hem-round-pentagon-gusset",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -30063,7 +30681,7 @@
     }
    ],
    "state": "has-owner-photo-approval",
-   "approvedPhotoEvents": 1,
+   "approvedPhotoEvents": 2,
    "illustrationKeepEvents": 0,
    "rejectionEvents": 0,
    "illustration": {
@@ -30083,12 +30701,29 @@
    "label": "Round Hem with Hexagon Gusset",
    "scope": "shirt",
    "current": {
-    "image": "/images/hem/round-hem-with-hexagon-gusset.jpg",
-    "techpackIllustration": null,
+    "image": "/images/generated/shirt/hem-round-hexagon-gusset.webp",
+    "techpackIllustration": "/images/hem/round-hem-with-hexagon-gusset.jpg",
     "illustration": "/images/hem/round-hem-with-hexagon-gusset.jpg",
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 1,
+     "image": {
+      "path": ".craft-pipeline/shirt/hem-round-hexagon-gusset/candidate-1.png",
+      "sha1": "41dff0860d7c5eeb823e60262c04e528a6f69eb8",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-08-11T22:54:11.680Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/hem-round-hexagon-gusset",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -30141,7 +30776,7 @@
     }
    ],
    "state": "has-owner-photo-approval",
-   "approvedPhotoEvents": 1,
+   "approvedPhotoEvents": 2,
    "illustrationKeepEvents": 0,
    "rejectionEvents": 1,
    "illustration": {
@@ -30161,12 +30796,29 @@
    "label": "Large Round Hem with Triangle Gusset",
    "scope": "shirt",
    "current": {
-    "image": "/images/hem/large-round-hem-with-triangle-gusset.jpg",
-    "techpackIllustration": null,
+    "image": "/images/generated/shirt/hem-large-round-triangle-gusset.webp",
+    "techpackIllustration": "/images/hem/large-round-hem-with-triangle-gusset.jpg",
     "illustration": "/images/hem/large-round-hem-with-triangle-gusset.jpg",
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 3,
+     "image": {
+      "path": ".craft-pipeline/shirt/hem-large-round-triangle-gusset/candidate-3.png",
+      "sha1": "efc32fc6b376fb13311b92500e9347295d747eae",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-08-11T22:48:33.222Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/hem-large-round-triangle-gusset",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -30219,7 +30871,7 @@
     }
    ],
    "state": "has-owner-photo-approval",
-   "approvedPhotoEvents": 1,
+   "approvedPhotoEvents": 2,
    "illustrationKeepEvents": 0,
    "rejectionEvents": 1,
    "illustration": {
@@ -30400,12 +31052,29 @@
    "label": "Machine 0.6 cm Top Stitching",
    "scope": "shirt",
    "current": {
-    "image": "/images/decoration_stitching_on_shoulder/machine-06cm-top-stitching.jpg",
-    "techpackIllustration": null,
+    "image": "/images/generated/shirt/shl-stitch-06-top.webp",
+    "techpackIllustration": "/images/decoration_stitching_on_shoulder/machine-06cm-top-stitching.jpg",
     "illustration": "/images/decoration_stitching_on_shoulder/machine-06cm-top-stitching.jpg",
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 3,
+     "image": {
+      "path": ".craft-pipeline/shirt/shl-stitch-06-top/candidate-3.png",
+      "sha1": "9642aa6cd2cd81434fdeacc0e79aef3abdcbc777",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-08-11T20:58:07.979Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/shl-stitch-06-top",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -30445,7 +31114,7 @@
     }
    ],
    "state": "has-owner-photo-approval",
-   "approvedPhotoEvents": 1,
+   "approvedPhotoEvents": 2,
    "illustrationKeepEvents": 0,
    "rejectionEvents": 1,
    "illustration": {
@@ -30916,6 +31585,31 @@
    },
    "events": [
     {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 2,
+     "image": {
+      "path": ".craft-pipeline/shirt/cuff-french-4bh/candidate-2.png",
+      "sha1": "9d544b0fd7e3d4528b450732467117f5513881b3",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Unrealistic / AI look"
+     ],
+     "references": [
+      "/images/review-refs/shirt/cuff-french-4bh/1786487328469-iejrc5.webp",
+      "/images/review-refs/shirt/cuff-french-4bh/1786487337097-hd3fkc.webp",
+      "/images/review-refs/shirt/cuff-french-4bh/1786487345601-z10ang.webp"
+     ],
+     "decidedAt": "2026-08-11T22:29:12.453Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/cuff-french-4bh",
+     "current": true
+    },
+    {
      "source": "july-v3",
      "verdict": "remake",
      "julyKey": "shirt|cuff|cuff-french-4bh",
@@ -31118,7 +31812,7 @@
    "state": "has-owner-photo-approval",
    "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 1,
-   "rejectionEvents": 4,
+   "rejectionEvents": 5,
    "illustration": {
     "path": "/images/cuff/french-cuff-with-4-buttonholes.jpg",
     "status": "verified-match",
@@ -31143,6 +31837,27 @@
     "images": []
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 2,
+     "image": {
+      "path": ".craft-pipeline/shirt/cuff-curved-1btn-1bh/candidate-2.png",
+      "sha1": "db19e0c23ee8e6e33fecae87eb07a9af7dbffb22",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "notes": "This illustration is a **rounded/curved shirt cuff with a single button and single buttonhole**. The important thing is that the cuff is **not a straight rectangular cuff**—the lower edge is a continuous rounded curve.\n\nThere is **no numerical scale in this drawing**, so we can't derive an absolute centimeter dimension from the illustration alone. But we can define the geometry mathematically so your tech-pack/image-generation system can reproduce it accurately.\n\n### Cuff geometry\n\nLet:\n\n* (W) = finished wrist/cuff circumference\n* (E) = desired wearing ease\n* (D) = finished cuff depth\n\nA good bespoke starting point would be:\n\n[\nE = 2.0\\text{–}2.5\\text{ cm}\n]\n\nTherefore:\n\n[\n\\boxed{\\text{Finished cuff circumference}=W+E}\n]\n\nIf the cuff is drafted flat as a single continuous piece:\n\n[\n\\boxed{\\text{Flat cuff length}=W+E+\\text{overlap}}\n]\n\nFor a button cuff, use approximately:\n\n[\n\\text{overlap}=1.5\\text{–}2.0\\text{ cm}\n]\n\n---\n\n### Rounded bottom\n\nThe bottom of the cuff should be treated as a **continuous curved arc**, rather than square corners.\n\nIf the cuff depth is (D), a simple symmetrical approximation is a semicircular/elliptical lower curve.\n\nFor an elliptical curve:\n\n[\n\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1\n]\n\nwhere:\n\n* (a) = approximately half the cuff width\n* (b) = depth of the lower curve\n\nThe illustration shows approximately:\n\n**straight top edge → vertical/near-vertical sides → progressively rounded lower edge → center of bottom edge at the lowest point.**\n\n---\n\n### Button and buttonhole\n\nThe illustration shows:\n\n**1 button + 1 horizontal buttonhole**\n\nThe buttonhole should be centered on the cuff's closure axis.\n\nA practical relationship is:\n\n[\nL_{BH}=D_B+0.2\\text{–}0.3\\text{ cm}\n]\n\nwhere (D_B) is the button diameter.\n\nFor example, with a:\n\n**1.5 cm button**\n\n[\nL_{BH}\\approx1.7\\text{–}1.8\\text{ cm}\n]\n\nThe button should be positioned approximately at the midpoint of the buttonhole.\n\n---\n\n### The red construction in your illustration\n\nThe upper portion shows the **shirt sleeve/placket entering the cuff**, with the cuff folded around the sleeve opening.\n\nThe vertical sleeve placket should terminate inside the cuff rather than appearing as an independent decorative strip.\n\nSo the construction specification should be:\n\n> **Single-button rounded shirt cuff. Cuff has a straight upper edge and a smoothly curved lower edge, symmetrical from center to center. One horizontal buttonhole and one corresponding button. Sleeve placket enters centrally into the cuff construction. No square lower corners. The curved lower edge forms a continuous rounded profile.**\n\n### For your image-generation pipeline\n\nI'd encode the geometry as:\n\n> **Rounded single-button shirt cuff, one button and one horizontal buttonhole, symmetrical cuff construction, straight upper edge, gently tapered sides transitioning into a pronounced continuous semicircular/elliptical lower curve. The lowest point of the cuff is centered between the two ends. Button and buttonhole aligned on the closure axis. Sleeve placket terminates cleanly into the cuff. Preserve the exact curved silhouette; do not generate a rectangular or French-style square cuff.**\n\n**If you give me the cuff depth (for example 6.5 cm) and the wrist circumference, I can give you the exact centimeter dimensions for the cuff, curve radius, button position, and buttonhole position.**",
+     "tags": [
+      "Unrealistic / AI look"
+     ],
+     "decidedAt": "2026-08-11T22:32:44.757Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/cuff-curved-1btn-1bh",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -31297,7 +32012,7 @@
    "state": "has-owner-photo-approval",
    "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 0,
-   "rejectionEvents": 5,
+   "rejectionEvents": 6,
    "illustration": {
     "path": "/images/cuff/curved-cuff-with-1-button-and-1-buttonhole.jpg",
     "status": "drawing-unverified",
@@ -31322,6 +32037,30 @@
     "images": []
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 2,
+     "image": {
+      "path": ".craft-pipeline/shirt/cuff-hex-french-4bh/candidate-2.png",
+      "sha1": "b1a63cdd23d7fc1d660a1f9156d9794e1a5f0651",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Unrealistic / AI look"
+     ],
+     "references": [
+      "/images/review-refs/shirt/cuff-hex-french-4bh/1786487260051-odcikg.webp",
+      "/images/review-refs/shirt/cuff-hex-french-4bh/1786487294829-sv4iup.webp"
+     ],
+     "decidedAt": "2026-08-11T22:28:24.800Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/cuff-hex-french-4bh",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -31476,7 +32215,7 @@
    "state": "has-owner-photo-approval",
    "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 0,
-   "rejectionEvents": 5,
+   "rejectionEvents": 6,
    "illustration": {
     "path": "/images/cuff/hexagon-french-cuff-with-4-buttonholes.jpg",
     "status": "drawing-unverified",
@@ -31811,6 +32550,27 @@
    },
    "events": [
     {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 2,
+     "image": {
+      "path": ".craft-pipeline/shirt/cuff-hex-2btn-1bh/candidate-2.png",
+      "sha1": "8a7a981e88de61610d1c6bccf504a06800ee0e2b",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "notes": "illustration has two examples in two positions od the same craft",
+     "tags": [
+      "Unrealistic / AI look"
+     ],
+     "decidedAt": "2026-08-11T22:26:16.153Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/cuff-hex-2btn-1bh",
+     "current": true
+    },
+    {
      "source": "july-v3",
      "verdict": "remake",
      "julyKey": "shirt|cuff|cuff-hex-2btn-1bh",
@@ -31923,7 +32683,7 @@
    "state": "has-owner-photo-approval",
    "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 0,
-   "rejectionEvents": 0,
+   "rejectionEvents": 1,
    "illustration": {
     "path": "/images/cuff/hexagonal-cuff-with-2-buttons-and-1-buttonhole.jpg",
     "status": "drawing-unverified",
@@ -34829,6 +35589,26 @@
    },
    "events": [
     {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 3,
+     "image": {
+      "path": ".craft-pipeline/shirt/cuf-lining-hard/candidate-3.png",
+      "sha1": "7d933facb415ba0f52e1e0671af0751c116d0ea4",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Unrealistic / AI look"
+     ],
+     "decidedAt": "2026-08-11T22:17:31.585Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/cuf-lining-hard",
+     "current": true
+    },
+    {
      "source": "july-v3",
      "verdict": "bad-techpack",
      "julyKey": "shirt|cuff_lining|cuf-lining-hard",
@@ -34958,7 +35738,7 @@
    "state": "has-owner-photo-approval",
    "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 1,
-   "rejectionEvents": 5,
+   "rejectionEvents": 6,
    "illustration": {
     "path": "/images/cuff_lining/cuff-lining-hard.jpg",
     "status": "verified-match",
@@ -35231,6 +36011,27 @@
    },
    "events": [
     {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 3,
+     "image": {
+      "path": ".craft-pipeline/shirt/cpleat-double/candidate-3.png",
+      "sha1": "d03d0b77422d62642a3218f0c29000a843f5a705",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "notes": "shirt cuff is backwards remove hand/model or flip orientation",
+     "tags": [
+      "Wrong side or orientation"
+     ],
+     "decidedAt": "2026-08-11T20:59:36.387Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/cpleat-double",
+     "current": true
+    },
+    {
      "source": "july-v3",
      "verdict": "remake",
      "julyKey": "shirt|cuff_pleat|cpleat-double",
@@ -35332,7 +36133,7 @@
    "state": "has-owner-photo-approval",
    "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 0,
-   "rejectionEvents": 5,
+   "rejectionEvents": 6,
    "illustration": {
     "path": "/images/cuff_pleat/double-pleat.jpg",
     "status": "verified-match",
@@ -38518,6 +39319,30 @@
    },
    "events": [
     {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 3,
+     "image": {
+      "path": ".craft-pipeline/shirt/sleeve-tab-inner/candidate-3.png",
+      "sha1": "361b42855381f38aa40cf18db42e531ee678b624",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Wrong side or orientation",
+      "Wrong size or proportion",
+      "Wrong shape / outline",
+      "Wrong feature entirely",
+      "Unrealistic / AI look"
+     ],
+     "decidedAt": "2026-08-11T22:17:52.509Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/sleeve-tab-inner",
+     "current": true
+    },
+    {
      "source": "july-v3",
      "verdict": "remake",
      "julyKey": "shirt|sleeve_tab|sleeve-tab-inner",
@@ -38556,7 +39381,7 @@
    "state": "has-owner-photo-approval",
    "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 0,
-   "rejectionEvents": 0,
+   "rejectionEvents": 1,
    "illustration": {
     "path": "/images/sleeve_tab/inner-sleeve-tab.jpg",
     "status": "verified-match",
@@ -38646,6 +39471,26 @@
    },
    "events": [
     {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 3,
+     "image": {
+      "path": ".craft-pipeline/shirt/csplice-upper-cuff/candidate-3.png",
+      "sha1": "8efd919edb7733f435540ebf5598736296890fef",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Unrealistic / AI look"
+     ],
+     "decidedAt": "2026-08-11T22:48:38.553Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/csplice-upper-cuff",
+     "current": true
+    },
+    {
      "source": "july-v3",
      "verdict": "remake",
      "julyKey": "shirt|cuff_splicing|csplice-upper-cuff",
@@ -38697,7 +39542,7 @@
    "state": "has-owner-photo-approval",
    "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 1,
-   "rejectionEvents": 0,
+   "rejectionEvents": 1,
    "illustration": {
     "path": "/images/cuff_splicing/upper-sleeve-cuff.jpg",
     "status": "drawing-unverified",
@@ -38721,6 +39566,29 @@
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 3,
+     "image": {
+      "path": ".craft-pipeline/shirt/csplice-lower-cuff/candidate-3.png",
+      "sha1": "bfbfb33e8385987c2b4e71dc547802d6043b690f",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Wrong garment or wrong part",
+      "Wrong size or proportion",
+      "Annotation or colour bled in from the drawing",
+      "Unrealistic / AI look"
+     ],
+     "decidedAt": "2026-08-11T22:25:09.492Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/csplice-lower-cuff",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -38773,7 +39641,7 @@
    "state": "has-owner-photo-approval",
    "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 1,
-   "rejectionEvents": 0,
+   "rejectionEvents": 1,
    "illustration": {
     "path": "/images/cuff_splicing/lower-sleeve-cuff.jpg",
     "status": "drawing-unverified",
@@ -38797,6 +39665,27 @@
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 3,
+     "image": {
+      "path": ".craft-pipeline/shirt/csplice-cuff-edge/candidate-3.png",
+      "sha1": "b05902f3de360a4ba6b412226d6e10264e64e040",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Unrealistic / AI look",
+      "Annotation or colour bled in from the drawing"
+     ],
+     "decidedAt": "2026-08-11T22:48:44.022Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/csplice-cuff-edge",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -38849,7 +39738,7 @@
    "state": "has-owner-photo-approval",
    "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 1,
-   "rejectionEvents": 0,
+   "rejectionEvents": 1,
    "illustration": {
     "path": "/images/cuff_splicing/cuff-edge.jpg",
     "status": "drawing-unverified",
@@ -38873,6 +39762,28 @@
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 3,
+     "image": {
+      "path": ".craft-pipeline/shirt/csplice-strip-mid/candidate-3.png",
+      "sha1": "923ca105d954a91d9aecd5a212acb79d04b970cc",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Wrong side or orientation",
+      "Annotation or colour bled in from the drawing",
+      "Wrong shape / outline"
+     ],
+     "decidedAt": "2026-08-11T22:25:02.752Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/csplice-strip-mid",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -38925,7 +39836,7 @@
    "state": "has-owner-photo-approval",
    "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 1,
-   "rejectionEvents": 0,
+   "rejectionEvents": 1,
    "illustration": {
     "path": "/images/cuff_splicing/strip-in-middle-cuff.jpg",
     "status": "drawing-unverified",
@@ -39795,12 +40706,29 @@
    "label": "Box Pleat to Bottom with Double Darts",
    "scope": "shirt",
    "current": {
-    "image": "/images/techpacks/shirt/back/box-pleat-to-bottom.jpg",
-    "techpackIllustration": null,
+    "image": "/images/generated/shirt/back-box-dbl-darts.webp",
+    "techpackIllustration": "/images/techpacks/shirt/back/box-pleat-to-bottom.jpg",
     "illustration": "/images/techpacks/shirt/back/box-pleat-to-bottom.jpg",
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 4,
+     "image": {
+      "path": ".craft-pipeline/shirt/back-box-dbl-darts/candidate-4.png",
+      "sha1": "ddb2e30237bd98516d945c13e260e1da7238a40e",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-08-11T22:06:19.161Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/back-box-dbl-darts",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -39867,8 +40795,8 @@
      }
     }
    ],
-   "state": "illustration-kept-only",
-   "approvedPhotoEvents": 0,
+   "state": "has-owner-photo-approval",
+   "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 1,
    "rejectionEvents": 2,
    "illustration": {
@@ -39888,13 +40816,30 @@
    "label": "Inverted Center Pleats",
    "scope": "shirt",
    "current": {
-    "image": "/images/back/inverted-center-pleats.jpg",
-    "techpackIllustration": null,
+    "image": "/images/generated/shirt/back-inverted-center-pleats.webp",
+    "techpackIllustration": "/images/back/inverted-center-pleats.jpg",
     "illustration": "/images/back/inverted-center-pleats.jpg",
     "illustrationStatus": "drawing",
     "images": []
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 3,
+     "image": {
+      "path": ".craft-pipeline/shirt/back-inverted-center-pleats/candidate-3.png",
+      "sha1": "b7045a1cc0bdba6c0df46661c8f44d83ef3da4fa",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-08-11T22:48:47.437Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/back-inverted-center-pleats",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -40022,7 +40967,7 @@
     }
    ],
    "state": "has-owner-photo-approval",
-   "approvedPhotoEvents": 1,
+   "approvedPhotoEvents": 2,
    "illustrationKeepEvents": 0,
    "rejectionEvents": 6,
    "illustration": {
@@ -40042,13 +40987,30 @@
    "label": "Napoli Yoke with Double Darts",
    "scope": "shirt",
    "current": {
-    "image": "/images/back/napoli-yoke-with-double-darts.jpg",
-    "techpackIllustration": null,
+    "image": "/images/generated/shirt/back-napoli-dbl-darts.webp",
+    "techpackIllustration": "/images/back/napoli-yoke-with-double-darts.jpg",
     "illustration": "/images/back/napoli-yoke-with-double-darts.jpg",
     "illustrationStatus": "drawing",
     "images": []
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 4,
+     "image": {
+      "path": ".craft-pipeline/shirt/back-napoli-dbl-darts/candidate-4.png",
+      "sha1": "0f6c8a18bb921e8db17ec44aba88977709c5c993",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-08-11T22:03:29.176Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/back-napoli-dbl-darts",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -40176,7 +41138,7 @@
     }
    ],
    "state": "has-owner-photo-approval",
-   "approvedPhotoEvents": 1,
+   "approvedPhotoEvents": 2,
    "illustrationKeepEvents": 0,
    "rejectionEvents": 6,
    "illustration": {
@@ -40277,13 +41239,30 @@
    "label": "Side Pleats with Double Darts",
    "scope": "shirt",
    "current": {
-    "image": "/images/back/side-pleats-with-double-darts.jpg",
-    "techpackIllustration": null,
+    "image": "/images/generated/shirt/back-side-pleats-dbl-darts.webp",
+    "techpackIllustration": "/images/back/side-pleats-with-double-darts.jpg",
     "illustration": "/images/back/side-pleats-with-double-darts.jpg",
     "illustrationStatus": "drawing",
     "images": []
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 4,
+     "image": {
+      "path": ".craft-pipeline/shirt/back-side-pleats-dbl-darts/candidate-4.png",
+      "sha1": "8094aedb9b87454885493fd90a24d587593d3b6e",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-08-11T21:49:44.569Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/back-side-pleats-dbl-darts",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -40426,7 +41405,7 @@
     }
    ],
    "state": "has-owner-photo-approval",
-   "approvedPhotoEvents": 1,
+   "approvedPhotoEvents": 2,
    "illustrationKeepEvents": 0,
    "rejectionEvents": 7,
    "illustration": {
@@ -40446,12 +41425,29 @@
    "label": "Napoli without Dart",
    "scope": "shirt",
    "current": {
-    "image": "/images/back/napoli-without-dart.jpg",
-    "techpackIllustration": null,
+    "image": "/images/generated/shirt/back-napoli-no-dart.webp",
+    "techpackIllustration": "/images/back/napoli-without-dart.jpg",
     "illustration": "/images/back/napoli-without-dart.jpg",
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 4,
+     "image": {
+      "path": ".craft-pipeline/shirt/back-napoli-no-dart/candidate-4.png",
+      "sha1": "4a61922ccf756c5966a467518d6651ba37e94214",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-08-11T21:49:32.981Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/back-napoli-no-dart",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -40489,7 +41485,7 @@
     }
    ],
    "state": "has-owner-photo-approval",
-   "approvedPhotoEvents": 1,
+   "approvedPhotoEvents": 2,
    "illustrationKeepEvents": 0,
    "rejectionEvents": 0,
    "illustration": {
@@ -40643,11 +41639,12 @@
    "label": "Half Yoke",
    "scope": "shirt",
    "current": {
-    "image": "/images/yoke/half-yoke.jpg",
-    "techpackIllustration": null,
+    "image": "/images/generated/shirt/yoke-half.webp",
+    "techpackIllustration": "/images/yoke/half-yoke.jpg",
     "illustration": "/images/yoke/half-yoke.jpg",
     "illustrationStatus": "drawing",
     "photos": [
+     "/images/generated/shirt/yoke-half.webp",
      "https://propercloth.com/reference/wp-content/uploads/2014/02/SplitYoke-768x1024.jpg"
     ],
     "images": [
@@ -40655,6 +41652,23 @@
     ]
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 1,
+     "image": {
+      "path": ".craft-pipeline/shirt/yoke-half/candidate-1.png",
+      "sha1": "6d7ff569241dcd72bd501854ec90999a96b7d393",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-08-11T21:01:47.689Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/yoke-half",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "approved",
@@ -40755,7 +41769,7 @@
     }
    ],
    "state": "has-owner-photo-approval",
-   "approvedPhotoEvents": 2,
+   "approvedPhotoEvents": 3,
    "illustrationKeepEvents": 1,
    "rejectionEvents": 4,
    "illustration": {
@@ -40910,11 +41924,11 @@
     {
      "source": "qc",
      "machine": true,
-     "verdict": "PASS_WAIVED",
-     "attempt": 3,
+     "verdict": "UNMET",
+     "attempt": 4,
      "image": {
-      "path": ".craft-pipeline/shirt/bias-outer-top-collar/candidate-3.png",
-      "sha1": "71c9771163cd1526d8e19df386714032673051c9",
+      "path": ".craft-pipeline/shirt/bias-outer-top-collar/candidate-4.png",
+      "sha1": "3187e1cebdb9e15825da0c684921cf84e192db7f",
       "exists": true,
       "kind": "pipeline-candidate"
      }
@@ -41019,6 +42033,34 @@
    },
    "events": [
     {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 4,
+     "image": {
+      "path": ".craft-pipeline/shirt/bias-outer-collar-stand/candidate-4.png",
+      "sha1": "294736da361991fc804a34934217f38b14913496",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Wrong side or orientation",
+      "Unrealistic / AI look",
+      "Wrong shape / outline"
+     ],
+     "references": [
+      "/images/review-refs/shirt/bias-outer-collar-stand/1786484498535-bvdfhc.jpg",
+      "/images/review-refs/shirt/bias-outer-collar-stand/1786484507141-ygge8h.webp",
+      "/images/review-refs/shirt/bias-outer-collar-stand/1786484535981-uitp46.webp",
+      "/images/review-refs/shirt/bias-outer-collar-stand/1786484547875-62j09v.webp"
+     ],
+     "decidedAt": "2026-08-11T21:42:44.031Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/bias-outer-collar-stand",
+     "current": true
+    },
+    {
      "source": "july-v3",
      "verdict": "remake",
      "julyKey": "shirt|bias_cutting|bias-outer-collar-stand",
@@ -41057,7 +42099,7 @@
    "state": "has-owner-photo-approval",
    "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 0,
-   "rejectionEvents": 0,
+   "rejectionEvents": 1,
    "illustration": {
     "path": "/images/bias_cutting/outer-collar-stand.jpg",
     "status": "verified-match",
@@ -41075,12 +42117,29 @@
    "label": "Inner Top Collar",
    "scope": "shirt",
    "current": {
-    "image": "/images/bias_cutting/inner-top-collar.jpg",
-    "techpackIllustration": null,
+    "image": "/images/generated/shirt/bias-inner-top-collar.webp",
+    "techpackIllustration": "/images/bias_cutting/inner-top-collar.jpg",
     "illustration": "/images/bias_cutting/inner-top-collar.jpg",
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 4,
+     "image": {
+      "path": ".craft-pipeline/shirt/bias-inner-top-collar/candidate-4.png",
+      "sha1": "04aaabcbd858a630a0980294ea3de7b736ece655",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-08-11T21:49:39.577Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/bias-inner-top-collar",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -41118,7 +42177,7 @@
     }
    ],
    "state": "has-owner-photo-approval",
-   "approvedPhotoEvents": 1,
+   "approvedPhotoEvents": 2,
    "illustrationKeepEvents": 0,
    "rejectionEvents": 0,
    "illustration": {
@@ -41138,12 +42197,29 @@
    "label": "Outer Cuff",
    "scope": "shirt",
    "current": {
-    "image": "/images/bias_cutting/outer-cuff.jpg",
-    "techpackIllustration": null,
+    "image": "/images/generated/shirt/bias-outer-cuff.webp",
+    "techpackIllustration": "/images/bias_cutting/outer-cuff.jpg",
     "illustration": "/images/bias_cutting/outer-cuff.jpg",
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 4,
+     "image": {
+      "path": ".craft-pipeline/shirt/bias-outer-cuff/candidate-4.png",
+      "sha1": "7d287a63b626f8415ad8a9bc01b09f9cf6554563",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-08-11T21:12:11.368Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/bias-outer-cuff",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -41181,7 +42257,7 @@
     }
    ],
    "state": "has-owner-photo-approval",
-   "approvedPhotoEvents": 1,
+   "approvedPhotoEvents": 2,
    "illustrationKeepEvents": 0,
    "rejectionEvents": 0,
    "illustration": {
@@ -41207,6 +42283,27 @@
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 4,
+     "image": {
+      "path": ".craft-pipeline/shirt/bias-inner-cuff/candidate-4.png",
+      "sha1": "480a5c2b4048024873ff38cf12d016ab753abbd4",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Annotation or colour bled in from the drawing",
+      "Wrong shape / outline"
+     ],
+     "decidedAt": "2026-08-11T22:08:06.968Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/bias-inner-cuff",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -41246,7 +42343,7 @@
    "state": "has-owner-photo-approval",
    "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 0,
-   "rejectionEvents": 0,
+   "rejectionEvents": 1,
    "illustration": {
     "path": "/images/bias_cutting/inner-cuff.jpg",
     "status": "drawing-unverified",
@@ -41463,12 +42560,29 @@
    "label": "Lower Wrap Collar",
    "scope": "shirt",
    "current": {
-    "image": "/images/contrast_color_position/lower-wrap-collar.jpg",
-    "techpackIllustration": null,
+    "image": "/images/generated/shirt/contrast-lower-wrap-collar.webp",
+    "techpackIllustration": "/images/contrast_color_position/lower-wrap-collar.jpg",
     "illustration": "/images/contrast_color_position/lower-wrap-collar.jpg",
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 3,
+     "image": {
+      "path": ".craft-pipeline/shirt/contrast-lower-wrap-collar/candidate-3.png",
+      "sha1": "4e8c1e362adb21f4083f196440eae9a5ec28f5d0",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-08-11T22:16:52.741Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/contrast-lower-wrap-collar",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -41594,7 +42708,7 @@
     }
    ],
    "state": "has-owner-photo-approval",
-   "approvedPhotoEvents": 1,
+   "approvedPhotoEvents": 2,
    "illustrationKeepEvents": 0,
    "rejectionEvents": 0,
    "illustration": {
@@ -41620,6 +42734,26 @@
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 3,
+     "image": {
+      "path": ".craft-pipeline/shirt/contrast-pocket-flap/candidate-3.png",
+      "sha1": "a0d3ba672fc6ca328a9f7e64c2ad0a7664510e84",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Unrealistic / AI look"
+     ],
+     "decidedAt": "2026-08-11T22:17:13.121Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/contrast-pocket-flap",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -41691,7 +42825,7 @@
    "state": "has-owner-photo-approval",
    "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 0,
-   "rejectionEvents": 0,
+   "rejectionEvents": 1,
    "illustration": {
     "path": "/images/contrast_color_position/pocket-flap.jpg",
     "status": "drawing-unverified",
@@ -41715,6 +42849,28 @@
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 3,
+     "image": {
+      "path": ".craft-pipeline/shirt/contrast-sleeve-vent/candidate-3.png",
+      "sha1": "5f59da9624a4a319593d66304d6837347ab82628",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Wrong size or proportion",
+      "Wrong shape / outline",
+      "Annotation or colour bled in from the drawing"
+     ],
+     "decidedAt": "2026-08-11T22:16:38.421Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/contrast-sleeve-vent",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -41778,7 +42934,7 @@
    "state": "has-owner-photo-approval",
    "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 0,
-   "rejectionEvents": 0,
+   "rejectionEvents": 1,
    "illustration": {
     "path": "/images/contrast_color_position/sleeve-vent.jpg",
     "status": "verified-match",
@@ -41802,6 +42958,30 @@
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 4,
+     "image": {
+      "path": ".craft-pipeline/shirt/contrast-cuff-tab/candidate-4.png",
+      "sha1": "0066973771b923d4abfc4dcade2bbed6e33694ca",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Unrealistic / AI look",
+      "Wrong side or orientation",
+      "Wrong shape / outline",
+      "Annotation or colour bled in from the drawing",
+      "Wrong garment or wrong part"
+     ],
+     "decidedAt": "2026-08-11T22:03:53.409Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/contrast-cuff-tab",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -41841,7 +43021,7 @@
    "state": "has-owner-photo-approval",
    "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 0,
-   "rejectionEvents": 0,
+   "rejectionEvents": 1,
    "illustration": {
     "path": "/images/contrast_color_position/cuff-tab.jpg",
     "status": "verified-match",
@@ -41859,12 +43039,29 @@
    "label": "Shoulder Epaulet",
    "scope": "shirt",
    "current": {
-    "image": "/images/contrast_color_position/shoulder-epaulet.jpg",
-    "techpackIllustration": null,
+    "image": "/images/generated/shirt/contrast-shoulder-epaulet.webp",
+    "techpackIllustration": "/images/contrast_color_position/shoulder-epaulet.jpg",
     "illustration": "/images/contrast_color_position/shoulder-epaulet.jpg",
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 4,
+     "image": {
+      "path": ".craft-pipeline/shirt/contrast-shoulder-epaulet/candidate-4.png",
+      "sha1": "7fc3d8e6e9b138a009b83f12ce2da149d3151a2d",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-08-11T21:36:42.999Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/contrast-shoulder-epaulet",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -41902,7 +43099,7 @@
     }
    ],
    "state": "has-owner-photo-approval",
-   "approvedPhotoEvents": 1,
+   "approvedPhotoEvents": 2,
    "illustrationKeepEvents": 0,
    "rejectionEvents": 0,
    "illustration": {
@@ -41928,6 +43125,26 @@
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 3,
+     "image": {
+      "path": ".craft-pipeline/shirt/contrast-upper-wrap-collar/candidate-3.png",
+      "sha1": "da7e397974f10becabe98e526e812b40174d8be2",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Wrong garment or wrong part"
+     ],
+     "decidedAt": "2026-08-11T22:10:22.205Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/contrast-upper-wrap-collar",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -41992,7 +43209,7 @@
    "state": "has-owner-photo-approval",
    "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 0,
-   "rejectionEvents": 0,
+   "rejectionEvents": 1,
    "illustration": {
     "path": "/images/contrast_color_position/upper-wrap-collar.jpg",
     "status": "drawing-unverified",
@@ -42016,6 +43233,30 @@
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 4,
+     "image": {
+      "path": ".craft-pipeline/shirt/contrast-inner-yoke/candidate-4.png",
+      "sha1": "e107861120f48cc3df559063e0901b83c5e054b4",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "notes": "inside yoke not outside yoke",
+     "tags": [
+      "Wrong side or orientation"
+     ],
+     "references": [
+      "/images/review-refs/shirt/contrast-inner-yoke/1786485645330-imw3zd.webp"
+     ],
+     "decidedAt": "2026-08-11T22:03:24.423Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/contrast-inner-yoke",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -42055,7 +43296,7 @@
    "state": "has-owner-photo-approval",
    "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 0,
-   "rejectionEvents": 0,
+   "rejectionEvents": 1,
    "illustration": {
     "path": "/images/contrast_color_position/inner-yoke.jpg",
     "status": "drawing-unverified",
@@ -42079,6 +43320,27 @@
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 3,
+     "image": {
+      "path": ".craft-pipeline/shirt/contrast-left-pocket/candidate-3.png",
+      "sha1": "0771dacc741a2571c49563b79387ce8b38a44a06",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Wrong garment or wrong part",
+      "Unrealistic / AI look"
+     ],
+     "decidedAt": "2026-08-11T22:17:07.033Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/contrast-left-pocket",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -42141,7 +43403,7 @@
    "state": "has-owner-photo-approval",
    "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 0,
-   "rejectionEvents": 0,
+   "rejectionEvents": 1,
    "illustration": {
     "path": "/images/contrast_color_position/left-pocket.jpg",
     "status": "drawing-unverified",
@@ -42165,6 +43427,26 @@
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 3,
+     "image": {
+      "path": ".craft-pipeline/shirt/contrast-right-pocket/candidate-3.png",
+      "sha1": "f668d8918041761921299380a973f7ea77cfbcdb",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Wrong shape / outline"
+     ],
+     "decidedAt": "2026-08-11T22:11:21.166Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/contrast-right-pocket",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -42208,10 +43490,10 @@
      }
     }
    ],
-   "state": "undecided",
+   "state": "rejected-only",
    "approvedPhotoEvents": 0,
    "illustrationKeepEvents": 0,
-   "rejectionEvents": 0,
+   "rejectionEvents": 1,
    "illustration": {
     "path": "/images/contrast_color_position/right-pocket.jpg",
     "status": "drawing-unverified",
@@ -43534,12 +44816,29 @@
    "label": "None",
    "scope": "shirt",
    "current": {
-    "image": "/images/epaulet/none.jpg",
-    "techpackIllustration": null,
+    "image": "/images/generated/shirt/epaulet-none.webp",
+    "techpackIllustration": "/images/epaulet/none.jpg",
     "illustration": "/images/epaulet/none.jpg",
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 3,
+     "image": {
+      "path": ".craft-pipeline/shirt/epaulet-none/candidate-3.png",
+      "sha1": "6850d476e1afa5109b859fefcd4313a3540370dc",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-08-11T22:25:24.691Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/epaulet-none",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "approved",
@@ -43591,7 +44890,7 @@
     }
    ],
    "state": "has-owner-photo-approval",
-   "approvedPhotoEvents": 2,
+   "approvedPhotoEvents": 3,
    "illustrationKeepEvents": 1,
    "rejectionEvents": 0,
    "illustration": {
@@ -43617,6 +44916,26 @@
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 3,
+     "image": {
+      "path": ".craft-pipeline/shirt/epaulet-pointed/candidate-3.png",
+      "sha1": "07131707d601fc48cb6c248941ad8573274f2204",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Wrong side or orientation"
+     ],
+     "decidedAt": "2026-08-11T22:25:17.244Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/epaulet-pointed",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -43656,7 +44975,7 @@
    "state": "has-owner-photo-approval",
    "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 0,
-   "rejectionEvents": 0,
+   "rejectionEvents": 1,
    "illustration": {
     "path": "/images/epaulet/pointed-shoulder-epaulet.jpg",
     "status": "verified-match",
@@ -43797,12 +45116,29 @@
    "label": "Position 2",
    "scope": "shirt",
    "current": {
-    "image": "/images/brand_label_position/picture-1113.jpg",
-    "techpackIllustration": null,
+    "image": "/images/generated/shirt/blp-2.webp",
+    "techpackIllustration": "/images/brand_label_position/picture-1113.jpg",
     "illustration": "/images/brand_label_position/picture-1113.jpg",
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 3,
+     "image": {
+      "path": ".craft-pipeline/shirt/blp-2/candidate-3.png",
+      "sha1": "b7714565f63ff4ae02bbf2ec4b65f280194562e5",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-08-11T22:16:58.489Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/blp-2",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "bad-techpack",
@@ -43873,7 +45209,7 @@
     }
    ],
    "state": "has-owner-photo-approval",
-   "approvedPhotoEvents": 1,
+   "approvedPhotoEvents": 2,
    "illustrationKeepEvents": 0,
    "rejectionEvents": 0,
    "illustration": {
@@ -43899,6 +45235,24 @@
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 3,
+     "image": {
+      "path": ".craft-pipeline/shirt/blp-3/candidate-3.png",
+      "sha1": "235ebc9b84890a48535f1bc4acf166bf25828113",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "notes": "Add \"Blessed&Dressed\" to the label",
+     "decidedAt": "2026-08-11T22:11:12.135Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/blp-3",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "bad-techpack",
@@ -43959,10 +45313,10 @@
      }
     }
    ],
-   "state": "undecided",
+   "state": "rejected-only",
    "approvedPhotoEvents": 0,
    "illustrationKeepEvents": 0,
-   "rejectionEvents": 0,
+   "rejectionEvents": 1,
    "illustration": {
     "path": "/images/brand_label_position/picture-1114.jpg",
     "status": "verified-match",
@@ -43986,6 +45340,27 @@
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 3,
+     "image": {
+      "path": ".craft-pipeline/shirt/blp-4/candidate-3.png",
+      "sha1": "504543b6ff2a5a043ca53f17dd74d06b0c0bea98",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "notes": "supposed to be inside shirt",
+     "tags": [
+      "Wrong side or orientation"
+     ],
+     "decidedAt": "2026-08-11T22:11:44.895Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "shirt/blp-4",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "bad-techpack",
@@ -44095,10 +45470,10 @@
      }
     }
    ],
-   "state": "undecided",
+   "state": "rejected-only",
    "approvedPhotoEvents": 0,
    "illustrationKeepEvents": 0,
-   "rejectionEvents": 0,
+   "rejectionEvents": 1,
    "illustration": {
     "path": "/images/brand_label_position/picture-1115.jpg",
     "status": "verified-match",
@@ -44166,12 +45541,29 @@
    "label": "Natural",
    "scope": "jacket",
    "current": {
-    "image": null,
+    "image": "/images/generated/sport-coat/sleeve-natural.webp",
     "techpackIllustration": "/images/supplier-bb/SHSMD/A.jpg",
     "illustration": "/images/supplier-bb/SHSMD/A.jpg",
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 8,
+     "image": {
+      "path": ".craft-pipeline/sport-coat/sleeve-natural/candidate-8.png",
+      "sha1": "0c4025837486adb71cbb432ceabdf8ac7d5cdd0f",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-08-11T21:07:58.910Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "sport-coat/sleeve-natural",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -44208,7 +45600,7 @@
     }
    ],
    "state": "has-owner-photo-approval",
-   "approvedPhotoEvents": 1,
+   "approvedPhotoEvents": 2,
    "illustrationKeepEvents": 0,
    "rejectionEvents": 0,
    "illustration": {
@@ -44228,12 +45620,29 @@
    "label": "Regular",
    "scope": "jacket",
    "current": {
-    "image": "/images/jacket/shoulder-head/regular.jpg",
+    "image": "/images/generated/sport-coat/sleeve-regular.webp",
     "techpackIllustration": "/images/supplier-bb/SHSMD/B.jpg",
     "illustration": "/images/supplier-bb/SHSMD/B.jpg",
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 8,
+     "image": {
+      "path": ".craft-pipeline/sport-coat/sleeve-regular/candidate-8.png",
+      "sha1": "0f0ceac46ad59ac24772b3ae5424559a22f609d8",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-08-11T21:09:07.358Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "sport-coat/sleeve-regular",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -44270,7 +45679,7 @@
     }
    ],
    "state": "has-owner-photo-approval",
-   "approvedPhotoEvents": 1,
+   "approvedPhotoEvents": 2,
    "illustrationKeepEvents": 0,
    "rejectionEvents": 0,
    "illustration": {
@@ -44457,12 +45866,29 @@
    "label": "Shirt Head",
    "scope": "jacket",
    "current": {
-    "image": "/images/jacket/shoulder-head/shirt-head.jpg",
+    "image": "/images/generated/sport-coat/sleeve-shirt-head.webp",
     "techpackIllustration": "/images/supplier-bb/SHSMD/E.jpg",
     "illustration": "/images/supplier-bb/SHSMD/E.jpg",
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 8,
+     "image": {
+      "path": ".craft-pipeline/sport-coat/sleeve-shirt-head/candidate-8.png",
+      "sha1": "0249a7cd0153adbadb53b82bb941f7dae7e9f838",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-08-11T21:08:08.215Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "sport-coat/sleeve-shirt-head",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -44499,7 +45925,7 @@
     }
    ],
    "state": "has-owner-photo-approval",
-   "approvedPhotoEvents": 1,
+   "approvedPhotoEvents": 2,
    "illustrationKeepEvents": 0,
    "rejectionEvents": 0,
    "illustration": {
@@ -46811,6 +48237,24 @@
    },
    "events": [
     {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 1,
+     "image": {
+      "path": "/images/review/sport-coat__lapel-notch-73__owner.webp",
+      "sha1": "a861b6445f00645d71e62ba1b14b1a4394ff4415",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "notes": "give the model a tie i never want a unbuttoned shirt with no under shirt",
+     "decidedAt": "2026-08-11T22:54:49.958Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "sport-coat/lapel-notch-73",
+     "current": true
+    },
+    {
      "source": "july-v3",
      "verdict": "bad-techpack",
      "julyKey": "jacket|lapel-style|lapel-notch-73",
@@ -46945,7 +48389,7 @@
    "state": "illustration-kept-only",
    "approvedPhotoEvents": 0,
    "illustrationKeepEvents": 3,
-   "rejectionEvents": 4,
+   "rejectionEvents": 5,
    "illustration": {
     "path": "/images/blueprints/supplier/a8b481235ced__0001__Notch.jpg",
     "status": "drawing-unverified",
@@ -47222,7 +48666,7 @@
    "label": "Peak 99°",
    "scope": "jacket",
    "current": {
-    "image": "/images/blueprints/supplier/e914d0a71607__0004__Semi-peak.jpg",
+    "image": "/images/generated/suit-2pc/lapel-peak-99.webp",
     "techpackIllustration": "/images/blueprints/supplier/e914d0a71607__0004__Semi-peak.jpg",
     "illustration": "/images/blueprints/supplier/e914d0a71607__0004__Semi-peak.jpg",
     "illustrationStatus": "drawing",
@@ -47240,6 +48684,23 @@
     "realImage": "/images/generated/jacket/lapel-peak-99.webp"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 1,
+     "image": {
+      "path": "/images/review/sport-coat__lapel-peak-99__owner.webp",
+      "sha1": "0186a31d645a4ad9916d7a05918233390c6b0b23",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-08-11T22:54:59.930Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "sport-coat/lapel-peak-99",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "bad-techpack",
@@ -47373,7 +48834,7 @@
     }
    ],
    "state": "has-owner-photo-approval",
-   "approvedPhotoEvents": 1,
+   "approvedPhotoEvents": 2,
    "illustrationKeepEvents": 3,
    "rejectionEvents": 3,
    "illustration": {
@@ -47393,7 +48854,7 @@
    "label": "Peak 101°",
    "scope": "jacket",
    "current": {
-    "image": "/images/blueprints/supplier/ec013dda688e__0002__Peak.jpg",
+    "image": "/images/generated/suit-2pc/lapel-peak-101.webp",
     "techpackIllustration": "/images/blueprints/supplier/ec013dda688e__0002__Peak.jpg",
     "illustration": "/images/blueprints/supplier/ec013dda688e__0002__Peak.jpg",
     "illustrationStatus": "drawing",
@@ -47409,6 +48870,23 @@
     ]
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 1,
+     "image": {
+      "path": "/images/review/sport-coat__lapel-peak-101__owner.webp",
+      "sha1": "2cca495b430d3b8754f4f5198e8549dd6e302ff6",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-08-11T22:55:06.273Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "sport-coat/lapel-peak-101",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "bad-techpack",
@@ -47541,8 +49019,8 @@
      "ownerVerdictAtTheTime": "never-reviewed"
     }
    ],
-   "state": "illustration-kept-only",
-   "approvedPhotoEvents": 0,
+   "state": "has-owner-photo-approval",
+   "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 3,
    "rejectionEvents": 4,
    "illustration": {
@@ -55625,12 +57103,29 @@
    "label": "Each Side Double",
    "scope": "jacket",
    "current": {
-    "image": null,
+    "image": "/images/generated/sport-coat/lbp-both-double.webp",
     "techpackIllustration": "/images/supplier-bb/GTECP/E.jpg",
     "illustration": "/images/supplier-bb/GTECP/E.jpg",
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 2,
+     "image": {
+      "path": ".craft-pipeline/sport-coat/lbp-both-double/candidate-2.png",
+      "sha1": "c2b15b319eb28eac866546525b4108b48896e06b",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-08-11T22:49:06.732Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "sport-coat/lbp-both-double",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "bad-techpack",
@@ -55651,8 +57146,8 @@
      }
     }
    ],
-   "state": "undecided",
-   "approvedPhotoEvents": 0,
+   "state": "has-owner-photo-approval",
+   "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 0,
    "rejectionEvents": 0,
    "illustration": {
@@ -77420,12 +78915,29 @@
    "label": "THE STRUCTURED / ENGLISH SHOULDER ",
    "scope": "jacket",
    "current": {
-    "image": "/images/jacket/shoulder-head/regular.jpg",
-    "techpackIllustration": null,
+    "image": "/images/generated/jacket/sleeve-regular.webp",
+    "techpackIllustration": "/images/jacket/shoulder-head/regular.jpg",
     "illustration": "/images/jacket/shoulder-head/regular.jpg",
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 7,
+     "image": {
+      "path": ".craft-pipeline/suit-2pc/sleeve-regular/candidate-7.png",
+      "sha1": "23e8890c68fc5779aefe65ab29068d7f464f1d80",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-08-11T21:09:37.896Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-2pc/sleeve-regular",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -77462,7 +78974,7 @@
     }
    ],
    "state": "has-owner-photo-approval",
-   "approvedPhotoEvents": 1,
+   "approvedPhotoEvents": 2,
    "illustrationKeepEvents": 0,
    "rejectionEvents": 0,
    "illustration": {
@@ -77599,12 +79111,29 @@
    "label": "Shirt Head/THE UNSTRUCTURED ",
    "scope": "jacket",
    "current": {
-    "image": "/images/jacket/shoulder-head/shirt-head.jpg",
-    "techpackIllustration": null,
+    "image": "/images/generated/jacket/sleeve-shirt-head.webp",
+    "techpackIllustration": "/images/jacket/shoulder-head/shirt-head.jpg",
     "illustration": "/images/jacket/shoulder-head/shirt-head.jpg",
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 7,
+     "image": {
+      "path": ".craft-pipeline/suit-2pc/sleeve-shirt-head/candidate-7.png",
+      "sha1": "b54e9b0ba7c8f4eaa72c44e04bba4e532c8316c3",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-08-11T21:09:32.217Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-2pc/sleeve-shirt-head",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -77641,7 +79170,7 @@
     }
    ],
    "state": "has-owner-photo-approval",
-   "approvedPhotoEvents": 1,
+   "approvedPhotoEvents": 2,
    "illustrationKeepEvents": 0,
    "rejectionEvents": 0,
    "illustration": {
@@ -77880,6 +79409,24 @@
    },
    "events": [
     {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 2,
+     "image": {
+      "path": ".craft-pipeline/suit-2pc/light-half-canvas/candidate-2.png",
+      "sha1": "b5168640b9a348cb8bb378eef47daee3f8d429c0",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "notes": "looks to thick focus on authenticity of fabrics used. used a super 180 wool navy blue with white pinstripe. and use authentic canvas fabric",
+     "decidedAt": "2026-08-11T21:01:41.846Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-2pc/light-half-canvas",
+     "current": true
+    },
+    {
      "source": "july-v3",
      "verdict": "remake",
      "julyKey": "jacket|canvas|light-half-canvas",
@@ -77905,7 +79452,7 @@
    "state": "has-owner-photo-approval",
    "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 0,
-   "rejectionEvents": 0,
+   "rejectionEvents": 1,
    "illustration": {
     "path": "/images/supplier-bb/PROCE/D.jpg",
     "status": "drawing-unverified",
@@ -89390,7 +90937,7 @@
    "label": "Each Side Double",
    "scope": "jacket",
    "current": {
-    "image": null,
+    "image": "/images/generated/sport-coat/lbp-both-double.webp",
     "techpackIllustration": "/images/supplier-bb/GTECP/E.jpg",
     "illustration": "/images/supplier-bb/GTECP/E.jpg",
     "illustrationStatus": "drawing"
@@ -112078,6 +113625,29 @@
    },
    "events": [
     {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 5,
+     "image": {
+      "path": ".craft-pipeline/suit-2pc/jetted-front/candidate-5.png",
+      "sha1": "8e216ba29d9fd116269ab0140c729e7f3694e495",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Wrong feature entirely"
+     ],
+     "references": [
+      "/images/review-refs/suit-2pc/jetted-front/1786482650182-e16dyx.webp"
+     ],
+     "decidedAt": "2026-08-11T21:11:01.153Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-2pc/jetted-front",
+     "current": true
+    },
+    {
      "source": "july-v3",
      "verdict": "remake",
      "julyKey": "trousers|front-pocket-style|jetted-front",
@@ -112191,7 +113761,7 @@
    "state": "has-owner-photo-approval",
    "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 0,
-   "rejectionEvents": 5,
+   "rejectionEvents": 6,
    "illustration": {
     "path": "/images/blueprints/factory/9092405bd48f__3131__Besom.jpg",
     "status": "verified-match",
@@ -112989,23 +114559,25 @@
    "events": [
     {
      "source": "admin-portal",
-     "via": "map",
+     "via": "log",
+     "event": "decision",
      "verdict": "rejected",
-     "attempt": 3,
+     "attempt": 8,
      "image": {
-      "path": ".craft-pipeline/suit-2pc/jeans-square/candidate-3.png",
-      "sha1": "2bc144228544d4f5a34842947afe8d8c9ca0341d",
+      "path": ".craft-pipeline/suit-2pc/jeans-square/candidate-8.png",
+      "sha1": "b4dd7bffb41a35baf3257624955c57c1dbe04bef",
       "exists": true,
-      "kind": "pipeline-candidate"
+      "kind": "logged-at-decision-time"
      },
+     "notes": "perfect except there should be a square right angle at the front of the pocket. remember to keep a luxury wool fabric. preferably a navy blue pinstripe. the image is blue jeans and only for pocket shape reference",
      "tags": [
-      "Wrong side or orientation"
+      "Wrong shape / outline"
      ],
      "references": [
-      "/images/review-refs/suit-2pc/jeans-square/1786386069215-2s45i7.webp"
+      "/images/review-refs/suit-2pc/jeans-square/1786482392035-h417xl.webp"
      ],
-     "decidedAt": "2026-08-10T18:21:38.856Z",
-     "boundBy": "pipeline-spec",
+     "decidedAt": "2026-08-11T21:07:38.607Z",
+     "boundBy": "explicit-addr",
      "portalKey": "suit-2pc/jeans-square",
      "current": true
     },
@@ -118783,6 +120355,29 @@
    },
    "events": [
     {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 2,
+     "image": {
+      "path": ".craft-pipeline/suit-2pc/ext-len-5/candidate-2.png",
+      "sha1": "672662eaee5619c42acb58e038525de3808a711e",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "notes": "For a 5.0 cm extension, keeping the same proportional relationship from the original pattern:\n\nCalculations\n\nDrop\n\nD=0.333×5.0D = 0.333 \\times 5.0 D=1.67 cmD = 1.67\\text{ cm}\n\nPractical tailoring value:\n\nD≈1.7 cmD \\approx 1.7\\text{ cm}\n\nCurve Radius\n\nR=0.70×5.0R = 0.70 \\times 5.0 R=3.5 cmR = 3.5\\text{ cm}\n\nAngle\n\nθ=tan⁡−1(1.675.0)\\theta = \\tan^{-1}\\left(\\frac{1.67}{5.0}\\right) θ≈18.4∘\\theta \\approx 18.4^\\circ\nDraft Layout\nWaistline\nA-------------B\n               \\\n                \\\n                 C\n\nA-B = 5.0 cm\nB-C = 1.7 cm\n\nBespoke Pattern Specifications\nExtension length = 5.0 cm\nFront drop = 1.7 cm\nCurve radius = 3.5 cm\nWaistband finished width = 4.0 cm (typical)\nFly shield width = 3.5-4.0 cm\nDraft angle = 18.4°\nQuick Drafting Formula\n\nFor any extension length LL:\n\nDrop=L3\\text{Drop} = \\frac{L}{3} Radius=0.7L\\text{Radius} = 0.7L\n\nFor 5 cm:\n\nDrop = 1.7 cm\nRadius = 3.5 cm\n\nThis gives a clean, compact bespoke waistband extension suitable for most modern tailored trousers with a tab or hook-and-bar closure.",
+     "references": [
+      "/images/review-refs/suit-2pc/ext-len-5/1786488293413-4e8u97.webp",
+      "/images/review-refs/suit-2pc/ext-len-5/1786488320070-9lz9v7.webp",
+      "/images/review-refs/suit-2pc/ext-len-5/1786488330831-tj18tz.webp"
+     ],
+     "decidedAt": "2026-08-11T22:45:42.888Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-2pc/ext-len-5",
+     "current": true
+    },
+    {
      "source": "july-v3",
      "verdict": "remake",
      "julyKey": "trousers|extension-length|ext-len-5",
@@ -118838,7 +120433,7 @@
    "state": "illustration-kept-only",
    "approvedPhotoEvents": 0,
    "illustrationKeepEvents": 1,
-   "rejectionEvents": 1,
+   "rejectionEvents": 2,
    "illustration": {
     "path": "/images/blueprints/factory/17db92352b9c__A.jpg",
     "status": "verified-match",
@@ -118862,6 +120457,32 @@
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 2,
+     "image": {
+      "path": ".craft-pipeline/suit-2pc/ext-len-55/candidate-2.png",
+      "sha1": "f826210acff8f32ff56cbc5223427923017ffc6f",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "notes": "For a 5.5 cm waistband extension, maintaining the same proportions as the original 13 cm draft:\n\nCalculations\n\nVertical Drop\n\nD=5.53D = \\frac{5.5}{3} D=1.83 cmD = 1.83\\text{ cm}\n\nRound to:\n\nD≈1.8 cmD \\approx 1.8\\text{ cm}\n\nCurve Radius\n\nR=0.70×5.5R = 0.70 \\times 5.5 R=3.85 cmR = 3.85\\text{ cm}\n\nRound to:\n\nR≈4.0 cmR \\approx 4.0\\text{ cm}\n\nDraft Angle\n\nθ=tan⁡−1(1.835.5)\\theta = \\tan^{-1}\\left(\\frac{1.83}{5.5}\\right) θ≈18.4∘\\theta \\approx 18.4^\\circ\nDraft Layout\nA--------------B\n                \\\n                 \\\n                  C\n\nA→B = 5.5 cm\nB→C = 1.8 cm drop\nConnect B→C with a smooth French-curve blend\nCurve radius ≈ 4.0 cm\nTailor's Practical Draft\n\nFor a typical bespoke trouser waistband:\n\nFinished waistband width: 4.0 cm\nExtension length: 5.5 cm\nDrop below waistband line: 1.8 cm\nCurve radius: 4.0 cm\nFly shield width: 3.5 to 4.0 cm\nSeam allowance: 1.0 cm\nQuick Formula\n\nFor any extension length LL:\n\nDrop=0.333L\\text{Drop} = 0.333L Radius=0.70L\\text{Radius} = 0.70L\n\nFor 5.5 cm:\n\nDrop = 1.8 cm\nRadius = 3.9 to 4.0 cm\nAngle ≈ 18.4°\n\nThis proportion will produce a compact, elegant bespoke waistband extension that is very close to what is commonly used on high-end tailored trousers with a clean tab closure.",
+     "tags": [
+      "Unrealistic / AI look"
+     ],
+     "references": [
+      "/images/review-refs/suit-2pc/ext-len-55/1786488204984-9g2i34.webp",
+      "/images/review-refs/suit-2pc/ext-len-55/1786488225623-2ujq83.webp",
+      "/images/review-refs/suit-2pc/ext-len-55/1786488237702-x47knh.webp"
+     ],
+     "decidedAt": "2026-08-11T22:44:11.005Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-2pc/ext-len-55",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -118918,7 +120539,7 @@
    "state": "illustration-kept-only",
    "approvedPhotoEvents": 0,
    "illustrationKeepEvents": 1,
-   "rejectionEvents": 1,
+   "rejectionEvents": 2,
    "illustration": {
     "path": "/images/blueprints/factory/996d352c9178__B.jpg",
     "status": "verified-match",
@@ -118942,6 +120563,29 @@
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 2,
+     "image": {
+      "path": ".craft-pipeline/suit-2pc/ext-len-6/candidate-2.png",
+      "sha1": "421636e9d6a781e103556c6a013d5bb40ff2a910",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "notes": "For a 6.0 cm waistband extension using the same proportional geometry:\n\n1. Vertical Drop\nD=0.333×6.0D = 0.333 \\times 6.0 D=2.0 cmD = 2.0\\text{ cm}\n2. Curve Radius\nR=0.70×6.0R = 0.70 \\times 6.0 R=4.2 cmR = 4.2\\text{ cm}\n3. Angle\nθ=tan⁡−1(2.06.0)\\theta = \\tan^{-1}\\left(\\frac{2.0}{6.0}\\right) θ=18.43∘\\theta = 18.43^\\circ\nDrafting Layout\nA----------------B  (6.0 cm)\n\n                  \\\n                   \\\n                    C\n                   (2.0 cm drop)\n\n\nWhere:\n\nA→B = 6.0 cm\nB→C = 2.0 cm\nConnect B to C with a smooth French curve\nUse a curve radius of approximately 4.0 to 4.5 cm\nBespoke Trouser Waistband Specs\nComponent\tDimensionWaistband finished width\t4.0 cm\nExtension length\t6.0 cm\nFront drop\t2.0 cm\nCurve radius\t4.2 cm\nFly shield width\t3.5-4.0 cm\nDraft angle\t18.4°\nQuick Pattern Formula\n\nFor any extension length LL:\n\nDrop=L3\\text{Drop} = \\frac{L}{3} Radius=0.7L\\text{Radius} = 0.7L\n\nFor L = 6.0 cm:\n\nDrop=2.0 cm\\text{Drop} = 2.0\\text{ cm} Radius=4.2 cm\\text{Radius} = 4.2\\text{ cm}\n\nThese proportions create a clean bespoke waistband extension similar to the one shown in your image, scaled to 6 cm.",
+     "references": [
+      "/images/review-refs/suit-2pc/ext-len-6/1786488125604-3n86el.webp",
+      "/images/review-refs/suit-2pc/ext-len-6/1786488144380-etzzpd.webp",
+      "/images/review-refs/suit-2pc/ext-len-6/1786488155188-nuc8j3.webp"
+     ],
+     "decidedAt": "2026-08-11T22:42:46.338Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-2pc/ext-len-6",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -118998,7 +120642,7 @@
    "state": "illustration-kept-only",
    "approvedPhotoEvents": 0,
    "illustrationKeepEvents": 1,
-   "rejectionEvents": 1,
+   "rejectionEvents": 2,
    "illustration": {
     "path": "/images/blueprints/factory/ef0fb41e2ad1__C.jpg",
     "status": "verified-match",
@@ -119022,6 +120666,31 @@
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 2,
+     "image": {
+      "path": ".craft-pipeline/suit-2pc/ext-len-65/candidate-2.png",
+      "sha1": "90ffa02df6126bdc11f172c3fe39a3816494bdc1",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "notes": "For a 6.5 cm diagonal waistband/fly transition, using the same proportional drafting method:\n\nDrop\nD=0.333×6.5D = 0.333 \\times 6.5 D=2.16 cmD = 2.16 \\text{ cm}\nCurve Radius\nR=0.70×6.5R = 0.70 \\times 6.5 R=4.55 cmR = 4.55 \\text{ cm}\nAngle\nθ=tan⁡−1(2.166.5)\\theta = \\tan^{-1}\\left(\\frac{2.16}{6.5}\\right) θ≈18.4∘\\theta \\approx 18.4^\\circ\nDraft\nA----------------B\n                  \\\n                   \\\n                    C\n\nA→B = 6.5 cm\nB→C = 2.2 cm drop\nBlend B→C with a smooth French curve\nRecommended curve radius = 4.5 to 5.0 cm\nBespoke Tailoring Practical Values\n\nIf this is a trouser waistband extension:\n\nFinished waistband width: 4.0 cm\nExtension length: 6.5 cm\nFront drop: 2.2 cm\nCurve radius: 4.5 cm\nFly shield width: 3.5 to 4.0 cm\n\nThis will maintain the same visual proportion as the original 13 cm pattern while reducing the extension to 6.5 cm.",
+     "tags": [
+      "Unrealistic / AI look"
+     ],
+     "references": [
+      "/images/review-refs/suit-2pc/ext-len-65/1786488074198-i7gqzj.webp",
+      "/images/review-refs/suit-2pc/ext-len-65/1786488081194-hs6351.webp"
+     ],
+     "decidedAt": "2026-08-11T22:41:34.296Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-2pc/ext-len-65",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -119078,7 +120747,7 @@
    "state": "illustration-kept-only",
    "approvedPhotoEvents": 0,
    "illustrationKeepEvents": 1,
-   "rejectionEvents": 1,
+   "rejectionEvents": 2,
    "illustration": {
     "path": "/images/blueprints/factory/bd9c06045808__D.jpg",
     "status": "verified-match",
@@ -119102,6 +120771,27 @@
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 2,
+     "image": {
+      "path": ".craft-pipeline/suit-2pc/ext-len-7/candidate-2.png",
+      "sha1": "1fe35bf99c2cf8696f92f6847a7c73abf9bdd3a3",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "notes": "If you're changing that 13 cm diagonal shaping length to 7 cm, the geometry scales accordingly.\n\nUsing the same drop proportion:\n\nD=73D = \\frac{7}{3} D=2.33 cmD = 2.33 \\text{ cm}\nAngle Calculation\nθ=tan⁡−1(2.337)\\theta = \\tan^{-1}\\left(\\frac{2.33}{7}\\right) θ≈18.4∘\\theta \\approx 18.4^\\circ\n\nSo the shape remains nearly identical, just shorter.\n\nDraft Dimensions for a 7 cm Waistband Extension\nExtension length: 7.0 cm\nVertical drop: 2.3 cm\nCurve radius: 4.5 to 5.0 cm\nFly extension width: 3.5 to 4.0 cm\nFinished waistband width: 4.0 cm (typical bespoke)\nDrafting Method\nA ------------------ B\n|                     \\\n|                      \\\n|                       C\n|\n|\n\nA→B = 7 cm\nB→C = 2.3 cm drop\nBlend B to C with a smooth French curve\nRadius ≈ 5 cm\nScaling Formula\n\nFor any diagonal length LL:\n\nDrop=0.333L\\text{Drop} = 0.333L Radius=0.70L\\text{Radius} = 0.70L\n\nFor L=7L = 7 cm:\n\nDrop=7×0.333=2.33 cm\\text{Drop} = 7 \\times 0.333 = 2.33 \\text{ cm} Radius=7×0.70=4.9 cm\\text{Radius} = 7 \\times 0.70 = 4.9 \\text{ cm}\n\nThis will produce a clean bespoke waistband/fly transition matching the proportions of the original drawing while reducing the extension from 13 cm to 7 cm.",
+     "tags": [
+      "Unrealistic / AI look"
+     ],
+     "decidedAt": "2026-08-11T22:39:21.288Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-2pc/ext-len-7",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -119158,7 +120848,7 @@
    "state": "illustration-kept-only",
    "approvedPhotoEvents": 0,
    "illustrationKeepEvents": 1,
-   "rejectionEvents": 1,
+   "rejectionEvents": 2,
    "illustration": {
     "path": "/images/blueprints/factory/a9b053b81635__E.jpg",
     "status": "verified-match",
@@ -119182,6 +120872,27 @@
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 2,
+     "image": {
+      "path": ".craft-pipeline/suit-2pc/ext-len-13/candidate-2.png",
+      "sha1": "90aabee61efea53e148aa8c0b3e7ffaee3bd5c60",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "notes": "From the image, I can see a trouser waistband extension/tab at the front closure. The only dimension shown is 13 cm, measured diagonally from the waistband edge down toward the fly extension area. The drawing appears to show:\n\nA waistband with an extended fastening tab.\nA curved fly facing underneath.\nA zipper fly.\nA front waistband overlap/underlap construction commonly used in bespoke tailoring.\n\nBecause the image only contains a single dimension (13 cm) and no scale, I cannot derive exact finished pattern dimensions, but I can give you the geometric drafting formulas used by bespoke trousermakers.\n\n1. Waistband Length Formula\n\nThe finished waistband length equals the trouser waist line plus overlap.\n\nWL=W+OWL = W + O\n\nWhere:\n\nWLWL = waistband length\nWW = trouser waist circumference\nOO = overlap extension\n\nTypical bespoke overlap:\n\nO=3.5 cm to 5.0 cmO = 3.5 \\text{ cm to } 5.0 \\text{ cm}\n\nExample:\n\nWaist = 84 cm\n\nWL=84+4=88 cmWL = 84 + 4 = 88 \\text{ cm}\n2. Waistband Width Formula\n\nFinished width:\n\nWWf=3.5 cm to 4.5 cmWW_f = 3.5 \\text{ cm to } 4.5 \\text{ cm}\n\nCut width before folding:\n\nWWc=(WWf×2)+SAWW_c = (WW_f \\times 2) + SA\n\nWhere:\n\nSASA = seam allowances\n\nExample:\n\nFinished waistband = 4 cm\n\nWWc=(4×2)+2WW_c = (4 \\times 2) + 2 WWc=10 cmWW_c = 10 \\text{ cm}\n3. Extension Tab Geometry\n\nFor a classic bespoke extension:\n\nEL=0.04W+1EL = 0.04W + 1\n\nWhere:\n\nELEL = extension length\nWW = body waist circumference\n\nExample:\n\n84 cm waist\n\nEL=(84×0.04)+1EL = (84 \\times 0.04)+1 EL=4.36 cmEL = 4.36 \\text{ cm}\n\nRound to:\n\nEL≈4.5 cmEL \\approx 4.5 \\text{ cm}\n4. Fly Extension Formula\n\nThe underlap extension behind the zipper is typically:\n\nFE=Zw+1.5FE = Z_w + 1.5\n\nWhere:\n\nFEFE = fly extension width\nZwZ_w = zipper tape width\n\nTypical:\n\nFE=4.0−4.5 cmFE = 4.0 - 4.5 \\text{ cm}\n5. Curved Front Waistband Drop\n\nThe image shows a diagonal dimension of 13 cm.\n\nFor a shaped waistband extension:\n\nD=133D = \\frac{13}{3}\n\nTypical resulting drop:\n\nD≈4.3 cmD \\approx 4.3 \\text{ cm}\n\nThis corresponds closely to common bespoke front fly curves.\n\nTo draft:\n\nMark 13 cm along the front edge.\nDrop approximately 4 to 4.5 cm.\nConnect with a French curve to form the fly shape.\n6. Waistband Angle Calculation\n\nIf the extension is 13 cm long and drops 4.5 cm:\n\nθ=tan⁡−1(4.513)\\theta = \\tan^{-1} \\left(\\frac{4.5}{13}\\right) θ=19.1∘\\theta = 19.1^\\circ\n\nSo the front shaping angle is approximately:\n\n19∘19^\\circ\n7. Bespoke Waistband Extension Draft\n\nA common high-end tailoring draft:\n\n           4.5 cm\n    ┌─────────────────┐\n    │                 │\n    │                 │\n    │                 │\n    └───────╮         │\n            ╰─────────┘\n\n                 ↑\n           13 cm curve\n\n\nMeasurements:\n\nFinished waistband width = 4 cm\nExtension length = 4.5 cm\nFly extension width = 4 cm\nCurved transition length = 13 cm\nCurve radius = 7 to 9 cm\n8. Drafting Formula From Waist Measurement\n\nFor any waist size:\n\nExtension=W20\\text{Extension} = \\frac{W}{20} Fly Width=W22\\text{Fly Width} = \\frac{W}{22} Curve Radius=W10\\text{Curve Radius} = \\frac{W}{10}\n\nExample (84 cm waist):\n\nExtension=8420=4.2 cm\\text{Extension} = \\frac{84}{20}=4.2\\text{ cm} Fly Width=8422=3.8 cm\\text{Fly Width}=\\frac{84}{22}=3.8\\text{ cm} Radius=8410=8.4 cm\\text{Radius}=\\frac{84}{10}=8.4\\text{ cm}\n\nThese formulas produce the proportions typically seen in bespoke Italian and Savile Row trouser waistbands.\n\nIf this came from a specific trouser pattern system (Müller, Aldrich, ESMOD, Jansen, or a Japanese tailoring draft), upload the full pattern image and I can reverse-engineer the exact geometry and grading formulas.",
+     "tags": [
+      "Unrealistic / AI look"
+     ],
+     "decidedAt": "2026-08-11T22:38:49.683Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-2pc/ext-len-13",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -119238,7 +120949,7 @@
    "state": "illustration-kept-only",
    "approvedPhotoEvents": 0,
    "illustrationKeepEvents": 1,
-   "rejectionEvents": 1,
+   "rejectionEvents": 2,
    "illustration": {
     "path": "/images/blueprints/factory/8f065c084861__K.jpg",
     "status": "verified-match",
@@ -119262,6 +120973,30 @@
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 2,
+     "image": {
+      "path": ".craft-pipeline/suit-2pc/ext-len-15/candidate-2.png",
+      "sha1": "ea6f70ce80aefc70afab06e8c24788a93ac1dd84",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "notes": "Yes. This illustration is showing a **waist/waistband extension**, with the **15 cm dimension referring to the extension length** shown by the red dimension marker.\n\n### What the 15 cm means\n\nThe red dimension is measuring the **extension along the waist closure**, not the circumference of the entire waist.\n\nSo:\n\n[\n\\boxed{\\text{Waist extension}=15.0\\text{ cm}}\n]\n\nIf this is a shirt waist extension/overlap, the construction should be understood as:\n\n**Body waist edge → extension/overlap → closure**\n\nThe extension is **15 cm long in the direction indicated by the dimension**, following the garment's closure/waist edge.\n\n### If you're using this for image generation\n\nI would specify it as:\n\n> **Waist extension: 15.0 cm. The waist/closure extension must measure exactly 15 cm along the indicated closure direction. Show the extension as an integral continuation of the garment body, with the correct overlapping closure construction. Do not interpret 15 cm as waist circumference, extension width, or vertical garment length. Preserve the curved lower transition shown in the technical illustration.**\n\n### Important distinction\n\nIf you're trying to calculate the **actual amount added to the finished waist circumference**, we need to know whether this 15 cm is:\n\n1. **15 cm total extension length**, or\n2. **15 cm overlap added to the waist circumference**, or\n3. **15 cm measured vertically along the garment**, which is what the illustration may be indicating.\n\nFrom this image alone, **15 cm is definitely the labeled dimension**, but I would not use it to calculate finished waist circumference without the tech-pack's written description.\n\nIf you give me the **waist measurement and tell me whether this is a shirt, trouser, or jacket waist extension**, I can give you the exact drafting math.",
+     "tags": [
+      "Unrealistic / AI look"
+     ],
+     "references": [
+      "/images/review-refs/suit-2pc/ext-len-15/1786487833910-3r94rm.png"
+     ],
+     "decidedAt": "2026-08-11T22:37:15.238Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-2pc/ext-len-15",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -119318,7 +121053,7 @@
    "state": "illustration-kept-only",
    "approvedPhotoEvents": 0,
    "illustrationKeepEvents": 1,
-   "rejectionEvents": 1,
+   "rejectionEvents": 2,
    "illustration": {
     "path": "/images/blueprints/factory/b9c52226e508__L.jpg",
     "status": "verified-match",
@@ -119491,7 +121226,7 @@
       "kind": "was-live",
       "alias": {
        "path": "/images/generated/suit-2pc/adjuster-both.png",
-       "sha1": "52d027911e7f6dd8c7356af4729b2478e2951d43"
+       "sha1": "563daca5b6d8465c5c595370178ccc97a4d41960"
       }
      },
      "replacedWith": "/images/blueprints/factory/f2e0b944fc8f__3352__Adjust_buckle_number.jpg",
@@ -119501,10 +121236,10 @@
      "source": "qc",
      "machine": true,
      "verdict": "PASS",
-     "attempt": 1,
+     "attempt": 2,
      "image": {
-      "path": ".craft-pipeline/suit-2pc/adjuster-both/candidate-1.png",
-      "sha1": "52d027911e7f6dd8c7356af4729b2478e2951d43",
+      "path": ".craft-pipeline/suit-2pc/adjuster-both/candidate-2.png",
+      "sha1": "563daca5b6d8465c5c595370178ccc97a4d41960",
       "exists": true,
       "kind": "pipeline-candidate"
      }
@@ -121369,13 +123104,30 @@
    "label": "Double Forward Pleats",
    "scope": "trousers",
    "current": {
-    "image": "/images/blueprints/factory/48f3c94b03b0__3024__Double_toward_fly.jpg",
-    "techpackIllustration": null,
+    "image": "/images/generated/jacket/double-forward.webp",
+    "techpackIllustration": "/images/blueprints/factory/48f3c94b03b0__3024__Double_toward_fly.jpg",
     "illustration": "/images/blueprints/factory/48f3c94b03b0__3024__Double_toward_fly.jpg",
     "illustrationStatus": "drawing",
     "images": []
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 4,
+     "image": {
+      "path": ".craft-pipeline/suit-2pc/double-forward/candidate-4.png",
+      "sha1": "ab2e5126e0d50ab2f5e830b26c928b09bb6947f3",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-08-11T22:10:09.073Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-2pc/double-forward",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -121487,7 +123239,7 @@
     }
    ],
    "state": "has-owner-photo-approval",
-   "approvedPhotoEvents": 1,
+   "approvedPhotoEvents": 2,
    "illustrationKeepEvents": 0,
    "rejectionEvents": 5,
    "illustration": {
@@ -123073,6 +124825,26 @@
    },
    "events": [
     {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 5,
+     "image": {
+      "path": ".craft-pipeline/suit-2pc/fly-french/candidate-5.png",
+      "sha1": "e65734702b6f20cb2d1c8fb4cef648618dc0feb6",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Unrealistic / AI look"
+     ],
+     "decidedAt": "2026-08-11T21:11:47.842Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-2pc/fly-french",
+     "current": true
+    },
+    {
      "source": "july-v3",
      "verdict": "remake",
      "julyKey": "trousers|fly-style|fly-french",
@@ -123204,7 +124976,7 @@
    "state": "has-owner-photo-approval",
    "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 1,
-   "rejectionEvents": 5,
+   "rejectionEvents": 6,
    "illustration": {
     "path": "/images/blueprints/remote/692862b38427__3403.jpg",
     "status": "verified-match",
@@ -123641,12 +125413,29 @@
    "label": "No Fly Topstitch",
    "scope": "trousers",
    "current": {
-    "image": "/images/blueprints/factory/10bfe4668d92__31A6__No_top_stitch_hidden_stitch.jpg",
-    "techpackIllustration": null,
+    "image": "/images/generated/jacket/fly-stitch-none.webp",
+    "techpackIllustration": "/images/blueprints/factory/10bfe4668d92__31A6__No_top_stitch_hidden_stitch.jpg",
     "illustration": "/images/blueprints/factory/10bfe4668d92__31A6__No_top_stitch_hidden_stitch.jpg",
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 2,
+     "image": {
+      "path": ".craft-pipeline/suit-2pc/fly-stitch-none/candidate-2.png",
+      "sha1": "63db4cade9743ec743ff7888fe9640bafd40d1d0",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-08-11T22:25:32.140Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-2pc/fly-stitch-none",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -123719,7 +125508,7 @@
     }
    ],
    "state": "has-owner-photo-approval",
-   "approvedPhotoEvents": 1,
+   "approvedPhotoEvents": 2,
    "illustrationKeepEvents": 0,
    "rejectionEvents": 0,
    "illustration": {
@@ -124011,13 +125800,30 @@
    "label": "No Back Pockets",
    "scope": "trousers",
    "current": {
-    "image": "/images/blueprints/factory/d1ec6888d1c1__31A0__No.jpg",
-    "techpackIllustration": null,
+    "image": "/images/generated/jacket/back-none.webp",
+    "techpackIllustration": "/images/blueprints/factory/d1ec6888d1c1__31A0__No.jpg",
     "illustration": "/images/blueprints/factory/d1ec6888d1c1__31A0__No.jpg",
     "illustrationStatus": "drawing",
     "images": []
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 3,
+     "image": {
+      "path": ".craft-pipeline/suit-2pc/back-none/candidate-3.png",
+      "sha1": "ccb9155ff4e93c746c5e55275b2bdf3563d00113",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-08-11T22:48:58.983Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-2pc/back-none",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -124129,7 +125935,7 @@
     }
    ],
    "state": "has-owner-photo-approval",
-   "approvedPhotoEvents": 1,
+   "approvedPhotoEvents": 2,
    "illustrationKeepEvents": 0,
    "rejectionEvents": 5,
    "illustration": {
@@ -124453,12 +126259,29 @@
    "label": "Left Besom with Button & Buttonhole",
    "scope": "trousers",
    "current": {
-    "image": "/images/blueprints/factory/7e10ed9447af__32C7__Left_besom_bttn_bttnhole.jpg",
-    "techpackIllustration": null,
+    "image": "/images/generated/jacket/back-left-jetted.webp",
+    "techpackIllustration": "/images/blueprints/factory/7e10ed9447af__32C7__Left_besom_bttn_bttnhole.jpg",
     "illustration": "/images/blueprints/factory/7e10ed9447af__32C7__Left_besom_bttn_bttnhole.jpg",
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 4,
+     "image": {
+      "path": ".craft-pipeline/suit-2pc/back-left-jetted/candidate-4.png",
+      "sha1": "09642c32417432ba0a87f7b20c673adc6a057c63",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-08-11T22:09:18.450Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-2pc/back-left-jetted",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -124495,7 +126318,7 @@
     }
    ],
    "state": "has-owner-photo-approval",
-   "approvedPhotoEvents": 1,
+   "approvedPhotoEvents": 2,
    "illustrationKeepEvents": 0,
    "rejectionEvents": 0,
    "illustration": {
@@ -127175,6 +128998,28 @@
    },
    "events": [
     {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 2,
+     "image": {
+      "path": ".craft-pipeline/suit-2pc/hem-76/candidate-2.png",
+      "sha1": "497123b4efb568936d9ee9f9670d10c16923f53a",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "notes": "If the red line represents a 7 cm plain hem turn-up (inside fold allowance), the drafting is straightforward.\n\nPlain Hem Construction\n\nLet:\n\nFH = finished hem depth\nHA = hem allowance\n\nFor a plain trouser hem:\n\nHA=FHHA = FH\n\nIf the hem allowance shown is 7 cm:\n\nHA=7 cmHA = 7\\text{ cm}\nDrafting\n\nAt the trouser bottom:\n\nDraw the finished hem line.\nMeasure 7 cm downward.\nDraw the cut line.\nFold up the full 7 cm allowance and stitch blind or machine hem.\nCut Edge\n──────────────────\n\n      7 cm\n\n──────────────────\nFinished Hem Line\n\nTailoring Standards\nHem Type\tAllowanceLightweight trousers\t4-5 cm\nStandard hem\t5 cm\nBespoke hem\t6-7 cm\nHeavy cloth / future alterations\t7-10 cm\nFabric Consumption\n\nSince the allowance is folded:\n\nExtra Length Required=7 cm\\text{Extra Length Required} = 7\\text{ cm}\n\nAdd seam finishing if needed:\n\nCut Length=Finished Length+7 cm\\text{Cut Length} = \\text{Finished Length} + 7\\text{ cm}\n\nor\n\nCut Length=Finished Length+8 cm\\text{Cut Length} = \\text{Finished Length} + 8\\text{ cm}\n\nif using a 1 cm overlock/clean-finish edge.\n\nA 7 cm plain hem is very much in line with traditional bespoke tailoring because it provides enough inlay for future length adjustments while giving the hem more weight and a cleaner drape.    make it look more bespoke luxury add some beautiful shoes",
+     "references": [
+      "/images/review-refs/suit-2pc/hem-76/1786488376400-zk2hwg.webp",
+      "/images/review-refs/suit-2pc/hem-76/1786488397889-he2uhu.webp"
+     ],
+     "decidedAt": "2026-08-11T22:48:12.850Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-2pc/hem-76",
+     "current": true
+    },
+    {
      "source": "july-v3",
      "verdict": "remake",
      "julyKey": "trousers|hem-style|hem-76",
@@ -127231,7 +129076,7 @@
    "state": "has-owner-photo-approval",
    "approvedPhotoEvents": 2,
    "illustrationKeepEvents": 0,
-   "rejectionEvents": 0,
+   "rejectionEvents": 1,
    "illustration": {
     "path": "/images/blueprints/remote/87f09a00ddf2__3609.jpg",
     "status": "verified-match",
@@ -131925,7 +133770,7 @@
    "label": "Natural",
    "scope": "jacket",
    "current": {
-    "image": null,
+    "image": "/images/generated/sport-coat/sleeve-natural.webp",
     "techpackIllustration": "/images/supplier-bb/SHSMD/A.jpg",
     "illustration": "/images/supplier-bb/SHSMD/A.jpg",
     "illustrationStatus": "drawing"
@@ -131975,7 +133820,7 @@
    "label": "Regular",
    "scope": "jacket",
    "current": {
-    "image": "/images/jacket/shoulder-head/regular.jpg",
+    "image": "/images/generated/sport-coat/sleeve-regular.webp",
     "techpackIllustration": "/images/supplier-bb/SHSMD/B.jpg",
     "illustration": "/images/supplier-bb/SHSMD/B.jpg",
     "illustrationStatus": "drawing"
@@ -132142,7 +133987,7 @@
    "label": "Shirt Head",
    "scope": "jacket",
    "current": {
-    "image": "/images/jacket/shoulder-head/shirt-head.jpg",
+    "image": "/images/generated/sport-coat/sleeve-shirt-head.webp",
     "techpackIllustration": "/images/supplier-bb/SHSMD/E.jpg",
     "illustration": "/images/supplier-bb/SHSMD/E.jpg",
     "illustrationStatus": "drawing"
@@ -142708,7 +144553,7 @@
    "label": "Each Side Double",
    "scope": "jacket",
    "current": {
-    "image": null,
+    "image": "/images/generated/sport-coat/lbp-both-double.webp",
     "techpackIllustration": "/images/supplier-bb/GTECP/E.jpg",
     "illustration": "/images/supplier-bb/GTECP/E.jpg",
     "illustrationStatus": "drawing"
@@ -168197,8 +170042,8 @@
    "label": "Left Welt",
    "scope": "vest",
    "current": {
-    "image": "/images/options/vest/vest-ticket-left.jpg",
-    "techpackIllustration": null,
+    "image": "/images/generated/jacket/vest-ticket-left.webp",
+    "techpackIllustration": "/images/options/vest/vest-ticket-left.jpg",
     "illustration": "/images/options/vest/vest-ticket-left.jpg",
     "illustrationStatus": "drawing",
     "verification": {
@@ -168207,6 +170052,23 @@
     }
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 3,
+     "image": {
+      "path": ".craft-pipeline/suit-3pc/vest-ticket-left/candidate-3.png",
+      "sha1": "5dc39ff0178f5065d1147bfac29ceec5797d3aed",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-08-11T22:17:39.930Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-3pc/vest-ticket-left",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "approved",
@@ -168261,7 +170123,7 @@
     }
    ],
    "state": "has-owner-photo-approval",
-   "approvedPhotoEvents": 3,
+   "approvedPhotoEvents": 4,
    "illustrationKeepEvents": 0,
    "rejectionEvents": 0,
    "illustration": {
@@ -178941,7 +180803,7 @@
       "kind": "was-live",
       "alias": {
        "path": "/images/generated/suit-2pc/adjuster-both.png",
-       "sha1": "52d027911e7f6dd8c7356af4729b2478e2951d43"
+       "sha1": "563daca5b6d8465c5c595370178ccc97a4d41960"
       }
      },
      "replacedWith": "/images/blueprints/factory/f2e0b944fc8f__3352__Adjust_buckle_number.jpg",
@@ -180638,8 +182500,8 @@
    "label": "Double Forward Pleats",
    "scope": "trousers",
    "current": {
-    "image": "/images/blueprints/factory/48f3c94b03b0__3024__Double_toward_fly.jpg",
-    "techpackIllustration": null,
+    "image": "/images/generated/jacket/double-forward.webp",
+    "techpackIllustration": "/images/blueprints/factory/48f3c94b03b0__3024__Double_toward_fly.jpg",
     "illustration": "/images/blueprints/factory/48f3c94b03b0__3024__Double_toward_fly.jpg",
     "illustrationStatus": "drawing",
     "images": []
@@ -182642,8 +184504,8 @@
    "label": "No Fly Topstitch",
    "scope": "trousers",
    "current": {
-    "image": "/images/blueprints/factory/10bfe4668d92__31A6__No_top_stitch_hidden_stitch.jpg",
-    "techpackIllustration": null,
+    "image": "/images/generated/jacket/fly-stitch-none.webp",
+    "techpackIllustration": "/images/blueprints/factory/10bfe4668d92__31A6__No_top_stitch_hidden_stitch.jpg",
     "illustration": "/images/blueprints/factory/10bfe4668d92__31A6__No_top_stitch_hidden_stitch.jpg",
     "illustrationStatus": "drawing"
    },
@@ -182920,8 +184782,8 @@
    "label": "No Back Pockets",
    "scope": "trousers",
    "current": {
-    "image": "/images/blueprints/factory/d1ec6888d1c1__31A0__No.jpg",
-    "techpackIllustration": null,
+    "image": "/images/generated/jacket/back-none.webp",
+    "techpackIllustration": "/images/blueprints/factory/d1ec6888d1c1__31A0__No.jpg",
     "illustration": "/images/blueprints/factory/d1ec6888d1c1__31A0__No.jpg",
     "illustrationStatus": "drawing",
     "images": []
@@ -183258,8 +185120,8 @@
    "label": "Left Besom with Button & Buttonhole",
    "scope": "trousers",
    "current": {
-    "image": "/images/blueprints/factory/7e10ed9447af__32C7__Left_besom_bttn_bttnhole.jpg",
-    "techpackIllustration": null,
+    "image": "/images/generated/jacket/back-left-jetted.webp",
+    "techpackIllustration": "/images/blueprints/factory/7e10ed9447af__32C7__Left_besom_bttn_bttnhole.jpg",
     "illustration": "/images/blueprints/factory/7e10ed9447af__32C7__Left_besom_bttn_bttnhole.jpg",
     "illustrationStatus": "drawing"
    },
@@ -197889,7 +199751,7 @@
       "kind": "was-live",
       "alias": {
        "path": "/images/generated/suit-2pc/adjuster-both.png",
-       "sha1": "52d027911e7f6dd8c7356af4729b2478e2951d43"
+       "sha1": "563daca5b6d8465c5c595370178ccc97a4d41960"
       }
      },
      "replacedWith": "/images/blueprints/factory/f2e0b944fc8f__3352__Adjust_buckle_number.jpg",
@@ -199640,8 +201502,8 @@
    "label": "Double Forward Pleats",
    "scope": "trousers",
    "current": {
-    "image": "/images/blueprints/factory/48f3c94b03b0__3024__Double_toward_fly.jpg",
-    "techpackIllustration": null,
+    "image": "/images/generated/jacket/double-forward.webp",
+    "techpackIllustration": "/images/blueprints/factory/48f3c94b03b0__3024__Double_toward_fly.jpg",
     "illustration": "/images/blueprints/factory/48f3c94b03b0__3024__Double_toward_fly.jpg",
     "illustrationStatus": "drawing",
     "images": []
@@ -201789,8 +203651,8 @@
    "label": "No Fly Topstitch",
    "scope": "trousers",
    "current": {
-    "image": "/images/blueprints/factory/10bfe4668d92__31A6__No_top_stitch_hidden_stitch.jpg",
-    "techpackIllustration": null,
+    "image": "/images/generated/jacket/fly-stitch-none.webp",
+    "techpackIllustration": "/images/blueprints/factory/10bfe4668d92__31A6__No_top_stitch_hidden_stitch.jpg",
     "illustration": "/images/blueprints/factory/10bfe4668d92__31A6__No_top_stitch_hidden_stitch.jpg",
     "illustrationStatus": "drawing"
    },
@@ -202156,8 +204018,8 @@
    "label": "No Back Pockets",
    "scope": "trousers",
    "current": {
-    "image": "/images/blueprints/factory/d1ec6888d1c1__31A0__No.jpg",
-    "techpackIllustration": null,
+    "image": "/images/generated/jacket/back-none.webp",
+    "techpackIllustration": "/images/blueprints/factory/d1ec6888d1c1__31A0__No.jpg",
     "illustration": "/images/blueprints/factory/d1ec6888d1c1__31A0__No.jpg",
     "illustrationStatus": "drawing",
     "images": []
@@ -202494,8 +204356,8 @@
    "label": "Left Besom with Button & Buttonhole",
    "scope": "trousers",
    "current": {
-    "image": "/images/blueprints/factory/7e10ed9447af__32C7__Left_besom_bttn_bttnhole.jpg",
-    "techpackIllustration": null,
+    "image": "/images/generated/jacket/back-left-jetted.webp",
+    "techpackIllustration": "/images/blueprints/factory/7e10ed9447af__32C7__Left_besom_bttn_bttnhole.jpg",
     "illustration": "/images/blueprints/factory/7e10ed9447af__32C7__Left_besom_bttn_bttnhole.jpg",
     "illustrationStatus": "drawing"
    },
@@ -213489,11 +215351,12 @@
    "label": "Left Welt",
    "scope": "vest",
    "current": {
-    "image": "/images/generated/vest/vest-ticket-left.webp",
+    "image": "/images/generated/jacket/vest-ticket-left.webp",
     "techpackIllustration": "/images/options/vest/vest-ticket-left.jpg",
     "illustration": "/images/options/vest/vest-ticket-left.jpg",
     "illustrationStatus": "drawing",
     "photos": [
+     "/images/generated/jacket/vest-ticket-left.webp",
      "/images/generated/vest/vest-ticket-left.webp"
     ],
     "realImage": "/images/generated/vest/vest-ticket-left.webp",

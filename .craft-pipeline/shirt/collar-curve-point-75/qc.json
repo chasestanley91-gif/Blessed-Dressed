@@ -2,7 +2,7 @@
   "addr": "shirt > collar-curve-point-75",
   "productId": "shirt",
   "optionId": "collar-curve-point-75",
-  "attempt": 1,
+  "attempt": 2,
   "maxAttempts": 3,
   "scores": {
     "shape": 98,
@@ -12,23 +12,41 @@
     "construction": 99,
     "placement": 99,
     "symmetry": 98,
-    "composition": 99,
+    "composition": 98,
     "blueprint-match": 98
   },
   "scoreMin": 98,
   "waiverMin": 95,
   "belowMinCategories": [],
   "belowWaiverMinCategories": [],
-  "errors": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "Owner correction reference shows the collar fastened closed; candidate is worn open at the throat per the locked prompt composition carried over from the accepted attempt-1 framing.",
+      "expected": "Owner reference composition (collar closed) where it matters to the craft",
+      "actual": "Collar worn open, band button unfastened; tip geometry — the subject of the owner correction — is unaffected and fully visible",
+      "correction": "If the owner still objects, regenerate with the collar-band button fastened to mirror the reference composition exactly."
+    },
+    {
+      "severity": "minor",
+      "category": "construction",
+      "description": "Small stitched buttonhole visible at the right collar-band end (band worn open). Reads as legitimate band construction, not a collar-pin eyelet borrowed from the round-point sibling, but flagged for owner awareness.",
+      "expected": "Clean band end or unobtrusive band buttonhole",
+      "actual": "Visible stitched band buttonhole at the right band end",
+      "correction": "None required; if the owner objects, lock 'no visible band buttonhole' in the next prompt."
+    }
+  ],
   "verdict": "PASS",
   "waiver": null,
   "correction": null,
   "lockedFeatures": [
+    "collar tips end in a defined point that curves out slightly at the very end - NOT rounded (owner correction implemented)",
     "white cotton poplin",
     "open collar no tie",
     "tight collar framing",
     "light-grey studio set"
   ],
-  "notes": "Tips softly rounded per drawing (zoom-verified); clearly distinct from round-point (much rounder + eyelets) and sharp points.",
-  "checkedAt": "2026-08-02T09:51:09.483Z"
+  "notes": "Attempt 2 after owner rejection of attempt 1 ('curve out oh so slightly at the end not be rounded'). Owner reference photo (/images/review-refs/shirt/collar-curve-point-75/1786403392798-f8np4q.webp) was attached FIRST, ahead of the tech-pack drawing, and outranks it. Zoom inspection of both tip regions confirms pointed terminations with a subtle outward sweep along the leading edge - the rounded-tip failure of attempt 1 is corrected and matches the owner reference construction. Both leaves mirror in length and tip shape within natural open-collar drape. No annotation bleed (no numbers, arrows, callouts). The spec-token 'rounded-bottom pocket' is a known descriptionHazard artifact (OCCLUDER, EXCLUDED_SHAPE) and does not describe collar geometry; no pocket appears in frame, correctly. QC is advisory: owner decides publish.",
+  "checkedAt": "2026-08-11T09:15:59.026Z"
 }

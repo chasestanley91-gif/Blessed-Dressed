@@ -1,0 +1,38 @@
+{
+  "scores": {
+    "shape": 96,
+    "geometry": 45,
+    "dimensions": 95,
+    "angles": 30,
+    "construction": 55,
+    "placement": 96,
+    "symmetry": 93,
+    "composition": 98,
+    "blueprint-match": 40
+  },
+  "errors": [
+    {
+      "severity": "critical",
+      "category": "blueprint-match",
+      "description": "The option's entire subject — the outer top collar cut on a TRUE 45-degree bias — is not rendered. The stripes on both collar leaves run only about 10–20 degrees off vertical, which reads as an ordinary straight-grain collar with natural roll, not a bias-cut one. The drawing hatches the outer top collar panel diagonally at ~45 degrees; the candidate shows no legible diagonal-versus-vertical contrast at the collar seam. A customer cannot identify the option in one second — this is generic-category substitution (a standard striped shirt).",
+      "expected": "collar-leaf stripes at a clear 45 degrees meeting the strictly vertical body/placket stripes at the collar seam",
+      "actual": "collar-leaf stripes near-vertical (~10–20 degrees of tilt), indistinguishable from a straight-grain collar",
+      "correction": "ERROR: bias absent on the outer top collar. EXPECTED: leaf stripes at a true 45-degree diagonal, unmistakably contrasting with the vertical body stripes. ACTUAL: near-vertical leaf stripes. CORRECTION: state the leaf stripe angle numerically and contrastively — 'the stripes on BOTH collar leaves run at EXACTLY 45 degrees, halfway between vertical and horizontal, like the diagonal of a square; they visibly CROSS the vertical body stripes at the collar seam' — and forbid near-vertical: 'FORBIDDEN: collar-leaf stripes within 30 degrees of vertical OR within 30 degrees of horizontal.' LOCKED-FEATURES: keep everything else from attempt 4. FORBIDDEN-CHANGES: do not change fabric, framing, background, quality tier, or stripe sharpness."
+    },
+    {
+      "severity": "major",
+      "category": "construction",
+      "description": "The inner face of the collar (visible between and behind the standing leaves) shows HORIZONTAL cross-grain stripes. The drawing hatches only the outer top collar; every other panel should read straight grain (near-vertical stripes). Horizontal is neither straight grain nor bias, and it muddies the discriminator against the sibling inner-top-collar option.",
+      "expected": "inner top collar and collar band on the straight grain, stripes near-vertical, only the outer top collar diagonal",
+      "actual": "inner top collar with fully horizontal stripes",
+      "correction": "Add an explicit line: 'the INSIDE of the collar and the collar band stay on the straight grain — their stripes run vertically, never horizontally; ONLY the outer top collar is diagonal.'"
+    }
+  ],
+  "lockedFeatures": [
+    "STRIPE RENDERING IS NOW CORRECT — razor-sharp, continuous, evenly spaced navy stripes across the whole frame with zero blotching and zero specular smudges; the owner's attempt-3 rejection cause is fixed. Keep gpt_image_2 at quality=medium, resolution=1k.",
+    "garment-only composition: no model, no skin; both collar leaves fully in frame, collar dominating the frame",
+    "fine navy stripes on white cotton; vertical stripes on body and placket; mother-of-pearl buttons; no red anywhere; zero traced annotation",
+    "seamless neutral light-grey studio background; matte pressed poplin, no gloss"
+  ],
+  "notes": "ATTEMPT 4 (post-owner-rejection re-shoot). The corrective locks worked on exactly what they targeted: stripe sharpness is flawless at medium quality — the 'blotched / lose focus' failure is gone. But the model traded away the bias itself: attempt 3 had a clear (if steep) diagonal on the leaves; attempt 4 regressed to near-vertical leaf stripes plus a horizontal-striped inner collar, so the craft option is no longer legible at all. Lesson for later waves: when a corrective lock hammers on rendering fidelity, restate the geometry discriminator with equal force and a numeric angle plus an explicit forbidden band (here: 45 degrees, forbid within 30 degrees of vertical/horizontal) — otherwise the model optimizes the correction and drops the subject."
+}

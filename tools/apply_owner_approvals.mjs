@@ -87,6 +87,7 @@ if (!ledger) { console.error('no ledger — run: node tools/build_decision_ledge
 // Queue items resolve review-copy approvals back to the original asset.
 const reviewQueue = readJson(path.join(REPO, 'data-store/image-review-queue.json'), { items: [] });
 const queueByKey = new Map((reviewQueue.items ?? []).map((i) => [i.key, i]));
+const unpublishLedger = readJson(path.join(REPO, 'public/images/reports/unpublish-ledger.json'), { changes: [] });
 
 // ── load catalog with live row handles ──────────────────────────────────────
 const files = new Map(); // product -> { cfg, touched }
@@ -198,7 +199,13 @@ for (const c of Object.values(ledger.crafts)) {
   const isReviewCopy = /(^|\/)images\/review\//.test(img.path) || img.kind === 'formerly-live';
   if (isReviewCopy || (img.kind === 'review-copy' && !img.path.startsWith('.craft-pipeline'))) {
     const qi = queueByKey.get(latest.portalKey);
-    const want = img.kind === 'formerly-live' ? img.path : (qi?.formerlyLiveAt ?? null);
+    // The queue is rebuilt after every wave and decided items drop out of it,
+    // so the formerly-live path may survive only in the unpublish ledger —
+    // the same record the staging tool derived it from.
+    const unpubHit = (unpublishLedger.changes ?? []).find((ch) =>
+      `${ch.product}|${ch.section}|${ch.field}|${ch.option}` === c.craftId);
+    const want = img.kind === 'formerly-live' ? img.path
+      : (qi?.formerlyLiveAt ?? unpubHit?.removed ?? null);
     if (want) {
       const wantAbs = path.join(PUBLIC, want.replace(/^\//, ''));
       if (!fs.existsSync(wantAbs)) { flagged.push({ craftId: c.craftId, reason: `approved original no longer on disk: ${want}` }); continue; }
@@ -216,9 +223,20 @@ for (const c of Object.values(ledger.crafts)) {
   }
 
   // Pipeline-candidate approval: master + webp under the product's folder.
+  // When the conventional name already belongs to a DIFFERENT craft (79
+  // option ids repeat across fields — stitch-01-top exists on both the collar
+  // and the placket), the file gets a field-suffixed name instead: one craft,
+  // one file, never a shared identity.
   const folder = GENERATED_FOLDER[row.product] ?? row.product;
-  const master = `/images/generated/${folder}/${row.optionId}.png`;
-  const served = master.replace(/\.png$/, '.webp');
+  let master = `/images/generated/${folder}/${row.optionId}.png`;
+  let served = master.replace(/\.png$/, '.webp');
+  {
+    const owners0 = wiredBy.get(served);
+    if (owners0 && [...owners0].some((o) => o !== row.identity)) {
+      master = `/images/generated/${folder}/${row.optionId}__${row.fieldId}.png`;
+      served = master.replace(/\.png$/, '.webp');
+    }
+  }
 
   // Live with the exact approved bytes already?
   if (row.option.image && isGenerated(row.option.image) && masterShaOfServed(row.option.image) === img.sha1) {

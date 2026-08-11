@@ -46,10 +46,12 @@
     "suit-2pc|Trousers-pleats-structure|fly-style|fly-fish-claw",
     "suit-2pc|Trousers-pleats-structure|fly-style|fly-hook-bar"
    ],
-   "runId": "wf_6265e8a6-325",
-   "status": "running"
+   "runId": "wf_b71e86ac-f4b",
+   "status": "partial: 6 generated (5 PASS, 1 UNMET-drawing-wrong), 34 hit session limit",
+   "note": "relaunched after args-as-string guard"
   }
  ],
  "next": 40,
- "note": "slice next wave from _wave-order-2026-08-11.json[next..next+40]; rerun generation_queue.mjs between waves"
+ "note": "slice next wave from _wave-order-2026-08-11.json[next..next+40]; rerun generation_queue.mjs between waves",
+ "appliedDecisionsThrough": "2026-08-11T22:55:06Z (392 decisions)"
 }

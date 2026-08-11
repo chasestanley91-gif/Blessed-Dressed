@@ -2,18 +2,18 @@
   "addr": "shirt > bias-outer-top-collar",
   "productId": "shirt",
   "optionId": "bias-outer-top-collar",
-  "attempt": 3,
+  "attempt": 4,
   "maxAttempts": 3,
   "scores": {
-    "shape": 97,
-    "geometry": 96,
-    "dimensions": 97,
-    "angles": 96,
-    "construction": 96,
-    "placement": 98,
-    "symmetry": 97,
+    "shape": 96,
+    "geometry": 45,
+    "dimensions": 95,
+    "angles": 30,
+    "construction": 55,
+    "placement": 96,
+    "symmetry": 93,
     "composition": 98,
-    "blueprint-match": 97
+    "blueprint-match": 40
   },
   "scoreMin": 98,
   "waiverMin": 95,
@@ -23,116 +23,44 @@
     "dimensions",
     "angles",
     "construction",
+    "placement",
     "symmetry",
     "blueprint-match"
   ],
-  "belowWaiverMinCategories": [],
+  "belowWaiverMinCategories": [
+    "geometry",
+    "angles",
+    "construction",
+    "symmetry",
+    "blueprint-match"
+  ],
   "errors": [
     {
-      "severity": "minor",
-      "category": "geometry",
-      "description": "The collar BAND, visible along the top inner edge, also reads as diagonally striped. The drawing hatches only the outer top collar, so the band should be straight grain. On a worn collar the band curves around the neck and its stripes fan, so this is ambiguous rather than clearly wrong at this angle.",
-      "expected": "the outer top collar on the bias; the collar band on the straight grain",
-      "actual": "the band's grain is not clearly distinguishable from the collar's",
-      "correction": "Accepted with the ambiguity recorded. The option being sold is the OUTER TOP COLLAR bias, and that relationship is unmistakable; the band is a secondary panel."
+      "severity": "critical",
+      "category": "blueprint-match",
+      "description": "The option's entire subject — the outer top collar cut on a TRUE 45-degree bias — is not rendered. The stripes on both collar leaves run only about 10–20 degrees off vertical, which reads as an ordinary straight-grain collar with natural roll, not a bias-cut one. The drawing hatches the outer top collar panel diagonally at ~45 degrees; the candidate shows no legible diagonal-versus-vertical contrast at the collar seam. A customer cannot identify the option in one second — this is generic-category substitution (a standard striped shirt).",
+      "expected": "collar-leaf stripes at a clear 45 degrees meeting the strictly vertical body/placket stripes at the collar seam",
+      "actual": "collar-leaf stripes near-vertical (~10–20 degrees of tilt), indistinguishable from a straight-grain collar",
+      "correction": "ERROR: bias absent on the outer top collar. EXPECTED: leaf stripes at a true 45-degree diagonal, unmistakably contrasting with the vertical body stripes. ACTUAL: near-vertical leaf stripes. CORRECTION: state the leaf stripe angle numerically and contrastively — 'the stripes on BOTH collar leaves run at EXACTLY 45 degrees, halfway between vertical and horizontal, like the diagonal of a square; they visibly CROSS the vertical body stripes at the collar seam' — and forbid near-vertical: 'FORBIDDEN: collar-leaf stripes within 30 degrees of vertical OR within 30 degrees of horizontal.' LOCKED-FEATURES: keep everything else from attempt 4. FORBIDDEN-CHANGES: do not change fabric, framing, background, quality tier, or stripe sharpness."
     },
     {
-      "severity": "minor",
+      "severity": "major",
       "category": "construction",
-      "description": "A few soft white specular smudges sit on both collar leaves where the light catches the cloth. They read as highlights rather than as construction, but they slightly blur the stripe at those points.",
-      "expected": "clean stripe legibility across the whole collar",
-      "actual": "two or three soft highlight patches on the leaves",
-      "correction": "Accepted. The stripe direction remains readable through them and no construction detail is obscured."
-    },
-    {
-      "severity": "minor",
-      "category": "angles",
-      "description": "The collar stripes run at a clear diagonal but nearer 55-60 degrees than the true 45 of a bias cut.",
-      "expected": "45 degrees to the straight grain",
-      "actual": "a clear diagonal, somewhat steeper than 45",
-      "correction": "Accepted. The option is a binary — bias versus straight grain — and no sibling option in this field is separated by the exact angle."
+      "description": "The inner face of the collar (visible between and behind the standing leaves) shows HORIZONTAL cross-grain stripes. The drawing hatches only the outer top collar; every other panel should read straight grain (near-vertical stripes). Horizontal is neither straight grain nor bias, and it muddies the discriminator against the sibling inner-top-collar option.",
+      "expected": "inner top collar and collar band on the straight grain, stripes near-vertical, only the outer top collar diagonal",
+      "actual": "inner top collar with fully horizontal stripes",
+      "correction": "Add an explicit line: 'the INSIDE of the collar and the collar band stay on the straight grain — their stripes run vertically, never horizontally; ONLY the outer top collar is diagonal.'"
     }
   ],
-  "verdict": "PASS_WAIVED",
-  "waiver": {
-    "granted": true,
-    "reason": "minor-only at attempt 3 of 3: retry budget exhausted with zero critical/major findings and every category >= 95",
-    "waiverMin": 95,
-    "scoreMin": 98,
-    "belowScoreMin": [
-      {
-        "category": "shape",
-        "score": 97,
-        "shortfall": 1
-      },
-      {
-        "category": "geometry",
-        "score": 96,
-        "shortfall": 2
-      },
-      {
-        "category": "dimensions",
-        "score": 97,
-        "shortfall": 1
-      },
-      {
-        "category": "angles",
-        "score": 96,
-        "shortfall": 2
-      },
-      {
-        "category": "construction",
-        "score": 96,
-        "shortfall": 2
-      },
-      {
-        "category": "symmetry",
-        "score": 97,
-        "shortfall": 1
-      },
-      {
-        "category": "blueprint-match",
-        "score": 97,
-        "shortfall": 1
-      }
-    ],
-    "minorErrors": [
-      {
-        "category": "geometry",
-        "description": "The collar BAND, visible along the top inner edge, also reads as diagonally striped. The drawing hatches only the outer top collar, so the band should be straight grain. On a worn collar the band curves around the neck and its stripes fan, so this is ambiguous rather than clearly wrong at this angle.",
-        "expected": "the outer top collar on the bias; the collar band on the straight grain",
-        "actual": "the band's grain is not clearly distinguishable from the collar's"
-      },
-      {
-        "category": "construction",
-        "description": "A few soft white specular smudges sit on both collar leaves where the light catches the cloth. They read as highlights rather than as construction, but they slightly blur the stripe at those points.",
-        "expected": "clean stripe legibility across the whole collar",
-        "actual": "two or three soft highlight patches on the leaves"
-      },
-      {
-        "category": "angles",
-        "description": "The collar stripes run at a clear diagonal but nearer 55-60 degrees than the true 45 of a bias cut.",
-        "expected": "45 degrees to the straight grain",
-        "actual": "a clear diagonal, somewhat steeper than 45"
-      }
-    ],
-    "attempt": 3,
-    "maxAttempts": 3,
-    "waiverAttemptFloor": 3,
-    "authority": "user decision 2026-07-30: QC gate stays >=98; a 3rd attempt is allowed; after 3 attempts an image with ZERO critical/major findings may ship at >=95 as a LOGGED WAIVER in qc.json",
-    "grantedAt": "2026-08-01T01:47:03.551Z"
-  },
+  "verdict": "UNMET",
+  "waiver": null,
   "correction": null,
   "lockedFeatures": [
-    "THE BIAS IS VISIBLE AT ALL — diagonal stripes on the outer top collar meeting vertical stripes on the body and placket at the collar seam. This is the entire option and attempt 2 showed none of it.",
-    "the shirt body, placket and front all on the straight grain, stripes running vertically",
-    "both collar leaves fully in frame, mirroring each other",
-    "mother-of-pearl buttons with visible sewing thread",
-    "no red anywhere, though the drawing hatches the collar in red ink",
-    "garment only: no model, face, neck or skin",
-    "seamless neutral light-grey studio background",
-    "zero traced annotation"
+    "STRIPE RENDERING IS NOW CORRECT — razor-sharp, continuous, evenly spaced navy stripes across the whole frame with zero blotching and zero specular smudges; the owner's attempt-3 rejection cause is fixed. Keep gpt_image_2 at quality=medium, resolution=1k.",
+    "garment-only composition: no model, no skin; both collar leaves fully in frame, collar dominating the frame",
+    "fine navy stripes on white cotton; vertical stripes on body and placket; mother-of-pearl buttons; no red anywhere; zero traced annotation",
+    "seamless neutral light-grey studio background; matte pressed poplin, no gloss"
   ],
-  "notes": "ATTEMPT 3. The MAJOR is resolved, and the cause of it is worth recording because it applies to a whole family of options.\n\nAttempts 1 and 2 rendered this on a PLAIN WHITE shirt. Bias cutting is a GRAIN DIRECTION, and on plain cloth a grain direction is invisible — so the photograph showed literally nothing of the option being sold. The blueprint communicates the bias with diagonal HATCHING over the collar panel, and hatching on plain cloth photographs as nothing at all. The image was not slightly wrong; it was empty.\n\nRendering the shirt in a fine vertical navy stripe makes the grain of every panel directly legible, and the option becomes obvious in one second: the collar's stripes run diagonally while the body's run vertically, and the two meet at the collar seam. There is precedent as well as logic — shirt/canvas-normal, passed earlier today, was rendered striped and its bias angle was measurable to a tenth of a degree.\n\nThe general rule this establishes for the whole bias_cutting field, and for any future option whose subject is grain, weave or nap direction: THE CLOTH MUST CARRY A PATTERN THAT REVEALS DIRECTION. Choosing plain cloth for such an option is not a neutral styling decision — it deletes the subject.\n\nAll nine categories at or above 95 with zero Critical or Major findings, so this qualifies for the logged waiver at attempt 3.",
-  "checkedAt": "2026-08-01T01:47:03.552Z"
+  "notes": "ATTEMPT 4 (post-owner-rejection re-shoot). The corrective locks worked on exactly what they targeted: stripe sharpness is flawless at medium quality — the 'blotched / lose focus' failure is gone. But the model traded away the bias itself: attempt 3 had a clear (if steep) diagonal on the leaves; attempt 4 regressed to near-vertical leaf stripes plus a horizontal-striped inner collar, so the craft option is no longer legible at all. Lesson for later waves: when a corrective lock hammers on rendering fidelity, restate the geometry discriminator with equal force and a numeric angle plus an explicit forbidden band (here: 45 degrees, forbid within 30 degrees of vertical/horizontal) — otherwise the model optimizes the correction and drops the subject.",
+  "checkedAt": "2026-08-11T09:18:57.300Z"
 }

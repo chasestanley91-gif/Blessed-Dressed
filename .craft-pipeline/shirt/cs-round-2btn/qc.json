@@ -2,27 +2,50 @@
   "addr": "shirt > cs-round-2btn",
   "productId": "shirt",
   "optionId": "cs-round-2btn",
-  "attempt": 1,
+  "attempt": 2,
   "maxAttempts": 3,
   "scores": {
     "shape": 99,
-    "geometry": 99,
-    "dimensions": 99,
-    "angles": 99,
-    "construction": 99,
-    "placement": 99,
-    "symmetry": 99,
-    "composition": 99,
-    "blueprint-match": 99
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 98,
+    "construction": 98,
+    "placement": 100,
+    "symmetry": 98,
+    "composition": 98,
+    "blueprint-match": 98
   },
   "scoreMin": 98,
   "waiverMin": 95,
   "belowMinCategories": [],
   "belowWaiverMinCategories": [],
-  "errors": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "construction",
+      "description": "Front placket topstitching notated as dashed lines in the drawing reads as a plain front in the candidate.",
+      "expected": "Visible stitched front placket per the drawing's dashed-line notation.",
+      "actual": "Plain/French-style front with a fold line and no contrast topstitch.",
+      "correction": "Not required: the front placket is a neighboring craft field, not the showcased option, and the owner's white reference photo shows the same plain front — owner references outrank the drawing per the applied correction."
+    },
+    {
+      "severity": "minor",
+      "category": "construction",
+      "description": "Band topstitch is tone-on-tone and reads faintly compared with the drawing's dashed stitch notation.",
+      "expected": "Clearly visible edge stitching along the collar band.",
+      "actual": "White-on-white stitching, subtle at this exposure, consistent with luxury shirtmaking and the owner's reference photos.",
+      "correction": "Not required: matches the finish level shown in the owner's references."
+    }
+  ],
   "verdict": "PASS",
   "waiver": null,
   "correction": null,
-  "notes": "Exactly two buttons stacked vertically on the exposed collar stand, rounded domed top edge, straight lower edge where it meets the placket. The separate lower placket button is present as drawn and was correctly not counted as a third stand button. No red bled through from the position markers.",
-  "checkedAt": "2026-08-02T17:01:37.387Z"
+  "lockedFeatures": [
+    "exactly 2 stand buttons, stacked vertically, both fastened (band closed as drawn and as shown in owner references)",
+    "round front edge of the tall collar stand",
+    "owner-reference composition: bust-style product framing, slight three-quarter angle, grey seamless background",
+    "natural cotton texture and realistic product-photography finish (corrects the 'Unrealistic / AI look' rejection)"
+  ],
+  "notes": "Attempt 2 after owner rejection of attempt 1 (tag: Unrealistic / AI look). Owner-supplied references were attached ahead of the tech-pack drawing and their composition was matched. Candidate shows the band fastened with both buttons closed — this matches BOTH the illustration and all four owner references; the prompt's inherited 'top button unfastened' line was overridden by the owner-correction block and is not scored as a discrepancy since QC compares candidate against the illustration. The separate lower placket button is present and was not miscounted as a third stand button. No red position-marker bleed, no annotation traced, no AI artifacts found on band, buttonholes, or collar tips. QC is advisory here: the owner decides the publish; no catalog write-back is performed by this run.",
+  "checkedAt": "2026-08-11T09:16:51.748Z"
 }

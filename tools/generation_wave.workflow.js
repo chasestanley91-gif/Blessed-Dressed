@@ -22,8 +22,11 @@ const RESULT = {
   required: ['craftId', 'outcome', 'attempt', 'jobId', 'candidatePath', 'sha1', 'qcVerdict', 'note'],
 }
 
-const ids = Array.isArray(args?.craftIds) ? args.craftIds : []
-const wave = args?.wave ?? 'wave'
+// args may arrive as a JSON string depending on the caller — normalize.
+let a = args
+if (typeof a === 'string') { try { a = JSON.parse(a) } catch { a = {} } }
+const ids = Array.isArray(a?.craftIds) ? a.craftIds : []
+const wave = a?.wave ?? 'wave'
 if (!ids.length) return { error: 'args.craftIds is empty — derive it from data-store/generation-queue.json states B/C' }
 
 phase('Generate')
