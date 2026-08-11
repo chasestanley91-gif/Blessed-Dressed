@@ -43,17 +43,58 @@ than converge, so this costs little and saves a lot.
 
 ---
 
+## There are four garments — everything else is a copy
+
+Corrected by the owner, then verified against the catalog — the arithmetic is
+exact, so this is not an approximation:
+
+| Garment | Catalog rows | **Distinct craft options** |
+|---|---|---|
+| Shirt | 796 | **796** (appears in one product) |
+| Jacket | 1,132 | **378** (× sport-coat, suit-2pc, suit-3pc) |
+| Trousers | 666 | **222** (× trousers, suit-2pc, suit-3pc) |
+| Vest | 268 | **134** (× vest, suit-3pc) |
+| | **2,862** | **1,530** |
+
+222 × 3 = 666. 134 × 2 = 268. A 2-piece suit is trousers + jacket; a 3-piece
+adds a vest. **suit-2pc and suit-3pc contain no craft options of their own** —
+1,332 rows (46.5%) are duplicates. One photograph per option, fanned out to
+every row that shares it.
+
+The identity is **(garment, field, option)** and deliberately excludes the
+label, because four shared options have drifted in wording between product
+files — jacket `sleeve-head/sleeve-regular` reads "Regular" in sport-coat and
+suit-3pc but `"THE STRUCTURED / ENGLISH SHOULDER "` in suit-2pc. Keying on the
+label split one craft option into two queue entries that would each have been
+paid for. Fixing it collapsed the queue **161 → 137** and moved 22 more into
+already-done: about **96 credits**.
+
+Three shared options also disagree on which *drawing* they point at, and in all
+three cases one side is the `/images/jacket/` set (5.8% usable). The queue now
+prefers the trustworthy drawing over whichever product row it read first.
+
+Fabrics, threads and buttons are out of scope and stay as they are.
+
+---
+
 ## Where things stand
 
 | | |
 |---|---|
 | Craft options | **2,862** — unchanged, invariants hold |
+| Distinct craft options | 1,530 |
 | Options with a shipping verdict | 291 (253 PASS + 38 PASS_WAIVED) |
 | UNMET / FAIL | 60 / 25 |
 | Candidate images on disk | 734 |
-| Still to shoot | **120** |
+| Options still open | **137 identities**, covering 178 catalog rows |
+| — of those, measured rungs (never shot) | 40 |
+| **Still to shoot** | **96**, across 40 groups |
 | Credits | **828.9** |
-| Cost to finish at the new setting | 120 × 4 = **480**, leaving ~349 |
+| **Cost to finish** | 96 × 4 = **384**, leaving ~445 |
+
+Verified after re-prep: `prepared 136 / dropped 1`, `shootable 96, measured rungs
+excluded 40`. The one drop is `shirt/collar-rounded-stand`, which has no drawing
+at all and is needs-source, not a failure.
 
 Everything already shipped was made at the old cheap setting. Replacing all 291
 would cost ~1,164 credits — more than the balance. That is the next budget
