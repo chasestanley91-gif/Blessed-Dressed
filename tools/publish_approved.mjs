@@ -68,6 +68,35 @@ const args = Object.fromEntries(
   })
 );
 
+// ── OWNER GATE ──────────────────────────────────────────────────────────────
+// Owner instruction, 2026-08-10: "unless ive approved them physically dont put
+// them on the live website."
+//
+// A QC verdict is evidence, not consent. This script used to treat PASS as
+// authorisation to write the live catalog, and that is exactly how 788 rows came
+// to serve a render nobody had signed off — 263 of them images the owner had
+// already looked at and REJECTED. See tools/unpublish_unapproved.mjs, which had
+// to undo it.
+//
+// A machine cannot grant this. --apply now requires the operator to state that
+// the owner looked at these images and said yes; the flag exists so that saying
+// it is a deliberate act rather than a default.
+if (args.apply && !args['owner-approved']) {
+  console.error('REFUSED: --apply writes the live catalog, and the owner has ruled that');
+  console.error('nothing goes live without their physical approval.');
+  console.error('');
+  console.error('A PASS verdict is not approval. It is a machine score on a picture the');
+  console.error('owner has not seen. Stage the candidates for review instead:');
+  console.error('');
+  console.error('  node tools/build_review_queue.mjs --write     # every candidate, any verdict');
+  console.error('');
+  console.error('Once the owner has been through them and said yes, re-run with:');
+  console.error('');
+  console.error('  node tools/publish_approved.mjs --apply --owner-approved');
+  console.error('');
+  process.exit(2);
+}
+
 const readJson = (p) => JSON.parse(fs.readFileSync(p, 'utf8'));
 const sha1 = (p) => crypto.createHash('sha1').update(fs.readFileSync(p)).digest('hex');
 const isGenerated = (v) => typeof v === 'string' && v.includes('/images/generated/');
