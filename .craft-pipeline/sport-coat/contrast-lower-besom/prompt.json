@@ -1,0 +1,106 @@
+{
+  "addr": "sport-coat > suit-details > contrast-position > contrast-lower-besom",
+  "label": "Lower Pocket Besom",
+  "part": "fin-contrast",
+  "orientation": "front",
+  "excluded": null,
+  "generate": true,
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\sport-coat.json",
+  "source": "json",
+  "illustration": "/images/supplier-bb/GCOPA/E.jpg",
+  "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\supplier-bb\\GCOPA\\E.jpg",
+  "illustrationExists": true,
+  "illustrationRemote": false,
+  "profile": {
+    "addr": "sport-coat > suit-details > contrast-position > contrast-lower-besom",
+    "product": "sport-coat",
+    "field": "Contrast Fabric Position",
+    "option": "Lower Pocket Besom",
+    "part": "fin-contrast",
+    "garment": "bespoke sport coat",
+    "orientation": "front",
+    "absence": false,
+    "distinguishingDetail": "Contrast on lower pocket welts.",
+    "measured": {
+      "dimensions": [],
+      "angles": [],
+      "counts": [],
+      "shapes": [
+        "jetted / besom welt"
+      ],
+      "spread": [],
+      "flags": [
+        "contrast fabric"
+      ]
+    },
+    "reproduceFromIllustration": [
+      "contrast fabric panel",
+      "exact placement/position",
+      "edge seam join"
+    ],
+    "composition": {
+      "crop": "on the contrast detail",
+      "dominanceTarget": "40–80% of frame",
+      "identifyWithin": "1 second"
+    },
+    "forbidden": [
+      "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+      "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+      "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+    ],
+    "excluded": null,
+    "generate": true
+  },
+  "requiredTokens": [
+    "jetted / besom welt",
+    "contrast fabric"
+  ],
+  "checklist": [
+    "on the lower side, NOT mirrored or swapped (check against the drawing, not against convention)",
+    "shape reads as drawn: jetted / besom welt",
+    "present & positioned as drawn: contrast fabric",
+    "distinguishing detail present: Contrast on lower pocket welts.",
+    "reproduced from the illustration: contrast fabric panel",
+    "reproduced from the illustration: exact placement/position",
+    "reproduced from the illustration: edge seam join",
+    "orientation matches the illustration: front",
+    "the Contrast Fabric Position dominates the frame (40–80%), identifiable within one second, framed on the contrast detail",
+    "silhouette, proportions, seam & stitch placement match the illustration; left/right symmetry correct",
+    "NO generic-category substitution — this exact option, not a typical one",
+    "a real photograph of the exact drawn option — not the line-art, no stylisation",
+    "OWNER CORRECTION (attempt 2): ONLY the BOTTOM besom lip of each hip pocket is contrast — the UPPER lip is plainly visible in the charcoal body cloth, never black",
+    "OWNER CORRECTION (attempt 2): exactly ONE thin contrast welt strip per hip pocket, on the lower edge of the pocket mouth, on BOTH hip pockets",
+    "OWNER CORRECTION (attempt 2): no visible pocket flap covering the opening, and absolutely no contrast-cloth flap (that is the sibling option 'Lower Pocket Flap')",
+    "OWNER CORRECTION (attempt 2): no contrast on any ticket pocket, chest pocket, lapel or collar"
+  ],
+  "scoreCard": [
+    { "category": "shape", "score": null, "min": 98 },
+    { "category": "geometry", "score": null, "min": 98 },
+    { "category": "dimensions", "score": null, "min": 98 },
+    { "category": "angles", "score": null, "min": 98 },
+    { "category": "construction", "score": null, "min": 98 },
+    { "category": "placement", "score": null, "min": 98 },
+    { "category": "symmetry", "score": null, "min": 98 },
+    { "category": "composition", "score": null, "min": 98 },
+    { "category": "blueprint-match", "score": null, "min": 98 }
+  ],
+  "ownerCorrections": [
+    {
+      "attempt": 1,
+      "source": "admin-portal",
+      "verdict": "rejected",
+      "tags": ["Reference drawing itself is wrong"],
+      "notes": "the bottom besom of the flap pocket is supposed to be contrast not the upper and lower./",
+      "references": [],
+      "encodedConstraints": [
+        "only the BOTTOM besom lip of each hip pocket is contrast; the upper lip stays in body cloth",
+        "one contrast welt strip per pocket, never two",
+        "owner correction outranks the shared generic drawing on pocket-mouth contrast placement",
+        "no contrast flap (sibling discriminator vs contrast-lower-flap)"
+      ],
+      "recordedAt": "2026-08-11T00:00:00.000Z"
+    }
+  ],
+  "prompt": "Ultra-photorealistic luxury menswear product photography.\n\nA single-subject craft DOCUMENTATION photograph: the Contrast Fabric Position is the dominant subject, filling 40–80% of the frame and identifiable within one second.\n\nA premium bespoke sport coat featuring a precise Lower Pocket Besom (Contrast Fabric Position).\n\nDistinguishing construction detail (reproduce exactly as drawn): Contrast on lower pocket welts.\n\nExact specification — on the lower side ONLY — do not mirror or swap; jetted / besom welt shape; contrast fabric — matching the illustration precisely.\n\nMANDATORY GEOMETRY COVERAGE — reproduce from the illustration, exactly and without assumption, every one of these: contrast fabric panel, exact placement/position, edge seam join. Match each to the drawing.\n\nVIEW — this illustration is the front of the garment. Photograph the same face; never substitute a different face of the garment.\n\nBLUEPRINT LOCK — THE DRAWING IS LAW: the attached technical illustration is the manufacturing blueprint for this exact craft option and the SOLE authority for the image. Reproduce its geometry precisely — point/edge shape, lengths, widths, depths, angles, curvature, roll lines, symmetry, button/tab/stay positions, seam and stitch placement, and proportions — within less than 2% deviation. Assume NOTHING from tailoring/menswear/fashion convention or model priors; every visible characteristic must come from the drawing. Do not redesign, reinterpret, substitute a similar commercial style, stylise, or \"improve\" it. Do NOT fall back to a generic version of this category — reproduce THIS option, not a typical one. If convention conflicts with the drawing, the drawing wins. Accuracy over aesthetics. ANNOTATIONS ARE NOT THE GARMENT: the technical drawing may carry measurement callouts — dimension numbers (\"2.5cm\", \"9cm\", \"115°\"), tick / leader / dimension lines, arrows, red or coloured guide marks, and text labels. These are manufacturing documentation, NOT features of the cloth. Reproduce ONLY the finished garment: never render any number, unit, arrow, callout, leader line, measurement mark, or text anywhere in the photograph. The final image is a clean garment photo with zero annotation. COLOUR IN THE DRAWING IS NOTATION, NOT CLOTH: any red, orange or otherwise highlighted region marks WHERE the craft option sits — it is a position marker, never a colour specification. Flat grey or tinted shading marks the EXTENT of a panel, lining or facing, not its shade. Render every one of those areas in the garment's own cloth and thread, in the natural colour that tailoring would use there. There must be no red, no highlighter tint and no flat unshaded grey panel anywhere in the photograph unless the option's own label explicitly names that colour.\n\nCONTRAST LOCK — OVERRIDES THE SHADING RULE ABOVE FOR THIS OPTION ONLY. On this drawing the shaded / tinted region is NOT notation: it marks the panel that is cut from a DIFFERENT cloth, and that second cloth is the entire product. Render \"Lower Pocket Besom\" in a clearly contrasting fabric — visibly different in colour and texture from the body of the garment (for example a deep black silk or velvet against a navy or charcoal wool) — with a crisp, clean seam where the two cloths meet. EVERY OTHER PANEL stays in the body cloth. The contrast must be obvious at a glance: if a viewer cannot instantly see which part is the different fabric, the image has failed. Do NOT render the shaded area in the body cloth, and do NOT spread the contrast fabric onto any panel the drawing leaves unshaded. THESE PANELS MUST ALL REMAIN IN THE PLAIN BODY CLOTH, with no contrast fabric, trim, edging or piping of any kind on them: top collar; lapels; sleeve cuffs; buttons; body and sleeves. Any contrast on one of those is a failed image, because it makes this option indistinguishable from a different option in the same field.\n\nOWNER CORRECTION — ATTEMPT 2. THIS BLOCK OVERRIDES THE ATTACHED DRAWING AND ANY EARLIER LINE OF THIS PROMPT WHEREVER THEY CONFLICT. Attempt 1 was rejected by the owner because BOTH welt lips of each hip pocket were rendered in the contrast cloth. The owner's ruling, verbatim: \"the bottom besom of the flap pocket is supposed to be contrast not the upper and lower.\" Locked geometry for this attempt: (1) the sport coat has TWO lower hip pockets, one on each front panel, and this option applies identically to both; (2) each hip pocket reads as a clean double-besom (jetted) pocket mouth — two narrow horizontal welt lips framing the opening — with NO flap hanging over the opening (if the pocket owns a flap it is tucked fully inside and invisible); (3) ONLY the BOTTOM besom lip — the single narrow welt strip BELOW the pocket opening — is cut from the contrast black cloth: exactly ONE thin black welt per pocket, never two; (4) the UPPER besom lip, directly above the opening, stays strictly in the charcoal body cloth with ZERO contrast — the visible difference between the charcoal upper lip and the black lower lip IS the photograph's entire message and must read instantly at a glance; (5) the phrase \"lower pocket welts\" earlier in this prompt means the bottom welt of EACH of the two hip pockets — it never means both lips of one pocket. FORBIDDEN IN THIS ATTEMPT: any contrast on the upper besom lip; both lips rendered black; a visible pocket flap covering the opening; a contrast-cloth flap of any kind (a contrast flap is the different sibling option \"Lower Pocket Flap\" and rendering it here is an automatic failure); contrast on a ticket pocket, chest pocket, lapel or collar. The attached drawing is a generic shared front view that the owner has flagged as wrong for this option — where it disagrees with this correction, THIS CORRECTION WINS on the pocket-mouth contrast placement; the drawing still governs overall silhouette, notch lapels, two-button front, welt chest pocket and proportions.\n\nPhotographed worn on a male model.\n\nFrame on the contrast detail; the detail must read clearly and sharply.\n\nSavile Row and high-end Italian sartorial aesthetic. Natural daylight studio lighting, Phase One IQ4 medium-format camera, 150MP detail, shallow depth of field, magazine-quality editorial menswear photography. Authentic bespoke craftsmanship, fine hand stitching, premium finishing. SET — shot in a clean luxury photographic studio against a seamless, plain, neutral light-grey background with clear separation between garment and background: no location, no architecture, no furniture, no scenery, no props and no environmental context of any kind competing with the garment.\n\nExtremely realistic textured wool/hopsack with visible weave texture, fine stitching.\n\nAvoid: any GENERIC menswear substitution (a generic spread collar, generic notch/peak lapel, generic pocket/pleat/vent/cuff/waistband in place of the drawn one), illustration or line-art style, CGI or 3D-render look, cartoon, mannequin, fashion sketch, inaccurate geometry, altered proportions, missing construction details, asymmetry, watermark, AI-art appearance, AND any text or annotation traced from the drawing: NO measurement numbers, units (cm/mm/°), dimension or leader lines, arrows, callouts, red/coloured guide marks, ruler ticks, or labels anywhere in the frame. This is real garment photography of the exact drawn option — clean cloth only, nothing else.\n\nFORBIDDEN FOR THIS OPTION — do not render: a generic version of this part standing in for the exact drawn option (generic-category substitution); any feature, count, or geometry borrowed from a neighboring craft option on the same field; a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion).",
+  "builtAt": "2026-08-11T00:00:00.000Z"
+}

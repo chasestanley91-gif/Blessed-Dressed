@@ -7,15 +7,25 @@
     "construction": 99,
     "placement": 99,
     "symmetry": 98,
-    "composition": 99,
+    "composition": 98,
     "blueprint-match": 98
   },
-  "errors": [],
-  "lockedFeatures": [
-    "white cotton poplin",
-    "open collar no tie",
-    "tight collar framing",
-    "light-grey studio set"
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "symmetry",
+      "description": "Very slight natural press/roll difference between the two collar leaves in the folded presentation",
+      "expected": "Both collar leaves identical in length, angle and tip shape",
+      "actual": "Leaves mirror each other; the left leaf's roll sits fractionally higher from pressing — within natural fabric behavior and consistent with the owner reference photograph",
+      "correction": "None required"
+    }
   ],
-  "notes": "Attempt 3: the drawing's folded-back left leaf reveal reproduced — triangular underside panel with centred collar stay, right leaf flat and buttoned."
+  "lockedFeatures": [
+    "collar-band button fastened, collar closed at the throat",
+    "both collar points flat and buttoned down, one mother-of-pearl button just below each tip, mirrored",
+    "dashed triangle in drawing treated as cutaway annotation - no fold, flap, panel, or exposed collar stay rendered",
+    "owner-reference folded-flat retail composition, square-on, collar centred in upper frame",
+    "white cotton poplin, light-grey seamless studio background"
+  ],
+  "notes": "Attempt 4, first candidate after owner rejection of attempt 3 (Wrong side or orientation: collar point rendered folded up as triangular underside panel with exposed stay). Candidate-4 corrects the failure completely: this is a regular button-down collar with both points flat and buttoned to the shirt body; the drawing's dashed cutaway triangle is NOT rendered as a garment feature. Composition intentionally matches the owner's attached reference photograph (folded flat retail display) per the applied ownerCorrections block, which relaxes the spec's 40-80% frame-dominance target; collar occupies roughly 25% of frame but is identifiable within one second. Rendered in the option's own white poplin, not the reference's navy. No annotations, numbers, or leader lines anywhere in frame. QC is advisory here: owner decides the publish - no catalog write-back performed in this unattended wave."
 }

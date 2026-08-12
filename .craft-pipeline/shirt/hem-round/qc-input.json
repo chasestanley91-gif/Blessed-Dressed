@@ -1,40 +1,39 @@
 {
   "scores": {
-    "shape": 99,
-    "geometry": 99,
-    "dimensions": 99,
-    "angles": 99,
+    "shape": 100,
+    "geometry": 98,
+    "dimensions": 98,
+    "angles": 100,
     "construction": 98,
-    "placement": 99,
-    "symmetry": 98,
-    "composition": 98,
-    "blueprint-match": 99
+    "placement": 100,
+    "symmetry": 100,
+    "composition": 100,
+    "blueprint-match": 98
   },
   "errors": [
     {
       "severity": "minor",
       "category": "construction",
-      "description": "The narrow hem's parallel topstitch line is soft and only partly resolved at low/1k quality; the hem fold is clearly present but the stitch row itself is not crisply legible.",
-      "expected": "Blueprint draws a dashed stitch line running parallel to the hem edge for the full length of the curve, i.e. a visibly topstitched narrow rolled hem.",
-      "actual": "A clean narrow rolled hem edge follows the entire curve and is visible as a fold band (most legible along the lower-right sweep), but the individual topstitch row is under-resolved rather than absent or misplaced.",
-      "correction": "Cosmetic only, caused by the 1k/low render tier rather than wrong geometry; a higher quality tier would resolve the stitch row. No geometry change required."
+      "description": "The drawing's small seam-junction mark at the hem/side-seam apex is rendered as a plain felled seam junction with no distinct reinforcement bar.",
+      "expected": "Tiny inline seam-junction mark at the apex as drawn.",
+      "actual": "Clean felled side seam running continuously into the rolled hem, no visible reinforcement element.",
+      "correction": "None required — the owner's attempt-1 rejection (looks identical to a sibling option) mandates a PLAIN side seam with absolutely no gusset-like patch; the three gusset siblings own that feature. The plain junction is the deliberate discriminator."
     },
     {
       "severity": "minor",
-      "category": "composition",
-      "description": "Two secondary elements share the frame with the showcased hem: the model's forearm and shirt cuff intrude at the upper-left, and the dark trouser mass occupies roughly the lower-left quarter.",
-      "expected": "The Hem Shape as the dominant, unobstructed subject at 40-80% of frame against a seamless neutral light-grey studio background.",
-      "actual": "Hem plus shirt body reads at roughly 55-60% of frame and the hem curve is completely unobstructed edge to edge; background is correctly seamless light grey with no location, architecture or props. The trousers are legitimate and arguably necessary context for a hem shown untucked, and the cuff does not touch or occlude the hem.",
-      "correction": "Optional tightening of the crop to exclude the forearm/cuff would raise focus, but the option is already identifiable in well under one second. Not a blocking defect."
+      "category": "dimensions",
+      "description": "The hem scoop is rendered deeper (side-seam high point roughly 7-9 cm above the tail bottoms) than the literal arc in the line drawing.",
+      "expected": "Moderate arc exactly as the drawing's curvature.",
+      "actual": "Deep, pronounced classic shirttail scoop with long front and back tails.",
+      "correction": "None required — Small Round Hem (hem-small-round) shares the pixel-identical drawing, so curve depth is the ONLY discriminator between the two options; the owner correction explicitly requires the deep full shirttail here and forbids a shallow curve."
     }
   ],
   "lockedFeatures": [
-    "white bespoke cotton poplin dress shirt",
-    "worn on a male model, untucked",
-    "seamless neutral light-grey studio background, no location or props",
-    "natural daylight studio lighting",
-    "detail crop framed on the shirttail hem at the side seam",
-    "no text, annotation, watermark, ruler or dimension callout in frame"
+    "deep full shirttail scoop with long front and back tails (the anti-Small-Round-Hem discriminator)",
+    "plain felled side-seam junction with NO gusset patch of any polygon (anti-gusset-sibling discriminator)",
+    "continuous unbroken hem curve through the side seam - no vent, no level hemline (anti-Straight-Hem discriminator)",
+    "wider lower-third framing showing the full hemline sweep instead of a tight side-seam crop",
+    "white cotton poplin, narrow rolled hem edge, neutral light-grey studio set"
   ],
-  "notes": "ADVERSARIAL COMPARISON, attempt 1, candidate-1.png vs /images/hem/round-hem.jpg.\n\nWHAT THE BLUEPRINT DRAWS: an isolated hem-edge schematic centred on the side seam. The seam is drawn as a solid vertical line flanked by two dashed topstitch rows, dropping from the top of the frame and terminating in a small cusp exactly where it meets the hem. From that cusp the red hem edge falls away in BOTH directions in one continuous smooth curve - toward the front panel on one side and the back panel on the other - so the hem is at its HIGHEST at the side seam and longest at front and back. A second dashed curve runs parallel to the hem edge for its full length (the narrow topstitched hem). There is no vent slit, no squared or level segment, and no gusset panel.\n\nWHAT THE PHOTO SHOWS: a near-profile detail of the lower shirt. A topstitched vertical side seam runs down the centre of frame and terminates in a small cusp at the hem apex. From that apex the hem descends both toward the front (frame left, to roughly y=745) and toward the back (frame right, to roughly y=820) in one continuous curve. Highest point of the hem is precisely at the side seam. A narrow rolled hem edge follows the whole curve. No vent slit at the seam, no squared segment, no gusset. Photoreal cotton poplin on a real model (visible skin/hand, not a mannequin), no line-art or CGI look.\n\nREJECTION ATTEMPTS THAT FAILED (i.e. checks the photo survived):\n- Straight-hem contamination: none - the hem is continuously curved with zero level run.\n- Side-vent contamination (hem-straight-side-vents / hem-sq-side-vents-5cm): none - the side seam closes cleanly into the hem apex with no slit.\n- Small-round-hem contamination: no - the rise from the front low point up to the seam apex is generous, matching the blueprint's deep sweep rather than a shallow one.\n- Gusset contamination: correctly absent (see below).\n- Face/orientation error: spec orientation is 'detail'; the photo is a macro crop with no full-garment silhouette, centred on the same side-seam region the drawing isolates, spanning front and back exactly as drawn. No front/back swap.\n- Inverted geometry (the single most likely failure for this option - hem dipping at the seam instead of rising): did NOT occur. The apex is unambiguously at the seam.\n- Text / annotation / watermark / ruler / dimension callout traced from the drawing: none anywhere in frame; no red or coloured guide marks survived into the photo.\n- Location, architecture, furniture, scenery or props: none; background is seamless light grey.\n\nSIDE GUSSET - DOCUMENTED NON-ISSUE: the auto-generated part-level checklist for 'shirt-hem' lists 'side gusset' among features to reproduce, and the built prompt therefore instructed the model to render one. The BLUEPRINT DEPICTS NO GUSSET - gussets belong to the sibling options hem-round-pentagon-gusset, hem-round-hexagon-gusset, hem-large-round-triangle-gusset and hem-small-round-pentagon-gusset. Under the Supreme Rule (the drawing is law, and the prompt's own FORBIDDEN block bars geometry borrowed from a neighbouring option on the same field) the correct output is no gusset. The photo renders no gusset, so this checklist line is vacuously satisfied. Had a gusset appeared it would have been a CRITICAL sibling-contamination error; it did not.\n\nSYMMETRY: the back tail falls slightly lower/longer than the front tail. This matches the blueprint, whose own curve descends further on one side, and matches real worn drape on a garment photographed in profile. The construction-symmetry requirement that matters for this option - the hem rises at the side seam on both the front and back side - is fully satisfied. Not scored as a defect.\n\nDIMENSIONS / ANGLES: the extracted spec carries no dimensions, angles or counts (measured.shapes = ['curved hem'] only), so there is no numeric tolerance to violate; these categories were graded on proportional fidelity of the rise-to-run of the curve, which tracks the drawing.\n\nCONCLUSION: a faithful, unobstructed, annotation-free reproduction of the drawn round/shirttail hem. Two minor cosmetic observations, no critical or major discrepancies."
+  "notes": "Attempt 2 after owner rejection of attempt 1 ('Looks identical to a sibling option'). The checklist token 'side gusset' descends from a flawed spec extraction: the drawing marks only the seam junction, and the actual gusseted hems are three separate sibling options (pentagon/hexagon/triangle); rendering any gusset here would recreate the exact sibling-confusion failure. Candidate-2 reads unambiguously as the full Round Hem in one second: deep scoop peaking exactly at the plain side seam, back tail visible behind the front tail, rolled edge visible along the curve, no annotations, photographic realism throughout. Both logged findings are the owner-mandated corrections, not defects."
 }

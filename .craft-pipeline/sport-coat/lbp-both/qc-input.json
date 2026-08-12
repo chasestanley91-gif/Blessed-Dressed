@@ -1,43 +1,31 @@
 {
   "scores": {
-    "shape": 98,
-    "geometry": 99,
-    "dimensions": 98,
+    "shape": 99,
+    "geometry": 98,
+    "dimensions": 99,
     "angles": 98,
     "construction": 99,
     "placement": 99,
-    "symmetry": 99,
+    "symmetry": 98,
     "composition": 98,
     "blueprint-match": 98
   },
   "errors": [
     {
       "severity": "minor",
-      "category": "dimensions",
-      "description": "The collar leaves and the gorge seam sit above the top frame edge, so the buttonhole's height relative to the gorge cannot be measured in-frame — only its height relative to the lapel edge. The blueprint does place its two marks well below the collar, and the render is consistent with that, but the absolute reference point is outside the crop.",
-      "expected": "buttonhole position measurable against the gorge, per the drawing",
-      "actual": "gorge cropped above frame; position measurable only against the lapel edge",
-      "correction": "acceptable; the mandated tight crop necessarily excludes the gorge, and left/right position parity — which is what this option specifies — is fully verifiable"
-    },
-    {
-      "severity": "minor",
-      "category": "composition",
-      "description": "The buttonholes themselves are small in absolute area (roughly 1% each); what dominates is the pair of lapel faces that carry them. For a position-type option specified across BOTH lapels this is the correct trade-off — the frame must be wide enough to show both sides at once — but a viewer must look at two small marks rather than one large feature.",
-      "expected": "the craft option dominating 40-80% of frame",
-      "actual": "the two lapel faces carrying the buttonholes fill roughly 65% of frame; the buttonhole marks themselves are small",
-      "correction": "no action; this is the tightest framing that still proves the 'both sides' specification"
+      "category": "angles",
+      "description": "Buttonhole slant is diagonal toward the gorge rather than parallel to the lapel front edge as in owner reference 1; the drawing's ticks and owner reference 2 show the same diagonal slant, and the owner's three references disagree among themselves on orientation, so the slant is within the owner's own demonstrated range.",
+      "expected": "Orientation within the range shown by the drawing's ticks and the owner references",
+      "actual": "Diagonal slant mirroring the drawing's tick marks, matching owner reference 2",
+      "correction": "If the owner objects, re-lock orientation as parallel to the lapel front edge per reference 1"
     }
   ],
   "lockedFeatures": [
-    "orientation: front",
-    "EXACTLY ONE buttonhole on each lapel — left and right — the definition of the 'Both Sides' option",
-    "buttonholes at equal height on the two lapels; bilateral symmetry preserved",
-    "buttonholes worked in NAVY thread matching the cloth — no annotation colour anywhere",
-    "notch lapel with clean folded edge",
-    "fabric: navy hopsack with clearly visible basketweave",
-    "no necktie; plain white shirt strip between the lapels only",
-    "background: seamless neutral studio",
-    "zero annotation in frame"
+    "one tonal buttonhole per lapel, both sides",
+    "high placement 2.5-4 cm below the notch (owner's attempt-3 position correction)",
+    "tonal navy thread, no red traced from position markers",
+    "close crop, both lapels, no necktie, no chin",
+    "navy hopsack fabric, seamless light-grey studio background"
   ],
-  "notes": "ATTEMPT 2 — ADVERSARIAL RE-READ vs /images/blueprints/supplier/68b420f69832__0543__Right_Left_bttn_hole.jpg.\n\nTHE ATTEMPT-1 CRITICAL FAILURE IS FULLY RESOLVED. Attempt 1 traced the blueprint's red position markers into the cloth and produced two saturated red buttonholes resembling applied plastic tags. Attempt 2 renders both buttonholes as genuine worked buttonholes stitched in navy thread matching the hopsack — tonal, reading unmistakably as stitched cloth. There is now NO red anywhere in the frame. This confirms that the fix for annotation-colour tracing is to state explicitly that the drawing's red means position, not colour.\n\nTHE ATTEMPT-1 MAJOR FAILURES ARE ALSO RESOLVED: the necktie, chin and neck are gone, and the crop is now a tight horizontal band across both lapel faces at buttonhole height, with only a narrow strip of plain white shirt between them. Nothing competes with the option.\n\nEVERY LOCKED FEATURE RE-VERIFIED AFTER THE CORRECTION (checking the fix broke nothing):\n- Count: still exactly one buttonhole per lapel. It did not drift to two-on-one-side or to none, which was the main risk when re-rolling a count-sensitive option.\n- Symmetry: the two buttonholes sit at matching height and matching distance from their respective lapel edges.\n- Lapel family: still a notch lapel; no drift to peak or shawl.\n- Face: still the front.\n- Annotation: no numbers, arrows, leader lines, ticks or text.\n\nATTEMPTED REJECTIONS THAT FAILED: (1) Are these real worked buttonholes or just dark dashes painted on? At full resolution each shows a bar-tacked end and a stitched gimp edge raised above the weave — genuine construction. (2) Did the tighter crop lose the 'both sides' proof? No — both lapels and both buttonholes are simultaneously in frame, which is the entire point of this option. (3) Is the cloth still sport-coat appropriate? Yes, open hopsack basketweave.\n\nNo critical or major findings remain."
+  "notes": "Attempt 3 after owner rejection of attempt 2 (buttonhole too far down the lapel). Both buttonholes now sit high on the lapel immediately below the notch, matching all three owner references and the drawing's red tick positions. Exactly one buttonhole per lapel (the stacked-pair style sample in owner reference 2 was correctly not copied). Mirrored symmetric, equal heights, tonal hand-corded finish, no annotations or red marks, no tie or chin in frame. Owner references were attached ahead of the illustration per the proven reference run."
 }

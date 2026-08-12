@@ -2,33 +2,50 @@
   "addr": "shirt > collar-round-point-70-holes",
   "productId": "shirt",
   "optionId": "collar-round-point-70-holes",
-  "attempt": 1,
+  "attempt": 2,
   "maxAttempts": 3,
   "scores": {
     "shape": 99,
     "geometry": 98,
     "dimensions": 98,
     "angles": 98,
-    "construction": 99,
+    "construction": 98,
     "placement": 99,
     "symmetry": 98,
-    "composition": 99,
+    "composition": 98,
     "blueprint-match": 98
   },
   "scoreMin": 98,
   "waiverMin": 95,
   "belowMinCategories": [],
   "belowWaiverMinCategories": [],
-  "errors": [],
+  "errors": [
+    {
+      "severity": "minor",
+      "category": "construction",
+      "description": "Eyelets on both leaves are rendered with fitted metal rims/pin-end hardware rather than the bare drilled holes of the line drawing.",
+      "expected": "Drawing shows small open eyelet holes, caption 'Collar Pin Not Included'.",
+      "actual": "Silver metal-rimmed fittings occupy the eyelets on both leaves, matching owner reference photos 2 and 4 (silver/gold barbell-end look).",
+      "correction": "None required — owner-supplied references outrank the drawing per the applied ownerCorrections block, and refs 2/4 show exactly this hardware."
+    },
+    {
+      "severity": "minor",
+      "category": "composition",
+      "description": "Frame extends further down the chest than the owner's tighter collar-crop references; collar occupies roughly 35-45% of frame.",
+      "expected": "Owner reference photos crop tight on the collar/knot area.",
+      "actual": "Candidate includes chin-to-mid-chest; collar still identifiable well within one second.",
+      "correction": "None required — within the relaxed dominance rule when owner references exist."
+    }
+  ],
   "verdict": "PASS",
   "waiver": null,
   "correction": null,
   "lockedFeatures": [
-    "white cotton poplin",
-    "open collar no tie",
-    "tight collar framing",
-    "light-grey studio set"
+    "photoreal skin/fabric rendering (natural stubble, poplin weave, drape wrinkles) — the fix for the attempt-1 'Unrealistic / AI look' rejection",
+    "round club points ~7.0 cm with metal-rimmed eyelets on both leaves",
+    "open collar, top button fastened, no tie, spread unobstructed",
+    "tight collar-and-neckline framing on light-grey studio set"
   ],
-  "notes": "Round tips + metal-rimmed eyelets on both leaves, no pin fitted (drawing note: pin not included). Excellent match.",
-  "checkedAt": "2026-08-02T09:51:10.039Z"
+  "notes": "Attempt 2 after owner rejection of attempt 1 ('Unrealistic / AI look', 4 reference photos supplied). Realism was the primary axis this pass: candidate-2 shows natural skin texture, believable cotton poplin weave, natural drape and realistic metal specular — no AI tells found under adversarial inspection. Geometry matches the drawing: rounded club points, ~65 deg closed spread, symmetric eyelets near the points. The visible eyelet hardware is the discriminator separating this option from sibling collar-round-point-70 (no holes) and matches owner refs 2/4, which outrank the drawing. QC is advisory in this wave: verdict recorded, NO catalog write-back performed (owner decides publishes).",
+  "checkedAt": "2026-08-11T23:39:00.697Z"
 }

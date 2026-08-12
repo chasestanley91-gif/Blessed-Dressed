@@ -258,7 +258,10 @@ function ReviewCard({
     <>
       <div style={{ display: "flex", alignItems: "baseline", gap: 12, marginBottom: 10, flexWrap: "wrap" }}>
         <strong style={{ fontSize: 17 }}>{item.label}</strong>
-        <code style={{ background: "#eee", padding: "2px 7px", borderRadius: 4, fontSize: 12 }}>{item.key}</code>
+        {/* The full address, not `product/option` — that short form names two
+            different crafts at once (the suit-2pc/coin-left collision), so it is
+            not enough to tell you which craft you are approving. */}
+        <code title={item.key} style={{ background: "#eee", padding: "2px 7px", borderRadius: 4, fontSize: 12 }}>{item.addr || item.key}</code>
         {item.field && <span style={{ color: "#666", fontSize: 13 }}>{item.field}</span>}
         {item.attempt > 1 && (
           <span style={{ background: "#fde68a", padding: "2px 8px", borderRadius: 4, fontSize: 12 }}>

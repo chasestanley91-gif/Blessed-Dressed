@@ -1,44 +1,50 @@
 {
   "scores": {
-    "shape": 98,
-    "geometry": 99,
+    "shape": 99,
+    "geometry": 98,
     "dimensions": 98,
-    "angles": 99,
-    "construction": 98,
-    "placement": 98,
+    "angles": 98,
+    "construction": 96,
+    "placement": 99,
     "symmetry": 99,
-    "composition": 96,
-    "blueprint-match": 98
+    "composition": 97,
+    "blueprint-match": 97
   },
   "errors": [
     {
       "severity": "minor",
-      "category": "composition",
-      "description": "The horizontal crop-in asked for at attempt 3 did not happen - the frame is essentially unchanged from attempt 2. On this 880x1168 render the left ~20% is still empty grey sweep and the sleeve still runs off the right edge with roughly half the frame as featureless navy cloth, so the four buttonholes (x 255-380, y 280-830) occupy about 6% of the frame area against the 40-80% dominance target. The option is nonetheless identifiable in well under a second and nothing competes with it: no hand, no wrist, no opposite sleeve, no jacket body.",
-      "expected": "a thin grey margin at the vent edge and about two buttonhole-lengths of plain sleeve to the right, so the buttonhole column dominates by area",
-      "actual": "about 20% empty sweep on the left and about half the frame plain sleeve on the right; buttonhole run about 6% of frame area",
-      "correction": "crop in horizontally to roughly half the current frame width, keeping the vertical framing and all four buttonholes plus the turned-back vent corner complete"
+      "category": "construction",
+      "description": "The slit opening inside each of the four hand-worked buttonholes reads slightly closed at this 880x1168 render, and the eyelet (keyhole) character of the ends required by the 'eyelet holes' flag is only suggested, not crisply resolved. Stitching itself is correct: self-coloured olive thread, hand-worked bars, tone-matched to the cloth.",
+      "expected": "four hand-worked slanted buttonholes each with a clearly open dark slit and a discernible eyelet end inside the self-coloured stitching",
+      "actual": "four correct hand-worked slanted buttonholes whose slit openings and eyelet ends read slightly soft at 1k resolution",
+      "correction": "if a future retry is ever commissioned, render at 2k or add 'open keyhole eyelet visible at the end of each worked buttonhole' to the prompt; do NOT change anything else"
     },
     {
       "severity": "minor",
-      "category": "construction",
-      "description": "The worked buttonholes read slightly more as raised stitched bars than as the open worked slits of attempt 2 - the slit opening inside each buttonhole is less clearly dark and open at this render resolution.",
-      "expected": "four hand-worked buttonholes each with a clearly open slit inside the self-coloured stitching",
-      "actual": "correct hand-worked stitching, but the slit openings read slightly closed",
-      "correction": "open the slit inside each worked buttonhole so a dark opening is visible within the self-coloured stitching"
+      "category": "composition",
+      "description": "The buttonhole column occupies roughly 8-10% of frame area against the spec's 40-80% dominance target. This is the sanctioned relaxation: the owner supplied a reference photograph after rejecting attempt 3, and its worn, mid-shot arm framing was matched instead of fighting it. The four slanted buttonholes are tack-sharp and identifiable in well under one second, with nothing competing.",
+      "expected": "spec target: buttonhole detail dominating 40-80% of frame",
+      "actual": "owner-reference framing: worn sleeve mid-shot with the buttonhole column at ~8-10% of frame, in crisp focus",
+      "correction": "none required - owner reference composition outranks the spec dominance target per the correction of 2026-08-10"
+    },
+    {
+      "severity": "minor",
+      "category": "blueprint-match",
+      "description": "The drawing does not label which sleeve it depicts, so whether the candidate's slant is the same mirror as the drawing's cannot be verified; the candidate shows the wearer's left sleeve with all four holes in a consistent ~45-50 degree parallel slant rising toward the vent edge, which is construction-consistent with the drawing's ~51 degree slashes. The option's discriminator versus its straight sibling (slanted vs straight) is unambiguous. The drawing's turned-back triangular fold was deliberately NOT reproduced: the owner ruled on 2026-08-10 that it is a cutaway annotation showing the sleeve's functionality, not literal cloth.",
+      "expected": "slanted buttonholes as drawn; fold treated as cutaway annotation per owner ruling",
+      "actual": "four parallel slanted buttonholes, no literal fold, natural open functional cuff as in the owner's reference photo",
+      "correction": "none required - if the owner wants the opposite mirror, that is a new owner instruction, not a defect"
     }
   ],
   "lockedFeatures": [
     "exactly FOUR buttonholes - do not add or remove one",
-    "buttonholes slanted, rising from lower-left to upper-right at about 50 degrees from horizontal, exactly as drawn",
-    "buttonholes evenly spaced in a single column along the sleeve vent edge",
-    "NO buttons rendered - the drawing shows buttonholes only, and the button count is a different craft option",
-    "hand-worked buttonhole stitching in self-coloured navy thread",
-    "the turned-back triangular vent corner at the base of the buttonhole run exactly as drawn",
-    "the cuff edge at the bottom with a thin sliver of white shirt cuff below it",
-    "navy textured wool/hopsack with visible weave",
-    "seamless neutral light-grey studio sweep, no hand, no fingers, no wrist, no opposite sleeve, no jacket body, no annotations, no red"
+    "buttonholes slanted at ~45-50 degrees in a single parallel column along the vent edge - the discriminator vs the straight sibling",
+    "NO buttons rendered - the drawing shows buttonholes only; button count is a different craft option",
+    "NO literal turned-back fold or curled hem - the drawing's fold is a CUTAWAY annotation (owner ruling 2026-08-10), never cloth",
+    "worn on a male model in brown-olive textured wool/hopsack matching the owner's reference photo cloth",
+    "natural, slightly open functional cuff with striped shirt cuff visible beneath, as in the owner's reference",
+    "photorealistic finish - no CGI/AI plastic look, no annotations, no red marks"
   ],
-  "notes": "ATTEMPT 3 vs /images/blueprints/factory/fdbc0cbb0bb5__AAAN__Normal_slanted.jpg. Geometry holds perfectly for the third time: exactly four buttonholes, no fifth, no buttons, single column on the vent edge, slant measured at about 52 degrees against about 51 degrees in the drawing, even spacing, and the turned-back triangular vent corner that the drawing shows at the base of the run. Both remaining findings are Minor and neither touches construction accuracy. The model would not tighten the horizontal crop despite an explicit, quantified instruction to do so - it is anchored to the illustration's own aspect and framing via the blueprint reference image, which is the same reason no other option in this batch moved its crop far either. Retry budget spent with zero critical/major findings.",
+  "notes": "ATTEMPT 4, regenerated after the OWNER rejected attempt 3 ('Unrealistic / AI look' - the drawing's fold is a cutaway to show the sleeve's functionality, not to be taken literally) and supplied 1 reference photograph. The owner reference was attached FIRST, before the illustration, and outranks it. Candidate-4 corrects the rejection completely: no literal fold, worn presentation, cloth and framing matched to the owner's photo, four cleanly slanted hand-worked buttonholes. All three findings are Minor; none touches the craft discriminator. Retry budget already spent across attempts 1-3 with the geometry holding every time. This verdict is advisory - the owner decides the publish.",
   "verdict": null
 }
