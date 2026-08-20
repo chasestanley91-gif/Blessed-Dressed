@@ -2,9 +2,9 @@
   "standard": "Blessed & Dressed MTM Wholesale Supplier Requirements v1",
   "generatedFrom": "japan-suppliers.json",
   "counts": {
-    "QUALIFIED": 5,
+    "QUALIFIED": 6,
     "CONDITIONAL": 12,
-    "BACKUP": 6,
+    "BACKUP": 5,
     "DISQUALIFIED": 3
   },
   "results": [
@@ -17,14 +17,14 @@
         "shirt"
       ],
       "priorResearchScore": 80,
-      "mtmVetScore": 79,
+      "mtmVetScore": 81,
       "verdict": "QUALIFIED",
       "action": "Wave 1 outreach now",
       "gateFailures": [],
       "categoryScores": {
         "productQuality": 15,
         "customization": 7.2,
-        "measurementSystem": 6,
+        "measurementSystem": 8,
         "production": 11,
         "qualityAssurance": 8,
         "remakePolicy": 1.2,
@@ -39,10 +39,10 @@
         "remakePolicy"
       ],
       "contact": {
-        "website": null,
-        "email": null,
-        "formUrl": null,
-        "phone": null
+        "website": "https://hitoyoshicorp.com/",
+        "email": "info@hitoyoshicorp.com",
+        "formUrl": "https://hitoyoshicorp.com/contact/",
+        "phone": "+81-966-23-2612"
       },
       "flags": []
     },
@@ -55,36 +55,79 @@
         "shirt"
       ],
       "priorResearchScore": 73,
-      "mtmVetScore": 73,
+      "mtmVetScore": 80.8,
       "verdict": "QUALIFIED",
       "action": "Wave 1 outreach now",
       "gateFailures": [],
       "categoryScores": {
         "productQuality": 15,
         "customization": 12,
-        "measurementSystem": 3.8,
+        "measurementSystem": 8,
         "production": 8,
         "qualityAssurance": 4.8,
         "remakePolicy": 1.2,
         "branding": 4.8,
         "logistics": 8,
-        "retailSupport": 5.4,
+        "retailSupport": 9,
         "commercial": 10
       },
       "leadTimeWeeks": "3-6",
       "costBand": "low",
       "unknownsToClose": [
-        "digitalPlatform",
         "leadTime",
         "remakePolicy"
       ],
       "contact": {
-        "website": null,
+        "website": "https://www.do-1.co.jp/",
         "email": null,
-        "formUrl": null,
-        "phone": null
+        "formUrl": "https://www.us.do-1.co.jp/mail_form.html",
+        "phone": "+1-646-744-5770 (Do-1 USA, NY)"
       },
       "flags": []
+    },
+    {
+      "id": "yamamoto-excy",
+      "name": "Yamamoto & Co. (EXCY)",
+      "location": "Kanda, Tokyo",
+      "type": "coordinator",
+      "products": [
+        "suit",
+        "jacket",
+        "trousers",
+        "shirt"
+      ],
+      "priorResearchScore": 83,
+      "mtmVetScore": 77.6,
+      "verdict": "QUALIFIED",
+      "action": "Wave 1 outreach now",
+      "gateFailures": [],
+      "categoryScores": {
+        "productQuality": 15,
+        "customization": 7.2,
+        "measurementSystem": 8,
+        "production": 9.6,
+        "qualityAssurance": 8,
+        "remakePolicy": 1.2,
+        "branding": 4.8,
+        "logistics": 8,
+        "retailSupport": 9,
+        "commercial": 6.8
+      },
+      "leadTimeWeeks": "3-6",
+      "costBand": "mid",
+      "unknownsToClose": [
+        "remakePolicy"
+      ],
+      "contact": {
+        "website": "https://www.excy.co.jp",
+        "englishSite": "https://www.excy-global.com",
+        "email": "contact@excy.co.jp",
+        "formUrl": "https://www.excy-global.com/blog/sewing-dept/contact/",
+        "phone": "+81-3-3254-1051"
+      },
+      "flags": [
+        "coordinator margin; one step removed from factory floor — mitigated by transparency about which factories sew"
+      ]
     },
     {
       "id": "sada",
@@ -122,56 +165,12 @@
       "contact": {
         "website": "https://www.sandars.co.jp",
         "email": null,
-        "formUrl": "https://www.sandars.co.jp/service/oem/",
-        "phone": null
+        "formUrl": "https://www.sandars.co.jp/contact/",
+        "phone": "+81-3-5809-2273"
       },
       "flags": [
-        "must pin Japan factory routing — group also produces in China; require Miyagi production in writing"
-      ]
-    },
-    {
-      "id": "yamamoto-excy",
-      "name": "Yamamoto & Co. (EXCY)",
-      "location": "Kanda, Tokyo",
-      "type": "coordinator",
-      "products": [
-        "suit",
-        "jacket",
-        "trousers",
-        "shirt"
-      ],
-      "priorResearchScore": 83,
-      "mtmVetScore": 70.2,
-      "verdict": "QUALIFIED",
-      "action": "Wave 1 outreach now",
-      "gateFailures": [],
-      "categoryScores": {
-        "productQuality": 15,
-        "customization": 7.2,
-        "measurementSystem": 3.8,
-        "production": 9.6,
-        "qualityAssurance": 8,
-        "remakePolicy": 1.2,
-        "branding": 4.8,
-        "logistics": 4.8,
-        "retailSupport": 9,
-        "commercial": 6.8
-      },
-      "leadTimeWeeks": "3-6",
-      "costBand": "mid",
-      "unknownsToClose": [
-        "digitalPlatform",
-        "remakePolicy"
-      ],
-      "contact": {
-        "website": "https://www.excy.co.jp",
-        "englishSite": "https://www.excy-global.com",
-        "email": null,
-        "formUrl": null,
-        "phone": null
-      },
-      "flags": [
-        "coordinator margin; one step removed from factory floor — mitigated by transparency about which factories sew"
+        "must pin Japan factory routing — group also produces in China; require Miyagi production in writing",
+        "complex designs sewn at Miyagi factory; simple low-cost designs sewn in Beijing — require Miyagi routing in writing"
       ]
     },
     {
@@ -207,14 +206,141 @@
         "english"
       ],
       "contact": {
-        "website": null,
+        "website": "https://www.e-yamaki.co.jp/",
         "email": null,
-        "formUrl": null,
-        "phone": null
+        "formUrl": "https://www.e-yamaki.co.jp/contact.html",
+        "phone": "+81-6-6764-2211"
       },
       "flags": [
-        "MTM plant consolidation in progress — confirm continuity before committing"
+        "MTM plant consolidation in progress — confirm continuity before committing",
+        "OEM production spans Japan, Laos, China, Thailand — require made-in-Japan routing in writing"
       ]
+    },
+    {
+      "id": "goodhill",
+      "name": "GoodHill",
+      "location": "Tottori",
+      "type": "factory",
+      "products": [
+        "suit",
+        "jacket",
+        "trousers"
+      ],
+      "priorResearchScore": 58,
+      "mtmVetScore": 63.8,
+      "verdict": "QUALIFIED",
+      "action": "Wave 1 outreach now",
+      "gateFailures": [],
+      "categoryScores": {
+        "productQuality": 9,
+        "customization": 7.2,
+        "measurementSystem": 3.8,
+        "production": 9.6,
+        "qualityAssurance": 8,
+        "remakePolicy": 1.2,
+        "branding": 4.8,
+        "logistics": 1.2,
+        "retailSupport": 9,
+        "commercial": 10
+      },
+      "leadTimeWeeks": "3-5",
+      "costBand": "low",
+      "unknownsToClose": [
+        "digitalPlatform",
+        "remakePolicy",
+        "intlShipping"
+      ],
+      "contact": {
+        "website": "https://goodhill.co.jp/",
+        "email": null,
+        "formUrl": "https://goodhill.co.jp/contact/",
+        "phone": "+81-857-21-5000"
+      },
+      "flags": []
+    },
+    {
+      "id": "flex-japan",
+      "name": "Flex Japan / Amakusa Flex",
+      "location": "Nagano / Kumamoto",
+      "type": "factory",
+      "products": [
+        "shirt"
+      ],
+      "priorResearchScore": 65,
+      "mtmVetScore": 61.8,
+      "verdict": "CONDITIONAL",
+      "action": "Wave 2 outreach — pursue, but close the listed unknowns before sampling",
+      "gateFailures": [],
+      "categoryScores": {
+        "productQuality": 9,
+        "customization": 7.2,
+        "measurementSystem": 6,
+        "production": 10.6,
+        "qualityAssurance": 4.8,
+        "remakePolicy": 1.2,
+        "branding": 4.8,
+        "logistics": 1.2,
+        "retailSupport": 9,
+        "commercial": 8
+      },
+      "leadTimeWeeks": "2-4",
+      "costBand": "low",
+      "unknownsToClose": [
+        "remakePolicy",
+        "intlShipping"
+      ],
+      "contact": {
+        "website": "https://www.flexjapan.co.jp/",
+        "email": "info@flexjapan.co.jp",
+        "formUrl": "https://www.flexjapan.co.jp/site/contact",
+        "phone": "+81-26-261-3000"
+      },
+      "flags": []
+    },
+    {
+      "id": "five-one-factory",
+      "name": "Five One Factory",
+      "location": "Hirakata, Osaka",
+      "type": "factory",
+      "products": [
+        "suit",
+        "jacket",
+        "vest",
+        "coat",
+        "tuxedo"
+      ],
+      "priorResearchScore": 77,
+      "mtmVetScore": 60.8,
+      "verdict": "CONDITIONAL",
+      "action": "Wave 2 outreach — pursue, but close the listed unknowns before sampling",
+      "gateFailures": [],
+      "categoryScores": {
+        "productQuality": 12,
+        "customization": 7.2,
+        "measurementSystem": 3.8,
+        "production": 7,
+        "qualityAssurance": 4.8,
+        "remakePolicy": 1.2,
+        "branding": 8,
+        "logistics": 4.8,
+        "retailSupport": 9,
+        "commercial": 3
+      },
+      "leadTimeWeeks": "4-8",
+      "costBand": "mid-high",
+      "unknownsToClose": [
+        "digitalPlatform",
+        "leadTime",
+        "remakePolicy",
+        "costSignal"
+      ],
+      "contact": {
+        "website": "https://www.fiveone-f.com/",
+        "email": null,
+        "formUrl": "https://www.fiveone-m.com/contact/",
+        "phone": "+81-72-851-5151"
+      },
+      "flags": []
     },
     {
       "id": "riforma-igarashi",
@@ -261,49 +387,6 @@
       ]
     },
     {
-      "id": "goodhill",
-      "name": "GoodHill",
-      "location": "Tottori",
-      "type": "factory",
-      "products": [
-        "suit",
-        "jacket",
-        "trousers"
-      ],
-      "priorResearchScore": 58,
-      "mtmVetScore": 56.1,
-      "verdict": "CONDITIONAL",
-      "action": "Wave 2 outreach — pursue, but close the listed unknowns before sampling",
-      "gateFailures": [],
-      "categoryScores": {
-        "productQuality": 9,
-        "customization": 7.2,
-        "measurementSystem": 3.8,
-        "production": 9.6,
-        "qualityAssurance": 8,
-        "remakePolicy": 1.2,
-        "branding": 4.8,
-        "logistics": 1.2,
-        "retailSupport": 1.3,
-        "commercial": 10
-      },
-      "leadTimeWeeks": "3-5",
-      "costBand": "low",
-      "unknownsToClose": [
-        "digitalPlatform",
-        "remakePolicy",
-        "intlShipping",
-        "english"
-      ],
-      "contact": {
-        "website": null,
-        "email": null,
-        "formUrl": null,
-        "phone": null
-      },
-      "flags": []
-    },
-    {
       "id": "katsuda-hifuku",
       "name": "Katsuda Hifuku",
       "location": "Osaka HQ; Miyazaki factories",
@@ -314,14 +397,14 @@
         "trousers"
       ],
       "priorResearchScore": 76,
-      "mtmVetScore": 54.3,
+      "mtmVetScore": 56.5,
       "verdict": "CONDITIONAL",
       "action": "Wave 2 outreach — pursue, but close the listed unknowns before sampling",
       "gateFailures": [],
       "categoryScores": {
         "productQuality": 12,
         "customization": 7.2,
-        "measurementSystem": 5.8,
+        "measurementSystem": 8,
         "production": 8,
         "qualityAssurance": 4.8,
         "remakePolicy": 1.2,
@@ -333,91 +416,95 @@
       "leadTimeWeeks": "3-6",
       "costBand": "low",
       "unknownsToClose": [
-        "digitalPlatform",
         "leadTime",
         "remakePolicy",
         "intlShipping",
         "english"
       ],
       "contact": {
-        "website": "https://katsudahifuku.com",
+        "website": "https://www.katsudahifuku.com/",
         "email": null,
         "formUrl": null,
-        "phone": null
+        "phone": "+81-6-6961-1956"
+      },
+      "flags": [
+        "no public email/form — dealer-only login; contact by phone (Japanese)"
+      ]
+    },
+    {
+      "id": "saito",
+      "name": "Saito Co., Ltd.",
+      "location": "Miyazaki",
+      "type": "factory",
+      "products": [
+        "suit",
+        "jacket",
+        "trousers"
+      ],
+      "priorResearchScore": 66,
+      "mtmVetScore": 54.1,
+      "verdict": "CONDITIONAL",
+      "action": "Wave 2 outreach — pursue, but close the listed unknowns before sampling",
+      "gateFailures": [],
+      "categoryScores": {
+        "productQuality": 5.6,
+        "customization": 7.2,
+        "measurementSystem": 10,
+        "production": 8,
+        "qualityAssurance": 4.8,
+        "remakePolicy": 1.2,
+        "branding": 4.8,
+        "logistics": 1.2,
+        "retailSupport": 1.3,
+        "commercial": 10
+      },
+      "leadTimeWeeks": "3-6",
+      "costBand": "low",
+      "unknownsToClose": [
+        "fabricAccess",
+        "leadTime",
+        "remakePolicy",
+        "intlShipping",
+        "english"
+      ],
+      "contact": {
+        "website": "https://saito-ordersuit.com/",
+        "email": "info2@saito-ordersuit.com",
+        "formUrl": "https://saito-ordersuit.com/new-inquiry/",
+        "phone": "+81-983-32-6311"
       },
       "flags": []
     },
     {
-      "id": "flex-japan",
-      "name": "Flex Japan / Amakusa Flex",
-      "location": "Nagano / Kumamoto",
+      "id": "sun-line",
+      "name": "Sun Line",
+      "location": "Inakadate, Aomori",
       "type": "factory",
       "products": [
-        "shirt"
+        "suit",
+        "jacket",
+        "coat",
+        "vest"
       ],
-      "priorResearchScore": 65,
-      "mtmVetScore": 54.1,
+      "priorResearchScore": 67,
+      "mtmVetScore": 53.6,
       "verdict": "CONDITIONAL",
       "action": "Wave 2 outreach — pursue, but close the listed unknowns before sampling",
       "gateFailures": [],
       "categoryScores": {
         "productQuality": 9,
         "customization": 7.2,
-        "measurementSystem": 6,
-        "production": 10.6,
-        "qualityAssurance": 4.8,
-        "remakePolicy": 1.2,
-        "branding": 4.8,
-        "logistics": 1.2,
-        "retailSupport": 1.3,
-        "commercial": 8
-      },
-      "leadTimeWeeks": "2-4",
-      "costBand": "low",
-      "unknownsToClose": [
-        "remakePolicy",
-        "intlShipping",
-        "english"
-      ],
-      "contact": {
-        "website": null,
-        "email": null,
-        "formUrl": null,
-        "phone": null
-      },
-      "flags": []
-    },
-    {
-      "id": "five-one-factory",
-      "name": "Five One Factory",
-      "location": "Hirakata, Osaka",
-      "type": "factory",
-      "products": [
-        "suit",
-        "jacket",
-        "vest",
-        "coat",
-        "tuxedo"
-      ],
-      "priorResearchScore": 77,
-      "mtmVetScore": 53.1,
-      "verdict": "CONDITIONAL",
-      "action": "Wave 2 outreach — pursue, but close the listed unknowns before sampling",
-      "gateFailures": [],
-      "categoryScores": {
-        "productQuality": 12,
-        "customization": 7.2,
-        "measurementSystem": 3.8,
+        "measurementSystem": 5.8,
         "production": 7,
         "qualityAssurance": 4.8,
         "remakePolicy": 1.2,
         "branding": 8,
         "logistics": 4.8,
         "retailSupport": 1.3,
-        "commercial": 3
+        "commercial": 4.5
       },
       "leadTimeWeeks": "4-8",
-      "costBand": "mid-high",
+      "costBand": "mid",
       "unknownsToClose": [
         "digitalPlatform",
         "leadTime",
@@ -426,10 +513,10 @@
         "costSignal"
       ],
       "contact": {
-        "website": null,
+        "website": "https://sunline-aomori.com/",
         "email": null,
-        "formUrl": null,
-        "phone": null
+        "formUrl": "https://sunline-aomori.com/%E3%81%8A%E5%95%8F%E5%90%88%E3%81%9B/",
+        "phone": "+81-172-43-8514"
       },
       "flags": []
     },
@@ -614,82 +701,35 @@
         "costSignal"
       ],
       "contact": {
-        "website": null,
+        "website": "https://miyukisewing-nagasaki.com/",
         "email": null,
         "formUrl": null,
-        "phone": null
+        "phone": "+81-959-32-2022"
       },
       "flags": [
-        "Japanese-language only; public partner program is consumer-event oriented — brand-label contract terms need direct confirmation"
+        "Japanese-language only; public partner program is consumer-event oriented — brand-label contract terms need direct confirmation",
+        "no email or contact form published — phone (Japanese) or route via Yamamoto EXCY (resells Miyuki order line to tailors)"
       ]
     },
     {
-      "id": "sun-line",
-      "name": "Sun Line",
-      "location": "Inakadate, Aomori",
+      "id": "terao-f",
+      "name": "Terao-F",
+      "location": "Hyogo",
       "type": "factory",
       "products": [
-        "suit",
-        "jacket",
-        "coat",
-        "vest"
+        "shirt"
       ],
-      "priorResearchScore": 67,
-      "mtmVetScore": 48.6,
-      "verdict": "CONDITIONAL",
-      "action": "Wave 2 outreach — pursue, but close the listed unknowns before sampling",
-      "gateFailures": [],
-      "categoryScores": {
-        "productQuality": 9,
-        "customization": 7.2,
-        "measurementSystem": 5.8,
-        "production": 5.6,
-        "qualityAssurance": 4.8,
-        "remakePolicy": 1.2,
-        "branding": 8,
-        "logistics": 1.2,
-        "retailSupport": 1.3,
-        "commercial": 4.5
-      },
-      "leadTimeWeeks": "4-8",
-      "costBand": "mid",
-      "unknownsToClose": [
-        "digitalPlatform",
-        "leadTime",
-        "remakePolicy",
-        "intlShipping",
-        "english",
-        "costSignal"
-      ],
-      "contact": {
-        "website": null,
-        "email": null,
-        "formUrl": null,
-        "phone": null
-      },
-      "flags": []
-    },
-    {
-      "id": "saito",
-      "name": "Saito Co., Ltd.",
-      "location": "Miyazaki",
-      "type": "factory",
-      "products": [
-        "suit",
-        "jacket",
-        "trousers"
-      ],
-      "priorResearchScore": 66,
-      "mtmVetScore": 47.9,
+      "priorResearchScore": 64,
+      "mtmVetScore": 48.5,
       "verdict": "CONDITIONAL",
       "action": "Wave 2 outreach — pursue, but close the listed unknowns before sampling",
       "gateFailures": [],
       "categoryScores": {
         "productQuality": 5.6,
         "customization": 7.2,
-        "measurementSystem": 3.8,
+        "measurementSystem": 8,
         "production": 8,
-        "qualityAssurance": 4.8,
+        "qualityAssurance": 1.2,
         "remakePolicy": 1.2,
         "branding": 4.8,
         "logistics": 1.2,
@@ -700,17 +740,17 @@
       "costBand": "low",
       "unknownsToClose": [
         "fabricAccess",
-        "digitalPlatform",
         "leadTime",
+        "qc",
         "remakePolicy",
         "intlShipping",
         "english"
       ],
       "contact": {
-        "website": null,
+        "website": "https://www.terao-f.co.jp/",
         "email": null,
-        "formUrl": null,
-        "phone": null
+        "formUrl": "https://www.terao-f.co.jp/contacts/",
+        "phone": "+81-6-6481-9867"
       },
       "flags": []
     },
@@ -757,14 +797,15 @@
         "english"
       ],
       "contact": {
-        "website": null,
-        "email": null,
+        "website": "http://sample-koubou.com/",
+        "email": "info@sample-koubou.com",
         "formUrl": null,
-        "phone": null
+        "phone": "+81-6-4400-7788"
       },
       "flags": [
         "official website domain did not resolve during research — directory-verified; re-verify before contact",
-        "Japanese only"
+        "Japanese only",
+        "directory shows 15 staff, est. 2019 (not 12 staff); uses own atelier PLUS domestic and Chinese partner factories — pin made-in-Japan routing per order"
       ]
     },
     {
@@ -807,12 +848,14 @@
         "costSignal"
       ],
       "contact": {
-        "website": null,
+        "website": "https://motomiya-santo.co.jp/",
         "email": null,
-        "formUrl": null,
-        "phone": null
+        "formUrl": "https://sartoria-speranza.jp/contact/",
+        "phone": "+81-243-33-3414"
       },
-      "flags": []
+      "flags": [
+        "unverified email candidate motomiya@sartoria-sato.jp — do NOT use until confirmed; use the Sartoria Speranza contact form"
+      ]
     },
     {
       "id": "aries-dankan",
@@ -901,59 +944,15 @@
         "costSignal"
       ],
       "contact": {
-        "website": null,
-        "email": null,
+        "website": "https://tahara-co.com/",
+        "email": "info@tahara-co.com",
         "formUrl": null,
-        "phone": null
+        "phone": "+81-6-6955-0130"
       },
       "flags": [
-        "strong tuxedo/wedding-formal complement to a core suit partner"
+        "strong tuxedo/wedding-formal complement to a core suit partner",
+        "'for tailors' contact-form category could not be verified — use info@tahara-co.com or phone"
       ]
-    },
-    {
-      "id": "terao-f",
-      "name": "Terao-F",
-      "location": "Hyogo",
-      "type": "factory",
-      "products": [
-        "shirt"
-      ],
-      "priorResearchScore": 64,
-      "mtmVetScore": 41.2,
-      "verdict": "BACKUP",
-      "action": "Hold; contact only if Waves 1-2 underdeliver",
-      "gateFailures": [],
-      "categoryScores": {
-        "productQuality": 5.6,
-        "customization": 7.2,
-        "measurementSystem": 3.8,
-        "production": 4.9,
-        "qualityAssurance": 1.2,
-        "remakePolicy": 1.2,
-        "branding": 4.8,
-        "logistics": 1.2,
-        "retailSupport": 1.3,
-        "commercial": 10
-      },
-      "leadTimeWeeks": "3-6",
-      "costBand": "low",
-      "unknownsToClose": [
-        "fabricAccess",
-        "digitalPlatform",
-        "leadTime",
-        "capacity",
-        "qc",
-        "remakePolicy",
-        "intlShipping",
-        "english"
-      ],
-      "contact": {
-        "website": null,
-        "email": null,
-        "formUrl": null,
-        "phone": null
-      },
-      "flags": []
     },
     {
       "id": "sarto-kleis",
