@@ -1,0 +1,53 @@
+{
+  "standard": "Blessed & Dressed MTM Wholesale Supplier Requirements v1",
+  "source": "Owner brief 2026-08-20: wholesale supplier qualification checklist for made-to-measure suits and shirts",
+  "hardGates": [
+    {
+      "id": "one_piece_mtm",
+      "name": "One-garment MTM capability",
+      "rule": "Must produce single garments cut and sewn to one customer's measurements (one-cut-one-sew / MTM / MOQ 1 or no minimum). Batch-only factories fail.",
+      "evidenceField": "onePieceMtm",
+      "failLevels": []
+    },
+    {
+      "id": "b2b_contract",
+      "name": "B2B wholesale/contract model",
+      "rule": "Must operate as a contract/OEM/wholesale partner for third parties. Consumer-retail-only shops and factories captive to a single brand fail.",
+      "evidenceField": "b2bContract",
+      "failLevels": []
+    },
+    {
+      "id": "made_in_japan",
+      "name": "Production in Japan",
+      "rule": "Garments must be cut and sewn in Japan. Japanese HQs routing production offshore fail unless Japan routing is confirmed in writing.",
+      "evidenceField": null,
+      "failLevels": []
+    },
+    {
+      "id": "product_scope",
+      "name": "Product scope",
+      "rule": "Must produce at least one core B&D category: suits/jackets/trousers/vests/formalwear or dress shirts.",
+      "evidenceField": null,
+      "failLevels": []
+    }
+  ],
+  "categories": [
+    { "id": "productQuality", "name": "1. Product quality (construction + fabric standards)", "weight": 15, "evidenceFields": ["construction", "fabricAccess"], "checklist": ["full/half canvas options", "hand-finished details", "functional buttonholes", "reinforced stress points", "quality linings", "wool Super 100s+ range", "premium shirt cottons"] },
+    { "id": "customization", "name": "2. Customization depth", "weight": 12, "evidenceFields": ["customization"], "checklist": ["lapel/vent/pocket/lining/button options", "monograms", "custom labels", "collar/cuff/placket options (shirts)", "contrast fabrics"] },
+    { "id": "measurementSystem", "name": "3. Measurement system + pattern intake", "weight": 10, "evidenceFields": ["patternIntake", "digitalPlatform"], "checklist": ["digital ordering platform", "saved customer profiles/reorder", "accepts supplied patterns or deep posture adjustments", "measurement guides + fit correction support"] },
+    { "id": "production", "name": "4. Production (lead time, rush, capacity)", "weight": 12, "evidenceFields": ["leadTime", "capacity"], "checklist": ["standard lead 2-8 weeks", "rush option", "order status tracking", "peak/wedding/group scaling"] },
+    { "id": "qualityAssurance", "name": "5. Quality assurance", "weight": 8, "evidenceFields": ["qc"], "checklist": ["pre-shipment inspection", "measurement verification", "certifications (IACDE 3-star)", "QC documentation"] },
+    { "id": "remakePolicy", "name": "6. Alteration & remake policy", "weight": 8, "evidenceFields": ["remakePolicy"], "checklist": ["remake on measurement/manufacturing/fabric defects", "local alteration credit", "defined claim timeline"] },
+    { "id": "branding", "name": "7. Private label & branding", "weight": 8, "evidenceFields": ["privateLabel"], "checklist": ["retailer neck labels", "hang tags", "garment bags/packaging", "marketing assets/swatch tools"] },
+    { "id": "logistics", "name": "8. Logistics (international shipping)", "weight": 8, "evidenceFields": ["intlShipping"], "checklist": ["international shipping w/ tracking", "expedited options", "garment protection packaging"] },
+    { "id": "retailSupport", "name": "9. Retail support (communication, training, account mgmt)", "weight": 9, "evidenceFields": ["english"], "checklist": ["dedicated account contact", "measuring training", "fit consultation", "responsive communication", "workable language channel"] },
+    { "id": "commercial", "name": "10. Financial & commercial terms", "weight": 10, "evidenceFields": ["costSignal"], "checklist": ["wholesale pricing structure", "volume discounts", "sample program", "business registration/references", "cost fits B&D targets"] }
+  ],
+  "evidenceScores": { "VERIFIED": 1.0, "LIKELY": 0.6, "UNKNOWN": 0.15 },
+  "costBandScores": { "low": 1.0, "mid": 0.75, "mid-high": 0.45, "high": 0.15, "null": 0.15 },
+  "verdictBands": [
+    { "verdict": "QUALIFIED", "min": 62, "action": "Wave 1 outreach now" },
+    { "verdict": "CONDITIONAL", "min": 45, "action": "Wave 2 outreach — pursue, but close the listed unknowns before sampling" },
+    { "verdict": "BACKUP", "min": 0, "action": "Hold; contact only if Waves 1-2 underdeliver" }
+  ]
+}
