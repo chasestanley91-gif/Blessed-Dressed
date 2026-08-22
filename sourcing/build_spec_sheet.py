@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
-"""Build the Blessed & Dressed first-sample spec sheet PDF (v2).
+"""Build the Blessed & Dressed first-sample spec sheet PDF (v3).
 
 Construction/option details are transcribed verbatim from the owner's live
-order forms (garbled spacing restored, nothing removed); measurements are the
-owner's golden measurements from the same forms. 0.0 = not specified on the
-form. Run: python3 sourcing/build_spec_sheet.py
+order forms (garbled spacing restored, nothing removed). Measurements, posture
+profile and fit rules come from the owner's Master Client Specification v3
+(2026-08-16), which supersedes the raw order forms; the previous supplier's
+name, order numbers and fabric codes are scrubbed from this supplier-facing
+sheet. Run: python3 sourcing/build_spec_sheet.py
 """
 from reportlab.lib.pagesizes import letter
 from reportlab.lib.units import mm
@@ -41,7 +43,7 @@ def opts_table(rows):
 
 
 def meas_table(rows):
-    data = [[Paragraph("<b>Measurement point</b>", bodyw), Paragraph("<b>Actual value</b>", bodyw)]]
+    data = [[Paragraph("<b>Measurement point</b>", bodyw), Paragraph("<b>Enter (finished, cm)</b>", bodyw)]]
     data += [[Paragraph(a, body), Paragraph(b, body)] for a, b in rows]
     t = Table(data, colWidths=[100 * mm, 70 * mm])
     t.setStyle(TableStyle([
@@ -56,7 +58,7 @@ def meas_table(rows):
 
 def header(story, title):
     story.append(Paragraph("Blessed &amp; Dressed", h1))
-    story.append(Paragraph("First Sample Specification Sheet (v2) — Prepared for Yamamoto EXCY · August 2026", sub))
+    story.append(Paragraph("First Sample Specification Sheet (v3) — Prepared for Yamamoto EXCY · August 2026", sub))
     story.append(Paragraph(title, h2))
 
 
@@ -132,24 +134,50 @@ JACKET_OPTS = [
     ("Care label position", "Left inner pocket"),
 ]
 
+BODY_BASELINE = [
+    ("Height", "170.2 (under verification vs 175.3 — confirm before cutting)"),
+    ("Weight", "88.5&#8211;90.3 kg"), ("Age", "34"),
+    ("Chest", "111.8"), ("Stomach", "102.9"), ("Stomach (highest point)", "113.0"),
+    ("Waist", "99.1"), ("Seat", "110.5"), ("Thigh", "63.5"),
+    ("Neck", "41.1"), ("Knee (finished ref)", "45.7"), ("Calf", "36.8"),
+    ("Shoulder (curve-taped)", "47.0 — functional shoulder is 45.0; cut against 44.5&#8211;45.0 finished"),
+    ("Front shoulder", "41.9"), ("Pant bottom (ref)", "36.8"),
+    ("Bicep", "33.0"), ("Wrist L / R", "17.8 / 17.8"),
+    ("Sleeve L / R", "61.0 / 61.7"), ("Outseam L / R", "97.8 / 97.8"),
+    ("Nape to waist", "38.1"), ("Front waist length", "38.6"),
+    ("U-rise", "71.1"), ("Back waist height", "11.4"), ("Front waist height", "14.5"),
+    ("Back length (jacket/shirt)", "73.7"),
+    ("Across-back / inseam", "To be confirmed at fitting — available on request"),
+]
+
 JACKET_MEAS = [
-    ("Height", "170.2"), ("Weight", "197.0"), ("Age", "34.0"),
-    ("Hem (Finished)", "0.0"),
-    ("Full Chest (Finished)", "120.0"),
-    ("Full Stomach (Finished)", "109.0"),
-    ("Full Belly (Finished)", "115.0"),
-    ("Full Seat (Finished)", "118.0"),
-    ("Full Bicep (Finished)", "41.0"),
+    ("Full Chest (Finished)", "120.0 (body 111.8, ease +8.2 — proven)"),
+    ("Full Stomach (Finished)", "109.0 (proven)"),
+    ("Full Belly (Finished)", "116.0 (body highest point 113.0 — tightest margin, do not reduce)"),
+    ("Full Seat (Finished)", "118.0 (proven)"),
+    ("Full Bicep (Finished)", "41.0 (body 33.0)"),
     ("Full Cuff (Finished)", "28.0"),
-    ("Shoulder Width (Finished)", "44.5"),
+    ("Shoulder Width (Finished)", "44.5 (do NOT narrow further)"),
     ("Back Width (Finished)", "46.5"),
-    ("Left Sleeve (Finished)", "61.0"),
-    ("Right Sleeve (Finished)", "62.0"),
+    ("Left / Right Sleeve (Finished)", "61.0 / 62.0"),
     ("Back Length (Finished)", "72.5"),
-    ("Front Length (Finished)", "75.0"),
-    ("Neckline (body)", "41.2"),
-    ("Nape to Waist Length", "0.0"),
+    ("Front Length (Finished)", "75.0 (front&#8722;back balance +2.5 — preserve)"),
     ("First Button Stance", "39.0"),
+    ("Neckline (body)", "41.1"),
+]
+
+JACKET_ADJ = [
+    ("Left shoulder slope", "NORMAL — body reads slightly square; never cut with sloping shoulders (causes a horizontal fold below the collar)"),
+    ("Right shoulder slope", "NORMAL — same"),
+    ("Front shoulder", "Very Forward"),
+    ("Arm", "Generally advanced; bent arm 1.0"),
+    ("Armhole depth", "Up 2.5 cm"),
+    ("Front chest", "&#8722;1.5 cm"),
+    ("Stomach dart", "0.5 cm"),
+    ("Head / Neck", "Slightly forward / slightly thin"),
+    ("Chest", "Out / slightly pectorales"),
+    ("Seat", "Normal — never Flat, never Portly belly"),
+    ("Belly", "Normal (fat around)"),
 ]
 
 TROUSER_OPTS = [
@@ -190,22 +218,24 @@ TROUSER_OPTS = [
 ]
 
 TROUSER_MEAS = [
-    ("Height", "170.2"), ("Weight", "197.0"), ("Age", "34.0"),
-    ("Full Waist (Finished)", "99.0"),
-    ("Full Seat (Finished)", "118.0"),
-    ("Left Pant Length (Finished)", "97.8"),
-    ("Right Pant Length (Finished)", "99.1"),
-    ("Full Thigh (Finished)", "70.0"),
-    ("Full Knee (Finished)", "47.2"),
-    ("Full Opening (Finished)", "36.0"),
-    ("U-Rise", "73.0"),
-    ("Back Waist Height (body)", "0.0"),
-    ("Front Waist Height (body)", "0.0"),
-    ("Inseam Length", "0.0"),
-    ("Crotch Depth (with waist) (Finished)", "0.0"),
-    ("Front Rise (with waist) (Finished)", "11.0"),
-    ("Back Rise (with waist) (Finished)", "43.0"),
+    ("Full Waist (Finished)", "99.0 (body +0 — works with side adjusters; do not go below)"),
+    ("Full Seat (Finished)", "117.5 (+7.0 ease)"),
+    ("Full Thigh (Finished)", "69.5 (+6.0 — seated thigh expands 3&#8211;5 cm)"),
+    ("Full Knee (Finished)", "46.5 (slim taper)"),
+    ("Full Opening (Finished)", "37.0 (must clear calf 36.8 — floor is 37)"),
+    ("U-Rise (Finished)", "74.5 (+3.4 ease — critical for seated comfort)"),
+    ("Front Rise (Finished)", "26.0"),
+    ("Back Rise (Finished)", "45.5 (raised — back path length for sitting)"),
+    ("Left / Right Pant Length (Finished)", "97.8 / 97.8 (equalized)"),
     ("Full Calf (body)", "36.8"),
+]
+
+TROUSER_ADJ = [
+    ("Hips", "NORMAL — never Very Low (drops the waistband and steals rise)"),
+    ("Back crotch", "Do NOT straighten (straightening shortens the seat); back crotch curved 0.5 — adds seated seat length"),
+    ("Front centre height", "3 cm"),
+    ("Waist height", "Higher 2.0 cm — back only (anchors waistband when seated)"),
+    ("Seat / Belly", "Normal / Normal — never Flat, never Portly"),
 ]
 
 SHIRT_OPTS = [
@@ -256,69 +286,83 @@ SHIRT_OPTS = [
 ]
 
 SHIRT_MEAS = [
-    ("Height", "67.0 (in) = 170.2 cm"), ("Weight", "199.0"), ("Age", "34.0"),
-    ("Neck (Finished)", "40.1"),
-    ("Full Chest (Finished)", "118.2"),
-    ("Darted Waist (Finished)", "0.0"),
-    ("Full Stomach (Finished)", "119.8"),
-    ("Full Seat (Finished)", "118.5"),
-    ("Full Bicep (Finished)", "41.2"),
-    ("Left Cuff (Finished)", "25.3"),
-    ("Right Cuff (Finished)", "25.3"),
-    ("Shoulder Width (Finished)", "47.0"),
-    ("Left Sleeve (Finished)", "62.0"),
-    ("Right Sleeve (Finished)", "62.2"),
-    ("Back Length (Finished)", "81.3"),
+    ("Neck (Finished)", "42.0 (body 41.1, ease +0.9)"),
+    ("Full Chest (Finished)", "118.2 (body 111.8, ease +6.4 — proven)"),
+    ("Full Stomach (Finished)", "116.0 (body 102.9 — trimmed to +13 from proven +18.1, per fit note)"),
+    ("Full Seat (Finished)", "118.5 (+8.0)"),
+    ("Full Bicep (Finished)", "41.0 (body 33.0, +8.0)"),
+    ("Shoulder Width (Finished)", "45.0 (functional shoulder 45.0, ease 0)"),
+    ("Left / Right Sleeve (Finished)", "61.5 / 62.5 (body 61.0 / 61.7)"),
+    ("Left / Right Cuff (Finished)", "25.3 / 25.9"),
+    ("Back Length (Finished)", "76.2"),
     ("Front Length (Finished)", "81.3"),
-    ("Neckline (body)", "0.0"),
     ("Nape to Waist Length (body)", "38.1"),
     ("Front Waist Length (body)", "38.6"),
-    ("Full Belly (body)", "0.0"),
 ]
 
-POSTURE = [
-    ("Head", "SLIGHTLY FORWARD"),
-    ("Neck", "SLIGHTLY THIN"),
-    ("Left shoulder", "NORMAL"),
-    ("Right shoulder", "NORMAL"),
-    ("Front shoulder", "FORWARD SHOULDER"),
-    ("Arm adjustment", "SLIGHTLY THIN"),
-    ("Arm adjustment", "Forward"),
-    ("Armhole depth", "Down 2"),
-    ("Pectorales", "SLIGHTLY PECTORALES"),
+SHIRT_ADJ = [
+    ("Head / Neck", "Slightly forward / slightly thin"),
+    ("Shoulders", "Normal slope, both sides"),
+    ("Front shoulder", "Forward shoulder"),
+    ("Arm", "Slightly thin + forward"),
+    ("Armhole", "Up 2"),
+    ("Chest", "Slightly pectorales"),
+]
+
+FIT_RULES = [
+    ("Shoulders", "Cut against 44.5&#8211;45.0 finished shoulder. The body reads slightly square: a sloping-shoulder cut produces a horizontal fold below the collar; keep slope NORMAL both sides."),
+    ("Jacket balance", "Preserve front&#8722;back balance of +2.5 (front length 75.0 vs back 72.5)."),
+    ("Belly ease", "The jacket's tightest margin — finished belly 116.0 over a 113.0 body point; do not reduce."),
+    ("Trouser back path", "Seated comfort requires U-rise ease &#8805; +3 (target 74.5) and back rise &#8805; 45.5. Non-negotiable for the slim trouser."),
+    ("Leg opening", "Must clear the 36.8 calf — floor is 37.0."),
+    ("Iteration", "This profile is proven on previous garments; if the factory recommends deviating, please change one variable at a time and tell us which."),
 ]
 
 doc = SimpleDocTemplate(
     "sourcing/BlessedDressed-Sample-Spec-Sheet.pdf", pagesize=letter,
     leftMargin=18 * mm, rightMargin=18 * mm, topMargin=14 * mm, bottomMargin=14 * mm,
-    title="Blessed & Dressed — First Sample Specification Sheet v2", author="Blessed & Dressed")
+    title="Blessed & Dressed — First Sample Specification Sheet v3", author="Blessed & Dressed")
 story = []
 
+header(story, "Client Body Baseline (measured in person)")
+story.append(Paragraph("Master client fit profile, verified over multiple completed garments. All values in cm unless noted; ease = finished &#8722; body. The finished measurements and adjustment tables on the following pages are the values to cut against; they already include the correct ease for this client. Shell fabrics: suit in navy worsted wool Super 110s&#8211;120s, shirt in white two-ply ~100s cotton poplin — please propose options. Trim, thread and lining codes (e.g. FK503237, YZ002, FB2634A1) reference our current component library; nearest equivalents may be proposed.", body))
+story.append(Paragraph("Body Baseline", h3))
+story.append(opts_table(BODY_BASELINE))
+story.append(PageBreak())
+
 header(story, "Sample A — Suit Jacket (Double-Breasted 6x2)")
-story.append(Paragraph("Cut to the personal measurements and posture notes on these pages (measurement method: finished measurement, values in cm unless noted; 0.0 = not specified — please derive from the pattern). Shell fabric: navy worsted wool, Super 110s&#8211;120s — please propose options. Trim, thread and lining codes (e.g. FK503237, YZ002, FB2634A1) reference our current component library; nearest equivalents may be proposed.", body))
 story.append(Paragraph("Construction &amp; Options", h3))
 story.append(opts_table(JACKET_OPTS))
 story.append(PageBreak())
 
-header(story, "Sample A — Suit Jacket Measurements + Trousers")
-story.append(Paragraph("Jacket — Finished Measurements", h3))
+header(story, "Sample A — Jacket Measurements &amp; Fit Adjustments")
+story.append(Paragraph("Jacket — Finished Measurements (proven fit — cut exactly)", h3))
 story.append(meas_table(JACKET_MEAS))
+story.append(Paragraph("Jacket — Posture &amp; Figure Adjustments", h3))
+story.append(opts_table(JACKET_ADJ))
+story.append(PageBreak())
+
+header(story, "Sample A — Trousers")
 story.append(Paragraph("Trousers — Construction &amp; Options", h3))
 story.append(opts_table(TROUSER_OPTS))
-story.append(PageBreak())
-
-header(story, "Sample A — Trouser Measurements · Sample B — Dress Shirt")
-story.append(Paragraph("Trousers — Finished Measurements", h3))
+story.append(Paragraph("Trousers — Finished Measurements (cut exactly)", h3))
 story.append(meas_table(TROUSER_MEAS))
-story.append(Paragraph("Dress Shirt — Construction &amp; Options (shell: white cotton poplin, two-ply ~100s — please propose options)", h3))
-story.append(opts_table(SHIRT_OPTS))
+story.append(Paragraph("Trousers — Posture &amp; Figure Adjustments", h3))
+story.append(opts_table(TROUSER_ADJ))
 story.append(PageBreak())
 
-header(story, "Sample B — Shirt Measurements · Posture &amp; Fit Notes")
-story.append(Paragraph("Dress Shirt — Finished Measurements", h3))
+header(story, "Sample B — Dress Shirt")
+story.append(Paragraph("Construction &amp; Options (shell: white cotton poplin, two-ply ~100s — please propose options)", h3))
+story.append(opts_table(SHIRT_OPTS))
+story.append(Paragraph("Dress Shirt — Finished Measurements (proven fit, one noted refinement)", h3))
 story.append(meas_table(SHIRT_MEAS))
-story.append(Paragraph("Posture &amp; Figure Adjustments (assessed in person)", h3))
-story.append(opts_table(POSTURE))
+story.append(Paragraph("Dress Shirt — Posture &amp; Figure Adjustments", h3))
+story.append(opts_table(SHIRT_ADJ))
+story.append(PageBreak())
+
+header(story, "Fit Rules &amp; Notes")
+story.append(Paragraph("Fit Rules (learned across completed garments — please respect)", h3))
+story.append(opts_table(FIT_RULES))
 story.append(Paragraph("Notes", h3))
 story.append(opts_table([
     ("Purpose", "Evaluate sewing quality, construction, finishing and fit accuracy against the measurements above, before discussing an ongoing MTM program."),
@@ -332,8 +376,8 @@ def _footer(canvas, doc_):
     canvas.saveState()
     canvas.setFont("Helvetica", 7.5)
     canvas.setFillColor(GREY)
-    canvas.drawRightString(letter[0] - 18 * mm, 8 * mm, f"Blessed & Dressed — Sample Spec v2 — page {canvas.getPageNumber()}")
+    canvas.drawRightString(letter[0] - 18 * mm, 8 * mm, f"Blessed & Dressed — Sample Spec v3 — page {canvas.getPageNumber()}")
     canvas.restoreState()
 
 doc.build(story, onFirstPage=_footer, onLaterPages=_footer)
-print("built v2")
+print("built v3")
