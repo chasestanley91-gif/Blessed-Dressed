@@ -64,7 +64,7 @@ def header(story, title):
 
 JACKET_OPTS = [
     ("Shoulder head", "Regular"),
-    ("Canvas", "Regular Fused"),
+    ("Canvas", "FULL CANVAS (upgraded from fused — owner decision 2026-08-22)"),
     ("Lapel", "Curved Peak Lapel 103&#176;"),
     ("Lapel width", "12.5 CM"),
     ("Folded collar craftsmanship", "Normal"),
