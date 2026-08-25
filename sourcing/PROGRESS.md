@@ -71,6 +71,17 @@ policy blocks the domains — so they are itemised as tasks with the exact field
 The checkable call sheet lives at the artifact published 2026-08-25 and saves ticks
 between visits; `sourcing/call-sheet.html` is its source.
 
+**SMS is not a usable channel for the phone-only group.** Inkbox reports
+`sms_available: false` (no phone number is assigned to the identity, so there is no
+sending number) and its consent preflight returns `recipient_not_opted_in` with
+`consent_required: true` — it gates first-contact SMS on recipient opt-in. Separately,
+nine of the eleven numbers cannot receive a text at all: four are office landlines
+(Metro, Holland & Sherry, Scabal, Marzotto), two are toll-free (Jodek, Dormeuil), one is
+an Austrian PBX root (Getzner), and two are Chinese landline area codes (Lianfa +86 513,
+Jinfeng +86 571). Only Hebei Xingye (+86 155) and Global Fabric Wholesale (+86 134) are
+mobile, both are tier C/D, and both want WhatsApp rather than SMS. Each call row now
+states its real channel.
+
 Rows stay `not_contacted` in the dataset until a draft is actually **sent**. A written
 draft is not a contact.
 
@@ -120,3 +131,4 @@ number in the ledger, and Wave B exists to close it.
 | 2026-08-20 | Japan supplier vetting pass (production partners, not cloth). |
 | 2026-08-24 | Wave 1 recovered into the repo; Wave 2 adds 18; ledger, map, outreach plan and tracker built. |
 | 2026-08-25 | 20 personalised email drafts written into Gmail (unsent). Call sheet published with 55 checkable tasks covering all 57 suppliers. |
+| 2026-08-25 | SMS outreach ruled out: no Inkbox sending number, platform requires opt-in, and 9 of 11 numbers are landline or toll-free. Call rows annotated with real channel. |
