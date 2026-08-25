@@ -128,6 +128,14 @@ because it costs nothing to hold — no minimum, free bunches, same-day dispatch
 is the tropical warm-weather cloth the original brief asked for. Golden Fox is the newer
 lighter-weight option.
 
+## Owed to suppliers — do not let these slip
+
+- **Fox Brothers.** The reply sent 2026-08-25 promises the **full street address and ZIP, plus
+  EIN and resale certificate, "separately today"**. Volunteered, not asked for — and the account
+  cannot open without it. This is now the binding commitment in the whole campaign.
+- **Gladson / HFW.** Guy Milinazzo is waiting on an anticipated first-year volume figure and
+  call availability. He offered the call twice; it is the highest-leverage move open right now.
+
 ## Blocking the next step
 
 1. **Wave 2 contacts are unverified against live sites.** The session's network policy
@@ -174,6 +182,7 @@ number in the ledger, and Wave B exists to close it.
 | 2026-08-20 | Japan supplier vetting pass (production partners, not cloth). |
 | 2026-08-24 | Wave 1 recovered into the repo; Wave 2 adds 18; ledger, map, outreach plan and tracker built. |
 | 2026-08-25 | 20 personalised email drafts written into Gmail (unsent). Call sheet published with 55 checkable tasks covering all 57 suppliers. |
+| 2026-08-25 | Fox reply SENT (22:24 UTC) — first completed exchange of the campaign. Street address, ZIP, EIN and resale certificate now owed to them. |
 | 2026-08-25 | Gladson (US agent for HFW) replied — Guy Milinazzo, EVP. Cut lengths and US-held stock confirmed; vetting questions received. Reply drafted. |
 | 2026-08-25 | Retail pricing established from the catalogue: suits $599–1,500, sweet spot ~$900. Confirms the $15–30/yd cloth target is correctly calibrated. |
 | 2026-08-25 | Fox Brothers replied — first response of the campaign. Terms captured; tier C→B. Reply drafted. |
