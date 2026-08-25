@@ -9,7 +9,7 @@ are tool-generated and cover a different workstream; this file tracks cloth sour
 
 <!-- BEGIN GENERATED: node sourcing/build-ledger.mjs -->
 
-**57 fabric suppliers identified across 9 countries. 1 contacted.**
+**57 fabric suppliers identified across 9 countries. 2 contacted.**
 
 Research is no longer the bottleneck. Outreach is. The ledger has more qualified
 suppliers than a company at this stage can work at once, and every single row still
@@ -22,7 +22,7 @@ reads `not_contacted`. The next unit of progress is an email, not another search
 | Identified | 57 | Across 9 countries, tiered A–D |
 | Direct email or phone on file | 33 | 24 have only a website or postal address |
 | Re-verified against live site | 0 | **Blocks Wave 2 sending** — see below |
-| Contacted | 1 | — |
+| Contacted | 2 | — |
 | Replied | 0 | — |
 | Trade account open | 0 | — |
 | Swatches in hand | 0 | — |
@@ -84,6 +84,24 @@ states its real channel.
 
 Rows stay `not_contacted` in the dataset until a draft is actually **sent**. A written
 draft is not a contact.
+
+## Second reply — Gladson / HFW (2026-08-25)
+
+**Guy Milinazzo, EVP of Gladson, the US agent for HFW.** HFW's Jesica Oldham forwarded the
+enquiry to him. Structurally the best fit found anywhere in the ledger:
+
+- **Individual cut lengths are normal business** — a 3.2 m suit length is explicitly fine.
+- **HFW collections are held in the US** — no direct import, no buyer-side duty.
+- **No minimum annual purchase** for the relationship itself.
+- Home of **Fresco**, the high-twist tropical the brief asked for.
+
+The gate is credibility, not money. Gladson vets before releasing collections because sample
+presentations cost them real money, and sent five qualifying questions — website, retail price
+range, annual volume, current mill relationships, and Fresco alone versus the broader offering.
+A pre-launch brand is exactly the profile that normally gets screened out here.
+
+He offered a phone call twice. **Take it** — at pre-revenue the founder's voice outperforms any
+number on a form. EIN and resale certificate are now on the critical path; he asked for both.
 
 ## First reply in (2026-08-25)
 
@@ -156,5 +174,7 @@ number in the ledger, and Wave B exists to close it.
 | 2026-08-20 | Japan supplier vetting pass (production partners, not cloth). |
 | 2026-08-24 | Wave 1 recovered into the repo; Wave 2 adds 18; ledger, map, outreach plan and tracker built. |
 | 2026-08-25 | 20 personalised email drafts written into Gmail (unsent). Call sheet published with 55 checkable tasks covering all 57 suppliers. |
+| 2026-08-25 | Gladson (US agent for HFW) replied — Guy Milinazzo, EVP. Cut lengths and US-held stock confirmed; vetting questions received. Reply drafted. |
+| 2026-08-25 | Retail pricing established from the catalogue: suits $599–1,500, sweet spot ~$900. Confirms the $15–30/yd cloth target is correctly calibrated. |
 | 2026-08-25 | Fox Brothers replied — first response of the campaign. Terms captured; tier C→B. Reply drafted. |
 | 2026-08-25 | SMS outreach ruled out: no Inkbox sending number, platform requires opt-in, and 9 of 11 numbers are landline or toll-free. Call rows annotated with real channel. |

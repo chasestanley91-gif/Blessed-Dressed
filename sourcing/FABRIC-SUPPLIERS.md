@@ -65,6 +65,25 @@ The Super number is fibre fineness, and fineness is the cost. Held against evide
 | **Super 150s–180s, new cloth** | **$60–150+/yd** | Holland & Sherry, Cerruti, Dormeuil, Zegna. **No new-cloth route under $30/yd exists.** |
 | Super 150s–180s, *closeout* | **$15–35/yd** | The only under-$30 door: Metro Textiles ($29.50–75.50/yd with the frequent 50% codes), Fabric Mart ($2–8 on sale), B. Black remnant lots, John Foster Mill Archive one-offs, Cerruti remnants |
 
+### 2a. What the retail price actually allows — the target checks out
+
+Added 2026-08-25, from the product catalogue (`products_export.csv`) rather than assumption:
+**suits retail at $599–$1,500, sweet spot around $800–900; shirts $75–$175.**
+
+A suit takes ~3.2 m of cloth. Against a $900 suit:
+
+| Cloth at | Per 3.2 m length | Share of a $900 suit |
+| --- | --- | --- |
+| $15/yd ($16.40/m) — the preferred target | ~$52 | **6%** — very comfortable |
+| $30/yd ($32.80/m) — the stated ceiling | ~$105 | **12%** — workable |
+| Fresco / HFW premium (~$60–90/m) | ~$190–290 | **21–32%** — premium tier only |
+| Italian Super 110s+ (VBC ~$70/m) | ~$224 | **25%** — same |
+
+**The original brief was well calibrated.** A $15–30/yd cloth budget is exactly right for a
+$900 suit — it lands cloth at 6–12% of retail, which leaves room for CMT, trims and margin.
+That is why the Asian all-wool worsted tier matters so much and why the premium merchants,
+however good their terms, can only ever be a top tier rather than the core book.
+
 **The practical read.** Your $15/yd number is achievable today, in volume, for
 wool-blend and entry all-wool suiting from Asia. Your Super 150s–180s number is
 achievable only opportunistically, through jobbers and mill archives, in lots you
@@ -153,7 +172,7 @@ plus every UK and Italian merchant on the list.
 | **Standeven** | UK | mill / merchant | suiting | no | Wholesale, login-gated | Super 100s-150s ranges | Free trade account, ~48 h approval, NO minimums, swatches + bunches to trade on request - small tailors explicitly welcome | yes | sales@standevenfabrics.co.uk | VERIFIED |
 | **Bateman Ogden** | UK | merchant | suiting | no | Login-gated | mixed | Trade signup incl. 'Individual - instant activation' and 'CMT House' account types | likely | batemanogden.co.uk/CreateAccount | VERIFIED |
 | **Vitale Barberis Canonico** | Italy | mill acting as merchant | suiting | no | ~$70/m retail references | Super 110s-150s core, incl. tropical | Trade 'Professional Space' platform (registration-gated) | own e-shop | vitalebarberiscanonico.shop | VERIFIED |
-| **Huddersfield Fine Worsteds / Hardy Minnis (Fresco)** | UK | merchant | suiting | no | Trade-only | Super 100s-170s | Public may request pattern swatches; 'Bunch Status' tracker | via Gladson NJ stock | US: HMS/Gladson - Bob McAuley<br>info@hfwltd.com<br>212-581-9750 | VERIFIED |
+| **Huddersfield Fine Worsteds / Hardy Minnis (Fresco)** | UK | merchant | suiting | no | Trade-only | Super 100s-170s | Public may request pattern swatches; 'Bunch Status' tracker | yes - 3.2 m suit lengths "within the normal scope of our business" | Guy Milinazzo, Executive Vice President, Gladson Ltd (US agent for HFW)<br>guym@gladsonltd.com<br>hfwltd.com / gladsonltd.com | VERIFIED |
 | **OCM Private Limited** | India (Amritsar) | integrated worsted mill (est. 1922, worsted since 1972) | suiting | **YES** | Not published - quote required | Super 100s - Super 140s (all-wool and wool blends) | Not published - ask | unknown | harjot.singh@ocm.in<br>+91 183 282 0600<br>ocm.in<br>OCM Estate, G.T. Road, Chheharta, Amritsar, Punjab | LIKELY |
 | **Digjam Limited** | India (Jamnagar) | composite worsted mill (est. 1948) | suiting | no | Not published - quote required | Premium worsted; exact Super range not published - confirm | Not published - ask | unknown | digjam.co.in | LIKELY |
 | **Vardhman Textiles** | India (Ludhiana) | vertically integrated mill | shirting | **YES** | Not published - quote required | — | Not published - ask | unlikely | fabric.vardhman.com | LIKELY |
@@ -250,7 +269,7 @@ plus every UK and Italian merchant on the list.
 - **Lanificio Cerruti** — Covers the top of your Super range (150s-200s). Remnant lots are the affordable door.
 - **Caccioppoli** — Expect real-business vetting. Well above band.
 - **Harrisons / Lesser / Smith / W.Bill / P&H (LBD group)** — One call to Kemp & Hewitt opens roughly five brands at once.
-- **Huddersfield Fine Worsteds / Hardy Minnis (Fresco)** — HOME OF FRESCO - the benchmark high-twist tropical cloth you named. Trade-only, but public pattern swatches are available.
+- **Huddersfield Fine Worsteds / Hardy Minnis (Fresco)** — REPLIED 2026-08-25 via Gladson, their US agent - Guy Milinazzo, EVP. Structurally the best fit found so far: individual 3.2 m cut lengths are normal business, HFW collections are held in the US so there is no direct import and no buyer-side duty, and there is no minimum annual purchase for the relationship itself. HOME OF FRESCO, the high-twist tropical named in the brief. The gate is credibility, not money: Gladson vets before releasing collections because sample presentations cost them real money, and a pre-launch brand is exactly the profile that normally gets screened out. He offered a phone call twice - take it; at pre-revenue the founder's voice outperforms any number on a form. Price reality: at a ~$900 median suit, a 3.2 m Fresco length is roughly 20-32% of retail before CMT, so Fresco is a premium warm-weather tier, not the core book.
 - **Holland & Sherry** — Covers your full Super range. No self-serve signup - NY rep only.
 - **Scabal** — HIDDEN CONDITION: volume-tiered pricing - the same cloth costs you more because you buy little.
 - **Dormeuil** — Selective allocation - unlikely to book a brand-new account early.
