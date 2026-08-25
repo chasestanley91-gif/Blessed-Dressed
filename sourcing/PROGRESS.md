@@ -9,7 +9,7 @@ are tool-generated and cover a different workstream; this file tracks cloth sour
 
 <!-- BEGIN GENERATED: node sourcing/build-ledger.mjs -->
 
-**57 fabric suppliers identified across 9 countries. 2 contacted.**
+**57 fabric suppliers identified across 9 countries. 5 contacted.**
 
 Research is no longer the bottleneck. Outreach is. The ledger has more qualified
 suppliers than a company at this stage can work at once, and every single row still
@@ -22,7 +22,7 @@ reads `not_contacted`. The next unit of progress is an email, not another search
 | Identified | 57 | Across 9 countries, tiered A–D |
 | Direct email or phone on file | 33 | 24 have only a website or postal address |
 | Re-verified against live site | 0 | **Blocks Wave 2 sending** — see below |
-| Contacted | 2 | — |
+| Contacted | 5 | — |
 | Replied | 0 | — |
 | Trade account open | 0 | — |
 | Swatches in hand | 0 | — |
@@ -102,6 +102,22 @@ A pre-launch brand is exactly the profile that normally gets screened out here.
 
 He offered a phone call twice. **Take it** — at pre-revenue the founder's voice outperforms any
 number on a form. EIN and resale certificate are now on the critical path; he asked for both.
+
+## Outreach is live (2026-08-25)
+
+**13 of the 20 drafts have been sent. Five suppliers have replied.** Three of those
+replies sat unnoticed until a sent-mail audit turned them up — worth knowing that the
+inbox, not the ledger, is now where the state lives.
+
+| Supplier | Status |
+| --- | --- |
+| **Standeven** | Replied 08:05 by M Townsend — **still unread**. Free account, 48h, no minimums. The fastest win available. |
+| **Yardblox** | Replied 05:43, cc Yvonne Tyan. Not yet actioned. |
+| **Dugdale (Zach Jobe)** | In conversation since 19 Aug, predating this session. Four messages; he replied again 18:17. |
+| **Fox Brothers** | Reply sent 22:24. Street address and ZIP promised same-day, still outstanding. |
+| **HFW → Gladson** | Routed to its US agent. Reply drafted, pending call windows. |
+
+Still unsent: OCM, Yünsa, Raymond, Tollegno, Kemp & Hewitt, B. Black, plus the Gladson reply.
 
 ## First reply in (2026-08-25)
 
