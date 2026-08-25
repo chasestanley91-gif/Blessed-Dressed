@@ -3,7 +3,7 @@
 _Hand-maintained. The craft-photography dashboards (`PROJECT_DASHBOARD.md`, `STATE.md`)
 are tool-generated and cover a different workstream; this file tracks cloth sourcing._
 
-**Last updated: 2026-08-24**
+**Last updated: 2026-08-25**
 
 ## Headline
 
@@ -55,6 +55,25 @@ reads `not_contacted`. The next unit of progress is an email, not another search
 - **Built the outreach machine** — five waves, six templates, eight standard questions,
   five scoring gates, a 30-day cadence, and a tracker CSV generated from the dataset.
 
+## Outreach status (2026-08-25)
+
+**20 personalised email drafts are written and sitting in Gmail, unsent.** They cover 23
+of the 57 suppliers — Ariston, Zegna and the Harrisons stable are folded into one email
+to their shared US agent, Kemp & Hewitt. Each draft is written to that specific supplier,
+citing what we actually know about them (Standeven's no-minimum trade account, Fresco at
+Hardy Minnis, Nanshan's Super 120s tropical, Jiexiang's 96/4 poplin) rather than a
+template blast. None state our target price. None ask for anything but cloth.
+
+The rest of the ledger has no usable email: **11 are phone-only** and **24 take web forms
+or trade-account signups**. Those cannot be automated from here — the session's network
+policy blocks the domains — so they are itemised as tasks with the exact fields to paste.
+
+The checkable call sheet lives at the artifact published 2026-08-25 and saves ticks
+between visits; `sourcing/call-sheet.html` is its source.
+
+Rows stay `not_contacted` in the dataset until a draft is actually **sent**. A written
+draft is not a contact.
+
 ## Blocking the next step
 
 1. **Wave 2 contacts are unverified against live sites.** The session's network policy
@@ -78,8 +97,8 @@ number in the ledger, and Wave B exists to close it.
 
 - [ ] Assemble the business identity pack (Step 0)
 - [ ] Re-verify the 18 Wave 2 contacts against their live sites
-- [ ] Send Wave A — 8 free/instant accounts
-- [ ] Send Wave B — 8 price-discovery RFQs, same day, for comparable quotes
+- [ ] Review and send the 20 Gmail drafts (Wave A and Wave B are both covered)
+- [ ] Work the 11 phone calls and 24 web forms from the call sheet
 - [ ] Log every send in `outreach-tracker.csv`
 - [ ] Day 4: first bump on non-responders
 
@@ -100,3 +119,4 @@ number in the ledger, and Wave B exists to close it.
 | 2026-08-18 | Sourcing report: 39 fabric vendors profiled (Phase 2). Artifact only. |
 | 2026-08-20 | Japan supplier vetting pass (production partners, not cloth). |
 | 2026-08-24 | Wave 1 recovered into the repo; Wave 2 adds 18; ledger, map, outreach plan and tracker built. |
+| 2026-08-25 | 20 personalised email drafts written into Gmail (unsent). Call sheet published with 55 checkable tasks covering all 57 suppliers. |

@@ -1,0 +1,493 @@
+<title>The Cloth Call Sheet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+
+<style id="page-style">
+  :root {
+    --ground: #EDEFEE;
+    --surface: #F8F9F8;
+    --surface-2: #E4E7E5;
+    --ink: #16191C;
+    --ink-muted: #565E66;
+    --ink-faint: #7B848C;
+    --rule: #D0D5D2;
+    --rule-firm: #B6BDB9;
+    --navy: #1F3A5F;
+    --navy-soft: #DDE4EE;
+    --brass: #7E6118;
+    --brass-soft: #F0E7CF;
+    --thread: #2A5A43;
+    --thread-soft: #DCEAE2;
+    --oxblood: #7A2B2B;
+    --oxblood-soft: #F2DEDE;
+    --display: "Spectral", "Iowan Old Style", Palatino, Georgia, serif;
+    --sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground: #131619; --surface: #1A1E22; --surface-2: #23282D;
+      --ink: #E7EAE8; --ink-muted: #9BA3A9; --ink-faint: #788188;
+      --rule: #2D333A; --rule-firm: #3D444C;
+      --navy: #86AAD2; --navy-soft: #1E2A38;
+      --brass: #C9A64F; --brass-soft: #2E2717;
+      --thread: #74B294; --thread-soft: #16281F;
+      --oxblood: #D08E8E; --oxblood-soft: #331E1E;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground: #131619; --surface: #1A1E22; --surface-2: #23282D;
+    --ink: #E7EAE8; --ink-muted: #9BA3A9; --ink-faint: #788188;
+    --rule: #2D333A; --rule-firm: #3D444C;
+    --navy: #86AAD2; --navy-soft: #1E2A38;
+    --brass: #C9A64F; --brass-soft: #2E2717;
+    --thread: #74B294; --thread-soft: #16281F;
+    --oxblood: #D08E8E; --oxblood-soft: #331E1E;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    background: var(--ground); color: var(--ink);
+    font-family: var(--sans); font-size: 16px; line-height: 1.6;
+    margin: 0; -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1000px; margin: 0 auto; padding: 48px 22px 96px; display: flex; flex-direction: column; gap: 42px; }
+  a { color: var(--navy); text-underline-offset: 2px; }
+  a:focus-visible, button:focus-visible, .row label:focus-visible { outline: 2px solid var(--navy); outline-offset: 3px; }
+
+  .eyebrow { font-size: 11.5px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--brass); margin: 0; }
+  h1 { font-family: var(--display); font-size: clamp(2.1rem, 5vw, 3rem); line-height: 1.07; font-weight: 600; letter-spacing: -.02em; margin: 0; text-wrap: balance; }
+  .standfirst { font-family: var(--display); font-size: 1.14rem; line-height: 1.5; color: var(--ink-muted); margin: 0; max-width: 60ch; }
+
+  header.masthead { display: flex; flex-direction: column; gap: 16px; }
+
+  /* progress */
+  .progress { display: flex; flex-direction: column; gap: 9px; }
+  .progress .meta { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font-size: .84rem; color: var(--ink-muted); }
+  .progress .meta strong { font-family: var(--mono); font-size: 1.1rem; color: var(--ink); font-variant-numeric: tabular-nums; }
+  .track { height: 8px; background: var(--surface-2); border-radius: 2px; overflow: hidden; border: 1px solid var(--rule); }
+  .track span { display: block; height: 100%; background: var(--thread); transition: width .3s ease; }
+  @media (prefers-reduced-motion: reduce) { .track span { transition: none; } }
+
+  .saveline { font-family: var(--mono); font-size: .76rem; color: var(--ink-faint); min-height: 1.2em; }
+  .saveline.warn { color: var(--oxblood); }
+
+  section { display: flex; flex-direction: column; gap: 16px; }
+  h2 { font-family: var(--display); font-size: 1.5rem; font-weight: 600; letter-spacing: -.01em; margin: 0; padding-bottom: 9px; border-bottom: 1px solid var(--rule-firm); display: flex; justify-content: space-between; align-items: baseline; gap: 12px; text-wrap: balance; }
+  h2 .tally { font-family: var(--mono); font-size: .82rem; font-weight: 400; color: var(--ink-faint); font-variant-numeric: tabular-nums; }
+  p { margin: 0; max-width: 68ch; }
+  .lede { color: var(--ink-muted); font-size: .94rem; }
+
+  /* rows */
+  .rows { display: flex; flex-direction: column; border: 1px solid var(--rule); border-radius: 2px; overflow: hidden; }
+  .row { display: grid; grid-template-columns: 30px 1fr; gap: 13px; padding: 13px 15px; background: var(--surface); border-bottom: 1px solid var(--rule); align-items: start; }
+  .row:last-child { border-bottom: 0; }
+  .row.done { background: var(--thread-soft); }
+  .row.done .name { text-decoration: line-through; text-decoration-color: var(--ink-faint); color: var(--ink-muted); }
+
+  .row label { display: flex; align-items: center; justify-content: center; padding-top: 2px; cursor: pointer; }
+  .row input[type="checkbox"] { width: 18px; height: 18px; accent-color: var(--thread); cursor: pointer; margin: 0; }
+  .row.locked input[type="checkbox"] { cursor: not-allowed; opacity: .45; }
+
+  .body { display: flex; flex-direction: column; gap: 5px; min-width: 0; }
+  .line1 { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px; }
+  .name { font-weight: 600; font-size: .96rem; }
+  .target { font-family: var(--mono); font-size: .8rem; color: var(--navy); word-break: break-all; }
+  .note { font-size: .86rem; color: var(--ink-muted); }
+
+  .chip { display: inline-block; font-family: var(--mono); font-size: 9.5px; font-weight: 500; letter-spacing: .04em; padding: 2px 6px; border-radius: 2px; white-space: nowrap; }
+  .chip.a { background: var(--thread-soft); color: var(--thread); }
+  .chip.b { background: var(--navy-soft); color: var(--navy); }
+  .chip.c { background: var(--surface-2); color: var(--ink-faint); }
+  .chip.d { background: var(--oxblood-soft); color: var(--oxblood); }
+  .chip.flag { background: var(--brass-soft); color: var(--brass); }
+
+  /* paste block */
+  .paste { background: var(--surface); border: 1px solid var(--rule); border-radius: 2px; padding: 18px 20px; display: flex; flex-direction: column; gap: 12px; }
+  .paste h3 { font-size: .95rem; font-weight: 600; margin: 0; }
+  .paste pre { font-family: var(--mono); font-size: .8rem; line-height: 1.6; background: var(--surface-2); border-radius: 2px; padding: 13px 15px; margin: 0; overflow-x: auto; white-space: pre-wrap; color: var(--ink); }
+  .paste button { font-family: var(--sans); font-size: .82rem; font-weight: 600; background: var(--navy); color: var(--ground); border: 0; border-radius: 2px; padding: 8px 15px; cursor: pointer; align-self: flex-start; }
+  .paste button:hover { opacity: .9; }
+
+  .callout { background: var(--surface); border-left: 3px solid var(--brass); border-radius: 0 2px 2px 0; padding: 15px 19px; display: flex; flex-direction: column; gap: 7px; }
+  .callout.stop { border-left-color: var(--oxblood); }
+  .callout h3 { font-size: .93rem; font-weight: 600; margin: 0; }
+  .callout p { font-size: .89rem; color: var(--ink-muted); }
+
+  footer { border-top: 1px solid var(--rule-firm); padding-top: 18px; font-size: .81rem; color: var(--ink-faint); display: flex; flex-direction: column; gap: 6px; }
+  footer code { font-family: var(--mono); font-size: .95em; }
+</style>
+
+<div class="wrap" id="app"></div>
+
+<script type="application/json" id="state">{"done":{},"updated":null}</script>
+
+<script id="app-script">
+(function () {
+  "use strict";
+
+  // ---- the call sheet -------------------------------------------------------
+  var TASKS = [
+    // --- email drafts, already written and sitting in Gmail ---
+    { id: "standeven", g: "email", tier: "A", name: "Standeven", target: "sales@standevenfabrics.co.uk",
+      note: "Free trade account, ~48h approval, no minimums, small tailors explicitly welcome. The single best first account in the list." },
+    { id: "acorn", g: "email", tier: "A", name: "Acorn Fabrics", target: "sales@acornfabrics.co.uk",
+      note: "Free trade range cards, no minimum, cuts 2–3 m shirt lengths. Asks for both cotton and 96/4 stretch shirting." },
+    { id: "bblack", g: "email", tier: "A", name: "B. Black & Sons", target: "info@bblackandsons.com",
+      note: "No trade gate at all. Draft asks specifically for remnant and mill-archive lots, which is where sub-$30 high-Super cloth hides." },
+    { id: "mjcahn", g: "email", tier: "A", name: "M.J. Cahn — Steven Cahn", target: "Woolens@gmail.com",
+      note: "Named principal, documented sample programme, 24h dispatch. Draft offers a call as an alternative." },
+    { id: "dugdale", g: "email", tier: "A", name: "Dugdale Bros — Zach Jobe", target: "zach.jobe@dugdalebros.com",
+      note: "Their US rep in Brooklyn. Going to him directly beats the web form." },
+    { id: "hfw", g: "email", tier: "A", name: "Huddersfield Fine Worsteds / Hardy Minnis", target: "info@hfwltd.com",
+      note: "Home of Fresco — the high-twist tropical you asked for. Draft asks for pattern swatches ahead of an account, which they do allow." },
+    { id: "canclini", g: "email", tier: "A", name: "Canclini 1925", target: "info@canclini.it",
+      note: "Premium Italian cotton shirting, fabric-only house. Asks whether they cut 2 m shirt lengths direct or via their store." },
+    { id: "ocm", g: "email", tier: "A", name: "OCM Private Limited", target: "harjot.singh@ocm.in",
+      note: "Super 100s–140s at Indian cost — the best range match anywhere in the ledger. Address is from a company registry, so verify it first." },
+    { id: "yunsa", g: "email", tier: "A", name: "Yünsa", target: "pazarlama@yunsa.com",
+      note: "Fabric-only premium worsted mill, spins its own yarn. Strongest free-and-clear fit at real quality." },
+    { id: "yunai", g: "email", tier: "A", name: "Shaoxing Yun Ai Textile", target: "admin@yunaitextile.com",
+      note: "Dedicated Super 100s/120s/130 lines plus in-stock suiting. Draft insists all-wool and blends be quoted separately." },
+    { id: "kemp", g: "email", tier: "A", name: "Kemp & Hewitt", target: "orders@kempandhewitt.com",
+      note: "One account covers Ariston, the Harrisons stable and Zegna cloth. Three suppliers, one email." },
+    { id: "cerruti", g: "email", tier: "B", name: "Lanificio Cerruti", target: "bunch@lanificiocerruti.com",
+      note: "Their dedicated bunch address. Covers the Super 150s+ top of your range; draft asks about remnant lots." },
+    { id: "tollegno", g: "email", tier: "B", name: "Tollegno 1900", target: "info@tollegno1900.it",
+      note: "Has a New York office — domestic service removes freight and duty friction." },
+    { id: "raymond", g: "email", tier: "B", name: "Raymond (fabric division)", target: "sonam.gupta@raymond.in",
+      note: "Reaches the top of the Super range. Biggest garment arm in the ledger — buy cloth, share nothing else." },
+    { id: "altinyildiz", g: "email", tier: "B", name: "Altınyıldız Tekstil", target: "mail@altinyildiz.com.tr",
+      note: "Exporting Turkish suiting since 1956. Draft goes to both published addresses." },
+    { id: "km", g: "email", tier: "B", name: "Hangzhou K&M — Jenny", target: "jenny@kmtextile.net",
+      note: "Free A4 sample cards. Draft offers to pay courier up front, which is what converts with Chinese mills." },
+    { id: "sixdragon", g: "email", tier: "B", name: "Hangzhou Six Dragon — Jack Wang", target: "gm@sixdragontextile.com",
+      note: "Weaves, dyes and prints in house. Draft asks for both cotton and 96/4 stretch shirting cards." },
+    { id: "yardblox", g: "email", tier: "B", name: "Yardblox", target: "hello@yardblox.com",
+      note: "Free colour cards, no minimums. Draft also asks who actually mills their cloth." },
+    { id: "donear", g: "email", tier: "C", name: "Donear", target: "info@donear.com",
+      note: "Draft insists all-wool be quoted separately from polyester-viscose — the usual bait-and-switch in Indian suiting quotes." },
+    { id: "fox", g: "email", tier: "C", name: "Fox Brothers", target: "info@foxflannel.com",
+      note: "Real English flannel for autumn/winter. Well above your band — send only if you want the top-end story." },
+
+    // --- phone calls ---
+    { id: "metro", g: "call", tier: "A", name: "Metro Textiles", target: "(212) 209-0004",
+      note: "The key channel for high-Super cloth under $30. Ask what wool they have now, and about the 50% codes. Phone only — no email published." },
+    { id: "hs", g: "call", tier: "B", name: "Holland & Sherry, New York", target: "212-758-1911",
+      note: "145 E 57th St. No self-serve signup — ask for the rep who handles new accounts. Wait until a trade account or two is open." },
+    { id: "getzner", g: "call", tier: "B", name: "Getzner Textil", target: "+43 5552 601-0",
+      note: "Ask for the 1.5 m made-to-measure cut-length programme by name. It is the only way in at your scale." },
+    { id: "jodek", g: "call", tier: "C", name: "Jodek (for Caccioppoli)", target: "800-325-4668",
+      note: "US distributor for Caccioppoli bunches. Expect real-business vetting — have the resale certificate ready." },
+    { id: "marzotto", g: "call", tier: "B", name: "Marzotto USA", target: "212-944-0196",
+      note: "The most affordable of the Biella names. Ask which distributor serves buyers at your scale." },
+    { id: "scabal", g: "call", tier: "C", name: "Scabal USA", target: "212-764-8580",
+      note: "Ask directly how their pricing tiers work — the same cloth costs more if you buy little. Better to know before you invest." },
+    { id: "dormeuil", g: "call", tier: "C", name: "Dormeuil USA", target: "800-416-4144",
+      note: "232 Madison Ave. Books are allocated selectively; unlikely to open early, so call late in the sequence." },
+    { id: "lianfa", g: "call", tier: "B", name: "Jiangsu Lianfa Textile", target: "+86 513 8886 9069",
+      note: "Second-largest yarn-dyed shirting capacity in the world. Large garment arm. Ask for the export sales desk." },
+    { id: "xingye", g: "call", tier: "C", name: "Hebei Xingye", target: "+86 155 1161 6069",
+      note: "WhatsApp. Free samples, courier ~$25–40 refunded against first order. Budget swatch harvest only." },
+    { id: "jinfeng", g: "call", tier: "C", name: "Hangzhou Jinfeng", target: "+86-571-8299-5618",
+      note: "Integrated mill, quote-only, no published swatch programme. Low priority." },
+    { id: "gfw", g: "call", tier: "D", name: "Global Fabric Wholesale", target: "+86 134 1118 9544",
+      note: "Trading company, kg-based tiers, no factory evidence. Skip unless the others go quiet." },
+
+    // --- web forms and account signups ---
+    { id: "batemanogden", g: "form", tier: "A", name: "Bateman Ogden", target: "batemanogden.co.uk/CreateAccount",
+      note: "Choose the 'Individual — instant activation' account type. Lowest-friction trade signup in the entire ledger. Do this one first." },
+    { id: "vbc", g: "form", tier: "A", name: "Vitale Barberis Canonico", target: "vitalebarberiscanonico.shop",
+      note: "Register for the trade 'Professional Space'. The tropical Super 110s/120s benchmark." },
+    { id: "digjam", g: "form", tier: "A", name: "Digjam", target: "digjam.co.in",
+      note: "Fabric-first Indian worsted, no garment arm. Use their enquiry form — and confirm they are actively trading before investing effort." },
+    { id: "vardhman", g: "form", tier: "A", name: "Vardhman Textiles", target: "fabric.vardhman.com",
+      note: "Direct hit on stretch shirting: weft stretch, bi-stretch, cotton-nylon stretch. Ask for the fabric division, not garments." },
+    { id: "nanshan", g: "form", tier: "A", name: "Shandong Nanshan", target: "en.nanshan.com.cn",
+      note: "Lists Super 120s tropical. Has New York and Los Angeles offices — ask to be routed to the US office and do it all in English." },
+    { id: "surui", g: "form", tier: "A", name: "Shaoxing Surui Textile", target: "suruitex.en.alibaba.com",
+      note: "Publishes $9.50–16.50/m at a 1-metre minimum — the best price-to-minimum ratio found. Message through Alibaba; verify it is a real mill." },
+    { id: "jiexiang", g: "form", tier: "A", name: "Jiexiang Textile", target: "jiexiangtextile.com",
+      note: "Already stocks a 96/4 cotton-spandex shirting poplin, 133x72, 130 gsm — the corrected spec, on the shelf." },
+    { id: "zelouf", g: "form", tier: "B", name: "Zelouf Fabrics", target: "zelouffabrics.com/pages/wholesale",
+      note: "Wholesale registration unlocks free swatches. $20 minimum order. Quick win." },
+    { id: "soktas", g: "form", tier: "B", name: "Söktaş", target: "soktas.com.tr",
+      note: "Premium Turkish cotton shirting, roughly in band. Ask how US buyers are served." },
+    { id: "sunshine", g: "form", tier: "B", name: "Jiangsu Sunshine Group", target: "china-sunshine.com",
+      note: "China's largest worsted producer. You are small to them — expect distributor routing. Large garment arm." },
+    { id: "jianlu", g: "form", tier: "B", name: "Jiangsu Jianlu Worsted", target: "jianlufabric.en.made-in-china.com",
+      note: "Dedicated worsted mill, no garment arm found. Good free-and-clear candidate worth verifying." },
+    { id: "mhtextile", g: "form", tier: "B", name: "MH Textile", target: "mh-chine.com",
+      note: "Publishes 97/3 cotton-spandex stretch twill. Useful as a technical counterpart as well as a supplier." },
+    { id: "albini", g: "form", tier: "B", name: "Albini Group / Thomas Mason", target: "bespoke.albinigroup.com",
+      note: "Books are reimbursed only if you hit a first-year minimum turnover — ask what that number is before accepting any." },
+    { id: "reda", g: "form", tier: "B", name: "Reda 1865", target: "reda1865.com",
+      note: "Strong tropical and high-twist ranges. No published swatch programme — use the contact form." },
+    { id: "johnfoster", g: "form", tier: "B", name: "John Foster", target: "john-foster.co.uk",
+      note: "Ask specifically about Mill Archive one-offs — a genuine under-band route to high-Super English cloth." },
+    { id: "luthai", g: "form", tier: "B", name: "Luthai Textile", target: "luthai.com",
+      note: "World's largest yarn-dyed shirting mill, ~$6.80/m dealer reference. Routed via distributors; has a garment arm." },
+    { id: "fabricmart", g: "form", tier: "B", name: "Fabric Mart", target: "fabricmartfabrics.com",
+      note: "Closeout jobber, $2–8 on sale. Set a monthly reminder to check stock — this is a hunt, not a relationship." },
+    { id: "ffc", g: "form", tier: "B", name: "Fashion Fabrics Club", target: "fashionfabricsclub.com",
+      note: "$8–15/yd suiting, in band. Closeout, so no reorders. Same firm as Fabric Depot." },
+    { id: "yutai", g: "form", tier: "C", name: "Yutai Textiles", target: "yutaitextiles.com",
+      note: "Poplin specialist since 1999. Relevant to the 100% cotton shirting programme." },
+    { id: "mafatlal", g: "form", tier: "C", name: "Mafatlal Industries", target: "mafatlals.com",
+      note: "Long-established Indian shirting name. Thin evidence so far — treat as a lead to qualify." },
+    { id: "huzhou", g: "form", tier: "C", name: "Huzhou Shichang Textile", target: "sctextile.goldsupplier.com",
+      note: "Cotton/spandex twill producer. Lead only." },
+    { id: "wooltex", g: "form", tier: "C", name: "Wooltex", target: "wooltex.com",
+      note: "Makes wool suiting fabric and wool suits. Lower priority on your free-and-clear rule." },
+    { id: "bhilwara", g: "form", tier: "C", name: "Bhilwara cluster", target: "ExportersIndia listings",
+      note: "Mascot, Oxford Intl, Siddhartha, Ekta, Dheer Dada. Cheapest in the ledger but 200–500 m minimums block single-length buying." },
+    { id: "loropiana", g: "form", tier: "D", name: "Loro Piana", target: "loropiana.com/textile",
+      note: "Mostly above $150/yd, LVMH vetting, volume expectations. Listed for completeness — do not spend early effort here." }
+  ];
+
+  var GROUPS = [
+    { key: "email", title: "Send the drafts", blurb: "Twenty emails are written and waiting in Gmail. Open each, check the address is right, and hit send. Every one is personalised — none of them read like a blast." },
+    { key: "call", title: "Make the calls", blurb: "These eleven publish no usable email. A phone call also gets you further faster with US jobbers, who mostly do not work from an inbox." },
+    { key: "form", title: "Fill the forms", blurb: "Twenty-four have no email either — they take web forms or trade-account signups. The paste block below covers every field these ask for." }
+  ];
+
+  var PASTE = [
+    "Company:  Blessed & Dressed",
+    "Contact:  Dustin Stanley, Founder",
+    "Country:  United States",
+    "Business: Custom menswear — individual made-to-measure suits, sport",
+    "          coats, trousers, vests and shirts, cut one at a time to each",
+    "          customer's measurements, with full-canvas construction.",
+    "",
+    "What we are looking for",
+    "  Suiting  — all-wool worsted and wool-rich blends, 250–290 gsm,",
+    "             150 cm width, plain weave and twill. High-twist and",
+    "             tropical qualities, 220–260 gsm, for warm weather.",
+    "             Please state composition, Super count and micron.",
+    "  Shirting — 100% cotton, 110–140 gsm, 150 cm, two-ply yarns, in",
+    "             poplin, twill, oxford and royal oxford. Also woven",
+    "             cotton/elastane stretch at 96/4 or 97/3, weft stretch.",
+    "",
+    "What we need to know",
+    "  1. How a US business opens a trade account, and what documents.",
+    "  2. Swatch cards or bunches — available, and on what terms?",
+    "  3. Minimum cut per order. Can you cut a single suit length (3.2 m)",
+    "     or shirt length (2 m)?",
+    "  4. Price per metre at the specs above, and your price breaks.",
+    "  5. Lead time and dispatch.",
+    "  6. Shipping to the US — incoterm, and who carries duty?",
+    "  7. Any minimum annual purchase tied to holding your books?",
+    "  8. Are these continuity qualities we can reorder in twelve months?",
+    "",
+    "We can provide a courier account or pay courier charges for samples."
+  ].join("\n");
+
+  // ---- state ----------------------------------------------------------------
+  function readState() {
+    try {
+      var el = document.getElementById("state");
+      var s = JSON.parse(el.textContent);
+      if (!s || typeof s !== "object") throw new Error("bad");
+      s.done = s.done && typeof s.done === "object" ? s.done : {};
+      return s;
+    } catch (e) {
+      return { done: {}, updated: null };
+    }
+  }
+
+  var state = readState();
+  var writable = true;      // flipped false on the first not_writer/not_granted
+  var api = null;           // the artifact capability namespace, once resolved
+  var pending = null;       // debounce handle
+  var waited = 0;           // ms spent waiting for the capability to resolve
+  var saveMsg = "";
+  var saveWarn = false;
+
+  function esc(s) {
+    return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
+
+  function href(t) {
+    if (t.g === "email") return "mailto:" + t.target;
+    if (t.g === "call") return "tel:" + t.target.replace(/[^+0-9]/g, "");
+    if (/^[a-z0-9.-]+\.[a-z]{2,}/i.test(t.target)) return "https://" + t.target.replace(/^https?:\/\//, "");
+    return null;
+  }
+
+  // ---- render ---------------------------------------------------------------
+  function renderBody() {
+    var total = TASKS.length;
+    var doneCount = TASKS.filter(function (t) { return state.done[t.id]; }).length;
+    var pct = total ? Math.round((doneCount / total) * 100) : 0;
+
+    var h = "";
+    h += '<header class="masthead">';
+    h += '<p class="eyebrow">Blessed &amp; Dressed · Cloth Sourcing · Outreach</p>';
+    h += '<h1>The Cloth Call Sheet</h1>';
+    h += '<p class="standfirst">Every supplier worth contacting, in the order worth contacting them. Tick as you go — the page remembers.</p>';
+    h += '<div class="progress"><div class="meta"><span><strong>' + doneCount + '</strong> of ' + total + ' contacted</span><span>' + pct + '%</span></div>';
+    h += '<div class="track"><span style="width:' + pct + '%"></span></div>';
+    h += '<div class="saveline' + (saveWarn ? " warn" : "") + '">' + esc(saveMsg) + "</div></div>";
+    h += "</header>";
+
+    if (!writable) {
+      h += '<div class="callout stop"><h3>This is a read-only view</h3>';
+      h += "<p>Ticks will not save from here. Open the artifact from your own gallery to check items off.</p></div>";
+    }
+
+    h += '<div class="callout"><h3>Before you send anything</h3>';
+    h += "<p>Two things raise your reply rate more than any wording change. Get a business email on your own domain — a trade desk reading a Gmail address discounts you before the first line. And have your EIN and resale certificate scanned and ready; several of these will ask on the first reply, and the ones that ask are the ones worth having.</p></div>";
+
+    GROUPS.forEach(function (grp) {
+      var rows = TASKS.filter(function (t) { return t.g === grp.key; });
+      var d = rows.filter(function (t) { return state.done[t.id]; }).length;
+      h += "<section>";
+      h += "<h2>" + esc(grp.title) + '<span class="tally">' + d + " / " + rows.length + "</span></h2>";
+      h += '<p class="lede">' + esc(grp.blurb) + "</p>";
+      h += '<div class="rows">';
+      rows.forEach(function (t) {
+        var on = !!state.done[t.id];
+        var link = href(t);
+        h += '<div class="row' + (on ? " done" : "") + (writable ? "" : " locked") + '">';
+        h += '<label><input type="checkbox" data-id="' + esc(t.id) + '"' + (on ? " checked" : "") +
+             (writable ? "" : " disabled") + ' aria-label="Mark ' + esc(t.name) + ' contacted"></label>';
+        h += '<div class="body"><div class="line1">';
+        h += '<span class="name">' + esc(t.name) + "</span>";
+        h += '<span class="chip ' + t.tier.toLowerCase() + '">TIER ' + esc(t.tier) + "</span>";
+        if (t.id === "ocm" || t.id === "yunai" || t.id === "raymond" || t.id === "altinyildiz") {
+          h += '<span class="chip flag">VERIFY ADDRESS</span>';
+        }
+        h += "</div>";
+        h += '<span class="target">' + (link ? '<a href="' + esc(link) + '" target="_blank" rel="noopener">' + esc(t.target) + "</a>" : esc(t.target)) + "</span>";
+        h += '<span class="note">' + esc(t.note) + "</span>";
+        h += "</div></div>";
+      });
+      h += "</div>";
+
+      if (grp.key === "form") {
+        h += '<div class="paste"><h3>Paste this into any form</h3>';
+        h += "<pre>" + esc(PASTE) + "</pre>";
+        h += '<button type="button" id="copybtn">Copy to clipboard</button></div>';
+      }
+      h += "</section>";
+    });
+
+    h += "<footer>";
+    h += "<p>Full detail on every supplier — price bands, swatch terms, cut-length policy, evidence — lives in <code>sourcing/FABRIC-SUPPLIERS.md</code>, with the strategy behind this sequence in <code>sourcing/OUTREACH-PLAN.md</code>.</p>";
+    h += "<p>Never state your target price to any vendor. Ask what theirs is. And share no tech packs, patterns or customer data with the twelve mills that also make finished garments.</p>";
+    if (state.updated) h += "<p>Last ticked " + esc(state.updated) + ".</p>";
+    h += "</footer>";
+    return h;
+  }
+
+  function paint() {
+    document.getElementById("app").innerHTML = renderBody();
+    var btn = document.getElementById("copybtn");
+    if (btn) {
+      btn.addEventListener("click", function () {
+        navigator.clipboard.writeText(PASTE).then(function () {
+          btn.textContent = "Copied";
+          setTimeout(function () { btn.textContent = "Copy to clipboard"; }, 1800);
+        }, function () {
+          btn.textContent = "Press Ctrl+C to copy";
+        });
+      });
+    }
+  }
+
+  // ---- publish --------------------------------------------------------------
+  function buildDocument() {
+    var css = document.getElementById("page-style").textContent;
+    var js = document.getElementById("app-script").textContent;
+    var fonts =
+      '<link rel="preconnect" href="https://fonts.googleapis.com">' +
+      '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>' +
+      '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">';
+    var open = "<" + "script";
+    var close = "<" + "/script>";
+    return "<!doctype html>\n<html>\n<head>\n<meta charset=\"utf-8\">\n" +
+      "<title>The Cloth Call Sheet</title>\n" + fonts +
+      "\n<style id=\"page-style\">" + css + "</style>\n</head>\n<body>\n" +
+      '<div class="wrap" id="app"></div>\n' +
+      open + ' type="application/json" id="state">' + JSON.stringify(state) + close + "\n" +
+      open + ' id="app-script">' + js + close + "\n</body>\n</html>";
+  }
+
+  function setSave(msg, warn) {
+    saveMsg = msg || "";
+    saveWarn = !!warn;
+    var el = document.querySelector(".saveline");
+    if (el) {
+      el.textContent = saveMsg;
+      el.className = "saveline" + (saveWarn ? " warn" : "");
+    }
+  }
+
+  function flush() {
+    pending = null;
+    if (!writable) return;
+    if (!api) {
+      // the capability has not resolved yet — hold the tick and retry shortly
+      if (waited < 12000) { waited += 700; schedule(700); }
+      else setSave("Saving is unavailable in this view.", true);
+      return;
+    }
+    setSave("Saving…", false);
+    api.publish(buildDocument()).then(function () {
+      // this view reloads to the new version; nothing more to do
+    }, function (err) {
+      var code = (err && err.code) || "upstream_error";
+      if (code === "conflict") {
+        setSave("Someone else saved first — reloading to their version.", false);
+        return; // the shell is already reloading every view
+      }
+      if (code === "not_writer" || code === "not_granted" ||
+          code === "not_declared" || code === "capability_disabled" ||
+          code === "capability_removed" || code === "consent_required") {
+        writable = false;
+        paint();
+        setSave("Read-only view — ticks are not saved.", true);
+        return;
+      }
+      if (code === "rate_limited") {
+        setSave("Saving too fast — pausing, then trying again.", true);
+        schedule(6000);
+        return;
+      }
+      setSave("Could not save that tick. Try again in a moment.", true);
+    });
+  }
+
+  function schedule(delay) {
+    if (pending) clearTimeout(pending);
+    pending = setTimeout(flush, delay == null ? 900 : delay);
+  }
+
+  // ---- events ---------------------------------------------------------------
+  document.addEventListener("change", function (e) {
+    var box = e.target;
+    if (!box || box.type !== "checkbox" || !box.dataset.id) return;
+    if (!writable) { box.checked = !box.checked; return; }
+    if (box.checked) state.done[box.dataset.id] = true;
+    else delete state.done[box.dataset.id];
+    state.updated = new Date().toISOString().slice(0, 10);
+    paint();
+    setSave("Saving…", false);
+    schedule();
+  });
+
+  paint();
+
+  if (window.claude && typeof window.claude.use === "function") {
+    window.claude.use("artifact").then(function (ns) {
+      if (!ns) { writable = false; paint(); return; }
+      api = ns;
+    }, function () { writable = false; paint(); });
+  } else {
+    writable = false;
+    paint();
+  }
+})();
+</script>
