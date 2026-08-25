@@ -9,7 +9,7 @@ are tool-generated and cover a different workstream; this file tracks cloth sour
 
 <!-- BEGIN GENERATED: node sourcing/build-ledger.mjs -->
 
-**57 fabric suppliers identified across 9 countries. 0 contacted.**
+**57 fabric suppliers identified across 9 countries. 1 contacted.**
 
 Research is no longer the bottleneck. Outreach is. The ledger has more qualified
 suppliers than a company at this stage can work at once, and every single row still
@@ -22,13 +22,13 @@ reads `not_contacted`. The next unit of progress is an email, not another search
 | Identified | 57 | Across 9 countries, tiered A–D |
 | Direct email or phone on file | 33 | 24 have only a website or postal address |
 | Re-verified against live site | 0 | **Blocks Wave 2 sending** — see below |
-| Contacted | 0 | — |
+| Contacted | 1 | — |
 | Replied | 0 | — |
 | Trade account open | 0 | — |
 | Swatches in hand | 0 | — |
 | Cloth purchased | 0 | — |
 
-**By tier:** A 18 · B 24 · C 12 · D 3 — A = open now, B = worth a letter, C = reference, D = deprioritised
+**By tier:** A 18 · B 25 · C 11 · D 3 — A = open now, B = worth a letter, C = reference, D = deprioritised
 
 **By evidence:** VERIFIED 36 · LIKELY 19 · UNVERIFIED 2
 
@@ -85,6 +85,31 @@ states its real channel.
 Rows stay `not_contacted` in the dataset until a draft is actually **sent**. A written
 draft is not a contact.
 
+## First reply in (2026-08-25)
+
+**Fox Brothers answered — Patrick Osborne-Fox, within about 13 hours of send.** The
+eight-question format worked: he answered point by point, in order.
+
+What it changed. Fox went into this ledger as tier C with almost every field marked
+"not published". The reply upgrades it to B and replaces most of those fields with fact:
+
+- **No MOQ at all on the stock service collection** — single suit lengths are fine.
+- **Free soft cover bunches.** Hardbacks GBP 30, credited back against an order placed
+  within 3 months. Hardbacks exist for Classic Flannel, Vintage Fox, Fox Air, Golden Fox.
+- **Same-day dispatch** once payment clears. **Duty is buyer-side**, confirmed in writing.
+- **Everything except the Fox Drop collection is continuity** — reorderable.
+- Accounts open on **ProForma**, reviewed for credit terms after 6 months of trading.
+- **Trade pricing is withheld until the account is open** — the one thing still unknown.
+
+The strategic read is unchanged by the good terms: public references put Fox well above
+the $30/yd ceiling, so this is a **premium story cloth bought one length at a time
+against a paid commission**, not programme cloth. The account is worth holding precisely
+because it costs nothing to hold — no minimum, free bunches, same-day dispatch.
+
+**Fox Air is directly on brief.** Patrick names it as their high-twist collection, which
+is the tropical warm-weather cloth the original brief asked for. Golden Fox is the newer
+lighter-weight option.
+
 ## Blocking the next step
 
 1. **Wave 2 contacts are unverified against live sites.** The session's network policy
@@ -131,4 +156,5 @@ number in the ledger, and Wave B exists to close it.
 | 2026-08-20 | Japan supplier vetting pass (production partners, not cloth). |
 | 2026-08-24 | Wave 1 recovered into the repo; Wave 2 adds 18; ledger, map, outreach plan and tracker built. |
 | 2026-08-25 | 20 personalised email drafts written into Gmail (unsent). Call sheet published with 55 checkable tasks covering all 57 suppliers. |
+| 2026-08-25 | Fox Brothers replied — first response of the campaign. Terms captured; tier C→B. Reply drafted. |
 | 2026-08-25 | SMS outreach ruled out: no Inkbox sending number, platform requires opt-in, and 9 of 11 numbers are landline or toll-free. Call rows annotated with real channel. |

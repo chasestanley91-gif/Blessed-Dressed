@@ -163,7 +163,7 @@ plus every UK and Italian merchant on the list.
 | **Jiexiang Textile** | China | shirting fabric manufacturer | shirting | no | Quote-based | — | Not published - ask | unknown | jiexiangtextile.com | VERIFIED |
 | **Yunsa Yunlu Sanayi ve Ticaret A.S.** | Turkey (Istanbul / Cerkezkoy) | integrated worsted mill | suiting | no | Not published - quote required | Upper-segment worsted - confirm Super range | Not published - ask sales directly | unknown | pazarlama@yunsa.com<br>+90 (212) 365 65 00<br>yunsa.com/en | VERIFIED |
 
-### Tier B — worth a letter (24)
+### Tier B — worth a letter (25)
 
 | Supplier | Country | Type | Segment | Own garment arm | Price band | Super range | Swatch terms | Cut lengths | Contact | Evid. |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -180,6 +180,7 @@ plus every UK and Italian merchant on the list.
 | **Reda 1865** | Italy | mill | suiting | no | Not published (mid-premium) | Super 110s-170s | None published | Reda Shop | reda1865.com | LIKELY |
 | **Tollegno 1900** | Italy | mill | suiting | no | Not published | Super 110s-150s | None published | unknown | info@tollegno1900.it<br>39 W 38th St, NYC | VERIFIED |
 | **Ariston Napoli** | Italy | mill | suiting | no | ~$40-90/m forum references | mixed | Bunch catalogs online; via US agent | cut-length house | US agent: Kemp & Hewitt<br>orders@kempandhewitt.com<br>203-838-3000 | VERIFIED |
+| **Fox Brothers** | UK | flannel mill | suiting | no | Trade pricing released only after the account opens. Public refs ~GBP 82-92/m (2017), i.e. well above the $30/yd ceiling. | n/a - flannel/heavier | Soft cover sets FREE. Hardback bunches GBP 30/book, credited back against an order placed within 3 months. Hardbacks available: Classic Flannel, Vintage Fox, Fox Air, Golden Fox. | yes - no MOQ on stock service | Patrick Osborne-Fox<br>Patrick.Osborne-Fox@foxflannel.com<br>01823 662271<br>foxflannel.com / themerchantfox.co.uk | VERIFIED |
 | **Lanificio Cerruti** | Italy | mill | suiting | no | $50-100/yd remnant references | Super 150s-200s | Dedicated bunch email; e-shop with Piacenza | fabrics.piacenza1733.com | bunch@lanificiocerruti.com<br>US bespoke: Antoniades +1 212 935 0111 | VERIFIED |
 | **Harrisons / Lesser / Smith / W.Bill / P&H (LBD group)** | UK | merchant group | suiting | no | ~GBP 60-120/m retail references | Super 100s-180s across the stable | Bunch system; stock checker; account number required | yes | US: Kemp & Hewitt 203-838-3000 | VERIFIED |
 | **Holland & Sherry** | UK | merchant | suiting | no | ~$60-150+/yd | Super 100s-180s+ | All bunch books browsable free online; account via NY rep | yes | 212-758-1911<br>145 E 57th St, NYC | VERIFIED |
@@ -192,7 +193,7 @@ plus every UK and Italian merchant on the list.
 | **MH Textile (mh-chine)** | China | fabric supplier | shirting | no | Quote-based | — | Not published - ask | unknown | mh-chine.com | VERIFIED |
 | **Altinyildiz Tekstil ve Konfeksiyon A.S.** | Turkey (Cerkezkoy, Tekirdag) | worsted mill | suiting | **YES** | Not published - quote required | Not published - confirm | Not published - ask | unknown | mail@altinyildiz.com.tr / info@altinyildiz.com.tr<br>altinyildiz.com.tr<br>Yildirim Beyazit Mah., Sanayi Bulvari, Cerkezkoy/Tekirdag | VERIFIED |
 
-### Tier C — reference / backup (12)
+### Tier C — reference / backup (11)
 
 | Supplier | Country | Type | Segment | Own garment arm | Price band | Super range | Swatch terms | Cut lengths | Contact | Evid. |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -200,7 +201,6 @@ plus every UK and Italian merchant on the list.
 | **Hebei Xingye** | China | trader (claims mill) | suiting | unknown | TR band $0.60-3.00/m | — | Free samples; you pay courier (~$25-40), refunded on first order - stated verbatim | no | +86 155 1161 6069 (WhatsApp) | VERIFIED |
 | **Hangzhou Jinfeng** | China | integrated mill (18,000 m2) | suiting | unknown | Quote-based TR | — | Not published | no | +86-571-8299-5618 | VERIFIED |
 | **Siyaram's / Donear** | India | major mills | both | **YES** | Not published (PV suiting/shirting) | — | Via channel-partner / dealer program | no | info@donear.com<br>siyaram.com | VERIFIED |
-| **Fox Brothers** | UK | flannel mill | suiting | no | GBP 82-92/m (2017 reference) | n/a - flannel/heavier | Per-product swatches for anyone | public webshop | info@foxflannel.com | VERIFIED |
 | **Caccioppoli** | Italy (Naples) | merchant | suiting | no | ~$100/m secondary references | high | Bunches are core business; via US distributor | 24-48 h dispatch | US: Jodek 800-325-4668 | VERIFIED |
 | **Scabal** | Belgium | merchant | suiting | no | Tiered ('Smart' to 'Bentley') | Super 100s-180s+ | ~80 live bunches; Business Solutions enquiry | 24-h claim | Scabal USA NYC 212-764-8580 | VERIFIED |
 | **Dormeuil** | France | merchant | suiting | no | Mid-premium to Vanquish | Super 110s-180s+ | Books allocated selectively to accounts | yes | 800-416-4144<br>Dormeuil USA, 232 Madison Ave | LIKELY |
@@ -246,7 +246,7 @@ plus every UK and Italian merchant on the list.
 - **Reda 1865** — Contact via CTDA DFNY booth. Strong tropical/high-twist ranges.
 - **Tollegno 1900** — Has a New York office - domestic contact removes duty and freight friction.
 - **Ariston Napoli** — Cut-length house - suits one-garment-at-a-time buying.
-- **Fox Brothers** — Well above band and wrong season for tropical. Import duty explicitly buyer-side.
+- **Fox Brothers** — REPLIED 2026-08-25 - the first supplier to answer. Terms are far better than assumed: NO MOQ on the stock service collection, same-day dispatch, free soft cover bunches, and everything but Fox Drop is continuity. Upgraded C->B on those terms. Price is still the catch - trade pricing is withheld until the account opens, and public references put it far above the $30/yd ceiling, so treat Fox as a premium story cloth bought one length at a time against a paid commission, never as programme cloth. FOX AIR IS DIRECTLY ON BRIEF: Patrick names it as their high-twist collection, which is the tropical/warm-weather cloth the brief asked for. Import duty is buyer-side, confirmed in writing.
 - **Lanificio Cerruti** — Covers the top of your Super range (150s-200s). Remnant lots are the affordable door.
 - **Caccioppoli** — Expect real-business vetting. Well above band.
 - **Harrisons / Lesser / Smith / W.Bill / P&H (LBD group)** — One call to Kemp & Hewitt opens roughly five brands at once.
