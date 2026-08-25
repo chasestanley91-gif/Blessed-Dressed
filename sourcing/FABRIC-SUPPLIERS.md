@@ -65,24 +65,35 @@ The Super number is fibre fineness, and fineness is the cost. Held against evide
 | **Super 150s–180s, new cloth** | **$60–150+/yd** | Holland & Sherry, Cerruti, Dormeuil, Zegna. **No new-cloth route under $30/yd exists.** |
 | Super 150s–180s, *closeout* | **$15–35/yd** | The only under-$30 door: Metro Textiles ($29.50–75.50/yd with the frequent 50% codes), Fabric Mart ($2–8 on sale), B. Black remnant lots, John Foster Mill Archive one-offs, Cerruti remnants |
 
-### 2a. What the retail price actually allows — the target checks out
+### 2a. What the price model actually allows
 
-Added 2026-08-25, from the product catalogue (`products_export.csv`) rather than assumption:
-**suits retail at $599–$1,500, sweet spot around $800–900; shirts $75–$175.**
+**Corrected 2026-08-25.** An earlier version of this section computed cloth as a share of
+retail and concluded Fresco could only ever be a premium tier. That rested on two wrong
+assumptions, both since corrected by the owner.
 
-A suit takes ~3.2 m of cloth. Against a $900 suit:
+**The business model is cost-plus on cloth.** Cloth is passed through to the customer close
+to transparently — it sits on the customer's invoice as its own line rather than being
+absorbed into the garment price. So cloth cost does **not** come out of the making price,
+and "cloth as a percentage of retail" is the wrong frame entirely.
 
-| Cloth at | Per 3.2 m length | Share of a $900 suit |
-| --- | --- | --- |
-| $15/yd ($16.40/m) — the preferred target | ~$52 | **6%** — very comfortable |
-| $30/yd ($32.80/m) — the stated ceiling | ~$105 | **12%** — workable |
-| Fresco / HFW premium (~$60–90/m) | ~$190–290 | **21–32%** — premium tier only |
-| Italian Super 110s+ (VBC ~$70/m) | ~$224 | **25%** — same |
+**The real price band** is $600–700 for the bulk of the work, roughly $500 at the floor for
+a client worth winning, and up to $1,500 at the top — not the ~$900 catalogue median used
+before. The business is **operating**, producing through other manufacturers, not pre-launch.
 
-**The original brief was well calibrated.** A $15–30/yd cloth budget is exactly right for a
-$900 suit — it lands cloth at 6–12% of retail, which leaves room for CMT, trims and margin.
-That is why the Asian all-wool worsted tier matters so much and why the premium merchants,
-however good their terms, can only ever be a top tier rather than the core book.
+What this changes:
+
+- **Premium cloth is viable.** Fresco, VBC and the Italian merchants are not locked out by
+  the price band, because the customer selects the cloth and carries its cost. The constraint
+  is what a customer will choose, not what the margin will bear.
+- **The $15–30/yd target still matters, for a different reason.** It is not margin protection.
+  It is what makes an attractive **house and entry cloth offer** at the $600–700 core price —
+  the cloth a customer takes when they are not reaching for a named English or Italian bunch.
+  That is still the largest gap in the ledger and still worth closing.
+- **Tropical and lightweight wool is the existing business,** not a category to enter. The
+  brief's central ask is where most of the owner's work already sits.
+
+So the two tiers are real but their roles have swapped: the cheap tier is the volume offer,
+the premium tier is genuinely sellable, and cloth price competes on the customer's invoice.
 
 **The practical read.** Your $15/yd number is achievable today, in volume, for
 wool-blend and entry all-wool suiting from Asia. Your Super 150s–180s number is
@@ -269,7 +280,7 @@ plus every UK and Italian merchant on the list.
 - **Lanificio Cerruti** — Covers the top of your Super range (150s-200s). Remnant lots are the affordable door.
 - **Caccioppoli** — Expect real-business vetting. Well above band.
 - **Harrisons / Lesser / Smith / W.Bill / P&H (LBD group)** — One call to Kemp & Hewitt opens roughly five brands at once.
-- **Huddersfield Fine Worsteds / Hardy Minnis (Fresco)** — REPLIED 2026-08-25 via Gladson, their US agent - Guy Milinazzo, EVP. Structurally the best fit found so far: individual 3.2 m cut lengths are normal business, HFW collections are held in the US so there is no direct import and no buyer-side duty, and there is no minimum annual purchase for the relationship itself. HOME OF FRESCO, the high-twist tropical named in the brief. The gate is credibility, not money: Gladson vets before releasing collections because sample presentations cost them real money, and a pre-launch brand is exactly the profile that normally gets screened out. He offered a phone call twice - take it; at pre-revenue the founder's voice outperforms any number on a form. Price reality: at a ~$900 median suit, a 3.2 m Fresco length is roughly 20-32% of retail before CMT, so Fresco is a premium warm-weather tier, not the core book.
+- **Huddersfield Fine Worsteds / Hardy Minnis (Fresco)** — REPLIED 2026-08-25 via Gladson, their US agent - Guy Milinazzo, EVP. Structurally the best fit found so far: individual 3.2 m cut lengths are normal business, HFW collections are held in the US so there is no direct import and no buyer-side duty, and there is no minimum annual purchase for the relationship itself. HOME OF FRESCO, the high-twist tropical named in the brief. The gate is credibility, not money: Gladson vets before releasing collections because sample presentations cost them real money, and a pre-launch brand is exactly the profile that normally gets screened out. He offered a phone call twice - take it; at pre-revenue the founder's voice outperforms any number on a form. Price reality CORRECTED 2026-08-25: cloth is a cost-plus pass-through to the customer, so Fresco is not locked out by the price band - the customer selects it and carries the cost. Stronger still, the owner ALREADY HOLDS Fresco, Voyager and several Huddersfield books coded to an old factory system, which turns the ask from "send me samples" into "help me make my existing books current" - costing Gladson nothing and proving existing activity.
 - **Holland & Sherry** — Covers your full Super range. No self-serve signup - NY rep only.
 - **Scabal** — HIDDEN CONDITION: volume-tiered pricing - the same cloth costs you more because you buy little.
 - **Dormeuil** — Selective allocation - unlikely to book a brand-new account early.
