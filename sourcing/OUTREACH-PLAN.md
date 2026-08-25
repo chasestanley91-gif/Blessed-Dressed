@@ -196,6 +196,17 @@ the mills that measure from the ones that market.
   "let me know."
 - **Convert every quote to $/yd before comparing** ($/m ÷ 1.0936). Metre prices look
   9% cheaper than they are.
+- **Never hand a supplier a zero-cost alternative to the thing you actually want.**
+  Learned the hard way on the Gladson thread. A draft offered "rather than send new
+  books, just tell me which of my old references are still live" — clever, cheap for
+  them, and precisely the reason they would have sent nothing. If you want the books,
+  ask for the books; offer the cheap option only as an addition, and say plainly that it
+  does not substitute. The same trap exists wherever you try to sound low-maintenance:
+  a merchant will always take the exit you leave open.
+- **Existing books are a credential, not a problem to be solved.** Holding a mill's
+  bunches already — even outdated ones — answers the "are you real" screen that volume
+  questions are really asking. Lead with them as evidence you sell that cloth, and keep
+  any coding or currency issue as something you handle, not something they must fix.
 - **Log every send in the tracker the same day.** An untracked outreach campaign
   becomes a guess within two weeks.
 
