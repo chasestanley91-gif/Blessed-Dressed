@@ -20,7 +20,7 @@ reads `not_contacted`. The next unit of progress is an email, not another search
 | Stage | Count | Notes |
 | --- | --- | --- |
 | Identified | 57 | Across 9 countries, tiered A–D |
-| Direct email or phone on file | 33 | 24 have only a website or postal address |
+| Direct email or phone on file | 34 | 23 have only a website or postal address |
 | Re-verified against live site | 0 | **Blocks Wave 2 sending** — see below |
 | Contacted | 12 | — |
 | Replied | 0 | — |
@@ -28,7 +28,7 @@ reads `not_contacted`. The next unit of progress is an email, not another search
 | Swatches in hand | 0 | — |
 | Cloth purchased | 0 | — |
 
-**By tier:** A 18 · B 25 · C 11 · D 3 — A = open now, B = worth a letter, C = reference, D = deprioritised
+**By tier:** A 18 · B 26 · C 10 · D 3 — A = open now, B = worth a letter, C = reference, D = deprioritised
 
 **By evidence:** VERIFIED 36 · LIKELY 19 · UNVERIFIED 2
 
