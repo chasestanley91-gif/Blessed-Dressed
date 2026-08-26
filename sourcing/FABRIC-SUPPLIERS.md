@@ -262,17 +262,17 @@ plus every UK and Italian merchant on the list.
 - **Fabric Mart** — IN PRICE BAND. One of the few realistic routes to high-Super cloth under $30/yd - but closeout, so no reorders.
 - **Yardblox** — REPLIED 2026-08-25 05:43, cc Yvonne Tyan. Not yet read or actioned. | IN PRICE BAND. Opaque location/fulfilment - ask where it ships from and who mills it.
 - **Zelouf Fabrics** — Account approval requirements unpublished.
-- **Tessitura Monti / Canclini 1925** — Premium 100% cotton shirting, fabric-only house, sells cut lengths through its own store.
+- **Tessitura Monti / Canclini 1925** — CONTACTED 2026-08-25 (recovered from the call sheet). | Premium 100% cotton shirting, fabric-only house, sells cut lengths through its own store.
 - **Getzner Textil** — The 1.5 m MTM cut-length program is the only way in at your scale - ask for it by name.
-- **Soktas** — IN PRICE BAND for premium cotton shirting. US route unclear - ask Gladson.
+- **Soktas** — CONTACTED 2026-08-25 (recovered from the call sheet). | IN PRICE BAND for premium cotton shirting. US route unclear - ask Gladson.
 - **Metro Textiles** — KEY CHANNEL for high-Super cloth under $30/yd. Jobber closeouts of Italian/English mill cloth - with the 50% codes this lands in band. Phone-only, small shop.
 - **B. Black & Sons** — No trade gate at all - anyone can buy. Just above band; ask about mill-archive and remnant lots which fall under $30.
 - **M.J. Cahn** — Named principal, documented sample program, fast dispatch. Cheap call to make.
 - **Dugdale Bros & Co** — IN CONVERSATION since 2026-08-19 - predates this session. Four-message thread with Zach Jobe; he replied again 2026-08-25 18:17. This relationship is further along than the rest of the ledger. | Above your price band but a named US rep and an open bunch form make this the easiest premium English account to open.
 - **Standeven** — REPLIED 2026-08-25 08:05 by M Townsend - and the reply was still UNREAD as of 22:5x. This is the fastest real win available: free trade account, ~48h approval, no minimums, small tailors explicitly welcome. Open it. | Clearest published trade terms found anywhere. Free account, 48 h, no minimums. Open this first.
-- **Bateman Ogden** — 'Individual - instant activation' is the lowest-friction trade signup in the whole ledger.
+- **Bateman Ogden** — CONTACTED 2026-08-25 (recovered from the call sheet). | 'Individual - instant activation' is the lowest-friction trade signup in the whole ledger.
 - **John Foster** — Mill Archive one-offs are a genuine under-band route to high-Super English cloth.
-- **Vitale Barberis Canonico** — The reference point for tropical Super 110s/120s. Above band, but the quality benchmark you price everything else against.
+- **Vitale Barberis Canonico** — CONTACTED 2026-08-25 (recovered from the call sheet). | The reference point for tropical Super 110s/120s. Above band, but the quality benchmark you price everything else against.
 - **Reda 1865** — Contact via CTDA DFNY booth. Strong tropical/high-twist ranges.
 - **Tollegno 1900** — Has a New York office - domestic contact removes duty and freight friction.
 - **Ariston Napoli** — Cut-length house - suits one-garment-at-a-time buying.
@@ -286,16 +286,16 @@ plus every UK and Italian merchant on the list.
 - **Dormeuil** — Selective allocation - unlikely to book a brand-new account early.
 - **Albini Group (Thomas Mason / David & John Anderson)** — HIDDEN CONDITION: books reimbursed only if you hit a first-year minimum turnover. Resale cert + trade references required.
 - **Ermenegildo Zegna (cloth division)** — GARMENT ARM: Zegna is a major suit brand. Brand-controlled cloth allocation. Far above band.
-- **Loro Piana** — GARMENT ARM + LVMH vetting and volume expectations. Out of band.
+- **Loro Piana** — CONTACTED 2026-08-25 (recovered from the call sheet). | GARMENT ARM + LVMH vetting and volume expectations. Out of band.
 - **Marzotto / Guabello** — The most affordable of the Biella names. Small buyers routed to distributors.
 - **OCM Private Limited** — India's first integrated worsted unit. 8 million m/yr, 37-acre plant, NABL-accredited lab (first worsted suiting maker in India to get it), ISO 9001. Covers Super 100s-140s - the sweet spot of your range at Indian cost. GARMENT ARM: also makes RTW suits and jackets, so treat tech packs as confidential.
-- **Digjam Limited** — FABRIC-FIRST, no significant garment arm - strongest 'free and clear' fit in the Indian worsted tier. Fully vertically integrated wool-top to finished cloth on French/German/Swiss/Italian machinery. 3M+ m/yr, 35-40% exported to Europe/USA/Canada/Middle East. ISO 9001:2015 + Oeko-Tex. Note: had a liquidity-driven shutdown in its past - check current trading status before committing.
+- **Digjam Limited** — CONTACTED 2026-08-25 (recovered from the call sheet). | FABRIC-FIRST, no significant garment arm - strongest 'free and clear' fit in the Indian worsted tier. Fully vertically integrated wool-top to finished cloth on French/German/Swiss/Italian machinery. 3M+ m/yr, 35-40% exported to Europe/USA/Canada/Middle East. ISO 9001:2015 + Oeko-Tex. Note: had a liquidity-driven shutdown in its past - check current trading status before committing.
 - **Raymond (fabric division)** — One of the largest worsted producers in the world and reaches the top of your Super range. GARMENT ARM IS LARGE: Raymond runs its own retail, made-to-measure and tailoring network - the most direct downstream competitor in this ledger. Buy cloth, share nothing.
 - **Vardhman Textiles** — DIRECT HIT ON THE STRETCH SHIRTING ASK: publishes 100% cotton, cotton stretch (weft stretch AND bi-stretch), cotton-nylon stretch, cotton-linen and cotton-cellulosic shirting. 220M+ m/yr woven, 114M m/yr processed, exports to 75+ countries incl. USA. A LYCRA Company sourcing-network member. GARMENT ARM: 1.8M shirts/yr.
 - **Mafatlal Industries** — Long-established Indian shirting name, reported record H1 FY26 revenue. Lead only - no contact or product detail confirmed yet.
 - **Jiangsu Sunshine Group** — China's largest worsted wool fabric producer: 22-35M m/yr superfine worsted, 115,000 worsted spindles, 600 looms, 15,000+ staff. GARMENT ARM IS LARGE: 3.5M suits/yr capacity plus its own suit lines. Enormous capability but you are a rounding error to them - expect distributor routing.
 - **Shandong Nanshan Fashion Sci-Tech** — EXPLICITLY LISTS SUPER 120s TROPICAL plus lycra-elastic, OPTIM and cashmere-blend worsteds - the closest published match to your tropical-wool ask at Chinese cost. US offices in NY and LA mean you can open this in English, in your timezone, without freight risk on samples. GARMENT ARM exists - buy cloth only.
-- **Shaoxing Yun Ai Textile Co., Ltd** — FABRIC-ONLY, no garment arm found - clean 'free and clear' fit. Maintains dedicated Super 100s / 120s / 130 product lines and carries in-stock suiting, which usually means low minimums. Much of the visible stock is wool-blend (e.g. 10% wool / 61% poly / 29% rayon), so pin down all-wool vs blend on every quote.
+- **Shaoxing Yun Ai Textile Co., Ltd** — CONTACTED 2026-08-25 (recovered from the call sheet). | FABRIC-ONLY, no garment arm found - clean 'free and clear' fit. Maintains dedicated Super 100s / 120s / 130 product lines and carries in-stock suiting, which usually means low minimums. Much of the visible stock is wool-blend (e.g. 10% wool / 61% poly / 29% rayon), so pin down all-wool vs blend on every quote.
 - **Shaoxing Surui Textile Co., Ltd** — HITS THE $15/YD TARGET WITH PUBLISHED PRICING AND A 1-METRE MINIMUM - the single best price-to-minimum ratio in the ledger. Wool/poly blend (50% wool class), not all-wool, so it is a value-tier cloth, not a Super 130s substitute. Verify the mill is real before scaling.
 - **Jiangsu Jianlu Worsted Co., Ltd** — Presents as a dedicated worsted fabric mill with no garment arm found - good 'free and clear' candidate. Unverified beyond its trade storefront.
 - **Wooltex (China)** — GARMENT ARM: describes itself as making wool suiting fabrics AND wool suits. Lower priority on your free-and-clear rule.

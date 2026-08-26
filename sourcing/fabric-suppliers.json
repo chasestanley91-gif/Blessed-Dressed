@@ -351,8 +351,8 @@
       "source": "prior-report-2026-08-18",
       "wave": 1,
       "tier": "A",
-      "status": "not_contacted",
-      "notes": "Premium 100% cotton shirting, fabric-only house, sells cut lengths through its own store."
+      "status": "contacted",
+      "notes": "CONTACTED 2026-08-25 (recovered from the call sheet). | Premium 100% cotton shirting, fabric-only house, sells cut lengths through its own store."
     },
     {
       "id": "getzner",
@@ -398,8 +398,8 @@
       "source": "prior-report-2026-08-18",
       "wave": 1,
       "tier": "B",
-      "status": "not_contacted",
-      "notes": "IN PRICE BAND for premium cotton shirting. US route unclear - ask Gladson."
+      "status": "contacted",
+      "notes": "CONTACTED 2026-08-25 (recovered from the call sheet). | IN PRICE BAND for premium cotton shirting. US route unclear - ask Gladson."
     },
     {
       "id": "metro-textiles",
@@ -540,8 +540,8 @@
       "source": "prior-report-2026-08-18",
       "wave": 1,
       "tier": "A",
-      "status": "not_contacted",
-      "notes": "'Individual - instant activation' is the lowest-friction trade signup in the whole ledger."
+      "status": "contacted",
+      "notes": "CONTACTED 2026-08-25 (recovered from the call sheet). | 'Individual - instant activation' is the lowest-friction trade signup in the whole ledger."
     },
     {
       "id": "john-foster",
@@ -586,8 +586,8 @@
       "source": "prior-report-2026-08-18",
       "wave": 1,
       "tier": "A",
-      "status": "not_contacted",
-      "notes": "The reference point for tropical Super 110s/120s. Above band, but the quality benchmark you price everything else against."
+      "status": "contacted",
+      "notes": "CONTACTED 2026-08-25 (recovered from the call sheet). | The reference point for tropical Super 110s/120s. Above band, but the quality benchmark you price everything else against."
     },
     {
       "id": "reda-1865",
@@ -942,8 +942,8 @@
       "source": "prior-report-2026-08-18",
       "wave": 1,
       "tier": "D",
-      "status": "not_contacted",
-      "notes": "GARMENT ARM + LVMH vetting and volume expectations. Out of band."
+      "status": "contacted",
+      "notes": "CONTACTED 2026-08-25 (recovered from the call sheet). | GARMENT ARM + LVMH vetting and volume expectations. Out of band."
     },
     {
       "id": "marzotto-guabello",
@@ -1014,8 +1014,8 @@
       "source": "new-2026-08-24",
       "wave": 2,
       "tier": "A",
-      "status": "not_contacted",
-      "notes": "FABRIC-FIRST, no significant garment arm - strongest 'free and clear' fit in the Indian worsted tier. Fully vertically integrated wool-top to finished cloth on French/German/Swiss/Italian machinery. 3M+ m/yr, 35-40% exported to Europe/USA/Canada/Middle East. ISO 9001:2015 + Oeko-Tex. Note: had a liquidity-driven shutdown in its past - check current trading status before committing."
+      "status": "contacted",
+      "notes": "CONTACTED 2026-08-25 (recovered from the call sheet). | FABRIC-FIRST, no significant garment arm - strongest 'free and clear' fit in the Indian worsted tier. Fully vertically integrated wool-top to finished cloth on French/German/Swiss/Italian machinery. 3M+ m/yr, 35-40% exported to Europe/USA/Canada/Middle East. ISO 9001:2015 + Oeko-Tex. Note: had a liquidity-driven shutdown in its past - check current trading status before committing."
     },
     {
       "id": "raymond-fabric",
@@ -1159,8 +1159,8 @@
       "source": "new-2026-08-24",
       "wave": 2,
       "tier": "A",
-      "status": "not_contacted",
-      "notes": "FABRIC-ONLY, no garment arm found - clean 'free and clear' fit. Maintains dedicated Super 100s / 120s / 130 product lines and carries in-stock suiting, which usually means low minimums. Much of the visible stock is wool-blend (e.g. 10% wool / 61% poly / 29% rayon), so pin down all-wool vs blend on every quote."
+      "status": "contacted",
+      "notes": "CONTACTED 2026-08-25 (recovered from the call sheet). | FABRIC-ONLY, no garment arm found - clean 'free and clear' fit. Maintains dedicated Super 100s / 120s / 130 product lines and carries in-stock suiting, which usually means low minimums. Much of the visible stock is wool-blend (e.g. 10% wool / 61% poly / 29% rayon), so pin down all-wool vs blend on every quote."
     },
     {
       "id": "surui",
@@ -1409,5 +1409,18 @@
     "existing_books": "Already holds a Fresco book, a Voyager book, and several Huddersfield books, coded through an old factory system whose references no longer map cleanly.",
     "ambition": "Building a more upper-range clientele; cloth is the lever.",
     "volume": "~300 garments in the two years since opening (~150/year), projecting to double over the coming year on the back of the website launch, a planned social campaign, and the deliberate push upmarket."
+  },
+  "stage_model": {
+    "recorded": "2026-08-25",
+    "why": "A tick meant \"I reached out\" and nothing more, so a supplier who replied and then heard nothing looked identical to one still being chased. Replaced with a stage per row on the call sheet rather than a second list - two lists mean double entry, and the first disagreement leaves you unsure which is true.",
+    "stages": [
+      "todo",
+      "contacted",
+      "replied",
+      "warm",
+      "won",
+      "no"
+    ],
+    "canonical": "The call-sheet artifact is where stages are set. sourcing/call-sheet.html is its source."
   }
 }

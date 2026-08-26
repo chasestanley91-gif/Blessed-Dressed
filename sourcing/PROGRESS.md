@@ -9,7 +9,7 @@ are tool-generated and cover a different workstream; this file tracks cloth sour
 
 <!-- BEGIN GENERATED: node sourcing/build-ledger.mjs -->
 
-**57 fabric suppliers identified across 9 countries. 5 contacted.**
+**57 fabric suppliers identified across 9 countries. 12 contacted.**
 
 Research is no longer the bottleneck. Outreach is. The ledger has more qualified
 suppliers than a company at this stage can work at once, and every single row still
@@ -22,7 +22,7 @@ reads `not_contacted`. The next unit of progress is an email, not another search
 | Identified | 57 | Across 9 countries, tiered A–D |
 | Direct email or phone on file | 33 | 24 have only a website or postal address |
 | Re-verified against live site | 0 | **Blocks Wave 2 sending** — see below |
-| Contacted | 5 | — |
+| Contacted | 12 | — |
 | Replied | 0 | — |
 | Trade account open | 0 | — |
 | Swatches in hand | 0 | — |
@@ -102,6 +102,20 @@ A pre-launch brand is exactly the profile that normally gets screened out here.
 
 He offered a phone call twice. **Take it** — at pre-revenue the founder's voice outperforms any
 number on a form. EIN and resale certificate are now on the critical path; he asked for both.
+
+## Tracking model: stages, not ticks (2026-08-25)
+
+The call sheet originally carried a checkbox per supplier. That recorded *first contact
+only* — so a supplier who replied and then heard nothing looked identical to one still
+being chased, which is precisely how three replies went unnoticed. Each row now carries a
+stage instead: **to contact · contacted · replied · warm · account open · no**.
+
+One board, not two. A second list means double entry, and the first time the two disagree
+nobody knows which is true. The call-sheet artifact is where stages are set;
+`sourcing/call-sheet.html` is its source, and the artifact carries the live values.
+
+Recovering the published state also surfaced **seven contacts made outside this session** —
+Canclini, VBC, Digjam, Söktaş, Reda, Bateman Ogden and Loro Piana — now reflected here.
 
 ## Outreach is live (2026-08-25)
 

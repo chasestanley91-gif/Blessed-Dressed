@@ -117,17 +117,45 @@
 
   footer { border-top: 1px solid var(--rule-firm); padding-top: 18px; font-size: .81rem; color: var(--ink-faint); display: flex; flex-direction: column; gap: 6px; }
   footer code { font-family: var(--mono); font-size: .95em; }
+
+  /* ---- stage machinery ---- */
+  .board { display: grid; grid-template-columns: repeat(auto-fit, minmax(118px, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 2px; overflow: hidden; }
+  .cell { background: var(--surface); padding: 12px 13px; }
+  .cell .n { font-family: var(--mono); font-size: 1.5rem; font-weight: 500; line-height: 1.05; font-variant-numeric: tabular-nums; }
+  .cell .l { font-size: 10px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-faint); margin-top: 4px; }
+  .cell.act .n { color: var(--oxblood); }
+  .cell.won .n { color: var(--thread); }
+  .cell.wait .n { color: var(--brass); }
+
+  .filters { display: flex; flex-wrap: wrap; gap: 7px; }
+  .filters button { font-family: var(--sans); font-size: .78rem; font-weight: 500; background: var(--surface); color: var(--ink-muted); border: 1px solid var(--rule); border-radius: 2px; padding: 5px 11px; cursor: pointer; }
+  .filters button[aria-pressed="true"] { background: var(--navy); color: var(--ground); border-color: var(--navy); }
+
+  .row { grid-template-columns: 1fr; }
+  .rowtop { display: flex; flex-wrap: wrap; align-items: center; gap: 9px; }
+  .row select { font-family: var(--mono); font-size: .74rem; font-weight: 500; letter-spacing: .03em; padding: 3px 6px; border-radius: 2px; border: 1px solid var(--rule-firm); background: var(--surface-2); color: var(--ink); cursor: pointer; }
+  .row select:disabled { opacity: .5; cursor: not-allowed; }
+  .row .noteline { display: flex; align-items: center; gap: 8px; }
+  .row .noteline input { flex: 1; min-width: 0; font-family: var(--sans); font-size: .82rem; padding: 5px 8px; border-radius: 2px; border: 1px solid var(--rule); background: var(--ground); color: var(--ink); }
+  .row .noteline input::placeholder { color: var(--ink-faint); }
+  .row .noteline input:disabled { opacity: .5; }
+
+  .row.s-replied { background: var(--oxblood-soft); }
+  .row.s-won     { background: var(--thread-soft); }
+  .row.s-warm    { background: var(--brass-soft); }
+  .row.s-no      { opacity: .55; }
+  .row.s-no .name { text-decoration: line-through; text-decoration-color: var(--ink-faint); }
+  .row.s-contacted .name { color: var(--ink-muted); }
 </style>
 
 <div class="wrap" id="app"></div>
 
-<script type="application/json" id="state">{"done":{"dugdale":true,"canclini":true,"yunai":true,"standeven":true,"loropiana":true,"batemanogden":true,"vbc":true,"digjam":true,"yardblox":true,"soktas":true,"reda":true},"updated":"2026-08-25"}</script>
+<script type="application/json" id="state">{"v": 2, "stage": {"dugdale": "replied", "canclini": "contacted", "yunai": "contacted", "standeven": "replied", "loropiana": "contacted", "batemanogden": "contacted", "vbc": "contacted", "digjam": "contacted", "yardblox": "replied", "soktas": "contacted", "reda": "contacted", "fox": "replied", "hfw": "replied"}, "note": {}, "updated": "2026-08-25"}</script>
 
 <script id="app-script">
 (function () {
   "use strict";
 
-  // ---- the call sheet -------------------------------------------------------
   var TASKS = [
     // --- email drafts, already written and sitting in Gmail ---
     { id: "standeven", g: "email", tier: "A", name: "Standeven", target: "sales@standevenfabrics.co.uk",
@@ -247,9 +275,9 @@
   ];
 
   var GROUPS = [
-    { key: "email", title: "Send the drafts", blurb: "Twenty emails are written and waiting in Gmail. Open each, check the address is right, and hit send. Every one is personalised — none of them read like a blast." },
-    { key: "call", title: "Make the calls", blurb: "These eleven publish no usable email. Nine are landlines or toll-free lines and cannot receive a text at all — a text sent to them silently goes nowhere. Only two are mobile numbers, and both of those want WhatsApp rather than SMS. So this group is a calling list, not a texting list." },
-    { key: "form", title: "Fill the forms", blurb: "Twenty-four have no email either — they take web forms or trade-account signups. The paste block below covers every field these ask for." }
+    { key: "email", title: "Send the drafts", blurb: "Twenty emails are written and waiting in Gmail. Open each, check the address is right, and hit send. Every one is personalised \u2014 none of them read like a blast." },
+    { key: "call", title: "Make the calls", blurb: "These eleven publish no usable email. Nine are landlines or toll-free lines and cannot receive a text at all \u2014 a text sent to them silently goes nowhere. Only two are mobile numbers, and both of those want WhatsApp rather than SMS. So this group is a calling list, not a texting list." },
+    { key: "form", title: "Fill the forms", blurb: "Twenty-four have no email either \u2014 they take web forms or trade-account signups. The paste block below covers every field these ask for." }
   ];
 
   var PASTE = [
@@ -286,26 +314,43 @@
     "We can provide a courier account or pay courier charges for samples."
   ].join("\n");
 
+  // ---- stages ---------------------------------------------------------------
+  var STAGES = [
+    { key: "todo",      label: "To contact",  hint: "Not yet approached" },
+    { key: "contacted", label: "Contacted",   hint: "Sent \u2014 waiting on them" },
+    { key: "replied",   label: "Replied",     hint: "They answered \u2014 your move" },
+    { key: "warm",      label: "Warm",        hint: "Good lead, revisit later" },
+    { key: "won",       label: "Account open",hint: "Trading, or books on the way" },
+    { key: "no",        label: "No",          hint: "Declined or dead" }
+  ];
+  var STAGE_KEYS = STAGES.map(function (s) { return s.key; });
+
   // ---- state ----------------------------------------------------------------
   function readState() {
+    var empty = { v: 2, stage: {}, note: {}, updated: null };
     try {
-      var el = document.getElementById("state");
-      var s = JSON.parse(el.textContent);
-      if (!s || typeof s !== "object") throw new Error("bad");
-      s.done = s.done && typeof s.done === "object" ? s.done : {};
+      var s = JSON.parse(document.getElementById("state").textContent);
+      if (!s || typeof s !== "object") return empty;
+      // migrate v1 { done: {id:true} } -> v2 stages
+      if (!s.v && s.done && typeof s.done === "object") {
+        var mig = { v: 2, stage: {}, note: {}, updated: s.updated || null };
+        Object.keys(s.done).forEach(function (id) { if (s.done[id]) mig.stage[id] = "contacted"; });
+        return mig;
+      }
+      s.stage = s.stage && typeof s.stage === "object" ? s.stage : {};
+      s.note = s.note && typeof s.note === "object" ? s.note : {};
       return s;
-    } catch (e) {
-      return { done: {}, updated: null };
-    }
+    } catch (e) { return empty; }
   }
 
   var state = readState();
-  var writable = true;      // flipped false on the first not_writer/not_granted
-  var api = null;           // the artifact capability namespace, once resolved
-  var pending = null;       // debounce handle
-  var waited = 0;           // ms spent waiting for the capability to resolve
-  var saveMsg = "";
-  var saveWarn = false;
+  var filter = "all";        // per-viewer only, never published
+  var writable = true, api = null, pending = null, waited = 0, saveMsg = "", saveWarn = false;
+
+  function stageOf(id) {
+    var v = state.stage[id];
+    return STAGE_KEYS.indexOf(v) === -1 ? "todo" : v;
+  }
 
   function esc(s) {
     return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;")
@@ -319,57 +364,87 @@
     return null;
   }
 
+  function counts() {
+    var c = {}; STAGE_KEYS.forEach(function (k) { c[k] = 0; });
+    TASKS.forEach(function (t) { c[stageOf(t.id)]++; });
+    return c;
+  }
+
   // ---- render ---------------------------------------------------------------
   function renderBody() {
-    var total = TASKS.length;
-    var doneCount = TASKS.filter(function (t) { return state.done[t.id]; }).length;
-    var pct = total ? Math.round((doneCount / total) * 100) : 0;
+    var c = counts();
+    var live = TASKS.length - c.todo - c.no;
 
     var h = "";
     h += '<header class="masthead">';
-    h += '<p class="eyebrow">Blessed &amp; Dressed · Cloth Sourcing · Outreach</p>';
-    h += '<h1>The Cloth Call Sheet</h1>';
-    h += '<p class="standfirst">Every supplier worth contacting, in the order worth contacting them. Tick as you go — the page remembers.</p>';
-    h += '<div class="progress"><div class="meta"><span><strong>' + doneCount + '</strong> of ' + total + ' contacted</span><span>' + pct + '%</span></div>';
-    h += '<div class="track"><span style="width:' + pct + '%"></span></div>';
-    h += '<div class="saveline' + (saveWarn ? " warn" : "") + '">' + esc(saveMsg) + "</div></div>";
+    h += '<p class="eyebrow">Blessed &amp; Dressed \u00b7 Cloth Sourcing \u00b7 Outreach</p>';
+    h += "<h1>The Cloth Call Sheet</h1>";
+    h += '<p class="standfirst">Every supplier worth contacting, and where each one actually stands. Set a stage as things move \u2014 the page remembers.</p>';
+
+    h += '<div class="board">';
+    h += '<div class="cell"><div class="n">' + c.todo + '</div><div class="l">To contact</div></div>';
+    h += '<div class="cell wait"><div class="n">' + c.contacted + '</div><div class="l">Waiting</div></div>';
+    h += '<div class="cell act"><div class="n">' + c.replied + '</div><div class="l">Your move</div></div>';
+    h += '<div class="cell"><div class="n">' + c.warm + '</div><div class="l">Warm</div></div>';
+    h += '<div class="cell won"><div class="n">' + c.won + '</div><div class="l">Account open</div></div>';
+    h += '<div class="cell"><div class="n">' + c.no + '</div><div class="l">No</div></div>';
+    h += "</div>";
+    h += '<div class="saveline' + (saveWarn ? " warn" : "") + '">' + esc(saveMsg) + "</div>";
     h += "</header>";
+
+    if (c.replied) {
+      h += '<div class="callout stop"><h3>' + c.replied + " waiting on you</h3>";
+      h += "<p>A supplier who replied and then heard nothing is worse than one you never contacted. These are the rows marked <strong>Replied</strong> \u2014 filter to them below.</p></div>";
+    }
 
     if (!writable) {
       h += '<div class="callout stop"><h3>This is a read-only view</h3>';
-      h += "<p>Ticks will not save from here. Open the artifact from your own gallery to check items off.</p></div>";
+      h += "<p>Changes will not save from here. Open the artifact from your own gallery to update it.</p></div>";
     }
 
-    h += '<div class="callout"><h3>Before you send anything</h3>';
-    h += "<p>Two things raise your reply rate more than any wording change. Get a business email on your own domain — a trade desk reading a Gmail address discounts you before the first line. And have your EIN and resale certificate scanned and ready; several of these will ask on the first reply, and the ones that ask are the ones worth having.</p></div>";
+    h += "<section>";
+    h += '<div class="filters">';
+    h += '<button type="button" data-f="all" aria-pressed="' + (filter === "all") + '">All ' + TASKS.length + "</button>";
+    h += '<button type="button" data-f="live" aria-pressed="' + (filter === "live") + '">In play ' + live + "</button>";
+    STAGES.forEach(function (s) {
+      h += '<button type="button" data-f="' + s.key + '" aria-pressed="' + (filter === s.key) + '">' + esc(s.label) + " " + c[s.key] + "</button>";
+    });
+    h += "</div></section>";
 
     GROUPS.forEach(function (grp) {
-      var rows = TASKS.filter(function (t) { return t.g === grp.key; });
-      var d = rows.filter(function (t) { return state.done[t.id]; }).length;
+      var rows = TASKS.filter(function (t) {
+        if (t.g !== grp.key) return false;
+        if (filter === "all") return true;
+        if (filter === "live") return stageOf(t.id) !== "todo" && stageOf(t.id) !== "no";
+        return stageOf(t.id) === filter;
+      });
+      if (!rows.length) return;
+      var total = TASKS.filter(function (t) { return t.g === grp.key; }).length;
       h += "<section>";
-      h += "<h2>" + esc(grp.title) + '<span class="tally">' + d + " / " + rows.length + "</span></h2>";
-      h += '<p class="lede">' + esc(grp.blurb) + "</p>";
+      h += "<h2>" + esc(grp.title) + '<span class="tally">' + rows.length + " / " + total + "</span></h2>";
+      if (filter === "all") h += '<p class="lede">' + esc(grp.blurb) + "</p>";
       h += '<div class="rows">';
       rows.forEach(function (t) {
-        var on = !!state.done[t.id];
+        var st = stageOf(t.id);
         var link = href(t);
-        h += '<div class="row' + (on ? " done" : "") + (writable ? "" : " locked") + '">';
-        h += '<label><input type="checkbox" data-id="' + esc(t.id) + '"' + (on ? " checked" : "") +
-             (writable ? "" : " disabled") + ' aria-label="Mark ' + esc(t.name) + ' contacted"></label>';
-        h += '<div class="body"><div class="line1">';
+        h += '<div class="row s-' + st + '">';
+        h += '<div class="body">';
+        h += '<div class="rowtop">';
         h += '<span class="name">' + esc(t.name) + "</span>";
         h += '<span class="chip ' + t.tier.toLowerCase() + '">TIER ' + esc(t.tier) + "</span>";
-        if (t.id === "ocm" || t.id === "yunai" || t.id === "raymond" || t.id === "altinyildiz") {
-          h += '<span class="chip flag">VERIFY ADDRESS</span>';
-        }
+        h += '<select data-id="' + esc(t.id) + '" aria-label="Stage for ' + esc(t.name) + '"' + (writable ? "" : " disabled") + ">";
+        STAGES.forEach(function (s) {
+          h += '<option value="' + s.key + '"' + (s.key === st ? " selected" : "") + ">" + esc(s.label) + "</option>";
+        });
+        h += "</select>";
         h += "</div>";
         h += '<span class="target">' + (link ? '<a href="' + esc(link) + '" target="_blank" rel="noopener">' + esc(t.target) + "</a>" : esc(t.target)) + "</span>";
         h += '<span class="note">' + esc(t.note) + "</span>";
+        h += '<div class="noteline"><input type="text" data-note="' + esc(t.id) + '" value="' + esc(state.note[t.id] || "") + '" placeholder="What did they say? Terms, prices, next step\u2026"' + (writable ? "" : " disabled") + "></div>";
         h += "</div></div>";
       });
       h += "</div>";
-
-      if (grp.key === "form") {
+      if (grp.key === "form" && filter === "all") {
         h += '<div class="paste"><h3>Paste this into any form</h3>';
         h += "<pre>" + esc(PASTE) + "</pre>";
         h += '<button type="button" id="copybtn">Copy to clipboard</button></div>';
@@ -378,9 +453,9 @@
     });
 
     h += "<footer>";
-    h += "<p>Full detail on every supplier — price bands, swatch terms, cut-length policy, evidence — lives in <code>sourcing/FABRIC-SUPPLIERS.md</code>, with the strategy behind this sequence in <code>sourcing/OUTREACH-PLAN.md</code>.</p>";
+    h += "<p>Full detail on every supplier \u2014 price bands, swatch terms, cut-length policy, evidence \u2014 lives in <code>sourcing/FABRIC-SUPPLIERS.md</code>, with the strategy behind this sequence in <code>sourcing/OUTREACH-PLAN.md</code>.</p>";
     h += "<p>Never state your target price to any vendor. Ask what theirs is. And share no tech packs, patterns or customer data with the twelve mills that also make finished garments.</p>";
-    if (state.updated) h += "<p>Last ticked " + esc(state.updated) + ".</p>";
+    if (state.updated) h += "<p>Last change " + esc(state.updated) + ".</p>";
     h += "</footer>";
     return h;
   }
@@ -393,16 +468,14 @@
         navigator.clipboard.writeText(PASTE).then(function () {
           btn.textContent = "Copied";
           setTimeout(function () { btn.textContent = "Copy to clipboard"; }, 1800);
-        }, function () {
-          btn.textContent = "Press Ctrl+C to copy";
-        });
+        }, function () { btn.textContent = "Press Ctrl+C to copy"; });
       });
     }
   }
 
   // ---- publish --------------------------------------------------------------
   function buildDocument() {
-    var css = document.getElementById("page-style").textContent;
+    var cssText = document.getElementById("page-style").textContent;
     var js = document.getElementById("app-script").textContent;
     var fonts =
       '<link rel="preconnect" href="https://fonts.googleapis.com">' +
@@ -412,54 +485,36 @@
     var close = "<" + "/script>";
     return "<!doctype html>\n<html>\n<head>\n<meta charset=\"utf-8\">\n" +
       "<title>The Cloth Call Sheet</title>\n" + fonts +
-      "\n<style id=\"page-style\">" + css + "</style>\n</head>\n<body>\n" +
+      "\n<style id=\"page-style\">" + cssText + "</style>\n</head>\n<body>\n" +
       '<div class="wrap" id="app"></div>\n' +
       open + ' type="application/json" id="state">' + JSON.stringify(state) + close + "\n" +
       open + ' id="app-script">' + js + close + "\n</body>\n</html>";
   }
 
   function setSave(msg, warn) {
-    saveMsg = msg || "";
-    saveWarn = !!warn;
+    saveMsg = msg || ""; saveWarn = !!warn;
     var el = document.querySelector(".saveline");
-    if (el) {
-      el.textContent = saveMsg;
-      el.className = "saveline" + (saveWarn ? " warn" : "");
-    }
+    if (el) { el.textContent = saveMsg; el.className = "saveline" + (saveWarn ? " warn" : ""); }
   }
 
   function flush() {
     pending = null;
     if (!writable) return;
     if (!api) {
-      // the capability has not resolved yet — hold the tick and retry shortly
       if (waited < 12000) { waited += 700; schedule(700); }
       else setSave("Saving is unavailable in this view.", true);
       return;
     }
-    setSave("Saving…", false);
-    api.publish(buildDocument()).then(function () {
-      // this view reloads to the new version; nothing more to do
-    }, function (err) {
+    setSave("Saving\u2026", false);
+    api.publish(buildDocument()).then(function () {}, function (err) {
       var code = (err && err.code) || "upstream_error";
-      if (code === "conflict") {
-        setSave("Someone else saved first — reloading to their version.", false);
-        return; // the shell is already reloading every view
+      if (code === "conflict") { setSave("Someone else saved first \u2014 reloading to their version.", false); return; }
+      if (code === "not_writer" || code === "not_granted" || code === "not_declared" ||
+          code === "capability_disabled" || code === "capability_removed" || code === "consent_required") {
+        writable = false; paint(); setSave("Read-only view \u2014 changes are not saved.", true); return;
       }
-      if (code === "not_writer" || code === "not_granted" ||
-          code === "not_declared" || code === "capability_disabled" ||
-          code === "capability_removed" || code === "consent_required") {
-        writable = false;
-        paint();
-        setSave("Read-only view — ticks are not saved.", true);
-        return;
-      }
-      if (code === "rate_limited") {
-        setSave("Saving too fast — pausing, then trying again.", true);
-        schedule(6000);
-        return;
-      }
-      setSave("Could not save that tick. Try again in a moment.", true);
+      if (code === "rate_limited") { setSave("Saving too fast \u2014 pausing, then trying again.", true); schedule(6000); return; }
+      setSave("Could not save that change. Try again in a moment.", true);
     });
   }
 
@@ -468,17 +523,34 @@
     pending = setTimeout(flush, delay == null ? 900 : delay);
   }
 
+  function touched() {
+    state.updated = new Date().toISOString().slice(0, 10);
+    setSave("Saving\u2026", false);
+    schedule();
+  }
+
   // ---- events ---------------------------------------------------------------
   document.addEventListener("change", function (e) {
-    var box = e.target;
-    if (!box || box.type !== "checkbox" || !box.dataset.id) return;
-    if (!writable) { box.checked = !box.checked; return; }
-    if (box.checked) state.done[box.dataset.id] = true;
-    else delete state.done[box.dataset.id];
-    state.updated = new Date().toISOString().slice(0, 10);
+    var el = e.target;
+    if (!writable || !el) return;
+    if (el.tagName === "SELECT" && el.dataset.id) {
+      if (el.value === "todo") delete state.stage[el.dataset.id];
+      else state.stage[el.dataset.id] = el.value;
+      paint();
+      touched();
+    } else if (el.tagName === "INPUT" && el.dataset.note) {
+      var v = el.value.trim();
+      if (v) state.note[el.dataset.note] = v.slice(0, 400);
+      else delete state.note[el.dataset.note];
+      touched();
+    }
+  });
+
+  document.addEventListener("click", function (e) {
+    var b = e.target.closest ? e.target.closest("[data-f]") : null;
+    if (!b) return;
+    filter = b.dataset.f;
     paint();
-    setSave("Saving…", false);
-    schedule();
   });
 
   paint();
@@ -488,9 +560,6 @@
       if (!ns) { writable = false; paint(); return; }
       api = ns;
     }, function () { writable = false; paint(); });
-  } else {
-    writable = false;
-    paint();
-  }
+  } else { writable = false; paint(); }
 })();
 </script>
