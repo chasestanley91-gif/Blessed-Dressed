@@ -76,6 +76,43 @@ patternmaker before any list goes to a factory.** The suit figures were verified
 real group IDs; an earlier pass mis-bucketed the other three products by guessing at their
 naming conventions and produced a wrong headline. The current numbers use actual IDs.
 
+## Scope correction: use their patterns, supply only what they lack
+
+**Decided 2026-08-25, and it may change the economics considerably.**
+
+The earlier reading of Fukuda-san's explanation assumed a full supplied-pattern MTM
+program — B&D providing the master blocks. That is more than is actually wanted.
+
+The fit patterns are not the problem. Their factories' own base patterns and their body-type
+and size system (5–6 types × ~15 sizes) are **exactly what we want**; there is no wish to
+impose our own blocks on it.
+
+What we would supply is narrower: patterns **only for design details the factories do not
+already hold** — a particular craft option, or a suit design outside their range. Nothing
+touching sizing or fit.
+
+Which makes the unasked question the important one: **what can their factories already
+make from patterns they hold?** An established order-suit factory would be expected to
+carry single and double breasted, the common button configurations, notch/peak/shawl
+lapels, single/double/no vent and the standard pocket treatments already. If so, most of
+the catalog may be available with nothing supplied at all, and the pattern problem shrinks
+to a short list of exceptions.
+
+Three questions now put to them:
+
+1. The list of design options the factories can already produce from existing patterns.
+2. What happens to the setup cost if we work entirely within their existing patterns and
+   options — is there still a setup, and is it lower than the quoted figures?
+3. Where the boundary sits: what genuinely requires a supplied pattern.
+
+This also promotes the price list Fukuda-san promised from a footnote to the main event.
+If the existing pattern-order system is the route, its pricing **is** the pricing.
+
+**The tradeoff, stated plainly:** working from the factory's blocks means the house
+silhouette is theirs, not ours. That is normal and correct at this volume — it is what MTM
+is — but it is a brand decision, not only a cost one, and worth revisiting if the business
+ever wants a signature cut of its own.
+
 ## Proposed approach
 
 Send a defined **Phase 1 pattern set** — a short list of master patterns covering the
@@ -97,7 +134,8 @@ factory to build for a range that has not yet sold.
   patternmaker's confirmation before the list is sent.
 - Awaiting: per-additional-pattern registration cost, the explanation for the shirt system
   costing roughly twice the suit system, and a view on suits-first sequencing.
-- **CMT inquiry drafted 2026-08-25, not sent.** Asks indicative sewing costs (we supply
+- **Combined pattern-scope and CMT inquiry drafted 2026-08-25, not sent.** Leads with the
+  scope correction above, because the answer to it changes what everything else costs.** Asks indicative sewing costs (we supply
   cloth) for shirt, trousers, vest, sport coat, two-piece and three-piece suit, plus
   per-component prices so any combination can be built. The setup cost cannot be judged
   without it: JPY 200,000 is trivial against a workable per-garment cost and impossible
