@@ -97,6 +97,28 @@ factory to build for a range that has not yet sold.
   patternmaker's confirmation before the list is sent.
 - Awaiting: per-additional-pattern registration cost, the explanation for the shirt system
   costing roughly twice the suit system, and a view on suits-first sequencing.
+- **CMT inquiry drafted 2026-08-25, not sent.** Asks indicative sewing costs (we supply
+  cloth) for shirt, trousers, vest, sport coat, two-piece and three-piece suit, plus
+  per-component prices so any combination can be built. The setup cost cannot be judged
+  without it: JPY 200,000 is trivial against a workable per-garment cost and impossible
+  against a bad one, so the two numbers only mean anything together.
+- The four qualifiers that decide whether a CMT quote is comparable at all, all asked:
+  **what the price includes** (do the factories supply lining, canvas, interlining,
+  shoulder pads, buttons and thread, or do we — easily 20–30% of the number);
+  **construction level quoted separately** (full canvas vs half vs fused moves price more
+  than everything else combined, so an average would be useless);
+  **whether option complexity surcharges** (Fukuda-san noted elsewhere that cost varies
+  with sewing operations — a base-plus-surcharge structure is what a configurator needs);
+  and **volume tiering** against the real ~150 garments/year.
+- Also asked: lead time per garment type, currency, payment terms, incoterm, and whether
+  the shirt factory prices separately from the suit factory.
+
+### Outstanding from their side
+
+The price list for the existing suit pattern-order system was promised as an attachment
+but did not arrive — that message is 24 KB against 30–65 KB for his others. Resend
+requested, along with the sharper question of whether the existing pattern-order pricing
+is even a fair guide to a supplied-pattern program, or whether the two price differently.
 
 ### A drafting note worth keeping
 
