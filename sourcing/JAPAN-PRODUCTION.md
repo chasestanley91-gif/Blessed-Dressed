@@ -88,10 +88,23 @@ factory to build for a range that has not yet sold.
 
 ## Status
 
-- Reply drafted 2026-08-25 confirming understanding of the system, reframing the catalog
-  with the numbers above, proposing Phase 1, and asking the two cost questions. **Not sent.**
-- **Owed if this proceeds: the Phase 1 pattern list and actual pattern data.** That is real
-  patternmaking work and should be confirmed as deliverable before the reply goes.
+- **Reply SENT 2026-08-25** confirming understanding of the system, reframing the catalog
+  with the numbers above, proposing Phase 1, and asking the two cost questions.
+- **Now owed: the Phase 1 pattern list and actual pattern data**, offered in that reply.
+  Likely scope is the five suit master patterns — front style, button configuration, lapel
+  style, back vent, lining coverage. This is real patternmaking work, not a document that
+  can be assembled from the configurator, and the classification behind it needs a
+  patternmaker's confirmation before the list is sent.
+- Awaiting: per-additional-pattern registration cost, the explanation for the shirt system
+  costing roughly twice the suit system, and a view on suits-first sequencing.
+
+### A drafting note worth keeping
+
+The draft of this reply contained `Blessed &amp; Dressed` — HTML entities written into a
+plain-text mail field, which would have reached Fukuda-san as the literal characters
+`&amp;` in the company name, in both the subject and the signature. Caught before sending.
+Mail bodies composed here are plain text: write `&`, not `&amp;`, and never markdown
+`**bold**`, which renders as visible asterisks.
 
 ## Incidental finding
 
