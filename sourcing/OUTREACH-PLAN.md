@@ -253,6 +253,29 @@ will handle your orders.
 
 ---
 
+## Operational hazards when drafting replies
+
+Three failure modes hit during this campaign, each silent, each caught only by checking.
+Worth knowing before the next round.
+
+**A pasted email is not a located email.** When a reply arrives via screenshot or paste,
+find the real message in Gmail and reply to *that* before drafting. A draft created without
+the inbound message's id does not thread — it lands as a stray email beside the
+conversation instead of inside it. Caught once with Jodek; the draft looked perfect and
+would have arrived orphaned.
+
+**Editing a draft can un-thread it.** Updating an existing reply draft strips the reply
+headers. Always recreate the draft against the inbound message id and delete the old copy,
+rather than editing in place. Caught once with EXCY.
+
+**Mail composed here is plain text.** Markdown `**bold**` reaches the recipient as visible
+asterisks, and HTML entities reach them literally — `&amp;` prints as `&amp;` in the
+company name. Write plain `&`, use caps for headings. Caught in the Gladson and EXCY drafts,
+both before sending.
+
+The common thread: verify what is actually in the mailbox rather than what was intended.
+Every one of these produced a draft that read correctly and would have gone out wrong.
+
 ## Draft templates
 
 *Drafts only. Nothing below has been sent. Fill the bracketed fields and re-verify the
