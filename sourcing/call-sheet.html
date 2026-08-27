@@ -150,7 +150,7 @@
 
 <div class="wrap" id="app"></div>
 
-<script type="application/json" id="state">{"v": 2, "stage": {"dugdale": "replied", "canclini": "contacted", "yunai": "contacted", "standeven": "replied", "loropiana": "contacted", "batemanogden": "contacted", "vbc": "contacted", "digjam": "contacted", "yardblox": "replied", "soktas": "contacted", "reda": "contacted", "fox": "replied", "hfw": "replied"}, "note": {}, "updated": "2026-08-25"}</script>
+<script type="application/json" id="state">{"v":2,"stage":{"dugdale":"warm","canclini":"contacted","yunai":"contacted","standeven":"won","loropiana":"contacted","batemanogden":"contacted","vbc":"contacted","digjam":"contacted","yardblox":"no","soktas":"contacted","reda":"won","fox":"replied","hfw":"replied"},"note":{"reda":"no physical fabrics as of yet you have to buy, but I do have a Commercial account open and can order them via the website"},"updated":"2026-08-27"}</script>
 
 <script id="app-script">
 (function () {
@@ -163,7 +163,7 @@
     { id: "acorn", g: "email", tier: "A", name: "Acorn Fabrics", target: "sales@acornfabrics.co.uk",
       note: "Free trade range cards, no minimum, cuts 2–3 m shirt lengths. Asks for both cotton and 96/4 stretch shirting." },
     { id: "bblack", g: "email", tier: "A", name: "B. Black & Sons", target: "info@bblackandsons.com",
-      note: "No trade gate at all. Draft asks specifically for remnant and mill-archive lots, which is where sub-$30 high-Super cloth hides." },
+      note: "VERIFIED today: five 100% wool suiting styles at $18.71/yd on the 25%-off sale ($24.95 regular), sold by the yard, no trade gate. Order while the sale runs — this is real wool under $20 with zero import friction." },
     { id: "mjcahn", g: "email", tier: "A", name: "M.J. Cahn — Steven Cahn", target: "Woolens@gmail.com",
       note: "Named principal, documented sample programme, 24h dispatch. Draft offers a call as an alternative." },
     { id: "dugdale", g: "email", tier: "A", name: "Dugdale Bros — Zach Jobe", target: "zach.jobe@dugdalebros.com",
@@ -199,6 +199,13 @@
     { id: "fox", g: "email", tier: "C", name: "Fox Brothers", target: "info@foxflannel.com",
       note: "Real English flannel for autumn/winter. Well above your band — send only if you want the top-end story." },
 
+    { id: "cimexlana", g: "email", tier: "A", name: "CIMEXLANA (Mexico)", target: "jonathan@cimexlana.com.mx",
+      note: "NEW — top budget-tier find. Integrated Puebla wool mill, Super 80s–150s, courts tailors, markets its cloth as USMCA-origin = 0% duty. Snippets suggest $9–15/yd. Ask: price list, cut-length sales, USMCA certificate, shipping to Louisiana." },
+    { id: "novalan", g: "email", tier: "B", name: "Novalan (Mexico)", target: "info@novalan.com",
+      note: "NEW — second Mexican worsted house (Tulancingo, since 1983). Catalog shows Super 100s articles but no real prices. Same four questions as CIMEXLANA. Also +52 775 755 11 23." },
+    { id: "incalpaca", g: "email", tier: "C", name: "Incalpaca TPX (Peru)", target: "sales@incalpaca.com",
+      note: "NEW — alpaca/wool mill, Arequipa. Not budget — a differentiation play: alpaca jacketing no US competitor stocks, duty-free under the Peru TPA. Ask for fabric price list and small-order terms." },
+
     // --- phone calls ---
     { id: "metro", g: "call", tier: "A", name: "Metro Textiles", target: "(212) 209-0004",
       note: "Landline — call, do not text. The key channel for high-Super cloth under $30. Ask what wool they have now, and about the 50% codes. Phone only — no email published." },
@@ -223,7 +230,14 @@
     { id: "gfw", g: "call", tier: "D", name: "Global Fabric Wholesale", target: "+86 134 1118 9544",
       note: "MOBILE — WhatsApp rather than SMS. Trading company, kg-based tiers, no factory evidence. Skip unless the others go quiet." },
 
+    { id: "creditex", g: "call", tier: "B", name: "Creditex (Peru)", target: "+51 1 715 7500",
+      note: "NEW — pima shirting mill, Lima. Runs its own retail fabric store (oxfords, dobbies, poplins from ~$4/m) and exports 95% to the US/Europe. Spanish line. The one question: will they ship cut lengths or small rolls to a US business. 0% duty under the Peru TPA." },
+    { id: "fabricato", g: "call", tier: "D", name: "Fabricato (Colombia)", target: "+57 4 448 3500",
+      note: "NEW — Colombia's biggest mill, weaves poplin/twill/wool, exports to the US at 0% duty. Roll-scale minimums likely. Park unless a distributor surfaces." },
+
     // --- web forms and account signups ---
+    { id: "fabricsight", g: "form", tier: "A", name: "FabricSight (Portugal)", target: "fabricsight.com",
+      note: "NEW — verified: no minimums from 1 m, ships worldwide, €1 swatches. Wool-blend suiting €9.75–18.50/m, cotton poplins €12.95–17.50/m incl. non-iron and Pima stretch. No account needed — just order swatches from the site. ~15% duty lands most of it near your band." },
     { id: "batemanogden", g: "form", tier: "A", name: "Bateman Ogden", target: "batemanogden.co.uk/CreateAccount",
       note: "Choose the 'Individual — instant activation' account type. Lowest-friction trade signup in the entire ledger. Do this one first." },
     { id: "vbc", g: "form", tier: "A", name: "Vitale Barberis Canonico", target: "vitalebarberiscanonico.shop",
@@ -257,7 +271,7 @@
     { id: "luthai", g: "form", tier: "B", name: "Luthai Textile", target: "luthai.com",
       note: "World's largest yarn-dyed shirting mill, ~$6.80/m dealer reference. Routed via distributors; has a garment arm." },
     { id: "fabricmart", g: "form", tier: "B", name: "Fabric Mart", target: "fabricmartfabrics.com",
-      note: "Closeout jobber, $2–8 on sale. Set a monthly reminder to check stock — this is a hunt, not a relationship." },
+      note: "VERIFIED today: poly/wool suiting $8.75–$10.50/yd in stock, an Italian 100% wool stripe at $5.63/yd, and a $2/yd clearance bin — sold in quarter-yard steps, so a 3.5 yd cut is exact. No outreach needed, just shop it." },
     { id: "ffc", g: "form", tier: "B", name: "Fashion Fabrics Club", target: "fashionfabricsclub.com",
       note: "$8–15/yd suiting, in band. Closeout, so no reorders. Same firm as Fabric Depot." },
     { id: "yutai", g: "form", tier: "C", name: "Yutai Textiles", target: "yutaitextiles.com",
@@ -275,9 +289,9 @@
   ];
 
   var GROUPS = [
-    { key: "email", title: "Send the drafts", blurb: "Twenty emails are written and waiting in Gmail. Open each, check the address is right, and hit send. Every one is personalised \u2014 none of them read like a blast." },
-    { key: "call", title: "Make the calls", blurb: "These eleven publish no usable email. Nine are landlines or toll-free lines and cannot receive a text at all \u2014 a text sent to them silently goes nowhere. Only two are mobile numbers, and both of those want WhatsApp rather than SMS. So this group is a calling list, not a texting list." },
-    { key: "form", title: "Fill the forms", blurb: "Twenty-four have no email either \u2014 they take web forms or trade-account signups. The paste block below covers every field these ask for." }
+    { key: "email", title: "Send the drafts", blurb: "Twenty of these are written and waiting in Gmail — open each, check the address, hit send. The three marked NEW (CIMEXLANA, Novalan, Incalpaca) came out of the budget-tier research and still need a draft." },
+    { key: "call", title: "Make the calls", blurb: "Most of these publish no usable email. Nine are landlines or toll-free lines and cannot receive a text at all \u2014 a text sent to them silently goes nowhere. Only two are mobile numbers, and both of those want WhatsApp rather than SMS. So this group is a calling list, not a texting list." },
+    { key: "form", title: "Fill the forms", blurb: "These have no email either \u2014 they take web forms or trade-account signups. The paste block below covers every field these ask for." }
   ];
 
   var PASTE = [
