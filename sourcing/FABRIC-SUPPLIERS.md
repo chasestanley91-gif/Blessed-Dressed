@@ -170,14 +170,15 @@ plus every UK and Italian merchant on the list.
 
 <!-- BEGIN GENERATED: node sourcing/build-ledger.mjs -->
 
-### Tier A — open now (17)
+### Tier A — open now (20)
 
 | Supplier | Country | Type | Segment | Own garment arm | Price band | Super range | Swatch terms | Cut lengths | Contact | Evid. |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | **Acorn Fabrics** | UK | shirting mill / merchant | shirting | no | GBP 9.99-18.99/m | — | Free trade range cards on request; no minimum; sells trade + retail | 2-3 m shirt cuts | sales@acornfabrics.co.uk<br>01282 698662 | VERIFIED |
+| **Fabric Mart** | USA | jobber / closeout | both | no | $2-10.50/yd sale (verified); $25-50 regular | — | Paid 'Julie's Picks' club (capped 500 members) | yes | fabricmartfabrics.com | VERIFIED |
 | **Tessitura Monti / Canclini 1925** | Italy | shirting mill | shirting | no | ~$20-40/yd via resellers | — | Not published; US MTM shops hold libraries | via canclini.store | info@canclini.it<br>+39 031 3527511 | LIKELY |
-| **Metro Textiles** | USA (NYC) | jobber | suiting | no | $29.50-75.50/yd wool (50% discount codes common) | mixed, incl. high Supers | Not published | yes | (212) 209-0004 | VERIFIED |
-| **B. Black & Sons** | USA (LA) | woolens jobber since 1922 | suiting | no | ~$32.50/yd wool reference | mixed | Ad hoc by phone (not published) | yes | info@bblackandsons.com<br>800-433-1546 | VERIFIED |
+| **Metro Textiles** | USA (NYC) | jobber | suiting | no | $29.50-65.50/yd wool regular; codes cut 50-60% | mixed, incl. high Supers | Not published | yes | (212) 209-0004 | VERIFIED |
+| **B. Black & Sons** | USA (LA) | woolens jobber since 1922 | suiting | no | $18.71/yd sale (verified); $24.95/yd regular 100% wool | mixed | Ad hoc by phone (not published) | yes | info@bblackandsons.com<br>800-433-1546 | VERIFIED |
 | **M.J. Cahn** | USA (NYC) | wholesaler since 1933 | suiting | no | Not published | mixed | Documented 'Request Samples' program | 24-h dispatch | Steven Cahn<br>Woolens@gmail.com<br>212-563-7292 | VERIFIED |
 | **Dugdale Bros & Co** | UK | merchant | suiting | no | ~GBP 40-70/m retail references | Super 100s-150s ranges | Open 'Request a Bunch' form (tailors/designers) + full online cut-length portal | yes | Zachary C. Jobe, Director of North America<br>Zach.Jobe@dugdalebros.com<br>+1 (212) 729-6365 (North America) / +44 1484 421772 (Huddersfield)<br>1550 Wewatta St, 2nd Fl, Denver, CO 80202, USA · 5 Northumberland St, Huddersfield HD1 1RL, UK · 15 Clifford St, Mayfair, London W1S 4JY | VERIFIED |
 | **Standeven** | UK | mill / merchant | suiting | no | USD trade price list received 2026-08-26 (attachment "B USD.pdf") - NOT YET READ, no attachment tooling in session. | Super 100s-150s ranges | Website registration opens the trade account; swatches AND cut lengths ordered directly through the site, NO minimum order. Bunches sent free on request - offered unprompted 2026-08-25. | yes | Megan Townsend (sales) / Joe Atkinson (JAtkinson@standevenfabrics.co.uk, +44 1274 470089)<br>MTownsend@standevenfabrics.co.uk<br>+44 1274 681962<br>standevenfabrics.co.uk<br>Stanley Mills, Edward Street, Bradford, West Yorkshire BD4 9RS, UK | VERIFIED |
@@ -191,8 +192,10 @@ plus every UK and Italian merchant on the list.
 | **Shaoxing Surui Textile Co., Ltd** | China (Shaoxing) | worsted suiting supplier | suiting | no | $9.50-13.50/m at 3 m MOQ; $13.00-16.50/m at 1 m MOQ (published) | Worsted wool / wool-poly blends | Not published - ask | yes | suruitex.en.alibaba.com | VERIFIED |
 | **Jiexiang Textile** | China | shirting fabric manufacturer | shirting | no | Quote-based | — | Not published - ask | unknown | jiexiangtextile.com | VERIFIED |
 | **Yunsa Yunlu Sanayi ve Ticaret A.S.** | Turkey (Istanbul / Cerkezkoy) | integrated worsted mill | suiting | no | Not published - quote required | Upper-segment worsted - confirm Super range | Not published - ask sales directly | unknown | pazarlama@yunsa.com<br>+90 (212) 365 65 00<br>yunsa.com/en | VERIFIED |
+| **CIMEXLANA** | Mexico (Quecholac, Puebla) | integrated wool mill | suiting | no | $9-15/yd (search snippet - confirm) | Super 80s-150s pure wool + wool blends | Not published - 24hr online store exists | unknown | jonathan@cimexlana.com.mx<br>telalanausmca.com.mx | LIKELY |
+| **FabricSight** | Portugal (Porto) | stock-service wholesaler | both | no | EUR 9.75-18.50/m wool blends; EUR 12.95-17.50/m poplins | Mixed; premium worsteds EUR 26-34/m | EUR 1 swatches | yes | fabricsight.com | VERIFIED |
 
-### Tier B — worth a letter (26)
+### Tier B — worth a letter (27)
 
 | Supplier | Country | Type | Segment | Own garment arm | Price band | Super range | Swatch terms | Cut lengths | Contact | Evid. |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -200,7 +203,6 @@ plus every UK and Italian merchant on the list.
 | **Hangzhou Six Dragon Textile** | China | mill (16 yrs, weave/dye/print in-house) | shirting | no | Quote-based; cotton twill / poly-cotton wholesale | — | Not published | no | Jack Wang<br>gm@sixdragontextile.com<br>+86-15988150362 (WhatsApp)<br>https://www.sixdragontextile.com | VERIFIED |
 | **Luthai Textile** | China | yarn-dyed shirting mill (world's largest) | shirting | **YES** | ~$6.80/m dealer reference | — | Not published | no | luthai.com | LIKELY |
 | **Fashion Fabrics Club / Fabric Depot** | USA | closeout retailer | both | no | $8-15/yd suiting | — | Paid 1/4-yd swatches, max 5 per order | yes | fashionfabricsclub.com | VERIFIED |
-| **Fabric Mart** | USA | jobber / closeout | both | no | $2-8 sale; $18-40 regular | — | Paid 'Julie's Picks' club (capped 500 members) | yes | fabricmartfabrics.com | VERIFIED |
 | **Yardblox** | USA (ships US) | wholesaler | both | no | ~$12-26+/yd | — | Free-ish colour cards for most in-stock fabrics; 1-yd samples; no minimums | yes | hello@yardblox.com | VERIFIED |
 | **Zelouf Fabrics** | USA (NY) | converter | both | no | Not published; $20 minimum order | — | Free swatches with wholesale-account registration | yes | zelouffabrics.com/pages/wholesale | VERIFIED |
 | **Getzner Textil** | Austria | shirting mill | shirting | no | Mid band, not published | — | Seasonal collections to accounts | 1.5 m via MTM program | +43 5552 601-0<br>getzner.at inquiry | VERIFIED |
@@ -222,8 +224,10 @@ plus every UK and Italian merchant on the list.
 | **Jiangsu Lianfa Textile (DOUBLECOIN)** | China (Hai'an, Nantong) | yarn-dyed shirting mill - 2nd largest globally | shirting | **YES** | Not published - quote required | — | Not published - ask | unlikely | +86 513 8886 9069<br>lianfa.cn/en<br>No. 88 Henglian Road, Chengdong Town, Haian, Nantong 226600 | VERIFIED |
 | **MH Textile (mh-chine)** | China | fabric supplier | shirting | no | Quote-based | — | Not published - ask | unknown | mh-chine.com | VERIFIED |
 | **Altinyildiz Tekstil ve Konfeksiyon A.S.** | Turkey (Cerkezkoy, Tekirdag) | worsted mill | suiting | **YES** | Not published - quote required | Not published - confirm | Not published - ask | unknown | mail@altinyildiz.com.tr / info@altinyildiz.com.tr<br>altinyildiz.com.tr<br>Yildirim Beyazit Mah., Sanayi Bulvari, Cerkezkoy/Tekirdag | VERIFIED |
+| **Novalan** | Mexico (Tulancingo) | integrated worsted mill (est. 1983) | suiting | no | Not published ($1 placeholder prices in online catalog) | Super 100s documented (330-345 g/m jacketing) | Not published - enquiry cart on site | unknown | info@novalan.com<br>+52 775 755 11 23<br>novalan.com | LIKELY |
+| **Creditex S.A.A.** | Peru (Lima) | integrated pima shirting mill | shirting | **YES** | Retail store from ~S/15 (~$4/m); export pricing unknown | — | Not published | yes | +51 1 715 7500<br>creditex.com.pe | LIKELY |
 
-### Tier C — reference / backup (11)
+### Tier C — reference / backup (12)
 
 | Supplier | Country | Type | Segment | Own garment arm | Price band | Super range | Swatch terms | Cut lengths | Contact | Evid. |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -238,14 +242,16 @@ plus every UK and Italian merchant on the list.
 | **Wooltex (China)** | China | wool suiting fabric manufacturer | suiting | **YES** | Not published | Not published | Not published | unknown | wooltex.com | LIKELY |
 | **Huzhou Shichang Textile Co., Ltd** | China (Huzhou) | fabric manufacturer | shirting | no | Quote-based | — | Not published - ask | unknown | sctextile.goldsupplier.com | LIKELY |
 | **Yutai Textiles** | China | poplin fabric manufacturer (est. 1999) | shirting | no | Quote-based | — | Not published - ask | unknown | yutaitextiles.com | LIKELY |
+| **Incalpaca TPX** | Peru (Arequipa) | alpaca/wool weaving mill | suiting | **YES** | Premium (alpaca) - likely over $20/yd | — | Not published | unknown | sales@incalpaca.com<br>+51 54 60 30 00<br>incalpaca.com | LIKELY |
 
-### Tier D — deprioritised (3)
+### Tier D — deprioritised (4)
 
 | Supplier | Country | Type | Segment | Own garment arm | Price band | Super range | Swatch terms | Cut lengths | Contact | Evid. |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | **Global Fabric Wholesale** | China | trading company | suiting | unknown | Quote-based; wool blends 180-350 gsm | — | 'Free Samples!' advertised | no | +86 134 1118 9544 | VERIFIED |
 | **Ermenegildo Zegna (cloth division)** | Italy | mill | suiting | **YES** | >$100/yd (Trofeo) | Super 130s-180s+ | Via US rep only | via Kemp & Hewitt | orders@kempandhewitt.com | VERIFIED |
 | **Loro Piana** | Italy | mill (LVMH) | suiting | **YES** | Mostly >$150/yd - above band | Super 150s-250s | B2B textile portal request form | via merchants | loropiana.com/textile | LIKELY |
+| **Fabricato** | Colombia (Bello, Antioquia) | integrated mill | both | no | Unknown | — | Not published | no | +57 4 448 3500<br>fabricato.com | LIKELY |
 
 ### Per-supplier notes
 
@@ -255,18 +261,18 @@ plus every UK and Italian merchant on the list.
 - **Hangzhou Jinfeng** — Quote-only; no published swatch program.
 - **Hangzhou Six Dragon Textile** — REFRESHED 2026-08-24: direct WhatsApp number and site now confirmed on their own product pages. States weaving, dyeing and printing done in-house - upgrades them from 'claims mill' to likely genuine.
 - **Global Fabric Wholesale** — No factory evidence; kg-based tiers suit converters, not a bespoke house.
-- **Luthai Textile** — GARMENT ARM: Luthai also makes finished shirts. Sells fabric, but you are buying from a downstream competitor. Routed via distributors.
+- **Luthai Textile** — GARMENT ARM: Luthai also makes finished shirts. DEAD END for cut lengths - verified 2026-08-27: own Alibaba storefront prices yarn-dyed stretch shirting at $1.02-1.68/m but 2,000 m MOQ; only 5 genuine Luthai listings on the platform. Route to Luthai cloth is via jobbers/converters, not the mill.
 - **Siyaram's / Donear** — Territory/volume terms undisclosed. Both own downstream apparel brands.
 - **Fashion Fabrics Club / Fabric Depot** — IN PRICE BAND. Same firm behind two storefronts. No continuity stock - closeout means you cannot reorder a cloth.
 - **Acorn Fabrics** — Best documented no-friction shirting account found. No minimums, free cards, cuts shirt lengths.
-- **Fabric Mart** — IN PRICE BAND. One of the few realistic routes to high-Super cloth under $30/yd - but closeout, so no reorders.
+- **Fabric Mart** — IN PRICE BAND - VERIFIED 2026-08-27: poly/wool suiting $8.75-10.50/yd in stock (53-74 yd lots), Italian 100% wool stripe $5.63/yd, $2/yd clearance bin. Sold in 0.25-yd increments, so a 3.5-yd suit cut is orderable exactly. Only ~3 pure-wool items among 185 suiting products at any time - blends dominate. Closeout: no reorders. Sinking Spring PA, 610-678-1330.
 - **Yardblox** — REPLIED 2026-08-25 05:43, cc Yvonne Tyan. Not yet read or actioned. | IN PRICE BAND. Opaque location/fulfilment - ask where it ships from and who mills it.
 - **Zelouf Fabrics** — Account approval requirements unpublished.
 - **Tessitura Monti / Canclini 1925** — CONTACTED 2026-08-25 (recovered from the call sheet). | Premium 100% cotton shirting, fabric-only house, sells cut lengths through its own store.
 - **Getzner Textil** — The 1.5 m MTM cut-length program is the only way in at your scale - ask for it by name.
 - **Soktas** — CONTACTED 2026-08-25 (recovered from the call sheet). | IN PRICE BAND for premium cotton shirting. US route unclear - ask Gladson.
-- **Metro Textiles** — KEY CHANNEL for high-Super cloth under $30/yd. Jobber closeouts of Italian/English mill cloth - with the 50% codes this lands in band. Phone-only, small shop.
-- **B. Black & Sons** — No trade gate at all - anyone can buy. Just above band; ask about mill-archive and remnant lots which fall under $30.
+- **Metro Textiles** — KEY CHANNEL. VERIFIED 2026-08-27: sitewide codes COTTON60 (60% off cotton) and SUMMER50 (50% off rest) put cotton shirting at ~$7.80-10.60/yd and entry wool at ~$14.75/yd. Cotton shirting collection $19.50-26.50 regular incl. Made-in-Italy. Wool suiting 29 products $29.50-65.50 regular. Yelp reviews confirm wools from $15/yd transacted. 265 W 37th St Ste 908 NYC. Codes are ephemeral - re-check at purchase.
+- **B. Black & Sons** — No trade gate at all - anyone can buy, sold by the yard. VERIFIED 2026-08-27: 25%-off wool sale puts at least five 100% wool suiting styles (7849/7861/7863/7864/7869, 58-60in) at $18.71/yd - under the $20 line. Regular price $24.95. Zero duty, zero import friction.
 - **M.J. Cahn** — Named principal, documented sample program, fast dispatch. Cheap call to make.
 - **Dugdale Bros & Co** — CALL INBOUND: Zach is ringing during a layover on the morning of 2026-08-27 - no reply owed, he is initiating. Dugdale has a Denver office and a published Current Out of Stock List, which is worth asking about since it shows what is actually available before ordering. | CALL PROPOSED for 1pm Central on 2026-08-26 - he suggested it on 25 Aug and it was still unconfirmed. Thread runs back to 19 Aug: his UK colleague Dan passed the enquiry to him as he handles all of North America. Furthest-advanced relationship in the ledger. | IN CONVERSATION since 2026-08-19 - predates this session. Four-message thread with Zach Jobe; he replied again 2026-08-25 18:17. This relationship is further along than the rest of the ledger. | Above your price band but a named US rep and an open bunch form make this the easiest premium English account to open.
 - **Standeven** — THE FURTHEST-ADVANCED CLOTH RELATIONSHIP. No minimums confirmed unconditionally, USD trade price list sent, website account opened, five bunches requested. Season map recorded above: only three bunches are all-season, which is why all three were taken - continuity beats range when a customer returns wanting the same cloth. Churchill (the one autumn/winter book) is unavailable pending a re-vamp, so the autumn side of the offering stays thin until it returns. | REPLIED 2026-08-25 by Megan Townsend and it is as good as the published terms promised: register on the site, then order swatches and cut lengths directly with no minimum, prices visible once the account is live, carriage by order size. She offered bunches unprompted - "let me know if there are any bunches you would like and we would be happy to send them". Standeven is a division of Luxury Fabrics, part of SIL Holdings. | REPLIED 2026-08-25 08:05 by M Townsend - and the reply was still UNREAD as of 22:5x. This is the fastest real win available: free trade account, ~48h approval, no minimums, small tailors explicitly welcome. Open it. | Clearest published trade terms found anywhere. Free account, 48 h, no minimums. Open this first.
@@ -304,8 +310,14 @@ plus every UK and Italian merchant on the list.
 - **MH Textile (mh-chine)** — Publishes 97% cotton / 3% spandex stretch twill and documents the standard cotton-spandex woven ratios (92/8 through 98/2). Useful technical counterpart as well as a supplier.
 - **Huzhou Shichang Textile Co., Ltd** — Cotton/spandex twill producer. Thin evidence - lead only.
 - **Yutai Textiles** — Specialist poplin supplier since 1999 - relevant to the 100% cotton shirting ask.
-- **Yunsa Yunlu Sanayi ve Ticaret A.S.** — REINSTATED. The prior pass deprioritised Yunsa as 'brand-scale access only', but a direct sales address is published on its own site. Produces its own yarn: 10M m/yr fabric capacity, 4,500 t/yr worsted yarn, top-five upper-segment wool fabric exporter worldwide, exports to 50+ countries. FABRIC-ONLY, no garment arm - the strongest free-and-clear fit at premium quality. Turkey also sits between Italian quality and Asian cost.
+- **Yunsa Yunlu Sanayi ve Ticaret A.S.** — REINSTATED. The prior pass deprioritised Yunsa as 'brand-scale access only', but a direct sales address is published on its own site. Produces its own yarn: 10M m/yr fabric capacity, 4,500 t/yr worsted yarn, top-five upper-segment wool fabric exporter worldwide, exports to 50+ countries. FABRIC-ONLY, no garment arm - the strongest free-and-clear fit at premium quality. Turkey also sits between Italian quality and Asian cost. DUTY 2026: Turkey has NO US FTA - woven wool carries ~25% MFN plus the post-Jul-2026 Section 301 layer (10-12.5%), so ~35%+ lands on top of quoted prices. Factor into any quote.
 - **Altinyildiz Tekstil ve Konfeksiyon A.S.** — Exporting Turkish suiting since 1956. GARMENT ARM: the group also runs the Altinyildiz Classics menswear retail brand.
+- **CIMEXLANA** — STRONGEST BUDGET-TIER FIND. Fully integrated in-house (dye/spin/weave/finish) so USMCA yarn-forward is plausibly met = 0% US duty. Markets itself as USMCA/T-MEC sourced and AIMED AT TAILORS. 300,000 yd/month capacity. Domain is literally telalanausmca. Price and MOQ from search snippets only - first questions for contact. Active in IMMEX registry Mar 2026.
+- **Novalan** — Second surviving Mexican worsted house (San Ildefonso heritage). Spins, dyes and finishes in Mexico - supports USMCA yarn-forward = 0% duty. Online catalog lists real articles (100% wool Super 100s) but with placeholder prices; sells direct. Self-claims one of the biggest wool mills in the Americas.
+- **Creditex S.A.A.** — House of Pima - buys ~40% of Peru pima crop, spins/weaves/finishes in Peru (US-Peru TPA yarn-forward = 0% duty), exports 95% of output incl. US. Runs own retail fabric store Creditex Telas (Calle Los Tejedores 103, Ate, Lima) with 200k+ m stock of oxfords/dobbies/poplins from ~S/14.90. GARMENT ARM: also sews garments. Question: will they ship cut lengths or small rolls to a US business.
+- **Incalpaca TPX** — Alpaca/vicuna specialist, exports to 50+ countries, duty-free under US-Peru TPA. NOT a budget play - a differentiation play (alpaca jacketing/coating no US competitor stocks). Stock Service portal is garments, not fabric. Tissura resells their cloth by the yard.
+- **FabricSight** — VERIFIED no minimums from 1m, worldwide shipping, targets North America. Portuguese/EU mill cloth (aggregates 150+ mills). Viscose-wool stretch suiting EUR 13.50/m; cotton poplins EUR 12.95-17.50/m; non-iron and Pima stretch available. EU origin = ~15% all-inclusive US tariff under EU-US deal (LIKELY - verify at entry). Even with duty, lands near band.
+- **Fabricato** — Colombia largest mill; weaves poplin, twill and wool; exports to US (US-Colombia TPA = 0% if yarn-forward). Evidence is a 2012 profile - current product lines unverified, and mill-scale MOQ likely. Park unless a distributor surfaces.
 
 <!-- END GENERATED -->
 

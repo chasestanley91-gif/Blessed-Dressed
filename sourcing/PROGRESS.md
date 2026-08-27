@@ -9,7 +9,7 @@ are tool-generated and cover a different workstream; this file tracks cloth sour
 
 <!-- BEGIN GENERATED: node sourcing/build-ledger.mjs -->
 
-**57 fabric suppliers identified across 9 countries. 14 contacted.**
+**63 fabric suppliers identified across 13 countries. 14 contacted.**
 
 Research is no longer the bottleneck. Outreach is. The ledger has more qualified
 suppliers than a company at this stage can work at once, and every single row still
@@ -19,8 +19,8 @@ reads `not_contacted`. The next unit of progress is an email, not another search
 
 | Stage | Count | Notes |
 | --- | --- | --- |
-| Identified | 57 | Across 9 countries, tiered A–D |
-| Direct email or phone on file | 34 | 23 have only a website or postal address |
+| Identified | 63 | Across 13 countries, tiered A–D |
+| Direct email or phone on file | 39 | 24 have only a website or postal address |
 | Re-verified against live site | 0 | **Blocks Wave 2 sending** — see below |
 | Contacted | 14 | — |
 | Replied | 0 | — |
@@ -28,11 +28,11 @@ reads `not_contacted`. The next unit of progress is an email, not another search
 | Swatches in hand | 0 | — |
 | Cloth purchased | 0 | — |
 
-**By tier:** A 17 · B 26 · C 11 · D 3 — A = open now, B = worth a letter, C = reference, D = deprioritised
+**By tier:** A 20 · B 27 · C 12 · D 4 — A = open now, B = worth a letter, C = reference, D = deprioritised
 
-**By evidence:** VERIFIED 36 · LIKELY 19 · UNVERIFIED 2
+**By evidence:** VERIFIED 37 · LIKELY 24 · UNVERIFIED 2
 
-**Mills with their own garment arm:** 12 — buy cloth from these, share nothing else
+**Mills with their own garment arm:** 14 — buy cloth from these, share nothing else
 
 <!-- END GENERATED -->
 

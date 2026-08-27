@@ -177,7 +177,7 @@
       "price_band": "~$6.80/m dealer reference",
       "super_range": null,
       "swatch_program": "Not published",
-      "moq": null,
+      "moq": "2,000 m on Alibaba listings - fails cut-length test",
       "cut_lengths": false,
       "ships_us": true,
       "contacts": {
@@ -188,7 +188,7 @@
       "wave": 1,
       "tier": "B",
       "status": "not_contacted",
-      "notes": "GARMENT ARM: Luthai also makes finished shirts. Sells fabric, but you are buying from a downstream competitor. Routed via distributors."
+      "notes": "GARMENT ARM: Luthai also makes finished shirts. DEAD END for cut lengths - verified 2026-08-27: own Alibaba storefront prices yarn-dyed stretch shirting at $1.02-1.68/m but 2,000 m MOQ; only 5 genuine Luthai listings on the platform. Route to Luthai cloth is via jobbers/converters, not the mill."
     },
     {
       "id": "siyaram-donear",
@@ -268,7 +268,7 @@
       "type": "jobber / closeout",
       "segment": "both",
       "garment_arm": false,
-      "price_band": "$2-8 sale; $18-40 regular",
+      "price_band": "$2-10.50/yd sale (verified); $25-50 regular",
       "super_range": null,
       "swatch_program": "Paid 'Julie's Picks' club (capped 500 members)",
       "moq": "None",
@@ -280,9 +280,9 @@
       "evidence": "VERIFIED",
       "source": "prior-report-2026-08-18",
       "wave": 1,
-      "tier": "B",
+      "tier": "A",
       "status": "not_contacted",
-      "notes": "IN PRICE BAND. One of the few realistic routes to high-Super cloth under $30/yd - but closeout, so no reorders."
+      "notes": "IN PRICE BAND - VERIFIED 2026-08-27: poly/wool suiting $8.75-10.50/yd in stock (53-74 yd lots), Italian 100% wool stripe $5.63/yd, $2/yd clearance bin. Sold in 0.25-yd increments, so a 3.5-yd suit cut is orderable exactly. Only ~3 pure-wool items among 185 suiting products at any time - blends dominate. Closeout: no reorders. Sinking Spring PA, 610-678-1330."
     },
     {
       "id": "yardblox",
@@ -408,7 +408,7 @@
       "type": "jobber",
       "segment": "suiting",
       "garment_arm": false,
-      "price_band": "$29.50-75.50/yd wool (50% discount codes common)",
+      "price_band": "$29.50-65.50/yd wool regular; codes cut 50-60%",
       "super_range": "mixed, incl. high Supers",
       "swatch_program": "Not published",
       "moq": "None",
@@ -422,7 +422,7 @@
       "wave": 1,
       "tier": "A",
       "status": "not_contacted",
-      "notes": "KEY CHANNEL for high-Super cloth under $30/yd. Jobber closeouts of Italian/English mill cloth - with the 50% codes this lands in band. Phone-only, small shop."
+      "notes": "KEY CHANNEL. VERIFIED 2026-08-27: sitewide codes COTTON60 (60% off cotton) and SUMMER50 (50% off rest) put cotton shirting at ~$7.80-10.60/yd and entry wool at ~$14.75/yd. Cotton shirting collection $19.50-26.50 regular incl. Made-in-Italy. Wool suiting 29 products $29.50-65.50 regular. Yelp reviews confirm wools from $15/yd transacted. 265 W 37th St Ste 908 NYC. Codes are ephemeral - re-check at purchase."
     },
     {
       "id": "b-black-and-sons",
@@ -431,7 +431,7 @@
       "type": "woolens jobber since 1922",
       "segment": "suiting",
       "garment_arm": false,
-      "price_band": "~$32.50/yd wool reference",
+      "price_band": "$18.71/yd sale (verified); $24.95/yd regular 100% wool",
       "super_range": "mixed",
       "swatch_program": "Ad hoc by phone (not published)",
       "moq": "None - no trade gate",
@@ -446,7 +446,7 @@
       "wave": 1,
       "tier": "A",
       "status": "not_contacted",
-      "notes": "No trade gate at all - anyone can buy. Just above band; ask about mill-archive and remnant lots which fall under $30."
+      "notes": "No trade gate at all - anyone can buy, sold by the yard. VERIFIED 2026-08-27: 25%-off wool sale puts at least five 100% wool suiting styles (7849/7861/7863/7864/7869, 58-60in) at $18.71/yd - under the $20 line. Regular price $24.95. Zero duty, zero import friction."
     },
     {
       "id": "mj-cahn",
@@ -1411,7 +1411,7 @@
       "wave": 2,
       "tier": "A",
       "status": "not_contacted",
-      "notes": "REINSTATED. The prior pass deprioritised Yunsa as 'brand-scale access only', but a direct sales address is published on its own site. Produces its own yarn: 10M m/yr fabric capacity, 4,500 t/yr worsted yarn, top-five upper-segment wool fabric exporter worldwide, exports to 50+ countries. FABRIC-ONLY, no garment arm - the strongest free-and-clear fit at premium quality. Turkey also sits between Italian quality and Asian cost."
+      "notes": "REINSTATED. The prior pass deprioritised Yunsa as 'brand-scale access only', but a direct sales address is published on its own site. Produces its own yarn: 10M m/yr fabric capacity, 4,500 t/yr worsted yarn, top-five upper-segment wool fabric exporter worldwide, exports to 50+ countries. FABRIC-ONLY, no garment arm - the strongest free-and-clear fit at premium quality. Turkey also sits between Italian quality and Asian cost. DUTY 2026: Turkey has NO US FTA - woven wool carries ~25% MFN plus the post-Jul-2026 Section 301 layer (10-12.5%), so ~35%+ lands on top of quoted prices. Factor into any quote."
     },
     {
       "id": "altinyildiz",
@@ -1437,6 +1437,151 @@
       "tier": "B",
       "status": "not_contacted",
       "notes": "Exporting Turkish suiting since 1956. GARMENT ARM: the group also runs the Altinyildiz Classics menswear retail brand."
+    },
+    {
+      "id": "cimexlana",
+      "name": "CIMEXLANA",
+      "country": "Mexico (Quecholac, Puebla)",
+      "type": "integrated wool mill",
+      "segment": "suiting",
+      "garment_arm": false,
+      "price_band": "$9-15/yd (search snippet - confirm)",
+      "super_range": "Super 80s-150s pure wool + wool blends",
+      "swatch_program": "Not published - 24hr online store exists",
+      "moq": "Unknown - online store suggests cut lengths, confirm",
+      "cut_lengths": "unknown",
+      "ships_us": true,
+      "contacts": {
+        "email": "jonathan@cimexlana.com.mx",
+        "url": "telalanausmca.com.mx"
+      },
+      "evidence": "LIKELY",
+      "source": "deep-research-2026-08-27",
+      "wave": 1,
+      "tier": "A",
+      "status": "not_contacted",
+      "notes": "STRONGEST BUDGET-TIER FIND. Fully integrated in-house (dye/spin/weave/finish) so USMCA yarn-forward is plausibly met = 0% US duty. Markets itself as USMCA/T-MEC sourced and AIMED AT TAILORS. 300,000 yd/month capacity. Domain is literally telalanausmca. Price and MOQ from search snippets only - first questions for contact. Active in IMMEX registry Mar 2026."
+    },
+    {
+      "id": "novalan",
+      "name": "Novalan",
+      "country": "Mexico (Tulancingo)",
+      "type": "integrated worsted mill (est. 1983)",
+      "segment": "suiting",
+      "garment_arm": false,
+      "price_band": "Not published ($1 placeholder prices in online catalog)",
+      "super_range": "Super 100s documented (330-345 g/m jacketing)",
+      "swatch_program": "Not published - enquiry cart on site",
+      "moq": "Not published",
+      "cut_lengths": "unknown",
+      "ships_us": true,
+      "contacts": {
+        "email": "info@novalan.com",
+        "phone": "+52 775 755 11 23",
+        "url": "novalan.com"
+      },
+      "evidence": "LIKELY",
+      "source": "deep-research-2026-08-27",
+      "wave": 1,
+      "tier": "B",
+      "status": "not_contacted",
+      "notes": "Second surviving Mexican worsted house (San Ildefonso heritage). Spins, dyes and finishes in Mexico - supports USMCA yarn-forward = 0% duty. Online catalog lists real articles (100% wool Super 100s) but with placeholder prices; sells direct. Self-claims one of the biggest wool mills in the Americas."
+    },
+    {
+      "id": "creditex",
+      "name": "Creditex S.A.A.",
+      "country": "Peru (Lima)",
+      "type": "integrated pima shirting mill",
+      "segment": "shirting",
+      "garment_arm": true,
+      "price_band": "Retail store from ~S/15 (~$4/m); export pricing unknown",
+      "super_range": null,
+      "swatch_program": "Not published",
+      "moq": "Retail store sells cut lengths (Lima); export MOQ unknown",
+      "cut_lengths": true,
+      "ships_us": "unknown",
+      "contacts": {
+        "phone": "+51 1 715 7500",
+        "url": "creditex.com.pe"
+      },
+      "evidence": "LIKELY",
+      "source": "deep-research-2026-08-27",
+      "wave": 1,
+      "tier": "B",
+      "status": "not_contacted",
+      "notes": "House of Pima - buys ~40% of Peru pima crop, spins/weaves/finishes in Peru (US-Peru TPA yarn-forward = 0% duty), exports 95% of output incl. US. Runs own retail fabric store Creditex Telas (Calle Los Tejedores 103, Ate, Lima) with 200k+ m stock of oxfords/dobbies/poplins from ~S/14.90. GARMENT ARM: also sews garments. Question: will they ship cut lengths or small rolls to a US business."
+    },
+    {
+      "id": "incalpaca",
+      "name": "Incalpaca TPX",
+      "country": "Peru (Arequipa)",
+      "type": "alpaca/wool weaving mill",
+      "segment": "suiting",
+      "garment_arm": true,
+      "price_band": "Premium (alpaca) - likely over $20/yd",
+      "super_range": null,
+      "swatch_program": "Not published",
+      "moq": "Not published - wholesale oriented",
+      "cut_lengths": "unknown",
+      "ships_us": true,
+      "contacts": {
+        "email": "sales@incalpaca.com",
+        "phone": "+51 54 60 30 00",
+        "url": "incalpaca.com"
+      },
+      "evidence": "LIKELY",
+      "source": "deep-research-2026-08-27",
+      "wave": 2,
+      "tier": "C",
+      "status": "not_contacted",
+      "notes": "Alpaca/vicuna specialist, exports to 50+ countries, duty-free under US-Peru TPA. NOT a budget play - a differentiation play (alpaca jacketing/coating no US competitor stocks). Stock Service portal is garments, not fabric. Tissura resells their cloth by the yard."
+    },
+    {
+      "id": "fabricsight",
+      "name": "FabricSight",
+      "country": "Portugal (Porto)",
+      "type": "stock-service wholesaler",
+      "segment": "both",
+      "garment_arm": false,
+      "price_band": "EUR 9.75-18.50/m wool blends; EUR 12.95-17.50/m poplins",
+      "super_range": "Mixed; premium worsteds EUR 26-34/m",
+      "swatch_program": "EUR 1 swatches",
+      "moq": "NONE - from 1 meter",
+      "cut_lengths": true,
+      "ships_us": true,
+      "contacts": {
+        "url": "fabricsight.com"
+      },
+      "evidence": "VERIFIED",
+      "source": "deep-research-2026-08-27",
+      "wave": 1,
+      "tier": "A",
+      "status": "not_contacted",
+      "notes": "VERIFIED no minimums from 1m, worldwide shipping, targets North America. Portuguese/EU mill cloth (aggregates 150+ mills). Viscose-wool stretch suiting EUR 13.50/m; cotton poplins EUR 12.95-17.50/m; non-iron and Pima stretch available. EU origin = ~15% all-inclusive US tariff under EU-US deal (LIKELY - verify at entry). Even with duty, lands near band."
+    },
+    {
+      "id": "fabricato",
+      "name": "Fabricato",
+      "country": "Colombia (Bello, Antioquia)",
+      "type": "integrated mill",
+      "segment": "both",
+      "garment_arm": false,
+      "price_band": "Unknown",
+      "super_range": null,
+      "swatch_program": "Not published",
+      "moq": "Roll-scale (mill) - LIKELY",
+      "cut_lengths": false,
+      "ships_us": true,
+      "contacts": {
+        "phone": "+57 4 448 3500",
+        "url": "fabricato.com"
+      },
+      "evidence": "LIKELY",
+      "source": "deep-research-2026-08-27",
+      "wave": 2,
+      "tier": "D",
+      "status": "not_contacted",
+      "notes": "Colombia largest mill; weaves poplin, twill and wool; exports to US (US-Colombia TPA = 0% if yarn-forward). Evidence is a 2012 profile - current product lines unverified, and mill-scale MOQ likely. Park unless a distributor surfaces."
     }
   ],
   "business_model": {
@@ -1463,5 +1608,22 @@
       "no"
     ],
     "canonical": "The call-sheet artifact is where stages are set. sourcing/call-sheet.html is its source."
+  },
+  "us_import_2026": {
+    "as_of": "2026-08-27",
+    "verified": [
+      "SCOTUS struck down all IEEPA (reciprocal + fentanyl) tariffs 6-3 on 2026-02-20 (Learning Resources v. Trump); CBP stopped collecting 2026-02-24. [VERIFIED 2-1 and by refutation-pass cross-checks]",
+      "Replacement Section 122 surcharge ran at 10% (the announced 15% was never legally implemented - claim refuted 3-0) from 2026-02-24 and expired by operation of law 2026-07-24.",
+      "Since 2026-07-24: new Section 301 duties of 10-12.5% by country tier on ~60-80 economies replaced the surcharge; Brazil carries an additional 25% Section 301; Section 301 China List 3 (25% on woven fabrics) never went away.",
+      "De minimis ($800 duty-free parcels) suspended for ALL countries since 2025-08-29 (EO 14324), continued by EO 14388, codified in CBP regs 2026-06-24, upheld by CIT 2026-08-13, statutory repeal 2027-07-01. Every parcel now needs a formal or informal customs entry."
+    ],
+    "practical": [
+      "MFN base: woven wool (HTS 5112) ~25%; cotton shirting (HTS 5208/5210) ~7-10%.",
+      "Duty-free lanes that actually work: USMCA Mexico and US-Peru/Colombia TPAs at 0% when yarn-forward origin is met and documented. Mexico has live wool mills (CIMEXLANA, Novalan); Peru has pima shirting (Creditex).",
+      "Turkey: NO FTA - wool lands at ~35%+ total. Morocco: FTA exists but no suiting/shirting weaving found (Settavex is denim, possibly defunct) - the FTA does not help in practice.",
+      "China: wool suiting effectively ~50% total duty (25% MFN + 25% Section 301) plus per-parcel entry/brokerage fees; 1m-MOQ Alibaba sellers at $9-17/m nominal lose most of their edge landed.",
+      "EU (Portugal/Italy): ~15% all-inclusive ceiling under the EU-US deal effective 2026-07-01 [LIKELY - single source].",
+      "Small-parcel math: entry + brokerage on a $70 cut-length parcel often exceeds the duty itself. Consolidate orders or buy domestic."
+    ]
   }
 }
