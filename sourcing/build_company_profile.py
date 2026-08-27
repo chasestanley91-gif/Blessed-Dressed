@@ -69,11 +69,11 @@ st.append(kv([
     ("社名", "Blessed &amp; Dressed（ブレスト・アンド・ドレスト）"),
     ("代表者", "Chase Stanley（チェイス・スタンレー）"),
     ("所在地", "米国 ルイジアナ州"),
-    ("設立", blank("設立年をご記入ください")),
+    ("設立", "2024年"),
     ("事業内容", "紳士オーダーメイドスーツ・ドレスシャツの受注生産および販売"),
     ("販売形態", "完全予約制・対面接客によるメイド・トゥ・メジャー（MTM）販売"),
     ("連絡先", "chasestanley91@gmail.com"),
-    ("ウェブサイト", "現在制作中（公開準備が整い次第ご案内いたします）"),
+    ("ウェブサイト", "www.customsuits.com"),
 ]))
 
 st.append(Paragraph("事業の特徴 ― 対面採寸によるオーダーメイド", h3))
@@ -93,7 +93,6 @@ st.append(Paragraph("仕様管理", h3))
 st.append(kv([
     ("オプション管理", "オプション項目 370種、選択肢 約2,860件を商品別に管理"),
     ("注文仕様書", "1注文ごとに仕様書を作成（採寸値・体型補正・仕様指示）。PDF・表計算・CSV形式にて提出可能"),
-    ("年間生産予定数", blank("年間または月間の予定数量をご記入ください")),
 ]))
 
 st.append(Paragraph("生産パートナー様に求める条件", h3))
@@ -113,11 +112,11 @@ st.append(kv([
     ("Company", "Blessed &amp; Dressed"),
     ("Founder", "Chase Stanley"),
     ("Location", "Louisiana, United States"),
-    ("Established", blank("year to be filled in")),
+    ("Established", "2024"),
     ("Business", "Made-to-measure men's suits and dress shirts, produced to order"),
     ("Sales model", "Private, by-appointment in-person consultation"),
     ("Contact", "chasestanley91@gmail.com"),
-    ("Website", "Currently in development; URL will follow once public"),
+    ("Website", "www.customsuits.com"),
 ], jp=False))
 
 st.append(Paragraph("How We Work — In-Person Measurement", h3E))
@@ -138,7 +137,6 @@ st.append(Paragraph("Specification Management", h3E))
 st.append(kv([
     ("Option library", "370 option categories and approximately 2,860 individual choices, organised by garment"),
     ("Per-order spec", "A written specification sheet per order (measurements, figure adjustments, construction). Available as PDF, spreadsheet or CSV"),
-    ("Planned volume", blank("annual or monthly volume to be filled in")),
 ], jp=False))
 
 st.append(Paragraph("What We Need From a Production Partner", h3E))
@@ -147,10 +145,6 @@ st.append(Paragraph(
     "· Our woven brand labels sewn in　· Direct shipping to the United States<br/>"
     "· An agreed procedure for alterations and remakes when a garment misses specification", be))
 
-st.append(Spacer(1, 14))
-st.append(Paragraph(
-    '<font color="#B03030">Note: items shown in red brackets are placeholders — please provide these '
-    'values and the document will be finalised.</font>', be))
 
 
 def footer(c, d):
