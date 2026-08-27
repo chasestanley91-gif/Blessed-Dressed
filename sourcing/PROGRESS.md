@@ -9,7 +9,7 @@ are tool-generated and cover a different workstream; this file tracks cloth sour
 
 <!-- BEGIN GENERATED: node sourcing/build-ledger.mjs -->
 
-**63 fabric suppliers identified across 13 countries. 14 contacted.**
+**63 fabric suppliers identified across 13 countries. 15 contacted.**
 
 Research is no longer the bottleneck. Outreach is. The ledger has more qualified
 suppliers than a company at this stage can work at once, and every single row still
@@ -22,15 +22,15 @@ reads `not_contacted`. The next unit of progress is an email, not another search
 | Identified | 63 | Across 13 countries, tiered A–D |
 | Direct email or phone on file | 39 | 24 have only a website or postal address |
 | Re-verified against live site | 0 | **Blocks Wave 2 sending** — see below |
-| Contacted | 14 | — |
+| Contacted | 15 | — |
 | Replied | 0 | — |
 | Trade account open | 0 | — |
 | Swatches in hand | 0 | — |
 | Cloth purchased | 0 | — |
 
-**By tier:** A 20 · B 27 · C 12 · D 4 — A = open now, B = worth a letter, C = reference, D = deprioritised
+**By tier:** A 20 · B 28 · C 11 · D 4 — A = open now, B = worth a letter, C = reference, D = deprioritised
 
-**By evidence:** VERIFIED 37 · LIKELY 24 · UNVERIFIED 2
+**By evidence:** VERIFIED 38 · LIKELY 23 · UNVERIFIED 2
 
 **Mills with their own garment arm:** 14 — buy cloth from these, share nothing else
 

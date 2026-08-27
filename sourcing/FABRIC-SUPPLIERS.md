@@ -195,7 +195,7 @@ plus every UK and Italian merchant on the list.
 | **CIMEXLANA** | Mexico (Quecholac, Puebla) | integrated wool mill | suiting | no | $9-15/yd (search snippet - confirm) | Super 80s-150s pure wool + wool blends | Not published - 24hr online store exists | unknown | jonathan@cimexlana.com.mx<br>telalanausmca.com.mx | LIKELY |
 | **FabricSight** | Portugal (Porto) | stock-service wholesaler | both | no | EUR 9.75-18.50/m wool blends; EUR 12.95-17.50/m poplins | Mixed; premium worsteds EUR 26-34/m | EUR 1 swatches | yes | fabricsight.com | VERIFIED |
 
-### Tier B — worth a letter (27)
+### Tier B — worth a letter (28)
 
 | Supplier | Country | Type | Segment | Own garment arm | Price band | Super range | Swatch terms | Cut lengths | Contact | Evid. |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -216,6 +216,7 @@ plus every UK and Italian merchant on the list.
 | **Jodek International (VBC, Caccioppoli, and other Italian/English houses)** | Italy (Naples) | merchant | suiting | no | ~$150/yd is "a good slice of the pie". Some cloths above, some below. They specialise in luxury and state plainly they have little at opening price points. | high | Books loaned semi-permanently, no annual minimum. Chosen collaboratively; an unproductive book is swapped rather than penalised. New books each season in limited quantity; some older books unavailable. | yes | David Douek<br>info@jodekinternational.com<br>+1 310-275-9128<br>222 N. Canon Drive, Suite 204, Beverly Hills, CA 90210, USA | VERIFIED |
 | **Harrisons / Lesser / Smith / W.Bill / P&H (LBD group)** | UK | merchant group | suiting | no | ~GBP 60-120/m retail references | Super 100s-180s across the stable | Bunch system; stock checker; account number required | yes | US: Kemp & Hewitt 203-838-3000 | VERIFIED |
 | **Holland & Sherry** | UK | merchant | suiting | no | ~$60-150+/yd | Super 100s-180s+ | All bunch books browsable free online; account via NY rep | yes | 212-758-1911<br>145 E 57th St, NYC | VERIFIED |
+| **Dormeuil** | France | merchant | suiting | no | Mid-premium to Vanquish | Super 110s-180s+ | Books allocated selectively to accounts | yes | abuffa@dormeuil.com<br>800-416-4144<br>Dormeuil USA, 232 Madison Ave | VERIFIED |
 | **Albini Group (Thomas Mason / David & John Anderson)** | Italy | shirting mill group | shirting | no | Thomas Mason mid-premium; DJA >$100/yd | n/a (shirting counts to 330s) | Trade platform bespoke.albinigroup.com + Fabric Butler app | cut lengths for MTM makers | Albini USA, 260 W 39th St, NYC | LIKELY |
 | **Marzotto / Guabello** | Italy | industrial group | suiting | no | Not published (entry-premium) | Super 110s-150s | None published | via distributors | Marzotto USA 212-944-0196 | LIKELY |
 | **Raymond (fabric division)** | India | worsted suiting and jacketing mill | suiting | **YES** | Not published - quote required | Super 100s-180s+ across ranges | Not published - ask | unknown | Sonam Gupta<br>sonam.gupta@raymond.in<br>+91-9820444904<br>raymond.in | LIKELY |
@@ -227,7 +228,7 @@ plus every UK and Italian merchant on the list.
 | **Novalan** | Mexico (Tulancingo) | integrated worsted mill (est. 1983) | suiting | no | Not published ($1 placeholder prices in online catalog) | Super 100s documented (330-345 g/m jacketing) | Not published - enquiry cart on site | unknown | info@novalan.com<br>+52 775 755 11 23<br>novalan.com | LIKELY |
 | **Creditex S.A.A.** | Peru (Lima) | integrated pima shirting mill | shirting | **YES** | Retail store from ~S/15 (~$4/m); export pricing unknown | — | Not published | yes | +51 1 715 7500<br>creditex.com.pe | LIKELY |
 
-### Tier C — reference / backup (12)
+### Tier C — reference / backup (11)
 
 | Supplier | Country | Type | Segment | Own garment arm | Price band | Super range | Swatch terms | Cut lengths | Contact | Evid. |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -236,7 +237,6 @@ plus every UK and Italian merchant on the list.
 | **Hangzhou Jinfeng** | China | integrated mill (18,000 m2) | suiting | unknown | Quote-based TR | — | Not published | no | +86-571-8299-5618 | VERIFIED |
 | **Siyaram's / Donear** | India | major mills | both | **YES** | Not published (PV suiting/shirting) | — | Via channel-partner / dealer program | no | info@donear.com<br>siyaram.com | VERIFIED |
 | **Scabal** | Belgium | merchant | suiting | no | Tiered ('Smart' to 'Bentley') | Super 100s-180s+ | ~80 live bunches; Business Solutions enquiry | 24-h claim | Scabal USA NYC 212-764-8580 | VERIFIED |
-| **Dormeuil** | France | merchant | suiting | no | Mid-premium to Vanquish | Super 110s-180s+ | Books allocated selectively to accounts | yes | 800-416-4144<br>Dormeuil USA, 232 Madison Ave | LIKELY |
 | **Mafatlal Industries** | India | shirting and suiting mill | both | unknown | Not published | — | Not published - ask | unknown | mafatlals.com | UNVERIFIED |
 | **Shaoxing Yun Ai Textile Co., Ltd** | China (Shaoxing) | suiting fabric supplier/manufacturer | suiting | no | Quote-based; in-stock suiting programs | Publishes Super 100s, 120s and Super 130 wool fabric ranges | Not published - ask | no | Nicole<br>ya02@yunaitextile.com<br>0086-13656855796<br>iyunaitextile.com / yunai-textile.com | VERIFIED |
 | **Wooltex (China)** | China | wool suiting fabric manufacturer | suiting | **YES** | Not published | Not published | Not published | unknown | wooltex.com | LIKELY |
@@ -289,7 +289,7 @@ plus every UK and Italian merchant on the list.
 - **Huddersfield Fine Worsteds / Hardy Minnis (Fresco)** — Routed by HFW (Jesica Oldham) to Gladson, its US agent - Guy Milinazzo, EVP, guym@gladsonltd.com. He confirmed individual cut lengths (3.2m within normal scope), HFW collections held in the US, and no minimum annual purchase for a relationship - but gates sample presentations on five qualifying questions. Reply drafted, pending call windows. | REPLIED 2026-08-25 via Gladson, their US agent - Guy Milinazzo, EVP. Structurally the best fit found so far: individual 3.2 m cut lengths are normal business, HFW collections are held in the US so there is no direct import and no buyer-side duty, and there is no minimum annual purchase for the relationship itself. HOME OF FRESCO, the high-twist tropical named in the brief. The gate is credibility, not money: Gladson vets before releasing collections because sample presentations cost them real money, and a pre-launch brand is exactly the profile that normally gets screened out. He offered a phone call twice - take it; at pre-revenue the founder's voice outperforms any number on a form. Price reality CORRECTED 2026-08-25: cloth is a cost-plus pass-through to the customer, so Fresco is not locked out by the price band - the customer selects it and carries the cost. Stronger still, the owner ALREADY HOLDS Fresco, Voyager and several Huddersfield books coded to an old factory system, which turns the ask from "send me samples" into "help me make my existing books current" - costing Gladson nothing and proving existing activity.
 - **Holland & Sherry** — Covers your full Super range. No self-serve signup - NY rep only.
 - **Scabal** — HIDDEN CONDITION: volume-tiered pricing - the same cloth costs you more because you buy little.
-- **Dormeuil** — Selective allocation - unlikely to book a brand-new account early.
+- **Dormeuil** — BIG REPLY 2026-08-27: owner submitted the Dormeuil website contact form; Andrea Buffa (VP North America) personally replied same day proposing a video call Monday ~2 PM (timezone TBC - owner asked). The "unlikely to book a new account early" assumption is dead: the VP is running the conversation. Call prep: cite live accounts (Standeven open, Reda open, Gladson/Jodek/Fox in progress), pass-through cloth pricing, ~300 garments/2yrs doubling. Never state target price. Ask: starter bunches, cut lengths, lead time, duty, Gulf South rep.
 - **Albini Group (Thomas Mason / David & John Anderson)** — HIDDEN CONDITION: books reimbursed only if you hit a first-year minimum turnover. Resale cert + trade references required.
 - **Ermenegildo Zegna (cloth division)** — GARMENT ARM: Zegna is a major suit brand. Brand-controlled cloth allocation. Far above band.
 - **Loro Piana** — CONTACTED 2026-08-25 (recovered from the call sheet). | GARMENT ARM + LVMH vetting and volume expectations. Out of band.
