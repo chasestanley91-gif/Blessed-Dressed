@@ -73,7 +73,7 @@ st.append(kv([
     ("事業内容", "紳士オーダーメイドスーツ・ドレスシャツの受注生産および販売"),
     ("販売形態", "完全予約制・対面接客によるメイド・トゥ・メジャー（MTM）販売"),
     ("連絡先", "chasestanley91@gmail.com"),
-    ("ウェブサイト", "www.customsuits.com"),
+    ("ウェブサイト", "www.customsuits.net"),
 ]))
 
 st.append(Paragraph("事業の特徴 ― 対面採寸によるオーダーメイド", h3))
@@ -116,7 +116,7 @@ st.append(kv([
     ("Business", "Made-to-measure men's suits and dress shirts, produced to order"),
     ("Sales model", "Private, by-appointment in-person consultation"),
     ("Contact", "chasestanley91@gmail.com"),
-    ("Website", "www.customsuits.com"),
+    ("Website", "www.customsuits.net"),
 ], jp=False))
 
 st.append(Paragraph("How We Work — In-Person Measurement", h3E))
