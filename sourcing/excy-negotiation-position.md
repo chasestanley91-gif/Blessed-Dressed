@@ -89,3 +89,42 @@ the proprietary pattern system, every rate above is priced for the wrong service
 - Do **not** sign a volume commitment before a basted first article proves the pattern.
 - Do **not** disclose our retail pricing or landed-cost targets. A percentage against their
   own list is normal commercial negotiation; our margins are not their business.
+
+## Fabric supply — CMT vs package
+
+The price lists received are **CMT** (cut, make, trim): our fabric, their labour. The
+alternative is a **package price** where the factory supplies cloth. We need both numbers
+so we can choose per order.
+
+### Why their fabric may beat ours
+
+A Fukushima factory buys Japanese mill cloth (Miyuki, Nikke, Tomioka and similar) at
+domestic volume pricing a small US buyer cannot reach — and buying from their book removes
+inbound freight and Japanese import duty on the cloth entirely. Do not assume
+customer-supplied fabric is the cheaper route until both prices are on the table.
+
+### The three things to pin down
+
+1. **Consumption per garment, at our measurements.** A standard single-breasted suit runs
+   ~3.2–3.5 m. A double-breasted jacket on a 111.8 cm chest realistically needs 3.8–4.0 m.
+   If we ship a standard length, production stops and we pay freight twice. Get their actual
+   meterage per garment for our size before sending any cloth.
+2. **Whether the make price changes under customer-supplied material.** Some factories add a
+   handling or inspection surcharge for COM, or quote CMT high to steer customers onto their
+   own book. Ask directly whether the make charge is identical either way.
+3. **Fabric fault liability.** If our cloth carries a mill flaw and the garment is ruined,
+   who bears it? This is the most common COM dispute and must be agreed in writing before
+   the first shipment. Also settle who bears a shortage caused by their consumption estimate
+   being wrong.
+
+### Also worth asking
+
+- Minimum cut length — can they buy 3.5–4 m cuts from a merchant, or must we take a full piece?
+- Whether they will hold or reserve fabric for repeat orders.
+- Which merchant books they hold beyond their own house cloth.
+
+### Position
+
+Default to their fabric book for production volume; keep customer-supplied fabric available
+for signature cloth we want exclusive to us. Ask for CMT and package pricing side by side so
+the choice can be made order by order rather than locked in now.
