@@ -1,0 +1,43 @@
+{
+  "wave1": {
+    "executedAt": "2026-08-20",
+    "channel": "email (Gmail, from chasestanley91@gmail.com)",
+    "note": "Bilingual JA/EN, no pricing disclosed. Follow-up due 2026-08-27..30 if silent.",
+    "sends": [
+      { "supplier": "yamamoto-excy", "to": "contact@excy.co.jp", "gmailMessageId": "1a020fafafa8a8b1", "status": "REPLIED 2026-08-21", "reply": "Nobuyuki Fukuda (n.fukuda@excy.co.jp): yes to overseas OEM/CMT, 1-pc on partner-factory pattern, ~1 mo lead (1.5 peak), CAD/DXF/paper/spec/sample intake, dual QC, labels OK, FedEx/DHL to US, local-alteration credits case-by-case; proprietary-pattern MTM system ~6 mo setup, ~600 garments/yr guideline. Reply draft with sample request + measurement/posture method created 2026-08-22 (draft r-9149521918360447869). Note: their 2nd email (hoodie, 'Dear Nico') was misdirected — flagged politely." },
+      { "supplier": "hitoyoshi", "to": "info@hitoyoshicorp.com", "gmailMessageId": "1a020fb3c4196d78", "status": "REPLIED 2026-08-20 (via form thread)", "reply": "Hiroaki Maeda: CMT/OEM possible with mutual preparation; SHIRTS ONLY (no suits). Response pending." },
+      { "supplier": "flex-japan", "to": "info@flexjapan.co.jp", "gmailMessageId": "1a020fb66f67a172", "status": "REPLIED 2026-08-21", "reply": "yasushi@flexjapan.co.jp + 3 cc'd colleagues re: made-in-Japan OEM shirts. Response pending." },
+      { "supplier": "saito", "to": "info2@saito-ordersuit.com", "gmailMessageId": "1a020fbad37750fb", "status": "sent" },
+      { "supplier": "sample-koubou", "to": "info@sample-koubou.com", "gmailMessageId": "1a020fbcd6c79bf0", "status": "BOUNCED — domain not found; needs re-verified channel before any retry" },
+      { "supplier": "tahara-concert", "to": "info@tahara-co.com", "gmailMessageId": "1a020fbf0e2b21dc", "status": "sent" }
+    ],
+    "earlierThreads": [
+      { "supplier": "five-one-factory", "note": "Pre-existing 2026-08-18 thread (as Dustin Stanley) got a reply 2026-08-19 from Toshihiko Mori: MTM factory suited to limited small-batch production. Response pending." },
+      { "supplier": "yamaki-choya", "note": "Form thread reply 2026-08-19 from hirata@e-yamaki.co.jp asking for company profile + website URL. Response pending." }
+    ]
+  },
+  "wave2": {
+    "status": "pending-owner",
+    "note": "Web forms cannot be submitted from this session (external form posts blocked by egress policy). Owner submits with paste-ready text from email-templates.md — about 10 minutes each.",
+    "forms": [
+      { "supplier": "doi-hokosho", "formUrl": "https://www.us.do-1.co.jp/mail_form.html", "language": "English OK" },
+      { "supplier": "sada", "formUrl": "https://www.sandars.co.jp/contact/", "language": "Japanese", "critical": "require Miyagi (Japan) production in writing" },
+      { "supplier": "goodhill", "formUrl": "https://goodhill.co.jp/contact/", "language": "Japanese (EN site exists)" },
+      { "supplier": "yamaki-choya", "formUrl": "https://www.e-yamaki.co.jp/contact.html", "language": "Japanese", "critical": "require made-in-Japan routing" },
+      { "supplier": "five-one-factory", "formUrl": "https://www.fiveone-m.com/contact/", "language": "JA/EN" },
+      { "supplier": "sun-line", "formUrl": "https://sunline-aomori.com/ (お問合せ)", "language": "Japanese" },
+      { "supplier": "terao-f", "formUrl": "https://www.terao-f.co.jp/contacts/", "language": "Japanese", "note": "also try quote simulator /quotation/ for benchmark" },
+      { "supplier": "sartoria-speranza", "formUrl": "https://sartoria-speranza.jp/contact/", "language": "Japanese" }
+    ]
+  },
+  "wave3": {
+    "status": "hold",
+    "note": "Phone/Japanese-speaker or intermediary needed",
+    "targets": [
+      { "supplier": "miyuki-sewing", "phone": "+81-959-32-2022", "alt": "route via Yamamoto EXCY (resells Miyuki order line)" },
+      { "supplier": "katsuda-hifuku", "phone": "+81-6-6961-1956" },
+      { "supplier": "riforma-igarashi", "note": "find channel via NYC trunk-show network" }
+    ]
+  },
+  "doNotContact": ["kashiyama", "inoue-sei-barrage", "nihon-sewing", "tailor-blaze-fukuoka"]
+}
