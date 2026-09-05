@@ -1,6 +1,19 @@
 import { Resend } from "resend";
 import type { ConsultationRequest } from "@/app/api/consultation/route";
 import { SITE_URL } from "@/lib/site-url";
+import {
+  summarizeWardrobeAnswers,
+  type WardrobeQuestionnaireSubmission,
+} from "@/data/wardrobe-questionnaire";
+
+function escapeHtml(s: string): string {
+  return s
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
 
 const TIME_LABELS: Record<string, string> = {
   "weekday-morning":   "Weekday Mornings (Mon–Fri, 9am–12pm)",
@@ -132,5 +145,121 @@ export async function sendConsultationNotification(
     });
   } catch (err) {
     console.error("[email] Failed to send consultation notification:", err);
+  }
+}
+
+export async function sendWardrobeQuestionnaireNotification(
+  submission: WardrobeQuestionnaireSubmission
+): Promise<void> {
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    console.warn("[email] RESEND_API_KEY not set — skipping wardrobe questionnaire notification");
+    return;
+  }
+
+  const resend = new Resend(apiKey);
+  const from = process.env.RESEND_FROM ?? "onboarding@resend.dev";
+  const to = process.env.ADMIN_EMAIL ?? "chasestanley91@gmail.com";
+  const siteUrl = SITE_URL;
+
+  const submittedAt = new Date(submission.createdAt).toLocaleString("en-US", {
+    dateStyle: "medium",
+    timeStyle: "short",
+  });
+
+  const sections = summarizeWardrobeAnswers(submission.answers);
+  const e = escapeHtml;
+
+  const sectionHtml = sections
+    .map(
+      ({ section, rows }) => `
+      <hr class="divider" />
+      <div class="section" style="margin-top:20px">
+        <div class="section-label">${e(section.title)}</div>
+        ${rows
+          .map(
+            (r) =>
+              `<div class="row"><span class="key">${e(r.label)}</span><span class="val">${e(r.value)}</span></div>`
+          )
+          .join("\n")}
+      </div>`
+    )
+    .join("\n");
+
+  const html = `
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <style>
+    body { font-family: 'Helvetica Neue', Arial, sans-serif; background: #f5f1e6; margin: 0; padding: 32px 16px; }
+    .card { background: #071a2d; border-radius: 12px; max-width: 560px; margin: 0 auto; overflow: hidden; }
+    .header { background: #0b1b2e; padding: 28px 32px; border-bottom: 1px solid #1d3c62; }
+    .header p { margin: 0; }
+    .eyebrow { font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: #d4af37; }
+    .title { font-size: 22px; font-weight: 600; color: #f5f1e6; margin-top: 6px !important; }
+    .meta { font-size: 12px; color: #9b9180; margin-top: 4px !important; }
+    .body { padding: 28px 32px; }
+    .section { margin-bottom: 24px; }
+    .section-label { font-size: 9px; letter-spacing: 0.25em; text-transform: uppercase; color: #d4af37; margin-bottom: 10px; }
+    .row { display: flex; gap: 8px; margin-bottom: 8px; }
+    .key { font-size: 12px; color: #9b9180; width: 160px; flex-shrink: 0; }
+    .val { font-size: 12px; color: #f5f1e6; white-space: pre-wrap; }
+    .cta { text-align: center; padding: 24px 32px 32px; }
+    .btn { display: inline-block; background: #d4af37; color: #071a2d; font-size: 13px; font-weight: 700; padding: 12px 28px; border-radius: 999px; text-decoration: none; }
+    .divider { border: none; border-top: 1px solid #1d3c62; margin: 0; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="header">
+      <p class="eyebrow">Blessed &amp; Dressed — New Lead</p>
+      <p class="title">Wardrobe Questionnaire</p>
+      <p class="meta">${e(submission.id)} &nbsp;·&nbsp; Submitted ${e(submittedAt)}</p>
+    </div>
+    <div class="body">
+      <div class="section">
+        <div class="section-label">Contact</div>
+        <div class="row"><span class="key">Name</span><span class="val">${e(submission.firstName)} ${e(submission.lastName)}</span></div>
+        <div class="row"><span class="key">Email</span><span class="val">${e(submission.email)}</span></div>
+        <div class="row"><span class="key">Phone</span><span class="val">${e(submission.phone)}</span></div>
+      </div>
+      ${sectionHtml}
+    </div>
+    <div class="cta">
+      <a href="${siteUrl}/admin/wardrobe-questionnaires" class="btn">View in Admin →</a>
+    </div>
+  </div>
+</body>
+</html>`;
+
+  const text = [
+    `NEW WARDROBE QUESTIONNAIRE — ${submission.id}`,
+    `Submitted: ${submittedAt}`,
+    "",
+    "CONTACT",
+    `Name:  ${submission.firstName} ${submission.lastName}`,
+    `Email: ${submission.email}`,
+    `Phone: ${submission.phone}`,
+    ...sections.flatMap(({ section, rows }) => [
+      "",
+      section.title.toUpperCase(),
+      ...rows.map((r) => `${r.label}: ${r.value}`),
+    ]),
+    "",
+    `View in admin: ${siteUrl}/admin/wardrobe-questionnaires`,
+  ].join("\n");
+
+  try {
+    await resend.emails.send({
+      from,
+      to: [to],
+      replyTo: submission.email,
+      subject: `New Wardrobe Questionnaire — ${submission.firstName} ${submission.lastName} (${submission.id})`,
+      html,
+      text,
+    });
+  } catch (err) {
+    console.error("[email] Failed to send wardrobe questionnaire notification:", err);
   }
 }

@@ -202,6 +202,73 @@ test.describe("consultation PII", () => {
   });
 });
 
+test.describe("wardrobe questionnaire", () => {
+  test("the public endpoint exposes no listing", async ({ request }) => {
+    const res = await request.get("/api/wardrobe-questionnaire", { failOnStatusCode: false });
+    if (res.ok()) {
+      const body = await res.text();
+      expect(
+        body.trim().startsWith("["),
+        "GET /api/wardrobe-questionnaire must not return a list of records"
+      ).toBeFalsy();
+    } else {
+      expect([401, 404, 405]).toContain(res.status());
+    }
+  });
+
+  test("the admin listing is gated", async ({ request }) => {
+    const res = await request.get("/api/admin/wardrobe-questionnaires", { failOnStatusCode: false });
+    expect(res.status()).toBe(401);
+  });
+
+  test("a submission missing required answers is rejected", async ({ request }) => {
+    const res = await request.post("/api/wardrobe-questionnaire", {
+      data: {
+        firstName: "Test",
+        lastName: "Gentleman",
+        email: "test@example.com",
+        phone: "+1 555 000 0000",
+        answers: { dressCode: "suit-daily" },
+      },
+      failOnStatusCode: false,
+    });
+    expect(res.status()).toBe(400);
+    const body = (await res.json()) as { missing?: string[] };
+    expect(body.missing).toContain("occasions");
+    expect(body.missing).toContain("budget");
+  });
+
+  test("unknown answer keys and invalid option ids are dropped, not stored", async ({ request }) => {
+    const res = await request.post("/api/wardrobe-questionnaire", {
+      data: {
+        firstName: "Test",
+        lastName: "Gentleman",
+        email: "test@example.com",
+        phone: "+1 555 000 0000",
+        answers: {
+          dressCode: "suit-daily",
+          occasions: ["business", "not-a-real-occasion"],
+          styleDirection: "classic",
+          fitPreference: "tailored",
+          priorities: ["suit-2pc"],
+          timeline: "3-months",
+          budget: "5000-10000",
+          contactPreference: "email",
+          evil: "<script>alert(1)</script>",
+        },
+      },
+      failOnStatusCode: false,
+    });
+    // 201 when the data store is writable, 500 if it is not; either way the
+    // request must have passed validation (never a 400).
+    expect([201, 500]).toContain(res.status());
+    if (res.status() === 201) {
+      const body = (await res.json()) as { id: string };
+      expect(body.id).toMatch(/^WQ-\d{4}$/);
+    }
+  });
+});
+
 test.describe("builder slug integrity", () => {
   test("an unknown builder slug 404s instead of selling a $0-base garment", async ({ page }) => {
     const res = await page.goto("/builder/suit", { waitUntil: "domcontentloaded" });

@@ -6,6 +6,10 @@ import { accessories, type Accessory } from "@/data/accessories";
 import { orders, type Order } from "@/data/orders";
 import { builderProducts } from "@/data/builder";
 import type { ConsultationRequest } from "@/app/api/consultation/route";
+import {
+  WARDROBE_STORE_KEY,
+  type WardrobeQuestionnaireSubmission,
+} from "@/data/wardrobe-questionnaire";
 
 const STATUS_COLORS: Record<string, string> = {
   Pending:         "badge-pending",
@@ -18,6 +22,8 @@ const STATUS_COLORS: Record<string, string> = {
 export default async function AdminPage() {
   const liveConsultations = await loadDataAsync<ConsultationRequest[]>("consultations", []);
   const newConsultations = liveConsultations.filter((c) => c.status === "New").length;
+  const liveQuestionnaires = await loadDataAsync<WardrobeQuestionnaireSubmission[]>(WARDROBE_STORE_KEY, []);
+  const newQuestionnaires = liveQuestionnaires.filter((q) => q.status === "New").length;
 
   const liveProducts = await loadDataAsync<Product[]>("products", readyToWear);
   const liveAccessories = await loadDataAsync<Accessory[]>("accessories", accessories);
@@ -54,13 +60,14 @@ export default async function AdminPage() {
         </div>
 
         {/* KPI cards */}
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
           {[
             { label: "Total Products", value: liveProducts.length + liveAccessories.length + builderProducts.length, sub: `${builderProducts.length} bespoke · ${liveProducts.length} RTW · ${liveAccessories.length} accessories`, href: null },
             { label: "Active Orders", value: pendingOrders, sub: "Pending or in production", href: null },
             { label: "Revenue (all time)", value: `$${totalRevenue.toLocaleString()}`, sub: "Excl. cancelled orders", href: null },
             { label: "Low Stock Alerts", value: lowStockProducts.length, sub: "RTW items needing restock", href: null },
             { label: "New Consultations", value: newConsultations, sub: "Awaiting contact", href: "/admin/consultations" },
+            { label: "Wardrobe Questionnaires", value: newQuestionnaires, sub: "New, awaiting review", href: "/admin/wardrobe-questionnaires" },
           ].map((kpi) => {
             const card = (
               <div
@@ -89,6 +96,7 @@ export default async function AdminPage() {
             { label: "Content", href: "/admin/customize", desc: "Edit site copy & nav" },
             { label: "Theme", href: "/admin/theme", desc: "Colors & brand style" },
             { label: "Consultations", href: "/admin/consultations", desc: "Manage consultation requests" },
+            { label: "Wardrobe Questionnaires", href: "/admin/wardrobe-questionnaires", desc: "Review wardrobe-planning intakes" },
           ].map((card) => (
             <Link
               key={card.href}
