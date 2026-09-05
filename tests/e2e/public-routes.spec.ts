@@ -35,6 +35,8 @@ const PUBLIC_ROUTES: Route[] = [
   { path: "/fabric-book", heading: /\S/ },
   { path: "/cart", heading: /cart/i },
   { path: "/checkout", heading: /\S/ },
+  { path: "/consultation", heading: /consultation/i },
+  { path: "/wardrobe-questionnaire", heading: /wardrobe/i },
 ];
 
 test.describe("public routes smoke", () => {
