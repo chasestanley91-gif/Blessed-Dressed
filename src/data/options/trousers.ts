@@ -166,7 +166,7 @@ export const trousersDesign: ProductDesignConfig = {
           defaultValue: "loops-standard",
           options: [
             { id: "loops-standard", label: "Standard (7 Loops)", description: "Seven belt loops — standard trouser.", image: "/images/generated/trousers/loops-standard.webp" },
-            { id: "loops-5", label: "5 Loops", description: "Fewer loops — cleaner look.", image: "/images/generated/trousers/loops-standard.webp" },
+            { id: "loops-5", label: "5 Loops", description: "Fewer loops — cleaner look." },
             { id: "loops-no", label: "No Belt Loops", description: "No loops — side adjusters or braces.", image: "/images/generated/trousers/loops-no.webp" },
             { id: "loops-passant", label: "Double / Passant Loops", description: "Wide flat loops — formal trouser.", image: "/images/generated/trousers/loops-passant.webp" },
             { id: "loops-20cm", label: "2.0 cm Width Loops", description: "Wider 2.0 cm belt loops.", image: "/images/generated/trousers/loops-20cm.webp" },
