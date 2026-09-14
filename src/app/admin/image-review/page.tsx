@@ -29,6 +29,7 @@ type Item = {
   drawingUrl: string | null;
   drawingOriginalPath: string | null;
   promptText: string;
+  promptSource?: string;
   rejectionHistory?: { attemptRejected: number; decidedAt: string; tags: string[]; notes: string; references: string[] }[];
   isReplacementForRejected?: boolean;
 };
@@ -429,10 +430,32 @@ function ReviewCard({
 
           <details style={{ marginTop: 18 }}>
             <summary style={{ cursor: "pointer", fontSize: 13, color: "#555" }}>Prompt used</summary>
-            <pre style={{
-              whiteSpace: "pre-wrap", fontSize: 11, lineHeight: 1.45, background: "#f6f6f6",
-              padding: 10, borderRadius: 6, maxHeight: 320, overflow: "auto", marginTop: 8,
-            }}>{item.promptText}</pre>
+            {/* An empty box tells the reviewer nothing and quietly implies there
+                was no prompt. Say which prompt this is - or that it was never
+                recorded - so a judgement is never made against a prompt that is
+                not the one the picture came from. */}
+            {item.promptText ? (
+              <>
+                {item.promptSource && item.promptSource !== "recorded-at-generation" && (
+                  <p style={{ fontSize: 12, color: "#8a6d00", background: "#fff8e1", border: "1px solid #ffe6a1",
+                    borderRadius: 6, padding: "6px 9px", margin: "8px 0 0" }}>
+                    This is <strong>not necessarily</strong> the prompt this image was generated from — it was
+                    rebuilt afterwards and may differ.
+                  </p>
+                )}
+                <pre style={{
+                  whiteSpace: "pre-wrap", fontSize: 11, lineHeight: 1.45, background: "#f6f6f6",
+                  padding: 10, borderRadius: 6, maxHeight: 320, overflow: "auto", marginTop: 8,
+                }}>{item.promptText}</pre>
+              </>
+            ) : (
+              <p style={{ fontSize: 12, color: "#666", background: "#f6f6f6", borderRadius: 6,
+                padding: "8px 10px", margin: "8px 0 0" }}>
+                The prompt for this image was <strong>not recorded</strong>. It was built in memory during the
+                wave and never written to disk, so it cannot be shown. Judge the photograph against the drawing
+                and the specification above. Waves from here on record their prompt.
+              </p>
+            )}
           </details>
         </aside>
       </div>
