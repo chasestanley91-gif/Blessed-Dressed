@@ -1,0 +1,32 @@
+{
+ "craftId": "suit-2pc|Trousers-pleats-structure|fly-style|fly-pointed",
+ "note": "Owner rejection reasons for this craft, from BOTH decision sources. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "remake",
+   "tags": [],
+   "notes": "2-d illustration of a pair of pants open at the fly",
+   "reasonRecorded": true,
+   "references": [],
+   "craftId": "suit-2pc|Trousers-pleats-structure|fly-style|fly-pointed",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.879Z"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "suit-2pc|Trousers-pleats-structure|fly-style|fly-pointed",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.879Z"
+  }
+ ]
+}

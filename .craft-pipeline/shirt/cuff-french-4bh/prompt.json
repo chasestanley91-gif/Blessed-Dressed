@@ -1,0 +1,177 @@
+{
+  "addr": "shirt > cuffs > cuff > cuff-french-4bh",
+  "label": "French Cuff — 4 Buttonholes",
+  "part": "shirt-cuff",
+  "orientation": "front",
+  "excluded": null,
+  "generate": true,
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\shirt.json",
+  "source": "json",
+  "illustration": "/images/cuff/french-cuff-with-4-buttonholes.jpg",
+  "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\cuff\\french-cuff-with-4-buttonholes.jpg",
+  "illustrationExists": true,
+  "illustrationRemote": false,
+  "profile": {
+    "addr": "shirt > cuffs > cuff > cuff-french-4bh",
+    "product": "shirt",
+    "field": "Cuff Style",
+    "option": "French Cuff — 4 Buttonholes",
+    "part": "shirt-cuff",
+    "garment": "white bespoke cotton dress shirt",
+    "orientation": "front",
+    "absence": false,
+    "distinguishingDetail": "A French cuff with four buttonholes is the conventional double-cuff arrangement, with two aligned holes on each leaf so a single cufflink passes cleanly through all four layers when folded. This is the standard cufflink closure and produces the familiar crisp, squared double cuff that frames the cufflink neatly. It offers a slightly cleaner, more traditional look than higher buttonhole counts while retaining full formality.",
+    "measured": {
+      "dimensions": [],
+      "angles": [],
+      "counts": [
+        "4-buttonhole"
+      ],
+      "shapes": [
+        "French / double cuff"
+      ],
+      "spread": [],
+      "flags": [
+        "eyelet holes",
+        "cufflink closure"
+      ]
+    },
+    "reproduceFromIllustration": [
+      "cuff edge",
+      "closure",
+      "corner shape",
+      "topstitch"
+    ],
+    "composition": {
+      "crop": "tight on the cuff",
+      "dominanceTarget": "40–80% of frame",
+      "identifyWithin": "1 second"
+    },
+    "forbidden": [
+      "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+      "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+      "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)",
+      "any buttonhole count other than exactly 4 PER SIDE (8 in total across both sides)"
+    ],
+    "excluded": null,
+    "generate": true
+  },
+  "requiredTokens": [
+    "4-buttonhole",
+    "French / double cuff",
+    "eyelet holes",
+    "cufflink closure"
+  ],
+  "checklist": [
+    "exact count: 4-buttonhole",
+    "on the each side, NOT mirrored or swapped (check against the drawing, not against convention)",
+    "shape reads as drawn: French / double cuff",
+    "present & positioned as drawn: eyelet holes",
+    "present & positioned as drawn: cufflink closure",
+    "distinguishing detail present: A French cuff with four buttonholes is the conventional double-cuff arrangement, with two aligned holes on each leaf so a single cufflink passes cleanly through all four layers when folded. This is the standard cufflink closure and produces the familiar crisp, squared double cuff that frames the cufflink neatly. It offers a slightly cleaner, more traditional look than higher buttonhole counts while retaining full formality.",
+    "reproduced from the illustration: cuff edge",
+    "reproduced from the illustration: closure",
+    "reproduced from the illustration: corner shape",
+    "reproduced from the illustration: topstitch",
+    "orientation matches the illustration: front",
+    "the Cuff Style dominates the frame (40–80%), identifiable within one second, framed tight on the cuff",
+    "silhouette, proportions, seam & stitch placement match the illustration; left/right symmetry correct",
+    "NO generic-category substitution — this exact option, not a typical one",
+    "a real photograph of the exact drawn option — not the line-art, no stylisation"
+  ],
+  "scoreCard": [
+    {
+      "category": "shape",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "geometry",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "dimensions",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "angles",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "construction",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "placement",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "symmetry",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "composition",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "blueprint-match",
+      "score": null,
+      "min": 98
+    }
+  ],
+  "prompt": "Ultra-photorealistic luxury menswear product photography.\n\nA single-subject craft DOCUMENTATION photograph: the Cuff Style is the dominant subject, filling 40–80% of the frame and identifiable within one second.\n\nA premium white bespoke cotton dress shirt featuring a precise French Cuff — 4 Buttonholes (Cuff Style).\n\nDistinguishing construction detail (reproduce exactly as drawn): A French cuff with four buttonholes is the conventional double-cuff arrangement, with two aligned holes on each leaf so a single cufflink passes cleanly through all four layers when folded. This is the standard cufflink closure and produces the familiar crisp, squared double cuff that frames the cufflink neatly. It offers a slightly cleaner, more traditional look than higher buttonhole counts while retaining full formality.\n\nCOUNT LOCK — this count is stated PER SIDE, not as a whole-garment total. EXACTLY 4 buttonhole ON EACH SIDE — 4 on the wearer's left and 4 on the wearer's right, 8 in the photograph in total. Both sides must be visible and must match each other. A photograph showing the feature on only ONE side is the neighbouring option, not this one, and is a failed image.\n\nExact specification — on the each side ONLY — do not mirror or swap; French / double cuff shape; 4-buttonhole; eyelet holes, cufflink closure — matching the illustration precisely.\n\nMANDATORY GEOMETRY COVERAGE — reproduce from the illustration, exactly and without assumption, every one of these: cuff edge, closure, corner shape, topstitch. Match each to the drawing.\n\nVIEW — this illustration is the front of the garment. Photograph the same face; never substitute a different face of the garment.\n\nBLUEPRINT LOCK — THE DRAWING IS LAW: the attached technical illustration is the manufacturing blueprint for this exact craft option and the SOLE authority for the image. Reproduce its geometry precisely — point/edge shape, lengths, widths, depths, angles, curvature, roll lines, symmetry, button/tab/stay positions, seam and stitch placement, and proportions — within less than 2% deviation. Assume NOTHING from tailoring/menswear/fashion convention or model priors; every visible characteristic must come from the drawing. Do not redesign, reinterpret, substitute a similar commercial style, stylise, or \"improve\" it. Do NOT fall back to a generic version of this category — reproduce THIS option, not a typical one. If convention conflicts with the drawing, the drawing wins. Accuracy over aesthetics. ANNOTATIONS ARE NOT THE GARMENT: the technical drawing may carry measurement callouts — dimension numbers (\"2.5cm\", \"9cm\", \"115°\"), tick / leader / dimension lines, arrows, red or coloured guide marks, and text labels. These are manufacturing documentation, NOT features of the cloth. Reproduce ONLY the finished garment: never render any number, unit, arrow, callout, leader line, measurement mark, or text anywhere in the photograph. The final image is a clean garment photo with zero annotation. COLOUR IN THE DRAWING IS NOTATION, NOT CLOTH: any red, orange or otherwise highlighted region marks WHERE the craft option sits — it is a position marker, never a colour specification. Flat grey or tinted shading marks the EXTENT of a panel, lining or facing, not its shade. Render every one of those areas in the garment's own cloth and thread, in the natural colour that tailoring would use there. There must be no red, no highlighter tint and no flat unshaded grey panel anywhere in the photograph unless the option's own label explicitly names that colour.\n\nPhotographed worn on a male model, forearm raised to present the cuff, closed with elegant cufflinks.\n\nFrame tight on the cuff; the detail must read clearly and sharply.\n\nSavile Row and high-end Italian sartorial aesthetic. Natural daylight studio lighting, Phase One IQ4 medium-format camera, 150MP detail, shallow depth of field, magazine-quality editorial menswear photography. Authentic bespoke craftsmanship, fine hand stitching, premium finishing. SET — shot in a clean luxury photographic studio against a seamless, plain, neutral light-grey background with clear separation between garment and background: no location, no architecture, no furniture, no scenery, no props and no environmental context of any kind competing with the garment.\n\nExtremely realistic crisp cotton poplin texture, fine stitching.\n\nAvoid: any GENERIC menswear substitution (a generic spread collar, generic notch/peak lapel, generic pocket/pleat/vent/cuff/waistband in place of the drawn one), illustration or line-art style, CGI or 3D-render look, cartoon, mannequin, fashion sketch, inaccurate geometry, altered proportions, missing construction details, asymmetry, watermark, AI-art appearance, AND any text or annotation traced from the drawing: NO measurement numbers, units (cm/mm/°), dimension or leader lines, arrows, callouts, red/coloured guide marks, ruler ticks, or labels anywhere in the frame. This is real garment photography of the exact drawn option — clean cloth only, nothing else.\n\nFORBIDDEN FOR THIS OPTION — do not render: a generic version of this part standing in for the exact drawn option (generic-category substitution); any feature, count, or geometry borrowed from a neighboring craft option on the same field; a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion); any buttonhole count other than exactly 4 PER SIDE (8 in total across both sides); the feature on only ONE side (that is the neighbouring left/right option, not this one).\n\nOWNER REFERENCE PHOTOGRAPHS — 2 real photograph(s) of THIS exact craft option, supplied by the owner and attached alongside the drawing. Treat them as real-world ground truth for how this construction actually looks in cloth: match the construction, proportion, orientation and finish they show. Where a photograph and the line drawing disagree on how the feature physically reads, follow the photograph for material behaviour and the drawing for geometry; never invent a third version. Copy NOTHING else from them — not the fabric colour or pattern, not the background, styling, crop, lighting or accessories, and no person. Only the construction.\n\nOWNER CORRECTION AFTER REVIEW (attempt 2 was rejected by the owner — obey this over any conflicting earlier line, including the BLUEPRINT LOCK): What is wrong with it: Unrealistic / AI look. The owner has supplied 2 reference photograph(s) of what this option should actually look like. Those photographs are attached and OUTRANK the supplier line drawing wherever the two disagree: match the construction, proportion and finish shown in them. Use the line drawing only for anything the photographs do not show.\n\nOWNER CORRECTION AFTER REVIEW (a previous attempt was rejected by the owner — obey this over any conflicting earlier line, including the BLUEPRINT LOCK): The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+  "ownerReferences": [
+    {
+      "path": "/images/review-refs/shirt/cuff-french-4bh/1786487328469-iejrc5.webp",
+      "kind": "photograph",
+      "evidence": "Real photograph (208x260 px) of a worn pale-blue shirt cuff held between thumb and fingers. Closure is a single round pave/marcasite CUFFLINK head passing through the cuff; there are no buttons on the cuff itself (the two beige buttons at frame left sit on the shirt's front placket, not the cuff). A second fabric layer peeks past the wrist edge beside the thumb, consistent with a folded-back double cuff. Because the fastened cufflink covers the holes, ZERO buttonholes are countable - 4 vs 6 vs 8 cannot be distinguished.",
+      "ownerNotes": "",
+      "ownerDecisionKey": "shirt/cuff-french-4bh"
+    },
+    {
+      "path": "/images/review-refs/shirt/cuff-french-4bh/1786487345601-z10ang.webp",
+      "kind": "photograph",
+      "evidence": "Studio photograph (202x253 px) of a model's arm in a pale-blue shirt against dark trousers. The cuff is fastened by a single round silver cufflink head and carries no buttons, so it is a link cuff. The cuff reads as a deep squared panel, but the fold at the wrist edge that separates a double/French cuff from a single link cuff is not resolvable at this resolution, and the buttonholes are covered by the cufflink so none can be counted.",
+      "ownerNotes": "",
+      "ownerDecisionKey": "shirt/cuff-french-4bh"
+    }
+  ],
+  "ownerCorrections": [
+    {
+      "attemptRejected": 2,
+      "decidedAt": "2026-08-11T22:29:12.453Z",
+      "tags": [
+        "Unrealistic / AI look"
+      ],
+      "notes": "",
+      "references": [
+        "/images/review-refs/shirt/cuff-french-4bh/1786487328469-iejrc5.webp",
+        "/images/review-refs/shirt/cuff-french-4bh/1786487337097-hd3fkc.webp",
+        "/images/review-refs/shirt/cuff-french-4bh/1786487345601-z10ang.webp"
+      ],
+      "parkedAt": "2026-08-12T21:48:06.752Z",
+      "craftId": "shirt|cuffs|cuff|cuff-french-4bh"
+    },
+    {
+      "attemptRejected": null,
+      "decidedAt": null,
+      "source": "july-v3",
+      "verdict": "remake",
+      "tags": [],
+      "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+      "reasonRecorded": false,
+      "references": [],
+      "craftId": "shirt|cuffs|cuff|cuff-french-4bh",
+      "foldedFrom": "generation-queue.rejectionContext",
+      "parkedAt": "2026-08-16T05:02:08.180Z"
+    }
+  ],
+  "builtAt": "2026-08-27T02:37:10.148Z"
+}

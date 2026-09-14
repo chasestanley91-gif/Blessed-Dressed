@@ -1,0 +1,43 @@
+{
+ "craftId": "suit-3pc|suit-pockets|chest-pocket|cp-welt-23",
+ "note": "Owner rejection reasons for this craft, from BOTH decision sources. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 1,
+   "decidedAt": "2026-08-12T13:15:26.558Z",
+   "tags": [],
+   "notes": "For the Straight Welt Chest Pocket shown in the image, the visible measurement is the welt height (opening width):\n\nh=2.3 cmh = 2.3\\text{ cm}\n\nThe image depicts a classic straight breast welt pocket positioned on the left chest, with the welt angled slightly upward toward the armhole (typical menswear tailoring).\n\nStandard Proportions\n\nGiven:\n\nh=2.3 cmh = 2.3\\text{ cm}\n\nThe finished welt is normally constructed from a strip folded in half:\n\nCut Welt Width=2h+1.0\\text{Cut Welt Width} = 2h + 1.0\n\nUsing a 1.0 cm seam allowance:\n\n=2(2.3)+1.0= 2(2.3)+1.0 =5.6 cm= 5.6\\text{ cm}\n\nTherefore:\n\nFinished Welt Height = 2.3 cm\nCut Welt Width       = 5.6 cm\n\nPocket Length Formula\n\nTraditional breast-pocket length is:\n\nL=1.0WLL = 1.0W_L\n\nwhere WLW_L is lapel width.\n\nExamples:\n\nLapel Width\tPocket Length10.0 cm\t10.0 cm\n11.0 cm\t11.0 cm\n12.5 cm\t12.5 cm\n13.0 cm\t13.0 cm\n\nFor most bespoke coats:\n\nL=11.5 cm to 13.0 cmL = 11.5\\text{ cm to }13.0\\text{ cm}\n\nA common standard is:\n\nL=12.0 cmL = 12.0\\text{ cm}\nPocket Angle\n\nThe image shows a slight upward chest-pocket rake.\n\nTypical angle:\n\nα=10∘ to 15∘\\alpha = 10^\\circ \\text{ to } 15^\\circ\n\nA good draft value:\n\nα=12∘\\alpha = 12^\\circ\n\nPocket centerline equation:\n\ny=xtan⁡(12∘)y = x\\tan(12^\\circ) y=0.213xy = 0.213x\nPocket Opening Geometry\n\nFor a 12 cm opening:\n\nEndpoints become:\n\nP1=(0,0)P_1=(0,0) P2=(12cos⁡12∘,  12sin⁡12∘)P_2=(12\\cos12^\\circ,\\;12\\sin12^\\circ) P2=(11.74,  2.49)P_2=(11.74,\\;2.49)\nBespoke Draft Specification\n\nFor the pocket illustrated:\n\nPocket Type          = Straight Welt Chest Pocket\nFinished Welt Height = 2.3 cm\nCut Welt Width       = 5.6 cm\nPocket Length        = 12.0 cm\nPocket Angle         = 12°\nPocket Bag Depth     = 16.0 cm\nPocket Bag Width     = 14.0 cm\n\nRatio Formulas\n\nFor any straight breast welt pocket:\n\nPocket Length≈5.2h\\text{Pocket Length} \\approx 5.2h Pocket Bag Depth≈7h\\text{Pocket Bag Depth} \\approx 7h Pocket Bag Width≈6h\\text{Pocket Bag Width} \\approx 6h\n\nUsing h=2.3h=2.3:\n\nL≈11.96 cmL\\approx11.96\\text{ cm} D≈16.1 cmD\\approx16.1\\text{ cm} Wb≈13.8 cmW_b\\approx13.8\\text{ cm}\n\nThese dimensions closely match a classic bespoke straight welt chest pocket with a 2.3 cm welt height.",
+   "references": [
+    "/images/review-refs/suit-3pc/cp-welt-23/1786540503367-n4crwi.jpg"
+   ],
+   "parkedAt": "2026-08-12T21:48:07.569Z",
+   "craftId": "suit-3pc|suit-pockets|chest-pocket|cp-welt-23"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "remake",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "suit-3pc|suit-pockets|chest-pocket|cp-welt-23",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:09.104Z"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "suit-3pc|suit-pockets|chest-pocket|cp-welt-23",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:09.104Z"
+  }
+ ]
+}

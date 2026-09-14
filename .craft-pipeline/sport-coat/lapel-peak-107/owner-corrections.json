@@ -1,0 +1,30 @@
+{
+ "craftId": "sport-coat|lapel|lapel-style|lapel-peak-107",
+ "note": "Owner rejection reasons for this craft, from BOTH decision sources. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 1,
+   "decidedAt": "2026-08-12T03:43:24.188Z",
+   "tags": [],
+   "notes": "For the Normal Curved Gorge Peak Lapel in the image:\n\nLapel Width = 13 cm\nGorge Angle = 107°\nCurved Gorge Line (instead of a sharp angular notch transition)\nStyle: Traditional bespoke curved-gorge peak lapel\n1. Gorge Geometry\n\nGiven:\n\nθ=107∘\\theta = 107^\\circ\n\nExterior peak angle:\n\nϕ=180∘−107∘\\phi = 180^\\circ - 107^\\circ ϕ=73∘\\phi = 73^\\circ\n\nSo the peak line rises at:\n\n73∘\\boxed{73^\\circ}\n2. Lapel Width\nW=13 cmW = 13\\text{ cm}\n\nMeasured from roll line to outer edge at the widest point.\n\n3. Peak Projection\n\nFor a balanced bespoke peak:\n\nP=0.35WP = 0.35W P=0.35(13)P = 0.35(13) P=4.55 cmP = 4.55\\text{ cm}\n\nUse:\n\n4.6 cm\\boxed{4.6\\text{ cm}}\n4. Peak Length\n\nTraditional peak:\n\nPL=1.20WPL = 1.20W PL=1.20(13)PL = 1.20(13) PL=15.6 cmPL = 15.6\\text{ cm}\n\nUse:\n\n15.5 cm\\boxed{15.5\\text{ cm}}\n5. Peak Tip Coordinates\n\nStarting from the gorge point A=(0,0):\n\nX=15.5cos⁡73∘X = 15.5\\cos73^\\circ X=4.53 cmX = 4.53\\text{ cm} Y=15.5sin⁡73∘Y = 15.5\\sin73^\\circ Y=14.82 cmY = 14.82\\text{ cm}\n\nPeak tip:\n\n(4.53,  14.82)\\boxed{(4.53,\\;14.82)}\n6. Curved Gorge Construction\n\nThe image shows a smooth gorge rather than a hard corner.\n\nRecommended gorge curve depth:\n\nCD=0.10WCD = 0.10W CD=0.10(13)CD = 0.10(13) CD=1.3 cmCD = 1.3\\text{ cm}\n\nUse:\n\n1.3 cm\\boxed{1.3\\text{ cm}}\n7. Gorge Radius\n\nFor a classic bespoke curve:\n\nR=2.0WR = 2.0W R=2(13)R = 2(13) R=26 cmR = 26\\text{ cm}\n\nUse:\n\n26 cm radius\\boxed{26\\text{ cm radius}}\n\nThis gives the subtle rounded transition visible in the illustration.\n\n8. Gorge Height\nGH=0.80WGH = 0.80W GH=0.80(13)GH = 0.80(13) GH=10.4 cmGH = 10.4\\text{ cm}\n\nUse:\n\n10.4 cm\\boxed{10.4\\text{ cm}}\n\nfrom button stance to gorge point.\n\n9. Roll Line Location\nRL=0.55WRL = 0.55W RL=0.55(13)RL = 0.55(13) RL=7.15 cmRL = 7.15\\text{ cm}\nDraft Summary\nFeature\tMeasurementLapel Width\t13.0 cm\nGorge Angle\t107°\nExterior Peak Angle\t73°\nPeak Length\t15.5 cm\nPeak Projection\t4.6 cm\nGorge Height\t10.4 cm\nGorge Curve Depth\t1.3 cm\nGorge Radius\t26 cm\nRoll Line\t7.15 cm\nPattern Formula\n\nFor any curved-gorge peak lapel width WW:\n\nPeak Length=1.2W\\text{Peak Length}=1.2W Projection=0.35W\\text{Projection}=0.35W Gorge Height=0.8W\\text{Gorge Height}=0.8W Curve Depth=0.1W\\text{Curve Depth}=0.1W Curve Radius=2W\\text{Curve Radius}=2W\n\nFor your 107° curved-gorge, 13 cm peak lapel, the key drafting values are:\n\nPeak length: 15.5 cm\nPeak projection: 4.6 cm\nCurved gorge depth: 1.3 cm\nGorge radius: 26 cm\nGorge height: 10.4 cm\nExterior peak angle: 73°",
+   "references": [
+    "/images/review-refs/sport-coat/lapel-peak-107/1786506149888-1b71mq.jpg"
+   ],
+   "parkedAt": "2026-08-12T21:48:06.974Z",
+   "craftId": "sport-coat|lapel|lapel-style|lapel-peak-107"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "sport-coat|lapel|lapel-style|lapel-peak-107",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.330Z"
+  }
+ ]
+}

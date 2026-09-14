@@ -1,0 +1,34 @@
+{
+ "craftId": "suit-2pc|suit-pockets|lower-pocket|lp-large-slanted-55",
+ "note": "Owner rejection reasons for this craft, from BOTH decision sources. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 1,
+   "decidedAt": "2026-08-12T04:48:39.011Z",
+   "tags": [
+    "Reference drawing itself is wrong",
+    "Unrealistic / AI look",
+    "Wrong size or proportion"
+   ],
+   "notes": "For the Large Slanted Flap Pocket – 5.5 cm shown in the image:\n\nVisible Measurements\nFinished flap depth = 5.5 cm\nLarge slanted lower jacket pocket\nPocket opening slants upward toward side seam\nSlight trapezoidal taper\nTypical sport coat / hacking pocket style\n1. Finished Flap Depth\nF=5.5 cmF = 5.5 \\text{ cm}\n\nThis is the visible finished flap.\n\n2. Cut Flap Depth\n\nUsing a folded flap construction:\n\nFD=2F+2SAFD = 2F + 2SA\n\nWhere:\n\nSA=1.0 cmSA = 1.0 \\text{ cm}\n\nTherefore:\n\nFD=(2×5.5)+2FD = (2 \\times 5.5) + 2 FD=13.0 cmFD = 13.0 \\text{ cm}\nCut Pattern Depth\n13.0 cm\\boxed{13.0\\text{ cm}}\n3. Pocket Opening Length\n\nClassic bespoke formula:\n\nPL=Chest Circumference5PL=\\frac{\\text{Chest Circumference}}{5}\n\nTypical results:\n\n38\" chest → 19 cm\n40\" chest → 20 cm\n42\" chest → 21 cm\n\nRecommended standard:\n\n20.0 cm\\boxed{20.0\\text{ cm}}\n4. Flap Width\n\nAllow 0.5 cm extension beyond each end:\n\nFW=PL+1.0FW = PL + 1.0 FW=20+1FW = 20 + 1 FW=21.0 cmFW = 21.0\\text{ cm}\nFinished Width\n21.0 cm\\boxed{21.0\\text{ cm}}\n5. Pocket Slant Angle\n\nLarge slanted flap pockets generally use:\n\nθ=9∘\\theta = 9^\\circ\n\nTypical range:\n\n8∘ to 10∘8^\\circ\\text{ to }10^\\circ\n6. Rise Across Pocket\n\nFor a 20 cm pocket opening:\n\nRise=PL×sin⁡(θ)Rise = PL \\times \\sin(\\theta) Rise=20×sin⁡9∘Rise = 20 \\times \\sin 9^\\circ Rise=20(0.1564)Rise = 20(0.1564) Rise=3.13 cmRise = 3.13 \\text{ cm}\nRise\n3.1 cm\\boxed{3.1\\text{ cm}}\n7. Flap Taper\n\nFor a large flap:\n\nT=0.15FT = 0.15F T=0.15(5.5)T = 0.15(5.5) T=0.825 cmT = 0.825\\text{ cm}\n\nRound to:\n\n0.8 cm\\boxed{0.8\\text{ cm}}\n\nBottom edge width:\n\nBW=21.0−0.8BW = 21.0 - 0.8 BW=20.2 cmBW = 20.2\\text{ cm}\n8. Corner Radius\n\nRounded sport-coat corner:\n\nCR=0.18FCR = 0.18F CR=0.18(5.5)CR = 0.18(5.5) CR=0.99 cmCR = 0.99\\text{ cm}\n\nUse:\n\n1.0 cm radius\\boxed{1.0\\text{ cm radius}}\n9. Draft Coordinates\n\nUsing:\n\nPocket Length = 20 cm\nFlap Depth = 5.5 cm\nSlant = 9°\n\nPocket opening:\n\nA=(0,0)A=(0,0) B=(20,3.1)B=(20,3.1)\n\nUpper flap edge:\n\nC=(0,5.5)C=(0,5.5) D=(20,8.6)D=(20,8.6)\n\nLower corners taper inward:\n\n0.4 cm0.4\\text{ cm}\n\nper side.\n\nPattern Area\n\nFinished flap:\n\nA=FW×FA = FW \\times F A=21×5.5A = 21 \\times 5.5 A=115.5 cm2A = 115.5 \\text{ cm}^2\nComplete Bespoke Draft Summary\nFinished Flap\n21.0×5.5 cm\\boxed{21.0 \\times 5.5\\text{ cm}}\nCut Flap\n21.0×13.0 cm\\boxed{21.0 \\times 13.0\\text{ cm}}\nPocket Opening\n20.0 cm\\boxed{20.0\\text{ cm}}\nSlant\n9∘\\boxed{9^\\circ}\nRise\n3.1 cm\\boxed{3.1\\text{ cm}}\nTaper\n0.8 cm\\boxed{0.8\\text{ cm}}\nCorner Radius\n1.0 cm\\boxed{1.0\\text{ cm}}\nMaster Formulas\nFD=2F+2SAFD = 2F + 2SA FW=PL+1FW = PL + 1 T=0.15FT = 0.15F CR=0.18FCR = 0.18F Rise=PLsin⁡(θ)Rise = PL\\sin(\\theta)\n\nFor a 5.5 cm Large Slanted Flap, a well-balanced bespoke pattern is:\n\nPocket opening = 20 cm\nFinished flap depth = 5.5 cm\nCut flap depth = 13.0 cm\nFlap width = 21.0 cm\nSlant = 9°\nRise = 3.1 cm\nTaper = 0.8 cm\nCorner radius = 1.0 cm.",
+   "references": [
+    "/images/review-refs/suit-2pc/lp-large-slanted-55/1786510074816-dm2de6.jpg"
+   ],
+   "parkedAt": "2026-08-12T21:48:07.273Z",
+   "craftId": "suit-2pc|suit-pockets|lower-pocket|lp-large-slanted-55"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "discard",
+   "tags": [],
+   "notes": "bad Tech pack and all the pics are wrong remake everything",
+   "reasonRecorded": true,
+   "references": [],
+   "craftId": "suit-2pc|suit-pockets|lower-pocket|lp-large-slanted-55",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.577Z"
+  }
+ ]
+}

@@ -1,0 +1,58 @@
+{
+ "craftId": "sport-coat|lapel|lapel-style|lapel-shawl-0a",
+ "note": "Owner rejection reasons for this craft, from BOTH decision sources. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 1,
+   "decidedAt": "2026-08-12T04:03:41.910Z",
+   "tags": [
+    "Reference drawing itself is wrong"
+   ],
+   "notes": "For the 0A Shawl Lapel shown in the image:\n\nStyle: Classic Shawl Lapel\nLapel Width: 10.5 cm\nNo gorge angle (a shawl lapel has a continuous curve instead of a notch or peak gorge).\nThe red outline shows a continuous rolled collar/lapel shape terminating at the front point.\nDrafting Mathematics\n1. Lapel Width\n\nGiven:\n\nW=10.5 cmW = 10.5\\text{ cm}\n\nMeasured perpendicular from the roll line to the outer edge at the widest point.\n\n2. Shawl Radius\n\nFor a balanced bespoke shawl lapel:\n\nR=2.5WR = 2.5W R=2.5(10.5)R = 2.5(10.5) R=26.25 cmR = 26.25\\text{ cm}\n\nUse:\n\nR=26.3 cm\\boxed{R=26.3\\text{ cm}}\n\nThis is the primary sweep radius for the outer edge.\n\n3. Collar Crown Radius\n\nThe top collar section generally uses a tighter radius:\n\nRc=1.2WR_c = 1.2W Rc=1.2(10.5)R_c = 1.2(10.5) Rc=12.6 cmR_c = 12.6\\text{ cm} 12.6 cm\\boxed{12.6\\text{ cm}}\n4. Front Curve Depth\n\nDepth of the belly through the front lapel sweep:\n\nCD=0.25WCD = 0.25W CD=0.25(10.5)CD = 0.25(10.5) CD=2.63 cmCD = 2.63\\text{ cm} 2.6 cm\\boxed{2.6\\text{ cm}}\n5. Roll Line\n\nTraditional shawl roll line:\n\nRL=0.55WRL = 0.55W RL=0.55(10.5)RL = 0.55(10.5) RL=5.78 cmRL = 5.78\\text{ cm} 5.8 cm\\boxed{5.8\\text{ cm}}\n6. Collar Fall\n\nThe upper collar section above the neckline:\n\nCF=0.75WCF = 0.75W CF=0.75(10.5)CF = 0.75(10.5) CF=7.88 cmCF = 7.88\\text{ cm} 7.9 cm\\boxed{7.9\\text{ cm}}\n7. Front Point Length\n\nThe pointed front section shown in the illustration:\n\nFP=1.35WFP = 1.35W FP=1.35(10.5)FP = 1.35(10.5) FP=14.18 cmFP = 14.18\\text{ cm} 14.2 cm\\boxed{14.2\\text{ cm}}\nBezier/French-Curve Control Points\n\nIf drafting digitally:\n\nOuter Shawl Curve\n\nStarting at the shoulder break:\n\nP0=(0,0)P_0=(0,0)\n\nControl point 1:\n\nP1=(6.5,  0)P_1=(6.5,\\;0)\n\nControl point 2:\n\nP2=(10.5,  14)P_2=(10.5,\\;14)\n\nFront point:\n\nP3=(0,  44)P_3=(0,\\;44)\n\nThis creates a classic tuxedo shawl sweep.\n\nBespoke Proportion Summary\nFeature\tFormula\tValueLapel Width\tGiven\t10.5 cm\nMain Radius\t2.5W\t26.3 cm\nCollar Radius\t1.2W\t12.6 cm\nCurve Depth\t0.25W\t2.6 cm\nRoll Line\t0.55W\t5.8 cm\nCollar Fall\t0.75W\t7.9 cm\nFront Point Length\t1.35W\t14.2 cm\nMaster Shawl Lapel Formulas\nR=2.5WR = 2.5W Rc=1.2WR_c = 1.2W CD=0.25WCD = 0.25W RL=0.55WRL = 0.55W FP=1.35WFP = 1.35W\n\nFor your 10.5 cm wide Shawl Lapel, these values will reproduce the proportions shown in the illustration and result in a classic bespoke tuxedo-style shawl collar.",
+   "references": [
+    "/images/review-refs/sport-coat/lapel-shawl-0a/1786507419861-rd1xmu.jpg"
+   ],
+   "parkedAt": "2026-08-12T21:48:07.050Z",
+   "craftId": "sport-coat|lapel|lapel-style|lapel-shawl-0a"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "sport-coat|lapel|lapel-style|lapel-shawl-0a",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-15T20:49:14.346Z"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "suit-2pc|lapel|lapel-style|lapel-shawl-0a",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-15T20:49:14.346Z"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "suit-3pc|lapel|lapel-style|lapel-shawl-0a",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-15T20:49:14.347Z"
+  }
+ ]
+}

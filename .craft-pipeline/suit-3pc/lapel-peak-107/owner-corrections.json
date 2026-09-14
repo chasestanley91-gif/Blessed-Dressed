@@ -1,0 +1,32 @@
+{
+ "craftId": "suit-3pc|lapel|lapel-style|lapel-peak-107",
+ "note": "Owner rejection reasons for this craft, from BOTH decision sources. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 1,
+   "decidedAt": "2026-08-12T11:10:26.750Z",
+   "tags": [
+    "Reference drawing itself is wrong"
+   ],
+   "notes": "For the image labeled \"Normal Curved Gorge Line on Peak Lapel 107°\", the distinguishing feature is that the gorge seam is gently curved while the lapel edge remains mostly straight. The 107° peak is very open and aggressive, giving a strong chest-expanding effect.\n\nGeometric Parameters\n\nAssume:\n\nPeak Angle: θ=107∘\\theta = 107^\\circ\nLapel Width: W=12.5 cmW = 12.5\\text{ cm}\n\nHalf-angle:\n\nβ=107∘2=53.5∘\\beta = \\frac{107^\\circ}{2} = 53.5^\\circ\n\nSupplementary angle:\n\n180∘−107∘=73∘180^\\circ - 107^\\circ = 73^\\circ\nPeak Projection\n\nFor a peak this open, a projection ratio of 37% of lapel width works well:\n\nL=0.37WL = 0.37W L=0.37(12.5)L = 0.37(12.5) L=4.625 cmL = 4.625\\text{ cm}\nTrigonometric Construction\n\nUsing:\n\nsin⁡(53.5∘)=0.8039\\sin(53.5^\\circ) = 0.8039 cos⁡(53.5∘)=0.5948\\cos(53.5^\\circ) = 0.5948\n\nPeak rise:\n\nH=Lsin⁡(53.5∘)H = L \\sin(53.5^\\circ) H=4.625(0.8039)H = 4.625(0.8039) H=3.72 cmH = 3.72\\text{ cm}\n\nPeak spread:\n\nS=Lcos⁡(53.5∘)S = L \\cos(53.5^\\circ) S=4.625(0.5948)S = 4.625(0.5948) S=2.75 cmS = 2.75\\text{ cm}\nGeneral Formula\n\nFor any lapel width WW:\n\nL=0.37WL = 0.37W H=0.297WH = 0.297W S=0.220WS = 0.220W\nPeak Coordinates\n\nTaking the peak tip as the origin:\n\nP=(0,0)P=(0,0)\n\nUpper edge point:\n\nP1=(2.75,  3.72)P_1=(2.75,\\;3.72)\n\nLower gorge point:\n\nP2=(2.75,  −3.72)P_2=(2.75,\\;-3.72)\n\nResulting in:\n\n∠P1PP2=107∘\\angle P_1PP_2 = 107^\\circ\nNormal Curved Gorge Geometry\n\nUnlike a straight gorge seam, use a shallow Bézier curve.\n\nLet:\n\nG0=(0,0)G_0=(0,0) G2=(3.0,  1.8)G_2=(3.0,\\;1.8)\n\nControl point:\n\nG1=(1.2,  0.9)G_1=(1.2,\\;0.9)\n\nThe gorge curve is:\n\nB(t)=(1−t)2G0+2(1−t)tG1+t2G2B(t)=(1-t)^2G_0+2(1-t)tG_1+t^2G_2\n\nfor:\n\n0≤t≤10\\le t\\le1\n\nThis produces the gentle inward sweep shown in the illustration.\n\nDrafting Ratios for the Entire Style\nFeature\tRatio to WidthPeak Projection\t0.37 W\nPeak Rise\t0.297 W\nPeak Spread\t0.220 W\nGorge Curve Depth\t0.08 W\nGorge Curve Length\t0.24 W\n\nFor a 12.5 cm lapel:\n\nPeak angle: 107°\nProjection: 4.63 cm\nRise: 3.72 cm\nSpread: 2.75 cm\nGorge curve depth: 1.0 cm\nGorge curve length: 3.0 cm\nTailoring Character\n\nA 107° peak with a normal curved gorge sits near the dramatic end of traditional tailoring:\n\nBroader and more open than a 105° peak.\nLess severe than an RL peak.\nCreates a powerful V-shape.\nOften seen in fashion-forward double-breasted coats, ceremonial jackets, and bespoke showpieces.\nWorks best with lapel widths between 12 cm and 13.5 cm.",
+   "references": [
+    "/images/review-refs/suit-3pc/lapel-peak-107/1786532786555-v83s5v.jpg"
+   ],
+   "parkedAt": "2026-08-12T21:48:07.512Z",
+   "craftId": "suit-3pc|lapel|lapel-style|lapel-peak-107"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "suit-3pc|lapel|lapel-style|lapel-peak-107",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.964Z"
+  }
+ ]
+}

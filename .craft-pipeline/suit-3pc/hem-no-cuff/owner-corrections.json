@@ -1,0 +1,43 @@
+{
+ "craftId": "suit-3pc|Trousers-bottom-hem|hem-style|hem-no-cuff",
+ "note": "Owner rejection reasons for this craft, from BOTH decision sources. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 1,
+   "decidedAt": "2026-08-12T14:01:19.867Z",
+   "tags": [
+    "Unrealistic / AI look"
+   ],
+   "notes": "",
+   "references": [],
+   "parkedAt": "2026-08-12T21:48:07.824Z",
+   "craftId": "suit-3pc|Trousers-bottom-hem|hem-style|hem-no-cuff"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "remake",
+   "tags": [],
+   "notes": "the image needs to showcase the craftsmanship of a pant leg uncuffed hem measured at 5cm with a hidden stich black with white pinstripe super 160 wool",
+   "reasonRecorded": true,
+   "references": [],
+   "craftId": "suit-3pc|Trousers-bottom-hem|hem-style|hem-no-cuff",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:09.359Z"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "suit-3pc|Trousers-bottom-hem|hem-style|hem-no-cuff",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:09.359Z"
+  }
+ ]
+}

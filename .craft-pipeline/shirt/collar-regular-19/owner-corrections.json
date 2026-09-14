@@ -1,0 +1,41 @@
+{
+ "craftId": "shirt|collar|lapel|collar-regular-19",
+ "note": "Owner rejection reasons for this craft, from BOTH decision sources. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 3,
+   "decidedAt": "2026-08-11T22:14:45.655Z",
+   "tags": [],
+   "notes": "supposed to be a button down with a hidden button under each collar point Yes — this illustration is showing a **90° included collar spread**, measured between the two collar-point directions.\n\nIf we use your previous **5.0 cm collar point length**, the math is:\n\n### 1. Split the 90° spread in half\n\n[\n90^\\circ \\div 2 = 45^\\circ\n]\n\nEach collar point extends **45° from the center line**.\n\n### 2. Calculate the tip-to-tip width\n\nWith each collar point = **5.0 cm**:\n\n[\nW = 2L\\sin(\\theta/2)\n]\n\n[\nW = 2(5.0)\\sin(45^\\circ)\n]\n\n[\nW = 10(0.7071)\n]\n\n[\n\\boxed{W = 7.07\\text{ cm}}\n]\n\n### So this collar is:\n\n| Specification                  | Measurement |\n| ------------------------------ | ----------: |\n| Collar point length            |  **5.0 cm** |\n| Included spread                |     **90°** |\n| Half angle                     |     **45°** |\n| Point-to-point geometric width | **7.07 cm** |\n\n**For your tech-pack/image-generation specification:**\n\n> **Small Square Collar — 5.0 cm collar point length, 90° included spread. Collar points extend symmetrically at 45° from the centerline, producing approximately 7.07 cm tip-to-tip geometric spread.**\n\nThe important part for your image-generation pipeline is that **90° is the included angle between the two collar points**, not 90° for each side.",
+   "references": [],
+   "parkedAt": "2026-08-12T21:48:06.649Z",
+   "craftId": "shirt|collar|lapel|collar-regular-19"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "remake",
+   "tags": [],
+   "notes": "button down collor with button hidden under the tip triangle of the collar point",
+   "reasonRecorded": true,
+   "references": [],
+   "craftId": "shirt|collar|lapel|collar-regular-19",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.088Z"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "shirt|collar|lapel|collar-regular-19",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.088Z"
+  }
+ ]
+}

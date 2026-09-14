@@ -1,0 +1,32 @@
+{
+ "craftId": "shirt|placket|placket|placket-stud-hidden-2btn",
+ "note": "Owner rejection reasons for this craft, from BOTH decision sources. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 2,
+   "decidedAt": "2026-08-11T22:53:31.563Z",
+   "tags": [
+    "Wrong side or orientation",
+    "Wrong shape / outline",
+    "Generic version, not this option"
+   ],
+   "notes": "This image shows a Stud Hidden Placket (2 Buttons) dress shirt front. The outer placket folds over and conceals the visible buttons, leaving only the top collar button and sometimes the lowest fastening point visible.\n\nHidden Placket Geometry\nFinished Visible Front Placket Width\n\nTypical bespoke measurement:\n\nPW=3.0 cm to 3.5 cmPW = 3.0\\text{ cm to }3.5\\text{ cm}\nHidden Fly Extension\n\nThe concealed layer behind the placket is usually:\n\nHE=PW+2.0 cmHE = PW + 2.0\\text{ cm}\n\nFor a 3 cm finished placket:\n\nHE=3+2=5 cmHE = 3 + 2 = 5\\text{ cm}\nTotal Cut Width\n\nFor a classic hidden placket:\n\nCW=(PW×2)+HECW = (PW \\times 2) + HE\n\nExample:\n\nCW=(3×2)+5CW = (3 \\times 2) + 5 CW=11 cmCW = 11\\text{ cm}\n\nMany bespoke shirtmakers round this to:\n\n10.5−11.5 cm10.5 - 11.5\\text{ cm}\nTwo-Stud Placement\n\nFor a formal hidden placket with only 2 visible studs:\n\nTop Stud\n\nPlaced below the collar stand seam:\n\nS1=7.5 cmS_1 = 7.5\\text{ cm}\nSecond Stud\nS2=S1+8.5 cmS_2 = S_1 + 8.5\\text{ cm}\n\nResult:\n\nStud\tPosition from Neck Seam1\t7.5 cm\n2\t16.0 cm\nFold Lines\n\nFor a 3 cm finished placket:\n\nCF\n│\n\n0 cm    Center Front\n\n3 cm    First Fold\n\n6 cm    Visible Edge\n\n11 cm   Cut Edge\n\n\nOr mathematically:\n\nF1=PWF_1 = PW F2=2PWF_2 = 2PW CE=CWCE = CW\nFormal Bespoke Hidden Placket Formula\n\nFor any desired finished placket width PP:\n\nHidden extension:\n\nH=P+2H = P + 2\n\nTotal cut width:\n\nC=3P+2C = 3P + 2\n\nExample with 3.5 cm placket:\n\nC=(3×3.5)+2C = (3 \\times 3.5)+2 C=12.5 cmC = 12.5\\text{ cm}\nRecommended Bespoke Measurements\n\nFor a luxury MTM or bespoke dress shirt:\n\nFinished placket width: 3.0 cm\nHidden extension: 5.0 cm\nTotal cut width: 11.0 cm\nFirst visible stud: 7.5 cm below collar seam\nStud spacing: 8.5-9.0 cm\nInterlining width: 2.8 cm\n\nThis produces the concealed \"fly-front\" look shown in your image, suitable for tuxedo, formal, and contemporary bespoke shirts.",
+   "references": [],
+   "parkedAt": "2026-08-12T21:48:06.673Z",
+   "craftId": "shirt|placket|placket|placket-stud-hidden-2btn"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "shirt|placket|placket|placket-stud-hidden-2btn",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.147Z"
+  }
+ ]
+}

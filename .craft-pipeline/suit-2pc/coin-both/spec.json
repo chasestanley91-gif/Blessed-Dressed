@@ -11,13 +11,13 @@
   "description": "Coin pockets on both sides.",
   "fieldLabel": "Coin Pocket",
   "sectionLabel": "Trousers — Front & Pockets",
-  "part": "trouser-detail",
+  "part": "trouser-small-pocket",
   "garment": {
     "noun": "pair of bespoke wool tailored trousers",
     "fabric": "fine wool trouser cloth with visible weave"
   },
   "view": {
-    "orientation": "interior",
+    "orientation": "front",
     "wearerPerspective": true,
     "confirmedByVisualInspection": true
   },
@@ -26,9 +26,18 @@
     "dimensions": [],
     "angles": [],
     "counts": [],
-    "shapes": [],
+    "shapes": [
+      "coin pocket"
+    ],
+    "negatedShapes": [],
     "spread": [],
-    "flags": []
+    "flags": [],
+    "sides": [
+      "both"
+    ],
+    "attributes": [],
+    "supplierCodes": [],
+    "unresolved": []
   },
   "illustration": {
     "path": "/images/blueprints/remote/7f475092fe8b__3532.jpg",
@@ -43,5 +52,5 @@
   ],
   "excluded": null,
   "generate": true,
-  "extractedAt": "2026-07-31T18:55:03.257Z"
+  "extractedAt": "2026-08-27T02:36:21.994Z"
 }

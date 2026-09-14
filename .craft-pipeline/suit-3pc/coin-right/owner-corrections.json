@@ -1,0 +1,67 @@
+{
+ "craftId": "suit-3pc|Trousers-front-pockets|coin-pocket|coin-right",
+ "note": "Owner rejection reasons for this craft, from BOTH decision sources. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 1,
+   "decidedAt": "2026-08-12T13:57:20.523Z",
+   "tags": [],
+   "notes": "remove the model",
+   "references": [],
+   "parkedAt": "2026-08-12T21:48:07.725Z",
+   "craftId": "suit-3pc|Trousers-front-pockets|coin-pocket|coin-right"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "remake",
+   "tags": [],
+   "notes": "pants in illustration are inside out",
+   "reasonRecorded": true,
+   "references": [],
+   "craftId": "suit-3pc|Trousers-front-pockets|coin-pocket|coin-right",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:09.276Z"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "suit-3pc|Trousers-front-pockets|coin-pocket|coin-right",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:09.276Z"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "remake",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "suit-3pc|suit-pockets|coin-pocket|coin-right",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-26T06:51:18.936Z"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "suit-3pc|suit-pockets|coin-pocket|coin-right",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-26T06:51:18.936Z"
+  }
+ ]
+}

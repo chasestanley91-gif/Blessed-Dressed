@@ -1,6 +1,5 @@
 {
   "schema": "garment-spec/v1",
-  "specOnly": true,
   "addr": "suit-2pc > lapel > lapel-style > lapel-shawl",
   "productId": "suit-2pc",
   "sectionId": "lapel",
@@ -36,12 +35,20 @@
     ],
     "negatedShapes": [],
     "spread": [],
-    "flags": []
+    "flags": [],
+    "sides": [
+      "center",
+      "front",
+      "back"
+    ],
+    "attributes": [],
+    "supplierCodes": [],
+    "unresolved": []
   },
   "illustration": {
-    "path": null,
-    "disk": null,
-    "exists": false,
+    "path": "/images/blueprints/baoxiniao/jacket/REQCL/D.jpg",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\REQCL\\D.jpg",
+    "exists": true,
     "remote": false
   },
   "forbidden": [
@@ -51,5 +58,7 @@
   ],
   "excluded": null,
   "generate": true,
-  "extractedAt": "2026-08-01T22:54:52.863Z"
+  "extractedAt": "2026-08-26T03:53:05.469Z",
+  "illustrationRescopedAt": "2026-08-26T06:38:22.137Z",
+  "illustrationRescopeNote": "Path moved to the part-scoped blueprint tree. The IMAGE is byte-identical to the one this spec was extracted from (sha1 verified), so the reading below still stands and no re-extraction was needed."
 }

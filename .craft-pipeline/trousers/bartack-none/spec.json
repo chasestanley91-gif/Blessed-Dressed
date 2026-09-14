@@ -1,6 +1,5 @@
 {
   "schema": "garment-spec/v1",
-  "specOnly": true,
   "addr": "trousers > pleats-structure > bar-tack > bartack-none",
   "productId": "trousers",
   "sectionId": "pleats-structure",
@@ -18,7 +17,7 @@
     "fabric": "fine wool trouser cloth with visible weave"
   },
   "view": {
-    "orientation": "detail",
+    "orientation": "front",
     "wearerPerspective": true,
     "confirmedByVisualInspection": true
   },
@@ -30,12 +29,16 @@
     "shapes": [],
     "negatedShapes": [],
     "spread": [],
-    "flags": []
+    "flags": [],
+    "sides": [],
+    "attributes": [],
+    "supplierCodes": [],
+    "unresolved": []
   },
   "illustration": {
-    "path": null,
-    "disk": null,
-    "exists": false,
+    "path": "/images/blueprints/baoxiniao/trousers/REKPL/C.jpg",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\REKPL\\C.jpg",
+    "exists": true,
     "remote": false
   },
   "forbidden": [
@@ -46,5 +49,7 @@
   ],
   "excluded": null,
   "generate": true,
-  "extractedAt": "2026-08-02T07:07:28.537Z"
+  "extractedAt": "2026-08-26T05:21:10.350Z",
+  "illustrationRescopedAt": "2026-08-26T06:38:22.293Z",
+  "illustrationRescopeNote": "Path moved to the part-scoped blueprint tree. The IMAGE is byte-identical to the one this spec was extracted from (sha1 verified), so the reading below still stands and no re-extraction was needed."
 }

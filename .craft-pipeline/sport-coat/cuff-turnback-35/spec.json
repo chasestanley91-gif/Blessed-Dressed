@@ -1,0 +1,60 @@
+{
+  "schema": "garment-spec/v1",
+  "addr": "sport-coat > sleeves-cuffs > cuff-style > cuff-turnback-35",
+  "productId": "sport-coat",
+  "sectionId": "sleeves-cuffs",
+  "fieldId": "cuff-style",
+  "optionId": "cuff-turnback-35",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\sport-coat.json",
+  "source": "json",
+  "label": "Turn-back 3.5 cm",
+  "description": "The 3.5 cm turnback — often called a kissing cuff — is a narrower folded-back sleeve finish where the inner cuff folds outward by precisely 3.5 centimetres, leaving the cuff edge resting just against or lightly touching the sleeve face below. This measured fold introduces a subtle, refined decorative detail that shows the lining or a contrast inner fabric, adding depth without the boldness of a full gauntlet, and is particularly popular in Neapolitan and Spanish bespoke traditions. The exactness of the measurement gives each jacket a distinctive, considered quality.",
+  "fieldLabel": "Sleeve Cuff Style",
+  "sectionLabel": "Sleeves & Cuffs",
+  "part": "jacket-sleeve",
+  "garment": {
+    "noun": "bespoke sport coat",
+    "fabric": "textured wool/hopsack with visible weave"
+  },
+  "view": {
+    "orientation": "back",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": false,
+  "measured": {
+    "dimensions": [
+      "3.5 cm"
+    ],
+    "angles": [],
+    "counts": [],
+    "shapes": [],
+    "negatedShapes": [],
+    "spread": [],
+    "flags": [
+      "contrast fabric"
+    ],
+    "sides": [
+      "each",
+      "back",
+      "inside"
+    ],
+    "attributes": [],
+    "supplierCodes": [],
+    "unresolved": []
+  },
+  "illustration": {
+    "path": "/images/blueprints/baoxiniao/jacket/KFAXK/C2.jpg",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KFAXK\\C2.jpg",
+    "exists": true,
+    "remote": false
+  },
+  "forbidden": [
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-08-26T07:28:50.383Z"
+}

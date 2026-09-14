@@ -1,0 +1,70 @@
+{
+  "schema": "garment-spec/v1",
+  "addr": "suit-2pc > lapel > lapel-bh-style > lbh-no1-tc-arc",
+  "productId": "suit-2pc",
+  "sectionId": "lapel",
+  "fieldId": "lapel-bh-style",
+  "optionId": "lbh-no1-tc-arc",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\suit-2pc.json",
+  "source": "json",
+  "label": "No.1 Triple-Color Arc",
+  "description": "No.1 triple color arc — appoint 3 colors.",
+  "fieldLabel": "Lapel Buttonhole Style",
+  "sectionLabel": "Lapel",
+  "part": "jacket-lapel-buttonhole",
+  "garment": {
+    "noun": "navy bespoke suit jacket",
+    "fabric": "fine wool suiting with visible weave"
+  },
+  "view": {
+    "orientation": "front",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": false,
+  "measured": {
+    "dimensions": [],
+    "angles": [],
+    "counts": [],
+    "shapes": [
+      "arc buttonhole"
+    ],
+    "negatedShapes": [],
+    "spread": [],
+    "flags": [],
+    "sides": [],
+    "attributes": [
+      {
+        "feature": "buttonhole",
+        "attribute": "method",
+        "value": "hand-sewn"
+      },
+      {
+        "feature": "buttonhole",
+        "attribute": "profile",
+        "value": "arc"
+      },
+      {
+        "feature": "buttonhole",
+        "attribute": "colorway",
+        "value": "3-colour"
+      }
+    ],
+    "supplierCodes": [],
+    "unresolved": []
+  },
+  "illustration": {
+    "path": "/images/blueprints/supplier/a1cc16870a6b__055Y__No.1_Triple_color_arc_lapel_buttonhole_Handmade_Only_a.jpg",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\supplier\\a1cc16870a6b__055Y__No.1_Triple_color_arc_lapel_buttonhole_Handmade_Only_a.jpg",
+    "exists": true,
+    "remote": false
+  },
+  "forbidden": [
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-08-27T02:36:30.103Z"
+}

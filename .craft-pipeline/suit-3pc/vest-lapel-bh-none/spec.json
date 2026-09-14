@@ -1,0 +1,53 @@
+{
+  "schema": "garment-spec/v1",
+  "addr": "suit-3pc > Vest-lapel-neckline > lapel-buttonhole-vest > vest-lapel-bh-none",
+  "productId": "suit-3pc",
+  "sectionId": "Vest-lapel-neckline",
+  "fieldId": "lapel-buttonhole-vest",
+  "optionId": "vest-lapel-bh-none",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\suit-3pc.json",
+  "source": "json",
+  "label": "No Buttonhole",
+  "description": "Clean lapel.",
+  "fieldLabel": "Lapel Buttonhole Position",
+  "sectionLabel": "Vest — Lapel & Neckline",
+  "part": "vest-buttonhole",
+  "garment": {
+    "noun": "bespoke tailored waistcoat",
+    "fabric": "fine wool suiting"
+  },
+  "view": {
+    "orientation": "front",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": true,
+  "measured": {
+    "dimensions": [],
+    "angles": [],
+    "counts": [],
+    "shapes": [],
+    "negatedShapes": [],
+    "spread": [],
+    "flags": [],
+    "sides": [],
+    "attributes": [],
+    "supplierCodes": [],
+    "unresolved": []
+  },
+  "illustration": {
+    "path": "/images/blueprints/remote/b9f00f176e89__4544.jpg",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\remote\\b9f00f176e89__4544.jpg",
+    "exists": true,
+    "remote": false
+  },
+  "forbidden": [
+    "any lapel buttonhole position rendered anywhere in frame — this option is its deliberate absence",
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-08-27T02:36:45.154Z"
+}

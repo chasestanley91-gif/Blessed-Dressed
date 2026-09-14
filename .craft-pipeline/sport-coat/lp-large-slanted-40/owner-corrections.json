@@ -1,0 +1,38 @@
+{
+ "craftId": "sport-coat|suit-pockets|lower-pocket|lp-large-slanted-40",
+ "note": "Owner rejection reasons for this craft, from BOTH decision sources. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 1,
+   "decidedAt": "2026-08-12T04:30:23.187Z",
+   "tags": [
+    "Reference drawing itself is wrong",
+    "Wrong shape / outline",
+    "Generic version, not this option",
+    "Wrong feature entirely",
+    "Wrong size or proportion",
+    "Annotation or colour bled in from the drawing",
+    "Unrealistic / AI look"
+   ],
+   "notes": "For the Large Slanted Flap Lower Jacket Pocket shown in the image:\n\nObserved Measurements\nFinished flap depth = 4.0 cm\nStyle = Large Slanted Flap\nPocket is more pronounced and wider than a regular flap\nSlant appears stronger, typically used on sport coats and hacking-style pockets\n1. Finished Flap Depth\nF=4.0 cmF = 4.0\\text{ cm}\n\nVisible flap depth after construction.\n\n2. Cut Flap Depth\n\nAdd turn-of-cloth and seam allowances:\n\nFD=(2F)+2SAFD = (2F) + 2SA\n\nUsing 1 cm seam allowances:\n\nFD=(2×4)+2FD = (2 \\times 4) + 2 FD=10 cmFD = 10\\text{ cm}\nDraft Size\n10.0 cm\\boxed{10.0\\text{ cm}}\n3. Pocket Opening Length\n\nLarge flap pockets are typically:\n\nPL=Chest Circumference5PL = \\frac{\\text{Chest Circumference}}{5}\n\nFor a 40\" (101.6 cm) chest:\n\n101.6÷5101.6 \\div 5 =20.3 cm=20.3\\text{ cm}\n\nRecommended:\n\n20−21 cm\\boxed{20-21\\text{ cm}}\n4. Flap Width\n\nAllow 0.5 cm extension beyond each end:\n\nFW=PL+1.0FW = PL + 1.0\n\nFor a 20 cm pocket:\n\nFW=21 cmFW = 21\\text{ cm} 21.0 cm\\boxed{21.0\\text{ cm}}\n5. Pocket Slant Angle\n\nA large slanted flap generally uses:\n\n8∘8^\\circ\n\nto\n\n10∘10^\\circ\n\nRecommended:\n\n9∘\\boxed{9^\\circ}\n6. Vertical Rise\n\nFor a 20 cm pocket at 9°:\n\nRise=PLsin⁡(9∘)Rise = PL \\sin(9^\\circ) Rise=20(0.1564)Rise = 20(0.1564) Rise=3.13 cmRise = 3.13\\text{ cm} 3.1 cm\\boxed{3.1\\text{ cm}}\n\nThis means the outer end sits about 3.1 cm higher than the inner end.\n\n7. Flap Taper\n\nLarge flaps usually taper slightly.\n\nT=0.15FT = 0.15F T=0.15(4)T = 0.15(4) T=0.6 cmT = 0.6\\text{ cm}\n\nBottom edge width:\n\nBW=FW−0.6BW = FW - 0.6 BW=20.4 cmBW = 20.4\\text{ cm}\n8. Corner Treatment\n\nClassic bespoke:\n\nChamfer\n0.7 cm0.7\\text{ cm}\nAngle\n45∘45^\\circ\n\nor lightly rounded.\n\n9. Draft Coordinates\n\nAssuming:\n\nPocket length = 20 cm\nSlant = 9°\nFlap depth = 4 cm\n\nPocket opening:\n\nA=(0,0)A=(0,0) B=(20,3.1)B=(20,3.1)\n\nUpper flap edge:\n\nC=(0,4)C=(0,4) D=(20,7.1)D=(20,7.1)\n\nConnect parallel lines to create the flap.\n\nD------------------C\n \\                /\n  \\              /\n   \\            /\n    \\          /\nB------------------A\n\nComplete Bespoke Draft\nFinished Flap\n20×4 cm\\boxed{20 \\times 4\\text{ cm}}\nCut Flap\n21×10 cm\\boxed{21 \\times 10\\text{ cm}}\nPocket Length\n20−21 cm\\boxed{20-21\\text{ cm}}\nSlant\n9∘\\boxed{9^\\circ}\nRise Across Pocket\n3.1 cm\\boxed{3.1\\text{ cm}}\nTaper\n0.6 cm\\boxed{0.6\\text{ cm}}\nChamfer\n\\boxed{0.7\\text{ cm @ 45^\\circ}}\nPocket Bag\n\nWidth:\n\nPL+4=24 cmPL + 4 = 24\\text{ cm}\n\nDepth:\n\n1.4PL=28 cm1.4PL = 28\\text{ cm} 24×28 cm\\boxed{24 \\times 28\\text{ cm}}\nParametric Formula Set\nFW=PL+1FW = PL + 1 T=0.15FT = 0.15F Rise=PLsin⁡(θ)Rise = PL\\sin(\\theta) FD=2F+2SAFD = 2F + 2SA\n\nFor your Large Slanted Flap, 4 cm deep, the key geometry is:\n\nPocket opening: 20-21 cm\nVisible flap: 4.0 cm\nCut flap depth: 10.0 cm\nSlant: 9°\nRise: 3.1 cm\nTaper: 0.6 cm\nFlap width: 21 cm",
+   "references": [
+    "/images/review-refs/sport-coat/lp-large-slanted-40/1786508971773-llqusi.jpg"
+   ],
+   "parkedAt": "2026-08-12T21:48:07.178Z",
+   "craftId": "sport-coat|suit-pockets|lower-pocket|lp-large-slanted-40"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "discard",
+   "tags": [],
+   "notes": "bad Tech pack and all the pics are wrong remake everything",
+   "reasonRecorded": true,
+   "references": [],
+   "craftId": "sport-coat|suit-pockets|lower-pocket|lp-large-slanted-40",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.422Z"
+  }
+ ]
+}

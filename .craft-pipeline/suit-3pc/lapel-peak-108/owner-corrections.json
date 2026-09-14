@@ -1,0 +1,32 @@
+{
+ "craftId": "suit-3pc|lapel|lapel-style|lapel-peak-108",
+ "note": "Owner rejection reasons for this craft, from BOTH decision sources. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 1,
+   "decidedAt": "2026-08-12T11:11:29.949Z",
+   "tags": [
+    "Reference drawing itself is wrong"
+   ],
+   "notes": "For the Straight Peak Lapel 108° shown in the image, the key visual characteristic is that both sides of the peak are straight lines with virtually no curvature at the gorge. This creates an extremely sharp, architectural look.\n\nGeometry Definition\n\nLet:\n\nPeak Angle: θ=108∘\\theta = 108^\\circ\nLapel Width: W=12.5 cmW = 12.5\\text{ cm} (proportionally appropriate for this style)\n\nHalf-angle:\n\nβ=108∘2\\beta=\\frac{108^\\circ}{2} β=54∘\\beta=54^\\circ\n\nSupplementary angle:\n\n180∘−108∘=72∘180^\\circ-108^\\circ=72^\\circ\nPeak Projection\n\nFor very open peaks (107°-108°), a projection ratio of about 38% works well:\n\nL=0.38WL=0.38W\n\nFor a 12.5 cm lapel:\n\nL=0.38(12.5)L=0.38(12.5) L=4.75 cmL=4.75\\text{ cm}\nTrigonometric Construction\n\nUsing:\n\nsin⁡(54∘)=0.8090\\sin(54^\\circ)=0.8090 cos⁡(54∘)=0.5878\\cos(54^\\circ)=0.5878\nPeak Rise\nH=Lsin⁡(54∘)H=L\\sin(54^\\circ) H=4.75(0.8090)H=4.75(0.8090) H=3.84 cmH=3.84\\text{ cm}\nPeak Spread\nS=Lcos⁡(54∘)S=L\\cos(54^\\circ) S=4.75(0.5878)S=4.75(0.5878) S=2.79 cmS=2.79\\text{ cm}\nParametric Formula\n\nFor any lapel width WW:\n\nProjection\nL=0.38WL=0.38W\nRise\nH=0.38Wsin⁡(54∘)H=0.38W\\sin(54^\\circ) H=0.307WH=0.307W\nSpread\nS=0.38Wcos⁡(54∘)S=0.38W\\cos(54^\\circ) S=0.223WS=0.223W\nCAD Coordinates\n\nPeak tip at origin:\n\nP=(0,0)P=(0,0)\n\nUpper peak leg:\n\nP1=(2.79,  3.84)P_1=(2.79,\\;3.84)\n\nLower peak leg:\n\nP2=(2.79,  −3.84)P_2=(2.79,\\;-3.84)\n\nResult:\n\n∠P1PP2=108∘\\angle P_1PP_2=108^\\circ\nStraight-Line Equations\n\nSlope:\n\nm=tan⁡(54∘)m=\\tan(54^\\circ) m=1.376m=1.376\n\nUpper edge:\n\ny=1.376xy=1.376x\n\nLower edge:\n\ny=−1.376xy=-1.376x\nPatternmaker's Draft Ratios\n\nFor the 108° Straight Peak Lapel (12.5 cm width):\n\nLapel Width = 12.5 cm\nPeak Angle = 108°\nPeak Projection = 4.75 cm\nPeak Rise = 3.84 cm\nPeak Spread = 2.79 cm\nHalf-Angle = 54°\nProjection Ratio = 38% of lapel width\nComparison of Open Peak Angles\nPeak Angle\tProjection Ratio\tVisual Character102°\t35%\tBold Italian\n103°\t36%\tSweeping\n105°\t36%\tDramatic\n107°\t37%\tPowerful\n108°\t38%\tArchitectural\n110°+\t40%+\tExtreme showcase\n\nA 108° Straight Peak sits at the outer edge of traditional tailoring. The combination of a wide opening angle, straight gorge, and long projection produces the strong \"spear-point\" effect visible in the illustration. It is especially effective on double-breasted jackets and statement formalwear where maximum chest emphasis is desired.",
+   "references": [
+    "/images/review-refs/suit-3pc/lapel-peak-108/1786533086032-4rrvuk.jpg"
+   ],
+   "parkedAt": "2026-08-12T21:48:07.517Z",
+   "craftId": "suit-3pc|lapel|lapel-style|lapel-peak-108"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "suit-3pc|lapel|lapel-style|lapel-peak-108",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.967Z"
+  }
+ ]
+}

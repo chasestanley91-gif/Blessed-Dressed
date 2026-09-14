@@ -1,0 +1,151 @@
+{
+  "addr": "sport-coat > suit-pockets > lower-pocket > lp-patch-flap-btn",
+  "label": "Patch with Flap & Button",
+  "part": "jacket-pocket",
+  "orientation": "front",
+  "excluded": null,
+  "generate": true,
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\sport-coat.json",
+  "source": "json",
+  "illustration": "/images/review-refs/sport-coat/lp-patch-flap-btn/1786509562636-ww7uc6.jpg",
+  "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\review-refs\\sport-coat\\lp-patch-flap-btn\\1786509562636-ww7uc6.jpg",
+  "illustrationExists": true,
+  "illustrationRemote": false,
+  "profile": {
+    "addr": "sport-coat > suit-pockets > lower-pocket > lp-patch-flap-btn",
+    "product": "sport-coat",
+    "field": "Lower Pockets",
+    "option": "Patch with Flap & Button",
+    "part": "jacket-pocket",
+    "garment": "bespoke sport coat",
+    "orientation": "front",
+    "absence": false,
+    "distinguishingDetail": "Patch + flap + button closure.",
+    "measured": {
+      "dimensions": [],
+      "angles": [],
+      "counts": [],
+      "shapes": [
+        "flap pocket",
+        "patch pocket"
+      ],
+      "spread": [],
+      "flags": []
+    },
+    "reproduceFromIllustration": [
+      "pocket style (jetted/flap/patch)",
+      "welt",
+      "flap shape",
+      "pattern match"
+    ],
+    "composition": {
+      "crop": "on the hip pocket",
+      "dominanceTarget": "40–80% of frame",
+      "identifyWithin": "1 second"
+    },
+    "forbidden": [
+      "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+      "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+      "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+    ],
+    "excluded": null,
+    "generate": true
+  },
+  "requiredTokens": [
+    "flap pocket",
+    "patch pocket"
+  ],
+  "checklist": [
+    "shape reads as drawn: flap pocket",
+    "shape reads as drawn: patch pocket",
+    "distinguishing detail present: Patch + flap + button closure.",
+    "reproduced from the illustration: pocket style (jetted/flap/patch)",
+    "reproduced from the illustration: welt",
+    "reproduced from the illustration: flap shape",
+    "reproduced from the illustration: pattern match",
+    "orientation matches the illustration: front",
+    "the Lower Pockets dominates the frame (40–80%), identifiable within one second, framed on the hip pocket",
+    "silhouette, proportions, seam & stitch placement match the illustration; left/right symmetry correct",
+    "NO generic-category substitution — this exact option, not a typical one",
+    "a real photograph of the exact drawn option — not the line-art, no stylisation"
+  ],
+  "scoreCard": [
+    {
+      "category": "shape",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "geometry",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "dimensions",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "angles",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "construction",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "placement",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "symmetry",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "composition",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "blueprint-match",
+      "score": null,
+      "min": 98
+    }
+  ],
+  "prompt": "Ultra-photorealistic luxury menswear product photography.\n\nA single-subject craft DOCUMENTATION photograph: the Lower Pockets is the dominant subject, filling 40–80% of the frame and identifiable within one second.\n\nA premium bespoke sport coat featuring a precise Patch with Flap & Button (Lower Pockets).\n\nDistinguishing construction detail (reproduce exactly as drawn): Patch + flap + button closure.\n\nExact specification — flap pocket, patch pocket shape — matching the illustration precisely.\n\nMANDATORY GEOMETRY COVERAGE — reproduce from the illustration, exactly and without assumption, every one of these: pocket style (jetted/flap/patch), welt, flap shape, pattern match. Match each to the drawing.\n\nVIEW — this illustration is the front of the garment. Photograph the same face; never substitute a different face of the garment.\n\nBLUEPRINT LOCK — THE DRAWING IS LAW: the attached technical illustration is the manufacturing blueprint for this exact craft option and the SOLE authority for the image. Reproduce its geometry precisely — point/edge shape, lengths, widths, depths, angles, curvature, roll lines, symmetry, button/tab/stay positions, seam and stitch placement, and proportions — within less than 2% deviation. Assume NOTHING from tailoring/menswear/fashion convention or model priors; every visible characteristic must come from the drawing. Do not redesign, reinterpret, substitute a similar commercial style, stylise, or \"improve\" it. Do NOT fall back to a generic version of this category — reproduce THIS option, not a typical one. If convention conflicts with the drawing, the drawing wins. Accuracy over aesthetics. ANNOTATIONS ARE NOT THE GARMENT: the technical drawing may carry measurement callouts — dimension numbers (\"2.5cm\", \"9cm\", \"115°\"), tick / leader / dimension lines, arrows, red or coloured guide marks, and text labels. These are manufacturing documentation, NOT features of the cloth. Reproduce ONLY the finished garment: never render any number, unit, arrow, callout, leader line, measurement mark, or text anywhere in the photograph. The final image is a clean garment photo with zero annotation. COLOUR IN THE DRAWING IS NOTATION, NOT CLOTH: any red, orange or otherwise highlighted region marks WHERE the craft option sits — it is a position marker, never a colour specification. Flat grey or tinted shading marks the EXTENT of a panel, lining or facing, not its shade. Render every one of those areas in the garment's own cloth and thread, in the natural colour that tailoring would use there. There must be no red, no highlighter tint and no flat unshaded grey panel anywhere in the photograph unless the option's own label explicitly names that colour.\n\nPhotographed worn on a male model.\n\nFrame on the hip pocket; the detail must read clearly and sharply.\n\nSavile Row and high-end Italian sartorial aesthetic. Natural daylight studio lighting, Phase One IQ4 medium-format camera, 150MP detail, shallow depth of field, magazine-quality editorial menswear photography. Authentic bespoke craftsmanship, fine hand stitching, premium finishing. SET — shot in a clean luxury photographic studio against a seamless, plain, neutral light-grey background with clear separation between garment and background: no location, no architecture, no furniture, no scenery, no props and no environmental context of any kind competing with the garment.\n\nExtremely realistic textured wool/hopsack with visible weave texture, fine stitching.\n\nAvoid: any GENERIC menswear substitution (a generic spread collar, generic notch/peak lapel, generic pocket/pleat/vent/cuff/waistband in place of the drawn one), illustration or line-art style, CGI or 3D-render look, cartoon, mannequin, fashion sketch, inaccurate geometry, altered proportions, missing construction details, asymmetry, watermark, AI-art appearance, AND any text or annotation traced from the drawing: NO measurement numbers, units (cm/mm/°), dimension or leader lines, arrows, callouts, red/coloured guide marks, ruler ticks, or labels anywhere in the frame. This is real garment photography of the exact drawn option — clean cloth only, nothing else.\n\nFORBIDDEN FOR THIS OPTION — do not render: a generic version of this part standing in for the exact drawn option (generic-category substitution); any feature, count, or geometry borrowed from a neighboring craft option on the same field; a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion).\n\nOWNER CORRECTION AFTER REVIEW (attempt 1 was rejected by the owner — obey this over any conflicting earlier line, including the BLUEPRINT LOCK): What is wrong with it: Reference drawing itself is wrong; Unrealistic / AI look. For the Patch Pocket with Flap & Button shown in the image, the geometry consists of two separate pattern pieces: Patch Pocket Body Pocket Flap The illustrated pocket has: Rounded bottom corners Straight sides with slight flare Straight flap with angled top edge Centered button closure The owner uploaded 1 reference photograph(s) with this rejection, but they were reviewed and found NOT to depict this exact option, so none are attached. Take the correction text above literally and use the technical drawing as the geometry authority.\n\nOWNER CORRECTION AFTER REVIEW (a previous attempt was rejected by the owner — obey this over any conflicting earlier line, including the BLUEPRINT LOCK): bad Tech pack and all the pics are wrong remake everything",
+  "ownerCorrections": [
+    {
+      "attemptRejected": 1,
+      "decidedAt": "2026-08-12T04:40:45.149Z",
+      "tags": [
+        "Reference drawing itself is wrong",
+        "Unrealistic / AI look"
+      ],
+      "notes": "For the Patch Pocket with Flap & Button shown in the image, the geometry consists of two separate pattern pieces:\n\nPatch Pocket Body\nPocket Flap\n\nThe illustrated pocket has:\n\nRounded bottom corners\nStraight sides with slight flare\nStraight flap with angled top edge\nCentered button closure\n1. Pocket Width Formula\n\nFor a tailored jacket patch pocket:\n\nPW=Chest10PW=\\frac{Chest}{10}\n\nExample (40\" chest = 101.6 cm):\n\nPW=101.610PW=\\frac{101.6}{10} PW=10.16 cmPW=10.16\\text{ cm}\n\nUse:\n\n10.0−11.0 cm\\boxed{10.0-11.0\\text{ cm}}\n2. Pocket Height Formula\n\nClassic proportion:\n\nPH=1.25PWPH = 1.25PW\n\nIf:\n\nPW=10.5 cmPW = 10.5\\text{ cm}\n\nthen\n\nPH=13.1 cmPH=13.1\\text{ cm}\n\nUse:\n\n13.0 cm\\boxed{13.0\\text{ cm}}\n3. Bottom Radius\n\nThe image shows a rounded-bottom patch pocket.\n\nRadius:\n\nR=0.35PWR = 0.35PW\n\nFor a 10.5 cm pocket:\n\nR=3.7 cmR=3.7\\text{ cm} 3.5−4.0 cm\\boxed{3.5-4.0\\text{ cm}}\n4. Pocket Mouth Width\n\nTop edge remains full width:\n\nM=PWM = PW 10.5 cm\\boxed{10.5\\text{ cm}}\n5. Side Flare\n\nThe image shows slight tapering inward at the top.\n\nDifference per side:\n\nS=0.05PWS = 0.05PW S=0.5 cmS=0.5\\text{ cm}\n\nPocket bottom width:\n\nBW=PW+1.0BW = PW + 1.0 BW=11.5 cmBW = 11.5\\text{ cm}\n6. Flap Width\n\nFlap extends beyond pocket edges.\n\nFW=PW+1.0FW = PW + 1.0 FW=11.5 cmFW = 11.5\\text{ cm}\n7. Flap Depth\n\nTraditional proportion:\n\nFD=0.45PWFD = 0.45PW FD=0.45(10.5)FD=0.45(10.5) FD=4.7 cmFD=4.7\\text{ cm}\n\nUse:\n\n4.5−5.0 cm\\boxed{4.5-5.0\\text{ cm}}\n8. Flap Angle\n\nThe top edge in the drawing rises slightly.\n\nAngle:\n\nθ=3∘\\theta = 3^\\circ\n\nFor an 11.5 cm flap:\n\nRise=11.5sin⁡3∘Rise = 11.5\\sin3^\\circ Rise=0.60 cmRise = 0.60\\text{ cm} 0.6 cm rise\\boxed{0.6\\text{ cm rise}}\n9. Button Position\n\nCentered horizontally.\n\nVertical position:\n\nBP=0.5FDBP = 0.5FD\n\nFor 5 cm flap:\n\nBP=2.5 cmBP = 2.5\\text{ cm}\n10. Button Diameter\n\nTypical jacket patch pocket:\n\nBD=18L to 24LBD = 18L \\text{ to } 24L\n\nEquivalent:\n\n11−15 mm\\boxed{11-15\\text{ mm}}\n\nMost bespoke:\n\n13 mm\\boxed{13\\text{ mm}}\nDraft Coordinates\nPocket Body\n      A---------B\n      |         |\n      |         |\n      |         |\n     /           \\\n    /             \\\n   D---------------C\n\n\nExample:\n\nAB=10.5 cmAB=10.5\\text{ cm} AD=BC=13.0 cmAD=BC=13.0\\text{ cm}\n\nBottom corner radius:\n\nR=3.7 cmR=3.7\\text{ cm}\nFlap\n   E-----------F\n    \\         /\n     \\_______/\n\n\nDimensions:\n\nEF=11.5 cmEF=11.5\\text{ cm} Depth=5.0 cmDepth=5.0\\text{ cm}\n\nTop rise:\n\n0.6 cm0.6\\text{ cm}\nComplete Bespoke Draft Example\n\nFor a 40\" chest:\n\nPatch Pocket\n10.5×13.0 cm\\boxed{10.5 \\times 13.0\\text{ cm}}\nBottom Radius\n3.7 cm\\boxed{3.7\\text{ cm}}\nFlap\n11.5×5.0 cm\\boxed{11.5 \\times 5.0\\text{ cm}}\nFlap Rise\n0.6 cm\\boxed{0.6\\text{ cm}}\nButton\n13 mm\\boxed{13\\text{ mm}}\nButton Position\n2.5 cm from flap edge\\boxed{2.5\\text{ cm from flap edge}}\nMaster Formulas\nPH=1.25PWPH=1.25PW R=0.35PWR=0.35PW FW=PW+1FW=PW+1 FD=0.45PWFD=0.45PW BP=0.5FDBP=0.5FD\n\nThese formulas reproduce the proportions of the patch pocket with flap and button shown in the illustration.",
+      "references": [
+        "/images/review-refs/sport-coat/lp-patch-flap-btn/1786509562636-ww7uc6.jpg"
+      ],
+      "parkedAt": "2026-08-12T21:48:07.217Z",
+      "craftId": "sport-coat|suit-pockets|lower-pocket|lp-patch-flap-btn"
+    },
+    {
+      "attemptRejected": null,
+      "decidedAt": null,
+      "source": "july-v3",
+      "verdict": "discard",
+      "tags": [],
+      "notes": "bad Tech pack and all the pics are wrong remake everything",
+      "reasonRecorded": true,
+      "references": [],
+      "craftId": "sport-coat|suit-pockets|lower-pocket|lp-patch-flap-btn",
+      "foldedFrom": "generation-queue.rejectionContext",
+      "parkedAt": "2026-08-16T05:02:08.454Z"
+    }
+  ],
+  "correctionSanitized": 1,
+  "builtAt": "2026-08-27T02:37:01.660Z"
+}

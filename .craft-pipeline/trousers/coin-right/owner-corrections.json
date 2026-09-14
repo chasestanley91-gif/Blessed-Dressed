@@ -1,0 +1,43 @@
+{
+ "craftId": "trousers|front-pockets|coin-pocket|coin-right",
+ "note": "Owner rejection reasons for this craft, from BOTH decision sources. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 1,
+   "decidedAt": "2026-08-12T14:03:30.824Z",
+   "tags": [
+    "Unrealistic / AI look"
+   ],
+   "notes": "",
+   "references": [],
+   "parkedAt": "2026-08-12T21:48:07.881Z",
+   "craftId": "trousers|front-pockets|coin-pocket|coin-right"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "remake",
+   "tags": [],
+   "notes": "pants in illustration are inside out",
+   "reasonRecorded": true,
+   "references": [],
+   "craftId": "trousers|front-pockets|coin-pocket|coin-right",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:09.399Z"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "trousers|front-pockets|coin-pocket|coin-right",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:09.399Z"
+  }
+ ]
+}

@@ -11,13 +11,13 @@
   "description": "Watch pocket nested inside the right front pocket, 6 cm to 8 cm wide — the classic heritage utility detail, a hidden compartment inside the waistband.",
   "fieldLabel": "Watch Pocket",
   "sectionLabel": "Trousers — Front & Pockets",
-  "part": "trouser-detail",
+  "part": "trouser-small-pocket",
   "garment": {
     "noun": "pair of bespoke wool tailored trousers",
     "fabric": "fine wool trouser cloth with visible weave"
   },
   "view": {
-    "orientation": "three-quarter-front",
+    "orientation": "front",
     "wearerPerspective": true,
     "confirmedByVisualInspection": true
   },
@@ -29,10 +29,20 @@
     ],
     "angles": [],
     "counts": [],
-    "shapes": [],
+    "shapes": [
+      "watch pocket"
+    ],
     "negatedShapes": [],
     "spread": [],
-    "flags": []
+    "flags": [],
+    "sides": [
+      "right",
+      "front",
+      "inside"
+    ],
+    "attributes": [],
+    "supplierCodes": [],
+    "unresolved": []
   },
   "illustration": {
     "path": "/images/blueprints/factory/449292155f03__3180__Regular_right.jpg",
@@ -47,5 +57,5 @@
   ],
   "excluded": null,
   "generate": true,
-  "extractedAt": "2026-08-01T21:56:56.050Z"
+  "extractedAt": "2026-08-27T02:36:44.079Z"
 }

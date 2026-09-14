@@ -1,0 +1,30 @@
+{
+ "craftId": "vest|lining-vest|vest-lining-type|vest-lining-artistic",
+ "note": "Owner rejection reasons for this craft, from BOTH decision sources. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 1,
+   "decidedAt": "2026-08-12T14:05:50.593Z",
+   "tags": [
+    "Wrong side or orientation"
+   ],
+   "notes": "",
+   "references": [],
+   "parkedAt": "2026-08-12T21:48:08.016Z",
+   "craftId": "vest|lining-vest|vest-lining-type|vest-lining-artistic"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "remake",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "vest|lining-vest|vest-lining-type|vest-lining-artistic",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:09.501Z"
+  }
+ ]
+}

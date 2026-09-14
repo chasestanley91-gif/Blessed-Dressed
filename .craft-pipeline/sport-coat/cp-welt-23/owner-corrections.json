@@ -1,0 +1,45 @@
+{
+ "craftId": "sport-coat|suit-pockets|chest-pocket|cp-welt-23",
+ "note": "Owner rejection reasons for this craft, from BOTH decision sources. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 1,
+   "decidedAt": "2026-08-12T04:22:04.856Z",
+   "tags": [
+    "Reference drawing itself is wrong"
+   ],
+   "notes": "For the Straight Welt Pocket 2.3 cm shown in the image, the 2.3 cm dimension is the finished welt width (height) measured perpendicular to the pocket opening.\n\n1. Basic Welt Geometry\n\nGiven:\n\nW=2.3 cmW = 2.3\\text{ cm}\n\nWhere:\n\nWW = finished welt width\n\nA straight welt is simply a rectangle folded in half.\n\nCut Width Formula\nCW=2W+SACW = 2W + SA\n\nWhere:\n\nCWCW = cut welt width\nSASA = seam allowance\n\nUsing a standard 1 cm seam allowance:\n\nCW=(2×2.3)+2CW = (2 \\times 2.3)+2 CW=6.6 cmCW = 6.6\\text{ cm}\nDraft\nCut Welt Piece\n\n┌──────────────────────┐\n│                      │\n│      6.6 cm          │\n│                      │\n└──────────────────────┘\n\nFold Center\n────────────\n\n2. Pocket Mouth Length\n\nA standard breast welt pocket is related to chest size.\n\nBespoke Formula\nPL=Chest6PL=\\frac{Chest}{6}\n\nExample:\n\n40\" chest\n\n40×2.54=101.6cm40 \\times 2.54 = 101.6cm PL=101.66PL = \\frac{101.6}{6} PL=16.9cmPL = 16.9cm\n\nTypical pocket lengths:\n\nChest Size\tPocket Length36\"\t15.5 cm\n38\"\t16.0 cm\n40\"\t16.5-17.0 cm\n42\"\t17.0-17.5 cm\n3. Welt Fold Line\n\nFinished welt:\n\n2.3cm2.3cm\n\nVisible amount before fold:\n\n2×2.3=4.6cm2 \\times 2.3 = 4.6cm\n\nFold center:\n\n4.62=2.3cm\\frac{4.6}{2} = 2.3cm\n4. Pocket Slant Angle\n\nIf used as a breast pocket:\n\nTraditional angle:\n\n7∘−12∘7^\\circ - 12^\\circ\n\nCommon bespoke:\n\n10∘\\boxed{10^\\circ}\n\nfrom horizontal.\n\nIf a ticket pocket or hip welt:\n\n0∘0^\\circ\n\n(straight horizontal)\n\n5. Pocket Opening Rectangle\n\nFor a 16.5 cm breast welt:\n\nOpening dimensions:\n\n16.5×2.316.5 \\times 2.3\n\nArea:\n\nA=L×WA=L\\times W A=16.5×2.3A=16.5\\times2.3 A=37.95cm2A=37.95cm^2\n6. Corner Triangle Construction\n\nWhen cutting the pocket lips:\n\nTriangle length:\n\nTL=WTL = W TL=2.3cmTL = 2.3cm\n\nCut 45° corner triangles.\n\n \\      /\n  \\    /\n   \\  /\n    \\/\n\n7. Bespoke Pocket Bag Width\n\nPocket bag width:\n\nPB=PL+4PB = PL + 4\n\nFor a 16.5 cm pocket:\n\nPB=20.5cmPB = 20.5cm\n\nPocket depth:\n\nPD=1.5PLPD = 1.5PL PD=24.75cmPD = 24.75cm\nComplete Draft for 2.3 cm Straight Welt\nWelt Piece\n6.6cm×Pocket Length\\boxed{6.6cm \\times Pocket\\ Length}\nVisible Welt\n2.3cm\\boxed{2.3cm}\nFold Line\n2.3cm\\boxed{2.3cm}\nCorner Cuts\n45∘\\boxed{45^\\circ}\nPocket Length\nPL=Chest6PL=\\frac{Chest}{6}\nStandard Example (40\" Chest)\nPocket opening: 16.8 cm\nFinished welt: 2.3 cm\nCut welt width: 6.6 cm\nPocket bag width: 20.8 cm\nPocket depth: 25.2 cm\nBreast pocket angle: 10°\n\nThese are the geometric drafting values a bespoke tailor would use to create a 2.3 cm straight welt breast pocket.",
+   "references": [
+    "/images/review-refs/sport-coat/cp-welt-23/1786508520095-ijb01f.jpg"
+   ],
+   "parkedAt": "2026-08-12T21:48:07.151Z",
+   "craftId": "sport-coat|suit-pockets|chest-pocket|cp-welt-23"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "remake",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "sport-coat|suit-pockets|chest-pocket|cp-welt-23",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.404Z"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "sport-coat|suit-pockets|chest-pocket|cp-welt-23",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.404Z"
+  }
+ ]
+}

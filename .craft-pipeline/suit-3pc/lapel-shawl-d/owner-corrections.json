@@ -1,0 +1,32 @@
+{
+ "craftId": "suit-3pc|lapel|lapel-style|lapel-shawl-d",
+ "note": "Owner rejection reasons for this craft, from BOTH decision sources. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 1,
+   "decidedAt": "2026-08-12T13:01:28.386Z",
+   "tags": [
+    "Reference drawing itself is wrong"
+   ],
+   "notes": "For the D Shawl Lapel, 11 cm wide shown in the image, the geometry differs from a standard shawl lapel because the lower section forms a distinct teardrop (\"D\") profile with a pointed sweep at the bottom. This style is common in high-fashion tuxedos, double-breasted dinner jackets, and certain bespoke Italian patterns.\n\nVisual Characteristics\n\nThe image shows:\n\nContinuous shawl collar with no gorge or peak.\nFinished lapel width: 11 cm.\nLarge rounded outer roll.\nElongated lower point.\nAsymmetrical teardrop (\"D\") shape.\nNarrow collar band across the neck.\nPrimary Dimensions\n\nLet:\n\nW=11.0 cmW = 11.0\\text{ cm}\n\nRecommended proportions:\n\nR=1.55WR = 1.55W\n\nOuter roll radius:\n\nR=1.55(11)R = 1.55(11) R=17.05 cmR = 17.05\\text{ cm}\n\nLower spear extension:\n\nE=0.65WE = 0.65W E=7.15 cmE = 7.15\\text{ cm}\nD-Shawl Geometry\n\nUnlike a regular shawl, the lower edge extends beyond the centerline.\n\nDefine key points:\n\nA = Neck Point\nB = Upper Roll\nC = Mid Roll\nD = Bottom Sweep\nE = Lapel Point\n\n\nFor an 11 cm width:\n\nA = (0.0 , 0.0)\nB = (3.0 , 8.0)\nC = (7.0 , 22.0)\nD = (10.0, 38.0)\nE = (4.0 , 45.0)\n\nBézier Construction\n\nThe outer edge is best represented as a cubic Bézier curve:\n\nB(t)=(1−t)3P0+3(1−t)2tP1+3(1−t)t2P2+t3P3B(t) = (1-t)^3P_0 + 3(1-t)^2tP_1 + 3(1-t)t^2P_2 + t^3P_3\n\nwhere:\n\nP0=(0,0)P_0=(0,0) P1=(3,8)P_1=(3,8) P2=(10,30)P_2=(10,30) P3=(10,38)P_3=(10,38)\n\nThis forms the upper rounded portion.\n\nLower D-Tail Curve\n\nThe lower pointed section can be drafted using a second Bézier:\n\nQ0=(10,38)Q_0=(10,38) Q1=(10.5,41)Q_1=(10.5,41) Q2=(7.5,44)Q_2=(7.5,44) Q3=(4,45)Q_3=(4,45)\n\nThis creates the elongated droplet shape visible in the image.\n\nPatternmaker's Ratios\n\nFor any D-shawl width WW:\n\nOuter Radius\nR=1.55WR = 1.55W\nCollar Width\nC=0.30WC = 0.30W\nBottom Extension\nE=0.65WE = 0.65W\nRoll Depth\nD=0.15WD = 0.15W\n\nFor an 11 cm lapel:\n\nLapel Width         = 11.0 cm\nCollar Width        = 3.3 cm\nOuter Radius        = 17.1 cm\nBottom Extension    = 7.2 cm\nRoll Depth          = 1.7 cm\n\nDraft Formula Summary\nR=1.55WR=1.55W C=0.30WC=0.30W E=0.65WE=0.65W D=0.15WD=0.15W\n\nSubstituting W=11W=11:\n\nR=17.05 cmR=17.05\\text{ cm} C=3.30 cmC=3.30\\text{ cm} E=7.15 cmE=7.15\\text{ cm} D=1.65 cmD=1.65\\text{ cm}\nStyle Interpretation\n\nAn 11 cm D-Shawl Lapel produces:\n\nMore visual drama than a standard shawl.\nA longer V-line that elongates the torso.\nSofter appearance than a peak lapel.\nStrong formalwear and tuxedo aesthetic.\nA distinctive teardrop sweep that closely matches the silhouette shown in the illustration.",
+   "references": [
+    "/images/review-refs/suit-3pc/lapel-shawl-d/1786539640769-emzch6.jpg"
+   ],
+   "parkedAt": "2026-08-12T21:48:07.542Z",
+   "craftId": "suit-3pc|lapel|lapel-style|lapel-shawl-d"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "suit-3pc|lapel|lapel-style|lapel-shawl-d",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.983Z"
+  }
+ ]
+}

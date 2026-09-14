@@ -1,0 +1,45 @@
+{
+ "craftId": "suit-3pc|lapel|lapel-style|lapel-notch-68",
+ "note": "Owner rejection reasons for this craft, from BOTH decision sources. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 1,
+   "decidedAt": "2026-08-12T05:17:32.100Z",
+   "tags": [
+    "Reference drawing itself is wrong"
+   ],
+   "notes": "For the Notch Lapel with a Curved Gorge and a 68° notch angle, the key geometry is the notch itself, where the collar meets the lapel.\n\nGiven\nG=68∘G = 68^\\circ\n\nWhere:\n\nGG = inside notch angle (shown in the image)\nStyle = Curved Gorge Notch Lapel\n1. Collar-Lapel Relationship\n\nThe complement of the notch angle is:\n\n180∘−68∘=112∘180^\\circ - 68^\\circ = 112^\\circ\n\nSo the outer transition angle is:\n\n112∘\\boxed{112^\\circ}\n2. Standard Lapel Width Ratios\n\nFor a balanced notch lapel:\n\nFinished Lapel Width\tGorge Height8 cm\t6.0 cm\n9 cm\t6.8 cm\n10 cm\t7.5 cm\n11 cm\t8.3 cm\n\nFormula:\n\nGH=0.75WGH = 0.75W\n\nWhere:\n\nGHGH = gorge height\nWW = lapel width\n3. Curved Gorge Depth\n\nBecause the image specifies a curved gorge, the notch corner is softened.\n\nA good bespoke proportion:\n\nCD=0.10WCD = 0.10W\n\nExamples:\n\n9 cm lapel → 0.9 cm\n10 cm lapel → 1.0 cm\n11 cm lapel → 1.1 cm\n4. Curved Gorge Radius\n\nFor a smooth Neapolitan-style gorge:\n\nR=2.0WR = 2.0W\n\nExamples:\n\nLapel Width\tRadius9 cm\t18 cm\n10 cm\t20 cm\n11 cm\t22 cm\n5. Notch Opening Width\n\nIf the gorge seam length is LL:\n\nOpening Width=2Lsin⁡(68∘2)\\text{Opening Width} = 2L\\sin\\left(\\frac{68^\\circ}{2}\\right)\n\nSince:\n\nsin⁡34∘=0.559\\sin 34^\\circ = 0.559\n\nThen:\n\nOW=1.118LOW = 1.118L\n\nExample:\n\nIf gorge seam length = 4 cm:\n\nOW=4.47 cmOW=4.47\\text{ cm}\n6. Draft Coordinates\n\nUsing the gorge point as origin:\n\n        Collar\n           /\n          /\n         /\n        *\n       / )\n      /  )  Curved Gorge\n     /   )\n    *\n  Lapel\n\n\nFor a 10 cm lapel:\n\nGorge radius = 20 cm\nCurve depth = 1.0 cm\nNotch angle = 68°\n7. Practical Bespoke Draft (10 cm Example)\n\nAssuming:\n\nW=10 cmW = 10\\text{ cm}\n\nThen:\n\nGH=7.5 cmGH = 7.5\\text{ cm} CD=1.0 cmCD = 1.0\\text{ cm} R=20 cmR = 20\\text{ cm} G=68∘G = 68^\\circ\n\nResult:\n\nNotch angle = 68°\nGorge height = 7.5 cm\nCurved gorge depth = 1.0 cm\nGorge radius = 20 cm\nMaster Formula Set\nGH=0.75WGH = 0.75W CD=0.10WCD = 0.10W R=2WR = 2W OW=2Lsin⁡(G2)OW = 2L\\sin\\left(\\frac{G}{2}\\right)\n\nFor your 68° Curved Gorge Notch Lapel:\n\nNotch angle: 68°\nOuter angle: 112°\nCurve depth: 10% of lapel width\nGorge radius: 2 × lapel width\nGorge height: 75% of lapel width\n\nThese formulas will reproduce the soft, rounded gorge shown in the illustration.",
+   "references": [
+    "/images/review-refs/suit-3pc/lapel-notch-68/1786511797827-fise1l.jpg"
+   ],
+   "parkedAt": "2026-08-12T21:48:07.483Z",
+   "craftId": "suit-3pc|lapel|lapel-style|lapel-notch-68"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "remake",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "suit-3pc|lapel|lapel-style|lapel-notch-68",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.928Z"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "suit-3pc|lapel|lapel-style|lapel-notch-68",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.928Z"
+  }
+ ]
+}

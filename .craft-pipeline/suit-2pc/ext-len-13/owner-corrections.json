@@ -1,0 +1,106 @@
+{
+ "craftId": "suit-2pc|Trousers-waistband|extension-length|ext-len-13",
+ "note": "Owner rejection reasons for a craft that had no prompt.json when they were recorded. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 2,
+   "decidedAt": "2026-08-11T22:38:49.683Z",
+   "tags": [
+    "Unrealistic / AI look"
+   ],
+   "notes": "From the image, I can see a trouser waistband extension/tab at the front closure. The only dimension shown is 13 cm, measured diagonally from the waistband edge down toward the fly extension area. The drawing appears to show:\n\nA waistband with an extended fastening tab.\nA curved fly facing underneath.\nA zipper fly.\nA front waistband overlap/underlap construction commonly used in bespoke tailoring.\n\nBecause the image only contains a single dimension (13 cm) and no scale, I cannot derive exact finished pattern dimensions, but I can give you the geometric drafting formulas used by bespoke trousermakers.\n\n1. Waistband Length Formula\n\nThe finished waistband length equals the trouser waist line plus overlap.\n\nWL=W+OWL = W + O\n\nWhere:\n\nWLWL = waistband length\nWW = trouser waist circumference\nOO = overlap extension\n\nTypical bespoke overlap:\n\nO=3.5 cm to 5.0 cmO = 3.5 \\text{ cm to } 5.0 \\text{ cm}\n\nExample:\n\nWaist = 84 cm\n\nWL=84+4=88 cmWL = 84 + 4 = 88 \\text{ cm}\n2. Waistband Width Formula\n\nFinished width:\n\nWWf=3.5 cm to 4.5 cmWW_f = 3.5 \\text{ cm to } 4.5 \\text{ cm}\n\nCut width before folding:\n\nWWc=(WWf×2)+SAWW_c = (WW_f \\times 2) + SA\n\nWhere:\n\nSASA = seam allowances\n\nExample:\n\nFinished waistband = 4 cm\n\nWWc=(4×2)+2WW_c = (4 \\times 2) + 2 WWc=10 cmWW_c = 10 \\text{ cm}\n3. Extension Tab Geometry\n\nFor a classic bespoke extension:\n\nEL=0.04W+1EL = 0.04W + 1\n\nWhere:\n\nELEL = extension length\nWW = body waist circumference\n\nExample:\n\n84 cm waist\n\nEL=(84×0.04)+1EL = (84 \\times 0.04)+1 EL=4.36 cmEL = 4.36 \\text{ cm}\n\nRound to:\n\nEL≈4.5 cmEL \\approx 4.5 \\text{ cm}\n4. Fly Extension Formula\n\nThe underlap extension behind the zipper is typically:\n\nFE=Zw+1.5FE = Z_w + 1.5\n\nWhere:\n\nFEFE = fly extension width\nZwZ_w = zipper tape width\n\nTypical:\n\nFE=4.0−4.5 cmFE = 4.0 - 4.5 \\text{ cm}\n5. Curved Front Waistband Drop\n\nThe image shows a diagonal dimension of 13 cm.\n\nFor a shaped waistband extension:\n\nD=133D = \\frac{13}{3}\n\nTypical resulting drop:\n\nD≈4.3 cmD \\approx 4.3 \\text{ cm}\n\nThis corresponds closely to common bespoke front fly curves.\n\nTo draft:\n\nMark 13 cm along the front edge.\nDrop approximately 4 to 4.5 cm.\nConnect with a French curve to form the fly shape.\n6. Waistband Angle Calculation\n\nIf the extension is 13 cm long and drops 4.5 cm:\n\nθ=tan⁡−1(4.513)\\theta = \\tan^{-1} \\left(\\frac{4.5}{13}\\right) θ=19.1∘\\theta = 19.1^\\circ\n\nSo the front shaping angle is approximately:\n\n19∘19^\\circ\n7. Bespoke Waistband Extension Draft\n\nA common high-end tailoring draft:\n\n           4.5 cm\n    ┌─────────────────┐\n    │                 │\n    │                 │\n    │                 │\n    └───────╮         │\n            ╰─────────┘\n\n                 ↑\n           13 cm curve\n\n\nMeasurements:\n\nFinished waistband width = 4 cm\nExtension length = 4.5 cm\nFly extension width = 4 cm\nCurved transition length = 13 cm\nCurve radius = 7 to 9 cm\n8. Drafting Formula From Waist Measurement\n\nFor any waist size:\n\nExtension=W20\\text{Extension} = \\frac{W}{20} Fly Width=W22\\text{Fly Width} = \\frac{W}{22} Curve Radius=W10\\text{Curve Radius} = \\frac{W}{10}\n\nExample (84 cm waist):\n\nExtension=8420=4.2 cm\\text{Extension} = \\frac{84}{20}=4.2\\text{ cm} Fly Width=8422=3.8 cm\\text{Fly Width}=\\frac{84}{22}=3.8\\text{ cm} Radius=8410=8.4 cm\\text{Radius}=\\frac{84}{10}=8.4\\text{ cm}\n\nThese formulas produce the proportions typically seen in bespoke Italian and Savile Row trouser waistbands.\n\nIf this came from a specific trouser pattern system (Müller, Aldrich, ESMOD, Jansen, or a Japanese tailoring draft), upload the full pattern image and I can reverse-engineer the exact geometry and grading formulas.",
+   "references": [],
+   "parkedAt": "2026-08-12T21:48:07.421Z",
+   "craftId": "suit-2pc|Trousers-waistband|extension-length|ext-len-13"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "remake",
+   "tags": [],
+   "notes": "the illustration showcases the length of the waistband extension from the fly to the end where it buttons at 13cm",
+   "reasonRecorded": true,
+   "references": [],
+   "craftId": "suit-2pc|Trousers-waistband|extension-length|ext-len-13",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-15T20:49:14.540Z"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "suit-2pc|Trousers-waistband|extension-length|ext-len-13",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-15T20:49:14.540Z"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "remake",
+   "tags": [],
+   "notes": "the illustration showcases the length of the waistband extension from the fly to the end where it buttons at 13cm",
+   "reasonRecorded": true,
+   "references": [],
+   "craftId": "suit-3pc|Trousers-waistband|extension-length|ext-len-13",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-15T20:49:14.540Z"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "suit-3pc|Trousers-waistband|extension-length|ext-len-13",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-15T20:49:14.540Z"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "remake",
+   "tags": [],
+   "notes": "the illustration showcases the length of the waistband extension from the fly to the end where it buttons at 13cm",
+   "reasonRecorded": true,
+   "references": [],
+   "craftId": "trousers|waistband|extension-length|ext-len-13",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-15T20:49:14.540Z"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "trousers|waistband|extension-length|ext-len-13",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-15T20:49:14.540Z"
+  },
+  {
+   "attemptRejected": 3,
+   "decidedAt": "2026-09-14T04:06:08.419Z",
+   "tags": [
+    "Wrong side or orientation"
+   ],
+   "notes": "",
+   "references": [],
+   "parkedAt": "2026-09-14T04:16:31.583Z",
+   "craftId": "suit-2pc|Trousers-waistband|extension-length|ext-len-13"
+  }
+ ]
+}

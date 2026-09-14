@@ -1,0 +1,32 @@
+{
+ "craftId": "suit-3pc|lapel|lapel-style|lapel-peak-101",
+ "note": "Owner rejection reasons for this craft, from BOTH decision sources. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 1,
+   "decidedAt": "2026-08-12T10:30:16.992Z",
+   "tags": [
+    "Reference drawing itself is wrong"
+   ],
+   "notes": "For a 101° peak lapel with a finished lapel width of 11 cm, the key geometry is based on the peak angle, the break line, and the outer lapel edge.\n\nFrom the image, the marked 101° appears to be the included angle at the peak tip between the collar gorge line and the upper lapel edge.\n\n1. Basic Geometry\n\nDefine:\n\nW=11 cmW = 11\\text{ cm} (lapel width)\nθ=101∘\\theta = 101^\\circ (peak angle)\nBB = break line\nPP = peak tip\n\nThe complementary acute angle is:\n\nα=180∘−101∘\\alpha = 180^\\circ - 101^\\circ α=79∘\\alpha = 79^\\circ\n\nSince the angle is split by the bisector:\n\nβ=101∘2\\beta = \\frac{101^\\circ}{2} β=50.5∘\\beta = 50.5^\\circ\n2. Peak Construction Formula\n\nTreat the peak as an isosceles triangular projection.\n\nFor a projection length LL:\n\nPeak Height=Lsin⁡(50.5∘)\\text{Peak Height} = L\\sin(50.5^\\circ) Peak Spread=Lcos⁡(50.5∘)\\text{Peak Spread} = L\\cos(50.5^\\circ)\n\nUsing:\n\nsin⁡(50.5∘)=0.7716\\sin(50.5^\\circ)=0.7716 cos⁡(50.5∘)=0.6361\\cos(50.5^\\circ)=0.6361\n\nTherefore\n\nH=0.7716LH=0.7716L S=0.6361LS=0.6361L\n3. Lapel Edge Equation\n\nIf the break line is represented as the y-axis and the peak point lies at (0,0)(0,0), the upper lapel edge angle becomes:\n\nm=tan⁡(50.5∘)m=\\tan(50.5^\\circ) m=1.214m=1.214\n\nThus:\n\ny=1.214xy=1.214x\n\nfor one side of the peak.\n\nThe opposite side:\n\ny=−1.214xy=-1.214x\n4. Determining Peak Projection for an 11 cm Lapel\n\nMost bespoke tailors use:\n\nPeak Projection=0.25W  to  0.35W\\text{Peak Projection} = 0.25W \\; \\text{to} \\; 0.35W\n\nFor:\n\nW=11 cmW=11\\text{ cm}\n\nRecommended:\n\nL=3.0 cm to 4.0 cmL=3.0\\text{ cm to }4.0\\text{ cm}\n\nA balanced Italian-style peak uses:\n\nL≈3.5 cmL\\approx3.5\\text{ cm}\n\nThen:\n\nH=3.5(0.7716)H=3.5(0.7716) H=2.70 cmH=2.70\\text{ cm} S=3.5(0.6361)S=3.5(0.6361) S=2.23 cmS=2.23\\text{ cm}\n5. CAD Pattern Coordinates\n\nFor a draft with:\n\nPeak tip at P=(0,0)P=(0,0)\nProjection L=3.5 cmL=3.5\\text{ cm}\n\nThe peak legs become:\n\nP1=(2.23,  2.70)P_1=(2.23,\\;2.70) P2=(2.23,  −2.70)P_2=(2.23,\\;-2.70)\n\ngiving exactly:\n\n∠P1PP2=101∘\\angle P_1PP_2=101^\\circ\n6. Patternmaker's Formula\n\nFor any lapel width WW:\n\nL=0.32WL=0.32W H=0.247WH=0.247W S=0.204WS=0.204W\n\nFor W=11W=11:\n\nL=3.52 cmL=3.52\\text{ cm} H=2.72 cmH=2.72\\text{ cm} S=2.24 cmS=2.24\\text{ cm}\n\nThese dimensions produce a peak very close to the one shown in the image: a relatively aggressive Italian-style 101° peak with an 11 cm lapel width.",
+   "references": [
+    "/images/review-refs/suit-3pc/lapel-peak-101/1786530510160-hw3kip.jpg"
+   ],
+   "parkedAt": "2026-08-12T21:48:07.492Z",
+   "craftId": "suit-3pc|lapel|lapel-style|lapel-peak-101"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "suit-3pc|lapel|lapel-style|lapel-peak-101",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.938Z"
+  }
+ ]
+}

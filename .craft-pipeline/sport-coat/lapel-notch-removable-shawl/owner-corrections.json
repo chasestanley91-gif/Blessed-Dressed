@@ -1,0 +1,45 @@
+{
+ "craftId": "sport-coat|lapel|lapel-style|lapel-notch-removable-shawl",
+ "note": "Owner rejection reasons for this craft, from BOTH decision sources. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 1,
+   "decidedAt": "2026-08-12T04:19:01.709Z",
+   "tags": [
+    "Reference drawing itself is wrong"
+   ],
+   "notes": "A notch + removable shawl lapel is essentially a jacket designed with a detachable lapel/collar assembly. The exact attachment method can vary, but for a high-end bespoke garment, you generally want the attachment to be hidden from the outside.\n\nHow it works\n\nThink of the jacket as having two components:\n\n1. Permanent jacket body\n\nFront edge is constructed to receive the lapel.\nThe underlying collar/lapel area has a concealed attachment system.\nThe jacket still has its normal notch-lapel construction underneath.\n\n2. Removable shawl lapel piece\n\nThe shawl lapel is constructed as a separate component.\nIt wraps continuously around the neck rather than forming the normal notch break.\nIts underside contains the attachment mechanism.\n\nA simplified cross-section is:\n\n        NECK\n          │\n     ┌────┴────┐\n     │ SHAWL   │\n     │ LAPEL   │\n     └────┬────┘\n          │\n    concealed attachment\n     ═══════════════\n          │\n      JACKET BODY\n          │\n      FRONT EDGE\nThe most likely attachment methods\n\nFor a luxury bespoke version, there are several possibilities.\n\nConcealed snaps\n\nSmall sew-on snaps are placed underneath the lapel.\n\nSHAWL LAPEL\n   ●  ●  ●\n   │  │  │\n   ○  ○  ○\nJACKET BODY\n\nThe snaps are completely hidden when the shawl is installed.\n\nConcealed zipper\n\nA very fine zipper can run around the attachment perimeter. This gives extremely positive registration but is more difficult to execute cleanly around the curved neck/lapel area.\n\nHook-and-eye / specialty hooks\n\nSmall hooks can be sewn into the underside of the shawl and corresponding eyes into the jacket. This is traditional-looking and can be very secure, but positioning needs to be precise.\n\nCombination system\n\nFor a premium garment, you could use:\n\nconcealed snaps for positioning\nsmall hidden hooks for security\na precisely shaped underside facing to keep everything flat\nThe important tailoring issue\n\nThe removable shawl cannot simply be attached at the visible lapel edge.\n\nIt needs to register against the jacket's:\n\nneckline\ngorge\nfront edge\nbreak point\nshoulder/neck transition\n\nOtherwise, when the wearer moves, you'll see the shawl lift away from the jacket or create an unnatural ridge.\n\nThe shawl should effectively have a dedicated mounting perimeter.\n\nFor your catalog/image-generation system\n\nThis is particularly important because \"removable shawl lapel\" should not be interpreted by the image model as merely a shawl lapel sitting on top of a jacket.\n\nThe specification should communicate something like:\n\nRemovable Shawl Lapel:\nA separately constructed shawl-lapel component designed to attach\nto the jacket body using a concealed fastening system. The fastening\nmust not be visible from the exterior. When installed, the shawl\nforms a continuous, smooth roll around the neckline and front edge,\nwith no visible gap between the removable component and jacket body.\n\nIf your option is specifically \"Notch + Removable Shawl Lapel,\" then the image should ideally show the notch-lapel jacket underneath and the removable shawl component installed over it, while preserving the fact that the underlying jacket is a notch-lapel construction.\n\nThat's different from simply generating a normal shawl-lapel jacket.",
+   "references": [
+    "/images/review-refs/sport-coat/lapel-notch-removable-shawl/1786508336211-bov04h.jpg"
+   ],
+   "parkedAt": "2026-08-12T21:48:07.108Z",
+   "craftId": "sport-coat|lapel|lapel-style|lapel-notch-removable-shawl"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "remake",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "sport-coat|lapel|lapel-style|lapel-notch-removable-shawl",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.369Z"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "sport-coat|lapel|lapel-style|lapel-notch-removable-shawl",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.369Z"
+  }
+ ]
+}

@@ -1,0 +1,34 @@
+{
+ "craftId": "suit-2pc|suit-pockets|lower-pocket|lp-large-slanted-60",
+ "note": "Owner rejection reasons for this craft, from BOTH decision sources. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 1,
+   "decidedAt": "2026-08-12T04:49:39.652Z",
+   "tags": [
+    "Reference drawing itself is wrong",
+    "Unrealistic / AI look",
+    "Wrong size or proportion"
+   ],
+   "notes": "For the Large Slanted Flap 6.0 cm shown in the image, the visible blue dimension is the finished flap depth:\n\nF=6.0 cmF = 6.0 \\text{ cm}\n\nThe flap is a large trapezoidal sport-coat style flap with a slanted top edge parallel to the pocket mouth.\n\n1. Finished Dimensions\nFinished Flap Depth\nF=6.0 cmF = 6.0\\text{ cm}\nPocket Opening Length\n\nFor bespoke jackets:\n\nPL=Chest Circumference5PL=\\frac{\\text{Chest Circumference}}{5}\n\nTypical sizes:\n\nChest\tPocket Length38\"\t19 cm\n40\"\t20 cm\n42\"\t21 cm\n\nStandard drafting value:\n\nPL=20.0 cmPL = 20.0\\text{ cm}\nFinished Flap Width\n\nAllow 0.5 cm extension each end:\n\nFW=PL+1.0FW = PL + 1.0 FW=21.0 cmFW = 21.0\\text{ cm}\n2. Pattern Piece Size\n\nFor a folded flap:\n\nFD=2F+2SAFD = 2F + 2SA\n\nUsing:\n\nSA=1.0 cmSA = 1.0\\text{ cm} FD=2(6.0)+2FD = 2(6.0)+2 FD=14.0 cmFD = 14.0\\text{ cm}\nCut Pattern\n21.0×14.0 cm\\boxed{21.0 \\times 14.0\\text{ cm}}\n3. Pocket Slant Geometry\n\nThe image shows a strong sport-coat slant.\n\nRecommended:\n\nθ=9∘\\theta = 9^\\circ\nRise Across Pocket\nRise=PLsin⁡(θ)Rise = PL \\sin(\\theta) Rise=20sin⁡(9∘)Rise = 20 \\sin(9^\\circ) Rise=20(0.1564)Rise = 20(0.1564) Rise=3.13 cmRise = 3.13\\text{ cm} Rise=3.1 cm\\boxed{Rise = 3.1\\text{ cm}}\n\nThe outside end of the pocket sits approximately 3.1 cm higher.\n\n4. Flap Taper\n\nLarge flaps need slight taper.\n\nT=0.15FT = 0.15F T=0.15(6.0)T = 0.15(6.0) T=0.90 cmT = 0.90\\text{ cm}\n\nBottom width:\n\nBW=FW−TBW = FW - T BW=21.0−0.9BW = 21.0 - 0.9 BW=20.1 cmBW = 20.1\\text{ cm} BW=20.1 cm\\boxed{BW = 20.1\\text{ cm}}\n5. Corner Radius\n\nFor a large dress/sport flap:\n\nCR=0.18FCR = 0.18F CR=0.18(6.0)CR = 0.18(6.0) CR=1.08 cmCR = 1.08\\text{ cm}\n\nUse:\n\n1.1 cm radius\\boxed{1.1\\text{ cm radius}}\n6. Draft Coordinates\n\nUsing a 20 cm pocket opening:\n\nPocket Mouth\nA=(0,0)A=(0,0) B=(20,3.1)B=(20,3.1)\nUpper Flap Edge\nC=(0,6.0)C=(0,6.0) D=(20,9.1)D=(20,9.1)\nBottom Edge\n\nTaper inward:\n\n0.45 cm0.45\\text{ cm}\n\nper side.\n\nD----------------------C\n \\                    /\n  \\                  /\n   \\                /\n    \\              /\nB--------------------A\n\n7. Area\n\nFinished flap area:\n\nA=FW×FA = FW \\times F A=21×6A = 21 \\times 6 A=126 cm2A = 126\\text{ cm}^2\nComplete Bespoke Draft\nFinished Flap\n21.0×6.0 cm\\boxed{21.0 \\times 6.0\\text{ cm}}\nCut Flap\n21.0×14.0 cm\\boxed{21.0 \\times 14.0\\text{ cm}}\nPocket Opening\n20.0 cm\\boxed{20.0\\text{ cm}}\nSlant\n9∘\\boxed{9^\\circ}\nRise\n3.1 cm\\boxed{3.1\\text{ cm}}\nTaper\n0.9 cm\\boxed{0.9\\text{ cm}}\nCorner Radius\n1.1 cm\\boxed{1.1\\text{ cm}}\nFormula Set\nFD=2F+2SAFD = 2F + 2SA FW=PL+1FW = PL + 1 T=0.15FT = 0.15F CR=0.18FCR = 0.18F Rise=PLsin⁡(θ)Rise = PL\\sin(\\theta)\n\nFor a Large Slanted Flap 6.0 cm, the key drafting numbers are:\n\nPocket opening: 20.0 cm\nFinished flap depth: 6.0 cm\nFlap width: 21.0 cm\nCut depth: 14.0 cm\nSlant angle: 9°\nRise across pocket: 3.1 cm\nTaper: 0.9 cm\nCorner radius: 1.1 cm",
+   "references": [
+    "/images/review-refs/suit-2pc/lp-large-slanted-60/1786510174725-u2koa5.jpg"
+   ],
+   "parkedAt": "2026-08-12T21:48:07.276Z",
+   "craftId": "suit-2pc|suit-pockets|lower-pocket|lp-large-slanted-60"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "discard",
+   "tags": [],
+   "notes": "bad Tech pack and all the pics are wrong remake everything",
+   "reasonRecorded": true,
+   "references": [],
+   "craftId": "suit-2pc|suit-pockets|lower-pocket|lp-large-slanted-60",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.579Z"
+  }
+ ]
+}

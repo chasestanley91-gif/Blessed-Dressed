@@ -1,139 +1,167 @@
 {
- "addr": "shirt > collar > lapel > collar-wrap-75",
- "label": "Wrap Collar 7.5 cm",
- "part": "shirt-collar",
- "orientation": "detail",
- "excluded": null,
- "generate": true,
- "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\shirt.json",
- "source": "json",
- "illustration": "/images/techpacks/shirt/lapel/wrap-collar-in-75cm.jpg",
- "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\techpacks\\shirt\\lapel\\wrap-collar-in-75cm.jpg",
- "illustrationExists": true,
- "illustrationRemote": false,
- "profile": {
   "addr": "shirt > collar > lapel > collar-wrap-75",
-  "product": "shirt",
-  "field": "Collar Style",
-  "option": "Wrap Collar 7.5 cm",
+  "label": "Wrap Collar 7.5 cm",
   "part": "shirt-collar",
-  "garment": "white bespoke cotton dress shirt",
-  "orientation": "detail",
-  "absence": false,
-  "distinguishingDetail": "A symmetric 7.5 cm wrap point collar: two mirror-image leaves closing at centre front over the fastened top button with only a narrow inverted-V notch between them; each leaf is built as a layered wrap showing a DOUBLED EDGE (the outer leaf edge with a clearly visible second parallel edge line just inside it, exactly as drawn) plus a small stud detail near each point; the total spread between the two collar points is exactly 65 degrees. NOTE: the catalog prose describing an asymmetric overlapping sweep is unreliable and contradicts the drawing — the drawing is the sole geometry authority and it shows a SYMMETRIC collar.",
-  "measured": {
-   "dimensions": [
-    "7.5 cm"
-   ],
-   "angles": [],
-   "counts": [],
-   "shapes": [
-    "wrap"
-   ],
-   "spread": [],
-   "flags": []
-  },
-  "reproduceFromIllustration": [
-   "collar point geometry",
-   "collar stand",
-   "collar roll",
-   "stitching precision",
-   "the unobstructed spread between the collar points"
-  ],
-  "composition": {
-   "crop": "tight on the collar and neckline",
-   "dominanceTarget": "40–80% of frame",
-   "identifyWithin": "1 second"
-  },
-  "forbidden": [
-   "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
-   "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
-   "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
-  ],
+  "orientation": "front",
   "excluded": null,
-  "generate": true
- },
- "requiredTokens": [
-  "7.5 cm",
-  "wrap"
- ],
- "checklist": [
-  "length/width matches exactly: 7.5 cm",
-  "shape reads as drawn: wrap",
-  "distinguishing detail present: A symmetric 7.5 cm wrap point collar: two mirror-image leaves closing at centre front over the fastened top button with only a narrow inverted-V notch between them; each leaf is built as a layered wrap showing a DOUBLED EDGE (the outer leaf edge with a clearly visible second parallel edge line just inside it, exactly as drawn) plus a small stud detail near each point; the total spread between the two collar points is exactly 65 degrees. NOTE: the catalog prose describing an asymmetric overlapping sweep is unreliable and contradicts the drawing — the drawing is the sole geometry authority and it shows a SYMMETRIC collar.",
-  "reproduced from the illustration: collar point geometry",
-  "reproduced from the illustration: collar stand",
-  "reproduced from the illustration: collar roll",
-  "reproduced from the illustration: stitching precision",
-  "reproduced from the illustration: the unobstructed spread between the collar points",
-  "orientation matches the illustration: detail",
-  "the Collar Style dominates the frame (40–80%), identifiable within one second, framed tight on the collar and neckline",
-  "silhouette, proportions, seam & stitch placement match the illustration; left/right symmetry correct",
-  "NO generic-category substitution — this exact option, not a typical one",
-  "a real photograph of the exact drawn option — not the line-art, no stylisation"
- ],
- "scoreCard": [
-  {
-   "category": "shape",
-   "score": null,
-   "min": 98
+  "generate": true,
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\shirt.json",
+  "source": "json",
+  "illustration": "/images/techpacks/shirt/lapel/wrap-collar-in-75cm.jpg",
+  "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\techpacks\\shirt\\lapel\\wrap-collar-in-75cm.jpg",
+  "illustrationExists": true,
+  "illustrationRemote": false,
+  "profile": {
+    "addr": "shirt > collar > lapel > collar-wrap-75",
+    "product": "shirt",
+    "field": "Collar Style",
+    "option": "Wrap Collar 7.5 cm",
+    "part": "shirt-collar",
+    "garment": "white bespoke cotton dress shirt",
+    "orientation": "front",
+    "absence": false,
+    "distinguishingDetail": "A 7.5 cm wrap collar whose leaves are cut to overlap and sweep across the throat rather than meet symmetrically. The asymmetric wrap is a distinctive, architectural choice that frames the neck dramatically and stands apart from conventional tailoring.",
+    "measured": {
+      "dimensions": [
+        "7.5 cm"
+      ],
+      "angles": [],
+      "counts": [],
+      "shapes": [
+        "wrap"
+      ],
+      "spread": [],
+      "flags": []
+    },
+    "reproduceFromIllustration": [
+      "collar point geometry",
+      "collar stand",
+      "collar roll",
+      "stitching precision",
+      "the unobstructed spread between the collar points",
+      "both collar leaves mirroring each other exactly in length, angle and tip shape"
+    ],
+    "composition": {
+      "crop": "tight on the collar and neckline",
+      "dominanceTarget": "40–80% of frame",
+      "identifyWithin": "1 second"
+    },
+    "forbidden": [
+      "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+      "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+      "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+    ],
+    "excluded": null,
+    "generate": true
   },
-  {
-   "category": "geometry",
-   "score": null,
-   "min": 98
-  },
-  {
-   "category": "dimensions",
-   "score": null,
-   "min": 98
-  },
-  {
-   "category": "angles",
-   "score": null,
-   "min": 98
-  },
-  {
-   "category": "construction",
-   "score": null,
-   "min": 98
-  },
-  {
-   "category": "placement",
-   "score": null,
-   "min": 98
-  },
-  {
-   "category": "symmetry",
-   "score": null,
-   "min": 98
-  },
-  {
-   "category": "composition",
-   "score": null,
-   "min": 98
-  },
-  {
-   "category": "blueprint-match",
-   "score": null,
-   "min": 98
-  }
- ],
- "prompt": "Ultra-photorealistic luxury menswear product photography.\n\nA single-subject craft DOCUMENTATION photograph: the Collar Style is the dominant subject, filling 40–80% of the frame and identifiable within one second.\n\nA premium white bespoke cotton dress shirt featuring a precise Wrap Collar 7.5 cm (Collar Style).\n\nDistinguishing construction detail (reproduce exactly as drawn): A symmetric 7.5 cm wrap point collar: two mirror-image leaves closing at centre front over the fastened top button with only a narrow inverted-V notch between them; each leaf is built as a layered wrap showing a DOUBLED EDGE (the outer leaf edge with a clearly visible second parallel edge line just inside it, exactly as drawn) plus a small stud detail near each point; the total spread between the two collar points is exactly 65 degrees. NOTE: the catalog prose describing an asymmetric overlapping sweep is unreliable and contradicts the drawing — the drawing is the sole geometry authority and it shows a SYMMETRIC collar.\n\nExact specification — wrap shape; measuring exactly 7.5 cm — matching the illustration precisely.\n\nMANDATORY GEOMETRY COVERAGE — reproduce from the illustration, exactly and without assumption, every one of these: collar point geometry, collar stand, collar roll, stitching precision, the unobstructed spread between the collar points. Match each to the drawing.\n\nVIEW — this illustration is the detail of the garment. Photograph the same face; never substitute a different face of the garment.\n\nBLUEPRINT LOCK — THE DRAWING IS LAW: the attached technical illustration is the manufacturing blueprint for this exact craft option and the SOLE authority for the image. Reproduce its geometry precisely — point/edge shape, lengths, widths, depths, angles, curvature, roll lines, symmetry, button/tab/stay positions, seam and stitch placement, and proportions — within less than 2% deviation. Assume NOTHING from tailoring/menswear/fashion convention or model priors; every visible characteristic must come from the drawing. Do not redesign, reinterpret, substitute a similar commercial style, stylise, or \"improve\" it. Do NOT fall back to a generic version of this category — reproduce THIS option, not a typical one. If convention conflicts with the drawing, the drawing wins. Accuracy over aesthetics. ANNOTATIONS ARE NOT THE GARMENT: the technical drawing may carry measurement callouts — dimension numbers (\"2.5cm\", \"9cm\", \"115°\"), tick / leader / dimension lines, arrows, red or coloured guide marks, and text labels. These are manufacturing documentation, NOT features of the cloth. Reproduce ONLY the finished garment: never render any number, unit, arrow, callout, leader line, measurement mark, or text anywhere in the photograph. The final image is a clean garment photo with zero annotation.\n\nPhotographed worn on a male model, open-collar with the top button fastened and NO necktie, so the collar points, the spread between them and the entire collar band are completely unobstructed.\n\nFrame tight on the collar and neckline; the detail must read clearly and sharply.\n\nSavile Row and high-end Italian sartorial aesthetic. Natural daylight studio lighting, Phase One IQ4 medium-format camera, 150MP detail, shallow depth of field, magazine-quality editorial menswear photography. Authentic bespoke craftsmanship, fine hand stitching, premium finishing. SET — shot in a clean luxury photographic studio against a seamless, plain, neutral light-grey background with clear separation between garment and background: no location, no architecture, no furniture, no scenery, no props and no environmental context of any kind competing with the garment.\n\nExtremely realistic crisp cotton poplin texture, fine stitching.\n\nAvoid: any GENERIC menswear substitution (a generic spread collar, generic notch/peak lapel, generic pocket/pleat/vent/cuff/waistband in place of the drawn one), illustration or line-art style, CGI or 3D-render look, cartoon, mannequin, fashion sketch, inaccurate geometry, altered proportions, missing construction details, asymmetry, watermark, AI-art appearance, AND any text or annotation traced from the drawing: NO measurement numbers, units (cm/mm/°), dimension or leader lines, arrows, callouts, red/coloured guide marks, ruler ticks, or labels anywhere in the frame. This is real garment photography of the exact drawn option — clean cloth only, nothing else.\n\nFORBIDDEN FOR THIS OPTION — do not render: a generic version of this part standing in for the exact drawn option (generic-category substitution); any feature, count, or geometry borrowed from a neighboring craft option on the same field; a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion).\n\nOWNER CORRECTION AFTER REVIEW (attempt 1 was rejected by the owner — obey this over any conflicting earlier line, including the BLUEPRINT LOCK): What was wrong with attempt 1: Wrong shape / outline. SHAPE LOCK — the corrected outline, exactly as the technical drawing shows: (1) SYMMETRIC CLOSED point collar — the two leaves are precise mirror images meeting at centre front over the fastened top button, with only a narrow inverted-V notch between the leaf edges; (2) collar points exactly 7.5 cm long — moderate, never elongated, never exaggerated, never vertical; (3) the spread between the two collar points is exactly 65 degrees total — the points angle outward and downward and lie flat against the shirt front; (4) each leaf carries the drawn WRAP construction — a doubled edge: the outer leaf edge with a second parallel edge line just inside it (the layered wrap that separates this option from a plain point collar) — plus the small stud detail near each point as drawn. FORBIDDEN — the exact failure of attempt 1, never render it again: a tall open tab-collar silhouette; long vertical collar points; a wide gap between the leaves; any exposed collar band, band button, tab or closure hardware showing between the leaves; any asymmetric or overlapping leaf arrangement. The collar must read closed, symmetric, moderate and double-edged — the drawing outline, nothing else.",
- "builtAt": "2026-07-28T04:41:48.889Z",
- "ownerCorrections": [
-  {
-   "attemptRejected": 1,
-   "decidedAt": "2026-08-10T23:04:37.810Z",
-   "tags": [
-    "Wrong shape / outline"
-   ],
-   "notes": "",
-   "references": [],
-   "appliedAt": "2026-08-11T08:43:35.422Z",
-   "craftId": "shirt|collar|lapel|collar-wrap-75"
-  }
- ],
- "correctedForAttempt": 2,
- "correctionEditedAt": "2026-08-11T09:10:43.792Z"
+  "requiredTokens": [
+    "7.5 cm",
+    "wrap"
+  ],
+  "checklist": [
+    "length/width matches exactly: 7.5 cm",
+    "shape reads as drawn: wrap",
+    "distinguishing detail present: A 7.5 cm wrap collar whose leaves are cut to overlap and sweep across the throat rather than meet symmetrically. The asymmetric wrap is a distinctive, architectural choice that frames the neck dramatically and stands apart from conventional tailoring.",
+    "reproduced from the illustration: collar point geometry",
+    "reproduced from the illustration: collar stand",
+    "reproduced from the illustration: collar roll",
+    "reproduced from the illustration: stitching precision",
+    "reproduced from the illustration: the unobstructed spread between the collar points",
+    "reproduced from the illustration: both collar leaves mirroring each other exactly in length, angle and tip shape",
+    "orientation matches the illustration: front",
+    "the Collar Style dominates the frame (40–80%), identifiable within one second, framed tight on the collar and neckline",
+    "silhouette, proportions, seam & stitch placement match the illustration; left/right symmetry correct",
+    "NO generic-category substitution — this exact option, not a typical one",
+    "a real photograph of the exact drawn option — not the line-art, no stylisation"
+  ],
+  "scoreCard": [
+    {
+      "category": "shape",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "geometry",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "dimensions",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "angles",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "construction",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "placement",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "symmetry",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "composition",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "blueprint-match",
+      "score": null,
+      "min": 98
+    }
+  ],
+  "prompt": "Ultra-photorealistic luxury menswear product photography.\n\nA single-subject craft DOCUMENTATION photograph: the Collar Style is the dominant subject, filling 40–80% of the frame and identifiable within one second.\n\nA premium white bespoke cotton dress shirt featuring a precise Wrap Collar 7.5 cm (Collar Style).\n\nDistinguishing construction detail (reproduce exactly as drawn): A 7.5 cm wrap collar whose leaves are cut to overlap and sweep across the throat rather than meet symmetrically. The asymmetric wrap is a distinctive, architectural choice that frames the neck dramatically and stands apart from conventional tailoring.\n\nExact specification — wrap shape; measuring exactly 7.5 cm — matching the illustration precisely.\n\nMANDATORY GEOMETRY COVERAGE — reproduce from the illustration, exactly and without assumption, every one of these: collar point geometry, collar stand, collar roll, stitching precision, the unobstructed spread between the collar points, both collar leaves mirroring each other exactly in length, angle and tip shape. Match each to the drawing.\n\nVIEW — this illustration is the front of the garment. Photograph the same face; never substitute a different face of the garment.\n\nBLUEPRINT LOCK — THE DRAWING IS LAW: the attached technical illustration is the manufacturing blueprint for this exact craft option and the SOLE authority for the image. Reproduce its geometry precisely — point/edge shape, lengths, widths, depths, angles, curvature, roll lines, symmetry, button/tab/stay positions, seam and stitch placement, and proportions — within less than 2% deviation. Assume NOTHING from tailoring/menswear/fashion convention or model priors; every visible characteristic must come from the drawing. Do not redesign, reinterpret, substitute a similar commercial style, stylise, or \"improve\" it. Do NOT fall back to a generic version of this category — reproduce THIS option, not a typical one. If convention conflicts with the drawing, the drawing wins. Accuracy over aesthetics. ANNOTATIONS ARE NOT THE GARMENT: the technical drawing may carry measurement callouts — dimension numbers (\"2.5cm\", \"9cm\", \"115°\"), tick / leader / dimension lines, arrows, red or coloured guide marks, and text labels. These are manufacturing documentation, NOT features of the cloth. Reproduce ONLY the finished garment: never render any number, unit, arrow, callout, leader line, measurement mark, or text anywhere in the photograph. The final image is a clean garment photo with zero annotation. COLOUR IN THE DRAWING IS NOTATION, NOT CLOTH: any red, orange or otherwise highlighted region marks WHERE the craft option sits — it is a position marker, never a colour specification. Flat grey or tinted shading marks the EXTENT of a panel, lining or facing, not its shade. Render every one of those areas in the garment's own cloth and thread, in the natural colour that tailoring would use there. There must be no red, no highlighter tint and no flat unshaded grey panel anywhere in the photograph unless the option's own label explicitly names that colour.\n\nPhotographed presented on a crisply pressed white dress shirt as a close product detail, with NO model, NO face, NO neck and NO skin anywhere in frame, the collar left open at the throat with NO necktie and the top collar-band button UNFASTENED exactly as the reference shows it, the leaves relaxed apart so the collar points, the spread between them, the full collar band and its buttonhole are all completely unobstructed, and the collar reproduced in the SAME presentation and viewing angle as the attached reference so its exact tip geometry is preserved rather than re-staged.\n\nFrame tight on the collar and neckline; the detail must read clearly and sharply.\n\nMATCHED FRAMING — this option belongs to a family whose members differ from one another only by a measurement, so this photograph will be shown beside its siblings and compared directly. TWO SEPARATE REQUIREMENTS, and both must hold. FIRST, THE GARMENT: build the feature at exactly the size the drawing gives it — no larger. Do not exaggerate the dimension to make this option look more distinct from its siblings; the difference between them is small in real tailoring and must stay small here, because a customer choosing on these numbers is ordering a real garment. SECOND, THE CAMERA: frame the shot the way every member of the family must be framed — the garment part square to camera, centred, at a standard distance that leaves the whole garment occupying the same share of the picture no matter which value this option carries. Do not move closer for a small measurement or pull back for a large one. Getting one of these right while getting the other wrong is still a failure: an accurate feature shot at the wrong distance, or a matched frame containing an exaggerated feature, both mislead a customer comparing two pictures side by side.\n\nSavile Row and high-end Italian sartorial aesthetic. Natural daylight studio lighting, Phase One IQ4 medium-format camera, 150MP detail, shallow depth of field, magazine-quality editorial menswear photography. Authentic bespoke craftsmanship, fine hand stitching, premium finishing. SET — shot in a clean luxury photographic studio against a seamless, plain, neutral light-grey background with clear separation between garment and background: no location, no architecture, no furniture, no scenery, no props and no environmental context of any kind competing with the garment.\n\nExtremely realistic crisp cotton poplin texture, fine stitching.\n\nAvoid: any GENERIC menswear substitution (a generic spread collar, generic notch/peak lapel, generic pocket/pleat/vent/cuff/waistband in place of the drawn one), illustration or line-art style, CGI or 3D-render look, cartoon, mannequin, fashion sketch, inaccurate geometry, altered proportions, missing construction details, asymmetry, watermark, AI-art appearance, AND any text or annotation traced from the drawing: NO measurement numbers, units (cm/mm/°), dimension or leader lines, arrows, callouts, red/coloured guide marks, ruler ticks, or labels anywhere in the frame. This is real garment photography of the exact drawn option — clean cloth only, nothing else.\n\nFORBIDDEN FOR THIS OPTION — do not render: a generic version of this part standing in for the exact drawn option (generic-category substitution); any feature, count, or geometry borrowed from a neighboring craft option on the same field; a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion).\n\nOWNER CORRECTION AFTER REVIEW (attempt 1 was rejected by the owner — obey this over any conflicting earlier line, including the BLUEPRINT LOCK): What is wrong with it: Wrong shape / outline.\n\nOWNER CORRECTION AFTER REVIEW (attempt 2 was rejected by the owner — obey this over any conflicting earlier line, including the BLUEPRINT LOCK): For the Wrap Collar shown in the image: Collar type: Wrap Collar Point length: 7.5 cm (your specification) Included angle: 65° (shown in image) This is a symmetric geometry problem. Given Half-angle: The owner uploaded 4 reference photograph(s) with this rejection, but they were reviewed and found NOT to depict this exact option, so none are attached. Take the correction text above literally and use the technical drawing as the geometry authority.\n\nOWNER CORRECTION AFTER REVIEW (a previous attempt was rejected by the owner — obey this over any conflicting earlier line, including the BLUEPRINT LOCK): The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+  "ownerCorrections": [
+    {
+      "attemptRejected": 1,
+      "decidedAt": "2026-08-10T23:04:37.810Z",
+      "tags": [
+        "Wrong shape / outline"
+      ],
+      "notes": "",
+      "references": [],
+      "appliedAt": "2026-08-11T08:43:35.422Z",
+      "craftId": "shirt|collar|lapel|collar-wrap-75"
+    },
+    {
+      "attemptRejected": 2,
+      "decidedAt": "2026-08-12T03:24:16.041Z",
+      "tags": [],
+      "notes": "For the Wrap Collar shown in the image:\n\nCollar type: Wrap Collar\nPoint length: 7.5 cm (your specification)\nIncluded angle: 65° (shown in image)\n\nThis is a symmetric geometry problem.\n\nGiven\nL=7.5 cmL = 7.5\\text{ cm} θ=65∘\\theta = 65^\\circ\n\nHalf-angle:\n\nα=θ2\\alpha=\\frac{\\theta}{2} α=32.5∘\\alpha = 32.5^\\circ\n1. Horizontal Projection\n\nHow far each collar point extends from center front:\n\nX=Lsin⁡αX=L\\sin\\alpha X=7.5sin⁡(32.5∘)X=7.5\\sin(32.5^\\circ) X=7.5(0.5373)X=7.5(0.5373) X=4.03 cmX=4.03\\text{ cm}\n\nPer side projection:\n\n4.03 cm\\boxed{4.03\\text{ cm}}\n2. Vertical Drop\n\nHow far the collar point drops below the collar break line:\n\nY=Lcos⁡αY=L\\cos\\alpha Y=7.5cos⁡(32.5∘)Y=7.5\\cos(32.5^\\circ) Y=7.5(0.8434)Y=7.5(0.8434) Y=6.33 cmY=6.33\\text{ cm}\n\nPoint depth:\n\n6.33 cm\\boxed{6.33\\text{ cm}}\n3. Point-to-Point Spread\n\nDistance from collar point to collar point:\n\nW=2Lsin⁡(α)W=2L\\sin(\\alpha) W=2(7.5)(0.5373)W=2(7.5)(0.5373) W=8.06 cmW=8.06\\text{ cm}\n\nFront opening width:\n\n8.06 cm\\boxed{8.06\\text{ cm}}\n4. Draft Coordinates\n\nUsing the collar break point as the origin:\n\nLeft Point\n(−4.03, −6.33)(-4.03,\\,-6.33)\nRight Point\n(4.03, −6.33)(4.03,\\,-6.33)\nCollar Break\n(0,0)(0,0)\n5. Drafting Procedure\nDraw center front.\nMark collar break point.\nDraw two lines at 32.5° from center front.\nMeasure 7.5 cm along each line.\nMark collar points.\nShape outer edges with a slight convex curve.\nBlend into collar stand.\n            Break Point\n                 ●\n                / \\\n               /   \\\n              /     \\\n             /       \\\n            /         \\\n         7.5cm       7.5cm\n          /             \\\n         ●---------------●\n\n        Width = 8.06 cm\n\nFinished Geometry Summary\nMeasurement\tValuePoint length\t7.5 cm\nCollar angle\t65°\nHalf angle\t32.5°\nHorizontal projection\t4.03 cm\nVertical drop\t6.33 cm\nPoint-to-point spread\t8.06 cm\n\nThese dimensions will reproduce the wrap collar shown in the image at a 7.5 cm collar point length and 65° opening angle.",
+      "references": [
+        "/images/review-refs/shirt/collar-wrap-75/1786505000214-1h8c31.webp",
+        "/images/review-refs/shirt/collar-wrap-75/1786505012472-swgnfc.webp",
+        "/images/review-refs/shirt/collar-wrap-75/1786505039022-92ynmq.webp",
+        "/images/review-refs/shirt/collar-wrap-75/1786505049277-ymkc1b.webp"
+      ],
+      "appliedAt": "2026-08-12T16:35:07.266Z",
+      "craftId": "shirt|collar|lapel|collar-wrap-75"
+    },
+    {
+      "attemptRejected": null,
+      "decidedAt": null,
+      "source": "july-v3",
+      "verdict": "remake",
+      "tags": [],
+      "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+      "reasonRecorded": false,
+      "references": [],
+      "craftId": "shirt|collar|lapel|collar-wrap-75",
+      "foldedFrom": "generation-queue.rejectionContext",
+      "parkedAt": "2026-08-16T05:02:08.084Z"
+    }
+  ],
+  "correctionSanitized": 1,
+  "builtAt": "2026-08-27T02:37:08.649Z"
 }

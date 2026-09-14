@@ -1,0 +1,32 @@
+{
+ "craftId": "suit-3pc|lapel|lapel-style|lapel-peak-120-curved",
+ "note": "Owner rejection reasons for this craft, from BOTH decision sources. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 1,
+   "decidedAt": "2026-08-12T12:57:11.368Z",
+   "tags": [
+    "Reference drawing itself is wrong"
+   ],
+   "notes": "For the 120° Curved Peak Lapel shown in the illustration, the peak is extremely open and the outer lapel edge incorporates a gentle curve rather than a straight line. This is one of the most dramatic peak-lapel geometries used in bespoke tailoring.\n\nVisual Analysis of the Image\n\nThe image contains:\n\nA peak lapel with a marked gorge angle of 120°\nA pronounced sweeping lapel shape\nA curved outer lapel edge\nA long spear-point lapel ending near the waist button position\nA relatively wide chest opening\nA small breast welt pocket indication on the wearer's left side\n1. Fundamental Geometry\n\nLet:\n\nθ=120∘\\theta = 120^\\circ\n\nHalf-angle:\n\nβ=120∘2\\beta = \\frac{120^\\circ}{2} β=60∘\\beta = 60^\\circ\n\nSupplementary angle:\n\n180∘−120∘=60∘180^\\circ - 120^\\circ = 60^\\circ\n2. Recommended Proportions\n\nTo maintain visual balance:\n\nW=13.5 cmW = 13.5\\text{ cm}\n\nRecommended peak projection:\n\nL=0.45WL = 0.45W\n\nThus:\n\nL=0.45(13.5)L = 0.45(13.5) L=6.08 cmL = 6.08\\text{ cm}\n3. Trigonometric Construction\n\nUsing:\n\nsin⁡(60∘)=0.8660\\sin(60^\\circ)=0.8660 cos⁡(60∘)=0.5000\\cos(60^\\circ)=0.5000\nPeak Rise\nH=Lsin⁡(60∘)H=L\\sin(60^\\circ) H=6.08(0.8660)H=6.08(0.8660) H=5.26 cmH=5.26\\text{ cm}\nPeak Spread\nS=Lcos⁡(60∘)S=L\\cos(60^\\circ) S=6.08(0.5000)S=6.08(0.5000) S=3.04 cmS=3.04\\text{ cm}\n4. General Formula\n\nFor any lapel width WW:\n\nProjection\nL=0.45WL=0.45W\nRise\nH=0.45Wsin⁡(60∘)H=0.45W\\sin(60^\\circ) H=0.390WH=0.390W\nSpread\nS=0.45Wcos⁡(60∘)S=0.45W\\cos(60^\\circ) S=0.225WS=0.225W\n5. Coordinate Geometry\n\nPeak tip:\n\nP=(0,0)P=(0,0)\n\nUpper peak point:\n\nP1=(3.04,  5.26)P_1=(3.04,\\;5.26)\n\nLower gorge point:\n\nP2=(3.04,  −5.26)P_2=(3.04,\\;-5.26)\n\nVerification:\n\n∠P1PP2=120∘\\angle P_1PP_2 = 120^\\circ\n6. Curved Lapel Edge Formula\n\nUnlike straight peak lapels:\n\ny=mxy = mx\n\nthe outer edge is drafted as a Bézier curve.\n\nLet:\n\nP0=(0,0)P_0=(0,0) P2=(3.04,5.26)P_2=(3.04,5.26)\n\nControl point:\n\nPc=(1.8,  3.8)P_c=(1.8,\\;3.8)\n\nQuadratic Bézier equation:\n\nB(t)=(1−t)2P0+2(1−t)tPc+t2P2B(t)=(1-t)^2P_0+2(1-t)tP_c+t^2P_2\n\nwhere\n\n0≤t≤10\\le t\\le1\n\nThis produces the characteristic sweeping curve visible in the illustration.\n\n7. Drafting Specification (13.5 cm Width)\nPeak Angle      = 120°\nHalf Angle      = 60°\nLapel Width     = 13.5 cm\nProjection      = 6.08 cm\nPeak Rise       = 5.26 cm\nPeak Spread     = 3.04 cm\nProjection Rate = 45%\nCurve Radius    = 18-22 cm\n\nComparison of Extreme Peak Angles\nAngle\tWidth\tProjection110°\t12.5 cm\t5.00 cm\n114°\t13.0 cm\t5.46 cm\n115°\t13.0 cm\t5.59 cm\n120°\t13.5 cm\t6.08 cm\nTailoring Interpretation\n\nA 120° Curved Peak Lapel creates:\n\nMaximum shoulder-emphasis effect\nVery broad chest appearance\nLong sweeping lapel line\nStrong vintage 1930s and theatrical bespoke influence\nA shape halfway between a dramatic peak lapel and a swept shawl lapel\n\nFor pattern drafting, the defining proportions are:\n\nProjection≈45% of lapel width\\text{Projection} \\approx 45\\% \\text{ of lapel width} Rise≈39% of lapel width\\text{Rise} \\approx 39\\% \\text{ of lapel width} Spread≈22.5% of lapel width\\text{Spread} \\approx 22.5\\% \\text{ of lapel width}\n\nwhich reproduces the geometry shown in the illustration very closely.",
+   "references": [
+    "/images/review-refs/suit-3pc/lapel-peak-120-curved/1786539293105-sseax0.jpg"
+   ],
+   "parkedAt": "2026-08-12T21:48:07.535Z",
+   "craftId": "suit-3pc|lapel|lapel-style|lapel-peak-120-curved"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "suit-3pc|lapel|lapel-style|lapel-peak-120-curved",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.979Z"
+  }
+ ]
+}

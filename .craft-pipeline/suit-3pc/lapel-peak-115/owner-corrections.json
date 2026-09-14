@@ -1,0 +1,32 @@
+{
+ "craftId": "suit-3pc|lapel|lapel-style|lapel-peak-115",
+ "note": "Owner rejection reasons for this craft, from BOTH decision sources. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 1,
+   "decidedAt": "2026-08-12T11:51:36.646Z",
+   "tags": [
+    "Reference drawing itself is wrong"
+   ],
+   "notes": "Looking at the uploaded illustration, this 115° Peak Lapel is a standard straight-edged peak (not curved, not low-gorge, and not RL). The red annotation shows an included angle of 115° at the gorge/peak junction.\n\nGeometric Definition\n\nLet:\n\nPeak angle = θ=115∘\\theta = 115^\\circ\nLapel width = WW\nPeak projection = LL\nHalf-angle\nβ=115∘2=57.5∘\\beta=\\frac{115^\\circ}{2}=57.5^\\circ\nSupplementary angle\n180∘−115∘=65∘180^\\circ-115^\\circ=65^\\circ\nBespoke Drafting Ratios\n\nA true 115° peak needs a generous width to avoid looking flattened.\n\nRecommended:\n\nW=13.0 cmW=13.0\\text{ cm}\n\nPeak projection ratio:\n\nL=0.43WL=0.43W\n\nThus:\n\nL=0.43(13)L=0.43(13) L=5.59 cmL=5.59\\text{ cm}\nTrigonometric Construction\n\nUsing:\n\nsin⁡(57.5∘)=0.8434\\sin(57.5^\\circ)=0.8434 cos⁡(57.5∘)=0.5373\\cos(57.5^\\circ)=0.5373\nVertical Rise\nH=Lsin⁡(57.5∘)H=L\\sin(57.5^\\circ) H=5.59(0.8434)H=5.59(0.8434) H=4.71 cmH=4.71\\text{ cm}\nHorizontal Spread\nS=Lcos⁡(57.5∘)S=L\\cos(57.5^\\circ) S=5.59(0.5373)S=5.59(0.5373) S=3.00 cmS=3.00\\text{ cm}\nCoordinate Geometry\n\nTaking the peak point as the origin:\n\nP=(0,0)P=(0,0)\n\nUpper peak leg:\n\nP1=(3.00,  4.71)P_1=(3.00,\\;4.71)\n\nLower peak leg:\n\nP2=(3.00,  −4.71)P_2=(3.00,\\;-4.71)\n\nVerification:\n\n∠P1PP2=115∘\\angle P_1PP_2 =115^\\circ\nEdge-Line Equations\n\nSlope:\n\nm=tan⁡(57.5∘)m=\\tan(57.5^\\circ) m=1.569m=1.569\n\nUpper peak edge:\n\ny=1.569xy=1.569x\n\nLower peak edge:\n\ny=−1.569xy=-1.569x\nGeneral Formula for Any Width\n\nFor a 115° peak:\n\nProjection\nL=0.43WL=0.43W\nRise\nH=0.43Wsin⁡(57.5∘)H=0.43W\\sin(57.5^\\circ) H=0.363WH=0.363W\nSpread\nS=0.43Wcos⁡(57.5∘)S=0.43W\\cos(57.5^\\circ) S=0.231WS=0.231W\nDrafting Specification (13 cm Width)\nPeak Angle      = 115°\nHalf Angle      = 57.5°\nLapel Width     = 13.0 cm\nProjection      = 5.59 cm\nPeak Rise       = 4.71 cm\nPeak Spread     = 3.00 cm\nEdge Slope      = 1.569\nProjection Rate = 43%\n\nStyle Interpretation\n\nThe illustrated 115° peak lapel has:\n\nA very open gorge angle.\nStrong shoulder emphasis.\nLong spear-shaped lapel line.\nBroad chest appearance.\nClassic 1930s drape-cut and vintage double-breasted aesthetics.\n\nIn practical bespoke tailoring, 115° is about the maximum angle that still reads visually as a true peak lapel before transitioning into a semi-peak appearance, making the geometry in your illustration particularly dramatic but still wearable.",
+   "references": [
+    "/images/review-refs/suit-3pc/lapel-peak-115/1786535061601-v7jxib.jpg"
+   ],
+   "parkedAt": "2026-08-12T21:48:07.530Z",
+   "craftId": "suit-3pc|lapel|lapel-style|lapel-peak-115"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "suit-3pc|lapel|lapel-style|lapel-peak-115",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.976Z"
+  }
+ ]
+}

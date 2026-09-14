@@ -1,0 +1,32 @@
+{
+ "craftId": "suit-3pc|lapel|lapel-style|lapel-shawl",
+ "note": "Owner rejection reasons for this craft, from BOTH decision sources. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 1,
+   "decidedAt": "2026-08-12T13:00:19.315Z",
+   "tags": [
+    "Reference drawing itself is wrong"
+   ],
+   "notes": "For the 12.5 cm Shawl Lapel shown in the image, the geometry differs fundamentally from a peak lapel because there is no gorge angle and no peak point. Instead, the collar and lapel form one continuous curve flowing from the neckline to the front edge.\n\nObserved Features\n\nThe illustration shows:\n\nClassic tuxedo-style shawl lapel\nContinuous rounded outer edge\nNo notch or peak\nWidth approximately 12.5 cm\nSymmetrical left/right geometry\nTapering toward the button stance\nPrimary Dimensions\n\nLet:\n\nW=12.5 cmW = 12.5\\text{ cm}\n\nRecommended collar stand width:\n\nC=4.0 cmC = 4.0\\text{ cm}\n\nRecommended roll radius:\n\nR=1.4WR = 1.4W R=17.5 cmR = 17.5\\text{ cm}\nDrafting Geometry\n\nA shawl lapel is typically drafted as a compound curve made from:\n\nUpper collar arc\nOuter roll arc\nFront closing arc\n\nThe primary outer curve may be approximated by a circular arc:\n\nx2+y2=R2x^2+y^2=R^2\n\nFor this width:\n\nx2+y2=17.52x^2+y^2=17.5^2 x2+y2=306.25x^2+y^2=306.25\nBezier Construction (CAD Friendly)\n\nFor digital pattern drafting:\n\nStart Point\nP0=(0,0)P_0=(0,0)\nEnd Point\nP3=(12.5,40)P_3=(12.5,40)\nControl Points\nP1=(3.5,10)P_1=(3.5,10) P2=(10,30)P_2=(10,30)\n\nBezier equation:\n\nB(t)=(1−t)3P0+3(1−t)2tP1+3(1−t)t2P2+t3P3B(t) = (1-t)^3P_0 + 3(1-t)^2tP_1 + 3(1-t)t^2P_2 + t^3P_3\n\nwhere\n\n0≤t≤10\\le t\\le1\n\nThis creates a smooth shawl roll similar to the illustrated shape.\n\nPatternmaker's Ratios\n\nFor a 12.5 cm shawl lapel:\n\nFinished Width       = 12.5 cm\nCollar Width         = 4.0 cm\nOuter Curve Radius   = 17.5 cm\nFront Sweep Length   = 38-42 cm\nRoll Line Depth      = 1.5 cm\n\n\nUseful proportional formulas:\n\nR=1.4WR = 1.4W Collar Width=0.32W\\text{Collar Width}=0.32W Roll Depth=0.12W\\text{Roll Depth}=0.12W\nCoordinates for Full-Scale Draft\n\nUsing a 12.5 cm width:\n\nNeck Point       (0.0, 0.0)\nUpper Roll       (4.0, 8.0)\nMid Roll         (7.5, 20.0)\nChest Level      (10.5, 32.0)\nBottom Point     (12.5, 40.0)\n\n\nA fair curve through these points reproduces the profile shown in the illustration.\n\nStyle Characteristics\n\nA 12.5 cm Shawl Lapel creates:\n\nStrong formal tuxedo appearance\nBroad chest emphasis\nContinuous elegant roll\nSofter appearance than peak lapels\nExcellent proportions for dinner jackets and double-breasted tuxedos\n\nA common bespoke rule is:\n\nOuter Radius≈1.4×Lapel Width\\text{Outer Radius} \\approx 1.4 \\times \\text{Lapel Width}\n\nso for a 12.5 cm shawl, a radius of roughly 17.5 cm gives a balanced and visually smooth curve matching the illustrated design.",
+   "references": [
+    "/images/review-refs/suit-3pc/lapel-shawl/1786539607577-6i0aum.jpg"
+   ],
+   "parkedAt": "2026-08-12T21:48:07.538Z",
+   "craftId": "suit-3pc|lapel|lapel-style|lapel-shawl"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "suit-3pc|lapel|lapel-style|lapel-shawl",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.981Z"
+  }
+ ]
+}

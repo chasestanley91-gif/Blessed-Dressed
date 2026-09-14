@@ -1,6 +1,5 @@
 {
   "schema": "garment-spec/v1",
-  "specOnly": true,
   "addr": "trousers > front-pockets > pocket-depth > pocket-deep",
   "productId": "trousers",
   "sectionId": "front-pockets",
@@ -18,7 +17,7 @@
     "fabric": "fine wool trouser cloth with visible weave"
   },
   "view": {
-    "orientation": "interior",
+    "orientation": "front",
     "wearerPerspective": true,
     "confirmedByVisualInspection": true
   },
@@ -32,12 +31,16 @@
     "shapes": [],
     "negatedShapes": [],
     "spread": [],
-    "flags": []
+    "flags": [],
+    "sides": [],
+    "attributes": [],
+    "supplierCodes": [],
+    "unresolved": []
   },
   "illustration": {
-    "path": null,
-    "disk": null,
-    "exists": false,
+    "path": "/images/blueprints/baoxiniao/trousers/KPOKS/C.jpg",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\KPOKS\\C.jpg",
+    "exists": true,
     "remote": false
   },
   "forbidden": [
@@ -47,5 +50,7 @@
   ],
   "excluded": null,
   "generate": true,
-  "extractedAt": "2026-08-02T00:35:17.190Z"
+  "extractedAt": "2026-08-26T05:08:30.363Z",
+  "illustrationRescopedAt": "2026-08-26T06:38:22.309Z",
+  "illustrationRescopeNote": "Path moved to the part-scoped blueprint tree. The IMAGE is byte-identical to the one this spec was extracted from (sha1 verified), so the reading below still stands and no re-extraction was needed."
 }

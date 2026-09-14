@@ -17,7 +17,7 @@
     "fabric": "textured wool/hopsack with visible weave"
   },
   "view": {
-    "orientation": "detail",
+    "orientation": "front",
     "wearerPerspective": true,
     "confirmedByVisualInspection": true
   },
@@ -27,12 +27,17 @@
     "angles": [],
     "counts": [],
     "shapes": [],
+    "negatedShapes": [],
     "spread": [],
-    "flags": []
+    "flags": [],
+    "sides": [],
+    "attributes": [],
+    "supplierCodes": [],
+    "unresolved": []
   },
   "illustration": {
-    "path": "/images/jacket/lapel-bh-style/none.svg",
-    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\jacket\\lapel-bh-style\\none.svg",
+    "path": "/images/blueprints/baoxiniao/jacket/GTECH/A.jpg",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\GTECH\\A.jpg",
     "exists": true,
     "remote": false
   },
@@ -44,5 +49,7 @@
   ],
   "excluded": null,
   "generate": true,
-  "extractedAt": "2026-07-30T05:20:51.190Z"
+  "extractedAt": "2026-08-26T03:53:04.317Z",
+  "illustrationRescopedAt": "2026-08-26T06:38:21.713Z",
+  "illustrationRescopeNote": "Path moved to the part-scoped blueprint tree. The IMAGE is byte-identical to the one this spec was extracted from (sha1 verified), so the reading below still stands and no re-extraction was needed."
 }

@@ -11,10 +11,10 @@
   "description": "Open patch pockets both sides.",
   "fieldLabel": "Chest / Breast Pocket",
   "sectionLabel": "Vest — Pockets",
-  "part": "jacket-detail",
+  "part": "vest-chest-pocket",
   "garment": {
-    "noun": "navy bespoke suit jacket",
-    "fabric": "fine wool suiting with visible weave"
+    "noun": "bespoke tailored waistcoat",
+    "fabric": "fine wool suiting"
   },
   "view": {
     "orientation": "front",
@@ -29,8 +29,15 @@
     "shapes": [
       "patch pocket"
     ],
+    "negatedShapes": [],
     "spread": [],
-    "flags": []
+    "flags": [],
+    "sides": [
+      "both"
+    ],
+    "attributes": [],
+    "supplierCodes": [],
+    "unresolved": []
   },
   "illustration": {
     "path": "/images/options/vest/vest-chest-both-patch.jpg",
@@ -45,5 +52,5 @@
   ],
   "excluded": null,
   "generate": true,
-  "extractedAt": "2026-07-31T04:49:46.978Z"
+  "extractedAt": "2026-08-27T02:37:24.201Z"
 }

@@ -1,0 +1,32 @@
+{
+ "craftId": "suit-3pc|lapel|lapel-style|lapel-peak-114",
+ "note": "Owner rejection reasons for this craft, from BOTH decision sources. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 1,
+   "decidedAt": "2026-08-12T11:22:14.382Z",
+   "tags": [
+    "Reference drawing itself is wrong"
+   ],
+   "notes": "For the 114° Semi-Peak Lapel shown in the image, the shape transitions between a traditional peak lapel and an exaggerated fashion peak. The very open 114° angle causes the peak to visually flatten and broaden, which is why many patternmakers call this a semi-peak rather than a true aggressive peak.\n\nImage Characteristics\n\nThe image shows:\n\nPeak angle marked 114°\nStraight upper edge\nWide-open gorge geometry\nLong spear-shaped lapel\nSemi-peak appearance due to flattened peak angle\nSimilar visual style to 1930s drape-cut and some zoot-suit tailoring\n1. Base Geometry\n\nLet:\n\nθ=114∘\\theta = 114^\\circ\n\nHalf-angle:\n\nβ=114∘2\\beta=\\frac{114^\\circ}{2} β=57∘\\beta=57^\\circ\n\nSupplementary angle:\n\n180∘−114∘=66∘180^\\circ-114^\\circ=66^\\circ\n2. Recommended Lapel Width\n\nA 114° semi-peak becomes unstable visually below about 13 cm.\n\nRecommended:\n\nW=13.0 cmW = 13.0\\text{ cm}\n3. Peak Projection\n\nSemi-peaks generally require more projection to maintain definition.\n\nUse:\n\nL=0.42WL=0.42W\n\nFor:\n\nW=13.0W=13.0 L=0.42(13)L=0.42(13) L=5.46 cmL=5.46\\text{ cm}\n4. Trigonometric Construction\n\nUsing:\n\nsin⁡(57∘)=0.8387\\sin(57^\\circ)=0.8387 cos⁡(57∘)=0.5446\\cos(57^\\circ)=0.5446\nPeak Rise\nH=Lsin⁡(57∘)H=L\\sin(57^\\circ) H=5.46(0.8387)H=5.46(0.8387) H=4.58 cmH=4.58\\text{ cm}\nPeak Spread\nS=Lcos⁡(57∘)S=L\\cos(57^\\circ) S=5.46(0.5446)S=5.46(0.5446) S=2.97 cmS=2.97\\text{ cm}\n5. General Drafting Formula\n\nFor any lapel width WW:\n\nProjection\nL=0.42WL=0.42W\nRise\nH=0.42Wsin⁡(57∘)H=0.42W\\sin(57^\\circ) H=0.352WH=0.352W\nSpread\nS=0.42Wcos⁡(57∘)S=0.42W\\cos(57^\\circ) S=0.229WS=0.229W\n6. CAD Coordinates\n\nPlace the peak tip at:\n\nP=(0,0)P=(0,0)\n\nThen:\n\nP1=(2.97,  4.58)P_1=(2.97,\\;4.58) P2=(2.97,  −4.58)P_2=(2.97,\\;-4.58)\n\nThis produces:\n\n∠P1PP2=114∘\\angle P_1PP_2=114^\\circ\n\nexactly.\n\n7. Straight Edge Equations\n\nSlope:\n\nm=tan⁡(57∘)m=\\tan(57^\\circ) m=1.540m=1.540\n\nUpper edge:\n\ny=1.540xy=1.540x\n\nLower edge:\n\ny=−1.540xy=-1.540x\n8. Patternmaker's Specification\n\nFor the 114° Semi-Peak Lapel at 13 cm width:\n\nPeak Angle      = 114°\nHalf Angle      = 57°\nLapel Width     = 13.0 cm\nProjection      = 5.46 cm\nRise            = 4.58 cm\nSpread          = 2.97 cm\nProjection Rate = 42%\n\nComparison to Earlier Peak Angles\nAngle\tWidth\tProjection Ratio\tCharacter105°\t12.5 cm\t36%\tDramatic Peak\n108°\t12.5 cm\t38%\tArchitectural Peak\n110°\t12.5 cm\t40%\tSpear Peak\n114°\t13 cm\t42%\tSemi-Peak\n118°+\t13.5 cm+\t45%+\tExtreme Fashion Peak\nTailoring Interpretation\n\nA 114° Semi-Peak Lapel is near the practical limit of classic tailoring geometry. The peak begins to flatten visually, creating a broad shoulder-emphasizing line rather than a sharply pointing peak. To maintain the look shown in your image, a 13 cm width, 5.5 cm projection, and 57° peak leg angle provide the closest geometric match.",
+   "references": [
+    "/images/review-refs/suit-3pc/lapel-peak-114/1786533545123-cjj4h8.jpg"
+   ],
+   "parkedAt": "2026-08-12T21:48:07.527Z",
+   "craftId": "suit-3pc|lapel|lapel-style|lapel-peak-114"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "suit-3pc|lapel|lapel-style|lapel-peak-114",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.973Z"
+  }
+ ]
+}

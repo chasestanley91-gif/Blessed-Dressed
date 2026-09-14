@@ -1,0 +1,30 @@
+{
+ "craftId": "suit-2pc|suit-pockets|lower-pocket|lp-large-slanted-45",
+ "note": "Owner rejection reasons for this craft, from BOTH decision sources. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 1,
+   "decidedAt": "2026-08-12T04:46:38.048Z",
+   "tags": [],
+   "notes": "For the Large Slanted Flap 4.5 cm shown in the image, the visible measurement is the finished flap depth:\n\nF=4.5 cmF = 4.5\\text{ cm}\n\nThe flap is a trapezoid with a slanted top edge parallel to the pocket opening.\n\n1. Pocket Opening Length\n\nA bespoke lower pocket is typically:\n\nPL=Chest Circumference5PL=\\frac{\\text{Chest Circumference}}{5}\n\nCommon values:\n\n38\" chest → 19 cm\n40\" chest → 20 cm\n42\" chest → 21 cm\n\nStandard draft:\n\nPL=20 cm\\boxed{PL=20\\text{ cm}}\n2. Pocket Slant Angle\n\nThe image shows a pronounced slant.\n\nRecommended:\n\nθ=9∘\\theta = 9^\\circ\n\nRange:\n\n8∘ to 10∘8^\\circ \\text{ to } 10^\\circ\n3. Rise Across Pocket\n\nFor a 20 cm opening:\n\nRise=PLsin⁡θRise = PL\\sin\\theta Rise=20sin⁡9∘Rise = 20\\sin9^\\circ Rise=3.13 cmRise = 3.13\\text{ cm} Rise=3.1 cm\\boxed{Rise=3.1\\text{ cm}}\n4. Finished Flap Width\n\nAllow a 0.5 cm extension beyond each end:\n\nFW=PL+1FW = PL+1 FW=21 cmFW = 21\\text{ cm} FW=21.0 cm\\boxed{FW=21.0\\text{ cm}}\n5. Finished Flap Area\nA=FW×FA = FW \\times F A=21×4.5A = 21 \\times 4.5 A=94.5 cm2A = 94.5\\text{ cm}^2\n6. Draft (Cut) Flap Depth\n\nFor a folded flap with 1 cm seam allowance:\n\nFD=2F+2SAFD = 2F + 2SA FD=(2×4.5)+2FD = (2 \\times 4.5)+2 FD=11.0 cmFD = 11.0\\text{ cm} FD=11.0 cm\\boxed{FD=11.0\\text{ cm}}\n7. Flap Taper\n\nA large flap typically tapers:\n\nT=0.15FT = 0.15F T=0.15(4.5)T = 0.15(4.5) T=0.675 cmT = 0.675\\text{ cm}\n\nUse:\n\nT=0.7 cm\\boxed{T=0.7\\text{ cm}}\n\nBottom width:\n\nBW=21−0.7BW = 21 - 0.7 BW=20.3 cmBW = 20.3\\text{ cm}\n8. Corner Radius\n\nFor a dress/sport coat style:\n\nCR=0.18FCR = 0.18F CR=0.18(4.5)CR = 0.18(4.5) CR=0.81 cmCR = 0.81\\text{ cm}\n\nUse:\n\n0.8 cm radius\\boxed{0.8\\text{ cm radius}}\n9. Draft Coordinates\n\nUsing a 20 cm pocket:\n\nPocket Opening\nA=(0,0)A=(0,0) B=(20,3.1)B=(20,3.1)\nUpper Flap Edge\nC=(0,4.5)C=(0,4.5) D=(20,7.6)D=(20,7.6)\nLower Edge\n\nTaper inward:\n\n0.35 cm0.35\\text{ cm}\n\nat each corner.\n\nPattern Summary\nFinished Flap\n21.0×4.5 cm\\boxed{21.0 \\times 4.5\\text{ cm}}\nCut Flap\n21.0×11.0 cm\\boxed{21.0 \\times 11.0\\text{ cm}}\nPocket Opening\n20.0 cm\\boxed{20.0\\text{ cm}}\nPocket Slant\n9∘\\boxed{9^\\circ}\nRise\n3.1 cm\\boxed{3.1\\text{ cm}}\nTaper\n0.7 cm\\boxed{0.7\\text{ cm}}\nCorner Radius\n0.8 cm\\boxed{0.8\\text{ cm}}\nMaster Formulas\nFD=2F+2SAFD=2F+2SA FW=PL+1FW=PL+1 T=0.15FT=0.15F Rise=PLsin⁡(θ)Rise=PL\\sin(\\theta) CR=0.18FCR=0.18F\n\nThese proportions produce the large 4.5 cm slanted flap shown in the illustration while maintaining classic bespoke jacket balance.",
+   "references": [
+    "/images/review-refs/suit-2pc/lp-large-slanted-45/1786509995695-lclwaq.jpg"
+   ],
+   "parkedAt": "2026-08-12T21:48:07.260Z",
+   "craftId": "suit-2pc|suit-pockets|lower-pocket|lp-large-slanted-45"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "discard",
+   "tags": [],
+   "notes": "bad Tech pack and all the pics are wrong remake everything",
+   "reasonRecorded": true,
+   "references": [],
+   "craftId": "suit-2pc|suit-pockets|lower-pocket|lp-large-slanted-45",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.570Z"
+  }
+ ]
+}

@@ -1,0 +1,157 @@
+{
+  "addr": "sport-coat > suit-pockets > lower-pocket > lp-large-slanted-40",
+  "label": "Large Slanted Flap 4.0 cm",
+  "part": "jacket-pocket",
+  "orientation": "front",
+  "excluded": null,
+  "generate": true,
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\sport-coat.json",
+  "source": "json",
+  "illustration": "/images/blueprints/baoxiniao/jacket/REQPD/O.jpg",
+  "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQPD\\O.jpg",
+  "illustrationExists": true,
+  "illustrationRemote": false,
+  "profile": {
+    "addr": "sport-coat > suit-pockets > lower-pocket > lp-large-slanted-40",
+    "product": "sport-coat",
+    "field": "Lower Pockets",
+    "option": "Large Slanted Flap 4.0 cm",
+    "part": "jacket-pocket",
+    "garment": "bespoke sport coat",
+    "orientation": "front",
+    "absence": false,
+    "distinguishingDetail": "The large slanted flap is the same hacking-style pocket cut at a steeper angle or with a noticeably wider and deeper flap, creating a more emphatic visual statement on the hip. It is associated with tweed country jackets, overcoats, and double-breasted suits where a commanding lower pocket anchors the jacket's weight and presence. The scale suits taller clients or those wearing voluminous cloth — flannel, tweed, or heavy barathea — where a standard-width flap would look pinched or understated.",
+    "measured": {
+      "dimensions": [
+        "4.0 cm"
+      ],
+      "angles": [],
+      "counts": [],
+      "shapes": [
+        "flap pocket"
+      ],
+      "spread": [],
+      "flags": []
+    },
+    "reproduceFromIllustration": [
+      "pocket style (jetted/flap/patch)",
+      "welt",
+      "flap shape",
+      "pattern match"
+    ],
+    "composition": {
+      "crop": "on the hip pocket",
+      "dominanceTarget": "40–80% of frame",
+      "identifyWithin": "1 second"
+    },
+    "forbidden": [
+      "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+      "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+      "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+    ],
+    "excluded": null,
+    "generate": true
+  },
+  "requiredTokens": [
+    "4.0 cm",
+    "flap pocket"
+  ],
+  "checklist": [
+    "length/width matches exactly: 4.0 cm",
+    "on the lower side, NOT mirrored or swapped (check against the drawing, not against convention)",
+    "shape reads as drawn: flap pocket",
+    "distinguishing detail present: The large slanted flap is the same hacking-style pocket cut at a steeper angle or with a noticeably wider and deeper flap, creating a more emphatic visual statement on the hip. It is associated with tweed country jackets, overcoats, and double-breasted suits where a commanding lower pocket anchors the jacket's weight and presence. The scale suits taller clients or those wearing voluminous cloth — flannel, tweed, or heavy barathea — where a standard-width flap would look pinched or understated.",
+    "reproduced from the illustration: pocket style (jetted/flap/patch)",
+    "reproduced from the illustration: welt",
+    "reproduced from the illustration: flap shape",
+    "reproduced from the illustration: pattern match",
+    "orientation matches the illustration: front",
+    "the Lower Pockets dominates the frame (40–80%), identifiable within one second, framed on the hip pocket",
+    "silhouette, proportions, seam & stitch placement match the illustration; left/right symmetry correct",
+    "NO generic-category substitution — this exact option, not a typical one",
+    "a real photograph of the exact drawn option — not the line-art, no stylisation"
+  ],
+  "scoreCard": [
+    {
+      "category": "shape",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "geometry",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "dimensions",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "angles",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "construction",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "placement",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "symmetry",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "composition",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "blueprint-match",
+      "score": null,
+      "min": 98
+    }
+  ],
+  "prompt": "Ultra-photorealistic luxury menswear product photography.\n\nA single-subject craft DOCUMENTATION photograph: the Lower Pockets is the dominant subject, filling 40–80% of the frame and identifiable within one second.\n\nA premium bespoke sport coat featuring a precise Large Slanted Flap 4.0 cm (Lower Pockets).\n\nDistinguishing construction detail (reproduce exactly as drawn): The large slanted flap is the same hacking-style pocket cut at a steeper angle or with a noticeably wider and deeper flap, creating a more emphatic visual statement on the hip. It is associated with tweed country jackets, overcoats, and double-breasted suits where a commanding lower pocket anchors the jacket's weight and presence. The scale suits taller clients or those wearing voluminous cloth — flannel, tweed, or heavy barathea — where a standard-width flap would look pinched or understated.\n\nExact specification — on the lower side ONLY — do not mirror or swap; flap pocket shape; measuring exactly 4.0 cm — matching the illustration precisely.\n\nMANDATORY GEOMETRY COVERAGE — reproduce from the illustration, exactly and without assumption, every one of these: pocket style (jetted/flap/patch), welt, flap shape, pattern match. Match each to the drawing.\n\nVIEW — this illustration is the front of the garment. Photograph the same face; never substitute a different face of the garment.\n\nBLUEPRINT LOCK — THE DRAWING IS LAW: the attached technical illustration is the manufacturing blueprint for this exact craft option and the SOLE authority for the image. Reproduce its geometry precisely — point/edge shape, lengths, widths, depths, angles, curvature, roll lines, symmetry, button/tab/stay positions, seam and stitch placement, and proportions — within less than 2% deviation. Assume NOTHING from tailoring/menswear/fashion convention or model priors; every visible characteristic must come from the drawing. Do not redesign, reinterpret, substitute a similar commercial style, stylise, or \"improve\" it. Do NOT fall back to a generic version of this category — reproduce THIS option, not a typical one. If convention conflicts with the drawing, the drawing wins. Accuracy over aesthetics. ANNOTATIONS ARE NOT THE GARMENT: the technical drawing may carry measurement callouts — dimension numbers (\"2.5cm\", \"9cm\", \"115°\"), tick / leader / dimension lines, arrows, red or coloured guide marks, and text labels. These are manufacturing documentation, NOT features of the cloth. Reproduce ONLY the finished garment: never render any number, unit, arrow, callout, leader line, measurement mark, or text anywhere in the photograph. The final image is a clean garment photo with zero annotation. COLOUR IN THE DRAWING IS NOTATION, NOT CLOTH: any red, orange or otherwise highlighted region marks WHERE the craft option sits — it is a position marker, never a colour specification. Flat grey or tinted shading marks the EXTENT of a panel, lining or facing, not its shade. Render every one of those areas in the garment's own cloth and thread, in the natural colour that tailoring would use there. There must be no red, no highlighter tint and no flat unshaded grey panel anywhere in the photograph unless the option's own label explicitly names that colour.\n\nPhotographed worn on a male model.\n\nFrame on the hip pocket; the detail must read clearly and sharply.\n\nMATCHED FRAMING — this option belongs to a family whose members differ from one another only by a measurement, so this photograph will be shown beside its siblings and compared directly. TWO SEPARATE REQUIREMENTS, and both must hold. FIRST, THE GARMENT: build the feature at exactly the size the drawing gives it — no larger. Do not exaggerate the dimension to make this option look more distinct from its siblings; the difference between them is small in real tailoring and must stay small here, because a customer choosing on these numbers is ordering a real garment. SECOND, THE CAMERA: frame the shot the way every member of the family must be framed — the garment part square to camera, centred, at a standard distance that leaves the whole garment occupying the same share of the picture no matter which value this option carries. Do not move closer for a small measurement or pull back for a large one. Getting one of these right while getting the other wrong is still a failure: an accurate feature shot at the wrong distance, or a matched frame containing an exaggerated feature, both mislead a customer comparing two pictures side by side.\n\nSavile Row and high-end Italian sartorial aesthetic. Natural daylight studio lighting, Phase One IQ4 medium-format camera, 150MP detail, shallow depth of field, magazine-quality editorial menswear photography. Authentic bespoke craftsmanship, fine hand stitching, premium finishing. SET — shot in a clean luxury photographic studio against a seamless, plain, neutral light-grey background with clear separation between garment and background: no location, no architecture, no furniture, no scenery, no props and no environmental context of any kind competing with the garment.\n\nExtremely realistic textured wool/hopsack with visible weave texture, fine stitching.\n\nAvoid: any GENERIC menswear substitution (a generic spread collar, generic notch/peak lapel, generic pocket/pleat/vent/cuff/waistband in place of the drawn one), illustration or line-art style, CGI or 3D-render look, cartoon, mannequin, fashion sketch, inaccurate geometry, altered proportions, missing construction details, asymmetry, watermark, AI-art appearance, AND any text or annotation traced from the drawing: NO measurement numbers, units (cm/mm/°), dimension or leader lines, arrows, callouts, red/coloured guide marks, ruler ticks, or labels anywhere in the frame. This is real garment photography of the exact drawn option — clean cloth only, nothing else.\n\nFORBIDDEN FOR THIS OPTION — do not render: a generic version of this part standing in for the exact drawn option (generic-category substitution); any feature, count, or geometry borrowed from a neighboring craft option on the same field; a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion).\n\nOWNER CORRECTION AFTER REVIEW (attempt 1 was rejected by the owner — obey this over any conflicting earlier line, including the BLUEPRINT LOCK): What is wrong with it: Reference drawing itself is wrong; Wrong shape / outline; Generic version, not this option; Wrong feature entirely; Wrong size or proportion; Annotation or colour bled in from the drawing; Unrealistic / AI look. For the Large Slanted Flap Lower Jacket Pocket shown in the image:\n\nObserved Measurements\nFinished flap depth = 4.0 cm\nStyle = Large Slanted Flap\nPocket is more pronounced and wider than a regular flap\nSlant appears stronger, typically used on sport coats and hacking-style pockets\n1. Finished Flap Depth\nF=4.0 cmF = 4.0\\text{ cm}\n\nVisible flap depth after construction.\n\n2. Cut Flap Depth\n\nAdd turn-of-cloth and seam allowances:\n\nFD=(2F)+2SAFD = (2F) + 2SA\n\nUsing 1 cm seam allowances:\n\nFD=(2×4)+2FD = (2 \\times 4) + 2 FD=10 cmFD = 10\\text{ cm}\nDraft Size\n10.0 cm\\boxed{10.0\\text{ cm}}\n3. Pocket Opening Length\n\nLarge flap pockets are typically:\n\nPL=Chest Circumference5PL = \\frac{\\text{Chest Circumference}}{5}\n\nFor a 40\" (101.6 cm) chest:\n\n101.6÷5101.6 \\div 5 =20.3 cm=20.3\\text{ cm}\n\nRecommended:\n\n20−21 cm\\boxed{20-21\\text{ cm}}\n4. Flap Width\n\nAllow 0.5 cm extension beyond each end:\n\nFW=PL+1.0FW = PL + 1.0\n\nFor a 20 cm pocket:\n\nFW=21 cmFW = 21\\text{ cm} 21.0 cm\\boxed{21.0\\text{ cm}}\n5. Pocket Slant Angle\n\nA large slanted flap generally uses:\n\n8∘8^\\circ\n\nto\n\n10∘10^\\circ\n\nRecommended:\n\n9∘\\boxed{9^\\circ}\n6. Vertical Rise\n\nFor a 20 cm pocket at 9°:\n\nRise=PLsin⁡(9∘)Rise = PL \\sin(9^\\circ) Rise=20(0.1564)Rise = 20(0.1564) Rise=3.13 cmRise = 3.13\\text{ cm} 3.1 cm\\boxed{3.1\\text{ cm}}\n\nThis means the outer end sits about 3.1 cm higher than the inner end.\n\n7. Flap Taper\n\nLarge flaps usually taper slightly.\n\nT=0.15FT = 0.15F T=0.15(4)T = 0.15(4) T=0.6 cmT = 0.6\\text{ cm}\n\nBottom edge width:\n\nBW=FW−0.6BW = FW - 0.6 BW=20.4 cmBW = 20.4\\text{ cm}\n8. Corner Treatment\n\nClassic bespoke:\n\nChamfer\n0.7 cm0.7\\text{ cm}\nAngle\n45∘45^\\circ\n\nor lightly rounded.\n\n9. Draft Coordinates\n\nAssuming:\n\nPocket length = 20 cm\nSlant = 9°\nFlap depth = 4 cm\n\nPocket opening:\n\nA=(0,0)A=(0,0) B=(20,3.1)B=(20,3.1)\n\nUpper flap edge:\n\nC=(0,4)C=(0,4) D=(20,7.1)D=(20,7.1)\n\nConnect parallel lines to create the flap.\n\nD------------------C\n \\                /\n  \\              /\n   \\            /\n    \\          /\nB------------------A\n\nComplete Bespoke Draft\nFinished Flap\n20×4 cm\\boxed{20 \\times 4\\text{ cm}}\nCut Flap\n21×10 cm\\boxed{21 \\times 10\\text{ cm}}\nPocket Length\n20−21 cm\\boxed{20-21\\text{ cm}}\nSlant\n9∘\\boxed{9^\\circ}\nRise Across Pocket\n3.1 cm\\boxed{3.1\\text{ cm}}\nTaper\n0.6 cm\\boxed{0.6\\text{ cm}}\nChamfer\n\\boxed{0.7\\text{ cm @ 45^\\circ}}\nPocket Bag\n\nWidth:\n\nPL+4=24 cmPL + 4 = 24\\text{ cm}\n\nDepth:\n\n1.4PL=28 cm1.4PL = 28\\text{ cm} 24×28 cm\\boxed{24 \\times 28\\text{ cm}}\nParametric Formula Set\nFW=PL+1FW = PL + 1 T=0.15FT = 0.15F Rise=PLsin⁡(θ)Rise = PL\\sin(\\theta) FD=2F+2SAFD = 2F + 2SA\n\nFor your Large Slanted Flap, 4 cm deep, the key geometry is:\n\nPocket opening: 20-21 cm\nVisible flap: 4.0 cm\nCut flap depth: 10.0 cm\nSlant: 9°\nRise: 3.1 cm\nTaper: 0.6 cm\nFlap width: 21 cm The owner uploaded 1 reference photograph(s) with this rejection, but they were reviewed and found NOT to depict this exact option, so none are attached. Take the correction text above literally and use the technical drawing as the geometry authority.\n\nOWNER CORRECTION AFTER REVIEW (a previous attempt was rejected by the owner — obey this over any conflicting earlier line, including the BLUEPRINT LOCK): bad Tech pack and all the pics are wrong remake everything",
+  "ownerCorrections": [
+    {
+      "attemptRejected": 1,
+      "decidedAt": "2026-08-12T04:30:23.187Z",
+      "tags": [
+        "Reference drawing itself is wrong",
+        "Wrong shape / outline",
+        "Generic version, not this option",
+        "Wrong feature entirely",
+        "Wrong size or proportion",
+        "Annotation or colour bled in from the drawing",
+        "Unrealistic / AI look"
+      ],
+      "notes": "For the Large Slanted Flap Lower Jacket Pocket shown in the image:\n\nObserved Measurements\nFinished flap depth = 4.0 cm\nStyle = Large Slanted Flap\nPocket is more pronounced and wider than a regular flap\nSlant appears stronger, typically used on sport coats and hacking-style pockets\n1. Finished Flap Depth\nF=4.0 cmF = 4.0\\text{ cm}\n\nVisible flap depth after construction.\n\n2. Cut Flap Depth\n\nAdd turn-of-cloth and seam allowances:\n\nFD=(2F)+2SAFD = (2F) + 2SA\n\nUsing 1 cm seam allowances:\n\nFD=(2×4)+2FD = (2 \\times 4) + 2 FD=10 cmFD = 10\\text{ cm}\nDraft Size\n10.0 cm\\boxed{10.0\\text{ cm}}\n3. Pocket Opening Length\n\nLarge flap pockets are typically:\n\nPL=Chest Circumference5PL = \\frac{\\text{Chest Circumference}}{5}\n\nFor a 40\" (101.6 cm) chest:\n\n101.6÷5101.6 \\div 5 =20.3 cm=20.3\\text{ cm}\n\nRecommended:\n\n20−21 cm\\boxed{20-21\\text{ cm}}\n4. Flap Width\n\nAllow 0.5 cm extension beyond each end:\n\nFW=PL+1.0FW = PL + 1.0\n\nFor a 20 cm pocket:\n\nFW=21 cmFW = 21\\text{ cm} 21.0 cm\\boxed{21.0\\text{ cm}}\n5. Pocket Slant Angle\n\nA large slanted flap generally uses:\n\n8∘8^\\circ\n\nto\n\n10∘10^\\circ\n\nRecommended:\n\n9∘\\boxed{9^\\circ}\n6. Vertical Rise\n\nFor a 20 cm pocket at 9°:\n\nRise=PLsin⁡(9∘)Rise = PL \\sin(9^\\circ) Rise=20(0.1564)Rise = 20(0.1564) Rise=3.13 cmRise = 3.13\\text{ cm} 3.1 cm\\boxed{3.1\\text{ cm}}\n\nThis means the outer end sits about 3.1 cm higher than the inner end.\n\n7. Flap Taper\n\nLarge flaps usually taper slightly.\n\nT=0.15FT = 0.15F T=0.15(4)T = 0.15(4) T=0.6 cmT = 0.6\\text{ cm}\n\nBottom edge width:\n\nBW=FW−0.6BW = FW - 0.6 BW=20.4 cmBW = 20.4\\text{ cm}\n8. Corner Treatment\n\nClassic bespoke:\n\nChamfer\n0.7 cm0.7\\text{ cm}\nAngle\n45∘45^\\circ\n\nor lightly rounded.\n\n9. Draft Coordinates\n\nAssuming:\n\nPocket length = 20 cm\nSlant = 9°\nFlap depth = 4 cm\n\nPocket opening:\n\nA=(0,0)A=(0,0) B=(20,3.1)B=(20,3.1)\n\nUpper flap edge:\n\nC=(0,4)C=(0,4) D=(20,7.1)D=(20,7.1)\n\nConnect parallel lines to create the flap.\n\nD------------------C\n \\                /\n  \\              /\n   \\            /\n    \\          /\nB------------------A\n\nComplete Bespoke Draft\nFinished Flap\n20×4 cm\\boxed{20 \\times 4\\text{ cm}}\nCut Flap\n21×10 cm\\boxed{21 \\times 10\\text{ cm}}\nPocket Length\n20−21 cm\\boxed{20-21\\text{ cm}}\nSlant\n9∘\\boxed{9^\\circ}\nRise Across Pocket\n3.1 cm\\boxed{3.1\\text{ cm}}\nTaper\n0.6 cm\\boxed{0.6\\text{ cm}}\nChamfer\n\\boxed{0.7\\text{ cm @ 45^\\circ}}\nPocket Bag\n\nWidth:\n\nPL+4=24 cmPL + 4 = 24\\text{ cm}\n\nDepth:\n\n1.4PL=28 cm1.4PL = 28\\text{ cm} 24×28 cm\\boxed{24 \\times 28\\text{ cm}}\nParametric Formula Set\nFW=PL+1FW = PL + 1 T=0.15FT = 0.15F Rise=PLsin⁡(θ)Rise = PL\\sin(\\theta) FD=2F+2SAFD = 2F + 2SA\n\nFor your Large Slanted Flap, 4 cm deep, the key geometry is:\n\nPocket opening: 20-21 cm\nVisible flap: 4.0 cm\nCut flap depth: 10.0 cm\nSlant: 9°\nRise: 3.1 cm\nTaper: 0.6 cm\nFlap width: 21 cm",
+      "references": [
+        "/images/review-refs/sport-coat/lp-large-slanted-40/1786508971773-llqusi.jpg"
+      ],
+      "parkedAt": "2026-08-12T21:48:07.178Z",
+      "craftId": "sport-coat|suit-pockets|lower-pocket|lp-large-slanted-40"
+    },
+    {
+      "attemptRejected": null,
+      "decidedAt": null,
+      "source": "july-v3",
+      "verdict": "discard",
+      "tags": [],
+      "notes": "bad Tech pack and all the pics are wrong remake everything",
+      "reasonRecorded": true,
+      "references": [],
+      "craftId": "sport-coat|suit-pockets|lower-pocket|lp-large-slanted-40",
+      "foldedFrom": "generation-queue.rejectionContext",
+      "parkedAt": "2026-08-16T05:02:08.422Z"
+    }
+  ],
+  "builtAt": "2026-08-26T07:28:43.369Z"
+}

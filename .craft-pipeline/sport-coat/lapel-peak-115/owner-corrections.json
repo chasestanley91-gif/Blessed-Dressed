@@ -1,0 +1,32 @@
+{
+ "craftId": "sport-coat|lapel|lapel-style|lapel-peak-115",
+ "note": "Owner rejection reasons for this craft, from BOTH decision sources. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 1,
+   "decidedAt": "2026-08-12T03:50:55.587Z",
+   "tags": [
+    "Reference drawing itself is wrong"
+   ],
+   "notes": "For the Peak Lapel 115°, the image shows:\n\nGorge angle (inside angle) = 115°\nLapel width = 12.5 cm\nStraight peak\nStandard peak height, not a low peak or semi-peak\n1. Convert Gorge Angle to Peak Angle\n\nThe drafting angle of the peak is the supplementary angle:\n\nPeak Angle=180∘−115∘\\text{Peak Angle} = 180^\\circ - 115^\\circ =65∘= 65^\\circ\n\nSo draw the peak line at:\n\n65∘\\boxed{65^\\circ}\n\nfrom the collar seam.\n\n2. Peak Length\n\nFor a full peak lapel:\n\nPL=1.20WPL = 1.20W PL=1.20(12.5)PL = 1.20(12.5) PL=15.0 cmPL = 15.0\\text{ cm} 15.0 cm\\boxed{15.0\\text{ cm}}\n3. Peak Projection\n\nDistance the peak tip extends beyond the gorge:\n\nPP=0.35WPP = 0.35W PP=0.35(12.5)PP = 0.35(12.5) PP=4.375 cmPP = 4.375\\text{ cm} 4.4 cm\\boxed{4.4\\text{ cm}}\n4. Gorge Height\n\nFrom button stance to gorge point:\n\nGH=0.80WGH = 0.80W GH=0.80(12.5)GH = 0.80(12.5) GH=10.0 cmGH = 10.0\\text{ cm} 10.0 cm\\boxed{10.0\\text{ cm}}\n5. Roll Line\nRL=0.55WRL = 0.55W RL=0.55(12.5)RL = 0.55(12.5) RL=6.875 cmRL = 6.875\\text{ cm} 6.9 cm\\boxed{6.9\\text{ cm}}\n6. Peak Tip Coordinates\n\nUsing the gorge point as the origin:\n\nA=(0,0)A=(0,0)\n\nPeak length:\n\nPL=15.0 cmPL=15.0\\text{ cm}\n\nAngle:\n\n65∘65^\\circ\n\nHorizontal component:\n\nX=15cos⁡65∘X=15\\cos65^\\circ X=6.34 cmX=6.34\\text{ cm}\n\nVertical component:\n\nY=15sin⁡65∘Y=15\\sin65^\\circ Y=13.59 cmY=13.59\\text{ cm}\n\nPeak tip:\n\n(6.34,  13.59)\\boxed{(6.34,\\;13.59)}\nDrafting Layout\n                 Peak Tip\n                    *\n                   /\n                  /\n                 /\n                / 65°\n               /\n              *\n         Gorge Point\n\nPeak Length = 15.0 cm\nProjection  = 4.4 cm\nWidth       = 12.5 cm\n\nComplete Draft Specs\nMeasurement\tValueLapel Width\t12.5 cm\nGorge Angle\t115°\nExterior Peak Angle\t65°\nPeak Length\t15.0 cm\nPeak Projection\t4.4 cm\nGorge Height\t10.0 cm\nRoll Line\t6.9 cm\nBespoke Formula Set\nPeak Length=1.2W\\text{Peak Length} = 1.2W Peak Projection=0.35W\\text{Peak Projection} = 0.35W Gorge Height=0.8W\\text{Gorge Height} = 0.8W Roll Line=0.55W\\text{Roll Line} = 0.55W\n\nFor your 115° Peak Lapel, 12.5 cm wide, draft:\n\nPeak Length: 15.0 cm\nPeak Projection: 4.4 cm\nGorge Height: 10.0 cm\nRoll Line: 6.9 cm\nPeak Drafting Angle: 65°",
+   "references": [
+    "/images/review-refs/sport-coat/lapel-peak-115/1786506643128-6cjthm.jpg"
+   ],
+   "parkedAt": "2026-08-12T21:48:06.994Z",
+   "craftId": "sport-coat|lapel|lapel-style|lapel-peak-115"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "sport-coat|lapel|lapel-style|lapel-peak-115",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.344Z"
+  }
+ ]
+}

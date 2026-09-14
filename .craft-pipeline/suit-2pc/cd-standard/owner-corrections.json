@@ -1,0 +1,31 @@
+{
+ "craftId": "suit-2pc|front-style|chest-dart|cd-standard",
+ "note": "Owner rejection reasons for this craft, from BOTH decision sources. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 1,
+   "decidedAt": "2026-08-12T04:50:39.814Z",
+   "tags": [
+    "Wrong garment or wrong part",
+    "Wrong feature entirely"
+   ],
+   "notes": "",
+   "references": [],
+   "parkedAt": "2026-08-12T21:48:07.290Z",
+   "craftId": "suit-2pc|front-style|chest-dart|cd-standard"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "suit-2pc|front-style|chest-dart|cd-standard",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.632Z"
+  }
+ ]
+}

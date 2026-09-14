@@ -1,145 +1,159 @@
 {
- "addr": "shirt > collar > lapel > collar-curve-point-75",
- "label": "Curve Point 7.5 cm",
- "part": "shirt-collar",
- "orientation": "detail",
- "excluded": null,
- "generate": true,
- "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\shirt.json",
- "source": "json",
- "illustration": "/images/ai/collar-curve-point-75.png",
- "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\ai\\collar-curve-point-75.png",
- "illustrationExists": true,
- "illustrationRemote": false,
- "profile": {
   "addr": "shirt > collar > lapel > collar-curve-point-75",
-  "product": "shirt",
-  "field": "Collar Style",
-  "option": "Curve Point 7.5 cm",
+  "label": "Curve Point 7.5 cm",
   "part": "shirt-collar",
-  "garment": "white bespoke cotton dress shirt",
-  "orientation": "detail",
-  "absence": false,
-  "distinguishingDetail": "A 7.5 cm point whose tips are softened into a gentle rounded curve rather than a sharp tip. The rounded termination keeps the length and presence of a full point while reading softer and more approachable, flattering angular faces with or without a tie.",
-  "measured": {
-   "dimensions": [
-    "7.5 cm"
-   ],
-   "angles": [],
-   "counts": [],
-   "shapes": [
+  "orientation": "front",
+  "excluded": null,
+  "generate": true,
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\shirt.json",
+  "source": "json",
+  "illustration": "/images/techpacks/shirt/lapel/curve-point-collar-in-75cm.jpg",
+  "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\techpacks\\shirt\\lapel\\curve-point-collar-in-75cm.jpg",
+  "illustrationExists": true,
+  "illustrationRemote": false,
+  "profile": {
+    "addr": "shirt > collar > lapel > collar-curve-point-75",
+    "product": "shirt",
+    "field": "Collar Style",
+    "option": "Curve Point 7.5 cm",
+    "part": "shirt-collar",
+    "garment": "white bespoke cotton dress shirt",
+    "orientation": "front",
+    "absence": false,
+    "distinguishingDetail": "A 7.5 cm point whose tips are softened into a gentle rounded curve rather than a sharp tip. The rounded termination keeps the length and presence of a full point while reading softer and more approachable, flattering angular faces with or without a tie.",
+    "measured": {
+      "dimensions": [
+        "7.5 cm"
+      ],
+      "angles": [],
+      "counts": [],
+      "shapes": [
+        "curved point",
+        "point",
+        "rounded-bottom pocket"
+      ],
+      "spread": [],
+      "flags": []
+    },
+    "reproduceFromIllustration": [
+      "collar point geometry",
+      "collar stand",
+      "collar roll",
+      "stitching precision",
+      "the unobstructed spread between the collar points",
+      "both collar leaves mirroring each other exactly in length, angle and tip shape"
+    ],
+    "composition": {
+      "crop": "tight on the collar and neckline",
+      "dominanceTarget": "40–80% of frame",
+      "identifyWithin": "1 second"
+    },
+    "forbidden": [
+      "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+      "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+      "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+    ],
+    "excluded": null,
+    "generate": true
+  },
+  "requiredTokens": [
+    "7.5 cm",
     "curved point",
     "point",
     "rounded-bottom pocket"
-   ],
-   "spread": [],
-   "flags": []
-  },
-  "reproduceFromIllustration": [
-   "collar point geometry",
-   "collar stand",
-   "collar roll",
-   "stitching precision",
-   "the unobstructed spread between the collar points",
-   "both collar leaves mirroring each other exactly in length, angle and tip shape"
   ],
-  "composition": {
-   "crop": "tight on the collar and neckline",
-   "dominanceTarget": "40–80% of frame",
-   "identifyWithin": "1 second"
-  },
-  "forbidden": [
-   "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
-   "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
-   "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+  "checklist": [
+    "length/width matches exactly: 7.5 cm",
+    "shape reads as drawn: curved point",
+    "shape reads as drawn: point",
+    "shape reads as drawn: rounded-bottom pocket",
+    "distinguishing detail present: A 7.5 cm point whose tips are softened into a gentle rounded curve rather than a sharp tip. The rounded termination keeps the length and presence of a full point while reading softer and more approachable, flattering angular faces with or without a tie.",
+    "reproduced from the illustration: collar point geometry",
+    "reproduced from the illustration: collar stand",
+    "reproduced from the illustration: collar roll",
+    "reproduced from the illustration: stitching precision",
+    "reproduced from the illustration: the unobstructed spread between the collar points",
+    "reproduced from the illustration: both collar leaves mirroring each other exactly in length, angle and tip shape",
+    "orientation matches the illustration: front",
+    "the Collar Style dominates the frame (40–80%), identifiable within one second, framed tight on the collar and neckline",
+    "silhouette, proportions, seam & stitch placement match the illustration; left/right symmetry correct",
+    "NO generic-category substitution — this exact option, not a typical one",
+    "a real photograph of the exact drawn option — not the line-art, no stylisation"
   ],
-  "excluded": null,
-  "generate": true
- },
- "requiredTokens": [
-  "7.5 cm",
-  "curved point",
-  "point",
-  "rounded-bottom pocket"
- ],
- "checklist": [
-  "length/width matches exactly: 7.5 cm",
-  "shape reads as drawn: curved point",
-  "shape reads as drawn: point",
-  "shape reads as drawn: rounded-bottom pocket",
-  "distinguishing detail present: A 7.5 cm point whose tips are softened into a gentle rounded curve rather than a sharp tip. The rounded termination keeps the length and presence of a full point while reading softer and more approachable, flattering angular faces with or without a tie.",
-  "reproduced from the illustration: collar point geometry",
-  "reproduced from the illustration: collar stand",
-  "reproduced from the illustration: collar roll",
-  "reproduced from the illustration: stitching precision",
-  "reproduced from the illustration: the unobstructed spread between the collar points",
-  "reproduced from the illustration: both collar leaves mirroring each other exactly in length, angle and tip shape",
-  "orientation matches the illustration: detail",
-  "the Collar Style dominates the frame (40–80%), identifiable within one second, framed tight on the collar and neckline",
-  "silhouette, proportions, seam & stitch placement match the illustration; left/right symmetry correct",
-  "NO generic-category substitution — this exact option, not a typical one",
-  "a real photograph of the exact drawn option — not the line-art, no stylisation"
- ],
- "scoreCard": [
-  {
-   "category": "shape",
-   "score": null,
-   "min": 98
-  },
-  {
-   "category": "geometry",
-   "score": null,
-   "min": 98
-  },
-  {
-   "category": "dimensions",
-   "score": null,
-   "min": 98
-  },
-  {
-   "category": "angles",
-   "score": null,
-   "min": 98
-  },
-  {
-   "category": "construction",
-   "score": null,
-   "min": 98
-  },
-  {
-   "category": "placement",
-   "score": null,
-   "min": 98
-  },
-  {
-   "category": "symmetry",
-   "score": null,
-   "min": 98
-  },
-  {
-   "category": "composition",
-   "score": null,
-   "min": 98
-  },
-  {
-   "category": "blueprint-match",
-   "score": null,
-   "min": 98
-  }
- ],
- "prompt": "Ultra-photorealistic luxury menswear product photography.\n\nA single-subject craft DOCUMENTATION photograph: the Collar Style is the dominant subject, filling 40–80% of the frame and identifiable within one second.\n\nA premium white bespoke cotton dress shirt featuring a precise Curve Point 7.5 cm (Collar Style).\n\nDistinguishing construction detail (reproduce exactly as drawn): A 7.5 cm point whose tips are softened into a gentle rounded curve rather than a sharp tip. The rounded termination keeps the length and presence of a full point while reading softer and more approachable, flattering angular faces with or without a tie.\n\nExact specification — curved point, point, rounded-bottom pocket shape; measuring exactly 7.5 cm — matching the illustration precisely.\n\nMANDATORY GEOMETRY COVERAGE — reproduce from the illustration, exactly and without assumption, every one of these: collar point geometry, collar stand, collar roll, stitching precision, the unobstructed spread between the collar points, both collar leaves mirroring each other exactly in length, angle and tip shape. Match each to the drawing.\n\nVIEW — this illustration is the detail of the garment. Photograph the same face; never substitute a different face of the garment.\n\nBLUEPRINT LOCK — THE DRAWING IS LAW: the attached technical illustration is the manufacturing blueprint for this exact craft option and the SOLE authority for the image. Reproduce its geometry precisely — point/edge shape, lengths, widths, depths, angles, curvature, roll lines, symmetry, button/tab/stay positions, seam and stitch placement, and proportions — within less than 2% deviation. Assume NOTHING from tailoring/menswear/fashion convention or model priors; every visible characteristic must come from the drawing. Do not redesign, reinterpret, substitute a similar commercial style, stylise, or \"improve\" it. Do NOT fall back to a generic version of this category — reproduce THIS option, not a typical one. If convention conflicts with the drawing, the drawing wins. Accuracy over aesthetics. ANNOTATIONS ARE NOT THE GARMENT: the technical drawing may carry measurement callouts — dimension numbers (\"2.5cm\", \"9cm\", \"115°\"), tick / leader / dimension lines, arrows, red or coloured guide marks, and text labels. These are manufacturing documentation, NOT features of the cloth. Reproduce ONLY the finished garment: never render any number, unit, arrow, callout, leader line, measurement mark, or text anywhere in the photograph. The final image is a clean garment photo with zero annotation.\n\nPhotographed worn on a male model, worn open at the throat with NO necktie and the top collar-band button left UNFASTENED exactly as the blueprint draws it, the leaves relaxed apart so the collar points, the spread between them, the full collar band and its buttonhole are all completely unobstructed.\n\nFrame tight on the collar and neckline; the detail must read clearly and sharply.\n\nSavile Row and high-end Italian sartorial aesthetic. Natural daylight studio lighting, Phase One IQ4 medium-format camera, 150MP detail, shallow depth of field, magazine-quality editorial menswear photography. Authentic bespoke craftsmanship, fine hand stitching, premium finishing. SET — shot in a clean luxury photographic studio against a seamless, plain, neutral light-grey background with clear separation between garment and background: no location, no architecture, no furniture, no scenery, no props and no environmental context of any kind competing with the garment.\n\nExtremely realistic crisp cotton poplin texture, fine stitching.\n\nAvoid: any GENERIC menswear substitution (a generic spread collar, generic notch/peak lapel, generic pocket/pleat/vent/cuff/waistband in place of the drawn one), illustration or line-art style, CGI or 3D-render look, cartoon, mannequin, fashion sketch, inaccurate geometry, altered proportions, missing construction details, asymmetry, watermark, AI-art appearance, AND any text or annotation traced from the drawing: NO measurement numbers, units (cm/mm/°), dimension or leader lines, arrows, callouts, red/coloured guide marks, ruler ticks, or labels anywhere in the frame. This is real garment photography of the exact drawn option — clean cloth only, nothing else.\n\nFORBIDDEN FOR THIS OPTION — do not render: a generic version of this part standing in for the exact drawn option (generic-category substitution); any feature, count, or geometry borrowed from a neighboring craft option on the same field; a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion).\n\nOWNER CORRECTION AFTER REVIEW (attempt 1 was rejected by the owner — obey this over any conflicting earlier line, including the BLUEPRINT LOCK): the collar is supposed to curve out oh so slightly at the end not be rounded The owner has supplied 1 reference photograph(s) of what this option should actually look like. Those photographs are attached and OUTRANK the supplier line drawing wherever the two disagree: match the construction, proportion and finish shown in them. Use the line drawing only for anything the photographs do not show.",
- "builtAt": "2026-07-28T05:12:02.826Z",
- "ownerCorrections": [
-  {
-   "attemptRejected": 1,
-   "decidedAt": "2026-08-10T23:10:17.765Z",
-   "tags": [],
-   "notes": "the collar is supposed to curve out oh so slightly at the end not be rounded",
-   "references": [
-    "/images/review-refs/shirt/collar-curve-point-75/1786403392798-f8np4q.webp"
-   ],
-   "appliedAt": "2026-08-11T08:43:35.417Z",
-   "craftId": "shirt|collar|lapel|collar-curve-point-75"
-  }
- ]
+  "scoreCard": [
+    {
+      "category": "shape",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "geometry",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "dimensions",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "angles",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "construction",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "placement",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "symmetry",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "composition",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "blueprint-match",
+      "score": null,
+      "min": 98
+    }
+  ],
+  "prompt": "Ultra-photorealistic luxury menswear product photography.\n\nA single-subject craft DOCUMENTATION photograph: the Collar Style is the dominant subject, filling 40–80% of the frame and identifiable within one second.\n\nA premium white bespoke cotton dress shirt featuring a precise Curve Point 7.5 cm (Collar Style).\n\nDistinguishing construction detail (reproduce exactly as drawn): A 7.5 cm point whose tips are softened into a gentle rounded curve rather than a sharp tip. The rounded termination keeps the length and presence of a full point while reading softer and more approachable, flattering angular faces with or without a tie.\n\nExact specification — curved point, point, rounded-bottom pocket shape; measuring exactly 7.5 cm — matching the illustration precisely.\n\nMANDATORY GEOMETRY COVERAGE — reproduce from the illustration, exactly and without assumption, every one of these: collar point geometry, collar stand, collar roll, stitching precision, the unobstructed spread between the collar points, both collar leaves mirroring each other exactly in length, angle and tip shape. Match each to the drawing.\n\nVIEW — this illustration is the front of the garment. Photograph the same face; never substitute a different face of the garment.\n\nBLUEPRINT LOCK — THE DRAWING IS LAW: the attached technical illustration is the manufacturing blueprint for this exact craft option and the SOLE authority for the image. Reproduce its geometry precisely — point/edge shape, lengths, widths, depths, angles, curvature, roll lines, symmetry, button/tab/stay positions, seam and stitch placement, and proportions — within less than 2% deviation. Assume NOTHING from tailoring/menswear/fashion convention or model priors; every visible characteristic must come from the drawing. Do not redesign, reinterpret, substitute a similar commercial style, stylise, or \"improve\" it. Do NOT fall back to a generic version of this category — reproduce THIS option, not a typical one. If convention conflicts with the drawing, the drawing wins. Accuracy over aesthetics. ANNOTATIONS ARE NOT THE GARMENT: the technical drawing may carry measurement callouts — dimension numbers (\"2.5cm\", \"9cm\", \"115°\"), tick / leader / dimension lines, arrows, red or coloured guide marks, and text labels. These are manufacturing documentation, NOT features of the cloth. Reproduce ONLY the finished garment: never render any number, unit, arrow, callout, leader line, measurement mark, or text anywhere in the photograph. The final image is a clean garment photo with zero annotation. COLOUR IN THE DRAWING IS NOTATION, NOT CLOTH: any red, orange or otherwise highlighted region marks WHERE the craft option sits — it is a position marker, never a colour specification. Flat grey or tinted shading marks the EXTENT of a panel, lining or facing, not its shade. Render every one of those areas in the garment's own cloth and thread, in the natural colour that tailoring would use there. There must be no red, no highlighter tint and no flat unshaded grey panel anywhere in the photograph unless the option's own label explicitly names that colour.\n\nPhotographed presented on a crisply pressed white dress shirt as a close product detail, with NO model, NO face, NO neck and NO skin anywhere in frame, the collar left open at the throat with NO necktie and the top collar-band button UNFASTENED exactly as the reference shows it, the leaves relaxed apart so the collar points, the spread between them, the full collar band and its buttonhole are all completely unobstructed, and the collar reproduced in the SAME presentation and viewing angle as the attached reference so its exact tip geometry is preserved rather than re-staged.\n\nFrame tight on the collar and neckline; the detail must read clearly and sharply.\n\nMATCHED FRAMING — this option belongs to a family whose members differ from one another only by a measurement, so this photograph will be shown beside its siblings and compared directly. TWO SEPARATE REQUIREMENTS, and both must hold. FIRST, THE GARMENT: build the feature at exactly the size the drawing gives it — no larger. Do not exaggerate the dimension to make this option look more distinct from its siblings; the difference between them is small in real tailoring and must stay small here, because a customer choosing on these numbers is ordering a real garment. SECOND, THE CAMERA: frame the shot the way every member of the family must be framed — the garment part square to camera, centred, at a standard distance that leaves the whole garment occupying the same share of the picture no matter which value this option carries. Do not move closer for a small measurement or pull back for a large one. Getting one of these right while getting the other wrong is still a failure: an accurate feature shot at the wrong distance, or a matched frame containing an exaggerated feature, both mislead a customer comparing two pictures side by side.\n\nSavile Row and high-end Italian sartorial aesthetic. Natural daylight studio lighting, Phase One IQ4 medium-format camera, 150MP detail, shallow depth of field, magazine-quality editorial menswear photography. Authentic bespoke craftsmanship, fine hand stitching, premium finishing. SET — shot in a clean luxury photographic studio against a seamless, plain, neutral light-grey background with clear separation between garment and background: no location, no architecture, no furniture, no scenery, no props and no environmental context of any kind competing with the garment.\n\nExtremely realistic crisp cotton poplin texture, fine stitching.\n\nAvoid: any GENERIC menswear substitution (a generic spread collar, generic notch/peak lapel, generic pocket/pleat/vent/cuff/waistband in place of the drawn one), illustration or line-art style, CGI or 3D-render look, cartoon, mannequin, fashion sketch, inaccurate geometry, altered proportions, missing construction details, asymmetry, watermark, AI-art appearance, AND any text or annotation traced from the drawing: NO measurement numbers, units (cm/mm/°), dimension or leader lines, arrows, callouts, red/coloured guide marks, ruler ticks, or labels anywhere in the frame. This is real garment photography of the exact drawn option — clean cloth only, nothing else.\n\nFORBIDDEN FOR THIS OPTION — do not render: a generic version of this part standing in for the exact drawn option (generic-category substitution); any feature, count, or geometry borrowed from a neighboring craft option on the same field; a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion).\n\nOWNER CORRECTION AFTER REVIEW (attempt 1 was rejected by the owner — obey this over any conflicting earlier line, including the BLUEPRINT LOCK): the collar is supposed to curve out oh so slightly at the end not be rounded The owner uploaded 1 reference photograph(s) with this rejection, but they were reviewed and found NOT to depict this exact option, so none are attached. Take the correction text above literally and use the technical drawing as the geometry authority.\n\nOWNER CORRECTION AFTER REVIEW (attempt 2 was rejected by the owner — obey this over any conflicting earlier line, including the BLUEPRINT LOCK): What is wrong with it: Wrong shape / outline; Generic version, not this option; Wrong size or proportion. For the Curve Point Collar in your image: Collar type: Curved Point Collar Point length: 7.5 cm Included angle: 60° Difference from the standard point collar: the front edge is curved rather than a straight line, but the base geometry is identical. Base Geometry Given: Half-angle:",
+  "ownerCorrections": [
+    {
+      "attemptRejected": 1,
+      "decidedAt": "2026-08-10T23:10:17.765Z",
+      "tags": [],
+      "notes": "the collar is supposed to curve out oh so slightly at the end not be rounded",
+      "references": [
+        "/images/review-refs/shirt/collar-curve-point-75/1786403392798-f8np4q.webp"
+      ],
+      "appliedAt": "2026-08-11T08:43:35.417Z",
+      "craftId": "shirt|collar|lapel|collar-curve-point-75"
+    },
+    {
+      "attemptRejected": 2,
+      "decidedAt": "2026-08-12T03:33:22.073Z",
+      "tags": [
+        "Wrong shape / outline",
+        "Generic version, not this option",
+        "Wrong size or proportion"
+      ],
+      "notes": "For the Curve Point Collar in your image:\n\nCollar type: Curved Point Collar\nPoint length: 7.5 cm\nIncluded angle: 60°\nDifference from the standard point collar: the front edge is curved rather than a straight line, but the base geometry is identical.\nBase Geometry\n\nGiven:\n\nL=7.5 cmL = 7.5\\text{ cm} θ=60∘\\theta = 60^\\circ\n\nHalf-angle:\n\nα=30∘\\alpha = 30^\\circ\n1. Horizontal Projection\n\nDistance from center front to each point:\n\nX=Lsin⁡(30∘)X=L\\sin(30^\\circ) X=7.5(0.5)X=7.5(0.5) X=3.75 cmX=3.75\\text{ cm}\n2. Vertical Drop\n\nDistance from collar break to point:\n\nY=Lcos⁡(30∘)Y=L\\cos(30^\\circ) Y=7.5(0.8660)Y=7.5(0.8660) Y=6.50 cmY=6.50\\text{ cm}\n3. Point-to-Point Spread\nW=2XW=2X W=7.50 cmW=7.50\\text{ cm}\n\nSo the front opening width is:\n\n7.5 cm\\boxed{7.5\\text{ cm}}\nDraft Coordinates\n\nUsing the collar break point as (0,0):\n\nLeft Collar Point\n(−3.75, −6.50)(-3.75,\\,-6.50)\nRight Collar Point\n(3.75, −6.50)(3.75,\\,-6.50)\nCenter Front\n(0,0)(0,0)\nCurved Point Construction\n\nThe image shows a gentle convex curve on the front edge.\n\nMethod\n\nDraw the straight collar point first.\n\nBreak\n  ●\n / \\\n/   \\\n     ● Point\n\n\nThen create the curve.\n\nCurve Depth\n\nFor a classic curved-point collar, use:\n\nCurve Depth=0.08L to 0.12L\\text{Curve Depth} = 0.08L \\text{ to } 0.12L\n\nFor 7.5 cm:\n\n0.08(7.5)=0.60.08(7.5)=0.6 0.12(7.5)=0.90.12(7.5)=0.9\n\nRecommended:\n\n0.75 cm\\boxed{0.75\\text{ cm}}\nCurve Radius\n\nUse:\n\nR=2.5LR = 2.5L R=2.5(7.5)R = 2.5(7.5) R=18.75 cmR = 18.75\\text{ cm}\n\nRound to:\n\n19 cm radius\\boxed{19\\text{ cm radius}}\n\nThis gives the soft vintage curved look seen in high-end bespoke shirts.\n\nPattern Draft Formula\n\nFor any curved point collar:\n\nWidth\nW=2Lsin⁡(θ/2)W=2L\\sin(\\theta/2)\nDepth\nD=Lcos⁡(θ/2)D=L\\cos(\\theta/2)\nCurve Depth\nCD=0.10LCD=0.10L\nCurve Radius\nR=2.5LR=2.5L\nFor Your 7.5 cm Curved Point Collar\nPoint Length = 7.5 cm\nCollar Angle = 60°\nHalf Angle = 30°\nPoint Spread = 7.5 cm\nHorizontal Projection = 3.75 cm\nVertical Drop = 6.50 cm\nCurve Depth = 0.75 cm\nCurve Radius = 19 cm\n\nThese dimensions will reproduce a classic long curved-point collar similar to vintage British and Italian bespoke shirting.",
+      "references": [],
+      "appliedAt": "2026-08-12T16:35:07.258Z",
+      "craftId": "shirt|collar|lapel|collar-curve-point-75"
+    }
+  ],
+  "correctionSanitized": 1,
+  "builtAt": "2026-08-27T02:37:04.971Z"
 }

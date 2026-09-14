@@ -11,13 +11,13 @@
   "description": "Shawl lapel with band — dinner jacket character.",
   "fieldLabel": "Neckline / Lapel Style",
   "sectionLabel": "Vest — Lapel & Neckline",
-  "part": "vest-detail",
+  "part": "vest-lapel",
   "garment": {
     "noun": "bespoke tailored waistcoat",
     "fabric": "fine wool suiting"
   },
   "view": {
-    "orientation": "detail",
+    "orientation": "front",
     "wearerPerspective": true,
     "confirmedByVisualInspection": true
   },
@@ -31,7 +31,11 @@
     ],
     "negatedShapes": [],
     "spread": [],
-    "flags": []
+    "flags": [],
+    "sides": [],
+    "attributes": [],
+    "supplierCodes": [],
+    "unresolved": []
   },
   "illustration": {
     "path": "/images/options/vest/shawl-collar-stand.jpg",
@@ -46,5 +50,5 @@
   ],
   "excluded": null,
   "generate": true,
-  "extractedAt": "2026-08-02T16:24:55.993Z"
+  "extractedAt": "2026-08-27T02:37:26.064Z"
 }

@@ -11,7 +11,7 @@
   "description": "Reverse fastening.",
   "fieldLabel": "Placket Direction",
   "sectionLabel": "Vest — Front Style",
-  "part": "vest-detail",
+  "part": "vest-front",
   "garment": {
     "noun": "bespoke tailored waistcoat",
     "fabric": "fine wool suiting"
@@ -27,8 +27,16 @@
     "angles": [],
     "counts": [],
     "shapes": [],
+    "negatedShapes": [],
     "spread": [],
-    "flags": []
+    "flags": [],
+    "sides": [
+      "left",
+      "right"
+    ],
+    "attributes": [],
+    "supplierCodes": [],
+    "unresolved": []
   },
   "illustration": {
     "path": "/images/options/vest/vest-right-over-left.jpg",
@@ -43,5 +51,5 @@
   ],
   "excluded": null,
   "generate": true,
-  "extractedAt": "2026-07-31T19:00:32.915Z"
+  "extractedAt": "2026-08-27T02:37:25.348Z"
 }

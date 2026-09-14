@@ -1,0 +1,40 @@
+{
+ "craftId": "shirt|back-structure|bias_cutting|bias-outer-collar-stand",
+ "note": "Owner rejection reasons for this craft, from BOTH decision sources. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 4,
+   "decidedAt": "2026-08-11T21:42:44.031Z",
+   "tags": [
+    "Wrong side or orientation",
+    "Unrealistic / AI look",
+    "Wrong shape / outline"
+   ],
+   "notes": "LOCKED CORRECTIONS — each one fixes a named defect in a rejected attempt; obey all five. (1) SIDE/ORIENTATION LOCK: this drawing is the FRONT of the shirt seen at the throat — buttoned neck, front placket descending on the centre line. Photograph that front face only. FORBIDDEN: any back or rear view, any yoke, any back neck seam, any invented back placket, and any mirrored version of the drawn geometry. (2) SHAPE/OUTLINE LOCK: the subject is the OUTER COLLAR STAND — the narrow upright band standing at the neck seam, carrying the single neck button. What must read in frame is the exposed sliver of that band that shows above the shirt front and below the folded edges of the collar leaves. It is NOT the collar leaf, NOT the collar fall, and NOT a separate decorative strip applied on top; it is the structural neckband the collar is sewn to. (3) PANEL-ISOLATION LOCK — the single most important constraint: the diagonal grain belongs to the outer collar stand band ALONE. The stripe on that band runs at a clear 45 degrees. BOTH collar leaves and the front placket and the shirt front must keep their stripe running STRICTLY VERTICAL, dead parallel to the placket. The whole point of the photograph is the direction change meeting along the stand's own seams; if the collar leaves also run diagonal the option becomes unidentifiable and the image has failed. (4) REALISM LOCK: real photographed cotton poplin — crisp, correctly pressed, with true woven stripe continuity. FORBIDDEN: smeared, melted, blurred or dissolving patches of cloth, stripes that break up or wander mid-panel, plastic or waxy fabric, and any CGI or AI-render appearance. (5) FRAMING: crop tight to the neck and upper chest so the collar stand band is unmistakably the subject and is large in frame — but keep enough adjacent vertical-grain cloth (collar leaves and upper placket) inside the crop for the diagonal-versus-vertical contrast to be visible, matching the framing of the owner's attached photographs. Do not crop so far in that the comparison panel is lost, and do not pull so wide that chin, chest and lower placket buttons take over.",
+   "references": [
+    "/images/review-refs/shirt/bias-outer-collar-stand/1786484507141-ygge8h.webp",
+    "/images/review-refs/shirt/bias-outer-collar-stand/1786484535981-uitp46.webp",
+    "/images/review-refs/shirt/bias-outer-collar-stand/1786484547875-62j09v.webp"
+   ],
+   "referencesWithheld": [
+    "/images/review-refs/shirt/bias-outer-collar-stand/1786484498535-bvdfhc.jpg"
+   ],
+   "referencesWithheldWhy": "not verified as depicting this craft — do NOT attach at generation. Removed from references[] on 2026-08-12 so the prompt's reference count matches what is actually attached (3).",
+   "parkedAt": "2026-08-12T21:48:06.894Z",
+   "craftId": "shirt|back-structure|bias_cutting|bias-outer-collar-stand"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "remake",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "shirt|back-structure|bias_cutting|bias-outer-collar-stand",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.271Z"
+  }
+ ]
+}

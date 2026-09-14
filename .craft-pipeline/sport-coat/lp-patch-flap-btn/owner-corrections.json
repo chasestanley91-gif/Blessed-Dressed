@@ -1,0 +1,33 @@
+{
+ "craftId": "sport-coat|suit-pockets|lower-pocket|lp-patch-flap-btn",
+ "note": "Owner rejection reasons for this craft, from BOTH decision sources. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 1,
+   "decidedAt": "2026-08-12T04:40:45.149Z",
+   "tags": [
+    "Reference drawing itself is wrong",
+    "Unrealistic / AI look"
+   ],
+   "notes": "For the Patch Pocket with Flap & Button shown in the image, the geometry consists of two separate pattern pieces:\n\nPatch Pocket Body\nPocket Flap\n\nThe illustrated pocket has:\n\nRounded bottom corners\nStraight sides with slight flare\nStraight flap with angled top edge\nCentered button closure\n1. Pocket Width Formula\n\nFor a tailored jacket patch pocket:\n\nPW=Chest10PW=\\frac{Chest}{10}\n\nExample (40\" chest = 101.6 cm):\n\nPW=101.610PW=\\frac{101.6}{10} PW=10.16 cmPW=10.16\\text{ cm}\n\nUse:\n\n10.0−11.0 cm\\boxed{10.0-11.0\\text{ cm}}\n2. Pocket Height Formula\n\nClassic proportion:\n\nPH=1.25PWPH = 1.25PW\n\nIf:\n\nPW=10.5 cmPW = 10.5\\text{ cm}\n\nthen\n\nPH=13.1 cmPH=13.1\\text{ cm}\n\nUse:\n\n13.0 cm\\boxed{13.0\\text{ cm}}\n3. Bottom Radius\n\nThe image shows a rounded-bottom patch pocket.\n\nRadius:\n\nR=0.35PWR = 0.35PW\n\nFor a 10.5 cm pocket:\n\nR=3.7 cmR=3.7\\text{ cm} 3.5−4.0 cm\\boxed{3.5-4.0\\text{ cm}}\n4. Pocket Mouth Width\n\nTop edge remains full width:\n\nM=PWM = PW 10.5 cm\\boxed{10.5\\text{ cm}}\n5. Side Flare\n\nThe image shows slight tapering inward at the top.\n\nDifference per side:\n\nS=0.05PWS = 0.05PW S=0.5 cmS=0.5\\text{ cm}\n\nPocket bottom width:\n\nBW=PW+1.0BW = PW + 1.0 BW=11.5 cmBW = 11.5\\text{ cm}\n6. Flap Width\n\nFlap extends beyond pocket edges.\n\nFW=PW+1.0FW = PW + 1.0 FW=11.5 cmFW = 11.5\\text{ cm}\n7. Flap Depth\n\nTraditional proportion:\n\nFD=0.45PWFD = 0.45PW FD=0.45(10.5)FD=0.45(10.5) FD=4.7 cmFD=4.7\\text{ cm}\n\nUse:\n\n4.5−5.0 cm\\boxed{4.5-5.0\\text{ cm}}\n8. Flap Angle\n\nThe top edge in the drawing rises slightly.\n\nAngle:\n\nθ=3∘\\theta = 3^\\circ\n\nFor an 11.5 cm flap:\n\nRise=11.5sin⁡3∘Rise = 11.5\\sin3^\\circ Rise=0.60 cmRise = 0.60\\text{ cm} 0.6 cm rise\\boxed{0.6\\text{ cm rise}}\n9. Button Position\n\nCentered horizontally.\n\nVertical position:\n\nBP=0.5FDBP = 0.5FD\n\nFor 5 cm flap:\n\nBP=2.5 cmBP = 2.5\\text{ cm}\n10. Button Diameter\n\nTypical jacket patch pocket:\n\nBD=18L to 24LBD = 18L \\text{ to } 24L\n\nEquivalent:\n\n11−15 mm\\boxed{11-15\\text{ mm}}\n\nMost bespoke:\n\n13 mm\\boxed{13\\text{ mm}}\nDraft Coordinates\nPocket Body\n      A---------B\n      |         |\n      |         |\n      |         |\n     /           \\\n    /             \\\n   D---------------C\n\n\nExample:\n\nAB=10.5 cmAB=10.5\\text{ cm} AD=BC=13.0 cmAD=BC=13.0\\text{ cm}\n\nBottom corner radius:\n\nR=3.7 cmR=3.7\\text{ cm}\nFlap\n   E-----------F\n    \\         /\n     \\_______/\n\n\nDimensions:\n\nEF=11.5 cmEF=11.5\\text{ cm} Depth=5.0 cmDepth=5.0\\text{ cm}\n\nTop rise:\n\n0.6 cm0.6\\text{ cm}\nComplete Bespoke Draft Example\n\nFor a 40\" chest:\n\nPatch Pocket\n10.5×13.0 cm\\boxed{10.5 \\times 13.0\\text{ cm}}\nBottom Radius\n3.7 cm\\boxed{3.7\\text{ cm}}\nFlap\n11.5×5.0 cm\\boxed{11.5 \\times 5.0\\text{ cm}}\nFlap Rise\n0.6 cm\\boxed{0.6\\text{ cm}}\nButton\n13 mm\\boxed{13\\text{ mm}}\nButton Position\n2.5 cm from flap edge\\boxed{2.5\\text{ cm from flap edge}}\nMaster Formulas\nPH=1.25PWPH=1.25PW R=0.35PWR=0.35PW FW=PW+1FW=PW+1 FD=0.45PWFD=0.45PW BP=0.5FDBP=0.5FD\n\nThese formulas reproduce the proportions of the patch pocket with flap and button shown in the illustration.",
+   "references": [
+    "/images/review-refs/sport-coat/lp-patch-flap-btn/1786509562636-ww7uc6.jpg"
+   ],
+   "parkedAt": "2026-08-12T21:48:07.217Z",
+   "craftId": "sport-coat|suit-pockets|lower-pocket|lp-patch-flap-btn"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "discard",
+   "tags": [],
+   "notes": "bad Tech pack and all the pics are wrong remake everything",
+   "reasonRecorded": true,
+   "references": [],
+   "craftId": "sport-coat|suit-pockets|lower-pocket|lp-patch-flap-btn",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.454Z"
+  }
+ ]
+}

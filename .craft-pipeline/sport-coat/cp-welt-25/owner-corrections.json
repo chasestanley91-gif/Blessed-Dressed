@@ -1,0 +1,43 @@
+{
+ "craftId": "sport-coat|suit-pockets|chest-pocket|cp-welt-25",
+ "note": "Owner rejection reasons for this craft, from BOTH decision sources. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 1,
+   "decidedAt": "2026-08-12T04:22:50.590Z",
+   "tags": [],
+   "notes": "For the image shown, the finished straight welt height is 2.5 cm.\n\nThe geometry of a straight welt pocket is simple: the visible welt is a folded rectangle.\n\n1. Finished Welt Height\nW=2.5 cmW = 2.5\\text{ cm}\n\nWhere:\n\nWW = finished visible welt height.\n2. Cut Welt Width\n\nA welt is folded in half.\n\nFormula\nCW=2W+2SACW = 2W + 2SA\n\nWhere:\n\nCWCW = cut width\nSASA = seam allowance\n\nUsing a 1 cm seam allowance:\n\nCW=(2×2.5)+2CW = (2 \\times 2.5) + 2 CW=7.0 cmCW = 7.0\\text{ cm}\nResult\n7.0 cm\\boxed{7.0\\text{ cm}}\n3. Fold Line\n\nVisible welt:\n\n2.5 cm2.5\\text{ cm}\n\nBefore folding:\n\n2×2.5=5.0 cm2 \\times 2.5 = 5.0\\text{ cm}\n\nFold position:\n\n2.5 cm\\boxed{2.5\\text{ cm}}\n\nfrom either edge.\n\n4. Chest Pocket Length\n\nClassic bespoke chest pocket:\n\nPL=Chest Circumference6PL=\\frac{\\text{Chest Circumference}}{6}\n\nExamples:\n\n38\" Chest\n96.5/6=16.1 cm96.5/6 = 16.1\\text{ cm}\n40\" Chest\n101.6/6=16.9 cm101.6/6 = 16.9\\text{ cm}\n42\" Chest\n106.7/6=17.8 cm106.7/6 = 17.8\\text{ cm}\n\nMost bespoke jackets use:\n\n16.5−17.5 cm\\boxed{16.5-17.5\\text{ cm}}\n5. Pocket Angle\n\nTraditional breast pocket slant:\n\n8∘−12∘8^\\circ-12^\\circ\n\nMost common:\n\n10∘\\boxed{10^\\circ}\n\nupward toward the armhole.\n\n6. Corner Triangle Cuts\n\nPocket opening:\n\n2.5 cm2.5\\text{ cm}\n\nCorner triangle length:\n\nTL=WTL=W TL=2.5 cmTL=2.5\\text{ cm}\n\nCut triangles at:\n\n45∘\\boxed{45^\\circ}\n7. Pocket Bag Dimensions\nWidth\nPBW=PL+4PBW=PL+4\n\nExample:\n\n17+4=21 cm17+4=21\\text{ cm}\nDepth\nPBD=1.5PLPBD=1.5PL 1.5(17)=25.5 cm1.5(17) = 25.5\\text{ cm}\n8. Opening Rectangle Geometry\n\nIf pocket length is 17 cm:\n\nA=L×WA=L\\times W A=17×2.5A=17\\times2.5 A=42.5cm2A=42.5 cm^2\n\nOpening rectangle:\n\n17.0×2.5 cm\\boxed{17.0 \\times 2.5\\text{ cm}}\nBespoke Draft Summary\nWelt Piece\n7.0 cm×Pocket Length\\boxed{7.0\\text{ cm} \\times \\text{Pocket Length}}\nFinished Welt\n2.5 cm\\boxed{2.5\\text{ cm}}\nFold Line\n2.5 cm\\boxed{2.5\\text{ cm}}\nPocket Length\n16.5−17.5 cm\\boxed{16.5-17.5\\text{ cm}}\nPocket Angle\n10∘\\boxed{10^\\circ}\nCorner Triangle\n2.5 cm at 45∘\\boxed{2.5\\text{ cm at }45^\\circ}\nTypical 40\" Chest Example\nPocket length = 17.0 cm\nFinished welt = 2.5 cm\nCut welt = 7.0 cm\nPocket angle = 10°\nPocket bag = 21 cm × 25.5 cm\n\nThese are the drafting mathematics and geometric proportions for a 2.5 cm straight welt chest pocket in bespoke tailoring.",
+   "references": [
+    "/images/review-refs/sport-coat/cp-welt-25/1786508552620-qoob4o.jpg"
+   ],
+   "parkedAt": "2026-08-12T21:48:07.155Z",
+   "craftId": "sport-coat|suit-pockets|chest-pocket|cp-welt-25"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "remake",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "sport-coat|suit-pockets|chest-pocket|cp-welt-25",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.407Z"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "sport-coat|suit-pockets|chest-pocket|cp-welt-25",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.407Z"
+  }
+ ]
+}

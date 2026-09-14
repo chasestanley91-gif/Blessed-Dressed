@@ -1,0 +1,174 @@
+{
+  "addr": "shirt > collar > lapel > collar-cuban",
+  "label": "Cuban Collar",
+  "part": "shirt-collar",
+  "orientation": "front",
+  "excluded": null,
+  "generate": true,
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\shirt.json",
+  "source": "json",
+  "illustration": "/images/blueprints/baoxiniao/shirt/REQCL/A114.jpg",
+  "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\shirt\\REQCL\\A114.jpg",
+  "illustrationExists": true,
+  "illustrationRemote": false,
+  "profile": {
+    "addr": "shirt > collar > lapel > collar-cuban",
+    "product": "shirt",
+    "field": "Collar Style",
+    "option": "Cuban Collar",
+    "part": "shirt-collar",
+    "garment": "white bespoke cotton dress shirt",
+    "orientation": "front",
+    "absence": false,
+    "distinguishingDetail": "The Cuban collar — also known as a camp collar or revere collar — features a wide, lapel-like fold that lies flat against the shirt front with no band, no points, and no buttoning at the throat. It creates an open, relaxed neckline that evokes mid-century resort wear and Caribbean dressing, carrying an air of louche elegance. On bespoke shirts it is typically cut in luxury fabrics like silk or linen, making it ideal for warm-weather evenings and smart casual occasions.",
+    "measured": {
+      "dimensions": [],
+      "angles": [],
+      "counts": [],
+      "shapes": [
+        "cuban"
+      ],
+      "spread": [],
+      "flags": []
+    },
+    "reproduceFromIllustration": [
+      "collar point geometry",
+      "collar stand",
+      "collar roll",
+      "stitching precision",
+      "the unobstructed spread between the collar points",
+      "both collar leaves mirroring each other exactly in length, angle and tip shape"
+    ],
+    "composition": {
+      "crop": "tight on the collar and neckline",
+      "dominanceTarget": "40–80% of frame",
+      "identifyWithin": "1 second"
+    },
+    "forbidden": [
+      "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+      "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+      "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+    ],
+    "excluded": null,
+    "generate": true
+  },
+  "requiredTokens": [
+    "cuban"
+  ],
+  "checklist": [
+    "on the front side, NOT mirrored or swapped (check against the drawing, not against convention)",
+    "shape reads as drawn: cuban",
+    "distinguishing detail present: The Cuban collar — also known as a camp collar or revere collar — features a wide, lapel-like fold that lies flat against the shirt front with no band, no points, and no buttoning at the throat. It creates an open, relaxed neckline that evokes mid-century resort wear and Caribbean dressing, carrying an air of louche elegance. On bespoke shirts it is typically cut in luxury fabrics like silk or linen, making it ideal for warm-weather evenings and smart casual occasions.",
+    "reproduced from the illustration: collar point geometry",
+    "reproduced from the illustration: collar stand",
+    "reproduced from the illustration: collar roll",
+    "reproduced from the illustration: stitching precision",
+    "reproduced from the illustration: the unobstructed spread between the collar points",
+    "reproduced from the illustration: both collar leaves mirroring each other exactly in length, angle and tip shape",
+    "orientation matches the illustration: front",
+    "the Collar Style dominates the frame (40–80%), identifiable within one second, framed tight on the collar and neckline",
+    "silhouette, proportions, seam & stitch placement match the illustration; left/right symmetry correct",
+    "NO generic-category substitution — this exact option, not a typical one",
+    "a real photograph of the exact drawn option — not the line-art, no stylisation"
+  ],
+  "scoreCard": [
+    {
+      "category": "shape",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "geometry",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "dimensions",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "angles",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "construction",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "placement",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "symmetry",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "composition",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "blueprint-match",
+      "score": null,
+      "min": 98
+    }
+  ],
+  "prompt": "Ultra-photorealistic luxury menswear product photography.\n\nA single-subject craft DOCUMENTATION photograph: the Collar Style is the dominant subject, filling 40–80% of the frame and identifiable within one second.\n\nA premium white bespoke cotton dress shirt featuring a precise Cuban Collar (Collar Style).\n\nDistinguishing construction detail (reproduce exactly as drawn): The Cuban collar — also known as a camp collar or revere collar — features a wide, lapel-like fold that lies flat against the shirt front with no band, no points, and no buttoning at the throat. It creates an open, relaxed neckline that evokes mid-century resort wear and Caribbean dressing, carrying an air of louche elegance. On bespoke shirts it is typically cut in luxury fabrics like silk or linen, making it ideal for warm-weather evenings and smart casual occasions.\n\nExact specification — on the front side ONLY — do not mirror or swap; cuban shape — matching the illustration precisely.\n\nMANDATORY GEOMETRY COVERAGE — reproduce from the illustration, exactly and without assumption, every one of these: collar point geometry, collar stand, collar roll, stitching precision, the unobstructed spread between the collar points, both collar leaves mirroring each other exactly in length, angle and tip shape. Match each to the drawing.\n\nVIEW — this illustration is the front of the garment. Photograph the same face; never substitute a different face of the garment.\n\nBLUEPRINT LOCK — THE DRAWING IS LAW: the attached technical illustration is the manufacturing blueprint for this exact craft option and the SOLE authority for the image. Reproduce its geometry precisely — point/edge shape, lengths, widths, depths, angles, curvature, roll lines, symmetry, button/tab/stay positions, seam and stitch placement, and proportions — within less than 2% deviation. Assume NOTHING from tailoring/menswear/fashion convention or model priors; every visible characteristic must come from the drawing. Do not redesign, reinterpret, substitute a similar commercial style, stylise, or \"improve\" it. Do NOT fall back to a generic version of this category — reproduce THIS option, not a typical one. If convention conflicts with the drawing, the drawing wins. Accuracy over aesthetics. ANNOTATIONS ARE NOT THE GARMENT: the technical drawing may carry measurement callouts — dimension numbers (\"2.5cm\", \"9cm\", \"115°\"), tick / leader / dimension lines, arrows, red or coloured guide marks, and text labels. These are manufacturing documentation, NOT features of the cloth. Reproduce ONLY the finished garment: never render any number, unit, arrow, callout, leader line, measurement mark, or text anywhere in the photograph. The final image is a clean garment photo with zero annotation. COLOUR IN THE DRAWING IS NOTATION, NOT CLOTH: any red, orange or otherwise highlighted region marks WHERE the craft option sits — it is a position marker, never a colour specification. Flat grey or tinted shading marks the EXTENT of a panel, lining or facing, not its shade. Render every one of those areas in the garment's own cloth and thread, in the natural colour that tailoring would use there. There must be no red, no highlighter tint and no flat unshaded grey panel anywhere in the photograph unless the option's own label explicitly names that colour.\n\nPhotographed presented on a crisply pressed white dress shirt as a close product detail, with NO model, NO face, NO neck and NO skin anywhere in frame, the collar left open at the throat with NO necktie and the top collar-band button UNFASTENED exactly as the reference shows it, the leaves relaxed apart so the collar points, the spread between them, the full collar band and its buttonhole are all completely unobstructed, and the collar reproduced in the SAME presentation and viewing angle as the attached reference so its exact tip geometry is preserved rather than re-staged.\n\nFrame tight on the collar and neckline; the detail must read clearly and sharply.\n\nSavile Row and high-end Italian sartorial aesthetic. Natural daylight studio lighting, Phase One IQ4 medium-format camera, 150MP detail, shallow depth of field, magazine-quality editorial menswear photography. Authentic bespoke craftsmanship, fine hand stitching, premium finishing. SET — shot in a clean luxury photographic studio against a seamless, plain, neutral light-grey background with clear separation between garment and background: no location, no architecture, no furniture, no scenery, no props and no environmental context of any kind competing with the garment.\n\nExtremely realistic crisp cotton poplin texture, fine stitching.\n\nAvoid: any GENERIC menswear substitution (a generic spread collar, generic notch/peak lapel, generic pocket/pleat/vent/cuff/waistband in place of the drawn one), illustration or line-art style, CGI or 3D-render look, cartoon, mannequin, fashion sketch, inaccurate geometry, altered proportions, missing construction details, asymmetry, watermark, AI-art appearance, AND any text or annotation traced from the drawing: NO measurement numbers, units (cm/mm/°), dimension or leader lines, arrows, callouts, red/coloured guide marks, ruler ticks, or labels anywhere in the frame. This is real garment photography of the exact drawn option — clean cloth only, nothing else.\n\nFORBIDDEN FOR THIS OPTION — do not render: a generic version of this part standing in for the exact drawn option (generic-category substitution); any feature, count, or geometry borrowed from a neighboring craft option on the same field; a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion).\n\nOWNER REFERENCE PHOTOGRAPHS — 3 real photograph(s) of THIS exact craft option, supplied by the owner and attached alongside the drawing. Treat them as real-world ground truth for how this construction actually looks in cloth: match the construction, proportion, orientation and finish they show. Where a photograph and the line drawing disagree on how the feature physically reads, follow the photograph for material behaviour and the drawing for geometry; never invent a third version. Copy NOTHING else from them — not the fabric colour or pattern, not the background, styling, crop, lighting or accessories, and no person. Only the construction.\n\nOWNER CORRECTION AFTER REVIEW (attempt 4 was rejected by the owner — obey this over any conflicting earlier line, including the BLUEPRINT LOCK): the collar should fade back a 1/3 of the way back. collar fold shouldn't go all the way around follow style in illustration The owner has supplied 3 reference photograph(s) of what this option should actually look like. Those photographs are attached and OUTRANK the supplier line drawing wherever the two disagree: match the construction, proportion and finish shown in them. Use the line drawing only for anything the photographs do not show.\n\nOWNER CORRECTION AFTER REVIEW (a previous attempt was rejected by the owner — obey this over any conflicting earlier line, including the BLUEPRINT LOCK): The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+  "ownerReferences": [
+    {
+      "path": "/images/review-refs/shirt/collar-cuban/1786485090820-7rbwax.webp",
+      "kind": "photograph",
+      "evidence": "Colour photo of a man in a white linen camp shirt, cropped chin-to-thigh. The collar is a wide flat lapel-style fold lying against the shirt front, notched where the fold meets the front edge, with no separate collar band and no throat button/buttonhole - the neckline sits open in a shallow V. Front placket buttons start below the collar break. Two flapped chest patch pockets and long sleeves also visible.",
+      "ownerNotes": "the collar should fade back a 1/3 of the way back. collar fold shouldn't go all the way around follow style in illustration",
+      "ownerDecisionKey": "shirt/collar-cuban"
+    },
+    {
+      "path": "/images/review-refs/shirt/collar-cuban/1786485211503-y9ujcb.webp",
+      "kind": "photograph",
+      "evidence": "Colour lifestyle photo, man in a taupe knit shirt against a plaster wall. Collar is a single flat revere/camp fold with a clear notch, laid open against the chest, no collar band and no fastening at the throat; the neckline is an open V down to the first fastened front button. Five front buttons visible down the placket.",
+      "ownerNotes": "the collar should fade back a 1/3 of the way back. collar fold shouldn't go all the way around follow style in illustration",
+      "ownerDecisionKey": "shirt/collar-cuban"
+    },
+    {
+      "path": "/images/review-refs/shirt/collar-cuban/1786485221508-3vr0up.webp",
+      "kind": "photograph",
+      "evidence": "Tight colour photo cropped to the neck/chest of a cream textured shirt. The camp collar is the subject: a wide flat fold lying directly on the chest, a distinct notch where the fold breaks at the front edge, the fold visibly running out toward the shoulder rather than encircling the neck, bare neck above it with no band and no throat button. Two front buttons visible below the collar break; edge-stitched collar and placket edges readable.",
+      "ownerNotes": "the collar should fade back a 1/3 of the way back. collar fold shouldn't go all the way around follow style in illustration",
+      "ownerDecisionKey": "shirt/collar-cuban"
+    }
+  ],
+  "ownerCorrections": [
+    {
+      "attemptRejected": 4,
+      "decidedAt": "2026-08-11T21:57:45.885Z",
+      "tags": [],
+      "notes": "the collar should fade back a 1/3 of the way back. collar fold shouldn't go all the way around follow style in illustration",
+      "references": [
+        "/images/review-refs/shirt/collar-cuban/1786485090820-7rbwax.webp",
+        "/images/review-refs/shirt/collar-cuban/1786485211503-y9ujcb.webp",
+        "/images/review-refs/shirt/collar-cuban/1786485221508-3vr0up.webp"
+      ],
+      "parkedAt": "2026-08-12T21:48:06.656Z",
+      "craftId": "shirt|collar|lapel|collar-cuban"
+    },
+    {
+      "attemptRejected": null,
+      "decidedAt": null,
+      "source": "july-v3",
+      "verdict": "reject-file",
+      "tags": [],
+      "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+      "reasonRecorded": false,
+      "references": [],
+      "craftId": "shirt|collar|lapel|collar-cuban",
+      "foldedFrom": "generation-queue.rejectionContext",
+      "parkedAt": "2026-08-26T06:51:18.064Z"
+    }
+  ],
+  "builtAt": "2026-08-26T07:29:10.715Z"
+}

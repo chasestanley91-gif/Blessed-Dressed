@@ -11,10 +11,10 @@
   "description": "A flat front has no pleats or darts at all, so the cloth runs smooth and uninterrupted from the waistband down the front. It gives the cleanest, most modern and slimming silhouette and pairs naturally with a plain hem. It works best on slimmer cuts where there is no excess fabric to manage.",
   "fieldLabel": "Pleat Style",
   "sectionLabel": "Trousers — Pleats & Structure",
-  "part": "fin-pleat-detail",
+  "part": "trouser-pleat",
   "garment": {
-    "noun": "navy bespoke suit jacket",
-    "fabric": "fine wool suiting with visible weave"
+    "noun": "pair of bespoke wool tailored trousers",
+    "fabric": "fine wool trouser cloth with visible weave"
   },
   "view": {
     "orientation": "front",
@@ -26,13 +26,23 @@
     "dimensions": [],
     "angles": [],
     "counts": [],
-    "shapes": [],
+    "shapes": [
+      "flat front",
+      "plain hem"
+    ],
+    "negatedShapes": [],
     "spread": [],
-    "flags": []
+    "flags": [],
+    "sides": [
+      "front"
+    ],
+    "attributes": [],
+    "supplierCodes": [],
+    "unresolved": []
   },
   "illustration": {
-    "path": "/images/blueprints/factory/edc7138c802f__302L__No_pleat_no_dart.jpg",
-    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\factory\\edc7138c802f__302L__No_pleat_no_dart.jpg",
+    "path": "/images/blueprints/baoxiniao/trousers/KPOQZ/B.jpg",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\KPOQZ\\B.jpg",
     "exists": true,
     "remote": false
   },
@@ -43,5 +53,7 @@
   ],
   "excluded": null,
   "generate": true,
-  "extractedAt": "2026-07-31T04:39:47.043Z"
+  "extractedAt": "2026-08-26T05:21:10.152Z",
+  "illustrationRescopedAt": "2026-08-26T06:38:22.039Z",
+  "illustrationRescopeNote": "Path moved to the part-scoped blueprint tree. The IMAGE is byte-identical to the one this spec was extracted from (sha1 verified), so the reading below still stands and no re-extraction was needed."
 }

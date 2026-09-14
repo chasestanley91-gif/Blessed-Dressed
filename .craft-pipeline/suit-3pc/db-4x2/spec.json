@@ -11,7 +11,7 @@
   "description": "A double-breasted waistcoat with four buttons of which two fasten, giving an overlapping front with a compact, lower-buttoning closure. The wrapped front adds formality and visual width across the chest while keeping a relatively open, minimal look. It is a tidy, less ornate take on the double-breasted vest.",
   "fieldLabel": "Button Stance",
   "sectionLabel": "Vest — Front Style",
-  "part": "vest-detail",
+  "part": "vest-front",
   "garment": {
     "noun": "bespoke tailored waistcoat",
     "fabric": "fine wool suiting"
@@ -25,13 +25,25 @@
   "measured": {
     "dimensions": [],
     "angles": [],
-    "counts": [],
-    "shapes": [],
+    "counts": [
+      "4-button"
+    ],
+    "shapes": [
+      "double-breasted"
+    ],
+    "negatedShapes": [],
     "spread": [],
-    "flags": []
+    "flags": [],
+    "sides": [
+      "front",
+      "lower"
+    ],
+    "attributes": [],
+    "supplierCodes": [],
+    "unresolved": []
   },
   "illustration": {
-    "path": "/images/options/vest/db-4x2.jpg",
+    "path": "/images/blueprints/baoxiniao/jacket/REQBT/11.jpg",
     "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\options\\vest\\db-4x2.jpg",
     "exists": true,
     "remote": false
@@ -39,9 +51,12 @@
   "forbidden": [
     "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
     "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
-    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)",
+    "any button count other than exactly 4"
   ],
   "excluded": null,
   "generate": true,
-  "extractedAt": "2026-07-31T19:00:27.108Z"
+  "extractedAt": "2026-08-26T06:31:18.470Z",
+  "illustrationRescopedAt": "2026-08-26T06:38:22.247Z",
+  "illustrationRescopeNote": "Path moved to the part-scoped blueprint tree. The IMAGE is byte-identical to the one this spec was extracted from (sha1 verified), so the reading below still stands and no re-extraction was needed."
 }

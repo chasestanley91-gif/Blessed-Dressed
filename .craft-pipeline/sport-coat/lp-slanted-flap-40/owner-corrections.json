@@ -1,0 +1,32 @@
+{
+ "craftId": "sport-coat|suit-pockets|lower-pocket|lp-slanted-flap-40",
+ "note": "Owner rejection reasons for this craft, from BOTH decision sources. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 1,
+   "decidedAt": "2026-08-12T04:29:03.324Z",
+   "tags": [
+    "Reference drawing itself is wrong"
+   ],
+   "notes": "For the Regular Slanted Flap Lower Front Pocket shown in the image:\n\nFinished flap depth = 4.0 cm\nPocket is slanted upward toward the side seam\nStandard jacket lower pocket\nSingle-welt with flap\nTypical bespoke slant: 5° to 8°\n1. Finished Flap Depth\n\nGiven:\n\nF=4.0 cmF = 4.0\\text{ cm}\n\nThis is the visible flap depth after construction.\n\n2. Drafted Flap Depth\n\nAdd turn-of-cloth and seam allowance.\n\nFD=F+1.0+1.0FD = F + 1.0 + 1.0 FD=6.0 cmFD = 6.0\\text{ cm}\n\nDraft flap:\n\n6.0 cm deep\\boxed{6.0\\text{ cm deep}}\n3. Pocket Length\n\nTraditional bespoke lower pocket:\n\nPL=Chest5PL = \\frac{Chest}{5}\n\nExample for 40\" chest:\n\n101.6÷5101.6 \\div 5 =20.3 cm=20.3\\text{ cm}\n\nTypical range:\n\n18−21 cm\\boxed{18-21\\text{ cm}}\n\nMost commonly:\n\n20 cm\\boxed{20\\text{ cm}}\n4. Flap Width Formula\n\nFlap should overhang the pocket opening slightly.\n\nFW=PL+1.0FW = PL + 1.0\n\nFor a 20 cm pocket:\n\nFW=21.0 cmFW = 21.0\\text{ cm} 21.0 cm\\boxed{21.0\\text{ cm}}\n5. Pocket Slant Angle\n\nRegular slanted pocket:\n\n6∘\\boxed{6^\\circ}\n\nTypical bespoke range:\n\n5∘ to 8∘5^\\circ \\text{ to } 8^\\circ\n6. Vertical Rise Across Pocket\n\nFor a 20 cm pocket at 6°:\n\nRise=PL×sin⁡6∘Rise = PL \\times \\sin6^\\circ Rise=20×0.1045Rise = 20 \\times 0.1045 Rise=2.09 cmRise = 2.09\\text{ cm} 2.1 cm\\boxed{2.1\\text{ cm}}\n\nSo the outer pocket end is approximately 2.1 cm higher than the inner end.\n\n7. Flap Shape\n\nThe image shows a slightly tapered flap.\n\nRecommended taper:\n\nT=0.10FT = 0.10F T=0.10(4)T = 0.10(4) T=0.4 cmT = 0.4\\text{ cm}\n\nBottom width:\n\nBW=FW−0.4BW = FW - 0.4 BW=20.6 cmBW = 20.6\\text{ cm}\n8. Bottom Edge Angle\n\nBottom flap edge follows the pocket angle:\n\n6∘\\boxed{6^\\circ}\n\nparallel to pocket opening.\n\n9. Corner Geometry\n\nFor classic bespoke pockets:\n\nCorner chamfer:\n\n0.5 cm0.5\\text{ cm}\n\nCorner angle:\n\n45∘45^\\circ\n\nor lightly rounded.\n\nDraft Coordinates Example\n\nAssuming:\n\nPocket length = 20 cm\nFlap depth = 4 cm\nPocket angle = 6°\n\nPocket opening:\n\nA=(0,0)A=(0,0) B=(20,2.1)B=(20,2.1)\n\nUpper flap:\n\nC=(0,4)C=(0,4) D=(20,6.1)D=(20,6.1)\n\nConnect parallel to create the flap shape.\n\nComplete Bespoke Draft\nFinished Flap\n20×4 cm\\boxed{20 \\times 4\\text{ cm}}\nCut Flap\n21×6 cm\\boxed{21 \\times 6\\text{ cm}}\nPocket Slant\n6∘\\boxed{6^\\circ}\nRise\n2.1 cm\\boxed{2.1\\text{ cm}}\nTaper\n0.4 cm\\boxed{0.4\\text{ cm}}\nCorner Chamfer\n\\boxed{0.5\\text{ cm @ 45^\\circ}}\nPocket Bag\nWidth=PL+4=24 cm\\text{Width} = PL + 4 = 24\\text{ cm} Depth=1.4PL=28 cm\\text{Depth} = 1.4PL = 28\\text{ cm}\n\nA classic bespoke 4 cm regular slanted flap pocket therefore drafts to approximately:\n\nPocket opening: 20 cm\nVisible flap depth: 4 cm\nCut flap depth: 6 cm\nSlant: 6°\nRise across pocket: 2.1 cm\nFinished flap width: 21 cm.",
+   "references": [
+    "/images/review-refs/sport-coat/lp-slanted-flap-40/1786508865169-4pfgwr.jpg"
+   ],
+   "parkedAt": "2026-08-12T21:48:07.175Z",
+   "craftId": "sport-coat|suit-pockets|lower-pocket|lp-slanted-flap-40"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "discard",
+   "tags": [],
+   "notes": "bad Tech pack and all the pics are wrong remake everything",
+   "reasonRecorded": true,
+   "references": [],
+   "craftId": "sport-coat|suit-pockets|lower-pocket|lp-slanted-flap-40",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.420Z"
+  }
+ ]
+}

@@ -1,0 +1,153 @@
+{
+  "addr": "sport-coat > suit-pockets > chest-pocket > cp-welt-25",
+  "label": "Straight Welt 2.5 cm",
+  "part": "jacket-chest-pocket",
+  "orientation": "front",
+  "excluded": null,
+  "generate": true,
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\sport-coat.json",
+  "source": "json",
+  "illustration": "/images/blueprints/baoxiniao/jacket/REQPU/B.jpg",
+  "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQPU\\B.jpg",
+  "illustrationExists": true,
+  "illustrationRemote": false,
+  "profile": {
+    "addr": "sport-coat > suit-pockets > chest-pocket > cp-welt-25",
+    "product": "sport-coat",
+    "field": "Chest Pocket",
+    "option": "Straight Welt 2.5 cm",
+    "part": "jacket-chest-pocket",
+    "garment": "bespoke sport coat",
+    "orientation": "front",
+    "absence": false,
+    "distinguishingDetail": "At 2.5 cm the straight welt breast pocket represents the most widely used English standard, balancing visibility with formality. It sits precisely in the sweet spot between the ultra-narrow and the wider Italian welt, making it the default reference point for most British bespoke houses and many quality ready-to-wear makers. The opening is left completely empty so the full 2.5 cm depth of the welt reads clearly against the chest, its top and bottom edges parallel along the whole length.",
+    "measured": {
+      "dimensions": [
+        "2.5 cm"
+      ],
+      "angles": [],
+      "counts": [],
+      "shapes": [
+        "welt pocket"
+      ],
+      "spread": [
+        "narrow spread"
+      ],
+      "flags": []
+    },
+    "reproduceFromIllustration": [
+      "breast pocket shape (barchetta/welt)",
+      "curve",
+      "pattern match",
+      "the empty opening with both its edges visible end to end"
+    ],
+    "composition": {
+      "crop": "on the left breast pocket",
+      "dominanceTarget": "40–80% of frame",
+      "identifyWithin": "1 second"
+    },
+    "forbidden": [
+      "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+      "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+      "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+    ],
+    "excluded": null,
+    "generate": true
+  },
+  "requiredTokens": [
+    "2.5 cm",
+    "welt pocket"
+  ],
+  "checklist": [
+    "length/width matches exactly: 2.5 cm",
+    "on the WEARER'S left — i.e. the RIGHT of the frame in this front view; compare against the drawing side by side, NOT against convention",
+    "on the upper side, NOT mirrored or swapped (check against the drawing, not against convention)",
+    "on the lower side, NOT mirrored or swapped (check against the drawing, not against convention)",
+    "shape reads as drawn: welt pocket",
+    "distinguishing detail present: At 2.5 cm the straight welt breast pocket represents the most widely used English standard, balancing visibility with formality. It sits precisely in the sweet spot between the ultra-narrow and the wider Italian welt, making it the default reference point for most British bespoke houses and many quality ready-to-wear makers. The opening is left completely empty so the full 2.5 cm depth of the welt reads clearly against the chest, its top and bottom edges parallel along the whole length.",
+    "reproduced from the illustration: breast pocket shape (barchetta/welt)",
+    "reproduced from the illustration: curve",
+    "reproduced from the illustration: pattern match",
+    "reproduced from the illustration: the empty opening with both its edges visible end to end",
+    "orientation matches the illustration: front",
+    "the Chest Pocket dominates the frame (40–80%), identifiable within one second, framed on the left breast pocket",
+    "silhouette, proportions, seam & stitch placement match the illustration; left/right symmetry correct",
+    "NO generic-category substitution — this exact option, not a typical one",
+    "a real photograph of the exact drawn option — not the line-art, no stylisation"
+  ],
+  "scoreCard": [
+    {
+      "category": "shape",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "geometry",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "dimensions",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "angles",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "construction",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "placement",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "symmetry",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "composition",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "blueprint-match",
+      "score": null,
+      "min": 98
+    }
+  ],
+  "prompt": "Ultra-photorealistic luxury menswear product photography.\n\nA single-subject craft DOCUMENTATION photograph: the Chest Pocket is the dominant subject, filling 40–80% of the frame and identifiable within one second.\n\nA premium bespoke sport coat featuring a precise Straight Welt 2.5 cm (Chest Pocket).\n\nDistinguishing construction detail (reproduce exactly as drawn): At 2.5 cm the straight welt breast pocket represents the most widely used English standard, balancing visibility with formality. It sits precisely in the sweet spot between the ultra-narrow and the wider Italian welt, making it the default reference point for most British bespoke houses and many quality ready-to-wear makers. The opening is left completely empty so the full 2.5 cm depth of the welt reads clearly against the chest, its top and bottom edges parallel along the whole length.\n\nExact specification — on the left and upper and lower sides ONLY — do not mirror or swap. HANDEDNESS: \"left\" means the WEARER'S left, which appears on the RIGHT-HAND SIDE of a front-facing photograph; the wearer's right appears on the LEFT of the frame. Copy the reference drawing exactly as drawn — it is already in wearer perspective — and do NOT flip it; welt pocket shape; measuring exactly 2.5 cm; narrow spread — matching the illustration precisely.\n\nMANDATORY GEOMETRY COVERAGE — reproduce from the illustration, exactly and without assumption, every one of these: breast pocket shape (barchetta/welt), curve, pattern match, the empty opening with both its edges visible end to end. Match each to the drawing.\n\nVIEW — this illustration is the front of the garment. Photograph the same face; never substitute a different face of the garment.\n\nBLUEPRINT LOCK — THE DRAWING IS LAW: the attached technical illustration is the manufacturing blueprint for this exact craft option and the SOLE authority for the image. Reproduce its geometry precisely — point/edge shape, lengths, widths, depths, angles, curvature, roll lines, symmetry, button/tab/stay positions, seam and stitch placement, and proportions — within less than 2% deviation. Assume NOTHING from tailoring/menswear/fashion convention or model priors; every visible characteristic must come from the drawing. Do not redesign, reinterpret, substitute a similar commercial style, stylise, or \"improve\" it. Do NOT fall back to a generic version of this category — reproduce THIS option, not a typical one. If convention conflicts with the drawing, the drawing wins. Accuracy over aesthetics. ANNOTATIONS ARE NOT THE GARMENT: the technical drawing may carry measurement callouts — dimension numbers (\"2.5cm\", \"9cm\", \"115°\"), tick / leader / dimension lines, arrows, red or coloured guide marks, and text labels. These are manufacturing documentation, NOT features of the cloth. Reproduce ONLY the finished garment: never render any number, unit, arrow, callout, leader line, measurement mark, or text anywhere in the photograph. The final image is a clean garment photo with zero annotation. COLOUR IN THE DRAWING IS NOTATION, NOT CLOTH: any red, orange or otherwise highlighted region marks WHERE the craft option sits — it is a position marker, never a colour specification. Flat grey or tinted shading marks the EXTENT of a panel, lining or facing, not its shade. Render every one of those areas in the garment's own cloth and thread, in the natural colour that tailoring would use there. There must be no red, no highlighter tint and no flat unshaded grey panel anywhere in the photograph unless the option's own label explicitly names that colour.\n\nPhotographed worn on a male model, with NO pocket square and nothing tucked into or protruding from the pocket, and no necktie.\n\nFrame on the left breast pocket; the detail must read clearly and sharply.\n\nMATCHED FRAMING — this option belongs to a family whose members differ from one another only by a measurement, so this photograph will be shown beside its siblings and compared directly. TWO SEPARATE REQUIREMENTS, and both must hold. FIRST, THE GARMENT: build the feature at exactly the size the drawing gives it — no larger. Do not exaggerate the dimension to make this option look more distinct from its siblings; the difference between them is small in real tailoring and must stay small here, because a customer choosing on these numbers is ordering a real garment. SECOND, THE CAMERA: frame the shot the way every member of the family must be framed — the garment part square to camera, centred, at a standard distance that leaves the whole garment occupying the same share of the picture no matter which value this option carries. Do not move closer for a small measurement or pull back for a large one. Getting one of these right while getting the other wrong is still a failure: an accurate feature shot at the wrong distance, or a matched frame containing an exaggerated feature, both mislead a customer comparing two pictures side by side.\n\nSavile Row and high-end Italian sartorial aesthetic. Natural daylight studio lighting, Phase One IQ4 medium-format camera, 150MP detail, shallow depth of field, magazine-quality editorial menswear photography. Authentic bespoke craftsmanship, fine hand stitching, premium finishing. SET — shot in a clean luxury photographic studio against a seamless, plain, neutral light-grey background with clear separation between garment and background: no location, no architecture, no furniture, no scenery, no props and no environmental context of any kind competing with the garment.\n\nExtremely realistic textured wool/hopsack with visible weave texture, fine stitching.\n\nAvoid: any GENERIC menswear substitution (a generic spread collar, generic notch/peak lapel, generic pocket/pleat/vent/cuff/waistband in place of the drawn one), illustration or line-art style, CGI or 3D-render look, cartoon, mannequin, fashion sketch, inaccurate geometry, altered proportions, missing construction details, asymmetry, watermark, AI-art appearance, AND any text or annotation traced from the drawing: NO measurement numbers, units (cm/mm/°), dimension or leader lines, arrows, callouts, red/coloured guide marks, ruler ticks, or labels anywhere in the frame. This is real garment photography of the exact drawn option — clean cloth only, nothing else.\n\nFORBIDDEN FOR THIS OPTION — do not render: a generic version of this part standing in for the exact drawn option (generic-category substitution); any feature, count, or geometry borrowed from a neighboring craft option on the same field; a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion).\n\nOWNER CORRECTION AFTER REVIEW (attempt 1 was rejected by the owner — obey this over any conflicting earlier line, including the BLUEPRINT LOCK): For the image shown, the finished straight welt height is 2.5 cm.\n\nThe geometry of a straight welt pocket is simple: the visible welt is a folded rectangle.\n\n1. Finished Welt Height\nW=2.5 cmW = 2.5\\text{ cm}\n\nWhere:\n\nWW = finished visible welt height.\n2. Cut Welt Width\n\nA welt is folded in half.\n\nFormula\nCW=2W+2SACW = 2W + 2SA\n\nWhere:\n\nCWCW = cut width\nSASA = seam allowance\n\nUsing a 1 cm seam allowance:\n\nCW=(2×2.5)+2CW = (2 \\times 2.5) + 2 CW=7.0 cmCW = 7.0\\text{ cm}\nResult\n7.0 cm\\boxed{7.0\\text{ cm}}\n3. Fold Line\n\nVisible welt:\n\n2.5 cm2.5\\text{ cm}\n\nBefore folding:\n\n2×2.5=5.0 cm2 \\times 2.5 = 5.0\\text{ cm}\n\nFold position:\n\n2.5 cm\\boxed{2.5\\text{ cm}}\n\nfrom either edge.\n\n4. Chest Pocket Length\n\nClassic bespoke chest pocket:\n\nPL=Chest Circumference6PL=\\frac{\\text{Chest Circumference}}{6}\n\nExamples:\n\n38\" Chest\n96.5/6=16.1 cm96.5/6 = 16.1\\text{ cm}\n40\" Chest\n101.6/6=16.9 cm101.6/6 = 16.9\\text{ cm}\n42\" Chest\n106.7/6=17.8 cm106.7/6 = 17.8\\text{ cm}\n\nMost bespoke jackets use:\n\n16.5−17.5 cm\\boxed{16.5-17.5\\text{ cm}}\n5. Pocket Angle\n\nTraditional breast pocket slant:\n\n8∘−12∘8^\\circ-12^\\circ\n\nMost common:\n\n10∘\\boxed{10^\\circ}\n\nupward toward the armhole.\n\n6. Corner Triangle Cuts\n\nPocket opening:\n\n2.5 cm2.5\\text{ cm}\n\nCorner triangle length:\n\nTL=WTL=W TL=2.5 cmTL=2.5\\text{ cm}\n\nCut triangles at:\n\n45∘\\boxed{45^\\circ}\n7. Pocket Bag Dimensions\nWidth\nPBW=PL+4PBW=PL+4\n\nExample:\n\n17+4=21 cm17+4=21\\text{ cm}\nDepth\nPBD=1.5PLPBD=1.5PL 1.5(17)=25.5 cm1.5(17) = 25.5\\text{ cm}\n8. Opening Rectangle Geometry\n\nIf pocket length is 17 cm:\n\nA=L×WA=L\\times W A=17×2.5A=17\\times2.5 A=42.5cm2A=42.5 cm^2\n\nOpening rectangle:\n\n17.0×2.5 cm\\boxed{17.0 \\times 2.5\\text{ cm}}\nBespoke Draft Summary\nWelt Piece\n7.0 cm×Pocket Length\\boxed{7.0\\text{ cm} \\times \\text{Pocket Length}}\nFinished Welt\n2.5 cm\\boxed{2.5\\text{ cm}}\nFold Line\n2.5 cm\\boxed{2.5\\text{ cm}}\nPocket Length\n16.5−17.5 cm\\boxed{16.5-17.5\\text{ cm}}\nPocket Angle\n10∘\\boxed{10^\\circ}\nCorner Triangle\n2.5 cm at 45∘\\boxed{2.5\\text{ cm at }45^\\circ}\nTypical 40\" Chest Example\nPocket length = 17.0 cm\nFinished welt = 2.5 cm\nCut welt = 7.0 cm\nPocket angle = 10°\nPocket bag = 21 cm × 25.5 cm\n\nThese are the drafting mathematics and geometric proportions for a 2.5 cm straight welt chest pocket in bespoke tailoring. The owner uploaded 1 reference photograph(s) with this rejection, but they were reviewed and found NOT to depict this exact option, so none are attached. Take the correction text above literally and use the technical drawing as the geometry authority.\n\nOWNER CORRECTION AFTER REVIEW (a previous attempt was rejected by the owner — obey this over any conflicting earlier line, including the BLUEPRINT LOCK): The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+  "ownerCorrections": [
+    {
+      "attemptRejected": 1,
+      "decidedAt": "2026-08-12T04:22:50.590Z",
+      "tags": [],
+      "notes": "For the image shown, the finished straight welt height is 2.5 cm.\n\nThe geometry of a straight welt pocket is simple: the visible welt is a folded rectangle.\n\n1. Finished Welt Height\nW=2.5 cmW = 2.5\\text{ cm}\n\nWhere:\n\nWW = finished visible welt height.\n2. Cut Welt Width\n\nA welt is folded in half.\n\nFormula\nCW=2W+2SACW = 2W + 2SA\n\nWhere:\n\nCWCW = cut width\nSASA = seam allowance\n\nUsing a 1 cm seam allowance:\n\nCW=(2×2.5)+2CW = (2 \\times 2.5) + 2 CW=7.0 cmCW = 7.0\\text{ cm}\nResult\n7.0 cm\\boxed{7.0\\text{ cm}}\n3. Fold Line\n\nVisible welt:\n\n2.5 cm2.5\\text{ cm}\n\nBefore folding:\n\n2×2.5=5.0 cm2 \\times 2.5 = 5.0\\text{ cm}\n\nFold position:\n\n2.5 cm\\boxed{2.5\\text{ cm}}\n\nfrom either edge.\n\n4. Chest Pocket Length\n\nClassic bespoke chest pocket:\n\nPL=Chest Circumference6PL=\\frac{\\text{Chest Circumference}}{6}\n\nExamples:\n\n38\" Chest\n96.5/6=16.1 cm96.5/6 = 16.1\\text{ cm}\n40\" Chest\n101.6/6=16.9 cm101.6/6 = 16.9\\text{ cm}\n42\" Chest\n106.7/6=17.8 cm106.7/6 = 17.8\\text{ cm}\n\nMost bespoke jackets use:\n\n16.5−17.5 cm\\boxed{16.5-17.5\\text{ cm}}\n5. Pocket Angle\n\nTraditional breast pocket slant:\n\n8∘−12∘8^\\circ-12^\\circ\n\nMost common:\n\n10∘\\boxed{10^\\circ}\n\nupward toward the armhole.\n\n6. Corner Triangle Cuts\n\nPocket opening:\n\n2.5 cm2.5\\text{ cm}\n\nCorner triangle length:\n\nTL=WTL=W TL=2.5 cmTL=2.5\\text{ cm}\n\nCut triangles at:\n\n45∘\\boxed{45^\\circ}\n7. Pocket Bag Dimensions\nWidth\nPBW=PL+4PBW=PL+4\n\nExample:\n\n17+4=21 cm17+4=21\\text{ cm}\nDepth\nPBD=1.5PLPBD=1.5PL 1.5(17)=25.5 cm1.5(17) = 25.5\\text{ cm}\n8. Opening Rectangle Geometry\n\nIf pocket length is 17 cm:\n\nA=L×WA=L\\times W A=17×2.5A=17\\times2.5 A=42.5cm2A=42.5 cm^2\n\nOpening rectangle:\n\n17.0×2.5 cm\\boxed{17.0 \\times 2.5\\text{ cm}}\nBespoke Draft Summary\nWelt Piece\n7.0 cm×Pocket Length\\boxed{7.0\\text{ cm} \\times \\text{Pocket Length}}\nFinished Welt\n2.5 cm\\boxed{2.5\\text{ cm}}\nFold Line\n2.5 cm\\boxed{2.5\\text{ cm}}\nPocket Length\n16.5−17.5 cm\\boxed{16.5-17.5\\text{ cm}}\nPocket Angle\n10∘\\boxed{10^\\circ}\nCorner Triangle\n2.5 cm at 45∘\\boxed{2.5\\text{ cm at }45^\\circ}\nTypical 40\" Chest Example\nPocket length = 17.0 cm\nFinished welt = 2.5 cm\nCut welt = 7.0 cm\nPocket angle = 10°\nPocket bag = 21 cm × 25.5 cm\n\nThese are the drafting mathematics and geometric proportions for a 2.5 cm straight welt chest pocket in bespoke tailoring.",
+      "references": [
+        "/images/review-refs/sport-coat/cp-welt-25/1786508552620-qoob4o.jpg"
+      ],
+      "parkedAt": "2026-08-12T21:48:07.155Z",
+      "craftId": "sport-coat|suit-pockets|chest-pocket|cp-welt-25"
+    },
+    {
+      "attemptRejected": null,
+      "decidedAt": null,
+      "source": "july-v3",
+      "verdict": "remake",
+      "tags": [],
+      "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+      "reasonRecorded": false,
+      "references": [],
+      "craftId": "sport-coat|suit-pockets|chest-pocket|cp-welt-25",
+      "foldedFrom": "generation-queue.rejectionContext",
+      "parkedAt": "2026-08-16T05:02:08.407Z"
+    }
+  ],
+  "builtAt": "2026-08-26T07:29:06.941Z"
+}

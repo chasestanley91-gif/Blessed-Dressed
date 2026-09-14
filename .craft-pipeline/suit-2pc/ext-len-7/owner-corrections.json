@@ -1,0 +1,106 @@
+{
+ "craftId": "suit-2pc|Trousers-waistband|extension-length|ext-len-7",
+ "note": "Owner rejection reasons for a craft that had no prompt.json when they were recorded. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 2,
+   "decidedAt": "2026-08-11T22:39:21.288Z",
+   "tags": [
+    "Unrealistic / AI look"
+   ],
+   "notes": "If you're changing that 13 cm diagonal shaping length to 7 cm, the geometry scales accordingly.\n\nUsing the same drop proportion:\n\nD=73D = \\frac{7}{3} D=2.33 cmD = 2.33 \\text{ cm}\nAngle Calculation\nθ=tan⁡−1(2.337)\\theta = \\tan^{-1}\\left(\\frac{2.33}{7}\\right) θ≈18.4∘\\theta \\approx 18.4^\\circ\n\nSo the shape remains nearly identical, just shorter.\n\nDraft Dimensions for a 7 cm Waistband Extension\nExtension length: 7.0 cm\nVertical drop: 2.3 cm\nCurve radius: 4.5 to 5.0 cm\nFly extension width: 3.5 to 4.0 cm\nFinished waistband width: 4.0 cm (typical bespoke)\nDrafting Method\nA ------------------ B\n|                     \\\n|                      \\\n|                       C\n|\n|\n\nA→B = 7 cm\nB→C = 2.3 cm drop\nBlend B to C with a smooth French curve\nRadius ≈ 5 cm\nScaling Formula\n\nFor any diagonal length LL:\n\nDrop=0.333L\\text{Drop} = 0.333L Radius=0.70L\\text{Radius} = 0.70L\n\nFor L=7L = 7 cm:\n\nDrop=7×0.333=2.33 cm\\text{Drop} = 7 \\times 0.333 = 2.33 \\text{ cm} Radius=7×0.70=4.9 cm\\text{Radius} = 7 \\times 0.70 = 4.9 \\text{ cm}\n\nThis will produce a clean bespoke waistband/fly transition matching the proportions of the original drawing while reducing the extension from 13 cm to 7 cm.",
+   "references": [],
+   "parkedAt": "2026-08-12T21:48:07.417Z",
+   "craftId": "suit-2pc|Trousers-waistband|extension-length|ext-len-7"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "remake",
+   "tags": [],
+   "notes": "the illustration showcases the length of the waistband extension from the fly to the end where it buttons at 7cm",
+   "reasonRecorded": true,
+   "references": [],
+   "craftId": "suit-2pc|Trousers-waistband|extension-length|ext-len-7",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-15T20:49:14.535Z"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "suit-2pc|Trousers-waistband|extension-length|ext-len-7",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-15T20:49:14.535Z"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "remake",
+   "tags": [],
+   "notes": "the illustration showcases the length of the waistband extension from the fly to the end where it buttons at 7cm",
+   "reasonRecorded": true,
+   "references": [],
+   "craftId": "suit-3pc|Trousers-waistband|extension-length|ext-len-7",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-15T20:49:14.535Z"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "suit-3pc|Trousers-waistband|extension-length|ext-len-7",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-15T20:49:14.535Z"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "remake",
+   "tags": [],
+   "notes": "the illustration showcases the length of the waistband extension from the fly to the end where it buttons at 7cm",
+   "reasonRecorded": true,
+   "references": [],
+   "craftId": "trousers|waistband|extension-length|ext-len-7",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-15T20:49:14.535Z"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "trousers|waistband|extension-length|ext-len-7",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-15T20:49:14.535Z"
+  },
+  {
+   "attemptRejected": 3,
+   "decidedAt": "2026-09-14T04:05:22.212Z",
+   "tags": [
+    "Unrealistic / AI look"
+   ],
+   "notes": "",
+   "references": [],
+   "parkedAt": "2026-09-14T04:16:31.580Z",
+   "craftId": "suit-2pc|Trousers-waistband|extension-length|ext-len-7"
+  }
+ ]
+}

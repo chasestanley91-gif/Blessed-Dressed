@@ -1,0 +1,36 @@
+{
+ "craftId": "sport-coat|suit-pockets|lower-pocket|lp-large-slanted-45",
+ "note": "Owner rejection reasons for this craft, from BOTH decision sources. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 1,
+   "decidedAt": "2026-08-12T04:31:30.478Z",
+   "tags": [
+    "Reference drawing itself is wrong",
+    "Wrong shape / outline",
+    "Generic version, not this option",
+    "Wrong size or proportion",
+    "Unrealistic / AI look"
+   ],
+   "notes": "For the Large Slanted Flap Pocket, 4.5 cm deep shown in the image:\n\nVisible Measurements\nFinished flap depth = 4.5 cm\nLarge slanted lower jacket pocket\nStronger slant than a standard business suit pocket\nTypical sport coat / hacking jacket style\n1. Finished Flap Depth\nF=4.5 cmF = 4.5\\text{ cm}\n\nVisible depth after the flap is turned and pressed.\n\n2. Draft (Cut) Flap Depth\n\nA flap is cut double-depth then folded.\n\nUsing 1 cm seam allowances:\n\nFD=2F+2SAFD = 2F + 2SA FD=(2×4.5)+2FD = (2 \\times 4.5)+2 FD=11.0 cmFD = 11.0\\text{ cm}\nCut Depth\n11.0 cm\\boxed{11.0\\text{ cm}}\n3. Pocket Opening Length\n\nTraditional bespoke lower pocket:\n\nPL=Chest Circumference5PL = \\frac{\\text{Chest Circumference}}{5}\n\nTypical finished dimensions:\n\nChest\tPocket Length38\"\t19.0 cm\n40\"\t20.0 cm\n42\"\t21.0 cm\n\nPractical bespoke average:\n\n20.0 cm\\boxed{20.0\\text{ cm}}\n4. Flap Width\n\nAllow 0.5 cm extension beyond each end:\n\nFW=PL+1FW = PL + 1 FW=20+1FW = 20 + 1 FW=21 cmFW = 21\\text{ cm}\nFinished Width\n21.0 cm\\boxed{21.0\\text{ cm}}\n5. Slant Angle\n\nLarge slanted flap pockets typically use:\n\n8∘−10∘8^\\circ - 10^\\circ\n\nRecommended:\n\n9∘\\boxed{9^\\circ}\n6. Rise Across Pocket\n\nFor a 20 cm pocket:\n\nRise=PLsin⁡(9∘)Rise = PL \\sin(9^\\circ) Rise=20(0.1564)Rise = 20(0.1564) Rise=3.13 cmRise = 3.13\\text{ cm}\nVertical Difference\n3.1 cm\\boxed{3.1\\text{ cm}}\n7. Flap Taper\n\nLarge flaps taper slightly toward the bottom.\n\nFormula:\n\nT=0.15FT = 0.15F T=0.15(4.5)T = 0.15(4.5) T=0.675 cmT = 0.675\\text{ cm}\n\nUse:\n\n0.7 cm\\boxed{0.7\\text{ cm}}\n\nBottom width:\n\nBW=21−0.7BW = 21 - 0.7 BW=20.3 cmBW = 20.3\\text{ cm}\n8. Corner Shape\n\nClassic bespoke corner treatment:\n\nChamfer\n0.7 cm0.7\\text{ cm}\nAngle\n45∘45^\\circ\n\nOr a 0.7 cm radius round.\n\n9. Draft Coordinates\n\nAssuming:\n\nPocket length = 20 cm\nFlap depth = 4.5 cm\nSlant = 9°\n\nPocket opening:\n\nA=(0,0)A=(0,0) B=(20,3.1)B=(20,3.1)\n\nTop flap edge:\n\nC=(0,4.5)C=(0,4.5) D=(20,7.6)D=(20,7.6)\n\nBottom corners tapered 0.35 cm each side.\n\nPocket Bag Dimensions\n\nPocket bag width:\n\nPBW=PL+4PBW = PL + 4 PBW=24 cmPBW = 24\\text{ cm}\n\nPocket bag depth:\n\nPBD=1.4PLPBD = 1.4PL PBD=28 cmPBD = 28\\text{ cm} 24×28 cm\\boxed{24 \\times 28\\text{ cm}}\nComplete Bespoke Draft Summary\nFinished Flap\n20×4.5 cm\\boxed{20 \\times 4.5\\text{ cm}}\nCut Flap\n21×11 cm\\boxed{21 \\times 11\\text{ cm}}\nPocket Slant\n9∘\\boxed{9^\\circ}\nRise\n3.1 cm\\boxed{3.1\\text{ cm}}\nTaper\n0.7 cm\\boxed{0.7\\text{ cm}}\nCorner Chamfer\n\\boxed{0.7\\text{ cm @ 45^\\circ}\nPocket Bag\n24×28 cm\\boxed{24 \\times 28\\text{ cm}}\nMaster Formula Set\nFD=2F+2SAFD = 2F + 2SA FW=PL+1FW = PL + 1 T=0.15FT = 0.15F Rise=PLsin⁡(θ)Rise = PL\\sin(\\theta)\n\nFor this 4.5 cm large slanted flap, the key pattern values are:\n\nPocket opening: 20 cm\nFinished flap depth: 4.5 cm\nCut flap depth: 11 cm\nPocket slant: 9°\nRise across pocket: 3.1 cm\nFlap width: 21 cm\nTaper: 0.7 cm",
+   "references": [
+    "/images/review-refs/sport-coat/lp-large-slanted-45/1786509036881-91uxoa.jpg"
+   ],
+   "parkedAt": "2026-08-12T21:48:07.183Z",
+   "craftId": "sport-coat|suit-pockets|lower-pocket|lp-large-slanted-45"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "discard",
+   "tags": [],
+   "notes": "bad Tech pack and all the pics are wrong remake everything",
+   "reasonRecorded": true,
+   "references": [],
+   "craftId": "sport-coat|suit-pockets|lower-pocket|lp-large-slanted-45",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.425Z"
+  }
+ ]
+}

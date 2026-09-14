@@ -1,0 +1,45 @@
+{
+ "craftId": "sport-coat|lapel|lapel-style|lapel-peak-102-rl",
+ "note": "Owner rejection reasons for this craft, from BOTH decision sources. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 1,
+   "decidedAt": "2026-08-12T03:38:51.843Z",
+   "tags": [
+    "Reference drawing itself is wrong"
+   ],
+   "notes": "For the Peak Lapel shown in the image:\n\nStyle: Peak Lapel\nLapel Width: 14.0 cm\nGorge/peak angle shown: 102°\nClosure orientation: Right-over-Left (often used on women's jackets or specialty bespoke garments)\n\nThe image shows the inside angle at the peak as 102°.\n\n1. Peak Lapel Geometry\n\nGiven:\n\nθ=102∘\\theta = 102^\\circ\n\nThe complementary exterior peak angle is:\n\n180∘−102∘180^\\circ - 102^\\circ =78∘= 78^\\circ\n\nSo the peak projects at:\n\n78∘\\boxed{78^\\circ}\n\nfrom the upper collar edge.\n\n2. Lapel Width\n\nGiven:\n\nW=14 cmW = 14\\text{ cm}\n\nMeasured from the roll line to the outer lapel edge.\n\nCollar\n   \\\n    \\ 102°\n     \\\n      \\\n       \\______ Peak\n         <---->\n          14 cm\n\n3. Peak Projection\n\nMost bespoke peak lapels use:\n\nP=0.35WP = 0.35W\n\nFor a 14 cm lapel:\n\nP=14×0.35P = 14 \\times 0.35 P=4.9 cmP = 4.9\\text{ cm}\n\nRecommended peak extension:\n\n5.0 cm\\boxed{5.0\\text{ cm}}\n4. Gorge Height\n\nClassic relationship:\n\nGH=0.80WGH = 0.80W GH=0.80(14)GH = 0.80(14) GH=11.2 cmGH = 11.2\\text{ cm}\n\nSo from the buttoning point to the gorge:\n\n11.2 cm\\boxed{11.2\\text{ cm}}\n5. Peak Length\n\nFor a strong fashion peak:\n\nPL=1.20WPL = 1.20W PL=1.20(14)PL = 1.20(14) PL=16.8 cmPL = 16.8\\text{ cm}\n\nRounded:\n\n17 cm\\boxed{17\\text{ cm}}\n6. Draft Coordinates\n\nLet the gorge corner be point A = (0,0).\n\nPeak line length:\n\n17 cm17\\text{ cm}\n\nPeak angle:\n\n78∘78^\\circ\n\nCoordinates of peak point:\n\nX=17cos⁡78∘X = 17\\cos78^\\circ X=3.53 cmX = 3.53\\text{ cm} Y=17sin⁡78∘Y = 17\\sin78^\\circ Y=16.63 cmY = 16.63\\text{ cm}\n\nPeak tip location:\n\n(3.5,  16.6)\\boxed{(3.5,\\;16.6)}\n7. Roll-Line Formula\n\nFor a 14 cm lapel:\n\nBreak line width=14×0.55=7.7 cm\\text{Break line width} = 14 \\times 0.55 = 7.7\\text{ cm}\n\nOuter lapel width:\n\n14 cm14\\text{ cm}\n\nDifference:\n\n6.3 cm6.3\\text{ cm}\n\nThis creates the dramatic wide peak seen in your illustration.\n\nBespoke Specifications\nLapel Width: 14.0 cm\nInterior Peak Angle: 102°\nExterior Peak Angle: 78°\nPeak Projection: 5.0 cm\nPeak Length: 17.0 cm\nGorge Height: 11.2 cm\nRoll-Line Width: 7.7 cm\n\nThis produces a bold, wide 14 cm peak lapel with a 102° gorge angle, similar to vintage 1930s, Tom Ford-style, and statement bespoke evening jackets.",
+   "references": [
+    "/images/review-refs/sport-coat/lapel-peak-102-rl/1786505839402-takx4x.jpg"
+   ],
+   "parkedAt": "2026-08-12T21:48:06.960Z",
+   "craftId": "sport-coat|lapel|lapel-style|lapel-peak-102-rl"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "remake",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "sport-coat|lapel|lapel-style|lapel-peak-102-rl",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.318Z"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "sport-coat|lapel|lapel-style|lapel-peak-102-rl",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.318Z"
+  }
+ ]
+}

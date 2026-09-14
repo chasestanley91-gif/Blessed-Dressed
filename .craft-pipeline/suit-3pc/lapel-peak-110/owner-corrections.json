@@ -1,0 +1,32 @@
+{
+ "craftId": "suit-3pc|lapel|lapel-style|lapel-peak-110",
+ "note": "Owner rejection reasons for this craft, from BOTH decision sources. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 1,
+   "decidedAt": "2026-08-12T11:12:15.890Z",
+   "tags": [
+    "Reference drawing itself is wrong"
+   ],
+   "notes": "For the 110° Peak Lapel shown in the image, the peak is extremely open and elongated. Visually, it is one of the most aggressive traditional peak-lapel geometries before entering theatrical or fashion-show proportions.\n\nImage Characteristics\n\nThe illustration shows:\n\nStraight peak edges\nVery open gorge angle (110°)\nLong spear-shaped lapel\nModerate peak projection\nNarrow waist convergence toward the buttoning point\n1. Base Geometry\n\nLet:\n\nθ=110∘\\theta = 110^\\circ\n\nPeak half-angle:\n\nβ=110∘2\\beta=\\frac{110^\\circ}{2} β=55∘\\beta=55^\\circ\n\nSupplementary angle:\n\n180∘−110∘=70∘180^\\circ-110^\\circ=70^\\circ\n2. Recommended Width\n\nA 110° peak generally requires a wider lapel to remain visually balanced.\n\nRecommended:\n\nW=12.5 cmW = 12.5\\text{ cm}\n\nto\n\nW=13.0 cmW = 13.0\\text{ cm}\n\nUsing:\n\nW=12.5 cmW = 12.5\\text{ cm}\n3. Peak Projection\n\nFor a 110° peak:\n\nL=0.40WL=0.40W\n\nTherefore:\n\nL=0.40(12.5)L=0.40(12.5) L=5.0 cmL=5.0\\text{ cm}\n4. Trigonometric Construction\n\nUsing:\n\nsin⁡(55∘)=0.8192\\sin(55^\\circ)=0.8192 cos⁡(55∘)=0.5736\\cos(55^\\circ)=0.5736\nPeak Rise\nH=Lsin⁡(55∘)H=L\\sin(55^\\circ) H=5.0(0.8192)H=5.0(0.8192) H=4.10 cmH=4.10\\text{ cm}\nPeak Spread\nS=Lcos⁡(55∘)S=L\\cos(55^\\circ) S=5.0(0.5736)S=5.0(0.5736) S=2.87 cmS=2.87\\text{ cm}\n5. General Formula\n\nFor any lapel width WW:\n\nProjection\nL=0.40WL=0.40W\nRise\nH=0.40Wsin⁡(55∘)H=0.40W\\sin(55^\\circ) H=0.328WH=0.328W\nSpread\nS=0.40Wcos⁡(55∘)S=0.40W\\cos(55^\\circ) S=0.229WS=0.229W\n6. CAD Draft Coordinates\n\nPlace peak tip at:\n\nP=(0,0)P=(0,0)\n\nUpper peak point:\n\nP1=(2.87,  4.10)P_1=(2.87,\\;4.10)\n\nLower gorge point:\n\nP2=(2.87,  −4.10)P_2=(2.87,\\;-4.10)\n\nThis gives:\n\n∠P1PP2=110∘\\angle P_1PP_2 = 110^\\circ\n7. Straight Edge Equations\n\nSlope:\n\nm=tan⁡(55∘)m=\\tan(55^\\circ) m=1.428m=1.428\n\nUpper edge:\n\ny=1.428xy=1.428x\n\nLower edge:\n\ny=−1.428xy=-1.428x\n8. Patternmaker's Quick Draft (12.5 cm Width)\nMeasurement\tValueLapel Width\t12.5 cm\nPeak Angle\t110°\nHalf-Angle\t55°\nPeak Projection\t5.00 cm\nPeak Rise\t4.10 cm\nPeak Spread\t2.87 cm\nProjection Ratio\t40%\nComparison Chart\nAngle\tProjection Ratio\tRise Ratio101°\t32%\t24.7%\n102°\t35%\t27.2%\n103°\t36%\t28.2%\n105°\t36%\t28.6%\n107°\t37%\t29.7%\n108°\t38%\t30.7%\n110°\t40%\t32.8%\nTailoring Interpretation\n\nA 110° Peak Lapel creates:\n\nMaximum perceived shoulder width\nStrong V-shaped torso emphasis\nLong, spear-like lapel sweep\nA bold 1930s, zoot-suit, or fashion-forward bespoke aesthetic\n\nFor real-world bespoke drafting, the sweet spot is usually a 12.5-13.0 cm lapel width, a 5.0 cm peak projection, and a gorge height approximately 1.5-2.0 cm below the shoulder seam. This closely matches the proportions illustrated in the image.",
+   "references": [
+    "/images/review-refs/suit-3pc/lapel-peak-110/1786533115983-vvz2r7.jpg"
+   ],
+   "parkedAt": "2026-08-12T21:48:07.519Z",
+   "craftId": "suit-3pc|lapel|lapel-style|lapel-peak-110"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "suit-3pc|lapel|lapel-style|lapel-peak-110",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.969Z"
+  }
+ ]
+}

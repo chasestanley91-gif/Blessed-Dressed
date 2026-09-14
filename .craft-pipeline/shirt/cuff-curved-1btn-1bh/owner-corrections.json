@@ -1,0 +1,43 @@
+{
+ "craftId": "shirt|cuffs|cuff|cuff-curved-1btn-1bh",
+ "note": "Owner rejection reasons for this craft, from BOTH decision sources. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 2,
+   "decidedAt": "2026-08-11T22:32:44.757Z",
+   "tags": [
+    "Unrealistic / AI look"
+   ],
+   "notes": "This illustration is a **rounded/curved shirt cuff with a single button and single buttonhole**. The important thing is that the cuff is **not a straight rectangular cuff**—the lower edge is a continuous rounded curve.\n\nThere is **no numerical scale in this drawing**, so we can't derive an absolute centimeter dimension from the illustration alone. But we can define the geometry mathematically so your tech-pack/image-generation system can reproduce it accurately.\n\n### Cuff geometry\n\nLet:\n\n* (W) = finished wrist/cuff circumference\n* (E) = desired wearing ease\n* (D) = finished cuff depth\n\nA good bespoke starting point would be:\n\n[\nE = 2.0\\text{–}2.5\\text{ cm}\n]\n\nTherefore:\n\n[\n\\boxed{\\text{Finished cuff circumference}=W+E}\n]\n\nIf the cuff is drafted flat as a single continuous piece:\n\n[\n\\boxed{\\text{Flat cuff length}=W+E+\\text{overlap}}\n]\n\nFor a button cuff, use approximately:\n\n[\n\\text{overlap}=1.5\\text{–}2.0\\text{ cm}\n]\n\n---\n\n### Rounded bottom\n\nThe bottom of the cuff should be treated as a **continuous curved arc**, rather than square corners.\n\nIf the cuff depth is (D), a simple symmetrical approximation is a semicircular/elliptical lower curve.\n\nFor an elliptical curve:\n\n[\n\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1\n]\n\nwhere:\n\n* (a) = approximately half the cuff width\n* (b) = depth of the lower curve\n\nThe illustration shows approximately:\n\n**straight top edge → vertical/near-vertical sides → progressively rounded lower edge → center of bottom edge at the lowest point.**\n\n---\n\n### Button and buttonhole\n\nThe illustration shows:\n\n**1 button + 1 horizontal buttonhole**\n\nThe buttonhole should be centered on the cuff's closure axis.\n\nA practical relationship is:\n\n[\nL_{BH}=D_B+0.2\\text{–}0.3\\text{ cm}\n]\n\nwhere (D_B) is the button diameter.\n\nFor example, with a:\n\n**1.5 cm button**\n\n[\nL_{BH}\\approx1.7\\text{–}1.8\\text{ cm}\n]\n\nThe button should be positioned approximately at the midpoint of the buttonhole.\n\n---\n\n### The red construction in your illustration\n\nThe upper portion shows the **shirt sleeve/placket entering the cuff**, with the cuff folded around the sleeve opening.\n\nThe vertical sleeve placket should terminate inside the cuff rather than appearing as an independent decorative strip.\n\nSo the construction specification should be:\n\n> **Single-button rounded shirt cuff. Cuff has a straight upper edge and a smoothly curved lower edge, symmetrical from center to center. One horizontal buttonhole and one corresponding button. Sleeve placket enters centrally into the cuff construction. No square lower corners. The curved lower edge forms a continuous rounded profile.**\n\n### For your image-generation pipeline\n\nI'd encode the geometry as:\n\n> **Rounded single-button shirt cuff, one button and one horizontal buttonhole, symmetrical cuff construction, straight upper edge, gently tapered sides transitioning into a pronounced continuous semicircular/elliptical lower curve. The lowest point of the cuff is centered between the two ends. Button and buttonhole aligned on the closure axis. Sleeve placket terminates cleanly into the cuff. Preserve the exact curved silhouette; do not generate a rectangular or French-style square cuff.**\n\n**If you give me the cuff depth (for example 6.5 cm) and the wrist circumference, I can give you the exact centimeter dimensions for the cuff, curve radius, button position, and buttonhole position.**",
+   "references": [],
+   "parkedAt": "2026-08-12T21:48:06.764Z",
+   "craftId": "shirt|cuffs|cuff|cuff-curved-1btn-1bh"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "remake",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "shirt|cuffs|cuff|cuff-curved-1btn-1bh",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.185Z"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "shirt|cuffs|cuff|cuff-curved-1btn-1bh",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.185Z"
+  }
+ ]
+}

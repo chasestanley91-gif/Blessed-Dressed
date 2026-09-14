@@ -1,0 +1,32 @@
+{
+ "craftId": "suit-3pc|lapel|lapel-style|lapel-peak-110-low",
+ "note": "Owner rejection reasons for this craft, from BOTH decision sources. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 1,
+   "decidedAt": "2026-08-12T11:16:53.526Z",
+   "tags": [
+    "Reference drawing itself is wrong"
+   ],
+   "notes": "For the Low Peak Lapel 110° shown in the image, the peak angle remains 110°, but the gorge position is lowered relative to a standard 110° peak. The result is a longer lapel line, a deeper V-opening, and a more vintage 1930s-inspired silhouette.\n\nVisual Characteristics of the Image\n\nThe illustration shows:\n\nPeak angle labeled 110°\nLower gorge point than the previous standard 110° version\nLonger diagonal lapel edge\nMore elongated chest opening\nStraight peak edges\nPeak tip projecting upward less aggressively due to the lowered starting position\n1. Base Geometry\n\nLet:\n\nθ=110∘\\theta = 110^\\circ\n\nHalf-angle:\n\nβ=110∘2\\beta=\\frac{110^\\circ}{2} β=55∘\\beta=55^\\circ\n\nSupplementary angle:\n\n180∘−110∘=70∘180^\\circ-110^\\circ=70^\\circ\n2. Recommended Proportions\n\nFor a low gorge configuration:\n\nLapel Width W=12.5W = 12.5 cm\nGorge Drop D=2.0D = 2.0 to 3.03.0 cm below a standard gorge\nPeak Projection Ratio = 40%\nL=0.40WL = 0.40W L=0.40(12.5)L = 0.40(12.5) L=5.0 cmL = 5.0\\text{ cm}\n3. Peak Triangle Geometry\n\nUsing:\n\nsin⁡(55∘)=0.8192\\sin(55^\\circ)=0.8192 cos⁡(55∘)=0.5736\\cos(55^\\circ)=0.5736\nVertical Rise\nH=Lsin⁡(55∘)H=L\\sin(55^\\circ) H=5.0(0.8192)H=5.0(0.8192) H=4.10 cmH=4.10\\text{ cm}\nHorizontal Spread\nS=Lcos⁡(55∘)S=L\\cos(55^\\circ) S=5.0(0.5736)S=5.0(0.5736) S=2.87 cmS=2.87\\text{ cm}\n4. Effect of the Lower Gorge\n\nThe peak geometry does not change.\n\nWhat changes is the vertical location of the gorge:\n\nGlow=Gnormal−DG_{\\text{low}} = G_{\\text{normal}} - D\n\nwhere:\n\nD≈2.5 cmD \\approx 2.5\\text{ cm}\n\nThis increases the apparent lapel length by:\n\nΔLvisual≈D\\Delta L_{\\text{visual}} \\approx D\n\nmaking the chest opening appear deeper.\n\n5. CAD Coordinates\n\nUsing the peak tip as the origin:\n\nP=(0,0)P=(0,0)\n\nUpper peak edge:\n\nP1=(2.87,  4.10)P_1=(2.87,\\;4.10)\n\nLower edge:\n\nP2=(2.87,  −4.10)P_2=(2.87,\\;-4.10)\n\nproducing:\n\n∠P1PP2=110∘\\angle P_1PP_2=110^\\circ\n6. Straight Edge Equations\n\nSlope:\n\nm=tan⁡(55∘)m=\\tan(55^\\circ) m=1.428m=1.428\n\nUpper peak edge:\n\ny=1.428xy=1.428x\n\nLower peak edge:\n\ny=−1.428xy=-1.428x\n7. Patternmaker's Draft Formula\n\nFor any Low-Gorge 110° Peak Lapel:\n\nProjection\nL=0.40WL=0.40W\nRise\nH=0.328WH=0.328W\nSpread\nS=0.229WS=0.229W\nGorge Drop\nD=0.20WD=0.20W\n\nFor W=12.5W = 12.5 cm:\n\nD=2.5 cmD=2.5\\text{ cm}\nDraft Specification (12.5 cm Width)\nPeak Angle        = 110°\nLapel Width       = 12.5 cm\nPeak Projection   = 5.00 cm\nPeak Rise         = 4.10 cm\nPeak Spread       = 2.87 cm\nGorge Drop        = 2.50 cm\nHalf-Angle        = 55°\n\nStyle Effect\n\nA Low Gorge 110° Peak Lapel creates:\n\nMaximum lapel length illusion\nStrong V-shaped torso emphasis\nBroader-looking shoulders\nClassic 1930s/1940s drape-cut tailoring aesthetic\nExcellent proportions for double-breasted jackets and long-line single-breasted coats\n\nCompared with a standard 110° peak, the lowered gorge makes the lapel appear approximately 10–15% longer visually while preserving the exact same 110° peak geometry.",
+   "references": [
+    "/images/review-refs/suit-3pc/lapel-peak-110-low/1786533397892-x34hpx.jpg"
+   ],
+   "parkedAt": "2026-08-12T21:48:07.522Z",
+   "craftId": "suit-3pc|lapel|lapel-style|lapel-peak-110-low"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "suit-3pc|lapel|lapel-style|lapel-peak-110-low",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.971Z"
+  }
+ ]
+}

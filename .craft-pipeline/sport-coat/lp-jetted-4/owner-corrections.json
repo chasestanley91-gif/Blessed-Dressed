@@ -1,0 +1,59 @@
+{
+ "craftId": "sport-coat|suit-pockets|lower-pocket|lp-jetted-4",
+ "note": "Owner rejection reasons for this craft, from BOTH decision sources. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 1,
+   "decidedAt": "2026-08-12T04:37:00.207Z",
+   "tags": [
+    "Reference drawing itself is wrong",
+    "Unrealistic / AI look"
+   ],
+   "notes": "For the Straight Jetted Pocket 4.0 cm shown in the image:\n\nPocket type: Double Jetted Pocket\nPocket opening: Straight (0° slant)\nFinished jet assembly height: 4.0 cm\nCommon on formal jackets, tuxedos, and minimalist bespoke coats\n1. Finished Jetted Height\n\nGiven:\n\nJ=4.0 cmJ = 4.0\\text{ cm}\n\nThis is the total visible height between the outside edges of the two jets.\n\nFor equal jets:\n\nUpper Jet=Lower Jet=2.0 cm\\text{Upper Jet}=\\text{Lower Jet}=2.0\\text{ cm}\n2. Jet Strip Draft\n\nEach jet folds in half.\n\nFinished jet width:\n\nJW=J2JW=\\frac{J}{2} JW=2.0 cmJW=2.0\\text{ cm}\n\nCut width for each jet:\n\nCW=2(JW)+2SACW=2(JW)+2SA\n\nAssuming:\n\nSA=1.0 cmSA=1.0\\text{ cm} CW=2(2.0)+2CW=2(2.0)+2 CW=6.0 cmCW=6.0\\text{ cm}\nDraft Each Jet\n6.0 cm\\boxed{6.0\\text{ cm}}\n3. Pocket Length\n\nTypical bespoke lower jacket pocket:\n\nPL=Chest Circumference5PL=\\frac{\\text{Chest Circumference}}{5}\n\nExamples:\n\n38\" chest → 19 cm\n40\" chest → 20 cm\n42\" chest → 21 cm\n\nStandard:\n\n20.0 cm\\boxed{20.0\\text{ cm}}\n4. Jet Extension\n\nJets extend beyond the opening slightly.\n\nJE=0.5 cmJE = 0.5\\text{ cm}\n\nper side.\n\nTotal jet length:\n\nJL=PL+1JL = PL + 1 JL=21 cmJL = 21\\text{ cm} 21.0 cm\\boxed{21.0\\text{ cm}}\n5. Pocket Opening Geometry\n\nOpening dimensions:\n\n20.0×4.020.0 \\times 4.0\n\nArea:\n\nA=L×HA=L \\times H A=20×4A=20 \\times 4 A=80 cm2A=80\\text{ cm}^2\n6. Corner Triangle Construction\n\nPocket height:\n\n4.0 cm4.0\\text{ cm}\n\nCorner triangle length:\n\nTL=4.0 cmTL = 4.0\\text{ cm}\n\nCut:\n\n45∘\\boxed{45^\\circ}\n\nat each end.\n\n \\      /\n  \\    /\n   \\  /\n    \\/\n\n7. Jet Fold Lines\n\nEach jet:\n\n6.0 cm6.0\\text{ cm}\n\nFold line:\n\n3.0 cm3.0\\text{ cm}\n\nfrom either edge.\n\nCut Jet = 6 cm\n\n┌────────────┐\n│            │\n│------------│ ← Fold at 3 cm\n│            │\n└────────────┘\n\n8. Pocket Bag Dimensions\n\nWidth:\n\nPBW=PL+4PBW = PL + 4 PBW=24 cmPBW = 24\\text{ cm}\n\nDepth:\n\nPBD=1.4PLPBD = 1.4PL PBD=28 cmPBD = 28\\text{ cm}\nPocket Bag\n24×28 cm\\boxed{24 \\times 28\\text{ cm}}\nDraft Coordinates\n\nAssuming a 20 cm opening:\n\nPocket opening:\n\nA=(0,0)A=(0,0) B=(20,0)B=(20,0)\n\nUpper jet:\n\ny=+2.0y=+2.0\n\nLower jet:\n\ny=−2.0y=-2.0\n\nResulting visible height:\n\n4.0 cm4.0\\text{ cm}\nBespoke Draft Summary\nFinished Pocket\n20.0×4.0 cm\\boxed{20.0 \\times 4.0\\text{ cm}}\nEach Jet\n21.0×6.0 cm\\boxed{21.0 \\times 6.0\\text{ cm}}\nVisible Jet Width\n2.0 cm\\boxed{2.0\\text{ cm}}\nTotal Visible Height\n4.0 cm\\boxed{4.0\\text{ cm}}\nCorner Triangles\n\\boxed{4.0\\text{ cm @ 45^\\circ}}\nPocket Bag\n24×28 cm\\boxed{24 \\times 28\\text{ cm}}\nParametric Formula Set\nJW=J2JW=\\frac{J}{2} CW=2(JW)+2SACW=2(JW)+2SA JL=PL+1JL=PL+1 PBW=PL+4PBW=PL+4 PBD=1.4PLPBD=1.4PL\n\nFor a 4 cm straight jetted pocket, the key drafting values are:\n\nPocket opening: 20 cm\nTotal visible height: 4 cm\nEach visible jet: 2 cm\nCut jet width: 6 cm\nJet length: 21 cm\nPocket bag: 24 × 28 cm",
+   "references": [
+    "/images/review-refs/sport-coat/lp-jetted-4/1786509364409-6522au.jpg"
+   ],
+   "parkedAt": "2026-08-12T21:48:07.209Z",
+   "craftId": "sport-coat|suit-pockets|lower-pocket|lp-jetted-4"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "sport-coat|suit-pockets|lower-pocket|lp-jetted-4",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-15T20:49:14.382Z"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "suit-2pc|suit-pockets|lower-pocket|lp-jetted-4",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-15T20:49:14.382Z"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "suit-3pc|suit-pockets|lower-pocket|lp-jetted-4",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-15T20:49:14.382Z"
+  }
+ ]
+}

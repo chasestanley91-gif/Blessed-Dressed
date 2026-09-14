@@ -1,0 +1,32 @@
+{
+ "craftId": "suit-3pc|lapel|lapel-style|lapel-peak-99",
+ "note": "Owner rejection reasons for this craft, from BOTH decision sources. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 1,
+   "decidedAt": "2026-08-12T05:20:05.461Z",
+   "tags": [
+    "Reference drawing itself is wrong"
+   ],
+   "notes": "The image shows a wide semi-peak / open-notch lapel with a 99° gorge angle. The red annotation clearly labels the inside gorge angle as 99°.\n\nGiven\nG=99∘G = 99^\\circ\n\nWhere:\n\nGG = inside gorge angle\nStyle = Semi-Peak / Open Notch\nGorge = straight (not curved)\n1. Exterior Peak Angle\n\nThe supplementary angle is:\n\nE=180∘−99∘E = 180^\\circ - 99^\\circ E=81∘E = 81^\\circ E=81∘\\boxed{E=81^\\circ}\n\nThis is the actual angle used to draft the peak extension.\n\n2. Half-Angle Construction\n\nUseful for bisecting the gorge:\n\n99∘2=49.5∘\\frac{99^\\circ}{2} = 49.5^\\circ 49.5∘\\boxed{49.5^\\circ}\n3. Peak Length Formula\n\nFor a semi-peak:\n\nPL=1.15WPL = 1.15W\n\nWhere:\n\nWW = lapel width\nExamples\n\n10 cm lapel\n\nPL=11.5 cmPL=11.5\\text{ cm}\n\n11 cm lapel\n\nPL=12.65 cmPL=12.65\\text{ cm}\n\n12 cm lapel\n\nPL=13.8 cmPL=13.8\\text{ cm}\n4. Peak Projection\n\nTypical semi-peak:\n\nPP=0.32WPP = 0.32W\n\nExamples:\n\nLapel Width\tProjection10 cm\t3.2 cm\n11 cm\t3.5 cm\n12 cm\t3.8 cm\n5. Gorge Height\n\nTraditional bespoke ratio:\n\nGH=0.75WGH = 0.75W\n\nExamples:\n\nLapel Width\tGorge Height10 cm\t7.5 cm\n11 cm\t8.25 cm\n12 cm\t9.0 cm\n6. Gorge Opening Width\n\nIf gorge seam length is LL:\n\nOW=2Lsin⁡(99∘2)OW = 2L\\sin\\left(\\frac{99^\\circ}{2}\\right) OW=2Lsin⁡(49.5∘)OW = 2L\\sin(49.5^\\circ) OW=1.521LOW = 1.521L\n\nExample:\n\nL=4.0 cmL=4.0\\text{ cm} OW=6.08 cmOW=6.08\\text{ cm} OW=6.1 cm\\boxed{OW=6.1\\text{ cm}}\n7. Example Draft (12 cm Lapel)\n\nAssume:\n\nW=12 cmW=12\\text{ cm}\n\nThen:\n\nPeak Length\nPL=13.8 cmPL = 13.8\\text{ cm}\nProjection\nPP=3.84 cmPP = 3.84\\text{ cm}\nGorge Height\nGH=9.0 cmGH = 9.0\\text{ cm}\nGorge Angle\n99∘99^\\circ\nExterior Draft Angle\n81∘81^\\circ\nDraft Coordinates\n\nUsing gorge point A=(0,0)A=(0,0):\n\nFor a 13.8 cm peak at 81°:\n\nX=13.8cos⁡81∘X = 13.8\\cos81^\\circ X=2.16 cmX = 2.16\\text{ cm} Y=13.8sin⁡81∘Y = 13.8\\sin81^\\circ Y=13.63 cmY = 13.63\\text{ cm}\n\nPeak tip:\n\n(2.16,  13.63)\\boxed{(2.16,\\;13.63)}\nSummary\n\nFor the 99° Semi-Peak / Open Notch Gorge:\n\nInside Gorge=99∘\\boxed{\\text{Inside Gorge}=99^\\circ} Outside Peak=81∘\\boxed{\\text{Outside Peak}=81^\\circ} Half Angle=49.5∘\\boxed{\\text{Half Angle}=49.5^\\circ} Peak Length=1.15W\\boxed{\\text{Peak Length}=1.15W} Peak Projection=0.32W\\boxed{\\text{Peak Projection}=0.32W} Gorge Height=0.75W\\boxed{\\text{Gorge Height}=0.75W} Opening Width=1.521L\\boxed{\\text{Opening Width}=1.521L}\n\nThis produces the broad, open semi-peak appearance shown in the illustration.",
+   "references": [
+    "/images/review-refs/suit-3pc/lapel-peak-99/1786511967729-pp1bnf.jpg"
+   ],
+   "parkedAt": "2026-08-12T21:48:07.489Z",
+   "craftId": "suit-3pc|lapel|lapel-style|lapel-peak-99"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "suit-3pc|lapel|lapel-style|lapel-peak-99",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.935Z"
+  }
+ ]
+}

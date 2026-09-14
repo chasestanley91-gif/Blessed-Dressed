@@ -1,0 +1,156 @@
+{
+  "addr": "sport-coat > lapel > lapel-style > lapel-peak-115",
+  "label": "Peak 115°",
+  "part": "jacket-lapel",
+  "orientation": "front",
+  "excluded": null,
+  "generate": true,
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\sport-coat.json",
+  "source": "json",
+  "illustration": "/images/blueprints/baoxiniao/jacket/REQCL/12.jpg",
+  "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQCL\\12.jpg",
+  "illustrationExists": true,
+  "illustrationRemote": false,
+  "profile": {
+    "addr": "sport-coat > lapel > lapel-style > lapel-peak-115",
+    "product": "sport-coat",
+    "field": "Lapel Style",
+    "option": "Peak 115°",
+    "part": "jacket-lapel",
+    "garment": "bespoke sport coat",
+    "orientation": "front",
+    "absence": false,
+    "distinguishingDetail": "High-projection peak lapel at 115° — a long spear shape with more than 4 cm of projection. 1930s-inspired power tailoring: massive chest, strong shoulders, small-waist illusion.",
+    "measured": {
+      "dimensions": [
+        "4 cm"
+      ],
+      "angles": [
+        "115°"
+      ],
+      "counts": [],
+      "shapes": [
+        "peak lapel"
+      ],
+      "spread": [],
+      "flags": []
+    },
+    "reproduceFromIllustration": [
+      "lapel width at its widest point",
+      "peak/notch/shawl geometry",
+      "gorge position",
+      "lapel roll and edge stitch",
+      "the lower end of the lapel and the exact point at which its edges terminate, completely unobstructed"
+    ],
+    "composition": {
+      "crop": "waist-up, the lapel dominating the frame with the ENTIRE lapel run visible — from the collar down to the exact point where the two front edges meet at the closure, the termination fully inside the frame, never cropped",
+      "dominanceTarget": "40–80% of frame",
+      "identifyWithin": "1 second"
+    },
+    "forbidden": [
+      "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+      "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+      "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+    ],
+    "excluded": null,
+    "generate": true
+  },
+  "requiredTokens": [
+    "4 cm",
+    "115°",
+    "peak lapel"
+  ],
+  "checklist": [
+    "length/width matches exactly: 4 cm",
+    "angle matches exactly: 115°",
+    "shape reads as drawn: peak lapel",
+    "distinguishing detail present: High-projection peak lapel at 115° — a long spear shape with more than 4 cm of projection. 1930s-inspired power tailoring: massive chest, strong shoulders, small-waist illusion.",
+    "reproduced from the illustration: lapel width at its widest point",
+    "reproduced from the illustration: peak/notch/shawl geometry",
+    "reproduced from the illustration: gorge position",
+    "reproduced from the illustration: lapel roll and edge stitch",
+    "reproduced from the illustration: the lower end of the lapel and the exact point at which its edges terminate, completely unobstructed",
+    "orientation matches the illustration: front",
+    "the Lapel Style dominates the frame (40–80%), identifiable within one second, framed waist-up, the lapel dominating the frame with the ENTIRE lapel run visible — from the collar down to the exact point where the two front edges meet at the closure, the termination fully inside the frame, never cropped",
+    "silhouette, proportions, seam & stitch placement match the illustration; left/right symmetry correct",
+    "NO generic-category substitution — this exact option, not a typical one",
+    "a real photograph of the exact drawn option — not the line-art, no stylisation"
+  ],
+  "scoreCard": [
+    {
+      "category": "shape",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "geometry",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "dimensions",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "angles",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "construction",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "placement",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "symmetry",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "composition",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "blueprint-match",
+      "score": null,
+      "min": 98
+    }
+  ],
+  "prompt": "Ultra-photorealistic luxury menswear product photography.\n\nA single-subject craft DOCUMENTATION photograph: the Lapel Style is the dominant subject, filling 40–80% of the frame and identifiable within one second.\n\nA premium bespoke sport coat featuring a precise Peak 115° (Lapel Style).\n\nDistinguishing construction detail (reproduce exactly as drawn): High-projection peak lapel at 115° — a long spear shape with more than 4 cm of projection. 1930s-inspired power tailoring: massive chest, strong shoulders, small-waist illusion.\n\nExact specification — peak lapel shape; measuring exactly 4 cm; at 115° — matching the illustration precisely.\n\nMANDATORY GEOMETRY COVERAGE — reproduce from the illustration, exactly and without assumption, every one of these: lapel width at its widest point, peak/notch/shawl geometry, gorge position, lapel roll and edge stitch, the lower end of the lapel and the exact point at which its edges terminate, completely unobstructed. Match each to the drawing.\n\nVIEW — this illustration is the front of the garment. Photograph the same face; never substitute a different face of the garment.\n\nBLUEPRINT LOCK — THE DRAWING IS LAW: the attached technical illustration is the manufacturing blueprint for this exact craft option and the SOLE authority for the image. Reproduce its geometry precisely — point/edge shape, lengths, widths, depths, angles, curvature, roll lines, symmetry, button/tab/stay positions, seam and stitch placement, and proportions — within less than 2% deviation. Assume NOTHING from tailoring/menswear/fashion convention or model priors; every visible characteristic must come from the drawing. Do not redesign, reinterpret, substitute a similar commercial style, stylise, or \"improve\" it. Do NOT fall back to a generic version of this category — reproduce THIS option, not a typical one. If convention conflicts with the drawing, the drawing wins. Accuracy over aesthetics. ANNOTATIONS ARE NOT THE GARMENT: the technical drawing may carry measurement callouts — dimension numbers (\"2.5cm\", \"9cm\", \"115°\"), tick / leader / dimension lines, arrows, red or coloured guide marks, and text labels. These are manufacturing documentation, NOT features of the cloth. Reproduce ONLY the finished garment: never render any number, unit, arrow, callout, leader line, measurement mark, or text anywhere in the photograph. The final image is a clean garment photo with zero annotation. COLOUR IN THE DRAWING IS NOTATION, NOT CLOTH: any red, orange or otherwise highlighted region marks WHERE the craft option sits — it is a position marker, never a colour specification. Flat grey or tinted shading marks the EXTENT of a panel, lining or facing, not its shade. Render every one of those areas in the garment's own cloth and thread, in the natural colour that tailoring would use there. There must be no red, no highlighter tint and no flat unshaded grey panel anywhere in the photograph unless the option's own label explicitly names that colour.\n\nPhotographed worn on a male model wearing a crisp white dress shirt buttoned to the collar AND a neatly knotted slim silk necktie — never an open or unbuttoned shirt, never a bare chest — with the tie lying flat and narrow against the shirt so it never covers the lapel edges or the point where the two front edges meet, the jacket worn open just enough to read the gorge and lapel roll.\n\nFrame waist-up, the lapel dominating the frame with the ENTIRE lapel run visible — from the collar down to the exact point where the two front edges meet at the closure, the termination fully inside the frame, never cropped; the detail must read clearly and sharply.\n\nMATCHED FRAMING — this option belongs to a family whose members differ from one another only by a measurement, so this photograph will be shown beside its siblings and compared directly. TWO SEPARATE REQUIREMENTS, and both must hold. FIRST, THE GARMENT: build the feature at exactly the size the drawing gives it — no larger. Do not exaggerate the dimension to make this option look more distinct from its siblings; the difference between them is small in real tailoring and must stay small here, because a customer choosing on these numbers is ordering a real garment. SECOND, THE CAMERA: frame the shot the way every member of the family must be framed — the garment part square to camera, centred, at a standard distance that leaves the whole garment occupying the same share of the picture no matter which value this option carries. Do not move closer for a small measurement or pull back for a large one. Getting one of these right while getting the other wrong is still a failure: an accurate feature shot at the wrong distance, or a matched frame containing an exaggerated feature, both mislead a customer comparing two pictures side by side.\n\nSavile Row and high-end Italian sartorial aesthetic. Natural daylight studio lighting, Phase One IQ4 medium-format camera, 150MP detail, shallow depth of field, magazine-quality editorial menswear photography. Authentic bespoke craftsmanship, fine hand stitching, premium finishing. SET — shot in a clean luxury photographic studio against a seamless, plain, neutral light-grey background with clear separation between garment and background: no location, no architecture, no furniture, no scenery, no props and no environmental context of any kind competing with the garment.\n\nExtremely realistic textured wool/hopsack with visible weave texture, fine stitching.\n\nAvoid: any GENERIC menswear substitution (a generic spread collar, generic notch/peak lapel, generic pocket/pleat/vent/cuff/waistband in place of the drawn one), illustration or line-art style, CGI or 3D-render look, cartoon, mannequin, fashion sketch, inaccurate geometry, altered proportions, missing construction details, asymmetry, watermark, AI-art appearance, AND any text or annotation traced from the drawing: NO measurement numbers, units (cm/mm/°), dimension or leader lines, arrows, callouts, red/coloured guide marks, ruler ticks, or labels anywhere in the frame. This is real garment photography of the exact drawn option — clean cloth only, nothing else.\n\nFORBIDDEN FOR THIS OPTION — do not render: a generic version of this part standing in for the exact drawn option (generic-category substitution); any feature, count, or geometry borrowed from a neighboring craft option on the same field; a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion).\n\nOWNER CORRECTION AFTER REVIEW (attempt 1 was rejected by the owner — obey this over any conflicting earlier line, including the BLUEPRINT LOCK): What is wrong with it: Reference drawing itself is wrong. For the Peak Lapel 115°, the image shows:\n\nGorge angle (inside angle) = 115°\nLapel width = 12.5 cm\nStraight peak\nStandard peak height, not a low peak or semi-peak\n1. Convert Gorge Angle to Peak Angle\n\nThe drafting angle of the peak is the supplementary angle:\n\nPeak Angle=180∘−115∘\\text{Peak Angle} = 180^\\circ - 115^\\circ =65∘= 65^\\circ\n\nSo draw the peak line at:\n\n65∘\\boxed{65^\\circ}\n\nfrom the collar seam.\n\n2. Peak Length\n\nFor a full peak lapel:\n\nPL=1.20WPL = 1.20W PL=1.20(12.5)PL = 1.20(12.5) PL=15.0 cmPL = 15.0\\text{ cm} 15.0 cm\\boxed{15.0\\text{ cm}}\n3. Peak Projection\n\nDistance the peak tip extends beyond the gorge:\n\nPP=0.35WPP = 0.35W PP=0.35(12.5)PP = 0.35(12.5) PP=4.375 cmPP = 4.375\\text{ cm} 4.4 cm\\boxed{4.4\\text{ cm}}\n4. Gorge Height\n\nFrom button stance to gorge point:\n\nGH=0.80WGH = 0.80W GH=0.80(12.5)GH = 0.80(12.5) GH=10.0 cmGH = 10.0\\text{ cm} 10.0 cm\\boxed{10.0\\text{ cm}}\n5. Roll Line\nRL=0.55WRL = 0.55W RL=0.55(12.5)RL = 0.55(12.5) RL=6.875 cmRL = 6.875\\text{ cm} 6.9 cm\\boxed{6.9\\text{ cm}}\n6. Peak Tip Coordinates\n\nUsing the gorge point as the origin:\n\nA=(0,0)A=(0,0)\n\nPeak length:\n\nPL=15.0 cmPL=15.0\\text{ cm}\n\nAngle:\n\n65∘65^\\circ\n\nHorizontal component:\n\nX=15cos⁡65∘X=15\\cos65^\\circ X=6.34 cmX=6.34\\text{ cm}\n\nVertical component:\n\nY=15sin⁡65∘Y=15\\sin65^\\circ Y=13.59 cmY=13.59\\text{ cm}\n\nPeak tip:\n\n(6.34,  13.59)\\boxed{(6.34,\\;13.59)}\nDrafting Layout\n                 Peak Tip\n                    *\n                   /\n                  /\n                 /\n                / 65°\n               /\n              *\n         Gorge Point\n\nPeak Length = 15.0 cm\nProjection  = 4.4 cm\nWidth       = 12.5 cm\n\nComplete Draft Specs\nMeasurement\tValueLapel Width\t12.5 cm\nGorge Angle\t115°\nExterior Peak Angle\t65°\nPeak Length\t15.0 cm\nPeak Projection\t4.4 cm\nGorge Height\t10.0 cm\nRoll Line\t6.9 cm\nBespoke Formula Set\nPeak Length=1.2W\\text{Peak Length} = 1.2W Peak Projection=0.35W\\text{Peak Projection} = 0.35W Gorge Height=0.8W\\text{Gorge Height} = 0.8W Roll Line=0.55W\\text{Roll Line} = 0.55W\n\nFor your 115° Peak Lapel, 12.5 cm wide, draft:\n\nPeak Length: 15.0 cm\nPeak Projection: 4.4 cm\nGorge Height: 10.0 cm\nRoll Line: 6.9 cm\nPeak Drafting Angle: 65° The owner uploaded 1 reference photograph(s) with this rejection, but they were reviewed and found NOT to depict this exact option, so none are attached. Take the correction text above literally and use the technical drawing as the geometry authority.\n\nOWNER CORRECTION AFTER REVIEW (a previous attempt was rejected by the owner — obey this over any conflicting earlier line, including the BLUEPRINT LOCK): The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+  "ownerCorrections": [
+    {
+      "attemptRejected": 1,
+      "decidedAt": "2026-08-12T03:50:55.587Z",
+      "tags": [
+        "Reference drawing itself is wrong"
+      ],
+      "notes": "For the Peak Lapel 115°, the image shows:\n\nGorge angle (inside angle) = 115°\nLapel width = 12.5 cm\nStraight peak\nStandard peak height, not a low peak or semi-peak\n1. Convert Gorge Angle to Peak Angle\n\nThe drafting angle of the peak is the supplementary angle:\n\nPeak Angle=180∘−115∘\\text{Peak Angle} = 180^\\circ - 115^\\circ =65∘= 65^\\circ\n\nSo draw the peak line at:\n\n65∘\\boxed{65^\\circ}\n\nfrom the collar seam.\n\n2. Peak Length\n\nFor a full peak lapel:\n\nPL=1.20WPL = 1.20W PL=1.20(12.5)PL = 1.20(12.5) PL=15.0 cmPL = 15.0\\text{ cm} 15.0 cm\\boxed{15.0\\text{ cm}}\n3. Peak Projection\n\nDistance the peak tip extends beyond the gorge:\n\nPP=0.35WPP = 0.35W PP=0.35(12.5)PP = 0.35(12.5) PP=4.375 cmPP = 4.375\\text{ cm} 4.4 cm\\boxed{4.4\\text{ cm}}\n4. Gorge Height\n\nFrom button stance to gorge point:\n\nGH=0.80WGH = 0.80W GH=0.80(12.5)GH = 0.80(12.5) GH=10.0 cmGH = 10.0\\text{ cm} 10.0 cm\\boxed{10.0\\text{ cm}}\n5. Roll Line\nRL=0.55WRL = 0.55W RL=0.55(12.5)RL = 0.55(12.5) RL=6.875 cmRL = 6.875\\text{ cm} 6.9 cm\\boxed{6.9\\text{ cm}}\n6. Peak Tip Coordinates\n\nUsing the gorge point as the origin:\n\nA=(0,0)A=(0,0)\n\nPeak length:\n\nPL=15.0 cmPL=15.0\\text{ cm}\n\nAngle:\n\n65∘65^\\circ\n\nHorizontal component:\n\nX=15cos⁡65∘X=15\\cos65^\\circ X=6.34 cmX=6.34\\text{ cm}\n\nVertical component:\n\nY=15sin⁡65∘Y=15\\sin65^\\circ Y=13.59 cmY=13.59\\text{ cm}\n\nPeak tip:\n\n(6.34,  13.59)\\boxed{(6.34,\\;13.59)}\nDrafting Layout\n                 Peak Tip\n                    *\n                   /\n                  /\n                 /\n                / 65°\n               /\n              *\n         Gorge Point\n\nPeak Length = 15.0 cm\nProjection  = 4.4 cm\nWidth       = 12.5 cm\n\nComplete Draft Specs\nMeasurement\tValueLapel Width\t12.5 cm\nGorge Angle\t115°\nExterior Peak Angle\t65°\nPeak Length\t15.0 cm\nPeak Projection\t4.4 cm\nGorge Height\t10.0 cm\nRoll Line\t6.9 cm\nBespoke Formula Set\nPeak Length=1.2W\\text{Peak Length} = 1.2W Peak Projection=0.35W\\text{Peak Projection} = 0.35W Gorge Height=0.8W\\text{Gorge Height} = 0.8W Roll Line=0.55W\\text{Roll Line} = 0.55W\n\nFor your 115° Peak Lapel, 12.5 cm wide, draft:\n\nPeak Length: 15.0 cm\nPeak Projection: 4.4 cm\nGorge Height: 10.0 cm\nRoll Line: 6.9 cm\nPeak Drafting Angle: 65°",
+      "references": [
+        "/images/review-refs/sport-coat/lapel-peak-115/1786506643128-6cjthm.jpg"
+      ],
+      "parkedAt": "2026-08-12T21:48:06.994Z",
+      "craftId": "sport-coat|lapel|lapel-style|lapel-peak-115"
+    },
+    {
+      "attemptRejected": null,
+      "decidedAt": null,
+      "source": "july-v3",
+      "verdict": "reject-file",
+      "tags": [],
+      "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+      "reasonRecorded": false,
+      "references": [],
+      "craftId": "sport-coat|lapel|lapel-style|lapel-peak-115",
+      "foldedFrom": "generation-queue.rejectionContext",
+      "parkedAt": "2026-08-16T05:02:08.344Z"
+    }
+  ],
+  "builtAt": "2026-08-26T07:29:01.489Z"
+}

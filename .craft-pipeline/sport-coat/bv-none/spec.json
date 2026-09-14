@@ -1,0 +1,58 @@
+{
+  "schema": "garment-spec/v1",
+  "addr": "sport-coat > back-vents > back-vent-style > bv-none",
+  "productId": "sport-coat",
+  "sectionId": "back-vents",
+  "fieldId": "back-vent-style",
+  "optionId": "bv-none",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\sport-coat.json",
+  "source": "json",
+  "label": "No Vent",
+  "description": "A ventless back presents an unbroken, clean horizontal line across the entire hem of the jacket — no slits, no flaps, nothing to interrupt the silhouette from behind. Most closely associated with Italian tailoring and tuxedos globally, it creates a sleek, close-fitting appearance that flatters a slim physique and reads as fashion-forward and elegant when standing. The trade-off is mobility: sitting or reaching forward causes the back to pull and bunch, making it the least practical option for anyone who spends significant time seated.",
+  "fieldLabel": "Back Vent",
+  "sectionLabel": "Back & Vents",
+  "part": "jacket-vent",
+  "garment": {
+    "noun": "bespoke sport coat",
+    "fabric": "textured wool/hopsack with visible weave"
+  },
+  "view": {
+    "orientation": "back",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": true,
+  "measured": {
+    "dimensions": [],
+    "angles": [],
+    "counts": [],
+    "shapes": [
+      "ventless"
+    ],
+    "negatedShapes": [],
+    "spread": [],
+    "flags": [],
+    "sides": [
+      "back"
+    ],
+    "attributes": [],
+    "supplierCodes": [],
+    "unresolved": []
+  },
+  "illustration": {
+    "path": "/images/blueprints/baoxiniao/jacket/REQAP/A.jpg",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQAP\\A.jpg",
+    "exists": true,
+    "remote": false
+  },
+  "forbidden": [
+    "any back vent rendered anywhere in frame — this option is its deliberate absence",
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)",
+    "any back vent (this option is ventless)"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-08-26T07:28:58.109Z"
+}

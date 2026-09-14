@@ -1,143 +1,171 @@
 {
- "addr": "shirt > collar > lapel > collar-hexagon-stand",
- "label": "Hexagon Stand Collar",
- "part": "shirt-collar",
- "orientation": "front",
- "excluded": null,
- "generate": true,
- "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\shirt.json",
- "source": "json",
- "illustration": "/images/techpacks/shirt/lapel/hexagon-stand-collar.jpg",
- "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\techpacks\\shirt\\lapel\\hexagon-stand-collar.jpg",
- "illustrationExists": true,
- "illustrationRemote": false,
- "profile": {
   "addr": "shirt > collar > lapel > collar-hexagon-stand",
-  "product": "shirt",
-  "field": "Collar Style",
-  "option": "Hexagon Stand Collar",
+  "label": "Hexagon Stand Collar",
   "part": "shirt-collar",
-  "garment": "white bespoke cotton dress shirt",
   "orientation": "front",
-  "absence": false,
-  "distinguishingDetail": "A band-style stand collar finished with a faceted, six-sided geometric profile at the closure. The hexagonal detailing turns a simple upright band into a sculptural, fashion-forward focal point.",
-  "measured": {
-   "dimensions": [],
-   "angles": [],
-   "counts": [],
-   "shapes": [
+  "excluded": null,
+  "generate": true,
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\shirt.json",
+  "source": "json",
+  "illustration": "/images/techpacks/shirt/lapel/hexagon-stand-collar.jpg",
+  "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\techpacks\\shirt\\lapel\\hexagon-stand-collar.jpg",
+  "illustrationExists": true,
+  "illustrationRemote": false,
+  "profile": {
+    "addr": "shirt > collar > lapel > collar-hexagon-stand",
+    "product": "shirt",
+    "field": "Collar Style",
+    "option": "Hexagon Stand Collar",
+    "part": "shirt-collar",
+    "garment": "white bespoke cotton dress shirt",
+    "orientation": "front",
+    "absence": false,
+    "distinguishingDetail": "A band-style stand collar finished with a faceted, six-sided geometric profile at the closure. The hexagonal detailing turns a simple upright band into a sculptural, fashion-forward focal point.",
+    "measured": {
+      "dimensions": [],
+      "angles": [],
+      "counts": [],
+      "shapes": [
+        "point",
+        "hexagon pocket"
+      ],
+      "spread": [],
+      "flags": []
+    },
+    "reproduceFromIllustration": [
+      "collar point geometry",
+      "collar stand",
+      "collar roll",
+      "stitching precision",
+      "the unobstructed spread between the collar points",
+      "both collar leaves mirroring each other exactly in length, angle and tip shape"
+    ],
+    "composition": {
+      "crop": "tight on the collar and neckline",
+      "dominanceTarget": "40–80% of frame",
+      "identifyWithin": "1 second"
+    },
+    "forbidden": [
+      "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+      "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+      "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)",
+      "collar leaves ending in a squared/blunt flat edge, or in a rounded club tip — this option's collar point termination is a straight acute point"
+    ],
+    "excluded": null,
+    "generate": true
+  },
+  "requiredTokens": [
     "point",
     "hexagon pocket"
-   ],
-   "spread": [],
-   "flags": []
-  },
-  "reproduceFromIllustration": [
-   "collar point geometry",
-   "collar stand",
-   "collar roll",
-   "stitching precision",
-   "the unobstructed spread between the collar points",
-   "both collar leaves mirroring each other exactly in length, angle and tip shape"
   ],
-  "composition": {
-   "crop": "tight on the collar and neckline",
-   "dominanceTarget": "40–80% of frame",
-   "identifyWithin": "1 second"
-  },
-  "forbidden": [
-   "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
-   "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
-   "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)",
-   "collar leaves ending in a squared/blunt flat edge, or in a rounded club tip — this option's collar point termination is a straight acute point"
+  "checklist": [
+    "shape reads as drawn: point",
+    "shape reads as drawn: hexagon pocket",
+    "distinguishing detail present: A band-style stand collar finished with a faceted, six-sided geometric profile at the closure. The hexagonal detailing turns a simple upright band into a sculptural, fashion-forward focal point.",
+    "reproduced from the illustration: collar point geometry",
+    "reproduced from the illustration: collar stand",
+    "reproduced from the illustration: collar roll",
+    "reproduced from the illustration: stitching precision",
+    "reproduced from the illustration: the unobstructed spread between the collar points",
+    "reproduced from the illustration: both collar leaves mirroring each other exactly in length, angle and tip shape",
+    "orientation matches the illustration: front",
+    "the Collar Style dominates the frame (40–80%), identifiable within one second, framed tight on the collar and neckline",
+    "silhouette, proportions, seam & stitch placement match the illustration; left/right symmetry correct",
+    "NO generic-category substitution — this exact option, not a typical one",
+    "a real photograph of the exact drawn option — not the line-art, no stylisation"
   ],
-  "excluded": null,
-  "generate": true
- },
- "requiredTokens": [
-  "point",
-  "hexagon pocket"
- ],
- "checklist": [
-  "shape reads as drawn: point",
-  "shape reads as drawn: hexagon pocket",
-  "distinguishing detail present: A band-style stand collar finished with a faceted, six-sided geometric profile at the closure. The hexagonal detailing turns a simple upright band into a sculptural, fashion-forward focal point.",
-  "reproduced from the illustration: collar point geometry",
-  "reproduced from the illustration: collar stand",
-  "reproduced from the illustration: collar roll",
-  "reproduced from the illustration: stitching precision",
-  "reproduced from the illustration: the unobstructed spread between the collar points",
-  "reproduced from the illustration: both collar leaves mirroring each other exactly in length, angle and tip shape",
-  "orientation matches the illustration: front",
-  "the Collar Style dominates the frame (40–80%), identifiable within one second, framed tight on the collar and neckline",
-  "silhouette, proportions, seam & stitch placement match the illustration; left/right symmetry correct",
-  "NO generic-category substitution — this exact option, not a typical one",
-  "a real photograph of the exact drawn option — not the line-art, no stylisation"
- ],
- "scoreCard": [
-  {
-   "category": "shape",
-   "score": null,
-   "min": 98
-  },
-  {
-   "category": "geometry",
-   "score": null,
-   "min": 98
-  },
-  {
-   "category": "dimensions",
-   "score": null,
-   "min": 98
-  },
-  {
-   "category": "angles",
-   "score": null,
-   "min": 98
-  },
-  {
-   "category": "construction",
-   "score": null,
-   "min": 98
-  },
-  {
-   "category": "placement",
-   "score": null,
-   "min": 98
-  },
-  {
-   "category": "symmetry",
-   "score": null,
-   "min": 98
-  },
-  {
-   "category": "composition",
-   "score": null,
-   "min": 98
-  },
-  {
-   "category": "blueprint-match",
-   "score": null,
-   "min": 98
-  }
- ],
- "prompt": "Ultra-photorealistic luxury menswear product photography.\n\nA single-subject craft DOCUMENTATION photograph: the Collar Style is the dominant subject, filling 40-80% of the frame and identifiable within one second.\n\nA premium white bespoke cotton dress shirt featuring a precise Hexagon Stand Collar (Collar Style).\n\nTHE PART, LOCKED (owner correction — the previous attempt was rejected as \"Wrong garment or wrong part\"): this option is a STAND collar, also called a band collar — one single upright, closed band of doubled crisp cotton encircling the neck, approximately 3 to 3.5 cm tall all the way around, rising straight up from the neckline seam. There is NO fold-over collar, NO turndown, NO collar leaves, NO collar points spreading over the shoulders, NO spread, and NO open V at the throat. Nothing folds down over the band. The band is fully fastened at its front closure.\n\nTHE DISCRIMINATOR (what separates this option from a plain band or mandarin collar): the front closure of the band is finished with a faceted, six-sided geometric profile — the band's front ends are cut into crisp, straight, angled facets so that, seen from the front, the closure area composes a clean hexagonal outline centered on the placket. Sharp faceted corners meeting at precise angles, sculptural and geometric — never rounded club ends, never plain square-cut ends. The hexagonal detailing turns a simple upright band into a sculptural, fashion-forward focal point. Every facet edge is a straight line with a crisply pressed fold and fine, even edge-stitching running parallel to the edge.\n\nCatalog shape tokens for this option — \"point\" and \"hexagon pocket\" — both refer to the faceted hexagonal geometry of the collar band's closure: the sharp angular points where the hexagon's facets meet. There is NO pocket anywhere in this photograph; do not render any pocket of any kind, and do not render fold-over collar points.\n\nVIEW — front of the garment. Photograph the shirt straight on from the front at collar height; never substitute a different face of the garment.\n\nBLUEPRINT LOCK — OWNER OVERRIDE IN FORCE: the owner has ruled that the original tech-pack drawing for this option is itself wrong (\"Reference drawing itself is wrong\") — it depicts an open spread collar with pointed fold-over leaves, which is NOT this option, and it is disqualified and NOT attached. The sole geometry authority for this image is this prompt's locked description: a band-style stand collar with a faceted, six-sided hexagonal profile at its fastened front closure. Do not render an open collar, a spread collar, a camp collar, a notched collar, pointed fold-over leaves, or a deep open V at the throat — those are the exact failures of the rejected attempt. Assume nothing from the rejected geometry. Reproduce the locked stand-collar geometry precisely; accuracy over aesthetics. ANNOTATIONS ARE NOT THE GARMENT: never render any number, unit, arrow, callout, leader line, measurement mark, or text anywhere in the photograph — clean garment photo only.\n\nPhotographed presented as a close product detail on a crisply pressed white dress shirt, with NO model, NO face, NO neck and NO skin anywhere in frame, and NO necktie. The collar band is fully fastened at its front closure so the hexagonal faceted profile reads as one continuous, unobstructed geometric shape at center front, with the full height of the band visible around the neckline opening.\n\nFrame tight on the collar and neckline; the detail must read clearly and sharply, the collar centred in frame.\n\nSavile Row and high-end Italian sartorial aesthetic. Natural daylight studio lighting, Phase One IQ4 medium-format camera, 150MP detail, shallow depth of field, magazine-quality editorial menswear photography. Authentic bespoke craftsmanship, fine hand stitching, premium finishing. SET — shot in a clean luxury photographic studio against a seamless, plain, neutral light-grey background with clear separation between garment and background: no location, no architecture, no furniture, no scenery, no props and no environmental context of any kind competing with the garment.\n\nExtremely realistic crisp cotton poplin texture, fine stitching.\n\nAvoid: an open spread collar, a turndown collar, fold-over collar leaves, collar points thrown wide over the shoulders, an open V at the throat (these are the rejected attempt's exact failures and must not reappear); any GENERIC menswear substitution — in particular a generic band or mandarin collar with rounded or plain square front ends standing in for the hexagonal faceted closure; any pocket anywhere in frame; illustration or line-art style, CGI or 3D-render look, cartoon, mannequin, fashion sketch, inaccurate geometry, altered proportions, missing construction details, asymmetry, watermark, AI-art appearance, AND any text or annotation: NO measurement numbers, units (cm/mm/degrees), dimension or leader lines, arrows, callouts, coloured guide marks, ruler ticks, or labels anywhere in the frame. This is real garment photography of the exact locked option — clean cloth only, nothing else.\n\nFORBIDDEN FOR THIS OPTION — do not render: a generic version of this part standing in for the exact locked option (generic-category substitution); any feature, count, or geometry borrowed from a neighboring craft option on the same field — in particular any fold-over, spread, point, cutaway, club or button-down collar from sibling Collar Style options; a feature that belongs on the opposite face of the garment (front/back/side confusion); rounded club-tip or squared/blunt facet terminations — every visible corner of the hexagonal profile terminates in a straight acute point with crisp pressed edges.\n\nOWNER CORRECTION AFTER REVIEW (attempt 3 was rejected by the owner — this correction outranks every other line in this prompt, including any earlier blueprint, drawing, or QC instruction): 1) \"Wrong garment or wrong part\" — LOCKED: the garment is a white cotton dress SHIRT and the part is its STAND (band) collar: a single upright closed band, fastened at the front, nothing folded down. The rejected attempt showed an open spread collar with pointed leaves; that part is forbidden. 2) \"Reference drawing itself is wrong\" — LOCKED: the tech-pack drawing is disqualified as geometry authority and must not be imitated in any way; render the option solely from this prompt's locked stand-collar and hexagonal-closure description, exactly as the catalog defines it: \"A band-style stand collar finished with a faceted, six-sided geometric profile at the closure.\"",
- "builtAt": "2026-08-05T16:09:09.496Z",
- "correctionAttempt": 3,
- "ownerCorrections": [
-  {
-   "attemptRejected": 3,
-   "decidedAt": "2026-08-10T18:18:05.282Z",
-   "tags": [
-    "Wrong garment or wrong part",
-    "Reference drawing itself is wrong"
-   ],
-   "notes": "",
-   "references": [],
-   "appliedAt": "2026-08-11T08:43:35.425Z",
-   "craftId": "shirt|collar|lapel|collar-hexagon-stand"
-  }
- ],
- "promptEditedAt": "2026-08-11T09:11:49.468Z",
- "promptEditReason": "Hand-applied owner correction for rejected attempt 3 (tags: Wrong garment or wrong part; Reference drawing itself is wrong). Drawing disqualified by owner as geometry authority; prompt rebuilt around catalog label/description (band-style stand collar, faceted six-sided closure). build_prompt.mjs --write NOT used, preserving ownerCorrections. Stale QC correction block (which locked the rejected spread-leaf geometry) removed. Illustration intentionally NOT attached as generation reference for attempt 4."
+  "scoreCard": [
+    {
+      "category": "shape",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "geometry",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "dimensions",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "angles",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "construction",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "placement",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "symmetry",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "composition",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "blueprint-match",
+      "score": null,
+      "min": 98
+    }
+  ],
+  "prompt": "Ultra-photorealistic luxury menswear product photography.\n\nA single-subject craft DOCUMENTATION photograph: the Collar Style is the dominant subject, filling 40–80% of the frame and identifiable within one second.\n\nA premium white bespoke cotton dress shirt featuring a precise Hexagon Stand Collar (Collar Style).\n\nDistinguishing construction detail (reproduce exactly as drawn): A band-style stand collar finished with a faceted, six-sided geometric profile at the closure. The hexagonal detailing turns a simple upright band into a sculptural, fashion-forward focal point.\n\nExact specification — point, hexagon pocket shape — matching the illustration precisely.\n\nMANDATORY GEOMETRY COVERAGE — reproduce from the illustration, exactly and without assumption, every one of these: collar point geometry, collar stand, collar roll, stitching precision, the unobstructed spread between the collar points, both collar leaves mirroring each other exactly in length, angle and tip shape. Match each to the drawing.\n\nVIEW — this illustration is the front of the garment. Photograph the same face; never substitute a different face of the garment.\n\nBLUEPRINT LOCK — THE DRAWING IS LAW: the attached technical illustration is the manufacturing blueprint for this exact craft option and the SOLE authority for the image. Reproduce its geometry precisely — point/edge shape, lengths, widths, depths, angles, curvature, roll lines, symmetry, button/tab/stay positions, seam and stitch placement, and proportions — within less than 2% deviation. Assume NOTHING from tailoring/menswear/fashion convention or model priors; every visible characteristic must come from the drawing. Do not redesign, reinterpret, substitute a similar commercial style, stylise, or \"improve\" it. Do NOT fall back to a generic version of this category — reproduce THIS option, not a typical one. If convention conflicts with the drawing, the drawing wins. Accuracy over aesthetics. ANNOTATIONS ARE NOT THE GARMENT: the technical drawing may carry measurement callouts — dimension numbers (\"2.5cm\", \"9cm\", \"115°\"), tick / leader / dimension lines, arrows, red or coloured guide marks, and text labels. These are manufacturing documentation, NOT features of the cloth. Reproduce ONLY the finished garment: never render any number, unit, arrow, callout, leader line, measurement mark, or text anywhere in the photograph. The final image is a clean garment photo with zero annotation. COLOUR IN THE DRAWING IS NOTATION, NOT CLOTH: any red, orange or otherwise highlighted region marks WHERE the craft option sits — it is a position marker, never a colour specification. Flat grey or tinted shading marks the EXTENT of a panel, lining or facing, not its shade. Render every one of those areas in the garment's own cloth and thread, in the natural colour that tailoring would use there. There must be no red, no highlighter tint and no flat unshaded grey panel anywhere in the photograph unless the option's own label explicitly names that colour.\n\nPhotographed presented on a crisply pressed white dress shirt as a close product detail, with NO model, NO face, NO neck and NO skin anywhere in frame, the collar left open at the throat with NO necktie and the top collar-band button UNFASTENED exactly as the reference shows it, the leaves relaxed apart so the collar points, the spread between them, the full collar band and its buttonhole are all completely unobstructed, and the collar reproduced in the SAME presentation and viewing angle as the attached reference so its exact tip geometry is preserved rather than re-staged.\n\nFrame tight on the collar and neckline; the detail must read clearly and sharply.\n\nSavile Row and high-end Italian sartorial aesthetic. Natural daylight studio lighting, Phase One IQ4 medium-format camera, 150MP detail, shallow depth of field, magazine-quality editorial menswear photography. Authentic bespoke craftsmanship, fine hand stitching, premium finishing. SET — shot in a clean luxury photographic studio against a seamless, plain, neutral light-grey background with clear separation between garment and background: no location, no architecture, no furniture, no scenery, no props and no environmental context of any kind competing with the garment.\n\nExtremely realistic crisp cotton poplin texture, fine stitching.\n\nAvoid: any GENERIC menswear substitution (a generic spread collar, generic notch/peak lapel, generic pocket/pleat/vent/cuff/waistband in place of the drawn one), illustration or line-art style, CGI or 3D-render look, cartoon, mannequin, fashion sketch, inaccurate geometry, altered proportions, missing construction details, asymmetry, watermark, AI-art appearance, AND any text or annotation traced from the drawing: NO measurement numbers, units (cm/mm/°), dimension or leader lines, arrows, callouts, red/coloured guide marks, ruler ticks, or labels anywhere in the frame. This is real garment photography of the exact drawn option — clean cloth only, nothing else.\n\nFORBIDDEN FOR THIS OPTION — do not render: a generic version of this part standing in for the exact drawn option (generic-category substitution); any feature, count, or geometry borrowed from a neighboring craft option on the same field; a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion); collar leaves ending in a squared/blunt flat edge, or in a rounded club tip — this option's collar point termination is a straight acute point.\n\nOWNER CORRECTION AFTER REVIEW (attempt 3 was rejected by the owner — obey this over any conflicting earlier line, including the BLUEPRINT LOCK): What is wrong with it: Wrong garment or wrong part; Reference drawing itself is wrong.\n\nOWNER CORRECTION AFTER REVIEW (attempt 4 was rejected by the owner — obey this over any conflicting earlier line, including the BLUEPRINT LOCK): What is wrong with it: Unrealistic / AI look; Wrong shape / outline; Generic version, not this option; Wrong size or proportion; Reference drawing itself is wrong. Ive provided the correct illustration. Looking carefully at the image, the hexagon front opening is defined by: Front opening angle = 90° Slanted front edge length = 4.5 cm Center front depth = 3.5 cm The owner uploaded 1 reference photograph(s) with this rejection, but they were reviewed and found NOT to depict this exact option, so none are attached. Take the correction text above literally and use the technical drawing as the geometry authority.\n\nOWNER CORRECTION AFTER REVIEW (a previous attempt was rejected by the owner — obey this over any conflicting earlier line, including the BLUEPRINT LOCK): The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+  "ownerCorrections": [
+    {
+      "attemptRejected": 3,
+      "decidedAt": "2026-08-10T18:18:05.282Z",
+      "tags": [
+        "Wrong garment or wrong part",
+        "Reference drawing itself is wrong"
+      ],
+      "notes": "",
+      "references": [],
+      "appliedAt": "2026-08-11T08:43:35.425Z",
+      "craftId": "shirt|collar|lapel|collar-hexagon-stand"
+    },
+    {
+      "attemptRejected": 4,
+      "decidedAt": "2026-08-12T03:07:01.852Z",
+      "tags": [
+        "Unrealistic / AI look",
+        "Wrong shape / outline",
+        "Generic version, not this option",
+        "Wrong size or proportion",
+        "Reference drawing itself is wrong"
+      ],
+      "notes": "Ive provided the correct illustration. Looking carefully at the image, the hexagon front opening is defined by:\n\nFront opening angle = 90°\nSlanted front edge length = 4.5 cm\nCenter front depth = 3.5 cm\n\nThe geometry can be drafted exactly with trigonometry.\n\nStep 1. Draw the 90° Front Angle\n\nDraw a point A at the center front.\n\nFrom point A, draw two lines forming a 90° included angle.\n\nSince the collar is symmetrical:\n\n90∘2=45∘\\frac{90^\\circ}{2}=45^\\circ\n\nEach side is therefore at 45° to the center line.\n\n      B\n     /\n    /\n45°\n  /\n A\n  \\\n45°\n    \\\n     \\\n      C\n\nStep 2. Mark the Collar Front Length\n\nGiven:\n\nAB=AC=4.5 cmAB = AC = 4.5\\text{ cm}\n\nMeasure 4.5 cm along both 45° lines.\n\nStep 3. Calculate the Total Front Width\n\nUsing an isosceles triangle:\n\nBC=2Lsin⁡(θ/2)BC = 2L\\sin(\\theta/2)\n\nwhere\n\nL=4.5L=4.5 θ=90∘\\theta=90^\\circ\n\nTherefore:\n\nBC=2(4.5)sin⁡45∘BC = 2(4.5)\\sin45^\\circ BC=9(0.7071)BC = 9(0.7071) BC=6.36 cmBC = 6.36\\text{ cm}\n\nSo the opening across the front is:\n\n6.36 cm\\boxed{6.36\\text{ cm}}\nStep 4. Calculate the Collar Point Projection\n\nHorizontal projection:\n\nX=4.5cos⁡45∘X = 4.5\\cos45^\\circ X=4.5(0.7071)X = 4.5(0.7071) X=3.18 cmX = 3.18\\text{ cm}\n\nEach collar point extends:\n\n3.18 cm\\boxed{3.18\\text{ cm}}\n\nfrom center front.\n\nTotal span:\n\n2(3.18)2(3.18) 6.36 cm\\boxed{6.36\\text{ cm}}\n\nSame result as above.\n\nStep 5. Use the 3.5 cm Center Height\n\nThe image shows:\n\nH=3.5 cmH=3.5\\text{ cm}\n\nThis becomes the center front stand height.\n\nDraw a vertical center line.\n\nFrom A measure:\n\n3.5 cm3.5\\text{ cm}\n\nupward.\n\n     D\n     |\n     | 3.5 cm\n     |\n     A\n\nStep 6. Determine the Hexagon Side Lengths\n\nThe visible hexagon can be drafted from:\n\nTop edge = neck curve\nTwo upper side edges\nTwo front edges (4.5 cm)\nBottom front edge (6.36 cm span)\n\nThe basic hexagon proportions become:\n\n      ______\n     /      \\\n    /        \\\n   /          \\\n   \\          /\n    \\        /\n     \\______/\n\n\nUsing your measurements:\n\nFront diagonal edges:\n\n4.5 cm4.5\\text{ cm}\n\nFront width:\n\n6.36 cm6.36\\text{ cm}\n\nFront height:\n\n3.5 cm3.5\\text{ cm}\nStep 7. Collar Draft Coordinates\n\nPlace center front at origin:\n\nA=(0,0)A=(0,0)\n\nLeft point:\n\nB=(−3.18,  3.18)B=(-3.18,\\;3.18)\n\nRight point:\n\nC=(3.18,  3.18)C=(3.18,\\;3.18)\n\nStand height point:\n\nD=(0,  3.5)D=(0,\\;3.5)\n\nThese coordinates let you reproduce the exact geometry shown.\n\nFormula for Any Hexagon-Stand Collar\n\nIf:\n\nFront edge length = LL\nOpening angle = θ\\theta\n\nThen:\n\nFront Span\nW=2Lsin⁡(θ/2)W=2L\\sin(\\theta/2)\nProjection per Side\nP=Lcos⁡(θ/2)P=L\\cos(\\theta/2)\n\nFor your collar:\n\nW=6.36 cmW=6.36\\text{ cm} P=3.18 cmP=3.18\\text{ cm}\nHeight Ratio\n\nFrom the image:\n\n4.53.5=1.286\\frac{4.5}{3.5}=1.286\n\nSo a reusable proportion is:\n\nL≈1.29HL \\approx 1.29H\n\nor\n\nH≈0.78LH \\approx 0.78L\n\nWhich confirms this collar is a geometrically balanced hexagon-stand collar.",
+      "references": [
+        "/images/review-refs/shirt/collar-hexagon-stand/1786503704699-hdx4e9.jpg"
+      ],
+      "appliedAt": "2026-08-12T16:35:07.269Z",
+      "craftId": "shirt|collar|lapel|collar-hexagon-stand"
+    },
+    {
+      "attemptRejected": null,
+      "decidedAt": null,
+      "source": "july-v3",
+      "verdict": "remake",
+      "tags": [],
+      "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+      "reasonRecorded": false,
+      "references": [],
+      "craftId": "shirt|collar|lapel|collar-hexagon-stand",
+      "foldedFrom": "generation-queue.rejectionContext",
+      "parkedAt": "2026-08-16T05:02:08.110Z"
+    }
+  ],
+  "correctionSanitized": 1,
+  "builtAt": "2026-08-27T02:37:06.820Z"
 }

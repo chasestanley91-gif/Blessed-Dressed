@@ -1,0 +1,168 @@
+{
+  "addr": "suit-3pc > lapel > lapel-style > lapel-peak-99",
+  "label": "Peak 99°",
+  "part": "jacket-lapel",
+  "orientation": "front",
+  "excluded": null,
+  "generate": true,
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\suit-3pc.json",
+  "source": "json",
+  "illustration": "/images/blueprints/baoxiniao/jacket/REQCL/21.jpg",
+  "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQCL\\21.jpg",
+  "illustrationExists": true,
+  "illustrationRemote": false,
+  "profile": {
+    "addr": "suit-3pc > lapel > lapel-style > lapel-peak-99",
+    "product": "suit-3pc",
+    "field": "Lapel Style",
+    "option": "Peak 99°",
+    "part": "jacket-lapel",
+    "garment": "navy bespoke suit jacket",
+    "orientation": "front",
+    "absence": false,
+    "distinguishingDetail": "Entry-level peak lapel at a 99° peak angle, projecting 1 cm to 2 cm beyond the gorge line. The peak rises gently — formal but restrained; traditional double-breasted and formalwear territory.",
+    "measured": {
+      "dimensions": [
+        "1 cm",
+        "2 cm"
+      ],
+      "angles": [
+        "99°"
+      ],
+      "counts": [],
+      "shapes": [
+        "peak lapel"
+      ],
+      "spread": [],
+      "flags": []
+    },
+    "reproduceFromIllustration": [
+      "lapel width at its widest point",
+      "peak/notch/shawl geometry",
+      "gorge position",
+      "lapel roll and edge stitch",
+      "the lower end of the lapel and the exact point at which its edges terminate, completely unobstructed"
+    ],
+    "composition": {
+      "crop": "waist-up, the lapel dominating the frame with the ENTIRE lapel run visible — from the collar down to the exact point where the two front edges meet at the closure, the termination fully inside the frame, never cropped",
+      "dominanceTarget": "40–80% of frame",
+      "identifyWithin": "1 second"
+    },
+    "forbidden": [
+      "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+      "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+      "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+    ],
+    "excluded": null,
+    "generate": true
+  },
+  "requiredTokens": [
+    "1 cm",
+    "2 cm",
+    "99°",
+    "peak lapel"
+  ],
+  "checklist": [
+    "length/width matches exactly: 1 cm",
+    "length/width matches exactly: 2 cm",
+    "angle matches exactly: 99°",
+    "shape reads as drawn: peak lapel",
+    "distinguishing detail present: Entry-level peak lapel at a 99° peak angle, projecting 1 cm to 2 cm beyond the gorge line. The peak rises gently — formal but restrained; traditional double-breasted and formalwear territory.",
+    "reproduced from the illustration: lapel width at its widest point",
+    "reproduced from the illustration: peak/notch/shawl geometry",
+    "reproduced from the illustration: gorge position",
+    "reproduced from the illustration: lapel roll and edge stitch",
+    "reproduced from the illustration: the lower end of the lapel and the exact point at which its edges terminate, completely unobstructed",
+    "orientation matches the illustration: front",
+    "the Lapel Style dominates the frame (40–80%), identifiable within one second, framed waist-up, the lapel dominating the frame with the ENTIRE lapel run visible — from the collar down to the exact point where the two front edges meet at the closure, the termination fully inside the frame, never cropped",
+    "silhouette, proportions, seam & stitch placement match the illustration; left/right symmetry correct",
+    "NO generic-category substitution — this exact option, not a typical one",
+    "a real photograph of the exact drawn option — not the line-art, no stylisation"
+  ],
+  "scoreCard": [
+    {
+      "category": "shape",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "geometry",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "dimensions",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "angles",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "construction",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "placement",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "symmetry",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "composition",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "blueprint-match",
+      "score": null,
+      "min": 98
+    }
+  ],
+  "prompt": "Ultra-photorealistic luxury menswear product photography.\n\nA single-subject craft DOCUMENTATION photograph: the Lapel Style is the dominant subject, filling 40–80% of the frame and identifiable within one second.\n\nA premium navy bespoke suit jacket featuring a precise Peak 99° (Lapel Style).\n\nDistinguishing construction detail (reproduce exactly as drawn): Entry-level peak lapel at a 99° peak angle, projecting 1 cm to 2 cm beyond the gorge line. The peak rises gently — formal but restrained; traditional double-breasted and formalwear territory.\n\nExact specification — peak lapel shape; measuring exactly 1 cm, 2 cm; at 99° — matching the illustration precisely.\n\nMANDATORY GEOMETRY COVERAGE — reproduce from the illustration, exactly and without assumption, every one of these: lapel width at its widest point, peak/notch/shawl geometry, gorge position, lapel roll and edge stitch, the lower end of the lapel and the exact point at which its edges terminate, completely unobstructed. Match each to the drawing.\n\nVIEW — this illustration is the front of the garment. Photograph the same face; never substitute a different face of the garment.\n\nBLUEPRINT LOCK — THE DRAWING IS LAW: the attached technical illustration is the manufacturing blueprint for this exact craft option and the SOLE authority for the image. Reproduce its geometry precisely — point/edge shape, lengths, widths, depths, angles, curvature, roll lines, symmetry, button/tab/stay positions, seam and stitch placement, and proportions — within less than 2% deviation. Assume NOTHING from tailoring/menswear/fashion convention or model priors; every visible characteristic must come from the drawing. Do not redesign, reinterpret, substitute a similar commercial style, stylise, or \"improve\" it. Do NOT fall back to a generic version of this category — reproduce THIS option, not a typical one. If convention conflicts with the drawing, the drawing wins. Accuracy over aesthetics. ANNOTATIONS ARE NOT THE GARMENT: the technical drawing may carry measurement callouts — dimension numbers (\"2.5cm\", \"9cm\", \"115°\"), tick / leader / dimension lines, arrows, red or coloured guide marks, and text labels. These are manufacturing documentation, NOT features of the cloth. Reproduce ONLY the finished garment: never render any number, unit, arrow, callout, leader line, measurement mark, or text anywhere in the photograph. The final image is a clean garment photo with zero annotation. COLOUR IN THE DRAWING IS NOTATION, NOT CLOTH: any red, orange or otherwise highlighted region marks WHERE the craft option sits — it is a position marker, never a colour specification. Flat grey or tinted shading marks the EXTENT of a panel, lining or facing, not its shade. Render every one of those areas in the garment's own cloth and thread, in the natural colour that tailoring would use there. There must be no red, no highlighter tint and no flat unshaded grey panel anywhere in the photograph unless the option's own label explicitly names that colour.\n\nPhotographed worn on a male model wearing a crisp white dress shirt buttoned to the collar AND a neatly knotted slim silk necktie — never an open or unbuttoned shirt, never a bare chest — with the tie lying flat and narrow against the shirt so it never covers the lapel edges or the point where the two front edges meet, the jacket worn open just enough to read the gorge and lapel roll.\n\nFrame waist-up, the lapel dominating the frame with the ENTIRE lapel run visible — from the collar down to the exact point where the two front edges meet at the closure, the termination fully inside the frame, never cropped; the detail must read clearly and sharply.\n\nMATCHED FRAMING — this option belongs to a family whose members differ from one another only by a measurement, so this photograph will be shown beside its siblings and compared directly. TWO SEPARATE REQUIREMENTS, and both must hold. FIRST, THE GARMENT: build the feature at exactly the size the drawing gives it — no larger. Do not exaggerate the dimension to make this option look more distinct from its siblings; the difference between them is small in real tailoring and must stay small here, because a customer choosing on these numbers is ordering a real garment. SECOND, THE CAMERA: frame the shot the way every member of the family must be framed — the garment part square to camera, centred, at a standard distance that leaves the whole garment occupying the same share of the picture no matter which value this option carries. Do not move closer for a small measurement or pull back for a large one. Getting one of these right while getting the other wrong is still a failure: an accurate feature shot at the wrong distance, or a matched frame containing an exaggerated feature, both mislead a customer comparing two pictures side by side.\n\nSavile Row and high-end Italian sartorial aesthetic. Natural daylight studio lighting, Phase One IQ4 medium-format camera, 150MP detail, shallow depth of field, magazine-quality editorial menswear photography. Authentic bespoke craftsmanship, fine hand stitching, premium finishing. SET — shot in a clean luxury photographic studio against a seamless, plain, neutral light-grey background with clear separation between garment and background: no location, no architecture, no furniture, no scenery, no props and no environmental context of any kind competing with the garment.\n\nExtremely realistic fine wool suiting with visible weave texture, fine stitching.\n\nAvoid: any GENERIC menswear substitution (a generic spread collar, generic notch/peak lapel, generic pocket/pleat/vent/cuff/waistband in place of the drawn one), illustration or line-art style, CGI or 3D-render look, cartoon, mannequin, fashion sketch, inaccurate geometry, altered proportions, missing construction details, asymmetry, watermark, AI-art appearance, AND any text or annotation traced from the drawing: NO measurement numbers, units (cm/mm/°), dimension or leader lines, arrows, callouts, red/coloured guide marks, ruler ticks, or labels anywhere in the frame. This is real garment photography of the exact drawn option — clean cloth only, nothing else.\n\nFORBIDDEN FOR THIS OPTION — do not render: a generic version of this part standing in for the exact drawn option (generic-category substitution); any feature, count, or geometry borrowed from a neighboring craft option on the same field; a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion).\n\nOWNER REFERENCE PHOTOGRAPH — 1 real photograph(s) of THIS exact craft option, supplied by the owner and attached alongside the drawing. Treat them as real-world ground truth for how this construction actually looks in cloth: match the construction, proportion, orientation and finish they show. Where a photograph and the line drawing disagree on how the feature physically reads, follow the photograph for material behaviour and the drawing for geometry; never invent a third version. Copy NOTHING else from them — not the fabric colour or pattern, not the background, styling, crop, lighting or accessories, and no person. Only the construction.\n\nOWNER CORRECTION AFTER REVIEW (attempt 1 was rejected by the owner — obey this over any conflicting earlier line, including the BLUEPRINT LOCK): What is wrong with it: Reference drawing itself is wrong. The image shows a wide semi-peak / open-notch lapel with a 99° gorge angle. The red annotation clearly labels the inside gorge angle as 99°.\n\nGiven\nG=99∘G = 99^\\circ\n\nWhere:\n\nGG = inside gorge angle\nStyle = Semi-Peak / Open Notch\nGorge = straight (not curved)\n1. Exterior Peak Angle\n\nThe supplementary angle is:\n\nE=180∘−99∘E = 180^\\circ - 99^\\circ E=81∘E = 81^\\circ E=81∘\\boxed{E=81^\\circ}\n\nThis is the actual angle used to draft the peak extension.\n\n2. Half-Angle Construction\n\nUseful for bisecting the gorge:\n\n99∘2=49.5∘\\frac{99^\\circ}{2} = 49.5^\\circ 49.5∘\\boxed{49.5^\\circ}\n3. Peak Length Formula\n\nFor a semi-peak:\n\nPL=1.15WPL = 1.15W\n\nWhere:\n\nWW = lapel width\nExamples\n\n10 cm lapel\n\nPL=11.5 cmPL=11.5\\text{ cm}\n\n11 cm lapel\n\nPL=12.65 cmPL=12.65\\text{ cm}\n\n12 cm lapel\n\nPL=13.8 cmPL=13.8\\text{ cm}\n4. Peak Projection\n\nTypical semi-peak:\n\nPP=0.32WPP = 0.32W\n\nExamples:\n\nLapel Width\tProjection10 cm\t3.2 cm\n11 cm\t3.5 cm\n12 cm\t3.8 cm\n5. Gorge Height\n\nTraditional bespoke ratio:\n\nGH=0.75WGH = 0.75W\n\nExamples:\n\nLapel Width\tGorge Height10 cm\t7.5 cm\n11 cm\t8.25 cm\n12 cm\t9.0 cm\n6. Gorge Opening Width\n\nIf gorge seam length is LL:\n\nOW=2Lsin⁡(99∘2)OW = 2L\\sin\\left(\\frac{99^\\circ}{2}\\right) OW=2Lsin⁡(49.5∘)OW = 2L\\sin(49.5^\\circ) OW=1.521LOW = 1.521L\n\nExample:\n\nL=4.0 cmL=4.0\\text{ cm} OW=6.08 cmOW=6.08\\text{ cm} OW=6.1 cm\\boxed{OW=6.1\\text{ cm}}\n7. Example Draft (12 cm Lapel)\n\nAssume:\n\nW=12 cmW=12\\text{ cm}\n\nThen:\n\nPeak Length\nPL=13.8 cmPL = 13.8\\text{ cm}\nProjection\nPP=3.84 cmPP = 3.84\\text{ cm}\nGorge Height\nGH=9.0 cmGH = 9.0\\text{ cm}\nGorge Angle\n99∘99^\\circ\nExterior Draft Angle\n81∘81^\\circ\nDraft Coordinates\n\nUsing gorge point A=(0,0)A=(0,0):\n\nFor a 13.8 cm peak at 81°:\n\nX=13.8cos⁡81∘X = 13.8\\cos81^\\circ X=2.16 cmX = 2.16\\text{ cm} Y=13.8sin⁡81∘Y = 13.8\\sin81^\\circ Y=13.63 cmY = 13.63\\text{ cm}\n\nPeak tip:\n\n(2.16,  13.63)\\boxed{(2.16,\\;13.63)}\nSummary\n\nFor the 99° Semi-Peak / Open Notch Gorge:\n\nInside Gorge=99∘\\boxed{\\text{Inside Gorge}=99^\\circ} Outside Peak=81∘\\boxed{\\text{Outside Peak}=81^\\circ} Half Angle=49.5∘\\boxed{\\text{Half Angle}=49.5^\\circ} Peak Length=1.15W\\boxed{\\text{Peak Length}=1.15W} Peak Projection=0.32W\\boxed{\\text{Peak Projection}=0.32W} Gorge Height=0.75W\\boxed{\\text{Gorge Height}=0.75W} Opening Width=1.521L\\boxed{\\text{Opening Width}=1.521L}\n\nThis produces the broad, open semi-peak appearance shown in the illustration. The owner has supplied 1 reference photograph(s) of what this option should actually look like. Those photographs are attached and OUTRANK the supplier line drawing wherever the two disagree: match the construction, proportion and finish shown in them. Use the line drawing only for anything the photographs do not show.\n\nOWNER CORRECTION AFTER REVIEW (a previous attempt was rejected by the owner — obey this over any conflicting earlier line, including the BLUEPRINT LOCK): The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+  "ownerReferences": [
+    {
+      "path": "/images/review-refs/suit-3pc/lapel-peak-99/1786511967729-pp1bnf.jpg",
+      "kind": "annotated-drawing",
+      "evidence": "161x225 px line-art flat from the same plate family as the 110 deg upload: jacket neck and chest, collar band with grey shirt-and-tie fill, both collar leaves folded out, and a peak-family lapel each side ending in a sharp outward point with a V gorge opening. A RED arc captioned '99 deg' marks the inside gorge angle on the right side, matching the label's 99 deg exactly. Gorge and peak edges are drawn straight; magnified, the lapel point here sits slightly ABOVE the collar point, so this drawing is marginally more peaked than the 110 deg sibling.",
+      "ownerNotes": "The image shows a wide semi-peak / open-notch lapel with a 99° gorge angle. The red annotation clearly labels the inside gorge angle as 99°.\n\nGiven\nG=99∘G = 99^\\circ\n\nWhere:\n\nGG = inside gorge angle\nStyle = Semi-Peak / Open Notch\nGorge = straight (not curved)\n1. Exterior Peak Angle\n\nThe supplementary angle is:\n\nE=180∘−99∘E = 180^\\circ - 99^\\circ E=81∘E = 81^\\circ E=81∘\\boxed{E=81^\\circ}\n\nThis is the actual angle used to draft the peak extension.\n\n2. Half-Angle Construction\n\nUseful for bisecting the gorge:\n\n99∘2=49.5∘\\frac{99^\\circ}{2} = 49.5^\\circ 49.5∘\\boxed{49.5^\\circ}\n3. Peak Length Formula\n\nFor a semi-peak:\n\nPL=1.15WPL = 1.15W\n\nWhere:\n\nWW = lapel width\nExamples\n\n10 cm lapel\n\nPL=11.5 cmPL=11.5\\text{ cm}\n\n11 cm lapel\n\nPL=12.65 cmPL=12.65\\text{ cm}\n\n12 cm lapel\n\nPL=13.8 cmPL=13.8\\text{ cm}\n4. Peak Projection\n\nTypical semi-peak:\n\nPP=0.32WPP = 0.32W\n\nExamples:\n\nLapel Width\tProjection10 cm",
+      "ownerDecisionKey": "suit-3pc/lapel-peak-99"
+    }
+  ],
+  "ownerCorrections": [
+    {
+      "attemptRejected": 1,
+      "decidedAt": "2026-08-12T05:20:05.461Z",
+      "tags": [
+        "Reference drawing itself is wrong"
+      ],
+      "notes": "The image shows a wide semi-peak / open-notch lapel with a 99° gorge angle. The red annotation clearly labels the inside gorge angle as 99°.\n\nGiven\nG=99∘G = 99^\\circ\n\nWhere:\n\nGG = inside gorge angle\nStyle = Semi-Peak / Open Notch\nGorge = straight (not curved)\n1. Exterior Peak Angle\n\nThe supplementary angle is:\n\nE=180∘−99∘E = 180^\\circ - 99^\\circ E=81∘E = 81^\\circ E=81∘\\boxed{E=81^\\circ}\n\nThis is the actual angle used to draft the peak extension.\n\n2. Half-Angle Construction\n\nUseful for bisecting the gorge:\n\n99∘2=49.5∘\\frac{99^\\circ}{2} = 49.5^\\circ 49.5∘\\boxed{49.5^\\circ}\n3. Peak Length Formula\n\nFor a semi-peak:\n\nPL=1.15WPL = 1.15W\n\nWhere:\n\nWW = lapel width\nExamples\n\n10 cm lapel\n\nPL=11.5 cmPL=11.5\\text{ cm}\n\n11 cm lapel\n\nPL=12.65 cmPL=12.65\\text{ cm}\n\n12 cm lapel\n\nPL=13.8 cmPL=13.8\\text{ cm}\n4. Peak Projection\n\nTypical semi-peak:\n\nPP=0.32WPP = 0.32W\n\nExamples:\n\nLapel Width\tProjection10 cm\t3.2 cm\n11 cm\t3.5 cm\n12 cm\t3.8 cm\n5. Gorge Height\n\nTraditional bespoke ratio:\n\nGH=0.75WGH = 0.75W\n\nExamples:\n\nLapel Width\tGorge Height10 cm\t7.5 cm\n11 cm\t8.25 cm\n12 cm\t9.0 cm\n6. Gorge Opening Width\n\nIf gorge seam length is LL:\n\nOW=2Lsin⁡(99∘2)OW = 2L\\sin\\left(\\frac{99^\\circ}{2}\\right) OW=2Lsin⁡(49.5∘)OW = 2L\\sin(49.5^\\circ) OW=1.521LOW = 1.521L\n\nExample:\n\nL=4.0 cmL=4.0\\text{ cm} OW=6.08 cmOW=6.08\\text{ cm} OW=6.1 cm\\boxed{OW=6.1\\text{ cm}}\n7. Example Draft (12 cm Lapel)\n\nAssume:\n\nW=12 cmW=12\\text{ cm}\n\nThen:\n\nPeak Length\nPL=13.8 cmPL = 13.8\\text{ cm}\nProjection\nPP=3.84 cmPP = 3.84\\text{ cm}\nGorge Height\nGH=9.0 cmGH = 9.0\\text{ cm}\nGorge Angle\n99∘99^\\circ\nExterior Draft Angle\n81∘81^\\circ\nDraft Coordinates\n\nUsing gorge point A=(0,0)A=(0,0):\n\nFor a 13.8 cm peak at 81°:\n\nX=13.8cos⁡81∘X = 13.8\\cos81^\\circ X=2.16 cmX = 2.16\\text{ cm} Y=13.8sin⁡81∘Y = 13.8\\sin81^\\circ Y=13.63 cmY = 13.63\\text{ cm}\n\nPeak tip:\n\n(2.16,  13.63)\\boxed{(2.16,\\;13.63)}\nSummary\n\nFor the 99° Semi-Peak / Open Notch Gorge:\n\nInside Gorge=99∘\\boxed{\\text{Inside Gorge}=99^\\circ} Outside Peak=81∘\\boxed{\\text{Outside Peak}=81^\\circ} Half Angle=49.5∘\\boxed{\\text{Half Angle}=49.5^\\circ} Peak Length=1.15W\\boxed{\\text{Peak Length}=1.15W} Peak Projection=0.32W\\boxed{\\text{Peak Projection}=0.32W} Gorge Height=0.75W\\boxed{\\text{Gorge Height}=0.75W} Opening Width=1.521L\\boxed{\\text{Opening Width}=1.521L}\n\nThis produces the broad, open semi-peak appearance shown in the illustration.",
+      "references": [
+        "/images/review-refs/suit-3pc/lapel-peak-99/1786511967729-pp1bnf.jpg"
+      ],
+      "parkedAt": "2026-08-12T21:48:07.489Z",
+      "craftId": "suit-3pc|lapel|lapel-style|lapel-peak-99"
+    },
+    {
+      "attemptRejected": null,
+      "decidedAt": null,
+      "source": "july-v3",
+      "verdict": "reject-file",
+      "tags": [],
+      "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+      "reasonRecorded": false,
+      "references": [],
+      "craftId": "suit-3pc|lapel|lapel-style|lapel-peak-99",
+      "foldedFrom": "generation-queue.rejectionContext",
+      "parkedAt": "2026-08-16T05:02:08.935Z"
+    }
+  ],
+  "builtAt": "2026-08-26T07:29:09.169Z"
+}

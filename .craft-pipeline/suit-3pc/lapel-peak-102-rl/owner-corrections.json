@@ -1,0 +1,45 @@
+{
+ "craftId": "suit-3pc|lapel|lapel-style|lapel-peak-102-rl",
+ "note": "Owner rejection reasons for this craft, from BOTH decision sources. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 1,
+   "decidedAt": "2026-08-12T11:00:00.813Z",
+   "tags": [
+    "Reference drawing itself is wrong"
+   ],
+   "notes": "The image shows a 102° RL (Roped Line) Peak Lapel. Compared to the previous 102° peak, the RL version has a straighter, more angular collar edge and a more architectural peak shape.\n\nIf we assume the same proportion used by many bespoke patternmakers:\n\nPeak Angle = 102°\nLapel Width = 12.5 cm\nFundamental Angles\nθ=102∘\\theta = 102^\\circ\n\nHalf-angle:\n\nβ=102∘2=51∘\\beta = \\frac{102^\\circ}{2}=51^\\circ\n\nSupplementary angle:\n\n180∘−102∘=78∘180^\\circ-102^\\circ=78^\\circ\nRL Peak Geometry\n\nA good RL peak generally projects slightly farther than a standard peak.\n\nUse:\n\nL=0.35WL=0.35W\n\nWhere:\n\nW=12.5W=12.5 cm\nLL = peak projection\nL=0.35(12.5)L=0.35(12.5) L=4.375 cmL=4.375\\text{ cm}\nTrigonometric Construction\n\nUsing:\n\nsin⁡(51∘)=0.7771\\sin(51^\\circ)=0.7771 cos⁡(51∘)=0.6293\\cos(51^\\circ)=0.6293\n\nVertical rise:\n\nH=Lsin⁡(51∘)H=L\\sin(51^\\circ) H=4.375(0.7771)H=4.375(0.7771) H=3.40 cmH=3.40\\text{ cm}\n\nHorizontal spread:\n\nS=Lcos⁡(51∘)S=L\\cos(51^\\circ) S=4.375(0.6293)S=4.375(0.6293) S=2.75 cmS=2.75\\text{ cm}\nParametric Formula\n\nFor any RL peak lapel width WW:\n\nL=0.35WL=0.35W H=0.35Wsin⁡(51∘)H=0.35W\\sin(51^\\circ) H=0.272WH=0.272W S=0.35Wcos⁡(51∘)S=0.35W\\cos(51^\\circ) S=0.220WS=0.220W\nPattern Coordinates\n\nPlace the peak point at\n\nP=(0,0)P=(0,0)\n\nUpper RL peak line:\n\nP1=(2.75,  3.40)P_1=(2.75,\\;3.40)\n\nLower gorge intersection:\n\nP2=(2.75,  −3.40)P_2=(2.75,\\;-3.40)\n\nThis gives\n\n∠P1PP2=102∘\\angle P_1PP_2=102^\\circ\n\nexactly.\n\nLine Equations\n\nSlope:\n\nm=tan⁡(51∘)m=\\tan(51^\\circ) m=1.2349m=1.2349\n\nUpper peak edge:\n\ny=1.235xy=1.235x\n\nLower peak edge:\n\ny=−1.235xy=-1.235x\nTailor's Draft Specification\n\nFor a 102° RL Peak Lapel at 12.5 cm width:\n\nMeasurement\tDimensionLapel Width\t12.5 cm\nPeak Angle\t102°\nPeak Projection\t4.38 cm\nPeak Rise\t3.40 cm\nHorizontal Spread\t2.75 cm\nPeak Edge Angle\t51°\nGorge-to-Peak Extension\t≈35% of lapel width\n\nThis produces the bold, sharply-cut peak shown in the image, with a more structured English-bespoke silhouette than the softer Italian 102° peak.",
+   "references": [
+    "/images/review-refs/suit-3pc/lapel-peak-102-rl/1786532321300-ksucyx.jpg"
+   ],
+   "parkedAt": "2026-08-12T21:48:07.502Z",
+   "craftId": "suit-3pc|lapel|lapel-style|lapel-peak-102-rl"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "remake",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "suit-3pc|lapel|lapel-style|lapel-peak-102-rl",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.949Z"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "suit-3pc|lapel|lapel-style|lapel-peak-102-rl",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.949Z"
+  }
+ ]
+}

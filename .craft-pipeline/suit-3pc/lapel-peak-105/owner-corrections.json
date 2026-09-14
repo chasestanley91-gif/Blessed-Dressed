@@ -1,0 +1,32 @@
+{
+ "craftId": "suit-3pc|lapel|lapel-style|lapel-peak-105",
+ "note": "Owner rejection reasons for this craft, from BOTH decision sources. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 1,
+   "decidedAt": "2026-08-12T11:05:46.490Z",
+   "tags": [
+    "Reference drawing itself is wrong"
+   ],
+   "notes": "For the 105° Peak Lapel shown in the image, the peak is noticeably broader and more open than the 101°-103° versions. This creates a stronger horizontal emphasis and is often seen in dramatic double-breasted or fashion-forward bespoke tailoring.\n\nImage Analysis\n\nThe image shows:\n\nA traditional straight-edged peak lapel.\nPeak angle labeled 105°.\nRelatively long lapel line.\nSharp peak projection.\nNo curvature in the outer edge (unlike the 103° curved peak).\n1. Primary Geometry\n\nLet:\n\nθ=105∘\\theta = 105^\\circ\n\nHalf-angle:\n\nβ=θ2\\beta=\\frac{\\theta}{2} β=52.5∘\\beta=52.5^\\circ\n\nSupplementary angle:\n\n180∘−105∘=75∘180^\\circ-105^\\circ=75^\\circ\n2. Recommended Proportions\n\nA peak this open generally works best with:\n\nW=12.5 cmW = 12.5\\text{ cm}\n\nPeak projection ratio:\n\nL=0.36WL=0.36W\n\nTherefore:\n\nL=0.36(12.5)L=0.36(12.5) L=4.50 cmL=4.50\\text{ cm}\n3. Trigonometric Construction\n\nUsing:\n\nsin⁡(52.5∘)=0.7934\\sin(52.5^\\circ)=0.7934 cos⁡(52.5∘)=0.6088\\cos(52.5^\\circ)=0.6088\n\nPeak rise:\n\nH=Lsin⁡(52.5∘)H=L\\sin(52.5^\\circ) H=4.50(0.7934)H=4.50(0.7934) H=3.57 cmH=3.57\\text{ cm}\n\nPeak spread:\n\nS=Lcos⁡(52.5∘)S=L\\cos(52.5^\\circ) S=4.50(0.6088)S=4.50(0.6088) S=2.74 cmS=2.74\\text{ cm}\n4. Parametric Formula\n\nFor any width WW:\n\nProjection\nL=0.36WL=0.36W\nRise\nH=0.36Wsin⁡(52.5∘)H=0.36W\\sin(52.5^\\circ) H=0.286WH=0.286W\nSpread\nS=0.36Wcos⁡(52.5∘)S=0.36W\\cos(52.5^\\circ) S=0.219WS=0.219W\n5. CAD Coordinates\n\nPlace the peak tip at:\n\nP=(0,0)P=(0,0)\n\nUpper peak point:\n\nP1=(2.74,  3.57)P_1=(2.74,\\;3.57)\n\nLower peak point:\n\nP2=(2.74,  −3.57)P_2=(2.74,\\;-3.57)\n\nResult:\n\n∠P1PP2=105∘\\angle P_1PP_2 = 105^\\circ\n6. Drafting Equations\n\nPeak edge slope:\n\nm=tan⁡(52.5∘)m=\\tan(52.5^\\circ) m=1.303m=1.303\n\nUpper edge:\n\ny=1.303xy=1.303x\n\nLower edge:\n\ny=−1.303xy=-1.303x\n7. Patternmaker's Quick Formula\n\nFor a 105° peak lapel at 12.5 cm width:\n\nProjection=4.5 cm\\text{Projection}=4.5\\text{ cm} Rise=3.57 cm\\text{Rise}=3.57\\text{ cm} Spread=2.74 cm\\text{Spread}=2.74\\text{ cm} Half-Angle=52.5∘\\text{Half-Angle}=52.5^\\circ\nRatio Summary\nProjection=36% of lapel width\\text{Projection}=36\\%\\ \\text{of lapel width} Rise=28.6% of lapel width\\text{Rise}=28.6\\%\\ \\text{of lapel width} Spread=21.9% of lapel width\\text{Spread}=21.9\\%\\ \\text{of lapel width}\nComparative Peak Aggressiveness\nPeak Angle\tCharacter101°\tClassic Italian\n102°\tBold Italian\n103°\tStrong, elegant\n105°\tDramatic, fashion-forward\n108°+\tExtreme showcase peak\n\nA 105° peak is near the upper end of traditional tailoring and produces a very assertive, wide-chested visual effect while still remaining wearable in bespoke menswear.",
+   "references": [
+    "/images/review-refs/suit-3pc/lapel-peak-105/1786532618184-evzbku.jpg"
+   ],
+   "parkedAt": "2026-08-12T21:48:07.509Z",
+   "craftId": "suit-3pc|lapel|lapel-style|lapel-peak-105"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "suit-3pc|lapel|lapel-style|lapel-peak-105",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.955Z"
+  }
+ ]
+}

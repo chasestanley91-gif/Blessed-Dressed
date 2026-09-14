@@ -1,0 +1,32 @@
+{
+ "craftId": "sport-coat|lapel|lapel-style|lapel-shawl-0005",
+ "note": "Owner rejection reasons for this craft, from BOTH decision sources. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 1,
+   "decidedAt": "2026-08-12T04:08:15.136Z",
+   "tags": [
+    "Reference drawing itself is wrong"
+   ],
+   "notes": "For the 0005 Shawl Lapel shown in your image:\n\nObserved characteristics:\n\nWidth = 10.0 cm\nContinuous shawl curve\nSlimmer than 0A\nLess belly than 0E\nLong tapered front\nPointed teardrop termination\nNearly symmetrical left/right sweep\n\nThis is a very clean contemporary shawl, commonly used on dinner jackets and fashion tuxedos.\n\nPrimary Dimensions\n\nGiven:\n\nW=10.0 cmW = 10.0 \\text{ cm}\n1. Outer Shawl Radius\n\nMain outer sweep:\n\nRo=2.4WR_o = 2.4W Ro=2.4(10)R_o = 2.4(10) Ro=24.0 cmR_o = 24.0\\text{ cm}\n\nUse:\n\n24.0 cm\\boxed{24.0\\text{ cm}}\n2. Lower Nose Radius\n\nThe lower point is slightly softer than the 0E style.\n\nRn=1.0WR_n = 1.0W Rn=10.0 cmR_n = 10.0\\text{ cm}\n\nUse:\n\n10.0 cm\\boxed{10.0\\text{ cm}}\n3. Belly Amount\n\nMaximum fullness from a straight tangent:\n\nB=0.12WB = 0.12W B=0.12(10)B = 0.12(10) B=1.2 cmB = 1.2\\text{ cm}\n\nUse:\n\n1.2 cm\\boxed{1.2\\text{ cm}}\n4. Roll Line Position\nRL=0.55WRL = 0.55W RL=0.55(10)RL = 0.55(10) RL=5.5 cmRL = 5.5\\text{ cm}\n\nUse:\n\n5.5 cm\\boxed{5.5\\text{ cm}}\n5. Front Point Length\n\nFrom widest part to tip:\n\nFP=1.45WFP = 1.45W FP=1.45(10)FP = 1.45(10) FP=14.5 cmFP = 14.5\\text{ cm}\n\nUse:\n\n14.5 cm\\boxed{14.5\\text{ cm}}\n6. Collar Crown Radius\n\nUpper shawl sweep:\n\nRc=1.15WR_c = 1.15W Rc=1.15(10)R_c = 1.15(10) Rc=11.5 cmR_c = 11.5\\text{ cm}\n\nUse:\n\n11.5 cm\\boxed{11.5\\text{ cm}}\n7. Front Taper\n\nThe front edge taper is slightly less aggressive than the 0E.\n\nPer side:\n\n11∘11^\\circ\n\nTotal included taper:\n\n22∘22^\\circ\n\nUse:\n\n11∘ per side\\boxed{11^\\circ \\text{ per side}}\n8. Draft Control Points\n\nUsing the shoulder break as (0,0):\n\nWidest Point\n(10,  15)(10,\\;15)\nBelly Point\n(11.2,  26)(11.2,\\;26)\nFront Tip\n(0,  46)(0,\\;46)\n\nBlend smoothly with a French curve.\n\nComplete Draft Summary\nFeature\tValueShawl Width\t10.0 cm\nOuter Radius\t24.0 cm\nLower Radius\t10.0 cm\nBelly\t1.2 cm\nRoll Line\t5.5 cm\nFront Point Length\t14.5 cm\nCollar Radius\t11.5 cm\nFront Taper\t11°\nFormula Set\nRo=2.4WR_o = 2.4W Rn=1.0WR_n = 1.0W B=0.12WB = 0.12W RL=0.55WRL = 0.55W FP=1.45WFP = 1.45W Rc=1.15WR_c = 1.15W\n\nFor your 0005 Shawl Lapel, 10 cm wide, these values will reproduce the proportions shown in the illustration: a clean, elegant, moderately slim shawl with a pointed teardrop finish.",
+   "references": [
+    "/images/review-refs/sport-coat/lapel-shawl-0005/1786507674325-s2m6mi.jpg"
+   ],
+   "parkedAt": "2026-08-12T21:48:07.059Z",
+   "craftId": "sport-coat|lapel|lapel-style|lapel-shawl-0005"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "sport-coat|lapel|lapel-style|lapel-shawl-0005",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.361Z"
+  }
+ ]
+}

@@ -1,0 +1,45 @@
+{
+ "craftId": "suit-3pc|lapel|lapel-style|lapel-shawl-asymmetric",
+ "note": "Owner rejection reasons for this craft, from BOTH decision sources. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 1,
+   "decidedAt": "2026-08-12T13:12:38.328Z",
+   "tags": [
+    "Reference drawing itself is wrong"
+   ],
+   "notes": "For the Asymmetric Shawl Collar, 5 cm wide shown in the image, the geometry is significantly narrower and more elongated than a classic tuxedo shawl. The red drafting lines show an offset center roll line, creating an asymmetric visual balance while maintaining a continuous shawl curve.\n\nVisual Analysis\n\nThe image shows:\n\nFinished shawl width: 5 cm\nNarrow fashion shawl collar\nContinuous roll without notch or peak\nSlightly asymmetric front edge\nLong V-opening\nPointed front termination\nChinese text near the bottom that appears to be a drafting note\n1. Basic Parameters\n\nLet:\n\nW=5.0 cmW = 5.0 \\text{ cm}\n\nRecommended collar stand:\n\nC=0.30WC = 0.30W C=1.5 cmC = 1.5 \\text{ cm}\n\nOuter roll radius:\n\nR=1.8WR = 1.8W R=9.0 cmR = 9.0 \\text{ cm}\n2. Asymmetry Factor\n\nFor this style, the inner and outer lapel edges are not perfectly centered.\n\nDefine:\n\nA=0.20WA = 0.20W A=1.0 cmA = 1.0 \\text{ cm}\n\nThis means the roll line is offset approximately 1 cm from the geometric centerline.\n\n3. Outer Curve Geometry\n\nThe outer shawl edge can be modeled as half of an ellipse:\n\nx2a2+y2b2=1\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1\n\nWith:\n\na=5a = 5 b=14b = 14\n\nResulting in:\n\nx225+y2196=1\\frac{x^2}{25}+\\frac{y^2}{196}=1\n\nThis produces the long narrow silhouette shown.\n\n4. Drafting Coordinates\n\nOne side of the lapel:\n\nA = (0.0, 0.0)    Neck Point\nB = (1.5, 4.0)\nC = (3.5, 15.0)\nD = (4.5, 25.0)\nE = (2.0, 32.0)   Bottom Point\n\n\nMirror the outer profile while keeping the roll line offset by 1 cm to create the asymmetric effect.\n\n5. Bézier Construction\n\nFor CAD drafting:\n\nP0 = (0.0, 0.0)\nP1 = (1.5, 5.0)\nP2 = (4.0, 18.0)\nP3 = (4.5, 25.0)\n\n\nOuter curve:\n\nB(t)=(1−t)3P0+3(1−t)2tP1+3(1−t)t2P2+t3P3B(t) = (1-t)^3P_0 + 3(1-t)^2tP_1 + 3(1-t)t^2P_2 + t^3P_3\n\nFor:\n\n0≤t≤10 \\le t \\le 1\n6. Patternmaker's Ratios\n\nFor any asymmetric shawl collar:\n\nR=1.8WR = 1.8W C=0.30WC = 0.30W A=0.20WA = 0.20W F=6.4WF = 6.4W\n\nWhere:\n\nRR = roll radius\nCC = collar width\nAA = asymmetry offset\nFF = front depth\n7. Dimensions for 5 cm Width\nFinished Width      = 5.0 cm\nCollar Width        = 1.5 cm\nOuter Radius        = 9.0 cm\nAsymmetry Offset    = 1.0 cm\nFront Depth         = 32.0 cm\nRoll Depth          = 0.75 cm\n\nDraft Formula Summary\nR=1.8WR = 1.8W C=0.30WC = 0.30W A=0.20WA = 0.20W F=6.4WF = 6.4W\n\nSubstituting W=5W = 5:\n\nR=9.0 cmR = 9.0\\text{ cm} C=1.5 cmC = 1.5\\text{ cm} A=1.0 cmA = 1.0\\text{ cm} F=32.0 cmF = 32.0\\text{ cm}\nStyle Character\n\nA 5 cm Asymmetric Shawl Collar creates:\n\nA very modern, fashion-forward appearance.\nA slimmer chest profile than traditional tuxedo shawls.\nA longer visual V-line.\nStrong suitability for contemporary dinner jackets and avant-garde tailoring.\nA clean minimalist look with subtle asymmetrical interest.",
+   "references": [
+    "/images/review-refs/suit-3pc/lapel-shawl-asymmetric/1786540282448-hiaszc.jpg"
+   ],
+   "parkedAt": "2026-08-12T21:48:07.556Z",
+   "craftId": "suit-3pc|lapel|lapel-style|lapel-shawl-asymmetric"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "discard",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "suit-3pc|lapel|lapel-style|lapel-shawl-asymmetric",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.987Z"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "suit-3pc|lapel|lapel-style|lapel-shawl-asymmetric",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.987Z"
+  }
+ ]
+}

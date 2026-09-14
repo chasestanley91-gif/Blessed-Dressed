@@ -11,7 +11,7 @@
   "description": "The classic single-breasted waistcoat with five buttons, the traditional and most common configuration for three-piece suits and morning dress. The higher button placement closes the chest neatly and frames the tie, giving a timeless, formal appearance. The bottom button is conventionally left undone.",
   "fieldLabel": "Button Stance",
   "sectionLabel": "Vest — Front Style",
-  "part": "vest-detail",
+  "part": "vest-front",
   "garment": {
     "noun": "bespoke tailored waistcoat",
     "fabric": "fine wool suiting"
@@ -28,12 +28,22 @@
     "counts": [
       "5-button"
     ],
-    "shapes": [],
+    "shapes": [
+      "single-breasted"
+    ],
+    "negatedShapes": [],
     "spread": [],
-    "flags": []
+    "flags": [],
+    "sides": [
+      "left",
+      "lower"
+    ],
+    "attributes": [],
+    "supplierCodes": [],
+    "unresolved": []
   },
   "illustration": {
-    "path": "/images/options/vest/sb-5.jpg",
+    "path": "/images/blueprints/baoxiniao/jacket/REQBT/27.jpg",
     "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\options\\vest\\sb-5.jpg",
     "exists": true,
     "remote": false
@@ -46,5 +56,7 @@
   ],
   "excluded": null,
   "generate": true,
-  "extractedAt": "2026-07-31T18:55:10.466Z"
+  "extractedAt": "2026-08-26T06:31:18.885Z",
+  "illustrationRescopedAt": "2026-08-26T06:38:22.280Z",
+  "illustrationRescopeNote": "Path moved to the part-scoped blueprint tree. The IMAGE is byte-identical to the one this spec was extracted from (sha1 verified), so the reading below still stands and no re-extraction was needed."
 }

@@ -1,0 +1,32 @@
+{
+ "craftId": "suit-3pc|lapel|lapel-style|lapel-peak-103-curved",
+ "note": "Owner rejection reasons for this craft, from BOTH decision sources. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 1,
+   "decidedAt": "2026-08-12T11:03:08.259Z",
+   "tags": [
+    "Reference drawing itself is wrong"
+   ],
+   "notes": "For the Curved Peak Lapel 103° shown in the image, the geometry differs from the straight-edged RL and standard peak lapels because the outer lapel edge is a curve (usually a clothoid, spline, or circular arc) rather than a straight line. The controlling angle at the gorge remains 103°.\n\nPrimary Parameters\n\nLet:\n\nLapel Width: W=12.0 cmW = 12.0\\text{ cm} (recommended from the image proportions)\nPeak Angle: θ=103∘\\theta = 103^\\circ\n\nHalf-angle:\n\nβ=103∘2\\beta=\\frac{103^\\circ}{2} β=51.5∘\\beta=51.5^\\circ\nPeak Projection\n\nCurved peaks usually project slightly farther than standard peaks.\n\nA good drafting ratio is:\n\nL=0.36WL=0.36W\n\nFor a 12 cm lapel:\n\nL=0.36(12)L=0.36(12) L=4.32 cmL=4.32\\text{ cm}\nTrigonometric Construction\n\nUsing:\n\nsin⁡(51.5∘)=0.7826\\sin(51.5^\\circ)=0.7826 cos⁡(51.5∘)=0.6225\\cos(51.5^\\circ)=0.6225\n\nPeak rise:\n\nH=Lsin⁡(51.5∘)H=L\\sin(51.5^\\circ) H=4.32(0.7826)H=4.32(0.7826) H=3.38 cmH=3.38\\text{ cm}\n\nPeak spread:\n\nS=Lcos⁡(51.5∘)S=L\\cos(51.5^\\circ) S=4.32(0.6225)S=4.32(0.6225) S=2.69 cmS=2.69\\text{ cm}\nParametric Formula\n\nFor any lapel width WW:\n\nL=0.36WL=0.36W H=0.36Wsin⁡(51.5∘)H=0.36W\\sin(51.5^\\circ) H=0.282WH=0.282W S=0.36Wcos⁡(51.5∘)S=0.36W\\cos(51.5^\\circ) S=0.224WS=0.224W\nCAD Coordinates\n\nPeak tip:\n\nP=(0,0)P=(0,0)\n\nUpper control point:\n\nP1=(2.69,  3.38)P_1=(2.69,\\;3.38)\n\nLower gorge point:\n\nP2=(2.69,  −3.38)P_2=(2.69,\\;-3.38)\n\ngiving:\n\n∠P1PP2=103∘\\angle P_1PP_2=103^\\circ\nCurved Edge Formula\n\nInstead of a straight line:\n\ny=mxy=mx\n\nuse a quadratic Bézier curve:\n\nB(t)=(1−t)2P0+2(1−t)tPc+t2P1B(t)=(1-t)^2P_0 + 2(1-t)tP_c + t^2P_1\n\nwhere:\n\nP0P_0 = gorge origin\nP1P_1 = peak tip\nPcP_c = control point creating the sweep\n\nFor a classic curved peak:\n\nPc=(0.40W,  0.70H)P_c=(0.40W,\\;0.70H)\n\nFor W=12W=12:\n\nPc=(4.8,  2.37)P_c=(4.8,\\;2.37)\n\nThis creates the gentle outward flare visible in the illustration.\n\nTailor's Draft Specification\nFeature\tDimensionPeak Angle\t103°\nLapel Width\t12.0 cm\nPeak Projection\t4.32 cm\nPeak Rise\t3.38 cm\nPeak Spread\t2.69 cm\nHalf Angle\t51.5°\nCurve Radius (recommended)\t16-20 cm\nProjection Ratio\t0.36 × lapel width\nStyle Characteristics\n\nA 103° Curved Peak produces:\n\nSofter appearance than an RL Peak.\nStronger visual sweep than a standard peak.\nLonger lapel line toward the waist.\nTypical of high-end Italian bespoke houses such as Caraceni, Rubinacci, and some Cifonelli-inspired patterns.\nMost flattering when paired with 11.5-12.5 cm lapel widths and a slightly suppressed waist.",
+   "references": [
+    "/images/review-refs/suit-3pc/lapel-peak-103-curved/1786532572356-3unkno.jpg"
+   ],
+   "parkedAt": "2026-08-12T21:48:07.506Z",
+   "craftId": "suit-3pc|lapel|lapel-style|lapel-peak-103-curved"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "suit-3pc|lapel|lapel-style|lapel-peak-103-curved",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.952Z"
+  }
+ ]
+}

@@ -1,0 +1,45 @@
+{
+ "craftId": "suit-3pc|lapel|lapel-style|lapel-peak-102",
+ "note": "Owner rejection reasons for this craft, from BOTH decision sources. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 1,
+   "decidedAt": "2026-08-12T10:31:27.421Z",
+   "tags": [
+    "Reference drawing itself is wrong"
+   ],
+   "notes": "For a 102° peak lapel with a finished lapel width of 12.5 cm, the geometry changes slightly from the 101° version, producing a slightly flatter, broader peak.\n\n1. Define the Variables\nLapel Width: W=12.5 cmW = 12.5\\text{ cm}\nPeak Angle: θ=102∘\\theta = 102^\\circ\n\nHalf-angle:\n\nβ=θ2\\beta = \\frac{\\theta}{2} β=102∘2\\beta = \\frac{102^\\circ}{2} β=51∘\\beta = 51^\\circ\n\nAcute supplementary angle:\n\n180∘−102∘=78∘180^\\circ - 102^\\circ = 78^\\circ\n2. Recommended Peak Projection\n\nFor a strong bespoke peak lapel:\n\nL≈0.32WL \\approx 0.32W L=0.32(12.5)L = 0.32(12.5) L=4.0 cmL = 4.0\\text{ cm}\n3. Trigonometric Construction\n\nUsing:\n\nsin⁡(51∘)=0.7771\\sin(51^\\circ)=0.7771 cos⁡(51∘)=0.6293\\cos(51^\\circ)=0.6293\n\nPeak height:\n\nH=Lsin⁡(51∘)H=L\\sin(51^\\circ) H=4.0(0.7771)H=4.0(0.7771) H=3.11 cmH=3.11\\text{ cm}\n\nPeak spread:\n\nS=Lcos⁡(51∘)S=L\\cos(51^\\circ) S=4.0(0.6293)S=4.0(0.6293) S=2.52 cmS=2.52\\text{ cm}\n4. General Formula for Any 102° Peak\nL=0.32WL=0.32W H=0.32Wsin⁡(51∘)H=0.32W\\sin(51^\\circ) H=0.2487WH=0.2487W S=0.32Wcos⁡(51∘)S=0.32W\\cos(51^\\circ) S=0.2014WS=0.2014W\n\nTherefore for any lapel width:\n\nH=0.2487WH=0.2487W S=0.2014WS=0.2014W\n5. CAD Draft Coordinates\n\nPlace the peak tip at:\n\nP=(0,0)P=(0,0)\n\nUpper peak point:\n\nP1=(2.52,  3.11)P_1=(2.52,\\;3.11)\n\nLower peak point:\n\nP2=(2.52,  −3.11)P_2=(2.52,\\;-3.11)\n\nThese produce:\n\n∠P1PP2=102∘\\angle P_1PP_2=102^\\circ\n\nexactly.\n\n6. Line Equations\n\nPeak edge slope:\n\nm=tan⁡(51∘)m=\\tan(51^\\circ) m=1.2349m=1.2349\n\nUpper edge:\n\ny=1.235xy=1.235x\n\nLower edge:\n\ny=−1.235xy=-1.235x\n7. Tailoring Draft Dimensions (12.5 cm Lapel)\n\nA practical bespoke draft matching the illustration would be:\n\nFinished lapel width: 12.5 cm\nPeak angle: 102°\nPeak projection beyond gorge: 4.0 cm\nPeak rise: 3.11 cm\nPeak horizontal extension: 2.52 cm\nPeak edge angle from horizontal: 51°\nPeak edge angle from vertical break line:\n90∘−51∘=39∘90^\\circ-51^\\circ=39^\\circ\n\nThis yields a very bold, wide peak lapel typical of dramatic Italian, Zegna-style, or 1930s-inspired double-breasted tailoring proportions.",
+   "references": [
+    "/images/review-refs/suit-3pc/lapel-peak-102/1786530642118-ikfx4m.jpg"
+   ],
+   "parkedAt": "2026-08-12T21:48:07.494Z",
+   "craftId": "suit-3pc|lapel|lapel-style|lapel-peak-102"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "remake",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "suit-3pc|lapel|lapel-style|lapel-peak-102",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.944Z"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "suit-3pc|lapel|lapel-style|lapel-peak-102",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.944Z"
+  }
+ ]
+}

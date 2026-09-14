@@ -1,0 +1,32 @@
+{
+ "craftId": "suit-3pc|lapel|lapel-style|lapel-shawl-0a",
+ "note": "Owner rejection reasons for this craft, from BOTH decision sources. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 1,
+   "decidedAt": "2026-08-12T13:09:18.388Z",
+   "tags": [
+    "Reference drawing itself is wrong"
+   ],
+   "notes": "For the 0A Shawl Lapel, 10 cm wide shown in the image, the silhouette is a symmetrical oval shawl lapel with a rounded lower return rather than a pointed D-shawl or spear shawl. The red outline indicates a continuous, smooth perimeter from the collar to the bottom center point.\n\nVisual Analysis\n\nThe image shows:\n\nShawl lapel width: 10 cm\nContinuous one-piece collar/lapel shape\nSmooth rounded sides\nRounded lower belly\nCenter-front meeting at a single point\nNo peak, notch, or gorge angle\nSymmetrical geometry\n1. Design Parameters\n\nLet:\n\nW=10.0 cmW = 10.0\\text{ cm}\n\nRecommended proportions:\n\nR=1.60WR = 1.60W\n\nOuter radius:\n\nR=16.0 cmR = 16.0\\text{ cm}\n\nCollar width:\n\nC=0.32WC = 0.32W C=3.2 cmC = 3.2\\text{ cm}\n2. Oval Shawl Geometry\n\nThe outer edge can be approximated using an ellipse:\n\nx2a2+y2b2=1\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1\n\nwhere:\n\na=10a = 10 b=18b = 18\n\ngiving:\n\nx2100+y2324=1\\frac{x^2}{100}+\\frac{y^2}{324}=1\n\nThis closely reproduces the soft oval outline shown.\n\n3. Drafting Coordinates\n\nReference points:\n\nA = Neck Point\nB = Shoulder Break\nC = Chest Width\nD = Lower Belly\nE = Center Point\n\n\nCoordinates (cm):\n\nA = (0,0)\nB = (2.0,4.0)\nC = (5.0,18.0)\nD = (8.5,34.0)\nE = (0,42.0)\n\n\nMirror these across the centerline.\n\n4. CAD Bézier Construction\n\nUpper section:\n\nP0 = (0,0)\nP1 = (2,5)\nP2 = (5,14)\nP3 = (7,24)\n\n\nLower section:\n\nQ0 = (7,24)\nQ1 = (9,32)\nQ2 = (6,39)\nQ3 = (0,42)\n\n\nUsing:\n\nB(t)=(1−t)3P0+3(1−t)2tP1+3(1−t)t2P2+t3P3B(t)=(1-t)^3P_0+3(1-t)^2tP_1+3(1-t)t^2P_2+t^3P_3\n\nproduces a smooth shawl roll.\n\n5. Patternmaker's Ratios\n\nFor any 0A Shawl Lapel:\n\nCollar Width\nC=0.32WC=0.32W\nRoll Radius\nR=1.60WR=1.60W\nLower Belly Width\nB=0.85WB=0.85W\nFront Depth\nF=4.2WF=4.2W\n6. Dimensions for 10 cm Width\nLapel Width        = 10.0 cm\nCollar Width       = 3.2 cm\nOuter Radius       = 16.0 cm\nLower Belly Width  = 8.5 cm\nFront Depth        = 42.0 cm\nRoll Depth         = 1.2 cm\n\nMathematical Formula Summary\nR=1.60WR=1.60W C=0.32WC=0.32W B=0.85WB=0.85W F=4.2WF=4.2W\n\nSubstituting W=10W=10:\n\nR=16.0 cmR=16.0\\text{ cm} C=3.2 cmC=3.2\\text{ cm} B=8.5 cmB=8.5\\text{ cm} F=42.0 cmF=42.0\\text{ cm}\nTailoring Character\n\nThe 0A Shawl Lapel is the cleanest and most formal shawl variation:\n\nSofter than any peak lapel.\nMore balanced than a D-shawl.\nIdeal for tuxedos and dinner jackets.\nCreates a long uninterrupted vertical line.\nBest suited to lapel widths between 9.5 cm and 11 cm, with 10 cm being a classic proportion.",
+   "references": [
+    "/images/review-refs/suit-3pc/lapel-shawl-0a/1786539742266-p05ulb.jpg"
+   ],
+   "parkedAt": "2026-08-12T21:48:07.551Z",
+   "craftId": "suit-3pc|lapel|lapel-style|lapel-shawl-0a"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "suit-3pc|lapel|lapel-style|lapel-shawl-0a",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.985Z"
+  }
+ ]
+}

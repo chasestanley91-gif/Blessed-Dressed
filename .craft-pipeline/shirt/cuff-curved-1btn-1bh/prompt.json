@@ -1,0 +1,159 @@
+{
+  "addr": "shirt > cuffs > cuff > cuff-curved-1btn-1bh",
+  "label": "Curved Cuff — 1 Button, 1 Buttonhole",
+  "part": "shirt-cuff",
+  "orientation": "front",
+  "excluded": null,
+  "generate": true,
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\shirt.json",
+  "source": "json",
+  "illustration": "/images/cuff/curved-cuff-with-1-button-and-1-buttonhole.jpg",
+  "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\cuff\\curved-cuff-with-1-button-and-1-buttonhole.jpg",
+  "illustrationExists": true,
+  "illustrationRemote": false,
+  "profile": {
+    "addr": "shirt > cuffs > cuff > cuff-curved-1btn-1bh",
+    "product": "shirt",
+    "field": "Cuff Style",
+    "option": "Curved Cuff — 1 Button, 1 Buttonhole",
+    "part": "shirt-cuff",
+    "garment": "white bespoke cotton dress shirt",
+    "orientation": "front",
+    "absence": false,
+    "distinguishingDetail": "The curved one-button cuff is a barrel cuff whose outer corners are rounded off rather than left square, fastened with a single button and one buttonhole. The softened corners give the wrist a gentler, more refined silhouette than a sharp squared cuff while keeping the simplicity of a single-button closure. It is a subtle, slightly dressier take on the everyday barrel cuff.",
+    "measured": {
+      "dimensions": [],
+      "angles": [],
+      "counts": [
+        "1-buttonhole",
+        "1-button"
+      ],
+      "shapes": [
+        "rounded-bottom pocket",
+        "barrel / button cuff"
+      ],
+      "spread": [],
+      "flags": []
+    },
+    "reproduceFromIllustration": [
+      "cuff edge",
+      "closure",
+      "corner shape",
+      "topstitch"
+    ],
+    "composition": {
+      "crop": "tight on the cuff",
+      "dominanceTarget": "40–80% of frame",
+      "identifyWithin": "1 second"
+    },
+    "forbidden": [
+      "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+      "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+      "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)",
+      "any buttonhole count other than exactly 1",
+      "any button count other than exactly 1"
+    ],
+    "excluded": null,
+    "generate": true
+  },
+  "requiredTokens": [
+    "1-buttonhole",
+    "1-button",
+    "rounded-bottom pocket",
+    "barrel / button cuff"
+  ],
+  "checklist": [
+    "exact count: 1-buttonhole",
+    "exact count: 1-button",
+    "on the WEARER'S left — i.e. the RIGHT of the frame in this front view; compare against the drawing side by side, NOT against convention",
+    "on the outside side, NOT mirrored or swapped (check against the drawing, not against convention)",
+    "shape reads as drawn: rounded-bottom pocket",
+    "shape reads as drawn: barrel / button cuff",
+    "distinguishing detail present: The curved one-button cuff is a barrel cuff whose outer corners are rounded off rather than left square, fastened with a single button and one buttonhole. The softened corners give the wrist a gentler, more refined silhouette than a sharp squared cuff while keeping the simplicity of a single-button closure. It is a subtle, slightly dressier take on the everyday barrel cuff.",
+    "reproduced from the illustration: cuff edge",
+    "reproduced from the illustration: closure",
+    "reproduced from the illustration: corner shape",
+    "reproduced from the illustration: topstitch",
+    "orientation matches the illustration: front",
+    "the Cuff Style dominates the frame (40–80%), identifiable within one second, framed tight on the cuff",
+    "silhouette, proportions, seam & stitch placement match the illustration; left/right symmetry correct",
+    "NO generic-category substitution — this exact option, not a typical one",
+    "a real photograph of the exact drawn option — not the line-art, no stylisation"
+  ],
+  "scoreCard": [
+    {
+      "category": "shape",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "geometry",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "dimensions",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "angles",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "construction",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "placement",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "symmetry",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "composition",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "blueprint-match",
+      "score": null,
+      "min": 98
+    }
+  ],
+  "prompt": "Ultra-photorealistic luxury menswear product photography.\n\nA single-subject craft DOCUMENTATION photograph: the Cuff Style is the dominant subject, filling 40–80% of the frame and identifiable within one second.\n\nA premium white bespoke cotton dress shirt featuring a precise Curved Cuff — 1 Button, 1 Buttonhole (Cuff Style).\n\nDistinguishing construction detail (reproduce exactly as drawn): The curved one-button cuff is a barrel cuff whose outer corners are rounded off rather than left square, fastened with a single button and one buttonhole. The softened corners give the wrist a gentler, more refined silhouette than a sharp squared cuff while keeping the simplicity of a single-button closure. It is a subtle, slightly dressier take on the everyday barrel cuff.\n\nCOUNT LOCK — EXACTLY 1 buttonhole, and EXACTLY 1 button. Count them before finishing: not one more and not one fewer. Do not add a decorative extra, and do not drop one for balance.\n\nExact specification — on the left and outside sides ONLY — do not mirror or swap. HANDEDNESS: \"left\" means the WEARER'S left, which appears on the RIGHT-HAND SIDE of a front-facing photograph; the wearer's right appears on the LEFT of the frame. Copy the reference drawing exactly as drawn — it is already in wearer perspective — and do NOT flip it; rounded-bottom pocket, barrel / button cuff shape; 1-buttonhole, 1-button — matching the illustration precisely.\n\nMANDATORY GEOMETRY COVERAGE — reproduce from the illustration, exactly and without assumption, every one of these: cuff edge, closure, corner shape, topstitch. Match each to the drawing.\n\nVIEW — this illustration is the front of the garment. Photograph the same face; never substitute a different face of the garment.\n\nBLUEPRINT LOCK — THE DRAWING IS LAW: the attached technical illustration is the manufacturing blueprint for this exact craft option and the SOLE authority for the image. Reproduce its geometry precisely — point/edge shape, lengths, widths, depths, angles, curvature, roll lines, symmetry, button/tab/stay positions, seam and stitch placement, and proportions — within less than 2% deviation. Assume NOTHING from tailoring/menswear/fashion convention or model priors; every visible characteristic must come from the drawing. Do not redesign, reinterpret, substitute a similar commercial style, stylise, or \"improve\" it. Do NOT fall back to a generic version of this category — reproduce THIS option, not a typical one. If convention conflicts with the drawing, the drawing wins. Accuracy over aesthetics. ANNOTATIONS ARE NOT THE GARMENT: the technical drawing may carry measurement callouts — dimension numbers (\"2.5cm\", \"9cm\", \"115°\"), tick / leader / dimension lines, arrows, red or coloured guide marks, and text labels. These are manufacturing documentation, NOT features of the cloth. Reproduce ONLY the finished garment: never render any number, unit, arrow, callout, leader line, measurement mark, or text anywhere in the photograph. The final image is a clean garment photo with zero annotation. COLOUR IN THE DRAWING IS NOTATION, NOT CLOTH: any red, orange or otherwise highlighted region marks WHERE the craft option sits — it is a position marker, never a colour specification. Flat grey or tinted shading marks the EXTENT of a panel, lining or facing, not its shade. Render every one of those areas in the garment's own cloth and thread, in the natural colour that tailoring would use there. There must be no red, no highlighter tint and no flat unshaded grey panel anywhere in the photograph unless the option's own label explicitly names that colour.\n\nPhotographed worn on a male model, forearm raised to present the cuff, closed with its button(s).\n\nFrame tight on the cuff; the detail must read clearly and sharply.\n\nSavile Row and high-end Italian sartorial aesthetic. Natural daylight studio lighting, Phase One IQ4 medium-format camera, 150MP detail, shallow depth of field, magazine-quality editorial menswear photography. Authentic bespoke craftsmanship, fine hand stitching, premium finishing. SET — shot in a clean luxury photographic studio against a seamless, plain, neutral light-grey background with clear separation between garment and background: no location, no architecture, no furniture, no scenery, no props and no environmental context of any kind competing with the garment.\n\nExtremely realistic crisp cotton poplin texture, fine stitching.\n\nAvoid: any GENERIC menswear substitution (a generic spread collar, generic notch/peak lapel, generic pocket/pleat/vent/cuff/waistband in place of the drawn one), illustration or line-art style, CGI or 3D-render look, cartoon, mannequin, fashion sketch, inaccurate geometry, altered proportions, missing construction details, asymmetry, watermark, AI-art appearance, AND any text or annotation traced from the drawing: NO measurement numbers, units (cm/mm/°), dimension or leader lines, arrows, callouts, red/coloured guide marks, ruler ticks, or labels anywhere in the frame. This is real garment photography of the exact drawn option — clean cloth only, nothing else.\n\nFORBIDDEN FOR THIS OPTION — do not render: a generic version of this part standing in for the exact drawn option (generic-category substitution); any feature, count, or geometry borrowed from a neighboring craft option on the same field; a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion); any buttonhole count other than exactly 1; any button count other than exactly 1; 2 where the specification says 1.\n\nOWNER CORRECTION AFTER REVIEW (attempt 2 was rejected by the owner — obey this over any conflicting earlier line, including the BLUEPRINT LOCK): What is wrong with it: Unrealistic / AI look. This illustration is a **rounded/curved shirt cuff with a single button and single buttonhole**. The important thing is that the cuff is **not a straight rectangular cuff**—the lower edge is a continuous rounded curve. There is **no numerical scale in this drawing**, so we can't derive an absolute centimeter dimension from the illustration alone. But we can define the geometry mathematically so your tech-pack/image-generation system can reproduce it accurately. ### Cuff geometry Let: * (W) = finished wrist/cuff circumference * (E) = desired wearing ease * (D) = finished cuff depth A good bespoke starting point would be: Therefore: If the cuff is drafted flat as a single continuous piece: For a button cuff, use approximately: ### Rounded bottom The bottom of the cuff should be treated as a **continuous curved arc**, rather than square corners.\n\nOWNER CORRECTION AFTER REVIEW (a previous attempt was rejected by the owner — obey this over any conflicting earlier line, including the BLUEPRINT LOCK): The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+  "ownerCorrections": [
+    {
+      "attemptRejected": 2,
+      "decidedAt": "2026-08-11T22:32:44.757Z",
+      "tags": [
+        "Unrealistic / AI look"
+      ],
+      "notes": "This illustration is a **rounded/curved shirt cuff with a single button and single buttonhole**. The important thing is that the cuff is **not a straight rectangular cuff**—the lower edge is a continuous rounded curve.\n\nThere is **no numerical scale in this drawing**, so we can't derive an absolute centimeter dimension from the illustration alone. But we can define the geometry mathematically so your tech-pack/image-generation system can reproduce it accurately.\n\n### Cuff geometry\n\nLet:\n\n* (W) = finished wrist/cuff circumference\n* (E) = desired wearing ease\n* (D) = finished cuff depth\n\nA good bespoke starting point would be:\n\n[\nE = 2.0\\text{–}2.5\\text{ cm}\n]\n\nTherefore:\n\n[\n\\boxed{\\text{Finished cuff circumference}=W+E}\n]\n\nIf the cuff is drafted flat as a single continuous piece:\n\n[\n\\boxed{\\text{Flat cuff length}=W+E+\\text{overlap}}\n]\n\nFor a button cuff, use approximately:\n\n[\n\\text{overlap}=1.5\\text{–}2.0\\text{ cm}\n]\n\n---\n\n### Rounded bottom\n\nThe bottom of the cuff should be treated as a **continuous curved arc**, rather than square corners.\n\nIf the cuff depth is (D), a simple symmetrical approximation is a semicircular/elliptical lower curve.\n\nFor an elliptical curve:\n\n[\n\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1\n]\n\nwhere:\n\n* (a) = approximately half the cuff width\n* (b) = depth of the lower curve\n\nThe illustration shows approximately:\n\n**straight top edge → vertical/near-vertical sides → progressively rounded lower edge → center of bottom edge at the lowest point.**\n\n---\n\n### Button and buttonhole\n\nThe illustration shows:\n\n**1 button + 1 horizontal buttonhole**\n\nThe buttonhole should be centered on the cuff's closure axis.\n\nA practical relationship is:\n\n[\nL_{BH}=D_B+0.2\\text{–}0.3\\text{ cm}\n]\n\nwhere (D_B) is the button diameter.\n\nFor example, with a:\n\n**1.5 cm button**\n\n[\nL_{BH}\\approx1.7\\text{–}1.8\\text{ cm}\n]\n\nThe button should be positioned approximately at the midpoint of the buttonhole.\n\n---\n\n### The red construction in your illustration\n\nThe upper portion shows the **shirt sleeve/placket entering the cuff**, with the cuff folded around the sleeve opening.\n\nThe vertical sleeve placket should terminate inside the cuff rather than appearing as an independent decorative strip.\n\nSo the construction specification should be:\n\n> **Single-button rounded shirt cuff. Cuff has a straight upper edge and a smoothly curved lower edge, symmetrical from center to center. One horizontal buttonhole and one corresponding button. Sleeve placket enters centrally into the cuff construction. No square lower corners. The curved lower edge forms a continuous rounded profile.**\n\n### For your image-generation pipeline\n\nI'd encode the geometry as:\n\n> **Rounded single-button shirt cuff, one button and one horizontal buttonhole, symmetrical cuff construction, straight upper edge, gently tapered sides transitioning into a pronounced continuous semicircular/elliptical lower curve. The lowest point of the cuff is centered between the two ends. Button and buttonhole aligned on the closure axis. Sleeve placket terminates cleanly into the cuff. Preserve the exact curved silhouette; do not generate a rectangular or French-style square cuff.**\n\n**If you give me the cuff depth (for example 6.5 cm) and the wrist circumference, I can give you the exact centimeter dimensions for the cuff, curve radius, button position, and buttonhole position.**",
+      "references": [],
+      "parkedAt": "2026-08-12T21:48:06.764Z",
+      "craftId": "shirt|cuffs|cuff|cuff-curved-1btn-1bh"
+    },
+    {
+      "attemptRejected": null,
+      "decidedAt": null,
+      "source": "july-v3",
+      "verdict": "remake",
+      "tags": [],
+      "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+      "reasonRecorded": false,
+      "references": [],
+      "craftId": "shirt|cuffs|cuff|cuff-curved-1btn-1bh",
+      "foldedFrom": "generation-queue.rejectionContext",
+      "parkedAt": "2026-08-16T05:02:08.185Z"
+    }
+  ],
+  "correctionSanitized": 1,
+  "builtAt": "2026-08-27T02:37:09.425Z"
+}

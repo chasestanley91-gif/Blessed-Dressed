@@ -1,0 +1,32 @@
+{
+ "craftId": "suit-3pc|lapel|lapel-style|lapel-notch-73",
+ "note": "Owner rejection reasons for this craft, from BOTH decision sources. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 1,
+   "decidedAt": "2026-08-12T05:18:22.886Z",
+   "tags": [
+    "Reference drawing itself is wrong"
+   ],
+   "notes": "For the Straight Notch Lapel 73° shown in the image:\n\nStyle: Straight Notch\nInside notch angle: 73°\nGorge transition: straight (not curved)\nThe image shows a classic notch with sharp intersection lines.\n1. Notch Geometry\n\nGiven:\n\nG=73∘G = 73^\\circ\n\nThe supplementary outside angle is:\n\n180∘−73∘180^\\circ - 73^\\circ =107∘=107^\\circ\n\nSo:\n\nInside notch = 73°\nOutside angle = 107°\n2. Half-Angle Construction\n\nUseful when bisecting the notch:\n\n73∘2=36.5∘\\frac{73^\\circ}{2} = 36.5^\\circ\n\nDraft bisector:\n\n36.5∘\\boxed{36.5^\\circ}\n3. Gorge Seam Length\n\nFor most bespoke notch lapels:\n\nGL=0.35WGL = 0.35W\n\nWhere:\n\nWW = finished lapel width\n\nExamples:\n\n9 cm lapel\nGL=3.15 cmGL = 3.15\\text{ cm}\n10 cm lapel\nGL=3.5 cmGL = 3.5\\text{ cm}\n11 cm lapel\nGL=3.85 cmGL = 3.85\\text{ cm}\n4. Gorge Height\n\nTraditional balance:\n\nGH=0.75WGH = 0.75W\n\nExamples:\n\nLapel Width\tGorge Height8 cm\t6.0 cm\n9 cm\t6.75 cm\n10 cm\t7.5 cm\n11 cm\t8.25 cm\n5. Notch Opening\n\nIf gorge seam length is LL:\n\nOW=2Lsin⁡(73∘2)OW=2L\\sin\\left(\\frac{73^\\circ}{2}\\right) OW=2Lsin⁡(36.5∘)OW=2L\\sin(36.5^\\circ) OW=1.189LOW=1.189L\n\nExample:\n\nL=3.5 cmL=3.5\\text{ cm} OW=4.16 cmOW=4.16\\text{ cm}\n6. Collar Angle\n\nFor a straight 73° notch, many tailors draft the collar seam approximately:\n\n17∘17^\\circ\n\nto\n\n20∘20^\\circ\n\noff the neck line.\n\nRecommended:\n\n18∘\\boxed{18^\\circ}\n7. Draft Coordinates Example\n\nAssume:\n\nLapel width = 10 cm\nGorge seam = 3.5 cm\nNotch angle = 73°\n\nSet gorge point:\n\nA=(0,0)A=(0,0)\n\nCollar point:\n\nB=(3.5,0)B=(3.5,0)\n\nLapel point:\n\nC=(3.5cos⁡73∘, −3.5sin⁡73∘)C=(3.5\\cos73^\\circ,\\,-3.5\\sin73^\\circ) C=(1.02, −3.35)C=(1.02,\\,-3.35)\n\nThis creates the exact 73° notch.\n\n8. Straight Notch vs Curved Notch\nStraight Notch\nCorner radius:\nR=0R = 0\nSharp intersection\nCleaner business look\nCurved Gorge\nRadius typically:\nR=2WR = 2W\nSofter Neapolitan appearance\n\nYour image is a straight notch, so:\n\nR=0\\boxed{R=0}\nBespoke Draft Summary\n\nAssuming a 10 cm lapel width:\n\nNotch angle = 73°\nOutside angle = 107°\nHalf angle = 36.5°\nGorge height = 7.5 cm\nGorge seam = 3.5 cm\nNotch opening = 4.16 cm\nCollar seam angle = 18°\nGorge radius = 0 cm (sharp corner)\nMaster Formulas\nGH=0.75WGH=0.75W GL=0.35WGL=0.35W OW=2Lsin⁡(G2)OW=2L\\sin\\left(\\frac{G}{2}\\right) Outside Angle=180∘−G\\text{Outside Angle}=180^\\circ-G\n\nFor a 73° Straight Notch, these formulas reproduce the sharp, classic notch geometry shown in the illustration.",
+   "references": [
+    "/images/review-refs/suit-3pc/lapel-notch-73/1786511871464-mzoslu.jpg"
+   ],
+   "parkedAt": "2026-08-12T21:48:07.485Z",
+   "craftId": "suit-3pc|lapel|lapel-style|lapel-notch-73"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "suit-3pc|lapel|lapel-style|lapel-notch-73",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.932Z"
+  }
+ ]
+}

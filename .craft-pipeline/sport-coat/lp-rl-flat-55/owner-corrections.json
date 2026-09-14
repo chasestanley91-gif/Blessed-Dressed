@@ -1,0 +1,33 @@
+{
+ "craftId": "sport-coat|suit-pockets|lower-pocket|lp-rl-flat-55",
+ "note": "Owner rejection reasons for this craft, from BOTH decision sources. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 1,
+   "decidedAt": "2026-08-12T04:38:38.975Z",
+   "tags": [
+    "Reference drawing itself is wrong",
+    "Unrealistic / AI look"
+   ],
+   "notes": "For the RL Flat Dress Pocket – 5.5 cm shown in the image:\n\nObserved Geometry\n\nThe pocket flap is:\n\n5.5 cm finished depth\nLong, low-profile dress-pocket style\nSlight upward top edge\nSlightly curved lower edge\nRounded lower corners\nTypical formal jacket / dress coat pocket flap\n1. Finished Flap Depth\n\nGiven:\n\nF=5.5 cmF=5.5\\text{ cm}\n\nVisible finished depth.\n\n2. Cut Flap Depth\n\nFor a folded flap:\n\nFD=2F+2SAFD = 2F + 2SA\n\nUsing:\n\nSA=1.0 cmSA=1.0\\text{ cm} FD=(2×5.5)+2FD=(2\\times5.5)+2 FD=13.0 cmFD=13.0\\text{ cm}\nCut Depth\n13.0 cm\\boxed{13.0\\text{ cm}}\n3. Pocket Length\n\nClassic dress-pocket proportion:\n\nPL=Chest Circumference5PL=\\frac{\\text{Chest Circumference}}{5}\n\nTypical range:\n\nChest\tPocket Length38\"\t19 cm\n40\"\t20 cm\n42\"\t21 cm\n\nUse:\n\n20.0 cm\\boxed{20.0\\text{ cm}}\n4. Flap Length\n\nAllow a 0.5 cm extension beyond each end:\n\nFL=PL+1FL=PL+1 FL=20+1FL=20+1 FL=21.0 cmFL=21.0\\text{ cm}\nFinished Length\n21.0 cm\\boxed{21.0\\text{ cm}}\n5. Top Edge Pitch\n\nThe top edge rises slightly.\n\nRecommended angle:\n\nθ=3∘\\theta=3^\\circ\n\nFor a 21 cm flap:\n\nRise=21sin⁡3∘Rise=21\\sin3^\\circ Rise=1.10 cmRise=1.10\\text{ cm}\nEnd-to-End Rise\n1.1 cm\\boxed{1.1\\text{ cm}}\n6. Lower Edge Curve\n\nThe image shows a shallow concave curve.\n\nCurve depth:\n\nCD=0.10FCD=0.10F CD=0.10(5.5)CD=0.10(5.5) CD=0.55 cmCD=0.55\\text{ cm}\nCurve Depth\n0.55 cm\\boxed{0.55\\text{ cm}}\n7. Lower Curve Radius\n\nUsing the arc formula:\n\nR=L28h+h2R=\\frac{L^2}{8h}+\\frac{h}{2}\n\nWhere:\n\nL=21 cmL=21\\text{ cm} h=0.55 cmh=0.55\\text{ cm} R≈100.5 cmR\\approx100.5\\text{ cm}\nRadius\n100 cm\\boxed{100\\text{ cm}}\n8. Corner Radius\n\nRounded dress-pocket corners:\n\nCR=0.20FCR=0.20F CR=0.20(5.5)CR=0.20(5.5) CR=1.1 cmCR=1.1\\text{ cm}\nCorner Radius\n1.1 cm\\boxed{1.1\\text{ cm}}\n9. Draft Coordinates\n\nUsing a finished flap length of 21 cm:\n\nTop edge:\n\nA=(0,0)A=(0,0) B=(21,1.1)B=(21,1.1)\n\nBottom center curve:\n\nC=(10.5,−0.55)C=(10.5,-0.55)\n\nBottom corners rounded with:\n\nr=1.1 cmr=1.1\\text{ cm}\nComplete Draft Summary\nFinished Flap\n21.0×5.5 cm\\boxed{21.0 \\times 5.5\\text{ cm}}\nCut Flap\n21.0×13.0 cm\\boxed{21.0 \\times 13.0\\text{ cm}}\nTop Edge Rise\n1.1 cm\\boxed{1.1\\text{ cm}}\nTop Edge Angle\n3∘\\boxed{3^\\circ}\nLower Curve Depth\n0.55 cm\\boxed{0.55\\text{ cm}}\nCurve Radius\n100 cm\\boxed{100\\text{ cm}}\nCorner Radius\n1.1 cm\\boxed{1.1\\text{ cm}}\nPocket Opening\n20.0 cm\\boxed{20.0\\text{ cm}}\nMaster Formula Set\nFD=2F+2SAFD=2F+2SA FL=PL+1FL=PL+1 CD=0.10FCD=0.10F CR=0.20FCR=0.20F Rise=Lsin⁡(θ)Rise=L\\sin(\\theta)\n\nFor the RL Flat Dress Pocket 5.5 cm, use:\n\nFinished depth: 5.5 cm\nCut depth: 13.0 cm\nFinished length: 21.0 cm\nTop edge pitch: 3°\nRise: 1.1 cm\nLower curve depth: 0.55 cm\nCorner radius: 1.1 cm\nCurve radius: 100 cm",
+   "references": [
+    "/images/review-refs/sport-coat/lp-rl-flat-55/1786509445625-8v61py.jpg"
+   ],
+   "parkedAt": "2026-08-12T21:48:07.213Z",
+   "craftId": "sport-coat|suit-pockets|lower-pocket|lp-rl-flat-55"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "discard",
+   "tags": [],
+   "notes": "bad Tech pack and all the pics are wrong remake everything",
+   "reasonRecorded": true,
+   "references": [],
+   "craftId": "sport-coat|suit-pockets|lower-pocket|lp-rl-flat-55",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.450Z"
+  }
+ ]
+}

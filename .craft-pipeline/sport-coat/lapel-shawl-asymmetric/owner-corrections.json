@@ -1,0 +1,43 @@
+{
+ "craftId": "sport-coat|lapel|lapel-style|lapel-shawl-asymmetric",
+ "note": "Owner rejection reasons for this craft, from BOTH decision sources. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 1,
+   "decidedAt": "2026-08-12T04:15:43.906Z",
+   "tags": [],
+   "notes": "For the Asymmetric Shawl Collar shown in your image:\n\nVisible Characteristics\nShawl width = 10.0 cm\nContinuous shawl collar\nLong pointed front\nSlightly off-center/asymmetric wrap effect\nSlimmer upper collar\nTapered front termination\nNo gorge angle (shawl collar)\n1. Base Width\nW=10.0 cmW = 10.0\\text{ cm}\n2. Outer Shawl Radius\n\nFor this slimmer asymmetrical style:\n\nRo=2.7WR_o = 2.7W Ro=2.7(10)R_o = 2.7(10) Ro=27.0 cm\\boxed{R_o = 27.0\\text{ cm}}\n3. Bottom Nose Radius\n\nThe tip is sharper than a classic tuxedo shawl.\n\nRn=0.75WR_n = 0.75W Rn=0.75(10)R_n = 0.75(10) Rn=7.5 cm\\boxed{R_n = 7.5\\text{ cm}}\n4. Asymmetry Offset\n\nThe front point shifts slightly from center.\n\nTypical offset:\n\nAO=0.15WAO = 0.15W AO=0.15(10)AO = 0.15(10) AO=1.5 cm\\boxed{AO = 1.5\\text{ cm}}\n\nMove the front point 1.5 cm toward the overlap side.\n\n5. Roll Line\nRL=0.55WRL = 0.55W RL=0.55(10)RL = 0.55(10) RL=5.5 cm\\boxed{RL = 5.5\\text{ cm}}\n6. Front Length\n\nLong fashion shawl proportion:\n\nFL=1.60WFL = 1.60W FL=1.60(10)FL = 1.60(10) FL=16.0 cm\\boxed{FL = 16.0\\text{ cm}}\n\nMeasured from widest point to collar tip.\n\n7. Collar Crown Radius\n\nUpper neckline curve:\n\nRc=1.20WR_c = 1.20W Rc=1.20(10)R_c = 1.20(10) Rc=12.0 cm\\boxed{R_c = 12.0\\text{ cm}}\n8. Belly\n\nMaximum outward fullness:\n\nB=0.14WB = 0.14W B=0.14(10)B = 0.14(10) B=1.4 cm\\boxed{B = 1.4\\text{ cm}}\n9. Front Taper\n\nEach front edge:\n\n11∘11^\\circ\n\nto\n\n13∘13^\\circ\n\nRecommended:\n\n12∘\\boxed{12^\\circ}\n\nper side.\n\nDraft Coordinates\n\nUsing the neckline break as origin:\n\nShoulder Break\n(0,0)(0,0)\nWidest Point\n(10,  16)(10,\\;16)\nBelly Point\n(11.4,  28)(11.4,\\;28)\nFront Point (Asymmetric)\n(1.5,  48)(1.5,\\;48)\n\nInstead of ending at x=0, shift the point 1.5 cm toward the overlap side.\n\nDraft Summary\nFeature\tValueShawl Width\t10.0 cm\nOuter Radius\t27.0 cm\nNose Radius\t7.5 cm\nAsymmetry Offset\t1.5 cm\nRoll Line\t5.5 cm\nFront Length\t16.0 cm\nCollar Radius\t12.0 cm\nBelly\t1.4 cm\nFront Taper\t12°\nFormula Set\nRo=2.7WR_o = 2.7W Rn=0.75WR_n = 0.75W AO=0.15WAO = 0.15W FL=1.60WFL = 1.60W B=0.14WB = 0.14W RL=0.55WRL = 0.55W\n\nFor your Asymmetric Shawl Collar, 10 cm wide, these proportions will closely reproduce the silhouette shown in the image, with the subtle off-center pointed shawl shape.",
+   "references": [
+    "/images/review-refs/sport-coat/lapel-shawl-asymmetric/1786508141884-v55l3v.png"
+   ],
+   "parkedAt": "2026-08-12T21:48:07.066Z",
+   "craftId": "sport-coat|lapel|lapel-style|lapel-shawl-asymmetric"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "discard",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "sport-coat|lapel|lapel-style|lapel-shawl-asymmetric",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.363Z"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "sport-coat|lapel|lapel-style|lapel-shawl-asymmetric",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.363Z"
+  }
+ ]
+}

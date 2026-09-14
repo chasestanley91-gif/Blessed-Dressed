@@ -1,0 +1,55 @@
+{
+  "schema": "garment-spec/v1",
+  "addr": "sport-coat > suit-details > pick-stitching > ps-none",
+  "productId": "sport-coat",
+  "sectionId": "suit-details",
+  "fieldId": "pick-stitching",
+  "optionId": "ps-none",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\sport-coat.json",
+  "source": "json",
+  "label": "None",
+  "description": "The absence of pick stitching leaves the jacket's lapel, collar, and pocket edges with a smooth, unbroken surface that draws no attention to the seam lines and presents the cloth in its purest, most unadorned form. This is the preferred choice for very formal business and dress suits where the design language is one of restraint, as well as for highly textured fabrics — bouclé, herringbone, or prominent tweed — where the weave itself provides sufficient visual interest. Without any edge stitch, the jacket's silhouette is defined purely by its cut and canvas.",
+  "fieldLabel": "Pick Stitching",
+  "sectionLabel": "Details & Stitching",
+  "part": "fin-stitch",
+  "garment": {
+    "noun": "bespoke sport coat",
+    "fabric": "textured wool/hopsack with visible weave"
+  },
+  "view": {
+    "orientation": "front",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": true,
+  "measured": {
+    "dimensions": [],
+    "angles": [],
+    "counts": [],
+    "shapes": [],
+    "negatedShapes": [
+      "pick / AMF edge stitch"
+    ],
+    "spread": [],
+    "flags": [],
+    "sides": [],
+    "attributes": [],
+    "supplierCodes": [],
+    "unresolved": []
+  },
+  "illustration": {
+    "path": "/images/blueprints/baoxiniao/jacket/GTEGZ/A.jpg",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\GTEGZ\\A.jpg",
+    "exists": true,
+    "remote": false
+  },
+  "forbidden": [
+    "any pick stitching rendered anywhere in frame — this option is its deliberate absence",
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-08-26T07:28:21.851Z"
+}

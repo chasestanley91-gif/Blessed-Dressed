@@ -1,0 +1,47 @@
+{
+ "craftId": "suit-3pc|suit-pockets|chest-pocket|cp-boat-30",
+ "note": "Owner rejection reasons for this craft, from BOTH decision sources. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 1,
+   "decidedAt": "2026-08-12T13:22:33.905Z",
+   "tags": [
+    "Reference drawing itself is wrong"
+   ],
+   "notes": "",
+   "references": [
+    "/images/review-refs/suit-3pc/cp-boat-30/1786540780061-wd3a04.webp",
+    "/images/review-refs/suit-3pc/cp-boat-30/1786540871467-233lzy.webp",
+    "/images/review-refs/suit-3pc/cp-boat-30/1786540894686-d3iz68.jpg"
+   ],
+   "parkedAt": "2026-08-12T21:48:07.576Z",
+   "craftId": "suit-3pc|suit-pockets|chest-pocket|cp-boat-30"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "remake",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "suit-3pc|suit-pockets|chest-pocket|cp-boat-30",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:09.109Z"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "suit-3pc|suit-pockets|chest-pocket|cp-boat-30",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:09.109Z"
+  }
+ ]
+}

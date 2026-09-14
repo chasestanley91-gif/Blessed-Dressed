@@ -1,0 +1,32 @@
+{
+ "craftId": "sport-coat|lapel|lapel-style|lapel-peak-105",
+ "note": "Owner rejection reasons for this craft, from BOTH decision sources. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 1,
+   "decidedAt": "2026-08-12T03:41:56.627Z",
+   "tags": [
+    "Reference drawing itself is wrong"
+   ],
+   "notes": "For the Peak Lapel shown in the image:\n\nPeak/Gorge Angle = 105°\nLapel Width = 12 cm\nStyle = Straight Peak Lapel\nOutside peak angle:\n180∘−105∘=75∘180^\\circ - 105^\\circ = 75^\\circ\n1. Basic Lapel Geometry\n\nGiven:\n\nW=12 cmW = 12\\text{ cm} θ=105∘\\theta = 105^\\circ\n\nExterior peak:\n\nϕ=75∘\\phi = 75^\\circ\n2. Peak Projection\n\nA classic bespoke relationship:\n\nP=0.35WP = 0.35W P=0.35(12)P = 0.35(12) P=4.2 cmP = 4.2\\text{ cm}\n\nPeak extension:\n\n4.2 cm\\boxed{4.2\\text{ cm}}\n3. Peak Length\n\nTypical bespoke peak:\n\nPL=1.20WPL = 1.20W PL=1.20(12)PL = 1.20(12) PL=14.4 cmPL = 14.4\\text{ cm}\n\nUse:\n\n14.5 cm\\boxed{14.5\\text{ cm}}\n4. Gorge Height\nGH=0.80WGH = 0.80W GH=0.80(12)GH = 0.80(12) GH=9.6 cmGH = 9.6\\text{ cm}\n\nRecommended gorge height:\n\n9.5−10.0 cm\\boxed{9.5-10.0\\text{ cm}}\n5. Peak Point Coordinates\n\nUsing the gorge point as (0,0):\n\nPeak length:\n\n14.5 cm14.5\\text{ cm}\n\nPeak angle:\n\n75∘75^\\circ\n\nHorizontal component:\n\nX=14.5cos⁡75∘X = 14.5\\cos75^\\circ X=3.75 cmX = 3.75\\text{ cm}\n\nVertical component:\n\nY=14.5sin⁡75∘Y = 14.5\\sin75^\\circ Y=14.00 cmY = 14.00\\text{ cm}\n\nPeak tip:\n\n(3.75,  14.00)\\boxed{(3.75,\\;14.00)}\n6. Roll Line Position\n\nFor a 12 cm lapel:\n\nRL=0.55WRL = 0.55W RL=0.55(12)RL = 0.55(12) RL=6.6 cmRL = 6.6\\text{ cm}\n\nDistance from roll line to outer edge:\n\n12−6.612 - 6.6 =5.4 cm= 5.4\\text{ cm}\n7. Drafting Layout\n                Peak Tip\n                   *\n                  /\n                 /\n                /\n           75°\n              /\n             *\n      Gorge Point\n\n\nLapel Width = 12 cm\nPeak Length = 14.5 cm\nPeak Projection = 4.2 cm\n\nBespoke Specification Summary\nMeasurement\tValueLapel Width\t12.0 cm\nGorge Angle\t105°\nExterior Peak Angle\t75°\nPeak Length\t14.5 cm\nPeak Projection\t4.2 cm\nGorge Height\t9.6 cm\nRoll Line Position\t6.6 cm\n\nThis will reproduce a balanced 12 cm wide peak lapel with a 105° gorge, giving a slightly softer and more elegant peak than a 102° or 103° version while still maintaining a strong bespoke silhouette.",
+   "references": [
+    "/images/review-refs/sport-coat/lapel-peak-105/1786506067790-ozzknc.jpg"
+   ],
+   "parkedAt": "2026-08-12T21:48:06.971Z",
+   "craftId": "sport-coat|lapel|lapel-style|lapel-peak-105"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "sport-coat|lapel|lapel-style|lapel-peak-105",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.323Z"
+  }
+ ]
+}

@@ -1,0 +1,57 @@
+{
+  "schema": "garment-spec/v1",
+  "addr": "sport-coat > suit-pockets > chest-pocket > cp-inverted-pleat-2flap",
+  "productId": "sport-coat",
+  "sectionId": "suit-pockets",
+  "fieldId": "chest-pocket",
+  "optionId": "cp-inverted-pleat-2flap",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\sport-coat.json",
+  "source": "json",
+  "label": "Two Inverted Pleated + Flaps",
+  "description": "This unusual chest pocket combines an inverted pleat running down the centre of the patch — allowing the pocket to expand outward when loaded — with two flanking flaps that frame the opening on either side, creating an articulated, almost architectural appearance on the chest. It is a sporting and highly individual option, more often found on elaborate country or shooting jackets than on city suits. The construction demands considerable skill and signals a client comfortable with visible tailoring craft.",
+  "fieldLabel": "Chest Pocket",
+  "sectionLabel": "Pockets",
+  "part": "jacket-chest-pocket",
+  "garment": {
+    "noun": "bespoke sport coat",
+    "fabric": "textured wool/hopsack with visible weave"
+  },
+  "view": {
+    "orientation": "front",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": false,
+  "measured": {
+    "dimensions": [],
+    "angles": [],
+    "counts": [],
+    "shapes": [
+      "patch pocket"
+    ],
+    "negatedShapes": [],
+    "spread": [],
+    "flags": [],
+    "sides": [
+      "both",
+      "center"
+    ],
+    "attributes": [],
+    "supplierCodes": [],
+    "unresolved": []
+  },
+  "illustration": {
+    "path": "/images/blueprints/baoxiniao/jacket/REQPU/234.jpg",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQPU\\234.jpg",
+    "exists": true,
+    "remote": false
+  },
+  "forbidden": [
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-08-26T07:28:22.577Z"
+}

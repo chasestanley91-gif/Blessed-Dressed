@@ -1,0 +1,30 @@
+{
+ "craftId": "sport-coat|lapel|lapel-style|lapel-peak-108",
+ "note": "Owner rejection reasons for this craft, from BOTH decision sources. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 1,
+   "decidedAt": "2026-08-12T03:44:54.729Z",
+   "tags": [],
+   "notes": "For the Straight Peak Lapel shown in the image:\n\nLapel Width = 10.5 cm\nGorge Angle = 108°\nStyle = Straight Peak Lapel\nRight-over-left overlap\n\nThe image shows a sharp, straight peak with no curved gorge.\n\n1. Gorge Angle\n\nGiven:\n\nθ=108∘\\theta = 108^\\circ\n\nExterior peak angle:\n\nϕ=180∘−108∘\\phi = 180^\\circ - 108^\\circ ϕ=72∘\\phi = 72^\\circ\n\nSo the peak line rises at:\n\n72∘\\boxed{72^\\circ}\n2. Peak Projection\n\nFor a classic bespoke peak:\n\nP=0.35WP = 0.35W P=0.35(10.5)P = 0.35(10.5) P=3.675 cmP = 3.675\\text{ cm}\n\nUse:\n\n3.7 cm\\boxed{3.7\\text{ cm}}\n3. Peak Length\nPL=1.20WPL = 1.20W PL=1.20(10.5)PL = 1.20(10.5) PL=12.6 cmPL = 12.6\\text{ cm}\n\nUse:\n\n12.6 cm\\boxed{12.6\\text{ cm}}\n4. Gorge Height\nGH=0.80WGH = 0.80W GH=0.80(10.5)GH = 0.80(10.5) GH=8.4 cmGH = 8.4\\text{ cm}\n\nUse:\n\n8.4 cm\\boxed{8.4\\text{ cm}}\n5. Roll Line Position\nRL=0.55WRL = 0.55W RL=0.55(10.5)RL = 0.55(10.5) RL=5.78 cmRL = 5.78\\text{ cm}\n\nUse:\n\n5.8 cm\\boxed{5.8\\text{ cm}}\n\nfrom the outer edge to the roll line.\n\n6. Peak Tip Coordinates\n\nUsing the gorge point as origin:\n\nA=(0,0)A=(0,0)\n\nPeak length:\n\n12.6 cm12.6\\text{ cm}\n\nPeak angle:\n\n72∘72^\\circ\n\nHorizontal component:\n\nX=12.6cos⁡72∘X = 12.6\\cos72^\\circ X=3.89 cmX = 3.89\\text{ cm}\n\nVertical component:\n\nY=12.6sin⁡72∘Y = 12.6\\sin72^\\circ Y=11.99 cmY = 11.99\\text{ cm}\n\nPeak tip:\n\n(3.89,  11.99)\\boxed{(3.89,\\;11.99)}\nDraft Summary\nFeature\tValueLapel Width\t10.5 cm\nGorge Angle\t108°\nExterior Peak Angle\t72°\nPeak Length\t12.6 cm\nPeak Projection\t3.7 cm\nGorge Height\t8.4 cm\nRoll Line\t5.8 cm\nDrafting Formula\n\nFor any straight peak lapel:\n\nPeak Length=1.2W\\text{Peak Length}=1.2W Peak Projection=0.35W\\text{Peak Projection}=0.35W Gorge Height=0.8W\\text{Gorge Height}=0.8W Roll Line=0.55W\\text{Roll Line}=0.55W\n\nFor your 10.5 cm wide, 108° straight peak lapel, draft:\n\nPeak length: 12.6 cm\nProjection beyond gorge: 3.7 cm\nGorge height: 8.4 cm\nExterior peak angle: 72°\nRoll line: 5.8 cm from outer lapel edge.",
+   "references": [
+    "/images/review-refs/sport-coat/lapel-peak-108/1786506277247-wg1cna.jpg"
+   ],
+   "parkedAt": "2026-08-12T21:48:06.976Z",
+   "craftId": "sport-coat|lapel|lapel-style|lapel-peak-108"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "sport-coat|lapel|lapel-style|lapel-peak-108",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.332Z"
+  }
+ ]
+}

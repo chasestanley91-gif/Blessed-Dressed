@@ -1,0 +1,64 @@
+{
+  "schema": "garment-spec/v1",
+  "addr": "shirt > cuffs > cuff > cuff-round-2btn-1bh",
+  "productId": "shirt",
+  "sectionId": "cuffs",
+  "fieldId": "cuff",
+  "optionId": "cuff-round-2btn-1bh",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\shirt.json",
+  "source": "json",
+  "label": "Round Cuff — 2 Buttons, 1 Buttonhole",
+  "description": "The round two-button cuff is a barrel cuff with rounded outer corners secured by two buttons stacked along its depth. The pair of buttons makes the cuff taller and dressier than a one-button version and provides extra room to accommodate a watch, while the rounded corners soften the look. It strikes a balance between formal polish and everyday wearability.",
+  "fieldLabel": "Cuff Style",
+  "sectionLabel": "Cuffs",
+  "part": "shirt-cuff",
+  "garment": {
+    "noun": "white bespoke cotton dress shirt",
+    "fabric": "crisp cotton poplin"
+  },
+  "view": {
+    "orientation": "front",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": false,
+  "measured": {
+    "dimensions": [],
+    "angles": [],
+    "counts": [
+      "1-buttonhole",
+      "2-button"
+    ],
+    "shapes": [
+      "club / rounded",
+      "rounded-bottom pocket",
+      "barrel / button cuff"
+    ],
+    "negatedShapes": [],
+    "spread": [],
+    "flags": [],
+    "sides": [
+      "outside"
+    ],
+    "attributes": [],
+    "supplierCodes": [],
+    "unresolved": []
+  },
+  "illustration": {
+    "path": "/images/blueprints/baoxiniao/shirt/REQLS/A.jpg",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\shirt\\REQLS\\A.jpg",
+    "exists": true,
+    "remote": false
+  },
+  "forbidden": [
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)",
+    "any buttonhole count other than exactly 1",
+    "any button count other than exactly 2",
+    "collar leaves ending in a sharp acute point or a squared flat edge — this option's collar point termination is a fully rounded club tip"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-08-26T07:29:12.679Z"
+}

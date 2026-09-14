@@ -1,0 +1,43 @@
+{
+ "craftId": "suit-3pc|Trousers-pleats-structure|fly-style|fly-fish-claw",
+ "note": "Owner rejection reasons for this craft, from BOTH decision sources. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 1,
+   "decidedAt": "2026-08-12T13:59:50.173Z",
+   "tags": [
+    "Unrealistic / AI look"
+   ],
+   "notes": "",
+   "references": [],
+   "parkedAt": "2026-08-12T21:48:07.798Z",
+   "craftId": "suit-3pc|Trousers-pleats-structure|fly-style|fly-fish-claw"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "remake",
+   "tags": [],
+   "notes": "Pants in illustration are inside out",
+   "reasonRecorded": true,
+   "references": [],
+   "craftId": "suit-3pc|Trousers-pleats-structure|fly-style|fly-fish-claw",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:09.352Z"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "suit-3pc|Trousers-pleats-structure|fly-style|fly-fish-claw",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:09.352Z"
+  }
+ ]
+}

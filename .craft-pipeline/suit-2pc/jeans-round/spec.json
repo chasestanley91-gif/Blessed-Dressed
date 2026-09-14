@@ -11,13 +11,13 @@
   "description": "Jeans-style front pocket with one continuous large radius — soft and relaxed, removing rigidity from the hip; casual sophistication.",
   "fieldLabel": "Front Pocket Style",
   "sectionLabel": "Trousers — Front & Pockets",
-  "part": "trouser-detail",
+  "part": "trouser-front-pocket",
   "garment": {
     "noun": "pair of bespoke wool tailored trousers",
     "fabric": "fine wool trouser cloth with visible weave"
   },
   "view": {
-    "orientation": "three-quarter-front",
+    "orientation": "front",
     "wearerPerspective": true,
     "confirmedByVisualInspection": true
   },
@@ -26,10 +26,18 @@
     "dimensions": [],
     "angles": [],
     "counts": [],
-    "shapes": [],
+    "shapes": [
+      "jeans round pocket"
+    ],
     "negatedShapes": [],
     "spread": [],
-    "flags": []
+    "flags": [],
+    "sides": [
+      "front"
+    ],
+    "attributes": [],
+    "supplierCodes": [],
+    "unresolved": []
   },
   "illustration": {
     "path": "/images/blueprints/remote/1e222211e243__3136.jpg",
@@ -44,5 +52,5 @@
   ],
   "excluded": null,
   "generate": true,
-  "extractedAt": "2026-08-01T21:56:50.605Z"
+  "extractedAt": "2026-08-27T02:37:20.626Z"
 }

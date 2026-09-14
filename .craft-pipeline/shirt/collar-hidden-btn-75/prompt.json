@@ -1,142 +1,168 @@
 {
- "addr": "shirt > collar > lapel > collar-hidden-btn-75",
- "label": "Hidden Button 7.5 cm",
- "part": "shirt-collar",
- "orientation": "detail",
- "excluded": null,
- "generate": true,
- "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\shirt.json",
- "source": "json",
- "illustration": "/images/ai/collar-hidden-btn-75.png",
- "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\ai\\collar-hidden-btn-75.png",
- "illustrationExists": true,
- "illustrationRemote": false,
- "profile": {
   "addr": "shirt > collar > lapel > collar-hidden-btn-75",
-  "product": "shirt",
-  "field": "Collar Style",
-  "option": "Hidden Button 7.5 cm",
+  "label": "Hidden Button 7.5 cm",
   "part": "shirt-collar",
-  "garment": "white bespoke cotton dress shirt",
-  "orientation": "detail",
-  "absence": false,
-  "distinguishingDetail": "A clean 7.5 cm point with a concealed button under the leaf for a controlled roll without visible fastenings. It marries the tidiness of a button-down with the sleek front of a dress collar, ideal for a modern, uncluttered look.",
-  "measured": {
-   "dimensions": [
-    "7.5 cm"
-   ],
-   "angles": [],
-   "counts": [],
-   "shapes": [
-    "button-down point",
-    "point"
-   ],
-   "spread": [],
-   "flags": [
-    "hidden button fastening"
-   ]
-  },
-  "reproduceFromIllustration": [
-   "collar point geometry",
-   "collar stand",
-   "collar roll",
-   "stitching precision"
-  ],
-  "composition": {
-   "crop": "tight on the collar and neckline",
-   "dominanceTarget": "40–80% of frame",
-   "identifyWithin": "1 second"
-  },
-  "forbidden": [
-   "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
-   "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
-   "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
-  ],
+  "orientation": "front",
   "excluded": null,
-  "generate": true
- },
- "requiredTokens": [
-  "7.5 cm",
-  "button-down point",
-  "point",
-  "hidden button fastening"
- ],
- "checklist": [
-  "length/width matches exactly: 7.5 cm",
-  "shape reads as drawn: button-down point",
-  "shape reads as drawn: point",
-  "present & positioned as drawn: hidden button fastening",
-  "distinguishing detail present: A clean 7.5 cm point with a concealed button under the leaf for a controlled roll without visible fastenings. It marries the tidiness of a button-down with the sleek front of a dress collar, ideal for a modern, uncluttered look.",
-  "reproduced from the illustration: collar point geometry",
-  "reproduced from the illustration: collar stand",
-  "reproduced from the illustration: collar roll",
-  "reproduced from the illustration: stitching precision",
-  "orientation matches the illustration: detail",
-  "the Collar Style dominates the frame (40–80%), identifiable within one second, framed tight on the collar and neckline",
-  "silhouette, proportions, seam & stitch placement match the illustration; left/right symmetry correct",
-  "NO generic-category substitution — this exact option, not a typical one",
-  "a real photograph of the exact drawn option — not the line-art, no stylisation"
- ],
- "scoreCard": [
-  {
-   "category": "shape",
-   "score": null,
-   "min": 98
+  "generate": true,
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\shirt.json",
+  "source": "json",
+  "illustration": "/images/techpacks/shirt/lapel/hidden-button-collar-in-75cm.jpg",
+  "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\techpacks\\shirt\\lapel\\hidden-button-collar-in-75cm.jpg",
+  "illustrationExists": true,
+  "illustrationRemote": false,
+  "profile": {
+    "addr": "shirt > collar > lapel > collar-hidden-btn-75",
+    "product": "shirt",
+    "field": "Collar Style",
+    "option": "Hidden Button 7.5 cm",
+    "part": "shirt-collar",
+    "garment": "white bespoke cotton dress shirt",
+    "orientation": "front",
+    "absence": false,
+    "distinguishingDetail": "A clean 7.5 cm point with a concealed button under the leaf for a controlled roll without visible fastenings. It marries the tidiness of a button-down with the sleek front of a dress collar, ideal for a modern, uncluttered look.",
+    "measured": {
+      "dimensions": [
+        "7.5 cm"
+      ],
+      "angles": [],
+      "counts": [],
+      "shapes": [
+        "point"
+      ],
+      "spread": [],
+      "flags": [
+        "hidden button fastening"
+      ]
+    },
+    "reproduceFromIllustration": [
+      "collar point geometry",
+      "collar stand",
+      "collar roll",
+      "stitching precision",
+      "the unobstructed spread between the collar points",
+      "both collar leaves mirroring each other exactly in length, angle and tip shape"
+    ],
+    "composition": {
+      "crop": "tight on the collar and neckline",
+      "dominanceTarget": "40–80% of frame",
+      "identifyWithin": "1 second"
+    },
+    "forbidden": [
+      "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+      "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+      "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)",
+      "collar leaves ending in a squared/blunt flat edge, or in a rounded club tip — this option's collar point termination is a straight acute point"
+    ],
+    "excluded": null,
+    "generate": true
   },
-  {
-   "category": "geometry",
-   "score": null,
-   "min": 98
-  },
-  {
-   "category": "dimensions",
-   "score": null,
-   "min": 98
-  },
-  {
-   "category": "angles",
-   "score": null,
-   "min": 98
-  },
-  {
-   "category": "construction",
-   "score": null,
-   "min": 98
-  },
-  {
-   "category": "placement",
-   "score": null,
-   "min": 98
-  },
-  {
-   "category": "symmetry",
-   "score": null,
-   "min": 98
-  },
-  {
-   "category": "composition",
-   "score": null,
-   "min": 98
-  },
-  {
-   "category": "blueprint-match",
-   "score": null,
-   "min": 98
-  }
- ],
- "prompt": "Ultra-photorealistic luxury menswear product photography.\n\nA single-subject craft DOCUMENTATION photograph: the Collar Style is the dominant subject, filling 40–80% of the frame and identifiable within one second.\n\nA premium white bespoke cotton dress shirt featuring a precise Hidden Button 7.5 cm (Collar Style).\n\nDistinguishing construction detail (reproduce exactly as drawn): A clean 7.5 cm point with a concealed button under the leaf for a controlled roll without visible fastenings. It marries the tidiness of a button-down with the sleek front of a dress collar, ideal for a modern, uncluttered look.\n\nExact specification — button-down point, point shape; measuring exactly 7.5 cm; hidden button fastening — matching the illustration precisely.\n\nMANDATORY GEOMETRY COVERAGE — reproduce from the illustration, exactly and without assumption, every one of these: collar point geometry, collar stand, collar roll, stitching precision. Match each to the drawing.\n\nVIEW — this illustration is the detail of the garment. Photograph the same face; never substitute a different face of the garment.\n\nBLUEPRINT LOCK — THE DRAWING IS LAW: the attached technical illustration is the manufacturing blueprint for this exact craft option and the SOLE authority for the image. Reproduce its geometry precisely — point/edge shape, lengths, widths, depths, angles, curvature, roll lines, symmetry, button/tab/stay positions, seam and stitch placement, and proportions — within less than 2% deviation. Assume NOTHING from tailoring/menswear/fashion convention or model priors; every visible characteristic must come from the drawing. Do not redesign, reinterpret, substitute a similar commercial style, stylise, or \"improve\" it. Do NOT fall back to a generic version of this category — reproduce THIS option, not a typical one. If convention conflicts with the drawing, the drawing wins. Accuracy over aesthetics. ANNOTATIONS ARE NOT THE GARMENT: the technical drawing may carry measurement callouts — dimension numbers (\"2.5cm\", \"9cm\", \"115°\"), tick / leader / dimension lines, arrows, red or coloured guide marks, and text labels. These are manufacturing documentation, NOT features of the cloth. Reproduce ONLY the finished garment: never render any number, unit, arrow, callout, leader line, measurement mark, or text anywhere in the photograph. The final image is a clean garment photo with zero annotation.\n\nPhotographed worn on a male model, open-collar with the top button fastened, no tie.\n\nFrame tight on the collar and neckline; the detail must read clearly and sharply.\n\nSavile Row and high-end Italian sartorial aesthetic. Natural daylight studio lighting, Phase One IQ4 medium-format camera, 150MP detail, shallow depth of field, magazine-quality editorial menswear photography. Authentic bespoke craftsmanship, fine hand stitching, premium finishing. SET — shot in a clean luxury photographic studio against a seamless, plain, neutral light-grey background with clear separation between garment and background: no location, no architecture, no furniture, no scenery, no props and no environmental context of any kind competing with the garment.\n\nExtremely realistic crisp cotton poplin texture, fine stitching.\n\nAvoid: any GENERIC menswear substitution (a generic spread collar, generic notch/peak lapel, generic pocket/pleat/vent/cuff/waistband in place of the drawn one), illustration or line-art style, CGI or 3D-render look, cartoon, mannequin, fashion sketch, inaccurate geometry, altered proportions, missing construction details, asymmetry, watermark, AI-art appearance, AND any text or annotation traced from the drawing: NO measurement numbers, units (cm/mm/°), dimension or leader lines, arrows, callouts, red/coloured guide marks, ruler ticks, or labels anywhere in the frame. This is real garment photography of the exact drawn option — clean cloth only, nothing else.\n\nFORBIDDEN FOR THIS OPTION — do not render: a generic version of this part standing in for the exact drawn option (generic-category substitution); any feature, count, or geometry borrowed from a neighboring craft option on the same field; a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion).\n\nOWNER CORRECTION AFTER REVIEW (attempt 1 was rejected by the owner — obey this over any conflicting earlier line, including the BLUEPRINT LOCK): need to be a button down collar\n\nLOCKED CONSTRAINT FROM THIS REJECTION — BUTTON-DOWN COLLAR, HIDDEN FASTENING: the collar MUST read as a button-down collar. Both 7.5 cm collar points are rolled softly and anchored flat against the shirt body exactly as a classic button-down collar sits — collar closed, symmetrical, spread approximately 65 degrees as drawn. The fastening is CONCEALED: the button sits UNDER each collar leaf, so NO button is visible on the face of either collar point. FORBIDDEN: lifting, folding back, or flipping any collar corner to expose the hidden button (attempt 1 was rejected for exactly this lifted-leaf pose — both leaves stay flat and anchored); visible buttons or buttonholes on the face of the collar points (that is the sibling visible button-down option, NOT this one). The hidden-button construction reads ONLY through the anchored button-down roll combined with a completely clean, fastener-free collar face.",
- "builtAt": "2026-07-28T04:41:10.960Z",
- "ownerCorrections": [
-  {
-   "attemptRejected": 1,
-   "decidedAt": "2026-08-10T23:05:05.074Z",
-   "tags": [],
-   "notes": "need to be a button down collar",
-   "references": [],
-   "appliedAt": "2026-08-11T08:43:35.421Z",
-   "craftId": "shirt|collar|lapel|collar-hidden-btn-75"
-  }
- ],
- "strengthenedAt": "2026-08-11T09:09:23.000Z",
- "strengthenedWhy": "wave rule: rejectionContext note expanded into locked constraint + sibling discriminator"
+  "requiredTokens": [
+    "7.5 cm",
+    "point",
+    "hidden button fastening"
+  ],
+  "checklist": [
+    "length/width matches exactly: 7.5 cm",
+    "on the front side, NOT mirrored or swapped (check against the drawing, not against convention)",
+    "shape reads as drawn: point",
+    "present & positioned as drawn: hidden button fastening",
+    "distinguishing detail present: A clean 7.5 cm point with a concealed button under the leaf for a controlled roll without visible fastenings. It marries the tidiness of a button-down with the sleek front of a dress collar, ideal for a modern, uncluttered look.",
+    "reproduced from the illustration: collar point geometry",
+    "reproduced from the illustration: collar stand",
+    "reproduced from the illustration: collar roll",
+    "reproduced from the illustration: stitching precision",
+    "reproduced from the illustration: the unobstructed spread between the collar points",
+    "reproduced from the illustration: both collar leaves mirroring each other exactly in length, angle and tip shape",
+    "orientation matches the illustration: front",
+    "the Collar Style dominates the frame (40–80%), identifiable within one second, framed tight on the collar and neckline",
+    "silhouette, proportions, seam & stitch placement match the illustration; left/right symmetry correct",
+    "NO generic-category substitution — this exact option, not a typical one",
+    "a real photograph of the exact drawn option — not the line-art, no stylisation"
+  ],
+  "scoreCard": [
+    {
+      "category": "shape",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "geometry",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "dimensions",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "angles",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "construction",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "placement",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "symmetry",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "composition",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "blueprint-match",
+      "score": null,
+      "min": 98
+    }
+  ],
+  "prompt": "Ultra-photorealistic luxury menswear product photography.\n\nA single-subject craft DOCUMENTATION photograph: the Collar Style is the dominant subject, filling 40–80% of the frame and identifiable within one second.\n\nA premium white bespoke cotton dress shirt featuring a precise Hidden Button 7.5 cm (Collar Style).\n\nDistinguishing construction detail (reproduce exactly as drawn): A clean 7.5 cm point with a concealed button under the leaf for a controlled roll without visible fastenings. It marries the tidiness of a button-down with the sleek front of a dress collar, ideal for a modern, uncluttered look.\n\nExact specification — on the front side ONLY — do not mirror or swap; point shape; measuring exactly 7.5 cm; hidden button fastening — matching the illustration precisely.\n\nMANDATORY GEOMETRY COVERAGE — reproduce from the illustration, exactly and without assumption, every one of these: collar point geometry, collar stand, collar roll, stitching precision, the unobstructed spread between the collar points, both collar leaves mirroring each other exactly in length, angle and tip shape. Match each to the drawing.\n\nVIEW — this illustration is the front of the garment. Photograph the same face; never substitute a different face of the garment.\n\nBLUEPRINT LOCK — THE DRAWING IS LAW: the attached technical illustration is the manufacturing blueprint for this exact craft option and the SOLE authority for the image. Reproduce its geometry precisely — point/edge shape, lengths, widths, depths, angles, curvature, roll lines, symmetry, button/tab/stay positions, seam and stitch placement, and proportions — within less than 2% deviation. Assume NOTHING from tailoring/menswear/fashion convention or model priors; every visible characteristic must come from the drawing. Do not redesign, reinterpret, substitute a similar commercial style, stylise, or \"improve\" it. Do NOT fall back to a generic version of this category — reproduce THIS option, not a typical one. If convention conflicts with the drawing, the drawing wins. Accuracy over aesthetics. ANNOTATIONS ARE NOT THE GARMENT: the technical drawing may carry measurement callouts — dimension numbers (\"2.5cm\", \"9cm\", \"115°\"), tick / leader / dimension lines, arrows, red or coloured guide marks, and text labels. These are manufacturing documentation, NOT features of the cloth. Reproduce ONLY the finished garment: never render any number, unit, arrow, callout, leader line, measurement mark, or text anywhere in the photograph. The final image is a clean garment photo with zero annotation. COLOUR IN THE DRAWING IS NOTATION, NOT CLOTH: any red, orange or otherwise highlighted region marks WHERE the craft option sits — it is a position marker, never a colour specification. Flat grey or tinted shading marks the EXTENT of a panel, lining or facing, not its shade. Render every one of those areas in the garment's own cloth and thread, in the natural colour that tailoring would use there. There must be no red, no highlighter tint and no flat unshaded grey panel anywhere in the photograph unless the option's own label explicitly names that colour.\n\nPhotographed presented on a crisply pressed white dress shirt as a close product detail, with NO model, NO face, NO neck and NO skin anywhere in frame, the collar left open at the throat with NO necktie and the top collar-band button UNFASTENED exactly as the reference shows it, the leaves relaxed apart so the collar points, the spread between them, the full collar band and its buttonhole are all completely unobstructed, and the collar reproduced in the SAME presentation and viewing angle as the attached reference so its exact tip geometry is preserved rather than re-staged.\n\nFrame tight on the collar and neckline; the detail must read clearly and sharply.\n\nMATCHED FRAMING — this option belongs to a family whose members differ from one another only by a measurement, so this photograph will be shown beside its siblings and compared directly. TWO SEPARATE REQUIREMENTS, and both must hold. FIRST, THE GARMENT: build the feature at exactly the size the drawing gives it — no larger. Do not exaggerate the dimension to make this option look more distinct from its siblings; the difference between them is small in real tailoring and must stay small here, because a customer choosing on these numbers is ordering a real garment. SECOND, THE CAMERA: frame the shot the way every member of the family must be framed — the garment part square to camera, centred, at a standard distance that leaves the whole garment occupying the same share of the picture no matter which value this option carries. Do not move closer for a small measurement or pull back for a large one. Getting one of these right while getting the other wrong is still a failure: an accurate feature shot at the wrong distance, or a matched frame containing an exaggerated feature, both mislead a customer comparing two pictures side by side.\n\nSavile Row and high-end Italian sartorial aesthetic. Natural daylight studio lighting, Phase One IQ4 medium-format camera, 150MP detail, shallow depth of field, magazine-quality editorial menswear photography. Authentic bespoke craftsmanship, fine hand stitching, premium finishing. SET — shot in a clean luxury photographic studio against a seamless, plain, neutral light-grey background with clear separation between garment and background: no location, no architecture, no furniture, no scenery, no props and no environmental context of any kind competing with the garment.\n\nExtremely realistic crisp cotton poplin texture, fine stitching.\n\nAvoid: any GENERIC menswear substitution (a generic spread collar, generic notch/peak lapel, generic pocket/pleat/vent/cuff/waistband in place of the drawn one), illustration or line-art style, CGI or 3D-render look, cartoon, mannequin, fashion sketch, inaccurate geometry, altered proportions, missing construction details, asymmetry, watermark, AI-art appearance, AND any text or annotation traced from the drawing: NO measurement numbers, units (cm/mm/°), dimension or leader lines, arrows, callouts, red/coloured guide marks, ruler ticks, or labels anywhere in the frame. This is real garment photography of the exact drawn option — clean cloth only, nothing else.\n\nFORBIDDEN FOR THIS OPTION — do not render: a generic version of this part standing in for the exact drawn option (generic-category substitution); any feature, count, or geometry borrowed from a neighboring craft option on the same field; a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion); collar leaves ending in a squared/blunt flat edge, or in a rounded club tip — this option's collar point termination is a straight acute point; any button-down point — the description mentions it only by comparison, and this option is NOT that.\n\nOWNER CORRECTION AFTER REVIEW (attempt 1 was rejected by the owner — obey this over any conflicting earlier line, including the BLUEPRINT LOCK): need to be a button down collar\n\nOWNER CORRECTION AFTER REVIEW (attempt 2 was rejected by the owner — obey this over any conflicting earlier line, including the BLUEPRINT LOCK): What is wrong with it: Generic version, not this option. For the Hidden Button Collar shown in the image: Collar style: Hidden Button-Down Point length: 7.5 cm Collar angle: 65° Hidden button tab sewn under the collar points Two concealed buttons hold the collar points in place The hidden buttons do not change the collar geometry. They only add button placement and an under-collar tab. Base Collar Geometry Given: Half-angle: Horizontal Projection Each collar point extends: from center front. Vertical Drop Point depth: Point-to-Point Width Front opening: Collar Point Coordinates Using the collar break as the origin: Left point: Right point: Hidden Button Placement For a 7.5 cm point collar, place the hidden button approximately: back from the collar point.\n\nOWNER CORRECTION AFTER REVIEW (a previous attempt was rejected by the owner — obey this over any conflicting earlier line, including the BLUEPRINT LOCK): The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+  "ownerCorrections": [
+    {
+      "attemptRejected": 1,
+      "decidedAt": "2026-08-10T23:05:05.074Z",
+      "tags": [],
+      "notes": "need to be a button down collar",
+      "references": [],
+      "appliedAt": "2026-08-11T08:43:35.421Z",
+      "craftId": "shirt|collar|lapel|collar-hidden-btn-75"
+    },
+    {
+      "attemptRejected": 2,
+      "decidedAt": "2026-08-12T03:34:27.568Z",
+      "tags": [
+        "Generic version, not this option"
+      ],
+      "notes": "For the Hidden Button Collar shown in the image:\n\nCollar style: Hidden Button-Down\nPoint length: 7.5 cm\nCollar angle: 65°\nHidden button tab sewn under the collar points\nTwo concealed buttons hold the collar points in place\n\nThe hidden buttons do not change the collar geometry. They only add button placement and an under-collar tab.\n\nBase Collar Geometry\n\nGiven:\n\nL=7.5 cmL = 7.5\\text{ cm} θ=65∘\\theta = 65^\\circ\n\nHalf-angle:\n\nα=32.5∘\\alpha = 32.5^\\circ\nHorizontal Projection\nX=Lsin⁡(α)X=L\\sin(\\alpha) X=7.5sin⁡(32.5∘)X=7.5\\sin(32.5^\\circ) X=4.03 cmX=4.03\\text{ cm}\n\nEach collar point extends:\n\n4.03 cm\\boxed{4.03\\text{ cm}}\n\nfrom center front.\n\nVertical Drop\nY=Lcos⁡(α)Y=L\\cos(\\alpha) Y=7.5cos⁡(32.5∘)Y=7.5\\cos(32.5^\\circ) Y=6.33 cmY=6.33\\text{ cm}\n\nPoint depth:\n\n6.33 cm\\boxed{6.33\\text{ cm}}\nPoint-to-Point Width\nW=2XW=2X W=8.06 cmW=8.06\\text{ cm}\n\nFront opening:\n\n8.06 cm\\boxed{8.06\\text{ cm}}\nCollar Point Coordinates\n\nUsing the collar break as the origin:\n\nLeft point:\n\n(−4.03, −6.33)(-4.03,\\,-6.33)\n\nRight point:\n\n(4.03, −6.33)(4.03,\\,-6.33)\nHidden Button Placement\n\nFor a 7.5 cm point collar, place the hidden button approximately:\n\n0.60L0.60L\n\nback from the collar point.\n\n0.60(7.5)0.60(7.5) 4.5 cm4.5\\text{ cm}\nButton Position\n\nMeasured from the collar tip:\n\n4.5 cm\\boxed{4.5\\text{ cm}}\n\nMeasured from collar break:\n\n7.5−4.57.5-4.5 3.0 cm\\boxed{3.0\\text{ cm}}\nUnder-Collar Tab\n\nTypical hidden button tab dimensions:\n\nLength\n1.8 cm1.8\\text{ cm}\n\nto\n\n2.2 cm2.2\\text{ cm}\n\nRecommended:\n\n2.0 cm\\boxed{2.0\\text{ cm}}\nWidth\n1.5 cm\\boxed{1.5\\text{ cm}}\nButton Size\n10L to 12L10L \\text{ to } 12L\n\nApproximately:\n\n6−7 mm\\boxed{6-7\\text{ mm}}\n\ndiameter.\n\nDraft Summary\nMeasurement\tValueCollar point length\t7.5 cm\nCollar angle\t65°\nHalf-angle\t32.5°\nHorizontal projection\t4.03 cm\nVertical drop\t6.33 cm\nPoint-to-point spread\t8.06 cm\nHidden button from tip\t4.5 cm\nHidden button from break\t3.0 cm\nHidden tab length\t2.0 cm\nHidden tab width\t1.5 cm\n\nThis will produce a classic 7.5 cm hidden button-down collar very similar to the illustration, with the collar points rolling neatly toward the shirt front while the fastening remains invisible.",
+      "references": [],
+      "appliedAt": "2026-08-12T16:35:07.262Z",
+      "craftId": "shirt|collar|lapel|collar-hidden-btn-75"
+    },
+    {
+      "attemptRejected": null,
+      "decidedAt": null,
+      "source": "july-v3",
+      "verdict": "remake",
+      "tags": [],
+      "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+      "reasonRecorded": false,
+      "references": [],
+      "craftId": "shirt|collar|lapel|collar-hidden-btn-75",
+      "foldedFrom": "generation-queue.rejectionContext",
+      "parkedAt": "2026-08-16T05:02:08.075Z"
+    }
+  ],
+  "correctionSanitized": 1,
+  "builtAt": "2026-08-27T02:37:07.193Z"
 }

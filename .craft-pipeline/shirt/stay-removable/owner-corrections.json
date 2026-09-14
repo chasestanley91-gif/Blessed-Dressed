@@ -1,0 +1,31 @@
+{
+ "craftId": "shirt|collar|collar_stay|stay-removable",
+ "note": "Owner rejection reasons for this craft, from BOTH decision sources. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 3,
+   "decidedAt": "2026-08-11T22:17:25.680Z",
+   "tags": [
+    "Wrong shape / outline",
+    "Wrong side or orientation"
+   ],
+   "notes": "",
+   "references": [],
+   "parkedAt": "2026-08-12T21:48:06.659Z",
+   "craftId": "shirt|collar|collar_stay|stay-removable"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "shirt|collar|collar_stay|stay-removable",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-26T06:51:18.070Z"
+  }
+ ]
+}

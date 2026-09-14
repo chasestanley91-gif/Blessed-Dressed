@@ -11,13 +11,13 @@
   "description": "Slant front pocket with a 3.2 cm drop over a 15 cm run from the side seam — a 12° mouth, with the pocket bag rotated 18° to 25° in production and a bag depth of 23 cm. The diagonal cuts across the hip, lengthening the leg and narrowing the waist.",
   "fieldLabel": "Front Pocket Style",
   "sectionLabel": "Trousers — Front & Pockets",
-  "part": "trouser-detail",
+  "part": "trouser-front-pocket",
   "garment": {
     "noun": "pair of bespoke wool tailored trousers",
     "fabric": "fine wool trouser cloth with visible weave"
   },
   "view": {
-    "orientation": "three-quarter-front",
+    "orientation": "front",
     "wearerPerspective": true,
     "confirmedByVisualInspection": true
   },
@@ -39,7 +39,13 @@
     ],
     "negatedShapes": [],
     "spread": [],
-    "flags": []
+    "flags": [],
+    "sides": [
+      "front"
+    ],
+    "attributes": [],
+    "supplierCodes": [],
+    "unresolved": []
   },
   "illustration": {
     "path": "/images/blueprints/factory/fd63bf751c58__3101__3.2cm_slant.jpg",
@@ -54,5 +60,5 @@
   ],
   "excluded": null,
   "generate": true,
-  "extractedAt": "2026-08-01T21:56:54.625Z"
+  "extractedAt": "2026-08-27T02:37:21.789Z"
 }

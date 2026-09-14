@@ -1,0 +1,30 @@
+{
+ "craftId": "sport-coat|lapel|lapel-style|lapel-shawl-0e",
+ "note": "Owner rejection reasons for this craft, from BOTH decision sources. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 1,
+   "decidedAt": "2026-08-12T04:06:45.585Z",
+   "tags": [],
+   "notes": "For the 0E Shawl Lapel in your latest image:\n\nLapel Width = 10.0 cm\nLong teardrop shawl shape\nModerate shoulder break\nNarrow pointed front termination\nSymmetrical shawl curve\nNo gorge angle (continuous curve)\n\nThis 0E shape is slightly slimmer and more tapered than a classic tuxedo shawl.\n\nMaster Draft Dimensions\nGiven\nW=10.0 cmW = 10.0\\text{ cm}\n1. Outer Shawl Radius\n\nMain outside curve:\n\nRo=2.6WR_o = 2.6W Ro=2.6(10)R_o = 2.6(10) Ro=26.0 cm\\boxed{R_o = 26.0\\text{ cm}}\n2. Bottom Nose Radius\n\nThe tip is tighter than the upper sweep.\n\nRn=0.8WR_n = 0.8W Rn=0.8(10)R_n = 0.8(10) Rn=8.0 cm\\boxed{R_n = 8.0\\text{ cm}}\n3. Lapel Belly\n\nMaximum outward fullness:\n\nB=0.15WB = 0.15W B=0.15(10)B = 0.15(10) B=1.5 cm\\boxed{B = 1.5\\text{ cm}}\n4. Roll Line Position\nRL=0.55WRL = 0.55W RL=0.55(10)RL = 0.55(10) RL=5.5 cm\\boxed{RL = 5.5\\text{ cm}}\n5. Front Point Length\n\nFrom widest point to bottom tip:\n\nFP=1.50WFP = 1.50W FP=1.50(10)FP = 1.50(10) FP=15.0 cm\\boxed{FP = 15.0\\text{ cm}}\n6. Collar Crown Radius\n\nUpper collar sweep:\n\nRc=1.20WR_c = 1.20W Rc=1.20(10)R_c = 1.20(10) Rc=12.0 cm\\boxed{R_c = 12.0\\text{ cm}}\n7. Front Taper Angle\n\nEach front edge tapers inward approximately:\n\n12∘\\boxed{12^\\circ}\n\nper side.\n\nTotal included taper:\n\n24∘24^\\circ\n8. Draft Coordinates\n\nUsing the shoulder break as origin:\n\nWidest Point\n(10,  16)(10,\\;16)\nBelly Point\n(11.5,  28)(11.5,\\;28)\nFront Tip\n(0,  48)(0,\\;48)\n\nUse a French curve through these points to match the image.\n\nPattern Summary\nFeature\tValueLapel Width\t10.0 cm\nOuter Radius\t26.0 cm\nBottom Radius\t8.0 cm\nBelly\t1.5 cm\nRoll Line\t5.5 cm\nFront Point Length\t15.0 cm\nCollar Radius\t12.0 cm\nFront Taper\t12°\nQuick Formula Set\n\nFor this style of 0E shawl:\n\nRo=2.6WR_o = 2.6W Rn=0.8WR_n = 0.8W B=0.15WB = 0.15W RL=0.55WRL = 0.55W FP=1.5WFP = 1.5W Rc=1.2WR_c = 1.2W\n\nWith W = 10 cm, the resulting shawl lapel will closely match the proportions shown in the illustration.",
+   "references": [
+    "/images/review-refs/sport-coat/lapel-shawl-0e/1786507558352-fdup7m.jpg"
+   ],
+   "parkedAt": "2026-08-12T21:48:07.055Z",
+   "craftId": "sport-coat|lapel|lapel-style|lapel-shawl-0e"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "sport-coat|lapel|lapel-style|lapel-shawl-0e",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.355Z"
+  }
+ ]
+}

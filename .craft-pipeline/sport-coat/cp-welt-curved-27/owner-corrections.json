@@ -1,0 +1,45 @@
+{
+ "craftId": "sport-coat|suit-pockets|chest-pocket|cp-welt-curved-27",
+ "note": "Owner rejection reasons for this craft, from BOTH decision sources. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 1,
+   "decidedAt": "2026-08-12T04:27:01.034Z",
+   "tags": [
+    "Reference drawing itself is wrong"
+   ],
+   "notes": "For the Curved Welt Chest Pocket (Barchetta) with a 2.7 cm finished welt, the image shows:\n\nFinished welt height = 2.7 cm\nCurved upper edge\nSlanted breast pocket\nTypical Neapolitan/Italian barchetta (\"little boat\") shape\n1. Finished Welt Height\nW=2.7 cmW = 2.7\\text{ cm}\n\nThis is the visible height of the welt after construction.\n\n2. Welt Strip Draft\n\nA welt is folded in half.\n\nFormula\nCW=2W+2SACW = 2W + 2SA\n\nWhere:\n\nCWCW = cut welt width\nSASA = seam allowance (1 cm)\nCW=(2×2.7)+2CW=(2\\times2.7)+2 CW=7.4 cmCW=7.4\\text{ cm}\nCut Welt Size\n7.4 cm\\boxed{7.4\\text{ cm}}\n3. Pocket Length\n\nTraditional bespoke breast pocket:\n\nPL=Chest Circumference6PL = \\frac{\\text{Chest Circumference}}{6}\n\nTypical values:\n\nChest\tPocket Length38\"\t16.0 cm\n40\"\t16.8 cm\n42\"\t17.8 cm\n\nStandard bespoke size:\n\n17.0 cm\\boxed{17.0\\text{ cm}}\n4. Barchetta Curve Rise\n\nThe center of the pocket is raised above the ends.\n\nFormula\nCR=0.15WCR = 0.15W CR=0.15(2.7)CR = 0.15(2.7) CR=0.405 cmCR = 0.405\\text{ cm}\n\nUse:\n\n0.4 cm\\boxed{0.4\\text{ cm}}\n\nThis means:\n\nLeft end = 0 mm\nCenter = +4 mm\nRight end = 0 mm\n5. Curve Radius\n\nUsing:\n\nR=L28h+h2R=\\frac{L^2}{8h}+\\frac{h}{2}\n\nWhere:\n\nL=17 cmL = 17\\text{ cm}\nh=0.4 cmh = 0.4\\text{ cm}\nR=1728(0.4)+0.2R=\\frac{17^2}{8(0.4)}+0.2 R=90.5 cmR=90.5\\text{ cm}\nRadius\n90.5 cm\\boxed{90.5\\text{ cm}}\n6. Slant Angle\n\nClassic breast pocket slant:\n\n8∘−12∘8^\\circ - 12^\\circ\n\nRecommended:\n\n10∘\\boxed{10^\\circ}\n\ntoward the armhole.\n\n7. Draft Coordinates\n\nUsing a 17 cm opening:\n\nLeft end:\n\n(0,0)(0,0)\n\nCenter crown:\n\n(8.5,  0.4)(8.5,\\;0.4)\n\nRight end:\n\n(17,  0)(17,\\;0)\n\nPlot and connect with a French curve:\n\n          ●\n      (8.5,0.4)\n\n       /     \\\n      /       \\\n     /         \\\n\n●-------------------●\n(0,0)           (17,0)\n\n8. Corner Triangle Construction\n\nPocket opening:\n\n2.7 cm2.7\\text{ cm}\n\nTriangle length:\n\nTL=WTL=W TL=2.7 cmTL=2.7\\text{ cm}\n\nCut:\n\n45∘\\boxed{45^\\circ}\n\nat both ends.\n\n9. Pocket Bag Dimensions\n\nPocket bag width:\n\nPBW=PL+4PBW=PL+4 PBW=17+4PBW=17+4 PBW=21 cmPBW=21\\text{ cm}\n\nPocket bag depth:\n\nPBD=1.5PLPBD=1.5PL PBD=25.5 cmPBD=25.5\\text{ cm}\nPocket Bag\n21×25.5 cm\\boxed{21 \\times 25.5\\text{ cm}}\nComplete Bespoke Draft\nFinished Pocket\n17.0×2.7 cm\\boxed{17.0 \\times 2.7\\text{ cm}}\nWelt Strip\n7.4×17.0 cm\\boxed{7.4 \\times 17.0\\text{ cm}}\nBarchetta Rise\n0.4 cm\\boxed{0.4\\text{ cm}}\nCurve Radius\n90.5 cm\\boxed{90.5\\text{ cm}}\nPocket Slant\n10∘\\boxed{10^\\circ}\nCorner Cuts\n\\boxed{2.7\\text{ cm @ 45^\\circ}\nPocket Bag\n21.0×25.5 cm\\boxed{21.0 \\times 25.5\\text{ cm}}\nScaling Formulas\n\nFor any curved welt height WW:\n\nCurve Rise=0.15W\\text{Curve Rise}=0.15W Cut Welt Width=2W+2SA\\text{Cut Welt Width}=2W+2SA R=L28h+h2R=\\frac{L^2}{8h}+\\frac{h}{2}\n\nFor your 2.7 cm curved welt chest pocket, the key drafting geometry is:\n\nWelt height: 2.7 cm\nCut welt width: 7.4 cm\nPocket length: 17 cm\nBarchetta rise: 0.4 cm\nRadius: 90.5 cm\nSlant: 10°",
+   "references": [
+    "/images/review-refs/sport-coat/cp-welt-curved-27/1786508788526-3ja5ma.jpg"
+   ],
+   "parkedAt": "2026-08-12T21:48:07.172Z",
+   "craftId": "sport-coat|suit-pockets|chest-pocket|cp-welt-curved-27"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "remake",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "sport-coat|suit-pockets|chest-pocket|cp-welt-curved-27",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.418Z"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "sport-coat|suit-pockets|chest-pocket|cp-welt-curved-27",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.418Z"
+  }
+ ]
+}

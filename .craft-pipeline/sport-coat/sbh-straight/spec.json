@@ -17,7 +17,7 @@
     "fabric": "textured wool/hopsack with visible weave"
   },
   "view": {
-    "orientation": "detail",
+    "orientation": "front",
     "wearerPerspective": true,
     "confirmedByVisualInspection": true
   },
@@ -27,11 +27,22 @@
     "angles": [],
     "counts": [],
     "shapes": [],
+    "negatedShapes": [],
     "spread": [],
     "flags": [
       "eyelet holes",
       "horizontal buttonhole orientation"
-    ]
+    ],
+    "sides": [],
+    "attributes": [
+      {
+        "feature": "buttonhole",
+        "attribute": "profile",
+        "value": "straight"
+      }
+    ],
+    "supplierCodes": [],
+    "unresolved": []
   },
   "illustration": {
     "path": "/images/blueprints/factory/2002f8a736e6__AAAM__Normal.jpg",
@@ -46,5 +57,5 @@
   ],
   "excluded": null,
   "generate": true,
-  "extractedAt": "2026-07-31T04:39:44.667Z"
+  "extractedAt": "2026-08-15T21:52:02.431Z"
 }

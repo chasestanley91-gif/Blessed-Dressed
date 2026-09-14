@@ -1,0 +1,153 @@
+{
+  "addr": "sport-coat > suit-pockets > chest-pocket > cp-welt-curved-23",
+  "label": "Curved Welt 2.3 cm",
+  "part": "jacket-chest-pocket",
+  "orientation": "front",
+  "excluded": null,
+  "generate": true,
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\sport-coat.json",
+  "source": "json",
+  "illustration": "/images/blueprints/baoxiniao/jacket/REQPU/D.jpg",
+  "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQPU\\D.jpg",
+  "illustrationExists": true,
+  "illustrationRemote": false,
+  "profile": {
+    "addr": "sport-coat > suit-pockets > chest-pocket > cp-welt-curved-23",
+    "product": "sport-coat",
+    "field": "Chest Pocket",
+    "option": "Curved Welt 2.3 cm",
+    "part": "jacket-chest-pocket",
+    "garment": "bespoke sport coat",
+    "orientation": "front",
+    "absence": false,
+    "distinguishingDetail": "The curved welt at 2.3 cm — known in Italian tailoring as the barchetta, or 'little boat' — describes a gentle upward arc across the chest that follows the natural curvature of the pectoral muscle. At the narrowest barchetta width, the curve is subtle and refined, adding a whisper of Italian character without overwhelming the jacket's overall silhouette. It is favoured on structured Neapolitan suits where the curve reads as a sophisticated counterpoint to the clean lapel line.",
+    "measured": {
+      "dimensions": [
+        "2.3 cm"
+      ],
+      "angles": [],
+      "counts": [],
+      "shapes": [
+        "welt pocket",
+        "arc buttonhole"
+      ],
+      "spread": [],
+      "flags": []
+    },
+    "reproduceFromIllustration": [
+      "breast pocket shape (barchetta/welt)",
+      "curve",
+      "pattern match",
+      "the empty opening with both its edges visible end to end"
+    ],
+    "composition": {
+      "crop": "on the left breast pocket",
+      "dominanceTarget": "40–80% of frame",
+      "identifyWithin": "1 second"
+    },
+    "forbidden": [
+      "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+      "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+      "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+    ],
+    "excluded": null,
+    "generate": true
+  },
+  "requiredTokens": [
+    "2.3 cm",
+    "welt pocket",
+    "arc buttonhole"
+  ],
+  "checklist": [
+    "length/width matches exactly: 2.3 cm",
+    "shape reads as drawn: welt pocket",
+    "shape reads as drawn: arc buttonhole",
+    "distinguishing detail present: The curved welt at 2.3 cm — known in Italian tailoring as the barchetta, or 'little boat' — describes a gentle upward arc across the chest that follows the natural curvature of the pectoral muscle. At the narrowest barchetta width, the curve is subtle and refined, adding a whisper of Italian character without overwhelming the jacket's overall silhouette. It is favoured on structured Neapolitan suits where the curve reads as a sophisticated counterpoint to the clean lapel line.",
+    "reproduced from the illustration: breast pocket shape (barchetta/welt)",
+    "reproduced from the illustration: curve",
+    "reproduced from the illustration: pattern match",
+    "reproduced from the illustration: the empty opening with both its edges visible end to end",
+    "orientation matches the illustration: front",
+    "the Chest Pocket dominates the frame (40–80%), identifiable within one second, framed on the left breast pocket",
+    "silhouette, proportions, seam & stitch placement match the illustration; left/right symmetry correct",
+    "NO generic-category substitution — this exact option, not a typical one",
+    "a real photograph of the exact drawn option — not the line-art, no stylisation"
+  ],
+  "scoreCard": [
+    {
+      "category": "shape",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "geometry",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "dimensions",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "angles",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "construction",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "placement",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "symmetry",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "composition",
+      "score": null,
+      "min": 98
+    },
+    {
+      "category": "blueprint-match",
+      "score": null,
+      "min": 98
+    }
+  ],
+  "prompt": "Ultra-photorealistic luxury menswear product photography.\n\nA single-subject craft DOCUMENTATION photograph: the Chest Pocket is the dominant subject, filling 40–80% of the frame and identifiable within one second.\n\nA premium bespoke sport coat featuring a precise Curved Welt 2.3 cm (Chest Pocket).\n\nDistinguishing construction detail (reproduce exactly as drawn): The curved welt at 2.3 cm — known in Italian tailoring as the barchetta, or 'little boat' — describes a gentle upward arc across the chest that follows the natural curvature of the pectoral muscle. At the narrowest barchetta width, the curve is subtle and refined, adding a whisper of Italian character without overwhelming the jacket's overall silhouette. It is favoured on structured Neapolitan suits where the curve reads as a sophisticated counterpoint to the clean lapel line.\n\nExact specification — welt pocket, arc buttonhole shape; measuring exactly 2.3 cm — matching the illustration precisely.\n\nMANDATORY GEOMETRY COVERAGE — reproduce from the illustration, exactly and without assumption, every one of these: breast pocket shape (barchetta/welt), curve, pattern match, the empty opening with both its edges visible end to end. Match each to the drawing.\n\nVIEW — this illustration is the front of the garment. Photograph the same face; never substitute a different face of the garment.\n\nBLUEPRINT LOCK — THE DRAWING IS LAW: the attached technical illustration is the manufacturing blueprint for this exact craft option and the SOLE authority for the image. Reproduce its geometry precisely — point/edge shape, lengths, widths, depths, angles, curvature, roll lines, symmetry, button/tab/stay positions, seam and stitch placement, and proportions — within less than 2% deviation. Assume NOTHING from tailoring/menswear/fashion convention or model priors; every visible characteristic must come from the drawing. Do not redesign, reinterpret, substitute a similar commercial style, stylise, or \"improve\" it. Do NOT fall back to a generic version of this category — reproduce THIS option, not a typical one. If convention conflicts with the drawing, the drawing wins. Accuracy over aesthetics. ANNOTATIONS ARE NOT THE GARMENT: the technical drawing may carry measurement callouts — dimension numbers (\"2.5cm\", \"9cm\", \"115°\"), tick / leader / dimension lines, arrows, red or coloured guide marks, and text labels. These are manufacturing documentation, NOT features of the cloth. Reproduce ONLY the finished garment: never render any number, unit, arrow, callout, leader line, measurement mark, or text anywhere in the photograph. The final image is a clean garment photo with zero annotation. COLOUR IN THE DRAWING IS NOTATION, NOT CLOTH: any red, orange or otherwise highlighted region marks WHERE the craft option sits — it is a position marker, never a colour specification. Flat grey or tinted shading marks the EXTENT of a panel, lining or facing, not its shade. Render every one of those areas in the garment's own cloth and thread, in the natural colour that tailoring would use there. There must be no red, no highlighter tint and no flat unshaded grey panel anywhere in the photograph unless the option's own label explicitly names that colour.\n\nPhotographed worn on a male model, with NO pocket square and nothing tucked into or protruding from the pocket, and no necktie.\n\nFrame on the left breast pocket; the detail must read clearly and sharply.\n\nMATCHED FRAMING — this option belongs to a family whose members differ from one another only by a measurement, so this photograph will be shown beside its siblings and compared directly. TWO SEPARATE REQUIREMENTS, and both must hold. FIRST, THE GARMENT: build the feature at exactly the size the drawing gives it — no larger. Do not exaggerate the dimension to make this option look more distinct from its siblings; the difference between them is small in real tailoring and must stay small here, because a customer choosing on these numbers is ordering a real garment. SECOND, THE CAMERA: frame the shot the way every member of the family must be framed — the garment part square to camera, centred, at a standard distance that leaves the whole garment occupying the same share of the picture no matter which value this option carries. Do not move closer for a small measurement or pull back for a large one. Getting one of these right while getting the other wrong is still a failure: an accurate feature shot at the wrong distance, or a matched frame containing an exaggerated feature, both mislead a customer comparing two pictures side by side.\n\nSavile Row and high-end Italian sartorial aesthetic. Natural daylight studio lighting, Phase One IQ4 medium-format camera, 150MP detail, shallow depth of field, magazine-quality editorial menswear photography. Authentic bespoke craftsmanship, fine hand stitching, premium finishing. SET — shot in a clean luxury photographic studio against a seamless, plain, neutral light-grey background with clear separation between garment and background: no location, no architecture, no furniture, no scenery, no props and no environmental context of any kind competing with the garment.\n\nExtremely realistic textured wool/hopsack with visible weave texture, fine stitching.\n\nAvoid: any GENERIC menswear substitution (a generic spread collar, generic notch/peak lapel, generic pocket/pleat/vent/cuff/waistband in place of the drawn one), illustration or line-art style, CGI or 3D-render look, cartoon, mannequin, fashion sketch, inaccurate geometry, altered proportions, missing construction details, asymmetry, watermark, AI-art appearance, AND any text or annotation traced from the drawing: NO measurement numbers, units (cm/mm/°), dimension or leader lines, arrows, callouts, red/coloured guide marks, ruler ticks, or labels anywhere in the frame. This is real garment photography of the exact drawn option — clean cloth only, nothing else.\n\nFORBIDDEN FOR THIS OPTION — do not render: a generic version of this part standing in for the exact drawn option (generic-category substitution); any feature, count, or geometry borrowed from a neighboring craft option on the same field; a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion).\n\nOWNER CORRECTION AFTER REVIEW (attempt 1 was rejected by the owner — obey this over any conflicting earlier line, including the BLUEPRINT LOCK): What is wrong with it: Reference drawing itself is wrong. For the Curved Welt Chest Pocket (Barchetta) with a 2.3 cm finished welt, the image shows a classic boat-shaped breast pocket where the top edge has a subtle upward curve.\n\nGiven\nW=2.3 cmW = 2.3\\text{ cm}\n\nWhere:\n\nWW = finished visible welt height\n1. Welt Strip Size\n\nThe welt is folded in half.\n\nFormula\nCW=(2×W)+2SACW = (2 \\times W) + 2SA\n\nUsing a 1.0 cm seam allowance:\n\nCW=(2×2.3)+2CW = (2 \\times 2.3)+2 CW=6.6 cmCW = 6.6\\text{ cm}\nCut Welt\n6.6 cm×Pocket Length\\boxed{6.6\\text{ cm} \\times \\text{Pocket Length}}\n2. Pocket Length\n\nTraditional bespoke formula:\n\nPL=Chest Circumference6PL=\\frac{\\text{Chest Circumference}}{6}\n\nTypical finished lengths:\n\nChest\tPocket Length38\"\t16.0 cm\n40\"\t16.8 cm\n42\"\t17.8 cm\n\nMost bespoke jackets:\n\n16.5−17.0 cm\\boxed{16.5-17.0\\text{ cm}}\n3. Barchetta Curve Rise\n\nThe center of the pocket sits slightly higher than the ends.\n\nFormula\nCR=0.15WCR = 0.15W CR=0.15(2.3)CR = 0.15(2.3) CR=0.345 cmCR = 0.345\\text{ cm}\n\nRound to:\n\n0.35 cm\\boxed{0.35\\text{ cm}}\n\nThis means the pocket center is 3.5 mm higher than both ends.\n\n4. Curve Radius\n\nUsing a 17 cm pocket:\n\nR=L28h+h2R=\\frac{L^2}{8h}+\\frac{h}{2}\n\nWhere:\n\nL=17L=17 cm\nh=0.35h=0.35 cm\nR=1728(0.35)+0.175R=\\frac{17^2}{8(0.35)}+0.175 R≈103.4 cmR\\approx103.4\\text{ cm}\nRadius\n103 cm\\boxed{103\\text{ cm}}\n\nA large radius creates the subtle bespoke curve.\n\n5. Pocket Slant\n\nTraditional breast-pocket angle:\n\n8∘−12∘8^\\circ - 12^\\circ\n\nRecommended:\n\n10∘\\boxed{10^\\circ}\n\ntoward the armhole.\n\n6. Corner Triangle Cuts\n\nPocket opening height:\n\n2.3 cm2.3\\text{ cm}\n\nTriangle cuts:\n\nTL=WTL=W TL=2.3 cmTL=2.3\\text{ cm}\n\nCut at:\n\n45∘\\boxed{45^\\circ}\n7. Draft Coordinates\n\nFor a 17 cm pocket opening:\n\nLeft End:\n\n(0,0)(0,0)\n\nCenter Crown:\n\n(8.5,  0.35)(8.5,\\;0.35)\n\nRight End:\n\n(17,  0)(17,\\;0)\n\nDraw a smooth French curve through these points.\n\n          • (8.5,0.35)\n         /\\\n        /  \\\n       /    \\\n      /      \\\n•------------------•\n0                  17\n\n8. Pocket Bag Dimensions\n\nPocket-bag width:\n\nPBW=PL+4PBW = PL + 4\n\nFor a 17 cm pocket:\n\nPBW=21 cmPBW = 21\\text{ cm}\n\nPocket-bag depth:\n\nPBD=1.5PLPBD = 1.5PL PBD=25.5 cmPBD = 25.5\\text{ cm}\nComplete Bespoke Draft\nFinished Pocket\n17.0×2.3 cm\\boxed{17.0 \\times 2.3\\text{ cm}}\nWelt Strip\n6.6×17.0 cm\\boxed{6.6 \\times 17.0\\text{ cm}}\nCurve Rise\n0.35 cm\\boxed{0.35\\text{ cm}}\nCurve Radius\n103 cm\\boxed{103\\text{ cm}}\nPocket Angle\n10∘\\boxed{10^\\circ}\nCorner Triangle Cuts\n\\boxed{2.3\\text{ cm @ 45^\\circ} }\nPocket Bag\n21.0×25.5 cm\\boxed{21.0 \\times 25.5\\text{ cm}}\n\nThis produces a subtle Barchetta (curved welt) chest pocket with a 2.3 cm finished welt, very typical of Neapolitan and bespoke tailoring. The owner uploaded 1 reference photograph(s) with this rejection, but they were reviewed and found NOT to depict this exact option, so none are attached. Take the correction text above literally and use the technical drawing as the geometry authority.\n\nOWNER CORRECTION AFTER REVIEW (a previous attempt was rejected by the owner — obey this over any conflicting earlier line, including the BLUEPRINT LOCK): The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+  "ownerCorrections": [
+    {
+      "attemptRejected": 1,
+      "decidedAt": "2026-08-12T04:24:56.107Z",
+      "tags": [
+        "Reference drawing itself is wrong"
+      ],
+      "notes": "For the Curved Welt Chest Pocket (Barchetta) with a 2.3 cm finished welt, the image shows a classic boat-shaped breast pocket where the top edge has a subtle upward curve.\n\nGiven\nW=2.3 cmW = 2.3\\text{ cm}\n\nWhere:\n\nWW = finished visible welt height\n1. Welt Strip Size\n\nThe welt is folded in half.\n\nFormula\nCW=(2×W)+2SACW = (2 \\times W) + 2SA\n\nUsing a 1.0 cm seam allowance:\n\nCW=(2×2.3)+2CW = (2 \\times 2.3)+2 CW=6.6 cmCW = 6.6\\text{ cm}\nCut Welt\n6.6 cm×Pocket Length\\boxed{6.6\\text{ cm} \\times \\text{Pocket Length}}\n2. Pocket Length\n\nTraditional bespoke formula:\n\nPL=Chest Circumference6PL=\\frac{\\text{Chest Circumference}}{6}\n\nTypical finished lengths:\n\nChest\tPocket Length38\"\t16.0 cm\n40\"\t16.8 cm\n42\"\t17.8 cm\n\nMost bespoke jackets:\n\n16.5−17.0 cm\\boxed{16.5-17.0\\text{ cm}}\n3. Barchetta Curve Rise\n\nThe center of the pocket sits slightly higher than the ends.\n\nFormula\nCR=0.15WCR = 0.15W CR=0.15(2.3)CR = 0.15(2.3) CR=0.345 cmCR = 0.345\\text{ cm}\n\nRound to:\n\n0.35 cm\\boxed{0.35\\text{ cm}}\n\nThis means the pocket center is 3.5 mm higher than both ends.\n\n4. Curve Radius\n\nUsing a 17 cm pocket:\n\nR=L28h+h2R=\\frac{L^2}{8h}+\\frac{h}{2}\n\nWhere:\n\nL=17L=17 cm\nh=0.35h=0.35 cm\nR=1728(0.35)+0.175R=\\frac{17^2}{8(0.35)}+0.175 R≈103.4 cmR\\approx103.4\\text{ cm}\nRadius\n103 cm\\boxed{103\\text{ cm}}\n\nA large radius creates the subtle bespoke curve.\n\n5. Pocket Slant\n\nTraditional breast-pocket angle:\n\n8∘−12∘8^\\circ - 12^\\circ\n\nRecommended:\n\n10∘\\boxed{10^\\circ}\n\ntoward the armhole.\n\n6. Corner Triangle Cuts\n\nPocket opening height:\n\n2.3 cm2.3\\text{ cm}\n\nTriangle cuts:\n\nTL=WTL=W TL=2.3 cmTL=2.3\\text{ cm}\n\nCut at:\n\n45∘\\boxed{45^\\circ}\n7. Draft Coordinates\n\nFor a 17 cm pocket opening:\n\nLeft End:\n\n(0,0)(0,0)\n\nCenter Crown:\n\n(8.5,  0.35)(8.5,\\;0.35)\n\nRight End:\n\n(17,  0)(17,\\;0)\n\nDraw a smooth French curve through these points.\n\n          • (8.5,0.35)\n         /\\\n        /  \\\n       /    \\\n      /      \\\n•------------------•\n0                  17\n\n8. Pocket Bag Dimensions\n\nPocket-bag width:\n\nPBW=PL+4PBW = PL + 4\n\nFor a 17 cm pocket:\n\nPBW=21 cmPBW = 21\\text{ cm}\n\nPocket-bag depth:\n\nPBD=1.5PLPBD = 1.5PL PBD=25.5 cmPBD = 25.5\\text{ cm}\nComplete Bespoke Draft\nFinished Pocket\n17.0×2.3 cm\\boxed{17.0 \\times 2.3\\text{ cm}}\nWelt Strip\n6.6×17.0 cm\\boxed{6.6 \\times 17.0\\text{ cm}}\nCurve Rise\n0.35 cm\\boxed{0.35\\text{ cm}}\nCurve Radius\n103 cm\\boxed{103\\text{ cm}}\nPocket Angle\n10∘\\boxed{10^\\circ}\nCorner Triangle Cuts\n\\boxed{2.3\\text{ cm @ 45^\\circ} }\nPocket Bag\n21.0×25.5 cm\\boxed{21.0 \\times 25.5\\text{ cm}}\n\nThis produces a subtle Barchetta (curved welt) chest pocket with a 2.3 cm finished welt, very typical of Neapolitan and bespoke tailoring.",
+      "references": [
+        "/images/review-refs/sport-coat/cp-welt-curved-23/1786508680579-pvq60p.jpg"
+      ],
+      "parkedAt": "2026-08-12T21:48:07.165Z",
+      "craftId": "sport-coat|suit-pockets|chest-pocket|cp-welt-curved-23"
+    },
+    {
+      "attemptRejected": null,
+      "decidedAt": null,
+      "source": "july-v3",
+      "verdict": "reject-file",
+      "tags": [],
+      "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+      "reasonRecorded": false,
+      "references": [],
+      "craftId": "sport-coat|suit-pockets|chest-pocket|cp-welt-curved-23",
+      "foldedFrom": "generation-queue.rejectionContext",
+      "parkedAt": "2026-08-16T05:02:08.413Z"
+    }
+  ],
+  "builtAt": "2026-08-26T07:29:07.315Z"
+}

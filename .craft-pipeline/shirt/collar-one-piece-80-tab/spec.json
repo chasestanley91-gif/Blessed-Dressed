@@ -1,0 +1,56 @@
+{
+  "schema": "garment-spec/v1",
+  "addr": "shirt > collar > lapel > collar-one-piece-80-tab",
+  "productId": "shirt",
+  "sectionId": "collar",
+  "fieldId": "lapel",
+  "optionId": "collar-one-piece-80-tab",
+  "sourceFile": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\data-store\\options\\shirt.json",
+  "source": "json",
+  "label": "One-Piece 8.0 cm with Tab",
+  "description": "An 8.0 cm one-piece collar cut without a separate stand seam for a fluid, soft roll, completed with a tab behind the knot. The seamless leaf drapes gently around the neck, a hallmark of relaxed Neapolitan shirtmaking.",
+  "fieldLabel": "Collar Style",
+  "sectionLabel": "Collar",
+  "part": "shirt-collar",
+  "garment": {
+    "noun": "white bespoke cotton dress shirt",
+    "fabric": "crisp cotton poplin"
+  },
+  "view": {
+    "orientation": "front",
+    "wearerPerspective": true,
+    "confirmedByVisualInspection": true
+  },
+  "absence": false,
+  "measured": {
+    "dimensions": [
+      "8.0 cm"
+    ],
+    "angles": [],
+    "counts": [],
+    "shapes": [],
+    "negatedShapes": [],
+    "spread": [],
+    "flags": [
+      "tab fastening"
+    ],
+    "sides": [],
+    "attributes": [],
+    "supplierCodes": [],
+    "unresolved": []
+  },
+  "illustration": {
+    "path": "/images/blueprints/baoxiniao/shirt/REQCL/105.jpg",
+    "disk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\shirt\\REQCL\\105.jpg",
+    "exists": true,
+    "remote": false
+  },
+  "forbidden": [
+    "a generic version of this part standing in for the exact drawn option (generic-category substitution)",
+    "any feature, count, or geometry borrowed from a neighboring craft option on the same field",
+    "a feature that belongs on the opposite face of the garment from what this illustration shows (front/back/side confusion)"
+  ],
+  "excluded": null,
+  "generate": true,
+  "extractedAt": "2026-08-26T07:29:10.988Z"
+}

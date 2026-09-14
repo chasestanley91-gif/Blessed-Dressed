@@ -1,0 +1,36 @@
+{
+ "craftId": "suit-2pc|front-style|hem-gusset|hem-squared",
+ "note": "Owner rejection reasons for this craft, from BOTH decision sources. build_prompt.mjs folds these into every prompt it builds.",
+ "corrections": [
+  {
+   "attemptRejected": 1,
+   "decidedAt": "2026-08-12T04:54:32.474Z",
+   "tags": [
+    "Wrong feature entirely",
+    "Reference drawing itself is wrong",
+    "Wrong size or proportion",
+    "Unrealistic / AI look"
+   ],
+   "notes": "",
+   "references": [
+    "/images/review-refs/suit-2pc/hem-squared/1786510449559-3d7ias.png",
+    "/images/review-refs/suit-2pc/hem-squared/1786510461218-8xev0r.webp"
+   ],
+   "parkedAt": "2026-08-12T21:48:07.294Z",
+   "craftId": "suit-2pc|front-style|hem-gusset|hem-squared"
+  },
+  {
+   "attemptRejected": null,
+   "decidedAt": null,
+   "source": "july-v3",
+   "verdict": "reject-file",
+   "tags": [],
+   "notes": "The reason was not recorded with this rejection. Do not reproduce the previous attempt: treat the tech-pack drawing as the only geometry authority, and change the execution (framing, cloth, lighting, finish) rather than repeating it.",
+   "reasonRecorded": false,
+   "references": [],
+   "craftId": "suit-2pc|front-style|hem-gusset|hem-squared",
+   "foldedFrom": "generation-queue.rejectionContext",
+   "parkedAt": "2026-08-16T05:02:08.639Z"
+  }
+ ]
+}
