@@ -104,24 +104,130 @@ function addrFromQueue(key: string): string | undefined {
 }
 
 export async function GET() {
-  const queue = readJson<{ items?: unknown[]; generatedAt?: string }>(QUEUE_FILE, {});
+  const map = readJson<{ builtAt?: string; crafts?: CraftRow[]; totals?: unknown }>(
+    join(STORE, "craft-image-map.json"),
+    {},
+  );
+  const crafts = (map.crafts ?? [])
+    .filter((c) => c.inScope)
+    .map((c) => ({
+      ...c,
+      photos: (c.photos ?? []).filter((p) => p.verdict !== "rejected").map((p) => ({
+        ...p,
+        path: displayPath(p),
+      })).filter((p) => p.path.startsWith("/images/")),
+    }));
   const decisions = readJson<DecisionMap>(DECISIONS_FILE, {});
   return NextResponse.json({
-    generatedAt: queue.generatedAt ?? null,
-    items: queue.items ?? [],
+    generatedAt: map.builtAt ?? null,
+    totals: map.totals ?? null,
+    crafts,
     decisions,
   });
 }
 
+type MapPhoto = { path: string; sha1: string; aliases?: string[]; verdict: string; preTicked?: boolean; sources?: string[] };
+type CraftRow = {
+  craftId: string;
+  inScope?: boolean;
+  photos?: MapPhoto[];
+  [k: string]: unknown;
+};
+
+function displayPath(p: MapPhoto): string {
+  if (p.path.startsWith("/images/")) return p.path;
+  const alias = (p.aliases ?? []).find((a) => a.startsWith("/images/"));
+  return alias ?? p.path;
+}
+
+function saveCraftBatch(body: Record<string, unknown>) {
+  const craftId = String(body.craftId);
+  const photos = Array.isArray(body.photos) ? body.photos : [];
+  const notes = typeof body.notes === "string" ? body.notes.trim() : "";
+  const tags = Array.isArray(body.tags) ? body.tags.filter((t): t is string => typeof t === "string") : [];
+  const noneRight = body.noneRight === true;
+  const drawingWrong = body.drawingWrong === true;
+  const now = new Date().toISOString();
+  const targets = [craftId];
+  if (body.applyToJackets === true) {
+    const parts = craftId.split("|");
+    if (parts.length === 4) {
+      for (const p of ["suit-2pc", "suit-3pc", "sport-coat"]) {
+        const alt = [p, parts[1], parts[2], parts[3]].join("|");
+        if (alt !== craftId) targets.push(alt);
+      }
+    }
+  }
+
+  const decisions = readJson<DecisionMap>(DECISIONS_FILE, {});
+  let wrote = 0;
+  for (const id of targets) {
+    const [product, , , optionId] = id.split("|");
+    const key = `${product}/${optionId}`;
+    if (noneRight || drawingWrong) {
+      decisions[key] = {
+        key,
+        attempt: 1,
+        verdict: "rejected",
+        notes: notes || (drawingWrong ? "drawing is wrong" : "none are right — needs a new photo"),
+        tags: tags.length ? tags : ["Generic version, not this option"],
+        decidedAt: now,
+      };
+      appendLog({
+        ...decisions[key],
+        event: "decision",
+        addr: id.replace(/\|/g, " > "),
+      });
+      wrote += 1;
+    }
+    for (const raw of photos) {
+      if (!raw || typeof raw !== "object") continue;
+      const p = raw as { path?: string; sha1?: string; verdict?: string };
+      if (p.verdict !== "approved" && p.verdict !== "rejected") continue;
+      if (typeof p.path !== "string") continue;
+      appendLog({
+        key,
+        attempt: 1,
+        verdict: p.verdict,
+        notes: notes || undefined,
+        tags: tags.length ? tags : undefined,
+        decidedAt: now,
+        event: "decision",
+        addr: id.replace(/\|/g, " > "),
+        imagePath: p.path,
+        imageSha1: typeof p.sha1 === "string" ? p.sha1 : undefined,
+      });
+      if (p.verdict === "approved") {
+        decisions[key] = {
+          key,
+          attempt: 1,
+          verdict: "approved",
+          notes: notes || undefined,
+          decidedAt: now,
+        };
+      }
+      wrote += 1;
+    }
+  }
+  writeDecisions(decisions);
+  return NextResponse.json({ ok: true, wrote, targets });
+}
+
 export async function POST(req: NextRequest) {
-  let body: Partial<ReviewDecision> & { addr?: string };
+  let body: Record<string, unknown>;
   try {
-    body = (await req.json()) as Partial<ReviewDecision> & { addr?: string };
+    body = (await req.json()) as Record<string, unknown>;
   } catch {
     return NextResponse.json({ error: "Invalid JSON" }, { status: 400 });
   }
 
-  const { key, attempt, verdict } = body;
+  if (typeof body.craftId === "string" && body.craftId.includes("|")) {
+    return saveCraftBatch(body);
+  }
+
+  const key = body.key as string | undefined;
+  const attempt = body.attempt as number | undefined;
+  const verdict = body.verdict as string | undefined;
 
   if (!key || typeof key !== "string" || !key.includes("/")) {
     return NextResponse.json({ error: "key must be 'product/option'" }, { status: 400 });

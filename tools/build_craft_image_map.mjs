@@ -61,7 +61,11 @@ function servedOf(abs) {
   const n = abs.replace(/\\/g, '/');
   const pub = PUBLIC.replace(/\\/g, '/');
   const repo = REPO.replace(/\\/g, '/');
-  if (n.startsWith(pub)) return n.slice(pub.length).replace(/^/, '/').replace(/\\/g, '/');
+  if (n.toLowerCase().startsWith(pub.toLowerCase())) {
+    let rel = n.slice(pub.length).replace(/\\/g, '/');
+    if (!rel.startsWith('/')) rel = '/' + rel;
+    return rel;
+  }
   if (n.startsWith(repo)) return n.slice(repo.length + 1);
   return n;
 }
@@ -433,7 +437,13 @@ for (const c of crafts) {
     c.external.length,
   ].join(','));
 }
-fs.writeFileSync(CSV_OUT, csvLines.join('\n') + '\n', 'utf8');
+try {
+  fs.writeFileSync(CSV_OUT, csvLines.join('\n') + '\n', 'utf8');
+} catch (err) {
+  const alt = CSV_OUT.replace(/\.csv$/, `-${Date.now()}.csv`);
+  fs.writeFileSync(alt, csvLines.join('\n') + '\n', 'utf8');
+  console.warn('csv locked, wrote', alt, err.message);
+}
 
 console.log(`crafts ${totals.crafts}  in-scope ${totals.inScope}  excluded ${totals.excluded}`);
 console.log(`drawings  ok ${totals.drawingOk}  missing ${totals.drawingMissing}  flagged ${totals.drawingFlagged}`);

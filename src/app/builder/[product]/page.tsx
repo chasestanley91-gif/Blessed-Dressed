@@ -141,33 +141,27 @@ function StepBadge({ n, label, active, done }: { n: number; label: string; activ
 type OptionAsset = { url: string; role: "Illustration" | "Real photo" | "AI render" | "Photo" };
 
 function optionAssets(opt: DesignOption): { illustration?: string; photos: string[]; items: OptionAsset[] } {
-  const isPhotoPath = (p?: string) => !!p && /^\/images\/(generated|ai)\//i.test(p);
+  const local = (p?: string) => !!p && p.startsWith("/images/");
+  const isPhotoPath = (p?: string) => !!p && /^\/images\/(generated|ai|real|review)\//i.test(p);
 
-  const illustration =
-    opt.illustration ?? (opt.image && !isPhotoPath(opt.image) ? opt.image : undefined);
+  const illustration = local(opt.illustration)
+    ? opt.illustration
+    : (local(opt.image) && !isPhotoPath(opt.image) ? opt.image : undefined);
 
-  const photos =
-    opt.photos ?? [
-      ...(isPhotoPath(opt.image) ? [opt.image!] : []),
-      ...(opt.realImage ? [opt.realImage] : []),
-      ...(opt.aiImage ? [opt.aiImage] : []),
-      ...(opt.images ?? []),
-    ];
+  const photos = (opt.photos ?? []).filter((p) => local(p));
 
   const seen = new Set<string>();
   const items: OptionAsset[] = [];
   const push = (url: string | undefined, role: OptionAsset["role"]) => {
-    if (!url || seen.has(url)) return; // one file never appears twice
+    if (!url || seen.has(url)) return;
     seen.add(url);
     items.push({ url, role });
   };
 
-  push(illustration, "Illustration"); // guaranteed first slide when one exists
-  for (const p of photos) {
-    push(p, p === opt.realImage ? "Real photo" : p === opt.aiImage ? "AI render" : "Photo");
-  }
+  push(illustration, "Illustration");
+  for (const p of photos) push(p, "Photo");
 
-  return { illustration, photos: photos.filter(Boolean), items };
+  return { illustration, photos, items };
 }
 
 function OptionCard({ id, label, description, priceAdj, option, selected, onClick, onExpand }: {
@@ -176,13 +170,9 @@ function OptionCard({ id, label, description, priceAdj, option, selected, onClic
   option?: DesignOption; selected: boolean; onClick: () => void; onExpand?: () => void;
 }) {
   const { illustration, photos } = optionAssets(option ?? ({ id: "", label, description } as DesignOption));
-  // Lead with the drawing when this option's photo is shared with a sibling and
-  // therefore cannot show what makes them differ (photoAmbiguous), or when there
-  // is no photo at all.
-  const leadWithDrawing = option?.photoAmbiguous === true || photos.length === 0;
-  const thumb = leadWithDrawing ? (illustration ?? photos[0]) : (photos[0] ?? illustration);
-  const hasPhoto = !!thumb && thumb !== illustration;
-  const image = illustration; // drawing is the onError fallback target
+  const thumb = photos[0] ?? illustration;
+  const hasPhoto = !!photos[0];
+  const image = illustration;
   return (
     // The expand control used to be a <div role="button" tabIndex={0}> INSIDE
     // this <button>. Interactive content inside a button is invalid HTML: the

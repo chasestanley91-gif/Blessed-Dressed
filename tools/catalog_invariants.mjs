@@ -224,6 +224,14 @@ for (const [addr, o] of current.options) {
   }
   for (const v of [...(o.photos ?? []), ...(o.images ?? [])]) {
     if (typeof v === 'string' && v.startsWith('/')) referenced.add(v);
+    if (typeof v === 'string' && /^https?:\/\//i.test(v)) fail(`REMOTE IMAGE: ${addr} -> ${v}`);
+  }
+  for (const k of ASSET_KEYS) {
+    const v = o[k];
+    if (typeof v === 'string' && /^https?:\/\//i.test(v)) fail(`REMOTE IMAGE (${k}): ${addr} -> ${v}`);
+  }
+  if (typeof o.image === 'string' && PHOTO_DIR.test(o.image)) {
+    fail(`IMAGE SLOT IS A PHOTO (must be the drawing): ${addr} -> ${o.image}`);
   }
 }
 

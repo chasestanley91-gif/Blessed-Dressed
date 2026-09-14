@@ -18,9 +18,29 @@ import type { ProductDesignConfig } from "./types";
 let cache: Record<string, ProductDesignConfig> | null = null;
 let pending: Promise<Record<string, ProductDesignConfig>> | null = null;
 
+function stripUnsafeImages(all: Record<string, ProductDesignConfig>): Record<string, ProductDesignConfig> {
+  for (const cfg of Object.values(all)) {
+    for (const s of cfg.sections ?? []) {
+      for (const fl of s.fields ?? []) {
+        for (const o of fl.options ?? []) {
+          const drop = (p?: string) =>
+            !p || /^https?:\/\//i.test(p) || /^\/images\/(generated|ai|factory|jacket)\//i.test(p);
+          if (drop(o.image)) delete o.image;
+          if (drop(o.illustration)) delete o.illustration;
+          delete o.photos;
+          delete o.images;
+          delete o.realImage;
+          delete o.aiImage;
+        }
+      }
+    }
+  }
+  return all;
+}
+
 export function loadBundledDesigns(): Promise<Record<string, ProductDesignConfig>> {
   if (cache) return Promise.resolve(cache);
-  pending ??= import("./index").then((m) => (cache = m.allProductDesigns));
+  pending ??= import("./index").then((m) => (cache = stripUnsafeImages(m.allProductDesigns)));
   return pending;
 }
 

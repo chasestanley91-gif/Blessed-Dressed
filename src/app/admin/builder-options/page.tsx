@@ -61,19 +61,14 @@ function OptionRow({
       <div className="grid grid-cols-[230px_1fr_2fr_70px_auto_auto] gap-2 items-center">
         {/* Images: Illustration / AI render / Real photo — click to edit */}
         <div className="flex items-start gap-1.5">
-          {([["image", slotSrc(opt, "image") && (opt.image?.includes("/generated/") || !!opt.photos?.length || !!opt.images?.length) ? "Photo" : "Illus.", slotSrc(opt, "image")], ["aiImage", "AI", slotSrc(opt, "aiImage")], ["realImage", "Real", slotSrc(opt, "realImage")]] as const).map(([field, lbl, src]) => (
+          {([["image", "Draw", opt.illustration || opt.techpackIllustration || opt.image], ["aiImage", "Photo", (opt.photos ?? []).find((p) => p.startsWith("/images/"))], ["realImage", "Ref", undefined]] as const).map(([field, lbl, src]) => (
             <div key={field} className="flex flex-col items-center gap-0.5">
-              <button
-                type="button"
-                onClick={() => onEditImage(sectionIdx, fieldIdx, optIdx, field)}
-                title={`Edit ${lbl === "Illus." ? "illustration" : lbl === "AI" ? "AI render" : "real photo"}`}
-                className="group relative h-[52px] w-[68px] rounded bg-white overflow-hidden border border-border-accent hover:border-gold transition-colors"
+              <div
+                title="Photos are managed in Image Review"
+                className="relative h-[52px] w-[68px] rounded bg-white overflow-hidden border border-border-accent"
               >
                 <Thumb src={src} label={lbl} />
-                <span className="absolute inset-0 hidden items-center justify-center bg-black/50 font-sans text-[10px] font-semibold text-white group-hover:flex">
-                  ✎
-                </span>
-              </button>
+              </div>
               <span className="font-sans text-[8px] text-slate">{lbl}</span>
             </div>
           ))}
