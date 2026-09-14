@@ -474,11 +474,33 @@ if (APPLY) {
   // skip is recorded and surfaced.
   let folded = 0;
   log.correctionsSkipped = [];
+  let parked = 0;
   for (const { craftId, e } of corrections) {
     const [product] = craftId.split('|');
-    const pFile = path.join(PIPE, product, e.portalKey.split('/')[1], 'prompt.json');
+    const cDir = path.join(PIPE, product, e.portalKey.split('/')[1]);
+    const pFile = path.join(cDir, 'prompt.json');
     if (!fs.existsSync(pFile)) {
-      log.correctionsSkipped.push({ craftId, reason: 'no prompt.json yet — fold when tech-pack-interpreter builds it', tags: e.tags, notes: e.notes, references: e.references, attempt: e.attempt, decidedAt: e.decidedAt });
+      // No prompt exists yet, so there is nothing to append to — but the owner's
+      // retry instruction must not depend on a file that happens to exist. Park it
+      // beside the craft in owner-corrections.json; build_prompt.mjs reads that on
+      // EVERY build, so the very first prompt for this craft already carries the
+      // correction. Without this the retry silently repeats the rejected mistake,
+      // which is the failure PROJECT-GOAL-V4 §7 exists to prevent.
+      const parkFile = path.join(cDir, 'owner-corrections.json');
+      const parkedNow = fs.existsSync(parkFile) ? (readJson(parkFile, null)?.corrections ?? []) : [];
+      const dup = parkedNow.some((x) => x.attemptRejected === e.attempt && x.decidedAt === e.decidedAt);
+      if (!dup) {
+        parkedNow.push({ attemptRejected: e.attempt, decidedAt: e.decidedAt, tags: e.tags ?? [], notes: e.notes ?? '', references: e.references ?? [], parkedAt: new Date().toISOString(), craftId });
+        fs.mkdirSync(cDir, { recursive: true });
+        fs.writeFileSync(parkFile, JSON.stringify({
+          craftId,
+          note: 'Owner rejection reasons for a craft that had no prompt.json when they were '
+            + 'recorded. build_prompt.mjs folds these into every prompt it builds.',
+          corrections: parkedNow,
+        }, null, 1));
+        parked += 1;
+      }
+      log.correctionsSkipped.push({ craftId, reason: 'no prompt.json yet — parked in owner-corrections.json, folded on first prompt build', tags: e.tags, notes: e.notes, references: e.references, attempt: e.attempt, decidedAt: e.decidedAt });
       continue;
     }
     const prompt = readJson(pFile, null);
@@ -507,7 +529,8 @@ if (APPLY) {
   log.failures = failures;
   fs.writeFileSync(LOG, JSON.stringify(log, null, 1) + '\n', 'utf8');
   console.log(`\nAPPLIED: ${log.published.length} published, ${log.rewired.length} rewired, ${folded} corrections folded`);
-  if (log.correctionsSkipped.length) console.log(`corrections NOT folded (no/bad prompt.json — owner's reasons preserved in the log): ${log.correctionsSkipped.length}`);
+  if (parked) console.log(`corrections parked for crafts with no prompt yet (folded on first build): ${parked}`);
+  if (log.correctionsSkipped.length) console.log(`corrections not folded into an existing prompt: ${log.correctionsSkipped.length} (all preserved — see the log and owner-corrections.json)`);
   if ((log.galleryDetached ?? []).length) console.log(`gallery entries detached from non-target crafts: ${log.galleryDetached.length}`);
   if ((log.rejectedPurged ?? []).length) console.log(`rejected files purged from rows: ${log.rejectedPurged.length}`);
   if (failures.length) { console.log(`FAILED entries: ${failures.length}`); for (const f of failures) console.log(`  ${f.craftId}: ${f.error}`); }

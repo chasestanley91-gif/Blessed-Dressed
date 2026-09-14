@@ -196,6 +196,49 @@ const generated = scanGenerated();
 
 const isGeneratedPath = (s) => typeof s === 'string' && /(^|\/)images\/generated\//i.test(s);
 
+// ── the owner's own decisions ───────────────────────────────────────────────
+// The admin portal writes data-store/image-review-decisions.json; each entry is
+// a human ruling on one option at one attempt.
+//
+// This tool used to ignore that file completely and derive every lifecycle
+// stage from the machine QC verdict alone. That was a defect with teeth in BOTH
+// directions: 75 images the owner had REJECTED were reported to the next
+// session as "QC approved - publish it", and 40 images the owner had personally
+// APPROVED were filed under failed-retry-due/unmet and queued for a
+// credit-burning regeneration nobody needed.
+//
+// Owner ruling, 2026-08-10: "unless ive approved them physically dont put them
+// on the live website." A QC verdict is evidence; only the owner grants
+// consent. The owner's decision therefore outranks the machine in both
+// directions, and it is read HERE so no downstream reader has to remember to.
+const DECISIONS = path.join(REPO, 'data-store', 'image-review-decisions.json');
+const ownerDecisions = tryJson(DECISIONS) || {};
+
+// A `product/option` key is NOT a craft identity. 17 of them match two different
+// catalog rows apiece: suit-3pc/coin-none is BOTH the jacket coin pocket and the
+// trouser coin pocket; suit-3pc/sb-5 is both a jacket button config and a vest
+// one. Counting the rows that wear each key is what lets a binding refuse to
+// guess.
+const keyRowCount = new Map();
+for (const inv of inventory) {
+  const k = `${inv.product}/${inv.option}`;
+  keyRowCount.set(k, (keyRowCount.get(k) || 0) + 1);
+}
+
+// The append-only decision log records the FULL craft address the owner was
+// looking at when they ruled. Where it exists it outranks the ambiguous key.
+const DECISIONS_LOG = path.join(REPO, 'data-store', 'image-review-decisions-log.json');
+const rawDecisionLog = tryJson(DECISIONS_LOG) || [];
+const decisionLogEntries = Array.isArray(rawDecisionLog)
+  ? rawDecisionLog
+  : rawDecisionLog.entries || [];
+const ownerDecisionAddrs = new Map();
+for (const e of decisionLogEntries) {
+  if (!e || !e.key || !e.addr) continue;
+  if (!ownerDecisionAddrs.has(e.key)) ownerDecisionAddrs.set(e.key, new Set());
+  ownerDecisionAddrs.get(e.key).add(e.addr);
+}
+
 const records = [];
 const shippedUse = new Map(); // generated path -> [addr]
 
@@ -221,8 +264,55 @@ for (const inv of inventory) {
     shippedUse.set(shippedPath, [...(shippedUse.get(shippedPath) || []), inv.addr]);
   }
 
+  // WHICH CRAFT did the owner actually rule on?
+  //
+  // Binding a decision by its `product/option` key alone applies one craft's
+  // verdict to a DIFFERENT craft - precisely the contamination PROJECT-GOAL-V4
+  // §2 and §12 prohibit by name. That is not hypothetical: doing it unpublished
+  // the jacket coin-pocket row on the strength of a TROUSER rejection.
+  //
+  // So the address decides:
+  //   address    - the append-only log names this exact craft. Authoritative.
+  //   other-craft- the log names a DIFFERENT craft under this key. Not ours.
+  //   unique-key - no logged address, but only one row wears the key. Safe.
+  //   ambiguous  - no logged address and the key is shared. UNRESOLVED: it binds
+  //                to nothing, because §10 forbids acting on an association the
+  //                system cannot prove.
+  //
+  // A decision recorded against an OLDER attempt does not settle a NEWER
+  // candidate either: that reopens review rather than closing it.
+  const od = ownerDecisions[key] || null;
+  const loggedAddrs = ownerDecisionAddrs.get(key) || null;
+  let ownerBinding = 'none';
+  if (od) {
+    if (loggedAddrs) ownerBinding = loggedAddrs.has(inv.addr) ? 'address' : 'other-craft';
+    else if ((keyRowCount.get(key) || 0) <= 1) ownerBinding = 'unique-key';
+    else ownerBinding = 'ambiguous';
+  }
+  const owner =
+    od && (ownerBinding === 'address' || ownerBinding === 'unique-key')
+      ? {
+          verdict: od.verdict, // 'approved' | 'rejected'
+          attempt: od.attempt ?? null,
+          decidedAt: od.decidedAt ?? null,
+          boundBy: ownerBinding,
+          // No machine verdict => the owner ruled on whatever was in front of
+          // them, and that ruling stands unqualified.
+          coversGraded:
+            !pipe || !pipe.verdict ? true : (od.attempt ?? 0) >= (pipe.attempt ?? 0),
+        }
+      : null;
+  // Kept even though nothing binds, so an unprovable decision is VISIBLE in the
+  // report rather than silently absent from it.
+  const ownerUnresolved =
+    ownerBinding === 'ambiguous'
+      ? { key, verdict: od.verdict, decidedAt: od.decidedAt ?? null, rowsSharingKey: keyRowCount.get(key) || 0 }
+      : null;
+
   records.push({
     key,
+    owner,
+    ownerUnresolved,
     addr: inv.addr,
     product: inv.product,
     section: inv.section,
@@ -263,8 +353,34 @@ function deriveStage(r) {
   if (r.excluded) return 'excluded-swatch';
   if (!r.inScope) return r.blueprint === 'none' ? 'no-blueprint' : 'out-of-scope';
   const p = r.pipeline;
+  const o = r.owner;
+
+  // ── THE OWNER OUTRANKS THE MACHINE, IN BOTH DIRECTIONS ────────────────────
+  // Reading the QC verdict first is what produced two mirror-image defects:
+  // images the owner REJECTED were advertised to the next session as
+  // "publish it", and images the owner APPROVED were filed as retry-owed and
+  // queued to be regenerated at cost. No later gate can recover from either,
+  // because both corrupt the instruction the next reader acts on.
+  if (o && o.coversGraded) {
+    if (o.verdict === 'rejected') return 'owner-rejected';
+    if (o.verdict === 'approved') {
+      if (!r.shipped) return 'owner-approved-not-shipped';
+      // Shipped WITH consent. Keep the strength of the machine's agreement
+      // visible rather than flattening it: a clean pass, a logged waiver, an
+      // image taken over the machine's objection, and a legacy image the owner
+      // vouched for are four different claims.
+      if (p && p.verdict === 'PASS') return 'shipped';
+      if (p && p.verdict === 'PASS_WAIVED') return 'shipped-waived';
+      if (p && p.verdict) return 'shipped-owner-override';
+      return 'shipped-owner-approved';
+    }
+  }
+
   if (p && p.needsReverify) return 'needs-reverify';
-  if (p && p.verdict === 'PASS') return r.shipped ? 'shipped' : 'passed-not-shipped';
+
+  // Machine-approved, owner has not ruled on THIS attempt. Not shippable, and
+  // emphatically not "publish it" - it belongs in front of the owner.
+  if (p && (p.verdict === 'PASS' || p.verdict === 'PASS_WAIVED')) return 'awaiting-owner-review';
   // PASS_WAIVED ships too — it is an approval, granted after the retry budget is
   // spent, to an image scoring >=95 in every category with ZERO critical or major
   // findings. This branch did not exist, so every waived image fell through to
@@ -272,7 +388,6 @@ function deriveStage(r) {
   // doc told the next reader to go and QC an image that already carries a logged
   // verdict. Kept as its own stage rather than folded into `shipped`, because a
   // waiver is a weaker claim than a clean pass and the report should keep saying so.
-  if (p && p.verdict === 'PASS_WAIVED') return r.shipped ? 'shipped-waived' : 'waived-not-shipped';
   if (p && p.verdict === 'FAIL') return 'failed-retry-due';
   if (p && p.verdict === 'UNMET') return 'unmet';
   if (p && p.have.generation) return 'generated-awaiting-qc';
@@ -298,11 +413,47 @@ const findings = [];
 const add = (severity, code, message, items = []) =>
   findings.push({ severity, code, message, count: items.length, items: items.slice(0, 50) });
 
-// Blocking: QC approved but nothing shipped — approved work sitting unpublished.
-const passedNotShipped = records.filter((r) => r.stage === 'passed-not-shipped');
-if (passedNotShipped.length) {
-  add('blocking', 'PASS_NOT_SHIPPED', 'QC PASSed but the catalog does not point at a generated image.',
-    passedNotShipped.map((r) => r.addr));
+// Blocking: the owner APPROVED this image and the catalog still does not serve
+// it. This is the ONLY "publish it" finding there is. The old PASS_NOT_SHIPPED
+// finding keyed off the QC verdict instead, so it spent months instructing each
+// new session to publish 69 images the owner had explicitly REJECTED.
+const approvedNotShipped = records.filter((r) => r.stage === 'owner-approved-not-shipped');
+if (approvedNotShipped.length) {
+  add('blocking', 'OWNER_APPROVED_NOT_SHIPPED',
+    'The owner approved this image but the catalog does not serve it — publish it.',
+    approvedNotShipped.map((r) => r.addr));
+}
+
+// Blocking: an image the owner REJECTED is being served. This is
+// PROJECT-GOAL-V4 §20's "zero unapproved images accidentally published", and
+// it is the exact defect unpublish_unapproved.mjs had to repair on 2026-08-10.
+// Never let it go quiet again.
+const rejectedLive = records.filter(
+  (r) => r.owner && r.owner.coversGraded && r.owner.verdict === 'rejected' && r.shipped
+);
+if (rejectedLive.length) {
+  add('blocking', 'OWNER_REJECTED_LIVE',
+    'The owner REJECTED this image and it is still being served — unpublish it.',
+    rejectedLive.map((r) => `${r.addr} -> ${r.shippedPath}`));
+}
+
+// Warning: a decision that cannot be pinned to one craft. It binds to NOTHING,
+// so no tool will act on it - but it is a real owner ruling that is currently
+// doing no work, and only a human can say which craft it belongs to.
+const ownerAmbiguous = records.filter((r) => r.ownerUnresolved);
+if (ownerAmbiguous.length) {
+  add('warning', 'OWNER_DECISION_AMBIGUOUS',
+    'An owner decision exists under a product/option key shared by more than one craft, with no address in the append-only log. It binds to nothing until disambiguated \u2014 never act on it.',
+    ownerAmbiguous.map((r) => `${r.addr}  (key ${r.key} \u2192 ${r.ownerUnresolved.verdict}, shared by ${r.ownerUnresolved.rowsSharingKey} crafts)`));
+}
+
+// Warning, not blocking: a report cannot hurry a human. But this is the queue
+// the whole project gates on, so it must stay visible.
+const awaitingOwner = records.filter((r) => r.stage === 'awaiting-owner-review');
+if (awaitingOwner.length) {
+  add('warning', 'AWAITING_OWNER_REVIEW',
+    'QC approved; the owner has not ruled on this attempt. Stage it at /admin/image-review.',
+    awaitingOwner.map((r) => r.addr));
 }
 
 // Blocking: catalog points at a generated file that is not on disk.
@@ -444,7 +595,8 @@ if (sharedBlueprints.length) {
 
 // --- roll-ups ---------------------------------------------------------------
 const STAGES = [
-  'shipped', 'shipped-waived', 'passed-not-shipped', 'waived-not-shipped',
+  'shipped', 'shipped-waived', 'shipped-owner-override', 'shipped-owner-approved',
+  'owner-approved-not-shipped', 'owner-rejected', 'awaiting-owner-review',
   'needs-reverify', 'failed-retry-due', 'unmet',
   'generated-awaiting-qc', 'prompt-built', 'spec-only', 'legacy-shipped-unverified',
   'not-started', 'no-blueprint', 'excluded-swatch', 'out-of-scope',
@@ -471,7 +623,13 @@ const inScope = records.filter((r) => r.inScope);
 // visible rather than being absorbed into the headline.
 const verifiedClean = inScope.filter((r) => r.stage === 'shipped').length;
 const verifiedWaived = inScope.filter((r) => r.stage === 'shipped-waived').length;
-const verified = verifiedClean + verifiedWaived;
+// An image is DONE when the owner has consented to it and it is live — that is
+// the project's own definition (§10). Counting only machine-passed images
+// understated coverage by every option the owner personally signed off after the
+// machine had objected, or vouched for without a pipeline record at all.
+const verifiedOverride = inScope.filter((r) => r.stage === 'shipped-owner-override').length;
+const verifiedLegacyOk = inScope.filter((r) => r.stage === 'shipped-owner-approved').length;
+const verified = verifiedClean + verifiedWaived + verifiedOverride + verifiedLegacyOk;
 const pct = (n, d) => (d ? ((n / d) * 100).toFixed(1) : '0.0');
 
 const checkpoint = tryJson(path.join(REPORTS, 'CHECKPOINT.json'));
@@ -487,6 +645,8 @@ const summary = {
   verifiedShipped: verified,
   verifiedShippedClean: verifiedClean,
   verifiedShippedWaived: verifiedWaived,
+  verifiedShippedOwnerOverride: verifiedOverride,
+  verifiedShippedOwnerApprovedLegacy: verifiedLegacyOk,
   verifiedShippedPct: pct(verified, inScope.length),
   pipelineDirs: pipeline.size,
   generatedFiles: generated.size,
@@ -528,7 +688,7 @@ write(path.join(REPORTS, 'repo-index.json'), JSON.stringify({ generatedAt: summa
 write(path.join(REPORTS, 'state-summary.json'), JSON.stringify({ ...summary, findings }, null, 2));
 
 // --- PROJECT_DASHBOARD.md ---------------------------------------------------
-const dashCols = ['shipped', 'shipped-waived', 'passed-not-shipped', 'generated-awaiting-qc', 'spec-only', 'failed-retry-due', 'unmet', 'needs-reverify', 'legacy-shipped-unverified', 'not-started'];
+const dashCols = ['shipped', 'shipped-waived', 'shipped-owner-override', 'shipped-owner-approved', 'owner-approved-not-shipped', 'owner-rejected', 'awaiting-owner-review', 'generated-awaiting-qc', 'spec-only', 'failed-retry-due', 'unmet', 'legacy-shipped-unverified', 'not-started'];
 const dashRow = (name, p) =>
   `| ${name} | ${p.total} | ${p.inScope} | ` + dashCols.map((c) => p[c]).join(' | ') + ' |';
 
@@ -549,8 +709,13 @@ ${dashRow('**TOTAL**', totals)}
 
 | stage | meaning |
 |---|---|
-| shipped | qc.json PASS and the catalog points at the generated image |
-| passed-not-shipped | QC approved, catalog not yet updated — publish it |
+| shipped | owner APPROVED, QC PASS, and the catalog serves it |
+| shipped-waived | owner APPROVED, QC waived-pass, and the catalog serves it |
+| shipped-owner-override | live because the OWNER approved it over a QC FAIL/UNMET |
+| shipped-owner-approved | live legacy image the owner vouched for; no QC record |
+| owner-approved-not-shipped | the owner said yes and the catalog does not serve it — **publish it** |
+| owner-rejected | the owner said NO. Never publish; owes a failure-aware retry |
+| awaiting-owner-review | QC approved, owner has not ruled — belongs at /admin/image-review |
 | generated-awaiting-qc | image exists, no verdict yet |
 | spec-only / prompt-built | interpreted, not yet generated |
 | failed-retry-due | QC FAIL, a corrected attempt is owed |
@@ -631,6 +796,12 @@ if (blocking.length) {
   for (const f of blocking) {
     nextActions.push(`**Clear blocking \`${f.code}\`** (${f.count}) — ${f.message} See STATE.md for the list.`);
   }
+}
+if (totals['owner-rejected']) {
+  nextActions.push(`**Regenerate ${totals['owner-rejected']} owner-REJECTED option(s)** with failure-aware prompts — read each rejection reason first. These never publish as they stand.`);
+}
+if (totals['awaiting-owner-review']) {
+  nextActions.push(`**Put ${totals['awaiting-owner-review']} QC-approved image(s) in front of the owner** at /admin/image-review (\`node tools/build_review_queue.mjs --write\`). A QC PASS is not consent.`);
 }
 if (totals['needs-reverify']) {
   nextActions.push(`**Re-verify ${totals['needs-reverify']} option(s)** whose approval was revoked (stage \`needs-reverify\` in repo-index.json).`);

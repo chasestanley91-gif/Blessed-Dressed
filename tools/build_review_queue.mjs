@@ -80,6 +80,25 @@ for (const product of fs.readdirSync(PIPE)) {
       : /^PASS/.test(qcVerdict) ? 'shipped'
       : 'pipeline-rejected';
 
+    // build_prompt.mjs merges prompt.json.ownerCorrections with the PARKED
+    // owner-corrections.json, so a review that reads only the first shows an
+    // empty rejection history for every craft whose correction was parked -
+    // which was 29 of the 41 queued.
+    let parked = [];
+    try {
+      const pf = path.join(odir, 'owner-corrections.json');
+      if (fs.existsSync(pf)) parked = JSON.parse(fs.readFileSync(pf, 'utf8')).corrections || [];
+    } catch { /* ignore */ }
+    const mergedCorrections = [...(prompt.ownerCorrections || [])];
+    for (const c of parked) {
+      if (!mergedCorrections.some((x) => x.attemptRejected === c.attemptRejected && x.decidedAt === c.decidedAt)) mergedCorrections.push(c);
+    }
+    let recordedPrompt = '';
+    try {
+      const gf = path.join(odir, 'generation.json');
+      if (fs.existsSync(gf)) recordedPrompt = JSON.parse(fs.readFileSync(gf, 'utf8')).promptUsed || '';
+    } catch { /* ignore */ }
+
     const illDisk = spec.illustration && spec.illustration.disk;
     const illPath = spec.illustration && spec.illustration.path;
 
@@ -92,23 +111,38 @@ for (const product of fs.readdirSync(PIPE)) {
       label: (spec.profile && spec.profile.option) || spec.label || option,
       field: (spec.profile && spec.profile.field) || spec.fieldLabel || '',
       part: spec.part || '',
-      orientation: spec.orientation || '',
-      description: (spec.profile && spec.profile.distinguishingDetail) || '',
+      // SCHEMA DRIFT, fixed: the spec now nests the view (`view.orientation`)
+      // and carries `description` at the top level. The builder was still
+      // reading `spec.orientation` and `spec.profile.distinguishingDetail`, so
+      // ALL 41 queued candidates reached the owner with no written
+      // specification and no orientation — two of the ten things V4 s11 says
+      // the review screen must show. Old shapes kept as fallbacks.
+      orientation: (spec.view && spec.view.orientation) || spec.orientation || '',
+      description: spec.description || (spec.profile && spec.profile.distinguishingDetail) || '',
       candidateDisk: path.join(odir, latest),
       drawingDisk: illDisk && fs.existsSync(illDisk) ? illDisk : null,
       drawingOriginalPath: illPath || null,
-      promptText: typeof prompt.prompt === 'string' ? prompt.prompt : '',
+      // The prompt the image was ACTUALLY generated from is the one V4 s11.7
+      // asks for. A wave driven through prep_batch builds it in memory and
+      // never writes prompt.json, so showing whatever prompt.json happens to
+      // hold would show a DIFFERENT prompt than the one that made the picture.
+      // Prefer the recorded one; otherwise say so rather than mislead.
+      promptText: typeof recordedPrompt === 'string' && recordedPrompt
+        ? recordedPrompt
+        : (typeof prompt.prompt === 'string' ? prompt.prompt : ''),
+      promptSource: recordedPrompt ? 'recorded-at-generation'
+        : (typeof prompt.prompt === 'string' && prompt.prompt ? 'prompt.json (rebuilt later - may differ from the one used)' : 'NOT RECORDED'),
       // The owner's own rejection history for this craft, so the review screen
       // can say "this is the retry of the one you rejected, and here is why
       // you rejected it" instead of presenting a replacement as a stranger.
-      rejectionHistory: (prompt.ownerCorrections || []).map((c) => ({
+      rejectionHistory: mergedCorrections.map((c) => ({
         attemptRejected: c.attemptRejected, decidedAt: c.decidedAt,
         tags: c.tags || [], notes: c.notes || '', references: c.references || [],
       })),
-      isReplacementForRejected: (prompt.ownerCorrections || []).length > 0,
+      isReplacementForRejected: mergedCorrections.length > 0,
       jobId: gen.jobId || (gen.attempts && gen.attempts.length
         ? gen.attempts[gen.attempts.length - 1].jobId : null),
-      checklist: spec.checklist || [],
+      checklist: prompt.checklist || spec.checklist || [],
       qcVerdict,
       pipelineStatus,
       mtime: fs.statSync(path.join(odir, latest)).mtimeMs,
@@ -181,6 +215,7 @@ for (const r of rows) {
     drawingUrl: drawName ? `/images/review/${drawName}` : null,
     drawingOriginalPath: r.drawingOriginalPath,
     promptText: r.promptText,
+    promptSource: r.promptSource,
     rejectionHistory: r.rejectionHistory,
     isReplacementForRejected: r.isReplacementForRejected,
   });

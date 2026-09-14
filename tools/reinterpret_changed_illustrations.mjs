@@ -27,6 +27,13 @@ const PIPE = path.join(REPO, '.craft-pipeline');
 const SKILLS = process.env.CLAUDE_SKILLS_DIR || 'C:/Users/ChaseStanley/.claude/skills';
 const EXTRACT = path.join(SKILLS, 'tech-pack-interpreter', 'scripts', 'extract_spec.mjs');
 const APPLY = process.argv.includes('--apply');
+/**
+ * The extractor refuses to guess the view — correct, because the view can only be
+ * settled by LOOKING at the drawing. It has to be forwarded, and so does the
+ * section: 382 options share an option id with a different option inside the same
+ * product, so extract_spec refuses without it (see tools/prep_batch.mjs).
+ */
+const ORIENTATION = (process.argv.find((a) => a.startsWith('--orientation=')) ?? '').split('=')[1] ?? null;
 
 if (!fs.existsSync(EXTRACT)) {
   console.error(`tech-pack-interpreter extractor not found: ${EXTRACT}`);
@@ -60,7 +67,17 @@ if (!APPLY) {
 const ok = [], failed = [];
 for (const m of markers) {
   try {
-    const out = execFileSync(process.execPath, [EXTRACT, `--product=${m.product}`, `--option=${m.optionId}`, '--write'],
+    const section = typeof m.craftId === 'string' ? m.craftId.split('|')[1] : null;
+    const extra = [];
+    if (section) extra.push(`--section=${section}`);
+    // The MARKER knows which drawing this is; the CLI flag is only a fallback.
+    // A single global --orientation cannot be right for a batch that mixes an
+    // interior lining plate, a jacket front and a magnified cuff detail - and
+    // getting it wrong renders an interior drawing as a front view, which is
+    // exactly the class of error the extractor refuses to guess at.
+    const orientation = m.orientation ?? ORIENTATION;
+    if (orientation) extra.push(`--orientation=${orientation}`);
+    const out = execFileSync(process.execPath, [EXTRACT, `--product=${m.product}`, `--option=${m.optionId}`, ...extra, '--write'],
       { cwd: REPO, encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] });
     // Only clear the marker once a spec exists that names the new drawing.
     const spec = path.join(PIPE, m.product, m.optionId, 'spec.json');

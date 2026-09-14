@@ -55,6 +55,24 @@ const review = readJson(REVIEW_QUEUE, { items: [] });
 const awaitingByAddr = new Set();
 const awaitingByKey = new Set();
 const decisions = readJson(path.join(REPO, 'data-store/image-review-decisions.json'), {});
+
+// Owner reference photos that vision verification confirmed depict their craft. Only
+// these may be attached at generation time; see the rejectionContext note below.
+const refVerification = readJson(path.join(PUBLIC, 'images/reports/owner-reference-promotion.json'), null);
+const trustedRefs = new Set();
+for (const bucket of ['promoted', 'referencesAttached']) {
+  for (const row of refVerification?.[bucket] ?? []) {
+    if (bucket === 'promoted') trustedRefs.add(`${row.craftId}||${row.after}`);
+  }
+}
+for (const c of refVerification?.referencesAttached ?? []) {
+  const parked = readJson(path.join(REPO, c.out), null);
+  for (const r of parked?.references ?? []) trustedRefs.add(`${c.craftId}||${r.path}`);
+}
+if (!refVerification) {
+  console.warn('WARNING: no owner-reference-promotion.json — every owner reference will be '
+    + 'withheld from generation until verification has run. Run tools/promote_owner_references.mjs.');
+}
 for (const it of review.items ?? []) {
   const d = decisions[it.key];
   const pending = !d || d.attempt < it.attempt;
@@ -107,19 +125,44 @@ for (const opt of iterateOptions(cat)) {
   const hasPhotoApproval = (lc?.approvedPhotoEvents ?? 0) > 0;
   const rejectedNow = latestAdmin?.verdict === 'rejected'
     || (!latestAdmin && (lc?.rejectionEvents ?? 0) > 0 && !hasPhotoApproval);
+  // The generation wave treats an owner reference photo as OUTRANKING the drawing.
+  // That is right when the photo shows this craft and catastrophic when it does not:
+  // a wrong reference beats a correct blueprint and produces a confident wrong image.
+  // Vision verification (public/images/reports/owner-reference-promotion.json) found 50
+  // uploads that depict a different craft entirely — a coordinate-geometry screenshot, a
+  // DIY denim tutorial, hardware belonging to a neighbouring option. Those are withheld
+  // here, and anything unverified is withheld too: a reference is trusted only once
+  // something has actually looked at it. Withheld paths are still reported, never erased.
   const rejectionContext = (lc?.events ?? [])
     .filter((e) => !e.machine && ['rejected', 'reject-file', 'remake', 'discard'].includes(e.verdict))
-    .map((e) => ({ source: e.source, verdict: e.verdict, tags: e.tags, notes: e.notes ?? e.note, attempt: e.attempt, references: e.references }));
+    .map((e) => {
+      const refs = e.references ?? [];
+      const keep = refs.filter((r) => trustedRefs.has(`${craftId}||${r}`));
+      const withheld = refs.filter((r) => !keep.includes(r));
+      return {
+        source: e.source, verdict: e.verdict, tags: e.tags, notes: e.notes ?? e.note,
+        attempt: e.attempt, references: keep,
+        ...(withheld.length ? { referencesWithheld: withheld, referencesWithheldWhy: 'not verified as depicting this craft — do NOT attach at generation' } : {}),
+      };
+    });
 
   const illustrationUsable = ['verified-match', 'drawing-unverified'].includes(illu.status);
   const awaiting = awaitingByAddr.has(craftId)
     || (awaitingByKey.has(`${spec.productId}/${opt.optionId}`) && !awaitingByAddr.size);
 
   let state, why;
-  if (spec.excluded || spec.generate === false) {
-    state = 'X'; why = spec.excluded ? `excluded: ${spec.excluded}` : 'marked non-generatable';
+  // X is ONLY the by-design swatch exclusion. `spec.generate` is
+  // `hasBlueprint && !excluded`, so folding it into X here filed 700 real craft
+  // options — lower pockets, lapel widths, ticket pockets — as "excluded by
+  // design" when their actual problem is that no drawing exists on disk. That is
+  // state A's meaning ("blocked on source material, not on effort") and it is the
+  // difference between a gap the audit reports and a gap it hides.
+  if (spec.excluded) {
+    state = 'X'; why = `excluded: ${spec.excluded}`;
   } else if (!illustrationUsable) {
     state = 'A'; why = `illustration ${illu.status}`;
+  } else if (spec.generate === false) {
+    state = 'A'; why = 'no blueprint on disk to generate from';
   } else if (hasPhotoApproval && latestAdmin?.verdict !== 'rejected') {
     // Approval means generation is NOT needed — whether the image is wired yet
     // is apply_owner_approvals.mjs's department, surfaced here for the audit.

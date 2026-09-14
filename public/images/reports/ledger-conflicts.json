@@ -1,5 +1,82 @@
 {
- "builtAt": "2026-08-12T11:28:13.506Z",
+ "builtAt": "2026-08-27T19:47:50.492Z",
  "conflicts": [],
- "unresolved": []
+ "unresolved": [
+  {
+   "source": "admin-portal",
+   "key": "suit-2pc/bartack-none",
+   "decision": {
+    "key": "suit-2pc/bartack-none",
+    "attempt": 1,
+    "verdict": "approved",
+    "decidedAt": "2026-08-12T05:14:52.204Z"
+   },
+   "candidates": [
+    "suit-2pc|suit-pockets|lower-pocket-bartack|bartack-none",
+    "suit-2pc|Trousers-pleats-structure|bar-tack|bartack-none"
+   ]
+  },
+  {
+   "source": "admin-portal",
+   "key": "suit-3pc/coin-none",
+   "decision": {
+    "key": "suit-3pc/coin-none",
+    "attempt": 1,
+    "verdict": "rejected",
+    "notes": "remove the model",
+    "decidedAt": "2026-08-12T13:57:11.303Z"
+   },
+   "candidates": [
+    "suit-3pc|suit-pockets|coin-pocket|coin-none",
+    "suit-3pc|Trousers-front-pockets|coin-pocket|coin-none"
+   ]
+  },
+  {
+   "source": "admin-portal",
+   "key": "suit-3pc/coin-right",
+   "decision": {
+    "key": "suit-3pc/coin-right",
+    "attempt": 1,
+    "verdict": "rejected",
+    "notes": "remove the model",
+    "decidedAt": "2026-08-12T13:57:20.523Z"
+   },
+   "candidates": [
+    "suit-3pc|suit-pockets|coin-pocket|coin-right",
+    "suit-3pc|Trousers-front-pockets|coin-pocket|coin-right"
+   ]
+  },
+  {
+   "source": "admin-portal",
+   "key": "suit-3pc/coin-both",
+   "decision": {
+    "key": "suit-3pc/coin-both",
+    "attempt": 1,
+    "verdict": "rejected",
+    "notes": "remove the model",
+    "decidedAt": "2026-08-12T13:57:36.262Z"
+   },
+   "candidates": [
+    "suit-3pc|suit-pockets|coin-pocket|coin-both",
+    "suit-3pc|Trousers-front-pockets|coin-pocket|coin-both"
+   ]
+  },
+  {
+   "source": "admin-portal",
+   "key": "suit-3pc/bartack-none",
+   "decision": {
+    "key": "suit-3pc/bartack-none",
+    "attempt": 1,
+    "verdict": "approved",
+    "tags": [
+     "Reference drawing itself is wrong"
+    ],
+    "decidedAt": "2026-08-12T14:00:27.452Z"
+   },
+   "candidates": [
+    "suit-3pc|suit-pockets|lower-pocket-bartack|bartack-none",
+    "suit-3pc|Trousers-pleats-structure|bar-tack|bartack-none"
+   ]
+  }
+ ]
 }

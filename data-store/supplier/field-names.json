@@ -1,0 +1,5768 @@
+{
+  "generatedAt": "2026-08-26T06:13:12.662Z",
+  "source": "getZlpmd.data.datas[*][*].zlpmdList — field -> tfiel (name), tcont (wizard group)",
+  "note": "The human field names. craft-labels-<CAT>.json has NO usable field name: its `fieldLabel` is valueList[0].tprot, which equals the first VALUE label. Join on this file, not on that one.",
+  "categories": {
+    "BB": "jacket",
+    "BC": "shirt",
+    "BD": "trousers",
+    "BM": "vest"
+  },
+  "totalFields": 1146,
+  "byCategory": {
+    "BB": {
+      "part": "jacket",
+      "fieldCount": 370,
+      "fields": {
+        "LENFD": {
+          "name": "Front length(Finished)",
+          "group": "Try-on measurement",
+          "contp": "HSM"
+        },
+        "LENBD": {
+          "name": "Back length(Finished)",
+          "group": "Try-on measurement",
+          "contp": "HSM"
+        },
+        "LENSH": {
+          "name": "Shoulder Width(Finished)",
+          "group": "Try-on measurement",
+          "contp": "HSM"
+        },
+        "LENSL": {
+          "name": "Sleeves length(Finished)",
+          "group": "Try-on measurement",
+          "contp": "HSM"
+        },
+        "LENCH": {
+          "name": "Chest(Finished)",
+          "group": "Try-on measurement",
+          "contp": "HSM"
+        },
+        "LENMV": {
+          "name": "Stomach(Finished)",
+          "group": "Try-on measurement",
+          "contp": "HSM"
+        },
+        "LENBO": {
+          "name": "Seat(Finished)",
+          "group": "Try-on measurement",
+          "contp": "HSM"
+        },
+        "LENDR": {
+          "name": "Hem(Finished)",
+          "group": "Try-on measurement",
+          "contp": "HSM"
+        },
+        "LENXF": {
+          "name": "Full Bicep(Finished)",
+          "group": "Try-on measurement",
+          "contp": "HSM"
+        },
+        "LENM4": {
+          "name": "Full Cuff(Finished)",
+          "group": "Try-on measurement",
+          "contp": "HSM"
+        },
+        "LENBT": {
+          "name": "The first button distance",
+          "group": "Try-on measurement",
+          "contp": "HSM"
+        },
+        "LENM1": {
+          "name": "Pocket Height",
+          "group": "Try-on measurement",
+          "contp": "HSM"
+        },
+        "LENAP": {
+          "name": "The first button distance",
+          "group": "Size",
+          "contp": "MOD"
+        },
+        "BDJHD": {
+          "name": "Head",
+          "group": "Bodyshape adjustment",
+          "contp": "PMB"
+        },
+        "BDJNK": {
+          "name": "Neck",
+          "group": "Bodyshape adjustment",
+          "contp": "PMB"
+        },
+        "BDJLH": {
+          "name": "Left shoulder",
+          "group": "Bodyshape adjustment",
+          "contp": "PMB"
+        },
+        "BDJSJ": {
+          "name": "Bladebone",
+          "group": "Bodyshape adjustment",
+          "contp": "PMB"
+        },
+        "BDJRH": {
+          "name": "Right shoulder",
+          "group": "Bodyshape adjustment",
+          "contp": "PMB"
+        },
+        "BDJMH": {
+          "name": "Front shoulder",
+          "group": "Bodyshape adjustment",
+          "contp": "PMB"
+        },
+        "BDJBH": {
+          "name": "Arm adjustment",
+          "group": "Bodyshape adjustment",
+          "contp": "PMB"
+        },
+        "ADJES": {
+          "name": "Armhole Depth",
+          "group": "Bodyshape adjustment",
+          "contp": "PMB"
+        },
+        "BDJCH": {
+          "name": "Chest Out",
+          "group": "Bodyshape adjustment",
+          "contp": "PMB"
+        },
+        "ADJQX": {
+          "name": "Front Chest",
+          "group": "Bodyshape adjustment",
+          "contp": "PMB"
+        },
+        "BDJCI": {
+          "name": "Pectorales",
+          "group": "Bodyshape adjustment",
+          "contp": "PMB"
+        },
+        "BDJSB": {
+          "name": "Back",
+          "group": "Bodyshape adjustment",
+          "contp": "PMB"
+        },
+        "BDJST": {
+          "name": "Belly",
+          "group": "Bodyshape adjustment",
+          "contp": "PMB"
+        },
+        "BDJDS": {
+          "name": "Stomach Dart",
+          "group": "Bodyshape adjustment",
+          "contp": "PMB"
+        },
+        "BDJAB": {
+          "name": "Entirety",
+          "group": "Bodyshape adjustment",
+          "contp": "PMB"
+        },
+        "BDJAY": {
+          "name": "concave waist",
+          "group": "Bodyshape adjustment",
+          "contp": "PMB"
+        },
+        "ADJSU": {
+          "name": "Arm",
+          "group": "Bodyshape adjustment",
+          "contp": "PMB"
+        },
+        "ADJZJ": {
+          "name": "Left Shoulder Angle",
+          "group": "Bodyshape adjustment",
+          "contp": "PMA"
+        },
+        "ADJYJ": {
+          "name": "Right Shoulder Angle",
+          "group": "Bodyshape adjustment",
+          "contp": "PMA"
+        },
+        "ADJSD": {
+          "name": "Shoulder Pad",
+          "group": "Bodyshape adjustment",
+          "contp": "PMA"
+        },
+        "ADJMH": {
+          "name": "Shoulder Adjustment",
+          "group": "Bodyshape adjustment",
+          "contp": "PMA"
+        },
+        "ADJNE": {
+          "name": "Neck Width(SNP. to SNP.)",
+          "group": "Bodyshape adjustment",
+          "contp": "PMA"
+        },
+        "ADJHL": {
+          "name": "Back Collar Height",
+          "group": "Bodyshape adjustment",
+          "contp": "PMA"
+        },
+        "ADJBB": {
+          "name": "Back Width(Both side)",
+          "group": "Bodyshape adjustment",
+          "contp": "PMA"
+        },
+        "ADJBZ": {
+          "name": "Back Width(Centre Seam)",
+          "group": "Bodyshape adjustment",
+          "contp": "PMA"
+        },
+        "ADJBA": {
+          "name": "Back Balance",
+          "group": "Bodyshape adjustment",
+          "contp": "PMA"
+        },
+        "BDJAO": {
+          "name": "Back Waist",
+          "group": "Bodyshape adjustment",
+          "contp": "PMA"
+        },
+        "ADJXF": {
+          "name": "Full Bicep",
+          "group": "Bodyshape adjustment",
+          "contp": "PMA"
+        },
+        "ADJSK": {
+          "name": "Full Cuff",
+          "group": "Bodyshape adjustment",
+          "contp": "PMA"
+        },
+        "ADJSV": {
+          "name": "Sleeve Pitch",
+          "group": "Bodyshape adjustment",
+          "contp": "PMA"
+        },
+        "ADJG1": {
+          "name": "Front Edge",
+          "group": "Bodyshape adjustment",
+          "contp": "PMA"
+        },
+        "ADJQA": {
+          "name": "Front chest-stomach-seat",
+          "group": "Bodyshape adjustment",
+          "contp": "PMA"
+        },
+        "ADJQB": {
+          "name": "Back chest-stomach-seat",
+          "group": "Bodyshape adjustment",
+          "contp": "PMA"
+        },
+        "ADJQC": {
+          "name": "Back Chest",
+          "group": "Bodyshape adjustment",
+          "contp": "PMA"
+        },
+        "ADJSL": {
+          "name": "Left Sleeve Length",
+          "group": "Bodyshape adjustment",
+          "contp": "PMA"
+        },
+        "ADJYG": {
+          "name": "Waistline",
+          "group": "Bodyshape adjustment",
+          "contp": "PMA"
+        },
+        "ADJQT": {
+          "name": "Lapel Breakline Allowance",
+          "group": "Bodyshape adjustment",
+          "contp": "PMA"
+        },
+        "SHSMD": {
+          "name": "Shoulder head",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "PROCE": {
+          "name": "Canvas",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "READJ": {
+          "name": "Shoulder Pad",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "REQCL": {
+          "name": "Lapel",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "KFABL": {
+          "name": "Lapel width",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "KALTP": {
+          "name": "Folded collar craftsmanship",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "REQCZ": {
+          "name": "Collar Tab Fabric",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "GTELV": {
+          "name": "Collar felt",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "GTEDC": {
+          "name": "Collar interlining",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "GTECH": {
+          "name": "Lapel buttonhole style",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "GTECP": {
+          "name": "Lapel buttonhole position",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "GTECO": {
+          "name": "Lapel buttonhole color",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "REQPU": {
+          "name": "Chest pocket",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "REQPD": {
+          "name": "Lower pocket",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "REKPO": {
+          "name": "Lower pocket bartack",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "KPOKD": {
+          "name": "Ticket pocket",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "KPOKT": {
+          "name": "Card Pocket Spacing",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "KAXDK": {
+          "name": "Lower coin pocket",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "REQBT": {
+          "name": "Front style",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "REQBU": {
+          "name": "Placket button",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "REQBD": {
+          "name": "Placket Reinforcement Button",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "GTEKJ": {
+          "name": "Double breasted left & right button distance",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "KAKJC": {
+          "name": "Upper & lower button distance",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "KWAML": {
+          "name": "Chest dart distance",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "REQXB": {
+          "name": "Hem&gusset",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "GCOXC": {
+          "name": "Sleeve vent",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "GCOWZ": {
+          "name": "Sleeve Vent Ribbon Position",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "GCOCZ": {
+          "name": "Sleeve Vent Ribbon Fabric",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "REQBV": {
+          "name": "Sleeve button",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "KFAXK": {
+          "name": "Sleeve cuff",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "GTEXK": {
+          "name": "Cuff button number",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "GTEXJ": {
+          "name": "Cuff button spacing",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "GTEKF": {
+          "name": "Sleeve buttonhole direction",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "REQTT": {
+          "name": "Elbow patch",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "REQTC": {
+          "name": "Elbow patch fabric",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "REQLM": {
+          "name": "Piping(Out Looking) Position",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "GCOQT": {
+          "name": "Piping(Out Looking) Fabric",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "KINGM": {
+          "name": "Facing",
+          "group": "High-level design",
+          "contp": "PMF"
+        },
+        "KPEND": {
+          "name": "Pen pocket",
+          "group": "High-level design",
+          "contp": "PMF"
+        },
+        "GCOPB": {
+          "name": "Diamond Pen Pocket Contrast Area",
+          "group": "High-level design",
+          "contp": "PMF"
+        },
+        "GCOZB": {
+          "name": "Diamond Pen Pocket Contrast Material",
+          "group": "High-level design",
+          "contp": "PMF"
+        },
+        "KHALI": {
+          "name": "Half lining/full lining",
+          "group": "High-level design",
+          "contp": "PMF"
+        },
+        "KINBL": {
+          "name": "Half lining shape",
+          "group": "High-level design",
+          "contp": "PMF"
+        },
+        "KIPRO": {
+          "name": "Half lining craftsmanship",
+          "group": "High-level design",
+          "contp": "PMF"
+        },
+        "REQMA": {
+          "name": "Body lining",
+          "group": "High-level design",
+          "contp": "PMF"
+        },
+        "REQXU": {
+          "name": "Sleeve lining",
+          "group": "High-level design",
+          "contp": "PMF"
+        },
+        "GTEZB": {
+          "name": "Columbia stitching/Piping",
+          "group": "High-level design",
+          "contp": "PMF"
+        },
+        "GTEZY": {
+          "name": "Columbia stitching color",
+          "group": "High-level design",
+          "contp": "PMF"
+        },
+        "GTEQY": {
+          "name": "Piping color",
+          "group": "High-level design",
+          "contp": "PMF"
+        },
+        "KALDP": {
+          "name": "Inner pocket button",
+          "group": "High-level design",
+          "contp": "PMF"
+        },
+        "KALDF": {
+          "name": "Inner pocket closure",
+          "group": "High-level design",
+          "contp": "PMF"
+        },
+        "KIMOD": {
+          "name": "Perfume pad style",
+          "group": "High-level design",
+          "contp": "PMF"
+        },
+        "REAPB": {
+          "name": "Inner ticket pocket",
+          "group": "High-level design",
+          "contp": "PMF"
+        },
+        "KNAMD": {
+          "name": "Namecard pocket",
+          "group": "High-level design",
+          "contp": "PMF"
+        },
+        "KMPCD": {
+          "name": "Mp3 pocket",
+          "group": "High-level design",
+          "contp": "PMF"
+        },
+        "REQSD": {
+          "name": "Upper pocket fabric",
+          "group": "High-level design",
+          "contp": "PMF"
+        },
+        "GCIPA": {
+          "name": "Inner contrast position",
+          "group": "High-level design",
+          "contp": "PMF"
+        },
+        "GCIZS": {
+          "name": "Inner contrast fabric",
+          "group": "High-level design",
+          "contp": "PMF"
+        },
+        "RESPO": {
+          "name": "Cut-out position",
+          "group": "High-level design",
+          "contp": "PMF"
+        },
+        "REVKI": {
+          "name": "Cut-out fabric",
+          "group": "High-level design",
+          "contp": "PMF"
+        },
+        "REQBR": {
+          "name": "Brand label position",
+          "group": "High-level design",
+          "contp": "PMF"
+        },
+        "REMMP": {
+          "name": "Fabric label position",
+          "group": "High-level design",
+          "contp": "PMF"
+        },
+        "CBRXL": {
+          "name": "Label thread color",
+          "group": "High-level design",
+          "contp": "PMF"
+        },
+        "REQLG": {
+          "name": "Collar Label",
+          "group": "High-level design",
+          "contp": "PMF"
+        },
+        "REQDX": {
+          "name": "Care label classify",
+          "group": "High-level design",
+          "contp": "PMF"
+        },
+        "REQDM": {
+          "name": "Care label position",
+          "group": "High-level design",
+          "contp": "PMF"
+        },
+        "GTEGZ": {
+          "name": "picking stitching",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "REQGZ": {
+          "name": "Pick stitching position",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "GTEZS": {
+          "name": "Pick stitching color",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "GCOPA": {
+          "name": "Contrast position",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "GCOZS": {
+          "name": "Contrast fabric",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "JWBZS": {
+          "name": "External decoration",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "REQAP": {
+          "name": "Back vent",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "REQKC": {
+          "name": "hand stitch fixed",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "REQKJ": {
+          "name": "Folded back vent",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "GLKMO": {
+          "name": "Front buttonhole",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "GMKCO": {
+          "name": "All front buttonholes in one color",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "GMKC1": {
+          "name": "The first front buttonhole in contrast color",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "GMKC2": {
+          "name": "The second front buttonhole in contrast color",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "GMKC3": {
+          "name": "The third front buttonhole in contrast color",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "GMKC4": {
+          "name": "The fourth front buttonhole in contrast color",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "GMKC5": {
+          "name": "The fifth front buttonhole in contrast color",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "GXKMO": {
+          "name": "Sleeve buttonhole",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "GXKCO": {
+          "name": "All sleeves buttonhole one color",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "GXKC1": {
+          "name": "The first sleeve buttonhole in contrast color",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "GXKC2": {
+          "name": "The second sleeve buttonhole in contrast color",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "GXKC3": {
+          "name": "The third sleeve buttonhole in contrast color",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "GXKC4": {
+          "name": "The fourth sleeve buttonhole in contrast color",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "GXKC5": {
+          "name": "The fifth sleeve buttonhole in contrast color",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "GXKC6": {
+          "name": "The sixth sleeve buttonhole in contrast color",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "PHNBU": {
+          "name": "Sewing button style",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "PHBUC": {
+          "name": "Buttoning thread color",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "REFUH": {
+          "name": "Hand-made",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "REFUO": {
+          "name": "Handmade decorative line",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "BDJBE": {
+          "name": "body type",
+          "group": "Bodyshape adjustment",
+          "contp": "PMH"
+        },
+        "BDJNH": {
+          "name": "Left shoulder",
+          "group": "Bodyshape adjustment",
+          "contp": "PMH"
+        },
+        "BDJOH": {
+          "name": "Right shoulder",
+          "group": "Bodyshape adjustment",
+          "contp": "PMH"
+        },
+        "BDJSK": {
+          "name": "Bladebone",
+          "group": "Bodyshape adjustment",
+          "contp": "PMH"
+        },
+        "BDJSC": {
+          "name": "Back style",
+          "group": "Bodyshape adjustment",
+          "contp": "PMH"
+        },
+        "BDJAZ": {
+          "name": "concave waist",
+          "group": "Bodyshape adjustment",
+          "contp": "PMH"
+        },
+        "BDJSD": {
+          "name": "Chest",
+          "group": "Bodyshape adjustment",
+          "contp": "PMH"
+        },
+        "BDJSL": {
+          "name": "Belly",
+          "group": "Bodyshape adjustment",
+          "contp": "PMH"
+        },
+        "ADJSW": {
+          "name": "Arm curvature",
+          "group": "Bodyshape adjustment",
+          "contp": "PMH"
+        },
+        "ADJSX": {
+          "name": "Arm forward&backward",
+          "group": "Bodyshape adjustment",
+          "contp": "PMH"
+        },
+        "REQEM": {
+          "name": "Embroidery Details",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQTP": {
+          "name": "Embroidery Style",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQEM2": {
+          "name": "Embroidery Details2",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQEM3": {
+          "name": "Embroidery Details3",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQCO": {
+          "name": "Embroidery Color",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQCO2": {
+          "name": "Embroidery Color2",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQCO3": {
+          "name": "Embroidery Color3",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQTP2": {
+          "name": "Embroidery Style2",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQEW": {
+          "name": "Embroidery Font",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQEW2": {
+          "name": "Embroidery Font2",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQEW3": {
+          "name": "Embroidery Font3",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQTP3": {
+          "name": "Embroidery Style3",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQLO": {
+          "name": "Embroidery Position",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQLO2": {
+          "name": "Embroidery Position2",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQLO3": {
+          "name": "Embroidery Position3",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQCG": {
+          "name": "Embroidery Height",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQCG2": {
+          "name": "Embroidery Height2",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQCG3": {
+          "name": "Embroidery Height3",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQNP": {
+          "name": "Embroidery Remark",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQNP2": {
+          "name": "Embroidery Remark2",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQNP3": {
+          "name": "Embroidery Remark3",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "BTHAA": {
+          "name": "Neck Width (SNP. to SNP.)",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BTHAB": {
+          "name": "Back Collar Depth",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BTHAC": {
+          "name": "Left Shoulder Angle",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BTHAD": {
+          "name": "Right Shoulder Angle",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BTHAG": {
+          "name": "Left Shoulder Pad",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BTHAH": {
+          "name": "Right Shoulder Pad",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BTHAI": {
+          "name": "Forward shoulder",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BTHAJ": {
+          "name": "Backward shoulder",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BTHAK": {
+          "name": "Lett Scapular protrusion",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BTHAL": {
+          "name": "Right Scapular protrusion",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BTHAM": {
+          "name": "Back width(Both sides)",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "ADJSC": {
+          "name": "Humpback",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "ADJBX": {
+          "name": "Concave waist",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "ADJBW": {
+          "name": "Bottom of Centre Back",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BTHAP": {
+          "name": "Back Chest",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BTHAQ": {
+          "name": "Back Waist",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BTHAR": {
+          "name": "Back Bottom",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BTHAS": {
+          "name": "Back chest-stomach-seat",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BTHAT": {
+          "name": "back-sloping shoulders",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BTHAU": {
+          "name": "Front Chest(both sides)",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BTHAV": {
+          "name": "Lapel Breakline Allowance",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "ADJDY": {
+          "name": "Strong Chest",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BDJCJ": {
+          "name": "Chest Out",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "ADJXS": {
+          "name": "Chest Dart",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "ADJGA": {
+          "name": "Front Edge",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BTHAW": {
+          "name": "Expand Chest",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BTHAY": {
+          "name": "Front Half Chest",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BTHAZ": {
+          "name": "Front Half Waist",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BTHBA": {
+          "name": "Front Half Bottom",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BTHBB": {
+          "name": "Front chest-stomach-seat",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BTHBS": {
+          "name": "Front waist dart",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BTHBC": {
+          "name": "Arm adjustment",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BTHBD": {
+          "name": "Armhole Depth",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BTHBE": {
+          "name": "Curved Arm",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BTHBF": {
+          "name": "Straight Arm",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BTHBG": {
+          "name": "Left Sleeve Length",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "LENBL": {
+          "name": "Height",
+          "group": "Finished measurement",
+          "contp": "GSZ"
+        },
+        "LENWT": {
+          "name": "Weight",
+          "group": "Finished measurement",
+          "contp": "GSZ"
+        },
+        "LENOL": {
+          "name": "Age",
+          "group": "Finished measurement",
+          "contp": "GSZ"
+        },
+        "LENST": {
+          "name": "Full Belly(Finished)",
+          "group": "Finished measurement",
+          "contp": "GSZ"
+        },
+        "LENXK": {
+          "name": "Full Cuff(Finished)",
+          "group": "Finished measurement",
+          "contp": "GSZ"
+        },
+        "LENSB": {
+          "name": "Back width(Finished)",
+          "group": "Finished measurement",
+          "contp": "GSZ"
+        },
+        "LENSR": {
+          "name": "Right Sleeve(Finished)",
+          "group": "Finished measurement",
+          "contp": "GSZ"
+        },
+        "LENJW": {
+          "name": "Neckline(body)",
+          "group": "Finished measurement",
+          "contp": "GSZ"
+        },
+        "LREBL": {
+          "name": "Height(body)",
+          "group": "Body measurement",
+          "contp": "NSZ"
+        },
+        "LREWT": {
+          "name": "Weight(body)",
+          "group": "Body measurement",
+          "contp": "NSZ"
+        },
+        "LREBD": {
+          "name": "Neck(body)",
+          "group": "Body measurement",
+          "contp": "NSZ"
+        },
+        "LREBW": {
+          "name": "Chest(body)",
+          "group": "Body measurement",
+          "contp": "NSZ"
+        },
+        "LRELB": {
+          "name": "Stomach(body)",
+          "group": "Body measurement",
+          "contp": "NSZ"
+        },
+        "LREFW": {
+          "name": "Belly(body)",
+          "group": "Body measurement",
+          "contp": "NSZ"
+        },
+        "LREST": {
+          "name": "Seat(body)",
+          "group": "Body measurement",
+          "contp": "NSZ"
+        },
+        "LRESH": {
+          "name": "Back Shoulder",
+          "group": "Body measurement",
+          "contp": "NSZ"
+        },
+        "LREAH": {
+          "name": "Full Front Chest(body)",
+          "group": "Body measurement",
+          "contp": "NSZ"
+        },
+        "LREBH": {
+          "name": "Front Shoulder",
+          "group": "Body measurement",
+          "contp": "NSZ"
+        },
+        "LRESB": {
+          "name": "Full Back Width(body)",
+          "group": "Body measurement",
+          "contp": "NSZ"
+        },
+        "LREBO": {
+          "name": "Bicep(body)",
+          "group": "Body measurement",
+          "contp": "NSZ"
+        },
+        "LREBE": {
+          "name": "Wrist(body)",
+          "group": "Body measurement",
+          "contp": "NSZ"
+        },
+        "LRESL": {
+          "name": "Left Sleeve",
+          "group": "Body measurement",
+          "contp": "NSZ"
+        },
+        "LRESR": {
+          "name": "Right Sleeve",
+          "group": "Body measurement",
+          "contp": "NSZ"
+        },
+        "LREBV": {
+          "name": "Nape To Waist Length(body)",
+          "group": "Body measurement",
+          "contp": "NSZ"
+        },
+        "LREFV": {
+          "name": "Front To Waist Length(body)",
+          "group": "Body measurement",
+          "contp": "NSZ"
+        },
+        "LREML": {
+          "name": "Back Length",
+          "group": "Body measurement",
+          "contp": "NSZ"
+        },
+        "DRESH": {
+          "name": "Body- Finished allowance on Chest",
+          "group": "Fitting Allowrence",
+          "contp": "DRH"
+        },
+        "DRESI": {
+          "name": "Wearing Habit",
+          "group": "Wearing Habit",
+          "contp": "DRH"
+        },
+        "PFNC": {
+          "name": "水洗唛打面料出厂国",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "PFNM": {
+          "name": "水洗唛打面料成分",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "PLNC": {
+          "name": "水洗唛打里料出厂国",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "PLNM": {
+          "name": "水洗唛打里料成分",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "ADTSA": {
+          "name": "试穿合适",
+          "group": "半成品试穿",
+          "contp": "PDP"
+        },
+        "ARESY": {
+          "name": "群体区域",
+          "group": "Reginoal",
+          "contp": "PDP"
+        },
+        "AUGRU": {
+          "name": "订单原因",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "BAGGI": {
+          "name": "定制套袋",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "CHARG": {
+          "name": "批次号",
+          "group": "批次号",
+          "contp": "PDP"
+        },
+        "CMANR": {
+          "name": "供料面料号",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "COUNC": {
+          "name": "县/区",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "CPHNO": {
+          "name": "顾客手机号",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "CUBRD": {
+          "name": "品牌商标",
+          "group": "",
+          "contp": "PDP"
+        },
+        "DELCN": {
+          "name": "交货单号",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "DESIN": {
+          "name": "设计类型",
+          "group": "Design type",
+          "contp": "PDP"
+        },
+        "DISCT": {
+          "name": "折扣",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "DIVER": {
+          "name": "收货人",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "DRANP": {
+          "name": "改款打样要求",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "DRAWI": {
+          "name": "改款打样",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "DROCN": {
+          "name": "穿衣场合",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "EX2NU": {
+          "name": "20单号",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "EX8NU": {
+          "name": "80单号",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "EXPNU": {
+          "name": "快递单号",
+          "group": "Tracking number",
+          "contp": "PDP"
+        },
+        "FABBR": {
+          "name": "面料品牌",
+          "group": "Fabric brand",
+          "contp": "PDP"
+        },
+        "FABCO": {
+          "name": "面料商货号",
+          "group": "Fabric number",
+          "contp": "PDP"
+        },
+        "FABFT": {
+          "name": "颜色花型",
+          "group": "Color",
+          "contp": "PDP"
+        },
+        "FABMC": {
+          "name": "参考耗料",
+          "group": "",
+          "contp": "PDP"
+        },
+        "FABME": {
+          "name": "米数",
+          "group": "Meter",
+          "contp": "PDP"
+        },
+        "FABNO": {
+          "name": "下单面料号",
+          "group": "Fabric number",
+          "contp": "PDP"
+        },
+        "FABPE": {
+          "name": "成分",
+          "group": "Composition",
+          "contp": "PDP"
+        },
+        "IFREE": {
+          "name": "是否免费",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "ISCSU": {
+          "name": "是否客供面料",
+          "group": "Fabric source",
+          "contp": "PDP"
+        },
+        "KOSTL": {
+          "name": "成本中心",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "MAURQ": {
+          "name": "是否需要手册",
+          "group": "Need handbook or not",
+          "contp": "PDP"
+        },
+        "MEASU": {
+          "name": "量体方法",
+          "group": "Measurement methods",
+          "contp": "PDP"
+        },
+        "MODEM": {
+          "name": "版型",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "OMNNT": {
+          "name": "备注",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "PSIZE": {
+          "name": "皮衣大码收费",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REBBT": {
+          "name": "大扣子",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "RECOE": {
+          "name": "返修评分评分",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "RECOT": {
+          "name": "返修服务评价",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REEBY": {
+          "name": "刺绣",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REGIO": {
+          "name": "省/直辖市",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "REGRS": {
+          "name": "退货原因",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REIG1": {
+          "name": "返修试穿图",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REIG2": {
+          "name": "返修试穿图",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REIG3": {
+          "name": "返修试穿图",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REIG4": {
+          "name": "返修试穿图",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REIG5": {
+          "name": "返修评价图",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REIG6": {
+          "name": "返修评价图",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REIG7": {
+          "name": "返修评价图",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REKBA": {
+          "name": "打包方式",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "REKBD": {
+          "name": "吊牌需求",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REKCA": {
+          "name": "封样样衣",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "REKCO": {
+          "name": "发货费用",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REKNE": {
+          "name": "发货需求",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REKWM": {
+          "name": "水洗唛",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "REMED": {
+          "name": "快递支付方式",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REPRI": {
+          "name": "返修金额",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REPRS": {
+          "name": "返修原因",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REQAA": {
+          "name": "穿着习惯",
+          "group": "穿着习惯",
+          "contp": "PDP"
+        },
+        "RESBT": {
+          "name": "小扣子",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "RETMK": {
+          "name": "商标",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "REWHM": {
+          "name": "水洗唛",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "RGBRD": {
+          "name": "品牌领标",
+          "group": "",
+          "contp": "PDP"
+        },
+        "RREPS": {
+          "name": "公司发出快递单号",
+          "group": "",
+          "contp": "PDP"
+        },
+        "RREPY": {
+          "name": "公司发出快递公司",
+          "group": "",
+          "contp": "PDP"
+        },
+        "RSEPS": {
+          "name": "门店发出快递单号",
+          "group": "",
+          "contp": "PDP"
+        },
+        "RSEPY": {
+          "name": "门店发出快递公司",
+          "group": "",
+          "contp": "PDP"
+        },
+        "SDDAT": {
+          "name": "售后发货日期",
+          "group": "",
+          "contp": "PDP"
+        },
+        "SPETP": {
+          "name": "特殊订单",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "SRECN": {
+          "name": "合并发货序号",
+          "group": "合并发货序号",
+          "contp": "PDP"
+        },
+        "TELPH": {
+          "name": "收货电话",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "TRATP": {
+          "name": "贸易类型",
+          "group": "Trade type",
+          "contp": "PDP"
+        },
+        "TYRLT": {
+          "name": "试穿结果",
+          "group": "",
+          "contp": "PDP"
+        },
+        "URGEN": {
+          "name": "紧急指数",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "VBELN": {
+          "name": "退货凭证号",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "ZCHDS": {
+          "name": "倒顺裁",
+          "group": "",
+          "contp": "PDP"
+        },
+        "ZCHFK": {
+          "name": "幅宽",
+          "group": "",
+          "contp": "PDP"
+        },
+        "ZCHGC": {
+          "name": "格长",
+          "group": "",
+          "contp": "PDP"
+        },
+        "ZCHGK": {
+          "name": "格宽",
+          "group": "",
+          "contp": "PDP"
+        },
+        "ZCHHX": {
+          "name": "花型",
+          "group": "",
+          "contp": "PDP"
+        },
+        "ZCHTK": {
+          "name": "条宽",
+          "group": "",
+          "contp": "PDP"
+        },
+        "ZSFAC": {
+          "name": "零减面料",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "ADJFEE": {
+          "name": "品牌改款费",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "ADJUST": {
+          "name": "调整金额",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "CADRMK": {
+          "name": "CAD备注",
+          "group": "CAD备注",
+          "contp": "PDP"
+        },
+        "DRAIMG": {
+          "name": "改款打样图片",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "FNRIMG": {
+          "name": "面料品牌标",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "ISSUIT": {
+          "name": "是否套装",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "MEUNIT": {
+          "name": "量体单位",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "MPCYCL": {
+          "name": "面料采购周期",
+          "group": "订单信息",
+          "contp": "PDP"
+        },
+        "REGRS2": {
+          "name": "退货原因",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REGRS3": {
+          "name": "退货原因",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REGRS4": {
+          "name": "退货原因",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REGRS5": {
+          "name": "退货原因",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REGRS6": {
+          "name": "退货原因",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REGRS7": {
+          "name": "退货原因",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REPRS2": {
+          "name": "返修原因",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REPRS3": {
+          "name": "返修原因",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REPRS4": {
+          "name": "返修原因",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REPRS5": {
+          "name": "返修原因",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REPRS6": {
+          "name": "返修原因",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REPRS7": {
+          "name": "返修原因",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "RETLMT": {
+          "name": "是否退货",
+          "group": "是否退货",
+          "contp": "PDP"
+        },
+        "DRAIMG2": {
+          "name": "改款打样图片2",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "DRAIMG3": {
+          "name": "改款打样图片3",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "REGRSDT": {
+          "name": "退货明细",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REPRSDT": {
+          "name": "返修明细",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "SHPIMG1": {
+          "name": "体型图片",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "SHPIMG2": {
+          "name": "体型图片",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "SHPIMG3": {
+          "name": "体型图片",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "CONTRACT": {
+          "name": "合同",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "IONLINEP": {
+          "name": "是否线上支付",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "REGRSDT2": {
+          "name": "退货明细",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REGRSDT3": {
+          "name": "退货明细",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REGRSDT4": {
+          "name": "退货明细",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REGRSDT5": {
+          "name": "退货明细",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REGRSDT6": {
+          "name": "退货明细",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REGRSDT7": {
+          "name": "退货明细",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REPRSDT2": {
+          "name": "返修明细",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REPRSDT3": {
+          "name": "返修明细",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REPRSDT4": {
+          "name": "返修明细",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REPRSDT5": {
+          "name": "返修明细",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REPRSDT6": {
+          "name": "返修明细",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REPRSDT7": {
+          "name": "返修明细",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REQEMIMG": {
+          "name": "刺绣图片",
+          "group": "Order Requirement",
+          "contp": "PDP"
+        },
+        "REQEM2IMG": {
+          "name": "刺绣图片",
+          "group": "",
+          "contp": "PDP"
+        },
+        "REQEM3IMG": {
+          "name": "刺绣图片",
+          "group": "",
+          "contp": "PDP"
+        },
+        "REQEMIMG2": {
+          "name": "刺绣图片2",
+          "group": "Order Requirement",
+          "contp": "PDP"
+        },
+        "REQEMIMG3": {
+          "name": "刺绣图片3",
+          "group": "Order Requirement",
+          "contp": "PDP"
+        }
+      }
+    },
+    "BC": {
+      "part": "shirt",
+      "fieldCount": 288,
+      "fields": {
+        "LENWL": {
+          "name": "Neck(Finished)",
+          "group": "Try-on measurement",
+          "contp": "HSM"
+        },
+        "LENBD": {
+          "name": "Back length(Finished)",
+          "group": "Try-on measurement",
+          "contp": "HSM"
+        },
+        "LENSH": {
+          "name": "Shoulder Width(Finished)",
+          "group": "Try-on measurement",
+          "contp": "HSM"
+        },
+        "LENSL": {
+          "name": "Sleeves length(Finished)",
+          "group": "Try-on measurement",
+          "contp": "HSM"
+        },
+        "LENCH": {
+          "name": "Chest(Finished)",
+          "group": "Try-on measurement",
+          "contp": "HSM"
+        },
+        "LENMV": {
+          "name": "Stomach(Finished)",
+          "group": "Try-on measurement",
+          "contp": "HSM"
+        },
+        "LEDMV": {
+          "name": "Darted waist(Finished)",
+          "group": "Try-on measurement",
+          "contp": "HSM"
+        },
+        "LENDR": {
+          "name": "Hem(Finished)",
+          "group": "Try-on measurement",
+          "contp": "HSM"
+        },
+        "LENXF": {
+          "name": "Full Bicep(Finished)",
+          "group": "Try-on measurement",
+          "contp": "HSM"
+        },
+        "LENM4": {
+          "name": "Full Cuff(Finished)",
+          "group": "Try-on measurement",
+          "contp": "HSM"
+        },
+        "BDJHD": {
+          "name": "Head",
+          "group": "Bodyshape adjustment",
+          "contp": "PMB"
+        },
+        "BDJNK": {
+          "name": "Neck",
+          "group": "Bodyshape adjustment",
+          "contp": "PMB"
+        },
+        "BDJLH": {
+          "name": "Left shoulder",
+          "group": "Bodyshape adjustment",
+          "contp": "PMB"
+        },
+        "BDJRH": {
+          "name": "Right shoulder",
+          "group": "Bodyshape adjustment",
+          "contp": "PMB"
+        },
+        "BDJMH": {
+          "name": "Front shoulder",
+          "group": "Bodyshape adjustment",
+          "contp": "PMB"
+        },
+        "BDJBO": {
+          "name": "Arm adjustment",
+          "group": "Bodyshape adjustment",
+          "contp": "PMB"
+        },
+        "BDJBH": {
+          "name": "Arm adjustment",
+          "group": "Bodyshape adjustment",
+          "contp": "PMB"
+        },
+        "ADJES": {
+          "name": "Armhole Depth",
+          "group": "Bodyshape adjustment",
+          "contp": "PMB"
+        },
+        "BDJCH": {
+          "name": "Chest Out",
+          "group": "Bodyshape adjustment",
+          "contp": "PMB"
+        },
+        "BDJCI": {
+          "name": "Pectorales",
+          "group": "Bodyshape adjustment",
+          "contp": "PMB"
+        },
+        "BDJSB": {
+          "name": "Humpback",
+          "group": "Bodyshape adjustment",
+          "contp": "PMB"
+        },
+        "BDJSJ": {
+          "name": "Bladebone",
+          "group": "Bodyshape adjustment",
+          "contp": "PMB"
+        },
+        "BDJST": {
+          "name": "Belly",
+          "group": "Bodyshape adjustment",
+          "contp": "PMB"
+        },
+        "ADJQY": {
+          "name": "Front length",
+          "group": "Bodyshape adjustment",
+          "contp": "PMA"
+        },
+        "ADJZJ": {
+          "name": "Left Shoulder Angle",
+          "group": "Bodyshape adjustment",
+          "contp": "PMA"
+        },
+        "ADJYJ": {
+          "name": "Right Shoulder Angle",
+          "group": "Bodyshape adjustment",
+          "contp": "PMA"
+        },
+        "ADJXF": {
+          "name": "Full Bicep",
+          "group": "Bodyshape adjustment",
+          "contp": "PMA"
+        },
+        "ADJSK": {
+          "name": "Full Cuff",
+          "group": "Bodyshape adjustment",
+          "contp": "PMA"
+        },
+        "ADJHL": {
+          "name": "Back Collar Height",
+          "group": "Bodyshape adjustment",
+          "contp": "PMA"
+        },
+        "ADJBA": {
+          "name": "Back Balance",
+          "group": "Bodyshape adjustment",
+          "contp": "PMA"
+        },
+        "ADJSL": {
+          "name": "Left Sleeve Length",
+          "group": "Bodyshape adjustment",
+          "contp": "PMA"
+        },
+        "ADJAL": {
+          "name": "Left Cuff",
+          "group": "Bodyshape adjustment",
+          "contp": "PMA"
+        },
+        "SHSMD": {
+          "name": "Sleeve head",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "PROCE": {
+          "name": "Canvas",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "KFAQP": {
+          "name": "Front",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "REQCL": {
+          "name": "Lapel",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "GCLLI": {
+          "name": "Decoration stitching on collar",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "GTELS": {
+          "name": "Decoration stitching color on collar",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "RESPO": {
+          "name": "Collar splicing",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "REVKI": {
+          "name": "Cut-out fabric",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "RELCL": {
+          "name": "Collar stay",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "GTELC": {
+          "name": "Collar linings",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "REQLB": {
+          "name": "Collar stand height",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "KSHLA": {
+          "name": "Collar stand",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "RELBU": {
+          "name": "Button on collor stand",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "CLTKO": {
+          "name": "Buttonhole thread color on collar band",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "REQBM": {
+          "name": "Placket",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "KMKBM": {
+          "name": "Placket width",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "KMZBU": {
+          "name": "Placket button positton",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "GTEMS": {
+          "name": "Decoration stitching on placket",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "GTEMY": {
+          "name": "Decoration stitching color on placket",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "REQBU": {
+          "name": "Placket button",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "CMJKY": {
+          "name": "Buttonhole thread color on placket",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "GTEKF": {
+          "name": "Placket buttonhole direction",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "GLKMO": {
+          "name": "Buttonhole",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "RESPE": {
+          "name": "Placket splicing",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "REVKE": {
+          "name": "Placket Splicing Material",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "REQBA": {
+          "name": "Back",
+          "group": "High-level design",
+          "contp": "PMF"
+        },
+        "KZYKA": {
+          "name": "Yoke",
+          "group": "High-level design",
+          "contp": "PMF"
+        },
+        "KTPZS": {
+          "name": "Bias cutting",
+          "group": "High-level design",
+          "contp": "PMF"
+        },
+        "GCOPA": {
+          "name": "Contrast color position",
+          "group": "High-level design",
+          "contp": "PMF"
+        },
+        "GCOZS": {
+          "name": "Contrast fabric",
+          "group": "High-level design",
+          "contp": "PMF"
+        },
+        "SHZMD": {
+          "name": "Epaulet",
+          "group": "High-level design",
+          "contp": "PMF"
+        },
+        "REMMP": {
+          "name": "Fabric label position",
+          "group": "High-level design",
+          "contp": "PMF"
+        },
+        "REQBR": {
+          "name": "Brand label position",
+          "group": "High-level design",
+          "contp": "PMF"
+        },
+        "KAKJC": {
+          "name": "The first button distance",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "PHNBU": {
+          "name": "Sewing button style",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "PHBUC": {
+          "name": "Buttoning thread color",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "REQPO": {
+          "name": "Pocket",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "REQDN": {
+          "name": "Hem",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "REQLC": {
+          "name": "Decoration stitching on shoulder",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "REQLS": {
+          "name": "Cuff",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "CXKKY": {
+          "name": "Buttonhole thread color on cuff",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "REQXF": {
+          "name": "Long sleeve cuff width",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "GTXKC": {
+          "name": "Cuff lining",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "SLEXZ": {
+          "name": "Cuff pleat",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "GTEXC": {
+          "name": "Sleeve vent decoration thread",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "CXKXC": {
+          "name": "Sleeve vent decoration thread color",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "GTEXZ": {
+          "name": "Decoration stitching on cuff",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "CXKZS": {
+          "name": "Decoration stitching color on cuff",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "REBXU": {
+          "name": "Sleeve tab",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "RESPF": {
+          "name": "Cuff splicing",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "REVKF": {
+          "name": "Cuff stithing material",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "BDJBE": {
+          "name": "body type",
+          "group": "Bodyshape adjustment",
+          "contp": "PMH"
+        },
+        "BDJNH": {
+          "name": "Left shoulder",
+          "group": "Bodyshape adjustment",
+          "contp": "PMH"
+        },
+        "BDJOH": {
+          "name": "Right shoulder",
+          "group": "Bodyshape adjustment",
+          "contp": "PMH"
+        },
+        "BDJSK": {
+          "name": "Bladebone",
+          "group": "Bodyshape adjustment",
+          "contp": "PMH"
+        },
+        "BDJSC": {
+          "name": "Back style",
+          "group": "Bodyshape adjustment",
+          "contp": "PMH"
+        },
+        "BDJAZ": {
+          "name": "concave waist",
+          "group": "Bodyshape adjustment",
+          "contp": "PMH"
+        },
+        "BDJSD": {
+          "name": "Chest",
+          "group": "Bodyshape adjustment",
+          "contp": "PMH"
+        },
+        "BDJSL": {
+          "name": "Belly",
+          "group": "Bodyshape adjustment",
+          "contp": "PMH"
+        },
+        "ADJSW": {
+          "name": "Arm curvature",
+          "group": "Bodyshape adjustment",
+          "contp": "PMH"
+        },
+        "REQEM": {
+          "name": "Embroidery Details",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQTP": {
+          "name": "Embroidery Style",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQEM2": {
+          "name": "Embroidery Details2",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQEM3": {
+          "name": "Embroidery Details3",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQCO": {
+          "name": "Embroidery Color",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQCO2": {
+          "name": "Embroidery Color2",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQCO3": {
+          "name": "Embroidery Color3",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQTP2": {
+          "name": "Embroidery Style2",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQEW": {
+          "name": "Embroidery Font",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQEW2": {
+          "name": "Embroidery Font2",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQEW3": {
+          "name": "Embroidery Font3",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQTP3": {
+          "name": "Embroidery Style3",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQLO": {
+          "name": "Embroidery Position",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQLO2": {
+          "name": "Embroidery Position2",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQLO3": {
+          "name": "Embroidery Position3",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQCG": {
+          "name": "Embroidery Height",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQCG2": {
+          "name": "Embroidery Height2",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQCG3": {
+          "name": "Embroidery Height3",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQNP": {
+          "name": "Embroidery Remark",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQNP2": {
+          "name": "Embroidery Remark2",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQNP3": {
+          "name": "Embroidery Remark3",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "BTHAA": {
+          "name": "Neck Width (SNP. to SNP.)",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BTHAB": {
+          "name": "Back Collar Depth",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BTHAC": {
+          "name": "Left Shoulder Angle",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BTHAD": {
+          "name": "Right Shoulder Angle",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BTHAI": {
+          "name": "Forward shoulder",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BTHAJ": {
+          "name": "Backward shoulder",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BTHBP": {
+          "name": "Scapular protrusion",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BTHAM": {
+          "name": "Back width(Both sides)",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BTHBQ": {
+          "name": "Back waist dart",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "ADJSC": {
+          "name": "Humpback",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BTHAU": {
+          "name": "Front Chest(both sides)",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BDJCJ": {
+          "name": "Chest Out",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BTHBR": {
+          "name": "Front Length",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BTHBG": {
+          "name": "Left Sleeve Length",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BTHBD": {
+          "name": "Armhole Depth",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "LENBL": {
+          "name": "Height",
+          "group": "Finished measurement",
+          "contp": "GSZ"
+        },
+        "LENWT": {
+          "name": "Weight",
+          "group": "Finished measurement",
+          "contp": "GSZ"
+        },
+        "LENOL": {
+          "name": "Age",
+          "group": "Finished measurement",
+          "contp": "GSZ"
+        },
+        "LENBO": {
+          "name": "Full Seat(Finished)",
+          "group": "Finished measurement",
+          "contp": "GSZ"
+        },
+        "LENLK": {
+          "name": "Left cuff(Finished)",
+          "group": "Finished measurement",
+          "contp": "GSZ"
+        },
+        "LENRK": {
+          "name": "Right cuff(Finished)",
+          "group": "Finished measurement",
+          "contp": "GSZ"
+        },
+        "LENSR": {
+          "name": "Right sleeve(Finished)",
+          "group": "Finished measurement",
+          "contp": "GSZ"
+        },
+        "LENFD": {
+          "name": "Front length(Finished)",
+          "group": "Finished measurement",
+          "contp": "GSZ"
+        },
+        "LENJW": {
+          "name": "Neckline(body)",
+          "group": "Finished measurement",
+          "contp": "GSZ"
+        },
+        "LENBV": {
+          "name": "Nape to waist length(body)",
+          "group": "Finished measurement",
+          "contp": "GSZ"
+        },
+        "LENFV": {
+          "name": "Front waist length(body)",
+          "group": "Finished measurement",
+          "contp": "GSZ"
+        },
+        "LREBL": {
+          "name": "Height",
+          "group": "Body measurement",
+          "contp": "NSZ"
+        },
+        "LREWT": {
+          "name": "Weight",
+          "group": "Body measurement",
+          "contp": "NSZ"
+        },
+        "LREBD": {
+          "name": "Neck(body)",
+          "group": "Body measurement",
+          "contp": "NSZ"
+        },
+        "LREBW": {
+          "name": "Chest(body)",
+          "group": "Body measurement",
+          "contp": "NSZ"
+        },
+        "LRELB": {
+          "name": "Stomach(body)",
+          "group": "Body measurement",
+          "contp": "NSZ"
+        },
+        "LREFW": {
+          "name": "Belly(body)",
+          "group": "Body measurement",
+          "contp": "NSZ"
+        },
+        "LREST": {
+          "name": "Seat(body)",
+          "group": "Body measurement",
+          "contp": "NSZ"
+        },
+        "LRESH": {
+          "name": "Back shoulder",
+          "group": "Body measurement",
+          "contp": "NSZ"
+        },
+        "LREBO": {
+          "name": "Bicep(body)",
+          "group": "Body measurement",
+          "contp": "NSZ"
+        },
+        "LREBE": {
+          "name": "Left Wrist(body)",
+          "group": "Body measurement",
+          "contp": "NSZ"
+        },
+        "LREBR": {
+          "name": "Right Wrist(body)",
+          "group": "Body measurement",
+          "contp": "NSZ"
+        },
+        "LRESL": {
+          "name": "Left sleeve",
+          "group": "Body measurement",
+          "contp": "NSZ"
+        },
+        "LRESR": {
+          "name": "Right sleeve",
+          "group": "Body measurement",
+          "contp": "NSZ"
+        },
+        "LREBV": {
+          "name": "Nape To Waist Length(body)",
+          "group": "Body measurement",
+          "contp": "NSZ"
+        },
+        "LREFV": {
+          "name": "Front To Waist Length(body)",
+          "group": "Body measurement",
+          "contp": "NSZ"
+        },
+        "LREML": {
+          "name": "Back Length",
+          "group": "Body measurement",
+          "contp": "NSZ"
+        },
+        "DRESH": {
+          "name": "Body- Finished allowance on Chest",
+          "group": "Fitting Allowrence",
+          "contp": "DRH"
+        },
+        "DRESI": {
+          "name": "Wearing Habit",
+          "group": "Wearing Habit",
+          "contp": "DRH"
+        },
+        "PFNC": {
+          "name": "水洗唛打面料出厂国",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "PFNM": {
+          "name": "水洗唛打面料成分",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "PLNC": {
+          "name": "水洗唛打里料出厂国",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "PLNM": {
+          "name": "水洗唛打里料成分",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "ADTSA": {
+          "name": "试穿合适",
+          "group": "半成品试穿",
+          "contp": "PDP"
+        },
+        "ARESY": {
+          "name": "群体区域",
+          "group": "Reginoal",
+          "contp": "PDP"
+        },
+        "AUGRU": {
+          "name": "订单原因",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "BAGGI": {
+          "name": "定制套袋",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "CHARG": {
+          "name": "批次号",
+          "group": "批次号",
+          "contp": "PDP"
+        },
+        "CMANR": {
+          "name": "供料面料号",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "COUNC": {
+          "name": "县/区",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "CPHNO": {
+          "name": "顾客手机号",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "CUBRD": {
+          "name": "品牌商标",
+          "group": "",
+          "contp": "PDP"
+        },
+        "DELCN": {
+          "name": "交货单号",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "DESIN": {
+          "name": "设计类型",
+          "group": "Design type",
+          "contp": "PDP"
+        },
+        "DISCT": {
+          "name": "折扣",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "DIVER": {
+          "name": "收货人",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "DRANP": {
+          "name": "改款打样要求",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "DRAWI": {
+          "name": "改款打样",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "DROCN": {
+          "name": "穿衣场合",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "EX2NU": {
+          "name": "20单号",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "EX8NU": {
+          "name": "80单号",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "EXPNU": {
+          "name": "快递单号",
+          "group": "Tracking number",
+          "contp": "PDP"
+        },
+        "FABBR": {
+          "name": "面料品牌",
+          "group": "Fabric brand",
+          "contp": "PDP"
+        },
+        "FABCO": {
+          "name": "面料商货号",
+          "group": "Fabric number",
+          "contp": "PDP"
+        },
+        "FABFT": {
+          "name": "颜色花型",
+          "group": "Color",
+          "contp": "PDP"
+        },
+        "FABMC": {
+          "name": "参考耗料",
+          "group": "",
+          "contp": "PDP"
+        },
+        "FABME": {
+          "name": "米数",
+          "group": "Meter",
+          "contp": "PDP"
+        },
+        "FABNO": {
+          "name": "下单面料号",
+          "group": "Fabric number",
+          "contp": "PDP"
+        },
+        "FABPE": {
+          "name": "成分",
+          "group": "Composition",
+          "contp": "PDP"
+        },
+        "IFREE": {
+          "name": "是否免费",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "ISCSU": {
+          "name": "是否客供面料",
+          "group": "Fabric source",
+          "contp": "PDP"
+        },
+        "KOSTL": {
+          "name": "成本中心",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "MAURQ": {
+          "name": "是否需要手册",
+          "group": "Need handbook or not",
+          "contp": "PDP"
+        },
+        "MEASU": {
+          "name": "量体方法",
+          "group": "Measurement methods",
+          "contp": "PDP"
+        },
+        "MODEM": {
+          "name": "版型",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "OMNNT": {
+          "name": "备注",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "PSIZE": {
+          "name": "皮衣大码收费",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REBBT": {
+          "name": "大扣子",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "RECOE": {
+          "name": "返修评分评分",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "RECOT": {
+          "name": "返修服务评价",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REEBY": {
+          "name": "刺绣",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REGIO": {
+          "name": "省/直辖市",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "REGRS": {
+          "name": "退货原因",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REIG1": {
+          "name": "返修试穿图",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REIG2": {
+          "name": "返修试穿图",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REIG3": {
+          "name": "返修试穿图",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REIG4": {
+          "name": "返修试穿图",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REIG5": {
+          "name": "返修评价图",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REIG6": {
+          "name": "返修评价图",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REIG7": {
+          "name": "返修评价图",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REKBA": {
+          "name": "打包方式",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "REKBD": {
+          "name": "吊牌需求",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REKCA": {
+          "name": "封样样衣",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "REKCO": {
+          "name": "发货费用",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REKNE": {
+          "name": "发货需求",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REKWM": {
+          "name": "水洗唛",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "REMED": {
+          "name": "快递支付方式",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REPRI": {
+          "name": "返修金额",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REPRS": {
+          "name": "返修原因",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REQAA": {
+          "name": "穿着习惯",
+          "group": "穿着习惯",
+          "contp": "PDP"
+        },
+        "RESBT": {
+          "name": "小扣子",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "RETMK": {
+          "name": "商标",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "REWHM": {
+          "name": "水洗唛",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "RGBRD": {
+          "name": "品牌领标",
+          "group": "",
+          "contp": "PDP"
+        },
+        "RREPS": {
+          "name": "公司发出快递单号",
+          "group": "",
+          "contp": "PDP"
+        },
+        "RREPY": {
+          "name": "公司发出快递公司",
+          "group": "",
+          "contp": "PDP"
+        },
+        "RSEPS": {
+          "name": "门店发出快递单号",
+          "group": "",
+          "contp": "PDP"
+        },
+        "RSEPY": {
+          "name": "门店发出快递公司",
+          "group": "",
+          "contp": "PDP"
+        },
+        "SDDAT": {
+          "name": "售后发货日期",
+          "group": "",
+          "contp": "PDP"
+        },
+        "SPETP": {
+          "name": "特殊订单",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "SRECN": {
+          "name": "合并发货序号",
+          "group": "合并发货序号",
+          "contp": "PDP"
+        },
+        "TELPH": {
+          "name": "收货电话",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "TRATP": {
+          "name": "贸易类型",
+          "group": "Trade type",
+          "contp": "PDP"
+        },
+        "TYRLT": {
+          "name": "试穿结果",
+          "group": "",
+          "contp": "PDP"
+        },
+        "URGEN": {
+          "name": "紧急指数",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "VBELN": {
+          "name": "退货凭证号",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "ZCHDS": {
+          "name": "倒顺裁",
+          "group": "",
+          "contp": "PDP"
+        },
+        "ZCHFK": {
+          "name": "幅宽",
+          "group": "",
+          "contp": "PDP"
+        },
+        "ZCHGC": {
+          "name": "格长",
+          "group": "",
+          "contp": "PDP"
+        },
+        "ZCHGK": {
+          "name": "格宽",
+          "group": "",
+          "contp": "PDP"
+        },
+        "ZCHHX": {
+          "name": "花型",
+          "group": "",
+          "contp": "PDP"
+        },
+        "ZCHTK": {
+          "name": "条宽",
+          "group": "",
+          "contp": "PDP"
+        },
+        "ZSFAC": {
+          "name": "零减面料",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "ADJFEE": {
+          "name": "品牌改款费",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "ADJUST": {
+          "name": "调整金额",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "CADRMK": {
+          "name": "CAD备注",
+          "group": "CAD备注",
+          "contp": "PDP"
+        },
+        "DRAIMG": {
+          "name": "改款打样图片",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "FNRIMG": {
+          "name": "面料品牌标",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "ISSUIT": {
+          "name": "是否套装",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "MEUNIT": {
+          "name": "量体单位",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "MPCYCL": {
+          "name": "面料采购周期",
+          "group": "订单信息",
+          "contp": "PDP"
+        },
+        "REGRS2": {
+          "name": "退货原因",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REGRS3": {
+          "name": "退货原因",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REGRS4": {
+          "name": "退货原因",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REGRS5": {
+          "name": "退货原因",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REGRS6": {
+          "name": "退货原因",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REGRS7": {
+          "name": "退货原因",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REPRS2": {
+          "name": "返修原因",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REPRS3": {
+          "name": "返修原因",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REPRS4": {
+          "name": "返修原因",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REPRS5": {
+          "name": "返修原因",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REPRS6": {
+          "name": "返修原因",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REPRS7": {
+          "name": "返修原因",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "RETLMT": {
+          "name": "是否退货",
+          "group": "是否退货",
+          "contp": "PDP"
+        },
+        "DRAIMG2": {
+          "name": "改款打样图片2",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "DRAIMG3": {
+          "name": "改款打样图片3",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "REGRSDT": {
+          "name": "退货明细",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REPRSDT": {
+          "name": "返修明细",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "SHPIMG1": {
+          "name": "体型图片",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "SHPIMG2": {
+          "name": "体型图片",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "SHPIMG3": {
+          "name": "体型图片",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "CONTRACT": {
+          "name": "合同",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "IONLINEP": {
+          "name": "是否线上支付",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "REGRSDT2": {
+          "name": "退货明细",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REGRSDT3": {
+          "name": "退货明细",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REGRSDT4": {
+          "name": "退货明细",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REGRSDT5": {
+          "name": "退货明细",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REGRSDT6": {
+          "name": "退货明细",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REGRSDT7": {
+          "name": "退货明细",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REPRSDT2": {
+          "name": "返修明细",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REPRSDT3": {
+          "name": "返修明细",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REPRSDT4": {
+          "name": "返修明细",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REPRSDT5": {
+          "name": "返修明细",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REPRSDT6": {
+          "name": "返修明细",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REPRSDT7": {
+          "name": "返修明细",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REQEMIMG": {
+          "name": "刺绣图片",
+          "group": "Order Requirement",
+          "contp": "PDP"
+        },
+        "REQEM2IMG": {
+          "name": "刺绣图片",
+          "group": "",
+          "contp": "PDP"
+        },
+        "REQEM3IMG": {
+          "name": "刺绣图片",
+          "group": "",
+          "contp": "PDP"
+        },
+        "REQEMIMG2": {
+          "name": "刺绣图片2",
+          "group": "Order Requirement",
+          "contp": "PDP"
+        },
+        "REQEMIMG3": {
+          "name": "刺绣图片3",
+          "group": "Order Requirement",
+          "contp": "PDP"
+        }
+      }
+    },
+    "BD": {
+      "part": "trousers",
+      "fieldCount": 230,
+      "fields": {
+        "LENWA": {
+          "name": "Full Waist(Finished)",
+          "group": "Try-on measurement",
+          "contp": "HSM"
+        },
+        "LENBO": {
+          "name": "Seat(Finished)",
+          "group": "Try-on measurement",
+          "contp": "HSM"
+        },
+        "LENTC": {
+          "name": "Finished Outseam(Finished)",
+          "group": "Try-on measurement",
+          "contp": "HSM"
+        },
+        "LENLW": {
+          "name": "Crotch depth(Finished)",
+          "group": "Try-on measurement",
+          "contp": "HSM"
+        },
+        "LENSE": {
+          "name": "Full Thigh(Finished)",
+          "group": "Try-on measurement",
+          "contp": "HSM"
+        },
+        "LENKK": {
+          "name": "Full Knee(Finished)",
+          "group": "Try-on measurement",
+          "contp": "HSM"
+        },
+        "LENMZ": {
+          "name": "Base(Finished)",
+          "group": "Try-on measurement",
+          "contp": "HSM"
+        },
+        "BDJSE": {
+          "name": "Well-toned bott",
+          "group": "Bodyshape adjustment",
+          "contp": "PMB"
+        },
+        "BDJSP": {
+          "name": "Low Hips",
+          "group": "Bodyshape adjustment",
+          "contp": "PMB"
+        },
+        "BDJPT": {
+          "name": "Flat  Hips",
+          "group": "Bodyshape adjustment",
+          "contp": "PMB"
+        },
+        "BDJXT": {
+          "name": "Circumference of the calf",
+          "group": "Bodyshape adjustment",
+          "contp": "PMB"
+        },
+        "BDJQY": {
+          "name": "Front Centre Height",
+          "group": "Bodyshape adjustment",
+          "contp": "PMB"
+        },
+        "ADJGW": {
+          "name": "Full Thigh",
+          "group": "Bodyshape adjustment",
+          "contp": "PMA"
+        },
+        "ADJBQ": {
+          "name": "Fork Length",
+          "group": "Bodyshape adjustment",
+          "contp": "PMA"
+        },
+        "ADJDF": {
+          "name": "Centre Front Height",
+          "group": "Bodyshape adjustment",
+          "contp": "PMA"
+        },
+        "ADJDB": {
+          "name": "Centre Back Height",
+          "group": "Bodyshape adjustment",
+          "contp": "PMA"
+        },
+        "REBGZ": {
+          "name": "Back crotch curve",
+          "group": "Bodyshape adjustment",
+          "contp": "PMA"
+        },
+        "ADJHD": {
+          "name": "Back Crotch",
+          "group": "Bodyshape adjustment",
+          "contp": "PMA"
+        },
+        "ADJZK": {
+          "name": "Left Outseam",
+          "group": "Bodyshape adjustment",
+          "contp": "PMA"
+        },
+        "BDJKC": {
+          "name": "Back Balance",
+          "group": "",
+          "contp": "PMA"
+        },
+        "ADJXJ": {
+          "name": "Knock Knee",
+          "group": "Bodyshape adjustment",
+          "contp": "PMA"
+        },
+        "ADJTB": {
+          "name": "Forward Hips",
+          "group": "Bodyshape adjustment",
+          "contp": "PMA"
+        },
+        "KPOQD": {
+          "name": "Front pocket",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "GBKLI": {
+          "name": "Front pocket decoration thread",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "KPOKS": {
+          "name": "Front pocket depth",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "REQST": {
+          "name": "Waistband style",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "REQKP": {
+          "name": "Metal Adjuster",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "REQCT": {
+          "name": "Waistband extention shape",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "RECTL": {
+          "name": "Waistband extention length",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "RECTK": {
+          "name": "Waistband width",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "KPOQZ": {
+          "name": "Pleat",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "REQKB": {
+          "name": "Belt loops",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "KPWAE": {
+          "name": "Belt Loop Detail",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "KMKMP": {
+          "name": "Fly style",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "GTEMS": {
+          "name": "Fly decoration thread",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "REFUK": {
+          "name": "Manual Bar Tack Location",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "KPOQT": {
+          "name": "Outside watch pocket",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "KPWAK": {
+          "name": "Inside coin pocket",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "REQBU": {
+          "name": "Button",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "PHBUC": {
+          "name": "Buttoning thread color",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "PHNBU": {
+          "name": "Sewing button style",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "KPWAH": {
+          "name": "Center Crease",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "REQPF": {
+          "name": "Back pocket",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "KPOKP": {
+          "name": "Back pocket position",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "REKPL": {
+          "name": "Back pocket seal craft",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "GBKLL": {
+          "name": "Back Dart",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "REQFO": {
+          "name": "Bottom shape",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "KZPFZ": {
+          "name": "Bottom with skid stick",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "REWCT": {
+          "name": "Inner waist style",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "GCOPA": {
+          "name": "Contrast position",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "GCOZS": {
+          "name": "Contrast fabric",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "REVKI": {
+          "name": "Cut-out fabric",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "KPZMS": {
+          "name": "Side seam satin decoration",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "GLKMO": {
+          "name": "Buttonhole",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "GMKCO": {
+          "name": "Buttonhole thread color",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "KPWAM": {
+          "name": "Center waist seam style",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "KAHDT": {
+          "name": "Center back seam style",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "KINQL": {
+          "name": "Lining style in pants",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "KIXPO": {
+          "name": "Knee lining position in pants",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "REMMP": {
+          "name": "Fabric label position",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "REQBR": {
+          "name": "Brand label position",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "BDJSF": {
+          "name": "Hip",
+          "group": "Bodyshape adjustment",
+          "contp": "PMH"
+        },
+        "REQEM": {
+          "name": "Embroidery Details",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQTP": {
+          "name": "Embroidery Style",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQCO": {
+          "name": "Embroidery Color",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQEW": {
+          "name": "Embroidery Font",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQLO": {
+          "name": "Embroidery Position",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQCG": {
+          "name": "Embroidery Height",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQNP": {
+          "name": "Embroidery Remark",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "BTHBJ": {
+          "name": "Back Thigh",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BTHBK": {
+          "name": "Strong on front thigh",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BTHBL": {
+          "name": "Strong on calf",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BTHBM": {
+          "name": "Front Crotch",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BTHBN": {
+          "name": "Back Crotch",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BTHBO": {
+          "name": "Crotch Depth",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "REBGX": {
+          "name": "Crotch Line A",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "REBGS": {
+          "name": "Crotch Line B",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "REBGV": {
+          "name": "Crotch Line C",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "LENBL": {
+          "name": "Height",
+          "group": "Finished measurement",
+          "contp": "GSZ"
+        },
+        "LENWT": {
+          "name": "Weight",
+          "group": "Finished measurement",
+          "contp": "GSZ"
+        },
+        "LENOL": {
+          "name": "Age",
+          "group": "Finished measurement",
+          "contp": "GSZ"
+        },
+        "LENTR": {
+          "name": "Right Pant Length(Finished)",
+          "group": "Finished measurement",
+          "contp": "GSZ"
+        },
+        "LENTT": {
+          "name": "U-Rise",
+          "group": "Finished measurement",
+          "contp": "GSZ"
+        },
+        "LENWF": {
+          "name": "Front rise(with waist)(Finished)",
+          "group": "Finished measurement",
+          "contp": "GSZ"
+        },
+        "LENWB": {
+          "name": "Back rise(with waist)(Finished)",
+          "group": "Finished measurement",
+          "contp": "GSZ"
+        },
+        "LENSW": {
+          "name": "Full Calf(body)",
+          "group": "Finished measurement",
+          "contp": "GSZ"
+        },
+        "LREWA": {
+          "name": "Waist",
+          "group": "Body measurement",
+          "contp": "NSZ"
+        },
+        "LREST": {
+          "name": "Seat(body)",
+          "group": "Body measurement",
+          "contp": "NSZ"
+        },
+        "LRESE": {
+          "name": "Thigh(body)",
+          "group": "Body measurement",
+          "contp": "NSZ"
+        },
+        "LRETT": {
+          "name": "U-Rise",
+          "group": "Body measurement",
+          "contp": "NSZ"
+        },
+        "LREVB": {
+          "name": "Back Waist Height(body)",
+          "group": "Body measurement",
+          "contp": "NSZ"
+        },
+        "LREVF": {
+          "name": "Front Waist Height(body)",
+          "group": "Body measurement",
+          "contp": "NSZ"
+        },
+        "LRETC": {
+          "name": "Left Pant Length",
+          "group": "Body measurement",
+          "contp": "NSZ"
+        },
+        "LRETR": {
+          "name": "Right Pant Length",
+          "group": "Body measurement",
+          "contp": "NSZ"
+        },
+        "LREMW": {
+          "name": "Knee perimeter",
+          "group": "Body measurement",
+          "contp": "NSZ"
+        },
+        "LREFO": {
+          "name": "Leg Opening",
+          "group": "Body measurement",
+          "contp": "NSZ"
+        },
+        "LREXT": {
+          "name": "Calf(body)",
+          "group": "Body measurement",
+          "contp": "NSZ"
+        },
+        "DRESH": {
+          "name": "Fitting Allowrence",
+          "group": "Fitting Allowrence",
+          "contp": "DRH"
+        },
+        "DRESI": {
+          "name": "Wearing Habit",
+          "group": "Wearing Habit",
+          "contp": "DRH"
+        },
+        "PFNC": {
+          "name": "水洗唛打面料出厂国",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "PFNM": {
+          "name": "水洗唛打面料成分",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "PLNC": {
+          "name": "水洗唛打里料出厂国",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "PLNM": {
+          "name": "水洗唛打里料成分",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "ADTSA": {
+          "name": "试穿合适",
+          "group": "半成品试穿",
+          "contp": "PDP"
+        },
+        "ARESY": {
+          "name": "群体区域",
+          "group": "Reginoal",
+          "contp": "PDP"
+        },
+        "AUGRU": {
+          "name": "订单原因",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "BAGGI": {
+          "name": "定制套袋",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "CHARG": {
+          "name": "批次号",
+          "group": "批次号",
+          "contp": "PDP"
+        },
+        "CMANR": {
+          "name": "供料面料号",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "COUNC": {
+          "name": "县/区",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "CPHNO": {
+          "name": "顾客手机号",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "CUBRD": {
+          "name": "品牌商标",
+          "group": "",
+          "contp": "PDP"
+        },
+        "DELCN": {
+          "name": "交货单号",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "DESIN": {
+          "name": "设计类型",
+          "group": "Design type",
+          "contp": "PDP"
+        },
+        "DISCT": {
+          "name": "折扣",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "DIVER": {
+          "name": "收货人",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "DRANP": {
+          "name": "改款打样要求",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "DRAWI": {
+          "name": "改款打样",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "DROCN": {
+          "name": "穿衣场合",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "EX2NU": {
+          "name": "20单号",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "EX8NU": {
+          "name": "80单号",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "EXPNU": {
+          "name": "快递单号",
+          "group": "Tracking number",
+          "contp": "PDP"
+        },
+        "FABBR": {
+          "name": "面料品牌",
+          "group": "Fabric brand",
+          "contp": "PDP"
+        },
+        "FABCO": {
+          "name": "面料商货号",
+          "group": "Fabric number",
+          "contp": "PDP"
+        },
+        "FABFT": {
+          "name": "颜色花型",
+          "group": "Color",
+          "contp": "PDP"
+        },
+        "FABMC": {
+          "name": "参考耗料",
+          "group": "",
+          "contp": "PDP"
+        },
+        "FABME": {
+          "name": "米数",
+          "group": "Meter",
+          "contp": "PDP"
+        },
+        "FABNO": {
+          "name": "下单面料号",
+          "group": "Fabric number",
+          "contp": "PDP"
+        },
+        "FABPE": {
+          "name": "成分",
+          "group": "Composition",
+          "contp": "PDP"
+        },
+        "IFREE": {
+          "name": "是否免费",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "ISCSU": {
+          "name": "是否客供面料",
+          "group": "Fabric source",
+          "contp": "PDP"
+        },
+        "KOSTL": {
+          "name": "成本中心",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "MAURQ": {
+          "name": "是否需要手册",
+          "group": "Need handbook or not",
+          "contp": "PDP"
+        },
+        "MEASU": {
+          "name": "量体方法",
+          "group": "Measurement methods",
+          "contp": "PDP"
+        },
+        "MODEM": {
+          "name": "版型",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "OMNNT": {
+          "name": "备注",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "PSIZE": {
+          "name": "皮衣大码收费",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REBBT": {
+          "name": "大扣子",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "RECOE": {
+          "name": "返修评分评分",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "RECOT": {
+          "name": "返修服务评价",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REEBY": {
+          "name": "刺绣",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REGIO": {
+          "name": "省/直辖市",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "REGRS": {
+          "name": "退货原因",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REIG1": {
+          "name": "返修试穿图",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REIG2": {
+          "name": "返修试穿图",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REIG3": {
+          "name": "返修试穿图",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REIG4": {
+          "name": "返修试穿图",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REIG5": {
+          "name": "返修评价图",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REIG6": {
+          "name": "返修评价图",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REIG7": {
+          "name": "返修评价图",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REKBA": {
+          "name": "打包方式",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "REKBD": {
+          "name": "吊牌需求",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REKCA": {
+          "name": "封样样衣",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "REKCO": {
+          "name": "发货费用",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REKNE": {
+          "name": "发货需求",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REKWM": {
+          "name": "水洗唛",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "REMED": {
+          "name": "快递支付方式",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REPRI": {
+          "name": "返修金额",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REPRS": {
+          "name": "返修原因",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REQAA": {
+          "name": "穿着习惯",
+          "group": "穿着习惯",
+          "contp": "PDP"
+        },
+        "RESBT": {
+          "name": "小扣子",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "RETMK": {
+          "name": "商标",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "REWHM": {
+          "name": "水洗唛",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "RGBRD": {
+          "name": "品牌领标",
+          "group": "",
+          "contp": "PDP"
+        },
+        "RREPS": {
+          "name": "公司发出快递单号",
+          "group": "",
+          "contp": "PDP"
+        },
+        "RREPY": {
+          "name": "公司发出快递公司",
+          "group": "",
+          "contp": "PDP"
+        },
+        "RSEPS": {
+          "name": "门店发出快递单号",
+          "group": "",
+          "contp": "PDP"
+        },
+        "RSEPY": {
+          "name": "门店发出快递公司",
+          "group": "",
+          "contp": "PDP"
+        },
+        "SDDAT": {
+          "name": "售后发货日期",
+          "group": "",
+          "contp": "PDP"
+        },
+        "SPETP": {
+          "name": "特殊订单",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "SRECN": {
+          "name": "合并发货序号",
+          "group": "合并发货序号",
+          "contp": "PDP"
+        },
+        "TELPH": {
+          "name": "收货电话",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "TRATP": {
+          "name": "贸易类型",
+          "group": "Trade type",
+          "contp": "PDP"
+        },
+        "TYRLT": {
+          "name": "试穿结果",
+          "group": "",
+          "contp": "PDP"
+        },
+        "URGEN": {
+          "name": "紧急指数",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "VBELN": {
+          "name": "退货凭证号",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "ZCHDS": {
+          "name": "倒顺裁",
+          "group": "",
+          "contp": "PDP"
+        },
+        "ZCHFK": {
+          "name": "幅宽",
+          "group": "",
+          "contp": "PDP"
+        },
+        "ZCHGC": {
+          "name": "格长",
+          "group": "",
+          "contp": "PDP"
+        },
+        "ZCHGK": {
+          "name": "格宽",
+          "group": "",
+          "contp": "PDP"
+        },
+        "ZCHHX": {
+          "name": "花型",
+          "group": "",
+          "contp": "PDP"
+        },
+        "ZCHTK": {
+          "name": "条宽",
+          "group": "",
+          "contp": "PDP"
+        },
+        "ZSFAC": {
+          "name": "零减面料",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "ADJFEE": {
+          "name": "品牌改款费",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "ADJUST": {
+          "name": "调整金额",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "CADRMK": {
+          "name": "CAD备注",
+          "group": "CAD备注",
+          "contp": "PDP"
+        },
+        "DRAIMG": {
+          "name": "改款打样图片",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "FNRIMG": {
+          "name": "面料品牌标",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "ISSUIT": {
+          "name": "是否套装",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "MEUNIT": {
+          "name": "量体单位",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "MPCYCL": {
+          "name": "面料采购周期",
+          "group": "订单信息",
+          "contp": "PDP"
+        },
+        "REGRS2": {
+          "name": "退货原因",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REGRS3": {
+          "name": "退货原因",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REGRS4": {
+          "name": "退货原因",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REGRS5": {
+          "name": "退货原因",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REGRS6": {
+          "name": "退货原因",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REGRS7": {
+          "name": "退货原因",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REPRS2": {
+          "name": "返修原因",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REPRS3": {
+          "name": "返修原因",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REPRS4": {
+          "name": "返修原因",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REPRS5": {
+          "name": "返修原因",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REPRS6": {
+          "name": "返修原因",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REPRS7": {
+          "name": "返修原因",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "RETLMT": {
+          "name": "是否退货",
+          "group": "是否退货",
+          "contp": "PDP"
+        },
+        "DRAIMG2": {
+          "name": "改款打样图片2",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "DRAIMG3": {
+          "name": "改款打样图片3",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "REGRSDT": {
+          "name": "退货明细",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REPRSDT": {
+          "name": "返修明细",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "SHPIMG1": {
+          "name": "体型图片",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "SHPIMG2": {
+          "name": "体型图片",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "SHPIMG3": {
+          "name": "体型图片",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "CONTRACT": {
+          "name": "合同",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "IONLINEP": {
+          "name": "是否线上支付",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "REGRSDT2": {
+          "name": "退货明细",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REGRSDT3": {
+          "name": "退货明细",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REGRSDT4": {
+          "name": "退货明细",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REGRSDT5": {
+          "name": "退货明细",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REGRSDT6": {
+          "name": "退货明细",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REGRSDT7": {
+          "name": "退货明细",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REPRSDT2": {
+          "name": "返修明细",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REPRSDT3": {
+          "name": "返修明细",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REPRSDT4": {
+          "name": "返修明细",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REPRSDT5": {
+          "name": "返修明细",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REPRSDT6": {
+          "name": "返修明细",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REPRSDT7": {
+          "name": "返修明细",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REQEMIMG": {
+          "name": "刺绣图片",
+          "group": "Order Requirement",
+          "contp": "PDP"
+        },
+        "REQEM2IMG": {
+          "name": "刺绣图片",
+          "group": "",
+          "contp": "PDP"
+        },
+        "REQEM3IMG": {
+          "name": "刺绣图片",
+          "group": "",
+          "contp": "PDP"
+        },
+        "REQEMIMG2": {
+          "name": "刺绣图片2",
+          "group": "Order Requirement",
+          "contp": "PDP"
+        },
+        "REQEMIMG3": {
+          "name": "刺绣图片3",
+          "group": "Order Requirement",
+          "contp": "PDP"
+        }
+      }
+    },
+    "BM": {
+      "part": "vest",
+      "fieldCount": 258,
+      "fields": {
+        "LENFD": {
+          "name": "Front length(Finished)",
+          "group": "Try-on measurement",
+          "contp": "HSM"
+        },
+        "LENBD": {
+          "name": "Back length(Finished)",
+          "group": "Try-on measurement",
+          "contp": "HSM"
+        },
+        "LENSH": {
+          "name": "Shoulder Width(Finished)",
+          "group": "Try-on measurement",
+          "contp": "HSM"
+        },
+        "LENCH": {
+          "name": "Chest(Finished)",
+          "group": "Try-on measurement",
+          "contp": "HSM"
+        },
+        "LENMV": {
+          "name": "Stomach(Finished)",
+          "group": "Try-on measurement",
+          "contp": "HSM"
+        },
+        "LENDR": {
+          "name": "Hem(Finished)",
+          "group": "Try-on measurement",
+          "contp": "HSM"
+        },
+        "LENBT": {
+          "name": "The first button distance",
+          "group": "Try-on measurement",
+          "contp": "HSM"
+        },
+        "LENM1": {
+          "name": "Pocket Height",
+          "group": "半套号量体",
+          "contp": "HSM"
+        },
+        "BDJHD": {
+          "name": "Head",
+          "group": "Bodyshape adjustment",
+          "contp": "PMB"
+        },
+        "BDJNK": {
+          "name": "Neck",
+          "group": "Bodyshape adjustment",
+          "contp": "PMB"
+        },
+        "BDJLH": {
+          "name": "Left shoulder",
+          "group": "Bodyshape adjustment",
+          "contp": "PMB"
+        },
+        "BDJRH": {
+          "name": "Right shoulder",
+          "group": "Bodyshape adjustment",
+          "contp": "PMB"
+        },
+        "BDJMH": {
+          "name": "Front shoulder",
+          "group": "Bodyshape adjustment",
+          "contp": "PMB"
+        },
+        "BDJBO": {
+          "name": "Arm adjustment",
+          "group": "Bodyshape adjustment",
+          "contp": "PMB"
+        },
+        "BDJBH": {
+          "name": "Arm adjustment",
+          "group": "Bodyshape adjustment",
+          "contp": "PMB"
+        },
+        "BDJCH": {
+          "name": "Chest Out",
+          "group": "Bodyshape adjustment",
+          "contp": "PMB"
+        },
+        "BDJCI": {
+          "name": "Pectorales",
+          "group": "Bodyshape adjustment",
+          "contp": "PMB"
+        },
+        "BDJSB": {
+          "name": "Back",
+          "group": "Bodyshape adjustment",
+          "contp": "PMB"
+        },
+        "BDJSJ": {
+          "name": "Bladebone",
+          "group": "Bodyshape adjustment",
+          "contp": "PMB"
+        },
+        "BDJST": {
+          "name": "Belly",
+          "group": "Bodyshape adjustment",
+          "contp": "PMB"
+        },
+        "BDJAB": {
+          "name": "Entirety",
+          "group": "Bodyshape adjustment",
+          "contp": "PMB"
+        },
+        "BDJAY": {
+          "name": "concave waist",
+          "group": "Bodyshape adjustment",
+          "contp": "PMB"
+        },
+        "ADJZJ": {
+          "name": "Left Shoulder Angle",
+          "group": "Bodyshape adjustment",
+          "contp": "PMA"
+        },
+        "ADJYJ": {
+          "name": "Right Shoulder Angle",
+          "group": "Bodyshape adjustment",
+          "contp": "PMA"
+        },
+        "ADJNE": {
+          "name": "Neck Width(SNP. to SNP.)",
+          "group": "Bodyshape adjustment",
+          "contp": "PMA"
+        },
+        "ADJHL": {
+          "name": "Back Collar Height",
+          "group": "Bodyshape adjustment",
+          "contp": "PMA"
+        },
+        "ADJBA": {
+          "name": "Back Balance",
+          "group": "Bodyshape adjustment",
+          "contp": "PMA"
+        },
+        "ADJES": {
+          "name": "Armhole Depth",
+          "group": "Bodyshape adjustment",
+          "contp": "PMA"
+        },
+        "REQBT": {
+          "name": "Front style",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "REQCL": {
+          "name": "Lapel",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "KFABL": {
+          "name": "Lapel width",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "GTECH": {
+          "name": "Lapel buttonhole style",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "GTECP": {
+          "name": "Lapel buttonhole position",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "GTECO": {
+          "name": "Lapel buttonhole color",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "REQBU": {
+          "name": "Placket button",
+          "group": "Character design",
+          "contp": "PMD"
+        },
+        "KBAYD": {
+          "name": "Back belt",
+          "group": "High-level design",
+          "contp": "PMF"
+        },
+        "KBACZ": {
+          "name": "Back Material",
+          "group": "High-level design",
+          "contp": "PMF"
+        },
+        "GTEGZ": {
+          "name": "picking stitching",
+          "group": "High-level design",
+          "contp": "PMF"
+        },
+        "GTEZS": {
+          "name": "Pick stitching color",
+          "group": "High-level design",
+          "contp": "PMF"
+        },
+        "PHNBU": {
+          "name": "Sewing button style",
+          "group": "High-level design",
+          "contp": "PMF"
+        },
+        "PHBUC": {
+          "name": "Buttoning thread color",
+          "group": "High-level design",
+          "contp": "PMF"
+        },
+        "GCOPA": {
+          "name": "Contrast position",
+          "group": "High-level design",
+          "contp": "PMF"
+        },
+        "GCOZS": {
+          "name": "Contrast fabric",
+          "group": "High-level design",
+          "contp": "PMF"
+        },
+        "REQMA": {
+          "name": "Body lining",
+          "group": "High-level design",
+          "contp": "PMF"
+        },
+        "REMMP": {
+          "name": "Fabric label position",
+          "group": "High-level design",
+          "contp": "PMF"
+        },
+        "REQBR": {
+          "name": "Brand label position",
+          "group": "High-level design",
+          "contp": "PMF"
+        },
+        "CBRXL": {
+          "name": "Label thread color",
+          "group": "High-level design",
+          "contp": "PMF"
+        },
+        "REQDM": {
+          "name": "Care label position",
+          "group": "High-level design",
+          "contp": "PMF"
+        },
+        "RESPO": {
+          "name": "Cut-out position",
+          "group": "High-level design",
+          "contp": "PMF"
+        },
+        "REVKI": {
+          "name": "Cut-out fabric",
+          "group": "High-level design",
+          "contp": "PMF"
+        },
+        "GLKMO": {
+          "name": "Front buttonhole",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "GMKCO": {
+          "name": "All front buttonholes in one color",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "GMKC1": {
+          "name": "The first front buttonhole in contrast color",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "GMKC2": {
+          "name": "The second front buttonhole in contrast color",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "GMKC3": {
+          "name": "The third front buttonhole in contrast color",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "GMKC4": {
+          "name": "The fourth front buttonhole in contrast color",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "GMKC5": {
+          "name": "The fifth front buttonhole in contrast color",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "GMKC6": {
+          "name": "The sixth front buttonhole in contrast color",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "GMKC7": {
+          "name": "The seventh front buttonhole in contrast color",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "REQPU": {
+          "name": "Chest pocket",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "REQPD": {
+          "name": "Lower pocket",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "KPOKD": {
+          "name": "Ticket pocket",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "REQBA": {
+          "name": "Back",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "REKLK": {
+          "name": "Bottom shape",
+          "group": "Depth design",
+          "contp": "PME"
+        },
+        "BDJBE": {
+          "name": "body type",
+          "group": "Bodyshape adjustment",
+          "contp": "PMH"
+        },
+        "BDJNH": {
+          "name": "Left shoulder",
+          "group": "Bodyshape adjustment",
+          "contp": "PMH"
+        },
+        "BDJOH": {
+          "name": "Right shoulder",
+          "group": "Bodyshape adjustment",
+          "contp": "PMH"
+        },
+        "BDJSK": {
+          "name": "Bladebone",
+          "group": "Bodyshape adjustment",
+          "contp": "PMH"
+        },
+        "BDJSC": {
+          "name": "Back style",
+          "group": "Bodyshape adjustment",
+          "contp": "PMH"
+        },
+        "BDJSD": {
+          "name": "Chest",
+          "group": "Bodyshape adjustment",
+          "contp": "PMH"
+        },
+        "BDJSL": {
+          "name": "Belly",
+          "group": "Bodyshape adjustment",
+          "contp": "PMH"
+        },
+        "REQEM": {
+          "name": "Embroidery Details",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQTP": {
+          "name": "Embroidery Style",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQEM2": {
+          "name": "Embroidery Details2",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQEM3": {
+          "name": "Embroidery Details3",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQCO": {
+          "name": "Embroidery Color",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQCO2": {
+          "name": "Embroidery Color2",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQCO3": {
+          "name": "Embroidery Color3",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQTP2": {
+          "name": "Embroidery Style2",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQEW": {
+          "name": "Embroidery Font",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQEW2": {
+          "name": "Embroidery Font2",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQEW3": {
+          "name": "Embroidery Font3",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQTP3": {
+          "name": "Embroidery Style3",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQLO": {
+          "name": "Embroidery Position",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQLO2": {
+          "name": "Embroidery Position2",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQLO3": {
+          "name": "Embroidery Position3",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQCG": {
+          "name": "Embroidery Height",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQCG2": {
+          "name": "Embroidery Height2",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQCG3": {
+          "name": "Embroidery Height3",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQNP": {
+          "name": "Embroidery Remark",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQNP2": {
+          "name": "Embroidery Remark2",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "REQNP3": {
+          "name": "Embroidery Remark3",
+          "group": "Order Requirement",
+          "contp": "PMG"
+        },
+        "BTHAA": {
+          "name": "Neck Width (SNP. to SNP.)",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BTHAB": {
+          "name": "Back Collar Depth",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BTHAC": {
+          "name": "Left Shoulder Angle",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BTHAD": {
+          "name": "Right Shoulder Angle",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BTHAI": {
+          "name": "Forward shoulder",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BTHAJ": {
+          "name": "Backward shoulder",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BTHAK": {
+          "name": "Lett Scapular protrusion",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BTHAL": {
+          "name": "Right Scapular protrusion",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BTHAM": {
+          "name": "Back width(Both sides)",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "ADJSC": {
+          "name": "Humpback",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "ADJBX": {
+          "name": "Concave waist",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "ADJBW": {
+          "name": "Bottom of Centre Back",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "ADJGA": {
+          "name": "Front Edge",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BTHAW": {
+          "name": "Expand Chest",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BTHAX": {
+          "name": "Stomach Dart",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BTHAU": {
+          "name": "Front Chest(both sides)",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "BDJCJ": {
+          "name": "Chest Out",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "ADJXS": {
+          "name": "Chest Dart",
+          "group": "半套号体型调整",
+          "contp": "PMJ"
+        },
+        "LENBL": {
+          "name": "Height",
+          "group": "Finished measurement",
+          "contp": "GSZ"
+        },
+        "LENWT": {
+          "name": "Weight",
+          "group": "Finished measurement",
+          "contp": "GSZ"
+        },
+        "LENOL": {
+          "name": "Age",
+          "group": "Finished measurement",
+          "contp": "GSZ"
+        },
+        "LENBV": {
+          "name": "Nape to waist length(body)",
+          "group": "Finished measurement",
+          "contp": "GSZ"
+        },
+        "LENFV": {
+          "name": "Front waist length(body)",
+          "group": "Finished measurement",
+          "contp": "GSZ"
+        },
+        "LREBL": {
+          "name": "Height",
+          "group": "Body measurement",
+          "contp": "NSZ"
+        },
+        "LREWT": {
+          "name": "Weight",
+          "group": "Body measurement",
+          "contp": "NSZ"
+        },
+        "LREBD": {
+          "name": "Neck(body)",
+          "group": "Body measurement",
+          "contp": "NSZ"
+        },
+        "LREBW": {
+          "name": "Chest(body)",
+          "group": "Body measurement",
+          "contp": "NSZ"
+        },
+        "LRELB": {
+          "name": "Stomach(body)",
+          "group": "Body measurement",
+          "contp": "NSZ"
+        },
+        "LREFW": {
+          "name": "Belly(body)",
+          "group": "Body measurement",
+          "contp": "NSZ"
+        },
+        "LRESH": {
+          "name": "Back Shoulder",
+          "group": "Body measurement",
+          "contp": "NSZ"
+        },
+        "LREBV": {
+          "name": "Nape To Waist Length(body)",
+          "group": "Body measurement",
+          "contp": "NSZ"
+        },
+        "LREFV": {
+          "name": "Front To Waist Length(body)",
+          "group": "Body measurement",
+          "contp": "NSZ"
+        },
+        "LREML": {
+          "name": "Back Length",
+          "group": "Body measurement",
+          "contp": "NSZ"
+        },
+        "DRESH": {
+          "name": "Body- Finished allowance on Chest",
+          "group": "Fitting Allowrence",
+          "contp": "DRH"
+        },
+        "DRESI": {
+          "name": "Wearing Habit",
+          "group": "Wearing Habit",
+          "contp": "DRH"
+        },
+        "PFNC": {
+          "name": "水洗唛打面料出厂国",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "PFNM": {
+          "name": "水洗唛打面料成分",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "PLNC": {
+          "name": "水洗唛打里料出厂国",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "PLNM": {
+          "name": "水洗唛打里料成分",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "ADTSA": {
+          "name": "试穿合适",
+          "group": "半成品试穿",
+          "contp": "PDP"
+        },
+        "ARESY": {
+          "name": "群体区域",
+          "group": "Reginoal",
+          "contp": "PDP"
+        },
+        "AUGRU": {
+          "name": "订单原因",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "BAGGI": {
+          "name": "定制套袋",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "CHARG": {
+          "name": "批次号",
+          "group": "批次号",
+          "contp": "PDP"
+        },
+        "CMANR": {
+          "name": "供料面料号",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "COUNC": {
+          "name": "县/区",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "CPHNO": {
+          "name": "顾客手机号",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "CUBRD": {
+          "name": "品牌商标",
+          "group": "",
+          "contp": "PDP"
+        },
+        "DELCN": {
+          "name": "交货单号",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "DESIN": {
+          "name": "设计类型",
+          "group": "Design type",
+          "contp": "PDP"
+        },
+        "DISCT": {
+          "name": "折扣",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "DIVER": {
+          "name": "收货人",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "DRANP": {
+          "name": "改款打样要求",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "DRAWI": {
+          "name": "改款打样",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "DROCN": {
+          "name": "穿衣场合",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "EX2NU": {
+          "name": "20单号",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "EX8NU": {
+          "name": "80单号",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "EXPNU": {
+          "name": "快递单号",
+          "group": "Tracking number",
+          "contp": "PDP"
+        },
+        "FABBR": {
+          "name": "面料品牌",
+          "group": "Fabric brand",
+          "contp": "PDP"
+        },
+        "FABCO": {
+          "name": "面料商货号",
+          "group": "Fabric number",
+          "contp": "PDP"
+        },
+        "FABFT": {
+          "name": "颜色花型",
+          "group": "Color",
+          "contp": "PDP"
+        },
+        "FABMC": {
+          "name": "参考耗料",
+          "group": "",
+          "contp": "PDP"
+        },
+        "FABME": {
+          "name": "米数",
+          "group": "Meter",
+          "contp": "PDP"
+        },
+        "FABNO": {
+          "name": "下单面料号",
+          "group": "Fabric number",
+          "contp": "PDP"
+        },
+        "FABPE": {
+          "name": "成分",
+          "group": "Composition",
+          "contp": "PDP"
+        },
+        "IFREE": {
+          "name": "是否免费",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "ISCSU": {
+          "name": "是否客供面料",
+          "group": "Fabric source",
+          "contp": "PDP"
+        },
+        "KOSTL": {
+          "name": "成本中心",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "MAURQ": {
+          "name": "是否需要手册",
+          "group": "Need handbook or not",
+          "contp": "PDP"
+        },
+        "MEASU": {
+          "name": "量体方法",
+          "group": "Measurement methods",
+          "contp": "PDP"
+        },
+        "MODEM": {
+          "name": "版型",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "OMNNT": {
+          "name": "备注",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "PSIZE": {
+          "name": "皮衣大码收费",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REBBT": {
+          "name": "大扣子",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "RECOE": {
+          "name": "返修评分评分",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "RECOT": {
+          "name": "返修服务评价",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REEBY": {
+          "name": "刺绣",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REGIO": {
+          "name": "省/直辖市",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "REGRS": {
+          "name": "退货原因",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REIG1": {
+          "name": "返修试穿图",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REIG2": {
+          "name": "返修试穿图",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REIG3": {
+          "name": "返修试穿图",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REIG4": {
+          "name": "返修试穿图",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REIG5": {
+          "name": "返修评价图",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REIG6": {
+          "name": "返修评价图",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REIG7": {
+          "name": "返修评价图",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REKBA": {
+          "name": "打包方式",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "REKBD": {
+          "name": "吊牌需求",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REKCA": {
+          "name": "封样样衣",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "REKCO": {
+          "name": "发货费用",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REKNE": {
+          "name": "发货需求",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REKWM": {
+          "name": "水洗唛",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "REMED": {
+          "name": "快递支付方式",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REPRI": {
+          "name": "返修金额",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "REPRS": {
+          "name": "返修原因",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REQAA": {
+          "name": "穿着习惯",
+          "group": "穿着习惯",
+          "contp": "PDP"
+        },
+        "RESBT": {
+          "name": "小扣子",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "RETMK": {
+          "name": "商标",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "REWHM": {
+          "name": "水洗唛",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "RGBRD": {
+          "name": "品牌领标",
+          "group": "",
+          "contp": "PDP"
+        },
+        "RREPS": {
+          "name": "公司发出快递单号",
+          "group": "",
+          "contp": "PDP"
+        },
+        "RREPY": {
+          "name": "公司发出快递公司",
+          "group": "",
+          "contp": "PDP"
+        },
+        "RSEPS": {
+          "name": "门店发出快递单号",
+          "group": "",
+          "contp": "PDP"
+        },
+        "RSEPY": {
+          "name": "门店发出快递公司",
+          "group": "",
+          "contp": "PDP"
+        },
+        "SDDAT": {
+          "name": "售后发货日期",
+          "group": "",
+          "contp": "PDP"
+        },
+        "SPETP": {
+          "name": "特殊订单",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "SRECN": {
+          "name": "合并发货序号",
+          "group": "合并发货序号",
+          "contp": "PDP"
+        },
+        "TELPH": {
+          "name": "收货电话",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "TRATP": {
+          "name": "贸易类型",
+          "group": "Trade type",
+          "contp": "PDP"
+        },
+        "TYRLT": {
+          "name": "试穿结果",
+          "group": "",
+          "contp": "PDP"
+        },
+        "URGEN": {
+          "name": "紧急指数",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "VBELN": {
+          "name": "退货凭证号",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "ZCHDS": {
+          "name": "倒顺裁",
+          "group": "",
+          "contp": "PDP"
+        },
+        "ZCHFK": {
+          "name": "幅宽",
+          "group": "",
+          "contp": "PDP"
+        },
+        "ZCHGC": {
+          "name": "格长",
+          "group": "",
+          "contp": "PDP"
+        },
+        "ZCHGK": {
+          "name": "格宽",
+          "group": "",
+          "contp": "PDP"
+        },
+        "ZCHHX": {
+          "name": "花型",
+          "group": "",
+          "contp": "PDP"
+        },
+        "ZCHTK": {
+          "name": "条宽",
+          "group": "",
+          "contp": "PDP"
+        },
+        "ZSFAC": {
+          "name": "零减面料",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "ADJFEE": {
+          "name": "品牌改款费",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "ADJUST": {
+          "name": "调整金额",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "CADRMK": {
+          "name": "CAD备注",
+          "group": "CAD备注",
+          "contp": "PDP"
+        },
+        "DRAIMG": {
+          "name": "改款打样图片",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "FNRIMG": {
+          "name": "面料品牌标",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "ISSUIT": {
+          "name": "是否套装",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "MEUNIT": {
+          "name": "量体单位",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "MPCYCL": {
+          "name": "面料采购周期",
+          "group": "订单信息",
+          "contp": "PDP"
+        },
+        "REGRS2": {
+          "name": "退货原因",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REGRS3": {
+          "name": "退货原因",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REGRS4": {
+          "name": "退货原因",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REGRS5": {
+          "name": "退货原因",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REGRS6": {
+          "name": "退货原因",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REGRS7": {
+          "name": "退货原因",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REPRS2": {
+          "name": "返修原因",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REPRS3": {
+          "name": "返修原因",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REPRS4": {
+          "name": "返修原因",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REPRS5": {
+          "name": "返修原因",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REPRS6": {
+          "name": "返修原因",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REPRS7": {
+          "name": "返修原因",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "RETLMT": {
+          "name": "是否退货",
+          "group": "是否退货",
+          "contp": "PDP"
+        },
+        "DRAIMG2": {
+          "name": "改款打样图片2",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "DRAIMG3": {
+          "name": "改款打样图片3",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "REGRSDT": {
+          "name": "退货明细",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REPRSDT": {
+          "name": "返修明细",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "SHPIMG1": {
+          "name": "体型图片",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "SHPIMG2": {
+          "name": "体型图片",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "SHPIMG3": {
+          "name": "体型图片",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "CONTRACT": {
+          "name": "合同",
+          "group": "订单要求",
+          "contp": "PDP"
+        },
+        "IONLINEP": {
+          "name": "是否线上支付",
+          "group": "Order requirement",
+          "contp": "PDP"
+        },
+        "REGRSDT2": {
+          "name": "退货明细",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REGRSDT3": {
+          "name": "退货明细",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REGRSDT4": {
+          "name": "退货明细",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REGRSDT5": {
+          "name": "退货明细",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REGRSDT6": {
+          "name": "退货明细",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REGRSDT7": {
+          "name": "退货明细",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REPRSDT2": {
+          "name": "返修明细",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REPRSDT3": {
+          "name": "返修明细",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REPRSDT4": {
+          "name": "返修明细",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REPRSDT5": {
+          "name": "返修明细",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REPRSDT6": {
+          "name": "返修明细",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REPRSDT7": {
+          "name": "返修明细",
+          "group": "返修退货",
+          "contp": "PDP"
+        },
+        "REQEMIMG": {
+          "name": "刺绣图片",
+          "group": "Order Requirement",
+          "contp": "PDP"
+        },
+        "REQEM2IMG": {
+          "name": "刺绣图片",
+          "group": "",
+          "contp": "PDP"
+        },
+        "REQEM3IMG": {
+          "name": "刺绣图片",
+          "group": "",
+          "contp": "PDP"
+        },
+        "REQEMIMG2": {
+          "name": "刺绣图片2",
+          "group": "Order Requirement",
+          "contp": "PDP"
+        },
+        "REQEMIMG3": {
+          "name": "刺绣图片3",
+          "group": "Order Requirement",
+          "contp": "PDP"
+        }
+      }
+    }
+  }
+}
