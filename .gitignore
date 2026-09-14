@@ -41,8 +41,11 @@ yarn-error.log*
 /data-store/orders.json
 /data-store/bespoke-orders.json
 /data-store/consultations.json
-/data-store/image-review-*.json
+/data-store/image-review-queue*.json
 /data-store/image-rejections.json
+# Owner decisions are the only copy of 756 rulings — track them.
+!/data-store/image-review-decisions.json
+!/data-store/image-review-decisions-log.json
 /data-store/blueprint-repoint.json
 
 # Site CONFIGURATION is tracked on purpose. The Blob store is suspended
