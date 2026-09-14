@@ -1,0 +1,1384 @@
+{
+  "generatedAt": "2026-08-27T19:16:44.416Z",
+  "note": "CANDIDATES ONLY — nothing applied. A field mapping must be confirmed by comparing labels before any drawing is attached to a craft option.",
+  "unmappedNeedyFields": 30,
+  "byVerdict": {
+    "NAME_ONLY": 12,
+    "NO_CANDIDATE": 15,
+    "WEAK": 3
+  },
+  "rowsByVerdict": {
+    "NAME_ONLY": 63,
+    "NO_CANDIDATE": 95,
+    "WEAK": 7
+  },
+  "fields": [
+    {
+      "catalogField": "lapel-bh-style",
+      "part": "jacket",
+      "rowsAtStake": 15,
+      "optionCount": 5,
+      "optionLabels": [
+        "Real Functional (Machine)",
+        "Double-Color Straight A",
+        "Double-Color Straight B",
+        "½ Double-Color Straight",
+        "No.1 ½ Double-Color Straight"
+      ],
+      "verdict": "NAME_ONLY",
+      "candidates": [
+        {
+          "supplierField": "REQCL",
+          "supplierFieldLabel": "55°Notch lapel",
+          "labelHits": 0,
+          "ourOptionCount": 5,
+          "supplierValueCount": 39,
+          "fieldNameSim": 0.333,
+          "drawingsOnDisk": 39,
+          "samples": []
+        },
+        {
+          "supplierField": "REQLM",
+          "supplierFieldLabel": "0.3CM Piping on Up Lapel",
+          "labelHits": 0,
+          "ourOptionCount": 5,
+          "supplierValueCount": 3,
+          "fieldNameSim": 0.25,
+          "drawingsOnDisk": 3,
+          "samples": []
+        }
+      ],
+      "collision": {
+        "supplierField": "REQCL",
+        "alsoClaimedBy": [
+          "lapel",
+          "lapel-style"
+        ],
+        "why": "the same supplier field is the top candidate for more than one catalog field — label evidence cannot separate them; the drawings must be looked at"
+      }
+    },
+    {
+      "catalogField": "waistband-style",
+      "part": "trousers",
+      "rowsAtStake": 15,
+      "optionCount": 5,
+      "optionLabels": [
+        "Extended Tab Waistband",
+        "Waistcoat Back Band",
+        "Elasticated Insert",
+        "Double Waistband",
+        "Trouser Waist (No Band)"
+      ],
+      "verdict": "NO_CANDIDATE",
+      "candidates": [
+        {
+          "supplierField": "REQYT",
+          "supplierFieldLabel": "0ne Waistband Button 0ne Hook",
+          "labelHits": 0,
+          "ourOptionCount": 5,
+          "supplierValueCount": 7,
+          "fieldNameSim": 0.2,
+          "drawingsOnDisk": 7,
+          "samples": [],
+          "attractor": "leads 3 catalog fields on 0 label hit(s) - demoted"
+        },
+        {
+          "supplierField": "REQLO",
+          "supplierFieldLabel": "Inner left waistband",
+          "labelHits": 0,
+          "ourOptionCount": 5,
+          "supplierValueCount": 5,
+          "fieldNameSim": 0.25,
+          "drawingsOnDisk": 5,
+          "samples": [],
+          "attractor": "leads 5 catalog fields on 0 label hit(s) - demoted"
+        },
+        {
+          "supplierField": "REQLO2",
+          "supplierFieldLabel": "Inner left waistband",
+          "labelHits": 0,
+          "ourOptionCount": 5,
+          "supplierValueCount": 3,
+          "fieldNameSim": 0.25,
+          "drawingsOnDisk": 0,
+          "samples": [],
+          "attractor": "leads 5 catalog fields on 0 label hit(s) - demoted"
+        },
+        {
+          "supplierField": "REQLO3",
+          "supplierFieldLabel": "Inner left waistband",
+          "labelHits": 0,
+          "ourOptionCount": 5,
+          "supplierValueCount": 3,
+          "fieldNameSim": 0.25,
+          "drawingsOnDisk": 0,
+          "samples": [],
+          "attractor": "leads 5 catalog fields on 0 label hit(s) - demoted"
+        }
+      ],
+      "collision": {
+        "supplierField": "REQYT",
+        "alsoClaimedBy": [
+          "waistband-width",
+          "waistband-canvas"
+        ],
+        "why": "the same supplier field is the top candidate for more than one catalog field — label evidence cannot separate them; the drawings must be looked at"
+      }
+    },
+    {
+      "catalogField": "waistband-width",
+      "part": "trousers",
+      "rowsAtStake": 15,
+      "optionCount": 5,
+      "optionLabels": [
+        "3.5 cm",
+        "3.8 cm",
+        "4.0 cm",
+        "4.5 cm",
+        "5.0 cm"
+      ],
+      "verdict": "NO_CANDIDATE",
+      "candidates": [
+        {
+          "supplierField": "REQYT",
+          "supplierFieldLabel": "0ne Waistband Button 0ne Hook",
+          "labelHits": 0,
+          "ourOptionCount": 5,
+          "supplierValueCount": 7,
+          "fieldNameSim": 0.2,
+          "drawingsOnDisk": 7,
+          "samples": [],
+          "attractor": "leads 3 catalog fields on 0 label hit(s) - demoted"
+        },
+        {
+          "supplierField": "REQLO",
+          "supplierFieldLabel": "Inner left waistband",
+          "labelHits": 0,
+          "ourOptionCount": 5,
+          "supplierValueCount": 5,
+          "fieldNameSim": 0.25,
+          "drawingsOnDisk": 5,
+          "samples": [],
+          "attractor": "leads 5 catalog fields on 0 label hit(s) - demoted"
+        },
+        {
+          "supplierField": "REQLO2",
+          "supplierFieldLabel": "Inner left waistband",
+          "labelHits": 0,
+          "ourOptionCount": 5,
+          "supplierValueCount": 3,
+          "fieldNameSim": 0.25,
+          "drawingsOnDisk": 0,
+          "samples": [],
+          "attractor": "leads 5 catalog fields on 0 label hit(s) - demoted"
+        },
+        {
+          "supplierField": "REQLO3",
+          "supplierFieldLabel": "Inner left waistband",
+          "labelHits": 0,
+          "ourOptionCount": 5,
+          "supplierValueCount": 3,
+          "fieldNameSim": 0.25,
+          "drawingsOnDisk": 0,
+          "samples": [],
+          "attractor": "leads 5 catalog fields on 0 label hit(s) - demoted"
+        }
+      ],
+      "collision": {
+        "supplierField": "REQYT",
+        "alsoClaimedBy": [
+          "waistband-style",
+          "waistband-canvas"
+        ],
+        "why": "the same supplier field is the top candidate for more than one catalog field — label evidence cannot separate them; the drawings must be looked at"
+      }
+    },
+    {
+      "catalogField": "leg-shape",
+      "part": "trousers",
+      "rowsAtStake": 12,
+      "optionCount": 4,
+      "optionLabels": [
+        "Tapered",
+        "Straight Cut",
+        "Wide Leg",
+        "Slim"
+      ],
+      "verdict": "NO_CANDIDATE",
+      "candidates": []
+    },
+    {
+      "catalogField": "waistband-canvas",
+      "part": "trousers",
+      "rowsAtStake": 12,
+      "optionCount": 4,
+      "optionLabels": [
+        "Fused (Standard)",
+        "Full Canvas",
+        "Half Canvas",
+        "Single Layer"
+      ],
+      "verdict": "NO_CANDIDATE",
+      "candidates": [
+        {
+          "supplierField": "REQYT",
+          "supplierFieldLabel": "0ne Waistband Button 0ne Hook",
+          "labelHits": 0,
+          "ourOptionCount": 4,
+          "supplierValueCount": 7,
+          "fieldNameSim": 0.2,
+          "drawingsOnDisk": 7,
+          "samples": [],
+          "attractor": "leads 3 catalog fields on 0 label hit(s) - demoted"
+        },
+        {
+          "supplierField": "REQLO",
+          "supplierFieldLabel": "Inner left waistband",
+          "labelHits": 0,
+          "ourOptionCount": 4,
+          "supplierValueCount": 5,
+          "fieldNameSim": 0.25,
+          "drawingsOnDisk": 5,
+          "samples": [],
+          "attractor": "leads 5 catalog fields on 0 label hit(s) - demoted"
+        },
+        {
+          "supplierField": "REQLO2",
+          "supplierFieldLabel": "Inner left waistband",
+          "labelHits": 0,
+          "ourOptionCount": 4,
+          "supplierValueCount": 3,
+          "fieldNameSim": 0.25,
+          "drawingsOnDisk": 0,
+          "samples": [],
+          "attractor": "leads 5 catalog fields on 0 label hit(s) - demoted"
+        },
+        {
+          "supplierField": "REQLO3",
+          "supplierFieldLabel": "Inner left waistband",
+          "labelHits": 0,
+          "ourOptionCount": 4,
+          "supplierValueCount": 3,
+          "fieldNameSim": 0.25,
+          "drawingsOnDisk": 0,
+          "samples": [],
+          "attractor": "leads 5 catalog fields on 0 label hit(s) - demoted"
+        }
+      ],
+      "collision": {
+        "supplierField": "REQYT",
+        "alsoClaimedBy": [
+          "waistband-style",
+          "waistband-width"
+        ],
+        "why": "the same supplier field is the top candidate for more than one catalog field — label evidence cannot separate them; the drawings must be looked at"
+      }
+    },
+    {
+      "catalogField": "back-darts",
+      "part": "trousers",
+      "rowsAtStake": 9,
+      "optionCount": 3,
+      "optionLabels": [
+        "No Darts",
+        "Single Back Darts",
+        "Double Back Darts"
+      ],
+      "verdict": "NO_CANDIDATE",
+      "candidates": []
+    },
+    {
+      "catalogField": "hem-style",
+      "part": "trousers",
+      "rowsAtStake": 9,
+      "optionCount": 3,
+      "optionLabels": [
+        "3.8 cm Cuff Turn-Up",
+        "Fringe Edge",
+        "Unfinished (Raw Edge)"
+      ],
+      "verdict": "NAME_ONLY",
+      "candidates": [
+        {
+          "supplierField": "REQFO",
+          "supplierFieldLabel": "Blind hem +6cm infold",
+          "labelHits": 0,
+          "ourOptionCount": 3,
+          "supplierValueCount": 25,
+          "fieldNameSim": 0.2,
+          "drawingsOnDisk": 25,
+          "samples": []
+        }
+      ]
+    },
+    {
+      "catalogField": "fly-stitching",
+      "part": "trousers",
+      "rowsAtStake": 6,
+      "optionCount": 2,
+      "optionLabels": [
+        "Curved Fly Stitch",
+        "Straight Fly Stitch"
+      ],
+      "verdict": "NAME_ONLY",
+      "candidates": [
+        {
+          "supplierField": "GBKLI",
+          "supplierFieldLabel": "Pick stitching by machine 1",
+          "labelHits": 0,
+          "ourOptionCount": 2,
+          "supplierValueCount": 6,
+          "fieldNameSim": 0.25,
+          "drawingsOnDisk": 6,
+          "samples": []
+        },
+        {
+          "supplierField": "GTEMS",
+          "supplierFieldLabel": "Top stitching by machine",
+          "labelHits": 0,
+          "ourOptionCount": 2,
+          "supplierValueCount": 2,
+          "fieldNameSim": 0.25,
+          "drawingsOnDisk": 2,
+          "samples": []
+        }
+      ]
+    },
+    {
+      "catalogField": "center-crease",
+      "part": "trousers",
+      "rowsAtStake": 6,
+      "optionCount": 2,
+      "optionLabels": [
+        "Pressed Crease (Standard)",
+        "Fused Crease (Permanent)"
+      ],
+      "verdict": "NAME_ONLY",
+      "candidates": [
+        {
+          "supplierField": "KPWAH",
+          "supplierFieldLabel": "With Center Crease",
+          "labelHits": 0,
+          "ourOptionCount": 2,
+          "supplierValueCount": 2,
+          "fieldNameSim": 0.667,
+          "drawingsOnDisk": 2,
+          "samples": []
+        }
+      ],
+      "collision": {
+        "supplierField": "KPWAH",
+        "alsoClaimedBy": [
+          "center-seam"
+        ],
+        "why": "the same supplier field is the top candidate for more than one catalog field — label evidence cannot separate them; the drawings must be looked at"
+      }
+    },
+    {
+      "catalogField": "center-seam",
+      "part": "trousers",
+      "rowsAtStake": 6,
+      "optionCount": 2,
+      "optionLabels": [
+        "Open Seam",
+        "Flat-Fell Seam"
+      ],
+      "verdict": "NAME_ONLY",
+      "candidates": [
+        {
+          "supplierField": "KPWAH",
+          "supplierFieldLabel": "With Center Crease",
+          "labelHits": 0,
+          "ourOptionCount": 2,
+          "supplierValueCount": 2,
+          "fieldNameSim": 0.25,
+          "drawingsOnDisk": 2,
+          "samples": []
+        }
+      ],
+      "collision": {
+        "supplierField": "KPWAH",
+        "alsoClaimedBy": [
+          "center-crease"
+        ],
+        "why": "the same supplier field is the top candidate for more than one catalog field — label evidence cannot separate them; the drawings must be looked at"
+      }
+    },
+    {
+      "catalogField": "label-placement",
+      "part": "trousers",
+      "rowsAtStake": 6,
+      "optionCount": 2,
+      "optionLabels": [
+        "Inside Waistband",
+        "Care Label Only"
+      ],
+      "verdict": "NAME_ONLY",
+      "candidates": [
+        {
+          "supplierField": "REQBR",
+          "supplierFieldLabel": "No Brand Label",
+          "labelHits": 0,
+          "ourOptionCount": 2,
+          "supplierValueCount": 8,
+          "fieldNameSim": 0.333,
+          "drawingsOnDisk": 7,
+          "samples": []
+        },
+        {
+          "supplierField": "REMMP",
+          "supplierFieldLabel": "No Fabric Label",
+          "labelHits": 0,
+          "ourOptionCount": 2,
+          "supplierValueCount": 6,
+          "fieldNameSim": 0.333,
+          "drawingsOnDisk": 6,
+          "samples": []
+        }
+      ]
+    },
+    {
+      "catalogField": "fitting-adjustment-vest",
+      "part": "vest",
+      "rowsAtStake": 6,
+      "optionCount": 3,
+      "optionLabels": [
+        "Standard",
+        "-1.0 cm Arm Hole",
+        "Deep Stomach Dart"
+      ],
+      "verdict": "NO_CANDIDATE",
+      "candidates": []
+    },
+    {
+      "catalogField": "buttonhole-type-vest",
+      "part": "vest",
+      "rowsAtStake": 4,
+      "optionCount": 2,
+      "optionLabels": [
+        "Machine Stitched",
+        "Handmade Round Buttonholes"
+      ],
+      "verdict": "NO_CANDIDATE",
+      "candidates": []
+    },
+    {
+      "catalogField": "vest-label-placement",
+      "part": "vest",
+      "rowsAtStake": 4,
+      "optionCount": 2,
+      "optionLabels": [
+        "Inner Breast Pocket Area",
+        "Side Seam"
+      ],
+      "verdict": "NAME_ONLY",
+      "candidates": [
+        {
+          "supplierField": "REQLO3",
+          "supplierFieldLabel": "Brown blank label",
+          "labelHits": 0,
+          "ourOptionCount": 2,
+          "supplierValueCount": 5,
+          "fieldNameSim": 0.2,
+          "drawingsOnDisk": 5,
+          "samples": []
+        },
+        {
+          "supplierField": "REQLO2",
+          "supplierFieldLabel": "Brown blank label",
+          "labelHits": 0,
+          "ourOptionCount": 2,
+          "supplierValueCount": 5,
+          "fieldNameSim": 0.2,
+          "drawingsOnDisk": 5,
+          "samples": []
+        },
+        {
+          "supplierField": "REQLO",
+          "supplierFieldLabel": "Brown blank label",
+          "labelHits": 0,
+          "ourOptionCount": 2,
+          "supplierValueCount": 5,
+          "fieldNameSim": 0.2,
+          "drawingsOnDisk": 5,
+          "samples": []
+        },
+        {
+          "supplierField": "REMMP",
+          "supplierFieldLabel": "No Fabric Label",
+          "labelHits": 0,
+          "ourOptionCount": 2,
+          "supplierValueCount": 4,
+          "fieldNameSim": 0.25,
+          "drawingsOnDisk": 4,
+          "samples": []
+        }
+      ]
+    },
+    {
+      "catalogField": "vest-extras",
+      "part": "vest",
+      "rowsAtStake": 4,
+      "optionCount": 2,
+      "optionLabels": [
+        "None",
+        "Placket with Pad Buttons"
+      ],
+      "verdict": "NO_CANDIDATE",
+      "candidates": [
+        {
+          "supplierField": "GTECO",
+          "supplierFieldLabel": "Machine-made446",
+          "labelHits": 1,
+          "ourOptionCount": 2,
+          "supplierValueCount": 280,
+          "fieldNameSim": 0,
+          "drawingsOnDisk": 280,
+          "samples": [
+            {
+              "ours": "None",
+              "theirs": "None",
+              "value": "99"
+            }
+          ],
+          "attractor": "leads 3 catalog fields on 1 label hit(s) - demoted"
+        },
+        {
+          "supplierField": "GTEZS",
+          "supplierFieldLabel": "659",
+          "labelHits": 1,
+          "ourOptionCount": 2,
+          "supplierValueCount": 81,
+          "fieldNameSim": 0,
+          "drawingsOnDisk": 81,
+          "samples": [
+            {
+              "ours": "None",
+              "theirs": "None",
+              "value": "N"
+            }
+          ],
+          "attractor": "leads 3 catalog fields on 1 label hit(s) - demoted"
+        },
+        {
+          "supplierField": "CBRXL",
+          "supplierFieldLabel": "Matching to fabric",
+          "labelHits": 1,
+          "ourOptionCount": 2,
+          "supplierValueCount": 46,
+          "fieldNameSim": 0,
+          "drawingsOnDisk": 46,
+          "samples": [
+            {
+              "ours": "None",
+              "theirs": "None",
+              "value": "99"
+            }
+          ],
+          "attractor": "leads 3 catalog fields on 1 label hit(s) - demoted"
+        },
+        {
+          "supplierField": "GTECH",
+          "supplierFieldLabel": "None",
+          "labelHits": 1,
+          "ourOptionCount": 2,
+          "supplierValueCount": 26,
+          "fieldNameSim": 0,
+          "drawingsOnDisk": 26,
+          "samples": [
+            {
+              "ours": "None",
+              "theirs": "None",
+              "value": "A"
+            }
+          ],
+          "attractor": "leads 3 catalog fields on 1 label hit(s) - demoted"
+        }
+      ],
+      "collision": {
+        "supplierField": "GTECO",
+        "alsoClaimedBy": [
+          "contrast-lapel-collar",
+          "contrast-pocket-vest"
+        ],
+        "why": "the same supplier field is the top candidate for more than one catalog field — label evidence cannot separate them; the drawings must be looked at"
+      }
+    },
+    {
+      "catalogField": "elbow-patch",
+      "part": "jacket",
+      "rowsAtStake": 3,
+      "optionCount": 1,
+      "optionLabels": [
+        "None"
+      ],
+      "verdict": "WEAK",
+      "candidates": [
+        {
+          "supplierField": "REQMA",
+          "supplierFieldLabel": "None",
+          "labelHits": 1,
+          "ourOptionCount": 1,
+          "supplierValueCount": 243,
+          "fieldNameSim": 0,
+          "drawingsOnDisk": 195,
+          "samples": [
+            {
+              "ours": "None",
+              "theirs": "None",
+              "value": "FB000001"
+            }
+          ]
+        },
+        {
+          "supplierField": "GTECO",
+          "supplierFieldLabel": "Matching",
+          "labelHits": 1,
+          "ourOptionCount": 1,
+          "supplierValueCount": 154,
+          "fieldNameSim": 0,
+          "drawingsOnDisk": 154,
+          "samples": [
+            {
+              "ours": "None",
+              "theirs": "None",
+              "value": "99"
+            }
+          ]
+        },
+        {
+          "supplierField": "GTEZY",
+          "supplierFieldLabel": "YZ041",
+          "labelHits": 1,
+          "ourOptionCount": 1,
+          "supplierValueCount": 92,
+          "fieldNameSim": 0,
+          "drawingsOnDisk": 92,
+          "samples": [
+            {
+              "ours": "None",
+              "theirs": "None",
+              "value": "Z"
+            }
+          ]
+        },
+        {
+          "supplierField": "GTEZS",
+          "supplierFieldLabel": "Matching to fabric",
+          "labelHits": 1,
+          "ourOptionCount": 1,
+          "supplierValueCount": 80,
+          "fieldNameSim": 0,
+          "drawingsOnDisk": 80,
+          "samples": [
+            {
+              "ours": "None",
+              "theirs": "None",
+              "value": "N"
+            }
+          ]
+        }
+      ],
+      "collision": {
+        "supplierField": "REQMA",
+        "alsoClaimedBy": [
+          "handmade-decorative"
+        ],
+        "why": "the same supplier field is the top candidate for more than one catalog field — label evidence cannot separate them; the drawings must be looked at"
+      }
+    },
+    {
+      "catalogField": "handmade-decorative",
+      "part": "jacket",
+      "rowsAtStake": 3,
+      "optionCount": 1,
+      "optionLabels": [
+        "None"
+      ],
+      "verdict": "WEAK",
+      "candidates": [
+        {
+          "supplierField": "REQMA",
+          "supplierFieldLabel": "None",
+          "labelHits": 1,
+          "ourOptionCount": 1,
+          "supplierValueCount": 243,
+          "fieldNameSim": 0,
+          "drawingsOnDisk": 195,
+          "samples": [
+            {
+              "ours": "None",
+              "theirs": "None",
+              "value": "FB000001"
+            }
+          ]
+        },
+        {
+          "supplierField": "GTECO",
+          "supplierFieldLabel": "Matching",
+          "labelHits": 1,
+          "ourOptionCount": 1,
+          "supplierValueCount": 154,
+          "fieldNameSim": 0,
+          "drawingsOnDisk": 154,
+          "samples": [
+            {
+              "ours": "None",
+              "theirs": "None",
+              "value": "99"
+            }
+          ]
+        },
+        {
+          "supplierField": "GTEZY",
+          "supplierFieldLabel": "YZ041",
+          "labelHits": 1,
+          "ourOptionCount": 1,
+          "supplierValueCount": 92,
+          "fieldNameSim": 0,
+          "drawingsOnDisk": 92,
+          "samples": [
+            {
+              "ours": "None",
+              "theirs": "None",
+              "value": "Z"
+            }
+          ]
+        },
+        {
+          "supplierField": "GTEZS",
+          "supplierFieldLabel": "Matching to fabric",
+          "labelHits": 1,
+          "ourOptionCount": 1,
+          "supplierValueCount": 80,
+          "fieldNameSim": 0,
+          "drawingsOnDisk": 80,
+          "samples": [
+            {
+              "ours": "None",
+              "theirs": "None",
+              "value": "N"
+            }
+          ]
+        }
+      ],
+      "collision": {
+        "supplierField": "REQMA",
+        "alsoClaimedBy": [
+          "elbow-patch"
+        ],
+        "why": "the same supplier field is the top candidate for more than one catalog field — label evidence cannot separate them; the drawings must be looked at"
+      }
+    },
+    {
+      "catalogField": "pocket-stitching",
+      "part": "trousers",
+      "rowsAtStake": 3,
+      "optionCount": 1,
+      "optionLabels": [
+        "0.6 cm Topstitch"
+      ],
+      "verdict": "NAME_ONLY",
+      "candidates": [
+        {
+          "supplierField": "REQPF",
+          "supplierFieldLabel": "Jetted pocket with button",
+          "labelHits": 0,
+          "ourOptionCount": 1,
+          "supplierValueCount": 16,
+          "fieldNameSim": 0.2,
+          "drawingsOnDisk": 16,
+          "samples": []
+        },
+        {
+          "supplierField": "KPOQD",
+          "supplierFieldLabel": "Slant pocket 2",
+          "labelHits": 0,
+          "ourOptionCount": 1,
+          "supplierValueCount": 15,
+          "fieldNameSim": 0.333,
+          "drawingsOnDisk": 15,
+          "samples": []
+        },
+        {
+          "supplierField": "GBKLI",
+          "supplierFieldLabel": "Pick stitching by machine 1",
+          "labelHits": 0,
+          "ourOptionCount": 1,
+          "supplierValueCount": 6,
+          "fieldNameSim": 0.25,
+          "drawingsOnDisk": 6,
+          "samples": []
+        },
+        {
+          "supplierField": "GTEMS",
+          "supplierFieldLabel": "Top stitching by machine",
+          "labelHits": 0,
+          "ourOptionCount": 1,
+          "supplierValueCount": 2,
+          "fieldNameSim": 0.25,
+          "drawingsOnDisk": 2,
+          "samples": []
+        }
+      ],
+      "collision": {
+        "supplierField": "REQPF",
+        "alsoClaimedBy": [
+          "watch-pocket"
+        ],
+        "why": "the same supplier field is the top candidate for more than one catalog field — label evidence cannot separate them; the drawings must be looked at"
+      }
+    },
+    {
+      "catalogField": "watch-pocket",
+      "part": "trousers",
+      "rowsAtStake": 3,
+      "optionCount": 1,
+      "optionLabels": [
+        "Left Welt"
+      ],
+      "verdict": "NAME_ONLY",
+      "candidates": [
+        {
+          "supplierField": "REQPF",
+          "supplierFieldLabel": "Jetted pocket with button",
+          "labelHits": 0,
+          "ourOptionCount": 1,
+          "supplierValueCount": 16,
+          "fieldNameSim": 0.2,
+          "drawingsOnDisk": 16,
+          "samples": []
+        },
+        {
+          "supplierField": "KPOQD",
+          "supplierFieldLabel": "Slant pocket 2",
+          "labelHits": 0,
+          "ourOptionCount": 1,
+          "supplierValueCount": 15,
+          "fieldNameSim": 0.333,
+          "drawingsOnDisk": 15,
+          "samples": []
+        }
+      ],
+      "collision": {
+        "supplierField": "REQPF",
+        "alsoClaimedBy": [
+          "pocket-stitching"
+        ],
+        "why": "the same supplier field is the top candidate for more than one catalog field — label evidence cannot separate them; the drawings must be looked at"
+      }
+    },
+    {
+      "catalogField": "belt-loops",
+      "part": "trousers",
+      "rowsAtStake": 3,
+      "optionCount": 1,
+      "optionLabels": [
+        "5 Loops"
+      ],
+      "verdict": "NAME_ONLY",
+      "candidates": [
+        {
+          "supplierField": "REQKB",
+          "supplierFieldLabel": "1cm flat belt loops",
+          "labelHits": 0,
+          "ourOptionCount": 1,
+          "supplierValueCount": 11,
+          "fieldNameSim": 0.5,
+          "drawingsOnDisk": 10,
+          "samples": []
+        },
+        {
+          "supplierField": "GCOPA",
+          "supplierFieldLabel": "Belt loops",
+          "labelHits": 0,
+          "ourOptionCount": 1,
+          "supplierValueCount": 4,
+          "fieldNameSim": 1,
+          "drawingsOnDisk": 4,
+          "samples": []
+        }
+      ]
+    },
+    {
+      "catalogField": "waist-detail",
+      "part": "trousers",
+      "rowsAtStake": 3,
+      "optionCount": 1,
+      "optionLabels": [
+        "No Back Detail"
+      ],
+      "verdict": "NO_CANDIDATE",
+      "candidates": []
+    },
+    {
+      "catalogField": "inner-waist",
+      "part": "trousers",
+      "rowsAtStake": 3,
+      "optionCount": 1,
+      "optionLabels": [
+        "Standard, Piping & Snugtex"
+      ],
+      "verdict": "NO_CANDIDATE",
+      "candidates": [
+        {
+          "supplierField": "REQLO",
+          "supplierFieldLabel": "Inner left waistband",
+          "labelHits": 0,
+          "ourOptionCount": 1,
+          "supplierValueCount": 5,
+          "fieldNameSim": 0.25,
+          "drawingsOnDisk": 5,
+          "samples": [],
+          "attractor": "leads 5 catalog fields on 0 label hit(s) - demoted"
+        },
+        {
+          "supplierField": "REQLO2",
+          "supplierFieldLabel": "Inner left waistband",
+          "labelHits": 0,
+          "ourOptionCount": 1,
+          "supplierValueCount": 3,
+          "fieldNameSim": 0.25,
+          "drawingsOnDisk": 0,
+          "samples": [],
+          "attractor": "leads 5 catalog fields on 0 label hit(s) - demoted"
+        },
+        {
+          "supplierField": "REQLO3",
+          "supplierFieldLabel": "Inner left waistband",
+          "labelHits": 0,
+          "ourOptionCount": 1,
+          "supplierValueCount": 3,
+          "fieldNameSim": 0.25,
+          "drawingsOnDisk": 0,
+          "samples": [],
+          "attractor": "leads 5 catalog fields on 0 label hit(s) - demoted"
+        }
+      ],
+      "collision": {
+        "supplierField": "REQLO",
+        "alsoClaimedBy": [
+          "waistband-back-seam"
+        ],
+        "why": "the same supplier field is the top candidate for more than one catalog field — label evidence cannot separate them; the drawings must be looked at"
+      }
+    },
+    {
+      "catalogField": "contrast-positions",
+      "part": "trousers",
+      "rowsAtStake": 3,
+      "optionCount": 1,
+      "optionLabels": [
+        "No Contrast"
+      ],
+      "verdict": "NO_CANDIDATE",
+      "candidates": []
+    },
+    {
+      "catalogField": "waistband-back-seam",
+      "part": "trousers",
+      "rowsAtStake": 3,
+      "optionCount": 1,
+      "optionLabels": [
+        "With Bartack (Standard)"
+      ],
+      "verdict": "NO_CANDIDATE",
+      "candidates": [
+        {
+          "supplierField": "REQLO",
+          "supplierFieldLabel": "Inner left waistband",
+          "labelHits": 0,
+          "ourOptionCount": 1,
+          "supplierValueCount": 5,
+          "fieldNameSim": 0.2,
+          "drawingsOnDisk": 5,
+          "samples": [],
+          "attractor": "leads 5 catalog fields on 0 label hit(s) - demoted"
+        },
+        {
+          "supplierField": "REQLO2",
+          "supplierFieldLabel": "Inner left waistband",
+          "labelHits": 0,
+          "ourOptionCount": 1,
+          "supplierValueCount": 3,
+          "fieldNameSim": 0.2,
+          "drawingsOnDisk": 0,
+          "samples": [],
+          "attractor": "leads 5 catalog fields on 0 label hit(s) - demoted"
+        },
+        {
+          "supplierField": "REQLO3",
+          "supplierFieldLabel": "Inner left waistband",
+          "labelHits": 0,
+          "ourOptionCount": 1,
+          "supplierValueCount": 3,
+          "fieldNameSim": 0.2,
+          "drawingsOnDisk": 0,
+          "samples": [],
+          "attractor": "leads 5 catalog fields on 0 label hit(s) - demoted"
+        }
+      ],
+      "collision": {
+        "supplierField": "REQLO",
+        "alsoClaimedBy": [
+          "inner-waist"
+        ],
+        "why": "the same supplier field is the top candidate for more than one catalog field — label evidence cannot separate them; the drawings must be looked at"
+      }
+    },
+    {
+      "catalogField": "contrast-lapel-collar",
+      "part": "vest",
+      "rowsAtStake": 2,
+      "optionCount": 1,
+      "optionLabels": [
+        "None"
+      ],
+      "verdict": "NO_CANDIDATE",
+      "candidates": [
+        {
+          "supplierField": "GTECO",
+          "supplierFieldLabel": "Machine-made446",
+          "labelHits": 1,
+          "ourOptionCount": 1,
+          "supplierValueCount": 280,
+          "fieldNameSim": 0,
+          "drawingsOnDisk": 280,
+          "samples": [
+            {
+              "ours": "None",
+              "theirs": "None",
+              "value": "99"
+            }
+          ],
+          "attractor": "leads 3 catalog fields on 1 label hit(s) - demoted"
+        },
+        {
+          "supplierField": "GTEZS",
+          "supplierFieldLabel": "659",
+          "labelHits": 1,
+          "ourOptionCount": 1,
+          "supplierValueCount": 81,
+          "fieldNameSim": 0,
+          "drawingsOnDisk": 81,
+          "samples": [
+            {
+              "ours": "None",
+              "theirs": "None",
+              "value": "N"
+            }
+          ],
+          "attractor": "leads 3 catalog fields on 1 label hit(s) - demoted"
+        },
+        {
+          "supplierField": "CBRXL",
+          "supplierFieldLabel": "Matching to fabric",
+          "labelHits": 1,
+          "ourOptionCount": 1,
+          "supplierValueCount": 46,
+          "fieldNameSim": 0,
+          "drawingsOnDisk": 46,
+          "samples": [
+            {
+              "ours": "None",
+              "theirs": "None",
+              "value": "99"
+            }
+          ],
+          "attractor": "leads 3 catalog fields on 1 label hit(s) - demoted"
+        },
+        {
+          "supplierField": "GTECH",
+          "supplierFieldLabel": "None",
+          "labelHits": 1,
+          "ourOptionCount": 1,
+          "supplierValueCount": 26,
+          "fieldNameSim": 0,
+          "drawingsOnDisk": 26,
+          "samples": [
+            {
+              "ours": "None",
+              "theirs": "None",
+              "value": "A"
+            }
+          ],
+          "attractor": "leads 3 catalog fields on 1 label hit(s) - demoted"
+        }
+      ],
+      "collision": {
+        "supplierField": "GTECO",
+        "alsoClaimedBy": [
+          "vest-extras",
+          "contrast-pocket-vest"
+        ],
+        "why": "the same supplier field is the top candidate for more than one catalog field — label evidence cannot separate them; the drawings must be looked at"
+      }
+    },
+    {
+      "catalogField": "contrast-pocket-vest",
+      "part": "vest",
+      "rowsAtStake": 2,
+      "optionCount": 1,
+      "optionLabels": [
+        "None"
+      ],
+      "verdict": "NO_CANDIDATE",
+      "candidates": [
+        {
+          "supplierField": "GTECO",
+          "supplierFieldLabel": "Machine-made446",
+          "labelHits": 1,
+          "ourOptionCount": 1,
+          "supplierValueCount": 280,
+          "fieldNameSim": 0,
+          "drawingsOnDisk": 280,
+          "samples": [
+            {
+              "ours": "None",
+              "theirs": "None",
+              "value": "99"
+            }
+          ],
+          "attractor": "leads 3 catalog fields on 1 label hit(s) - demoted"
+        },
+        {
+          "supplierField": "GTEZS",
+          "supplierFieldLabel": "659",
+          "labelHits": 1,
+          "ourOptionCount": 1,
+          "supplierValueCount": 81,
+          "fieldNameSim": 0,
+          "drawingsOnDisk": 81,
+          "samples": [
+            {
+              "ours": "None",
+              "theirs": "None",
+              "value": "N"
+            }
+          ],
+          "attractor": "leads 3 catalog fields on 1 label hit(s) - demoted"
+        },
+        {
+          "supplierField": "CBRXL",
+          "supplierFieldLabel": "Matching to fabric",
+          "labelHits": 1,
+          "ourOptionCount": 1,
+          "supplierValueCount": 46,
+          "fieldNameSim": 0,
+          "drawingsOnDisk": 46,
+          "samples": [
+            {
+              "ours": "None",
+              "theirs": "None",
+              "value": "99"
+            }
+          ],
+          "attractor": "leads 3 catalog fields on 1 label hit(s) - demoted"
+        },
+        {
+          "supplierField": "GTECH",
+          "supplierFieldLabel": "None",
+          "labelHits": 1,
+          "ourOptionCount": 1,
+          "supplierValueCount": 26,
+          "fieldNameSim": 0,
+          "drawingsOnDisk": 26,
+          "samples": [
+            {
+              "ours": "None",
+              "theirs": "None",
+              "value": "A"
+            }
+          ],
+          "attractor": "leads 3 catalog fields on 1 label hit(s) - demoted"
+        }
+      ],
+      "collision": {
+        "supplierField": "GTECO",
+        "alsoClaimedBy": [
+          "vest-extras",
+          "contrast-lapel-collar"
+        ],
+        "why": "the same supplier field is the top candidate for more than one catalog field — label evidence cannot separate them; the drawings must be looked at"
+      }
+    },
+    {
+      "catalogField": "vest-piping",
+      "part": "vest",
+      "rowsAtStake": 2,
+      "optionCount": 1,
+      "optionLabels": [
+        "No Piping"
+      ],
+      "verdict": "NO_CANDIDATE",
+      "candidates": []
+    },
+    {
+      "catalogField": "collar_stand_height",
+      "part": "shirt",
+      "rowsAtStake": 1,
+      "optionCount": 1,
+      "optionLabels": [
+        "3.5 cm Standard"
+      ],
+      "verdict": "NAME_ONLY",
+      "candidates": [
+        {
+          "supplierField": "KSHLA",
+          "supplierFieldLabel": "Round collar stand",
+          "labelHits": 0,
+          "ourOptionCount": 1,
+          "supplierValueCount": 5,
+          "fieldNameSim": 0.5,
+          "drawingsOnDisk": 5,
+          "samples": []
+        },
+        {
+          "supplierField": "GTELC",
+          "supplierFieldLabel": "Collar linings normal",
+          "labelHits": 0,
+          "ourOptionCount": 1,
+          "supplierValueCount": 4,
+          "fieldNameSim": 0.2,
+          "drawingsOnDisk": 4,
+          "samples": []
+        }
+      ],
+      "collision": {
+        "supplierField": "KSHLA",
+        "alsoClaimedBy": [
+          "collar_stand"
+        ],
+        "why": "the same supplier field is the top candidate for more than one catalog field — label evidence cannot separate them; the drawings must be looked at"
+      }
+    },
+    {
+      "catalogField": "decoration_stitching_on_shoulder",
+      "part": "shirt",
+      "rowsAtStake": 1,
+      "optionCount": 1,
+      "optionLabels": [
+        "None"
+      ],
+      "verdict": "WEAK",
+      "candidates": [
+        {
+          "supplierField": "RELBU",
+          "supplierFieldLabel": "None",
+          "labelHits": 1,
+          "ourOptionCount": 1,
+          "supplierValueCount": 140,
+          "fieldNameSim": 0,
+          "drawingsOnDisk": 140,
+          "samples": [
+            {
+              "ours": "None",
+              "theirs": "None",
+              "value": "99"
+            }
+          ]
+        },
+        {
+          "supplierField": "RESPO",
+          "supplierFieldLabel": "Lower part of top collar",
+          "labelHits": 1,
+          "ourOptionCount": 1,
+          "supplierValueCount": 15,
+          "fieldNameSim": 0,
+          "drawingsOnDisk": 15,
+          "samples": [
+            {
+              "ours": "None",
+              "theirs": "None",
+              "value": "Z"
+            }
+          ]
+        },
+        {
+          "supplierField": "REQBA",
+          "supplierFieldLabel": "None",
+          "labelHits": 1,
+          "ourOptionCount": 1,
+          "supplierValueCount": 10,
+          "fieldNameSim": 0,
+          "drawingsOnDisk": 10,
+          "samples": [
+            {
+              "ours": "None",
+              "theirs": "None",
+              "value": "A"
+            }
+          ]
+        },
+        {
+          "supplierField": "GCLLI",
+          "supplierFieldLabel": "Machine 0.3cm top stitching",
+          "labelHits": 1,
+          "ourOptionCount": 1,
+          "supplierValueCount": 8,
+          "fieldNameSim": 0.167,
+          "drawingsOnDisk": 8,
+          "samples": [
+            {
+              "ours": "None",
+              "theirs": "None",
+              "value": "M"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "catalogField": "fabric_label_position",
+      "part": "shirt",
+      "rowsAtStake": 1,
+      "optionCount": 1,
+      "optionLabels": [
+        "Position 2"
+      ],
+      "verdict": "NAME_ONLY",
+      "candidates": [
+        {
+          "supplierField": "PHBUC",
+          "supplierFieldLabel": "Matching to fabric",
+          "labelHits": 0,
+          "ourOptionCount": 1,
+          "supplierValueCount": 79,
+          "fieldNameSim": 0.25,
+          "drawingsOnDisk": 79,
+          "samples": []
+        },
+        {
+          "supplierField": "GTELS",
+          "supplierFieldLabel": "Matching to fabric",
+          "labelHits": 0,
+          "ourOptionCount": 1,
+          "supplierValueCount": 47,
+          "fieldNameSim": 0.25,
+          "drawingsOnDisk": 47,
+          "samples": []
+        },
+        {
+          "supplierField": "GTEMY",
+          "supplierFieldLabel": "Matching to fabric",
+          "labelHits": 0,
+          "ourOptionCount": 1,
+          "supplierValueCount": 47,
+          "fieldNameSim": 0.25,
+          "drawingsOnDisk": 47,
+          "samples": []
+        },
+        {
+          "supplierField": "REQBR",
+          "supplierFieldLabel": "No Brand Label",
+          "labelHits": 0,
+          "ourOptionCount": 1,
+          "supplierValueCount": 4,
+          "fieldNameSim": 0.25,
+          "drawingsOnDisk": 4,
+          "samples": []
+        }
+      ]
+    }
+  ]
+}

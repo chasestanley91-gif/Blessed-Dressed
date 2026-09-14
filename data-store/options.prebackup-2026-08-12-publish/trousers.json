@@ -1,0 +1,2900 @@
+{
+  "productId": "trousers",
+  "basePrice": 495,
+  "sections": [
+    {
+      "id": "front-pockets",
+      "label": "Front & Pockets",
+      "fields": [
+        {
+          "id": "front-pocket-style",
+          "label": "Front Pocket Style",
+          "defaultValue": "slant-pockets",
+          "options": [
+            {
+              "id": "slant-pockets",
+              "label": "3.2 cm Slant Pocket",
+              "description": "Slant front pocket with a 3.2 cm drop over a 15 cm run from the side seam — a 12° mouth, with the pocket bag rotated 18° to 25° in production and a bag depth of 23 cm. The diagonal cuts across the hip, lengthening the leg and narrowing the waist.",
+              "image": "/images/generated/trousers/slant-pockets.webp",
+              "images": [],
+              "group": "slant",
+              "techpackIllustration": "/images/blueprints/factory/fd63bf751c58__3101__3.2cm_slant.jpg",
+              "illustration": "/images/blueprints/factory/fd63bf751c58__3101__3.2cm_slant.jpg",
+              "photos": [
+                "/images/generated/trousers/slant-pockets.webp"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "on-seam-pockets",
+              "label": "On-Seam (Side Seam)",
+              "description": "On-seam pocket set directly into the side seam — the opening starts 2 cm below the waistline and runs 16 cm vertically, with an 18 cm wide, 24 cm deep bag swung inward. Virtually invisible from the front; quiet luxury and the most elegant drape.",
+              "image": "/images/generated/trousers/on-seam-pockets.webp",
+              "images": [],
+              "group": "seam",
+              "techpackIllustration": "/images/blueprints/factory/a1a8d4d2842a__3130__Sideseam.jpg",
+              "illustration": "/images/blueprints/factory/a1a8d4d2842a__3130__Sideseam.jpg",
+              "photos": [
+                "/images/generated/trousers/on-seam-pockets.webp"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "quarter-top",
+              "label": "2.5 cm Slant Pocket",
+              "description": "Quarter-top slant pocket with a 2.5 cm drop — a mouth angle of 15° to 20°, closer to horizontal. Very refined and more formal, with a controlled hip appearance.",
+              "image": "/images/generated/jacket/quarter-top.webp",
+              "group": "quarter",
+              "techpackIllustration": "/images/blueprints/factory/1c5aed3c1ce4__3104__2.5cm_slant.jpg",
+              "illustration": "/images/blueprints/factory/1c5aed3c1ce4__3104__2.5cm_slant.jpg",
+              "photos": [
+                "/images/generated/jacket/quarter-top.webp"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "no-front-pockets",
+              "label": "No Front Pockets",
+              "description": "No front pockets — the front panel remains completely uninterrupted. The slimmest hips, flattest front and longest leg line; formal, eveningwear precision.",
+              "image": "/images/generated/trousers/no-front-pockets.webp",
+              "group": "none",
+              "techpackIllustration": "/images/blueprints/factory/39618b03fc3d__313C__No.jpg",
+              "illustration": "/images/blueprints/factory/39618b03fc3d__313C__No.jpg",
+              "photos": [
+                "/images/generated/trousers/no-front-pockets.webp"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "jetted-front",
+              "label": "Besom / Jetted Pocket",
+              "description": "Jetted (besom) front pocket — a narrow 14 cm to 16 cm slit set level at 0°, the pocket bag hidden beneath. One precise incision in the cloth; architectural minimalism, cleaner front, more formal.",
+              "image": "/images/blueprints/factory/9092405bd48f__3131__Besom.jpg",
+              "images": [],
+              "group": "jetted",
+              "illustration": "/images/blueprints/factory/9092405bd48f__3131__Besom.jpg",
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "slant-20",
+              "label": "2.0 cm Slant Pocket",
+              "description": "Shallow slant pocket with a 2.0 cm drop over a 15 cm run — nearly horizontal at about 7.6°. Conservative and quiet; the pocket recedes and the waist takes the emphasis.",
+              "image": "/images/generated/trousers/slant-20.webp",
+              "group": "slant",
+              "techpackIllustration": "/images/blueprints/remote/4017b96761a3__3100.jpg",
+              "realImage": "/images/generated/trousers/slant-20.webp",
+              "illustration": "/images/blueprints/remote/4017b96761a3__3100.jpg",
+              "photos": [
+                "/images/generated/trousers/slant-20.webp"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "slant-51",
+              "label": "5.1 cm Slant Pocket",
+              "description": "Aggressive slant pocket with a 5.1 cm drop over a 15 cm run — an 18.8° mouth climbing toward the waistband. Maximum movement: the longest-looking legs and narrowest-looking waist; Italian energy.",
+              "image": "/images/generated/trousers/slant-51.webp",
+              "group": "slant",
+              "techpackIllustration": "/images/blueprints/remote/76eec2e1b5b7__3102.jpg",
+              "realImage": "/images/generated/trousers/slant-51.webp",
+              "illustration": "/images/blueprints/remote/76eec2e1b5b7__3102.jpg",
+              "photos": [
+                "/images/generated/trousers/slant-51.webp"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "welt-pocket",
+              "label": "Welt Front Pocket",
+              "description": "Welt front pocket — the opening framed by a welt strip, more dimensional than a jetted cut with more visible craftsmanship. The pocket becomes an intentional bespoke detail.",
+              "image": "/images/generated/jacket/welt-pocket.webp",
+              "images": [
+                "https://www.permanentstyle.com/wp-content/uploads/2018/07/Prologue-Trousers-5.jpg"
+              ],
+              "group": "jetted",
+              "techpackIllustration": "/images/blueprints/remote/01dc8f37109e__3132.jpg",
+              "illustration": "/images/blueprints/remote/01dc8f37109e__3132.jpg",
+              "photos": [
+                "/images/generated/jacket/welt-pocket.webp",
+                "https://www.permanentstyle.com/wp-content/uploads/2018/07/Prologue-Trousers-5.jpg"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "slant-20-stripe",
+              "label": "2.0 cm Slant with Stripe",
+              "description": "2.0 cm slant pocket, its near-horizontal mouth outlined with a contrast stripe placed along the opening — a visible, sport-influenced detail.",
+              "image": "/images/generated/trousers/slant-20-stripe.webp",
+              "group": "slant",
+              "techpackIllustration": "/images/blueprints/remote/cac83d873411__3120.jpg",
+              "realImage": "/images/generated/trousers/slant-20-stripe.webp",
+              "illustration": "/images/blueprints/remote/cac83d873411__3120.jpg",
+              "photos": [
+                "/images/generated/trousers/slant-20-stripe.webp"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "slant-25-stripe",
+              "label": "2.5 cm Slant with Stripe",
+              "description": "2.5 cm slant pocket with a contrast stripe along the mouth — slightly more dynamic, balancing formal and casual aesthetics.",
+              "image": "/images/generated/trousers/slant-25-stripe.webp",
+              "group": "slant",
+              "techpackIllustration": "/images/blueprints/remote/90f739dcde96__3124.jpg",
+              "illustration": "/images/blueprints/remote/90f739dcde96__3124.jpg",
+              "photos": [
+                "/images/generated/trousers/slant-25-stripe.webp"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "slant-32-stripe",
+              "label": "3.2 cm Slant with Stripe",
+              "description": "3.2 cm slant pocket with a contrast stripe — the classic tailoring angle with a highlighted opening; the most versatile contrast pocket.",
+              "image": "/images/generated/trousers/slant-32-stripe.webp",
+              "group": "slant",
+              "techpackIllustration": "/images/blueprints/remote/ae13c72fb52e__3121.jpg",
+              "realImage": "/images/generated/trousers/slant-32-stripe.webp",
+              "illustration": "/images/blueprints/remote/ae13c72fb52e__3121.jpg",
+              "photos": [
+                "/images/generated/trousers/slant-32-stripe.webp"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "slant-51-stripe",
+              "label": "5.1 cm Slant with Stripe",
+              "description": "5.1 cm slant pocket with a bold contrast stripe — the aggressive diagonal becomes a design statement; longest legs, strongest V-shape.",
+              "image": "/images/blueprints/remote/91eb56a23d7e__3122.jpg",
+              "group": "slant",
+              "techpackIllustration": "/images/blueprints/remote/91eb56a23d7e__3122.jpg",
+              "illustration": "/images/blueprints/remote/91eb56a23d7e__3122.jpg",
+              "photos": [],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "jeans-square",
+              "label": "Square Jeans Pocket",
+              "description": "Jeans-style front pocket with a sharp 90° corner transition — utility-oriented, masculine, structured; carpenter's-apron strength at the hip.",
+              "image": "/images/blueprints/remote/14975407461c__3133.jpg",
+              "images": [],
+              "group": "other",
+              "techpackIllustration": "/images/blueprints/remote/14975407461c__3133.jpg",
+              "illustration": "/images/blueprints/remote/14975407461c__3133.jpg",
+              "photos": [],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "jeans-diamond",
+              "label": "Diamond Jeans Pocket",
+              "description": "Jeans-style diamond pocket with angular transition zones — technical, modern, engineered; a sharper, more structured lower body.",
+              "image": "/images/blueprints/remote/134adbb9c138__3134.jpg",
+              "group": "other",
+              "techpackIllustration": "/images/blueprints/remote/134adbb9c138__3134.jpg",
+              "illustration": "/images/blueprints/remote/134adbb9c138__3134.jpg",
+              "photos": [],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "jeans-arc",
+              "label": "Arc Jeans Pocket",
+              "description": "Jeans-style arc pocket — a long sweeping curved opening traveling like a wave down the hip; fluid, elegant, longer-legged.",
+              "image": "/images/blueprints/remote/3c70f95c470f__3135.jpg",
+              "images": [],
+              "group": "other",
+              "techpackIllustration": "/images/blueprints/remote/3c70f95c470f__3135.jpg",
+              "illustration": "/images/blueprints/remote/3c70f95c470f__3135.jpg",
+              "photos": [],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "jeans-round",
+              "label": "Round Jeans Pocket",
+              "description": "Jeans-style front pocket with one continuous large radius — soft and relaxed, removing rigidity from the hip; casual sophistication.",
+              "image": "/images/blueprints/remote/1e222211e243__3136.jpg",
+              "group": "other",
+              "techpackIllustration": "/images/blueprints/remote/1e222211e243__3136.jpg",
+              "illustration": "/images/blueprints/remote/1e222211e243__3136.jpg",
+              "photos": [],
+              "illustrationStatus": "drawing"
+            }
+          ],
+          "quiz": {
+            "question": "What front pocket style?",
+            "answers": [
+              {
+                "id": "slant",
+                "label": "Slanted",
+                "description": "Angled opening — easy access, sporty line.",
+                "matchGroups": [
+                  "slant"
+                ]
+              },
+              {
+                "id": "seam",
+                "label": "Side-Seam",
+                "description": "Hidden in the seam — the cleanest look.",
+                "matchGroups": [
+                  "seam"
+                ]
+              },
+              {
+                "id": "jetted",
+                "label": "Jetted / Welt",
+                "description": "Sharp horizontal welt — formal and tidy.",
+                "matchGroups": [
+                  "jetted"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "pocket-depth",
+          "label": "Pocket Depth",
+          "defaultValue": "pocket-standard",
+          "advanced": true,
+          "options": [
+            {
+              "id": "pocket-shallow",
+              "label": "Shallow (20 cm)",
+              "description": "Shallow 20 cm pocket bag — the bag stays high for less bulk at the thigh; a cleaner front and slimmer hip appearance.",
+              "photos": [],
+              "illustrationStatus": "unverified",
+              "image": "/images/generated/trousers/pocket-shallow.webp"
+            },
+            {
+              "id": "pocket-standard",
+              "label": "Standard (23 cm)",
+              "description": "Standard 23 cm pocket bag — balanced, neutral, and the most versatile depth.",
+              "photos": [],
+              "illustrationStatus": "unverified",
+              "image": "/images/generated/trousers/pocket-standard.webp"
+            },
+            {
+              "id": "pocket-deep",
+              "label": "Deep (26 cm)",
+              "description": "Deep 26 cm pocket bag reaching into the thigh — more storage and a fuller, slightly softer drape; a longer internal hammock suspended within the trouser.",
+              "photos": [],
+              "illustrationStatus": "unverified",
+              "image": "/images/generated/trousers/pocket-deep.webp"
+            }
+          ]
+        },
+        {
+          "id": "pocket-stitching",
+          "label": "Pocket Topstitch",
+          "defaultValue": "pocket-stitch-none",
+          "advanced": true,
+          "options": [
+            {
+              "id": "pocket-stitch-none",
+              "label": "No Topstitch (Hidden Stitch)",
+              "description": "No visible pocket topstitching — the pocket appears to emerge from the cloth with stitches nearly invisible; quiet luxury.",
+              "image": "/images/blueprints/factory/10bfe4668d92__31A6__No_top_stitch_hidden_stitch.jpg",
+              "techpackIllustration": "/images/blueprints/factory/10bfe4668d92__31A6__No_top_stitch_hidden_stitch.jpg",
+              "illustration": "/images/blueprints/factory/10bfe4668d92__31A6__No_top_stitch_hidden_stitch.jpg",
+              "photos": [],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "pocket-stitch-06",
+              "label": "0.6 cm Topstitch",
+              "description": "Visible 0.6 cm topstitch border tracing the pocket — the mouth becomes a design element; sport tailoring.",
+              "image": "/images/blueprints/factory/2b3c7bcf74ef__31A3__0.6cm_top_stitch.jpg",
+              "photos": [],
+              "illustrationStatus": "needs-source"
+            },
+            {
+              "id": "pocket-stitch-double",
+              "label": "0.1 + 0.7 cm Double Topstitch",
+              "description": "Double topstitching — parallel rows at 0.1 cm and 0.7 cm following the pocket edge like twin guardrails; heavy visual structure.",
+              "image": "/images/blueprints/factory/79a074c919dd__31A9__With_0.1_0.7_top_stitching.jpg",
+              "techpackIllustration": "/images/blueprints/factory/79a074c919dd__31A9__With_0.1_0.7_top_stitching.jpg",
+              "illustration": "/images/blueprints/factory/79a074c919dd__31A9__With_0.1_0.7_top_stitching.jpg",
+              "photos": [],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "pocket-stitch-015",
+              "label": "0.15 cm Topstitch",
+              "description": "Hairline 0.15 cm machine edge stitch along the pocket mouth — visible only up close; subtle craftsmanship.",
+              "image": "/images/generated/jacket/pocket-stitch-015.webp",
+              "techpackIllustration": "/images/blueprints/remote/cefac731f303__31A1.jpg",
+              "illustration": "/images/blueprints/remote/cefac731f303__31A1.jpg",
+              "photos": [
+                "/images/generated/jacket/pocket-stitch-015.webp"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "pocket-stitch-pick-06",
+              "label": "0.6 cm Pick Stitch",
+              "description": "Hand-pick stitching set 0.6 cm from the edge — visible artisan detailing, a trail of hand-set pearls tracing the opening.",
+              "image": "/images/blueprints/remote/0c5cfcfe96d9__165588183495006.jpg",
+              "techpackIllustration": "/images/blueprints/remote/0c5cfcfe96d9__165588183495006.jpg",
+              "illustration": "/images/blueprints/remote/0c5cfcfe96d9__165588183495006.jpg",
+              "photos": [],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "pocket-stitch-pick-015",
+              "label": "0.15 cm Pick Stitch",
+              "description": "Hand-pick stitching at 0.15 cm — tiny handmade dots along the pocket mouth; bespoke refinement.",
+              "image": "/images/generated/trousers/pocket-stitch-pick-015.webp",
+              "techpackIllustration": "/images/blueprints/remote/3b3071cbc092__3302.jpg",
+              "illustration": "/images/blueprints/remote/3b3071cbc092__3302.jpg",
+              "photos": [
+                "/images/generated/trousers/pocket-stitch-pick-015.webp"
+              ],
+              "illustrationStatus": "drawing"
+            }
+          ]
+        },
+        {
+          "id": "watch-pocket",
+          "label": "Watch Pocket",
+          "defaultValue": "watch-none",
+          "options": [
+            {
+              "id": "watch-none",
+              "label": "None",
+              "description": "No watch pocket — nothing interrupts the front pocket opening; the cleanest possible front.",
+              "image": "/images/generated/trousers/watch-none.webp",
+              "techpackIllustration": "/images/blueprints/factory/b9c177a1e8c4__3169__No.jpg",
+              "illustration": "/images/blueprints/factory/b9c177a1e8c4__3169__No.jpg",
+              "photos": [
+                "/images/generated/trousers/watch-none.webp"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "watch-right",
+              "label": "Regular Right",
+              "description": "Watch pocket nested inside the right front pocket, 6 cm to 8 cm wide — the classic heritage utility detail, a hidden compartment inside the waistband.",
+              "image": "/images/blueprints/factory/449292155f03__3180__Regular_right.jpg",
+              "techpackIllustration": "/images/blueprints/factory/449292155f03__3180__Regular_right.jpg",
+              "illustration": "/images/blueprints/factory/449292155f03__3180__Regular_right.jpg",
+              "photos": [],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "watch-left",
+              "label": "Left Welt",
+              "description": "Watch pocket on the left — a rare placement that reads immediately custom, with deliberate visual asymmetry.",
+              "image": "/images/blueprints/factory/2a5f7a6c70e1__3171__Left_welt.jpg",
+              "photos": [],
+              "illustrationStatus": "needs-source"
+            },
+            {
+              "id": "watch-both",
+              "label": "Both Sides",
+              "description": "Watch pockets on both sides — twin utility chambers mounted inside the waistband in balanced symmetry.",
+              "priceAdj": 10,
+              "image": "/images/blueprints/factory/88f95280e442__3532__Left_right.jpg",
+              "techpackIllustration": "/images/blueprints/factory/88f95280e442__3532__Left_right.jpg",
+              "illustration": "/images/blueprints/factory/88f95280e442__3532__Left_right.jpg",
+              "photos": [],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "watch-right-welt",
+              "label": "Right Welt",
+              "description": "Miniature welt watch pocket on the right — a luxury framed opening; a subtle bespoke signal.",
+              "image": "/images/generated/trousers/watch-right-welt.webp",
+              "techpackIllustration": "/images/blueprints/remote/9f85b09eb9d0__3181.jpg",
+              "illustration": "/images/blueprints/remote/9f85b09eb9d0__3181.jpg",
+              "photos": [
+                "/images/generated/trousers/watch-right-welt.webp"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "watch-right-besom",
+              "label": "Right Besom",
+              "description": "Besom watch pocket on the right — a tiny formal double-jetted opening; tailored rather than casual.",
+              "image": "/images/generated/trousers/watch-right-besom.webp",
+              "techpackIllustration": "/images/blueprints/remote/50184b7abbb4__3188.jpg",
+              "illustration": "/images/blueprints/remote/50184b7abbb4__3188.jpg",
+              "photos": [
+                "/images/generated/trousers/watch-right-besom.webp"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "watch-left-besom",
+              "label": "Left Besom",
+              "description": "Besom watch pocket on the left — formal jetted construction on the uncommon side; distinctively custom-made.",
+              "image": "/images/generated/jacket/watch-left-besom.webp",
+              "techpackIllustration": "/images/blueprints/remote/7d7d99126a50__3178.jpg",
+              "illustration": "/images/blueprints/remote/7d7d99126a50__3178.jpg",
+              "photos": [
+                "/images/generated/jacket/watch-left-besom.webp"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "watch-diamond-flap",
+              "label": "Right with Diamond Flap",
+              "description": "Watch pocket with a diamond-point flap — an extremely decorative, miniature jacket-pocket detail that draws the eye to the waistline.",
+              "image": "/images/blueprints/remote/c82dba868d19__3186.jpg",
+              "techpackIllustration": "/images/blueprints/remote/c82dba868d19__3186.jpg",
+              "illustration": "/images/blueprints/remote/c82dba868d19__3186.jpg",
+              "photos": [],
+              "illustrationStatus": "drawing"
+            }
+          ]
+        },
+        {
+          "id": "coin-pocket",
+          "label": "Coin Pocket",
+          "defaultValue": "coin-none",
+          "options": [
+            {
+              "id": "coin-none",
+              "label": "None",
+              "description": "No coin pocket.",
+              "image": "/images/blueprints/remote/1b89d5849265__3533.jpg",
+              "techpackIllustration": "/images/blueprints/remote/1b89d5849265__3533.jpg",
+              "illustration": "/images/blueprints/remote/1b89d5849265__3533.jpg",
+              "photos": [],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "coin-right",
+              "label": "Right Side",
+              "description": "Coin pocket on the right.",
+              "image": "/images/blueprints/remote/1d73941a4932__3530.jpg",
+              "techpackIllustration": "/images/blueprints/remote/1d73941a4932__3530.jpg",
+              "illustration": "/images/blueprints/remote/1d73941a4932__3530.jpg",
+              "photos": [],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "coin-left",
+              "label": "Left Side",
+              "description": "Coin pocket on the left.",
+              "image": "/images/blueprints/remote/099818025ae9__3531.jpg",
+              "techpackIllustration": "/images/blueprints/remote/099818025ae9__3531.jpg",
+              "illustration": "/images/blueprints/remote/099818025ae9__3531.jpg",
+              "photos": [],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "coin-both",
+              "label": "Both Sides",
+              "description": "Coin pockets on both sides.",
+              "image": "/images/blueprints/remote/7f475092fe8b__3532.jpg",
+              "techpackIllustration": "/images/blueprints/remote/7f475092fe8b__3532.jpg",
+              "illustration": "/images/blueprints/remote/7f475092fe8b__3532.jpg",
+              "photos": [],
+              "illustrationStatus": "drawing"
+            }
+          ]
+        },
+        {
+          "id": "pocket-knot",
+          "label": "Pocket Bartack Style",
+          "defaultValue": "knot-i",
+          "advanced": true,
+          "options": [
+            {
+              "id": "knot-i",
+              "label": "I-Shape Bartack",
+              "description": "Standard I-shaped reinforcement tack at pocket.",
+              "image": "/images/blueprints/remote/cc2d765f6c59__167843791093474.png",
+              "techpackIllustration": "/images/blueprints/remote/cc2d765f6c59__167843791093474.png",
+              "illustration": "/images/blueprints/remote/cc2d765f6c59__167843791093474.png",
+              "photos": [],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "knot-d",
+              "label": "D-Shape Bartack",
+              "description": "D-shaped reinforcement tack.",
+              "image": "/images/blueprints/remote/4c60eab1740c__169505392660138.png",
+              "techpackIllustration": "/images/blueprints/remote/4c60eab1740c__169505392660138.png",
+              "realImage": "/images/generated/trousers/knot-d--f35c7b45.webp",
+              "illustration": "/images/blueprints/remote/4c60eab1740c__169505392660138.png",
+              "photos": [
+                "/images/generated/trousers/knot-d--f35c7b45.webp"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "knot-dash",
+              "label": "Dash (–) Bartack",
+              "description": "Minimal dash-style reinforcement.",
+              "image": "/images/blueprints/remote/9638b5fbd394__167843798034583.png",
+              "techpackIllustration": "/images/blueprints/remote/9638b5fbd394__167843798034583.png",
+              "realImage": "/images/generated/trousers/knot-dash--98cf86c4.webp",
+              "illustration": "/images/blueprints/remote/9638b5fbd394__167843798034583.png",
+              "photos": [
+                "/images/generated/trousers/knot-dash--98cf86c4.webp"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "knot-hip-i",
+              "label": "Hip Pocket I-Edge",
+              "description": "I-shaped edge reinforcement on hip pocket.",
+              "image": "/images/blueprints/remote/243038270395__167843782135108.png",
+              "techpackIllustration": "/images/blueprints/remote/243038270395__167843782135108.png",
+              "illustration": "/images/blueprints/remote/243038270395__167843782135108.png",
+              "photos": [],
+              "illustrationStatus": "drawing"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "waistband",
+      "label": "Waistband",
+      "fields": [
+        {
+          "id": "waistband-style",
+          "label": "Waistband Style",
+          "defaultValue": "waist-elasticated",
+          "options": [
+            {
+              "id": "waist-standard",
+              "label": "Standard Waistband",
+              "description": "Standard separate waistband running completely horizontal around the body — no interruption, no extension beyond center front. Drafted as a simple rectangle in heights of 3.5 cm to 5.0 cm; a clean frame that lets the trousers speak first.",
+              "images": [
+                "https://www.permanentstyle.com/wp-content/uploads/2017/09/trouser-waistband-Musella-Dembech.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2018/04/bespoke-whitcomb-shatesbury-trouser.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2022/10/6-Andreas-Cavour.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2017/11/Fox-Brothers-trousers.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2019/05/Stoffa-trouser-review.jpg"
+              ],
+              "illustrationStatus": "needs-source",
+              "photos": [
+                "https://www.permanentstyle.com/wp-content/uploads/2017/09/trouser-waistband-Musella-Dembech.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2018/04/bespoke-whitcomb-shatesbury-trouser.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2022/10/6-Andreas-Cavour.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2017/11/Fox-Brothers-trousers.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2019/05/Stoffa-trouser-review.jpg"
+              ]
+            },
+            {
+              "id": "waist-extended-tab",
+              "label": "Extended Tab Waistband",
+              "description": "Extended tab waistband — one side projects 5 cm to 15 cm beyond center front and overlaps the opposite side, so closure sits away from the fly. The front waist becomes one uninterrupted line; Florentine bespoke character.",
+              "priceAdj": 35,
+              "images": [
+                "https://www.permanentstyle.com/wp-content/uploads/2016/09/Cerrato-wider-waistband.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2017/10/pommella-trousers-naples-bespoke.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2022/10/5-Cavour.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2017/11/trouser-fitting-Sartoria-Ciardi-naples.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2022/10/2-Pommella-detail.jpg"
+              ],
+              "photos": [
+                "https://www.permanentstyle.com/wp-content/uploads/2016/09/Cerrato-wider-waistband.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2017/10/pommella-trousers-naples-bespoke.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2022/10/5-Cavour.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2017/11/trouser-fitting-Sartoria-Ciardi-naples.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2022/10/2-Pommella-detail.jpg"
+              ],
+              "illustrationStatus": "unverified"
+            },
+            {
+              "id": "waist-waistcoat-back",
+              "label": "Waistcoat Back Band",
+              "description": "Waistcoat-back band — the rear waistband is shaped like a vest adjustment system, sculpting the seat and tightening the waist. The rear of a 1930s bespoke trouser; vintage elegance.",
+              "priceAdj": 25,
+              "images": [
+                "https://www.bondsuits.com/wp-content/uploads/2016/08/Casino-Royale-Dinner-Jacket-Shirt.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2018/04/bespoke-whitcomb-shatesbury-trouser.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2016/12/igarashi-trousers-bespoke.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2022/10/15-Index-Kit-Blake.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2017/09/trouser-waistband-Musella-Dembech.jpg"
+              ],
+              "illustrationStatus": "needs-source",
+              "photos": [
+                "https://www.bondsuits.com/wp-content/uploads/2016/08/Casino-Royale-Dinner-Jacket-Shirt.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2018/04/bespoke-whitcomb-shatesbury-trouser.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2016/12/igarashi-trousers-bespoke.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2022/10/15-Index-Kit-Blake.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2017/09/trouser-waistband-Musella-Dembech.jpg"
+              ]
+            },
+            {
+              "id": "waist-elasticated",
+              "label": "Elasticated Insert",
+              "description": "Elasticated insert waistband — elastic sections hidden in the side seams and rear panels give 2 cm to 8 cm of expansion. The front stays clean with some gathering at sides and rear; comfort-first modern utility.",
+              "images": [],
+              "photos": [],
+              "illustrationStatus": "unverified"
+            },
+            {
+              "id": "waist-double",
+              "label": "Double Waistband",
+              "description": "Double waistband — two waistband layers stacked vertically for substantial combined height, a strong horizontal architecture like a cummerbund built into the trousers. Smaller waist, longer legs, sartorial power.",
+              "images": [
+                "https://www.permanentstyle.com/wp-content/uploads/2016/09/Cerrato-wider-waistband.jpg"
+              ],
+              "photos": [
+                "https://www.permanentstyle.com/wp-content/uploads/2016/09/Cerrato-wider-waistband.jpg"
+              ],
+              "illustrationStatus": "unverified"
+            },
+            {
+              "id": "waist-no-band",
+              "label": "Trouser Waist (No Band)",
+              "description": "No-waistband trouser — the waist terminates directly at the trouser body with no separate waistband piece. Minimalist architecture with nothing interrupting the line; longer torso, cleaner front.",
+              "images": [
+                "https://www.bondsuits.com/wp-content/uploads/2011/09/Daniel-Craig-Casino-Royale-Madagascar-2.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2019/05/Stoffa-trouser-review.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2022/10/10-Drakes-Linen.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2019/10/Anglo-Italian-chino.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2017/12/2-suede-jacket-and-chinos.jpg"
+              ],
+              "photos": [
+                "https://www.bondsuits.com/wp-content/uploads/2011/09/Daniel-Craig-Casino-Royale-Madagascar-2.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2019/05/Stoffa-trouser-review.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2022/10/10-Drakes-Linen.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2019/10/Anglo-Italian-chino.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2017/12/2-suede-jacket-and-chinos.jpg"
+              ],
+              "illustrationStatus": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "waistband-width",
+          "label": "Waistband Width",
+          "defaultValue": "wband-40",
+          "options": [
+            {
+              "id": "wband-35",
+              "label": "3.5 cm",
+              "description": "3.5 cm waistband height — a thin visual border that nearly disappears, like a fine pencil line around the waist. Longer torso, less waist emphasis; modern and understated.",
+              "photos": [],
+              "illustrationStatus": "unverified"
+            },
+            {
+              "id": "wband-38",
+              "label": "3.8 cm",
+              "description": "3.8 cm waistband height — slightly more substantial than standard, adding subtle definition. Refined, contemporary tailoring.",
+              "photos": [],
+              "illustrationStatus": "unverified"
+            },
+            {
+              "id": "wband-40",
+              "label": "4.0 cm",
+              "description": "4.0 cm waistband height — the benchmark proportion and center point of traditional tailoring; neither dominant nor hidden.",
+              "photos": [],
+              "illustrationStatus": "unverified"
+            },
+            {
+              "id": "wband-45",
+              "label": "4.5 cm",
+              "description": "4.5 cm waistband height — the waistband becomes an intentional design feature with visual gravitas, like the stone foundation beneath a building. Smaller waist, stronger shape.",
+              "photos": [],
+              "illustrationStatus": "unverified"
+            },
+            {
+              "id": "wband-50",
+              "label": "5.0 cm",
+              "description": "5.0 cm waistband height — the waistband commands attention, dividing torso from legs like a handcrafted leather belt built into the trousers. Dramatically smaller waist, longer legs; Florentine power dressing.",
+              "photos": [],
+              "illustrationStatus": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "waistband-extension",
+          "label": "Extension & Closure",
+          "defaultValue": "ext-straight",
+          "options": [
+            {
+              "id": "ext-straight",
+              "label": "Sharp, Hook & Button",
+              "description": "A hook-and-button closure fastens the waistband tab with a concealed metal hook-and-bar backed up by a button, giving a flat, secure front with no visible bulge. The hook takes the strain so the waistband sits smooth and the button adds a backup fixing. It is a clean, quality closure typical of tailored trousers.",
+              "image": "/images/blueprints/factory/30d058bb5e5f__3412__Sharp_hook_btn.png",
+              "techpackIllustration": "/images/blueprints/factory/30d058bb5e5f__3412__Sharp_hook_btn.png",
+              "images": [],
+              "illustration": "/images/blueprints/factory/30d058bb5e5f__3412__Sharp_hook_btn.png",
+              "photos": [],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "ext-pointed",
+              "label": "Round, Hook & Button",
+              "description": "Pointed waistband extension — a sharp nose angled 20° to 35° on a 5 cm to 15 cm tab.",
+              "image": "/images/blueprints/factory/b14a71bdfdb9__3413__Round_hook_btn.jpg",
+              "techpackIllustration": "/images/blueprints/factory/b14a71bdfdb9__3413__Round_hook_btn.jpg",
+              "illustration": "/images/blueprints/factory/b14a71bdfdb9__3413__Round_hook_btn.jpg",
+              "photos": [],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "ext-curved",
+              "label": "Square, Hook & Button",
+              "description": "Curved waistband extension — a radius sweep of 3 cm to 6 cm whose curve meets the waistband edge at 0° for a perfectly smooth closure.",
+              "image": "/images/blueprints/factory/83fb9e94e989__342A__Square_hook_btn.png",
+              "techpackIllustration": "/images/blueprints/factory/83fb9e94e989__342A__Square_hook_btn.png",
+              "illustration": "/images/blueprints/factory/83fb9e94e989__342A__Square_hook_btn.png",
+              "photos": [],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "ext-no-btn",
+              "label": "No Extension, Button Only",
+              "description": "No extension tab, button closure only.",
+              "image": "/images/generated/trousers/ext-no-btn.webp",
+              "techpackIllustration": "/images/blueprints/remote/320d8ab0847a__3411.jpg",
+              "realImage": "/images/generated/trousers/ext-no-btn.webp",
+              "illustration": "/images/blueprints/remote/320d8ab0847a__3411.jpg",
+              "photos": [
+                "/images/generated/trousers/ext-no-btn.webp"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "ext-no-hook",
+              "label": "No Extension, Hook Only",
+              "description": "No extension tab, hook closure only.",
+              "image": "/images/blueprints/remote/b87e70d16b98__3410.jpg",
+              "techpackIllustration": "/images/blueprints/remote/b87e70d16b98__3410.jpg",
+              "illustration": "/images/blueprints/remote/b87e70d16b98__3410.jpg",
+              "photos": [],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "ext-sharp-double",
+              "label": "Double Sharp Extension",
+              "description": "Double-width pointed extension tab.",
+              "image": "/images/blueprints/remote/c7bf619b903f__3416.jpg",
+              "techpackIllustration": "/images/blueprints/remote/c7bf619b903f__3416.jpg",
+              "illustration": "/images/blueprints/remote/c7bf619b903f__3416.jpg",
+              "photos": [],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "ext-round-double",
+              "label": "Double Round Extension",
+              "description": "Double rounded extension.",
+              "image": "/images/blueprints/remote/4e94d4deb4e9__3415.jpg",
+              "techpackIllustration": "/images/blueprints/remote/4e94d4deb4e9__3415.jpg",
+              "illustration": "/images/blueprints/remote/4e94d4deb4e9__3415.jpg",
+              "photos": [],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "ext-square-double",
+              "label": "Double Square Extension",
+              "description": "Double square extension tab.",
+              "image": "/images/blueprints/remote/05e7a7878d0d__3417.jpg",
+              "techpackIllustration": "/images/blueprints/remote/05e7a7878d0d__3417.jpg",
+              "illustration": "/images/blueprints/remote/05e7a7878d0d__3417.jpg",
+              "photos": [],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "ext-sharp-dbl-hooks",
+              "label": "Sharp, Double Hooks",
+              "description": "Pointed tab with two hooks.",
+              "image": "/images/blueprints/remote/b981324a2a86__342T.jpg",
+              "techpackIllustration": "/images/blueprints/remote/b981324a2a86__342T.jpg",
+              "illustration": "/images/blueprints/remote/b981324a2a86__342T.jpg",
+              "photos": [],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "ext-round-dbl-hooks",
+              "label": "Round, Double Hooks",
+              "description": "Rounded tab with two hooks.",
+              "image": "/images/blueprints/remote/15cce2379001__342R.jpg",
+              "techpackIllustration": "/images/blueprints/remote/15cce2379001__342R.jpg",
+              "illustration": "/images/blueprints/remote/15cce2379001__342R.jpg",
+              "photos": [],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "ext-square-dbl-hooks",
+              "label": "Square, Double Hooks",
+              "description": "Square tab with two hooks.",
+              "image": "/images/blueprints/remote/c0b37c986521__3414.jpg",
+              "techpackIllustration": "/images/blueprints/remote/c0b37c986521__3414.jpg",
+              "illustration": "/images/blueprints/remote/c0b37c986521__3414.jpg",
+              "photos": [],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "ext-sharp-dbl-btn-hook",
+              "label": "Sharp, Double Button & Hook",
+              "description": "Pointed extension with double button and hook.",
+              "image": "/images/blueprints/remote/8bab494aa985__342L.jpg",
+              "techpackIllustration": "/images/blueprints/remote/8bab494aa985__342L.jpg",
+              "illustration": "/images/blueprints/remote/8bab494aa985__342L.jpg",
+              "photos": [],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "ext-round-dbl-btn-hook",
+              "label": "Round, Double Button & Hook",
+              "description": "Rounded extension with double button and hook.",
+              "image": "/images/blueprints/remote/8b1333b2d3f1__34AB.jpg",
+              "techpackIllustration": "/images/blueprints/remote/8b1333b2d3f1__34AB.jpg",
+              "illustration": "/images/blueprints/remote/8b1333b2d3f1__34AB.jpg",
+              "photos": [],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "ext-square-dbl-btn-hook",
+              "label": "Square, Double Button & Hook",
+              "description": "Square extension with double button and hook.",
+              "image": "/images/blueprints/remote/cf709e84920a__342D.jpg",
+              "techpackIllustration": "/images/blueprints/remote/cf709e84920a__342D.jpg",
+              "illustration": "/images/blueprints/remote/cf709e84920a__342D.jpg",
+              "photos": [],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "ext-double-ext",
+              "label": "Double Extension, Hook & Button",
+              "description": "A double extension waistband carries two overlapping extended tabs that fasten across the front, doubling the closure and creating an especially clean, supported waist. The layered tabs distribute strain and give a sharp, finished front for beltless wear. It is a refined detail on high-waisted bespoke and military-style trousers.",
+              "image": "/images/blueprints/remote/860ec779f45a__175807368017120.png",
+              "techpackIllustration": "/images/blueprints/remote/860ec779f45a__175807368017120.png",
+              "images": [],
+              "illustration": "/images/blueprints/remote/860ec779f45a__175807368017120.png",
+              "photos": [],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "ext-hw-buckle",
+              "label": "HW Pointed Extension with Buckle",
+              "description": "Hardware pointed extension with adjustable buckle.",
+              "image": "/images/generated/trousers/ext-hw-buckle.webp",
+              "techpackIllustration": "/images/blueprints/remote/c050c51b14db__175912451171820.png",
+              "realImage": "/images/generated/trousers/ext-hw-buckle.webp",
+              "illustration": "/images/blueprints/remote/c050c51b14db__175912451171820.png",
+              "photos": [
+                "/images/generated/trousers/ext-hw-buckle.webp"
+              ],
+              "illustrationStatus": "drawing"
+            }
+          ]
+        },
+        {
+          "id": "extension-length",
+          "label": "Extension Length",
+          "defaultValue": "ext-len-7",
+          "advanced": true,
+          "options": [
+            {
+              "id": "ext-len-5",
+              "label": "5 cm",
+              "description": "A short 5 cm waistband extension — the closure tab reaches 5 cm past the fly. The shortest, cleanest extension, sitting almost flush behind the fly.",
+              "image": "/images/blueprints/factory/17db92352b9c__A.jpg",
+              "techpackIllustration": "/images/blueprints/factory/17db92352b9c__A.jpg",
+              "bxn": {
+                "field": "RECTL",
+                "value": "A",
+                "desc": "Waistband extension length 5cm"
+              },
+              "illustration": "/images/blueprints/factory/17db92352b9c__A.jpg",
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "ext-len-55",
+              "label": "5.5 cm",
+              "description": "A 5.5 cm waistband extension tab reaching just past the fly closure for a clean, secure front.",
+              "image": "/images/blueprints/factory/996d352c9178__B.jpg",
+              "techpackIllustration": "/images/blueprints/factory/996d352c9178__B.jpg",
+              "bxn": {
+                "field": "RECTL",
+                "value": "B",
+                "desc": "Waistband extension length 5.5cm"
+              },
+              "illustration": "/images/blueprints/factory/996d352c9178__B.jpg",
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "ext-len-6",
+              "label": "6 cm",
+              "description": "A 6 cm waistband extension tab — a moderate reach past the closure, the common tailored extension length.",
+              "image": "/images/blueprints/factory/ef0fb41e2ad1__C.jpg",
+              "techpackIllustration": "/images/blueprints/factory/ef0fb41e2ad1__C.jpg",
+              "bxn": {
+                "field": "RECTL",
+                "value": "C",
+                "desc": "Waistband extension length 6cm"
+              },
+              "illustration": "/images/blueprints/factory/ef0fb41e2ad1__C.jpg",
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "ext-len-65",
+              "label": "6.5 cm",
+              "description": "A 6.5 cm waistband extension tab, reaching a little further across the front for added support.",
+              "image": "/images/blueprints/factory/bd9c06045808__D.jpg",
+              "techpackIllustration": "/images/blueprints/factory/bd9c06045808__D.jpg",
+              "bxn": {
+                "field": "RECTL",
+                "value": "D",
+                "desc": "Waistband extension length 6.5cm"
+              },
+              "illustration": "/images/blueprints/factory/bd9c06045808__D.jpg",
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "ext-len-7",
+              "label": "7 cm",
+              "description": "7 cm waistband extension — the tab carries the waistband a hand's width past the fly for a clean bespoke closure.",
+              "image": "/images/blueprints/factory/a9b053b81635__E.jpg",
+              "techpackIllustration": "/images/blueprints/factory/a9b053b81635__E.jpg",
+              "bxn": {
+                "field": "RECTL",
+                "value": "E",
+                "desc": "Waistband extension length 7cm"
+              },
+              "illustration": "/images/blueprints/factory/a9b053b81635__E.jpg",
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "ext-len-13",
+              "label": "13 cm",
+              "description": "13 cm waistband extension — a long Florentine tab crossing deep past center front; maximum sartorial presence.",
+              "image": "/images/blueprints/factory/8f065c084861__K.jpg",
+              "techpackIllustration": "/images/blueprints/factory/8f065c084861__K.jpg",
+              "bxn": {
+                "field": "RECTL",
+                "value": "K",
+                "desc": "Waistband extension length 13cm"
+              },
+              "illustration": "/images/blueprints/factory/8f065c084861__K.jpg",
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "ext-len-15",
+              "label": "15 cm",
+              "description": "The longest 15 cm waistband extension — a full French-bearer tab spanning well past the fly, the most supported and structured closure.",
+              "image": "/images/blueprints/factory/b9c52226e508__L.jpg",
+              "techpackIllustration": "/images/blueprints/factory/b9c52226e508__L.jpg",
+              "bxn": {
+                "field": "RECTL",
+                "value": "L",
+                "desc": "Waistband extension length 15cm"
+              },
+              "illustration": "/images/blueprints/factory/b9c52226e508__L.jpg",
+              "illustrationStatus": "drawing"
+            }
+          ]
+        },
+        {
+          "id": "metal-adjuster",
+          "label": "Side Adjustment Style",
+          "defaultValue": "adjuster-none",
+          "advanced": true,
+          "options": [
+            {
+              "id": "adjuster-none",
+              "label": "Standard (No Adjuster)",
+              "description": "No side adjusters — belt loops only.",
+              "image": "/images/generated/trousers/adjuster-none.webp",
+              "techpackIllustration": "/images/blueprints/factory/c2cad7a1cab9__3349__Standard.jpg",
+              "realImage": "/images/generated/trousers/adjuster-none.webp",
+              "illustration": "/images/blueprints/factory/c2cad7a1cab9__3349__Standard.jpg",
+              "photos": [
+                "/images/generated/trousers/adjuster-none.webp"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "adjuster-both",
+              "label": "Adjust Buckle",
+              "description": "Metal side adjusters on both sides, placed 7 cm to 10 cm behind the side seams — beltless waist control; immediately custom-made.",
+              "image": "/images/blueprints/factory/f2e0b944fc8f__3352__Adjust_buckle_number.jpg",
+              "techpackIllustration": "/images/blueprints/factory/f2e0b944fc8f__3352__Adjust_buckle_number.jpg",
+              "illustration": "/images/blueprints/factory/f2e0b944fc8f__3352__Adjust_buckle_number.jpg",
+              "photos": [],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "adjuster-left",
+              "label": "Square Side Adjust Button",
+              "description": "Square button adjusters on both sides.",
+              "image": "/images/blueprints/factory/ffa914420c24__3351__Square_side_adjust_button.jpg",
+              "techpackIllustration": "/images/blueprints/factory/ffa914420c24__3351__Square_side_adjust_button.jpg",
+              "illustration": "/images/blueprints/factory/ffa914420c24__3351__Square_side_adjust_button.jpg",
+              "photos": [],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "adjuster-buckle-loop",
+              "label": "Adjustable Buckle with Belt Loop",
+              "description": "Buckle adjuster alongside belt loop.",
+              "image": "/images/blueprints/remote/57c52816d98c__167108103407726.jpg",
+              "techpackIllustration": "/images/blueprints/remote/57c52816d98c__167108103407726.jpg",
+              "illustration": "/images/blueprints/remote/57c52816d98c__167108103407726.jpg",
+              "photos": [],
+              "illustrationStatus": "drawing"
+            }
+          ]
+        },
+        {
+          "id": "belt-loops",
+          "label": "Belt Loops",
+          "defaultValue": "loops-standard",
+          "options": [
+            {
+              "id": "loops-standard",
+              "label": "Standard (7 Loops)",
+              "description": "Standard seven belt loops space evenly around the waistband to carry a belt securely, the default on most casual and odd trousers. The loops let a belt do the holding while keeping the trouser anchored at common stress points. Seven is the typical full complement for a balanced layout.",
+              "image": "/images/blueprints/factory/88c59601c41a__3330__Regular.jpg",
+              "techpackIllustration": "/images/blueprints/factory/88c59601c41a__3330__Regular.jpg",
+              "images": [
+                "https://www.permanentstyle.com/wp-content/uploads/2022/10/7-Anglo-Italian.jpg"
+              ],
+              "illustration": "/images/blueprints/factory/88c59601c41a__3330__Regular.jpg",
+              "photos": [
+                "https://www.permanentstyle.com/wp-content/uploads/2022/10/7-Anglo-Italian.jpg"
+              ],
+              "illustrationStatus": "drawing",
+              "photoAmbiguous": true
+            },
+            {
+              "id": "loops-5",
+              "label": "5 Loops",
+              "description": "Fewer loops — cleaner look.",
+              "photos": [],
+              "illustrationStatus": "unverified",
+              "photoAmbiguous": true
+            },
+            {
+              "id": "loops-no",
+              "label": "No Belt Loops",
+              "description": "No belt loops — a clean, uninterrupted waistband worn with side adjusters or braces; the Florentine bespoke standard.",
+              "image": "/images/generated/trousers/loops-no.webp",
+              "techpackIllustration": "/images/blueprints/factory/5175739b2f59__3329__No.jpg",
+              "images": [
+                "https://www.bondsuits.com/wp-content/uploads/2018/10/mason-sons-cavalry-twill-trousers-side-adjusters.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2018/03/bespoke-trouser-side-adjustor-buckle.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2018/02/Strap-and-buckle-trousers1.jpg"
+              ],
+              "realImage": "/images/generated/trousers/loops-no.webp",
+              "illustration": "/images/blueprints/factory/5175739b2f59__3329__No.jpg",
+              "photos": [
+                "/images/generated/trousers/loops-no.webp",
+                "https://www.bondsuits.com/wp-content/uploads/2018/10/mason-sons-cavalry-twill-trousers-side-adjusters.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2018/03/bespoke-trouser-side-adjustor-buckle.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2018/02/Strap-and-buckle-trousers1.jpg"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "loops-passant",
+              "label": "Double / Passant Loops",
+              "description": "Double (passant) belt loops use pairs of narrow loops at each position instead of single ones, a military and equestrian-inspired detail. The doubled loops hold a belt more firmly and add a distinctive, slightly utilitarian look to the waistband. They are a deliberate styling flourish on field and casual trousers.",
+              "image": "/images/generated/trousers/loops-passant.webp",
+              "techpackIllustration": "/images/blueprints/factory/2deae8e2d693__3331__Double.jpg",
+              "images": [],
+              "realImage": "/images/generated/trousers/loops-passant.webp",
+              "illustration": "/images/blueprints/factory/2deae8e2d693__3331__Double.jpg",
+              "photos": [
+                "/images/generated/trousers/loops-passant.webp"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "loops-20cm",
+              "label": "2.0 cm Width Loops",
+              "description": "Wider 2.0 cm belt loops.",
+              "image": "/images/generated/trousers/loops-20cm.webp",
+              "techpackIllustration": "/images/blueprints/remote/2270e6ce114e__3332.jpg",
+              "realImage": "/images/generated/trousers/loops-20cm.webp",
+              "illustration": "/images/blueprints/remote/2270e6ce114e__3332.jpg",
+              "photos": [
+                "/images/generated/trousers/loops-20cm.webp"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "loops-one-right",
+              "label": "One Loop Right Front Only",
+              "description": "Single right-front loop — minimalist dress trouser.",
+              "image": "/images/generated/trousers/loops-one-right.webp",
+              "techpackIllustration": "/images/blueprints/remote/b95c608b8ee6__3618.jpg",
+              "realImage": "/images/generated/trousers/loops-one-right.webp",
+              "illustration": "/images/blueprints/remote/b95c608b8ee6__3618.jpg",
+              "photos": [
+                "/images/generated/trousers/loops-one-right.webp"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "loops-x-front",
+              "label": "X-Style Front Loops",
+              "description": "Crossed X-style loops on front, standard elsewhere.",
+              "image": "/images/generated/trousers/loops-x-front.webp",
+              "techpackIllustration": "/images/blueprints/remote/da6532e2c066__333E.jpg",
+              "realImage": "/images/generated/trousers/loops-x-front.webp",
+              "illustration": "/images/blueprints/remote/da6532e2c066__333E.jpg",
+              "photos": [
+                "/images/generated/trousers/loops-x-front.webp"
+              ],
+              "illustrationStatus": "drawing"
+            }
+          ]
+        },
+        {
+          "id": "waist-detail",
+          "label": "Back Waist Detail",
+          "defaultValue": "waist-detail-none",
+          "advanced": true,
+          "options": [
+            {
+              "id": "waist-detail-none",
+              "label": "No Back Detail",
+              "description": "Plain back waistband — no adjustment tab.",
+              "illustrationStatus": "needs-source"
+            },
+            {
+              "id": "waist-detail-square-tab",
+              "label": "Square Adjustment Tab with Buckle",
+              "description": "HW square adjustment tab at center back waist.",
+              "image": "/images/generated/trousers/waist-detail-square-tab.webp",
+              "techpackIllustration": "/images/blueprints/remote/82b4ff7adaf2__175912300465620.png",
+              "realImage": "/images/generated/trousers/waist-detail-square-tab.webp",
+              "illustration": "/images/blueprints/remote/82b4ff7adaf2__175912300465620.png",
+              "photos": [
+                "/images/generated/trousers/waist-detail-square-tab.webp"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "waist-detail-pointed-tab",
+              "label": "Pointed Adjustment Tab with Buttons",
+              "description": "HW pointed adjustment tab with four buttons at back waist.",
+              "image": "/images/generated/trousers/waist-detail-pointed-tab.webp",
+              "techpackIllustration": "/images/blueprints/remote/ebc6eb805303__175912296025464.png",
+              "realImage": "/images/generated/trousers/waist-detail-pointed-tab.webp",
+              "illustration": "/images/blueprints/remote/ebc6eb805303__175912296025464.png",
+              "photos": [
+                "/images/generated/trousers/waist-detail-pointed-tab.webp"
+              ],
+              "illustrationStatus": "drawing"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pleats-structure",
+      "label": "Pleats & Structure",
+      "fields": [
+        {
+          "id": "pleat-style",
+          "label": "Pleat Style",
+          "defaultValue": "flat-front",
+          "options": [
+            {
+              "id": "flat-front",
+              "label": "Flat Front (No Dart)",
+              "description": "A flat front has no pleats or darts at all, so the cloth runs smooth and uninterrupted from the waistband down the front. It gives the cleanest, most modern and slimming silhouette and pairs naturally with a plain hem. It works best on slimmer cuts where there is no excess fabric to manage.",
+              "image": "/images/generated/trousers/flat-front.webp",
+              "images": [],
+              "group": "flat",
+              "photos": [],
+              "illustrationStatus": "needs-source"
+            },
+            {
+              "id": "pleat-no-single-dart",
+              "label": "Flat Front, Single Dart",
+              "description": "A flat front with a single dart adds one short, stitched-down dart on each side of the front to shape the waist into the hip without an open pleat. It keeps the smooth flat-front look while improving the fit over a curved seat and thigh. The dart removes excess cloth cleanly rather than letting it fold.",
+              "image": "/images/generated/jacket/pleat-no-single-dart.webp",
+              "images": [],
+              "group": "flat",
+              "techpackIllustration": "/images/blueprints/remote/f0e67f33563a__302M.jpg",
+              "illustration": "/images/blueprints/remote/f0e67f33563a__302M.jpg",
+              "photos": [
+                "/images/generated/jacket/pleat-no-single-dart.webp"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "pleat-no-double-dart",
+              "label": "Flat Front, Double Dart",
+              "description": "A flat front with double darts uses two parallel darts per side to draw in more waist suppression while keeping a pleat-free front. It allows a fuller seat and thigh to be fitted to a trimmer waist with a still-clean front face. The result is shaping closer to a pleat's roominess but with a flat, tailored appearance.",
+              "image": "/images/generated/trousers/pleat-no-double-dart.webp",
+              "images": [],
+              "group": "flat",
+              "techpackIllustration": "/images/blueprints/remote/fcf7c7e892d6__302Y.jpg",
+              "realImage": "/images/generated/trousers/pleat-no-double-dart.webp",
+              "illustration": "/images/blueprints/remote/fcf7c7e892d6__302Y.jpg",
+              "photos": [
+                "/images/generated/trousers/pleat-no-double-dart.webp"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "single-forward",
+              "label": "Single Forward Pleat",
+              "description": "Single forward pleat with 2.5 cm pleat depth, opening toward the fly — 5 cm of hidden cloth volume folded toward center front.",
+              "image": "/images/blueprints/factory/768640315c4d__3022__Single_toward_fly.jpg",
+              "images": [],
+              "group": "single",
+              "techpackIllustration": "/images/blueprints/factory/768640315c4d__3022__Single_toward_fly.jpg",
+              "illustration": "/images/blueprints/factory/768640315c4d__3022__Single_toward_fly.jpg",
+              "photos": [],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "double-forward",
+              "label": "Double Forward Pleats",
+              "description": "Double forward pleats, each with 2.5 cm pleat depth — 10 cm of hidden cloth volume; upper-thigh circumference effectively increases 4 cm to 8 cm.",
+              "priceAdj": 20,
+              "image": "/images/generated/jacket/double-forward.webp",
+              "images": [],
+              "group": "double",
+              "illustration": "/images/blueprints/factory/48f3c94b03b0__3024__Double_toward_fly.jpg",
+              "illustrationStatus": "drawing",
+              "techpackIllustration": "/images/blueprints/factory/48f3c94b03b0__3024__Double_toward_fly.jpg"
+            },
+            {
+              "id": "single-reverse",
+              "label": "Single Reverse Pleat",
+              "description": "Single reverse pleat with 2.5 cm pleat depth, opening toward the pocket, its center placed 4 cm to 6 cm from the pocket edge — 5 cm of hidden cloth moving expansion toward the hip for a smoother fly.",
+              "image": "/images/generated/trousers/single-reverse.webp",
+              "images": [],
+              "group": "single",
+              "techpackIllustration": "/images/blueprints/factory/600d8568a158__3021__Single_toward_side.jpg",
+              "illustration": "/images/blueprints/factory/600d8568a158__3021__Single_toward_side.jpg",
+              "photos": [],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "double-reverse",
+              "label": "Double Reverse Pleats",
+              "description": "Double reverse pleats opening toward the pocket — two cloth reservoirs with 10 cm total pleat depth of hidden volume, working like bellows in stride; classic Neapolitan geometry.",
+              "priceAdj": 20,
+              "image": "/images/generated/trousers/double-reverse.webp",
+              "images": [
+                "https://www.permanentstyle.com/wp-content/uploads/2016/12/igarashi-trousers-bespoke.jpg"
+              ],
+              "group": "double",
+              "techpackIllustration": "/images/blueprints/factory/087231c58490__3023__Double_toward_side.jpg",
+              "illustration": "/images/blueprints/factory/087231c58490__3023__Double_toward_side.jpg",
+              "photos": [
+                "https://www.permanentstyle.com/wp-content/uploads/2016/12/igarashi-trousers-bespoke.jpg"
+              ],
+              "illustrationStatus": "drawing"
+            }
+          ],
+          "quiz": {
+            "question": "Front pleat preference?",
+            "answers": [
+              {
+                "id": "flat",
+                "label": "Flat Front",
+                "description": "Clean and contemporary — a slim silhouette.",
+                "matchGroups": [
+                  "flat"
+                ]
+              },
+              {
+                "id": "single",
+                "label": "Single Pleat",
+                "description": "One forward pleat — comfort with elegance.",
+                "matchGroups": [
+                  "single"
+                ]
+              },
+              {
+                "id": "double",
+                "label": "Double Pleat",
+                "description": "Two pleats — classic tailored fullness.",
+                "matchGroups": [
+                  "double"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "pleat-depth",
+          "label": "Pleat Depth",
+          "defaultValue": "pleat-25",
+          "advanced": true,
+          "options": [
+            {
+              "id": "pleat-15",
+              "label": "1.5 cm",
+              "description": "Shallow pleat — subtle volume.",
+              "image": "/images/generated/trousers/pleat-15--4ff383e5.webp",
+              "techpackIllustration": "/images/blueprints/remote/133c130c929d__302Z.jpg",
+              "realImage": "/images/generated/trousers/pleat-15--4ff383e5.webp",
+              "illustration": "/images/blueprints/remote/133c130c929d__302Z.jpg",
+              "photos": [
+                "/images/generated/trousers/pleat-15--4ff383e5.webp"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "pleat-20",
+              "label": "2.0 cm",
+              "description": "Standard narrow pleat.",
+              "image": "/images/generated/trousers/pleat-20--19ee5fc1.webp",
+              "techpackIllustration": "/images/blueprints/remote/3a8b742009cc__302H.jpg",
+              "realImage": "/images/generated/trousers/pleat-20--19ee5fc1.webp",
+              "illustration": "/images/blueprints/remote/3a8b742009cc__302H.jpg",
+              "photos": [
+                "/images/generated/trousers/pleat-20--19ee5fc1.webp"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "pleat-25",
+              "label": "2.5 cm",
+              "description": "Medium pleat depth — balanced.",
+              "image": "/images/generated/trousers/pleat-25--71a6a31b.webp",
+              "techpackIllustration": "/images/blueprints/remote/6c2ecb649616__302E.jpg",
+              "realImage": "/images/generated/trousers/pleat-25--71a6a31b.webp",
+              "illustration": "/images/blueprints/remote/6c2ecb649616__302E.jpg",
+              "photos": [
+                "/images/generated/trousers/pleat-25--71a6a31b.webp"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "pleat-32",
+              "label": "3.2 cm",
+              "description": "Deep pleat — generous volume.",
+              "image": "/images/generated/trousers/pleat-32.webp",
+              "techpackIllustration": "/images/blueprints/remote/370e6e7dc3e8__302F.jpg",
+              "realImage": "/images/generated/trousers/pleat-32.webp",
+              "illustration": "/images/blueprints/remote/370e6e7dc3e8__302F.jpg",
+              "photos": [
+                "/images/generated/trousers/pleat-32.webp"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "pleat-38",
+              "label": "3.8 cm",
+              "description": "Very deep pleat — dramatic drape.",
+              "image": "/images/generated/trousers/pleat-38.webp",
+              "techpackIllustration": "/images/blueprints/remote/6ef57bf870b8__302G.jpg",
+              "realImage": "/images/generated/trousers/pleat-38.webp",
+              "illustration": "/images/blueprints/remote/6ef57bf870b8__302G.jpg",
+              "photos": [
+                "/images/generated/trousers/pleat-38.webp"
+              ],
+              "illustrationStatus": "drawing"
+            }
+          ]
+        },
+        {
+          "id": "fly-style",
+          "label": "Fly Style",
+          "defaultValue": "fly-zip",
+          "options": [
+            {
+              "id": "fly-zip",
+              "label": "Zip Fly (Nylon)",
+              "description": "A nylon (coil) zip fly uses a lightweight plastic-toothed zipper, which is thin, flexible and lies very flat behind the fly. It keeps the front of the trouser smooth with no visible hardware and is quiet and snag-resistant. The low profile makes it well suited to lighter-weight and summer cloths where bulk would show.",
+              "image": "/images/blueprints/factory/99434c44259b__3420__Nylon.jpg",
+              "images": [],
+              "techpackIllustration": "/images/blueprints/factory/99434c44259b__3420__Nylon.jpg",
+              "illustration": "/images/blueprints/factory/99434c44259b__3420__Nylon.jpg",
+              "photos": [],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "fly-metal-zip",
+              "label": "Zip Fly (Metal)",
+              "description": "A metal zip fly uses metal teeth, prized for durability and a more substantial, secure feel under heavier cloths. It is the workhorse closure for sturdier trousers and denim, standing up to repeated use better than a coil zip. The trade-off is slightly more bulk and weight behind the fly.",
+              "image": "/images/generated/trousers/fly-metal-zip.webp",
+              "images": [],
+              "techpackIllustration": "/images/blueprints/remote/bd442512a412__3421.jpg",
+              "realImage": "/images/generated/trousers/fly-metal-zip.webp",
+              "illustration": "/images/blueprints/remote/bd442512a412__3421.jpg",
+              "photos": [
+                "/images/generated/trousers/fly-metal-zip.webp"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "fly-button",
+              "label": "Button Fly",
+              "description": "A button fly closes with a row of buttons concealed behind the fly placket, the traditional pre-zip method still chosen for its clean drape and heritage character. It has no metal to fail and lets the front of the trouser fall in a smoother line, at the cost of being slower to fasten. It is common on bespoke trousers and selvedge denim alike.",
+              "priceAdj": 20,
+              "image": "/images/blueprints/factory/3fcf22dd779d__3422__Bttns.jpg",
+              "images": [],
+              "techpackIllustration": "/images/blueprints/factory/3fcf22dd779d__3422__Bttns.jpg",
+              "illustration": "/images/blueprints/factory/3fcf22dd779d__3422__Bttns.jpg",
+              "photos": [],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "fly-hook-bar",
+              "label": "Fish-Mouth Fly",
+              "description": "A fish-mouth (frogmouth) fly refers to the curved, fish-mouth shaped opening at the top of the fly where the waistband closes, often paired with frogmouth front pockets. The shaped notch lets the waistband fasten cleanly and lie flat over the stomach. It is a vintage tailoring detail seen on mid-century trousers.",
+              "image": "/images/blueprints/factory/2fb4d84bc037__3400__Fish-mouth.jpg",
+              "images": [],
+              "techpackIllustration": "/images/blueprints/factory/2fb4d84bc037__3400__Fish-mouth.jpg",
+              "illustration": "/images/blueprints/factory/2fb4d84bc037__3400__Fish-mouth.jpg",
+              "photos": [],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "fly-fish-claw",
+              "label": "Fish-Claw Fly",
+              "description": "Fish-claw shaped fly front.",
+              "image": "/images/blueprints/remote/0c07e29e9fc5__3402.jpg",
+              "techpackIllustration": "/images/blueprints/remote/0c07e29e9fc5__3402.jpg",
+              "illustration": "/images/blueprints/remote/0c07e29e9fc5__3402.jpg",
+              "photos": [],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "fly-french",
+              "label": "French Fly",
+              "description": "A French fly adds an extra inner tab that extends across from the waistband and fastens with a hidden button inside the fly. This anchors the waistband closed and flat, taking strain off the main closure and preventing the front from pulling open. It is a mark of quality construction on better tailored trousers.",
+              "image": "/images/blueprints/remote/692862b38427__3403.jpg",
+              "images": [
+                "https://www.permanentstyle.com/wp-content/uploads/2022/10/2-Pommella-detail.jpg"
+              ],
+              "techpackIllustration": "/images/blueprints/remote/692862b38427__3403.jpg",
+              "illustration": "/images/blueprints/remote/692862b38427__3403.jpg",
+              "photos": [
+                "https://www.permanentstyle.com/wp-content/uploads/2022/10/2-Pommella-detail.jpg"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "fly-straight",
+              "label": "Straight Fly",
+              "description": "Straight topstitched fly — military style.",
+              "image": "/images/generated/trousers/fly-straight.webp",
+              "techpackIllustration": "/images/blueprints/remote/6a4438c01dcf__3401.jpg",
+              "realImage": "/images/generated/trousers/fly-straight.webp",
+              "illustration": "/images/blueprints/remote/6a4438c01dcf__3401.jpg",
+              "photos": [
+                "/images/generated/trousers/fly-straight.webp"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "fly-pointed",
+              "label": "Pointed Fly",
+              "description": "A pointed fly finishes the top of the fly placket with a tailored point rather than a square or curved end, adding a subtle decorative shape where the waistband meets the fly. It is a refined detail that signals hand-finishing on bespoke and made-to-measure trousers. The point sits neatly under the waistband closure.",
+              "image": "/images/blueprints/remote/da407a0ce211__3406.jpg",
+              "images": [],
+              "techpackIllustration": "/images/blueprints/remote/da407a0ce211__3406.jpg",
+              "illustration": "/images/blueprints/remote/da407a0ce211__3406.jpg",
+              "photos": [],
+              "illustrationStatus": "drawing"
+            }
+          ]
+        },
+        {
+          "id": "fly-stitching",
+          "label": "Fly Stitching",
+          "defaultValue": "fly-stitch-curved",
+          "advanced": true,
+          "options": [
+            {
+              "id": "fly-stitch-curved",
+              "label": "Curved Fly Stitch",
+              "description": "Standard curved topstitch on fly.",
+              "image": "/images/blueprints/factory/2b3c7bcf74ef__31A3__0.6cm_top_stitch.jpg",
+              "illustrationStatus": "needs-source"
+            },
+            {
+              "id": "fly-stitch-straight",
+              "label": "Straight Fly Stitch",
+              "description": "Clean straight topstitch.",
+              "image": "/images/blueprints/factory/e081e2a8c319__31A1__0.15cm_top_stitch.jpg",
+              "illustrationStatus": "needs-source"
+            },
+            {
+              "id": "fly-stitch-none",
+              "label": "No Fly Topstitch",
+              "description": "No decorative topstitch on fly.",
+              "image": "/images/generated/jacket/fly-stitch-none.webp",
+              "illustration": "/images/blueprints/factory/10bfe4668d92__31A6__No_top_stitch_hidden_stitch.jpg",
+              "illustrationStatus": "drawing",
+              "techpackIllustration": "/images/blueprints/factory/10bfe4668d92__31A6__No_top_stitch_hidden_stitch.jpg"
+            }
+          ]
+        },
+        {
+          "id": "bar-tack",
+          "label": "Bar Tack Reinforcement",
+          "defaultValue": "bartack-standard",
+          "advanced": true,
+          "options": [
+            {
+              "id": "bartack-standard",
+              "label": "Standard Bar Tacks",
+              "description": "Reinforcement at stress points.",
+              "image": "/images/generated/trousers/bartack-standard.webp",
+              "techpackIllustration": "/images/blueprints/factory/4d29fb809a0e__3191__Front_pocket_I_shape_bartack.png",
+              "illustration": "/images/blueprints/factory/4d29fb809a0e__3191__Front_pocket_I_shape_bartack.png",
+              "photos": [],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "bartack-none",
+              "label": "No Bar Tacks",
+              "description": "Clean finish without visible tacks.",
+              "photos": [],
+              "illustrationStatus": "unverified",
+              "image": "/images/generated/trousers/bartack-none.webp"
+            }
+          ]
+        },
+        {
+          "id": "center-crease",
+          "label": "Center Front Crease",
+          "defaultValue": "crease-pressed",
+          "options": [
+            {
+              "id": "crease-pressed",
+              "label": "Pressed Crease (Standard)",
+              "description": "Sharp pressed front crease — formal.",
+              "illustrationStatus": "needs-source"
+            },
+            {
+              "id": "crease-none",
+              "label": "No Crease",
+              "description": "Soft creaseless front — casual trousers.",
+              "illustrationStatus": "needs-source"
+            },
+            {
+              "id": "crease-fused",
+              "label": "Fused Crease (Permanent)",
+              "description": "Permanently fused crease — stays sharp.",
+              "illustrationStatus": "needs-source"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "back",
+      "label": "Back",
+      "fields": [
+        {
+          "id": "back-pocket-style",
+          "label": "Back Pocket Style",
+          "defaultValue": "back-left-welt",
+          "options": [
+            {
+              "id": "back-none",
+              "label": "No Back Pockets",
+              "description": "No back pockets leaves the seat of the trouser completely clean and uninterrupted, the most minimal and formal rear treatment. Without pocket openings the cloth lies smoothly over the seat, which flatters dress trousers and avoids sagging from carried items. It is favoured on the dressiest tailored and evening trousers.",
+              "image": "/images/generated/jacket/back-none.webp",
+              "images": [],
+              "group": "none",
+              "illustration": "/images/blueprints/factory/d1ec6888d1c1__31A0__No.jpg",
+              "illustrationStatus": "drawing",
+              "techpackIllustration": "/images/blueprints/factory/d1ec6888d1c1__31A0__No.jpg"
+            },
+            {
+              "id": "back-left-welt",
+              "label": "Left Welt with Button",
+              "description": "A welt back pocket with a button has a single reinforcing welt across the opening and a button closure to secure the contents. The welt gives a clean, slightly raised edge while the button keeps the pocket shut and adds a discreet detail. It is a tidy, traditional choice for dress trousers.",
+              "image": "/images/blueprints/factory/2aaa7a83011b__3221__Welt_with_bttn.jpg",
+              "images": [],
+              "group": "welt",
+              "techpackIllustration": "/images/blueprints/factory/2aaa7a83011b__3221__Welt_with_bttn.jpg",
+              "illustration": "/images/blueprints/factory/2aaa7a83011b__3221__Welt_with_bttn.jpg",
+              "photos": [],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "back-both-welt",
+              "label": "Both Welt Pockets (Left Button)",
+              "description": "Both sides welt with button.",
+              "priceAdj": 10,
+              "image": "/images/blueprints/factory/819f9d468b2d__320B__Right_left_besom_left_bttn.jpg",
+              "group": "welt",
+              "techpackIllustration": "/images/blueprints/factory/819f9d468b2d__320B__Right_left_besom_left_bttn.jpg",
+              "illustration": "/images/blueprints/factory/819f9d468b2d__320B__Right_left_besom_left_bttn.jpg",
+              "photos": [],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "back-left-jetted",
+              "label": "Left Besom with Button & Buttonhole",
+              "description": "Single left besom pocket.",
+              "image": "/images/generated/jacket/back-left-jetted.webp",
+              "group": "jetted",
+              "illustration": "/images/blueprints/factory/7e10ed9447af__32C7__Left_besom_bttn_bttnhole.jpg",
+              "illustrationStatus": "drawing",
+              "techpackIllustration": "/images/blueprints/factory/7e10ed9447af__32C7__Left_besom_bttn_bttnhole.jpg"
+            },
+            {
+              "id": "back-both-jetted",
+              "label": "Double Besom",
+              "description": "Double besom pockets both sides.",
+              "priceAdj": 10,
+              "image": "/images/blueprints/factory/81163ff25606__3200__Double_besom.jpg",
+              "group": "jetted",
+              "techpackIllustration": "/images/blueprints/factory/81163ff25606__3200__Double_besom.jpg",
+              "illustration": "/images/blueprints/factory/81163ff25606__3200__Double_besom.jpg",
+              "photos": [],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "back-left-patch",
+              "label": "Left Pointed Patch Pocket",
+              "description": "A pointed patch back pocket is sewn onto the outside of the seat with a shaped, pointed bottom edge, the casual style seen on jeans and chinos. Being applied on top of the cloth it is the most informal and visible back pocket, often topstitched for emphasis. It signals workwear and casual heritage rather than tailoring.",
+              "image": "/images/generated/jacket/back-left-patch.webp",
+              "images": [],
+              "group": "patch",
+              "techpackIllustration": "/images/blueprints/factory/5e26a3e5997d__3230__Patch_with_pointed.jpg",
+              "illustration": "/images/blueprints/factory/5e26a3e5997d__3230__Patch_with_pointed.jpg",
+              "photos": [
+                "/images/generated/jacket/back-left-patch.webp"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "back-both-patch",
+              "label": "Both Pointed Patch Pockets",
+              "description": "Two pointed patch back pockets.",
+              "priceAdj": 10,
+              "image": "/images/generated/trousers/back-both-patch.webp",
+              "group": "patch",
+              "techpackIllustration": "/images/blueprints/factory/ba3e4540b7bb__3231__Point_patch_with_bttn.jpg",
+              "illustration": "/images/blueprints/factory/ba3e4540b7bb__3231__Point_patch_with_bttn.jpg",
+              "photos": [],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "back-besom-btn",
+              "label": "Besom with Button",
+              "description": "A besom (double-jetted) back pocket with a button frames the opening with two narrow welts and fastens with a button, the standard refined rear pocket on dress trousers. The clean piped opening sits flush with the seat and the button adds security without bulk. It is the most common and most formal back-pocket style.",
+              "image": "/images/generated/trousers/back-besom-btn.webp",
+              "images": [],
+              "group": "besom",
+              "techpackIllustration": "/images/blueprints/remote/48c65a3a9184__165732923200806.jpg",
+              "realImage": "/images/generated/trousers/back-besom-btn.webp",
+              "illustration": "/images/blueprints/remote/48c65a3a9184__165732923200806.jpg",
+              "photos": [
+                "/images/generated/trousers/back-besom-btn.webp"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "back-welt-zip",
+              "label": "Welt with Zipper",
+              "description": "Welt pocket with zipper closure.",
+              "image": "/images/generated/trousers/back-welt-zip.webp",
+              "group": "welt",
+              "techpackIllustration": "/images/blueprints/remote/5ef31838ce8e__165732927877788.jpg",
+              "realImage": "/images/generated/trousers/back-welt-zip.webp",
+              "illustration": "/images/blueprints/remote/5ef31838ce8e__165732927877788.jpg",
+              "photos": [
+                "/images/generated/trousers/back-welt-zip.webp"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "back-welt-plain",
+              "label": "Plain Welt (No Button)",
+              "description": "Simple welt pocket, no button.",
+              "image": "/images/generated/trousers/back-welt-plain.webp",
+              "group": "welt",
+              "techpackIllustration": "/images/blueprints/remote/2d96087ff271__165732929300206.jpg",
+              "realImage": "/images/generated/trousers/back-welt-plain.webp",
+              "illustration": "/images/blueprints/remote/2d96087ff271__165732929300206.jpg",
+              "photos": [
+                "/images/generated/trousers/back-welt-plain.webp"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "back-right-besom-btn",
+              "label": "Right Besom with Button Only",
+              "description": "Right side besom with button, no left.",
+              "image": "/images/generated/trousers/back-right-besom-btn.webp",
+              "group": "besom",
+              "techpackIllustration": "/images/blueprints/remote/a4c36785c1cf__165732950101655.jpg",
+              "realImage": "/images/generated/trousers/back-right-besom-btn.webp",
+              "illustration": "/images/blueprints/remote/a4c36785c1cf__165732950101655.jpg",
+              "photos": [
+                "/images/generated/trousers/back-right-besom-btn.webp"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "back-both-besom-right-btn",
+              "label": "Both Besom (Right Button)",
+              "description": "Both sides besom, button on right side.",
+              "image": "/images/generated/trousers/back-both-besom-right-btn.webp",
+              "group": "besom",
+              "techpackIllustration": "/images/blueprints/remote/d11c489532aa__165732942214395.jpg",
+              "realImage": "/images/generated/trousers/back-both-besom-right-btn.webp",
+              "illustration": "/images/blueprints/remote/d11c489532aa__165732942214395.jpg",
+              "photos": [
+                "/images/generated/trousers/back-both-besom-right-btn.webp"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "back-besom-decorative",
+              "label": "Besom Decorative (No Bag)",
+              "description": "Decorative besom — no functional pocket bag.",
+              "image": "/images/generated/trousers/back-besom-decorative.webp",
+              "group": "besom",
+              "techpackIllustration": "/images/blueprints/remote/0eb8c7d082d0__165732940892061.jpg",
+              "realImage": "/images/generated/trousers/back-besom-decorative.webp",
+              "illustration": "/images/blueprints/remote/0eb8c7d082d0__165732940892061.jpg",
+              "photos": [
+                "/images/generated/trousers/back-besom-decorative.webp"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "back-right-besom-only",
+              "label": "Right Besom Only",
+              "description": "Right side besom only, no left pocket.",
+              "image": "/images/generated/trousers/back-right-besom-only.webp",
+              "group": "besom",
+              "techpackIllustration": "/images/blueprints/remote/d0eba06d5db4__165732951339318.jpg",
+              "realImage": "/images/generated/trousers/back-right-besom-only.webp",
+              "illustration": "/images/blueprints/remote/d0eba06d5db4__165732951339318.jpg",
+              "photos": [
+                "/images/generated/trousers/back-right-besom-only.webp"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "back-besom-no-right",
+              "label": "Left Besom Only (No Right)",
+              "description": "Left side besom only, no right pocket.",
+              "image": "/images/generated/trousers/back-besom-no-right.webp",
+              "group": "besom",
+              "techpackIllustration": "/images/blueprints/remote/ae7613e6e895__165732952700067.jpg",
+              "realImage": "/images/generated/trousers/back-besom-no-right.webp",
+              "illustration": "/images/blueprints/remote/ae7613e6e895__165732952700067.jpg",
+              "photos": [
+                "/images/generated/trousers/back-besom-no-right.webp"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "back-with-flap",
+              "label": "Besom with Flap",
+              "description": "A besom back pocket with a flap adds a buttoned flap over the double-jetted opening, combining a clean piped edge with a covered, more secure closure. The flap makes the pocket slightly more casual and protective than a plain besom while staying neat. It suits sportier tailored and country trousers.",
+              "image": "/images/generated/trousers/back-with-flap.webp",
+              "images": [],
+              "group": "other",
+              "techpackIllustration": "/images/blueprints/remote/e5b74bf14b92__165732948712689.jpg",
+              "realImage": "/images/generated/trousers/back-with-flap.webp",
+              "illustration": "/images/blueprints/remote/e5b74bf14b92__165732948712689.jpg",
+              "photos": [
+                "/images/generated/trousers/back-with-flap.webp"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "back-regular-flap",
+              "label": "Regular Flap Pocket",
+              "description": "A flap back pocket covers the opening with a buttoned flap, making it more casual and practical than an open jetted pocket. The flap protects the contents and adds a sportier, country look to the seat of the trouser. It is common on tweed, moleskin and other rugged tailored trousers.",
+              "image": "/images/generated/trousers/back-regular-flap.webp",
+              "images": [],
+              "group": "other",
+              "techpackIllustration": "/images/blueprints/remote/e5d0503b3faa__165732946216252.jpg",
+              "realImage": "/images/generated/trousers/back-regular-flap.webp",
+              "illustration": "/images/blueprints/remote/e5d0503b3faa__165732946216252.jpg",
+              "photos": [
+                "/images/generated/trousers/back-regular-flap.webp"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "back-pointed-flap-btn",
+              "label": "Pointed Flap with Button",
+              "description": "Pointed flap with buttonhole and button.",
+              "image": "/images/generated/trousers/back-pointed-flap-btn.webp",
+              "group": "other",
+              "techpackIllustration": "/images/blueprints/remote/1a5fc2cf52d7__165732943643000.jpg",
+              "realImage": "/images/generated/trousers/back-pointed-flap-btn.webp",
+              "illustration": "/images/blueprints/remote/1a5fc2cf52d7__165732943643000.jpg",
+              "photos": [
+                "/images/generated/trousers/back-pointed-flap-btn.webp"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "back-diamond-flap",
+              "label": "Diamond Flap with Button",
+              "description": "Diamond-shaped flap pocket.",
+              "image": "/images/generated/trousers/back-diamond-flap.webp",
+              "group": "other",
+              "techpackIllustration": "/images/blueprints/remote/46e33d1335dd__165732939375810.jpg",
+              "realImage": "/images/generated/trousers/back-diamond-flap.webp",
+              "illustration": "/images/blueprints/remote/46e33d1335dd__165732939375810.jpg",
+              "photos": [
+                "/images/generated/trousers/back-diamond-flap.webp"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "back-besom-round-tab",
+              "label": "Besom with Round Tab & Button",
+              "description": "Besom pocket with round tab detail.",
+              "image": "/images/generated/trousers/back-besom-round-tab.webp",
+              "group": "besom",
+              "techpackIllustration": "/images/blueprints/remote/1a7e1f0fb0ec__165732935228519.jpg",
+              "realImage": "/images/generated/trousers/back-besom-round-tab.webp",
+              "illustration": "/images/blueprints/remote/1a7e1f0fb0ec__165732935228519.jpg",
+              "photos": [
+                "/images/generated/trousers/back-besom-round-tab.webp"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "back-both-besom-tab",
+              "label": "Both Besom with Tab & Button",
+              "description": "Both sides besom with tab and button.",
+              "image": "/images/generated/trousers/back-both-besom-tab.webp",
+              "group": "besom",
+              "techpackIllustration": "/images/blueprints/remote/d5bc5ba1ec54__165732936598982.jpg",
+              "realImage": "/images/generated/trousers/back-both-besom-tab.webp",
+              "illustration": "/images/blueprints/remote/d5bc5ba1ec54__165732936598982.jpg",
+              "photos": [
+                "/images/generated/trousers/back-both-besom-tab.webp"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "back-besom-tab",
+              "label": "Besom with Tab & Button",
+              "description": "Single besom with tab and button.",
+              "image": "/images/generated/trousers/back-besom-tab.webp",
+              "group": "besom",
+              "techpackIllustration": "/images/blueprints/remote/22b7a9cee738__165732938026339.jpg",
+              "realImage": "/images/generated/trousers/back-besom-tab.webp",
+              "illustration": "/images/blueprints/remote/22b7a9cee738__165732938026339.jpg",
+              "photos": [
+                "/images/generated/trousers/back-besom-tab.webp"
+              ],
+              "illustrationStatus": "drawing"
+            }
+          ],
+          "quiz": {
+            "question": "Back pocket style?",
+            "answers": [
+              {
+                "id": "welt",
+                "label": "Welt",
+                "description": "Buttoned welt — the tailored default.",
+                "matchGroups": [
+                  "welt"
+                ]
+              },
+              {
+                "id": "jetted",
+                "label": "Jetted / Besom",
+                "description": "Minimal piped opening — refined.",
+                "matchGroups": [
+                  "jetted",
+                  "besom"
+                ]
+              },
+              {
+                "id": "patch",
+                "label": "Patch",
+                "description": "Applied pocket — casual and relaxed.",
+                "matchGroups": [
+                  "patch"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "back-darts",
+          "label": "Back Darts",
+          "defaultValue": "darts-single",
+          "options": [
+            {
+              "id": "darts-none",
+              "label": "No Darts",
+              "description": "Flat back panel — minimal construction.",
+              "image": "/images/blueprints/factory/edc7138c802f__302L__No_pleat_no_dart.jpg",
+              "illustrationStatus": "needs-source"
+            },
+            {
+              "id": "darts-single",
+              "label": "Single Back Darts",
+              "description": "Single back dart per side — 2 cm intake, 11 cm to 14 cm long, removing a 12 cm² triangle to curve the seat.",
+              "image": "/images/blueprints/factory/27e91c06ed8a__302M__No_pleat_single_dart.jpg",
+              "illustrationStatus": "needs-source"
+            },
+            {
+              "id": "darts-double",
+              "label": "Double Back Darts",
+              "description": "Double back darts per side — 2 cm intake each for 4 cm total suppression; the waist reduces 4 cm while the hip stays unchanged, creating pronounced seat curvature.",
+              "image": "/images/blueprints/factory/f1edbb42290d__302Y__No_pleat_double_darts.jpg",
+              "illustrationStatus": "needs-source"
+            }
+          ]
+        },
+        {
+          "id": "center-seam",
+          "label": "Center Back Seam",
+          "defaultValue": "seam-open",
+          "advanced": true,
+          "options": [
+            {
+              "id": "seam-open",
+              "label": "Open Seam",
+              "description": "Standard open center back seam.",
+              "illustrationStatus": "needs-source"
+            },
+            {
+              "id": "seam-flat-fell",
+              "label": "Flat-Fell Seam",
+              "description": "Double-sewn flat-fell seam — workwear craft.",
+              "illustrationStatus": "needs-source"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bottom-hem",
+      "label": "Bottom & Hem",
+      "fields": [
+        {
+          "id": "hem-style",
+          "label": "Hem Finish",
+          "defaultValue": "hem-no-cuff",
+          "options": [
+            {
+              "id": "hem-no-cuff",
+              "label": "Plain Hem 5.0 cm",
+              "description": "Plain hem — folded 5.0 cm internally and blind stitched, with 0 cm of visible external cuff. The leg falls uninterrupted into the shoe; longer, slimmer, modern.",
+              "image": "/images/generated/trousers/hem-no-cuff.webp",
+              "images": [],
+              "group": "plain",
+              "techpackIllustration": "/images/blueprints/factory/96e846dfee6b__3600__5.0cm.jpg",
+              "realImage": "/images/generated/trousers/hem-no-cuff.webp",
+              "illustration": "/images/blueprints/factory/96e846dfee6b__3600__5.0cm.jpg",
+              "photos": [
+                "/images/generated/trousers/hem-no-cuff.webp"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "hem-blind",
+              "label": "Plain Hem 6.4 cm",
+              "description": "Slightly wider plain hem allowance.",
+              "image": "/images/blueprints/factory/bad6c1a76bae__3607__6.4cm.jpg",
+              "group": "plain",
+              "techpackIllustration": "/images/blueprints/factory/bad6c1a76bae__3607__6.4cm.jpg",
+              "illustration": "/images/blueprints/factory/bad6c1a76bae__3607__6.4cm.jpg",
+              "photos": [],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "hem-single-turnup",
+              "label": "4.4 cm Cuff Turn-Up",
+              "description": "Traditional turn-up cuff with 4.4 cm visible depth — 8.8 cm of cloth plus 1 cm allowance folded inside the leg. Adds mass at the ankle so the trouser hangs straighter; Savile Row bespoke.",
+              "priceAdj": 20,
+              "image": "/images/generated/jacket/hem-single-turnup.webp",
+              "images": [],
+              "group": "cuffed",
+              "techpackIllustration": "/images/blueprints/factory/30517f02c254__3604__4.4cm_cuff.jpg",
+              "illustration": "/images/blueprints/factory/30517f02c254__3604__4.4cm_cuff.jpg",
+              "photos": [
+                "/images/generated/jacket/hem-single-turnup.webp"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "hem-double-turnup",
+              "label": "5.1 cm Cuff Turn-Up",
+              "description": "Large turn-up cuff with 5.1 cm visible depth — a 10.2 cm cloth reserve plus allowance. An unmistakable visual anchor at the ankle, the stone base of a grand column; English power tailoring.",
+              "priceAdj": 25,
+              "image": "/images/blueprints/factory/8bcc8e766c5e__3605__5.1cm_cuff.jpg",
+              "images": [],
+              "group": "cuffed",
+              "techpackIllustration": "/images/blueprints/factory/8bcc8e766c5e__3605__5.1cm_cuff.jpg",
+              "illustration": "/images/blueprints/factory/8bcc8e766c5e__3605__5.1cm_cuff.jpg",
+              "photos": [],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "hem-machine-plain",
+              "label": "Plain Hem 7.0 cm",
+              "description": "7.0 cm plain hem — generous allowance.",
+              "group": "plain",
+              "techpackIllustration": "/images/blueprints/remote/6ddcbc615b71__3608.jpg",
+              "realImage": "/images/generated/trousers/hem-machine-plain.webp",
+              "illustration": "/images/blueprints/remote/6ddcbc615b71__3608.jpg",
+              "photos": [],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "hem-76",
+              "label": "Plain Hem 7.6 cm",
+              "description": "7.6 cm plain hem allowance.",
+              "image": "/images/generated/trousers/hem-76.webp",
+              "group": "other",
+              "techpackIllustration": "/images/blueprints/remote/87f09a00ddf2__3609.jpg",
+              "realImage": "/images/generated/trousers/hem-76.webp",
+              "illustration": "/images/blueprints/remote/87f09a00ddf2__3609.jpg",
+              "photos": [
+                "/images/generated/trousers/hem-76.webp"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "hem-90",
+              "label": "Plain Hem 9.0 cm",
+              "description": "Wide 9.0 cm hem — traditional trouser.",
+              "image": "/images/generated/trousers/hem-90.webp",
+              "group": "other",
+              "techpackIllustration": "/images/blueprints/remote/9e8b12a7ade9__360H.jpg",
+              "realImage": "/images/generated/trousers/hem-90.webp",
+              "illustration": "/images/blueprints/remote/9e8b12a7ade9__360H.jpg",
+              "photos": [
+                "/images/generated/trousers/hem-90.webp"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "hem-cuff-32",
+              "label": "3.2 cm Cuff Turn-Up",
+              "description": "3.2 cm turn-up cuff — a subtle external fold adding slight visual weight while keeping a clean silhouette; quiet Italian refinement.",
+              "priceAdj": 20,
+              "image": "/images/blueprints/remote/7eca44df7089__3602.jpg",
+              "group": "cuffed",
+              "techpackIllustration": "/images/blueprints/remote/7eca44df7089__3602.jpg",
+              "realImage": "/images/generated/trousers/hem-cuff-32.webp",
+              "illustration": "/images/blueprints/remote/7eca44df7089__3602.jpg",
+              "photos": [
+                "/images/generated/trousers/hem-cuff-32.webp"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "hem-cuff-38",
+              "label": "3.8 cm Cuff Turn-Up",
+              "description": "3.8 cm turn-up cuff — clearly visible but not dominant, often considered the most balanced cuff size. The leg ends with authority, not drama.",
+              "priceAdj": 20,
+              "image": "/images/generated/trousers/hem-cuff-38.webp",
+              "group": "cuffed",
+              "realImage": "/images/generated/trousers/hem-cuff-38.webp",
+              "photos": [
+                "/images/generated/trousers/hem-cuff-38.webp"
+              ],
+              "illustrationStatus": "needs-source"
+            },
+            {
+              "id": "hem-extra-115",
+              "label": "11.5 cm Extra Fabric (Unfinished)",
+              "description": "Unfinished with 11.5 cm extra for later alterations.",
+              "image": "/images/blueprints/remote/a350bdebd165__166529847562294.5CM.jpg",
+              "group": "other",
+              "illustration": "/images/blueprints/remote/a350bdebd165__166529847562294.5CM.jpg",
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "hem-extra-130",
+              "label": "13.0 cm Extra Fabric (Unfinished)",
+              "description": "Generous 13.0 cm extra fabric for alterations.",
+              "image": "/images/blueprints/remote/2e5e80c016b2__166529849186105.jpg",
+              "group": "other",
+              "illustration": "/images/blueprints/remote/2e5e80c016b2__166529849186105.jpg",
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "hem-inner-fold-40",
+              "label": "4.0 cm Inner Edge Fold (Slanted)",
+              "description": "4.0 cm slanted inner edge fold hem.",
+              "image": "/images/blueprints/remote/d4b184a45b4b__360K.jpg",
+              "group": "other",
+              "techpackIllustration": "/images/blueprints/remote/d4b184a45b4b__360K.jpg",
+              "illustration": "/images/blueprints/remote/d4b184a45b4b__360K.jpg",
+              "photos": [],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "hem-inner-fold-70",
+              "label": "7.0 cm Inner Edge Fold (Slanted)",
+              "description": "7.0 cm slanted inner edge fold — wide trouser.",
+              "image": "/images/blueprints/remote/b61000e07375__36AF.jpg",
+              "group": "other",
+              "techpackIllustration": "/images/blueprints/remote/b61000e07375__36AF.jpg",
+              "illustration": "/images/blueprints/remote/b61000e07375__36AF.jpg",
+              "photos": [],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "hem-fixed-topstitch",
+              "label": "Fixed Bottom, 2.5 cm Topstitch",
+              "description": "Fixed hem with visible 2.5 cm topstitch.",
+              "image": "/images/generated/trousers/hem-fixed-topstitch.webp",
+              "group": "other",
+              "techpackIllustration": "/images/blueprints/remote/2298a47f90ea__166141804814147.jpg",
+              "realImage": "/images/generated/trousers/hem-fixed-topstitch.webp",
+              "illustration": "/images/blueprints/remote/2298a47f90ea__166141804814147.jpg",
+              "photos": [
+                "/images/generated/trousers/hem-fixed-topstitch.webp"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "hem-fringe",
+              "label": "Fringe Edge",
+              "description": "A fringe (frayed/raw) edge leaves the hem unfinished so the weft threads fray into a soft fringe, a deliberately casual and contemporary detail. It softens the bottom line and is seen on relaxed cotton, denim and fashion-forward trousers rather than tailored ones. The raw edge reads as undone and modern.",
+              "priceAdj": 15,
+              "images": [],
+              "group": "other",
+              "illustrationStatus": "needs-source"
+            },
+            {
+              "id": "hem-unfinished",
+              "label": "Unfinished (Raw Edge)",
+              "description": "Raw, unfinished hem — bespoke avant-garde.",
+              "group": "other",
+              "illustrationStatus": "needs-source"
+            }
+          ],
+          "quiz": {
+            "question": "How should the trouser hem finish?",
+            "answers": [
+              {
+                "id": "plain",
+                "label": "Plain Hem",
+                "description": "Clean finish — modern and versatile.",
+                "matchGroups": [
+                  "plain"
+                ]
+              },
+              {
+                "id": "cuffed",
+                "label": "Cuffed / Turn-Up",
+                "description": "Folded turn-up — traditional weight and structure.",
+                "matchGroups": [
+                  "cuffed"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "leg-shape",
+          "label": "Leg Shape",
+          "options": [
+            {
+              "id": "leg-tapered",
+              "label": "Tapered",
+              "description": "Tapered leg — a 3 cm to 5 cm reduction from knee to hem (23 cm knee to 19 cm hem).",
+              "images": [
+                "https://www.permanentstyle.com/wp-content/uploads/2019/10/Anglo-Italian-chino.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2022/10/7-Anglo-Italian.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2017/12/2-suede-jacket-and-chinos.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2019/05/Stoffa-trouser-review.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2022/10/12-The-Armoury-Model-A.jpg"
+              ],
+              "photos": [
+                "https://www.permanentstyle.com/wp-content/uploads/2019/10/Anglo-Italian-chino.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2022/10/7-Anglo-Italian.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2017/12/2-suede-jacket-and-chinos.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2019/05/Stoffa-trouser-review.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2022/10/12-The-Armoury-Model-A.jpg"
+              ],
+              "illustrationStatus": "unverified",
+              "image": "/images/generated/trousers/leg-tapered.webp"
+            },
+            {
+              "id": "leg-straight",
+              "label": "Straight Cut",
+              "description": "Straight leg — hem width equals knee width or reduces less than 2 cm (22 cm knee to 21 cm to 22 cm hem). Nearly parallel seams.",
+              "images": [
+                "https://www.permanentstyle.com/wp-content/uploads/2018/04/fox-brothers-vintage-serge-navy-trouser.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2017/11/Fox-Brothers-trousers.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2019/02/loafer-and-flannel-trousers.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2022/10/6-Andreas-Cavour.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2017/03/holland-and-sherry-cavalry-twill-trouser.jpg"
+              ],
+              "photos": [
+                "https://www.permanentstyle.com/wp-content/uploads/2018/04/fox-brothers-vintage-serge-navy-trouser.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2017/11/Fox-Brothers-trousers.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2019/02/loafer-and-flannel-trousers.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2022/10/6-Andreas-Cavour.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2017/03/holland-and-sherry-cavalry-twill-trouser.jpg"
+              ],
+              "illustrationStatus": "unverified",
+              "image": "/images/generated/trousers/leg-straight.webp"
+            },
+            {
+              "id": "leg-wide",
+              "label": "Wide Leg",
+              "description": "Wide leg — the hem approaches the thigh ratio (34 cm thigh, 24 cm to 28 cm hem) with minimal taper; side seam and inseam run nearly parallel, the characteristic draping column of Florentine and Neapolitan trousers.",
+              "images": [
+                "https://www.permanentstyle.com/wp-content/uploads/2017/10/bespoke-cream-wool-trousers-pleats-1.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2016/12/igarashi-trousers-bespoke.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2018/08/Panico-bespoke-trousers.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2017/10/pommella-trousers-naples-bespoke.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2018/07/panico-flannel-trouser.jpg"
+              ],
+              "photos": [
+                "https://www.permanentstyle.com/wp-content/uploads/2017/10/bespoke-cream-wool-trousers-pleats-1.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2016/12/igarashi-trousers-bespoke.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2018/08/Panico-bespoke-trousers.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2017/10/pommella-trousers-naples-bespoke.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2018/07/panico-flannel-trouser.jpg"
+              ],
+              "illustrationStatus": "unverified"
+            },
+            {
+              "id": "leg-slim",
+              "label": "Slim",
+              "description": "Slim leg — a 5 cm to 7 cm knee-to-hem reduction (22 cm knee to 15 cm to 17 cm hem); aggressive convergence.",
+              "images": [
+                "https://www.permanentstyle.com/wp-content/uploads/2019/05/Stoffa-trouser-review.jpg",
+                "https://www.bondsuits.com/wp-content/uploads/2014/04/Daniel-Craig-Turnups.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2014/04/Levis-bespoke-final.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2022/10/7-Anglo-Italian.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2015/02/Green-cotton-trousers-Calvo-de-Mora22.jpg"
+              ],
+              "photos": [
+                "https://www.permanentstyle.com/wp-content/uploads/2019/05/Stoffa-trouser-review.jpg",
+                "https://www.bondsuits.com/wp-content/uploads/2014/04/Daniel-Craig-Turnups.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2014/04/Levis-bespoke-final.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2022/10/7-Anglo-Italian.jpg",
+                "https://www.permanentstyle.com/wp-content/uploads/2015/02/Green-cotton-trousers-Calvo-de-Mora22.jpg"
+              ],
+              "illustrationStatus": "unverified",
+              "image": "/images/generated/trousers/leg-slim.webp"
+            }
+          ]
+        },
+        {
+          "id": "heel-guard",
+          "label": "Heel Guard",
+          "defaultValue": "heel-none",
+          "advanced": true,
+          "options": [
+            {
+              "id": "heel-none",
+              "label": "No Heel Guard",
+              "description": "No heel reinforcement.",
+              "image": "/images/blueprints/remote/90c9f9c84002__33BB.jpg",
+              "techpackIllustration": "/images/blueprints/remote/90c9f9c84002__33BB.jpg",
+              "illustration": "/images/blueprints/remote/90c9f9c84002__33BB.jpg",
+              "photos": [],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "heel-standard",
+              "label": "Heel Guard",
+              "description": "Standard heel guard — protects hem from wear.",
+              "image": "/images/generated/trousers/heel-standard.webp",
+              "techpackIllustration": "/images/blueprints/remote/17caa8efc528__3611.jpg",
+              "realImage": "/images/generated/trousers/heel-standard.webp",
+              "illustration": "/images/blueprints/remote/17caa8efc528__3611.jpg",
+              "photos": [
+                "/images/generated/trousers/heel-standard.webp"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "heel-whole-circle",
+              "label": "Whole Circle Heel Guard",
+              "description": "Full circle heel guard — maximum protection.",
+              "image": "/images/blueprints/remote/7a19d9941f5a__3614.jpg",
+              "techpackIllustration": "/images/blueprints/remote/7a19d9941f5a__3614.jpg",
+              "illustration": "/images/blueprints/remote/7a19d9941f5a__3614.jpg",
+              "photos": [],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "heel-ribbon",
+              "label": "Whole Circle (Finished Ribbon)",
+              "description": "Full circle heel guard with finished ribbon edge.",
+              "image": "/images/generated/trousers/heel-ribbon.webp",
+              "techpackIllustration": "/images/blueprints/remote/efad6677c088__361L.jpg",
+              "realImage": "/images/generated/trousers/heel-ribbon.webp",
+              "illustration": "/images/blueprints/remote/efad6677c088__361L.jpg",
+              "photos": [
+                "/images/generated/trousers/heel-ribbon.webp"
+              ],
+              "illustrationStatus": "drawing"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lining-internal",
+      "label": "Lining & Internal",
+      "fields": [
+        {
+          "id": "lining-style",
+          "label": "Lining",
+          "defaultValue": "lining-none",
+          "options": [
+            {
+              "id": "lining-none",
+              "label": "No Lining",
+              "description": "Unlined — lightest and most breathable.",
+              "image": "/images/blueprints/factory/ff559a0a79f9__3500__No.jpg",
+              "illustration": "/images/blueprints/factory/ff559a0a79f9__3500__No.jpg",
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "lining-knee",
+              "label": "Front Half (Pocket Inside)",
+              "description": "Front half lining, pocket on inside.",
+              "image": "/images/blueprints/factory/ca44a8b9c6b5__3502__Front_half_pocket_inside.jpg",
+              "illustration": "/images/blueprints/factory/ca44a8b9c6b5__3502__Front_half_pocket_inside.jpg",
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "lining-full",
+              "label": "Front & Back Full (Pocket Inside)",
+              "description": "Complete lining — supreme comfort.",
+              "priceAdj": 40,
+              "image": "/images/blueprints/factory/f5c3161c70b0__3506__Front_back_full_pocket_inside.jpg",
+              "illustration": "/images/blueprints/factory/f5c3161c70b0__3506__Front_back_full_pocket_inside.jpg",
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "lining-front-back-half-inside",
+              "label": "Front & Back Half (Pocket Inside)",
+              "description": "Half lining on both panels, pocket inside.",
+              "image": "/images/blueprints/remote/2c0efd965ae6__3504.jpg",
+              "illustration": "/images/blueprints/remote/2c0efd965ae6__3504.jpg",
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "lining-front-half-outside",
+              "label": "Front Half (Pocket Outside)",
+              "description": "Front half lining, pocket outside.",
+              "image": "/images/blueprints/remote/2b55c4f5e69a__3501.jpg",
+              "illustration": "/images/blueprints/remote/2b55c4f5e69a__3501.jpg",
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "lining-front-back-half-outside",
+              "label": "Front & Back Half (Pocket Outside)",
+              "description": "Half lining on both panels, pocket outside.",
+              "image": "/images/blueprints/remote/150ac03e507c__3503.jpg",
+              "illustration": "/images/blueprints/remote/150ac03e507c__3503.jpg",
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "lining-full-outside",
+              "label": "Front & Back Full (Pocket Outside)",
+              "description": "Complete full lining, pocket outside.",
+              "priceAdj": 40,
+              "image": "/images/blueprints/remote/ef28f183f3d1__3505.jpg",
+              "illustration": "/images/blueprints/remote/ef28f183f3d1__3505.jpg",
+              "illustrationStatus": "drawing"
+            }
+          ]
+        },
+        {
+          "id": "back-crotch-lining",
+          "label": "Back Crotch Lining",
+          "defaultValue": "crotch-none",
+          "advanced": true,
+          "options": [
+            {
+              "id": "crotch-none",
+              "label": "No Crotch Lining",
+              "description": "No additional lining at crotch.",
+              "image": "/images/blueprints/remote/7cf825d39e76__165396701246859.jpg",
+              "illustration": "/images/blueprints/remote/7cf825d39e76__165396701246859.jpg",
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "crotch-fabric",
+              "label": "Fabric",
+              "description": "Outer fabric applied to back crotch — durable.",
+              "image": "/images/blueprints/remote/1739430bba6e__165396711124919.jpg",
+              "illustration": "/images/blueprints/remote/1739430bba6e__165396711124919.jpg",
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "crotch-matched",
+              "label": "Matched Lining",
+              "description": "Crotch lining matched to body lining.",
+              "image": "/images/blueprints/remote/23402d004780__165396716037322.jpg",
+              "illustration": "/images/blueprints/remote/23402d004780__165396716037322.jpg",
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "crotch-lining",
+              "label": "Standard Lining",
+              "description": "Standard lining at back crotch area.",
+              "image": "/images/blueprints/remote/5f0bf4d338a8__165396714492932.jpg",
+              "illustration": "/images/blueprints/remote/5f0bf4d338a8__165396714492932.jpg",
+              "illustrationStatus": "drawing"
+            }
+          ]
+        },
+        {
+          "id": "pocket-lining",
+          "label": "Pocket Bag Lining",
+          "defaultValue": "pocket-lining-standard",
+          "advanced": true,
+          "options": [
+            {
+              "id": "pocket-lining-standard",
+              "label": "Standard Pocket Lining",
+              "description": "Standard white/neutral pocket bag lining.",
+              "illustrationStatus": "needs-source"
+            },
+            {
+              "id": "pocket-lining-appoint",
+              "label": "Appointed Pocket Lining",
+              "description": "Specify a custom fabric for pocket bags.",
+              "image": "/images/blueprints/remote/b61831c054bf__35C1.jpg",
+              "illustration": "/images/blueprints/remote/b61831c054bf__35C1.jpg",
+              "illustrationStatus": "drawing"
+            }
+          ]
+        },
+        {
+          "id": "inner-waist",
+          "label": "Inner Waistband Lining",
+          "defaultValue": "inner-curtain",
+          "advanced": true,
+          "options": [
+            {
+              "id": "inner-curtain",
+              "label": "Standard Curtain Lining",
+              "description": "Standard curtain lining — a floating cotton curtain (silesia, herringbone or pocketing cloth) hanging 8 cm to 12 cm below the waistband, attached only at the top so it floats. The waistband stays stable without stiffness; classic bespoke.",
+              "image": "/images/blueprints/factory/79ca59f0f330__3430__Standard.jpg",
+              "illustration": "/images/blueprints/factory/79ca59f0f330__3430__Standard.jpg",
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "inner-french-tack",
+              "label": "Pleated Curtain",
+              "description": "Pleated curtain lining — the curtain's fullness folded into engineered pleats giving 0.5 cm to 2 cm of hidden expansion when sitting. An accordion built into the waistband; bespoke technical tailoring.",
+              "image": "/images/blueprints/factory/2fddd32014a5__3434__Pleated_Curtain.jpg",
+              "illustration": "/images/blueprints/factory/2fddd32014a5__3434__Pleated_Curtain.jpg",
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "inner-none",
+              "label": "Appointed Waistband Fabric",
+              "description": "Appointed waistband fabric — no curtain; the interior waistband is the selected cloth itself. Ultra clean, flat and modern with less bulk.",
+              "image": "/images/blueprints/remote/771fa0093157__165396695067711.jpg",
+              "illustration": "/images/blueprints/remote/771fa0093157__165396695067711.jpg",
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "inner-snugtex",
+              "label": "Standard with Snugtex",
+              "description": "Curtain lining plus a Snugtex shirt-grip strip 1 cm to 2 cm wide running the waistband — a visible textured band that prevents shirt migration; executive performance tailoring.",
+              "image": "/images/blueprints/remote/aa381a729075__3440.jpg",
+              "illustration": "/images/blueprints/remote/aa381a729075__3440.jpg",
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "inner-snugtex-btn",
+              "label": "Standard, Snugtex & Button",
+              "description": "Snugtex grip strip plus an interior retention button anchoring the inner waistband — increased shirt security and higher waistband stability.",
+              "image": "/images/blueprints/remote/8df42b0caa2f__3449.jpg",
+              "illustration": "/images/blueprints/remote/8df42b0caa2f__3449.jpg",
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "inner-gripper",
+              "label": "Gripper Strip",
+              "description": "Dedicated gripper strip — a continuous rubber, silicone or textured woven band around the interior waist for maximum shirt retention; functional luxury.",
+              "image": "/images/blueprints/remote/604473969546__3443.jpg",
+              "illustration": "/images/blueprints/remote/604473969546__3443.jpg",
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "inner-piping-snugtex",
+              "label": "Standard, Piping & Snugtex",
+              "description": "Decorative piping along the waistband edge with Snugtex beneath — a framed border like the interior of a handcrafted leather briefcase; elegance combined with utility.",
+              "image": "/images/blueprints/remote/c8538a87dffb__3441.jpg",
+              "illustrationStatus": "needs-source"
+            },
+            {
+              "id": "inner-lining",
+              "label": "Appointed Lining",
+              "description": "Appointed lining — selected lining cloth replaces the standard waistband interior for a personalized reveal, dramatic or subtle; custom luxury.",
+              "image": "/images/blueprints/remote/f31966b9b208__344E.jpg",
+              "illustration": "/images/blueprints/remote/f31966b9b208__344E.jpg",
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "inner-pleat-snugtex",
+              "label": "Pleat with Snugtex & Button",
+              "description": "Pleated curtain plus Snugtex grip strip plus retention button — the most technically sophisticated standard interior; outstanding comfort, shirt retention and waistband longevity, like the movement inside a Swiss watch.",
+              "image": "/images/blueprints/remote/56ff34969306__3445.jpg",
+              "illustration": "/images/blueprints/remote/56ff34969306__3445.jpg",
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "inner-pleat-griplets",
+              "label": "Pleat with Griplets",
+              "description": "Pleated curtain with multiple individual griplet zones instead of one continuous strip — flexibility while maintaining grip; advanced bespoke construction.",
+              "image": "/images/blueprints/remote/af7276386df5__3435.jpg",
+              "illustration": "/images/blueprints/remote/af7276386df5__3435.jpg",
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "inner-finished-band",
+              "label": "Appointed Finished Waistband",
+              "description": "Appointed finished waistband — the entire interior presented as a finished design element with decorative edges and luxury materials, as refined inside as outside; showpiece tailoring.",
+              "image": "/images/blueprints/remote/1bffb62bd1be__344H.jpg",
+              "illustration": "/images/blueprints/remote/1bffb62bd1be__344H.jpg",
+              "illustrationStatus": "drawing"
+            }
+          ]
+        },
+        {
+          "id": "label-placement",
+          "label": "Label Placement",
+          "advanced": true,
+          "options": [
+            {
+              "id": "label-waistband",
+              "label": "Inside Waistband",
+              "description": "Brand label inside the waistband — standard.",
+              "illustrationStatus": "needs-source"
+            },
+            {
+              "id": "label-care-only",
+              "label": "Care Label Only",
+              "description": "Care label only — no brand label visible.",
+              "illustrationStatus": "needs-source"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "details-contrast",
+      "label": "Details & Contrast",
+      "fields": [
+        {
+          "id": "contrast-positions",
+          "label": "Contrast Fabric Positions",
+          "defaultValue": "trouser-contrast-none",
+          "options": [
+            {
+              "id": "trouser-contrast-none",
+              "label": "No Contrast",
+              "description": "Single fabric throughout.",
+              "illustrationStatus": "needs-source"
+            },
+            {
+              "id": "trouser-contrast-side",
+              "label": "Side Seam Satin Stripe",
+              "description": "Tuxedo-style satin side stripe.",
+              "priceAdj": 30,
+              "image": "/images/blueprints/factory/5252459c3a51__3382__Side_seam_with_fabric_1.2cm_width_.jpg",
+              "techpackIllustration": "/images/blueprints/factory/5252459c3a51__3382__Side_seam_with_fabric_1.2cm_width_.jpg",
+              "illustration": "/images/blueprints/factory/5252459c3a51__3382__Side_seam_with_fabric_1.2cm_width_.jpg",
+              "photos": [],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "trouser-contrast-pocket",
+              "label": "Contrast Pocket Bags",
+              "description": "Contrast color pocket bag fabric.",
+              "image": "/images/blueprints/factory/4087db58c8a3__314A__Cushion_layer_fabrics_appointed.jpg",
+              "techpackIllustration": "/images/blueprints/factory/4087db58c8a3__314A__Cushion_layer_fabrics_appointed.jpg",
+              "illustration": "/images/blueprints/factory/4087db58c8a3__314A__Cushion_layer_fabrics_appointed.jpg",
+              "photos": [],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "trouser-contrast-waist",
+              "label": "Contrast Waistband",
+              "description": "Contrasting fabric waistband.",
+              "image": "/images/blueprints/factory/b16ea7165058__33A2__Appointed_Waistband.jpg",
+              "techpackIllustration": "/images/blueprints/factory/b16ea7165058__33A2__Appointed_Waistband.jpg",
+              "illustration": "/images/blueprints/factory/b16ea7165058__33A2__Appointed_Waistband.jpg",
+              "photos": [],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "trouser-contrast-front-besom",
+              "label": "Contrast Front Pocket Besom",
+              "description": "Appointed contrast fabric on front pocket besom.",
+              "image": "/images/generated/jacket/trouser-contrast-front-besom.webp",
+              "techpackIllustration": "/images/blueprints/remote/5c43b55a10d4__3140.jpg",
+              "illustration": "/images/blueprints/remote/5c43b55a10d4__3140.jpg",
+              "photos": [
+                "/images/generated/jacket/trouser-contrast-front-besom.webp"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "trouser-contrast-back-pocket",
+              "label": "Contrast Back Pocket Besom",
+              "description": "Appointed contrast on back pocket besom.",
+              "image": "/images/generated/trousers/trouser-contrast-back-pocket.webp",
+              "techpackIllustration": "/images/blueprints/remote/a1696cc6abeb__325B.jpg",
+              "realImage": "/images/generated/trousers/trouser-contrast-back-pocket.webp",
+              "illustration": "/images/blueprints/remote/a1696cc6abeb__325B.jpg",
+              "photos": [
+                "/images/generated/trousers/trouser-contrast-back-pocket.webp"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "trouser-contrast-loop",
+              "label": "Contrast Belt Loop Fabric",
+              "description": "Belt loops in contrast appointed fabric.",
+              "image": "/images/generated/trousers/trouser-contrast-loop.webp",
+              "techpackIllustration": "/images/blueprints/remote/67e3df566ff6__3348.jpg",
+              "realImage": "/images/generated/trousers/trouser-contrast-loop.webp",
+              "illustration": "/images/blueprints/remote/67e3df566ff6__3348.jpg",
+              "photos": [
+                "/images/generated/trousers/trouser-contrast-loop.webp"
+              ],
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "trouser-contrast-covered-btn",
+              "label": "Fabric Covered Buttons",
+              "description": "All buttons covered in matching outer fabric.",
+              "image": "/images/generated/jacket/trouser-contrast-covered-btn.webp",
+              "techpackIllustration": "/images/blueprints/remote/763fb7c721e6__169560958482161.jpg",
+              "illustration": "/images/blueprints/remote/763fb7c721e6__169560958482161.jpg",
+              "photos": [
+                "/images/generated/jacket/trouser-contrast-covered-btn.webp"
+              ],
+              "illustrationStatus": "drawing"
+            }
+          ]
+        },
+        {
+          "id": "buttonhole-type-trouser",
+          "label": "Buttonhole Type",
+          "defaultValue": "tbh-machine",
+          "advanced": true,
+          "options": [
+            {
+              "id": "tbh-machine",
+              "label": "Machine Stitched",
+              "description": "Precise machine buttonholes.",
+              "illustrationStatus": "needs-source"
+            },
+            {
+              "id": "tbh-hand",
+              "label": "Hand-Worked",
+              "description": "Hand-stitched buttonholes — highest craft.",
+              "priceAdj": 30,
+              "illustrationStatus": "needs-source"
+            }
+          ]
+        },
+        {
+          "id": "sewing-button-style-trouser",
+          "label": "Button Sewing Style",
+          "defaultValue": "tbtn-cross",
+          "advanced": true,
+          "options": [
+            {
+              "id": "tbtn-cross",
+              "label": "Cross (+) Stitch",
+              "description": "Standard cross stitch.",
+              "image": "/images/blueprints/factory/f10f2242ae0a__345B__.jpg",
+              "illustration": "/images/blueprints/factory/f10f2242ae0a__345B__.jpg",
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "tbtn-parallel",
+              "label": "Parallel (=) Stitch",
+              "description": "Two parallel horizontal stitches.",
+              "image": "/images/blueprints/factory/f70bb9aa36d8__345A__.jpg",
+              "illustration": "/images/blueprints/factory/f70bb9aa36d8__345A__.jpg",
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "tbtn-claw",
+              "label": "Claw Stitch",
+              "description": "Claw-pattern button sewing.",
+              "image": "/images/blueprints/remote/2cc6fa76be17__345C.jpg",
+              "illustration": "/images/blueprints/remote/2cc6fa76be17__345C.jpg",
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "tbtn-square",
+              "label": "Square Stitch",
+              "description": "Square-pattern button sewing.",
+              "image": "/images/blueprints/remote/59f9f67ace69__34Y1.jpg",
+              "illustration": "/images/blueprints/remote/59f9f67ace69__34Y1.jpg",
+              "illustrationStatus": "drawing"
+            }
+          ]
+        },
+        {
+          "id": "button-thread",
+          "label": "Button Thread Color",
+          "defaultValue": "btn-thread-match",
+          "advanced": true,
+          "options": [
+            {
+              "id": "btn-thread-match",
+              "label": "Matched to Fabric",
+              "description": "Thread color matched to outer fabric.",
+              "image": "/images/blueprints/remote/6fefdb558f09__165588176962173.jpg",
+              "illustration": "/images/blueprints/remote/6fefdb558f09__165588176962173.jpg",
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "btn-thread-appoint",
+              "label": "Appointed Thread Color",
+              "description": "Specify a custom thread color at order.",
+              "image": "/images/blueprints/remote/8829b2048044__165588178047321.jpg",
+              "illustration": "/images/blueprints/remote/8829b2048044__165588178047321.jpg",
+              "illustrationStatus": "drawing"
+            }
+          ]
+        },
+        {
+          "id": "buttonhole-thread",
+          "label": "Buttonhole Thread Color",
+          "defaultValue": "bh-thread-match",
+          "advanced": true,
+          "options": [
+            {
+              "id": "bh-thread-match",
+              "label": "Match Fabric",
+              "description": "Buttonhole thread matched to fabric.",
+              "image": "/images/blueprints/remote/7a5d412484be__165588174165112.jpg",
+              "illustration": "/images/blueprints/remote/7a5d412484be__165588174165112.jpg",
+              "illustrationStatus": "drawing"
+            },
+            {
+              "id": "bh-thread-appoint",
+              "label": "Appointed Color",
+              "description": "Specify a custom buttonhole thread color.",
+              "image": "/images/blueprints/remote/bff42961fbe3__165588175293444.jpg",
+              "illustration": "/images/blueprints/remote/bff42961fbe3__165588175293444.jpg",
+              "illustrationStatus": "drawing"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "extras",
+      "label": "Extras",
+      "fields": [
+        {
+          "id": "waistband-canvas",
+          "label": "Waistband Canvas",
+          "defaultValue": "canvas-fused",
+          "advanced": true,
+          "options": [
+            {
+              "id": "canvas-fused",
+              "label": "Fused (Standard)",
+              "description": "Fused waistband — standard modern construction.",
+              "illustrationStatus": "needs-source"
+            },
+            {
+              "id": "canvas-full",
+              "label": "Full Canvas",
+              "description": "Full canvas waistband — structured and durable.",
+              "illustrationStatus": "needs-source"
+            },
+            {
+              "id": "canvas-half",
+              "label": "Half Canvas",
+              "description": "Half canvas construction.",
+              "illustrationStatus": "needs-source"
+            },
+            {
+              "id": "canvas-single",
+              "label": "Single Layer",
+              "description": "Single layer — lightest weight construction.",
+              "illustrationStatus": "needs-source"
+            }
+          ]
+        },
+        {
+          "id": "suspender-buttons",
+          "label": "Suspender / Brace Buttons",
+          "defaultValue": "suspender-none",
+          "advanced": true,
+          "options": [
+            {
+              "id": "suspender-none",
+              "label": "No Suspender Buttons",
+              "description": "Standard — no brace attachment buttons.",
+              "illustrationStatus": "needs-source"
+            },
+            {
+              "id": "suspender-add",
+              "label": "Add Suspender Buttons",
+              "description": "Buttons sewn inside waistband for brace attachment.",
+              "image": "/images/blueprints/remote/fb9584d940b7__169501755108517.jpg",
+              "illustration": "/images/blueprints/remote/fb9584d940b7__169501755108517.jpg",
+              "illustrationStatus": "drawing"
+            }
+          ]
+        },
+        {
+          "id": "extra-inner-button",
+          "label": "Inner Waistband Shirt-Stay Button",
+          "defaultValue": "inner-btn-none",
+          "advanced": true,
+          "options": [
+            {
+              "id": "inner-btn-none",
+              "label": "None",
+              "description": "No extra inner button.",
+              "illustrationStatus": "needs-source"
+            },
+            {
+              "id": "inner-btn-add",
+              "label": "Add Inner Button",
+              "description": "Extra button on inner waistband for shirt stay.",
+              "image": "/images/blueprints/remote/afc0db224e4c__174590664146501.png",
+              "illustration": "/images/blueprints/remote/afc0db224e4c__174590664146501.png",
+              "illustrationStatus": "drawing"
+            }
+          ]
+        },
+        {
+          "id": "waistband-back-seam",
+          "label": "Back Waistband Seam Bartack",
+          "defaultValue": "back-seam-standard",
+          "advanced": true,
+          "options": [
+            {
+              "id": "back-seam-standard",
+              "label": "With Bartack (Standard)",
+              "description": "Standard bartack reinforcement at back waistband seam.",
+              "photos": [],
+              "illustrationStatus": "unverified"
+            },
+            {
+              "id": "back-seam-no-bartack",
+              "label": "Without Bartack",
+              "description": "No bartack at back waistband seam — cleaner.",
+              "image": "/images/generated/trousers/back-seam-no-bartack.webp",
+              "techpackIllustration": "/images/blueprints/remote/8883c883645f__168129382192380.jpg",
+              "realImage": "/images/generated/trousers/back-seam-no-bartack.webp",
+              "illustration": "/images/blueprints/remote/8883c883645f__168129382192380.jpg",
+              "photos": [
+                "/images/generated/trousers/back-seam-no-bartack.webp"
+              ],
+              "illustrationStatus": "drawing"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,315 @@
+{
+  "generatedAt": "2026-08-26T06:04:52.422Z",
+  "note": "Expected option->supplier-value joins for the 2026-08-26 BB mappings. Written BEFORE applying so the applier can be diffed against intent.",
+  "expected": {
+    "perfume-pad": {
+      "supplierField": "KIMOD",
+      "joins": [
+        {
+          "option": "pp-none",
+          "label": "None",
+          "expect": "KIMOD/F",
+          "via": "exact"
+        },
+        {
+          "option": "pp-triangle",
+          "label": "Triangle Underarm Shield",
+          "expect": "KIMOD/E",
+          "via": "exact"
+        },
+        {
+          "option": "pp-round-1",
+          "label": "Round Shield 1",
+          "expect": "NO-JOIN",
+          "via": "-"
+        },
+        {
+          "option": "pp-round-2",
+          "label": "Round Shield 2",
+          "expect": "NO-JOIN",
+          "via": "-"
+        },
+        {
+          "option": "pp-round-3",
+          "label": "Round Shield 3",
+          "expect": "NO-JOIN",
+          "via": "-"
+        },
+        {
+          "option": "pp-u-1",
+          "label": "U-Shield 1",
+          "expect": "NO-JOIN",
+          "via": "-"
+        },
+        {
+          "option": "pp-u-2",
+          "label": "U-Shield 2",
+          "expect": "NO-JOIN",
+          "via": "-"
+        },
+        {
+          "option": "pp-u-3",
+          "label": "U-Shield 3",
+          "expect": "NO-JOIN",
+          "via": "-"
+        }
+      ]
+    },
+    "half-lining-shape": {
+      "supplierField": "KINBL",
+      "joins": [
+        {
+          "option": "hls-standard",
+          "label": "Standard Half Lining",
+          "expect": "KINBL/A",
+          "via": "containment"
+        },
+        {
+          "option": "hls-small-cutaway",
+          "label": "Small Cut-away",
+          "expect": "HELD"
+        },
+        {
+          "option": "hls-half",
+          "label": "1/2 Lining",
+          "expect": "KINBL/C",
+          "via": "exact"
+        },
+        {
+          "option": "hls-third-cutaway",
+          "label": "1/3 Cut-away",
+          "expect": "KINBL/D",
+          "via": "containment"
+        },
+        {
+          "option": "hls-third",
+          "label": "1/3 Lining",
+          "expect": "KINBL/G",
+          "via": "exact"
+        },
+        {
+          "option": "hls-quarter-cutaway",
+          "label": "1/4 Cut-away",
+          "expect": "KINBL/H",
+          "via": "containment"
+        }
+      ]
+    },
+    "columbia-piping": {
+      "supplierField": "GTEZB",
+      "joins": [
+        {
+          "option": "cp-none",
+          "label": "None",
+          "expect": "GTEZB/A",
+          "via": "exact"
+        },
+        {
+          "option": "cp-columbia",
+          "label": "Columbia Stitching",
+          "expect": "GTEZB/B",
+          "via": "exact"
+        },
+        {
+          "option": "cp-piping",
+          "label": "Piping",
+          "expect": "GTEZB/C",
+          "via": "exact"
+        },
+        {
+          "option": "cp-both",
+          "label": "Columbia + Piping",
+          "expect": "GTEZB/C",
+          "via": "containment"
+        }
+      ]
+    },
+    "namecard-pocket": {
+      "supplierField": "KNAMD",
+      "joins": [
+        {
+          "option": "nc-none",
+          "label": "None",
+          "expect": "KNAMD/D",
+          "via": "exact"
+        },
+        {
+          "option": "nc-left",
+          "label": "Left Inner",
+          "expect": "AMBIG(A,E)",
+          "via": "-"
+        },
+        {
+          "option": "nc-right",
+          "label": "Right Inner",
+          "expect": "AMBIG(B,F)",
+          "via": "-"
+        },
+        {
+          "option": "nc-both",
+          "label": "Both Sides",
+          "expect": "KNAMD/C",
+          "via": "exact"
+        }
+      ]
+    },
+    "half-lining-craft": {
+      "supplierField": "KIPRO",
+      "joins": [
+        {
+          "option": "hlc-binding",
+          "label": "Binding Seam",
+          "expect": "KIPRO/A",
+          "via": "exact"
+        },
+        {
+          "option": "hlc-french",
+          "label": "French Seam",
+          "expect": "KIPRO/B",
+          "via": "exact"
+        },
+        {
+          "option": "hlc-joining",
+          "label": "Joining Seam",
+          "expect": "KIPRO/C",
+          "via": "exact"
+        }
+      ]
+    },
+    "lower-pocket-bartack": {
+      "supplierField": "REKPO",
+      "joins": [
+        {
+          "option": "bartack-none",
+          "label": "None",
+          "expect": "REKPO/D",
+          "via": "exact"
+        },
+        {
+          "option": "bartack-d",
+          "label": "D-Bartack",
+          "expect": "REKPO/A",
+          "via": "exact"
+        },
+        {
+          "option": "bartack-i",
+          "label": "I-Bartack",
+          "expect": "REKPO/B",
+          "via": "exact"
+        },
+        {
+          "option": "bartack-x",
+          "label": "X-Bartack",
+          "expect": "REKPO/C",
+          "via": "exact"
+        },
+        {
+          "option": "bartack-1",
+          "label": "1-Bartack",
+          "expect": "REKPO/E",
+          "via": "exact"
+        }
+      ]
+    },
+    "facing-style": {
+      "supplierField": "KINGM",
+      "joins": [
+        {
+          "option": "facing-1",
+          "label": "Facing 1",
+          "expect": "KINGM/F",
+          "via": "exact"
+        },
+        {
+          "option": "facing-2",
+          "label": "Facing 2",
+          "expect": "KINGM/E",
+          "via": "exact"
+        },
+        {
+          "option": "facing-4",
+          "label": "Facing 4",
+          "expect": "KINGM/B",
+          "via": "exact"
+        },
+        {
+          "option": "facing-5",
+          "label": "Facing 5",
+          "expect": "KINGM/A",
+          "via": "exact"
+        },
+        {
+          "option": "facing-7",
+          "label": "Facing 7",
+          "expect": "KINGM/US66",
+          "via": "exact"
+        },
+        {
+          "option": "facing-9",
+          "label": "Facing 9",
+          "expect": "KINGM/DGG",
+          "via": "exact"
+        },
+        {
+          "option": "facing-half",
+          "label": "For Half Lining",
+          "expect": "KINGM/G",
+          "via": "containment"
+        },
+        {
+          "option": "facing-none",
+          "label": "For No Lining",
+          "expect": "KINGM/G03",
+          "via": "containment"
+        }
+      ]
+    },
+    "pen-pocket": {
+      "supplierField": "KPEND",
+      "joins": [
+        {
+          "option": "pen-none",
+          "label": "None",
+          "expect": "KPEND/Z",
+          "via": "exact"
+        },
+        {
+          "option": "pen-left-jetted",
+          "label": "Left Jetted",
+          "expect": "KPEND/A",
+          "via": "containment"
+        },
+        {
+          "option": "pen-left-drop",
+          "label": "Left Drop-shape",
+          "expect": "NO-JOIN",
+          "via": "-"
+        },
+        {
+          "option": "pen-left-diamond",
+          "label": "Left Diamond",
+          "expect": "NO-JOIN",
+          "via": "-"
+        },
+        {
+          "option": "pen-right-jetted",
+          "label": "Right Jetted",
+          "expect": "KPEND/D",
+          "via": "containment"
+        },
+        {
+          "option": "pen-right-drop",
+          "label": "Right Drop-shape",
+          "expect": "NO-JOIN",
+          "via": "-"
+        },
+        {
+          "option": "pen-right-diamond",
+          "label": "Right Diamond",
+          "expect": "NO-JOIN",
+          "via": "-"
+        }
+      ]
+    }
+  }
+}

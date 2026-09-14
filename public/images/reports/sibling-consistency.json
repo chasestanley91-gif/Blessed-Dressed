@@ -1,0 +1,1186 @@
+{
+  "ranAt": "2026-08-27T02:50:36.994Z",
+  "note": "Mechanical consistency check across measurement-family siblings. Measures what arithmetic can settle - cloth colour, lighting contrast, weave energy - and deliberately does NOT claim to measure framing, which needs vision. A flagged set was not shot as one set, and must not be published as a side-by-side comparison.",
+  "thresholds": {
+    "deltaE": 9,
+    "sd": 14,
+    "texture": 5
+  },
+  "setsMeasured": 22,
+  "setsFlagged": 15,
+  "results": [
+    {
+      "set": "suit-3pc/button-stance",
+      "stem": "db # #",
+      "complete": true,
+      "membersMeasured": 4,
+      "membersTotal": 4,
+      "maxDeltaE": 40.79,
+      "sdSpread": 22.33,
+      "textureSpread": 3.2,
+      "flagged": true,
+      "reasons": [
+        "colour spread ΔE 40.8 across the set (DB 6 × 2 vs DB 6 × 3) — these are not the same cloth under the same light",
+        "contrast spread 22.3 — different lighting setups"
+      ],
+      "members": [
+        {
+          "option": "db-4x2",
+          "label": "DB 4 × 2",
+          "path": ".craft-pipeline/suit-3pc/db-4x2/candidate-3.png",
+          "meanL": 42.01,
+          "meanA": 1.36,
+          "meanB": 0.68,
+          "sd": 29.82,
+          "texture": 5.12
+        },
+        {
+          "option": "db-6x2",
+          "label": "DB 6 × 2",
+          "path": ".craft-pipeline/suit-3pc/db-6x2/candidate-1.png",
+          "meanL": 49.55,
+          "meanA": 2.98,
+          "meanB": -6.21,
+          "sd": 28.79,
+          "texture": 3.53
+        },
+        {
+          "option": "db-6x3",
+          "label": "DB 6 × 3",
+          "path": ".craft-pipeline/suit-3pc/db-6x3/candidate-1.png",
+          "meanL": 8.81,
+          "meanA": 1.29,
+          "meanB": -7.39,
+          "sd": 9.01,
+          "texture": 1.92
+        },
+        {
+          "option": "db-8x4",
+          "label": "DB 8 × 4",
+          "path": ".craft-pipeline/suit-3pc/db-8x4/candidate-1.png",
+          "meanL": 36.81,
+          "meanA": 0.85,
+          "meanB": -5.81,
+          "sd": 31.34,
+          "texture": 4.95
+        }
+      ]
+    },
+    {
+      "set": "suit-3pc/button-config",
+      "stem": "db # #",
+      "complete": false,
+      "membersMeasured": 3,
+      "membersTotal": 6,
+      "maxDeltaE": 40.79,
+      "sdSpread": 20.81,
+      "textureSpread": 3.2,
+      "flagged": true,
+      "reasons": [
+        "colour spread ΔE 40.8 across the set (DB 6 × 2 vs DB 6 × 3) — these are not the same cloth under the same light",
+        "contrast spread 20.8 — different lighting setups"
+      ],
+      "members": [
+        {
+          "option": "db-4x2",
+          "label": "DB 4 × 2",
+          "path": ".craft-pipeline/suit-3pc/db-4x2/candidate-3.png",
+          "meanL": 42.01,
+          "meanA": 1.36,
+          "meanB": 0.68,
+          "sd": 29.82,
+          "texture": 5.12
+        },
+        {
+          "option": "db-6x2",
+          "label": "DB 6 × 2",
+          "path": ".craft-pipeline/suit-3pc/db-6x2/candidate-1.png",
+          "meanL": 49.55,
+          "meanA": 2.98,
+          "meanB": -6.21,
+          "sd": 28.79,
+          "texture": 3.53
+        },
+        {
+          "option": "db-6x3",
+          "label": "DB 6 × 3",
+          "path": ".craft-pipeline/suit-3pc/db-6x3/candidate-1.png",
+          "meanL": 8.81,
+          "meanA": 1.29,
+          "meanB": -7.39,
+          "sd": 9.01,
+          "texture": 1.92
+        }
+      ]
+    },
+    {
+      "set": "suit-3pc/button-stance",
+      "stem": "sb # buttons",
+      "complete": true,
+      "membersMeasured": 4,
+      "membersTotal": 4,
+      "maxDeltaE": 30.79,
+      "sdSpread": 18,
+      "textureSpread": 3.29,
+      "flagged": true,
+      "reasons": [
+        "colour spread ΔE 30.8 across the set (SB 4 Buttons vs SB 5 Buttons) — these are not the same cloth under the same light",
+        "contrast spread 18.0 — different lighting setups"
+      ],
+      "members": [
+        {
+          "option": "sb-3",
+          "label": "SB 3 Buttons",
+          "path": ".craft-pipeline/suit-3pc/sb-3/candidate-3.png",
+          "meanL": 38.16,
+          "meanA": 1.03,
+          "meanB": -0.82,
+          "sd": 27.44,
+          "texture": 5.51
+        },
+        {
+          "option": "sb-4",
+          "label": "SB 4 Buttons",
+          "path": ".craft-pipeline/suit-3pc/sb-4/candidate-1.png",
+          "meanL": 11.66,
+          "meanA": 1.99,
+          "meanB": -6.6,
+          "sd": 16.66,
+          "texture": 2.22
+        },
+        {
+          "option": "sb-5",
+          "label": "SB 5 Buttons",
+          "path": ".craft-pipeline/suit-3pc/sb-5/candidate-1.png",
+          "meanL": 42.43,
+          "meanA": 1.57,
+          "meanB": -5.44,
+          "sd": 34.66,
+          "texture": 5.09
+        },
+        {
+          "option": "sb-6",
+          "label": "SB 6 Buttons",
+          "path": ".craft-pipeline/suit-3pc/sb-6/candidate-2.png",
+          "meanL": 40.58,
+          "meanA": 1.05,
+          "meanB": -0.46,
+          "sd": 29.03,
+          "texture": 4.44
+        }
+      ]
+    },
+    {
+      "set": "suit-3pc/button-config",
+      "stem": "sb # buttons",
+      "complete": false,
+      "membersMeasured": 3,
+      "membersTotal": 4,
+      "maxDeltaE": 30.79,
+      "sdSpread": 18,
+      "textureSpread": 3.29,
+      "flagged": true,
+      "reasons": [
+        "colour spread ΔE 30.8 across the set (SB 4 Buttons vs SB 5 Buttons) — these are not the same cloth under the same light",
+        "contrast spread 18.0 — different lighting setups"
+      ],
+      "members": [
+        {
+          "option": "sb-3",
+          "label": "SB 3 Buttons",
+          "path": ".craft-pipeline/suit-3pc/sb-3/candidate-3.png",
+          "meanL": 38.16,
+          "meanA": 1.03,
+          "meanB": -0.82,
+          "sd": 27.44,
+          "texture": 5.51
+        },
+        {
+          "option": "sb-4",
+          "label": "SB 4 Buttons",
+          "path": ".craft-pipeline/suit-3pc/sb-4/candidate-1.png",
+          "meanL": 11.66,
+          "meanA": 1.99,
+          "meanB": -6.6,
+          "sd": 16.66,
+          "texture": 2.22
+        },
+        {
+          "option": "sb-5",
+          "label": "SB 5 Buttons",
+          "path": ".craft-pipeline/suit-3pc/sb-5/candidate-1.png",
+          "meanL": 42.43,
+          "meanA": 1.57,
+          "meanB": -5.44,
+          "sd": 34.66,
+          "texture": 5.09
+        }
+      ]
+    },
+    {
+      "set": "suit-2pc/front-pocket-style",
+      "stem": "# slant pocket",
+      "complete": false,
+      "membersMeasured": 2,
+      "membersTotal": 4,
+      "maxDeltaE": 16.7,
+      "sdSpread": 2.97,
+      "textureSpread": 0.83,
+      "flagged": true,
+      "reasons": [
+        "colour spread ΔE 16.7 across the set (3.2 cm Slant Pocket vs 2.5 cm Slant Pocket) — these are not the same cloth under the same light"
+      ],
+      "members": [
+        {
+          "option": "slant-pockets",
+          "label": "3.2 cm Slant Pocket",
+          "path": ".craft-pipeline/suit-2pc/slant-pockets/candidate-1.png",
+          "meanL": 22.29,
+          "meanA": 2.97,
+          "meanB": -8.9,
+          "sd": 23.46,
+          "texture": 2.26
+        },
+        {
+          "option": "quarter-top",
+          "label": "2.5 cm Slant Pocket",
+          "path": ".craft-pipeline/suit-2pc/quarter-top/candidate-3.png",
+          "meanL": 36.95,
+          "meanA": 0.78,
+          "meanB": -1.2,
+          "sd": 26.43,
+          "texture": 3.09
+        }
+      ]
+    },
+    {
+      "set": "suit-2pc/hem-style",
+      "stem": "plain hem #",
+      "complete": false,
+      "membersMeasured": 4,
+      "membersTotal": 5,
+      "maxDeltaE": 16.17,
+      "sdSpread": 6.88,
+      "textureSpread": 0.55,
+      "flagged": true,
+      "reasons": [
+        "colour spread ΔE 16.2 across the set (Plain Hem 5.0 cm vs Plain Hem 6.4 cm) — these are not the same cloth under the same light"
+      ],
+      "members": [
+        {
+          "option": "hem-no-cuff",
+          "label": "Plain Hem 5.0 cm",
+          "path": ".craft-pipeline/suit-2pc/hem-no-cuff/candidate-1.png",
+          "meanL": 52.27,
+          "meanA": 0.5,
+          "meanB": -0.92,
+          "sd": 29.78,
+          "texture": 2.83
+        },
+        {
+          "option": "hem-blind",
+          "label": "Plain Hem 6.4 cm",
+          "path": ".craft-pipeline/suit-2pc/hem-blind/candidate-2.png",
+          "meanL": 36.26,
+          "meanA": 0.85,
+          "meanB": -3.18,
+          "sd": 32.31,
+          "texture": 3.11
+        },
+        {
+          "option": "hem-76",
+          "label": "Plain Hem 7.6 cm",
+          "path": ".craft-pipeline/suit-2pc/hem-76/candidate-2.png",
+          "meanL": 38.88,
+          "meanA": 1.54,
+          "meanB": -0.15,
+          "sd": 29.98,
+          "texture": 3.3
+        },
+        {
+          "option": "hem-90",
+          "label": "Plain Hem 9.0 cm",
+          "path": ".craft-pipeline/suit-2pc/hem-90/candidate-1.png",
+          "meanL": 49.65,
+          "meanA": 0.45,
+          "meanB": 0.29,
+          "sd": 25.43,
+          "texture": 2.75
+        }
+      ]
+    },
+    {
+      "set": "suit-2pc/extension-length",
+      "stem": "#",
+      "complete": true,
+      "membersMeasured": 7,
+      "membersTotal": 7,
+      "maxDeltaE": 15.89,
+      "sdSpread": 19.43,
+      "textureSpread": 1.83,
+      "flagged": true,
+      "reasons": [
+        "colour spread ΔE 15.9 across the set (5.5 cm vs 7 cm) — these are not the same cloth under the same light",
+        "contrast spread 19.4 — different lighting setups"
+      ],
+      "members": [
+        {
+          "option": "ext-len-5",
+          "label": "5 cm",
+          "path": ".craft-pipeline/suit-2pc/ext-len-5/candidate-3.png",
+          "meanL": 52.61,
+          "meanA": 2.68,
+          "meanB": 5.72,
+          "sd": 15.42,
+          "texture": 2.09
+        },
+        {
+          "option": "ext-len-55",
+          "label": "5.5 cm",
+          "path": ".craft-pipeline/suit-2pc/ext-len-55/candidate-3.png",
+          "meanL": 57.17,
+          "meanA": 0.24,
+          "meanB": -1.96,
+          "sd": 17.45,
+          "texture": 1.36
+        },
+        {
+          "option": "ext-len-6",
+          "label": "6 cm",
+          "path": ".craft-pipeline/suit-2pc/ext-len-6/candidate-3.png",
+          "meanL": 51.85,
+          "meanA": 1.37,
+          "meanB": 2.87,
+          "sd": 29.3,
+          "texture": 2.83
+        },
+        {
+          "option": "ext-len-65",
+          "label": "6.5 cm",
+          "path": ".craft-pipeline/suit-2pc/ext-len-65/candidate-3.png",
+          "meanL": 42.46,
+          "meanA": 1.24,
+          "meanB": -2.52,
+          "sd": 31.94,
+          "texture": 3.19
+        },
+        {
+          "option": "ext-len-7",
+          "label": "7 cm",
+          "path": ".craft-pipeline/suit-2pc/ext-len-7/candidate-3.png",
+          "meanL": 41.56,
+          "meanA": 1.02,
+          "meanB": 0.88,
+          "sd": 24.97,
+          "texture": 1.71
+        },
+        {
+          "option": "ext-len-13",
+          "label": "13 cm",
+          "path": ".craft-pipeline/suit-2pc/ext-len-13/candidate-3.png",
+          "meanL": 50.58,
+          "meanA": 0.73,
+          "meanB": -1.62,
+          "sd": 29.32,
+          "texture": 2.92
+        },
+        {
+          "option": "ext-len-15",
+          "label": "15 cm",
+          "path": ".craft-pipeline/suit-2pc/ext-len-15/candidate-3.png",
+          "meanL": 43.8,
+          "meanA": 1.13,
+          "meanB": -2.11,
+          "sd": 34.85,
+          "texture": 1.96
+        }
+      ]
+    },
+    {
+      "set": "sport-coat/cuff-button-number",
+      "stem": "# buttons",
+      "complete": false,
+      "membersMeasured": 4,
+      "membersTotal": 5,
+      "maxDeltaE": 15.56,
+      "sdSpread": 6.97,
+      "textureSpread": 1.05,
+      "flagged": true,
+      "reasons": [
+        "colour spread ΔE 15.6 across the set (3 Buttons vs 5 Buttons) — these are not the same cloth under the same light"
+      ],
+      "members": [
+        {
+          "option": "cb-2",
+          "label": "2 Buttons",
+          "path": ".craft-pipeline/sport-coat/cb-2/candidate-1.png",
+          "meanL": 23.35,
+          "meanA": 2.28,
+          "meanB": -2.23,
+          "sd": 25.24,
+          "texture": 2.38
+        },
+        {
+          "option": "cb-3",
+          "label": "3 Buttons",
+          "path": ".craft-pipeline/sport-coat/cb-3/candidate-1.png",
+          "meanL": 21.76,
+          "meanA": 1.87,
+          "meanB": -4.33,
+          "sd": 26.71,
+          "texture": 2.27
+        },
+        {
+          "option": "cb-5",
+          "label": "5 Buttons",
+          "path": ".craft-pipeline/sport-coat/cb-5/candidate-3.png",
+          "meanL": 37.17,
+          "meanA": 2.01,
+          "meanB": -6.46,
+          "sd": 30.46,
+          "texture": 3.23
+        },
+        {
+          "option": "cb-6",
+          "label": "6 Buttons",
+          "path": ".craft-pipeline/sport-coat/cb-6/candidate-1.png",
+          "meanL": 25.33,
+          "meanA": 1.82,
+          "meanB": -3.73,
+          "sd": 23.49,
+          "texture": 2.18
+        }
+      ]
+    },
+    {
+      "set": "suit-2pc/lapel-style",
+      "stem": "peak #",
+      "complete": true,
+      "membersMeasured": 6,
+      "membersTotal": 6,
+      "maxDeltaE": 15.31,
+      "sdSpread": 4.05,
+      "textureSpread": 1.05,
+      "flagged": true,
+      "reasons": [
+        "colour spread ΔE 15.3 across the set (Peak 105° vs Peak 115°) — these are not the same cloth under the same light"
+      ],
+      "members": [
+        {
+          "option": "lapel-peak-99",
+          "label": "Peak 99°",
+          "path": ".craft-pipeline/suit-2pc/lapel-peak-99/candidate-1.png",
+          "meanL": 30.56,
+          "meanA": 3.37,
+          "meanB": -6.15,
+          "sd": 33.15,
+          "texture": 4.88
+        },
+        {
+          "option": "lapel-peak-101",
+          "label": "Peak 101°",
+          "path": ".craft-pipeline/suit-2pc/lapel-peak-101/candidate-2.png",
+          "meanL": 28.56,
+          "meanA": 2.78,
+          "meanB": -4.6,
+          "sd": 31.37,
+          "texture": 5.07
+        },
+        {
+          "option": "lapel-peak-102",
+          "label": "Peak 102°",
+          "path": ".craft-pipeline/suit-2pc/lapel-peak-102/candidate-1.png",
+          "meanL": 27.75,
+          "meanA": 2.97,
+          "meanB": -7.23,
+          "sd": 32.57,
+          "texture": 5.14
+        },
+        {
+          "option": "lapel-peak-105",
+          "label": "Peak 105°",
+          "path": ".craft-pipeline/suit-2pc/lapel-peak-105/candidate-2.png",
+          "meanL": 25.81,
+          "meanA": 2.79,
+          "meanB": -4.32,
+          "sd": 29.1,
+          "texture": 4.86
+        },
+        {
+          "option": "lapel-peak-110",
+          "label": "Peak 110°",
+          "path": ".craft-pipeline/suit-2pc/lapel-peak-110/candidate-1.png",
+          "meanL": 32.68,
+          "meanA": 2.36,
+          "meanB": -4.98,
+          "sd": 31.8,
+          "texture": 5.91
+        },
+        {
+          "option": "lapel-peak-115",
+          "label": "Peak 115°",
+          "path": ".craft-pipeline/suit-2pc/lapel-peak-115/candidate-2.png",
+          "meanL": 40.87,
+          "meanA": 3.03,
+          "meanB": -1.57,
+          "sd": 32.76,
+          "texture": 5.54
+        }
+      ]
+    },
+    {
+      "set": "trousers/front-pocket-style",
+      "stem": "# slant with stripe",
+      "complete": false,
+      "membersMeasured": 3,
+      "membersTotal": 4,
+      "maxDeltaE": 15.21,
+      "sdSpread": 4.2,
+      "textureSpread": 1.39,
+      "flagged": true,
+      "reasons": [
+        "colour spread ΔE 15.2 across the set (2.0 cm Slant with Stripe vs 2.5 cm Slant with Stripe) — these are not the same cloth under the same light"
+      ],
+      "members": [
+        {
+          "option": "slant-20-stripe",
+          "label": "2.0 cm Slant with Stripe",
+          "path": ".craft-pipeline/trousers/slant-20-stripe/candidate-1.png",
+          "meanL": 19.51,
+          "meanA": 0.26,
+          "meanB": -1.18,
+          "sd": 17.95,
+          "texture": 2.37
+        },
+        {
+          "option": "slant-25-stripe",
+          "label": "2.5 cm Slant with Stripe",
+          "path": ".craft-pipeline/trousers/slant-25-stripe/candidate-3.png",
+          "meanL": 34.7,
+          "meanA": 0.67,
+          "meanB": -1.88,
+          "sd": 21.26,
+          "texture": 2.89
+        },
+        {
+          "option": "slant-51-stripe",
+          "label": "5.1 cm Slant with Stripe",
+          "path": ".craft-pipeline/trousers/slant-51-stripe/candidate-1.png",
+          "meanL": 23.25,
+          "meanA": 1.25,
+          "meanB": -6.39,
+          "sd": 22.15,
+          "texture": 3.76
+        }
+      ]
+    },
+    {
+      "set": "suit-2pc/hem-style",
+      "stem": "# cuff turn up",
+      "complete": false,
+      "membersMeasured": 3,
+      "membersTotal": 4,
+      "maxDeltaE": 11.04,
+      "sdSpread": 2.69,
+      "textureSpread": 0.1,
+      "flagged": true,
+      "reasons": [
+        "colour spread ΔE 11.0 across the set (5.1 cm Cuff Turn-Up vs 3.2 cm Cuff Turn-Up) — these are not the same cloth under the same light"
+      ],
+      "members": [
+        {
+          "option": "hem-single-turnup",
+          "label": "4.4 cm Cuff Turn-Up",
+          "path": ".craft-pipeline/suit-2pc/hem-single-turnup/candidate-3.png",
+          "meanL": 37.94,
+          "meanA": 1.85,
+          "meanB": -3.89,
+          "sd": 30.36,
+          "texture": 3.11
+        },
+        {
+          "option": "hem-double-turnup",
+          "label": "5.1 cm Cuff Turn-Up",
+          "path": ".craft-pipeline/suit-2pc/hem-double-turnup/candidate-1.png",
+          "meanL": 34.73,
+          "meanA": 1.26,
+          "meanB": -2.99,
+          "sd": 28.62,
+          "texture": 3.17
+        },
+        {
+          "option": "hem-cuff-32",
+          "label": "3.2 cm Cuff Turn-Up",
+          "path": ".craft-pipeline/suit-2pc/hem-cuff-32/candidate-3.png",
+          "meanL": 45.68,
+          "meanA": 1.27,
+          "meanB": -1.56,
+          "sd": 27.67,
+          "texture": 3.07
+        }
+      ]
+    },
+    {
+      "set": "trousers/waistband-width",
+      "stem": "#",
+      "complete": true,
+      "membersMeasured": 5,
+      "membersTotal": 5,
+      "maxDeltaE": 10.21,
+      "sdSpread": 4.25,
+      "textureSpread": 0.47,
+      "flagged": true,
+      "reasons": [
+        "colour spread ΔE 10.2 across the set (4.0 cm vs 4.5 cm) — these are not the same cloth under the same light"
+      ],
+      "members": [
+        {
+          "option": "wband-35",
+          "label": "3.5 cm",
+          "path": ".craft-pipeline/trousers/wband-35/candidate-2.png",
+          "meanL": 36.7,
+          "meanA": 1.31,
+          "meanB": -2.26,
+          "sd": 33.41,
+          "texture": 0.87
+        },
+        {
+          "option": "wband-38",
+          "label": "3.8 cm",
+          "path": ".craft-pipeline/trousers/wband-38/candidate-2.png",
+          "meanL": 35.31,
+          "meanA": 1.22,
+          "meanB": -3,
+          "sd": 29.93,
+          "texture": 1.29
+        },
+        {
+          "option": "wband-40",
+          "label": "4.0 cm",
+          "path": ".craft-pipeline/trousers/wband-40/candidate-2.png",
+          "meanL": 38.91,
+          "meanA": 1.38,
+          "meanB": -3.28,
+          "sd": 33.18,
+          "texture": 1.34
+        },
+        {
+          "option": "wband-45",
+          "label": "4.5 cm",
+          "path": ".craft-pipeline/trousers/wband-45/candidate-2.png",
+          "meanL": 28.76,
+          "meanA": 1.13,
+          "meanB": -2.21,
+          "sd": 29.16,
+          "texture": 1.17
+        },
+        {
+          "option": "wband-50",
+          "label": "5.0 cm",
+          "path": ".craft-pipeline/trousers/wband-50/candidate-2.png",
+          "meanL": 38.1,
+          "meanA": 1.02,
+          "meanB": 0.25,
+          "sd": 31.48,
+          "texture": 0.98
+        }
+      ]
+    },
+    {
+      "set": "suit-2pc/front-pocket-style",
+      "stem": "# slant with stripe",
+      "complete": false,
+      "membersMeasured": 2,
+      "membersTotal": 4,
+      "maxDeltaE": 10.12,
+      "sdSpread": 3.39,
+      "textureSpread": 0.02,
+      "flagged": true,
+      "reasons": [
+        "colour spread ΔE 10.1 across the set (2.5 cm Slant with Stripe vs 5.1 cm Slant with Stripe) — these are not the same cloth under the same light"
+      ],
+      "members": [
+        {
+          "option": "slant-25-stripe",
+          "label": "2.5 cm Slant with Stripe",
+          "path": ".craft-pipeline/suit-2pc/slant-25-stripe/candidate-3.png",
+          "meanL": 28.35,
+          "meanA": 1.3,
+          "meanB": -3.63,
+          "sd": 28.83,
+          "texture": 3.83
+        },
+        {
+          "option": "slant-51-stripe",
+          "label": "5.1 cm Slant with Stripe",
+          "path": ".craft-pipeline/suit-2pc/slant-51-stripe/candidate-1.png",
+          "meanL": 38.3,
+          "meanA": 1.44,
+          "meanB": -1.77,
+          "sd": 25.44,
+          "texture": 3.85
+        }
+      ]
+    },
+    {
+      "set": "shirt/lapel",
+      "stem": "regular collar #",
+      "complete": true,
+      "membersMeasured": 4,
+      "membersTotal": 4,
+      "maxDeltaE": 9.95,
+      "sdSpread": 12.27,
+      "textureSpread": 1.31,
+      "flagged": true,
+      "reasons": [
+        "colour spread ΔE 9.9 across the set (Regular Collar 22 vs Regular Collar 21) — these are not the same cloth under the same light"
+      ],
+      "members": [
+        {
+          "option": "collar-regular-22",
+          "label": "Regular Collar 22",
+          "path": ".craft-pipeline/shirt/collar-regular-22/candidate-1.png",
+          "meanL": 77.98,
+          "meanA": 4.63,
+          "meanB": 2.11,
+          "sd": 18.13,
+          "texture": 2.22
+        },
+        {
+          "option": "collar-regular-20",
+          "label": "Regular Collar 20",
+          "path": ".craft-pipeline/shirt/collar-regular-20/candidate-4.png",
+          "meanL": 86.44,
+          "meanA": 1.1,
+          "meanB": -1.38,
+          "sd": 5.86,
+          "texture": 1.33
+        },
+        {
+          "option": "collar-regular-19",
+          "label": "Regular Collar 19",
+          "path": ".craft-pipeline/shirt/collar-regular-19/candidate-3.png",
+          "meanL": 85.79,
+          "meanA": 1.48,
+          "meanB": -2.35,
+          "sd": 7.52,
+          "texture": 1.19
+        },
+        {
+          "option": "collar-regular-21",
+          "label": "Regular Collar 21",
+          "path": ".craft-pipeline/shirt/collar-regular-21/candidate-2.png",
+          "meanL": 86.44,
+          "meanA": 1.23,
+          "meanB": -1.87,
+          "sd": 7.12,
+          "texture": 0.91
+        }
+      ]
+    },
+    {
+      "set": "suit-2pc/chest-pocket",
+      "stem": "straight welt #",
+      "complete": true,
+      "membersMeasured": 3,
+      "membersTotal": 3,
+      "maxDeltaE": 9.49,
+      "sdSpread": 9.72,
+      "textureSpread": 1.76,
+      "flagged": true,
+      "reasons": [
+        "colour spread ΔE 9.5 across the set (Straight Welt 2.3 cm vs Straight Welt 2.5 cm) — these are not the same cloth under the same light"
+      ],
+      "members": [
+        {
+          "option": "cp-welt-23",
+          "label": "Straight Welt 2.3 cm",
+          "path": ".craft-pipeline/suit-2pc/cp-welt-23/candidate-1.png",
+          "meanL": 18.32,
+          "meanA": 1.83,
+          "meanB": -6.61,
+          "sd": 22.15,
+          "texture": 2.06
+        },
+        {
+          "option": "cp-welt-25",
+          "label": "Straight Welt 2.5 cm",
+          "path": ".craft-pipeline/suit-2pc/cp-welt-25/candidate-1.png",
+          "meanL": 27.26,
+          "meanA": 3.33,
+          "meanB": -3.79,
+          "sd": 31.87,
+          "texture": 3.82
+        },
+        {
+          "option": "cp-welt-27",
+          "label": "Straight Welt 2.7 cm",
+          "path": ".craft-pipeline/suit-2pc/cp-welt-27/candidate-1.png",
+          "meanL": 20.76,
+          "meanA": 2.74,
+          "meanB": -5.03,
+          "sd": 27.92,
+          "texture": 3.16
+        }
+      ]
+    },
+    {
+      "set": "suit-2pc/lower-pocket",
+      "stem": "slanted flap #",
+      "complete": true,
+      "membersMeasured": 6,
+      "membersTotal": 6,
+      "maxDeltaE": 8.01,
+      "sdSpread": 5.71,
+      "textureSpread": 1.6,
+      "flagged": false,
+      "reasons": [],
+      "members": [
+        {
+          "option": "lp-slanted-flap-40",
+          "label": "Slanted Flap 4.0 cm",
+          "path": ".craft-pipeline/suit-2pc/lp-slanted-flap-40/candidate-1.png",
+          "meanL": 16.29,
+          "meanA": 4.35,
+          "meanB": -8.5,
+          "sd": 18.19,
+          "texture": 3.13
+        },
+        {
+          "option": "lp-slanted-flap-45",
+          "label": "Slanted Flap 4.5 cm",
+          "path": ".craft-pipeline/suit-2pc/lp-slanted-flap-45/candidate-1.png",
+          "meanL": 12.79,
+          "meanA": 3.1,
+          "meanB": -9.07,
+          "sd": 15.29,
+          "texture": 2.51
+        },
+        {
+          "option": "lp-slanted-flap-50",
+          "label": "Slanted Flap 5.0 cm",
+          "path": ".craft-pipeline/suit-2pc/lp-slanted-flap-50/candidate-1.png",
+          "meanL": 14.9,
+          "meanA": 2.17,
+          "meanB": -8.09,
+          "sd": 16.32,
+          "texture": 3.04
+        },
+        {
+          "option": "lp-slanted-flap-55",
+          "label": "Slanted Flap 5.5 cm",
+          "path": ".craft-pipeline/suit-2pc/lp-slanted-flap-55/candidate-2.png",
+          "meanL": 12.49,
+          "meanA": 3.02,
+          "meanB": -9.05,
+          "sd": 15.96,
+          "texture": 1.53
+        },
+        {
+          "option": "lp-slanted-flap-60",
+          "label": "Slanted Flap 6.0 cm",
+          "path": ".craft-pipeline/suit-2pc/lp-slanted-flap-60/candidate-1.png",
+          "meanL": 12.53,
+          "meanA": 2.67,
+          "meanB": -5.88,
+          "sd": 15.71,
+          "texture": 2.56
+        },
+        {
+          "option": "lp-slanted-flap-65",
+          "label": "Slanted Flap 6.5 cm",
+          "path": ".craft-pipeline/suit-2pc/lp-slanted-flap-65/candidate-1.png",
+          "meanL": 9.32,
+          "meanA": 1.34,
+          "meanB": -5.94,
+          "sd": 12.48,
+          "texture": 1.86
+        }
+      ]
+    },
+    {
+      "set": "suit-2pc/chest-pocket",
+      "stem": "curved welt #",
+      "complete": true,
+      "membersMeasured": 4,
+      "membersTotal": 4,
+      "maxDeltaE": 6.74,
+      "sdSpread": 2.04,
+      "textureSpread": 1.3,
+      "flagged": false,
+      "reasons": [],
+      "members": [
+        {
+          "option": "cp-welt-curved-23",
+          "label": "Curved Welt 2.3 cm",
+          "path": ".craft-pipeline/suit-2pc/cp-welt-curved-23/candidate-1.png",
+          "meanL": 20.23,
+          "meanA": 2.41,
+          "meanB": -6.24,
+          "sd": 26.71,
+          "texture": 2.26
+        },
+        {
+          "option": "cp-welt-curved-25",
+          "label": "Curved Welt 2.5 cm",
+          "path": ".craft-pipeline/suit-2pc/cp-welt-curved-25/candidate-1.png",
+          "meanL": 21.34,
+          "meanA": 1.93,
+          "meanB": -6.6,
+          "sd": 26.91,
+          "texture": 2.68
+        },
+        {
+          "option": "cp-welt-curved-27",
+          "label": "Curved Welt 2.7 cm",
+          "path": ".craft-pipeline/suit-2pc/cp-welt-curved-27/candidate-1.png",
+          "meanL": 26.87,
+          "meanA": 3.09,
+          "meanB": -5.29,
+          "sd": 28.75,
+          "texture": 3.56
+        },
+        {
+          "option": "cp-welt-curved-29",
+          "label": "Curved Welt 2.9 cm",
+          "path": ".craft-pipeline/suit-2pc/cp-welt-curved-29/candidate-1.png",
+          "meanL": 22.27,
+          "meanA": 2.09,
+          "meanB": -6.29,
+          "sd": 27.35,
+          "texture": 3.27
+        }
+      ]
+    },
+    {
+      "set": "shirt/lapel",
+      "stem": "point # with button",
+      "complete": false,
+      "membersMeasured": 3,
+      "membersTotal": 4,
+      "maxDeltaE": 4.73,
+      "sdSpread": 4.28,
+      "textureSpread": 0.36,
+      "flagged": false,
+      "reasons": [],
+      "members": [
+        {
+          "option": "collar-point-58-btn",
+          "label": "Point 5.8 cm with Button",
+          "path": ".craft-pipeline/shirt/collar-point-58-btn/candidate-2.png",
+          "meanL": 71.95,
+          "meanA": 4.37,
+          "meanB": 3.23,
+          "sd": 22.75,
+          "texture": 2.21
+        },
+        {
+          "option": "collar-point-70-btn",
+          "label": "Point 7.0 cm with Button",
+          "path": ".craft-pipeline/shirt/collar-point-70-btn/candidate-2.png",
+          "meanL": 74.14,
+          "meanA": 4.36,
+          "meanB": 2.5,
+          "sd": 20.77,
+          "texture": 2.09
+        },
+        {
+          "option": "collar-point-95-btn",
+          "label": "Point 9.5 cm with Button",
+          "path": ".craft-pipeline/shirt/collar-point-95-btn/candidate-2.png",
+          "meanL": 76.49,
+          "meanA": 4.79,
+          "meanB": 1.96,
+          "sd": 18.47,
+          "texture": 2.45
+        }
+      ]
+    },
+    {
+      "set": "suit-2pc/lower-pocket",
+      "stem": "straight jetted flap #",
+      "complete": true,
+      "membersMeasured": 6,
+      "membersTotal": 6,
+      "maxDeltaE": 4.27,
+      "sdSpread": 5.98,
+      "textureSpread": 1.13,
+      "flagged": false,
+      "reasons": [],
+      "members": [
+        {
+          "option": "lp-straight-jetted-40",
+          "label": "Straight Jetted Flap 4.0 cm",
+          "path": ".craft-pipeline/suit-2pc/lp-straight-jetted-40/candidate-1.png",
+          "meanL": 12.59,
+          "meanA": 2.62,
+          "meanB": -5.73,
+          "sd": 13.16,
+          "texture": 2.61
+        },
+        {
+          "option": "lp-straight-jetted-45",
+          "label": "Straight Jetted Flap 4.5 cm",
+          "path": ".craft-pipeline/suit-2pc/lp-straight-jetted-45/candidate-1.png",
+          "meanL": 10.43,
+          "meanA": 2.22,
+          "meanB": -8.47,
+          "sd": 9.26,
+          "texture": 1.71
+        },
+        {
+          "option": "lp-straight-jetted-50",
+          "label": "Straight Jetted Flap 5.0 cm",
+          "path": ".craft-pipeline/suit-2pc/lp-straight-jetted-50/candidate-2.png",
+          "meanL": 11.8,
+          "meanA": 3.46,
+          "meanB": -8,
+          "sd": 12.83,
+          "texture": 2.15
+        },
+        {
+          "option": "lp-straight-jetted-55",
+          "label": "Straight Jetted Flap 5.5 cm",
+          "path": ".craft-pipeline/suit-2pc/lp-straight-jetted-55/candidate-1.png",
+          "meanL": 11.36,
+          "meanA": 3.35,
+          "meanB": -9.75,
+          "sd": 11.84,
+          "texture": 2.07
+        },
+        {
+          "option": "lp-straight-jetted-60",
+          "label": "Straight Jetted Flap 6.0 cm",
+          "path": ".craft-pipeline/suit-2pc/lp-straight-jetted-60/candidate-2.png",
+          "meanL": 12.39,
+          "meanA": 4.22,
+          "meanB": -7.75,
+          "sd": 15.24,
+          "texture": 1.48
+        },
+        {
+          "option": "lp-straight-jetted-65",
+          "label": "Straight Jetted Flap 6.5 cm",
+          "path": ".craft-pipeline/suit-2pc/lp-straight-jetted-65/candidate-1.png",
+          "meanL": 12.22,
+          "meanA": 2.42,
+          "meanB": -6.14,
+          "sd": 14.04,
+          "texture": 2.4
+        }
+      ]
+    },
+    {
+      "set": "sport-coat/chest-dart",
+      "stem": "#",
+      "complete": false,
+      "membersMeasured": 2,
+      "membersTotal": 4,
+      "maxDeltaE": 4,
+      "sdSpread": 4.61,
+      "textureSpread": 0.61,
+      "flagged": false,
+      "reasons": [],
+      "members": [
+        {
+          "option": "cd-plus-2",
+          "label": "+2 cm",
+          "path": ".craft-pipeline/sport-coat/cd-plus-2/candidate-1.png",
+          "meanL": 26.7,
+          "meanA": 2.2,
+          "meanB": -7.19,
+          "sd": 21.54,
+          "texture": 5.52
+        },
+        {
+          "option": "cd-plus-3",
+          "label": "+3 cm",
+          "path": ".craft-pipeline/sport-coat/cd-plus-3/candidate-1.png",
+          "meanL": 23.2,
+          "meanA": 3.51,
+          "meanB": -8.62,
+          "sd": 26.15,
+          "texture": 4.91
+        }
+      ]
+    },
+    {
+      "set": "trousers/front-pocket-style",
+      "stem": "# slant pocket",
+      "complete": false,
+      "membersMeasured": 2,
+      "membersTotal": 4,
+      "maxDeltaE": 2.25,
+      "sdSpread": 0.98,
+      "textureSpread": 0.45,
+      "flagged": false,
+      "reasons": [],
+      "members": [
+        {
+          "option": "slant-pockets",
+          "label": "3.2 cm Slant Pocket",
+          "path": ".craft-pipeline/trousers/slant-pockets/candidate-1.png",
+          "meanL": 27.11,
+          "meanA": 0.35,
+          "meanB": -0.88,
+          "sd": 20.45,
+          "texture": 2.32
+        },
+        {
+          "option": "slant-20",
+          "label": "2.0 cm Slant Pocket",
+          "path": ".craft-pipeline/trousers/slant-20/candidate-1.png",
+          "meanL": 29.36,
+          "meanA": 0.32,
+          "meanB": -1,
+          "sd": 19.47,
+          "texture": 2.77
+        }
+      ]
+    },
+    {
+      "set": "shirt/brand_label_position",
+      "stem": "position #",
+      "complete": false,
+      "membersMeasured": 3,
+      "membersTotal": 5,
+      "maxDeltaE": 1.14,
+      "sdSpread": 2.94,
+      "textureSpread": 0.46,
+      "flagged": false,
+      "reasons": [],
+      "members": [
+        {
+          "option": "blp-2",
+          "label": "Position 2",
+          "path": ".craft-pipeline/shirt/blp-2/candidate-3.png",
+          "meanL": 84.17,
+          "meanA": 1.78,
+          "meanB": -2.12,
+          "sd": 8.14,
+          "texture": 1.66
+        },
+        {
+          "option": "blp-3",
+          "label": "Position 3",
+          "path": ".craft-pipeline/shirt/blp-3/candidate-3.png",
+          "meanL": 85.23,
+          "meanA": 1.64,
+          "meanB": -2.38,
+          "sd": 8.58,
+          "texture": 1.61
+        },
+        {
+          "option": "blp-4",
+          "label": "Position 4",
+          "path": ".craft-pipeline/shirt/blp-4/candidate-3.png",
+          "meanL": 85.28,
+          "meanA": 1.8,
+          "meanB": -2.37,
+          "sd": 5.64,
+          "texture": 1.2
+        }
+      ]
+    }
+  ]
+}

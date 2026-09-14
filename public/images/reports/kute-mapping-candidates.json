@@ -1,0 +1,1966 @@
+{
+  "generatedAt": "2026-08-26T03:43:53.161Z",
+  "note": "CANDIDATES ONLY - nothing applied.",
+  "fieldsWithACandidate": 50,
+  "byVerdict": {
+    "SECTION_ONLY": 32,
+    "WEAK": 16,
+    "STRONG": 2
+  },
+  "fields": [
+    {
+      "catalogField": "lower-pocket",
+      "part": "jacket",
+      "rowsAtStake": 32,
+      "optionCount": 11,
+      "optionLabels": [
+        "Welt Pocket 1.0 cm",
+        "Welt Pocket 1.2 cm",
+        "Welt Pocket 1.5 cm",
+        "Patch + Rounded Button Tab",
+        "Patch + Straight Button Tab",
+        "Patch + Angled Button Tab",
+        "Inverted Pleated + Basic Flap",
+        "Inverted Pleated + Flap & Button",
+        "Inverted Pleated + Angled Flap & Button",
+        "Box Patch Pocket + Flap"
+      ],
+      "verdict": "SECTION_ONLY",
+      "candidates": [
+        {
+          "section": "Pocket > Lower > Lower pocket",
+          "drawings": 26,
+          "labelHits": 0,
+          "collapsedMatches": 4,
+          "ourOptionCount": 11,
+          "sectionSim": 0.5,
+          "samples": []
+        },
+        {
+          "section": "Pocket > Lower > Ticket pocket",
+          "drawings": 19,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 11,
+          "sectionSim": 0.4,
+          "samples": []
+        },
+        {
+          "section": "Pocket > Chest > Chest pocket",
+          "drawings": 17,
+          "labelHits": 0,
+          "collapsedMatches": 4,
+          "ourOptionCount": 11,
+          "sectionSim": 0.2,
+          "samples": []
+        }
+      ]
+    },
+    {
+      "catalogField": "perfume-pad",
+      "part": "jacket",
+      "rowsAtStake": 24,
+      "optionCount": 8,
+      "optionLabels": [
+        "None",
+        "Triangle Underarm Shield",
+        "Round Shield 1",
+        "Round Shield 2",
+        "Round Shield 3",
+        "U-Shield 1",
+        "U-Shield 2",
+        "U-Shield 3"
+      ],
+      "verdict": "SECTION_ONLY",
+      "candidates": [
+        {
+          "section": "Sleeve > Elbow",
+          "drawings": 3,
+          "labelHits": 0,
+          "collapsedMatches": 3,
+          "ourOptionCount": 8,
+          "sectionSim": 0,
+          "samples": []
+        }
+      ]
+    },
+    {
+      "catalogField": "chest-pocket",
+      "part": "jacket",
+      "rowsAtStake": 21,
+      "optionCount": 7,
+      "optionLabels": [
+        "None",
+        "Round Patch",
+        "Tulip Shape Patch",
+        "Angled Box Pleat Patch",
+        "Multi-Pleated Patch",
+        "Two Inverted Pleated + Flaps",
+        "Inverted Pleated + Flap"
+      ],
+      "verdict": "WEAK",
+      "candidates": [
+        {
+          "section": "Sleeve > Elbow",
+          "drawings": 3,
+          "labelHits": 1,
+          "collapsedMatches": 0,
+          "ourOptionCount": 7,
+          "sectionSim": 0,
+          "samples": [
+            {
+              "ours": "Round Patch",
+              "theirs": "Round",
+              "ecode": "0609",
+              "path": "/images/factory/kute/jacket/Sleeve_Elbow/0609__Round.png"
+            }
+          ]
+        },
+        {
+          "section": "Pocket > Chest > Chest pocket",
+          "drawings": 17,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 7,
+          "sectionSim": 0.5,
+          "samples": []
+        },
+        {
+          "section": "Pocket > Chest > Chest pocket design",
+          "drawings": 2,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 7,
+          "sectionSim": 0.4,
+          "samples": []
+        }
+      ]
+    },
+    {
+      "catalogField": "button-config",
+      "part": "jacket",
+      "rowsAtStake": 21,
+      "optionCount": 7,
+      "optionLabels": [
+        "SB 5 Buttons",
+        "DB 2 × 1",
+        "DB 4 × 1",
+        "DB 4 × 2",
+        "DB 6 × 1",
+        "DB 6 × 2",
+        "DB 6 × 3"
+      ],
+      "verdict": "SECTION_ONLY",
+      "candidates": [
+        {
+          "section": "Style > Front bttn",
+          "drawings": 11,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 7,
+          "sectionSim": 0.4,
+          "samples": []
+        },
+        {
+          "section": "Style > Front Bottom",
+          "drawings": 6,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 7,
+          "sectionSim": 0.4,
+          "samples": []
+        },
+        {
+          "section": "Style > Front buttonhole",
+          "drawings": 2,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 7,
+          "sectionSim": 0.4,
+          "samples": []
+        }
+      ]
+    },
+    {
+      "catalogField": "pen-pocket",
+      "part": "jacket",
+      "rowsAtStake": 21,
+      "optionCount": 7,
+      "optionLabels": [
+        "None",
+        "Left Jetted",
+        "Left Drop-shape",
+        "Left Diamond",
+        "Right Jetted",
+        "Right Drop-shape",
+        "Right Diamond"
+      ],
+      "verdict": "SECTION_ONLY",
+      "candidates": [
+        {
+          "section": "Pocket > Lower > Lower pocket",
+          "drawings": 26,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 7,
+          "sectionSim": 0.25,
+          "samples": []
+        },
+        {
+          "section": "Pocket > Chest > Chest pocket",
+          "drawings": 17,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 7,
+          "sectionSim": 0.25,
+          "samples": []
+        },
+        {
+          "section": "Contrast > Pocket",
+          "drawings": 4,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 7,
+          "sectionSim": 0.25,
+          "samples": []
+        }
+      ]
+    },
+    {
+      "catalogField": "facing-style",
+      "part": "jacket",
+      "rowsAtStake": 18,
+      "optionCount": 6,
+      "optionLabels": [
+        "Facing 1",
+        "Facing 2",
+        "Facing 4",
+        "Facing 5",
+        "Facing 7",
+        "Facing 9"
+      ],
+      "verdict": "SECTION_ONLY",
+      "candidates": [
+        {
+          "section": "Lapel > Lapel Style",
+          "drawings": 20,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 6,
+          "sectionSim": 0.25,
+          "samples": []
+        },
+        {
+          "section": "Lining > Lining Style",
+          "drawings": 11,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 6,
+          "sectionSim": 0.25,
+          "samples": []
+        },
+        {
+          "section": "Style > Canvas",
+          "drawings": 6,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 6,
+          "sectionSim": 0.25,
+          "samples": []
+        }
+      ]
+    },
+    {
+      "catalogField": "half-lining-shape",
+      "part": "jacket",
+      "rowsAtStake": 18,
+      "optionCount": 6,
+      "optionLabels": [
+        "Standard Half Lining",
+        "Small Cut-away",
+        "1/2 Lining",
+        "1/3 Cut-away",
+        "1/3 Lining",
+        "1/4 Cut-away"
+      ],
+      "verdict": "STRONG",
+      "candidates": [
+        {
+          "section": "Lining > Lining Style",
+          "drawings": 11,
+          "labelHits": 2,
+          "collapsedMatches": 0,
+          "ourOptionCount": 6,
+          "sectionSim": 0.2,
+          "samples": [
+            {
+              "ours": "1/2 Lining",
+              "theirs": "1/2 lining with piping",
+              "ecode": "AA2Y",
+              "path": "/images/factory/kute/jacket/Lining_Lining_Style/AA2Y__1_2_lining_with_piping.jpeg"
+            },
+            {
+              "ours": "1/3 Lining",
+              "theirs": "1/3 lining with piping",
+              "ecode": "AA3Y",
+              "path": "/images/factory/kute/jacket/Lining_Lining_Style/AA3Y__1_3_lining_with_piping.jpeg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "catalogField": "waistband-style",
+      "part": "trousers",
+      "rowsAtStake": 18,
+      "optionCount": 6,
+      "optionLabels": [
+        "Standard Waistband",
+        "Extended Tab Waistband",
+        "Waistcoat Back Band",
+        "Elasticated Insert",
+        "Double Waistband",
+        "Trouser Waist (No Band)"
+      ],
+      "verdict": "WEAK",
+      "candidates": [
+        {
+          "section": "Waist > Adjustment style",
+          "drawings": 4,
+          "labelHits": 1,
+          "collapsedMatches": 0,
+          "ourOptionCount": 6,
+          "sectionSim": 0.25,
+          "samples": [
+            {
+              "ours": "Standard Waistband",
+              "theirs": "Standard",
+              "ecode": "3349",
+              "path": "/images/factory/kute/trousers/Waist_Adjustment_style/3349__Standard.jpeg"
+            }
+          ]
+        },
+        {
+          "section": "Waist > Inner Face",
+          "drawings": 12,
+          "labelHits": 1,
+          "collapsedMatches": 0,
+          "ourOptionCount": 6,
+          "sectionSim": 0,
+          "samples": [
+            {
+              "ours": "Standard Waistband",
+              "theirs": "Standard",
+              "ecode": "3430",
+              "path": "/images/factory/kute/trousers/Waist_Inner_Face/3430__Standard.jpeg"
+            }
+          ]
+        },
+        {
+          "section": "Waist > Belt loop",
+          "drawings": 9,
+          "labelHits": 1,
+          "collapsedMatches": 0,
+          "ourOptionCount": 6,
+          "sectionSim": 0,
+          "samples": [
+            {
+              "ours": "Double Waistband",
+              "theirs": "Double",
+              "ecode": "3331",
+              "path": "/images/factory/kute/trousers/Waist_Belt_loop/3331__Double.jpeg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "catalogField": "lapel-bh-style",
+      "part": "jacket",
+      "rowsAtStake": 15,
+      "optionCount": 5,
+      "optionLabels": [
+        "Real Functional (Machine)",
+        "Double-Color Straight A",
+        "Double-Color Straight B",
+        "½ Double-Color Straight",
+        "No.1 ½ Double-Color Straight"
+      ],
+      "verdict": "WEAK",
+      "candidates": [
+        {
+          "section": "Lapel > Handmade lapel buttonhole",
+          "drawings": 56,
+          "labelHits": 1,
+          "collapsedMatches": 0,
+          "ourOptionCount": 5,
+          "sectionSim": 0.25,
+          "samples": [
+            {
+              "ours": "½ Double-Color Straight",
+              "theirs": "Double color straight （handmade only),appoint color order 1-2",
+              "ecode": "055S",
+              "path": "/images/factory/kute/jacket/Lapel_Handmade_lapel_buttonhole/055S__Double_color_straight_handmade_only_appoint_color_order_1-2.jpg"
+            }
+          ]
+        },
+        {
+          "section": "Lapel > Lapel Style",
+          "drawings": 20,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 5,
+          "sectionSim": 1,
+          "samples": []
+        },
+        {
+          "section": "Lapel > Hole Style",
+          "drawings": 3,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 5,
+          "sectionSim": 0.667,
+          "samples": []
+        }
+      ]
+    },
+    {
+      "catalogField": "waistband-width",
+      "part": "trousers",
+      "rowsAtStake": 15,
+      "optionCount": 5,
+      "optionLabels": [
+        "3.5 cm",
+        "3.8 cm",
+        "4.0 cm",
+        "4.5 cm",
+        "5.0 cm"
+      ],
+      "verdict": "WEAK",
+      "candidates": [
+        {
+          "section": "Bottom > Bottom style",
+          "drawings": 14,
+          "labelHits": 1,
+          "collapsedMatches": 0,
+          "ourOptionCount": 5,
+          "sectionSim": 0,
+          "samples": [
+            {
+              "ours": "5.0 cm",
+              "theirs": "5.0cm",
+              "ecode": "3600",
+              "path": "/images/factory/kute/trousers/Bottom_Bottom_style/3600__5.0cm.jpeg"
+            }
+          ]
+        },
+        {
+          "section": "Style > Pleat style > Pleat depth",
+          "drawings": 5,
+          "labelHits": 1,
+          "collapsedMatches": 0,
+          "ourOptionCount": 5,
+          "sectionSim": 0,
+          "samples": [
+            {
+              "ours": "3.8 cm",
+              "theirs": "3.8cm",
+              "ecode": "302G",
+              "path": "/images/factory/kute/trousers/Style_Pleat_style_Pleat_depth/302G__3.8cm.jpeg"
+            }
+          ]
+        },
+        {
+          "section": "Contrast > Waistband",
+          "drawings": 1,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 5,
+          "sectionSim": 0.333,
+          "samples": []
+        }
+      ]
+    },
+    {
+      "catalogField": "lower-pocket-bartack",
+      "part": "jacket",
+      "rowsAtStake": 12,
+      "optionCount": 4,
+      "optionLabels": [
+        "None",
+        "D-Bartack",
+        "I-Bartack",
+        "X-Bartack"
+      ],
+      "verdict": "SECTION_ONLY",
+      "candidates": [
+        {
+          "section": "Pocket > Lower > Lower pocket",
+          "drawings": 26,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 4,
+          "sectionSim": 0.4,
+          "samples": []
+        },
+        {
+          "section": "Pocket > Lower > Ticket pocket",
+          "drawings": 19,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 4,
+          "sectionSim": 0.333,
+          "samples": []
+        },
+        {
+          "section": "Pocket > Inner > Inner pocket bartack",
+          "drawings": 3,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 4,
+          "sectionSim": 0.333,
+          "samples": []
+        }
+      ]
+    },
+    {
+      "catalogField": "namecard-pocket",
+      "part": "jacket",
+      "rowsAtStake": 12,
+      "optionCount": 4,
+      "optionLabels": [
+        "None",
+        "Left Inner",
+        "Right Inner",
+        "Both Sides"
+      ],
+      "verdict": "SECTION_ONLY",
+      "candidates": [
+        {
+          "section": "Pocket > Lower > Lower pocket",
+          "drawings": 26,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 4,
+          "sectionSim": 0.25,
+          "samples": []
+        },
+        {
+          "section": "Pocket > Chest > Chest pocket",
+          "drawings": 17,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 4,
+          "sectionSim": 0.25,
+          "samples": []
+        },
+        {
+          "section": "Contrast > Pocket",
+          "drawings": 4,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 4,
+          "sectionSim": 0.25,
+          "samples": []
+        }
+      ]
+    },
+    {
+      "catalogField": "inner-ticket-pocket",
+      "part": "jacket",
+      "rowsAtStake": 12,
+      "optionCount": 4,
+      "optionLabels": [
+        "None",
+        "Left",
+        "Right",
+        "Left & Right"
+      ],
+      "verdict": "STRONG",
+      "candidates": [
+        {
+          "section": "Pocket > Lower > Ticket pocket",
+          "drawings": 19,
+          "labelHits": 2,
+          "collapsedMatches": 0,
+          "ourOptionCount": 4,
+          "sectionSim": 0.4,
+          "samples": [
+            {
+              "ours": "Right",
+              "theirs": "Right welt",
+              "ecode": "0271",
+              "path": "/images/factory/kute/jacket/Pocket_Lower_Ticket_pocket/0271__Right_welt.jpeg"
+            },
+            {
+              "ours": "Left & Right",
+              "theirs": "Left&right",
+              "ecode": "MXFZYP",
+              "path": "/images/factory/kute/jacket/Pocket_Lower_Ticket_pocket/MXFZYP__Left_right.jpeg"
+            }
+          ]
+        },
+        {
+          "section": "Pocket > Inner > Inner-Other",
+          "drawings": 1,
+          "labelHits": 1,
+          "collapsedMatches": 0,
+          "ourOptionCount": 4,
+          "sectionSim": 0.4,
+          "samples": [
+            {
+              "ours": "Right",
+              "theirs": "Right  phone pocket",
+              "ecode": "0844",
+              "path": "/images/factory/kute/jacket/Pocket_Inner_Inner-Other/0844__Right_phone_pocket.png"
+            }
+          ]
+        },
+        {
+          "section": "Lapel > Hole Position",
+          "drawings": 7,
+          "labelHits": 1,
+          "collapsedMatches": 0,
+          "ourOptionCount": 4,
+          "sectionSim": 0,
+          "samples": [
+            {
+              "ours": "Right",
+              "theirs": "Right &Left bttn hole",
+              "ecode": "0543",
+              "path": "/images/factory/kute/jacket/Lapel_Hole_Position/0543__Right_Left_bttn_hole.jpeg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "catalogField": "lining-coverage",
+      "part": "jacket",
+      "rowsAtStake": 12,
+      "optionCount": 4,
+      "optionLabels": [
+        "Full Lining",
+        "Half Lining",
+        "Quarter Lining",
+        "Unlined"
+      ],
+      "verdict": "SECTION_ONLY",
+      "candidates": [
+        {
+          "section": "Lining > Lining Style",
+          "drawings": 11,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 4,
+          "sectionSim": 0.25,
+          "samples": []
+        },
+        {
+          "section": "Lining > Facing",
+          "drawings": 6,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 4,
+          "sectionSim": 0.25,
+          "samples": []
+        },
+        {
+          "section": "Lining > Body lining",
+          "drawings": 3,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 4,
+          "sectionSim": 0.25,
+          "samples": []
+        }
+      ]
+    },
+    {
+      "catalogField": "leg-shape",
+      "part": "trousers",
+      "rowsAtStake": 12,
+      "optionCount": 4,
+      "optionLabels": [
+        "Tapered",
+        "Straight Cut",
+        "Wide Leg",
+        "Slim"
+      ],
+      "verdict": "WEAK",
+      "candidates": [
+        {
+          "section": "Waist > Fly",
+          "drawings": 5,
+          "labelHits": 1,
+          "collapsedMatches": 0,
+          "ourOptionCount": 4,
+          "sectionSim": 0,
+          "samples": [
+            {
+              "ours": "Straight Cut",
+              "theirs": "Straight",
+              "ecode": "3401",
+              "path": "/images/factory/kute/trousers/Waist_Fly/3401__Straight.jpeg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "catalogField": "waistband-canvas",
+      "part": "trousers",
+      "rowsAtStake": 12,
+      "optionCount": 4,
+      "optionLabels": [
+        "Fused (Standard)",
+        "Full Canvas",
+        "Half Canvas",
+        "Single Layer"
+      ],
+      "verdict": "SECTION_ONLY",
+      "candidates": [
+        {
+          "section": "Contrast > Waistband",
+          "drawings": 1,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 4,
+          "sectionSim": 0.25,
+          "samples": []
+        }
+      ]
+    },
+    {
+      "catalogField": "handmade-decorative",
+      "part": "jacket",
+      "rowsAtStake": 9,
+      "optionCount": 3,
+      "optionLabels": [
+        "None",
+        "Shoulder Seam Only",
+        "Full — Shoulder, Vents, Chest Pocket, Buttonholes"
+      ],
+      "verdict": "SECTION_ONLY",
+      "candidates": [
+        {
+          "section": "Lapel > Handmade lapel buttonhole",
+          "drawings": 56,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 3,
+          "sectionSim": 0.25,
+          "samples": []
+        },
+        {
+          "section": "Other > Handmade option",
+          "drawings": 4,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 3,
+          "sectionSim": 0.25,
+          "samples": []
+        }
+      ]
+    },
+    {
+      "catalogField": "mp3-pocket",
+      "part": "jacket",
+      "rowsAtStake": 9,
+      "optionCount": 3,
+      "optionLabels": [
+        "None",
+        "Left Inner",
+        "Right Inner"
+      ],
+      "verdict": "SECTION_ONLY",
+      "candidates": [
+        {
+          "section": "Pocket > Lower > Lower pocket",
+          "drawings": 26,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 3,
+          "sectionSim": 0.25,
+          "samples": []
+        },
+        {
+          "section": "Pocket > Chest > Chest pocket",
+          "drawings": 17,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 3,
+          "sectionSim": 0.25,
+          "samples": []
+        },
+        {
+          "section": "Contrast > Pocket",
+          "drawings": 4,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 3,
+          "sectionSim": 0.25,
+          "samples": []
+        }
+      ]
+    },
+    {
+      "catalogField": "pocket-depth",
+      "part": "trousers",
+      "rowsAtStake": 9,
+      "optionCount": 3,
+      "optionLabels": [
+        "Shallow (20 cm)",
+        "Standard (23 cm)",
+        "Deep (26 cm)"
+      ],
+      "verdict": "WEAK",
+      "candidates": [
+        {
+          "section": "Waist > Inner Face",
+          "drawings": 12,
+          "labelHits": 1,
+          "collapsedMatches": 0,
+          "ourOptionCount": 3,
+          "sectionSim": 0,
+          "samples": [
+            {
+              "ours": "Standard (23 cm)",
+              "theirs": "Standard",
+              "ecode": "3430",
+              "path": "/images/factory/kute/trousers/Waist_Inner_Face/3430__Standard.jpeg"
+            }
+          ]
+        },
+        {
+          "section": "Waist > Adjustment style",
+          "drawings": 4,
+          "labelHits": 1,
+          "collapsedMatches": 0,
+          "ourOptionCount": 3,
+          "sectionSim": 0,
+          "samples": [
+            {
+              "ours": "Standard (23 cm)",
+              "theirs": "Standard",
+              "ecode": "3349",
+              "path": "/images/factory/kute/trousers/Waist_Adjustment_style/3349__Standard.jpeg"
+            }
+          ]
+        },
+        {
+          "section": "Pocket > Front Pocket",
+          "drawings": 16,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 3,
+          "sectionSim": 0.5,
+          "samples": []
+        }
+      ]
+    },
+    {
+      "catalogField": "back-darts",
+      "part": "trousers",
+      "rowsAtStake": 9,
+      "optionCount": 3,
+      "optionLabels": [
+        "No Darts",
+        "Single Back Darts",
+        "Double Back Darts"
+      ],
+      "verdict": "WEAK",
+      "candidates": [
+        {
+          "section": "Waist > Belt loop",
+          "drawings": 9,
+          "labelHits": 1,
+          "collapsedMatches": 0,
+          "ourOptionCount": 3,
+          "sectionSim": 0,
+          "samples": [
+            {
+              "ours": "Double Back Darts",
+              "theirs": "Double",
+              "ecode": "3331",
+              "path": "/images/factory/kute/trousers/Waist_Belt_loop/3331__Double.jpeg"
+            }
+          ]
+        },
+        {
+          "section": "Pocket > Back pocket",
+          "drawings": 23,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 3,
+          "sectionSim": 0.333,
+          "samples": []
+        },
+        {
+          "section": "Contrast > Back pocket",
+          "drawings": 1,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 3,
+          "sectionSim": 0.25,
+          "samples": []
+        }
+      ]
+    },
+    {
+      "catalogField": "hem-style",
+      "part": "trousers",
+      "rowsAtStake": 9,
+      "optionCount": 3,
+      "optionLabels": [
+        "3.8 cm Cuff Turn-Up",
+        "Fringe Edge",
+        "Unfinished (Raw Edge)"
+      ],
+      "verdict": "WEAK",
+      "candidates": [
+        {
+          "section": "Bottom > Bottom style",
+          "drawings": 14,
+          "labelHits": 1,
+          "collapsedMatches": 0,
+          "ourOptionCount": 3,
+          "sectionSim": 0.667,
+          "samples": [
+            {
+              "ours": "3.8 cm Cuff Turn-Up",
+              "theirs": "3.8cm  cuff",
+              "ecode": "3603",
+              "path": "/images/factory/kute/trousers/Bottom_Bottom_style/3603__3.8cm_cuff.jpeg"
+            }
+          ]
+        },
+        {
+          "section": "Style > Pleat style > Pleat style",
+          "drawings": 8,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 3,
+          "sectionSim": 0.25,
+          "samples": []
+        },
+        {
+          "section": "Style > Lining > Lining Style",
+          "drawings": 7,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 3,
+          "sectionSim": 0.25,
+          "samples": []
+        }
+      ]
+    },
+    {
+      "catalogField": "lapel",
+      "part": "shirt",
+      "rowsAtStake": 6,
+      "optionCount": 6,
+      "optionLabels": [
+        "French 7.5 cm",
+        "Stand Collar 5.0 cm",
+        "One-Piece 8.0 cm with Tab",
+        "One-Piece 8.5 cm with Tab",
+        "One-Piece 9.0 cm with Tab",
+        "DR Point 5.8 cm"
+      ],
+      "verdict": "SECTION_ONLY",
+      "candidates": [
+        {
+          "section": "Collar > Collar Style",
+          "drawings": 22,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 6,
+          "sectionSim": 0.333,
+          "samples": []
+        },
+        {
+          "section": "Collar > Point",
+          "drawings": 8,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 6,
+          "sectionSim": 0.333,
+          "samples": []
+        },
+        {
+          "section": "Collar > Band",
+          "drawings": 4,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 6,
+          "sectionSim": 0.333,
+          "samples": []
+        }
+      ]
+    },
+    {
+      "catalogField": "collar-interlining",
+      "part": "jacket",
+      "rowsAtStake": 6,
+      "optionCount": 2,
+      "optionLabels": [
+        "Regular (with Linen)",
+        "No Linen"
+      ],
+      "verdict": "WEAK",
+      "candidates": [
+        {
+          "section": "Pocket > Lower > Lower pocket",
+          "drawings": 26,
+          "labelHits": 1,
+          "collapsedMatches": 0,
+          "ourOptionCount": 2,
+          "sectionSim": 0,
+          "samples": [
+            {
+              "ours": "Regular (with Linen)",
+              "theirs": "Regular",
+              "ecode": "0201",
+              "path": "/images/factory/kute/jacket/Pocket_Lower_Lower_pocket/0201__Regular.jpeg"
+            }
+          ]
+        },
+        {
+          "section": "Pocket > Lower > Ticket pocket",
+          "drawings": 19,
+          "labelHits": 1,
+          "collapsedMatches": 0,
+          "ourOptionCount": 2,
+          "sectionSim": 0,
+          "samples": [
+            {
+              "ours": "Regular (with Linen)",
+              "theirs": "Regular",
+              "ecode": "0270",
+              "path": "/images/factory/kute/jacket/Pocket_Lower_Ticket_pocket/0270__Regular.jpeg"
+            }
+          ]
+        },
+        {
+          "section": "Style > Shoulder > Shoulder shape",
+          "drawings": 5,
+          "labelHits": 1,
+          "collapsedMatches": 0,
+          "ourOptionCount": 2,
+          "sectionSim": 0,
+          "samples": [
+            {
+              "ours": "Regular (with Linen)",
+              "theirs": "Regular",
+              "ecode": "0601",
+              "path": "/images/factory/kute/jacket/Style_Shoulder_Shoulder_shape/0601__Regular.jpeg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "catalogField": "front-buttonhole",
+      "part": "jacket",
+      "rowsAtStake": 6,
+      "optionCount": 2,
+      "optionLabels": [
+        "By Machine",
+        "By Hand"
+      ],
+      "verdict": "SECTION_ONLY",
+      "candidates": [
+        {
+          "section": "Style > Front buttonhole",
+          "drawings": 2,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 2,
+          "sectionSim": 1,
+          "samples": []
+        },
+        {
+          "section": "Style > Front bttn",
+          "drawings": 11,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 2,
+          "sectionSim": 0.5,
+          "samples": []
+        },
+        {
+          "section": "Style > Front Bottom",
+          "drawings": 6,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 2,
+          "sectionSim": 0.5,
+          "samples": []
+        }
+      ]
+    },
+    {
+      "catalogField": "hem-gusset",
+      "part": "jacket",
+      "rowsAtStake": 6,
+      "optionCount": 2,
+      "optionLabels": [
+        "Small Curved Bottom",
+        "Large Curved Bottom"
+      ],
+      "verdict": "SECTION_ONLY",
+      "candidates": [
+        {
+          "section": "Style > Front bttn",
+          "drawings": 11,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 2,
+          "sectionSim": 0.4,
+          "samples": []
+        },
+        {
+          "section": "Style > Front Bottom",
+          "drawings": 6,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 2,
+          "sectionSim": 0.4,
+          "samples": []
+        },
+        {
+          "section": "Style > Front buttonhole",
+          "drawings": 2,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 2,
+          "sectionSim": 0.4,
+          "samples": []
+        }
+      ]
+    },
+    {
+      "catalogField": "sleeve-buttonhole-type",
+      "part": "jacket",
+      "rowsAtStake": 6,
+      "optionCount": 2,
+      "optionLabels": [
+        "By Machine",
+        "By Hand"
+      ],
+      "verdict": "SECTION_ONLY",
+      "candidates": [
+        {
+          "section": "Lapel > Handmade lapel buttonhole",
+          "drawings": 56,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 2,
+          "sectionSim": 0.4,
+          "samples": []
+        },
+        {
+          "section": "Sleeve > Buttonhole design",
+          "drawings": 2,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 2,
+          "sectionSim": 0.4,
+          "samples": []
+        }
+      ]
+    },
+    {
+      "catalogField": "fly-stitching",
+      "part": "trousers",
+      "rowsAtStake": 6,
+      "optionCount": 2,
+      "optionLabels": [
+        "Curved Fly Stitch",
+        "Straight Fly Stitch"
+      ],
+      "verdict": "WEAK",
+      "candidates": [
+        {
+          "section": "Waist > Fly",
+          "drawings": 5,
+          "labelHits": 1,
+          "collapsedMatches": 0,
+          "ourOptionCount": 2,
+          "sectionSim": 0.2,
+          "samples": [
+            {
+              "ours": "Straight Fly Stitch",
+              "theirs": "Straight",
+              "ecode": "3401",
+              "path": "/images/factory/kute/trousers/Waist_Fly/3401__Straight.jpeg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "catalogField": "center-seam",
+      "part": "trousers",
+      "rowsAtStake": 6,
+      "optionCount": 2,
+      "optionLabels": [
+        "Open Seam",
+        "Flat-Fell Seam"
+      ],
+      "verdict": "SECTION_ONLY",
+      "candidates": [
+        {
+          "section": "Waist > Back waistband seam with bartack",
+          "drawings": 1,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 2,
+          "sectionSim": 0.286,
+          "samples": []
+        },
+        {
+          "section": "Pocket > Back pocket",
+          "drawings": 23,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 2,
+          "sectionSim": 0.25,
+          "samples": []
+        }
+      ]
+    },
+    {
+      "catalogField": "lapel-width",
+      "part": "vest",
+      "rowsAtStake": 6,
+      "optionCount": 3,
+      "optionLabels": [
+        "Narrow 6 cm",
+        "Standard 7.5 cm",
+        "Wide 9 cm"
+      ],
+      "verdict": "SECTION_ONLY",
+      "candidates": [
+        {
+          "section": "Lapel > Collar",
+          "drawings": 8,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 3,
+          "sectionSim": 0.25,
+          "samples": []
+        }
+      ]
+    },
+    {
+      "catalogField": "fitting-adjustment-vest",
+      "part": "vest",
+      "rowsAtStake": 6,
+      "optionCount": 3,
+      "optionLabels": [
+        "Standard",
+        "-1.0 cm Arm Hole",
+        "Deep Stomach Dart"
+      ],
+      "verdict": "WEAK",
+      "candidates": [
+        {
+          "section": "Back > Back style",
+          "drawings": 2,
+          "labelHits": 1,
+          "collapsedMatches": 0,
+          "ourOptionCount": 3,
+          "sectionSim": 0,
+          "samples": [
+            {
+              "ours": "Standard",
+              "theirs": "Standard vest with strap",
+              "ecode": "4200",
+              "path": "/images/factory/kute/vest/Back_Back_style/4200__Standard_vest_with_strap.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "catalogField": "sleeve-head",
+      "part": "jacket",
+      "rowsAtStake": 4,
+      "optionCount": 2,
+      "optionLabels": [
+        "Con Rollino",
+        "Natural"
+      ],
+      "verdict": "WEAK",
+      "candidates": [
+        {
+          "section": "Style > Shoulder > Shoulder shape",
+          "drawings": 5,
+          "labelHits": 1,
+          "collapsedMatches": 0,
+          "ourOptionCount": 2,
+          "sectionSim": 0.167,
+          "samples": [
+            {
+              "ours": "Natural",
+              "theirs": "Natural（big bicep）",
+              "ecode": "0A2K",
+              "path": "/images/factory/kute/jacket/Style_Shoulder_Shoulder_shape/0A2K__Natural_big_bicep.jpeg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "catalogField": "buttonhole-type-vest",
+      "part": "vest",
+      "rowsAtStake": 4,
+      "optionCount": 2,
+      "optionLabels": [
+        "Machine Stitched",
+        "Handmade Round Buttonholes"
+      ],
+      "verdict": "SECTION_ONLY",
+      "candidates": [
+        {
+          "section": "Style > Front buttonhole",
+          "drawings": 1,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 2,
+          "sectionSim": 0.6,
+          "samples": []
+        },
+        {
+          "section": "Style > Front bttn",
+          "drawings": 8,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 2,
+          "sectionSim": 0.333,
+          "samples": []
+        }
+      ]
+    },
+    {
+      "catalogField": "lapel-style",
+      "part": "jacket",
+      "rowsAtStake": 3,
+      "optionCount": 1,
+      "optionLabels": [
+        "Notch + Basic Tab"
+      ],
+      "verdict": "WEAK",
+      "candidates": [
+        {
+          "section": "Lapel > Lapel Style",
+          "drawings": 20,
+          "labelHits": 1,
+          "collapsedMatches": 0,
+          "ourOptionCount": 1,
+          "sectionSim": 1,
+          "samples": [
+            {
+              "ours": "Notch + Basic Tab",
+              "theirs": "Notch",
+              "ecode": "0001",
+              "path": "/images/factory/kute/jacket/Lapel_Lapel_Style/0001__Notch.jpeg"
+            }
+          ]
+        },
+        {
+          "section": "Lapel > Hole Style",
+          "drawings": 3,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 1,
+          "sectionSim": 0.667,
+          "samples": []
+        },
+        {
+          "section": "Lining > Lining Style",
+          "drawings": 11,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 1,
+          "sectionSim": 0.333,
+          "samples": []
+        }
+      ]
+    },
+    {
+      "catalogField": "lapel-bh-position",
+      "part": "jacket",
+      "rowsAtStake": 3,
+      "optionCount": 1,
+      "optionLabels": [
+        "Right Lapel"
+      ],
+      "verdict": "SECTION_ONLY",
+      "candidates": [
+        {
+          "section": "Lapel > Hole Position",
+          "drawings": 7,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 1,
+          "sectionSim": 0.667,
+          "samples": []
+        },
+        {
+          "section": "Lapel > Lapel Style",
+          "drawings": 20,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 1,
+          "sectionSim": 0.333,
+          "samples": []
+        },
+        {
+          "section": "Contrast > Lapel",
+          "drawings": 8,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 1,
+          "sectionSim": 0.333,
+          "samples": []
+        }
+      ]
+    },
+    {
+      "catalogField": "inner-pocket-closure",
+      "part": "jacket",
+      "rowsAtStake": 3,
+      "optionCount": 1,
+      "optionLabels": [
+        "None (Open)"
+      ],
+      "verdict": "SECTION_ONLY",
+      "candidates": [
+        {
+          "section": "Pocket > Inner > Inner pocket bartack",
+          "drawings": 3,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 1,
+          "sectionSim": 0.4,
+          "samples": []
+        },
+        {
+          "section": "Pocket > Inner > Inner-Other",
+          "drawings": 1,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 1,
+          "sectionSim": 0.4,
+          "samples": []
+        },
+        {
+          "section": "Pocket > Inner > Inside pocket shape",
+          "drawings": 9,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 1,
+          "sectionSim": 0.333,
+          "samples": []
+        }
+      ]
+    },
+    {
+      "catalogField": "pocket-stitching",
+      "part": "trousers",
+      "rowsAtStake": 3,
+      "optionCount": 1,
+      "optionLabels": [
+        "0.6 cm Topstitch"
+      ],
+      "verdict": "WEAK",
+      "candidates": [
+        {
+          "section": "Bttn & Thread > Stitching front pocket > STYLE",
+          "drawings": 6,
+          "labelHits": 1,
+          "collapsedMatches": 0,
+          "ourOptionCount": 1,
+          "sectionSim": 0.429,
+          "samples": [
+            {
+              "ours": "0.6 cm Topstitch",
+              "theirs": "0.6cm top stitch",
+              "ecode": "31A3",
+              "path": "/images/factory/kute/trousers/Bttn_Thread_Stitching_front_pocket_STYLE/31A3__0.6cm_top_stitch.jpeg"
+            }
+          ]
+        },
+        {
+          "section": "Pocket > Front Pocket",
+          "drawings": 16,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 1,
+          "sectionSim": 0.5,
+          "samples": []
+        },
+        {
+          "section": "Contrast > Front pocket besom",
+          "drawings": 2,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 1,
+          "sectionSim": 0.333,
+          "samples": []
+        }
+      ]
+    },
+    {
+      "catalogField": "watch-pocket",
+      "part": "trousers",
+      "rowsAtStake": 3,
+      "optionCount": 1,
+      "optionLabels": [
+        "Left Welt"
+      ],
+      "verdict": "WEAK",
+      "candidates": [
+        {
+          "section": "Pocket > Watch",
+          "drawings": 7,
+          "labelHits": 1,
+          "collapsedMatches": 0,
+          "ourOptionCount": 1,
+          "sectionSim": 0.5,
+          "samples": [
+            {
+              "ours": "Left Welt",
+              "theirs": "Left welt",
+              "ecode": "3171",
+              "path": "/images/factory/kute/trousers/Pocket_Watch/3171__Left_welt.jpeg"
+            }
+          ]
+        },
+        {
+          "section": "Pocket > Back pocket",
+          "drawings": 23,
+          "labelHits": 1,
+          "collapsedMatches": 0,
+          "ourOptionCount": 1,
+          "sectionSim": 0.2,
+          "samples": [
+            {
+              "ours": "Left Welt",
+              "theirs": "Left welt bttn&bttnhole",
+              "ecode": "32G4",
+              "path": "/images/factory/kute/trousers/Pocket_Back_pocket/32G4__Left_welt_bttn_bttnhole.jpeg"
+            }
+          ]
+        },
+        {
+          "section": "Pocket > Front Pocket",
+          "drawings": 16,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 1,
+          "sectionSim": 0.5,
+          "samples": []
+        }
+      ]
+    },
+    {
+      "catalogField": "belt-loops",
+      "part": "trousers",
+      "rowsAtStake": 3,
+      "optionCount": 1,
+      "optionLabels": [
+        "5 Loops"
+      ],
+      "verdict": "SECTION_ONLY",
+      "candidates": [
+        {
+          "section": "Contrast > Waistband",
+          "drawings": 1,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 1,
+          "sectionSim": 0.25,
+          "samples": []
+        }
+      ]
+    },
+    {
+      "catalogField": "waist-detail",
+      "part": "trousers",
+      "rowsAtStake": 3,
+      "optionCount": 1,
+      "optionLabels": [
+        "No Back Detail"
+      ],
+      "verdict": "SECTION_ONLY",
+      "candidates": [
+        {
+          "section": "Waist > Waist detail design",
+          "drawings": 2,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 1,
+          "sectionSim": 0.5,
+          "samples": []
+        },
+        {
+          "section": "Waist > Back waistband seam with bartack",
+          "drawings": 1,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 1,
+          "sectionSim": 0.286,
+          "samples": []
+        },
+        {
+          "section": "Waist > Fly",
+          "drawings": 5,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 1,
+          "sectionSim": 0.25,
+          "samples": []
+        }
+      ]
+    },
+    {
+      "catalogField": "pleat-style",
+      "part": "trousers",
+      "rowsAtStake": 3,
+      "optionCount": 1,
+      "optionLabels": [
+        "Flat Front (No Dart)"
+      ],
+      "verdict": "SECTION_ONLY",
+      "candidates": [
+        {
+          "section": "Style > Pleat style > Pleat style",
+          "drawings": 8,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 1,
+          "sectionSim": 0.5,
+          "samples": []
+        },
+        {
+          "section": "Style > Pleat style > Pleat depth",
+          "drawings": 5,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 1,
+          "sectionSim": 0.4,
+          "samples": []
+        }
+      ]
+    },
+    {
+      "catalogField": "inner-waist",
+      "part": "trousers",
+      "rowsAtStake": 3,
+      "optionCount": 1,
+      "optionLabels": [
+        "Standard, Piping & Snugtex"
+      ],
+      "verdict": "WEAK",
+      "candidates": [
+        {
+          "section": "Waist > Inner Face",
+          "drawings": 12,
+          "labelHits": 1,
+          "collapsedMatches": 0,
+          "ourOptionCount": 1,
+          "sectionSim": 0.4,
+          "samples": [
+            {
+              "ours": "Standard, Piping & Snugtex",
+              "theirs": "Standard",
+              "ecode": "3430",
+              "path": "/images/factory/kute/trousers/Waist_Inner_Face/3430__Standard.jpeg"
+            }
+          ]
+        },
+        {
+          "section": "Waist > Adjustment style",
+          "drawings": 4,
+          "labelHits": 1,
+          "collapsedMatches": 0,
+          "ourOptionCount": 1,
+          "sectionSim": 0.167,
+          "samples": [
+            {
+              "ours": "Standard, Piping & Snugtex",
+              "theirs": "Standard",
+              "ecode": "3349",
+              "path": "/images/factory/kute/trousers/Waist_Adjustment_style/3349__Standard.jpeg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "catalogField": "contrast-positions",
+      "part": "trousers",
+      "rowsAtStake": 3,
+      "optionCount": 1,
+      "optionLabels": [
+        "No Contrast"
+      ],
+      "verdict": "SECTION_ONLY",
+      "candidates": [
+        {
+          "section": "Contrast > Loop",
+          "drawings": 1,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 1,
+          "sectionSim": 0.25,
+          "samples": []
+        },
+        {
+          "section": "Contrast > Waistband",
+          "drawings": 1,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 1,
+          "sectionSim": 0.25,
+          "samples": []
+        }
+      ]
+    },
+    {
+      "catalogField": "waistband-back-seam",
+      "part": "trousers",
+      "rowsAtStake": 3,
+      "optionCount": 1,
+      "optionLabels": [
+        "With Bartack (Standard)"
+      ],
+      "verdict": "SECTION_ONLY",
+      "candidates": [
+        {
+          "section": "Waist > Back waistband seam with bartack",
+          "drawings": 1,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 1,
+          "sectionSim": 0.429,
+          "samples": []
+        }
+      ]
+    },
+    {
+      "catalogField": "canvas",
+      "part": "jacket",
+      "rowsAtStake": 2,
+      "optionCount": 1,
+      "optionLabels": [
+        "Ultra-thin Half Canvas"
+      ],
+      "verdict": "SECTION_ONLY",
+      "candidates": [
+        {
+          "section": "Style > Canvas",
+          "drawings": 6,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 1,
+          "sectionSim": 0.25,
+          "samples": []
+        }
+      ]
+    },
+    {
+      "catalogField": "contrast-lapel-collar",
+      "part": "vest",
+      "rowsAtStake": 2,
+      "optionCount": 1,
+      "optionLabels": [
+        "None"
+      ],
+      "verdict": "SECTION_ONLY",
+      "candidates": [
+        {
+          "section": "Contrast > Lapel&collar",
+          "drawings": 6,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 1,
+          "sectionSim": 0.75,
+          "samples": []
+        },
+        {
+          "section": "Lapel > Collar",
+          "drawings": 8,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 1,
+          "sectionSim": 0.5,
+          "samples": []
+        }
+      ]
+    },
+    {
+      "catalogField": "contrast-pocket-vest",
+      "part": "vest",
+      "rowsAtStake": 2,
+      "optionCount": 1,
+      "optionLabels": [
+        "None"
+      ],
+      "verdict": "SECTION_ONLY",
+      "candidates": [
+        {
+          "section": "Contrast > Pocket",
+          "drawings": 8,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 1,
+          "sectionSim": 0.667,
+          "samples": []
+        },
+        {
+          "section": "Pocket > Chest > Chest pocket",
+          "drawings": 9,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 1,
+          "sectionSim": 0.25,
+          "samples": []
+        }
+      ]
+    },
+    {
+      "catalogField": "vest-piping",
+      "part": "vest",
+      "rowsAtStake": 2,
+      "optionCount": 1,
+      "optionLabels": [
+        "No Piping"
+      ],
+      "verdict": "SECTION_ONLY",
+      "candidates": [
+        {
+          "section": "Lining > Piping",
+          "drawings": 1,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 1,
+          "sectionSim": 0.667,
+          "samples": []
+        },
+        {
+          "section": "Lining > Inner lining",
+          "drawings": 2,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 1,
+          "sectionSim": 0.25,
+          "samples": []
+        }
+      ]
+    },
+    {
+      "catalogField": "collar_stand_height",
+      "part": "shirt",
+      "rowsAtStake": 1,
+      "optionCount": 1,
+      "optionLabels": [
+        "3.5 cm Standard"
+      ],
+      "verdict": "SECTION_ONLY",
+      "candidates": [
+        {
+          "section": "Collar > Front height",
+          "drawings": 3,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 1,
+          "sectionSim": 0.5,
+          "samples": []
+        },
+        {
+          "section": "Collar > Collar Style",
+          "drawings": 22,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 1,
+          "sectionSim": 0.25,
+          "samples": []
+        },
+        {
+          "section": "Collar > Point",
+          "drawings": 8,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 1,
+          "sectionSim": 0.25,
+          "samples": []
+        }
+      ]
+    },
+    {
+      "catalogField": "collar_stand",
+      "part": "shirt",
+      "rowsAtStake": 1,
+      "optionCount": 1,
+      "optionLabels": [
+        "Square Collar Stand"
+      ],
+      "verdict": "SECTION_ONLY",
+      "candidates": [
+        {
+          "section": "Collar > Collar Style",
+          "drawings": 22,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 1,
+          "sectionSim": 0.333,
+          "samples": []
+        },
+        {
+          "section": "Collar > Point",
+          "drawings": 8,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 1,
+          "sectionSim": 0.333,
+          "samples": []
+        },
+        {
+          "section": "Collar > Band",
+          "drawings": 4,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 1,
+          "sectionSim": 0.333,
+          "samples": []
+        }
+      ]
+    },
+    {
+      "catalogField": "cuff",
+      "part": "shirt",
+      "rowsAtStake": 1,
+      "optionCount": 1,
+      "optionLabels": [
+        "Round Cuff — 2 Buttons, 1 Buttonhole"
+      ],
+      "verdict": "SECTION_ONLY",
+      "candidates": [
+        {
+          "section": "Contrast > Cuff",
+          "drawings": 9,
+          "labelHits": 0,
+          "collapsedMatches": 0,
+          "ourOptionCount": 1,
+          "sectionSim": 0.333,
+          "samples": []
+        }
+      ]
+    }
+  ]
+}

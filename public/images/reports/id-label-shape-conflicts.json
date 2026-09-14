@@ -1,0 +1,55 @@
+{
+  "ranAt": "2026-08-26T07:11:44.754Z",
+  "note": "Options whose internal ID names a shape the customer-facing LABEL contradicts, where each side carries a shape the other does not. A conflict needs a difference in BOTH directions - otherwise \"Round Point 7.0 cm\" flags itself, since round and pointed contradict but the id and label both carry both words and agree perfectly. Confirmed real on ext-pointed and ext-curved, whose DESCRIPTIONS had been written from the id and would have generated the wrong shape.",
+  "count": 6,
+  "hits": [
+    {
+      "prod": "suit-2pc",
+      "field": "waistband-extension",
+      "id": "ext-pointed",
+      "label": "Round, Hook & Button",
+      "desc": "Rounded waistband extension — a semicircular nose swept to a smooth 1.5 cm to 2.",
+      "clash": "id says pointed, label says round"
+    },
+    {
+      "prod": "suit-2pc",
+      "field": "waistband-extension",
+      "id": "ext-curved",
+      "label": "Square, Hook & Button",
+      "desc": "Square waistband extension — a flat end cut at 90° to the waistband edge with th",
+      "clash": "id says curved, label says square"
+    },
+    {
+      "prod": "suit-3pc",
+      "field": "waistband-extension",
+      "id": "ext-pointed",
+      "label": "Round, Hook & Button",
+      "desc": "Rounded waistband extension — a semicircular nose swept to a smooth 1.5 cm to 2.",
+      "clash": "id says pointed, label says round"
+    },
+    {
+      "prod": "suit-3pc",
+      "field": "waistband-extension",
+      "id": "ext-curved",
+      "label": "Square, Hook & Button",
+      "desc": "Square waistband extension — a flat end cut at 90° to the waistband edge with th",
+      "clash": "id says curved, label says square"
+    },
+    {
+      "prod": "trousers",
+      "field": "waistband-extension",
+      "id": "ext-pointed",
+      "label": "Round, Hook & Button",
+      "desc": "Rounded waistband extension — a semicircular nose swept to a smooth 1.5 cm to 2.",
+      "clash": "id says pointed, label says round"
+    },
+    {
+      "prod": "trousers",
+      "field": "waistband-extension",
+      "id": "ext-curved",
+      "label": "Square, Hook & Button",
+      "desc": "Square waistband extension — a flat end cut at 90° to the waistband edge with th",
+      "clash": "id says curved, label says square"
+    }
+  ]
+}

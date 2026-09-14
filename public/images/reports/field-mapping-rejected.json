@@ -1,0 +1,234 @@
+{
+  "note": "Candidate field mappings that were examined and REJECTED, with the reason. Recorded so they are not re-tried, and so they are not mistaken for unexplored ground. Every one of these was the top label-score candidate for its catalog field. Includes both supplier libraries: baoxiniao (flat field codes) and kutesmart (section paths). | 2026-08-26: entries carrying `superseded:true` were not deleted (V4 s13) - they record a rejection that was either based on a false premise or has been overtaken by a better source. Read `supersededReason`.",
+  "rejected": [
+    {
+      "catalogField": "belt-loops",
+      "supplierField": "REQKB",
+      "supplierFieldLabel": "1cm flat belt loops",
+      "why": "Different concept. Our option is a COUNT ('5 Loops'); every REQKB value is a loop WIDTH or style ('1cm flat', '5cm flat belt loops', '2cm slant'). '5cm flat belt loops' is a width, not five loops — the closest-looking value is the most misleading one."
+    },
+    {
+      "catalogField": "fly-stitching",
+      "supplierField": "GBKLI",
+      "supplierFieldLabel": "Pick stitching by machine 1",
+      "why": "Different concept. Ours is the fly seam SHAPE (Curved / Straight); GBKLI is stitching TECHNIQUE (pick vs top, machine vs hand). No GBKLI value expresses a curve at all."
+    },
+    {
+      "catalogField": "bar-tack",
+      "supplierField": "REFUK",
+      "supplierFieldLabel": "I-tack by Machine",
+      "why": "Ours is 'No Bar Tacks'. REFUK offers no None value — only I-tack, single/double pleat-root hand bartack, and a watch-pocket bartack. The single option we need is the one it cannot express."
+    },
+    {
+      "catalogField": "hem-style",
+      "supplierField": "REQFO",
+      "supplierFieldLabel": "Blind hem +6cm infold",
+      "why": "REQFO is plausibly the right FIELD (trouser bottom hem) but the values do not join. Our '3.8 cm Cuff Turn-Up' has no 3.8 counterpart — REQFO's turn-ups are numbered 1-5 and undimensioned — and our 'Fringe Edge' is undimensioned where REQFO offers 'Fringe 11CM'. This one needs a drawing-by-drawing look, not a label join."
+    },
+    {
+      "catalogField": "collar-interlining",
+      "supplierField": "GTEDC",
+      "supplierFieldLabel": "Regular",
+      "why": "GTEDC publishes exactly ONE value ('Regular') with one drawing. Our field is a two-way choice (Regular with Linen / No Linen) and the option that matters — the absence of linen — has no counterpart at all.",
+      "examinedAt": "2026-08-26T03:37:33.217145Z"
+    },
+    {
+      "catalogField": "label-placement",
+      "supplierField": "REQBR",
+      "supplierFieldLabel": "No Brand Label",
+      "why": "REQBR is BRAND-label placement (inner left waistband, inner right waistband, pocket linings). Our 'Inside Waistband' maps ambiguously to left OR right, and 'Care Label Only' has no counterpart. An ambiguous side is exactly the left/right defect this project keeps paying for.",
+      "examinedAt": "2026-08-26T03:37:33.217145Z"
+    },
+    {
+      "catalogField": "vest-label-placement",
+      "supplierField": "REQLO3",
+      "supplierFieldLabel": "Brown blank label",
+      "why": "REQLO3 mixes label COLOURS (brown / black / blue blank label) with placements in one value list. Our two options are placements. No clean join, and picking the placement-looking values out of a mixed list is a guess.",
+      "examinedAt": "2026-08-26T03:37:33.217145Z"
+    },
+    {
+      "catalogField": "collar_stand_height",
+      "supplierField": "KSHLA",
+      "supplierFieldLabel": "Round collar stand",
+      "why": "Different concept. KSHLA is collar stand SHAPE (round / square / with buttons); our option is a HEIGHT ('3.5 cm Standard'). No KSHLA value carries a height at all.",
+      "examinedAt": "2026-08-26T03:37:33.217145Z",
+      "superseded": true,
+      "supersededAt": "2026-08-26T06:17:24.113Z",
+      "supersededBy": "REQLB",
+      "supersededReason": "KSHLA is named \"Collar stand\" (shape). The HEIGHT field is REQLB, \"Collar stand height\". The original rejection was right that KSHLA carries no height; it just never saw REQLB. REQLB is re-rejected below on its own merits."
+    },
+    {
+      "catalogField": "coin-pocket / namecard-pocket / inner-ticket-pocket",
+      "supplierField": "GTECP",
+      "supplierFieldLabel": "Left",
+      "why": "FINAL. GTECP is the only interior-pocket POSITION field the supplier publishes with artwork (searched all 244 BB fields for interior/card/ticket/pen wording; the rest have zero drawings). Our catalog splits into three fields what the supplier models as one, so GTECP can serve at most one of them and nothing in the data says which. Assigning it to all three would be the shared-image defect; assigning it to one starves the other two arbitrarily. Needs the owner or a better drawing.",
+      "examinedAt": "2026-08-26T03:37:33.217145Z",
+      "superseded": true,
+      "supersededAt": "2026-08-26T05:54:39.194Z",
+      "supersededBy": "Full BB dictionary read (craft-labels-BB.json, 244 fields).",
+      "supersededReason": "The claim \"searched all 244 BB fields ... the rest have zero drawings\" was FALSE. The search was run against bb-images-labelled.json, a 48-field partial capture, not the 244-field dictionary. Baoxiniao does publish separate interior-pocket fields: KPEND (pen, 7 values incl. \"Drop shape left pen pocket\"), KNAMD (namecard, incl. \"Card Pocket: Self-fabric Patch Fabric\"), plus KMPCD / KAXDK / REAPB. GTECP is not the only such field and never had to serve three catalog fields."
+    },
+    {
+      "catalogField": "inner-ticket-pocket",
+      "supplierField": "kute: Pocket > Lower > Ticket pocket",
+      "why": "The section path is what proves it wrong. Kute files these under Pocket > LOWER > Ticket pocket - the outside hip ticket pocket. Our field is the INNER (interior) ticket pocket. The manufacturer's own taxonomy, the very evidence this library was mined for, says it is a different place on the garment.",
+      "examinedAt": "2026-08-26T03:44:59.374220+00:00"
+    },
+    {
+      "catalogField": "half-lining-shape",
+      "supplierField": "kute: Lining > Lining Style",
+      "why": "The two label hits are '1/2 lining WITH PIPING' and '1/3 lining WITH PIPING' against our plain '1/2 Lining' and '1/3 Lining'. Piping is a SEPARATE catalog field (columbia-piping), so these drawings would render a feature the option does not include.",
+      "examinedAt": "2026-08-26T03:44:59.374220+00:00",
+      "superseded": true,
+      "supersededAt": "2026-08-26T05:54:39.194Z",
+      "supersededBy": "KINBL (BB)",
+      "supersededReason": "The piping-contamination rejection of kute Lining > Lining Style stands. Moot: BB field KINBL carries all six of our options with no piping (Half lining | Small cut-away lining | 1/2 lining | 1/3 cut-away lining | 1/3 lining | 1/4 cut-away lining | None). NOTE: KINBL values B and E share the label \"Small cut-away lining\" - that pair must be told apart by drawing, not by label."
+    },
+    {
+      "catalogField": "lower-pocket (residual options)",
+      "supplierField": "kute: Pocket > Lower > Lower pocket",
+      "why": "Collapse, not a match. 'Patch + Rounded Button Tab', '+ Straight Button Tab', '+ Angled Button Tab' and 'Patch with Flap & Button' ALL prefix-match one generic entry 'Patch' (02J1). Applying it would put a single plate behind four different crafts - the shared-image defect. Kute publishes no per-tab patch drawings.",
+      "examinedAt": "2026-08-26T03:44:59.374220+00:00"
+    },
+    {
+      "catalogField": "perfume-pad",
+      "supplierField": "kute: Sleeve > Elbow",
+      "why": "Wrong body part and a 3-way collapse: 'Round Shield 1', '2' and '3' all match one entry 'Round' (0609) inside an ELBOW section. A perfume pad sits in the underarm.",
+      "examinedAt": "2026-08-26T03:44:59.374220+00:00",
+      "superseded": true,
+      "supersededAt": "2026-08-26T05:54:39.194Z",
+      "supersededBy": "KIMOD (BB)",
+      "supersededReason": "The rejection of kute Sleeve > Elbow stands on its own terms - an elbow section cannot show an underarm pad. It is now moot: BB field KIMOD is an exact 8-for-8 bijection with this field (Triangle underarm shield | Round underarm shield 1/2/3 | U-underarm shield 1/2/3 | None), matching our numbering exactly because the catalog was built from baoxiniao codes."
+    },
+    {
+      "catalogField": "waistband-style",
+      "supplierField": "REQST",
+      "supplierFieldLabel": "Standard",
+      "why": "Different axis. Ours are structural waistband TYPES (Standard / Extended Tab / Waistcoat Back Band / Elasticated Insert / Double / No Band). REQST's 18 values are adjuster and elastic MECHANISMS (full elastic with drawstring, metal adjusters on outseam, adjustable with button tab, suspender buttons). Only 'Standard' overlaps; the other five have no counterpart and the supplier's values have no home in our field.",
+      "examinedAt": "2026-08-26T04:44:47.776223+00:00"
+    },
+    {
+      "catalogField": "front-buttonhole",
+      "supplierField": "GTECH",
+      "supplierFieldLabel": "None",
+      "why": "CROSS-CRAFT TRAP. The matcher joins 2/2 ('By Machine' -> 'Squred Functional Buttonhole By Machine', 'By Hand' -> '008 by hand') but GTECH is the LAPEL buttonhole field, already verified and in use for lapel-bh-style. A front-edge buttonhole is a different place on the garment; a high label-join rate says the WORDS correspond, not the craft.",
+      "examinedAt": "2026-08-26T04:54:16.470659+00:00"
+    },
+    {
+      "catalogField": "sleeve-buttonhole-type",
+      "supplierField": "GTECH",
+      "supplierFieldLabel": "None",
+      "why": "Same trap as front-buttonhole: GTECH is the LAPEL buttonhole field. A sleeve buttonhole is on the cuff.",
+      "examinedAt": "2026-08-26T04:54:16.470659+00:00"
+    },
+    {
+      "catalogField": "waistband-width",
+      "supplierField": "RECTL",
+      "supplierFieldLabel": "5cm",
+      "why": "Range mismatch proves it is a different measurement. Our widths are 3.5 / 3.8 / 4.0 / 4.5 / 5.0 cm; RECTL runs 5cm to 15CM. Only the single 5cm value overlaps, and a field whose values reach 15 cm is not a trouser waistband width.",
+      "examinedAt": "2026-08-26T05:08:29.510649+00:00",
+      "superseded": true,
+      "supersededAt": "2026-08-26T06:17:24.113Z",
+      "supersededBy": "RECTK",
+      "supersededReason": "RECTL was the wrong field. The supplier names RECTK \"Waistband width\" (recovered from getZlpmd). The rejection reasoning - a range running to 15CM - was sound about RECTL and simply about the wrong field. RECTK is re-rejected below on its own merits."
+    },
+    {
+      "catalogField": "pocket-stitching",
+      "supplierField": "GBKLI",
+      "supplierFieldLabel": "Pick stitching by machine 1",
+      "why": "Ours are measured gauges (0.15 cm / 0.6 cm topstitch, 0.1+0.7 double, pick stitch at 0.15 and 0.6). GBKLI's six values carry NO dimension at all - 'Pick stitching by machine 1/2', 'Top stitching by machine 1/2'. A numbered variant cannot be mapped onto a measurement.",
+      "examinedAt": "2026-08-26T05:30:38.187769+00:00"
+    },
+    {
+      "catalogField": "front-pocket-style",
+      "supplierField": "KPOQD",
+      "supplierFieldLabel": "Slant pocket 2",
+      "why": "Same failure. Ours are measured slants (2.0 / 2.5 / 3.2 / 5.1 cm) plus jeans shapes; KPOQD offers 'Slant pocket 1/2/3/4' with no dimensions. Only one value carries a measurement ('2.5CM from the side seam'), and mapping numbered variants onto centimetre values would be a guess.",
+      "examinedAt": "2026-08-26T05:30:38.187769+00:00"
+    },
+    {
+      "catalogField": "waistband-width",
+      "supplierField": "RECTK",
+      "supplierFieldName": "Waistband width",
+      "why": "RIGHT field, wrong axis. RECTK is confirmed by name as the trouser waistband width field, but every one of its 27 values pairs a width with a CLOSURE - \"3.5cmOne hook\", \"3.5cmOne button\", \"3.5cmOne button one hook\", \"3.5cmTwo hooks(horizontal)\". Our options are pure widths, and closure is a SEPARATE catalog field (waistband-extension), so any pick would impose a closure the customer did not choose. Decisive on its own: RECTK publishes 3 / 3.5 / 4 / 4.5 / 5 / 5.5 / 6 cm and our catalog sells 3.8 cm, which does not exist there at all.",
+      "examinedAt": "2026-08-26T06:17:24.113Z"
+    },
+    {
+      "catalogField": "collar_stand_height",
+      "supplierField": "REQLB",
+      "supplierFieldName": "Collar stand height",
+      "why": "RIGHT field, the one option we need is missing. REQLB publishes 3 / 3.4 / 3.7(1btn) / 3.7(2btn) / 3.8 / 4 / 4.2 / 5 cm plus None and a 3.2cm band width. The only still-blocked option in our field is \"3.5 cm Standard\" and REQLB has no 3.5 cm value. Every other option in the field is already answered.",
+      "examinedAt": "2026-08-26T06:17:24.113Z"
+    },
+    {
+      "catalogField": "center-seam",
+      "supplierField": "KPWAM",
+      "supplierFieldName": "Center waist seam style",
+      "why": "Named the right area but a different axis. Ours are seam CONSTRUCTIONS (Open Seam / Flat-Fell Seam); KPWAM publishes None / I-shape / V-shape, which are the SHAPE of the centre-back waist seam. Neither of our two options is a shape and neither of their shapes is a construction.",
+      "examinedAt": "2026-08-26T06:20:12.532Z"
+    },
+    {
+      "catalogField": "watch-pocket",
+      "supplierField": "KPOQT",
+      "supplierFieldName": "Outside watch pocket",
+      "why": "Right field, unresolvable values. Our single blocked option is \"Left Welt\". KPOQT publishes Welt watch pocket 1/2/3 and Watch pocket 1/2/3 - three numbered welt variants and no side named anywhere. Picking one would be a guess on both axes at once. kute 3171 \"Left welt\" in section Pocket > Watch is the exact-label match and is the candidate to use instead.",
+      "examinedAt": "2026-08-26T06:20:12.532Z"
+    },
+    {
+      "catalogField": "inner-waist",
+      "supplierField": "REWCT",
+      "supplierFieldName": "Inner waist style",
+      "why": "Right field, opaque values. REWCT identifies its values by internal FY codes (FY040082, FY040107) with only some carrying a parenthetical hint, and none naming piping. Our \"Standard, Piping & Snugtex\" cannot be matched to an FY number without guessing. kute 3441 \"Standard, piping&snugtex\" in section Waist > Inner Face is a verbatim label match and is the candidate to use instead.",
+      "examinedAt": "2026-08-26T06:20:12.532Z"
+    },
+    {
+      "catalogField": "lapel-width (VEST)",
+      "supplierField": "KFABL",
+      "supplierFieldName": "Lapel width",
+      "why": "BLOCKED BY TOOLING, not by evidence. KFABL is the right field and covers 2 of our 3 vest widths (Narrow 6cm -> C, Standard 7.5cm -> F); Wide 9cm has no counterpart (KFABL jumps 8cm to 10cm). It cannot be applied yet because apply_field_mapping keys VERIFIED by field id alone and `lapel-width` already maps to KFABL for the JACKET - one field id cannot currently carry two garments. Worth 4 rows; needs the tool to accept an array per field id.",
+      "examinedAt": "2026-08-26T06:20:12.532Z"
+    },
+    {
+      "catalogField": "fitting-adjustment-vest",
+      "supplierField": "(none)",
+      "supplierFieldName": "—",
+      "why": "Searched all 258 BM field NAMES. The only ones sharing a word are BDJBO and BDJBH, both called \"Arm adjustment\" and both filed under Bodyshape adjustment - body measurements, not craft options, and both publish zero drawings. The supplier does not model our vest fitting adjustments as an illustrated craft field.",
+      "examinedAt": "2026-08-26T06:46:44.845Z"
+    },
+    {
+      "catalogField": "buttonhole-type-vest",
+      "supplierField": "(none)",
+      "supplierFieldName": "—",
+      "why": "The only BM fields matching \"buttonhole\" are COLOUR catalogues - GTECO \"Lapel buttonhole color\" (280 thread colours) and GMKC1..4 \"The first/second/... front buttonhole in contrast color\" (157 colours each). Ours is a TECHNIQUE (machine vs handmade round). No BM field carries buttonhole technique for the vest.",
+      "examinedAt": "2026-08-26T06:46:44.845Z"
+    },
+    {
+      "catalogField": "vest-label-placement",
+      "supplierField": "REQDM",
+      "supplierFieldName": "Care label position",
+      "why": "Right area, ambiguous side. REQDM offers \"Right front lining side seam\" and \"Left front lining side seam\"; our option is just \"Side Seam\" and does not say which. Our other option, \"Inner Breast Pocket Area\", maps equally well to \"Lower left pocket inside\" and \"Lower right pocket inside\". Choosing a side is exactly the left/right defect this project keeps paying for - same reasoning as the already-recorded label-placement/REQBR rejection.",
+      "examinedAt": "2026-08-26T06:46:44.845Z"
+    },
+    {
+      "catalogField": "vest-extras",
+      "supplierField": "REQBU",
+      "supplierFieldName": "Placket button",
+      "why": "Different kind of field. REQBU is a 216-entry catalogue of button PART NUMBERS (FK082427, GS85/FK082472). Our option is a construction choice, \"Placket with Pad Buttons\". PHNBU \"Sewing button style\" is the stitch pattern used to attach a button, also not it.",
+      "examinedAt": "2026-08-26T06:46:44.845Z"
+    },
+    {
+      "catalogField": "contrast-pocket-vest",
+      "supplierField": "(none)",
+      "supplierFieldName": "—",
+      "why": "Every BM field matching \"contrast\" is a thread-colour catalogue (GMKC1..4, 157 colours each). Our option is whether the pocket is made in a contrasting fabric at all.",
+      "examinedAt": "2026-08-26T06:46:44.845Z"
+    },
+    {
+      "catalogField": "vest-piping",
+      "supplierField": "(none)",
+      "supplierFieldName": "—",
+      "why": "No BM field name contains \"piping\". Note the JACKET has one (GTEZB \"Columbia stitching/Piping\", now mapped) but the vest does not.",
+      "examinedAt": "2026-08-26T06:46:44.845Z"
+    }
+  ]
+}

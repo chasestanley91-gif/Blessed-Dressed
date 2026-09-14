@@ -1,0 +1,3631 @@
+{
+  "generatedAt": "2026-08-26T07:23:11.199Z",
+  "source": "data-store/generation-queue.json",
+  "queueBuiltAt": "2026-08-26T06:44:53.730Z",
+  "states": [
+    "B",
+    "C"
+  ],
+  "queueRows": 771,
+  "identities": 371,
+  "rowsCovered": 759,
+  "dropped": 0,
+  "droppedItems": [],
+  "withheldSharedBlueprint": 4,
+  "withheldItems": [
+    {
+      "identity": "fin-lining|lining-color|bl-matching",
+      "product": "sport-coat",
+      "option": "bl-matching",
+      "label": "Matching to Fabric",
+      "illustration": "/images/blueprints/factory/d3eb9a6df665__0711__Match_fabric.webp",
+      "rows": 3,
+      "reason": "sharedBlueprint",
+      "alsoBacks": [
+        "bl-black \"Black\"",
+        "bl-cream \"Cream / Ivory\"",
+        "bl-charcoal \"Dark Charcoal\""
+      ]
+    },
+    {
+      "identity": "fin-lining|lining-color|bl-black",
+      "product": "sport-coat",
+      "option": "bl-black",
+      "label": "Black",
+      "illustration": "/images/blueprints/factory/d3eb9a6df665__0711__Match_fabric.webp",
+      "rows": 3,
+      "reason": "sharedBlueprint",
+      "alsoBacks": [
+        "bl-matching \"Matching to Fabric\"",
+        "bl-cream \"Cream / Ivory\"",
+        "bl-charcoal \"Dark Charcoal\""
+      ]
+    },
+    {
+      "identity": "fin-lining|lining-color|bl-cream",
+      "product": "sport-coat",
+      "option": "bl-cream",
+      "label": "Cream / Ivory",
+      "illustration": "/images/blueprints/factory/d3eb9a6df665__0711__Match_fabric.webp",
+      "rows": 3,
+      "reason": "sharedBlueprint",
+      "alsoBacks": [
+        "bl-matching \"Matching to Fabric\"",
+        "bl-black \"Black\"",
+        "bl-charcoal \"Dark Charcoal\""
+      ]
+    },
+    {
+      "identity": "fin-lining|lining-color|bl-charcoal",
+      "product": "sport-coat",
+      "option": "bl-charcoal",
+      "label": "Dark Charcoal",
+      "illustration": "/images/blueprints/factory/d3eb9a6df665__0711__Match_fabric.webp",
+      "rows": 3,
+      "reason": "sharedBlueprint",
+      "alsoBacks": [
+        "bl-matching \"Matching to Fabric\"",
+        "bl-black \"Black\"",
+        "bl-cream \"Cream / Ivory\""
+      ]
+    }
+  ],
+  "work": [
+    {
+      "identity": "fin-adjust|perfume-pad|pp-none",
+      "part": "fin-adjust",
+      "product": "sport-coat",
+      "section": "interior",
+      "field": "perfume-pad",
+      "option": "pp-none",
+      "label": "None",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KIMOD/F.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KIMOD\\F.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|interior|perfume-pad|pp-none",
+        "suit-2pc|interior|perfume-pad|pp-none",
+        "suit-3pc|interior|perfume-pad|pp-none"
+      ]
+    },
+    {
+      "identity": "fin-adjust|perfume-pad|pp-round-1",
+      "part": "fin-adjust",
+      "product": "sport-coat",
+      "section": "interior",
+      "field": "perfume-pad",
+      "option": "pp-round-1",
+      "label": "Round Shield 1",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KIMOD/B.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KIMOD\\B.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|interior|perfume-pad|pp-round-1",
+        "suit-2pc|interior|perfume-pad|pp-round-1",
+        "suit-3pc|interior|perfume-pad|pp-round-1"
+      ]
+    },
+    {
+      "identity": "fin-adjust|perfume-pad|pp-round-2",
+      "part": "fin-adjust",
+      "product": "sport-coat",
+      "section": "interior",
+      "field": "perfume-pad",
+      "option": "pp-round-2",
+      "label": "Round Shield 2",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KIMOD/A.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KIMOD\\A.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|interior|perfume-pad|pp-round-2",
+        "suit-2pc|interior|perfume-pad|pp-round-2",
+        "suit-3pc|interior|perfume-pad|pp-round-2"
+      ]
+    },
+    {
+      "identity": "fin-adjust|perfume-pad|pp-round-3",
+      "part": "fin-adjust",
+      "product": "sport-coat",
+      "section": "interior",
+      "field": "perfume-pad",
+      "option": "pp-round-3",
+      "label": "Round Shield 3",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KIMOD/H.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KIMOD\\H.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|interior|perfume-pad|pp-round-3",
+        "suit-2pc|interior|perfume-pad|pp-round-3",
+        "suit-3pc|interior|perfume-pad|pp-round-3"
+      ]
+    },
+    {
+      "identity": "fin-adjust|perfume-pad|pp-triangle",
+      "part": "fin-adjust",
+      "product": "sport-coat",
+      "section": "interior",
+      "field": "perfume-pad",
+      "option": "pp-triangle",
+      "label": "Triangle Underarm Shield",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KIMOD/E.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KIMOD\\E.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|interior|perfume-pad|pp-triangle",
+        "suit-2pc|interior|perfume-pad|pp-triangle",
+        "suit-3pc|interior|perfume-pad|pp-triangle"
+      ]
+    },
+    {
+      "identity": "fin-adjust|perfume-pad|pp-u-1",
+      "part": "fin-adjust",
+      "product": "sport-coat",
+      "section": "interior",
+      "field": "perfume-pad",
+      "option": "pp-u-1",
+      "label": "U-Shield 1",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KIMOD/D.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KIMOD\\D.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|interior|perfume-pad|pp-u-1",
+        "suit-2pc|interior|perfume-pad|pp-u-1",
+        "suit-3pc|interior|perfume-pad|pp-u-1"
+      ]
+    },
+    {
+      "identity": "fin-adjust|perfume-pad|pp-u-2",
+      "part": "fin-adjust",
+      "product": "sport-coat",
+      "section": "interior",
+      "field": "perfume-pad",
+      "option": "pp-u-2",
+      "label": "U-Shield 2",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KIMOD/C.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KIMOD\\C.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|interior|perfume-pad|pp-u-2",
+        "suit-2pc|interior|perfume-pad|pp-u-2",
+        "suit-3pc|interior|perfume-pad|pp-u-2"
+      ]
+    },
+    {
+      "identity": "fin-adjust|perfume-pad|pp-u-3",
+      "part": "fin-adjust",
+      "product": "sport-coat",
+      "section": "interior",
+      "field": "perfume-pad",
+      "option": "pp-u-3",
+      "label": "U-Shield 3",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KIMOD/G.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KIMOD\\G.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|interior|perfume-pad|pp-u-3",
+        "suit-2pc|interior|perfume-pad|pp-u-3",
+        "suit-3pc|interior|perfume-pad|pp-u-3"
+      ]
+    },
+    {
+      "identity": "fin-buttonhole|sleeve-buttonhole-type|slbh-hands",
+      "part": "fin-buttonhole",
+      "product": "sport-coat",
+      "section": "handmade",
+      "field": "sleeve-buttonhole-type",
+      "option": "slbh-hands",
+      "label": "By Hand",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/GXKMO/H.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\GXKMO\\H.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|handmade|sleeve-buttonhole-type|slbh-hands",
+        "suit-2pc|handmade|sleeve-buttonhole-type|slbh-hands",
+        "suit-3pc|handmade|sleeve-buttonhole-type|slbh-hands"
+      ]
+    },
+    {
+      "identity": "fin-buttonhole|sleeve-buttonhole-type|slbh-machine",
+      "part": "fin-buttonhole",
+      "product": "sport-coat",
+      "section": "handmade",
+      "field": "sleeve-buttonhole-type",
+      "option": "slbh-machine",
+      "label": "By Machine",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/GXKMO/A.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\GXKMO\\A.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|handmade|sleeve-buttonhole-type|slbh-machine",
+        "suit-2pc|handmade|sleeve-buttonhole-type|slbh-machine",
+        "suit-3pc|handmade|sleeve-buttonhole-type|slbh-machine"
+      ]
+    },
+    {
+      "identity": "fin-lining|facing-style|facing-1",
+      "part": "fin-lining",
+      "product": "sport-coat",
+      "section": "interior",
+      "field": "facing-style",
+      "option": "facing-1",
+      "label": "Facing 1",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KINGM/F.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KINGM\\F.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|interior|facing-style|facing-1",
+        "suit-2pc|interior|facing-style|facing-1",
+        "suit-3pc|interior|facing-style|facing-1"
+      ]
+    },
+    {
+      "identity": "fin-lining|facing-style|facing-2",
+      "part": "fin-lining",
+      "product": "sport-coat",
+      "section": "interior",
+      "field": "facing-style",
+      "option": "facing-2",
+      "label": "Facing 2",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KINGM/E.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KINGM\\E.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|interior|facing-style|facing-2",
+        "suit-2pc|interior|facing-style|facing-2",
+        "suit-3pc|interior|facing-style|facing-2"
+      ]
+    },
+    {
+      "identity": "fin-lining|facing-style|facing-4",
+      "part": "fin-lining",
+      "product": "sport-coat",
+      "section": "interior",
+      "field": "facing-style",
+      "option": "facing-4",
+      "label": "Facing 4",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KINGM/B.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KINGM\\B.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|interior|facing-style|facing-4",
+        "suit-2pc|interior|facing-style|facing-4",
+        "suit-3pc|interior|facing-style|facing-4"
+      ]
+    },
+    {
+      "identity": "fin-lining|facing-style|facing-5",
+      "part": "fin-lining",
+      "product": "sport-coat",
+      "section": "interior",
+      "field": "facing-style",
+      "option": "facing-5",
+      "label": "Facing 5",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KINGM/A.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KINGM\\A.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|interior|facing-style|facing-5",
+        "suit-2pc|interior|facing-style|facing-5",
+        "suit-3pc|interior|facing-style|facing-5"
+      ]
+    },
+    {
+      "identity": "fin-lining|facing-style|facing-7",
+      "part": "fin-lining",
+      "product": "sport-coat",
+      "section": "interior",
+      "field": "facing-style",
+      "option": "facing-7",
+      "label": "Facing 7",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KINGM/US66.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KINGM\\US66.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|interior|facing-style|facing-7",
+        "suit-2pc|interior|facing-style|facing-7",
+        "suit-3pc|interior|facing-style|facing-7"
+      ]
+    },
+    {
+      "identity": "fin-lining|facing-style|facing-9",
+      "part": "fin-lining",
+      "product": "sport-coat",
+      "section": "interior",
+      "field": "facing-style",
+      "option": "facing-9",
+      "label": "Facing 9",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KINGM/DGG.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KINGM\\DGG.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|interior|facing-style|facing-9",
+        "suit-2pc|interior|facing-style|facing-9",
+        "suit-3pc|interior|facing-style|facing-9"
+      ]
+    },
+    {
+      "identity": "fin-lining|half-lining-craft|hlc-binding",
+      "part": "fin-lining",
+      "product": "sport-coat",
+      "section": "suit-lining",
+      "field": "half-lining-craft",
+      "option": "hlc-binding",
+      "label": "Binding Seam",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KIPRO/A.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KIPRO\\A.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-lining|half-lining-craft|hlc-binding",
+        "suit-2pc|suit-lining|half-lining-craft|hlc-binding",
+        "suit-3pc|suit-lining|half-lining-craft|hlc-binding"
+      ]
+    },
+    {
+      "identity": "fin-lining|half-lining-craft|hlc-french",
+      "part": "fin-lining",
+      "product": "sport-coat",
+      "section": "suit-lining",
+      "field": "half-lining-craft",
+      "option": "hlc-french",
+      "label": "French Seam",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KIPRO/B.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KIPRO\\B.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-lining|half-lining-craft|hlc-french",
+        "suit-2pc|suit-lining|half-lining-craft|hlc-french",
+        "suit-3pc|suit-lining|half-lining-craft|hlc-french"
+      ]
+    },
+    {
+      "identity": "fin-lining|half-lining-craft|hlc-joining",
+      "part": "fin-lining",
+      "product": "sport-coat",
+      "section": "suit-lining",
+      "field": "half-lining-craft",
+      "option": "hlc-joining",
+      "label": "Joining Seam",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KIPRO/C.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KIPRO\\C.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-lining|half-lining-craft|hlc-joining",
+        "suit-2pc|suit-lining|half-lining-craft|hlc-joining",
+        "suit-3pc|suit-lining|half-lining-craft|hlc-joining"
+      ]
+    },
+    {
+      "identity": "fin-lining|half-lining-shape|hls-half",
+      "part": "fin-lining",
+      "product": "sport-coat",
+      "section": "suit-lining",
+      "field": "half-lining-shape",
+      "option": "hls-half",
+      "label": "1/2 Lining",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KINBL/C.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KINBL\\C.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-lining|half-lining-shape|hls-half",
+        "suit-2pc|suit-lining|half-lining-shape|hls-half",
+        "suit-3pc|suit-lining|half-lining-shape|hls-half"
+      ]
+    },
+    {
+      "identity": "fin-lining|half-lining-shape|hls-third",
+      "part": "fin-lining",
+      "product": "sport-coat",
+      "section": "suit-lining",
+      "field": "half-lining-shape",
+      "option": "hls-third",
+      "label": "1/3 Lining",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KINBL/G.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KINBL\\G.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-lining|half-lining-shape|hls-third",
+        "suit-2pc|suit-lining|half-lining-shape|hls-third",
+        "suit-3pc|suit-lining|half-lining-shape|hls-third"
+      ]
+    },
+    {
+      "identity": "fin-lining|half-lining-shape|hls-third-cutaway",
+      "part": "fin-lining",
+      "product": "sport-coat",
+      "section": "suit-lining",
+      "field": "half-lining-shape",
+      "option": "hls-third-cutaway",
+      "label": "1/3 Cut-away",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KINBL/D.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KINBL\\D.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-lining|half-lining-shape|hls-third-cutaway",
+        "suit-2pc|suit-lining|half-lining-shape|hls-third-cutaway",
+        "suit-3pc|suit-lining|half-lining-shape|hls-third-cutaway"
+      ]
+    },
+    {
+      "identity": "fin-lining|lining-coverage|lc-full",
+      "part": "fin-lining",
+      "product": "sport-coat",
+      "section": "suit-lining",
+      "field": "lining-coverage",
+      "option": "lc-full",
+      "label": "Full Lining",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KHALI/A.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KHALI\\A.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-lining|lining-coverage|lc-full",
+        "suit-2pc|suit-lining|lining-coverage|lc-full",
+        "suit-3pc|suit-lining|lining-coverage|lc-full"
+      ]
+    },
+    {
+      "identity": "fin-lining|lining-coverage|lc-half",
+      "part": "fin-lining",
+      "product": "sport-coat",
+      "section": "suit-lining",
+      "field": "lining-coverage",
+      "option": "lc-half",
+      "label": "Half Lining",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KHALI/B.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KHALI\\B.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-lining|lining-coverage|lc-half",
+        "suit-2pc|suit-lining|lining-coverage|lc-half",
+        "suit-3pc|suit-lining|lining-coverage|lc-half"
+      ]
+    },
+    {
+      "identity": "fin-lining|lining-coverage|lc-none",
+      "part": "fin-lining",
+      "product": "sport-coat",
+      "section": "suit-lining",
+      "field": "lining-coverage",
+      "option": "lc-none",
+      "label": "Unlined",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KHALI/C.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KHALI\\C.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-lining|lining-coverage|lc-none",
+        "suit-2pc|suit-lining|lining-coverage|lc-none",
+        "suit-3pc|suit-lining|lining-coverage|lc-none"
+      ]
+    },
+    {
+      "identity": "fin-piping|columbia-piping|cp-both",
+      "part": "fin-piping",
+      "product": "sport-coat",
+      "section": "suit-details",
+      "field": "columbia-piping",
+      "option": "cp-both",
+      "label": "Columbia + Piping",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/GTEZB/D.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\GTEZB\\D.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-details|columbia-piping|cp-both",
+        "suit-2pc|suit-details|columbia-piping|cp-both",
+        "suit-3pc|suit-details|columbia-piping|cp-both"
+      ]
+    },
+    {
+      "identity": "fin-piping|columbia-piping|cp-columbia",
+      "part": "fin-piping",
+      "product": "sport-coat",
+      "section": "suit-details",
+      "field": "columbia-piping",
+      "option": "cp-columbia",
+      "label": "Columbia Stitching",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/GTEZB/B.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\GTEZB\\B.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-details|columbia-piping|cp-columbia",
+        "suit-2pc|suit-details|columbia-piping|cp-columbia",
+        "suit-3pc|suit-details|columbia-piping|cp-columbia"
+      ]
+    },
+    {
+      "identity": "fin-piping|columbia-piping|cp-none",
+      "part": "fin-piping",
+      "product": "sport-coat",
+      "section": "suit-details",
+      "field": "columbia-piping",
+      "option": "cp-none",
+      "label": "None",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/GTEZB/A.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\GTEZB\\A.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-details|columbia-piping|cp-none",
+        "suit-2pc|suit-details|columbia-piping|cp-none",
+        "suit-3pc|suit-details|columbia-piping|cp-none"
+      ]
+    },
+    {
+      "identity": "fin-piping|columbia-piping|cp-piping",
+      "part": "fin-piping",
+      "product": "sport-coat",
+      "section": "suit-details",
+      "field": "columbia-piping",
+      "option": "cp-piping",
+      "label": "Piping",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/GTEZB/C.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\GTEZB\\C.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-details|columbia-piping|cp-piping",
+        "suit-2pc|suit-details|columbia-piping|cp-piping",
+        "suit-3pc|suit-details|columbia-piping|cp-piping"
+      ]
+    },
+    {
+      "identity": "fin-stitch|external-decoration|ext-loop-flat",
+      "part": "fin-stitch",
+      "product": "sport-coat",
+      "section": "back-vents",
+      "field": "external-decoration",
+      "option": "ext-loop-flat",
+      "label": "Front Chest Horizontal Button Loop",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/JWBZS/D.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\JWBZS\\D.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|back-vents|external-decoration|ext-loop-flat",
+        "suit-2pc|back-vents|external-decoration|ext-loop-flat",
+        "suit-3pc|back-vents|external-decoration|ext-loop-flat"
+      ]
+    },
+    {
+      "identity": "fin-stitch|external-decoration|ext-loop-slanted",
+      "part": "fin-stitch",
+      "product": "sport-coat",
+      "section": "back-vents",
+      "field": "external-decoration",
+      "option": "ext-loop-slanted",
+      "label": "Front Chest Slanted Button Loop",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/JWBZS/XD.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\JWBZS\\XD.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|back-vents|external-decoration|ext-loop-slanted",
+        "suit-2pc|back-vents|external-decoration|ext-loop-slanted",
+        "suit-3pc|back-vents|external-decoration|ext-loop-slanted"
+      ]
+    },
+    {
+      "identity": "fin-stitch|external-decoration|ext-none",
+      "part": "fin-stitch",
+      "product": "sport-coat",
+      "section": "back-vents",
+      "field": "external-decoration",
+      "option": "ext-none",
+      "label": "None",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/JWBZS/Z.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\JWBZS\\Z.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|back-vents|external-decoration|ext-none",
+        "suit-2pc|back-vents|external-decoration|ext-none",
+        "suit-3pc|back-vents|external-decoration|ext-none"
+      ]
+    },
+    {
+      "identity": "fin-stitch|handmade-decorative|hmd-full",
+      "part": "fin-stitch",
+      "product": "sport-coat",
+      "section": "handmade",
+      "field": "handmade-decorative",
+      "option": "hmd-full",
+      "label": "Full — Shoulder, Vents, Chest Pocket, Buttonholes",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REFUO/D.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REFUO\\D.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|handmade|handmade-decorative|hmd-full",
+        "suit-2pc|handmade|handmade-decorative|hmd-full",
+        "suit-3pc|handmade|handmade-decorative|hmd-full"
+      ]
+    },
+    {
+      "identity": "fin-stitch|handmade-decorative|hmd-shoulder",
+      "part": "fin-stitch",
+      "product": "sport-coat",
+      "section": "handmade",
+      "field": "handmade-decorative",
+      "option": "hmd-shoulder",
+      "label": "Shoulder Seam Only",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REFUO/B.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REFUO\\B.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|handmade|handmade-decorative|hmd-shoulder",
+        "suit-2pc|handmade|handmade-decorative|hmd-shoulder",
+        "suit-3pc|handmade|handmade-decorative|hmd-shoulder"
+      ]
+    },
+    {
+      "identity": "fin-stitch|pick-stitching-position|psp-all-seams",
+      "part": "fin-stitch",
+      "product": "sport-coat",
+      "section": "suit-details",
+      "field": "pick-stitching-position",
+      "option": "psp-all-seams",
+      "label": "All Seams",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REQGZ/J.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQGZ\\J.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-details|pick-stitching-position|psp-all-seams",
+        "suit-2pc|suit-details|pick-stitching-position|psp-all-seams",
+        "suit-3pc|suit-details|pick-stitching-position|psp-all-seams"
+      ]
+    },
+    {
+      "identity": "fin-stitch|pick-stitching-position|psp-plus-back",
+      "part": "fin-stitch",
+      "product": "sport-coat",
+      "section": "suit-details",
+      "field": "pick-stitching-position",
+      "option": "psp-plus-back",
+      "label": "+ Back Vent",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REQGZ/B.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQGZ\\B.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-details|pick-stitching-position|psp-plus-back",
+        "suit-2pc|suit-details|pick-stitching-position|psp-plus-back",
+        "suit-3pc|suit-details|pick-stitching-position|psp-plus-back"
+      ]
+    },
+    {
+      "identity": "fin-stitch|pick-stitching|ps-06-hand",
+      "part": "fin-stitch",
+      "product": "sport-coat",
+      "section": "suit-details",
+      "field": "pick-stitching",
+      "option": "ps-06-hand",
+      "label": "0.6 cm by Hand",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/GTEGZ/E.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\GTEGZ\\E.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-details|pick-stitching|ps-06-hand",
+        "suit-2pc|suit-details|pick-stitching|ps-06-hand",
+        "suit-3pc|suit-details|pick-stitching|ps-06-hand"
+      ]
+    },
+    {
+      "identity": "fin-stitch|pick-stitching|ps-none",
+      "part": "fin-stitch",
+      "product": "sport-coat",
+      "section": "suit-details",
+      "field": "pick-stitching",
+      "option": "ps-none",
+      "label": "None",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/GTEGZ/A.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\GTEGZ\\A.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-details|pick-stitching|ps-none",
+        "suit-2pc|suit-details|pick-stitching|ps-none",
+        "suit-3pc|suit-details|pick-stitching|ps-none"
+      ]
+    },
+    {
+      "identity": "jacket-canvas|canvas|ultra-thin-half",
+      "part": "jacket-canvas",
+      "product": "sport-coat",
+      "section": "shoulder-structure",
+      "field": "canvas",
+      "option": "ultra-thin-half",
+      "label": "Ultra-thin Half Canvas",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/PROCE/L.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\PROCE\\L.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|shoulder-structure|canvas|ultra-thin-half",
+        "suit-2pc|shoulder-structure|canvas|ultra-thin-half",
+        "suit-3pc|shoulder-structure|canvas|ultra-thin-half"
+      ]
+    },
+    {
+      "identity": "jacket-chest-pocket|chest-pocket|cp-inverted-pleat-2flap",
+      "part": "jacket-chest-pocket",
+      "product": "sport-coat",
+      "section": "suit-pockets",
+      "field": "chest-pocket",
+      "option": "cp-inverted-pleat-2flap",
+      "label": "Two Inverted Pleated + Flaps",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REQPU/234.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQPU\\234.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-pockets|chest-pocket|cp-inverted-pleat-2flap",
+        "suit-2pc|suit-pockets|chest-pocket|cp-inverted-pleat-2flap",
+        "suit-3pc|suit-pockets|chest-pocket|cp-inverted-pleat-2flap"
+      ]
+    },
+    {
+      "identity": "jacket-chest-pocket|chest-pocket|cp-inverted-pleat-flap",
+      "part": "jacket-chest-pocket",
+      "product": "sport-coat",
+      "section": "suit-pockets",
+      "field": "chest-pocket",
+      "option": "cp-inverted-pleat-flap",
+      "label": "Inverted Pleated + Flap",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REQPU/235.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQPU\\235.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-pockets|chest-pocket|cp-inverted-pleat-flap",
+        "suit-2pc|suit-pockets|chest-pocket|cp-inverted-pleat-flap",
+        "suit-3pc|suit-pockets|chest-pocket|cp-inverted-pleat-flap"
+      ]
+    },
+    {
+      "identity": "jacket-chest-pocket|chest-pocket|cp-none",
+      "part": "jacket-chest-pocket",
+      "product": "sport-coat",
+      "section": "suit-pockets",
+      "field": "chest-pocket",
+      "option": "cp-none",
+      "label": "None",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REQPU/H.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQPU\\H.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-pockets|chest-pocket|cp-none",
+        "suit-2pc|suit-pockets|chest-pocket|cp-none",
+        "suit-3pc|suit-pockets|chest-pocket|cp-none"
+      ]
+    },
+    {
+      "identity": "jacket-chest-pocket|chest-pocket|cp-patch-angled",
+      "part": "jacket-chest-pocket",
+      "product": "sport-coat",
+      "section": "suit-pockets",
+      "field": "chest-pocket",
+      "option": "cp-patch-angled",
+      "label": "Angled Box Pleat Patch",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REQPU/BE.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQPU\\BE.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-pockets|chest-pocket|cp-patch-angled",
+        "suit-2pc|suit-pockets|chest-pocket|cp-patch-angled",
+        "suit-3pc|suit-pockets|chest-pocket|cp-patch-angled"
+      ]
+    },
+    {
+      "identity": "jacket-chest-pocket|chest-pocket|cp-patch-multi",
+      "part": "jacket-chest-pocket",
+      "product": "sport-coat",
+      "section": "suit-pockets",
+      "field": "chest-pocket",
+      "option": "cp-patch-multi",
+      "label": "Multi-Pleated Patch",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REQPU/C1.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQPU\\C1.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-pockets|chest-pocket|cp-patch-multi",
+        "suit-2pc|suit-pockets|chest-pocket|cp-patch-multi",
+        "suit-3pc|suit-pockets|chest-pocket|cp-patch-multi"
+      ]
+    },
+    {
+      "identity": "jacket-chest-pocket|chest-pocket|cp-patch-round",
+      "part": "jacket-chest-pocket",
+      "product": "sport-coat",
+      "section": "suit-pockets",
+      "field": "chest-pocket",
+      "option": "cp-patch-round",
+      "label": "Round Patch",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REQPU/HXD.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQPU\\HXD.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-pockets|chest-pocket|cp-patch-round",
+        "suit-2pc|suit-pockets|chest-pocket|cp-patch-round",
+        "suit-3pc|suit-pockets|chest-pocket|cp-patch-round"
+      ]
+    },
+    {
+      "identity": "jacket-chest-pocket|chest-pocket|cp-patch-tulip",
+      "part": "jacket-chest-pocket",
+      "product": "sport-coat",
+      "section": "suit-pockets",
+      "field": "chest-pocket",
+      "option": "cp-patch-tulip",
+      "label": "Tulip Shape Patch",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REQPU/233.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQPU\\233.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-pockets|chest-pocket|cp-patch-tulip",
+        "suit-2pc|suit-pockets|chest-pocket|cp-patch-tulip",
+        "suit-3pc|suit-pockets|chest-pocket|cp-patch-tulip"
+      ]
+    },
+    {
+      "identity": "jacket-front-buttonhole|front-buttonhole|fbh-hands",
+      "part": "jacket-front-buttonhole",
+      "product": "sport-coat",
+      "section": "front-style",
+      "field": "front-buttonhole",
+      "option": "fbh-hands",
+      "label": "By Hand",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/GLKMO/H.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\GLKMO\\H.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|front-style|front-buttonhole|fbh-hands",
+        "suit-2pc|front-style|front-buttonhole|fbh-hands",
+        "suit-3pc|front-style|front-buttonhole|fbh-hands"
+      ]
+    },
+    {
+      "identity": "jacket-front-buttonhole|front-buttonhole|fbh-machine",
+      "part": "jacket-front-buttonhole",
+      "product": "sport-coat",
+      "section": "front-style",
+      "field": "front-buttonhole",
+      "option": "fbh-machine",
+      "label": "By Machine",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/GLKMO/A.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\GLKMO\\A.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|front-style|front-buttonhole|fbh-machine",
+        "suit-2pc|front-style|front-buttonhole|fbh-machine",
+        "suit-3pc|front-style|front-buttonhole|fbh-machine"
+      ]
+    },
+    {
+      "identity": "jacket-front|button-config|sb-5",
+      "part": "jacket-front",
+      "product": "sport-coat",
+      "section": "front-style",
+      "field": "button-config",
+      "option": "sb-5",
+      "label": "SB 5 Buttons",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REQBT/27.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQBT\\27.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|front-style|button-config|sb-5",
+        "suit-2pc|front-style|button-config|sb-5",
+        "suit-3pc|front-style|button-config|sb-5"
+      ]
+    },
+    {
+      "identity": "jacket-interior|inner-pocket-closure|ipc-none",
+      "part": "jacket-interior",
+      "product": "sport-coat",
+      "section": "interior",
+      "field": "inner-pocket-closure",
+      "option": "ipc-none",
+      "label": "None (Open)",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KALDF/D.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KALDF\\D.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|interior|inner-pocket-closure|ipc-none",
+        "suit-2pc|interior|inner-pocket-closure|ipc-none",
+        "suit-3pc|interior|inner-pocket-closure|ipc-none"
+      ]
+    },
+    {
+      "identity": "jacket-interior|inner-ticket-pocket|itp-both",
+      "part": "jacket-interior",
+      "product": "sport-coat",
+      "section": "interior",
+      "field": "inner-ticket-pocket",
+      "option": "itp-both",
+      "label": "Left & Right",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REAPB/D.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REAPB\\D.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|interior|inner-ticket-pocket|itp-both",
+        "suit-2pc|interior|inner-ticket-pocket|itp-both",
+        "suit-3pc|interior|inner-ticket-pocket|itp-both"
+      ]
+    },
+    {
+      "identity": "jacket-interior|inner-ticket-pocket|itp-left",
+      "part": "jacket-interior",
+      "product": "sport-coat",
+      "section": "interior",
+      "field": "inner-ticket-pocket",
+      "option": "itp-left",
+      "label": "Left",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REAPB/A.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REAPB\\A.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|interior|inner-ticket-pocket|itp-left",
+        "suit-2pc|interior|inner-ticket-pocket|itp-left",
+        "suit-3pc|interior|inner-ticket-pocket|itp-left"
+      ]
+    },
+    {
+      "identity": "jacket-interior|inner-ticket-pocket|itp-none",
+      "part": "jacket-interior",
+      "product": "sport-coat",
+      "section": "interior",
+      "field": "inner-ticket-pocket",
+      "option": "itp-none",
+      "label": "None",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REAPB/C.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REAPB\\C.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|interior|inner-ticket-pocket|itp-none",
+        "suit-2pc|interior|inner-ticket-pocket|itp-none",
+        "suit-3pc|interior|inner-ticket-pocket|itp-none"
+      ]
+    },
+    {
+      "identity": "jacket-interior|inner-ticket-pocket|itp-right",
+      "part": "jacket-interior",
+      "product": "sport-coat",
+      "section": "interior",
+      "field": "inner-ticket-pocket",
+      "option": "itp-right",
+      "label": "Right",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REAPB/B.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REAPB\\B.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|interior|inner-ticket-pocket|itp-right",
+        "suit-2pc|interior|inner-ticket-pocket|itp-right",
+        "suit-3pc|interior|inner-ticket-pocket|itp-right"
+      ]
+    },
+    {
+      "identity": "jacket-interior|mp3-pocket|mp3-left",
+      "part": "jacket-interior",
+      "product": "sport-coat",
+      "section": "interior",
+      "field": "mp3-pocket",
+      "option": "mp3-left",
+      "label": "Left Inner",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KMPCD/B.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KMPCD\\B.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|interior|mp3-pocket|mp3-left",
+        "suit-2pc|interior|mp3-pocket|mp3-left",
+        "suit-3pc|interior|mp3-pocket|mp3-left"
+      ]
+    },
+    {
+      "identity": "jacket-interior|mp3-pocket|mp3-none",
+      "part": "jacket-interior",
+      "product": "sport-coat",
+      "section": "interior",
+      "field": "mp3-pocket",
+      "option": "mp3-none",
+      "label": "None",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KMPCD/A.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KMPCD\\A.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|interior|mp3-pocket|mp3-none",
+        "suit-2pc|interior|mp3-pocket|mp3-none",
+        "suit-3pc|interior|mp3-pocket|mp3-none"
+      ]
+    },
+    {
+      "identity": "jacket-interior|mp3-pocket|mp3-right",
+      "part": "jacket-interior",
+      "product": "sport-coat",
+      "section": "interior",
+      "field": "mp3-pocket",
+      "option": "mp3-right",
+      "label": "Right Inner",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KMPCD/C.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KMPCD\\C.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|interior|mp3-pocket|mp3-right",
+        "suit-2pc|interior|mp3-pocket|mp3-right",
+        "suit-3pc|interior|mp3-pocket|mp3-right"
+      ]
+    },
+    {
+      "identity": "jacket-interior|namecard-pocket|nc-both",
+      "part": "jacket-interior",
+      "product": "sport-coat",
+      "section": "interior",
+      "field": "namecard-pocket",
+      "option": "nc-both",
+      "label": "Both Sides",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KNAMD/C.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KNAMD\\C.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|interior|namecard-pocket|nc-both",
+        "suit-2pc|interior|namecard-pocket|nc-both",
+        "suit-3pc|interior|namecard-pocket|nc-both"
+      ]
+    },
+    {
+      "identity": "jacket-interior|namecard-pocket|nc-left",
+      "part": "jacket-interior",
+      "product": "sport-coat",
+      "section": "interior",
+      "field": "namecard-pocket",
+      "option": "nc-left",
+      "label": "Left Inner",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KNAMD/A.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KNAMD\\A.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|interior|namecard-pocket|nc-left",
+        "suit-2pc|interior|namecard-pocket|nc-left",
+        "suit-3pc|interior|namecard-pocket|nc-left"
+      ]
+    },
+    {
+      "identity": "jacket-interior|namecard-pocket|nc-none",
+      "part": "jacket-interior",
+      "product": "sport-coat",
+      "section": "interior",
+      "field": "namecard-pocket",
+      "option": "nc-none",
+      "label": "None",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KNAMD/D.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KNAMD\\D.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|interior|namecard-pocket|nc-none",
+        "suit-2pc|interior|namecard-pocket|nc-none",
+        "suit-3pc|interior|namecard-pocket|nc-none"
+      ]
+    },
+    {
+      "identity": "jacket-interior|namecard-pocket|nc-right",
+      "part": "jacket-interior",
+      "product": "sport-coat",
+      "section": "interior",
+      "field": "namecard-pocket",
+      "option": "nc-right",
+      "label": "Right Inner",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KNAMD/B.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KNAMD\\B.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|interior|namecard-pocket|nc-right",
+        "suit-2pc|interior|namecard-pocket|nc-right",
+        "suit-3pc|interior|namecard-pocket|nc-right"
+      ]
+    },
+    {
+      "identity": "jacket-interior|pen-pocket|pen-left-diamond",
+      "part": "jacket-interior",
+      "product": "sport-coat",
+      "section": "interior",
+      "field": "pen-pocket",
+      "option": "pen-left-diamond",
+      "label": "Left Diamond",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KPEND/C.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KPEND\\C.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|interior|pen-pocket|pen-left-diamond",
+        "suit-2pc|interior|pen-pocket|pen-left-diamond",
+        "suit-3pc|interior|pen-pocket|pen-left-diamond"
+      ]
+    },
+    {
+      "identity": "jacket-interior|pen-pocket|pen-left-drop",
+      "part": "jacket-interior",
+      "product": "sport-coat",
+      "section": "interior",
+      "field": "pen-pocket",
+      "option": "pen-left-drop",
+      "label": "Left Drop-shape",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KPEND/B.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KPEND\\B.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|interior|pen-pocket|pen-left-drop",
+        "suit-2pc|interior|pen-pocket|pen-left-drop",
+        "suit-3pc|interior|pen-pocket|pen-left-drop"
+      ]
+    },
+    {
+      "identity": "jacket-interior|pen-pocket|pen-left-jetted",
+      "part": "jacket-interior",
+      "product": "sport-coat",
+      "section": "interior",
+      "field": "pen-pocket",
+      "option": "pen-left-jetted",
+      "label": "Left Jetted",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KPEND/A.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KPEND\\A.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|interior|pen-pocket|pen-left-jetted",
+        "suit-2pc|interior|pen-pocket|pen-left-jetted",
+        "suit-3pc|interior|pen-pocket|pen-left-jetted"
+      ]
+    },
+    {
+      "identity": "jacket-interior|pen-pocket|pen-right-diamond",
+      "part": "jacket-interior",
+      "product": "sport-coat",
+      "section": "interior",
+      "field": "pen-pocket",
+      "option": "pen-right-diamond",
+      "label": "Right Diamond",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KPEND/F.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KPEND\\F.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|interior|pen-pocket|pen-right-diamond",
+        "suit-2pc|interior|pen-pocket|pen-right-diamond",
+        "suit-3pc|interior|pen-pocket|pen-right-diamond"
+      ]
+    },
+    {
+      "identity": "jacket-interior|pen-pocket|pen-right-drop",
+      "part": "jacket-interior",
+      "product": "sport-coat",
+      "section": "interior",
+      "field": "pen-pocket",
+      "option": "pen-right-drop",
+      "label": "Right Drop-shape",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KPEND/E.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KPEND\\E.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|interior|pen-pocket|pen-right-drop",
+        "suit-2pc|interior|pen-pocket|pen-right-drop",
+        "suit-3pc|interior|pen-pocket|pen-right-drop"
+      ]
+    },
+    {
+      "identity": "jacket-interior|pen-pocket|pen-right-jetted",
+      "part": "jacket-interior",
+      "product": "sport-coat",
+      "section": "interior",
+      "field": "pen-pocket",
+      "option": "pen-right-jetted",
+      "label": "Right Jetted",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KPEND/D.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KPEND\\D.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|interior|pen-pocket|pen-right-jetted",
+        "suit-2pc|interior|pen-pocket|pen-right-jetted",
+        "suit-3pc|interior|pen-pocket|pen-right-jetted"
+      ]
+    },
+    {
+      "identity": "jacket-lapel-buttonhole|lapel-bh-style|lbh-fake-round",
+      "part": "jacket-lapel-buttonhole",
+      "product": "sport-coat",
+      "section": "lapel",
+      "field": "lapel-bh-style",
+      "option": "lbh-fake-round",
+      "label": "Fake Round",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/GTECH/D.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\GTECH\\D.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|lapel|lapel-bh-style|lbh-fake-round",
+        "suit-2pc|lapel|lapel-bh-style|lbh-fake-round",
+        "suit-3pc|lapel|lapel-bh-style|lbh-fake-round"
+      ]
+    },
+    {
+      "identity": "jacket-lapel-buttonhole|lapel-bh-style|lbh-fake-square",
+      "part": "jacket-lapel-buttonhole",
+      "product": "sport-coat",
+      "section": "lapel",
+      "field": "lapel-bh-style",
+      "option": "lbh-fake-square",
+      "label": "Fake Square-End",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/GTECH/C.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\GTECH\\C.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|lapel|lapel-bh-style|lbh-fake-square",
+        "suit-2pc|lapel|lapel-bh-style|lbh-fake-square",
+        "suit-3pc|lapel|lapel-bh-style|lbh-fake-square"
+      ]
+    },
+    {
+      "identity": "jacket-lapel|lapel-style|lapel-notch-73",
+      "part": "jacket-lapel",
+      "product": "sport-coat",
+      "section": "lapel",
+      "field": "lapel-style",
+      "option": "lapel-notch-73",
+      "label": "Straight Notch 73°",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REQCL/BG.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQCL\\BG.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|lapel|lapel-style|lapel-notch-73",
+        "suit-2pc|lapel|lapel-style|lapel-notch-73",
+        "suit-3pc|lapel|lapel-style|lapel-notch-73"
+      ]
+    },
+    {
+      "identity": "jacket-lapel|lapel-style|lapel-notch-tab-basic",
+      "part": "jacket-lapel",
+      "product": "sport-coat",
+      "section": "lapel",
+      "field": "lapel-style",
+      "option": "lapel-notch-tab-basic",
+      "label": "Notch + Basic Tab",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REQCL/13.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQCL\\13.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|lapel|lapel-style|lapel-notch-tab-basic",
+        "suit-2pc|lapel|lapel-style|lapel-notch-tab-basic",
+        "suit-3pc|lapel|lapel-style|lapel-notch-tab-basic"
+      ]
+    },
+    {
+      "identity": "jacket-lapel|lapel-style|lapel-peak-120-curved",
+      "part": "jacket-lapel",
+      "product": "sport-coat",
+      "section": "lapel",
+      "field": "lapel-style",
+      "option": "lapel-peak-120-curved",
+      "label": "Curved Peak 120°",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REQCL/AD.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQCL\\AD.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|lapel|lapel-style|lapel-peak-120-curved",
+        "suit-2pc|lapel|lapel-style|lapel-peak-120-curved",
+        "suit-3pc|lapel|lapel-style|lapel-peak-120-curved"
+      ]
+    },
+    {
+      "identity": "jacket-lapel|lapel-width|lw-100",
+      "part": "jacket-lapel",
+      "product": "sport-coat",
+      "section": "lapel",
+      "field": "lapel-width",
+      "option": "lw-100",
+      "label": "10.0 cm",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KFABL/M.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KFABL\\M.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|lapel|lapel-width|lw-100",
+        "suit-2pc|lapel|lapel-width|lw-100",
+        "suit-3pc|lapel|lapel-width|lw-100"
+      ]
+    },
+    {
+      "identity": "jacket-lapel|lapel-width|lw-105",
+      "part": "jacket-lapel",
+      "product": "sport-coat",
+      "section": "lapel",
+      "field": "lapel-width",
+      "option": "lw-105",
+      "label": "10.5 cm",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KFABL/R.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KFABL\\R.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|lapel|lapel-width|lw-105",
+        "suit-2pc|lapel|lapel-width|lw-105",
+        "suit-3pc|lapel|lapel-width|lw-105"
+      ]
+    },
+    {
+      "identity": "jacket-lapel|lapel-width|lw-110",
+      "part": "jacket-lapel",
+      "product": "sport-coat",
+      "section": "lapel",
+      "field": "lapel-width",
+      "option": "lw-110",
+      "label": "11.0 cm",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KFABL/1.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KFABL\\1.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|lapel|lapel-width|lw-110",
+        "suit-2pc|lapel|lapel-width|lw-110",
+        "suit-3pc|lapel|lapel-width|lw-110"
+      ]
+    },
+    {
+      "identity": "jacket-lapel|lapel-width|lw-115",
+      "part": "jacket-lapel",
+      "product": "sport-coat",
+      "section": "lapel",
+      "field": "lapel-width",
+      "option": "lw-115",
+      "label": "11.5 cm",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KFABL/218.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KFABL\\218.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|lapel|lapel-width|lw-115",
+        "suit-2pc|lapel|lapel-width|lw-115",
+        "suit-3pc|lapel|lapel-width|lw-115"
+      ]
+    },
+    {
+      "identity": "jacket-lapel|lapel-width|lw-45",
+      "part": "jacket-lapel",
+      "product": "sport-coat",
+      "section": "lapel",
+      "field": "lapel-width",
+      "option": "lw-45",
+      "label": "4.5 cm",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KFABL/L.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KFABL\\L.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|lapel|lapel-width|lw-45",
+        "suit-2pc|lapel|lapel-width|lw-45",
+        "suit-3pc|lapel|lapel-width|lw-45"
+      ]
+    },
+    {
+      "identity": "jacket-lapel|lapel-width|lw-50",
+      "part": "jacket-lapel",
+      "product": "sport-coat",
+      "section": "lapel",
+      "field": "lapel-width",
+      "option": "lw-50",
+      "label": "5.0 cm",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KFABL/A.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KFABL\\A.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|lapel|lapel-width|lw-50",
+        "suit-2pc|lapel|lapel-width|lw-50",
+        "suit-3pc|lapel|lapel-width|lw-50"
+      ]
+    },
+    {
+      "identity": "jacket-lapel|lapel-width|lw-60",
+      "part": "jacket-lapel",
+      "product": "sport-coat",
+      "section": "lapel",
+      "field": "lapel-width",
+      "option": "lw-60",
+      "label": "6.0 cm",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KFABL/C.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KFABL\\C.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|lapel|lapel-width|lw-60",
+        "suit-2pc|lapel|lapel-width|lw-60",
+        "suit-3pc|lapel|lapel-width|lw-60"
+      ]
+    },
+    {
+      "identity": "jacket-lapel|lapel-width|lw-70",
+      "part": "jacket-lapel",
+      "product": "sport-coat",
+      "section": "lapel",
+      "field": "lapel-width",
+      "option": "lw-70",
+      "label": "7.0 cm",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KFABL/D.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KFABL\\D.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|lapel|lapel-width|lw-70",
+        "suit-2pc|lapel|lapel-width|lw-70",
+        "suit-3pc|lapel|lapel-width|lw-70"
+      ]
+    },
+    {
+      "identity": "jacket-lapel|lapel-width|lw-75",
+      "part": "jacket-lapel",
+      "product": "sport-coat",
+      "section": "lapel",
+      "field": "lapel-width",
+      "option": "lw-75",
+      "label": "7.5 cm",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KFABL/P.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KFABL\\P.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|lapel|lapel-width|lw-75",
+        "suit-2pc|lapel|lapel-width|lw-75",
+        "suit-3pc|lapel|lapel-width|lw-75"
+      ]
+    },
+    {
+      "identity": "jacket-lapel|lapel-width|lw-85",
+      "part": "jacket-lapel",
+      "product": "sport-coat",
+      "section": "lapel",
+      "field": "lapel-width",
+      "option": "lw-85",
+      "label": "8.5 cm",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KFABL/Q.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KFABL\\Q.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|lapel|lapel-width|lw-85",
+        "suit-2pc|lapel|lapel-width|lw-85",
+        "suit-3pc|lapel|lapel-width|lw-85"
+      ]
+    },
+    {
+      "identity": "jacket-lapel|lapel-width|lw-90",
+      "part": "jacket-lapel",
+      "product": "sport-coat",
+      "section": "lapel",
+      "field": "lapel-width",
+      "option": "lw-90",
+      "label": "9.0 cm",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KFABL/F.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KFABL\\F.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|lapel|lapel-width|lw-90",
+        "suit-2pc|lapel|lapel-width|lw-90",
+        "suit-3pc|lapel|lapel-width|lw-90"
+      ]
+    },
+    {
+      "identity": "jacket-lapel|lapel-width|lw-95",
+      "part": "jacket-lapel",
+      "product": "sport-coat",
+      "section": "lapel",
+      "field": "lapel-width",
+      "option": "lw-95",
+      "label": "9.5 cm",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KFABL/S.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KFABL\\S.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|lapel|lapel-width|lw-95",
+        "suit-2pc|lapel|lapel-width|lw-95",
+        "suit-3pc|lapel|lapel-width|lw-95"
+      ]
+    },
+    {
+      "identity": "jacket-pocket|coin-pocket|coin-both",
+      "part": "jacket-pocket",
+      "product": "sport-coat",
+      "section": "suit-pockets",
+      "field": "coin-pocket",
+      "option": "coin-both",
+      "label": "Both Sides",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KAXDK/C.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KAXDK\\C.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-pockets|coin-pocket|coin-both",
+        "suit-2pc|suit-pockets|coin-pocket|coin-both",
+        "suit-3pc|suit-pockets|coin-pocket|coin-both"
+      ]
+    },
+    {
+      "identity": "jacket-pocket|coin-pocket|coin-left",
+      "part": "jacket-pocket",
+      "product": "sport-coat",
+      "section": "suit-pockets",
+      "field": "coin-pocket",
+      "option": "coin-left",
+      "label": "Left Side",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KAXDK/A.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KAXDK\\A.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-pockets|coin-pocket|coin-left",
+        "suit-2pc|suit-pockets|coin-pocket|coin-left",
+        "suit-3pc|suit-pockets|coin-pocket|coin-left"
+      ]
+    },
+    {
+      "identity": "jacket-pocket|coin-pocket|coin-right",
+      "part": "jacket-pocket",
+      "product": "sport-coat",
+      "section": "suit-pockets",
+      "field": "coin-pocket",
+      "option": "coin-right",
+      "label": "Right Side",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KAXDK/B.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KAXDK\\B.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-pockets|coin-pocket|coin-right",
+        "suit-2pc|suit-pockets|coin-pocket|coin-right",
+        "suit-3pc|suit-pockets|coin-pocket|coin-right"
+      ]
+    },
+    {
+      "identity": "jacket-pocket|lower-pocket-bartack|bartack-d",
+      "part": "jacket-pocket",
+      "product": "sport-coat",
+      "section": "suit-pockets",
+      "field": "lower-pocket-bartack",
+      "option": "bartack-d",
+      "label": "D-Bartack",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REKPO/A.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REKPO\\A.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-pockets|lower-pocket-bartack|bartack-d",
+        "suit-2pc|suit-pockets|lower-pocket-bartack|bartack-d",
+        "suit-3pc|suit-pockets|lower-pocket-bartack|bartack-d"
+      ]
+    },
+    {
+      "identity": "jacket-pocket|lower-pocket-bartack|bartack-i",
+      "part": "jacket-pocket",
+      "product": "sport-coat",
+      "section": "suit-pockets",
+      "field": "lower-pocket-bartack",
+      "option": "bartack-i",
+      "label": "I-Bartack",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REKPO/B.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REKPO\\B.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-pockets|lower-pocket-bartack|bartack-i",
+        "suit-2pc|suit-pockets|lower-pocket-bartack|bartack-i",
+        "suit-3pc|suit-pockets|lower-pocket-bartack|bartack-i"
+      ]
+    },
+    {
+      "identity": "jacket-pocket|lower-pocket-bartack|bartack-none",
+      "part": "jacket-pocket",
+      "product": "sport-coat",
+      "section": "suit-pockets",
+      "field": "lower-pocket-bartack",
+      "option": "bartack-none",
+      "label": "None",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REKPO/D.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REKPO\\D.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-pockets|lower-pocket-bartack|bartack-none",
+        "suit-2pc|suit-pockets|lower-pocket-bartack|bartack-none",
+        "suit-3pc|suit-pockets|lower-pocket-bartack|bartack-none"
+      ]
+    },
+    {
+      "identity": "jacket-pocket|lower-pocket-bartack|bartack-x",
+      "part": "jacket-pocket",
+      "product": "sport-coat",
+      "section": "suit-pockets",
+      "field": "lower-pocket-bartack",
+      "option": "bartack-x",
+      "label": "X-Bartack",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REKPO/C.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REKPO\\C.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-pockets|lower-pocket-bartack|bartack-x",
+        "suit-2pc|suit-pockets|lower-pocket-bartack|bartack-x",
+        "suit-3pc|suit-pockets|lower-pocket-bartack|bartack-x"
+      ]
+    },
+    {
+      "identity": "jacket-pocket|lower-pocket|lp-angled-box-pleat",
+      "part": "jacket-pocket",
+      "product": "sport-coat",
+      "section": "suit-pockets",
+      "field": "lower-pocket",
+      "option": "lp-angled-box-pleat",
+      "label": "Angled Box Pleat Patch",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REQPD/BE.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQPD\\BE.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-pockets|lower-pocket|lp-angled-box-pleat",
+        "suit-2pc|suit-pockets|lower-pocket|lp-angled-box-pleat",
+        "suit-3pc|suit-pockets|lower-pocket|lp-angled-box-pleat"
+      ]
+    },
+    {
+      "identity": "jacket-pocket|lower-pocket|lp-box-pleat-flap",
+      "part": "jacket-pocket",
+      "product": "sport-coat",
+      "section": "suit-pockets",
+      "field": "lower-pocket",
+      "option": "lp-box-pleat-flap",
+      "label": "Box Patch Pocket + Flap",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REQPD/234.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQPD\\234.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-pockets|lower-pocket|lp-box-pleat-flap",
+        "suit-2pc|suit-pockets|lower-pocket|lp-box-pleat-flap",
+        "suit-3pc|suit-pockets|lower-pocket|lp-box-pleat-flap"
+      ]
+    },
+    {
+      "identity": "jacket-pocket|lower-pocket|lp-inverted-angled-flap-btn",
+      "part": "jacket-pocket",
+      "product": "sport-coat",
+      "section": "suit-pockets",
+      "field": "lower-pocket",
+      "option": "lp-inverted-angled-flap-btn",
+      "label": "Inverted Pleated + Angled Flap & Button",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REQPD/19.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQPD\\19.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-pockets|lower-pocket|lp-inverted-angled-flap-btn",
+        "suit-2pc|suit-pockets|lower-pocket|lp-inverted-angled-flap-btn",
+        "suit-3pc|suit-pockets|lower-pocket|lp-inverted-angled-flap-btn"
+      ]
+    },
+    {
+      "identity": "jacket-pocket|lower-pocket|lp-inverted-flap",
+      "part": "jacket-pocket",
+      "product": "sport-coat",
+      "section": "suit-pockets",
+      "field": "lower-pocket",
+      "option": "lp-inverted-flap",
+      "label": "Inverted Pleated + Basic Flap",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REQPD/20.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQPD\\20.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-pockets|lower-pocket|lp-inverted-flap",
+        "suit-2pc|suit-pockets|lower-pocket|lp-inverted-flap",
+        "suit-3pc|suit-pockets|lower-pocket|lp-inverted-flap"
+      ]
+    },
+    {
+      "identity": "jacket-pocket|lower-pocket|lp-inverted-flap-btn",
+      "part": "jacket-pocket",
+      "product": "sport-coat",
+      "section": "suit-pockets",
+      "field": "lower-pocket",
+      "option": "lp-inverted-flap-btn",
+      "label": "Inverted Pleated + Flap & Button",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REQPD/236.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQPD\\236.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-pockets|lower-pocket|lp-inverted-flap-btn",
+        "suit-2pc|suit-pockets|lower-pocket|lp-inverted-flap-btn",
+        "suit-3pc|suit-pockets|lower-pocket|lp-inverted-flap-btn"
+      ]
+    },
+    {
+      "identity": "jacket-pocket|lower-pocket|lp-large-slanted-40",
+      "part": "jacket-pocket",
+      "product": "sport-coat",
+      "section": "suit-pockets",
+      "field": "lower-pocket",
+      "option": "lp-large-slanted-40",
+      "label": "Large Slanted Flap 4.0 cm",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REQPD/O.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQPD\\O.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-pockets|lower-pocket|lp-large-slanted-40",
+        "suit-2pc|suit-pockets|lower-pocket|lp-large-slanted-40",
+        "suit-3pc|suit-pockets|lower-pocket|lp-large-slanted-40"
+      ]
+    },
+    {
+      "identity": "jacket-pocket|lower-pocket|lp-large-slanted-45",
+      "part": "jacket-pocket",
+      "product": "sport-coat",
+      "section": "suit-pockets",
+      "field": "lower-pocket",
+      "option": "lp-large-slanted-45",
+      "label": "Large Slanted Flap 4.5 cm",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REQPD/Q.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQPD\\Q.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-pockets|lower-pocket|lp-large-slanted-45",
+        "suit-2pc|suit-pockets|lower-pocket|lp-large-slanted-45",
+        "suit-3pc|suit-pockets|lower-pocket|lp-large-slanted-45"
+      ]
+    },
+    {
+      "identity": "jacket-pocket|lower-pocket|lp-large-slanted-50",
+      "part": "jacket-pocket",
+      "product": "sport-coat",
+      "section": "suit-pockets",
+      "field": "lower-pocket",
+      "option": "lp-large-slanted-50",
+      "label": "Large Slanted Flap 5.0 cm",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REQPD/R.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQPD\\R.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-pockets|lower-pocket|lp-large-slanted-50",
+        "suit-2pc|suit-pockets|lower-pocket|lp-large-slanted-50",
+        "suit-3pc|suit-pockets|lower-pocket|lp-large-slanted-50"
+      ]
+    },
+    {
+      "identity": "jacket-pocket|lower-pocket|lp-large-slanted-55",
+      "part": "jacket-pocket",
+      "product": "sport-coat",
+      "section": "suit-pockets",
+      "field": "lower-pocket",
+      "option": "lp-large-slanted-55",
+      "label": "Large Slanted Flap 5.5 cm",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REQPD/13.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQPD\\13.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-pockets|lower-pocket|lp-large-slanted-55",
+        "suit-2pc|suit-pockets|lower-pocket|lp-large-slanted-55",
+        "suit-3pc|suit-pockets|lower-pocket|lp-large-slanted-55"
+      ]
+    },
+    {
+      "identity": "jacket-pocket|lower-pocket|lp-large-slanted-65",
+      "part": "jacket-pocket",
+      "product": "sport-coat",
+      "section": "suit-pockets",
+      "field": "lower-pocket",
+      "option": "lp-large-slanted-65",
+      "label": "Large Slanted Flap 6.5 cm",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REQPD/24.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQPD\\24.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-pockets|lower-pocket|lp-large-slanted-65",
+        "suit-2pc|suit-pockets|lower-pocket|lp-large-slanted-65",
+        "suit-3pc|suit-pockets|lower-pocket|lp-large-slanted-65"
+      ]
+    },
+    {
+      "identity": "jacket-pocket|lower-pocket|lp-large-slanted-jetted",
+      "part": "jacket-pocket",
+      "product": "sport-coat",
+      "section": "suit-pockets",
+      "field": "lower-pocket",
+      "option": "lp-large-slanted-jetted",
+      "label": "Large Slanted Jetted Pocket",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REQPD/S.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQPD\\S.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-pockets|lower-pocket|lp-large-slanted-jetted",
+        "suit-2pc|suit-pockets|lower-pocket|lp-large-slanted-jetted",
+        "suit-3pc|suit-pockets|lower-pocket|lp-large-slanted-jetted"
+      ]
+    },
+    {
+      "identity": "jacket-pocket|lower-pocket|lp-multi-pleat",
+      "part": "jacket-pocket",
+      "product": "sport-coat",
+      "section": "suit-pockets",
+      "field": "lower-pocket",
+      "option": "lp-multi-pleat",
+      "label": "Multi-Pleat Patch",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REQPD/S1.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQPD\\S1.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-pockets|lower-pocket|lp-multi-pleat",
+        "suit-2pc|suit-pockets|lower-pocket|lp-multi-pleat",
+        "suit-3pc|suit-pockets|lower-pocket|lp-multi-pleat"
+      ]
+    },
+    {
+      "identity": "jacket-pocket|lower-pocket|lp-patch-btn-tab-round",
+      "part": "jacket-pocket",
+      "product": "sport-coat",
+      "section": "suit-pockets",
+      "field": "lower-pocket",
+      "option": "lp-patch-btn-tab-round",
+      "label": "Patch + Rounded Button Tab",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REQPD/7.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQPD\\7.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-pockets|lower-pocket|lp-patch-btn-tab-round",
+        "suit-2pc|suit-pockets|lower-pocket|lp-patch-btn-tab-round",
+        "suit-3pc|suit-pockets|lower-pocket|lp-patch-btn-tab-round"
+      ]
+    },
+    {
+      "identity": "jacket-pocket|lower-pocket|lp-patch-btn-tab-straight",
+      "part": "jacket-pocket",
+      "product": "sport-coat",
+      "section": "suit-pockets",
+      "field": "lower-pocket",
+      "option": "lp-patch-btn-tab-straight",
+      "label": "Patch + Straight Button Tab",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REQPD/6.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQPD\\6.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-pockets|lower-pocket|lp-patch-btn-tab-straight",
+        "suit-2pc|suit-pockets|lower-pocket|lp-patch-btn-tab-straight",
+        "suit-3pc|suit-pockets|lower-pocket|lp-patch-btn-tab-straight"
+      ]
+    },
+    {
+      "identity": "jacket-pocket|lower-pocket|lp-rl-flat-55",
+      "part": "jacket-pocket",
+      "product": "sport-coat",
+      "section": "suit-pockets",
+      "field": "lower-pocket",
+      "option": "lp-rl-flat-55",
+      "label": "RL Flat Dress Pocket 5.5 cm",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REQPD/SA.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQPD\\SA.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-pockets|lower-pocket|lp-rl-flat-55",
+        "suit-2pc|suit-pockets|lower-pocket|lp-rl-flat-55",
+        "suit-3pc|suit-pockets|lower-pocket|lp-rl-flat-55"
+      ]
+    },
+    {
+      "identity": "jacket-pocket|lower-pocket|lp-slanted-jetted",
+      "part": "jacket-pocket",
+      "product": "sport-coat",
+      "section": "suit-pockets",
+      "field": "lower-pocket",
+      "option": "lp-slanted-jetted",
+      "label": "Slanted Jetted Pocket",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REQPD/J.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQPD\\J.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-pockets|lower-pocket|lp-slanted-jetted",
+        "suit-2pc|suit-pockets|lower-pocket|lp-slanted-jetted",
+        "suit-3pc|suit-pockets|lower-pocket|lp-slanted-jetted"
+      ]
+    },
+    {
+      "identity": "jacket-pocket|lower-pocket|lp-water-drop",
+      "part": "jacket-pocket",
+      "product": "sport-coat",
+      "section": "suit-pockets",
+      "field": "lower-pocket",
+      "option": "lp-water-drop",
+      "label": "Water-drop Shape Patch",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REQPD/HMD.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQPD\\HMD.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-pockets|lower-pocket|lp-water-drop",
+        "suit-2pc|suit-pockets|lower-pocket|lp-water-drop",
+        "suit-3pc|suit-pockets|lower-pocket|lp-water-drop"
+      ]
+    },
+    {
+      "identity": "jacket-sleeve-vent|sleeve-vent|sv-functional-mock",
+      "part": "jacket-sleeve-vent",
+      "product": "sport-coat",
+      "section": "sleeves-cuffs",
+      "field": "sleeve-vent",
+      "option": "sv-functional-mock",
+      "label": "Functional + Mock Vent",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/GCOXC/C.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\GCOXC\\C.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|sleeves-cuffs|sleeve-vent|sv-functional-mock",
+        "suit-2pc|sleeves-cuffs|sleeve-vent|sv-functional-mock",
+        "suit-3pc|sleeves-cuffs|sleeve-vent|sv-functional-mock"
+      ]
+    },
+    {
+      "identity": "jacket-sleeve-vent|sleeve-vent|sv-functional-no-bh",
+      "part": "jacket-sleeve-vent",
+      "product": "sport-coat",
+      "section": "sleeves-cuffs",
+      "field": "sleeve-vent",
+      "option": "sv-functional-no-bh",
+      "label": "Functional (No Buttonhole)",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/GCOXC/D.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\GCOXC\\D.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|sleeves-cuffs|sleeve-vent|sv-functional-no-bh",
+        "suit-2pc|sleeves-cuffs|sleeve-vent|sv-functional-no-bh",
+        "suit-3pc|sleeves-cuffs|sleeve-vent|sv-functional-no-bh"
+      ]
+    },
+    {
+      "identity": "jacket-sleeve-vent|sleeve-vent|sv-mock",
+      "part": "jacket-sleeve-vent",
+      "product": "sport-coat",
+      "section": "sleeves-cuffs",
+      "field": "sleeve-vent",
+      "option": "sv-mock",
+      "label": "Mock / Show Vent",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/GCOXC/B.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\GCOXC\\B.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|sleeves-cuffs|sleeve-vent|sv-mock",
+        "suit-2pc|sleeves-cuffs|sleeve-vent|sv-mock",
+        "suit-3pc|sleeves-cuffs|sleeve-vent|sv-mock"
+      ]
+    },
+    {
+      "identity": "jacket-sleeve-vent|sleeve-vent|sv-none",
+      "part": "jacket-sleeve-vent",
+      "product": "sport-coat",
+      "section": "sleeves-cuffs",
+      "field": "sleeve-vent",
+      "option": "sv-none",
+      "label": "None",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/GCOXC/N.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\GCOXC\\N.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|sleeves-cuffs|sleeve-vent|sv-none",
+        "suit-2pc|sleeves-cuffs|sleeve-vent|sv-none",
+        "suit-3pc|sleeves-cuffs|sleeve-vent|sv-none"
+      ]
+    },
+    {
+      "identity": "jacket-sleeve|cuff-button-number|cb-4",
+      "part": "jacket-sleeve",
+      "product": "sport-coat",
+      "section": "sleeves-cuffs",
+      "field": "cuff-button-number",
+      "option": "cb-4",
+      "label": "4 Buttons",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/GTEXK/4.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\GTEXK\\4.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|sleeves-cuffs|cuff-button-number|cb-4",
+        "suit-2pc|sleeves-cuffs|cuff-button-number|cb-4",
+        "suit-3pc|sleeves-cuffs|cuff-button-number|cb-4"
+      ]
+    },
+    {
+      "identity": "jacket-sleeve|cuff-button-spacing|bs-no-kiss",
+      "part": "jacket-sleeve",
+      "product": "sport-coat",
+      "section": "sleeves-cuffs",
+      "field": "cuff-button-spacing",
+      "option": "bs-no-kiss",
+      "label": "No Kissing (Standard)",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/GTEXJ/B.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\GTEXJ\\B.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|sleeves-cuffs|cuff-button-spacing|bs-no-kiss",
+        "suit-2pc|sleeves-cuffs|cuff-button-spacing|bs-no-kiss",
+        "suit-3pc|sleeves-cuffs|cuff-button-spacing|bs-no-kiss"
+      ]
+    },
+    {
+      "identity": "jacket-sleeve|cuff-style|cuff-angled",
+      "part": "jacket-sleeve",
+      "product": "sport-coat",
+      "section": "sleeves-cuffs",
+      "field": "cuff-style",
+      "option": "cuff-angled",
+      "label": "Angled Vent Cuff",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KFAXK/X.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KFAXK\\X.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|sleeves-cuffs|cuff-style|cuff-angled",
+        "suit-2pc|sleeves-cuffs|cuff-style|cuff-angled",
+        "suit-3pc|sleeves-cuffs|cuff-style|cuff-angled"
+      ]
+    },
+    {
+      "identity": "jacket-sleeve|cuff-style|cuff-british",
+      "part": "jacket-sleeve",
+      "product": "sport-coat",
+      "section": "sleeves-cuffs",
+      "field": "cuff-style",
+      "option": "cuff-british",
+      "label": "British Turn-up",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KFAXK/C.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KFAXK\\C.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|sleeves-cuffs|cuff-style|cuff-british",
+        "suit-2pc|sleeves-cuffs|cuff-style|cuff-british",
+        "suit-3pc|sleeves-cuffs|cuff-style|cuff-british"
+      ]
+    },
+    {
+      "identity": "jacket-sleeve|cuff-style|cuff-round",
+      "part": "jacket-sleeve",
+      "product": "sport-coat",
+      "section": "sleeves-cuffs",
+      "field": "cuff-style",
+      "option": "cuff-round",
+      "label": "Round Cuff",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KFAXK/B.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KFAXK\\B.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|sleeves-cuffs|cuff-style|cuff-round",
+        "suit-2pc|sleeves-cuffs|cuff-style|cuff-round",
+        "suit-3pc|sleeves-cuffs|cuff-style|cuff-round"
+      ]
+    },
+    {
+      "identity": "jacket-sleeve|cuff-style|cuff-turnback-35",
+      "part": "jacket-sleeve",
+      "product": "sport-coat",
+      "section": "sleeves-cuffs",
+      "field": "cuff-style",
+      "option": "cuff-turnback-35",
+      "label": "Turn-back 3.5 cm",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KFAXK/C2.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KFAXK\\C2.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|sleeves-cuffs|cuff-style|cuff-turnback-35",
+        "suit-2pc|sleeves-cuffs|cuff-style|cuff-turnback-35",
+        "suit-3pc|sleeves-cuffs|cuff-style|cuff-turnback-35"
+      ]
+    },
+    {
+      "identity": "jacket-sleeve|cuff-style|cuff-turnback-40",
+      "part": "jacket-sleeve",
+      "product": "sport-coat",
+      "section": "sleeves-cuffs",
+      "field": "cuff-style",
+      "option": "cuff-turnback-40",
+      "label": "Turn-back 4.0 cm",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KFAXK/C3.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KFAXK\\C3.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|sleeves-cuffs|cuff-style|cuff-turnback-40",
+        "suit-2pc|sleeves-cuffs|cuff-style|cuff-turnback-40",
+        "suit-3pc|sleeves-cuffs|cuff-style|cuff-turnback-40"
+      ]
+    },
+    {
+      "identity": "jacket-ticket-pocket|ticket-pocket|tp-card-formal",
+      "part": "jacket-ticket-pocket",
+      "product": "sport-coat",
+      "section": "suit-pockets",
+      "field": "ticket-pocket",
+      "option": "tp-card-formal",
+      "label": "Formal Card Holder",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KPOKD/25Q.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KPOKD\\25Q.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-pockets|ticket-pocket|tp-card-formal",
+        "suit-2pc|suit-pockets|ticket-pocket|tp-card-formal",
+        "suit-3pc|suit-pockets|ticket-pocket|tp-card-formal"
+      ]
+    },
+    {
+      "identity": "jacket-ticket-pocket|ticket-pocket|tp-card-italian",
+      "part": "jacket-ticket-pocket",
+      "product": "sport-coat",
+      "section": "suit-pockets",
+      "field": "ticket-pocket",
+      "option": "tp-card-italian",
+      "label": "Italian Card Slot",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KPOKD/25K.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KPOKD\\25K.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-pockets|ticket-pocket|tp-card-italian",
+        "suit-2pc|suit-pockets|ticket-pocket|tp-card-italian",
+        "suit-3pc|suit-pockets|ticket-pocket|tp-card-italian"
+      ]
+    },
+    {
+      "identity": "jacket-ticket-pocket|ticket-pocket|tp-flap-40",
+      "part": "jacket-ticket-pocket",
+      "product": "sport-coat",
+      "section": "suit-pockets",
+      "field": "ticket-pocket",
+      "option": "tp-flap-40",
+      "label": "Flap 4.0 cm",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KPOKD/J.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KPOKD\\J.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-pockets|ticket-pocket|tp-flap-40",
+        "suit-2pc|suit-pockets|ticket-pocket|tp-flap-40",
+        "suit-3pc|suit-pockets|ticket-pocket|tp-flap-40"
+      ]
+    },
+    {
+      "identity": "jacket-ticket-pocket|ticket-pocket|tp-flap-45",
+      "part": "jacket-ticket-pocket",
+      "product": "sport-coat",
+      "section": "suit-pockets",
+      "field": "ticket-pocket",
+      "option": "tp-flap-45",
+      "label": "Flap 4.5 cm",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KPOKD/F.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KPOKD\\F.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-pockets|ticket-pocket|tp-flap-45",
+        "suit-2pc|suit-pockets|ticket-pocket|tp-flap-45",
+        "suit-3pc|suit-pockets|ticket-pocket|tp-flap-45"
+      ]
+    },
+    {
+      "identity": "jacket-ticket-pocket|ticket-pocket|tp-flap-50",
+      "part": "jacket-ticket-pocket",
+      "product": "sport-coat",
+      "section": "suit-pockets",
+      "field": "ticket-pocket",
+      "option": "tp-flap-50",
+      "label": "Flap 5.0 cm",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KPOKD/G.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KPOKD\\G.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-pockets|ticket-pocket|tp-flap-50",
+        "suit-2pc|suit-pockets|ticket-pocket|tp-flap-50",
+        "suit-3pc|suit-pockets|ticket-pocket|tp-flap-50"
+      ]
+    },
+    {
+      "identity": "jacket-ticket-pocket|ticket-pocket|tp-flap-55",
+      "part": "jacket-ticket-pocket",
+      "product": "sport-coat",
+      "section": "suit-pockets",
+      "field": "ticket-pocket",
+      "option": "tp-flap-55",
+      "label": "Flap 5.5 cm",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KPOKD/H.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KPOKD\\H.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-pockets|ticket-pocket|tp-flap-55",
+        "suit-2pc|suit-pockets|ticket-pocket|tp-flap-55",
+        "suit-3pc|suit-pockets|ticket-pocket|tp-flap-55"
+      ]
+    },
+    {
+      "identity": "jacket-ticket-pocket|ticket-pocket|tp-flap-60",
+      "part": "jacket-ticket-pocket",
+      "product": "sport-coat",
+      "section": "suit-pockets",
+      "field": "ticket-pocket",
+      "option": "tp-flap-60",
+      "label": "Flap 6.0 cm",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KPOKD/I.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KPOKD\\I.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-pockets|ticket-pocket|tp-flap-60",
+        "suit-2pc|suit-pockets|ticket-pocket|tp-flap-60",
+        "suit-3pc|suit-pockets|ticket-pocket|tp-flap-60"
+      ]
+    },
+    {
+      "identity": "jacket-ticket-pocket|ticket-pocket|tp-none",
+      "part": "jacket-ticket-pocket",
+      "product": "sport-coat",
+      "section": "suit-pockets",
+      "field": "ticket-pocket",
+      "option": "tp-none",
+      "label": "None",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KPOKD/D.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KPOKD\\D.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-pockets|ticket-pocket|tp-none",
+        "suit-2pc|suit-pockets|ticket-pocket|tp-none",
+        "suit-3pc|suit-pockets|ticket-pocket|tp-none"
+      ]
+    },
+    {
+      "identity": "jacket-ticket-pocket|ticket-pocket|tp-rl-card",
+      "part": "jacket-ticket-pocket",
+      "product": "sport-coat",
+      "section": "suit-pockets",
+      "field": "ticket-pocket",
+      "option": "tp-rl-card",
+      "label": "RL Card Pocket",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KPOKD/EG.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KPOKD\\EG.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-pockets|ticket-pocket|tp-rl-card",
+        "suit-2pc|suit-pockets|ticket-pocket|tp-rl-card",
+        "suit-3pc|suit-pockets|ticket-pocket|tp-rl-card"
+      ]
+    },
+    {
+      "identity": "jacket-ticket-pocket|ticket-pocket|tp-welt",
+      "part": "jacket-ticket-pocket",
+      "product": "sport-coat",
+      "section": "suit-pockets",
+      "field": "ticket-pocket",
+      "option": "tp-welt",
+      "label": "Welt Ticket Pocket",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KPOKD/C.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KPOKD\\C.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "sport-coat|suit-pockets|ticket-pocket|tp-welt",
+        "suit-2pc|suit-pockets|ticket-pocket|tp-welt",
+        "suit-3pc|suit-pockets|ticket-pocket|tp-welt"
+      ]
+    },
+    {
+      "identity": "trouser-waistband|waistband-style|waist-standard",
+      "part": "trouser-waistband",
+      "product": "suit-2pc",
+      "section": "Trousers-waistband",
+      "field": "waistband-style",
+      "option": "waist-standard",
+      "label": "Standard Waistband",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/trousers/REQST/A.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\trousers\\REQST\\A.jpg",
+      "states": {
+        "C": 3
+      },
+      "rows": [
+        "suit-2pc|Trousers-waistband|waistband-style|waist-standard",
+        "suit-3pc|Trousers-waistband|waistband-style|waist-standard",
+        "trousers|waistband|waistband-style|waist-standard"
+      ]
+    },
+    {
+      "identity": "fin-adjust|center-crease|crease-none",
+      "part": "fin-adjust",
+      "product": "suit-2pc",
+      "section": "Trousers-pleats-structure",
+      "field": "center-crease",
+      "option": "crease-none",
+      "label": "No Crease",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/trousers/KPWAH/B.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\trousers\\KPWAH\\B.jpg",
+      "states": {
+        "B": 3
+      },
+      "rows": [
+        "suit-2pc|Trousers-pleats-structure|center-crease|crease-none",
+        "suit-3pc|Trousers-pleats-structure|center-crease|crease-none",
+        "trousers|pleats-structure|center-crease|crease-none"
+      ]
+    },
+    {
+      "identity": "fin-buttonhole|buttonhole-type-trouser|tbh-hand",
+      "part": "fin-buttonhole",
+      "product": "suit-2pc",
+      "section": "Trousers-details-contrast",
+      "field": "buttonhole-type-trouser",
+      "option": "tbh-hand",
+      "label": "Hand-Worked",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/trousers/GLKMO/A.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\trousers\\GLKMO\\A.jpg",
+      "states": {
+        "B": 3
+      },
+      "rows": [
+        "suit-2pc|Trousers-details-contrast|buttonhole-type-trouser|tbh-hand",
+        "suit-3pc|Trousers-details-contrast|buttonhole-type-trouser|tbh-hand",
+        "trousers|details-contrast|buttonhole-type-trouser|tbh-hand"
+      ]
+    },
+    {
+      "identity": "fin-interlining|folded-collar-craft|fcc-normal",
+      "part": "fin-interlining",
+      "product": "sport-coat",
+      "section": "lapel",
+      "field": "folded-collar-craft",
+      "option": "fcc-normal",
+      "label": "Normal",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KALTP/A.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KALTP\\A.jpg",
+      "states": {
+        "B": 3
+      },
+      "rows": [
+        "sport-coat|lapel|folded-collar-craft|fcc-normal",
+        "suit-2pc|lapel|folded-collar-craft|fcc-normal",
+        "suit-3pc|lapel|folded-collar-craft|fcc-normal"
+      ]
+    },
+    {
+      "identity": "fin-interlining|folded-collar-craft|fcc-turnback",
+      "part": "fin-interlining",
+      "product": "sport-coat",
+      "section": "lapel",
+      "field": "folded-collar-craft",
+      "option": "fcc-turnback",
+      "label": "Turn Back at the End",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KALTP/B.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KALTP\\B.jpg",
+      "states": {
+        "B": 3
+      },
+      "rows": [
+        "sport-coat|lapel|folded-collar-craft|fcc-turnback",
+        "suit-2pc|lapel|folded-collar-craft|fcc-turnback",
+        "suit-3pc|lapel|folded-collar-craft|fcc-turnback"
+      ]
+    },
+    {
+      "identity": "fin-lining|collar-interlining|ci-no-linen",
+      "part": "fin-lining",
+      "product": "sport-coat",
+      "section": "lapel",
+      "field": "collar-interlining",
+      "option": "ci-no-linen",
+      "label": "No Linen",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/GTEDC/NFC00054.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\GTEDC\\NFC00054.jpg",
+      "states": {
+        "B": 3
+      },
+      "rows": [
+        "sport-coat|lapel|collar-interlining|ci-no-linen",
+        "suit-2pc|lapel|collar-interlining|ci-no-linen",
+        "suit-3pc|lapel|collar-interlining|ci-no-linen"
+      ]
+    },
+    {
+      "identity": "fin-lining|collar-interlining|ci-regular",
+      "part": "fin-lining",
+      "product": "sport-coat",
+      "section": "lapel",
+      "field": "collar-interlining",
+      "option": "ci-regular",
+      "label": "Regular (with Linen)",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/GTEDC/A.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\GTEDC\\A.jpg",
+      "states": {
+        "B": 3
+      },
+      "rows": [
+        "sport-coat|lapel|collar-interlining|ci-regular",
+        "suit-2pc|lapel|collar-interlining|ci-regular",
+        "suit-3pc|lapel|collar-interlining|ci-regular"
+      ]
+    },
+    {
+      "identity": "jacket-back-belt|back-vent-style|bv-side-belt",
+      "part": "jacket-back-belt",
+      "product": "sport-coat",
+      "section": "back-vents",
+      "field": "back-vent-style",
+      "option": "bv-side-belt",
+      "label": "Side Vents + Inner Belt",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REQAP/D.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQAP\\D.jpg",
+      "states": {
+        "B": 3
+      },
+      "rows": [
+        "sport-coat|back-vents|back-vent-style|bv-side-belt",
+        "suit-2pc|back-vents|back-vent-style|bv-side-belt",
+        "suit-3pc|back-vents|back-vent-style|bv-side-belt"
+      ]
+    },
+    {
+      "identity": "jacket-lapel-bh-position|lapel-bh-position|lbp-right",
+      "part": "jacket-lapel-bh-position",
+      "product": "sport-coat",
+      "section": "lapel",
+      "field": "lapel-bh-position",
+      "option": "lbp-right",
+      "label": "Right Lapel",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/GTECP/B.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\GTECP\\B.jpg",
+      "states": {
+        "B": 3
+      },
+      "rows": [
+        "sport-coat|lapel|lapel-bh-position|lbp-right",
+        "suit-2pc|lapel|lapel-bh-position|lbp-right",
+        "suit-3pc|lapel|lapel-bh-position|lbp-right"
+      ]
+    },
+    {
+      "identity": "jacket-vent|back-vent-style|bv-none",
+      "part": "jacket-vent",
+      "product": "sport-coat",
+      "section": "back-vents",
+      "field": "back-vent-style",
+      "option": "bv-none",
+      "label": "No Vent",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REQAP/A.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQAP\\A.jpg",
+      "states": {
+        "B": 3
+      },
+      "rows": [
+        "sport-coat|back-vents|back-vent-style|bv-none",
+        "suit-2pc|back-vents|back-vent-style|bv-none",
+        "suit-3pc|back-vents|back-vent-style|bv-none"
+      ]
+    },
+    {
+      "identity": "jacket-chest-pocket|chest-pocket|cp-welt-23",
+      "part": "jacket-chest-pocket",
+      "product": "sport-coat",
+      "section": "suit-pockets",
+      "field": "chest-pocket",
+      "option": "cp-welt-23",
+      "label": "Straight Welt 2.3 cm",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REQPU/A.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQPU\\A.jpg",
+      "states": {
+        "C": 2
+      },
+      "rows": [
+        "sport-coat|suit-pockets|chest-pocket|cp-welt-23",
+        "suit-3pc|suit-pockets|chest-pocket|cp-welt-23"
+      ]
+    },
+    {
+      "identity": "jacket-chest-pocket|chest-pocket|cp-welt-27",
+      "part": "jacket-chest-pocket",
+      "product": "sport-coat",
+      "section": "suit-pockets",
+      "field": "chest-pocket",
+      "option": "cp-welt-27",
+      "label": "Straight Welt 2.7 cm",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REQPU/C.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQPU\\C.jpg",
+      "states": {
+        "C": 2
+      },
+      "rows": [
+        "sport-coat|suit-pockets|chest-pocket|cp-welt-27",
+        "suit-3pc|suit-pockets|chest-pocket|cp-welt-27"
+      ]
+    },
+    {
+      "identity": "jacket-lapel|lapel-style|lapel-peak-102-rl",
+      "part": "jacket-lapel",
+      "product": "sport-coat",
+      "section": "lapel",
+      "field": "lapel-style",
+      "option": "lapel-peak-102-rl",
+      "label": "Peak 102° RL",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REQCL/BJ.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQCL\\BJ.jpg",
+      "states": {
+        "C": 2
+      },
+      "rows": [
+        "sport-coat|lapel|lapel-style|lapel-peak-102-rl",
+        "suit-3pc|lapel|lapel-style|lapel-peak-102-rl"
+      ]
+    },
+    {
+      "identity": "jacket-lapel|lapel-style|lapel-peak-103-curved",
+      "part": "jacket-lapel",
+      "product": "sport-coat",
+      "section": "lapel",
+      "field": "lapel-style",
+      "option": "lapel-peak-103-curved",
+      "label": "Curved Peak 103°",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REQCL/23.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQCL\\23.jpg",
+      "states": {
+        "C": 2
+      },
+      "rows": [
+        "sport-coat|lapel|lapel-style|lapel-peak-103-curved",
+        "suit-3pc|lapel|lapel-style|lapel-peak-103-curved"
+      ]
+    },
+    {
+      "identity": "jacket-lapel|lapel-style|lapel-peak-107",
+      "part": "jacket-lapel",
+      "product": "sport-coat",
+      "section": "lapel",
+      "field": "lapel-style",
+      "option": "lapel-peak-107",
+      "label": "Peak 107° (Normal Curve)",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REQCL/20.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQCL\\20.jpg",
+      "states": {
+        "C": 2
+      },
+      "rows": [
+        "sport-coat|lapel|lapel-style|lapel-peak-107",
+        "suit-3pc|lapel|lapel-style|lapel-peak-107"
+      ]
+    },
+    {
+      "identity": "jacket-lapel|lapel-style|lapel-peak-108",
+      "part": "jacket-lapel",
+      "product": "sport-coat",
+      "section": "lapel",
+      "field": "lapel-style",
+      "option": "lapel-peak-108",
+      "label": "Straight Peak 108°",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REQCL/19.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQCL\\19.jpg",
+      "states": {
+        "C": 2
+      },
+      "rows": [
+        "sport-coat|lapel|lapel-style|lapel-peak-108",
+        "suit-3pc|lapel|lapel-style|lapel-peak-108"
+      ]
+    },
+    {
+      "identity": "jacket-lapel|lapel-style|lapel-peak-110",
+      "part": "jacket-lapel",
+      "product": "sport-coat",
+      "section": "lapel",
+      "field": "lapel-style",
+      "option": "lapel-peak-110",
+      "label": "Peak 110°",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REQCL/15.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQCL\\15.jpg",
+      "states": {
+        "C": 2
+      },
+      "rows": [
+        "sport-coat|lapel|lapel-style|lapel-peak-110",
+        "suit-3pc|lapel|lapel-style|lapel-peak-110"
+      ]
+    },
+    {
+      "identity": "jacket-lapel|lapel-style|lapel-peak-110-low",
+      "part": "jacket-lapel",
+      "product": "sport-coat",
+      "section": "lapel",
+      "field": "lapel-style",
+      "option": "lapel-peak-110-low",
+      "label": "Low Peak 110°",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REQCL/17.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQCL\\17.jpg",
+      "states": {
+        "C": 2
+      },
+      "rows": [
+        "sport-coat|lapel|lapel-style|lapel-peak-110-low",
+        "suit-3pc|lapel|lapel-style|lapel-peak-110-low"
+      ]
+    },
+    {
+      "identity": "jacket-lapel|lapel-style|lapel-peak-115",
+      "part": "jacket-lapel",
+      "product": "sport-coat",
+      "section": "lapel",
+      "field": "lapel-style",
+      "option": "lapel-peak-115",
+      "label": "Peak 115°",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REQCL/12.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQCL\\12.jpg",
+      "states": {
+        "C": 2
+      },
+      "rows": [
+        "sport-coat|lapel|lapel-style|lapel-peak-115",
+        "suit-3pc|lapel|lapel-style|lapel-peak-115"
+      ]
+    },
+    {
+      "identity": "jacket-lapel|lapel-style|lapel-shawl",
+      "part": "jacket-lapel",
+      "product": "sport-coat",
+      "section": "lapel",
+      "field": "lapel-style",
+      "option": "lapel-shawl",
+      "label": "Shawl Lapel",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REQCL/D.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQCL\\D.jpg",
+      "states": {
+        "C": 2
+      },
+      "rows": [
+        "sport-coat|lapel|lapel-style|lapel-shawl",
+        "suit-3pc|lapel|lapel-style|lapel-shawl"
+      ]
+    },
+    {
+      "identity": "jacket-lapel|lapel-style|lapel-shawl-asymmetric",
+      "part": "jacket-lapel",
+      "product": "sport-coat",
+      "section": "lapel",
+      "field": "lapel-style",
+      "option": "lapel-shawl-asymmetric",
+      "label": "Asymmetric Shawl Collar",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REQCL/216.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQCL\\216.jpg",
+      "states": {
+        "C": 2
+      },
+      "rows": [
+        "sport-coat|lapel|lapel-style|lapel-shawl-asymmetric",
+        "suit-3pc|lapel|lapel-style|lapel-shawl-asymmetric"
+      ]
+    },
+    {
+      "identity": "jacket-lapel|lapel-style|lapel-shawl-d",
+      "part": "jacket-lapel",
+      "product": "sport-coat",
+      "section": "lapel",
+      "field": "lapel-style",
+      "option": "lapel-shawl-d",
+      "label": "D-Shawl Lapel",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REQCL/24.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQCL\\24.jpg",
+      "states": {
+        "C": 2
+      },
+      "rows": [
+        "sport-coat|lapel|lapel-style|lapel-shawl-d",
+        "suit-3pc|lapel|lapel-style|lapel-shawl-d"
+      ]
+    },
+    {
+      "identity": "jacket-pocket|lower-pocket|lp-large-slanted-60",
+      "part": "jacket-pocket",
+      "product": "sport-coat",
+      "section": "suit-pockets",
+      "field": "lower-pocket",
+      "option": "lp-large-slanted-60",
+      "label": "Large Slanted Flap 6.0 cm",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REQPD/14.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQPD\\14.jpg",
+      "states": {
+        "C": 2
+      },
+      "rows": [
+        "sport-coat|suit-pockets|lower-pocket|lp-large-slanted-60",
+        "suit-3pc|suit-pockets|lower-pocket|lp-large-slanted-60"
+      ]
+    },
+    {
+      "identity": "jacket-pocket|lower-pocket|lp-patch-flap-btn",
+      "part": "jacket-pocket",
+      "product": "suit-2pc",
+      "section": "suit-pockets",
+      "field": "lower-pocket",
+      "option": "lp-patch-flap-btn",
+      "label": "Patch with Flap & Button",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REQPD/237.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQPD\\237.jpg",
+      "states": {
+        "C": 2
+      },
+      "rows": [
+        "suit-2pc|suit-pockets|lower-pocket|lp-patch-flap-btn",
+        "suit-3pc|suit-pockets|lower-pocket|lp-patch-flap-btn"
+      ]
+    },
+    {
+      "identity": "jacket-pocket|lower-pocket|lp-straight-jetted-50",
+      "part": "jacket-pocket",
+      "product": "sport-coat",
+      "section": "suit-pockets",
+      "field": "lower-pocket",
+      "option": "lp-straight-jetted-50",
+      "label": "Straight Jetted Flap 5.0 cm",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REQPD/C.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQPD\\C.jpg",
+      "states": {
+        "C": 2
+      },
+      "rows": [
+        "sport-coat|suit-pockets|lower-pocket|lp-straight-jetted-50",
+        "suit-3pc|suit-pockets|lower-pocket|lp-straight-jetted-50"
+      ]
+    },
+    {
+      "identity": "jacket-pocket|lower-pocket|lp-straight-jetted-60",
+      "part": "jacket-pocket",
+      "product": "sport-coat",
+      "section": "suit-pockets",
+      "field": "lower-pocket",
+      "option": "lp-straight-jetted-60",
+      "label": "Straight Jetted Flap 6.0 cm",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REQPD/12.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQPD\\12.jpg",
+      "states": {
+        "C": 2
+      },
+      "rows": [
+        "sport-coat|suit-pockets|lower-pocket|lp-straight-jetted-60",
+        "suit-3pc|suit-pockets|lower-pocket|lp-straight-jetted-60"
+      ]
+    },
+    {
+      "identity": "vest-lapel|lapel-width|vest-lapel-narrow",
+      "part": "vest-lapel",
+      "product": "suit-3pc",
+      "section": "Vest-lapel-neckline",
+      "field": "lapel-width",
+      "option": "vest-lapel-narrow",
+      "label": "Narrow 6 cm",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/vest/KFABL/C.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\vest\\KFABL\\C.jpg",
+      "states": {
+        "C": 2
+      },
+      "rows": [
+        "suit-3pc|Vest-lapel-neckline|lapel-width|vest-lapel-narrow",
+        "vest|lapel-neckline|lapel-width|vest-lapel-narrow"
+      ]
+    },
+    {
+      "identity": "vest-lapel|lapel-width|vest-lapel-standard",
+      "part": "vest-lapel",
+      "product": "suit-3pc",
+      "section": "Vest-lapel-neckline",
+      "field": "lapel-width",
+      "option": "vest-lapel-standard",
+      "label": "Standard 7.5 cm",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/vest/KFABL/F.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\vest\\KFABL\\F.jpg",
+      "states": {
+        "C": 2
+      },
+      "rows": [
+        "suit-3pc|Vest-lapel-neckline|lapel-width|vest-lapel-standard",
+        "vest|lapel-neckline|lapel-width|vest-lapel-standard"
+      ]
+    },
+    {
+      "identity": "fin-buttonhole|buttonhole|bh-hand",
+      "part": "fin-buttonhole",
+      "product": "shirt",
+      "section": "placket",
+      "field": "buttonhole",
+      "option": "bh-hand",
+      "label": "Hand-Made",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/shirt/GLKMO/H.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\shirt\\GLKMO\\H.jpg",
+      "states": {
+        "C": 1
+      },
+      "rows": [
+        "shirt|placket|buttonhole|bh-hand"
+      ]
+    },
+    {
+      "identity": "fin-buttonhole|buttonhole|bh-machine",
+      "part": "fin-buttonhole",
+      "product": "shirt",
+      "section": "placket",
+      "field": "buttonhole",
+      "option": "bh-machine",
+      "label": "Machine",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/shirt/GLKMO/A.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\shirt\\GLKMO\\A.jpg",
+      "states": {
+        "C": 1
+      },
+      "rows": [
+        "shirt|placket|buttonhole|bh-machine"
+      ]
+    },
+    {
+      "identity": "fin-contrast|contrast-position|contrast-chest-pocket",
+      "part": "fin-contrast",
+      "product": "suit-2pc",
+      "section": "suit-details",
+      "field": "contrast-position",
+      "option": "contrast-chest-pocket",
+      "label": "Chest Pocket Trim",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/GCOPA/D.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\GCOPA\\D.jpg",
+      "states": {
+        "C": 1
+      },
+      "rows": [
+        "suit-2pc|suit-details|contrast-position|contrast-chest-pocket"
+      ]
+    },
+    {
+      "identity": "fin-contrast|contrast-position|contrast-satin-lapel",
+      "part": "fin-contrast",
+      "product": "suit-2pc",
+      "section": "suit-details",
+      "field": "contrast-position",
+      "option": "contrast-satin-lapel",
+      "label": "Satin Piping on Lapel",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/GCOPA/W.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\GCOPA\\W.jpg",
+      "states": {
+        "C": 1
+      },
+      "rows": [
+        "suit-2pc|suit-details|contrast-position|contrast-satin-lapel"
+      ]
+    },
+    {
+      "identity": "jacket-chest-pocket|chest-pocket|cp-boat-30",
+      "part": "jacket-chest-pocket",
+      "product": "suit-3pc",
+      "section": "suit-pockets",
+      "field": "chest-pocket",
+      "option": "cp-boat-30",
+      "label": "Boat-shaped 3.0 cm",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REQPU/237.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQPU\\237.jpg",
+      "states": {
+        "C": 1
+      },
+      "rows": [
+        "suit-3pc|suit-pockets|chest-pocket|cp-boat-30"
+      ]
+    },
+    {
+      "identity": "jacket-chest-pocket|chest-pocket|cp-welt-25",
+      "part": "jacket-chest-pocket",
+      "product": "sport-coat",
+      "section": "suit-pockets",
+      "field": "chest-pocket",
+      "option": "cp-welt-25",
+      "label": "Straight Welt 2.5 cm",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REQPU/B.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQPU\\B.jpg",
+      "states": {
+        "C": 1
+      },
+      "rows": [
+        "sport-coat|suit-pockets|chest-pocket|cp-welt-25"
+      ]
+    },
+    {
+      "identity": "jacket-chest-pocket|chest-pocket|cp-welt-curved-23",
+      "part": "jacket-chest-pocket",
+      "product": "sport-coat",
+      "section": "suit-pockets",
+      "field": "chest-pocket",
+      "option": "cp-welt-curved-23",
+      "label": "Curved Welt 2.3 cm",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REQPU/D.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQPU\\D.jpg",
+      "states": {
+        "C": 1
+      },
+      "rows": [
+        "sport-coat|suit-pockets|chest-pocket|cp-welt-curved-23"
+      ]
+    },
+    {
+      "identity": "jacket-chest-pocket|chest-pocket|cp-welt-curved-25",
+      "part": "jacket-chest-pocket",
+      "product": "sport-coat",
+      "section": "suit-pockets",
+      "field": "chest-pocket",
+      "option": "cp-welt-curved-25",
+      "label": "Curved Welt 2.5 cm",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REQPU/E.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQPU\\E.jpg",
+      "states": {
+        "C": 1
+      },
+      "rows": [
+        "sport-coat|suit-pockets|chest-pocket|cp-welt-curved-25"
+      ]
+    },
+    {
+      "identity": "jacket-chest-pocket|chest-pocket|cp-welt-curved-27",
+      "part": "jacket-chest-pocket",
+      "product": "sport-coat",
+      "section": "suit-pockets",
+      "field": "chest-pocket",
+      "option": "cp-welt-curved-27",
+      "label": "Curved Welt 2.7 cm",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REQPU/F.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQPU\\F.jpg",
+      "states": {
+        "C": 1
+      },
+      "rows": [
+        "sport-coat|suit-pockets|chest-pocket|cp-welt-curved-27"
+      ]
+    },
+    {
+      "identity": "jacket-interior|pen-pocket|pen-none",
+      "part": "jacket-interior",
+      "product": "suit-2pc",
+      "section": "interior",
+      "field": "pen-pocket",
+      "option": "pen-none",
+      "label": "None",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/KPEND/Z.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\KPEND\\Z.jpg",
+      "states": {
+        "C": 1
+      },
+      "rows": [
+        "suit-2pc|interior|pen-pocket|pen-none"
+      ]
+    },
+    {
+      "identity": "jacket-lapel|lapel-style|lapel-peak-102",
+      "part": "jacket-lapel",
+      "product": "suit-3pc",
+      "section": "lapel",
+      "field": "lapel-style",
+      "option": "lapel-peak-102",
+      "label": "Peak 102°",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REQCL/22.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQCL\\22.jpg",
+      "states": {
+        "C": 1
+      },
+      "rows": [
+        "suit-3pc|lapel|lapel-style|lapel-peak-102"
+      ]
+    },
+    {
+      "identity": "jacket-lapel|lapel-style|lapel-peak-99",
+      "part": "jacket-lapel",
+      "product": "suit-3pc",
+      "section": "lapel",
+      "field": "lapel-style",
+      "option": "lapel-peak-99",
+      "label": "Peak 99°",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REQCL/21.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQCL\\21.jpg",
+      "states": {
+        "C": 1
+      },
+      "rows": [
+        "suit-3pc|lapel|lapel-style|lapel-peak-99"
+      ]
+    },
+    {
+      "identity": "jacket-pocket|lower-pocket|lp-slanted-flap-40",
+      "part": "jacket-pocket",
+      "product": "sport-coat",
+      "section": "suit-pockets",
+      "field": "lower-pocket",
+      "option": "lp-slanted-flap-40",
+      "label": "Slanted Flap 4.0 cm",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/jacket/REQPD/G.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\jacket\\REQPD\\G.jpg",
+      "states": {
+        "C": 1
+      },
+      "rows": [
+        "sport-coat|suit-pockets|lower-pocket|lp-slanted-flap-40"
+      ]
+    },
+    {
+      "identity": "shirt-collar-stand|collar_stand|cs-square",
+      "part": "shirt-collar-stand",
+      "product": "shirt",
+      "section": "collar",
+      "field": "collar_stand",
+      "option": "cs-square",
+      "label": "Square Collar Stand",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/shirt/KSHLA/C.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\shirt\\KSHLA\\C.jpg",
+      "states": {
+        "C": 1
+      },
+      "rows": [
+        "shirt|collar|collar_stand|cs-square"
+      ]
+    },
+    {
+      "identity": "shirt-collar-stand|collar_stay|stay-removable",
+      "part": "shirt-collar-stand",
+      "product": "shirt",
+      "section": "collar",
+      "field": "collar_stay",
+      "option": "stay-removable",
+      "label": "Removable",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/shirt/RELCL/B.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\shirt\\RELCL\\B.jpg",
+      "states": {
+        "C": 1
+      },
+      "rows": [
+        "shirt|collar|collar_stay|stay-removable"
+      ]
+    },
+    {
+      "identity": "shirt-collar|lapel|collar-cuban",
+      "part": "shirt-collar",
+      "product": "shirt",
+      "section": "collar",
+      "field": "lapel",
+      "option": "collar-cuban",
+      "label": "Cuban Collar",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/shirt/REQCL/A114.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\shirt\\REQCL\\A114.jpg",
+      "states": {
+        "C": 1
+      },
+      "rows": [
+        "shirt|collar|lapel|collar-cuban"
+      ]
+    },
+    {
+      "identity": "shirt-collar|lapel|collar-one-piece-80-tab",
+      "part": "shirt-collar",
+      "product": "shirt",
+      "section": "collar",
+      "field": "lapel",
+      "option": "collar-one-piece-80-tab",
+      "label": "One-Piece 8.0 cm with Tab",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/shirt/REQCL/105.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\shirt\\REQCL\\105.jpg",
+      "states": {
+        "C": 1
+      },
+      "rows": [
+        "shirt|collar|lapel|collar-one-piece-80-tab"
+      ]
+    },
+    {
+      "identity": "shirt-collar|lapel|collar-one-piece-85-tab",
+      "part": "shirt-collar",
+      "product": "shirt",
+      "section": "collar",
+      "field": "lapel",
+      "option": "collar-one-piece-85-tab",
+      "label": "One-Piece 8.5 cm with Tab",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/shirt/REQCL/99.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\shirt\\REQCL\\99.jpg",
+      "states": {
+        "C": 1
+      },
+      "rows": [
+        "shirt|collar|lapel|collar-one-piece-85-tab"
+      ]
+    },
+    {
+      "identity": "shirt-collar|lapel|collar-one-piece-90-tab",
+      "part": "shirt-collar",
+      "product": "shirt",
+      "section": "collar",
+      "field": "lapel",
+      "option": "collar-one-piece-90-tab",
+      "label": "One-Piece 9.0 cm with Tab",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/shirt/REQCL/104.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\shirt\\REQCL\\104.jpg",
+      "states": {
+        "C": 1
+      },
+      "rows": [
+        "shirt|collar|lapel|collar-one-piece-90-tab"
+      ]
+    },
+    {
+      "identity": "shirt-cuff|cuff|cuff-round-2btn-1bh",
+      "part": "shirt-cuff",
+      "product": "shirt",
+      "section": "cuffs",
+      "field": "cuff",
+      "option": "cuff-round-2btn-1bh",
+      "label": "Round Cuff — 2 Buttons, 1 Buttonhole",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/shirt/REQLS/A.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\shirt\\REQLS\\A.jpg",
+      "states": {
+        "C": 1
+      },
+      "rows": [
+        "shirt|cuffs|cuff|cuff-round-2btn-1bh"
+      ]
+    },
+    {
+      "identity": "shirt-hem|hem|hem-small-round",
+      "part": "shirt-hem",
+      "product": "shirt",
+      "section": "pocket-hem",
+      "field": "hem",
+      "option": "hem-small-round",
+      "label": "Small Round Hem",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/shirt/REQDN/C.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\shirt\\REQDN\\C.jpg",
+      "states": {
+        "C": 1
+      },
+      "rows": [
+        "shirt|pocket-hem|hem|hem-small-round"
+      ]
+    },
+    {
+      "identity": "shirt-hem|hem|hem-small-round-pentagon-gusset",
+      "part": "shirt-hem",
+      "product": "shirt",
+      "section": "pocket-hem",
+      "field": "hem",
+      "option": "hem-small-round-pentagon-gusset",
+      "label": "Small Round Hem with Pentagon Gusset",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/shirt/REQDN/I.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\shirt\\REQDN\\I.jpg",
+      "states": {
+        "C": 1
+      },
+      "rows": [
+        "shirt|pocket-hem|hem|hem-small-round-pentagon-gusset"
+      ]
+    },
+    {
+      "identity": "shirt-placket|placket|placket-half-hidden",
+      "part": "shirt-placket",
+      "product": "shirt",
+      "section": "placket",
+      "field": "placket",
+      "option": "placket-half-hidden",
+      "label": "Half Hidden Placket",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/shirt/REQBM/I.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\shirt\\REQBM\\I.jpg",
+      "states": {
+        "C": 1
+      },
+      "rows": [
+        "shirt|placket|placket|placket-half-hidden"
+      ]
+    },
+    {
+      "identity": "trouser-pocket-depth|pocket-depth|pocket-shallow",
+      "part": "trouser-pocket-depth",
+      "product": "suit-2pc",
+      "section": "Trousers-front-pockets",
+      "field": "pocket-depth",
+      "option": "pocket-shallow",
+      "label": "Shallow (20 cm)",
+      "orientation": null,
+      "illustration": "/images/blueprints/baoxiniao/trousers/KPOKS/F.jpg",
+      "illustrationDisk": "C:\\Users\\ChaseStanley\\Downloads\\files\\brand_assets\\blessed-dressed\\public\\images\\blueprints\\baoxiniao\\trousers\\KPOKS\\F.jpg",
+      "states": {
+        "C": 1
+      },
+      "rows": [
+        "suit-2pc|Trousers-front-pockets|pocket-depth|pocket-shallow"
+      ]
+    }
+  ],
+  "note": "The identities whose blueprint 404s on production. They CANNOT be generated until a deploy - Higgsfield imports the drawing by URL. Their specs and prompts are still worth building now so any defect is found before the deploy, not after.",
+  "filteredFrom": 371
+}

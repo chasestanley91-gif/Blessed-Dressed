@@ -1,0 +1,857 @@
+{
+  "generatedAt": "2026-08-26T06:25:30.875Z",
+  "minScore": 70,
+  "note": "Proposals only. A field-NAME match proves the two fields are about the same thing; it does NOT prove their value sets join. Confirm against the drawings before applying.",
+  "blockedFieldsWithCandidate": 34,
+  "blockedRowsCovered": 157,
+  "proposals": [
+    {
+      "part": "jacket",
+      "catalogField": "lapel-bh-style",
+      "catalogFieldLabel": "",
+      "blockedRows": 15,
+      "optionCount": 5,
+      "options": [
+        "Real Functional (Machine)",
+        "Double-Color Straight A",
+        "Double-Color Straight B",
+        "½ Double-Color Straight",
+        "No.1 ½ Double-Color Straight"
+      ],
+      "candidates": [
+        {
+          "code": "GTECH",
+          "name": "Lapel buttonhole style",
+          "group": "Character design",
+          "score": 80,
+          "valueCount": 32
+        },
+        {
+          "code": "REQCL",
+          "name": "Lapel",
+          "group": "Character design",
+          "score": 70,
+          "valueCount": 39
+        }
+      ],
+      "note": ""
+    },
+    {
+      "part": "jacket",
+      "catalogField": "lower-pocket",
+      "catalogFieldLabel": "",
+      "blockedRows": 15,
+      "optionCount": 5,
+      "options": [
+        "Straight Jetted Flap 4.0 cm",
+        "Welt Pocket 1.0 cm",
+        "Welt Pocket 1.2 cm",
+        "Welt Pocket 1.5 cm",
+        "Patch + Angled Button Tab"
+      ],
+      "candidates": [
+        {
+          "code": "REQPD",
+          "name": "Lower pocket",
+          "group": "Character design",
+          "score": 100,
+          "valueCount": 52
+        },
+        {
+          "code": "REKPO",
+          "name": "Lower pocket bartack",
+          "group": "Character design",
+          "score": 80,
+          "valueCount": 5
+        },
+        {
+          "code": "KAXDK",
+          "name": "Lower coin pocket",
+          "group": "Character design",
+          "score": 80,
+          "valueCount": 4
+        }
+      ],
+      "note": ""
+    },
+    {
+      "part": "trousers",
+      "catalogField": "waistband-style",
+      "catalogFieldLabel": "",
+      "blockedRows": 15,
+      "optionCount": 5,
+      "options": [
+        "Extended Tab Waistband",
+        "Waistcoat Back Band",
+        "Elasticated Insert",
+        "Double Waistband",
+        "Trouser Waist (No Band)"
+      ],
+      "candidates": [
+        {
+          "code": "REQST",
+          "name": "Waistband style",
+          "group": "Character design",
+          "score": 100,
+          "valueCount": 18
+        }
+      ],
+      "note": ""
+    },
+    {
+      "part": "trousers",
+      "catalogField": "waistband-width",
+      "catalogFieldLabel": "",
+      "blockedRows": 15,
+      "optionCount": 5,
+      "options": [
+        "3.5 cm",
+        "3.8 cm",
+        "4.0 cm",
+        "4.5 cm",
+        "5.0 cm"
+      ],
+      "candidates": [
+        {
+          "code": "RECTK",
+          "name": "Waistband width",
+          "group": "Character design",
+          "score": 100,
+          "valueCount": 27
+        }
+      ],
+      "note": ""
+    },
+    {
+      "part": "shirt",
+      "catalogField": "lapel",
+      "catalogFieldLabel": "",
+      "blockedRows": 9,
+      "optionCount": 9,
+      "options": [
+        "Round Point 7.0 cm",
+        "Small Square 5.0 cm Zigzag",
+        "Middle Cut-Away 8.5 cm",
+        "French 7.5 cm",
+        "Tuxedo Collar",
+        "Rounded Stand Collar",
+        "Square Stand (No Button)",
+        "Standard with 7.5 cm Collar Stand",
+        "Cuban Collar"
+      ],
+      "candidates": [
+        {
+          "code": "REQCL",
+          "name": "Lapel",
+          "group": "Character design",
+          "score": 100,
+          "valueCount": 66
+        }
+      ],
+      "note": ""
+    },
+    {
+      "part": "jacket",
+      "catalogField": "handmade-decorative",
+      "catalogFieldLabel": "",
+      "blockedRows": 9,
+      "optionCount": 3,
+      "options": [
+        "None",
+        "Shoulder Seam Only",
+        "Full — Shoulder, Vents, Chest Pocket, Buttonholes"
+      ],
+      "candidates": [
+        {
+          "code": "REFUO",
+          "name": "Handmade decorative line",
+          "group": "Depth design",
+          "score": 80,
+          "valueCount": 4
+        }
+      ],
+      "note": ""
+    },
+    {
+      "part": "jacket",
+      "catalogField": "contrast-position",
+      "catalogFieldLabel": "",
+      "blockedRows": 9,
+      "optionCount": 3,
+      "options": [
+        "No Contrast",
+        "Chest Pocket Trim",
+        "Satin Piping on Lapel"
+      ],
+      "candidates": [
+        {
+          "code": "GCOPA",
+          "name": "Contrast position",
+          "group": "Depth design",
+          "score": 100,
+          "valueCount": 11
+        },
+        {
+          "code": "GCIPA",
+          "name": "Inner contrast position",
+          "group": "High-level design",
+          "score": 80,
+          "valueCount": 1
+        }
+      ],
+      "note": ""
+    },
+    {
+      "part": "jacket",
+      "catalogField": "collar-interlining",
+      "catalogFieldLabel": "",
+      "blockedRows": 6,
+      "optionCount": 2,
+      "options": [
+        "Regular (with Linen)",
+        "No Linen"
+      ],
+      "candidates": [
+        {
+          "code": "GTEDC",
+          "name": "Collar interlining",
+          "group": "Character design",
+          "score": 100,
+          "valueCount": 2
+        }
+      ],
+      "note": ""
+    },
+    {
+      "part": "jacket",
+      "catalogField": "hem-gusset",
+      "catalogFieldLabel": "",
+      "blockedRows": 6,
+      "optionCount": 2,
+      "options": [
+        "Small Curved Bottom",
+        "Large Curved Bottom"
+      ],
+      "candidates": [
+        {
+          "code": "REQXB",
+          "name": "Hem&gusset",
+          "group": "Character design",
+          "score": 100,
+          "valueCount": 7
+        }
+      ],
+      "note": ""
+    },
+    {
+      "part": "jacket",
+      "catalogField": "half-lining-shape",
+      "catalogFieldLabel": "",
+      "blockedRows": 6,
+      "optionCount": 2,
+      "options": [
+        "Standard Half Lining",
+        "Small Cut-away"
+      ],
+      "candidates": [
+        {
+          "code": "KINBL",
+          "name": "Half lining shape",
+          "group": "High-level design",
+          "score": 100,
+          "valueCount": 8
+        }
+      ],
+      "note": ""
+    },
+    {
+      "part": "trousers",
+      "catalogField": "center-crease",
+      "catalogFieldLabel": "",
+      "blockedRows": 6,
+      "optionCount": 2,
+      "options": [
+        "Pressed Crease (Standard)",
+        "Fused Crease (Permanent)"
+      ],
+      "candidates": [
+        {
+          "code": "KPWAH",
+          "name": "Center Crease",
+          "group": "Character design",
+          "score": 100,
+          "valueCount": 2
+        }
+      ],
+      "note": ""
+    },
+    {
+      "part": "trousers",
+      "catalogField": "center-seam",
+      "catalogFieldLabel": "",
+      "blockedRows": 6,
+      "optionCount": 2,
+      "options": [
+        "Open Seam",
+        "Flat-Fell Seam"
+      ],
+      "candidates": [
+        {
+          "code": "KAHDT",
+          "name": "Center back seam style",
+          "group": "Depth design",
+          "score": 80,
+          "valueCount": 2
+        },
+        {
+          "code": "KPWAM",
+          "name": "Center waist seam style",
+          "group": "Depth design",
+          "score": 80,
+          "valueCount": 3
+        }
+      ],
+      "note": ""
+    },
+    {
+      "part": "jacket",
+      "catalogField": "cuff-button-number",
+      "catalogFieldLabel": "",
+      "blockedRows": 3,
+      "optionCount": 1,
+      "options": [
+        "4 Buttons"
+      ],
+      "candidates": [
+        {
+          "code": "GTEXK",
+          "name": "Cuff button number",
+          "group": "Character design",
+          "score": 100,
+          "valueCount": 7
+        }
+      ],
+      "note": ""
+    },
+    {
+      "part": "jacket",
+      "catalogField": "cuff-button-spacing",
+      "catalogFieldLabel": "",
+      "blockedRows": 3,
+      "optionCount": 1,
+      "options": [
+        "No Kissing (Standard)"
+      ],
+      "candidates": [
+        {
+          "code": "GTEXJ",
+          "name": "Cuff button spacing",
+          "group": "Character design",
+          "score": 100,
+          "valueCount": 3
+        }
+      ],
+      "note": ""
+    },
+    {
+      "part": "jacket",
+      "catalogField": "elbow-patch",
+      "catalogFieldLabel": "",
+      "blockedRows": 3,
+      "optionCount": 1,
+      "options": [
+        "None"
+      ],
+      "candidates": [
+        {
+          "code": "REQTT",
+          "name": "Elbow patch",
+          "group": "Character design",
+          "score": 100,
+          "valueCount": 2
+        },
+        {
+          "code": "REQTC",
+          "name": "Elbow patch fabric",
+          "group": "Character design",
+          "score": 80,
+          "valueCount": 7
+        }
+      ],
+      "note": ""
+    },
+    {
+      "part": "trousers",
+      "catalogField": "front-pocket-style",
+      "catalogFieldLabel": "",
+      "blockedRows": 3,
+      "optionCount": 1,
+      "options": [
+        "2.5 cm Slant Pocket"
+      ],
+      "candidates": [
+        {
+          "code": "KPOQD",
+          "name": "Front pocket",
+          "group": "Character design",
+          "score": 70,
+          "valueCount": 15
+        }
+      ],
+      "note": ""
+    },
+    {
+      "part": "trousers",
+      "catalogField": "watch-pocket",
+      "catalogFieldLabel": "",
+      "blockedRows": 3,
+      "optionCount": 1,
+      "options": [
+        "Left Welt"
+      ],
+      "candidates": [
+        {
+          "code": "KPOQT",
+          "name": "Outside watch pocket",
+          "group": "Character design",
+          "score": 80,
+          "valueCount": 9
+        }
+      ],
+      "note": ""
+    },
+    {
+      "part": "trousers",
+      "catalogField": "belt-loops",
+      "catalogFieldLabel": "",
+      "blockedRows": 3,
+      "optionCount": 1,
+      "options": [
+        "5 Loops"
+      ],
+      "candidates": [
+        {
+          "code": "REQKB",
+          "name": "Belt loops",
+          "group": "Character design",
+          "score": 100,
+          "valueCount": 11
+        }
+      ],
+      "note": ""
+    },
+    {
+      "part": "trousers",
+      "catalogField": "inner-waist",
+      "catalogFieldLabel": "",
+      "blockedRows": 3,
+      "optionCount": 1,
+      "options": [
+        "Standard, Piping & Snugtex"
+      ],
+      "candidates": [
+        {
+          "code": "REWCT",
+          "name": "Inner waist style",
+          "group": "Depth design",
+          "score": 80,
+          "valueCount": 15
+        }
+      ],
+      "note": ""
+    },
+    {
+      "part": "shirt",
+      "catalogField": "buttonhole",
+      "catalogFieldLabel": "",
+      "blockedRows": 2,
+      "optionCount": 2,
+      "options": [
+        "Machine",
+        "Hand-Made"
+      ],
+      "candidates": [
+        {
+          "code": "GLKMO",
+          "name": "Buttonhole",
+          "group": "Character design",
+          "score": 100,
+          "valueCount": 2
+        },
+        {
+          "code": "GTEKF",
+          "name": "Placket buttonhole direction",
+          "group": "Character design",
+          "score": 80,
+          "valueCount": 3
+        },
+        {
+          "code": "CLTKO",
+          "name": "Buttonhole thread color on collar band",
+          "group": "Character design",
+          "score": 80,
+          "valueCount": 79
+        }
+      ],
+      "note": ""
+    },
+    {
+      "part": "shirt",
+      "catalogField": "hem",
+      "catalogFieldLabel": "",
+      "blockedRows": 2,
+      "optionCount": 2,
+      "options": [
+        "Small Round Hem",
+        "Small Round Hem with Pentagon Gusset"
+      ],
+      "candidates": [
+        {
+          "code": "REQDN",
+          "name": "Hem",
+          "group": "Depth design",
+          "score": 100,
+          "valueCount": 9
+        }
+      ],
+      "note": ""
+    },
+    {
+      "part": "vest",
+      "catalogField": "lapel-width",
+      "catalogFieldLabel": "",
+      "blockedRows": 2,
+      "optionCount": 1,
+      "options": [
+        "Wide 9 cm"
+      ],
+      "candidates": [
+        {
+          "code": "KFABL",
+          "name": "Lapel width",
+          "group": "Character design",
+          "score": 100,
+          "valueCount": 9
+        },
+        {
+          "code": "REQCL",
+          "name": "Lapel",
+          "group": "Character design",
+          "score": 70,
+          "valueCount": 10
+        }
+      ],
+      "note": ""
+    },
+    {
+      "part": "vest",
+      "catalogField": "contrast-lapel-collar",
+      "catalogFieldLabel": "",
+      "blockedRows": 2,
+      "optionCount": 1,
+      "options": [
+        "None"
+      ],
+      "candidates": [
+        {
+          "code": "REQCL",
+          "name": "Lapel",
+          "group": "Character design",
+          "score": 70,
+          "valueCount": 10
+        }
+      ],
+      "note": ""
+    },
+    {
+      "part": "shirt",
+      "catalogField": "collar_stay",
+      "catalogFieldLabel": "",
+      "blockedRows": 1,
+      "optionCount": 1,
+      "options": [
+        "Removable"
+      ],
+      "candidates": [
+        {
+          "code": "RELCL",
+          "name": "Collar stay",
+          "group": "Character design",
+          "score": 100,
+          "valueCount": 6
+        }
+      ],
+      "note": ""
+    },
+    {
+      "part": "shirt",
+      "catalogField": "collar_stand_height",
+      "catalogFieldLabel": "",
+      "blockedRows": 1,
+      "optionCount": 1,
+      "options": [
+        "3.5 cm Standard"
+      ],
+      "candidates": [
+        {
+          "code": "REQLB",
+          "name": "Collar stand height",
+          "group": "Character design",
+          "score": 100,
+          "valueCount": 10
+        },
+        {
+          "code": "KSHLA",
+          "name": "Collar stand",
+          "group": "Character design",
+          "score": 70,
+          "valueCount": 5
+        }
+      ],
+      "note": ""
+    },
+    {
+      "part": "shirt",
+      "catalogField": "collar_stand",
+      "catalogFieldLabel": "",
+      "blockedRows": 1,
+      "optionCount": 1,
+      "options": [
+        "Square Collar Stand"
+      ],
+      "candidates": [
+        {
+          "code": "KSHLA",
+          "name": "Collar stand",
+          "group": "Character design",
+          "score": 100,
+          "valueCount": 5
+        },
+        {
+          "code": "REQLB",
+          "name": "Collar stand height",
+          "group": "Character design",
+          "score": 80,
+          "valueCount": 10
+        }
+      ],
+      "note": ""
+    },
+    {
+      "part": "shirt",
+      "catalogField": "placket",
+      "catalogFieldLabel": "",
+      "blockedRows": 1,
+      "optionCount": 1,
+      "options": [
+        "Half Hidden Placket"
+      ],
+      "candidates": [
+        {
+          "code": "REQBM",
+          "name": "Placket",
+          "group": "Character design",
+          "score": 100,
+          "valueCount": 10
+        },
+        {
+          "code": "RESPE",
+          "name": "Placket splicing",
+          "group": "Character design",
+          "score": 80,
+          "valueCount": 1
+        },
+        {
+          "code": "GTEKF",
+          "name": "Placket buttonhole direction",
+          "group": "Character design",
+          "score": 80,
+          "valueCount": 3
+        }
+      ],
+      "note": ""
+    },
+    {
+      "part": "shirt",
+      "catalogField": "decoration_stitching_on_placket",
+      "catalogFieldLabel": "",
+      "blockedRows": 1,
+      "optionCount": 1,
+      "options": [
+        "Machine 0.1 cm Top Stitching"
+      ],
+      "candidates": [
+        {
+          "code": "GTEMS",
+          "name": "Decoration stitching on placket",
+          "group": "Character design",
+          "score": 100,
+          "valueCount": 5
+        },
+        {
+          "code": "GTEMY",
+          "name": "Decoration stitching color on placket",
+          "group": "Character design",
+          "score": 80,
+          "valueCount": 47
+        },
+        {
+          "code": "REQBM",
+          "name": "Placket",
+          "group": "Character design",
+          "score": 70,
+          "valueCount": 10
+        }
+      ],
+      "note": ""
+    },
+    {
+      "part": "shirt",
+      "catalogField": "decoration_stitching_on_shoulder",
+      "catalogFieldLabel": "",
+      "blockedRows": 1,
+      "optionCount": 1,
+      "options": [
+        "None"
+      ],
+      "candidates": [
+        {
+          "code": "REQLC",
+          "name": "Decoration stitching on shoulder",
+          "group": "Depth design",
+          "score": 100,
+          "valueCount": 2
+        }
+      ],
+      "note": ""
+    },
+    {
+      "part": "shirt",
+      "catalogField": "cuff",
+      "catalogFieldLabel": "",
+      "blockedRows": 1,
+      "optionCount": 1,
+      "options": [
+        "Round Cuff — 2 Buttons, 1 Buttonhole"
+      ],
+      "candidates": [
+        {
+          "code": "REQLS",
+          "name": "Cuff",
+          "group": "Depth design",
+          "score": 100,
+          "valueCount": 26
+        },
+        {
+          "code": "SLEXZ",
+          "name": "Cuff pleat",
+          "group": "Depth design",
+          "score": 80,
+          "valueCount": 2
+        },
+        {
+          "code": "GTXKC",
+          "name": "Cuff lining",
+          "group": "Depth design",
+          "score": 80,
+          "valueCount": 4
+        }
+      ],
+      "note": ""
+    },
+    {
+      "part": "shirt",
+      "catalogField": "cuff_lining",
+      "catalogFieldLabel": "",
+      "blockedRows": 1,
+      "optionCount": 1,
+      "options": [
+        "Hard FC390057"
+      ],
+      "candidates": [
+        {
+          "code": "GTXKC",
+          "name": "Cuff lining",
+          "group": "Depth design",
+          "score": 100,
+          "valueCount": 4
+        },
+        {
+          "code": "REQLS",
+          "name": "Cuff",
+          "group": "Depth design",
+          "score": 70,
+          "valueCount": 26
+        }
+      ],
+      "note": ""
+    },
+    {
+      "part": "shirt",
+      "catalogField": "contrast_color_position",
+      "catalogFieldLabel": "",
+      "blockedRows": 1,
+      "optionCount": 1,
+      "options": [
+        "No Contrast"
+      ],
+      "candidates": [
+        {
+          "code": "GCOPA",
+          "name": "Contrast color position",
+          "group": "High-level design",
+          "score": 100,
+          "valueCount": 17
+        }
+      ],
+      "note": ""
+    },
+    {
+      "part": "shirt",
+      "catalogField": "fabric_label_position",
+      "catalogFieldLabel": "",
+      "blockedRows": 1,
+      "optionCount": 1,
+      "options": [
+        "Position 2"
+      ],
+      "candidates": [
+        {
+          "code": "REMMP",
+          "name": "Fabric label position",
+          "group": "High-level design",
+          "score": 100,
+          "valueCount": 2
+        }
+      ],
+      "note": ""
+    },
+    {
+      "part": "jacket",
+      "catalogField": "lapel-style",
+      "catalogFieldLabel": "",
+      "blockedRows": 1,
+      "optionCount": 1,
+      "options": [
+        "E peak"
+      ],
+      "candidates": [
+        {
+          "code": "GTECH",
+          "name": "Lapel buttonhole style",
+          "group": "Character design",
+          "score": 80,
+          "valueCount": 32
+        },
+        {
+          "code": "REQCL",
+          "name": "Lapel",
+          "group": "Character design",
+          "score": 70,
+          "valueCount": 39
+        }
+      ],
+      "note": ""
+    }
+  ]
+}

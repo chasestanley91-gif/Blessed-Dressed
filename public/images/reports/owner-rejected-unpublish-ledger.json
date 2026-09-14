@@ -1,0 +1,372 @@
+{
+  "runs": [
+    {
+      "at": "2026-08-27T19:00:12.519Z",
+      "tool": "tools/unpublish_owner_rejected.mjs",
+      "reason": "Owner rejected these images; PROJECT-GOAL-V4 §20 requires that zero unapproved images are served.",
+      "count": 10,
+      "changes": [
+        {
+          "addr": "shirt > placket > decoration_stitching_on_placket > stitch-01-inner-plain",
+          "product": "shirt",
+          "section": "placket",
+          "field": "decoration_stitching_on_placket",
+          "option": "stitch-01-inner-plain",
+          "label": "0.1 cm Topstitch (Inner Plain Placket)",
+          "removed": "/images/generated/shirt/stitch-01-inner-plain.webp",
+          "restoredTo": "/images/decoration_stitching_on_placket/machine-01cm-top-stitching-on-inner-plain-placket.jpg",
+          "clearedSlot": false,
+          "ownerVerdict": "rejected",
+          "ownerAttempt": 3,
+          "ownerDecidedAt": "2026-08-11T22:24:53.595Z",
+          "before": {
+            "image": "/images/generated/shirt/stitch-01-inner-plain.webp"
+          }
+        },
+        {
+          "addr": "sport-coat > suit-details > contrast-position > contrast-lower-besom",
+          "product": "sport-coat",
+          "section": "suit-details",
+          "field": "contrast-position",
+          "option": "contrast-lower-besom",
+          "label": "Lower Pocket Besom",
+          "removed": "/images/generated/jacket/contrast-lower-besom.webp",
+          "restoredTo": "/images/supplier-bb/GCOPA/E.jpg",
+          "clearedSlot": false,
+          "ownerVerdict": "rejected",
+          "ownerAttempt": 1,
+          "ownerDecidedAt": "2026-08-10T22:56:06.682Z",
+          "before": {
+            "image": "/images/generated/jacket/contrast-lower-besom.webp",
+            "realImage": "/images/generated/jacket/contrast-lower-besom.webp",
+            "photos": [
+              "/images/generated/jacket/contrast-lower-besom.webp"
+            ]
+          }
+        },
+        {
+          "addr": "suit-2pc > suit-pockets > coin-pocket > coin-none",
+          "product": "suit-2pc",
+          "section": "suit-pockets",
+          "field": "coin-pocket",
+          "option": "coin-none",
+          "label": "None",
+          "removed": "/images/generated/jacket/coin-none.webp",
+          "restoredTo": "/images/blueprints/baoxiniao/jacket/KAXDK/Z.jpg",
+          "clearedSlot": false,
+          "ownerVerdict": "rejected",
+          "ownerAttempt": 1,
+          "ownerDecidedAt": "2026-08-11T00:28:18.392Z",
+          "before": {
+            "image": "/images/generated/jacket/coin-none.webp",
+            "realImage": "/images/generated/jacket/coin-none.webp",
+            "photos": [
+              "/images/generated/jacket/coin-none.webp"
+            ]
+          }
+        },
+        {
+          "addr": "suit-2pc > Trousers-details-contrast > contrast-positions > trouser-contrast-back-pocket",
+          "product": "suit-2pc",
+          "section": "Trousers-details-contrast",
+          "field": "contrast-positions",
+          "option": "trouser-contrast-back-pocket",
+          "label": "Contrast Back Pocket Besom",
+          "removed": "/images/generated/trousers/trouser-contrast-back-pocket.webp",
+          "restoredTo": "/images/blueprints/remote/a1696cc6abeb__325B.jpg",
+          "clearedSlot": false,
+          "ownerVerdict": "rejected",
+          "ownerAttempt": 1,
+          "ownerDecidedAt": "2026-08-10T22:54:07.877Z",
+          "before": {
+            "image": "/images/generated/trousers/trouser-contrast-back-pocket.webp",
+            "realImage": "/images/generated/trousers/trouser-contrast-back-pocket.webp",
+            "photos": [
+              "/images/generated/trousers/trouser-contrast-back-pocket.webp"
+            ]
+          }
+        },
+        {
+          "addr": "suit-2pc > Trousers-details-contrast > contrast-positions > trouser-contrast-loop",
+          "product": "suit-2pc",
+          "section": "Trousers-details-contrast",
+          "field": "contrast-positions",
+          "option": "trouser-contrast-loop",
+          "label": "Contrast Belt Loop Fabric",
+          "removed": "/images/generated/trousers/trouser-contrast-loop.webp",
+          "restoredTo": "/images/blueprints/remote/67e3df566ff6__3348.jpg",
+          "clearedSlot": false,
+          "ownerVerdict": "rejected",
+          "ownerAttempt": 1,
+          "ownerDecidedAt": "2026-08-10T22:52:52.446Z",
+          "before": {
+            "image": "/images/generated/trousers/trouser-contrast-loop.webp",
+            "realImage": "/images/generated/trousers/trouser-contrast-loop.webp",
+            "photos": [
+              "/images/generated/trousers/trouser-contrast-loop.webp"
+            ]
+          }
+        },
+        {
+          "addr": "suit-3pc > lapel > lapel-style > lapel-notch-68",
+          "product": "suit-3pc",
+          "section": "lapel",
+          "field": "lapel-style",
+          "option": "lapel-notch-68",
+          "label": "Notch 68° (Curved Gorge)",
+          "removed": "/images/generated/sport-coat/lapel-notch-68.webp",
+          "restoredTo": "/images/blueprints/factory/877a05ce586e__0689__Notch_with_high_gorge.jpg",
+          "clearedSlot": false,
+          "ownerVerdict": "rejected",
+          "ownerAttempt": 1,
+          "ownerDecidedAt": "2026-08-12T05:17:32.100Z",
+          "before": {
+            "image": "/images/generated/sport-coat/lapel-notch-68.webp",
+            "photos": [
+              "/images/generated/sport-coat/lapel-notch-68.webp",
+              "https://cdn.prod.website-files.com/5fb638ef16441f801761b4e1/5fb7a6ceaa1448c50ebeac0f_Camps-notch.jpeg",
+              "https://cdn.prod.website-files.com/5fb638ef16441f801761b4e1/5fb7a6ceee86f4fc0aaa6712_Cifonelli-notch.jpeg",
+              "https://cdn.prod.website-files.com/5fb638ef16441f801761b4e1/5fb7a6ce53b786ff5019c017_Arnys-Dirnelli-1.jpeg",
+              "https://cdn.prod.website-files.com/5fb638ef16441f801761b4e1/5fb7a6ce9e7caa329bf93db7_lapels_explained-830x445.png",
+              "https://cdn.prod.website-files.com/5fb638ef16441f801761b4e1/5fb7a6ce15b6ed50c91ba63f_smalto-notch.jpeg"
+            ]
+          }
+        },
+        {
+          "addr": "suit-3pc > suit-pockets > coin-pocket > coin-none",
+          "product": "suit-3pc",
+          "section": "suit-pockets",
+          "field": "coin-pocket",
+          "option": "coin-none",
+          "label": "None",
+          "removed": "/images/generated/jacket/coin-none.webp",
+          "restoredTo": "/images/blueprints/baoxiniao/jacket/KAXDK/Z.jpg",
+          "clearedSlot": false,
+          "ownerVerdict": "rejected",
+          "ownerAttempt": 1,
+          "ownerDecidedAt": "2026-08-12T13:57:11.303Z",
+          "before": {
+            "image": "/images/generated/jacket/coin-none.webp",
+            "realImage": "/images/generated/jacket/coin-none.webp",
+            "photos": [
+              "/images/generated/jacket/coin-none.webp"
+            ]
+          }
+        },
+        {
+          "addr": "suit-3pc > front-style > button-config > db-6x2",
+          "product": "suit-3pc",
+          "section": "front-style",
+          "field": "button-config",
+          "option": "db-6x2",
+          "label": "DB 6 × 2",
+          "removed": "/images/generated/jacket/db-6x2.webp",
+          "restoredTo": "/images/blueprints/baoxiniao/jacket/REQBT/12.jpg",
+          "clearedSlot": false,
+          "ownerVerdict": "rejected",
+          "ownerAttempt": 1,
+          "ownerDecidedAt": "2026-08-11T00:17:45.826Z",
+          "before": {
+            "image": "/images/generated/jacket/db-6x2.webp",
+            "realImage": "/images/generated/jacket/db-6x2.webp",
+            "photos": [
+              "/images/generated/jacket/db-6x2.webp",
+              "https://www.bondsuits.com/wp-content/uploads/2011/01/Double-Breasted-Chalkstripe-Suit-2.jpg",
+              "https://www.bondsuits.com/wp-content/uploads/2011/02/Octopussy-Double-Breasted-Suit-3.jpg",
+              "https://www.bondsuits.com/wp-content/uploads/2014/12/Drax-Three-Piece-Double-Breasted-Suit.jpg",
+              "https://www.bondsuits.com/wp-content/uploads/2014/12/Drax-Three-Piece-Double-Breasted-Suit-2.jpg",
+              "https://www.bondsuits.com/wp-content/uploads/2021/02/man-with-the-golden-gun-chalk-stripe-suit-charcoal-comparison.jpg"
+            ]
+          }
+        },
+        {
+          "addr": "suit-3pc > front-style > button-config > db-6x3",
+          "product": "suit-3pc",
+          "section": "front-style",
+          "field": "button-config",
+          "option": "db-6x3",
+          "label": "DB 6 × 3",
+          "removed": "/images/generated/jacket/db-6x3.webp",
+          "restoredTo": "/images/blueprints/baoxiniao/jacket/REQBT/13.jpg",
+          "clearedSlot": false,
+          "ownerVerdict": "rejected",
+          "ownerAttempt": 1,
+          "ownerDecidedAt": "2026-08-11T01:09:41.094Z",
+          "before": {
+            "image": "/images/generated/jacket/db-6x3.webp",
+            "realImage": "/images/generated/jacket/db-6x3.webp",
+            "photos": [
+              "/images/generated/jacket/db-6x3.webp",
+              "https://www.bondsuits.com/wp-content/uploads/2014/12/Drax-Three-Piece-Double-Breasted-Suit-3.jpg",
+              "https://www.bondsuits.com/wp-content/uploads/2011/08/The-Spy-Who-Loved-Me-Naval-Uniform.jpg",
+              "https://www.bondsuits.com/wp-content/uploads/2018/05/double-breasted-jacket-wrap-lapel-width.jpg",
+              "https://www.bondsuits.com/wp-content/uploads/2013/06/Sea-Wolves-White-Dinner-Jacket.jpg",
+              "https://www.bondsuits.com/wp-content/uploads/2018/05/double-breasted-jacket-wrap.jpg"
+            ]
+          }
+        },
+        {
+          "addr": "trousers > front-pockets > front-pocket-style > welt-pocket",
+          "product": "trousers",
+          "section": "front-pockets",
+          "field": "front-pocket-style",
+          "option": "welt-pocket",
+          "label": "Welt Front Pocket",
+          "removed": "/images/generated/jacket/welt-pocket.webp",
+          "restoredTo": "/images/blueprints/remote/01dc8f37109e__3132.jpg",
+          "clearedSlot": false,
+          "ownerVerdict": "rejected",
+          "ownerAttempt": 1,
+          "ownerDecidedAt": "2026-08-12T14:02:58.599Z",
+          "before": {
+            "image": "/images/generated/jacket/welt-pocket.webp",
+            "photos": [
+              "/images/generated/jacket/welt-pocket.webp",
+              "https://www.permanentstyle.com/wp-content/uploads/2018/07/Prologue-Trousers-5.jpg"
+            ]
+          }
+        }
+      ],
+      "reverted": {
+        "at": "2026-08-27T19:04:54.453Z",
+        "by": "restore from data-store/options.prebackup-2026-08-27-unpublish-rejected",
+        "reason": "This run bound owner decisions by the product/option key, which is not a craft identity. 4 of its 10 rows were bound to the WRONG craft (notably suit-3pc > suit-pockets > coin-pocket > coin-none, unpublished on the strength of a TROUSER rejection). Reverted in full, the binding was made address-aware in tools/project_state.mjs, and only the 6 provable rows were re-applied in the next run. Retained per PROJECT-GOAL-V4 §13: decision history is never destroyed.",
+        "supersededBy": 1
+      }
+    },
+    {
+      "at": "2026-08-27T19:04:42.410Z",
+      "tool": "tools/unpublish_owner_rejected.mjs",
+      "reason": "Owner rejected these images; PROJECT-GOAL-V4 §20 requires that zero unapproved images are served.",
+      "count": 6,
+      "changes": [
+        {
+          "addr": "shirt > placket > decoration_stitching_on_placket > stitch-01-inner-plain",
+          "product": "shirt",
+          "section": "placket",
+          "field": "decoration_stitching_on_placket",
+          "option": "stitch-01-inner-plain",
+          "label": "0.1 cm Topstitch (Inner Plain Placket)",
+          "removed": "/images/generated/shirt/stitch-01-inner-plain.webp",
+          "restoredTo": "/images/decoration_stitching_on_placket/machine-01cm-top-stitching-on-inner-plain-placket.jpg",
+          "clearedSlot": false,
+          "ownerVerdict": "rejected",
+          "ownerAttempt": 3,
+          "ownerDecidedAt": "2026-08-11T22:24:53.595Z",
+          "before": {
+            "image": "/images/generated/shirt/stitch-01-inner-plain.webp"
+          }
+        },
+        {
+          "addr": "sport-coat > suit-details > contrast-position > contrast-lower-besom",
+          "product": "sport-coat",
+          "section": "suit-details",
+          "field": "contrast-position",
+          "option": "contrast-lower-besom",
+          "label": "Lower Pocket Besom",
+          "removed": "/images/generated/jacket/contrast-lower-besom.webp",
+          "restoredTo": "/images/supplier-bb/GCOPA/E.jpg",
+          "clearedSlot": false,
+          "ownerVerdict": "rejected",
+          "ownerAttempt": 1,
+          "ownerDecidedAt": "2026-08-10T22:56:06.682Z",
+          "before": {
+            "image": "/images/generated/jacket/contrast-lower-besom.webp",
+            "realImage": "/images/generated/jacket/contrast-lower-besom.webp",
+            "photos": [
+              "/images/generated/jacket/contrast-lower-besom.webp"
+            ]
+          }
+        },
+        {
+          "addr": "suit-2pc > Trousers-details-contrast > contrast-positions > trouser-contrast-back-pocket",
+          "product": "suit-2pc",
+          "section": "Trousers-details-contrast",
+          "field": "contrast-positions",
+          "option": "trouser-contrast-back-pocket",
+          "label": "Contrast Back Pocket Besom",
+          "removed": "/images/generated/trousers/trouser-contrast-back-pocket.webp",
+          "restoredTo": "/images/blueprints/remote/a1696cc6abeb__325B.jpg",
+          "clearedSlot": false,
+          "ownerVerdict": "rejected",
+          "ownerAttempt": 1,
+          "ownerDecidedAt": "2026-08-10T22:54:07.877Z",
+          "before": {
+            "image": "/images/generated/trousers/trouser-contrast-back-pocket.webp",
+            "realImage": "/images/generated/trousers/trouser-contrast-back-pocket.webp",
+            "photos": [
+              "/images/generated/trousers/trouser-contrast-back-pocket.webp"
+            ]
+          }
+        },
+        {
+          "addr": "suit-2pc > Trousers-details-contrast > contrast-positions > trouser-contrast-loop",
+          "product": "suit-2pc",
+          "section": "Trousers-details-contrast",
+          "field": "contrast-positions",
+          "option": "trouser-contrast-loop",
+          "label": "Contrast Belt Loop Fabric",
+          "removed": "/images/generated/trousers/trouser-contrast-loop.webp",
+          "restoredTo": "/images/blueprints/remote/67e3df566ff6__3348.jpg",
+          "clearedSlot": false,
+          "ownerVerdict": "rejected",
+          "ownerAttempt": 1,
+          "ownerDecidedAt": "2026-08-10T22:52:52.446Z",
+          "before": {
+            "image": "/images/generated/trousers/trouser-contrast-loop.webp",
+            "realImage": "/images/generated/trousers/trouser-contrast-loop.webp",
+            "photos": [
+              "/images/generated/trousers/trouser-contrast-loop.webp"
+            ]
+          }
+        },
+        {
+          "addr": "suit-3pc > lapel > lapel-style > lapel-notch-68",
+          "product": "suit-3pc",
+          "section": "lapel",
+          "field": "lapel-style",
+          "option": "lapel-notch-68",
+          "label": "Notch 68° (Curved Gorge)",
+          "removed": "/images/generated/sport-coat/lapel-notch-68.webp",
+          "restoredTo": "/images/blueprints/factory/877a05ce586e__0689__Notch_with_high_gorge.jpg",
+          "clearedSlot": false,
+          "ownerVerdict": "rejected",
+          "ownerAttempt": 1,
+          "ownerDecidedAt": "2026-08-12T05:17:32.100Z",
+          "before": {
+            "image": "/images/generated/sport-coat/lapel-notch-68.webp",
+            "photos": [
+              "/images/generated/sport-coat/lapel-notch-68.webp",
+              "https://cdn.prod.website-files.com/5fb638ef16441f801761b4e1/5fb7a6ceaa1448c50ebeac0f_Camps-notch.jpeg",
+              "https://cdn.prod.website-files.com/5fb638ef16441f801761b4e1/5fb7a6ceee86f4fc0aaa6712_Cifonelli-notch.jpeg",
+              "https://cdn.prod.website-files.com/5fb638ef16441f801761b4e1/5fb7a6ce53b786ff5019c017_Arnys-Dirnelli-1.jpeg",
+              "https://cdn.prod.website-files.com/5fb638ef16441f801761b4e1/5fb7a6ce9e7caa329bf93db7_lapels_explained-830x445.png",
+              "https://cdn.prod.website-files.com/5fb638ef16441f801761b4e1/5fb7a6ce15b6ed50c91ba63f_smalto-notch.jpeg"
+            ]
+          }
+        },
+        {
+          "addr": "trousers > front-pockets > front-pocket-style > welt-pocket",
+          "product": "trousers",
+          "section": "front-pockets",
+          "field": "front-pocket-style",
+          "option": "welt-pocket",
+          "label": "Welt Front Pocket",
+          "removed": "/images/generated/jacket/welt-pocket.webp",
+          "restoredTo": "/images/blueprints/remote/01dc8f37109e__3132.jpg",
+          "clearedSlot": false,
+          "ownerVerdict": "rejected",
+          "ownerAttempt": 1,
+          "ownerDecidedAt": "2026-08-12T14:02:58.599Z",
+          "before": {
+            "image": "/images/generated/jacket/welt-pocket.webp",
+            "photos": [
+              "/images/generated/jacket/welt-pocket.webp",
+              "https://www.permanentstyle.com/wp-content/uploads/2018/07/Prologue-Trousers-5.jpg"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

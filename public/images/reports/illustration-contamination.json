@@ -1,0 +1,38 @@
+{
+  "note": "Craft options whose ILLUSTRATION depicts a different craft. Append-only. Nothing here is auto-corrected: a repoint needs evidence, and an owner-approved photo is never unpublished on account of its drawing (V4 §5).",
+  "findings": [
+    {
+      "foundAt": "2026-08-16T03:48:39.874Z",
+      "craftIds": [
+        "sport-coat|lapel|lapel-bh-position|lbp-both-double",
+        "suit-2pc|lapel|lapel-bh-position|lbp-both-double",
+        "suit-3pc|lapel|lapel-bh-position|lbp-both-double"
+      ],
+      "label": "Both Sides Double (Lapel Buttonhole Position)",
+      "illustration": "/images/supplier-bb/GTECP/E.jpg",
+      "defect": "GTECP is an INTERIOR POCKET position field, not a lapel field. GTECP/E (\"Each side double\") draws an opened jacket interior with two marks on EACH inner facing. It is behind a LAPEL buttonhole option.",
+      "evidence": "Opened GTECP/E: jacket shown from the inside, both facings visible, two red marks per side. Its sibling values are Left / Right / Left double / Both sides / Each side double / None — interior pocket positions.",
+      "liveImage": "/images/generated/sport-coat/lbp-both-double.webp",
+      "liveImageAssessment": "CORRECT for the option — the photograph shows two buttonholes on each lapel. The text specification carried the count and the render recovered despite the wrong reference.",
+      "ownerApprovals": 1,
+      "action": "NONE TAKEN. The owner approved this photograph and it is right, so it stays live (V4 §5). The drawing is still wrong and must not be used for any regeneration; a correct lapel-position plate has to be found first. Do not repoint on a guess.",
+      "alsoAffects": "GTECP is simultaneously the top label-match candidate for coin-pocket, namecard-pocket and inner-ticket-pocket. Because it is an interior field, coin-pocket (a hip-pocket craft) is excluded; namecard-pocket and inner-ticket-pocket remain indistinguishable from the drawing alone."
+    },
+    {
+      "foundAt": "2026-08-26T05:30:37.994Z",
+      "craftIds": [
+        "suit-2pc|Trousers-pleats-structure|fly-stitching|fly-stitch-none",
+        "suit-3pc|Trousers-pleats-structure|fly-stitching|fly-stitch-none",
+        "trousers|pleats-structure|fly-stitching|fly-stitch-none"
+      ],
+      "label": "No Fly Topstitch (Fly Stitching)",
+      "illustration": "/images/blueprints/factory/10bfe4668d92__31A6__No_top_stitch_hidden_stitch.jpg",
+      "defect": "The 31A* plates are the POCKET topstitch family - 31A1 (0.15cm), 31A9 (0.1+0.7 double), 31A6 (no topstitch) all back pocket-stitching. The fly option borrowed 31A6, so one plate now serves two different crafts on different parts of the trouser.",
+      "evidence": "31A6 is simultaneously the illustration for pocket-stitching/pocket-stitch-none and fly-stitching/fly-stitch-none across all three trouser-bearing products.",
+      "liveImage": "/images/generated/jacket/fly-stitch-none.webp",
+      "liveImageAssessment": "CORRECT for the option - navy trousers, front view, a clean fly with no topstitch line. The path is misfiled under /generated/jacket/ for a TROUSER craft, but the picture itself is right.",
+      "ownerApprovals": 4,
+      "action": "NONE TAKEN. The owner approved this photograph on all three rows and it is right, so it stays live (V4 s5). The drawing must not drive a regeneration; fly-stitching has no plate of its own and its other two options (Curved / Straight Fly Stitch) have no drawing at all. The supplier publishes no fly-stitch field with artwork - GBKLI was examined and rejected (unmeasured technique values against our measured gauges)."
+    }
+  ]
+}

@@ -1,0 +1,965 @@
+{
+  "generatedAt": "2026-08-26T05:40:42.057Z",
+  "note": "CANDIDATES ONLY. A high join rate says the LABELS correspond; only opening the drawing says the craft does.",
+  "minRate": 0.6,
+  "fields": [
+    {
+      "catalogField": "perfume-pad",
+      "part": "jacket",
+      "rowsAtStake": 24,
+      "optionCount": 8,
+      "optionLabels": [
+        "None",
+        "Triangle Underarm Shield",
+        "Round Shield 1",
+        "Round Shield 2",
+        "Round Shield 3",
+        "U-Shield 1",
+        "U-Shield 2",
+        "U-Shield 3"
+      ],
+      "candidates": [
+        {
+          "supplierField": "KIMOD",
+          "alreadySourceFor": [],
+          "warning": null,
+          "values": 8,
+          "joined": 8,
+          "ofOptions": 8,
+          "rate": 1,
+          "pairs": [
+            {
+              "ours": "None",
+              "theirs": "None",
+              "code": "F"
+            },
+            {
+              "ours": "Triangle Underarm Shield",
+              "theirs": "Triangle underarm shield",
+              "code": "E"
+            },
+            {
+              "ours": "Round Shield 1",
+              "theirs": "Round underarm shield 1",
+              "code": "B"
+            },
+            {
+              "ours": "Round Shield 2",
+              "theirs": "Round underarm shield 2",
+              "code": "A"
+            },
+            {
+              "ours": "Round Shield 3",
+              "theirs": "Round underarm shield 3",
+              "code": "H"
+            },
+            {
+              "ours": "U-Shield 1",
+              "theirs": "U-underarm shield 1",
+              "code": "D"
+            }
+          ],
+          "drawingsPublished": 0
+        },
+        {
+          "supplierField": "KPOKD",
+          "alreadySourceFor": [
+            "ticket-pocket"
+          ],
+          "warning": "ALREADY the source for ticket-pocket - a different place on the garment unless proven otherwise",
+          "values": 11,
+          "joined": 1,
+          "ofOptions": 8,
+          "rate": 0.13,
+          "pairs": [
+            {
+              "ours": "None",
+              "theirs": "None",
+              "code": "D"
+            }
+          ]
+        },
+        {
+          "supplierField": "KIPRO",
+          "alreadySourceFor": [],
+          "warning": null,
+          "values": 4,
+          "joined": 1,
+          "ofOptions": 8,
+          "rate": 0.13,
+          "pairs": [
+            {
+              "ours": "None",
+              "theirs": "NONE",
+              "code": "Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "catalogField": "pen-pocket",
+      "part": "jacket",
+      "rowsAtStake": 21,
+      "optionCount": 7,
+      "optionLabels": [
+        "None",
+        "Left Jetted",
+        "Left Drop-shape",
+        "Left Diamond",
+        "Right Jetted",
+        "Right Drop-shape",
+        "Right Diamond"
+      ],
+      "candidates": [
+        {
+          "supplierField": "KPEND",
+          "alreadySourceFor": [],
+          "warning": null,
+          "values": 7,
+          "joined": 7,
+          "ofOptions": 7,
+          "rate": 1,
+          "pairs": [
+            {
+              "ours": "None",
+              "theirs": "None",
+              "code": "Z"
+            },
+            {
+              "ours": "Left Jetted",
+              "theirs": "Left jetted pocket",
+              "code": "A"
+            },
+            {
+              "ours": "Left Drop-shape",
+              "theirs": "Drop shape left pen pocket",
+              "code": "B"
+            },
+            {
+              "ours": "Left Diamond",
+              "theirs": "Diamond shape left pocket",
+              "code": "C"
+            },
+            {
+              "ours": "Right Jetted",
+              "theirs": "RIGHT JETTED POCKET",
+              "code": "D"
+            },
+            {
+              "ours": "Right Drop-shape",
+              "theirs": "Drop shape right pen pocket",
+              "code": "E"
+            }
+          ],
+          "drawingsPublished": 0
+        },
+        {
+          "supplierField": "KPOKD",
+          "alreadySourceFor": [
+            "ticket-pocket"
+          ],
+          "warning": "ALREADY the source for ticket-pocket - a different place on the garment unless proven otherwise",
+          "values": 11,
+          "joined": 1,
+          "ofOptions": 7,
+          "rate": 0.14,
+          "pairs": [
+            {
+              "ours": "None",
+              "theirs": "None",
+              "code": "D"
+            }
+          ]
+        },
+        {
+          "supplierField": "KIPRO",
+          "alreadySourceFor": [],
+          "warning": null,
+          "values": 4,
+          "joined": 1,
+          "ofOptions": 7,
+          "rate": 0.14,
+          "pairs": [
+            {
+              "ours": "None",
+              "theirs": "NONE",
+              "code": "Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "catalogField": "facing-style",
+      "part": "jacket",
+      "rowsAtStake": 18,
+      "optionCount": 6,
+      "optionLabels": [
+        "Facing 1",
+        "Facing 2",
+        "Facing 4",
+        "Facing 5",
+        "Facing 7",
+        "Facing 9"
+      ],
+      "candidates": [
+        {
+          "supplierField": "KINGM",
+          "alreadySourceFor": [],
+          "warning": null,
+          "values": 8,
+          "joined": 6,
+          "ofOptions": 6,
+          "rate": 1,
+          "pairs": [
+            {
+              "ours": "Facing 1",
+              "theirs": "Facing 1",
+              "code": "F"
+            },
+            {
+              "ours": "Facing 2",
+              "theirs": "Facing 2",
+              "code": "E"
+            },
+            {
+              "ours": "Facing 4",
+              "theirs": "Facing 4",
+              "code": "B"
+            },
+            {
+              "ours": "Facing 5",
+              "theirs": "Facing 5",
+              "code": "A"
+            },
+            {
+              "ours": "Facing 7",
+              "theirs": "Facing 7",
+              "code": "US66"
+            },
+            {
+              "ours": "Facing 9",
+              "theirs": "Facing 9",
+              "code": "DGG"
+            }
+          ],
+          "drawingsPublished": 0
+        }
+      ]
+    },
+    {
+      "catalogField": "half-lining-shape",
+      "part": "jacket",
+      "rowsAtStake": 18,
+      "optionCount": 6,
+      "optionLabels": [
+        "Standard Half Lining",
+        "Small Cut-away",
+        "1/2 Lining",
+        "1/3 Cut-away",
+        "1/3 Lining",
+        "1/4 Cut-away"
+      ],
+      "candidates": [
+        {
+          "supplierField": "KINBL",
+          "alreadySourceFor": [],
+          "warning": null,
+          "values": 8,
+          "joined": 4,
+          "ofOptions": 6,
+          "rate": 0.67,
+          "pairs": [
+            {
+              "ours": "1/2 Lining",
+              "theirs": "1/2 lining",
+              "code": "C"
+            },
+            {
+              "ours": "1/3 Cut-away",
+              "theirs": "1/3 cut-away lining",
+              "code": "D"
+            },
+            {
+              "ours": "1/3 Lining",
+              "theirs": "1/3 lining",
+              "code": "G"
+            },
+            {
+              "ours": "1/4 Cut-away",
+              "theirs": "1/4 cut-away lining",
+              "code": "H"
+            }
+          ],
+          "drawingsPublished": 0
+        }
+      ]
+    },
+    {
+      "catalogField": "lower-pocket-bartack",
+      "part": "jacket",
+      "rowsAtStake": 12,
+      "optionCount": 4,
+      "optionLabels": [
+        "None",
+        "D-Bartack",
+        "I-Bartack",
+        "X-Bartack"
+      ],
+      "candidates": [
+        {
+          "supplierField": "KALDF",
+          "alreadySourceFor": [],
+          "warning": null,
+          "values": 4,
+          "joined": 4,
+          "ofOptions": 4,
+          "rate": 1,
+          "pairs": [
+            {
+              "ours": "None",
+              "theirs": "None",
+              "code": "D"
+            },
+            {
+              "ours": "D-Bartack",
+              "theirs": "D- bartack",
+              "code": "A"
+            },
+            {
+              "ours": "I-Bartack",
+              "theirs": "I- bartack",
+              "code": "B"
+            },
+            {
+              "ours": "X-Bartack",
+              "theirs": "X- bartack",
+              "code": "C"
+            }
+          ],
+          "drawingsPublished": 0
+        },
+        {
+          "supplierField": "REKPO",
+          "alreadySourceFor": [
+            "inner-pocket-closure"
+          ],
+          "warning": "ALREADY the source for inner-pocket-closure - a different place on the garment unless proven otherwise",
+          "values": 5,
+          "joined": 4,
+          "ofOptions": 4,
+          "rate": 1,
+          "pairs": [
+            {
+              "ours": "None",
+              "theirs": "None",
+              "code": "D"
+            },
+            {
+              "ours": "D-Bartack",
+              "theirs": "D- bartack",
+              "code": "A"
+            },
+            {
+              "ours": "I-Bartack",
+              "theirs": "I-bartack",
+              "code": "B"
+            },
+            {
+              "ours": "X-Bartack",
+              "theirs": "X- bartack",
+              "code": "C"
+            }
+          ]
+        },
+        {
+          "supplierField": "KPOKD",
+          "alreadySourceFor": [
+            "ticket-pocket"
+          ],
+          "warning": "ALREADY the source for ticket-pocket - a different place on the garment unless proven otherwise",
+          "values": 11,
+          "joined": 1,
+          "ofOptions": 4,
+          "rate": 0.25,
+          "pairs": [
+            {
+              "ours": "None",
+              "theirs": "None",
+              "code": "D"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "catalogField": "columbia-piping",
+      "part": "jacket",
+      "rowsAtStake": 12,
+      "optionCount": 4,
+      "optionLabels": [
+        "None",
+        "Columbia Stitching",
+        "Piping",
+        "Columbia + Piping"
+      ],
+      "candidates": [
+        {
+          "supplierField": "GTEZB",
+          "alreadySourceFor": [],
+          "warning": null,
+          "values": 4,
+          "joined": 4,
+          "ofOptions": 4,
+          "rate": 1,
+          "pairs": [
+            {
+              "ours": "None",
+              "theirs": "None",
+              "code": "A"
+            },
+            {
+              "ours": "Columbia Stitching",
+              "theirs": "Columbia stitching",
+              "code": "B"
+            },
+            {
+              "ours": "Piping",
+              "theirs": "Piping",
+              "code": "C"
+            },
+            {
+              "ours": "Columbia + Piping",
+              "theirs": "Columbia stitching and piping",
+              "code": "D"
+            }
+          ],
+          "drawingsPublished": 0
+        },
+        {
+          "supplierField": "KPOKD",
+          "alreadySourceFor": [
+            "ticket-pocket"
+          ],
+          "warning": "ALREADY the source for ticket-pocket - a different place on the garment unless proven otherwise",
+          "values": 11,
+          "joined": 1,
+          "ofOptions": 4,
+          "rate": 0.25,
+          "pairs": [
+            {
+              "ours": "None",
+              "theirs": "None",
+              "code": "D"
+            }
+          ]
+        },
+        {
+          "supplierField": "KIPRO",
+          "alreadySourceFor": [],
+          "warning": null,
+          "values": 4,
+          "joined": 1,
+          "ofOptions": 4,
+          "rate": 0.25,
+          "pairs": [
+            {
+              "ours": "None",
+              "theirs": "NONE",
+              "code": "Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "catalogField": "namecard-pocket",
+      "part": "jacket",
+      "rowsAtStake": 12,
+      "optionCount": 4,
+      "optionLabels": [
+        "None",
+        "Left Inner",
+        "Right Inner",
+        "Both Sides"
+      ],
+      "candidates": [
+        {
+          "supplierField": "KNAMD",
+          "alreadySourceFor": [],
+          "warning": null,
+          "values": 7,
+          "joined": 4,
+          "ofOptions": 4,
+          "rate": 1,
+          "pairs": [
+            {
+              "ours": "None",
+              "theirs": "None",
+              "code": "D"
+            },
+            {
+              "ours": "Left Inner",
+              "theirs": "Left Inner Pocket Depth 15CM",
+              "code": "E"
+            },
+            {
+              "ours": "Right Inner",
+              "theirs": "Right Inner Pocket Depth 15CM",
+              "code": "F"
+            },
+            {
+              "ours": "Both Sides",
+              "theirs": "Both sides",
+              "code": "C"
+            }
+          ],
+          "drawingsPublished": 0
+        },
+        {
+          "supplierField": "REQLO1",
+          "alreadySourceFor": [],
+          "warning": null,
+          "values": 14,
+          "joined": 2,
+          "ofOptions": 4,
+          "rate": 0.5,
+          "pairs": [
+            {
+              "ours": "Left Inner",
+              "theirs": "ABOVE LEFT INNER POCKET",
+              "code": "I"
+            },
+            {
+              "ours": "Right Inner",
+              "theirs": "ABOVE RIGHT INNER POCKET",
+              "code": "J"
+            }
+          ]
+        },
+        {
+          "supplierField": "KMPCD",
+          "alreadySourceFor": [],
+          "warning": null,
+          "values": 4,
+          "joined": 2,
+          "ofOptions": 4,
+          "rate": 0.5,
+          "pairs": [
+            {
+              "ours": "None",
+              "theirs": "None",
+              "code": "A"
+            },
+            {
+              "ours": "Both Sides",
+              "theirs": "Both sides",
+              "code": "D"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "catalogField": "inner-ticket-pocket",
+      "part": "jacket",
+      "rowsAtStake": 12,
+      "optionCount": 4,
+      "optionLabels": [
+        "None",
+        "Left",
+        "Right",
+        "Left & Right"
+      ],
+      "candidates": [
+        {
+          "supplierField": "REAPB",
+          "alreadySourceFor": [],
+          "warning": null,
+          "values": 4,
+          "joined": 4,
+          "ofOptions": 4,
+          "rate": 1,
+          "pairs": [
+            {
+              "ours": "None",
+              "theirs": "None",
+              "code": "C"
+            },
+            {
+              "ours": "Left",
+              "theirs": "Left",
+              "code": "A"
+            },
+            {
+              "ours": "Right",
+              "theirs": "Right",
+              "code": "B"
+            },
+            {
+              "ours": "Left & Right",
+              "theirs": "Left and right",
+              "code": "D"
+            }
+          ],
+          "drawingsPublished": 0
+        },
+        {
+          "supplierField": "KMPCD",
+          "alreadySourceFor": [],
+          "warning": null,
+          "values": 4,
+          "joined": 3,
+          "ofOptions": 4,
+          "rate": 0.75,
+          "pairs": [
+            {
+              "ours": "None",
+              "theirs": "None",
+              "code": "A"
+            },
+            {
+              "ours": "Left",
+              "theirs": "Left",
+              "code": "B"
+            },
+            {
+              "ours": "Right",
+              "theirs": "Right",
+              "code": "C"
+            }
+          ]
+        },
+        {
+          "supplierField": "KNAMD",
+          "alreadySourceFor": [],
+          "warning": null,
+          "values": 7,
+          "joined": 3,
+          "ofOptions": 4,
+          "rate": 0.75,
+          "pairs": [
+            {
+              "ours": "None",
+              "theirs": "None",
+              "code": "D"
+            },
+            {
+              "ours": "Left",
+              "theirs": "Left",
+              "code": "A"
+            },
+            {
+              "ours": "Right",
+              "theirs": "Right",
+              "code": "B"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "catalogField": "mp3-pocket",
+      "part": "jacket",
+      "rowsAtStake": 9,
+      "optionCount": 3,
+      "optionLabels": [
+        "None",
+        "Left Inner",
+        "Right Inner"
+      ],
+      "candidates": [
+        {
+          "supplierField": "KNAMD",
+          "alreadySourceFor": [],
+          "warning": null,
+          "values": 7,
+          "joined": 3,
+          "ofOptions": 3,
+          "rate": 1,
+          "pairs": [
+            {
+              "ours": "None",
+              "theirs": "None",
+              "code": "D"
+            },
+            {
+              "ours": "Left Inner",
+              "theirs": "Left Inner Pocket Depth 15CM",
+              "code": "E"
+            },
+            {
+              "ours": "Right Inner",
+              "theirs": "Right Inner Pocket Depth 15CM",
+              "code": "F"
+            }
+          ],
+          "drawingsPublished": 0
+        },
+        {
+          "supplierField": "REQLO1",
+          "alreadySourceFor": [],
+          "warning": null,
+          "values": 14,
+          "joined": 2,
+          "ofOptions": 3,
+          "rate": 0.67,
+          "pairs": [
+            {
+              "ours": "Left Inner",
+              "theirs": "ABOVE LEFT INNER POCKET",
+              "code": "I"
+            },
+            {
+              "ours": "Right Inner",
+              "theirs": "ABOVE RIGHT INNER POCKET",
+              "code": "J"
+            }
+          ]
+        },
+        {
+          "supplierField": "REQDM",
+          "alreadySourceFor": [],
+          "warning": null,
+          "values": 2,
+          "joined": 2,
+          "ofOptions": 3,
+          "rate": 0.67,
+          "pairs": [
+            {
+              "ours": "Left Inner",
+              "theirs": "Left inner pocket",
+              "code": "A"
+            },
+            {
+              "ours": "Right Inner",
+              "theirs": "Right inner pocket",
+              "code": "B"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "catalogField": "half-lining-craft",
+      "part": "jacket",
+      "rowsAtStake": 9,
+      "optionCount": 3,
+      "optionLabels": [
+        "Binding Seam",
+        "French Seam",
+        "Joining Seam"
+      ],
+      "candidates": [
+        {
+          "supplierField": "KIPRO",
+          "alreadySourceFor": [],
+          "warning": null,
+          "values": 4,
+          "joined": 3,
+          "ofOptions": 3,
+          "rate": 1,
+          "pairs": [
+            {
+              "ours": "Binding Seam",
+              "theirs": "Binding seam",
+              "code": "A"
+            },
+            {
+              "ours": "French Seam",
+              "theirs": "French seam",
+              "code": "B"
+            },
+            {
+              "ours": "Joining Seam",
+              "theirs": "Joining seam",
+              "code": "C"
+            }
+          ],
+          "drawingsPublished": 0
+        }
+      ]
+    },
+    {
+      "catalogField": "lapel-bh-position",
+      "part": "jacket",
+      "rowsAtStake": 3,
+      "optionCount": 1,
+      "optionLabels": [
+        "Right Lapel"
+      ],
+      "candidates": [
+        {
+          "supplierField": "REQLO3",
+          "alreadySourceFor": [],
+          "warning": null,
+          "values": 23,
+          "joined": 1,
+          "ofOptions": 1,
+          "rate": 1,
+          "pairs": [
+            {
+              "ours": "Right Lapel",
+              "theirs": "Right Lapel Fold Line",
+              "code": "R"
+            }
+          ],
+          "drawingsPublished": 0
+        },
+        {
+          "supplierField": "REQLO2",
+          "alreadySourceFor": [],
+          "warning": null,
+          "values": 23,
+          "joined": 1,
+          "ofOptions": 1,
+          "rate": 1,
+          "pairs": [
+            {
+              "ours": "Right Lapel",
+              "theirs": "Right Lapel Fold Line",
+              "code": "R"
+            }
+          ]
+        },
+        {
+          "supplierField": "REQLO1",
+          "alreadySourceFor": [],
+          "warning": null,
+          "values": 14,
+          "joined": 1,
+          "ofOptions": 1,
+          "rate": 1,
+          "pairs": [
+            {
+              "ours": "Right Lapel",
+              "theirs": "RIGHT LAPEL FOLD LINE",
+              "code": "R"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "catalogField": "contrast-lapel-collar",
+      "part": "vest",
+      "rowsAtStake": 2,
+      "optionCount": 1,
+      "optionLabels": [
+        "None"
+      ],
+      "candidates": [
+        {
+          "supplierField": "KWABU",
+          "alreadySourceFor": [],
+          "warning": null,
+          "values": 3,
+          "joined": 1,
+          "ofOptions": 1,
+          "rate": 1,
+          "pairs": [
+            {
+              "ours": "None",
+              "theirs": "None",
+              "code": "K"
+            }
+          ],
+          "drawingsPublished": 0
+        },
+        {
+          "supplierField": "REQDM",
+          "alreadySourceFor": [],
+          "warning": null,
+          "values": 5,
+          "joined": 1,
+          "ofOptions": 1,
+          "rate": 1,
+          "pairs": [
+            {
+              "ours": "None",
+              "theirs": "None",
+              "code": "D"
+            }
+          ]
+        },
+        {
+          "supplierField": "KPOKD",
+          "alreadySourceFor": [],
+          "warning": null,
+          "values": 4,
+          "joined": 1,
+          "ofOptions": 1,
+          "rate": 1,
+          "pairs": [
+            {
+              "ours": "None",
+              "theirs": "None",
+              "code": "D"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "catalogField": "contrast-pocket-vest",
+      "part": "vest",
+      "rowsAtStake": 2,
+      "optionCount": 1,
+      "optionLabels": [
+        "None"
+      ],
+      "candidates": [
+        {
+          "supplierField": "KWABU",
+          "alreadySourceFor": [],
+          "warning": null,
+          "values": 3,
+          "joined": 1,
+          "ofOptions": 1,
+          "rate": 1,
+          "pairs": [
+            {
+              "ours": "None",
+              "theirs": "None",
+              "code": "K"
+            }
+          ],
+          "drawingsPublished": 0
+        },
+        {
+          "supplierField": "REQDM",
+          "alreadySourceFor": [],
+          "warning": null,
+          "values": 5,
+          "joined": 1,
+          "ofOptions": 1,
+          "rate": 1,
+          "pairs": [
+            {
+              "ours": "None",
+              "theirs": "None",
+              "code": "D"
+            }
+          ]
+        },
+        {
+          "supplierField": "KPOKD",
+          "alreadySourceFor": [],
+          "warning": null,
+          "values": 4,
+          "joined": 1,
+          "ofOptions": 1,
+          "rate": 1,
+          "pairs": [
+            {
+              "ours": "None",
+              "theirs": "None",
+              "code": "D"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
