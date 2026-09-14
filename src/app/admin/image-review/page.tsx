@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
 
 // Owner image review.
 //
@@ -81,9 +81,21 @@ export default function ImageReviewPage() {
         const r = await fetch("/api/admin/image-review");
         const d = await r.json();
         if (cancelled) return;
-        setItems(d.items ?? []);
-        setDecisions(d.decisions ?? {});
+        const nextItems: Item[] = d.items ?? [];
+        const nextDecisions: Record<string, Decision> = d.decisions ?? {};
+        setItems(nextItems);
+        setDecisions(nextDecisions);
         setLoadError(null);
+        const pendingLeft = nextItems.filter((i) => {
+          const dec = nextDecisions[i.key];
+          return !dec || dec.attempt < i.attempt;
+        });
+        // After the owner finishes the queue, stay on the photos — don't
+        // drop them into an empty "nothing waiting" screen.
+        if (pendingLeft.length === 0 && nextItems.length > 0) {
+          setFilter("all");
+          setIdx(0);
+        }
       } catch {
         if (!cancelled) setLoadError("Could not load the review queue.");
       } finally {
@@ -124,12 +136,22 @@ export default function ImageReviewPage() {
     setDecisions((prev) => { const n = { ...prev }; delete n[key]; return n; });
   }, []);
 
+  const pageWrap: CSSProperties = {
+    fontFamily: "system-ui, sans-serif",
+    padding: "20px 24px",
+    maxWidth: 1500,
+    margin: "0 auto",
+    background: "#f4f1ea",
+    color: "#1c1917",
+    minHeight: "100%",
+  };
+
   if (loading) {
-    return <div style={{ padding: 40, fontFamily: "system-ui" }}>Loading review queue…</div>;
+    return <div style={{ ...pageWrap, padding: 40 }}>Loading review queue…</div>;
   }
 
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", padding: "20px 24px", maxWidth: 1500, margin: "0 auto" }}>
+    <div style={pageWrap}>
       <header style={{ display: "flex", alignItems: "baseline", gap: 16, flexWrap: "wrap", marginBottom: 16 }}>
         <h1 style={{ fontSize: 22, margin: 0, letterSpacing: "-0.02em" }}>Craft option image review</h1>
         <span style={{ color: "#666", fontSize: 14 }}>
@@ -150,8 +172,8 @@ export default function ImageReviewPage() {
           <p style={{ fontSize: 17, margin: 0 }}>Nothing waiting for you.</p>
           <p style={{ color: "#666", marginTop: 8 }}>
             {items.length === 0
-              ? "The queue is empty. Run: node tools/build_review_queue.mjs --write"
-              : "Every candidate in the queue has a decision."}
+              ? "The review queue is empty — there is nothing new to approve."
+              : "Every photo in this queue already has your decision. Use Show all to look at them again."}
           </p>
         </div>
       ) : (

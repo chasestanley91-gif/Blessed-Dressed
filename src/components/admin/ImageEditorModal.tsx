@@ -46,6 +46,24 @@ function isSvg(path: string) {
   return path.split("?")[0].toLowerCase().endsWith(".svg");
 }
 
+/** Catalog `image` is overloaded: photo for most options, drawing for others.
+ *  Lock crop/adjust only for actual drawings — not for generated photos that
+ *  happen to live in the Illustration slot. */
+function isPhotoPath(path: string | null | undefined): boolean {
+  if (!path) return false;
+  const p = path.split("?")[0].toLowerCase();
+  if (p.endsWith(".svg")) return false;
+  return (
+    p.includes("/images/generated/") ||
+    p.includes("/images/real/") ||
+    p.includes("/images/ai/") ||
+    p.includes("/images/uploads/") ||
+    p.includes("/images/review/") ||
+    p.startsWith("blob:") ||
+    p.startsWith("https://")
+  );
+}
+
 /** Re-draw the original image rotated by `turns` quarter-turns; returns an object URL. */
 async function bakeRotation(img: HTMLImageElement, turns: number): Promise<string> {
   const canvas = document.createElement("canvas");
@@ -141,7 +159,9 @@ export default function ImageEditorModal({
 
   const currentPath = opt[slot];
   const filter = filterString(brightness, contrast, saturation);
-  const editable = !!workingSrc && slot !== "image" && !(source && isSvg(sourcePath(source) ?? ""));
+  const activePath = source ? sourcePath(source) : currentPath;
+  const lockedAsDrawing = slot === "image" && !isPhotoPath(activePath);
+  const editable = !!workingSrc && !lockedAsDrawing && !(source && isSvg(sourcePath(source) ?? ""));
 
   function sourcePath(s: Source): string | null {
     return s.kind === "upload" ? s.objectUrl : s.path;
@@ -502,8 +522,8 @@ export default function ImageEditorModal({
                   <img src={workingSrc} alt="preview" className="max-h-[40vh] max-w-full object-contain" />
                 </div>
                 <p className="font-sans text-xs text-muted-dark text-center max-w-sm">
-                  {slot === "image"
-                    ? "Illustrations are replaced, not edited — pick a new file or library image, then Use As-Is."
+                  {lockedAsDrawing
+                    ? "Technical drawings are replaced, not cropped — pick a new file or library image, then Use As-Is."
                     : "SVG images can't be cropped or adjusted — use Use As-Is to assign it."}
                 </p>
               </div>

@@ -30,7 +30,7 @@ function OptionRow({
       <div className="grid grid-cols-[230px_1fr_2fr_70px_auto_auto] gap-2 items-center">
         {/* Images: Illustration / AI render / Real photo — click to edit */}
         <div className="flex items-start gap-1.5">
-          {([["image", "Illus.", opt.image], ["aiImage", "AI", opt.aiImage], ["realImage", "Real", opt.realImage]] as const).map(([field, lbl, src]) => (
+          {([["image", opt.image && /\/images\/generated\//.test(opt.image) ? "Photo" : "Illus.", opt.image], ["aiImage", "AI", opt.aiImage], ["realImage", "Real", opt.realImage]] as const).map(([field, lbl, src]) => (
             <div key={field} className="flex flex-col items-center gap-0.5">
               <button
                 type="button"

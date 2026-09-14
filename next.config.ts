@@ -36,6 +36,7 @@ const nextConfig: NextConfig = {
       "./public/images/collections/**",
       "./public/images/products/**",
       "./public/images/uploads/**",
+      "./data-store/options/*.json",
     ],
   },
   experimental: {
