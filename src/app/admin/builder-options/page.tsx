@@ -5,6 +5,37 @@ import type { ProductDesignConfig, DesignField, DesignOption, FieldQuiz, QuizAns
 import ImageEditorModal, { type ImageSlot } from "@/components/admin/ImageEditorModal";
 import { Toast } from "@/components/admin/shared";
 
+function slotSrc(opt: DesignOption, slot: ImageSlot): string | undefined {
+  if (slot === "aiImage") return opt.aiImage;
+  if (slot === "realImage") return opt.realImage;
+  return (
+    opt.image ||
+    opt.photos?.[0] ||
+    opt.images?.[0] ||
+    opt.illustration ||
+    opt.techpackIllustration
+  );
+}
+
+function Thumb({ src, label }: { src?: string; label: string }) {
+  const [failed, setFailed] = useState(false);
+  useEffect(() => { setFailed(false); }, [src]);
+  if (!src || failed) {
+    return (
+      <div className="flex h-full w-full items-center justify-center bg-border-accent/60 font-sans text-base text-dim">+</div>
+    );
+  }
+  return (
+    <img
+      src={src}
+      alt={label}
+      className="h-full w-full object-contain"
+      referrerPolicy="no-referrer"
+      onError={() => setFailed(true)}
+    />
+  );
+}
+
 const PRODUCTS = [
   { id: "suit-2pc", label: "Suit (2pc)" },
   { id: "suit-3pc", label: "Suit (3pc)" },
@@ -30,7 +61,7 @@ function OptionRow({
       <div className="grid grid-cols-[230px_1fr_2fr_70px_auto_auto] gap-2 items-center">
         {/* Images: Illustration / AI render / Real photo — click to edit */}
         <div className="flex items-start gap-1.5">
-          {([["image", opt.image && /\/images\/generated\//.test(opt.image) ? "Photo" : "Illus.", opt.image], ["aiImage", "AI", opt.aiImage], ["realImage", "Real", opt.realImage]] as const).map(([field, lbl, src]) => (
+          {([["image", slotSrc(opt, "image") && (opt.image?.includes("/generated/") || !!opt.photos?.length || !!opt.images?.length) ? "Photo" : "Illus.", slotSrc(opt, "image")], ["aiImage", "AI", slotSrc(opt, "aiImage")], ["realImage", "Real", slotSrc(opt, "realImage")]] as const).map(([field, lbl, src]) => (
             <div key={field} className="flex flex-col items-center gap-0.5">
               <button
                 type="button"
@@ -38,9 +69,7 @@ function OptionRow({
                 title={`Edit ${lbl === "Illus." ? "illustration" : lbl === "AI" ? "AI render" : "real photo"}`}
                 className="group relative h-[52px] w-[68px] rounded bg-white overflow-hidden border border-border-accent hover:border-gold transition-colors"
               >
-                {src
-                  ? <img src={src} alt={lbl} className="h-full w-full object-contain" />
-                  : <div className="flex h-full w-full items-center justify-center bg-border-accent/60 font-sans text-base text-dim">+</div>}
+                <Thumb src={src} label={lbl} />
                 <span className="absolute inset-0 hidden items-center justify-center bg-black/50 font-sans text-[10px] font-semibold text-white group-hover:flex">
                   ✎
                 </span>

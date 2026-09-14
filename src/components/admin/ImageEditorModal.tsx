@@ -157,7 +157,10 @@ export default function ImageEditorModal({
   const [library, setLibrary] = useState<SiteImage[]>([]);
   const category = PRODUCT_CATEGORY[productId] ?? "jacket";
 
-  const currentPath = opt[slot];
+  const currentPath =
+    slot === "image"
+      ? opt.image || opt.photos?.[0] || opt.images?.[0] || opt.illustration || opt.techpackIllustration
+      : opt[slot];
   const filter = filterString(brightness, contrast, saturation);
   const activePath = source ? sourcePath(source) : currentPath;
   const lockedAsDrawing = slot === "image" && !isPhotoPath(activePath);
@@ -209,6 +212,7 @@ export default function ImageEditorModal({
       setWorkingSrc(src);
     };
     img.onerror = () => setError("Could not load that image.");
+    img.referrerPolicy = "no-referrer";
     img.src = src;
   }, []);
 
