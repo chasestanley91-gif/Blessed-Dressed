@@ -1,8 +1,13 @@
 {
- "plannedAt": "2026-08-15T17:38:37.765Z",
- "applied": false,
+ "plannedAt": "2026-09-14T04:16:24.687Z",
+ "applied": true,
  "already": 442,
- "flagged": [],
+ "flagged": [
+  {
+   "craftId": "suit-3pc|Trousers-bottom-hem|heel-guard|heel-none",
+   "reason": "master collision: /images/generated/jacket/heel-none.png is also being written by suit-2pc|Trousers-bottom-hem|heel-guard|heel-none with different bytes"
+  }
+ ],
  "corrections": [
   {
    "craftId": "shirt|collar|lapel|collar-curve-point-75",
@@ -13,19 +18,6 @@
     "Wrong size or proportion"
    ],
    "notes": "For the Curve Point Collar in your image:\n\nCollar type: Curved Point Collar\nPoint length: 7.5 cm\nIncluded angle: 60°\nDifference from the standard point collar: the front edge is curved rather than a straight line, but the base geometry is identical.\nBase Geometry\n\nGiven:\n\nL=7.5 cmL = 7.5\\text{ cm} θ=60∘\\theta = 60^\\circ\n\nHalf-angle:\n\nα=30∘\\alpha = 30^\\circ\n1. Horizontal Projection\n\nDistance from center front to each point:\n\nX=Lsin⁡(30∘)X=L\\sin(30^\\circ) X=7.5(0.5)X=7.5(0.5) X=3.75 cmX=3.75\\text{ cm}\n2. Vertical Drop\n\nDistance from collar break to point:\n\nY=Lcos⁡(30∘)Y=L\\cos(30^\\circ) Y=7.5(0.8660)Y=7.5(0.8660) Y=6.50 cmY=6.50\\text{ cm}\n3. Point-to-Point Spread\nW=2XW=2X W=7.50 cmW=7.50\\text{ cm}\n\nSo the front opening width is:\n\n7.5 cm\\boxed{7.5\\text{ cm}}\nDraft Coordinates\n\nUsing the collar break point as (0,0):\n\nLeft Collar Point\n(−3.75, −6.50)(-3.75,\\,-6.50)\nRight Collar Point\n(3.75, −6.50)(3.75,\\,-6.50)\nCenter Front\n(0,0)(0,0)\nCurved Point Construction\n\nThe image shows a gentle convex curve on the front edge.\n\nMethod\n\nDraw the straight collar point first.\n\nBreak\n  ●\n / \\\n/   \\\n     ● Point\n\n\nThen create the curve.\n\nCurve Depth\n\nFor a classic curved-point collar, use:\n\nCurve Depth=0.08L to 0.12L\\text{Curve Depth} = 0.08L \\text{ to } 0.12L\n\nFor 7.5 cm:\n\n0.08(7.5)=0.60.08(7.5)=0.6 0.12(7.5)=0.90.12(7.5)=0.9\n\nRecommended:\n\n0.75 cm\\boxed{0.75\\text{ cm}}\nCurve Radius\n\nUse:\n\nR=2.5LR = 2.5L R=2.5(7.5)R = 2.5(7.5) R=18.75 cmR = 18.75\\text{ cm}\n\nRound to:\n\n19 cm radius\\boxed{19\\text{ cm radius}}\n\nThis gives the soft vintage curved look seen in high-end bespoke shirts.\n\nPattern Draft Formula\n\nFor any curved point collar:\n\nWidth\nW=2Lsin⁡(θ/2)W=2L\\sin(\\theta/2)\nDepth\nD=Lcos⁡(θ/2)D=L\\cos(\\theta/2)\nCurve Depth\nCD=0.10LCD=0.10L\nCurve Radius\nR=2.5LR=2.5L\nFor Your 7.5 cm Curved Point Collar\nPoint Length = 7.5 cm\nCollar Angle = 60°\nHalf Angle = 30°\nPoint Spread = 7.5 cm\nHorizontal Projection = 3.75 cm\nVertical Drop = 6.50 cm\nCurve Depth = 0.75 cm\nCurve Radius = 19 cm\n\nThese dimensions will reproduce a classic long curved-point collar similar to vintage British and Italian bespoke shirting."
-  },
-  {
-   "craftId": "shirt|collar|lapel|collar-point-75-holes",
-   "attempt": 1,
-   "tags": [
-    "Feature not visible / too small in frame"
-   ],
-   "references": [
-    "/images/review-refs/shirt/collar-point-75-holes/1786403172033-ou29bw.webp",
-    "/images/review-refs/shirt/collar-point-75-holes/1786403177008-mfi5w5.webp",
-    "/images/review-refs/shirt/collar-point-75-holes/1786403180718-uzk0gb.webp",
-    "/images/review-refs/shirt/collar-point-75-holes/1786403183675-wli53o.webp"
-   ]
   },
   {
    "craftId": "shirt|collar|lapel|collar-hidden-btn-75",
@@ -192,24 +184,10 @@
    ]
   },
   {
-   "craftId": "shirt|pocket-hem|hem|hem-round",
-   "attempt": 1,
-   "tags": [
-    "Looks identical to a sibling option"
-   ]
-  },
-  {
    "craftId": "shirt|cuffs|cuff|cuff-french-6bh",
-   "attempt": 2,
+   "attempt": 3,
    "tags": [
-    "Unrealistic / AI look"
-   ],
-   "references": [
-    "/images/review-refs/shirt/cuff-french-6bh/1786401509205-whixis.webp",
-    "/images/review-refs/shirt/cuff-french-6bh/1786401838647-cffa5y.webp",
-    "/images/review-refs/shirt/cuff-french-6bh/1786401843236-te66my.webp",
-    "/images/review-refs/shirt/cuff-french-6bh/1786401856538-4fg2dz.webp",
-    "/images/review-refs/shirt/cuff-french-6bh/1786401860307-yi04zv.webp"
+    "Annotation or colour bled in from the drawing"
    ]
   },
   {
@@ -256,20 +234,6 @@
    "attempt": 3,
    "tags": [
     "Unrealistic / AI look"
-   ]
-  },
-  {
-   "craftId": "shirt|cuffs|cuff_pleat|cpleat-single",
-   "attempt": 1,
-   "tags": [
-    "Unrealistic / AI look"
-   ],
-   "notes": "single pleat",
-   "references": [
-    "/images/review-refs/shirt/cpleat-single/1786410838546-ylk4r3.webp",
-    "/images/review-refs/shirt/cpleat-single/1786410846958-p6wzjf.webp",
-    "/images/review-refs/shirt/cpleat-single/1786410859102-8g2szc.webp",
-    "/images/review-refs/shirt/cpleat-single/1786410871241-qwngcm.webp"
    ]
   },
   {
@@ -556,13 +520,14 @@
   },
   {
    "craftId": "sport-coat|lapel|lapel-style|lapel-shawl-0a",
-   "attempt": 1,
+   "attempt": 2,
    "tags": [
-    "Reference drawing itself is wrong"
+    "Wrong shape / outline"
    ],
-   "notes": "For the 0A Shawl Lapel shown in the image:\n\nStyle: Classic Shawl Lapel\nLapel Width: 10.5 cm\nNo gorge angle (a shawl lapel has a continuous curve instead of a notch or peak gorge).\nThe red outline shows a continuous rolled collar/lapel shape terminating at the front point.\nDrafting Mathematics\n1. Lapel Width\n\nGiven:\n\nW=10.5 cmW = 10.5\\text{ cm}\n\nMeasured perpendicular from the roll line to the outer edge at the widest point.\n\n2. Shawl Radius\n\nFor a balanced bespoke shawl lapel:\n\nR=2.5WR = 2.5W R=2.5(10.5)R = 2.5(10.5) R=26.25 cmR = 26.25\\text{ cm}\n\nUse:\n\nR=26.3 cm\\boxed{R=26.3\\text{ cm}}\n\nThis is the primary sweep radius for the outer edge.\n\n3. Collar Crown Radius\n\nThe top collar section generally uses a tighter radius:\n\nRc=1.2WR_c = 1.2W Rc=1.2(10.5)R_c = 1.2(10.5) Rc=12.6 cmR_c = 12.6\\text{ cm} 12.6 cm\\boxed{12.6\\text{ cm}}\n4. Front Curve Depth\n\nDepth of the belly through the front lapel sweep:\n\nCD=0.25WCD = 0.25W CD=0.25(10.5)CD = 0.25(10.5) CD=2.63 cmCD = 2.63\\text{ cm} 2.6 cm\\boxed{2.6\\text{ cm}}\n5. Roll Line\n\nTraditional shawl roll line:\n\nRL=0.55WRL = 0.55W RL=0.55(10.5)RL = 0.55(10.5) RL=5.78 cmRL = 5.78\\text{ cm} 5.8 cm\\boxed{5.8\\text{ cm}}\n6. Collar Fall\n\nThe upper collar section above the neckline:\n\nCF=0.75WCF = 0.75W CF=0.75(10.5)CF = 0.75(10.5) CF=7.88 cmCF = 7.88\\text{ cm} 7.9 cm\\boxed{7.9\\text{ cm}}\n7. Front Point Length\n\nThe pointed front section shown in the illustration:\n\nFP=1.35WFP = 1.35W FP=1.35(10.5)FP = 1.35(10.5) FP=14.18 cmFP = 14.18\\text{ cm} 14.2 cm\\boxed{14.2\\text{ cm}}\nBezier/French-Curve Control Points\n\nIf drafting digitally:\n\nOuter Shawl Curve\n\nStarting at the shoulder break:\n\nP0=(0,0)P_0=(0,0)\n\nControl point 1:\n\nP1=(6.5,  0)P_1=(6.5,\\;0)\n\nControl point 2:\n\nP2=(10.5,  14)P_2=(10.5,\\;14)\n\nFront point:\n\nP3=(0,  44)P_3=(0,\\;44)\n\nThis creates a classic tuxedo shawl sweep.\n\nBespoke Proportion Summary\nFeature\tFormula\tValueLapel Width\tGiven\t10.5 cm\nMain Radius\t2.5W\t26.3 cm\nCollar Radius\t1.2W\t12.6 cm\nCurve Depth\t0.25W\t2.6 cm\nRoll Line\t0.55W\t5.8 cm\nCollar Fall\t0.75W\t7.9 cm\nFront Point Length\t1.35W\t14.2 cm\nMaster Shawl Lapel Formulas\nR=2.5WR = 2.5W Rc=1.2WR_c = 1.2W CD=0.25WCD = 0.25W RL=0.55WRL = 0.55W FP=1.35WFP = 1.35W\n\nFor your 10.5 cm wide Shawl Lapel, these values will reproduce the proportions shown in the illustration and result in a classic bespoke tuxedo-style shawl collar.",
    "references": [
-    "/images/review-refs/sport-coat/lapel-shawl-0a/1786507419861-rd1xmu.jpg"
+    "/images/review-refs/sport-coat/lapel-shawl-0a/1789356205382-e9wq1a.jpg",
+    "/images/review-refs/sport-coat/lapel-shawl-0a/1789356216257-xfwkrl.jpg",
+    "/images/review-refs/sport-coat/lapel-shawl-0a/1789356242731-zv4vzg.jpg"
    ]
   },
   {
@@ -612,30 +577,6 @@
    "notes": "A notch + removable shawl lapel is essentially a jacket designed with a detachable lapel/collar assembly. The exact attachment method can vary, but for a high-end bespoke garment, you generally want the attachment to be hidden from the outside.\n\nHow it works\n\nThink of the jacket as having two components:\n\n1. Permanent jacket body\n\nFront edge is constructed to receive the lapel.\nThe underlying collar/lapel area has a concealed attachment system.\nThe jacket still has its normal notch-lapel construction underneath.\n\n2. Removable shawl lapel piece\n\nThe shawl lapel is constructed as a separate component.\nIt wraps continuously around the neck rather than forming the normal notch break.\nIts underside contains the attachment mechanism.\n\nA simplified cross-section is:\n\n        NECK\n          │\n     ┌────┴────┐\n     │ SHAWL   │\n     │ LAPEL   │\n     └────┬────┘\n          │\n    concealed attachment\n     ═══════════════\n          │\n      JACKET BODY\n          │\n      FRONT EDGE\nThe most likely attachment methods\n\nFor a luxury bespoke version, there are several possibilities.\n\nConcealed snaps\n\nSmall sew-on snaps are placed underneath the lapel.\n\nSHAWL LAPEL\n   ●  ●  ●\n   │  │  │\n   ○  ○  ○\nJACKET BODY\n\nThe snaps are completely hidden when the shawl is installed.\n\nConcealed zipper\n\nA very fine zipper can run around the attachment perimeter. This gives extremely positive registration but is more difficult to execute cleanly around the curved neck/lapel area.\n\nHook-and-eye / specialty hooks\n\nSmall hooks can be sewn into the underside of the shawl and corresponding eyes into the jacket. This is traditional-looking and can be very secure, but positioning needs to be precise.\n\nCombination system\n\nFor a premium garment, you could use:\n\nconcealed snaps for positioning\nsmall hidden hooks for security\na precisely shaped underside facing to keep everything flat\nThe important tailoring issue\n\nThe removable shawl cannot simply be attached at the visible lapel edge.\n\nIt needs to register against the jacket's:\n\nneckline\ngorge\nfront edge\nbreak point\nshoulder/neck transition\n\nOtherwise, when the wearer moves, you'll see the shawl lift away from the jacket or create an unnatural ridge.\n\nThe shawl should effectively have a dedicated mounting perimeter.\n\nFor your catalog/image-generation system\n\nThis is particularly important because \"removable shawl lapel\" should not be interpreted by the image model as merely a shawl lapel sitting on top of a jacket.\n\nThe specification should communicate something like:\n\nRemovable Shawl Lapel:\nA separately constructed shawl-lapel component designed to attach\nto the jacket body using a concealed fastening system. The fastening\nmust not be visible from the exterior. When installed, the shawl\nforms a continuous, smooth roll around the neckline and front edge,\nwith no visible gap between the removable component and jacket body.\n\nIf your option is specifically \"Notch + Removable Shawl Lapel,\" then the image should ideally show the notch-lapel jacket underneath and the removable shawl component installed over it, while preserving the fact that the underlying jacket is a notch-lapel construction.\n\nThat's different from simply generating a normal shawl-lapel jacket.",
    "references": [
     "/images/review-refs/sport-coat/lapel-notch-removable-shawl/1786508336211-bov04h.jpg"
-   ]
-  },
-  {
-   "craftId": "sport-coat|lapel|lapel-bh-position|lbp-left-double",
-   "attempt": 1,
-   "tags": [
-    "Unrealistic / AI look"
-   ],
-   "references": [
-    "/images/review-refs/sport-coat/lbp-left-double/1786410412711-enti9i.webp",
-    "/images/review-refs/sport-coat/lbp-left-double/1786410441043-0i04fj.jpg"
-   ]
-  },
-  {
-   "craftId": "sport-coat|lapel|lapel-bh-position|lbp-both",
-   "attempt": 2,
-   "tags": [
-    "Wrong shape / outline"
-   ],
-   "notes": "buttonhole is to far down the lapel",
-   "references": [
-    "/images/review-refs/sport-coat/lbp-both/1786400897710-j6ncj5.jpg",
-    "/images/review-refs/sport-coat/lbp-both/1786400909351-rwc25c.jpg",
-    "/images/review-refs/sport-coat/lbp-both/1786400917142-kufs1y.jpg"
    ]
   },
   {
@@ -789,14 +730,15 @@
   },
   {
    "craftId": "sport-coat|suit-pockets|lower-pocket|lp-jetted-4",
-   "attempt": 1,
+   "attempt": 2,
    "tags": [
-    "Reference drawing itself is wrong",
-    "Unrealistic / AI look"
+    "Wrong size or proportion"
    ],
-   "notes": "For the Straight Jetted Pocket 4.0 cm shown in the image:\n\nPocket type: Double Jetted Pocket\nPocket opening: Straight (0° slant)\nFinished jet assembly height: 4.0 cm\nCommon on formal jackets, tuxedos, and minimalist bespoke coats\n1. Finished Jetted Height\n\nGiven:\n\nJ=4.0 cmJ = 4.0\\text{ cm}\n\nThis is the total visible height between the outside edges of the two jets.\n\nFor equal jets:\n\nUpper Jet=Lower Jet=2.0 cm\\text{Upper Jet}=\\text{Lower Jet}=2.0\\text{ cm}\n2. Jet Strip Draft\n\nEach jet folds in half.\n\nFinished jet width:\n\nJW=J2JW=\\frac{J}{2} JW=2.0 cmJW=2.0\\text{ cm}\n\nCut width for each jet:\n\nCW=2(JW)+2SACW=2(JW)+2SA\n\nAssuming:\n\nSA=1.0 cmSA=1.0\\text{ cm} CW=2(2.0)+2CW=2(2.0)+2 CW=6.0 cmCW=6.0\\text{ cm}\nDraft Each Jet\n6.0 cm\\boxed{6.0\\text{ cm}}\n3. Pocket Length\n\nTypical bespoke lower jacket pocket:\n\nPL=Chest Circumference5PL=\\frac{\\text{Chest Circumference}}{5}\n\nExamples:\n\n38\" chest → 19 cm\n40\" chest → 20 cm\n42\" chest → 21 cm\n\nStandard:\n\n20.0 cm\\boxed{20.0\\text{ cm}}\n4. Jet Extension\n\nJets extend beyond the opening slightly.\n\nJE=0.5 cmJE = 0.5\\text{ cm}\n\nper side.\n\nTotal jet length:\n\nJL=PL+1JL = PL + 1 JL=21 cmJL = 21\\text{ cm} 21.0 cm\\boxed{21.0\\text{ cm}}\n5. Pocket Opening Geometry\n\nOpening dimensions:\n\n20.0×4.020.0 \\times 4.0\n\nArea:\n\nA=L×HA=L \\times H A=20×4A=20 \\times 4 A=80 cm2A=80\\text{ cm}^2\n6. Corner Triangle Construction\n\nPocket height:\n\n4.0 cm4.0\\text{ cm}\n\nCorner triangle length:\n\nTL=4.0 cmTL = 4.0\\text{ cm}\n\nCut:\n\n45∘\\boxed{45^\\circ}\n\nat each end.\n\n \\      /\n  \\    /\n   \\  /\n    \\/\n\n7. Jet Fold Lines\n\nEach jet:\n\n6.0 cm6.0\\text{ cm}\n\nFold line:\n\n3.0 cm3.0\\text{ cm}\n\nfrom either edge.\n\nCut Jet = 6 cm\n\n┌────────────┐\n│            │\n│------------│ ← Fold at 3 cm\n│            │\n└────────────┘\n\n8. Pocket Bag Dimensions\n\nWidth:\n\nPBW=PL+4PBW = PL + 4 PBW=24 cmPBW = 24\\text{ cm}\n\nDepth:\n\nPBD=1.4PLPBD = 1.4PL PBD=28 cmPBD = 28\\text{ cm}\nPocket Bag\n24×28 cm\\boxed{24 \\times 28\\text{ cm}}\nDraft Coordinates\n\nAssuming a 20 cm opening:\n\nPocket opening:\n\nA=(0,0)A=(0,0) B=(20,0)B=(20,0)\n\nUpper jet:\n\ny=+2.0y=+2.0\n\nLower jet:\n\ny=−2.0y=-2.0\n\nResulting visible height:\n\n4.0 cm4.0\\text{ cm}\nBespoke Draft Summary\nFinished Pocket\n20.0×4.0 cm\\boxed{20.0 \\times 4.0\\text{ cm}}\nEach Jet\n21.0×6.0 cm\\boxed{21.0 \\times 6.0\\text{ cm}}\nVisible Jet Width\n2.0 cm\\boxed{2.0\\text{ cm}}\nTotal Visible Height\n4.0 cm\\boxed{4.0\\text{ cm}}\nCorner Triangles\n\\boxed{4.0\\text{ cm @ 45^\\circ}}\nPocket Bag\n24×28 cm\\boxed{24 \\times 28\\text{ cm}}\nParametric Formula Set\nJW=J2JW=\\frac{J}{2} CW=2(JW)+2SACW=2(JW)+2SA JL=PL+1JL=PL+1 PBW=PL+4PBW=PL+4 PBD=1.4PLPBD=1.4PL\n\nFor a 4 cm straight jetted pocket, the key drafting values are:\n\nPocket opening: 20 cm\nTotal visible height: 4 cm\nEach visible jet: 2 cm\nCut jet width: 6 cm\nJet length: 21 cm\nPocket bag: 24 × 28 cm",
+   "notes": "bottom welt is wider than the top. a jetted pocket has two equal edges",
    "references": [
-    "/images/review-refs/sport-coat/lp-jetted-4/1786509364409-6522au.jpg"
+    "/images/review-refs/sport-coat/lp-jetted-4/1789356034915-kvq5k9.jpg",
+    "/images/review-refs/sport-coat/lp-jetted-4/1789356043815-vo211c.jpg",
+    "/images/review-refs/sport-coat/lp-jetted-4/1789356064524-kqcclf.jpg"
    ]
   },
   {
@@ -831,46 +773,34 @@
    ]
   },
   {
-   "craftId": "sport-coat|front-style|chest-dart|cd-standard",
-   "attempt": 1,
-   "tags": [
-    "Unrealistic / AI look",
-    "Wrong garment or wrong part"
-   ]
-  },
-  {
-   "craftId": "sport-coat|front-style|hem-gusset|hem-squared",
+   "craftId": "sport-coat|front-style|hem-gusset|hem-round",
    "attempt": 1,
    "tags": [
     "Unrealistic / AI look"
-   ],
-   "references": [
-    "/images/review-refs/sport-coat/hem-squared/1786402134831-5ntcxr.webp",
-    "/images/review-refs/sport-coat/hem-squared/1786402139405-fm4kcg.webp"
+   ]
+  },
+  {
+   "craftId": "sport-coat|front-style|hem-gusset|hem-dr-round",
+   "attempt": 1,
+   "tags": [
+    "Unrealistic / AI look"
    ]
   },
   {
    "craftId": "sport-coat|sleeves-cuffs|sleeve-buttonhole-dir|sbh-straight",
-   "attempt": 1,
+   "attempt": 3,
    "tags": [
+    "Wrong shape / outline",
+    "Wrong size or proportion",
+    "Annotation or colour bled in from the drawing",
     "Unrealistic / AI look"
-   ],
-   "references": [
-    "/images/review-refs/sport-coat/sbh-straight/1786410631460-ptiq45.webp",
-    "/images/review-refs/sport-coat/sbh-straight/1786410642429-9oq55z.webp",
-    "/images/review-refs/sport-coat/sbh-straight/1786410652419-l6vlql.webp",
-    "/images/review-refs/sport-coat/sbh-straight/1786410660730-wkvtyh.webp"
    ]
   },
   {
-   "craftId": "sport-coat|sleeves-cuffs|sleeve-buttonhole-dir|sbh-slant",
-   "attempt": 3,
+   "craftId": "sport-coat|handmade|handmade-type|hm-individual",
+   "attempt": 1,
    "tags": [
     "Unrealistic / AI look"
-   ],
-   "notes": "THE FOLD IN THE ILLISTARTION IS A CUTAWAY TO SHOW TYHE FUNCTIUONALITY OF THE SLEEVE NOT TO BE TAKEN LITERALLY",
-   "references": [
-    "/images/review-refs/sport-coat/sbh-slant/1786389040327-zelzc9.webp"
    ]
   },
   {
@@ -880,6 +810,13 @@
     "Reference drawing itself is wrong"
    ],
    "notes": "the bottom besom of the flap pocket is supposed to be contrast not the upper and lower./"
+  },
+  {
+   "craftId": "sport-coat|interior|inner-pocket-closure|ipc-d",
+   "attempt": 1,
+   "tags": [
+    "Unrealistic / AI look"
+   ]
   },
   {
    "craftId": "suit-2pc|shoulder-structure|canvas|light-half-canvas",
@@ -939,6 +876,21 @@
    ]
   },
   {
+   "craftId": "suit-2pc|lapel|lapel-style|lapel-fishtail",
+   "attempt": 1,
+   "tags": [
+    "Feature not visible / too small in frame"
+   ],
+   "references": [
+    "/images/review-refs/suit-2pc/lapel-fishtail/1789356740254-dd247v.jpg",
+    "/images/review-refs/suit-2pc/lapel-fishtail/1789356743878-ixvy7o.jpg",
+    "/images/review-refs/suit-2pc/lapel-fishtail/1789356747048-e45cq1.jpg",
+    "/images/review-refs/suit-2pc/lapel-fishtail/1789356752212-c2sa8d.jpg",
+    "/images/review-refs/suit-2pc/lapel-fishtail/1789356769186-0qexbz.jpg",
+    "/images/review-refs/suit-2pc/lapel-fishtail/1789356781333-65nehu.jpg"
+   ]
+  },
+  {
    "craftId": "suit-2pc|lapel|lapel-bh-position|lbp-both",
    "attempt": 1,
    "tags": [
@@ -946,11 +898,6 @@
     "Unrealistic / AI look",
     "Wrong size or proportion"
    ]
-  },
-  {
-   "craftId": "suit-2pc|suit-pockets|chest-pocket|cp-trapezoid",
-   "attempt": 2,
-   "notes": "pocket welt should be in the shape of a Trapezoid narrower on the left side than the right side. angle on top bottom flat"
   },
   {
    "craftId": "suit-2pc|suit-pockets|lower-pocket|lp-large-slanted-40",
@@ -1046,6 +993,37 @@
    ]
   },
   {
+   "craftId": "suit-2pc|front-style|chest-dart|cd-plus-2",
+   "attempt": 1,
+   "tags": [
+    "Feature not visible / too small in frame"
+   ]
+  },
+  {
+   "craftId": "suit-2pc|front-style|chest-dart|cd-plus-3",
+   "attempt": 1,
+   "tags": [
+    "Feature not visible / too small in frame"
+   ],
+   "notes": "Craft option is showing the chest dart on the jacket being moved 3cm to the left"
+  },
+  {
+   "craftId": "suit-2pc|front-style|hem-gusset|hem-round",
+   "attempt": 1,
+   "tags": [
+    "Unrealistic / AI look"
+   ],
+   "references": [
+    "/images/review-refs/suit-2pc/hem-round/1789357973533-zdchpy.webp",
+    "/images/review-refs/suit-2pc/hem-round/1789357977351-kufzri.webp",
+    "/images/review-refs/suit-2pc/hem-round/1789357981767-naf5yg.webp",
+    "/images/review-refs/suit-2pc/hem-round/1789357985198-bgbyd8.webp",
+    "/images/review-refs/suit-2pc/hem-round/1789357989187-otex4s.jpg",
+    "/images/review-refs/suit-2pc/hem-round/1789357995171-vegnj2.jpg",
+    "/images/review-refs/suit-2pc/hem-round/1789357998607-ksjgzq.jpg"
+   ]
+  },
+  {
    "craftId": "suit-2pc|front-style|hem-gusset|hem-squared",
    "attempt": 1,
    "tags": [
@@ -1057,6 +1035,13 @@
    "references": [
     "/images/review-refs/suit-2pc/hem-squared/1786510449559-3d7ias.png",
     "/images/review-refs/suit-2pc/hem-squared/1786510461218-8xev0r.webp"
+   ]
+  },
+  {
+   "craftId": "suit-2pc|front-style|hem-gusset|hem-dr-round",
+   "attempt": 1,
+   "tags": [
+    "Unrealistic / AI look"
    ]
   },
   {
@@ -1082,6 +1067,23 @@
    ]
   },
   {
+   "craftId": "suit-2pc|handmade|handmade-type|hm-individual",
+   "attempt": 1,
+   "tags": [
+    "Reference drawing itself is wrong",
+    "Wrong feature entirely",
+    "Unrealistic / AI look"
+   ],
+   "notes": "Craft option is showcasing the facts that all handmade options are being chosen",
+   "references": [
+    "/images/review-refs/suit-2pc/hm-individual/1789356573848-hkdpwv.jpg",
+    "/images/review-refs/suit-2pc/hm-individual/1789356584883-i906tj.jpg",
+    "/images/review-refs/suit-2pc/hm-individual/1789356588311-1owfm1.jpg",
+    "/images/review-refs/suit-2pc/hm-individual/1789356593284-77iylm.jpg",
+    "/images/review-refs/suit-2pc/hm-individual/1789356597839-6d8nah.jpg"
+   ]
+  },
+  {
    "craftId": "suit-2pc|suit-details|contrast-position|contrast-chest-pocket",
    "attempt": 1,
    "tags": [
@@ -1103,6 +1105,17 @@
    ]
   },
   {
+   "craftId": "suit-2pc|interior|inner-pocket-closure|ipc-d",
+   "attempt": 1,
+   "tags": [
+    "Unrealistic / AI look"
+   ],
+   "references": [
+    "/images/review-refs/suit-2pc/ipc-d/1789357132215-l4hmil.jpg",
+    "/images/review-refs/suit-2pc/ipc-d/1789357169104-38xfjw.jpg"
+   ]
+  },
+  {
    "craftId": "suit-2pc|Trousers-front-pockets|front-pocket-style|slant-pockets",
    "attempt": 1,
    "tags": [
@@ -1120,6 +1133,13 @@
    ]
   },
   {
+   "craftId": "suit-2pc|Trousers-front-pockets|front-pocket-style|slant-51-stripe",
+   "attempt": 1,
+   "tags": [
+    "Wrong side or orientation"
+   ]
+  },
+  {
    "craftId": "suit-2pc|Trousers-front-pockets|front-pocket-style|jeans-square",
    "attempt": 8,
    "tags": [
@@ -1132,8 +1152,9 @@
   },
   {
    "craftId": "suit-2pc|Trousers-front-pockets|front-pocket-style|jeans-arc",
-   "attempt": 1,
+   "attempt": 2,
    "tags": [
+    "Wrong side or orientation",
     "Unrealistic / AI look"
    ]
   },
@@ -1168,19 +1189,31 @@
    ]
   },
   {
+   "craftId": "suit-2pc|Trousers-front-pockets|watch-pocket|watch-diamond-flap",
+   "attempt": 1,
+   "tags": [
+    "Wrong shape / outline",
+    "Wrong size or proportion",
+    "Unrealistic / AI look"
+   ],
+   "references": [
+    "/images/review-refs/suit-2pc/watch-diamond-flap/1789356439349-aykfi6.jpg",
+    "/images/review-refs/suit-2pc/watch-diamond-flap/1789356443470-znnv3s.jpg",
+    "/images/review-refs/suit-2pc/watch-diamond-flap/1789356447433-w0wie2.jpg",
+    "/images/review-refs/suit-2pc/watch-diamond-flap/1789356476451-nu885f.jpg"
+   ]
+  },
+  {
    "craftId": "suit-2pc|Trousers-front-pockets|coin-pocket|coin-none",
    "attempt": 1,
    "notes": "illisration is fine no need to re genrate a photo"
   },
   {
-   "craftId": "suit-2pc|Trousers-front-pockets|coin-pocket|coin-right",
-   "attempt": 1,
-   "notes": "remove model"
-  },
-  {
    "craftId": "suit-2pc|Trousers-front-pockets|coin-pocket|coin-both",
-   "attempt": 2,
-   "notes": "REMOVE BARE STOMACH"
+   "attempt": 3,
+   "tags": [
+    "Unrealistic / AI look"
+   ]
   },
   {
    "craftId": "suit-2pc|Trousers-waistband|waistband-style|waist-extended-tab",
@@ -1252,120 +1285,235 @@
   },
   {
    "craftId": "suit-2pc|Trousers-waistband|waistband-extension|ext-straight",
-   "attempt": 1,
+   "attempt": 3,
    "tags": [
     "Unrealistic / AI look"
    ],
-   "references": [
-    "/images/review-refs/suit-2pc/ext-straight/1786409768277-vsvk24.png",
-    "/images/review-refs/suit-2pc/ext-straight/1786409878840-iexo2w.jpg",
-    "/images/review-refs/suit-2pc/ext-straight/1786409891453-jtj97b.webp",
-    "/images/review-refs/suit-2pc/ext-straight/1786409900286-noie2g.webp"
-   ]
+   "notes": "the silver part is hidden"
   },
   {
    "craftId": "suit-2pc|Trousers-waistband|waistband-extension|ext-pointed",
-   "attempt": 2,
+   "attempt": 3,
    "tags": [
     "Unrealistic / AI look"
    ],
-   "notes": "illustration shows a fold away. left side of the waistband is showing the waistband folded to the side",
-   "references": [
-    "/images/review-refs/suit-2pc/ext-pointed/1786390437660-2d1abn.webp"
-   ]
+   "notes": "silver latch is hidden"
   },
   {
    "craftId": "suit-2pc|Trousers-waistband|waistband-extension|ext-curved",
+   "attempt": 2,
+   "tags": [
+    "Unrealistic / AI look",
+    "Wrong side or orientation"
+   ],
+   "references": [
+    "/images/review-refs/suit-2pc/ext-curved/1789359096596-qlch1d.jpg",
+    "/images/review-refs/suit-2pc/ext-curved/1789359107848-t3evfr.jpg",
+    "/images/review-refs/suit-2pc/ext-curved/1789359115417-ht6d0n.jpg",
+    "/images/review-refs/suit-2pc/ext-curved/1789359125459-4fnc9w.jpg"
+   ]
+  },
+  {
+   "craftId": "suit-2pc|Trousers-waistband|waistband-extension|ext-no-hook",
    "attempt": 1,
    "tags": [
     "Unrealistic / AI look"
    ],
    "references": [
-    "/images/review-refs/suit-2pc/ext-curved/1786408245497-zohvld.webp",
-    "/images/review-refs/suit-2pc/ext-curved/1786408252690-fznr2q.webp",
-    "/images/review-refs/suit-2pc/ext-curved/1786408265159-11i8c0.webp"
+    "/images/review-refs/suit-2pc/ext-no-hook/1789358339630-rtcsrw.jpg",
+    "/images/review-refs/suit-2pc/ext-no-hook/1789358349215-hnrjkc.jpg",
+    "/images/review-refs/suit-2pc/ext-no-hook/1789358356152-4nfmsk.jpg"
+   ]
+  },
+  {
+   "craftId": "suit-2pc|Trousers-waistband|waistband-extension|ext-sharp-double",
+   "attempt": 1,
+   "tags": [
+    "Unrealistic / AI look"
+   ],
+   "references": [
+    "/images/review-refs/suit-2pc/ext-sharp-double/1789357645308-05cp45.jpg",
+    "/images/review-refs/suit-2pc/ext-sharp-double/1789357655440-il44u5.avif",
+    "/images/review-refs/suit-2pc/ext-sharp-double/1789357660757-mjacni.jpg",
+    "/images/review-refs/suit-2pc/ext-sharp-double/1789357673697-z4zv23.jpg"
+   ]
+  },
+  {
+   "craftId": "suit-2pc|Trousers-waistband|waistband-extension|ext-round-double",
+   "attempt": 1,
+   "tags": [
+    "Unrealistic / AI look"
+   ]
+  },
+  {
+   "craftId": "suit-2pc|Trousers-waistband|waistband-extension|ext-square-double",
+   "attempt": 1,
+   "tags": [
+    "Unrealistic / AI look"
+   ],
+   "references": [
+    "/images/review-refs/suit-2pc/ext-square-double/1789358016584-ir54c3.jpg",
+    "/images/review-refs/suit-2pc/ext-square-double/1789358032191-9lplaq.jpg",
+    "/images/review-refs/suit-2pc/ext-square-double/1789358043420-cucdhu.jpg",
+    "/images/review-refs/suit-2pc/ext-square-double/1789358051920-k9vme0.jpg"
+   ]
+  },
+  {
+   "craftId": "suit-2pc|Trousers-waistband|waistband-extension|ext-sharp-dbl-hooks",
+   "attempt": 1,
+   "tags": [
+    "Unrealistic / AI look"
+   ],
+   "references": [
+    "/images/review-refs/suit-2pc/ext-sharp-dbl-hooks/1789357892546-2z3fsv.jpg",
+    "/images/review-refs/suit-2pc/ext-sharp-dbl-hooks/1789357898962-sbkfp3.jpg",
+    "/images/review-refs/suit-2pc/ext-sharp-dbl-hooks/1789357904204-solbhk.jpg",
+    "/images/review-refs/suit-2pc/ext-sharp-dbl-hooks/1789357918103-3na8md.jpg",
+    "/images/review-refs/suit-2pc/ext-sharp-dbl-hooks/1789357920812-8sve6t.jpg"
+   ]
+  },
+  {
+   "craftId": "suit-2pc|Trousers-waistband|waistband-extension|ext-round-dbl-hooks",
+   "attempt": 1,
+   "tags": [
+    "Unrealistic / AI look"
+   ]
+  },
+  {
+   "craftId": "suit-2pc|Trousers-waistband|waistband-extension|ext-square-dbl-hooks",
+   "attempt": 1,
+   "tags": [
+    "Unrealistic / AI look"
+   ],
+   "references": [
+    "/images/review-refs/suit-2pc/ext-square-dbl-hooks/1789357595995-6yf4lm.jpg",
+    "/images/review-refs/suit-2pc/ext-square-dbl-hooks/1789357613860-mdnaq0.avif"
+   ]
+  },
+  {
+   "craftId": "suit-2pc|Trousers-waistband|waistband-extension|ext-sharp-dbl-btn-hook",
+   "attempt": 1,
+   "tags": [
+    "Unrealistic / AI look"
+   ]
+  },
+  {
+   "craftId": "suit-2pc|Trousers-waistband|waistband-extension|ext-round-dbl-btn-hook",
+   "attempt": 1,
+   "tags": [
+    "Unrealistic / AI look"
+   ],
+   "references": [
+    "/images/review-refs/suit-2pc/ext-round-dbl-btn-hook/1789358272693-jlavxy.jpg"
+   ]
+  },
+  {
+   "craftId": "suit-2pc|Trousers-waistband|waistband-extension|ext-square-dbl-btn-hook",
+   "attempt": 1,
+   "tags": [
+    "Unrealistic / AI look"
+   ],
+   "references": [
+    "/images/review-refs/suit-2pc/ext-square-dbl-btn-hook/1789357694332-sh6yva.jpg",
+    "/images/review-refs/suit-2pc/ext-square-dbl-btn-hook/1789357699320-re8ufe.avif",
+    "/images/review-refs/suit-2pc/ext-square-dbl-btn-hook/1789357720639-w3abas.jpg",
+    "/images/review-refs/suit-2pc/ext-square-dbl-btn-hook/1789357736000-cnk2ue.jpg",
+    "/images/review-refs/suit-2pc/ext-square-dbl-btn-hook/1789357744762-5f93ga.jpg"
+   ]
+  },
+  {
+   "craftId": "suit-2pc|Trousers-waistband|waistband-extension|ext-double-ext",
+   "attempt": 1,
+   "tags": [
+    "Unrealistic / AI look"
+   ],
+   "references": [
+    "/images/review-refs/suit-2pc/ext-double-ext/1789358431240-bkwfph.jpg",
+    "/images/review-refs/suit-2pc/ext-double-ext/1789358448420-yj23k6.jpg"
    ]
   },
   {
    "craftId": "suit-2pc|Trousers-waistband|extension-length|ext-len-5",
-   "attempt": 2,
-   "notes": "For a 5.0 cm extension, keeping the same proportional relationship from the original pattern:\n\nCalculations\n\nDrop\n\nD=0.333×5.0D = 0.333 \\times 5.0 D=1.67 cmD = 1.67\\text{ cm}\n\nPractical tailoring value:\n\nD≈1.7 cmD \\approx 1.7\\text{ cm}\n\nCurve Radius\n\nR=0.70×5.0R = 0.70 \\times 5.0 R=3.5 cmR = 3.5\\text{ cm}\n\nAngle\n\nθ=tan⁡−1(1.675.0)\\theta = \\tan^{-1}\\left(\\frac{1.67}{5.0}\\right) θ≈18.4∘\\theta \\approx 18.4^\\circ\nDraft Layout\nWaistline\nA-------------B\n               \\\n                \\\n                 C\n\nA-B = 5.0 cm\nB-C = 1.7 cm\n\nBespoke Pattern Specifications\nExtension length = 5.0 cm\nFront drop = 1.7 cm\nCurve radius = 3.5 cm\nWaistband finished width = 4.0 cm (typical)\nFly shield width = 3.5-4.0 cm\nDraft angle = 18.4°\nQuick Drafting Formula\n\nFor any extension length LL:\n\nDrop=L3\\text{Drop} = \\frac{L}{3} Radius=0.7L\\text{Radius} = 0.7L\n\nFor 5 cm:\n\nDrop = 1.7 cm\nRadius = 3.5 cm\n\nThis gives a clean, compact bespoke waistband extension suitable for most modern tailored trousers with a tab or hook-and-bar closure.",
-   "references": [
-    "/images/review-refs/suit-2pc/ext-len-5/1786488293413-4e8u97.webp",
-    "/images/review-refs/suit-2pc/ext-len-5/1786488320070-9lz9v7.webp",
-    "/images/review-refs/suit-2pc/ext-len-5/1786488330831-tj18tz.webp"
+   "attempt": 3,
+   "tags": [
+    "Wrong side or orientation"
    ]
   },
   {
    "craftId": "suit-2pc|Trousers-waistband|extension-length|ext-len-55",
-   "attempt": 2,
+   "attempt": 3,
    "tags": [
     "Unrealistic / AI look"
-   ],
-   "notes": "For a 5.5 cm waistband extension, maintaining the same proportions as the original 13 cm draft:\n\nCalculations\n\nVertical Drop\n\nD=5.53D = \\frac{5.5}{3} D=1.83 cmD = 1.83\\text{ cm}\n\nRound to:\n\nD≈1.8 cmD \\approx 1.8\\text{ cm}\n\nCurve Radius\n\nR=0.70×5.5R = 0.70 \\times 5.5 R=3.85 cmR = 3.85\\text{ cm}\n\nRound to:\n\nR≈4.0 cmR \\approx 4.0\\text{ cm}\n\nDraft Angle\n\nθ=tan⁡−1(1.835.5)\\theta = \\tan^{-1}\\left(\\frac{1.83}{5.5}\\right) θ≈18.4∘\\theta \\approx 18.4^\\circ\nDraft Layout\nA--------------B\n                \\\n                 \\\n                  C\n\nA→B = 5.5 cm\nB→C = 1.8 cm drop\nConnect B→C with a smooth French-curve blend\nCurve radius ≈ 4.0 cm\nTailor's Practical Draft\n\nFor a typical bespoke trouser waistband:\n\nFinished waistband width: 4.0 cm\nExtension length: 5.5 cm\nDrop below waistband line: 1.8 cm\nCurve radius: 4.0 cm\nFly shield width: 3.5 to 4.0 cm\nSeam allowance: 1.0 cm\nQuick Formula\n\nFor any extension length LL:\n\nDrop=0.333L\\text{Drop} = 0.333L Radius=0.70L\\text{Radius} = 0.70L\n\nFor 5.5 cm:\n\nDrop = 1.8 cm\nRadius = 3.9 to 4.0 cm\nAngle ≈ 18.4°\n\nThis proportion will produce a compact, elegant bespoke waistband extension that is very close to what is commonly used on high-end tailored trousers with a clean tab closure.",
-   "references": [
-    "/images/review-refs/suit-2pc/ext-len-55/1786488204984-9g2i34.webp",
-    "/images/review-refs/suit-2pc/ext-len-55/1786488225623-2ujq83.webp",
-    "/images/review-refs/suit-2pc/ext-len-55/1786488237702-x47knh.webp"
    ]
   },
   {
    "craftId": "suit-2pc|Trousers-waistband|extension-length|ext-len-6",
-   "attempt": 2,
-   "notes": "For a 6.0 cm waistband extension using the same proportional geometry:\n\n1. Vertical Drop\nD=0.333×6.0D = 0.333 \\times 6.0 D=2.0 cmD = 2.0\\text{ cm}\n2. Curve Radius\nR=0.70×6.0R = 0.70 \\times 6.0 R=4.2 cmR = 4.2\\text{ cm}\n3. Angle\nθ=tan⁡−1(2.06.0)\\theta = \\tan^{-1}\\left(\\frac{2.0}{6.0}\\right) θ=18.43∘\\theta = 18.43^\\circ\nDrafting Layout\nA----------------B  (6.0 cm)\n\n                  \\\n                   \\\n                    C\n                   (2.0 cm drop)\n\n\nWhere:\n\nA→B = 6.0 cm\nB→C = 2.0 cm\nConnect B to C with a smooth French curve\nUse a curve radius of approximately 4.0 to 4.5 cm\nBespoke Trouser Waistband Specs\nComponent\tDimensionWaistband finished width\t4.0 cm\nExtension length\t6.0 cm\nFront drop\t2.0 cm\nCurve radius\t4.2 cm\nFly shield width\t3.5-4.0 cm\nDraft angle\t18.4°\nQuick Pattern Formula\n\nFor any extension length LL:\n\nDrop=L3\\text{Drop} = \\frac{L}{3} Radius=0.7L\\text{Radius} = 0.7L\n\nFor L = 6.0 cm:\n\nDrop=2.0 cm\\text{Drop} = 2.0\\text{ cm} Radius=4.2 cm\\text{Radius} = 4.2\\text{ cm}\n\nThese proportions create a clean bespoke waistband extension similar to the one shown in your image, scaled to 6 cm.",
-   "references": [
-    "/images/review-refs/suit-2pc/ext-len-6/1786488125604-3n86el.webp",
-    "/images/review-refs/suit-2pc/ext-len-6/1786488144380-etzzpd.webp",
-    "/images/review-refs/suit-2pc/ext-len-6/1786488155188-nuc8j3.webp"
+   "attempt": 3,
+   "tags": [
+    "Unrealistic / AI look"
    ]
   },
   {
    "craftId": "suit-2pc|Trousers-waistband|extension-length|ext-len-65",
-   "attempt": 2,
+   "attempt": 3,
    "tags": [
     "Unrealistic / AI look"
-   ],
-   "notes": "For a 6.5 cm diagonal waistband/fly transition, using the same proportional drafting method:\n\nDrop\nD=0.333×6.5D = 0.333 \\times 6.5 D=2.16 cmD = 2.16 \\text{ cm}\nCurve Radius\nR=0.70×6.5R = 0.70 \\times 6.5 R=4.55 cmR = 4.55 \\text{ cm}\nAngle\nθ=tan⁡−1(2.166.5)\\theta = \\tan^{-1}\\left(\\frac{2.16}{6.5}\\right) θ≈18.4∘\\theta \\approx 18.4^\\circ\nDraft\nA----------------B\n                  \\\n                   \\\n                    C\n\nA→B = 6.5 cm\nB→C = 2.2 cm drop\nBlend B→C with a smooth French curve\nRecommended curve radius = 4.5 to 5.0 cm\nBespoke Tailoring Practical Values\n\nIf this is a trouser waistband extension:\n\nFinished waistband width: 4.0 cm\nExtension length: 6.5 cm\nFront drop: 2.2 cm\nCurve radius: 4.5 cm\nFly shield width: 3.5 to 4.0 cm\n\nThis will maintain the same visual proportion as the original 13 cm pattern while reducing the extension to 6.5 cm.",
-   "references": [
-    "/images/review-refs/suit-2pc/ext-len-65/1786488074198-i7gqzj.webp",
-    "/images/review-refs/suit-2pc/ext-len-65/1786488081194-hs6351.webp"
    ]
   },
   {
    "craftId": "suit-2pc|Trousers-waistband|extension-length|ext-len-7",
-   "attempt": 2,
+   "attempt": 3,
    "tags": [
     "Unrealistic / AI look"
-   ],
-   "notes": "If you're changing that 13 cm diagonal shaping length to 7 cm, the geometry scales accordingly.\n\nUsing the same drop proportion:\n\nD=73D = \\frac{7}{3} D=2.33 cmD = 2.33 \\text{ cm}\nAngle Calculation\nθ=tan⁡−1(2.337)\\theta = \\tan^{-1}\\left(\\frac{2.33}{7}\\right) θ≈18.4∘\\theta \\approx 18.4^\\circ\n\nSo the shape remains nearly identical, just shorter.\n\nDraft Dimensions for a 7 cm Waistband Extension\nExtension length: 7.0 cm\nVertical drop: 2.3 cm\nCurve radius: 4.5 to 5.0 cm\nFly extension width: 3.5 to 4.0 cm\nFinished waistband width: 4.0 cm (typical bespoke)\nDrafting Method\nA ------------------ B\n|                     \\\n|                      \\\n|                       C\n|\n|\n\nA→B = 7 cm\nB→C = 2.3 cm drop\nBlend B to C with a smooth French curve\nRadius ≈ 5 cm\nScaling Formula\n\nFor any diagonal length LL:\n\nDrop=0.333L\\text{Drop} = 0.333L Radius=0.70L\\text{Radius} = 0.70L\n\nFor L=7L = 7 cm:\n\nDrop=7×0.333=2.33 cm\\text{Drop} = 7 \\times 0.333 = 2.33 \\text{ cm} Radius=7×0.70=4.9 cm\\text{Radius} = 7 \\times 0.70 = 4.9 \\text{ cm}\n\nThis will produce a clean bespoke waistband/fly transition matching the proportions of the original drawing while reducing the extension from 13 cm to 7 cm."
+   ]
   },
   {
    "craftId": "suit-2pc|Trousers-waistband|extension-length|ext-len-13",
-   "attempt": 2,
+   "attempt": 3,
    "tags": [
-    "Unrealistic / AI look"
-   ],
-   "notes": "From the image, I can see a trouser waistband extension/tab at the front closure. The only dimension shown is 13 cm, measured diagonally from the waistband edge down toward the fly extension area. The drawing appears to show:\n\nA waistband with an extended fastening tab.\nA curved fly facing underneath.\nA zipper fly.\nA front waistband overlap/underlap construction commonly used in bespoke tailoring.\n\nBecause the image only contains a single dimension (13 cm) and no scale, I cannot derive exact finished pattern dimensions, but I can give you the geometric drafting formulas used by bespoke trousermakers.\n\n1. Waistband Length Formula\n\nThe finished waistband length equals the trouser waist line plus overlap.\n\nWL=W+OWL = W + O\n\nWhere:\n\nWLWL = waistband length\nWW = trouser waist circumference\nOO = overlap extension\n\nTypical bespoke overlap:\n\nO=3.5 cm to 5.0 cmO = 3.5 \\text{ cm to } 5.0 \\text{ cm}\n\nExample:\n\nWaist = 84 cm\n\nWL=84+4=88 cmWL = 84 + 4 = 88 \\text{ cm}\n2. Waistband Width Formula\n\nFinished width:\n\nWWf=3.5 cm to 4.5 cmWW_f = 3.5 \\text{ cm to } 4.5 \\text{ cm}\n\nCut width before folding:\n\nWWc=(WWf×2)+SAWW_c = (WW_f \\times 2) + SA\n\nWhere:\n\nSASA = seam allowances\n\nExample:\n\nFinished waistband = 4 cm\n\nWWc=(4×2)+2WW_c = (4 \\times 2) + 2 WWc=10 cmWW_c = 10 \\text{ cm}\n3. Extension Tab Geometry\n\nFor a classic bespoke extension:\n\nEL=0.04W+1EL = 0.04W + 1\n\nWhere:\n\nELEL = extension length\nWW = body waist circumference\n\nExample:\n\n84 cm waist\n\nEL=(84×0.04)+1EL = (84 \\times 0.04)+1 EL=4.36 cmEL = 4.36 \\text{ cm}\n\nRound to:\n\nEL≈4.5 cmEL \\approx 4.5 \\text{ cm}\n4. Fly Extension Formula\n\nThe underlap extension behind the zipper is typically:\n\nFE=Zw+1.5FE = Z_w + 1.5\n\nWhere:\n\nFEFE = fly extension width\nZwZ_w = zipper tape width\n\nTypical:\n\nFE=4.0−4.5 cmFE = 4.0 - 4.5 \\text{ cm}\n5. Curved Front Waistband Drop\n\nThe image shows a diagonal dimension of 13 cm.\n\nFor a shaped waistband extension:\n\nD=133D = \\frac{13}{3}\n\nTypical resulting drop:\n\nD≈4.3 cmD \\approx 4.3 \\text{ cm}\n\nThis corresponds closely to common bespoke front fly curves.\n\nTo draft:\n\nMark 13 cm along the front edge.\nDrop approximately 4 to 4.5 cm.\nConnect with a French curve to form the fly shape.\n6. Waistband Angle Calculation\n\nIf the extension is 13 cm long and drops 4.5 cm:\n\nθ=tan⁡−1(4.513)\\theta = \\tan^{-1} \\left(\\frac{4.5}{13}\\right) θ=19.1∘\\theta = 19.1^\\circ\n\nSo the front shaping angle is approximately:\n\n19∘19^\\circ\n7. Bespoke Waistband Extension Draft\n\nA common high-end tailoring draft:\n\n           4.5 cm\n    ┌─────────────────┐\n    │                 │\n    │                 │\n    │                 │\n    └───────╮         │\n            ╰─────────┘\n\n                 ↑\n           13 cm curve\n\n\nMeasurements:\n\nFinished waistband width = 4 cm\nExtension length = 4.5 cm\nFly extension width = 4 cm\nCurved transition length = 13 cm\nCurve radius = 7 to 9 cm\n8. Drafting Formula From Waist Measurement\n\nFor any waist size:\n\nExtension=W20\\text{Extension} = \\frac{W}{20} Fly Width=W22\\text{Fly Width} = \\frac{W}{22} Curve Radius=W10\\text{Curve Radius} = \\frac{W}{10}\n\nExample (84 cm waist):\n\nExtension=8420=4.2 cm\\text{Extension} = \\frac{84}{20}=4.2\\text{ cm} Fly Width=8422=3.8 cm\\text{Fly Width}=\\frac{84}{22}=3.8\\text{ cm} Radius=8410=8.4 cm\\text{Radius}=\\frac{84}{10}=8.4\\text{ cm}\n\nThese formulas produce the proportions typically seen in bespoke Italian and Savile Row trouser waistbands.\n\nIf this came from a specific trouser pattern system (Müller, Aldrich, ESMOD, Jansen, or a Japanese tailoring draft), upload the full pattern image and I can reverse-engineer the exact geometry and grading formulas."
+    "Wrong side or orientation"
+   ]
   },
   {
    "craftId": "suit-2pc|Trousers-waistband|extension-length|ext-len-15",
-   "attempt": 2,
+   "attempt": 3,
    "tags": [
-    "Unrealistic / AI look"
-   ],
-   "notes": "Yes. This illustration is showing a **waist/waistband extension**, with the **15 cm dimension referring to the extension length** shown by the red dimension marker.\n\n### What the 15 cm means\n\nThe red dimension is measuring the **extension along the waist closure**, not the circumference of the entire waist.\n\nSo:\n\n[\n\\boxed{\\text{Waist extension}=15.0\\text{ cm}}\n]\n\nIf this is a shirt waist extension/overlap, the construction should be understood as:\n\n**Body waist edge → extension/overlap → closure**\n\nThe extension is **15 cm long in the direction indicated by the dimension**, following the garment's closure/waist edge.\n\n### If you're using this for image generation\n\nI would specify it as:\n\n> **Waist extension: 15.0 cm. The waist/closure extension must measure exactly 15 cm along the indicated closure direction. Show the extension as an integral continuation of the garment body, with the correct overlapping closure construction. Do not interpret 15 cm as waist circumference, extension width, or vertical garment length. Preserve the curved lower transition shown in the technical illustration.**\n\n### Important distinction\n\nIf you're trying to calculate the **actual amount added to the finished waist circumference**, we need to know whether this 15 cm is:\n\n1. **15 cm total extension length**, or\n2. **15 cm overlap added to the waist circumference**, or\n3. **15 cm measured vertically along the garment**, which is what the illustration may be indicating.\n\nFrom this image alone, **15 cm is definitely the labeled dimension**, but I would not use it to calculate finished waist circumference without the tech-pack's written description.\n\nIf you give me the **waist measurement and tell me whether this is a shirt, trouser, or jacket waist extension**, I can give you the exact drafting math.",
-   "references": [
-    "/images/review-refs/suit-2pc/ext-len-15/1786487833910-3r94rm.png"
+    "Wrong side or orientation"
    ]
   },
   {
    "craftId": "suit-2pc|Trousers-waistband|metal-adjuster|adjuster-left",
-   "attempt": 2,
-   "notes": "the allistic is hidden inside the waistband",
+   "attempt": 3,
+   "tags": [
+    "Wrong count"
+   ],
+   "notes": "button in the front should be removed",
    "references": [
-    "/images/review-refs/suit-2pc/adjuster-left/1786390677797-lvmn9o.webp",
-    "/images/review-refs/suit-2pc/adjuster-left/1786390695075-dx7xo1.webp"
+    "/images/review-refs/suit-2pc/adjuster-left/1789358950909-y3fy9u.jpg"
    ]
+  },
+  {
+   "craftId": "suit-2pc|Trousers-waistband|metal-adjuster|adjuster-buckle-loop",
+   "attempt": 1,
+   "tags": [
+    "Unrealistic / AI look"
+   ],
+   "references": [
+    "/images/review-refs/suit-2pc/adjuster-buckle-loop/1789358599102-8qzbbp.jpg",
+    "/images/review-refs/suit-2pc/adjuster-buckle-loop/1789358602482-wm6a8z.jpg",
+    "/images/review-refs/suit-2pc/adjuster-buckle-loop/1789358617791-yqb92i.jpg",
+    "/images/review-refs/suit-2pc/adjuster-buckle-loop/1789358620139-8vx20r.jpg",
+    "/images/review-refs/suit-2pc/adjuster-buckle-loop/1789358625374-c2tf69.jpg",
+    "/images/review-refs/suit-2pc/adjuster-buckle-loop/1789358630459-ckibw5.jpg"
+   ]
+  },
+  {
+   "craftId": "suit-2pc|Trousers-waistband|belt-loops|loops-standard",
+   "attempt": 1,
+   "tags": [
+    "Unrealistic / AI look"
+   ],
+   "notes": "7 loops on the front and back not all on the front"
   },
   {
    "craftId": "suit-2pc|Trousers-pleats-structure|fly-style|fly-zip",
@@ -1391,25 +1539,10 @@
    ]
   },
   {
-   "craftId": "suit-2pc|Trousers-pleats-structure|fly-style|fly-button",
-   "attempt": 2,
-   "notes": "it looks goo except there is pant fabric material showing inside the open fly where its should be a tshirt or boxers",
-   "references": [
-    "/images/review-refs/suit-2pc/fly-button/1786401267211-ymti49.webp",
-    "/images/review-refs/suit-2pc/fly-button/1786401296350-ko35tg.webp",
-    "/images/review-refs/suit-2pc/fly-button/1786401300356-yw45f6.webp",
-    "/images/review-refs/suit-2pc/fly-button/1786401320199-g30ydq.webp",
-    "/images/review-refs/suit-2pc/fly-button/1786401326602-bhh38o.webp"
-   ]
-  },
-  {
    "craftId": "suit-2pc|Trousers-pleats-structure|fly-style|fly-hook-bar",
-   "attempt": 1,
+   "attempt": 2,
    "tags": [
-    "Unrealistic / AI look"
-   ],
-   "references": [
-    "/images/review-refs/suit-2pc/fly-hook-bar/1786410232831-z4uku2.png"
+    "Annotation or colour bled in from the drawing"
    ]
   },
   {
@@ -1511,6 +1644,13 @@
   },
   {
    "craftId": "suit-2pc|Trousers-bottom-hem|leg-shape|leg-wide",
+   "attempt": 1,
+   "tags": [
+    "Unrealistic / AI look"
+   ]
+  },
+  {
+   "craftId": "suit-2pc|Trousers-bottom-hem|heel-guard|heel-whole-circle",
    "attempt": 1,
    "tags": [
     "Unrealistic / AI look"
@@ -1972,23 +2112,20 @@
    "notes": "THE CENTER OF THE FLAP SHOULD LINE UPO WITH THE SEAM"
   },
   {
-   "craftId": "suit-3pc|Vest-lining-vest|vest-lining-type|vest-lining-artistic",
-   "attempt": 2,
-   "tags": [
-    "Wrong shape / outline"
-   ],
-   "notes": "looks to thick custom lining appears to be sewn onto the fabric",
-   "references": [
-    "/images/review-refs/suit-3pc/vest-lining-artistic/1786400555922-2gqg8j.jpg",
-    "/images/review-refs/suit-3pc/vest-lining-artistic/1786400567847-0a4xar.jpg",
-    "/images/review-refs/suit-3pc/vest-lining-artistic/1786400575772-wf32rt.jpg"
-   ]
-  },
-  {
    "craftId": "suit-3pc|Trousers-front-pockets|front-pocket-style|jeans-arc",
    "attempt": 1,
    "tags": [
     "Wrong garment or wrong part"
+   ]
+  },
+  {
+   "craftId": "suit-3pc|Trousers-front-pockets|pocket-stitching|pocket-stitch-pick-06",
+   "attempt": 1,
+   "tags": [
+    "Feature not visible / too small in frame"
+   ],
+   "references": [
+    "/images/review-refs/suit-3pc/pocket-stitch-pick-06/1789357295054-1eh2vz.jpg"
    ]
   },
   {
@@ -2174,6 +2311,30 @@
    "tags": [
     "Unrealistic / AI look"
    ]
+  },
+  {
+   "craftId": "suit-3pc|Trousers-bottom-hem|heel-guard|heel-whole-circle",
+   "attempt": 1,
+   "tags": [
+    "Generic version, not this option",
+    "Feature not visible / too small in frame"
+   ]
+  },
+  {
+   "craftId": "suit-3pc|Trousers-details-contrast|contrast-positions|trouser-contrast-front-besom",
+   "attempt": 1,
+   "tags": [
+    "Unrealistic / AI look",
+    "Wrong side or orientation"
+   ]
+  },
+  {
+   "craftId": "suit-3pc|Trousers-details-contrast|contrast-positions|trouser-contrast-covered-btn",
+   "attempt": 1,
+   "tags": [
+    "Wrong garment or wrong part"
+   ],
+   "notes": "its a satin covered button"
   },
   {
    "craftId": "suit-3pc|Trousers-extras|waistband-back-seam|back-seam-standard",
@@ -2500,5 +2661,439 @@
    ]
   }
  ],
- "plan": []
+ "plan": [
+  {
+   "kind": "publish",
+   "craftId": "shirt|collar|lapel|collar-point-75-holes",
+   "master": "/images/generated/shirt/collar-point-75-holes.png",
+   "served": "/images/generated/shirt/collar-point-75-holes.webp",
+   "sha1": "a5a3d2ffe38fff63de98b17101476ec428607ff8",
+   "attempt": 2,
+   "previous": "/images/techpacks/shirt/lapel/point-collar-in-75cm-with-small-holes.jpg",
+   "targets": [
+    "shirt|collar|lapel|collar-point-75-holes"
+   ]
+  },
+  {
+   "kind": "publish",
+   "craftId": "shirt|pocket-hem|hem|hem-round",
+   "master": "/images/generated/shirt/hem-round.png",
+   "served": "/images/generated/shirt/hem-round.webp",
+   "sha1": "b6cf9328d3d0e8985d062a211f5a2f29cbba390b",
+   "attempt": 2,
+   "previous": "/images/hem/round-hem.jpg",
+   "targets": [
+    "shirt|pocket-hem|hem|hem-round"
+   ]
+  },
+  {
+   "kind": "publish",
+   "craftId": "shirt|cuffs|cuff_pleat|cpleat-single",
+   "master": "/images/generated/shirt/cpleat-single.png",
+   "served": "/images/generated/shirt/cpleat-single.webp",
+   "sha1": "d9bf0c2f9cc0610b089bbdac57d0e0ed111a20f5",
+   "attempt": 2,
+   "previous": "/images/cuff_pleat/single-pleat.jpg",
+   "targets": [
+    "shirt|cuffs|cuff_pleat|cpleat-single"
+   ]
+  },
+  {
+   "kind": "publish",
+   "craftId": "sport-coat|lapel|lapel-style|lapel-fishtail",
+   "master": "/images/generated/sport-coat/lapel-fishtail.png",
+   "served": "/images/generated/sport-coat/lapel-fishtail.webp",
+   "sha1": "a75b11a5f5f5971a5b1bc3e1f793dac57d828fb8",
+   "attempt": 1,
+   "previous": "/images/blueprints/supplier/9aca8479eb97__0006__Fish_mouth.jpg",
+   "targets": [
+    "sport-coat|lapel|lapel-style|lapel-fishtail",
+    "suit-3pc|lapel|lapel-style|lapel-fishtail"
+   ],
+   "targetsExcluded": [
+    {
+     "craftId": "suit-2pc|lapel|lapel-style|lapel-fishtail",
+     "reason": "label drift: \"Italian Fishmouth Lapel\""
+    }
+   ]
+  },
+  {
+   "kind": "publish",
+   "craftId": "sport-coat|lapel|lapel-bh-style|lbh-no1-dc-straight",
+   "master": "/images/generated/sport-coat/lbh-no1-dc-straight.png",
+   "served": "/images/generated/sport-coat/lbh-no1-dc-straight.webp",
+   "sha1": "62d5df870264f079297bb58b3a86480edd6f5a2f",
+   "attempt": 1,
+   "previous": "/images/blueprints/supplier/e346a69313a8__055R__No.1_Double_color_handmade_straight_lapel_buttonhole_H.jpg",
+   "targets": [
+    "sport-coat|lapel|lapel-bh-style|lbh-no1-dc-straight",
+    "suit-2pc|lapel|lapel-bh-style|lbh-no1-dc-straight",
+    "suit-3pc|lapel|lapel-bh-style|lbh-no1-dc-straight"
+   ]
+  },
+  {
+   "kind": "publish",
+   "craftId": "sport-coat|lapel|lapel-bh-style|lbh-no1-tc-arc",
+   "master": "/images/generated/sport-coat/lbh-no1-tc-arc.png",
+   "served": "/images/generated/sport-coat/lbh-no1-tc-arc.webp",
+   "sha1": "8b9181721b68f32c3132b247bcc916e80ce1ace9",
+   "attempt": 1,
+   "previous": "/images/blueprints/supplier/a1cc16870a6b__055Y__No.1_Triple_color_arc_lapel_buttonhole_Handmade_Only_a.jpg",
+   "targets": [
+    "sport-coat|lapel|lapel-bh-style|lbh-no1-tc-arc",
+    "suit-2pc|lapel|lapel-bh-style|lbh-no1-tc-arc",
+    "suit-3pc|lapel|lapel-bh-style|lbh-no1-tc-arc"
+   ]
+  },
+  {
+   "kind": "publish",
+   "craftId": "sport-coat|lapel|lapel-bh-position|lbp-left-double",
+   "master": "/images/generated/sport-coat/lbp-left-double.png",
+   "served": "/images/generated/sport-coat/lbp-left-double.webp",
+   "sha1": "ff47094daac255b7c64e817bd2cb18dddbef91a2",
+   "attempt": 2,
+   "previous": "/images/blueprints/supplier/fd7769c12fc9__0545__Double_left_bttn_hole.jpg",
+   "targets": [
+    "sport-coat|lapel|lapel-bh-position|lbp-left-double",
+    "suit-2pc|lapel|lapel-bh-position|lbp-left-double",
+    "suit-3pc|lapel|lapel-bh-position|lbp-left-double"
+   ]
+  },
+  {
+   "kind": "publish",
+   "craftId": "sport-coat|lapel|lapel-bh-position|lbp-both",
+   "master": "/images/generated/sport-coat/lbp-both.png",
+   "served": "/images/generated/sport-coat/lbp-both.webp",
+   "sha1": "0ebd84448452f9014e4d58196b67c80763e5ed20",
+   "attempt": 4,
+   "previous": "/images/blueprints/supplier/68b420f69832__0543__Right_Left_bttn_hole.jpg",
+   "targets": [
+    "sport-coat|lapel|lapel-bh-position|lbp-both"
+   ],
+   "targetsExcluded": [
+    {
+     "craftId": "suit-2pc|lapel|lapel-bh-position|lbp-both",
+     "reason": "owner rejected this craft — awaiting its own regeneration"
+    },
+    {
+     "craftId": "suit-3pc|lapel|lapel-bh-position|lbp-both",
+     "reason": "owner rejected this craft — awaiting its own regeneration"
+    }
+   ]
+  },
+  {
+   "kind": "publish",
+   "craftId": "sport-coat|front-style|chest-dart|cd-standard",
+   "master": "/images/generated/sport-coat/cd-standard.png",
+   "served": "/images/generated/sport-coat/cd-standard.webp",
+   "sha1": "1e0c14da6419730a82bed9043b0e43e65b250fc8",
+   "attempt": 2,
+   "previous": "/images/supplier-bb/KWAML/Z.jpg",
+   "targets": [
+    "sport-coat|front-style|chest-dart|cd-standard"
+   ],
+   "targetsExcluded": [
+    {
+     "craftId": "suit-2pc|front-style|chest-dart|cd-standard",
+     "reason": "owner rejected this craft — awaiting its own regeneration"
+    },
+    {
+     "craftId": "suit-3pc|front-style|chest-dart|cd-standard",
+     "reason": "owner rejected this craft — awaiting its own regeneration"
+    }
+   ]
+  },
+  {
+   "kind": "publish",
+   "craftId": "sport-coat|front-style|chest-dart|cd-plus-2",
+   "master": "/images/generated/sport-coat/cd-plus-2.png",
+   "served": "/images/generated/sport-coat/cd-plus-2.webp",
+   "sha1": "cad8b0b28f036b0015f0d995590ad2bf24b95809",
+   "attempt": 1,
+   "previous": null,
+   "targets": [
+    "sport-coat|front-style|chest-dart|cd-plus-2",
+    "suit-3pc|front-style|chest-dart|cd-plus-2"
+   ],
+   "targetsExcluded": [
+    {
+     "craftId": "suit-2pc|front-style|chest-dart|cd-plus-2",
+     "reason": "owner rejected this craft — awaiting its own regeneration"
+    }
+   ]
+  },
+  {
+   "kind": "publish",
+   "craftId": "sport-coat|front-style|chest-dart|cd-plus-3",
+   "master": "/images/generated/sport-coat/cd-plus-3.png",
+   "served": "/images/generated/sport-coat/cd-plus-3.webp",
+   "sha1": "2443fb401cf2ca13c0c398412f1ee0bb9a825507",
+   "attempt": 1,
+   "previous": null,
+   "targets": [
+    "sport-coat|front-style|chest-dart|cd-plus-3",
+    "suit-3pc|front-style|chest-dart|cd-plus-3"
+   ],
+   "targetsExcluded": [
+    {
+     "craftId": "suit-2pc|front-style|chest-dart|cd-plus-3",
+     "reason": "owner rejected this craft — awaiting its own regeneration"
+    }
+   ]
+  },
+  {
+   "kind": "publish",
+   "craftId": "sport-coat|front-style|hem-gusset|hem-squared",
+   "master": "/images/generated/sport-coat/hem-squared.png",
+   "served": "/images/generated/sport-coat/hem-squared.webp",
+   "sha1": "aeba7921ce5e3cb4259c408cc88bdca69dd10445",
+   "attempt": 2,
+   "previous": "/images/supplier-bb/REQXB/Q.jpg",
+   "targets": [
+    "sport-coat|front-style|hem-gusset|hem-squared"
+   ],
+   "targetsExcluded": [
+    {
+     "craftId": "suit-2pc|front-style|hem-gusset|hem-squared",
+     "reason": "owner rejected this craft — awaiting its own regeneration"
+    },
+    {
+     "craftId": "suit-3pc|front-style|hem-gusset|hem-squared",
+     "reason": "owner rejected this craft — awaiting its own regeneration"
+    }
+   ]
+  },
+  {
+   "kind": "publish",
+   "craftId": "sport-coat|sleeves-cuffs|sleeve-buttonhole-dir|sbh-slant",
+   "master": "/images/generated/sport-coat/sbh-slant.png",
+   "served": "/images/generated/sport-coat/sbh-slant.webp",
+   "sha1": "55b96b914ebe6dc488d9f48c3e46e3ffeaee08b9",
+   "attempt": 5,
+   "previous": "/images/blueprints/factory/fdbc0cbb0bb5__AAAN__Normal_slanted.jpg",
+   "targets": [
+    "sport-coat|sleeves-cuffs|sleeve-buttonhole-dir|sbh-slant"
+   ],
+   "targetsExcluded": [
+    {
+     "craftId": "suit-2pc|sleeves-cuffs|sleeve-buttonhole-dir|sbh-slant",
+     "reason": "owner rejected this craft — awaiting its own regeneration"
+    },
+    {
+     "craftId": "suit-3pc|sleeves-cuffs|sleeve-buttonhole-dir|sbh-slant",
+     "reason": "owner rejected this craft — awaiting its own regeneration"
+    }
+   ]
+  },
+  {
+   "kind": "publish",
+   "craftId": "sport-coat|interior|inner-pocket-closure|ipc-i",
+   "master": "/images/generated/sport-coat/ipc-i.png",
+   "served": "/images/generated/sport-coat/ipc-i.webp",
+   "sha1": "cf200e5eed90c45d0fc2ac4c099c4a681918963b",
+   "attempt": 1,
+   "previous": null,
+   "targets": [
+    "sport-coat|interior|inner-pocket-closure|ipc-i",
+    "suit-2pc|interior|inner-pocket-closure|ipc-i",
+    "suit-3pc|interior|inner-pocket-closure|ipc-i"
+   ]
+  },
+  {
+   "kind": "publish",
+   "craftId": "sport-coat|interior|inner-pocket-closure|ipc-x",
+   "master": "/images/generated/sport-coat/ipc-x.png",
+   "served": "/images/generated/sport-coat/ipc-x.webp",
+   "sha1": "fafd9fdb0632994bdd06a0fca37d4695b5110797",
+   "attempt": 1,
+   "previous": null,
+   "targets": [
+    "sport-coat|interior|inner-pocket-closure|ipc-x",
+    "suit-2pc|interior|inner-pocket-closure|ipc-x",
+    "suit-3pc|interior|inner-pocket-closure|ipc-x"
+   ]
+  },
+  {
+   "kind": "publish",
+   "craftId": "suit-2pc|lapel|lapel-bh-style|lbh-no1-dc-straight",
+   "master": "/images/generated/jacket/lbh-no1-dc-straight.png",
+   "served": "/images/generated/jacket/lbh-no1-dc-straight.webp",
+   "sha1": "5b3d628ee5e5962c8fd441a7b989f6eb34131ce4",
+   "attempt": 1,
+   "previous": "/images/blueprints/supplier/e346a69313a8__055R__No.1_Double_color_handmade_straight_lapel_buttonhole_H.jpg",
+   "targets": [
+    "suit-2pc|lapel|lapel-bh-style|lbh-no1-dc-straight",
+    "sport-coat|lapel|lapel-bh-style|lbh-no1-dc-straight",
+    "suit-3pc|lapel|lapel-bh-style|lbh-no1-dc-straight"
+   ]
+  },
+  {
+   "kind": "publish",
+   "craftId": "suit-2pc|lapel|lapel-bh-style|lbh-no1-tc-arc",
+   "master": "/images/generated/jacket/lbh-no1-tc-arc.png",
+   "served": "/images/generated/jacket/lbh-no1-tc-arc.webp",
+   "sha1": "69972aecd2fecf335dc1ef11cfa1d8b6280d61cf",
+   "attempt": 1,
+   "previous": "/images/blueprints/supplier/a1cc16870a6b__055Y__No.1_Triple_color_arc_lapel_buttonhole_Handmade_Only_a.jpg",
+   "targets": [
+    "suit-2pc|lapel|lapel-bh-style|lbh-no1-tc-arc",
+    "sport-coat|lapel|lapel-bh-style|lbh-no1-tc-arc",
+    "suit-3pc|lapel|lapel-bh-style|lbh-no1-tc-arc"
+   ]
+  },
+  {
+   "kind": "publish",
+   "craftId": "suit-2pc|suit-pockets|chest-pocket|cp-trapezoid",
+   "master": "/images/generated/jacket/cp-trapezoid.png",
+   "served": "/images/generated/jacket/cp-trapezoid.webp",
+   "sha1": "ca00f5f2d794681326e8474f29b975af0af76f78",
+   "attempt": 3,
+   "previous": "/images/blueprints/supplier/9dc885487d07__00J2__Trapezoid.jpg",
+   "targets": [
+    "suit-2pc|suit-pockets|chest-pocket|cp-trapezoid",
+    "sport-coat|suit-pockets|chest-pocket|cp-trapezoid"
+   ],
+   "targetsExcluded": [
+    {
+     "craftId": "suit-3pc|suit-pockets|chest-pocket|cp-trapezoid",
+     "reason": "owner rejected this craft — awaiting its own regeneration"
+    }
+   ]
+  },
+  {
+   "kind": "publish",
+   "craftId": "suit-2pc|interior|inner-pocket-closure|ipc-i",
+   "master": "/images/generated/jacket/ipc-i.png",
+   "served": "/images/generated/jacket/ipc-i.webp",
+   "sha1": "c5ad7fb5421424c0675a46b5bb36e05ff08be425",
+   "attempt": 1,
+   "previous": null,
+   "targets": [
+    "suit-2pc|interior|inner-pocket-closure|ipc-i",
+    "sport-coat|interior|inner-pocket-closure|ipc-i",
+    "suit-3pc|interior|inner-pocket-closure|ipc-i"
+   ]
+  },
+  {
+   "kind": "publish",
+   "craftId": "suit-2pc|interior|inner-pocket-closure|ipc-x",
+   "master": "/images/generated/jacket/ipc-x.png",
+   "served": "/images/generated/jacket/ipc-x.webp",
+   "sha1": "e1ae5e73827d432a2b4b4b85b1eed1685a3debd2",
+   "attempt": 1,
+   "previous": null,
+   "targets": [
+    "suit-2pc|interior|inner-pocket-closure|ipc-x",
+    "sport-coat|interior|inner-pocket-closure|ipc-x",
+    "suit-3pc|interior|inner-pocket-closure|ipc-x"
+   ]
+  },
+  {
+   "kind": "publish",
+   "craftId": "suit-2pc|Trousers-front-pockets|pocket-stitching|pocket-stitch-pick-06",
+   "master": "/images/generated/jacket/pocket-stitch-pick-06.png",
+   "served": "/images/generated/jacket/pocket-stitch-pick-06.webp",
+   "sha1": "33315304fd822fcc6175df4e03df3105318614f0",
+   "attempt": 1,
+   "previous": "/images/blueprints/remote/0c5cfcfe96d9__165588183495006.jpg",
+   "targets": [
+    "suit-2pc|Trousers-front-pockets|pocket-stitching|pocket-stitch-pick-06",
+    "trousers|front-pockets|pocket-stitching|pocket-stitch-pick-06"
+   ],
+   "targetsExcluded": [
+    {
+     "craftId": "suit-3pc|Trousers-front-pockets|pocket-stitching|pocket-stitch-pick-06",
+     "reason": "owner rejected this craft — awaiting its own regeneration"
+    }
+   ]
+  },
+  {
+   "kind": "publish",
+   "craftId": "suit-2pc|Trousers-front-pockets|coin-pocket|coin-right",
+   "master": "/images/generated/jacket/coin-right.png",
+   "served": "/images/generated/jacket/coin-right.webp",
+   "sha1": "010ebd8d6f568d5aa534aa8535f520f7862096f1",
+   "attempt": 2,
+   "previous": "/images/blueprints/remote/1d73941a4932__3530.jpg",
+   "targets": [
+    "suit-2pc|Trousers-front-pockets|coin-pocket|coin-right"
+   ],
+   "targetsExcluded": [
+    {
+     "craftId": "sport-coat|suit-pockets|coin-pocket|coin-right",
+     "reason": "blueprint drift: /images/blueprints/baoxiniao/jacket/kaxdk/b.jpg"
+    },
+    {
+     "craftId": "suit-2pc|suit-pockets|coin-pocket|coin-right",
+     "reason": "blueprint drift: /images/blueprints/baoxiniao/jacket/kaxdk/b.jpg"
+    },
+    {
+     "craftId": "suit-3pc|suit-pockets|coin-pocket|coin-right",
+     "reason": "blueprint drift: /images/blueprints/baoxiniao/jacket/kaxdk/b.jpg"
+    },
+    {
+     "craftId": "suit-3pc|Trousers-front-pockets|coin-pocket|coin-right",
+     "reason": "owner rejected this craft — awaiting its own regeneration"
+    },
+    {
+     "craftId": "trousers|front-pockets|coin-pocket|coin-right",
+     "reason": "owner rejected this craft — awaiting its own regeneration"
+    }
+   ]
+  },
+  {
+   "kind": "publish",
+   "craftId": "suit-2pc|Trousers-pleats-structure|fly-style|fly-button",
+   "master": "/images/generated/jacket/fly-button.png",
+   "served": "/images/generated/jacket/fly-button.webp",
+   "sha1": "61a92d4126a926c51fb16f18692b2909846d2e3f",
+   "attempt": 3,
+   "previous": "/images/blueprints/factory/3fcf22dd779d__3422__Bttns.jpg",
+   "targets": [
+    "suit-2pc|Trousers-pleats-structure|fly-style|fly-button"
+   ],
+   "targetsExcluded": [
+    {
+     "craftId": "suit-3pc|Trousers-pleats-structure|fly-style|fly-button",
+     "reason": "owner rejected this craft — awaiting its own regeneration"
+    },
+    {
+     "craftId": "trousers|pleats-structure|fly-style|fly-button",
+     "reason": "owner rejected this craft — awaiting its own regeneration"
+    }
+   ]
+  },
+  {
+   "kind": "publish",
+   "craftId": "suit-2pc|Trousers-bottom-hem|heel-guard|heel-none",
+   "master": "/images/generated/jacket/heel-none.png",
+   "served": "/images/generated/jacket/heel-none.webp",
+   "sha1": "66da75fa10f7bec4282c4e329885956f44e1002e",
+   "attempt": 1,
+   "previous": "/images/blueprints/remote/90c9f9c84002__33BB.jpg",
+   "targets": [
+    "suit-2pc|Trousers-bottom-hem|heel-guard|heel-none",
+    "suit-3pc|Trousers-bottom-hem|heel-guard|heel-none",
+    "trousers|bottom-hem|heel-guard|heel-none"
+   ]
+  },
+  {
+   "kind": "publish",
+   "craftId": "suit-3pc|Vest-lining-vest|vest-lining-type|vest-lining-artistic",
+   "master": "/images/generated/jacket/vest-lining-artistic.png",
+   "served": "/images/generated/jacket/vest-lining-artistic.webp",
+   "sha1": "bea27fbf06c8a59ca0079fc16fa1bd146157387b",
+   "attempt": 3,
+   "previous": "/images/options/vest/vest-lining-artistic.jpg",
+   "targets": [
+    "suit-3pc|Vest-lining-vest|vest-lining-type|vest-lining-artistic"
+   ],
+   "targetsExcluded": [
+    {
+     "craftId": "vest|lining-vest|vest-lining-type|vest-lining-artistic",
+     "reason": "owner rejected this craft — awaiting its own regeneration"
+    }
+   ]
+  }
+ ]
 }

@@ -1,12 +1,12 @@
 {
  "version": 1,
- "builtAt": "2026-08-27T19:47:50.492Z",
+ "builtAt": "2026-09-14T04:16:46.204Z",
  "builder": "tools/build_decision_ledger.mjs",
  "note": "Canonical merged decision ledger. Downstream tools read THIS, not the individual sources. Machine events (machine:true) are evidence, never approval.",
  "sources": {
   "admin-portal": {
    "path": "data-store/image-review-decisions.json",
-   "decisions": 711
+   "decisions": 756
   },
   "july-v3": {
    "path": "public/images/reports/review-decisions-v3-2026-07-30.json",
@@ -33,14 +33,14 @@
  },
  "stats": {
   "crafts": 2862,
-  "adminBound": 706,
+  "adminBound": 751,
   "julyEvents": 8097,
   "historyEvents": 938,
   "qcEvents": 376,
-  "approvedCrafts": 2068,
-  "photoApproved": 1883,
-  "illustrationKeptOnly": 185,
-  "rejectedOnly": 682,
+  "approvedCrafts": 2083,
+  "photoApproved": 1903,
+  "illustrationKeptOnly": 180,
+  "rejectedOnly": 667,
   "conflicted": 0,
   "undecided": 112,
   "illustration": {
@@ -1816,35 +1816,29 @@
    "label": "Point 7.5 cm (Small Holes)",
    "scope": "shirt",
    "current": {
-    "image": "/images/techpacks/shirt/lapel/point-collar-in-75cm-with-small-holes.jpg",
+    "image": "/images/generated/shirt/collar-point-75-holes.webp",
     "techpackIllustration": "/images/techpacks/shirt/lapel/point-collar-in-75cm-with-small-holes.jpg",
     "illustration": "/images/techpacks/shirt/lapel/point-collar-in-75cm-with-small-holes.jpg",
     "illustrationStatus": "drawing",
-    "photos": []
+    "photos": [
+     "/images/generated/shirt/collar-point-75-holes.webp"
+    ]
    },
    "events": [
     {
      "source": "admin-portal",
-     "via": "map",
-     "verdict": "rejected",
-     "attempt": 1,
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 2,
      "image": {
-      "path": ".craft-pipeline/shirt/collar-point-75-holes/candidate-1.png",
-      "sha1": "55ab0154205238deb12eb776af7f9fff6d600a01",
+      "path": ".craft-pipeline/shirt/collar-point-75-holes/candidate-2.png",
+      "sha1": "a5a3d2ffe38fff63de98b17101476ec428607ff8",
       "exists": true,
-      "kind": "pipeline-candidate"
+      "kind": "logged-at-decision-time"
      },
-     "tags": [
-      "Feature not visible / too small in frame"
-     ],
-     "references": [
-      "/images/review-refs/shirt/collar-point-75-holes/1786403172033-ou29bw.webp",
-      "/images/review-refs/shirt/collar-point-75-holes/1786403177008-mfi5w5.webp",
-      "/images/review-refs/shirt/collar-point-75-holes/1786403180718-uzk0gb.webp",
-      "/images/review-refs/shirt/collar-point-75-holes/1786403183675-wli53o.webp"
-     ],
-     "decidedAt": "2026-08-10T23:06:37.672Z",
-     "boundBy": "pipeline-spec",
+     "decidedAt": "2026-09-14T04:12:33.466Z",
+     "boundBy": "explicit-addr",
      "portalKey": "shirt/collar-point-75-holes",
      "current": true
     },
@@ -1910,12 +1904,12 @@
      "machine": true,
      "image": {
       "path": "/images/generated/shirt/collar-point-75-holes.webp",
-      "sha1": "0bd1ca7e081318cf0188f3f1c3c0733c7e41d576",
+      "sha1": "0ca4769c191d47c6cb41b3a65fef576ad59f6b83",
       "exists": true,
       "kind": "was-live",
       "alias": {
        "path": "/images/generated/shirt/collar-point-75-holes.png",
-       "sha1": "55ab0154205238deb12eb776af7f9fff6d600a01"
+       "sha1": "a5a3d2ffe38fff63de98b17101476ec428607ff8"
       }
      },
      "replacedWith": "/images/techpacks/shirt/lapel/point-collar-in-75cm-with-small-holes.jpg",
@@ -1934,10 +1928,10 @@
      }
     }
    ],
-   "state": "illustration-kept-only",
-   "approvedPhotoEvents": 0,
+   "state": "has-owner-photo-approval",
+   "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 1,
-   "rejectionEvents": 3,
+   "rejectionEvents": 2,
    "illustration": {
     "path": "/images/techpacks/shirt/lapel/point-collar-in-75cm-with-small-holes.jpg",
     "status": "drawing-unverified",
@@ -29994,11 +29988,12 @@
    "label": "Round Hem",
    "scope": "shirt",
    "current": {
-    "image": "/images/hem/round-hem.jpg",
+    "image": "/images/generated/shirt/hem-round.webp",
     "techpackIllustration": "/images/hem/round-hem.jpg",
     "illustration": "/images/hem/round-hem.jpg",
     "illustrationStatus": "drawing",
     "photos": [
+     "/images/generated/shirt/hem-round.webp",
      "https://propercloth.com/reference/wp-content/uploads/2020/06/rounded.jpg"
     ],
     "images": [
@@ -30008,20 +30003,18 @@
    "events": [
     {
      "source": "admin-portal",
-     "via": "map",
-     "verdict": "rejected",
-     "attempt": 1,
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 2,
      "image": {
-      "path": ".craft-pipeline/shirt/hem-round/candidate-1.png",
-      "sha1": "9442b8b3826f020cec36489629399a5c9e92ee77",
+      "path": ".craft-pipeline/shirt/hem-round/candidate-2.png",
+      "sha1": "b6cf9328d3d0e8985d062a211f5a2f29cbba390b",
       "exists": true,
-      "kind": "pipeline-candidate"
+      "kind": "logged-at-decision-time"
      },
-     "tags": [
-      "Looks identical to a sibling option"
-     ],
-     "decidedAt": "2026-08-11T01:11:31.056Z",
-     "boundBy": "pipeline-spec",
+     "decidedAt": "2026-09-14T04:12:45.213Z",
+     "boundBy": "explicit-addr",
      "portalKey": "shirt/hem-round",
      "current": true
     },
@@ -30204,7 +30197,7 @@
      "machine": true,
      "image": {
       "path": "/images/generated/shirt/hem-round.webp",
-      "sha1": "285dfbff96c9e9e5ad4fbebde59a8872e50b2190",
+      "sha1": "c7d781a24f876ff3d8ef596048c462359220e91e",
       "exists": true,
       "kind": "was-live",
       "alias": {
@@ -30229,9 +30222,9 @@
     }
    ],
    "state": "has-owner-photo-approval",
-   "approvedPhotoEvents": 1,
+   "approvedPhotoEvents": 2,
    "illustrationKeepEvents": 2,
-   "rejectionEvents": 9,
+   "rejectionEvents": 8,
    "illustration": {
     "path": "/images/hem/round-hem.jpg",
     "status": "drawing-unverified",
@@ -31487,27 +31480,21 @@
    "events": [
     {
      "source": "admin-portal",
-     "via": "map",
+     "via": "log",
+     "event": "decision",
      "verdict": "rejected",
-     "attempt": 2,
+     "attempt": 3,
      "image": {
-      "path": ".craft-pipeline/shirt/cuff-french-6bh/candidate-2.png",
-      "sha1": "2c0a39e1064966ff5714506cec7efaa602367bb9",
+      "path": ".craft-pipeline/shirt/cuff-french-6bh/candidate-3.png",
+      "sha1": "df8fb359867f2e2d1caffb8cd25a9cbc5b0b9cbf",
       "exists": true,
-      "kind": "pipeline-candidate"
+      "kind": "logged-at-decision-time"
      },
      "tags": [
-      "Unrealistic / AI look"
+      "Annotation or colour bled in from the drawing"
      ],
-     "references": [
-      "/images/review-refs/shirt/cuff-french-6bh/1786401509205-whixis.webp",
-      "/images/review-refs/shirt/cuff-french-6bh/1786401838647-cffa5y.webp",
-      "/images/review-refs/shirt/cuff-french-6bh/1786401843236-te66my.webp",
-      "/images/review-refs/shirt/cuff-french-6bh/1786401856538-4fg2dz.webp",
-      "/images/review-refs/shirt/cuff-french-6bh/1786401860307-yi04zv.webp"
-     ],
-     "decidedAt": "2026-08-10T22:44:28.057Z",
-     "boundBy": "pipeline-spec",
+     "decidedAt": "2026-09-14T04:10:35.112Z",
+     "boundBy": "explicit-addr",
      "portalKey": "shirt/cuff-french-6bh",
      "current": true
     },
@@ -35908,37 +35895,30 @@
    "label": "Single Pleat",
    "scope": "shirt",
    "current": {
-    "image": "/images/cuff_pleat/single-pleat.jpg",
+    "image": "/images/generated/shirt/cpleat-single.webp",
     "techpackIllustration": "/images/cuff_pleat/single-pleat.jpg",
     "illustration": "/images/cuff_pleat/single-pleat.jpg",
     "illustrationStatus": "drawing",
-    "photos": [],
+    "photos": [
+     "/images/generated/shirt/cpleat-single.webp"
+    ],
     "images": []
    },
    "events": [
     {
      "source": "admin-portal",
-     "via": "map",
-     "verdict": "rejected",
-     "attempt": 1,
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 2,
      "image": {
-      "path": ".craft-pipeline/shirt/cpleat-single/candidate-1.png",
-      "sha1": "8cf10c417633f9b2ecfdb8f463632a6c6f98df9a",
+      "path": ".craft-pipeline/shirt/cpleat-single/candidate-2.png",
+      "sha1": "d9bf0c2f9cc0610b089bbdac57d0e0ed111a20f5",
       "exists": true,
-      "kind": "pipeline-candidate"
+      "kind": "logged-at-decision-time"
      },
-     "notes": "single pleat",
-     "tags": [
-      "Unrealistic / AI look"
-     ],
-     "references": [
-      "/images/review-refs/shirt/cpleat-single/1786410838546-ylk4r3.webp",
-      "/images/review-refs/shirt/cpleat-single/1786410846958-p6wzjf.webp",
-      "/images/review-refs/shirt/cpleat-single/1786410859102-8g2szc.webp",
-      "/images/review-refs/shirt/cpleat-single/1786410871241-qwngcm.webp"
-     ],
-     "decidedAt": "2026-08-11T01:14:35.577Z",
-     "boundBy": "pipeline-spec",
+     "decidedAt": "2026-09-14T04:12:38.983Z",
+     "boundBy": "explicit-addr",
      "portalKey": "shirt/cpleat-single",
      "current": true
     },
@@ -36046,12 +36026,12 @@
      "machine": true,
      "image": {
       "path": "/images/generated/shirt/cpleat-single.webp",
-      "sha1": "0ca86625d95536b14fa81beb1cb7912e7bbe98c5",
+      "sha1": "af535cd33a4226a3f8ca532687310d931eba275c",
       "exists": true,
       "kind": "was-live",
       "alias": {
        "path": "/images/generated/shirt/cpleat-single.png",
-       "sha1": "8cf10c417633f9b2ecfdb8f463632a6c6f98df9a"
+       "sha1": "d9bf0c2f9cc0610b089bbdac57d0e0ed111a20f5"
       }
      },
      "replacedWith": "/images/cuff_pleat/single-pleat.jpg",
@@ -36071,9 +36051,9 @@
     }
    ],
    "state": "has-owner-photo-approval",
-   "approvedPhotoEvents": 1,
+   "approvedPhotoEvents": 2,
    "illustrationKeepEvents": 0,
-   "rejectionEvents": 6,
+   "rejectionEvents": 5,
    "illustration": {
     "path": "/images/cuff_pleat/single-pleat.jpg",
     "status": "drawing-unverified",
@@ -51422,6 +51402,31 @@
      "decidedAt": "2026-08-12T04:03:41.910Z",
      "boundBy": "explicit-addr",
      "portalKey": "sport-coat/lapel-shawl-0a",
+     "current": false
+    },
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 2,
+     "image": {
+      "path": ".craft-pipeline/sport-coat/lapel-shawl-0a/candidate-2.png",
+      "sha1": "d591c7c140f3af2b78bec42a4f0fc6d7d6095799",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Wrong shape / outline"
+     ],
+     "references": [
+      "/images/review-refs/sport-coat/lapel-shawl-0a/1789356205382-e9wq1a.jpg",
+      "/images/review-refs/sport-coat/lapel-shawl-0a/1789356216257-xfwkrl.jpg",
+      "/images/review-refs/sport-coat/lapel-shawl-0a/1789356242731-zv4vzg.jpg"
+     ],
+     "decidedAt": "2026-09-14T03:24:14.835Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "sport-coat/lapel-shawl-0a",
      "current": true
     },
     {
@@ -52414,11 +52419,12 @@
    "label": "Italian Fishtail Lapel",
    "scope": "jacket",
    "current": {
-    "image": "/images/blueprints/supplier/9aca8479eb97__0006__Fish_mouth.jpg",
+    "image": "/images/generated/sport-coat/lapel-fishtail.webp",
     "techpackIllustration": "/images/blueprints/supplier/9aca8479eb97__0006__Fish_mouth.jpg",
     "illustration": "/images/blueprints/supplier/9aca8479eb97__0006__Fish_mouth.jpg",
     "illustrationStatus": "drawing",
     "photos": [
+     "/images/generated/sport-coat/lapel-fishtail.webp",
      "https://cdn.prod.website-files.com/5fb638ef16441f801761b4e1/5fb7a6ceaa1448c50ebeac0f_Camps-notch.jpeg",
      "https://cdn.prod.website-files.com/5fb638ef16441f801761b4e1/5fb7a6ce53b786ff5019c017_Arnys-Dirnelli-1.jpeg",
      "https://cdn.prod.website-files.com/5fb638ef16441f801761b4e1/5fb7a6ceee86f4fc0aaa6712_Cifonelli-notch.jpeg",
@@ -52434,6 +52440,23 @@
     ]
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 1,
+     "image": {
+      "path": ".craft-pipeline/sport-coat/lapel-fishtail/candidate-1.png",
+      "sha1": "a75b11a5f5f5971a5b1bc3e1f793dac57d828fb8",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-09-14T04:04:10.483Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "sport-coat/lapel-fishtail",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "bad-techpack",
@@ -52491,8 +52514,8 @@
      "ownerVerdictAtTheTime": "REJECTED"
     }
    ],
-   "state": "rejected-only",
-   "approvedPhotoEvents": 0,
+   "state": "has-owner-photo-approval",
+   "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 0,
    "rejectionEvents": 2,
    "illustration": {
@@ -55214,13 +55237,33 @@
    "label": "No.1 Double-Color Straight",
    "scope": "jacket",
    "current": {
-    "image": "/images/blueprints/supplier/e346a69313a8__055R__No.1_Double_color_handmade_straight_lapel_buttonhole_H.jpg",
+    "image": "/images/generated/jacket/lbh-no1-dc-straight.webp",
     "techpackIllustration": "/images/blueprints/supplier/e346a69313a8__055R__No.1_Double_color_handmade_straight_lapel_buttonhole_H.jpg",
     "illustration": "/images/blueprints/supplier/e346a69313a8__055R__No.1_Double_color_handmade_straight_lapel_buttonhole_H.jpg",
     "illustrationStatus": "drawing",
-    "photos": []
+    "photos": [
+     "/images/generated/jacket/lbh-no1-dc-straight.webp",
+     "/images/generated/sport-coat/lbh-no1-dc-straight.webp"
+    ]
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 1,
+     "image": {
+      "path": ".craft-pipeline/sport-coat/lbh-no1-dc-straight/candidate-1.png",
+      "sha1": "62d5df870264f079297bb58b3a86480edd6f5a2f",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-09-14T04:04:14.435Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "sport-coat/lbh-no1-dc-straight",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -55266,20 +55309,20 @@
      "machine": true,
      "image": {
       "path": "/images/generated/jacket/lbh-no1-dc-straight.webp",
-      "sha1": "c74ee8c233033a054c1b19d4e682a7a1469393cf",
+      "sha1": "096694b1eb8d83d7690af41b36feec53196b8297",
       "exists": true,
       "kind": "was-live",
       "alias": {
        "path": "/images/generated/jacket/lbh-no1-dc-straight.png",
-       "sha1": "b0040be85d7798811ed067f935dcfc459b749c96"
+       "sha1": "5b3d628ee5e5962c8fd441a7b989f6eb34131ce4"
       }
      },
      "replacedWith": "/images/blueprints/supplier/e346a69313a8__055R__No.1_Double_color_handmade_straight_lapel_buttonhole_H.jpg",
      "ownerVerdictAtTheTime": "REJECTED"
     }
    ],
-   "state": "rejected-only",
-   "approvedPhotoEvents": 0,
+   "state": "has-owner-photo-approval",
+   "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 0,
    "rejectionEvents": 2,
    "illustration": {
@@ -55384,13 +55427,33 @@
    "label": "No.1 Triple-Color Arc",
    "scope": "jacket",
    "current": {
-    "image": "/images/blueprints/supplier/a1cc16870a6b__055Y__No.1_Triple_color_arc_lapel_buttonhole_Handmade_Only_a.jpg",
+    "image": "/images/generated/jacket/lbh-no1-tc-arc.webp",
     "techpackIllustration": "/images/blueprints/supplier/a1cc16870a6b__055Y__No.1_Triple_color_arc_lapel_buttonhole_Handmade_Only_a.jpg",
     "illustration": "/images/blueprints/supplier/a1cc16870a6b__055Y__No.1_Triple_color_arc_lapel_buttonhole_Handmade_Only_a.jpg",
     "illustrationStatus": "drawing",
-    "photos": []
+    "photos": [
+     "/images/generated/jacket/lbh-no1-tc-arc.webp",
+     "/images/generated/sport-coat/lbh-no1-tc-arc.webp"
+    ]
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 1,
+     "image": {
+      "path": ".craft-pipeline/sport-coat/lbh-no1-tc-arc/candidate-1.png",
+      "sha1": "8b9181721b68f32c3132b247bcc916e80ce1ace9",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-09-14T04:04:12.760Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "sport-coat/lbh-no1-tc-arc",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -55436,20 +55499,20 @@
      "machine": true,
      "image": {
       "path": "/images/generated/jacket/lbh-no1-tc-arc.webp",
-      "sha1": "4a68579279dcf94816c2c7fecced5ed8b7df20bd",
+      "sha1": "3c5066703d344a667235c28a982c96d803fa9c5b",
       "exists": true,
       "kind": "was-live",
       "alias": {
        "path": "/images/generated/jacket/lbh-no1-tc-arc.png",
-       "sha1": "fe611f36a480eceb2984e99f28311d1142ae39e1"
+       "sha1": "69972aecd2fecf335dc1ef11cfa1d8b6280d61cf"
       }
      },
      "replacedWith": "/images/blueprints/supplier/a1cc16870a6b__055Y__No.1_Triple_color_arc_lapel_buttonhole_Handmade_Only_a.jpg",
      "ownerVerdictAtTheTime": "REJECTED"
     }
    ],
-   "state": "rejected-only",
-   "approvedPhotoEvents": 0,
+   "state": "has-owner-photo-approval",
+   "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 0,
    "rejectionEvents": 2,
    "illustration": {
@@ -57444,33 +57507,29 @@
    "label": "Left Double",
    "scope": "jacket",
    "current": {
-    "image": "/images/blueprints/supplier/fd7769c12fc9__0545__Double_left_bttn_hole.jpg",
+    "image": "/images/generated/sport-coat/lbp-left-double.webp",
     "techpackIllustration": "/images/blueprints/supplier/fd7769c12fc9__0545__Double_left_bttn_hole.jpg",
     "illustration": "/images/blueprints/supplier/fd7769c12fc9__0545__Double_left_bttn_hole.jpg",
     "illustrationStatus": "drawing",
-    "photos": []
+    "photos": [
+     "/images/generated/sport-coat/lbp-left-double.webp"
+    ]
    },
    "events": [
     {
      "source": "admin-portal",
-     "via": "map",
-     "verdict": "rejected",
-     "attempt": 1,
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 2,
      "image": {
-      "path": ".craft-pipeline/sport-coat/lbp-left-double/candidate-1.png",
-      "sha1": "47d16f68e23a3b0cd90b66f317dff47724aa089c",
+      "path": ".craft-pipeline/sport-coat/lbp-left-double/candidate-2.png",
+      "sha1": "ff47094daac255b7c64e817bd2cb18dddbef91a2",
       "exists": true,
-      "kind": "pipeline-candidate"
+      "kind": "logged-at-decision-time"
      },
-     "tags": [
-      "Unrealistic / AI look"
-     ],
-     "references": [
-      "/images/review-refs/sport-coat/lbp-left-double/1786410412711-enti9i.webp",
-      "/images/review-refs/sport-coat/lbp-left-double/1786410441043-0i04fj.jpg"
-     ],
-     "decidedAt": "2026-08-11T01:08:05.039Z",
-     "boundBy": "pipeline-spec",
+     "decidedAt": "2026-09-14T04:12:28.639Z",
+     "boundBy": "explicit-addr",
      "portalKey": "sport-coat/lbp-left-double",
      "current": true
     },
@@ -57487,12 +57546,12 @@
      "machine": true,
      "image": {
       "path": "/images/generated/sport-coat/lbp-left-double.webp",
-      "sha1": "6ca1d403f1cc6164294a853179b5f70a1014073d",
+      "sha1": "6431e04aa1c140ac7d9c237e4cb3740884bab69d",
       "exists": true,
       "kind": "was-live",
       "alias": {
        "path": "/images/generated/sport-coat/lbp-left-double.png",
-       "sha1": "47d16f68e23a3b0cd90b66f317dff47724aa089c"
+       "sha1": "ff47094daac255b7c64e817bd2cb18dddbef91a2"
       }
      },
      "replacedWith": "/images/blueprints/supplier/fd7769c12fc9__0545__Double_left_bttn_hole.jpg",
@@ -57511,10 +57570,10 @@
      }
     }
    ],
-   "state": "rejected-only",
-   "approvedPhotoEvents": 0,
+   "state": "has-owner-photo-approval",
+   "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 0,
-   "rejectionEvents": 1,
+   "rejectionEvents": 0,
    "illustration": {
     "path": "/images/blueprints/supplier/fd7769c12fc9__0545__Double_left_bttn_hole.jpg",
     "status": "drawing-unverified",
@@ -57532,35 +57591,29 @@
    "label": "Both Sides",
    "scope": "jacket",
    "current": {
-    "image": "/images/blueprints/supplier/68b420f69832__0543__Right_Left_bttn_hole.jpg",
+    "image": "/images/generated/sport-coat/lbp-both.webp",
     "techpackIllustration": "/images/blueprints/supplier/68b420f69832__0543__Right_Left_bttn_hole.jpg",
     "illustration": "/images/blueprints/supplier/68b420f69832__0543__Right_Left_bttn_hole.jpg",
     "illustrationStatus": "drawing",
-    "photos": []
+    "photos": [
+     "/images/generated/sport-coat/lbp-both.webp"
+    ]
    },
    "events": [
     {
      "source": "admin-portal",
-     "via": "map",
-     "verdict": "rejected",
-     "attempt": 2,
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 4,
      "image": {
-      "path": ".craft-pipeline/sport-coat/lbp-both/candidate-2.png",
-      "sha1": "44bd596e79129087ff538c77a2ada3353fac08d8",
+      "path": ".craft-pipeline/sport-coat/lbp-both/candidate-4.png",
+      "sha1": "0ebd84448452f9014e4d58196b67c80763e5ed20",
       "exists": true,
-      "kind": "pipeline-candidate"
+      "kind": "logged-at-decision-time"
      },
-     "notes": "buttonhole is to far down the lapel",
-     "tags": [
-      "Wrong shape / outline"
-     ],
-     "references": [
-      "/images/review-refs/sport-coat/lbp-both/1786400897710-j6ncj5.jpg",
-      "/images/review-refs/sport-coat/lbp-both/1786400909351-rwc25c.jpg",
-      "/images/review-refs/sport-coat/lbp-both/1786400917142-kufs1y.jpg"
-     ],
-     "decidedAt": "2026-08-10T22:33:43.528Z",
-     "boundBy": "pipeline-spec",
+     "decidedAt": "2026-09-14T04:06:23.724Z",
+     "boundBy": "explicit-addr",
      "portalKey": "sport-coat/lbp-both",
      "current": true
     },
@@ -57577,12 +57630,12 @@
      "machine": true,
      "image": {
       "path": "/images/generated/sport-coat/lbp-both.webp",
-      "sha1": "8b7e8600dc4f9fc29b95017bbff494992cfbc8ec",
+      "sha1": "f7e590de82c7d17edb2f9c8f6ac25573fc2cee9f",
       "exists": true,
       "kind": "was-live",
       "alias": {
        "path": "/images/generated/sport-coat/lbp-both.png",
-       "sha1": "d937a7965b608476960a2679333932d451397c8a"
+       "sha1": "0ebd84448452f9014e4d58196b67c80763e5ed20"
       }
      },
      "replacedWith": "/images/blueprints/supplier/68b420f69832__0543__Right_Left_bttn_hole.jpg",
@@ -57601,10 +57654,10 @@
      }
     }
    ],
-   "state": "rejected-only",
-   "approvedPhotoEvents": 0,
+   "state": "has-owner-photo-approval",
+   "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 0,
-   "rejectionEvents": 1,
+   "rejectionEvents": 0,
    "illustration": {
     "path": "/images/blueprints/supplier/68b420f69832__0543__Right_Left_bttn_hole.jpg",
     "status": "drawing-unverified",
@@ -60651,11 +60704,13 @@
    "label": "Trapezoid Pocket",
    "scope": "jacket",
    "current": {
-    "image": "/images/generated/suit-2pc/cp-trapezoid.webp",
+    "image": "/images/generated/jacket/cp-trapezoid.webp",
     "techpackIllustration": "/images/blueprints/supplier/9dc885487d07__00J2__Trapezoid.jpg",
     "illustration": "/images/blueprints/supplier/9dc885487d07__00J2__Trapezoid.jpg",
     "illustrationStatus": "drawing",
     "photos": [
+     "/images/generated/jacket/cp-trapezoid.webp",
+     "/images/review/sport-coat__cp-trapezoid__owner.webp",
      "https://resource.kutetailor.com/comm/style/detail/173132335851625.png",
      "https://cdn.shopify.com/s/files/1/1383/8317/files/Pini_Parma-37_large.jpg?v=1588751211"
     ],
@@ -63354,6 +63409,32 @@
       "/images/review-refs/sport-coat/lp-jetted-4/1786509364409-6522au.jpg"
      ],
      "decidedAt": "2026-08-12T04:37:00.207Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "sport-coat/lp-jetted-4",
+     "current": false
+    },
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 2,
+     "image": {
+      "path": ".craft-pipeline/sport-coat/lp-jetted-4/candidate-2.png",
+      "sha1": "309fa6d6b15f6d5bac77ce54a0181a487ff1ce16",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "notes": "bottom welt is wider than the top. a jetted pocket has two equal edges",
+     "tags": [
+      "Wrong size or proportion"
+     ],
+     "references": [
+      "/images/review-refs/sport-coat/lp-jetted-4/1789356034915-kvq5k9.jpg",
+      "/images/review-refs/sport-coat/lp-jetted-4/1789356043815-vo211c.jpg",
+      "/images/review-refs/sport-coat/lp-jetted-4/1789356064524-kqcclf.jpg"
+     ],
+     "decidedAt": "2026-09-14T03:22:01.689Z",
      "boundBy": "explicit-addr",
      "portalKey": "sport-coat/lp-jetted-4",
      "current": true
@@ -68707,11 +68788,13 @@
    "label": "Standard",
    "scope": "jacket",
    "current": {
-    "image": "/images/supplier-bb/KWAML/Z.jpg",
+    "image": "/images/generated/sport-coat/cd-standard.webp",
     "techpackIllustration": "/images/supplier-bb/KWAML/Z.jpg",
     "illustration": "/images/supplier-bb/KWAML/Z.jpg",
     "illustrationStatus": "drawing",
-    "photos": []
+    "photos": [
+     "/images/generated/sport-coat/cd-standard.webp"
+    ]
    },
    "events": [
     {
@@ -68731,6 +68814,23 @@
       "Wrong garment or wrong part"
      ],
      "decidedAt": "2026-08-12T04:42:23.875Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "sport-coat/cd-standard",
+     "current": false
+    },
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 2,
+     "image": {
+      "path": ".craft-pipeline/sport-coat/cd-standard/candidate-2.png",
+      "sha1": "1e0c14da6419730a82bed9043b0e43e65b250fc8",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-09-14T03:24:38.734Z",
      "boundBy": "explicit-addr",
      "portalKey": "sport-coat/cd-standard",
      "current": true
@@ -68775,10 +68875,10 @@
      "ownerVerdictAtTheTime": "never-reviewed"
     }
    ],
-   "state": "rejected-only",
-   "approvedPhotoEvents": 0,
+   "state": "has-owner-photo-approval",
+   "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 0,
-   "rejectionEvents": 2,
+   "rejectionEvents": 1,
    "illustration": {
     "path": "/images/supplier-bb/KWAML/Z.jpg",
     "status": "drawing-unverified",
@@ -68796,12 +68896,29 @@
    "label": "+2 cm",
    "scope": "jacket",
    "current": {
-    "image": null,
+    "image": "/images/generated/sport-coat/cd-plus-2.webp",
     "techpackIllustration": "/images/supplier-bb/KWAML/A.jpg",
     "illustration": "/images/supplier-bb/KWAML/A.jpg",
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 1,
+     "image": {
+      "path": ".craft-pipeline/sport-coat/cd-plus-2/candidate-1.png",
+      "sha1": "cad8b0b28f036b0015f0d995590ad2bf24b95809",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-09-14T04:04:56.414Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "sport-coat/cd-plus-2",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "bad-techpack",
@@ -68825,8 +68942,8 @@
      "decidedAt": "2026-07-30"
     }
    ],
-   "state": "rejected-only",
-   "approvedPhotoEvents": 0,
+   "state": "has-owner-photo-approval",
+   "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 0,
    "rejectionEvents": 1,
    "illustration": {
@@ -68846,12 +68963,29 @@
    "label": "+3 cm",
    "scope": "jacket",
    "current": {
-    "image": null,
+    "image": "/images/generated/sport-coat/cd-plus-3.webp",
     "techpackIllustration": "/images/supplier-bb/KWAML/B.jpg",
     "illustration": "/images/supplier-bb/KWAML/B.jpg",
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 1,
+     "image": {
+      "path": ".craft-pipeline/sport-coat/cd-plus-3/candidate-1.png",
+      "sha1": "2443fb401cf2ca13c0c398412f1ee0bb9a825507",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-09-14T04:04:52.934Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "sport-coat/cd-plus-3",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "bad-techpack",
@@ -68875,8 +69009,8 @@
      "decidedAt": "2026-07-30"
     }
    ],
-   "state": "rejected-only",
-   "approvedPhotoEvents": 0,
+   "state": "has-owner-photo-approval",
+   "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 0,
    "rejectionEvents": 1,
    "illustration": {
@@ -68903,6 +69037,26 @@
    },
    "events": [
     {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 1,
+     "image": {
+      "path": ".craft-pipeline/sport-coat/hem-round/candidate-1.png",
+      "sha1": "01500d07828cd785289e91ec1f2c20464eae7ab3",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Unrealistic / AI look"
+     ],
+     "decidedAt": "2026-09-14T04:04:44.043Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "sport-coat/hem-round",
+     "current": true
+    },
+    {
      "source": "july-v3",
      "verdict": "bad-techpack",
      "julyKey": "jacket|hem-gusset|hem-round",
@@ -68928,7 +69082,7 @@
    "state": "rejected-only",
    "approvedPhotoEvents": 0,
    "illustrationKeepEvents": 0,
-   "rejectionEvents": 1,
+   "rejectionEvents": 2,
    "illustration": {
     "path": "/images/supplier-bb/REQXB/P.jpg",
     "status": "drawing-unverified",
@@ -69017,7 +69171,7 @@
    "label": "Squared Bottom",
    "scope": "jacket",
    "current": {
-    "image": "/images/supplier-bb/REQXB/Q.jpg",
+    "image": "/images/generated/sport-coat/hem-squared.webp",
     "techpackIllustration": "/images/supplier-bb/REQXB/Q.jpg",
     "illustration": "/images/supplier-bb/REQXB/Q.jpg",
     "illustrationStatus": "drawing"
@@ -69025,24 +69179,18 @@
    "events": [
     {
      "source": "admin-portal",
-     "via": "map",
-     "verdict": "rejected",
-     "attempt": 1,
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 2,
      "image": {
-      "path": ".craft-pipeline/sport-coat/hem-squared/candidate-1.png",
-      "sha1": "dff8b46b5a9802c67565cca63ec757045a7f6651",
+      "path": ".craft-pipeline/sport-coat/hem-squared/candidate-2.png",
+      "sha1": "aeba7921ce5e3cb4259c408cc88bdca69dd10445",
       "exists": true,
-      "kind": "pipeline-candidate"
+      "kind": "logged-at-decision-time"
      },
-     "tags": [
-      "Unrealistic / AI look"
-     ],
-     "references": [
-      "/images/review-refs/sport-coat/hem-squared/1786402134831-5ntcxr.webp",
-      "/images/review-refs/sport-coat/hem-squared/1786402139405-fm4kcg.webp"
-     ],
-     "decidedAt": "2026-08-10T22:49:13.640Z",
-     "boundBy": "pipeline-spec",
+     "decidedAt": "2026-09-14T04:12:24.705Z",
+     "boundBy": "explicit-addr",
      "portalKey": "sport-coat/hem-squared",
      "current": true
     },
@@ -69074,12 +69222,12 @@
      "machine": true,
      "image": {
       "path": "/images/generated/sport-coat/hem-squared.webp",
-      "sha1": "38068d2795b831fc127a671b32d4ff61e087a89c",
+      "sha1": "b5d84e6dee501e430375b2ba35da8860206bb57c",
       "exists": true,
       "kind": "was-live",
       "alias": {
        "path": "/images/generated/sport-coat/hem-squared.png",
-       "sha1": "dff8b46b5a9802c67565cca63ec757045a7f6651"
+       "sha1": "aeba7921ce5e3cb4259c408cc88bdca69dd10445"
       }
      },
      "replacedWith": "/images/supplier-bb/REQXB/Q.jpg",
@@ -69098,10 +69246,10 @@
      }
     }
    ],
-   "state": "rejected-only",
-   "approvedPhotoEvents": 0,
+   "state": "has-owner-photo-approval",
+   "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 0,
-   "rejectionEvents": 2,
+   "rejectionEvents": 1,
    "illustration": {
     "path": "/images/supplier-bb/REQXB/Q.jpg",
     "status": "drawing-unverified",
@@ -69226,6 +69374,26 @@
    },
    "events": [
     {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 1,
+     "image": {
+      "path": ".craft-pipeline/sport-coat/hem-dr-round/candidate-1.png",
+      "sha1": "80b766976045d7457d6733754a31c9dea6f9e133",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Unrealistic / AI look"
+     ],
+     "decidedAt": "2026-09-14T04:04:48.423Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "sport-coat/hem-dr-round",
+     "current": true
+    },
+    {
      "source": "july-v3",
      "verdict": "bad-techpack",
      "julyKey": "jacket|hem-gusset|hem-dr-round",
@@ -69251,7 +69419,7 @@
    "state": "rejected-only",
    "approvedPhotoEvents": 0,
    "illustrationKeepEvents": 0,
-   "rejectionEvents": 1,
+   "rejectionEvents": 2,
    "illustration": {
     "path": "/images/supplier-bb/REQXB/D.jpg",
     "status": "drawing-unverified",
@@ -71367,26 +71535,24 @@
    "events": [
     {
      "source": "admin-portal",
-     "via": "map",
+     "via": "log",
+     "event": "decision",
      "verdict": "rejected",
-     "attempt": 1,
+     "attempt": 3,
      "image": {
-      "path": ".craft-pipeline/sport-coat/sbh-straight/candidate-1.png",
-      "sha1": "152165cd25975ed1fecc7ec39986812de984a426",
+      "path": ".craft-pipeline/sport-coat/sbh-straight/candidate-3.png",
+      "sha1": "4d1a92af66ab0837c4437978e11ee0aa8855dd4c",
       "exists": true,
-      "kind": "pipeline-candidate"
+      "kind": "logged-at-decision-time"
      },
      "tags": [
+      "Wrong shape / outline",
+      "Wrong size or proportion",
+      "Annotation or colour bled in from the drawing",
       "Unrealistic / AI look"
      ],
-     "references": [
-      "/images/review-refs/sport-coat/sbh-straight/1786410631460-ptiq45.webp",
-      "/images/review-refs/sport-coat/sbh-straight/1786410642429-9oq55z.webp",
-      "/images/review-refs/sport-coat/sbh-straight/1786410652419-l6vlql.webp",
-      "/images/review-refs/sport-coat/sbh-straight/1786410660730-wkvtyh.webp"
-     ],
-     "decidedAt": "2026-08-11T01:11:08.736Z",
-     "boundBy": "pipeline-spec",
+     "decidedAt": "2026-09-14T04:10:30.593Z",
+     "boundBy": "explicit-addr",
      "portalKey": "sport-coat/sbh-straight",
      "current": true
     },
@@ -71463,33 +71629,29 @@
    "label": "Slanted",
    "scope": "jacket",
    "current": {
-    "image": "/images/blueprints/factory/fdbc0cbb0bb5__AAAN__Normal_slanted.jpg",
+    "image": "/images/generated/sport-coat/sbh-slant.webp",
     "techpackIllustration": "/images/blueprints/factory/fdbc0cbb0bb5__AAAN__Normal_slanted.jpg",
     "illustration": "/images/blueprints/factory/fdbc0cbb0bb5__AAAN__Normal_slanted.jpg",
     "illustrationStatus": "drawing",
-    "photos": []
+    "photos": [
+     "/images/generated/sport-coat/sbh-slant.webp"
+    ]
    },
    "events": [
     {
      "source": "admin-portal",
-     "via": "map",
-     "verdict": "rejected",
-     "attempt": 3,
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 5,
      "image": {
-      "path": ".craft-pipeline/sport-coat/sbh-slant/candidate-3.png",
-      "sha1": "bb41f2f17b34f8876e004b3387d45e874ae56325",
+      "path": ".craft-pipeline/sport-coat/sbh-slant/candidate-5.png",
+      "sha1": "55b96b914ebe6dc488d9f48c3e46e3ffeaee08b9",
       "exists": true,
-      "kind": "pipeline-candidate"
+      "kind": "logged-at-decision-time"
      },
-     "notes": "THE FOLD IN THE ILLISTARTION IS A CUTAWAY TO SHOW TYHE FUNCTIUONALITY OF THE SLEEVE NOT TO BE TAKEN LITERALLY",
-     "tags": [
-      "Unrealistic / AI look"
-     ],
-     "references": [
-      "/images/review-refs/sport-coat/sbh-slant/1786389040327-zelzc9.webp"
-     ],
-     "decidedAt": "2026-08-10T19:10:46.433Z",
-     "boundBy": "pipeline-spec",
+     "decidedAt": "2026-09-14T04:06:15.701Z",
+     "boundBy": "explicit-addr",
      "portalKey": "sport-coat/sbh-slant",
      "current": true
     },
@@ -71521,12 +71683,12 @@
      "machine": true,
      "image": {
       "path": "/images/generated/sport-coat/sbh-slant.webp",
-      "sha1": "21438f72e92a275362d20ede64bafd59f1a3b8a2",
+      "sha1": "aa6afddd043d2fa7d53a013f8ba66c74ff6d58f0",
       "exists": true,
       "kind": "was-live",
       "alias": {
        "path": "/images/generated/sport-coat/sbh-slant.png",
-       "sha1": "bb41f2f17b34f8876e004b3387d45e874ae56325"
+       "sha1": "55b96b914ebe6dc488d9f48c3e46e3ffeaee08b9"
       }
      },
      "replacedWith": "/images/blueprints/factory/fdbc0cbb0bb5__AAAN__Normal_slanted.jpg",
@@ -71546,9 +71708,9 @@
     }
    ],
    "state": "has-owner-photo-approval",
-   "approvedPhotoEvents": 1,
+   "approvedPhotoEvents": 2,
    "illustrationKeepEvents": 0,
-   "rejectionEvents": 1,
+   "rejectionEvents": 0,
    "illustration": {
     "path": "/images/blueprints/factory/fdbc0cbb0bb5__AAAN__Normal_slanted.jpg",
     "status": "drawing-unverified",
@@ -72649,6 +72811,26 @@
    },
    "events": [
     {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 1,
+     "image": {
+      "path": ".craft-pipeline/sport-coat/hm-individual/candidate-1.png",
+      "sha1": "a45c9570136dea98e4cde55361451bc95577877a",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Unrealistic / AI look"
+     ],
+     "decidedAt": "2026-09-14T04:04:40.023Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "sport-coat/hm-individual",
+     "current": true
+    },
+    {
      "source": "july-v3",
      "verdict": "bad-techpack",
      "julyKey": "jacket|handmade-type|hm-individual",
@@ -72749,7 +72931,7 @@
    "state": "rejected-only",
    "approvedPhotoEvents": 0,
    "illustrationKeepEvents": 0,
-   "rejectionEvents": 6,
+   "rejectionEvents": 7,
    "illustration": {
     "path": "/images/blueprints/factory/01c43a2f9084__08C0__Manually_sewing_lapel.png",
     "status": "drawing-unverified",
@@ -77457,6 +77639,26 @@
    },
    "events": [
     {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 1,
+     "image": {
+      "path": ".craft-pipeline/sport-coat/ipc-d/candidate-1.png",
+      "sha1": "2dcb70c0dcbae60c1a71452cc2c9de23ccc8bb14",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Unrealistic / AI look"
+     ],
+     "decidedAt": "2026-09-14T04:04:29.563Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "sport-coat/ipc-d",
+     "current": true
+    },
+    {
      "source": "july-v3",
      "verdict": "bad-techpack",
      "julyKey": "jacket|inner-pocket-closure|ipc-d",
@@ -77482,7 +77684,7 @@
    "state": "rejected-only",
    "approvedPhotoEvents": 0,
    "illustrationKeepEvents": 0,
-   "rejectionEvents": 1,
+   "rejectionEvents": 2,
    "illustration": {
     "path": "/images/supplier-bb/REKPO/A.jpg",
     "status": "drawing-unverified",
@@ -77500,12 +77702,29 @@
    "label": "I-Bartack",
    "scope": "jacket",
    "current": {
-    "image": null,
+    "image": "/images/generated/jacket/ipc-i.webp",
     "techpackIllustration": "/images/supplier-bb/REKPO/B.jpg",
     "illustration": "/images/supplier-bb/REKPO/B.jpg",
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 1,
+     "image": {
+      "path": ".craft-pipeline/sport-coat/ipc-i/candidate-1.png",
+      "sha1": "cf200e5eed90c45d0fc2ac4c099c4a681918963b",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-09-14T04:04:22.537Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "sport-coat/ipc-i",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "bad-techpack",
@@ -77529,8 +77748,8 @@
      "decidedAt": "2026-07-30"
     }
    ],
-   "state": "rejected-only",
-   "approvedPhotoEvents": 0,
+   "state": "has-owner-photo-approval",
+   "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 0,
    "rejectionEvents": 1,
    "illustration": {
@@ -77550,12 +77769,29 @@
    "label": "X-Bartack",
    "scope": "jacket",
    "current": {
-    "image": null,
+    "image": "/images/generated/jacket/ipc-x.webp",
     "techpackIllustration": "/images/supplier-bb/REKPO/C.jpg",
     "illustration": "/images/supplier-bb/REKPO/C.jpg",
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 1,
+     "image": {
+      "path": ".craft-pipeline/sport-coat/ipc-x/candidate-1.png",
+      "sha1": "fafd9fdb0632994bdd06a0fca37d4695b5110797",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-09-14T04:04:15.810Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "sport-coat/ipc-x",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "bad-techpack",
@@ -77579,8 +77815,8 @@
      "decidedAt": "2026-07-30"
     }
    ],
-   "state": "rejected-only",
-   "approvedPhotoEvents": 0,
+   "state": "has-owner-photo-approval",
+   "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 0,
    "rejectionEvents": 1,
    "illustration": {
@@ -87277,6 +87513,34 @@
    },
    "events": [
     {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 1,
+     "image": {
+      "path": ".craft-pipeline/suit-2pc/lapel-fishtail/candidate-1.png",
+      "sha1": "0d83ef505507cca1fa0a15692dd1b165c14a2448",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Feature not visible / too small in frame"
+     ],
+     "references": [
+      "/images/review-refs/suit-2pc/lapel-fishtail/1789356740254-dd247v.jpg",
+      "/images/review-refs/suit-2pc/lapel-fishtail/1789356743878-ixvy7o.jpg",
+      "/images/review-refs/suit-2pc/lapel-fishtail/1789356747048-e45cq1.jpg",
+      "/images/review-refs/suit-2pc/lapel-fishtail/1789356752212-c2sa8d.jpg",
+      "/images/review-refs/suit-2pc/lapel-fishtail/1789356769186-0qexbz.jpg",
+      "/images/review-refs/suit-2pc/lapel-fishtail/1789356781333-65nehu.jpg"
+     ],
+     "decidedAt": "2026-09-14T03:33:47.093Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-2pc/lapel-fishtail",
+     "current": true
+    },
+    {
      "source": "july-v3",
      "verdict": "bad-techpack",
      "julyKey": "jacket|lapel-style|lapel-fishtail",
@@ -87336,7 +87600,7 @@
    "state": "rejected-only",
    "approvedPhotoEvents": 0,
    "illustrationKeepEvents": 0,
-   "rejectionEvents": 2,
+   "rejectionEvents": 3,
    "illustration": {
     "path": "/images/blueprints/supplier/9aca8479eb97__0006__Fish_mouth.jpg",
     "status": "drawing-unverified",
@@ -90079,13 +90343,33 @@
    "label": "No.1 Double-Color Straight",
    "scope": "jacket",
    "current": {
-    "image": "/images/blueprints/supplier/e346a69313a8__055R__No.1_Double_color_handmade_straight_lapel_buttonhole_H.jpg",
+    "image": "/images/generated/jacket/lbh-no1-dc-straight.webp",
     "techpackIllustration": "/images/blueprints/supplier/e346a69313a8__055R__No.1_Double_color_handmade_straight_lapel_buttonhole_H.jpg",
     "illustration": "/images/blueprints/supplier/e346a69313a8__055R__No.1_Double_color_handmade_straight_lapel_buttonhole_H.jpg",
     "illustrationStatus": "drawing",
-    "photos": []
+    "photos": [
+     "/images/generated/jacket/lbh-no1-dc-straight.webp",
+     "/images/generated/sport-coat/lbh-no1-dc-straight.webp"
+    ]
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 1,
+     "image": {
+      "path": ".craft-pipeline/suit-2pc/lbh-no1-dc-straight/candidate-1.png",
+      "sha1": "5b3d628ee5e5962c8fd441a7b989f6eb34131ce4",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-09-14T03:44:19.065Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-2pc/lbh-no1-dc-straight",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -90131,20 +90415,20 @@
      "machine": true,
      "image": {
       "path": "/images/generated/jacket/lbh-no1-dc-straight.webp",
-      "sha1": "c74ee8c233033a054c1b19d4e682a7a1469393cf",
+      "sha1": "096694b1eb8d83d7690af41b36feec53196b8297",
       "exists": true,
       "kind": "was-live",
       "alias": {
        "path": "/images/generated/jacket/lbh-no1-dc-straight.png",
-       "sha1": "b0040be85d7798811ed067f935dcfc459b749c96"
+       "sha1": "5b3d628ee5e5962c8fd441a7b989f6eb34131ce4"
       }
      },
      "replacedWith": "/images/blueprints/supplier/e346a69313a8__055R__No.1_Double_color_handmade_straight_lapel_buttonhole_H.jpg",
      "ownerVerdictAtTheTime": "REJECTED"
     }
    ],
-   "state": "rejected-only",
-   "approvedPhotoEvents": 0,
+   "state": "has-owner-photo-approval",
+   "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 0,
    "rejectionEvents": 2,
    "illustration": {
@@ -90249,13 +90533,33 @@
    "label": "No.1 Triple-Color Arc",
    "scope": "jacket",
    "current": {
-    "image": "/images/blueprints/supplier/a1cc16870a6b__055Y__No.1_Triple_color_arc_lapel_buttonhole_Handmade_Only_a.jpg",
+    "image": "/images/generated/jacket/lbh-no1-tc-arc.webp",
     "techpackIllustration": "/images/blueprints/supplier/a1cc16870a6b__055Y__No.1_Triple_color_arc_lapel_buttonhole_Handmade_Only_a.jpg",
     "illustration": "/images/blueprints/supplier/a1cc16870a6b__055Y__No.1_Triple_color_arc_lapel_buttonhole_Handmade_Only_a.jpg",
     "illustrationStatus": "drawing",
-    "photos": []
+    "photos": [
+     "/images/generated/jacket/lbh-no1-tc-arc.webp",
+     "/images/generated/sport-coat/lbh-no1-tc-arc.webp"
+    ]
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 1,
+     "image": {
+      "path": ".craft-pipeline/suit-2pc/lbh-no1-tc-arc/candidate-1.png",
+      "sha1": "69972aecd2fecf335dc1ef11cfa1d8b6280d61cf",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-09-14T03:44:15.556Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-2pc/lbh-no1-tc-arc",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -90301,20 +90605,20 @@
      "machine": true,
      "image": {
       "path": "/images/generated/jacket/lbh-no1-tc-arc.webp",
-      "sha1": "4a68579279dcf94816c2c7fecced5ed8b7df20bd",
+      "sha1": "3c5066703d344a667235c28a982c96d803fa9c5b",
       "exists": true,
       "kind": "was-live",
       "alias": {
        "path": "/images/generated/jacket/lbh-no1-tc-arc.png",
-       "sha1": "fe611f36a480eceb2984e99f28311d1142ae39e1"
+       "sha1": "69972aecd2fecf335dc1ef11cfa1d8b6280d61cf"
       }
      },
      "replacedWith": "/images/blueprints/supplier/a1cc16870a6b__055Y__No.1_Triple_color_arc_lapel_buttonhole_Handmade_Only_a.jpg",
      "ownerVerdictAtTheTime": "REJECTED"
     }
    ],
-   "state": "rejected-only",
-   "approvedPhotoEvents": 0,
+   "state": "has-owner-photo-approval",
+   "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 0,
    "rejectionEvents": 2,
    "illustration": {
@@ -92286,7 +92590,10 @@
     "techpackIllustration": "/images/blueprints/supplier/fd7769c12fc9__0545__Double_left_bttn_hole.jpg",
     "illustration": "/images/blueprints/supplier/fd7769c12fc9__0545__Double_left_bttn_hole.jpg",
     "illustrationStatus": "drawing",
-    "photos": []
+    "photos": [
+     "/images/generated/sport-coat/lbp-left-double.webp",
+     "/images/review/suit-2pc__lbp-left-double__owner.webp"
+    ]
    },
    "events": [
     {
@@ -92319,12 +92626,12 @@
      "machine": true,
      "image": {
       "path": "/images/generated/sport-coat/lbp-left-double.webp",
-      "sha1": "6ca1d403f1cc6164294a853179b5f70a1014073d",
+      "sha1": "6431e04aa1c140ac7d9c237e4cb3740884bab69d",
       "exists": true,
       "kind": "was-live",
       "alias": {
        "path": "/images/generated/sport-coat/lbp-left-double.png",
-       "sha1": "47d16f68e23a3b0cd90b66f317dff47724aa089c"
+       "sha1": "ff47094daac255b7c64e817bd2cb18dddbef91a2"
       }
      },
      "replacedWith": "/images/blueprints/supplier/fd7769c12fc9__0545__Double_left_bttn_hole.jpg",
@@ -92394,12 +92701,12 @@
      "machine": true,
      "image": {
       "path": "/images/generated/sport-coat/lbp-both.webp",
-      "sha1": "8b7e8600dc4f9fc29b95017bbff494992cfbc8ec",
+      "sha1": "f7e590de82c7d17edb2f9c8f6ac25573fc2cee9f",
       "exists": true,
       "kind": "was-live",
       "alias": {
        "path": "/images/generated/sport-coat/lbp-both.png",
-       "sha1": "d937a7965b608476960a2679333932d451397c8a"
+       "sha1": "0ebd84448452f9014e4d58196b67c80763e5ed20"
       }
      },
      "replacedWith": "/images/blueprints/supplier/68b420f69832__0543__Right_Left_bttn_hole.jpg",
@@ -95684,11 +95991,12 @@
    "label": "Trapezoid Pocket",
    "scope": "jacket",
    "current": {
-    "image": "/images/blueprints/supplier/9dc885487d07__00J2__Trapezoid.jpg",
+    "image": "/images/generated/jacket/cp-trapezoid.webp",
     "techpackIllustration": "/images/blueprints/supplier/9dc885487d07__00J2__Trapezoid.jpg",
     "illustration": "/images/blueprints/supplier/9dc885487d07__00J2__Trapezoid.jpg",
     "illustrationStatus": "drawing",
     "photos": [
+     "/images/generated/jacket/cp-trapezoid.webp",
      "https://resource.kutetailor.com/comm/style/detail/173132335851625.png",
      "https://cdn.shopify.com/s/files/1/1383/8317/files/Pini_Parma-37_large.jpg?v=1588751211"
     ],
@@ -95700,18 +96008,18 @@
    "events": [
     {
      "source": "admin-portal",
-     "via": "map",
-     "verdict": "rejected",
-     "attempt": 2,
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 3,
      "image": {
-      "path": ".craft-pipeline/suit-2pc/cp-trapezoid/candidate-2.png",
-      "sha1": "6f77d44e17acb0e3789c7318d3083e8e79900345",
+      "path": ".craft-pipeline/suit-2pc/cp-trapezoid/candidate-3.png",
+      "sha1": "ca00f5f2d794681326e8474f29b975af0af76f78",
       "exists": true,
-      "kind": "pipeline-candidate"
+      "kind": "logged-at-decision-time"
      },
-     "notes": "pocket welt should be in the shape of a Trapezoid narrower on the left side than the right side. angle on top bottom flat",
-     "decidedAt": "2026-08-10T19:29:30.617Z",
-     "boundBy": "pipeline-spec",
+     "decidedAt": "2026-09-14T04:07:11.109Z",
+     "boundBy": "explicit-addr",
      "portalKey": "suit-2pc/cp-trapezoid",
      "current": true
     },
@@ -95844,10 +96152,10 @@
      }
     }
    ],
-   "state": "illustration-kept-only",
-   "approvedPhotoEvents": 0,
+   "state": "has-owner-photo-approval",
+   "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 1,
-   "rejectionEvents": 6,
+   "rejectionEvents": 5,
    "illustration": {
     "path": "/images/blueprints/supplier/9dc885487d07__00J2__Trapezoid.jpg",
     "status": "drawing-unverified",
@@ -104369,6 +104677,26 @@
    },
    "events": [
     {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 1,
+     "image": {
+      "path": ".craft-pipeline/suit-2pc/cd-plus-2/candidate-1.png",
+      "sha1": "b0044b08edfac6ca0f5291a28b11e0bba7a54795",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Feature not visible / too small in frame"
+     ],
+     "decidedAt": "2026-09-14T03:33:55.528Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-2pc/cd-plus-2",
+     "current": true
+    },
+    {
      "source": "july-v3",
      "verdict": "bad-techpack",
      "julyKey": "jacket|chest-dart|cd-plus-2",
@@ -104394,7 +104722,7 @@
    "state": "rejected-only",
    "approvedPhotoEvents": 0,
    "illustrationKeepEvents": 0,
-   "rejectionEvents": 1,
+   "rejectionEvents": 2,
    "illustration": {
     "path": "/images/supplier-bb/KWAML/A.jpg",
     "status": "drawing-unverified",
@@ -104418,6 +104746,27 @@
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 1,
+     "image": {
+      "path": ".craft-pipeline/suit-2pc/cd-plus-3/candidate-1.png",
+      "sha1": "c59ef2afafc3b2a13bab7f4bd923cbff9d457e05",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "notes": "Craft option is showing the chest dart on the jacket being moved 3cm to the left",
+     "tags": [
+      "Feature not visible / too small in frame"
+     ],
+     "decidedAt": "2026-09-14T03:26:09.655Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-2pc/cd-plus-3",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "bad-techpack",
@@ -104444,7 +104793,7 @@
    "state": "rejected-only",
    "approvedPhotoEvents": 0,
    "illustrationKeepEvents": 0,
-   "rejectionEvents": 1,
+   "rejectionEvents": 2,
    "illustration": {
     "path": "/images/supplier-bb/KWAML/B.jpg",
     "status": "drawing-unverified",
@@ -104468,6 +104817,35 @@
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 1,
+     "image": {
+      "path": ".craft-pipeline/suit-2pc/hem-round/candidate-1.png",
+      "sha1": "01df81994151236b66c827475bfe222fd41a0180",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Unrealistic / AI look"
+     ],
+     "references": [
+      "/images/review-refs/suit-2pc/hem-round/1789357973533-zdchpy.webp",
+      "/images/review-refs/suit-2pc/hem-round/1789357977351-kufzri.webp",
+      "/images/review-refs/suit-2pc/hem-round/1789357981767-naf5yg.webp",
+      "/images/review-refs/suit-2pc/hem-round/1789357985198-bgbyd8.webp",
+      "/images/review-refs/suit-2pc/hem-round/1789357989187-otex4s.jpg",
+      "/images/review-refs/suit-2pc/hem-round/1789357995171-vegnj2.jpg",
+      "/images/review-refs/suit-2pc/hem-round/1789357998607-ksjgzq.jpg"
+     ],
+     "decidedAt": "2026-09-14T03:53:21.272Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-2pc/hem-round",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "bad-techpack",
@@ -104494,7 +104872,7 @@
    "state": "rejected-only",
    "approvedPhotoEvents": 0,
    "illustrationKeepEvents": 0,
-   "rejectionEvents": 1,
+   "rejectionEvents": 2,
    "illustration": {
     "path": "/images/supplier-bb/REQXB/P.jpg",
     "status": "drawing-unverified",
@@ -104644,12 +105022,12 @@
      "machine": true,
      "image": {
       "path": "/images/generated/sport-coat/hem-squared.webp",
-      "sha1": "38068d2795b831fc127a671b32d4ff61e087a89c",
+      "sha1": "b5d84e6dee501e430375b2ba35da8860206bb57c",
       "exists": true,
       "kind": "was-live",
       "alias": {
        "path": "/images/generated/sport-coat/hem-squared.png",
-       "sha1": "dff8b46b5a9802c67565cca63ec757045a7f6651"
+       "sha1": "aeba7921ce5e3cb4259c408cc88bdca69dd10445"
       }
      },
      "replacedWith": "/images/supplier-bb/REQXB/Q.jpg",
@@ -104784,6 +105162,26 @@
    },
    "events": [
     {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 1,
+     "image": {
+      "path": ".craft-pipeline/suit-2pc/hem-dr-round/candidate-1.png",
+      "sha1": "fbf86d1c5442a9d2a31e5cd1f1c954400da456db",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Unrealistic / AI look"
+     ],
+     "decidedAt": "2026-09-14T03:54:58.367Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-2pc/hem-dr-round",
+     "current": true
+    },
+    {
      "source": "july-v3",
      "verdict": "bad-techpack",
      "julyKey": "jacket|hem-gusset|hem-dr-round",
@@ -104809,7 +105207,7 @@
    "state": "rejected-only",
    "approvedPhotoEvents": 0,
    "illustrationKeepEvents": 0,
-   "rejectionEvents": 1,
+   "rejectionEvents": 2,
    "illustration": {
     "path": "/images/supplier-bb/REQXB/D.jpg",
     "status": "drawing-unverified",
@@ -106878,12 +107276,12 @@
      "machine": true,
      "image": {
       "path": "/images/generated/sport-coat/sbh-slant.webp",
-      "sha1": "21438f72e92a275362d20ede64bafd59f1a3b8a2",
+      "sha1": "aa6afddd043d2fa7d53a013f8ba66c74ff6d58f0",
       "exists": true,
       "kind": "was-live",
       "alias": {
        "path": "/images/generated/sport-coat/sbh-slant.png",
-       "sha1": "bb41f2f17b34f8876e004b3387d45e874ae56325"
+       "sha1": "55b96b914ebe6dc488d9f48c3e46e3ffeaee08b9"
       }
      },
      "replacedWith": "/images/blueprints/factory/fdbc0cbb0bb5__AAAN__Normal_slanted.jpg",
@@ -107859,6 +108257,36 @@
    },
    "events": [
     {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 1,
+     "image": {
+      "path": ".craft-pipeline/suit-2pc/hm-individual/candidate-1.png",
+      "sha1": "d17b13c7c30aeb636bb17173f18dbd166e3fd081",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "notes": "Craft option is showcasing the facts that all handmade options are being chosen",
+     "tags": [
+      "Reference drawing itself is wrong",
+      "Wrong feature entirely",
+      "Unrealistic / AI look"
+     ],
+     "references": [
+      "/images/review-refs/suit-2pc/hm-individual/1789356573848-hkdpwv.jpg",
+      "/images/review-refs/suit-2pc/hm-individual/1789356584883-i906tj.jpg",
+      "/images/review-refs/suit-2pc/hm-individual/1789356588311-1owfm1.jpg",
+      "/images/review-refs/suit-2pc/hm-individual/1789356593284-77iylm.jpg",
+      "/images/review-refs/suit-2pc/hm-individual/1789356597839-6d8nah.jpg"
+     ],
+     "decidedAt": "2026-09-14T03:31:03.128Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-2pc/hm-individual",
+     "current": true
+    },
+    {
      "source": "july-v3",
      "verdict": "bad-techpack",
      "julyKey": "jacket|handmade-type|hm-individual",
@@ -107959,7 +108387,7 @@
    "state": "rejected-only",
    "approvedPhotoEvents": 0,
    "illustrationKeepEvents": 0,
-   "rejectionEvents": 6,
+   "rejectionEvents": 7,
    "illustration": {
     "path": "/images/blueprints/factory/01c43a2f9084__08C0__Manually_sewing_lapel.png",
     "status": "drawing-unverified",
@@ -112419,6 +112847,30 @@
    },
    "events": [
     {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 1,
+     "image": {
+      "path": ".craft-pipeline/suit-2pc/ipc-d/candidate-1.png",
+      "sha1": "2ef08dfc3eeec49d5b11bb1d25f7a47d25ef6855",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Unrealistic / AI look"
+     ],
+     "references": [
+      "/images/review-refs/suit-2pc/ipc-d/1789357132215-l4hmil.jpg",
+      "/images/review-refs/suit-2pc/ipc-d/1789357169104-38xfjw.jpg"
+     ],
+     "decidedAt": "2026-09-14T03:39:35.337Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-2pc/ipc-d",
+     "current": true
+    },
+    {
      "source": "july-v3",
      "verdict": "bad-techpack",
      "julyKey": "jacket|inner-pocket-closure|ipc-d",
@@ -112444,7 +112896,7 @@
    "state": "rejected-only",
    "approvedPhotoEvents": 0,
    "illustrationKeepEvents": 0,
-   "rejectionEvents": 1,
+   "rejectionEvents": 2,
    "illustration": {
     "path": "/images/supplier-bb/REKPO/A.jpg",
     "status": "drawing-unverified",
@@ -112462,12 +112914,29 @@
    "label": "I-Bartack",
    "scope": "jacket",
    "current": {
-    "image": null,
+    "image": "/images/generated/jacket/ipc-i.webp",
     "techpackIllustration": "/images/supplier-bb/REKPO/B.jpg",
     "illustration": "/images/supplier-bb/REKPO/B.jpg",
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 1,
+     "image": {
+      "path": ".craft-pipeline/suit-2pc/ipc-i/candidate-1.png",
+      "sha1": "c5ad7fb5421424c0675a46b5bb36e05ff08be425",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-09-14T03:34:01.197Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-2pc/ipc-i",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "bad-techpack",
@@ -112491,8 +112960,8 @@
      "decidedAt": "2026-07-30"
     }
    ],
-   "state": "rejected-only",
-   "approvedPhotoEvents": 0,
+   "state": "has-owner-photo-approval",
+   "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 0,
    "rejectionEvents": 1,
    "illustration": {
@@ -112512,12 +112981,29 @@
    "label": "X-Bartack",
    "scope": "jacket",
    "current": {
-    "image": null,
+    "image": "/images/generated/jacket/ipc-x.webp",
     "techpackIllustration": "/images/supplier-bb/REKPO/C.jpg",
     "illustration": "/images/supplier-bb/REKPO/C.jpg",
     "illustrationStatus": "drawing"
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 1,
+     "image": {
+      "path": ".craft-pipeline/suit-2pc/ipc-x/candidate-1.png",
+      "sha1": "e1ae5e73827d432a2b4b4b85b1eed1685a3debd2",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-09-14T03:33:58.300Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-2pc/ipc-x",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "bad-techpack",
@@ -112541,8 +113027,8 @@
      "decidedAt": "2026-07-30"
     }
    ],
-   "state": "rejected-only",
-   "approvedPhotoEvents": 0,
+   "state": "has-owner-photo-approval",
+   "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 0,
    "rejectionEvents": 1,
    "illustration": {
@@ -116547,6 +117033,26 @@
    },
    "events": [
     {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 1,
+     "image": {
+      "path": ".craft-pipeline/suit-2pc/slant-51-stripe/candidate-1.png",
+      "sha1": "1e54f2a1d0526a005eb4a984a921d1777cacac1b",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Wrong side or orientation"
+     ],
+     "decidedAt": "2026-09-14T03:54:50.906Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-2pc/slant-51-stripe",
+     "current": true
+    },
+    {
      "source": "july-v3",
      "verdict": "remake",
      "julyKey": "trousers|front-pocket-style|slant-51-stripe",
@@ -116622,7 +117128,7 @@
    "state": "illustration-kept-only",
    "approvedPhotoEvents": 0,
    "illustrationKeepEvents": 1,
-   "rejectionEvents": 2,
+   "rejectionEvents": 3,
    "illustration": {
     "path": "/images/blueprints/remote/91eb56a23d7e__3122.jpg",
     "status": "drawing-unverified",
@@ -116961,20 +117467,22 @@
    "events": [
     {
      "source": "admin-portal",
-     "via": "map",
+     "via": "log",
+     "event": "decision",
      "verdict": "rejected",
-     "attempt": 1,
+     "attempt": 2,
      "image": {
-      "path": ".craft-pipeline/suit-2pc/jeans-arc/candidate-1.png",
-      "sha1": "cce8d32b3575bee57f7147639fc0cf7a5efdf4a8",
+      "path": ".craft-pipeline/suit-2pc/jeans-arc/candidate-2.png",
+      "sha1": "155dfa95d482d00268d80ac6f0cb81dbfaf3763e",
       "exists": true,
-      "kind": "pipeline-candidate"
+      "kind": "logged-at-decision-time"
      },
      "tags": [
+      "Wrong side or orientation",
       "Unrealistic / AI look"
      ],
-     "decidedAt": "2026-08-11T00:05:53.840Z",
-     "boundBy": "pipeline-spec",
+     "decidedAt": "2026-09-14T04:10:48.445Z",
+     "boundBy": "explicit-addr",
      "portalKey": "suit-2pc/jeans-arc",
      "current": true
     },
@@ -118013,13 +118521,32 @@
    "label": "0.6 cm Pick Stitch",
    "scope": "trousers",
    "current": {
-    "image": "/images/blueprints/remote/0c5cfcfe96d9__165588183495006.jpg",
+    "image": "/images/generated/jacket/pocket-stitch-pick-06.webp",
     "techpackIllustration": "/images/blueprints/remote/0c5cfcfe96d9__165588183495006.jpg",
     "illustration": "/images/blueprints/remote/0c5cfcfe96d9__165588183495006.jpg",
     "illustrationStatus": "drawing",
-    "photos": []
+    "photos": [
+     "/images/generated/jacket/pocket-stitch-pick-06.webp"
+    ]
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 1,
+     "image": {
+      "path": ".craft-pipeline/suit-2pc/pocket-stitch-pick-06/candidate-1.png",
+      "sha1": "33315304fd822fcc6175df4e03df3105318614f0",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-09-14T04:04:32.896Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-2pc/pocket-stitch-pick-06",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -118093,8 +118620,8 @@
      "ownerVerdictAtTheTime": "REJECTED"
     }
    ],
-   "state": "illustration-kept-only",
-   "approvedPhotoEvents": 0,
+   "state": "has-owner-photo-approval",
+   "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 1,
    "rejectionEvents": 2,
    "illustration": {
@@ -118946,6 +119473,34 @@
    },
    "events": [
     {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 1,
+     "image": {
+      "path": ".craft-pipeline/suit-2pc/watch-diamond-flap/candidate-1.png",
+      "sha1": "9264e0f1c58df962342a725146ef08ac5f3285db",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Wrong shape / outline",
+      "Wrong size or proportion",
+      "Unrealistic / AI look"
+     ],
+     "references": [
+      "/images/review-refs/suit-2pc/watch-diamond-flap/1789356439349-aykfi6.jpg",
+      "/images/review-refs/suit-2pc/watch-diamond-flap/1789356443470-znnv3s.jpg",
+      "/images/review-refs/suit-2pc/watch-diamond-flap/1789356447433-w0wie2.jpg",
+      "/images/review-refs/suit-2pc/watch-diamond-flap/1789356476451-nu885f.jpg"
+     ],
+     "decidedAt": "2026-09-14T03:28:16.269Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-2pc/watch-diamond-flap",
+     "current": true
+    },
+    {
      "source": "july-v3",
      "verdict": "remake",
      "julyKey": "trousers|watch-pocket|watch-diamond-flap",
@@ -119021,7 +119576,7 @@
    "state": "illustration-kept-only",
    "approvedPhotoEvents": 0,
    "illustrationKeepEvents": 1,
-   "rejectionEvents": 2,
+   "rejectionEvents": 3,
    "illustration": {
     "path": "/images/blueprints/remote/c82dba868d19__3186.jpg",
     "status": "drawing-unverified",
@@ -119156,27 +119711,29 @@
    "label": "Right Side",
    "scope": "trousers",
    "current": {
-    "image": "/images/blueprints/remote/1d73941a4932__3530.jpg",
+    "image": "/images/generated/jacket/coin-right.webp",
     "techpackIllustration": "/images/blueprints/remote/1d73941a4932__3530.jpg",
     "illustration": "/images/blueprints/remote/1d73941a4932__3530.jpg",
     "illustrationStatus": "drawing",
-    "photos": []
+    "photos": [
+     "/images/generated/jacket/coin-right.webp"
+    ]
    },
    "events": [
     {
      "source": "admin-portal",
-     "via": "map",
-     "verdict": "rejected",
-     "attempt": 1,
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 2,
      "image": {
-      "path": ".craft-pipeline/suit-2pc/coin-right/candidate-1.png",
-      "sha1": "c34fabba8b142d575ec6bf759f2f824de75d5104",
+      "path": ".craft-pipeline/suit-2pc/coin-right/candidate-2.png",
+      "sha1": "010ebd8d6f568d5aa534aa8535f520f7862096f1",
       "exists": true,
-      "kind": "pipeline-candidate"
+      "kind": "logged-at-decision-time"
      },
-     "notes": "remove model",
-     "decidedAt": "2026-08-11T00:31:27.091Z",
-     "boundBy": "pipeline-spec",
+     "decidedAt": "2026-09-14T04:10:56.952Z",
+     "boundBy": "explicit-addr",
      "portalKey": "suit-2pc/coin-right",
      "ambiguousKey": true,
      "current": true
@@ -119253,9 +119810,9 @@
     }
    ],
    "state": "has-owner-photo-approval",
-   "approvedPhotoEvents": 1,
+   "approvedPhotoEvents": 2,
    "illustrationKeepEvents": 0,
-   "rejectionEvents": 2,
+   "rejectionEvents": 1,
    "illustration": {
     "path": "/images/blueprints/remote/1d73941a4932__3530.jpg",
     "status": "drawing-unverified",
@@ -119397,18 +119954,21 @@
    "events": [
     {
      "source": "admin-portal",
-     "via": "map",
+     "via": "log",
+     "event": "decision",
      "verdict": "rejected",
-     "attempt": 2,
+     "attempt": 3,
      "image": {
-      "path": ".craft-pipeline/suit-2pc/coin-both/candidate-2.png",
-      "sha1": "e8420495ce973e6f2dafb3eda48c028d9b336dd9",
+      "path": ".craft-pipeline/suit-2pc/coin-both/candidate-3.png",
+      "sha1": "434d18b3e7e4a92be229e0c94dc7f63eeb025abb",
       "exists": true,
-      "kind": "pipeline-candidate"
+      "kind": "logged-at-decision-time"
      },
-     "notes": "REMOVE BARE STOMACH",
-     "decidedAt": "2026-08-10T19:21:18.597Z",
-     "boundBy": "pipeline-spec",
+     "tags": [
+      "Unrealistic / AI look"
+     ],
+     "decidedAt": "2026-09-14T04:07:06.835Z",
+     "boundBy": "explicit-addr",
      "portalKey": "suit-2pc/coin-both",
      "ambiguousKey": true,
      "current": true
@@ -121068,26 +121628,22 @@
    "events": [
     {
      "source": "admin-portal",
-     "via": "map",
+     "via": "log",
+     "event": "decision",
      "verdict": "rejected",
-     "attempt": 1,
+     "attempt": 3,
      "image": {
-      "path": ".craft-pipeline/suit-2pc/ext-straight/candidate-1.png",
-      "sha1": "5e0674b91430f57f5f5d59a6e01fb36e221dd5ec",
+      "path": ".craft-pipeline/suit-2pc/ext-straight/candidate-3.png",
+      "sha1": "5d573b8a459b858e9ed807e61472731854772037",
       "exists": true,
-      "kind": "pipeline-candidate"
+      "kind": "logged-at-decision-time"
      },
+     "notes": "the silver part is hidden",
      "tags": [
       "Unrealistic / AI look"
      ],
-     "references": [
-      "/images/review-refs/suit-2pc/ext-straight/1786409768277-vsvk24.png",
-      "/images/review-refs/suit-2pc/ext-straight/1786409878840-iexo2w.jpg",
-      "/images/review-refs/suit-2pc/ext-straight/1786409891453-jtj97b.webp",
-      "/images/review-refs/suit-2pc/ext-straight/1786409900286-noie2g.webp"
-     ],
-     "decidedAt": "2026-08-11T00:58:24.032Z",
-     "boundBy": "pipeline-spec",
+     "decidedAt": "2026-09-14T04:06:44.895Z",
+     "boundBy": "explicit-addr",
      "portalKey": "suit-2pc/ext-straight",
      "current": true
     },
@@ -121265,24 +121821,22 @@
    "events": [
     {
      "source": "admin-portal",
-     "via": "map",
+     "via": "log",
+     "event": "decision",
      "verdict": "rejected",
-     "attempt": 2,
+     "attempt": 3,
      "image": {
-      "path": ".craft-pipeline/suit-2pc/ext-pointed/candidate-2.png",
-      "sha1": "2c5bd21c5cd364258a2c6ccd8a894d3374cb6662",
+      "path": ".craft-pipeline/suit-2pc/ext-pointed/candidate-3.png",
+      "sha1": "a4182080787b1a3c239a64c63a772bfb38200368",
       "exists": true,
-      "kind": "pipeline-candidate"
+      "kind": "logged-at-decision-time"
      },
-     "notes": "illustration shows a fold away. left side of the waistband is showing the waistband folded to the side",
+     "notes": "silver latch is hidden",
      "tags": [
       "Unrealistic / AI look"
      ],
-     "references": [
-      "/images/review-refs/suit-2pc/ext-pointed/1786390437660-2d1abn.webp"
-     ],
-     "decidedAt": "2026-08-10T19:35:22.684Z",
-     "boundBy": "pipeline-spec",
+     "decidedAt": "2026-09-14T04:07:35.051Z",
+     "boundBy": "explicit-addr",
      "portalKey": "suit-2pc/ext-pointed",
      "current": true
     },
@@ -121385,25 +121939,28 @@
    "events": [
     {
      "source": "admin-portal",
-     "via": "map",
+     "via": "log",
+     "event": "decision",
      "verdict": "rejected",
-     "attempt": 1,
+     "attempt": 2,
      "image": {
-      "path": ".craft-pipeline/suit-2pc/ext-curved/candidate-1.png",
-      "sha1": "aed6e51b73d9bac1cc45a74ff917bcd1e9768690",
+      "path": ".craft-pipeline/suit-2pc/ext-curved/candidate-2.png",
+      "sha1": "056d4896e1be4e3c636380d98c388ee8d51efb25",
       "exists": true,
-      "kind": "pipeline-candidate"
+      "kind": "logged-at-decision-time"
      },
      "tags": [
-      "Unrealistic / AI look"
+      "Unrealistic / AI look",
+      "Wrong side or orientation"
      ],
      "references": [
-      "/images/review-refs/suit-2pc/ext-curved/1786408245497-zohvld.webp",
-      "/images/review-refs/suit-2pc/ext-curved/1786408252690-fznr2q.webp",
-      "/images/review-refs/suit-2pc/ext-curved/1786408265159-11i8c0.webp"
+      "/images/review-refs/suit-2pc/ext-curved/1789359096596-qlch1d.jpg",
+      "/images/review-refs/suit-2pc/ext-curved/1789359107848-t3evfr.jpg",
+      "/images/review-refs/suit-2pc/ext-curved/1789359115417-ht6d0n.jpg",
+      "/images/review-refs/suit-2pc/ext-curved/1789359125459-4fnc9w.jpg"
      ],
-     "decidedAt": "2026-08-11T00:31:11.954Z",
-     "boundBy": "pipeline-spec",
+     "decidedAt": "2026-09-14T04:12:18.672Z",
+     "boundBy": "explicit-addr",
      "portalKey": "suit-2pc/ext-curved",
      "current": true
     },
@@ -121576,6 +122133,31 @@
    },
    "events": [
     {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 1,
+     "image": {
+      "path": ".craft-pipeline/suit-2pc/ext-no-hook/candidate-1.png",
+      "sha1": "6ee2db9cd2295de7c514b9c54899a8a0b45ca2ad",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Unrealistic / AI look"
+     ],
+     "references": [
+      "/images/review-refs/suit-2pc/ext-no-hook/1789358339630-rtcsrw.jpg",
+      "/images/review-refs/suit-2pc/ext-no-hook/1789358349215-hnrjkc.jpg",
+      "/images/review-refs/suit-2pc/ext-no-hook/1789358356152-4nfmsk.jpg"
+     ],
+     "decidedAt": "2026-09-14T03:59:18.889Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-2pc/ext-no-hook",
+     "current": true
+    },
+    {
      "source": "july-v3",
      "verdict": "remake",
      "julyKey": "trousers|waistband-extension|ext-no-hook",
@@ -121635,7 +122217,7 @@
    "state": "illustration-kept-only",
    "approvedPhotoEvents": 0,
    "illustrationKeepEvents": 1,
-   "rejectionEvents": 1,
+   "rejectionEvents": 2,
    "illustration": {
     "path": "/images/blueprints/remote/b87e70d16b98__3410.jpg",
     "status": "drawing-unverified",
@@ -121660,6 +122242,32 @@
     "photos": []
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 1,
+     "image": {
+      "path": ".craft-pipeline/suit-2pc/ext-sharp-double/candidate-1.png",
+      "sha1": "915efa858b0f3bbcdd2d2265735d4130d4aa6d0a",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Unrealistic / AI look"
+     ],
+     "references": [
+      "/images/review-refs/suit-2pc/ext-sharp-double/1789357645308-05cp45.jpg",
+      "/images/review-refs/suit-2pc/ext-sharp-double/1789357655440-il44u5.avif",
+      "/images/review-refs/suit-2pc/ext-sharp-double/1789357660757-mjacni.jpg",
+      "/images/review-refs/suit-2pc/ext-sharp-double/1789357673697-z4zv23.jpg"
+     ],
+     "decidedAt": "2026-09-14T03:47:55.881Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-2pc/ext-sharp-double",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "bad-techpack",
@@ -121721,7 +122329,7 @@
    "state": "rejected-only",
    "approvedPhotoEvents": 0,
    "illustrationKeepEvents": 0,
-   "rejectionEvents": 2,
+   "rejectionEvents": 3,
    "illustration": {
     "path": "/images/blueprints/remote/c7bf619b903f__3416.jpg",
     "status": "drawing-unverified",
@@ -121746,6 +122354,26 @@
     "photos": []
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 1,
+     "image": {
+      "path": ".craft-pipeline/suit-2pc/ext-round-double/candidate-1.png",
+      "sha1": "278d2750c09ebcaeed27af721a253b256b031c69",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Unrealistic / AI look"
+     ],
+     "decidedAt": "2026-09-14T03:57:28.477Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-2pc/ext-round-double",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -121806,7 +122434,7 @@
    "state": "rejected-only",
    "approvedPhotoEvents": 0,
    "illustrationKeepEvents": 0,
-   "rejectionEvents": 2,
+   "rejectionEvents": 3,
    "illustration": {
     "path": "/images/blueprints/remote/4e94d4deb4e9__3415.jpg",
     "status": "drawing-unverified",
@@ -121831,6 +122459,32 @@
     "photos": []
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 1,
+     "image": {
+      "path": ".craft-pipeline/suit-2pc/ext-square-double/candidate-1.png",
+      "sha1": "21726859b7e13cb2cfde2f9af73334363c075c80",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Unrealistic / AI look"
+     ],
+     "references": [
+      "/images/review-refs/suit-2pc/ext-square-double/1789358016584-ir54c3.jpg",
+      "/images/review-refs/suit-2pc/ext-square-double/1789358032191-9lplaq.jpg",
+      "/images/review-refs/suit-2pc/ext-square-double/1789358043420-cucdhu.jpg",
+      "/images/review-refs/suit-2pc/ext-square-double/1789358051920-k9vme0.jpg"
+     ],
+     "decidedAt": "2026-09-14T03:54:39.272Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-2pc/ext-square-double",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -121891,7 +122545,7 @@
    "state": "illustration-kept-only",
    "approvedPhotoEvents": 0,
    "illustrationKeepEvents": 1,
-   "rejectionEvents": 1,
+   "rejectionEvents": 2,
    "illustration": {
     "path": "/images/blueprints/remote/05e7a7878d0d__3417.jpg",
     "status": "drawing-unverified",
@@ -121916,6 +122570,33 @@
     "photos": []
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 1,
+     "image": {
+      "path": ".craft-pipeline/suit-2pc/ext-sharp-dbl-hooks/candidate-1.png",
+      "sha1": "effb5c4edc7cb7f8a8059accd7845b9cf19838de",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Unrealistic / AI look"
+     ],
+     "references": [
+      "/images/review-refs/suit-2pc/ext-sharp-dbl-hooks/1789357892546-2z3fsv.jpg",
+      "/images/review-refs/suit-2pc/ext-sharp-dbl-hooks/1789357898962-sbkfp3.jpg",
+      "/images/review-refs/suit-2pc/ext-sharp-dbl-hooks/1789357904204-solbhk.jpg",
+      "/images/review-refs/suit-2pc/ext-sharp-dbl-hooks/1789357918103-3na8md.jpg",
+      "/images/review-refs/suit-2pc/ext-sharp-dbl-hooks/1789357920812-8sve6t.jpg"
+     ],
+     "decidedAt": "2026-09-14T03:52:06.824Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-2pc/ext-sharp-dbl-hooks",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -121976,7 +122657,7 @@
    "state": "illustration-kept-only",
    "approvedPhotoEvents": 0,
    "illustrationKeepEvents": 1,
-   "rejectionEvents": 1,
+   "rejectionEvents": 2,
    "illustration": {
     "path": "/images/blueprints/remote/b981324a2a86__342T.jpg",
     "status": "drawing-unverified",
@@ -122001,6 +122682,26 @@
     "photos": []
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 1,
+     "image": {
+      "path": ".craft-pipeline/suit-2pc/ext-round-dbl-hooks/candidate-1.png",
+      "sha1": "57f8f2b5a9e0c31467bf1ccc75ef422e6922f9ae",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Unrealistic / AI look"
+     ],
+     "decidedAt": "2026-09-14T03:57:32.066Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-2pc/ext-round-dbl-hooks",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -122061,7 +122762,7 @@
    "state": "illustration-kept-only",
    "approvedPhotoEvents": 0,
    "illustrationKeepEvents": 1,
-   "rejectionEvents": 1,
+   "rejectionEvents": 2,
    "illustration": {
     "path": "/images/blueprints/remote/15cce2379001__342R.jpg",
     "status": "drawing-unverified",
@@ -122086,6 +122787,30 @@
     "photos": []
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 1,
+     "image": {
+      "path": ".craft-pipeline/suit-2pc/ext-square-dbl-hooks/candidate-1.png",
+      "sha1": "62a46ccc1f602bcd1a877f7ba7f1ecb026cb9faa",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Unrealistic / AI look"
+     ],
+     "references": [
+      "/images/review-refs/suit-2pc/ext-square-dbl-hooks/1789357595995-6yf4lm.jpg",
+      "/images/review-refs/suit-2pc/ext-square-dbl-hooks/1789357613860-mdnaq0.avif"
+     ],
+     "decidedAt": "2026-09-14T03:47:10.499Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-2pc/ext-square-dbl-hooks",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -122146,7 +122871,7 @@
    "state": "illustration-kept-only",
    "approvedPhotoEvents": 0,
    "illustrationKeepEvents": 1,
-   "rejectionEvents": 1,
+   "rejectionEvents": 2,
    "illustration": {
     "path": "/images/blueprints/remote/c0b37c986521__3414.jpg",
     "status": "drawing-unverified",
@@ -122171,6 +122896,26 @@
     "photos": []
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 1,
+     "image": {
+      "path": ".craft-pipeline/suit-2pc/ext-sharp-dbl-btn-hook/candidate-1.png",
+      "sha1": "dceef2e84e19520da88bd9cf139bbd00556a1e9d",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Unrealistic / AI look"
+     ],
+     "decidedAt": "2026-09-14T03:57:24.803Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-2pc/ext-sharp-dbl-btn-hook",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -122231,7 +122976,7 @@
    "state": "illustration-kept-only",
    "approvedPhotoEvents": 0,
    "illustrationKeepEvents": 1,
-   "rejectionEvents": 1,
+   "rejectionEvents": 2,
    "illustration": {
     "path": "/images/blueprints/remote/8bab494aa985__342L.jpg",
     "status": "drawing-unverified",
@@ -122256,6 +123001,29 @@
     "photos": []
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 1,
+     "image": {
+      "path": ".craft-pipeline/suit-2pc/ext-round-dbl-btn-hook/candidate-1.png",
+      "sha1": "46648d29a9a67993bce38452801d2fd1f24dcba8",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Unrealistic / AI look"
+     ],
+     "references": [
+      "/images/review-refs/suit-2pc/ext-round-dbl-btn-hook/1789358272693-jlavxy.jpg"
+     ],
+     "decidedAt": "2026-09-14T03:57:55.895Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-2pc/ext-round-dbl-btn-hook",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -122316,7 +123084,7 @@
    "state": "illustration-kept-only",
    "approvedPhotoEvents": 0,
    "illustrationKeepEvents": 1,
-   "rejectionEvents": 1,
+   "rejectionEvents": 2,
    "illustration": {
     "path": "/images/blueprints/remote/8b1333b2d3f1__34AB.jpg",
     "status": "drawing-unverified",
@@ -122341,6 +123109,33 @@
     "photos": []
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 1,
+     "image": {
+      "path": ".craft-pipeline/suit-2pc/ext-square-dbl-btn-hook/candidate-1.png",
+      "sha1": "89dfcf350d20a56b825bf93b68fa162f009da035",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Unrealistic / AI look"
+     ],
+     "references": [
+      "/images/review-refs/suit-2pc/ext-square-dbl-btn-hook/1789357694332-sh6yva.jpg",
+      "/images/review-refs/suit-2pc/ext-square-dbl-btn-hook/1789357699320-re8ufe.avif",
+      "/images/review-refs/suit-2pc/ext-square-dbl-btn-hook/1789357720639-w3abas.jpg",
+      "/images/review-refs/suit-2pc/ext-square-dbl-btn-hook/1789357736000-cnk2ue.jpg",
+      "/images/review-refs/suit-2pc/ext-square-dbl-btn-hook/1789357744762-5f93ga.jpg"
+     ],
+     "decidedAt": "2026-09-14T03:49:19.257Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-2pc/ext-square-dbl-btn-hook",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -122401,7 +123196,7 @@
    "state": "illustration-kept-only",
    "approvedPhotoEvents": 0,
    "illustrationKeepEvents": 1,
-   "rejectionEvents": 1,
+   "rejectionEvents": 2,
    "illustration": {
     "path": "/images/blueprints/remote/cf709e84920a__342D.jpg",
     "status": "drawing-unverified",
@@ -122427,6 +123222,30 @@
     "images": []
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 1,
+     "image": {
+      "path": ".craft-pipeline/suit-2pc/ext-double-ext/candidate-1.png",
+      "sha1": "342049c75a552edf6598f32e50ebaddf5431f192",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Unrealistic / AI look"
+     ],
+     "references": [
+      "/images/review-refs/suit-2pc/ext-double-ext/1789358431240-bkwfph.jpg",
+      "/images/review-refs/suit-2pc/ext-double-ext/1789358448420-yj23k6.jpg"
+     ],
+     "decidedAt": "2026-09-14T04:01:07.818Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-2pc/ext-double-ext",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "bad-techpack",
@@ -122562,7 +123381,7 @@
    "state": "illustration-kept-only",
    "approvedPhotoEvents": 0,
    "illustrationKeepEvents": 1,
-   "rejectionEvents": 6,
+   "rejectionEvents": 7,
    "illustration": {
     "path": "/images/blueprints/remote/860ec779f45a__175807368017120.png",
     "status": "drawing-unverified",
@@ -122678,6 +123497,26 @@
      "decidedAt": "2026-08-11T22:45:42.888Z",
      "boundBy": "explicit-addr",
      "portalKey": "suit-2pc/ext-len-5",
+     "current": false
+    },
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 3,
+     "image": {
+      "path": ".craft-pipeline/suit-2pc/ext-len-5/candidate-3.png",
+      "sha1": "713548eaf2b5e5628690d4ddbe09a175bd274dde",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Wrong side or orientation"
+     ],
+     "decidedAt": "2026-09-14T04:05:53.886Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-2pc/ext-len-5",
      "current": true
     },
     {
@@ -122784,6 +123623,26 @@
      "decidedAt": "2026-08-11T22:44:11.005Z",
      "boundBy": "explicit-addr",
      "portalKey": "suit-2pc/ext-len-55",
+     "current": false
+    },
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 3,
+     "image": {
+      "path": ".craft-pipeline/suit-2pc/ext-len-55/candidate-3.png",
+      "sha1": "e257aee7ec5e52a33da8e595a85c7e29c2323f87",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Unrealistic / AI look"
+     ],
+     "decidedAt": "2026-09-14T04:05:44.796Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-2pc/ext-len-55",
      "current": true
     },
     {
@@ -122885,6 +123744,26 @@
       "/images/review-refs/suit-2pc/ext-len-6/1786488155188-nuc8j3.webp"
      ],
      "decidedAt": "2026-08-11T22:42:46.338Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-2pc/ext-len-6",
+     "current": false
+    },
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 3,
+     "image": {
+      "path": ".craft-pipeline/suit-2pc/ext-len-6/candidate-3.png",
+      "sha1": "90063bbce2c09ab1218770a440860ce57bec84ba",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Unrealistic / AI look"
+     ],
+     "decidedAt": "2026-09-14T04:05:40.351Z",
      "boundBy": "explicit-addr",
      "portalKey": "suit-2pc/ext-len-6",
      "current": true
@@ -122992,6 +123871,26 @@
      "decidedAt": "2026-08-11T22:41:34.296Z",
      "boundBy": "explicit-addr",
      "portalKey": "suit-2pc/ext-len-65",
+     "current": false
+    },
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 3,
+     "image": {
+      "path": ".craft-pipeline/suit-2pc/ext-len-65/candidate-3.png",
+      "sha1": "7bf3d7335c7d43dde259432ed72cc11e80efcc78",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Unrealistic / AI look"
+     ],
+     "decidedAt": "2026-09-14T04:05:30.679Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-2pc/ext-len-65",
      "current": true
     },
     {
@@ -123093,6 +123992,26 @@
      "decidedAt": "2026-08-11T22:39:21.288Z",
      "boundBy": "explicit-addr",
      "portalKey": "suit-2pc/ext-len-7",
+     "current": false
+    },
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 3,
+     "image": {
+      "path": ".craft-pipeline/suit-2pc/ext-len-7/candidate-3.png",
+      "sha1": "71122951157b9afc34a783df11834fb67bca9247",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Unrealistic / AI look"
+     ],
+     "decidedAt": "2026-09-14T04:05:22.212Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-2pc/ext-len-7",
      "current": true
     },
     {
@@ -123192,6 +124111,26 @@
       "Unrealistic / AI look"
      ],
      "decidedAt": "2026-08-11T22:38:49.683Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-2pc/ext-len-13",
+     "current": false
+    },
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 3,
+     "image": {
+      "path": ".craft-pipeline/suit-2pc/ext-len-13/candidate-3.png",
+      "sha1": "2e044d31a4fe18e1af721b2da230e174abdd0d76",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Wrong side or orientation"
+     ],
+     "decidedAt": "2026-09-14T04:06:08.419Z",
      "boundBy": "explicit-addr",
      "portalKey": "suit-2pc/ext-len-13",
      "current": true
@@ -123296,6 +124235,26 @@
       "/images/review-refs/suit-2pc/ext-len-15/1786487833910-3r94rm.png"
      ],
      "decidedAt": "2026-08-11T22:37:15.238Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-2pc/ext-len-15",
+     "current": false
+    },
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 3,
+     "image": {
+      "path": ".craft-pipeline/suit-2pc/ext-len-15/candidate-3.png",
+      "sha1": "cca9b24f5bc51a586f4df80a019b09943bb93894",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Wrong side or orientation"
+     ],
+     "decidedAt": "2026-09-14T04:06:02.499Z",
      "boundBy": "explicit-addr",
      "portalKey": "suit-2pc/ext-len-15",
      "current": true
@@ -123570,22 +124529,25 @@
    "events": [
     {
      "source": "admin-portal",
-     "via": "map",
+     "via": "log",
+     "event": "decision",
      "verdict": "rejected",
-     "attempt": 2,
+     "attempt": 3,
      "image": {
-      "path": ".craft-pipeline/suit-2pc/adjuster-left/candidate-2.png",
-      "sha1": "670bf34af7e6011321325997b617812e15b9cf44",
+      "path": ".craft-pipeline/suit-2pc/adjuster-left/candidate-3.png",
+      "sha1": "f7cf41e533886436d840b905ca37de6dc9b7aaa6",
       "exists": true,
-      "kind": "pipeline-candidate"
+      "kind": "logged-at-decision-time"
      },
-     "notes": "the allistic is hidden inside the waistband",
-     "references": [
-      "/images/review-refs/suit-2pc/adjuster-left/1786390677797-lvmn9o.webp",
-      "/images/review-refs/suit-2pc/adjuster-left/1786390695075-dx7xo1.webp"
+     "notes": "button in the front should be removed",
+     "tags": [
+      "Wrong count"
      ],
-     "decidedAt": "2026-08-10T19:38:36.952Z",
-     "boundBy": "pipeline-spec",
+     "references": [
+      "/images/review-refs/suit-2pc/adjuster-left/1789358950909-y3fy9u.jpg"
+     ],
+     "decidedAt": "2026-09-14T04:10:07.523Z",
+     "boundBy": "explicit-addr",
      "portalKey": "suit-2pc/adjuster-left",
      "current": true
     },
@@ -123688,6 +124650,34 @@
    },
    "events": [
     {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 1,
+     "image": {
+      "path": ".craft-pipeline/suit-2pc/adjuster-buckle-loop/candidate-1.png",
+      "sha1": "2ae1fee2d270aaaa6219fbe96b249155b03b5f5a",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Unrealistic / AI look"
+     ],
+     "references": [
+      "/images/review-refs/suit-2pc/adjuster-buckle-loop/1789358599102-8qzbbp.jpg",
+      "/images/review-refs/suit-2pc/adjuster-buckle-loop/1789358602482-wm6a8z.jpg",
+      "/images/review-refs/suit-2pc/adjuster-buckle-loop/1789358617791-yqb92i.jpg",
+      "/images/review-refs/suit-2pc/adjuster-buckle-loop/1789358620139-8vx20r.jpg",
+      "/images/review-refs/suit-2pc/adjuster-buckle-loop/1789358625374-c2tf69.jpg",
+      "/images/review-refs/suit-2pc/adjuster-buckle-loop/1789358630459-ckibw5.jpg"
+     ],
+     "decidedAt": "2026-09-14T04:04:03.047Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-2pc/adjuster-buckle-loop",
+     "current": true
+    },
+    {
      "source": "july-v3",
      "verdict": "remake",
      "julyKey": "trousers|metal-adjuster|adjuster-buckle-loop",
@@ -123748,7 +124738,7 @@
    "state": "illustration-kept-only",
    "approvedPhotoEvents": 0,
    "illustrationKeepEvents": 1,
-   "rejectionEvents": 1,
+   "rejectionEvents": 2,
    "illustration": {
     "path": "/images/blueprints/remote/57c52816d98c__167108103407726.jpg",
     "status": "drawing-unverified",
@@ -123779,6 +124769,27 @@
     "photoAmbiguous": true
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 1,
+     "image": {
+      "path": ".craft-pipeline/suit-2pc/loops-standard/candidate-1.png",
+      "sha1": "d438a87169aab9f5474868740d1b0cad18a73f97",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "notes": "7 loops on the front and back not all on the front",
+     "tags": [
+      "Unrealistic / AI look"
+     ],
+     "decidedAt": "2026-09-14T04:01:35.276Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-2pc/loops-standard",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -123884,7 +124895,7 @@
    "state": "rejected-only",
    "approvedPhotoEvents": 0,
    "illustrationKeepEvents": 0,
-   "rejectionEvents": 5,
+   "rejectionEvents": 6,
    "illustration": {
     "path": "/images/blueprints/factory/88c59601c41a__3330__Regular.jpg",
     "status": "drawing-unverified",
@@ -126662,35 +127673,30 @@
    "label": "Button Fly",
    "scope": "trousers",
    "current": {
-    "image": "/images/blueprints/factory/3fcf22dd779d__3422__Bttns.jpg",
+    "image": "/images/generated/jacket/fly-button.webp",
     "techpackIllustration": "/images/blueprints/factory/3fcf22dd779d__3422__Bttns.jpg",
     "illustration": "/images/blueprints/factory/3fcf22dd779d__3422__Bttns.jpg",
     "illustrationStatus": "drawing",
-    "photos": [],
+    "photos": [
+     "/images/generated/jacket/fly-button.webp"
+    ],
     "images": []
    },
    "events": [
     {
      "source": "admin-portal",
-     "via": "map",
-     "verdict": "rejected",
-     "attempt": 2,
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 3,
      "image": {
-      "path": ".craft-pipeline/suit-2pc/fly-button/candidate-2.png",
-      "sha1": "438cdc62eca20d7c8a1b5dddc406ef8de7acd5bd",
+      "path": ".craft-pipeline/suit-2pc/fly-button/candidate-3.png",
+      "sha1": "61a92d4126a926c51fb16f18692b2909846d2e3f",
       "exists": true,
-      "kind": "pipeline-candidate"
+      "kind": "logged-at-decision-time"
      },
-     "notes": "it looks goo except there is pant fabric material showing inside the open fly where its should be a tshirt or boxers",
-     "references": [
-      "/images/review-refs/suit-2pc/fly-button/1786401267211-ymti49.webp",
-      "/images/review-refs/suit-2pc/fly-button/1786401296350-ko35tg.webp",
-      "/images/review-refs/suit-2pc/fly-button/1786401300356-yw45f6.webp",
-      "/images/review-refs/suit-2pc/fly-button/1786401320199-g30ydq.webp",
-      "/images/review-refs/suit-2pc/fly-button/1786401326602-bhh38o.webp"
-     ],
-     "decidedAt": "2026-08-10T22:36:21.504Z",
-     "boundBy": "pipeline-spec",
+     "decidedAt": "2026-09-14T04:07:00.640Z",
+     "boundBy": "explicit-addr",
      "portalKey": "suit-2pc/fly-button",
      "current": true
     },
@@ -126822,9 +127828,9 @@
     }
    ],
    "state": "has-owner-photo-approval",
-   "approvedPhotoEvents": 1,
+   "approvedPhotoEvents": 2,
    "illustrationKeepEvents": 0,
-   "rejectionEvents": 6,
+   "rejectionEvents": 5,
    "illustration": {
     "path": "/images/blueprints/factory/3fcf22dd779d__3422__Bttns.jpg",
     "status": "drawing-unverified",
@@ -126852,23 +127858,21 @@
    "events": [
     {
      "source": "admin-portal",
-     "via": "map",
+     "via": "log",
+     "event": "decision",
      "verdict": "rejected",
-     "attempt": 1,
+     "attempt": 2,
      "image": {
-      "path": ".craft-pipeline/suit-2pc/fly-hook-bar/candidate-1.png",
-      "sha1": "d101d4cb56b8b34b95e28e9d937d422b14d20e6b",
+      "path": ".craft-pipeline/suit-2pc/fly-hook-bar/candidate-2.png",
+      "sha1": "720e6efe3b20f5b3c252a10d3d582e3028bf57cc",
       "exists": true,
-      "kind": "pipeline-candidate"
+      "kind": "logged-at-decision-time"
      },
      "tags": [
-      "Unrealistic / AI look"
+      "Annotation or colour bled in from the drawing"
      ],
-     "references": [
-      "/images/review-refs/suit-2pc/fly-hook-bar/1786410232831-z4uku2.png"
-     ],
-     "decidedAt": "2026-08-11T01:03:55.536Z",
-     "boundBy": "pipeline-spec",
+     "decidedAt": "2026-09-14T04:10:53.245Z",
+     "boundBy": "explicit-addr",
      "portalKey": "suit-2pc/fly-hook-bar",
      "current": true
     },
@@ -132881,13 +133885,32 @@
    "label": "No Heel Guard",
    "scope": "trousers",
    "current": {
-    "image": "/images/blueprints/remote/90c9f9c84002__33BB.jpg",
+    "image": "/images/generated/jacket/heel-none.webp",
     "techpackIllustration": "/images/blueprints/remote/90c9f9c84002__33BB.jpg",
     "illustration": "/images/blueprints/remote/90c9f9c84002__33BB.jpg",
     "illustrationStatus": "drawing",
-    "photos": []
+    "photos": [
+     "/images/generated/jacket/heel-none.webp"
+    ]
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 1,
+     "image": {
+      "path": ".craft-pipeline/suit-2pc/heel-none/candidate-1.png",
+      "sha1": "66da75fa10f7bec4282c4e329885956f44e1002e",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-09-14T04:05:05.916Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-2pc/heel-none",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -132946,8 +133969,8 @@
      "ownerVerdictAtTheTime": "REJECTED"
     }
    ],
-   "state": "illustration-kept-only",
-   "approvedPhotoEvents": 0,
+   "state": "has-owner-photo-approval",
+   "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 1,
    "rejectionEvents": 1,
    "illustration": {
@@ -133047,6 +134070,26 @@
    },
    "events": [
     {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 1,
+     "image": {
+      "path": ".craft-pipeline/suit-2pc/heel-whole-circle/candidate-1.png",
+      "sha1": "aa78661d82126b79140674d019c8970266e22538",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Unrealistic / AI look"
+     ],
+     "decidedAt": "2026-09-14T04:05:01.844Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-2pc/heel-whole-circle",
+     "current": true
+    },
+    {
      "source": "july-v3",
      "verdict": "remake",
      "julyKey": "trousers|heel-guard|heel-whole-circle",
@@ -133107,7 +134150,7 @@
    "state": "illustration-kept-only",
    "approvedPhotoEvents": 0,
    "illustrationKeepEvents": 1,
-   "rejectionEvents": 1,
+   "rejectionEvents": 2,
    "illustration": {
     "path": "/images/blueprints/remote/7a19d9941f5a__3614.jpg",
     "status": "drawing-unverified",
@@ -142674,11 +143717,12 @@
    "label": "Italian Fishtail Lapel",
    "scope": "jacket",
    "current": {
-    "image": "/images/blueprints/supplier/9aca8479eb97__0006__Fish_mouth.jpg",
+    "image": "/images/generated/sport-coat/lapel-fishtail.webp",
     "techpackIllustration": "/images/blueprints/supplier/9aca8479eb97__0006__Fish_mouth.jpg",
     "illustration": "/images/blueprints/supplier/9aca8479eb97__0006__Fish_mouth.jpg",
     "illustrationStatus": "drawing",
     "photos": [
+     "/images/generated/sport-coat/lapel-fishtail.webp",
      "https://cdn.prod.website-files.com/5fb638ef16441f801761b4e1/5fb7a6ceaa1448c50ebeac0f_Camps-notch.jpeg",
      "https://cdn.prod.website-files.com/5fb638ef16441f801761b4e1/5fb7a6ce53b786ff5019c017_Arnys-Dirnelli-1.jpeg",
      "https://cdn.prod.website-files.com/5fb638ef16441f801761b4e1/5fb7a6ceee86f4fc0aaa6712_Cifonelli-notch.jpeg",
@@ -145447,11 +146491,14 @@
    "label": "No.1 Double-Color Straight",
    "scope": "jacket",
    "current": {
-    "image": "/images/blueprints/supplier/e346a69313a8__055R__No.1_Double_color_handmade_straight_lapel_buttonhole_H.jpg",
+    "image": "/images/generated/jacket/lbh-no1-dc-straight.webp",
     "techpackIllustration": "/images/blueprints/supplier/e346a69313a8__055R__No.1_Double_color_handmade_straight_lapel_buttonhole_H.jpg",
     "illustration": "/images/blueprints/supplier/e346a69313a8__055R__No.1_Double_color_handmade_straight_lapel_buttonhole_H.jpg",
     "illustrationStatus": "drawing",
-    "photos": []
+    "photos": [
+     "/images/generated/jacket/lbh-no1-dc-straight.webp",
+     "/images/generated/sport-coat/lbh-no1-dc-straight.webp"
+    ]
    },
    "events": [
     {
@@ -145499,12 +146546,12 @@
      "machine": true,
      "image": {
       "path": "/images/generated/jacket/lbh-no1-dc-straight.webp",
-      "sha1": "c74ee8c233033a054c1b19d4e682a7a1469393cf",
+      "sha1": "096694b1eb8d83d7690af41b36feec53196b8297",
       "exists": true,
       "kind": "was-live",
       "alias": {
        "path": "/images/generated/jacket/lbh-no1-dc-straight.png",
-       "sha1": "b0040be85d7798811ed067f935dcfc459b749c96"
+       "sha1": "5b3d628ee5e5962c8fd441a7b989f6eb34131ce4"
       }
      },
      "replacedWith": "/images/blueprints/supplier/e346a69313a8__055R__No.1_Double_color_handmade_straight_lapel_buttonhole_H.jpg",
@@ -145617,11 +146664,14 @@
    "label": "No.1 Triple-Color Arc",
    "scope": "jacket",
    "current": {
-    "image": "/images/blueprints/supplier/a1cc16870a6b__055Y__No.1_Triple_color_arc_lapel_buttonhole_Handmade_Only_a.jpg",
+    "image": "/images/generated/jacket/lbh-no1-tc-arc.webp",
     "techpackIllustration": "/images/blueprints/supplier/a1cc16870a6b__055Y__No.1_Triple_color_arc_lapel_buttonhole_Handmade_Only_a.jpg",
     "illustration": "/images/blueprints/supplier/a1cc16870a6b__055Y__No.1_Triple_color_arc_lapel_buttonhole_Handmade_Only_a.jpg",
     "illustrationStatus": "drawing",
-    "photos": []
+    "photos": [
+     "/images/generated/jacket/lbh-no1-tc-arc.webp",
+     "/images/generated/sport-coat/lbh-no1-tc-arc.webp"
+    ]
    },
    "events": [
     {
@@ -145669,12 +146719,12 @@
      "machine": true,
      "image": {
       "path": "/images/generated/jacket/lbh-no1-tc-arc.webp",
-      "sha1": "4a68579279dcf94816c2c7fecced5ed8b7df20bd",
+      "sha1": "3c5066703d344a667235c28a982c96d803fa9c5b",
       "exists": true,
       "kind": "was-live",
       "alias": {
        "path": "/images/generated/jacket/lbh-no1-tc-arc.png",
-       "sha1": "fe611f36a480eceb2984e99f28311d1142ae39e1"
+       "sha1": "69972aecd2fecf335dc1ef11cfa1d8b6280d61cf"
       }
      },
      "replacedWith": "/images/blueprints/supplier/a1cc16870a6b__055Y__No.1_Triple_color_arc_lapel_buttonhole_Handmade_Only_a.jpg",
@@ -147654,7 +148704,10 @@
     "techpackIllustration": "/images/blueprints/supplier/fd7769c12fc9__0545__Double_left_bttn_hole.jpg",
     "illustration": "/images/blueprints/supplier/fd7769c12fc9__0545__Double_left_bttn_hole.jpg",
     "illustrationStatus": "drawing",
-    "photos": []
+    "photos": [
+     "/images/generated/sport-coat/lbp-left-double.webp",
+     "/images/review/suit-3pc__lbp-left-double__owner.webp"
+    ]
    },
    "events": [
     {
@@ -147687,12 +148740,12 @@
      "machine": true,
      "image": {
       "path": "/images/generated/sport-coat/lbp-left-double.webp",
-      "sha1": "6ca1d403f1cc6164294a853179b5f70a1014073d",
+      "sha1": "6431e04aa1c140ac7d9c237e4cb3740884bab69d",
       "exists": true,
       "kind": "was-live",
       "alias": {
        "path": "/images/generated/sport-coat/lbp-left-double.png",
-       "sha1": "47d16f68e23a3b0cd90b66f317dff47724aa089c"
+       "sha1": "ff47094daac255b7c64e817bd2cb18dddbef91a2"
       }
      },
      "replacedWith": "/images/blueprints/supplier/fd7769c12fc9__0545__Double_left_bttn_hole.jpg",
@@ -147761,12 +148814,12 @@
      "machine": true,
      "image": {
       "path": "/images/generated/sport-coat/lbp-both.webp",
-      "sha1": "8b7e8600dc4f9fc29b95017bbff494992cfbc8ec",
+      "sha1": "f7e590de82c7d17edb2f9c8f6ac25573fc2cee9f",
       "exists": true,
       "kind": "was-live",
       "alias": {
        "path": "/images/generated/sport-coat/lbp-both.png",
-       "sha1": "d937a7965b608476960a2679333932d451397c8a"
+       "sha1": "0ebd84448452f9014e4d58196b67c80763e5ed20"
       }
      },
      "replacedWith": "/images/blueprints/supplier/68b420f69832__0543__Right_Left_bttn_hole.jpg",
@@ -158823,7 +159876,7 @@
    "label": "+2 cm",
    "scope": "jacket",
    "current": {
-    "image": null,
+    "image": "/images/generated/sport-coat/cd-plus-2.webp",
     "techpackIllustration": "/images/supplier-bb/KWAML/A.jpg",
     "illustration": "/images/supplier-bb/KWAML/A.jpg",
     "illustrationStatus": "drawing"
@@ -158873,7 +159926,7 @@
    "label": "+3 cm",
    "scope": "jacket",
    "current": {
-    "image": null,
+    "image": "/images/generated/sport-coat/cd-plus-3.webp",
     "techpackIllustration": "/images/supplier-bb/KWAML/B.jpg",
     "illustration": "/images/supplier-bb/KWAML/B.jpg",
     "illustrationStatus": "drawing"
@@ -159098,12 +160151,12 @@
      "machine": true,
      "image": {
       "path": "/images/generated/sport-coat/hem-squared.webp",
-      "sha1": "38068d2795b831fc127a671b32d4ff61e087a89c",
+      "sha1": "b5d84e6dee501e430375b2ba35da8860206bb57c",
       "exists": true,
       "kind": "was-live",
       "alias": {
        "path": "/images/generated/sport-coat/hem-squared.png",
-       "sha1": "dff8b46b5a9802c67565cca63ec757045a7f6651"
+       "sha1": "aeba7921ce5e3cb4259c408cc88bdca69dd10445"
       }
      },
      "replacedWith": "/images/supplier-bb/REQXB/Q.jpg",
@@ -161324,12 +162377,12 @@
      "machine": true,
      "image": {
       "path": "/images/generated/sport-coat/sbh-slant.webp",
-      "sha1": "21438f72e92a275362d20ede64bafd59f1a3b8a2",
+      "sha1": "aa6afddd043d2fa7d53a013f8ba66c74ff6d58f0",
       "exists": true,
       "kind": "was-live",
       "alias": {
        "path": "/images/generated/sport-coat/sbh-slant.png",
-       "sha1": "bb41f2f17b34f8876e004b3387d45e874ae56325"
+       "sha1": "55b96b914ebe6dc488d9f48c3e46e3ffeaee08b9"
       }
      },
      "replacedWith": "/images/blueprints/factory/fdbc0cbb0bb5__AAAN__Normal_slanted.jpg",
@@ -166908,7 +167961,7 @@
    "label": "I-Bartack",
    "scope": "jacket",
    "current": {
-    "image": null,
+    "image": "/images/generated/jacket/ipc-i.webp",
     "techpackIllustration": "/images/supplier-bb/REKPO/B.jpg",
     "illustration": "/images/supplier-bb/REKPO/B.jpg",
     "illustrationStatus": "drawing"
@@ -166958,7 +168011,7 @@
    "label": "X-Bartack",
    "scope": "jacket",
    "current": {
-    "image": null,
+    "image": "/images/generated/jacket/ipc-x.webp",
     "techpackIllustration": "/images/supplier-bb/REKPO/C.jpg",
     "illustration": "/images/supplier-bb/REKPO/C.jpg",
     "illustrationStatus": "drawing"
@@ -176890,11 +177943,13 @@
    "label": "Artistic Lining (Placement)",
    "scope": "vest",
    "current": {
-    "image": "/images/options/vest/vest-lining-artistic.jpg",
+    "image": "/images/generated/jacket/vest-lining-artistic.webp",
     "techpackIllustration": "/images/options/vest/vest-lining-artistic.jpg",
     "illustration": "/images/options/vest/vest-lining-artistic.jpg",
     "illustrationStatus": "drawing",
-    "photos": [],
+    "photos": [
+     "/images/generated/jacket/vest-lining-artistic.webp"
+    ],
     "verification": {
      "method": "factory-asset-self-hosted",
      "verifiedDate": "2026-06-06"
@@ -176903,26 +177958,18 @@
    "events": [
     {
      "source": "admin-portal",
-     "via": "map",
-     "verdict": "rejected",
-     "attempt": 2,
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 3,
      "image": {
-      "path": ".craft-pipeline/suit-3pc/vest-lining-artistic/candidate-2.png",
-      "sha1": "7cb54508b7d194ab4a8763317bc71b2bdc5c1798",
+      "path": ".craft-pipeline/suit-3pc/vest-lining-artistic/candidate-3.png",
+      "sha1": "bea27fbf06c8a59ca0079fc16fa1bd146157387b",
       "exists": true,
-      "kind": "pipeline-candidate"
+      "kind": "logged-at-decision-time"
      },
-     "notes": "looks to thick custom lining appears to be sewn onto the fabric",
-     "tags": [
-      "Wrong shape / outline"
-     ],
-     "references": [
-      "/images/review-refs/suit-3pc/vest-lining-artistic/1786400555922-2gqg8j.jpg",
-      "/images/review-refs/suit-3pc/vest-lining-artistic/1786400567847-0a4xar.jpg",
-      "/images/review-refs/suit-3pc/vest-lining-artistic/1786400575772-wf32rt.jpg"
-     ],
-     "decidedAt": "2026-08-10T22:23:42.029Z",
-     "boundBy": "pipeline-spec",
+     "decidedAt": "2026-09-14T04:06:53.569Z",
+     "boundBy": "explicit-addr",
      "portalKey": "suit-3pc/vest-lining-artistic",
      "current": true
     },
@@ -176979,9 +178026,9 @@
     }
    ],
    "state": "has-owner-photo-approval",
-   "approvedPhotoEvents": 1,
+   "approvedPhotoEvents": 2,
    "illustrationKeepEvents": 0,
-   "rejectionEvents": 1,
+   "rejectionEvents": 0,
    "illustration": {
     "path": "/images/options/vest/vest-lining-artistic.jpg",
     "status": "verified-match",
@@ -180823,6 +181870,29 @@
    },
    "events": [
     {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 1,
+     "image": {
+      "path": ".craft-pipeline/suit-3pc/pocket-stitch-pick-06/candidate-1.png",
+      "sha1": "0121745b8b771ee54e5260206d3fab6412298830",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Feature not visible / too small in frame"
+     ],
+     "references": [
+      "/images/review-refs/suit-3pc/pocket-stitch-pick-06/1789357295054-1eh2vz.jpg"
+     ],
+     "decidedAt": "2026-09-14T03:44:03.422Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-3pc/pocket-stitch-pick-06",
+     "current": true
+    },
+    {
      "source": "july-v3",
      "verdict": "remake",
      "julyKey": "trousers|pocket-stitching|pocket-stitch-pick-06",
@@ -180898,7 +181968,7 @@
    "state": "illustration-kept-only",
    "approvedPhotoEvents": 0,
    "illustrationKeepEvents": 1,
-   "rejectionEvents": 2,
+   "rejectionEvents": 3,
    "illustration": {
     "path": "/images/blueprints/remote/0c5cfcfe96d9__165588183495006.jpg",
     "status": "drawing-unverified",
@@ -194362,13 +195432,32 @@
    "label": "No Heel Guard",
    "scope": "trousers",
    "current": {
-    "image": "/images/blueprints/remote/90c9f9c84002__33BB.jpg",
+    "image": "/images/generated/jacket/heel-none.webp",
     "techpackIllustration": "/images/blueprints/remote/90c9f9c84002__33BB.jpg",
     "illustration": "/images/blueprints/remote/90c9f9c84002__33BB.jpg",
     "illustrationStatus": "drawing",
-    "photos": []
+    "photos": [
+     "/images/generated/jacket/heel-none.webp"
+    ]
    },
    "events": [
+    {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "approved",
+     "attempt": 1,
+     "image": {
+      "path": ".craft-pipeline/suit-3pc/heel-none/candidate-1.png",
+      "sha1": "f90b0c8ee6989465f4a5ba19cf178e5eeab74e30",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "decidedAt": "2026-09-14T03:24:48.315Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-3pc/heel-none",
+     "current": true
+    },
     {
      "source": "july-v3",
      "verdict": "remake",
@@ -194427,8 +195516,8 @@
      "ownerVerdictAtTheTime": "REJECTED"
     }
    ],
-   "state": "illustration-kept-only",
-   "approvedPhotoEvents": 0,
+   "state": "has-owner-photo-approval",
+   "approvedPhotoEvents": 1,
    "illustrationKeepEvents": 1,
    "rejectionEvents": 1,
    "illustration": {
@@ -194528,6 +195617,27 @@
    },
    "events": [
     {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 1,
+     "image": {
+      "path": ".craft-pipeline/suit-3pc/heel-whole-circle/candidate-1.png",
+      "sha1": "4901397d0310b4143e5af55fb2bad36bc077b5ab",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Generic version, not this option",
+      "Feature not visible / too small in frame"
+     ],
+     "decidedAt": "2026-09-14T03:55:17.713Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-3pc/heel-whole-circle",
+     "current": true
+    },
+    {
      "source": "july-v3",
      "verdict": "remake",
      "julyKey": "trousers|heel-guard|heel-whole-circle",
@@ -194588,7 +195698,7 @@
    "state": "illustration-kept-only",
    "approvedPhotoEvents": 0,
    "illustrationKeepEvents": 1,
-   "rejectionEvents": 1,
+   "rejectionEvents": 2,
    "illustration": {
     "path": "/images/blueprints/remote/7a19d9941f5a__3614.jpg",
     "status": "drawing-unverified",
@@ -196256,6 +197366,27 @@
    },
    "events": [
     {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 1,
+     "image": {
+      "path": ".craft-pipeline/suit-3pc/trouser-contrast-front-besom/candidate-1.png",
+      "sha1": "8b13778c6c8badac3f5ae86629702ec8194e8508",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "tags": [
+      "Unrealistic / AI look",
+      "Wrong side or orientation"
+     ],
+     "decidedAt": "2026-09-14T03:44:13.239Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-3pc/trouser-contrast-front-besom",
+     "current": true
+    },
+    {
      "source": "july-v3",
      "verdict": "remake",
      "julyKey": "trousers|contrast-positions|trouser-contrast-front-besom",
@@ -196315,7 +197446,7 @@
    "state": "illustration-kept-only",
    "approvedPhotoEvents": 0,
    "illustrationKeepEvents": 1,
-   "rejectionEvents": 1,
+   "rejectionEvents": 2,
    "illustration": {
     "path": "/images/blueprints/remote/5c43b55a10d4__3140.jpg",
     "status": "drawing-unverified",
@@ -196485,6 +197616,27 @@
    },
    "events": [
     {
+     "source": "admin-portal",
+     "via": "log",
+     "event": "decision",
+     "verdict": "rejected",
+     "attempt": 1,
+     "image": {
+      "path": ".craft-pipeline/suit-3pc/trouser-contrast-covered-btn/candidate-1.png",
+      "sha1": "144796f660ce4843c87836dc357004aea9970e05",
+      "exists": true,
+      "kind": "logged-at-decision-time"
+     },
+     "notes": "its a satin covered button",
+     "tags": [
+      "Wrong garment or wrong part"
+     ],
+     "decidedAt": "2026-09-14T03:49:42.121Z",
+     "boundBy": "explicit-addr",
+     "portalKey": "suit-3pc/trouser-contrast-covered-btn",
+     "current": true
+    },
+    {
      "source": "july-v3",
      "verdict": "remake",
      "julyKey": "trousers|contrast-positions|trouser-contrast-covered-btn",
@@ -196545,7 +197697,7 @@
    "state": "illustration-kept-only",
    "approvedPhotoEvents": 0,
    "illustrationKeepEvents": 1,
-   "rejectionEvents": 1,
+   "rejectionEvents": 2,
    "illustration": {
     "path": "/images/blueprints/remote/763fb7c721e6__169560958482161.jpg",
     "status": "drawing-unverified",
@@ -200280,11 +201432,13 @@
    "label": "0.6 cm Pick Stitch",
    "scope": "trousers",
    "current": {
-    "image": "/images/blueprints/remote/0c5cfcfe96d9__165588183495006.jpg",
+    "image": "/images/generated/jacket/pocket-stitch-pick-06.webp",
     "techpackIllustration": "/images/blueprints/remote/0c5cfcfe96d9__165588183495006.jpg",
     "illustration": "/images/blueprints/remote/0c5cfcfe96d9__165588183495006.jpg",
     "illustrationStatus": "drawing",
-    "photos": []
+    "photos": [
+     "/images/generated/jacket/pocket-stitch-pick-06.webp"
+    ]
    },
    "events": [
     {
@@ -202284,7 +203438,8 @@
      "https://www.permanentstyle.com/wp-content/uploads/2022/10/6-Andreas-Cavour.jpg",
      "https://www.permanentstyle.com/wp-content/uploads/2017/11/Fox-Brothers-trousers.jpg",
      "https://www.permanentstyle.com/wp-content/uploads/2019/05/Stoffa-trouser-review.jpg"
-    ]
+    ],
+    "realImage": "/images/real/waist-standard-1789359286387.jpg"
    },
    "events": [
     {
@@ -214338,11 +215493,13 @@
    "label": "No Heel Guard",
    "scope": "trousers",
    "current": {
-    "image": "/images/blueprints/remote/90c9f9c84002__33BB.jpg",
+    "image": "/images/generated/jacket/heel-none.webp",
     "techpackIllustration": "/images/blueprints/remote/90c9f9c84002__33BB.jpg",
     "illustration": "/images/blueprints/remote/90c9f9c84002__33BB.jpg",
     "illustrationStatus": "drawing",
-    "photos": []
+    "photos": [
+     "/images/generated/jacket/heel-none.webp"
+    ]
    },
    "events": [
     {
