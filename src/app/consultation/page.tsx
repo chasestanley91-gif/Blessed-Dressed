@@ -417,6 +417,12 @@ export default function ConsultationPage() {
               Try the bespoke builder →
             </Link>
           </p>
+          <p className="font-sans text-xs text-slate">
+            Planning a full wardrobe?{" "}
+            <Link href="/wardrobe-questionnaire" className="text-gold underline underline-offset-2 hover:no-underline">
+              Complete the Gentleman&rsquo;s Wardrobe Questionnaire →
+            </Link>
+          </p>
         </div>
 
       </form>
