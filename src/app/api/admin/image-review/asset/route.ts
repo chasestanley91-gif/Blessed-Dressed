@@ -5,7 +5,7 @@ import { join } from "path";
 import { saveImageAsset, ImagePathError } from "@/lib/image-store";
 
 const STORE = join(process.cwd(), "data-store");
-const MAP_FILE = join(STORE, "craft-image-map.json");
+const OVERLAY_FILE = join(STORE, "image-review-overlays.json");
 const SAFE = /^[a-z0-9][a-z0-9._-]*$/i;
 const ALLOWED = new Set(["image/jpeg", "image/png", "image/webp", "image/gif", "image/avif"]);
 const ALLOWED_EXT = new Set(["jpg", "jpeg", "png", "webp", "gif", "avif"]);
@@ -50,13 +50,13 @@ function patchOption(craftId: string, fn: (o: Record<string, unknown>) => void) 
   writeFileSync(file, JSON.stringify(cfg, null, 2) + "\n", "utf8");
 }
 
-function patchMap(craftId: string, fn: (c: Record<string, unknown>) => void) {
-  const map = readJson<{ crafts?: Record<string, unknown>[] }>(MAP_FILE, { crafts: [] });
-  const row = (map.crafts ?? []).find((c) => c.craftId === craftId);
-  if (!row) return;
+function patchOverlay(craftId: string, fn: (c: Record<string, unknown>) => void) {
+  const all = readJson<Record<string, Record<string, unknown>>>(OVERLAY_FILE, {});
+  const row = all[craftId] ?? {};
   fn(row);
+  all[craftId] = row;
   mkdirSync(STORE, { recursive: true });
-  writeFileSync(MAP_FILE, JSON.stringify(map, null, 1) + "\n", "utf8");
+  writeFileSync(OVERLAY_FILE, JSON.stringify(all, null, 1) + "\n", "utf8");
 }
 
 export async function POST(req: NextRequest) {
@@ -99,13 +99,11 @@ export async function POST(req: NextRequest) {
         o.image = path;
         o.illustrationStatus = "drawing";
       });
-      patchMap(craftId, (c) => {
+      patchOverlay(craftId, (c) => {
         c.drawing = { path, status: "owner-uploaded", exists: true };
-        const flags = Array.isArray(c.flags) ? c.flags.filter((f) => f !== "NO_DRAWING" && f !== "DRAWING_FILE_MISSING" && f !== "DRAWING_SUSPECT") : [];
-        c.flags = flags;
       });
     } else if (kind === "reference") {
-      patchMap(craftId, (c) => {
+      patchOverlay(craftId, (c) => {
         const refs = Array.isArray(c.references) ? c.references : [];
         refs.push({ path, bytes: file.size });
         c.references = refs;
@@ -116,7 +114,7 @@ export async function POST(req: NextRequest) {
         if (!photos.includes(path)) photos.push(path);
         o.photos = photos;
       });
-      patchMap(craftId, (c) => {
+      patchOverlay(craftId, (c) => {
         const photos = Array.isArray(c.photos) ? c.photos : [];
         photos.push({ path, sha1, sources: ["owner-upload"], verdict: "approved", preTicked: true });
         c.photos = photos;

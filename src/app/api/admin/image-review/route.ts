@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { readFileSync, writeFileSync, mkdirSync, existsSync } from "fs";
+import { readFileSync, writeFileSync, mkdirSync, existsSync, statSync } from "fs";
 import { createHash } from "crypto";
 import { join } from "path";
 
@@ -68,11 +68,15 @@ type LogEntry = ReviewDecision & {
   event: "decision" | "revoked";
 };
 
-function appendLog(entry: LogEntry) {
+function appendLogs(entries: LogEntry[]) {
+  if (!entries.length) return;
   const log = readJson<LogEntry[]>(DECISIONS_LOG_FILE, []);
-  log.push(entry);
+  log.push(...entries);
   mkdirSync(STORE, { recursive: true });
   writeFileSync(DECISIONS_LOG_FILE, JSON.stringify(log, null, 1));
+}
+function appendLog(entry: LogEntry) {
+  appendLogs([entry]);
 }
 
 /** Hash the exact bytes the owner judged: the pipeline candidate when it
@@ -103,36 +107,86 @@ function addrFromQueue(key: string): string | undefined {
   return queue.items?.find((i) => i.key === key)?.addr;
 }
 
-export async function GET() {
-  const map = readJson<{ builtAt?: string; crafts?: CraftRow[]; totals?: unknown }>(
-    join(STORE, "craft-image-map.json"),
-    {},
-  );
+type MapPhoto = { path: string; sha1: string; aliases?: string[]; verdict: string; preTicked?: boolean; sources?: string[] };
+type CraftRow = {
+  craftId: string;
+  product?: string;
+  sectionId?: string;
+  sectionLabel?: string;
+  fieldId?: string;
+  fieldLabel?: string;
+  optionId?: string;
+  label?: string;
+  flags?: string[];
+  inScope?: boolean;
+  drawing?: { path: string | null; status: string; exists: boolean };
+  photos?: MapPhoto[];
+  references?: { path: string; bytes: number }[];
+};
+
+let mapCache: { mtime: number; data: { builtAt?: string; crafts?: CraftRow[]; totals?: unknown } } | null = null;
+function loadMap() {
+  const p = join(STORE, "craft-image-map.json");
+  const st = existsSync(p) ? statSync(p).mtimeMs : 0;
+  if (mapCache && mapCache.mtime === st) return mapCache.data;
+  const data = readJson<{ builtAt?: string; crafts?: CraftRow[]; totals?: unknown }>(p, {});
+  mapCache = { mtime: st, data };
+  return data;
+}
+
+type Overlay = {
+  drawing?: { path: string; status: string; exists: boolean };
+  photos?: MapPhoto[];
+  references?: { path: string; bytes: number }[];
+};
+const OVERLAY_FILE = join(STORE, "image-review-overlays.json");
+
+function displayPath(p: MapPhoto): string {
+  if (p.path.startsWith("/images/")) return p.path;
+  const alias = (p.aliases ?? []).find((a) => a.startsWith("/images/"));
+  return alias ?? p.path;
+}
+
+export async function GET(req: NextRequest) {
+  const product = req.nextUrl.searchParams.get("product") || "";
+  const map = loadMap();
+  const overlays = readJson<Record<string, Overlay>>(OVERLAY_FILE, {});
   const crafts = (map.crafts ?? [])
-    .filter((c) => c.inScope)
-    .map((c) => ({
-      ...c,
-      photos: (c.photos ?? []).filter((p) => p.verdict !== "rejected").map((p) => ({
-        ...p,
-        path: displayPath(p),
-      })).filter((p) => p.path.startsWith("/images/")),
-    }));
-  const decisions = readJson<DecisionMap>(DECISIONS_FILE, {});
+    .filter((c) => c.inScope && (!product || c.product === product))
+    .map((c) => {
+      const over = overlays[c.craftId];
+      const photos = [...(c.photos ?? []), ...(over?.photos ?? [])]
+        .filter((p) => p.verdict !== "rejected")
+        .map((p) => ({
+          path: displayPath(p),
+          sha1: p.sha1,
+          verdict: p.verdict,
+          preTicked: p.preTicked,
+          sources: p.sources,
+        }))
+        .filter((p) => p.path.startsWith("/images/"));
+      return {
+        craftId: c.craftId,
+        product: c.product,
+        sectionId: c.sectionId,
+        sectionLabel: c.sectionLabel,
+        fieldId: c.fieldId,
+        fieldLabel: c.fieldLabel,
+        optionId: c.optionId,
+        label: c.label,
+        flags: c.flags,
+        inScope: c.inScope,
+        drawing: over?.drawing ?? c.drawing,
+        photos,
+        references: [...(Array.isArray(c.references) ? c.references : []), ...(over?.references ?? [])],
+      };
+    });
   return NextResponse.json({
     generatedAt: map.builtAt ?? null,
     totals: map.totals ?? null,
     crafts,
-    decisions,
   });
 }
-
-type MapPhoto = { path: string; sha1: string; aliases?: string[]; verdict: string; preTicked?: boolean; sources?: string[] };
-type CraftRow = {
-  craftId: string;
-  inScope?: boolean;
-  photos?: MapPhoto[];
-  [k: string]: unknown;
-};
 
 function displayPath(p: MapPhoto): string {
   if (p.path.startsWith("/images/")) return p.path;
@@ -160,6 +214,7 @@ function saveCraftBatch(body: Record<string, unknown>) {
   }
 
   const decisions = readJson<DecisionMap>(DECISIONS_FILE, {});
+  const logEntries: LogEntry[] = [];
   let wrote = 0;
   for (const id of targets) {
     const [product, , , optionId] = id.split("|");
@@ -173,7 +228,7 @@ function saveCraftBatch(body: Record<string, unknown>) {
         tags: tags.length ? tags : ["Generic version, not this option"],
         decidedAt: now,
       };
-      appendLog({
+      logEntries.push({
         ...decisions[key],
         event: "decision",
         addr: id.replace(/\|/g, " > "),
@@ -185,7 +240,7 @@ function saveCraftBatch(body: Record<string, unknown>) {
       const p = raw as { path?: string; sha1?: string; verdict?: string };
       if (p.verdict !== "approved" && p.verdict !== "rejected") continue;
       if (typeof p.path !== "string") continue;
-      appendLog({
+      logEntries.push({
         key,
         attempt: 1,
         verdict: p.verdict,
@@ -210,6 +265,7 @@ function saveCraftBatch(body: Record<string, unknown>) {
     }
   }
   writeDecisions(decisions);
+  appendLogs(logEntries);
   return NextResponse.json({ ok: true, wrote, targets });
 }
 

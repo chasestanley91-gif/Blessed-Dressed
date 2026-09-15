@@ -65,7 +65,8 @@ export default function ImageReviewPage() {
   const [crafts, setCrafts] = useState<Craft[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [garment, setGarment] = useState("all");
+  const [garment, setGarment] = useState("shirt");
+  const savingRef = useRef(false);
   const [filter, setFilter] = useState<"needs-review" | "done" | "flagged" | "all">("needs-review");
   const [q, setQ] = useState("");
   const [cursorId, setCursorId] = useState<string | null>(null);
@@ -81,21 +82,28 @@ export default function ImageReviewPage() {
   const formResetFor = useRef<string | null>(null);
 
   useEffect(() => {
+    let cancelled = false;
+    setLoading(true);
     void (async () => {
       try {
-        const r = await fetch("/api/admin/image-review");
+        const qs = garment && garment !== "all" ? `?product=${encodeURIComponent(garment)}` : "";
+        const r = await fetch(`/api/admin/image-review${qs}`);
         const d = await r.json();
+        if (cancelled) return;
         const list: Craft[] = (d.crafts ?? []).slice().sort(sortCrafts);
         setCrafts(list);
-        const saved = typeof window !== "undefined" ? sessionStorage.getItem(CURSOR_KEY) : null;
-        setCursorId(saved && list.some((c) => c.craftId === saved) ? saved : list[0]?.craftId ?? null);
+        const saved = sessionStorage.getItem(CURSOR_KEY);
+        const start = saved && list.some((c) => c.craftId === saved) ? saved : list[0]?.craftId ?? null;
+        setCursorId(start);
+        formResetFor.current = null;
       } catch {
-        setError("Could not load the craft map.");
+        if (!cancelled) setError("Could not load the craft map.");
       } finally {
-        setLoading(false);
+        if (!cancelled) setLoading(false);
       }
     })();
-  }, []);
+    return () => { cancelled = true; };
+  }, [garment]);
 
   useEffect(() => {
     if (cursorId) sessionStorage.setItem(CURSOR_KEY, cursorId);
@@ -148,7 +156,8 @@ export default function ImageReviewPage() {
   }, []);
 
   const save = useCallback(async (noneRight: boolean) => {
-    if (!current || saving) return;
+    if (!current || saving || savingRef.current) return;
+    savingRef.current = true;
     const i = visible.findIndex((c) => c.craftId === current.craftId);
     const nextId = visible[i + 1]?.craftId ?? null;
     setSaving(true);
@@ -192,9 +201,10 @@ export default function ImageReviewPage() {
     } catch (e) {
       setError(e instanceof Error ? e.message : "Save failed");
     } finally {
+      savingRef.current = false;
       setSaving(false);
     }
-  }, [current, picked, tags, notes, drawingWrong, applyJackets, saving, visible, goTo]);
+  }, [current, picked, tags, notes, drawingWrong, applyJackets, visible, goTo]);
 
   async function upload(kind: "drawing" | "reference" | "photo", file: File) {
     if (!current) return;
@@ -237,7 +247,6 @@ export default function ImageReviewPage() {
 
   if (loading) return <div style={pageWrap}>Loading craft map…</div>;
 
-  const garments = [...new Set(crafts.map((c) => c.product))];
   const doneCount = crafts.filter((c) => c.photos.some((p) => p.verdict === "approved")).length;
 
   return (
@@ -245,9 +254,10 @@ export default function ImageReviewPage() {
       <header style={{ display: "flex", flexWrap: "wrap", gap: 10, alignItems: "center", marginBottom: 14 }}>
         <h1 style={{ margin: 0, fontSize: 22 }}>Craft photo review</h1>
         <span style={{ color: "#57534e", fontSize: 13 }}>{doneCount} / {crafts.length} in-scope have an approved photo</span>
-        <select value={garment} onChange={(e) => { setGarment(e.target.value); }} style={sel}>
-          <option value="all">All garments</option>
-          {garments.map((g) => <option key={g} value={g}>{g}</option>)}
+        <select value={garment} onChange={(e) => { setGarment(e.target.value); setCursorId(null); }} style={sel}>
+          {["shirt", "sport-coat", "suit-2pc", "suit-3pc", "trousers", "vest"].map((g) => (
+            <option key={g} value={g}>{g}</option>
+          ))}
         </select>
         <select value={filter} onChange={(e) => { setFilter(e.target.value as typeof filter); }} style={sel}>
           <option value="needs-review">Needs review</option>
