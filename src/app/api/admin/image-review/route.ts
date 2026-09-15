@@ -138,6 +138,7 @@ type Overlay = {
   drawing?: { path: string; status: string; exists: boolean };
   photos?: MapPhoto[];
   references?: { path: string; bytes: number }[];
+  removedSha1?: string[];
 };
 const OVERLAY_FILE = join(STORE, "image-review-overlays.json");
 
@@ -155,8 +156,9 @@ export async function GET(req: NextRequest) {
     .filter((c) => c.inScope && (!product || c.product === product))
     .map((c) => {
       const over = overlays[c.craftId];
+      const removed = new Set(over?.removedSha1 ?? []);
       const photos = [...(c.photos ?? []), ...(over?.photos ?? [])]
-        .filter((p) => p.verdict !== "rejected")
+        .filter((p) => p.verdict !== "rejected" && !removed.has(p.sha1))
         .map((p) => ({
           path: displayPath(p),
           sha1: p.sha1,

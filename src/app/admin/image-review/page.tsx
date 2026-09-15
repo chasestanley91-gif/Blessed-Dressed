@@ -79,6 +79,9 @@ export default function ImageReviewPage() {
   const [saving, setSaving] = useState(false);
   const [uploading, setUploading] = useState<string | null>(null);
   const [zoom, setZoom] = useState<string | null>(null);
+  const [moveFor, setMoveFor] = useState<Photo | null>(null);
+  const [moveQuery, setMoveQuery] = useState("");
+  const [moving, setMoving] = useState(false);
   const formResetFor = useRef<string | null>(null);
 
   useEffect(() => {
@@ -147,6 +150,8 @@ export default function ImageReviewPage() {
     setDrawingWrong(false);
     setZoom(current.photos[0]?.path ?? current.drawing.path);
     setApplyJackets(false);
+    setMoveFor(null);
+    setMoveQuery("");
   }, [current]);
 
   const goTo = useCallback((id: string | null) => {
@@ -205,6 +210,50 @@ export default function ImageReviewPage() {
       setSaving(false);
     }
   }, [current, picked, tags, notes, drawingWrong, applyJackets, visible, goTo]);
+
+  function pathLooksLike(path: string, optionId: string) {
+    const p = path.toLowerCase();
+    const id = optionId.toLowerCase();
+    return p.includes(`/${id}.`) || p.includes(`/${id}-`) || p.includes(`__${id}__`) || p.endsWith(`/${id}`);
+  }
+
+  async function movePhoto(toCraftId: string) {
+    if (!current || !moveFor || moving) return;
+    setMoving(true);
+    setError(null);
+    try {
+      const r = await fetch("/api/admin/image-review/move", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          fromCraftId: current.craftId,
+          toCraftId,
+          path: moveFor.path,
+          sha1: moveFor.sha1,
+        }),
+      });
+      const d = await r.json().catch(() => ({}));
+      if (!r.ok) throw new Error(d.error || "Move failed");
+      const dest = crafts.find((c) => c.craftId === toCraftId);
+      setCrafts((prev) => prev.map((c) => {
+        if (c.craftId === current.craftId) {
+          return { ...c, photos: c.photos.filter((p) => p.sha1 !== moveFor.sha1 && p.path !== moveFor.path) };
+        }
+        if (c.craftId === toCraftId) {
+          if (c.photos.some((p) => p.sha1 === moveFor.sha1 || p.path === moveFor.path)) return c;
+          return { ...c, photos: [...c.photos, { ...moveFor, verdict: "unreviewed", preTicked: false }] };
+        }
+        return c;
+      }));
+      setMoveFor(null);
+      setMoveQuery("");
+      setError(`Moved to ${dest?.label ?? toCraftId}. It will show there as waiting.`);
+    } catch (e) {
+      setError(e instanceof Error ? e.message : "Move failed");
+    } finally {
+      setMoving(false);
+    }
+  }
 
   async function upload(kind: "drawing" | "reference" | "photo", file: File) {
     if (!current) return;
@@ -299,32 +348,71 @@ export default function ImageReviewPage() {
               <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(140px, 1fr))", gap: 8 }}>
                 {current.photos.map((p) => {
                   const v = picked[p.sha1] ?? "unreviewed";
+                  const hints = crafts.filter((c) => c.craftId !== current.craftId && pathLooksLike(p.path, c.optionId)).slice(0, 3);
                   return (
-                    <button
-                      key={p.sha1 || p.path}
-                      type="button"
-                      onClick={() => {
-                        setZoom(p.path);
-                        setPicked((prev) => ({
-                          ...prev,
-                          [p.sha1]: v === "approved" ? "unreviewed" : "approved",
-                        }));
-                      }}
-                      style={{
-                        border: v === "approved" ? "3px solid #b45309" : "1px solid #d6d3d1",
-                        borderRadius: 8,
-                        padding: 4,
-                        background: "#fff",
-                        cursor: "pointer",
-                      }}
-                    >
-                      <img src={p.path} alt="" style={{ width: "100%", height: 110, objectFit: "contain" }} />
-                      <span style={{ fontSize: 11 }}>{v === "approved" ? "Use this" : "Waiting"}</span>
-                    </button>
+                    <div key={p.sha1 || p.path} style={{ border: v === "approved" ? "3px solid #b45309" : "1px solid #d6d3d1", borderRadius: 8, padding: 4, background: "#fff" }}>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setZoom(p.path);
+                          setPicked((prev) => ({
+                            ...prev,
+                            [p.sha1]: v === "approved" ? "unreviewed" : "approved",
+                          }));
+                        }}
+                        style={{ border: 0, background: "transparent", padding: 0, cursor: "pointer", width: "100%" }}
+                      >
+                        <img src={p.path} alt="" style={{ width: "100%", height: 110, objectFit: "contain" }} />
+                        <span style={{ fontSize: 11 }}>{v === "approved" ? "Use this" : "Waiting"}</span>
+                      </button>
+                      <button type="button" onClick={() => { setMoveFor(p); setMoveQuery(""); setZoom(p.path); }}
+                        style={{ display: "block", width: "100%", marginTop: 4, fontSize: 11, border: "1px solid #d6d3d1", borderRadius: 4, background: "#fafaf9", cursor: "pointer" }}>
+                        Wrong craft — move
+                      </button>
+                      {hints.map((h) => (
+                        <button key={h.craftId} type="button" disabled={moving} onClick={() => { setMoveFor(p); void movePhoto(h.craftId); }}
+                          style={{ display: "block", width: "100%", marginTop: 2, fontSize: 10, textAlign: "left", border: 0, background: "transparent", color: "#1d4ed8", cursor: "pointer" }}>
+                          Looks like {h.label}
+                        </button>
+                      ))}
+                    </div>
                   );
                 })}
                 {current.photos.length === 0 && <p style={{ color: "#78716c" }}>No local photos yet. Upload one below or mark “None are right”.</p>}
               </div>
+              {moveFor && current && (
+                <div style={{ marginTop: 12, padding: 12, background: "#fff", border: "1px solid #d6d3d1", borderRadius: 8 }}>
+                  <p style={cap}>Move this photo to the right craft</p>
+                  <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
+                    <img src={moveFor.path} alt="" style={{ height: 64, background: "#fafaf9" }} />
+                    <input value={moveQuery} onChange={(e) => setMoveQuery(e.target.value)} placeholder="Type the option name, e.g. point 7.0"
+                      style={{ ...sel, flex: 1 }} autoFocus />
+                    <button type="button" onClick={() => setMoveFor(null)} style={btn}>Cancel</button>
+                  </div>
+                  <p style={{ fontSize: 12, color: "#57534e", margin: "8px 0 4px" }}>Same group (most likely)</p>
+                  <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+                    {crafts.filter((c) => c.product === current.product && c.sectionId === current.sectionId && c.fieldId === current.fieldId && c.craftId !== current.craftId).map((c) => (
+                      <button key={c.craftId} type="button" disabled={moving} onClick={() => void movePhoto(c.craftId)} style={btn}>{c.label}</button>
+                    ))}
+                  </div>
+                  {moveQuery.trim().length >= 2 && (
+                    <>
+                      <p style={{ fontSize: 12, color: "#57534e", margin: "8px 0 4px" }}>Search matches</p>
+                      <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+                        {crafts.filter((c) => {
+                          if (c.craftId === current.craftId) return false;
+                          const hay = `${c.label} ${c.optionId} ${c.fieldLabel ?? ""} ${c.sectionLabel ?? ""}`.toLowerCase();
+                          return hay.includes(moveQuery.trim().toLowerCase());
+                        }).slice(0, 12).map((c) => (
+                          <button key={c.craftId} type="button" disabled={moving} onClick={() => void movePhoto(c.craftId)} style={btn}>
+                            {c.label} <span style={{ color: "#78716c" }}>({c.fieldLabel || c.fieldId})</span>
+                          </button>
+                        ))}
+                      </div>
+                    </>
+                  )}
+                </div>
+              )}
               <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginTop: 10 }}>
                 <label style={fileBtn}>
                   {uploading === "photo" ? "Uploading…" : "Add photo to use"}
