@@ -188,12 +188,6 @@ export async function GET(req: NextRequest) {
   });
 }
 
-function displayPath(p: MapPhoto): string {
-  if (p.path.startsWith("/images/")) return p.path;
-  const alias = (p.aliases ?? []).find((a) => a.startsWith("/images/"));
-  return alias ?? p.path;
-}
-
 function saveCraftBatch(body: Record<string, unknown>) {
   const craftId = String(body.craftId);
   const photos = Array.isArray(body.photos) ? body.photos : [];
