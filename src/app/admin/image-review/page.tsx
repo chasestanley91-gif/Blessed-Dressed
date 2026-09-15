@@ -96,7 +96,13 @@ export default function ImageReviewPage() {
         const list: Craft[] = (d.crafts ?? []).slice().sort(sortCrafts);
         setCrafts(list);
         const saved = sessionStorage.getItem(CURSOR_KEY);
-        const start = saved && list.some((c) => c.craftId === saved) ? saved : list[0]?.craftId ?? null;
+        const resume = typeof d.resumeCraftId === "string" ? d.resumeCraftId : null;
+        const start =
+          (resume && list.some((c) => c.craftId === resume) ? resume : null)
+          || (saved && list.some((c) => c.craftId === saved) ? saved : null)
+          || list.find((c) => c.photos.some((p) => p.verdict === "unreviewed"))?.craftId
+          || list[0]?.craftId
+          || null;
         setCursorId(start);
         formResetFor.current = null;
       } catch {
@@ -338,7 +344,7 @@ export default function ImageReviewPage() {
     <div style={pageWrap}>
       <header style={{ display: "flex", flexWrap: "wrap", gap: 10, alignItems: "center", marginBottom: 14 }}>
         <h1 style={{ margin: 0, fontSize: 22 }}>Craft photo review</h1>
-        <span style={{ color: "#57534e", fontSize: 13 }}>{doneCount} / {crafts.length} in-scope have an approved photo</span>
+        <span style={{ color: "#57534e", fontSize: 13 }}>{doneCount} / {crafts.length} on this garment have an approved photo · buttons and threads are hidden</span>
         <select value={garment} onChange={(e) => { setGarment(e.target.value); setCursorId(null); }} style={sel}>
           {["shirt", "sport-coat", "suit-2pc", "suit-3pc", "trousers", "vest"].map((g) => (
             <option key={g} value={g}>{g}</option>

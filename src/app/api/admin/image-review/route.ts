@@ -141,6 +141,29 @@ type Overlay = {
   removedSha1?: string[];
 };
 const OVERLAY_FILE = join(STORE, "image-review-overlays.json");
+const PROGRESS_FILE = join(STORE, "image-review-progress.json");
+
+function addrToCraftId(addr?: string) {
+  if (!addr || !addr.includes(">")) return "";
+  return addr.split(">").map((p) => p.trim()).join("|");
+}
+
+function latestPhotoVerdicts() {
+  const log = readJson<LogEntry[]>(DECISIONS_LOG_FILE, []);
+  const by = new Map<string, string>();
+  let lastCraft = "";
+  for (const e of log) {
+    if (e.event !== "decision") continue;
+    const craftId = addrToCraftId(e.addr);
+    if (!craftId) continue;
+    lastCraft = craftId;
+    if (e.imageSha1) by.set(`${craftId}|sha1:${e.imageSha1}`, e.verdict);
+    if (e.imagePath) by.set(`${craftId}|path:${e.imagePath}`, e.verdict);
+    by.set(`${craftId}|last`, e.verdict);
+  }
+  const progress = readJson<{ craftId?: string }>(PROGRESS_FILE, {});
+  return { by, lastCraft: progress.craftId || lastCraft };
+}
 
 function displayPath(p: MapPhoto): string {
   if (p.path.startsWith("/images/")) return p.path;
@@ -167,6 +190,7 @@ export async function GET(req: NextRequest) {
   const product = req.nextUrl.searchParams.get("product") || "";
   const map = loadMap();
   const overlays = readJson<Record<string, Overlay>>(OVERLAY_FILE, {});
+  const { by: verdicts, lastCraft } = latestPhotoVerdicts();
   const crafts = (map.crafts ?? [])
     .filter((c) => c.inScope && !skipSwatches.has(c.craftId) && (!product || c.product === product))
     .map((c) => {
@@ -182,7 +206,17 @@ export async function GET(req: NextRequest) {
           preTicked: p.preTicked,
           sources: p.sources,
         }))
+        .map((p) => {
+          const v = verdicts.get(`${c.craftId}|sha1:${p.sha1}`) || verdicts.get(`${c.craftId}|path:${p.path}`);
+          if (!v) return p;
+          return {
+            ...p,
+            verdict: v,
+            preTicked: v === "approved",
+          };
+        })
         .filter((p) => {
+          if (p.verdict === "rejected") return false;
           if (!p.path.startsWith("/images/")) return false;
           if (drawPath && p.path === drawPath) return false;
           if (/\/techpacks\//.test(p.path) || /\/blueprints\//.test(p.path)) return false;
@@ -217,10 +251,26 @@ export async function GET(req: NextRequest) {
         references: [...(Array.isArray(c.references) ? c.references : []), ...(over?.references ?? [])],
       };
     });
+  crafts.sort((a, b) => String(a.craftId).localeCompare(String(b.craftId)));
+  const doneIds = new Set(
+    crafts.filter((c) => {
+      const photos = c.photos ?? [];
+      if (!photos.length) return verdicts.has(`${c.craftId}|last`);
+      return photos.every((p) => p.verdict === "approved" || p.verdict === "rejected");
+    }).map((c) => c.craftId),
+  );
+  const idx = crafts.findIndex((c) => c.craftId === lastCraft);
+  let resumeCraftId =
+    (idx >= 0 ? crafts.slice(idx + 1).find((c) => !doneIds.has(c.craftId))?.craftId : null)
+    || crafts.find((c) => !doneIds.has(c.craftId))?.craftId
+    || lastCraft
+    || null;
   return NextResponse.json({
     generatedAt: map.builtAt ?? null,
     totals: map.totals ?? null,
     crafts,
+    resumeCraftId,
+    reviewedCount: doneIds.size,
   });
 }
 
@@ -296,6 +346,11 @@ function saveCraftBatch(body: Record<string, unknown>) {
   }
   writeDecisions(decisions);
   appendLogs(logEntries);
+  writeFileSync(PROGRESS_FILE, JSON.stringify({
+    craftId,
+    product: craftId.split("|")[0],
+    at: now,
+  }, null, 1) + "\n");
   return NextResponse.json({ ok: true, wrote, targets });
 }
 
