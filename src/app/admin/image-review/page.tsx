@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState, type CSSProperties } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
 
 type Photo = {
   path: string;
@@ -41,6 +41,7 @@ const PROBLEM_TAGS = [
 ];
 
 const ORDER = ["lapel", "collar", "pocket", "cuff", "vent", "pleat", "waist"];
+const CURSOR_KEY = "bd-review-cursor";
 
 function sortCrafts(a: Craft, b: Craft) {
   if (a.product !== b.product) return a.product.localeCompare(b.product);
@@ -67,14 +68,17 @@ export default function ImageReviewPage() {
   const [garment, setGarment] = useState("all");
   const [filter, setFilter] = useState<"needs-review" | "done" | "flagged" | "all">("needs-review");
   const [q, setQ] = useState("");
-  const [idx, setIdx] = useState(0);
+  const [cursorId, setCursorId] = useState<string | null>(null);
+  const [history, setHistory] = useState<string[]>([]);
   const [picked, setPicked] = useState<Record<string, "approved" | "rejected" | "unreviewed">>({});
   const [tags, setTags] = useState<string[]>([]);
   const [notes, setNotes] = useState("");
   const [drawingWrong, setDrawingWrong] = useState(false);
   const [applyJackets, setApplyJackets] = useState(false);
   const [saving, setSaving] = useState(false);
+  const [uploading, setUploading] = useState<string | null>(null);
   const [zoom, setZoom] = useState<string | null>(null);
+  const formResetFor = useRef<string | null>(null);
 
   useEffect(() => {
     void (async () => {
@@ -83,6 +87,8 @@ export default function ImageReviewPage() {
         const d = await r.json();
         const list: Craft[] = (d.crafts ?? []).slice().sort(sortCrafts);
         setCrafts(list);
+        const saved = typeof window !== "undefined" ? sessionStorage.getItem(CURSOR_KEY) : null;
+        setCursorId(saved && list.some((c) => c.craftId === saved) ? saved : list[0]?.craftId ?? null);
       } catch {
         setError("Could not load the craft map.");
       } finally {
@@ -90,6 +96,10 @@ export default function ImageReviewPage() {
       }
     })();
   }, []);
+
+  useEffect(() => {
+    if (cursorId) sessionStorage.setItem(CURSOR_KEY, cursorId);
+  }, [cursorId]);
 
   const visible = useMemo(() => {
     return crafts.filter((c) => {
@@ -99,31 +109,48 @@ export default function ImageReviewPage() {
         if (!hay.includes(q.toLowerCase())) return false;
       }
       const hasUnreviewed = c.photos.some((p) => p.verdict === "unreviewed");
-      const done = c.photos.length > 0 && c.photos.every((p) => p.verdict === "approved" || p.verdict === "rejected") && !hasUnreviewed;
-      if (filter === "needs-review" && !hasUnreviewed && c.photos.some((p) => p.preTicked)) return false;
-      if (filter === "needs-review" && done) return false;
+      const done = c.photos.length > 0 && !hasUnreviewed && c.photos.every((p) => p.verdict === "approved" || p.verdict === "rejected");
+      if (filter === "needs-review") {
+        if (c.craftId === cursorId) return true;
+        if (done) return false;
+        if (!hasUnreviewed && c.photos.some((p) => p.preTicked) && c.photos.length > 0) return false;
+      }
       if (filter === "done" && !done) return false;
       if (filter === "flagged" && !(c.flags ?? []).length) return false;
       return true;
     });
-  }, [crafts, garment, filter, q]);
+  }, [crafts, garment, filter, q, cursorId]);
 
-  const current = visible[Math.min(idx, Math.max(0, visible.length - 1))];
+  const current =
+    visible.find((c) => c.craftId === cursorId)
+    ?? crafts.find((c) => c.craftId === cursorId)
+    ?? null;
+  const pos = current ? visible.findIndex((c) => c.craftId === current.craftId) : -1;
 
   useEffect(() => {
     if (!current) return;
+    if (formResetFor.current === current.craftId) return;
+    formResetFor.current = current.craftId;
     const next: Record<string, "approved" | "rejected" | "unreviewed"> = {};
     for (const p of current.photos) next[p.sha1] = p.preTicked || p.verdict === "approved" ? "approved" : "unreviewed";
     setPicked(next);
     setTags([]);
     setNotes("");
     setDrawingWrong(false);
-    setZoom(current.photos[0]?.path ?? null);
+    setZoom(current.photos[0]?.path ?? current.drawing.path);
     setApplyJackets(false);
-  }, [current?.craftId]);
+  }, [current]);
+
+  const goTo = useCallback((id: string | null) => {
+    if (!id) return;
+    formResetFor.current = null;
+    setCursorId(id);
+  }, []);
 
   const save = useCallback(async (noneRight: boolean) => {
     if (!current || saving) return;
+    const i = visible.findIndex((c) => c.craftId === current.craftId);
+    const nextId = visible[i + 1]?.craftId ?? null;
     setSaving(true);
     setError(null);
     try {
@@ -149,6 +176,7 @@ export default function ImageReviewPage() {
         const d = await r.json().catch(() => ({}));
         throw new Error(d.error || "Save failed");
       }
+      setHistory((h) => [...h, current.craftId]);
       setCrafts((prev) => prev.map((c) => {
         if (c.craftId !== current.craftId) return c;
         return {
@@ -160,13 +188,52 @@ export default function ImageReviewPage() {
           })),
         };
       }));
-      setIdx((i) => i + 1);
+      goTo(nextId);
     } catch (e) {
       setError(e instanceof Error ? e.message : "Save failed");
     } finally {
       setSaving(false);
     }
-  }, [current, picked, tags, notes, drawingWrong, applyJackets, saving]);
+  }, [current, picked, tags, notes, drawingWrong, applyJackets, saving, visible, goTo]);
+
+  async function upload(kind: "drawing" | "reference" | "photo", file: File) {
+    if (!current) return;
+    setUploading(kind);
+    setError(null);
+    try {
+      const fd = new FormData();
+      fd.set("file", file);
+      fd.set("craftId", current.craftId);
+      fd.set("kind", kind);
+      const r = await fetch("/api/admin/image-review/asset", { method: "POST", body: fd });
+      const d = await r.json().catch(() => ({}));
+      if (!r.ok) throw new Error(d.error || "Upload failed");
+      const path = d.path as string;
+      const sha1 = (d.sha1 as string) || path;
+      setCrafts((prev) => prev.map((c) => {
+        if (c.craftId !== current.craftId) return c;
+        if (kind === "drawing") {
+          return { ...c, drawing: { path, status: "owner-uploaded", exists: true }, flags: c.flags.filter((f) => !f.startsWith("DRAWING") && f !== "NO_DRAWING") };
+        }
+        if (kind === "reference") {
+          return { ...c, references: [...c.references, { path, bytes: file.size }] };
+        }
+        return {
+          ...c,
+          photos: [...c.photos, { path, sha1, verdict: "approved", preTicked: true, sources: ["owner-upload"] }],
+        };
+      }));
+      if (kind === "photo") {
+        setPicked((p) => ({ ...p, [sha1]: "approved" }));
+        setZoom(path);
+      }
+      if (kind === "drawing") setDrawingWrong(false);
+    } catch (e) {
+      setError(e instanceof Error ? e.message : "Upload failed");
+    } finally {
+      setUploading(null);
+    }
+  }
 
   if (loading) return <div style={pageWrap}>Loading craft map…</div>;
 
@@ -178,17 +245,17 @@ export default function ImageReviewPage() {
       <header style={{ display: "flex", flexWrap: "wrap", gap: 10, alignItems: "center", marginBottom: 14 }}>
         <h1 style={{ margin: 0, fontSize: 22 }}>Craft photo review</h1>
         <span style={{ color: "#57534e", fontSize: 13 }}>{doneCount} / {crafts.length} in-scope have an approved photo</span>
-        <select value={garment} onChange={(e) => { setGarment(e.target.value); setIdx(0); }} style={sel}>
+        <select value={garment} onChange={(e) => { setGarment(e.target.value); }} style={sel}>
           <option value="all">All garments</option>
           {garments.map((g) => <option key={g} value={g}>{g}</option>)}
         </select>
-        <select value={filter} onChange={(e) => { setFilter(e.target.value as typeof filter); setIdx(0); }} style={sel}>
+        <select value={filter} onChange={(e) => { setFilter(e.target.value as typeof filter); }} style={sel}>
           <option value="needs-review">Needs review</option>
           <option value="done">Done</option>
           <option value="flagged">Flagged</option>
           <option value="all">All</option>
         </select>
-        <input value={q} onChange={(e) => { setQ(e.target.value); setIdx(0); }} placeholder="Search…" style={{ ...sel, width: 180 }} />
+        <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search…" style={{ ...sel, width: 180 }} />
       </header>
       {error && <p style={{ color: "#b3261e" }}>{error}</p>}
       {!current ? (
@@ -196,7 +263,7 @@ export default function ImageReviewPage() {
       ) : (
         <div>
           <p style={{ margin: "0 0 10px", fontSize: 13, color: "#57534e" }}>
-            {Math.min(idx, visible.length - 1) + 1} / {visible.length} · {current.product} · {current.sectionLabel || current.sectionId} · {current.fieldLabel || current.fieldId}
+            {pos + 1} / {visible.length} · {current.product} · {current.sectionLabel || current.sectionId} · {current.fieldLabel || current.fieldId}
           </p>
           <h2 style={{ margin: "0 0 8px", fontSize: 20 }}>{current.label}</h2>
           {!!current.flags.length && <p style={{ color: "#b45309", fontSize: 12 }}>Flags: {current.flags.join(", ")}</p>}
@@ -207,19 +274,24 @@ export default function ImageReviewPage() {
               {current.drawing.path
                 ? <img src={current.drawing.path} alt="drawing" style={{ width: "100%", background: "#fff", borderRadius: 8 }} />
                 : <div style={{ padding: 40, background: "#e7e5e4", borderRadius: 8 }}>NO DRAWING</div>}
+              <label style={fileBtn}>
+                {uploading === "drawing" ? "Uploading drawing…" : "Replace drawing"}
+                <input type="file" accept="image/*" hidden disabled={!!uploading}
+                  onChange={(e) => { const f = e.target.files?.[0]; e.target.value = ""; if (f) void upload("drawing", f); }} />
+              </label>
               <label style={{ display: "flex", gap: 8, marginTop: 10, fontSize: 13 }}>
                 <input type="checkbox" checked={drawingWrong} onChange={(e) => setDrawingWrong(e.target.checked)} />
-                Drawing is wrong
+                Drawing is wrong (and I do not have a replacement yet)
               </label>
             </div>
             <div>
-              <p style={cap}>Photos for this craft — tick to approve</p>
+              <p style={cap}>Photos for this craft — click to approve</p>
               <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(140px, 1fr))", gap: 8 }}>
                 {current.photos.map((p) => {
                   const v = picked[p.sha1] ?? "unreviewed";
                   return (
                     <button
-                      key={p.sha1}
+                      key={p.sha1 || p.path}
                       type="button"
                       onClick={() => {
                         setZoom(p.path);
@@ -237,11 +309,23 @@ export default function ImageReviewPage() {
                       }}
                     >
                       <img src={p.path} alt="" style={{ width: "100%", height: 110, objectFit: "contain" }} />
-                      <span style={{ fontSize: 11 }}>{v === "approved" ? "Approved" : "Waiting"}</span>
+                      <span style={{ fontSize: 11 }}>{v === "approved" ? "Use this" : "Waiting"}</span>
                     </button>
                   );
                 })}
-                {current.photos.length === 0 && <p style={{ color: "#78716c" }}>No local photos on file. Use “None are right”.</p>}
+                {current.photos.length === 0 && <p style={{ color: "#78716c" }}>No local photos yet. Upload one below or mark “None are right”.</p>}
+              </div>
+              <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginTop: 10 }}>
+                <label style={fileBtn}>
+                  {uploading === "photo" ? "Uploading…" : "Add photo to use"}
+                  <input type="file" accept="image/*" hidden disabled={!!uploading}
+                    onChange={(e) => { const f = e.target.files?.[0]; e.target.value = ""; if (f) void upload("photo", f); }} />
+                </label>
+                <label style={fileBtn}>
+                  {uploading === "reference" ? "Uploading…" : "Add reference"}
+                  <input type="file" accept="image/*" hidden disabled={!!uploading}
+                    onChange={(e) => { const f = e.target.files?.[0]; e.target.value = ""; if (f) void upload("reference", f); }} />
+                </label>
               </div>
               {zoom && (
                 <div style={{ marginTop: 12, background: "#fff", borderRadius: 8, padding: 8 }}>
@@ -251,7 +335,7 @@ export default function ImageReviewPage() {
               )}
               {!!current.references.length && (
                 <div style={{ marginTop: 12 }}>
-                  <p style={cap}>Your reference uploads (not published unless you tick a matching photo)</p>
+                  <p style={cap}>Reference uploads</p>
                   <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
                     {current.references.map((r) => (
                       <img key={r.path} src={r.path} alt="" style={{ height: 72, background: "#fff", borderRadius: 4 }} />
@@ -279,11 +363,19 @@ export default function ImageReviewPage() {
             </label>
           )}
           <div style={{ display: "flex", gap: 8, marginTop: 14, flexWrap: "wrap" }}>
-            <button type="button" disabled={saving} onClick={() => setIdx((i) => Math.max(0, i - 1))} style={btn}>Back</button>
+            <button type="button" disabled={saving || history.length === 0} onClick={() => {
+              const prev = history[history.length - 1];
+              setHistory((h) => h.slice(0, -1));
+              goTo(prev);
+            }} style={btn}>Back</button>
             <button type="button" disabled={saving} onClick={() => void save(false)} style={{ ...btn, background: "#1c1917", color: "#fff" }}>
               {saving ? "Saving…" : "Save & next"}
             </button>
-            <button type="button" disabled={saving} onClick={() => setIdx((i) => i + 1)} style={btn}>Skip</button>
+            <button type="button" disabled={saving} onClick={() => {
+              const i = visible.findIndex((c) => c.craftId === current.craftId);
+              setHistory((h) => [...h, current.craftId]);
+              goTo(visible[i + 1]?.craftId ?? current.craftId);
+            }} style={btn}>Skip</button>
             <button type="button" disabled={saving} onClick={() => void save(true)} style={{ ...btn, color: "#b3261e" }}>
               None are right — needs a new photo
             </button>
@@ -297,3 +389,4 @@ export default function ImageReviewPage() {
 const sel: CSSProperties = { padding: "6px 8px", fontSize: 13 };
 const cap: CSSProperties = { fontSize: 11, textTransform: "uppercase", letterSpacing: "0.12em", color: "#78716c", margin: "0 0 6px" };
 const btn: CSSProperties = { padding: "8px 14px", fontSize: 13, borderRadius: 8, border: "1px solid #d6d3d1", background: "#fff", cursor: "pointer" };
+const fileBtn: CSSProperties = { ...btn, display: "inline-block", marginTop: 10 };
