@@ -7,20 +7,9 @@
  },
  "shirt/collar-hexagon-stand": {
   "key": "shirt/collar-hexagon-stand",
-  "attempt": 4,
-  "verdict": "rejected",
-  "notes": "Ive provided the correct illustration. Looking carefully at the image, the hexagon front opening is defined by:\n\nFront opening angle = 90°\nSlanted front edge length = 4.5 cm\nCenter front depth = 3.5 cm\n\nThe geometry can be drafted exactly with trigonometry.\n\nStep 1. Draw the 90° Front Angle\n\nDraw a point A at the center front.\n\nFrom point A, draw two lines forming a 90° included angle.\n\nSince the collar is symmetrical:\n\n90∘2=45∘\\frac{90^\\circ}{2}=45^\\circ\n\nEach side is therefore at 45° to the center line.\n\n      B\n     /\n    /\n45°\n  /\n A\n  \\\n45°\n    \\\n     \\\n      C\n\nStep 2. Mark the Collar Front Length\n\nGiven:\n\nAB=AC=4.5 cmAB = AC = 4.5\\text{ cm}\n\nMeasure 4.5 cm along both 45° lines.\n\nStep 3. Calculate the Total Front Width\n\nUsing an isosceles triangle:\n\nBC=2Lsin⁡(θ/2)BC = 2L\\sin(\\theta/2)\n\nwhere\n\nL=4.5L=4.5 θ=90∘\\theta=90^\\circ\n\nTherefore:\n\nBC=2(4.5)sin⁡45∘BC = 2(4.5)\\sin45^\\circ BC=9(0.7071)BC = 9(0.7071) BC=6.36 cmBC = 6.36\\text{ cm}\n\nSo the opening across the front is:\n\n6.36 cm\\boxed{6.36\\text{ cm}}\nStep 4. Calculate the Collar Point Projection\n\nHorizontal projection:\n\nX=4.5cos⁡45∘X = 4.5\\cos45^\\circ X=4.5(0.7071)X = 4.5(0.7071) X=3.18 cmX = 3.18\\text{ cm}\n\nEach collar point extends:\n\n3.18 cm\\boxed{3.18\\text{ cm}}\n\nfrom center front.\n\nTotal span:\n\n2(3.18)2(3.18) 6.36 cm\\boxed{6.36\\text{ cm}}\n\nSame result as above.\n\nStep 5. Use the 3.5 cm Center Height\n\nThe image shows:\n\nH=3.5 cmH=3.5\\text{ cm}\n\nThis becomes the center front stand height.\n\nDraw a vertical center line.\n\nFrom A measure:\n\n3.5 cm3.5\\text{ cm}\n\nupward.\n\n     D\n     |\n     | 3.5 cm\n     |\n     A\n\nStep 6. Determine the Hexagon Side Lengths\n\nThe visible hexagon can be drafted from:\n\nTop edge = neck curve\nTwo upper side edges\nTwo front edges (4.5 cm)\nBottom front edge (6.36 cm span)\n\nThe basic hexagon proportions become:\n\n      ______\n     /      \\\n    /        \\\n   /          \\\n   \\          /\n    \\        /\n     \\______/\n\n\nUsing your measurements:\n\nFront diagonal edges:\n\n4.5 cm4.5\\text{ cm}\n\nFront width:\n\n6.36 cm6.36\\text{ cm}\n\nFront height:\n\n3.5 cm3.5\\text{ cm}\nStep 7. Collar Draft Coordinates\n\nPlace center front at origin:\n\nA=(0,0)A=(0,0)\n\nLeft point:\n\nB=(−3.18,  3.18)B=(-3.18,\\;3.18)\n\nRight point:\n\nC=(3.18,  3.18)C=(3.18,\\;3.18)\n\nStand height point:\n\nD=(0,  3.5)D=(0,\\;3.5)\n\nThese coordinates let you reproduce the exact geometry shown.\n\nFormula for Any Hexagon-Stand Collar\n\nIf:\n\nFront edge length = LL\nOpening angle = θ\\theta\n\nThen:\n\nFront Span\nW=2Lsin⁡(θ/2)W=2L\\sin(\\theta/2)\nProjection per Side\nP=Lcos⁡(θ/2)P=L\\cos(\\theta/2)\n\nFor your collar:\n\nW=6.36 cmW=6.36\\text{ cm} P=3.18 cmP=3.18\\text{ cm}\nHeight Ratio\n\nFrom the image:\n\n4.53.5=1.286\\frac{4.5}{3.5}=1.286\n\nSo a reusable proportion is:\n\nL≈1.29HL \\approx 1.29H\n\nor\n\nH≈0.78LH \\approx 0.78L\n\nWhich confirms this collar is a geometrically balanced hexagon-stand collar.",
-  "tags": [
-   "Unrealistic / AI look",
-   "Wrong shape / outline",
-   "Generic version, not this option",
-   "Wrong size or proportion",
-   "Reference drawing itself is wrong"
-  ],
-  "references": [
-   "/images/review-refs/shirt/collar-hexagon-stand/1786503704699-hdx4e9.jpg"
-  ],
-  "decidedAt": "2026-08-12T03:07:01.852Z"
+  "attempt": 1,
+  "verdict": "approved",
+  "decidedAt": "2026-09-15T03:49:19.850Z"
  },
  "suit-2pc/jeans-square": {
   "key": "suit-2pc/jeans-square",
@@ -79,19 +68,19 @@
  },
  "shirt/collar-sq-65-btn": {
   "key": "shirt/collar-sq-65-btn",
-  "attempt": 4,
+  "attempt": 1,
   "verdict": "approved",
-  "decidedAt": "2026-08-11T21:18:55.611Z"
+  "decidedAt": "2026-09-15T05:07:04.124Z"
  },
  "shirt/collar-small-sq-50": {
   "key": "shirt/collar-small-sq-50",
-  "attempt": 4,
-  "verdict": "approved",
-  "notes": "not the correct collar spread angle. If you mean a **small square collar** with:\n\n* **Collar point length:** 5.0 cm\n* **Spread:** 80° included angle between the two collar points\n\nThen the geometry is:\n\ngenui{\"plane_coordinate_geometry_learning_block\":{\"type_id\":\"DISTANCE_FORMULA\",\"content\":\"d=\\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}\"}}\n\n### 1. Half-angle\n\nThe 80° spread is split equally:\n\n[\n80^\\circ \\div 2 = 40^\\circ\n]\n\nEach collar point is therefore **40° from the center line**.\n\n### 2. Width across the collar points\n\nWith each point being 5.0 cm long:\n\n[\nW=2(5.0)\\sin(40^\\circ)\n]\n\n[\nW=6.43\\text{ cm}\n]\n\n### Result\n\n**5.0 cm point length + 80° spread = approximately 6.43 cm tip-to-tip width.**\n\nSo for your tech-pack specification, you could write:\n\n> **Small Square Collar — 5.0 cm Point Length, 80° Spread, 6.43 cm Tip-to-Tip**\n\nIf by **\"80° spread\"** you mean the *angle of each collar side relative to the centerline* rather than the included angle, the calculation is different. d=\\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}",
-  "references": [
-   "/images/review-refs/shirt/collar-small-sq-50/1786484058707-hnmrvj.png"
+  "attempt": 1,
+  "verdict": "rejected",
+  "notes": "none are right — needs a new photo",
+  "tags": [
+   "Generic version, not this option"
   ],
-  "decidedAt": "2026-08-11T21:34:25.299Z"
+  "decidedAt": "2026-09-15T05:04:02.579Z"
  },
  "suit-3pc/coin-left": {
   "key": "suit-3pc/coin-left",
@@ -346,21 +335,25 @@
  },
  "shirt/collar-regular-20": {
   "key": "shirt/collar-regular-20",
-  "attempt": 4,
+  "attempt": 1,
   "verdict": "approved",
-  "decidedAt": "2026-08-12T03:07:18.911Z"
+  "decidedAt": "2026-09-15T04:51:06.069Z"
  },
  "shirt/collar-sq-65": {
   "key": "shirt/collar-sq-65",
-  "attempt": 3,
-  "verdict": "approved",
-  "decidedAt": "2026-08-10T18:57:32.774Z"
+  "attempt": 1,
+  "verdict": "rejected",
+  "notes": "none are right — needs a new photo",
+  "tags": [
+   "Generic version, not this option"
+  ],
+  "decidedAt": "2026-09-15T05:06:28.143Z"
  },
  "shirt/collar-fashion-point-58": {
   "key": "shirt/collar-fashion-point-58",
-  "attempt": 3,
+  "attempt": 1,
   "verdict": "approved",
-  "decidedAt": "2026-08-10T18:57:37.214Z"
+  "decidedAt": "2026-09-15T03:46:03.171Z"
  },
  "suit-2pc/pocket-stitch-double": {
   "key": "suit-2pc/pocket-stitch-double",
@@ -400,9 +393,9 @@
  },
  "shirt/collar-point-70-hidden-btn": {
   "key": "shirt/collar-point-70-hidden-btn",
-  "attempt": 3,
+  "attempt": 1,
   "verdict": "approved",
-  "decidedAt": "2026-08-10T19:00:34.787Z"
+  "decidedAt": "2026-09-15T04:43:07.767Z"
  },
  "sport-coat/cb-5": {
   "key": "sport-coat/cb-5",
@@ -418,9 +411,9 @@
  },
  "shirt/collar-point-70": {
   "key": "shirt/collar-point-70",
-  "attempt": 4,
+  "attempt": 1,
   "verdict": "approved",
-  "decidedAt": "2026-08-12T03:15:31.992Z"
+  "decidedAt": "2026-09-15T04:42:12.358Z"
  },
  "suit-3pc/vest-right-over-left": {
   "key": "suit-3pc/vest-right-over-left",
@@ -486,22 +479,15 @@
  },
  "shirt/collar-point-95-btn": {
   "key": "shirt/collar-point-95-btn",
-  "attempt": 2,
+  "attempt": 1,
   "verdict": "approved",
-  "notes": "LOOKS TO RIGID. LENGHT LOOS RIGHT BUT ITS TO RIGID",
-  "tags": [
-   "Unrealistic / AI look"
-  ],
-  "references": [
-   "/images/review-refs/shirt/collar-point-95-btn/1786389424684-blje2z.png"
-  ],
-  "decidedAt": "2026-08-10T19:17:39.315Z"
+  "decidedAt": "2026-09-15T04:50:09.258Z"
  },
  "shirt/collar-point-70-btn": {
   "key": "shirt/collar-point-70-btn",
-  "attempt": 2,
+  "attempt": 1,
   "verdict": "approved",
-  "decidedAt": "2026-08-10T19:17:46.032Z"
+  "decidedAt": "2026-09-15T04:42:42.310Z"
  },
  "shirt/collar-point-58-btn": {
   "key": "shirt/collar-point-58-btn",
@@ -883,18 +869,15 @@
  },
  "shirt/collar-round-point-70": {
   "key": "shirt/collar-round-point-70",
-  "attempt": 2,
+  "attempt": 1,
   "verdict": "approved",
-  "tags": [
-   "Reference drawing itself is wrong"
-  ],
-  "decidedAt": "2026-08-10T22:45:00.524Z"
+  "decidedAt": "2026-09-15T04:55:36.752Z"
  },
  "shirt/collar-long-point-85": {
   "key": "shirt/collar-long-point-85",
-  "attempt": 2,
+  "attempt": 1,
   "verdict": "approved",
-  "decidedAt": "2026-08-10T22:45:08.416Z"
+  "decidedAt": "2026-09-15T04:00:19.971Z"
  },
  "shirt/hem-straight": {
   "key": "shirt/hem-straight",
@@ -1137,66 +1120,49 @@
   "key": "shirt/collar-button-down-78",
   "attempt": 1,
   "verdict": "approved",
-  "decidedAt": "2026-08-10T23:04:08.041Z"
+  "decidedAt": "2026-09-15T03:33:16.269Z"
  },
  "shirt/collar-wrap-75": {
   "key": "shirt/collar-wrap-75",
-  "attempt": 2,
-  "verdict": "rejected",
-  "notes": "For the Wrap Collar shown in the image:\n\nCollar type: Wrap Collar\nPoint length: 7.5 cm (your specification)\nIncluded angle: 65° (shown in image)\n\nThis is a symmetric geometry problem.\n\nGiven\nL=7.5 cmL = 7.5\\text{ cm} θ=65∘\\theta = 65^\\circ\n\nHalf-angle:\n\nα=θ2\\alpha=\\frac{\\theta}{2} α=32.5∘\\alpha = 32.5^\\circ\n1. Horizontal Projection\n\nHow far each collar point extends from center front:\n\nX=Lsin⁡αX=L\\sin\\alpha X=7.5sin⁡(32.5∘)X=7.5\\sin(32.5^\\circ) X=7.5(0.5373)X=7.5(0.5373) X=4.03 cmX=4.03\\text{ cm}\n\nPer side projection:\n\n4.03 cm\\boxed{4.03\\text{ cm}}\n2. Vertical Drop\n\nHow far the collar point drops below the collar break line:\n\nY=Lcos⁡αY=L\\cos\\alpha Y=7.5cos⁡(32.5∘)Y=7.5\\cos(32.5^\\circ) Y=7.5(0.8434)Y=7.5(0.8434) Y=6.33 cmY=6.33\\text{ cm}\n\nPoint depth:\n\n6.33 cm\\boxed{6.33\\text{ cm}}\n3. Point-to-Point Spread\n\nDistance from collar point to collar point:\n\nW=2Lsin⁡(α)W=2L\\sin(\\alpha) W=2(7.5)(0.5373)W=2(7.5)(0.5373) W=8.06 cmW=8.06\\text{ cm}\n\nFront opening width:\n\n8.06 cm\\boxed{8.06\\text{ cm}}\n4. Draft Coordinates\n\nUsing the collar break point as the origin:\n\nLeft Point\n(−4.03, −6.33)(-4.03,\\,-6.33)\nRight Point\n(4.03, −6.33)(4.03,\\,-6.33)\nCollar Break\n(0,0)(0,0)\n5. Drafting Procedure\nDraw center front.\nMark collar break point.\nDraw two lines at 32.5° from center front.\nMeasure 7.5 cm along each line.\nMark collar points.\nShape outer edges with a slight convex curve.\nBlend into collar stand.\n            Break Point\n                 ●\n                / \\\n               /   \\\n              /     \\\n             /       \\\n            /         \\\n         7.5cm       7.5cm\n          /             \\\n         ●---------------●\n\n        Width = 8.06 cm\n\nFinished Geometry Summary\nMeasurement\tValuePoint length\t7.5 cm\nCollar angle\t65°\nHalf angle\t32.5°\nHorizontal projection\t4.03 cm\nVertical drop\t6.33 cm\nPoint-to-point spread\t8.06 cm\n\nThese dimensions will reproduce the wrap collar shown in the image at a 7.5 cm collar point length and 65° opening angle.",
-  "references": [
-   "/images/review-refs/shirt/collar-wrap-75/1786505000214-1h8c31.webp",
-   "/images/review-refs/shirt/collar-wrap-75/1786505012472-swgnfc.webp",
-   "/images/review-refs/shirt/collar-wrap-75/1786505039022-92ynmq.webp",
-   "/images/review-refs/shirt/collar-wrap-75/1786505049277-ymkc1b.webp"
-  ],
-  "decidedAt": "2026-08-12T03:24:16.041Z"
+  "attempt": 1,
+  "verdict": "approved",
+  "decidedAt": "2026-09-15T05:12:24.008Z"
  },
  "shirt/collar-hidden-btn-75": {
   "key": "shirt/collar-hidden-btn-75",
-  "attempt": 2,
-  "verdict": "rejected",
-  "notes": "For the Hidden Button Collar shown in the image:\n\nCollar style: Hidden Button-Down\nPoint length: 7.5 cm\nCollar angle: 65°\nHidden button tab sewn under the collar points\nTwo concealed buttons hold the collar points in place\n\nThe hidden buttons do not change the collar geometry. They only add button placement and an under-collar tab.\n\nBase Collar Geometry\n\nGiven:\n\nL=7.5 cmL = 7.5\\text{ cm} θ=65∘\\theta = 65^\\circ\n\nHalf-angle:\n\nα=32.5∘\\alpha = 32.5^\\circ\nHorizontal Projection\nX=Lsin⁡(α)X=L\\sin(\\alpha) X=7.5sin⁡(32.5∘)X=7.5\\sin(32.5^\\circ) X=4.03 cmX=4.03\\text{ cm}\n\nEach collar point extends:\n\n4.03 cm\\boxed{4.03\\text{ cm}}\n\nfrom center front.\n\nVertical Drop\nY=Lcos⁡(α)Y=L\\cos(\\alpha) Y=7.5cos⁡(32.5∘)Y=7.5\\cos(32.5^\\circ) Y=6.33 cmY=6.33\\text{ cm}\n\nPoint depth:\n\n6.33 cm\\boxed{6.33\\text{ cm}}\nPoint-to-Point Width\nW=2XW=2X W=8.06 cmW=8.06\\text{ cm}\n\nFront opening:\n\n8.06 cm\\boxed{8.06\\text{ cm}}\nCollar Point Coordinates\n\nUsing the collar break as the origin:\n\nLeft point:\n\n(−4.03, −6.33)(-4.03,\\,-6.33)\n\nRight point:\n\n(4.03, −6.33)(4.03,\\,-6.33)\nHidden Button Placement\n\nFor a 7.5 cm point collar, place the hidden button approximately:\n\n0.60L0.60L\n\nback from the collar point.\n\n0.60(7.5)0.60(7.5) 4.5 cm4.5\\text{ cm}\nButton Position\n\nMeasured from the collar tip:\n\n4.5 cm\\boxed{4.5\\text{ cm}}\n\nMeasured from collar break:\n\n7.5−4.57.5-4.5 3.0 cm\\boxed{3.0\\text{ cm}}\nUnder-Collar Tab\n\nTypical hidden button tab dimensions:\n\nLength\n1.8 cm1.8\\text{ cm}\n\nto\n\n2.2 cm2.2\\text{ cm}\n\nRecommended:\n\n2.0 cm\\boxed{2.0\\text{ cm}}\nWidth\n1.5 cm\\boxed{1.5\\text{ cm}}\nButton Size\n10L to 12L10L \\text{ to } 12L\n\nApproximately:\n\n6−7 mm\\boxed{6-7\\text{ mm}}\n\ndiameter.\n\nDraft Summary\nMeasurement\tValueCollar point length\t7.5 cm\nCollar angle\t65°\nHalf-angle\t32.5°\nHorizontal projection\t4.03 cm\nVertical drop\t6.33 cm\nPoint-to-point spread\t8.06 cm\nHidden button from tip\t4.5 cm\nHidden button from break\t3.0 cm\nHidden tab length\t2.0 cm\nHidden tab width\t1.5 cm\n\nThis will produce a classic 7.5 cm hidden button-down collar very similar to the illustration, with the collar points rolling neatly toward the shirt front while the fastening remains invisible.",
-  "tags": [
-   "Generic version, not this option"
-  ],
-  "decidedAt": "2026-08-12T03:34:27.568Z"
+  "attempt": 1,
+  "verdict": "approved",
+  "decidedAt": "2026-09-15T03:49:46.195Z"
  },
  "shirt/collar-point-75-holes": {
   "key": "shirt/collar-point-75-holes",
-  "attempt": 2,
+  "attempt": 1,
   "verdict": "approved",
-  "decidedAt": "2026-09-14T04:12:33.466Z"
+  "decidedAt": "2026-09-15T04:47:02.423Z"
  },
  "shirt/collar-round-point-70-holes": {
   "key": "shirt/collar-round-point-70-holes",
-  "attempt": 2,
+  "attempt": 1,
   "verdict": "approved",
-  "decidedAt": "2026-08-12T03:15:38.325Z"
+  "decidedAt": "2026-09-15T04:59:41.168Z"
  },
  "shirt/collar-point-58-zigzag": {
   "key": "shirt/collar-point-58-zigzag",
   "attempt": 1,
   "verdict": "approved",
-  "decidedAt": "2026-08-10T23:08:03.357Z"
+  "decidedAt": "2026-09-15T04:09:10.833Z"
  },
  "shirt/collar-curve-point-75": {
   "key": "shirt/collar-curve-point-75",
-  "attempt": 2,
-  "verdict": "rejected",
-  "notes": "For the Curve Point Collar in your image:\n\nCollar type: Curved Point Collar\nPoint length: 7.5 cm\nIncluded angle: 60°\nDifference from the standard point collar: the front edge is curved rather than a straight line, but the base geometry is identical.\nBase Geometry\n\nGiven:\n\nL=7.5 cmL = 7.5\\text{ cm} θ=60∘\\theta = 60^\\circ\n\nHalf-angle:\n\nα=30∘\\alpha = 30^\\circ\n1. Horizontal Projection\n\nDistance from center front to each point:\n\nX=Lsin⁡(30∘)X=L\\sin(30^\\circ) X=7.5(0.5)X=7.5(0.5) X=3.75 cmX=3.75\\text{ cm}\n2. Vertical Drop\n\nDistance from collar break to point:\n\nY=Lcos⁡(30∘)Y=L\\cos(30^\\circ) Y=7.5(0.8660)Y=7.5(0.8660) Y=6.50 cmY=6.50\\text{ cm}\n3. Point-to-Point Spread\nW=2XW=2X W=7.50 cmW=7.50\\text{ cm}\n\nSo the front opening width is:\n\n7.5 cm\\boxed{7.5\\text{ cm}}\nDraft Coordinates\n\nUsing the collar break point as (0,0):\n\nLeft Collar Point\n(−3.75, −6.50)(-3.75,\\,-6.50)\nRight Collar Point\n(3.75, −6.50)(3.75,\\,-6.50)\nCenter Front\n(0,0)(0,0)\nCurved Point Construction\n\nThe image shows a gentle convex curve on the front edge.\n\nMethod\n\nDraw the straight collar point first.\n\nBreak\n  ●\n / \\\n/   \\\n     ● Point\n\n\nThen create the curve.\n\nCurve Depth\n\nFor a classic curved-point collar, use:\n\nCurve Depth=0.08L to 0.12L\\text{Curve Depth} = 0.08L \\text{ to } 0.12L\n\nFor 7.5 cm:\n\n0.08(7.5)=0.60.08(7.5)=0.6 0.12(7.5)=0.90.12(7.5)=0.9\n\nRecommended:\n\n0.75 cm\\boxed{0.75\\text{ cm}}\nCurve Radius\n\nUse:\n\nR=2.5LR = 2.5L R=2.5(7.5)R = 2.5(7.5) R=18.75 cmR = 18.75\\text{ cm}\n\nRound to:\n\n19 cm radius\\boxed{19\\text{ cm radius}}\n\nThis gives the soft vintage curved look seen in high-end bespoke shirts.\n\nPattern Draft Formula\n\nFor any curved point collar:\n\nWidth\nW=2Lsin⁡(θ/2)W=2L\\sin(\\theta/2)\nDepth\nD=Lcos⁡(θ/2)D=L\\cos(\\theta/2)\nCurve Depth\nCD=0.10LCD=0.10L\nCurve Radius\nR=2.5LR=2.5L\nFor Your 7.5 cm Curved Point Collar\nPoint Length = 7.5 cm\nCollar Angle = 60°\nHalf Angle = 30°\nPoint Spread = 7.5 cm\nHorizontal Projection = 3.75 cm\nVertical Drop = 6.50 cm\nCurve Depth = 0.75 cm\nCurve Radius = 19 cm\n\nThese dimensions will reproduce a classic long curved-point collar similar to vintage British and Italian bespoke shirting.",
-  "tags": [
-   "Wrong shape / outline",
-   "Generic version, not this option",
-   "Wrong size or proportion"
-  ],
-  "decidedAt": "2026-08-12T03:33:22.073Z"
+  "attempt": 1,
+  "verdict": "approved",
+  "decidedAt": "2026-09-15T03:33:52.008Z"
  },
  "shirt/collar-regular-22": {
   "key": "shirt/collar-regular-22",
   "attempt": 1,
   "verdict": "approved",
-  "decidedAt": "2026-08-10T23:10:23.454Z"
+  "decidedAt": "2026-09-15T04:52:56.941Z"
  },
  "suit-2pc/lapel-peak-removable-shawl": {
   "key": "suit-2pc/lapel-peak-removable-shawl",
@@ -2190,19 +2156,13 @@
   "key": "shirt/collar-sq-stand-no-btn",
   "attempt": 1,
   "verdict": "approved",
-  "tags": [
-   "Reference drawing itself is wrong"
-  ],
-  "decidedAt": "2026-08-11T07:42:28.083Z"
+  "decidedAt": "2026-09-15T05:08:03.959Z"
  },
  "shirt/collar-std-75-stand": {
   "key": "shirt/collar-std-75-stand",
   "attempt": 1,
   "verdict": "approved",
-  "tags": [
-   "Reference drawing itself is wrong"
-  ],
-  "decidedAt": "2026-08-11T07:42:44.788Z"
+  "decidedAt": "2026-09-15T05:11:02.866Z"
  },
  "shirt/placket-plain": {
   "key": "shirt/placket-plain",
@@ -2338,20 +2298,9 @@
  },
  "shirt/collar-dbl-cutaway-55-btn": {
   "key": "shirt/collar-dbl-cutaway-55-btn",
-  "attempt": 4,
-  "verdict": "rejected",
-  "tags": [
-   "Generic version, not this option"
-  ],
-  "references": [
-   "/images/review-refs/shirt/collar-dbl-cutaway-55-btn/1786483062110-2bjw75.jpg",
-   "/images/review-refs/shirt/collar-dbl-cutaway-55-btn/1786483069019-2m6ush.jpg",
-   "/images/review-refs/shirt/collar-dbl-cutaway-55-btn/1786483075421-czdpnz.jpg",
-   "/images/review-refs/shirt/collar-dbl-cutaway-55-btn/1786483082234-2ti210.webp",
-   "/images/review-refs/shirt/collar-dbl-cutaway-55-btn/1786483094335-kwwzlc.webp",
-   "/images/review-refs/shirt/collar-dbl-cutaway-55-btn/1786483118244-a1vbto.webp"
-  ],
-  "decidedAt": "2026-08-11T21:18:43.837Z"
+  "attempt": 1,
+  "verdict": "approved",
+  "decidedAt": "2026-09-15T03:45:22.676Z"
  },
  "shirt/pocket-round-welt": {
   "key": "shirt/pocket-round-welt",
@@ -2364,9 +2313,9 @@
  },
  "shirt/collar-large-cutaway-82": {
   "key": "shirt/collar-large-cutaway-82",
-  "attempt": 4,
+  "attempt": 1,
   "verdict": "approved",
-  "decidedAt": "2026-08-11T21:19:15.626Z"
+  "decidedAt": "2026-09-15T03:58:08.879Z"
  },
  "shirt/contrast-shoulder-epaulet": {
   "key": "shirt/contrast-shoulder-epaulet",
@@ -2411,15 +2360,9 @@
  },
  "shirt/collar-cuban": {
   "key": "shirt/collar-cuban",
-  "attempt": 4,
-  "verdict": "rejected",
-  "notes": "the collar should fade back a 1/3 of the way back. collar fold shouldn't go all the way around follow style in illustration",
-  "references": [
-   "/images/review-refs/shirt/collar-cuban/1786485090820-7rbwax.webp",
-   "/images/review-refs/shirt/collar-cuban/1786485211503-y9ujcb.webp",
-   "/images/review-refs/shirt/collar-cuban/1786485221508-3vr0up.webp"
-  ],
-  "decidedAt": "2026-08-11T21:57:45.885Z"
+  "attempt": 1,
+  "verdict": "approved",
+  "decidedAt": "2026-09-15T03:33:34.961Z"
  },
  "shirt/contrast-inner-yoke": {
   "key": "shirt/contrast-inner-yoke",
@@ -2566,10 +2509,9 @@
  },
  "shirt/collar-regular-19": {
   "key": "shirt/collar-regular-19",
-  "attempt": 3,
-  "verdict": "rejected",
-  "notes": "supposed to be a button down with a hidden button under each collar point Yes — this illustration is showing a **90° included collar spread**, measured between the two collar-point directions.\n\nIf we use your previous **5.0 cm collar point length**, the math is:\n\n### 1. Split the 90° spread in half\n\n[\n90^\\circ \\div 2 = 45^\\circ\n]\n\nEach collar point extends **45° from the center line**.\n\n### 2. Calculate the tip-to-tip width\n\nWith each collar point = **5.0 cm**:\n\n[\nW = 2L\\sin(\\theta/2)\n]\n\n[\nW = 2(5.0)\\sin(45^\\circ)\n]\n\n[\nW = 10(0.7071)\n]\n\n[\n\\boxed{W = 7.07\\text{ cm}}\n]\n\n### So this collar is:\n\n| Specification                  | Measurement |\n| ------------------------------ | ----------: |\n| Collar point length            |  **5.0 cm** |\n| Included spread                |     **90°** |\n| Half angle                     |     **45°** |\n| Point-to-point geometric width | **7.07 cm** |\n\n**For your tech-pack/image-generation specification:**\n\n> **Small Square Collar — 5.0 cm collar point length, 90° included spread. Collar points extend symmetrically at 45° from the centerline, producing approximately 7.07 cm tip-to-tip geometric spread.**\n\nThe important part for your image-generation pipeline is that **90° is the included angle between the two collar points**, not 90° for each side.",
-  "decidedAt": "2026-08-11T22:14:45.655Z"
+  "attempt": 1,
+  "verdict": "approved",
+  "decidedAt": "2026-09-15T04:50:35.557Z"
  },
  "shirt/contrast-sleeve-vent": {
   "key": "shirt/contrast-sleeve-vent",
@@ -2843,15 +2785,15 @@
  },
  "shirt/collar-mid-cutaway-85": {
   "key": "shirt/collar-mid-cutaway-85",
-  "attempt": 3,
+  "attempt": 1,
   "verdict": "approved",
-  "decidedAt": "2026-08-11T22:48:16.908Z"
+  "decidedAt": "2026-09-15T04:03:38.018Z"
  },
  "shirt/collar-hexagon": {
   "key": "shirt/collar-hexagon",
-  "attempt": 3,
+  "attempt": 1,
   "verdict": "approved",
-  "decidedAt": "2026-08-11T22:48:20.444Z"
+  "decidedAt": "2026-09-15T03:49:07.471Z"
  },
  "shirt/hem-sq-side-vents-5cm": {
   "key": "shirt/hem-sq-side-vents-5cm",
@@ -2949,9 +2891,9 @@
  },
  "shirt/collar-regular-21": {
   "key": "shirt/collar-regular-21",
-  "attempt": 2,
+  "attempt": 1,
   "verdict": "approved",
-  "decidedAt": "2026-08-11T22:53:40.172Z"
+  "decidedAt": "2026-09-15T04:51:24.443Z"
  },
  "shirt/front-narrow-pleats": {
   "key": "shirt/front-narrow-pleats",
@@ -6119,5 +6061,177 @@
   "attempt": 1,
   "verdict": "approved",
   "decidedAt": "2026-09-14T04:05:05.916Z"
+ },
+ "shirt/collar-af1-70": {
+  "key": "shirt/collar-af1-70",
+  "attempt": 1,
+  "verdict": "approved",
+  "decidedAt": "2026-09-15T03:31:55.133Z"
+ },
+ "shirt/collar-curved-80": {
+  "key": "shirt/collar-curved-80",
+  "attempt": 1,
+  "verdict": "rejected",
+  "notes": "none are right — needs a new photo",
+  "tags": [
+   "Generic version, not this option"
+  ],
+  "decidedAt": "2026-09-15T03:35:28.182Z"
+ },
+ "shirt/collar-cutaway-55": {
+  "key": "shirt/collar-cutaway-55",
+  "attempt": 1,
+  "verdict": "approved",
+  "decidedAt": "2026-09-15T03:44:41.566Z"
+ },
+ "shirt/collar-cutaway-55-btn": {
+  "key": "shirt/collar-cutaway-55-btn",
+  "attempt": 1,
+  "verdict": "approved",
+  "decidedAt": "2026-09-15T03:44:55.869Z"
+ },
+ "shirt/collar-dr-point-58": {
+  "key": "shirt/collar-dr-point-58",
+  "attempt": 1,
+  "verdict": "approved",
+  "decidedAt": "2026-09-15T03:45:39.925Z"
+ },
+ "shirt/collar-french-75": {
+  "key": "shirt/collar-french-75",
+  "attempt": 1,
+  "verdict": "rejected",
+  "notes": "none are right — needs a new photo",
+  "tags": [
+   "Generic version, not this option"
+  ],
+  "decidedAt": "2026-09-15T03:47:32.217Z"
+ },
+ "shirt/collar-frog-mandarin": {
+  "key": "shirt/collar-frog-mandarin",
+  "attempt": 1,
+  "verdict": "approved",
+  "decidedAt": "2026-09-15T03:48:39.629Z"
+ },
+ "shirt/collar-large-cutaway-75": {
+  "key": "shirt/collar-large-cutaway-75",
+  "attempt": 1,
+  "verdict": "approved",
+  "decidedAt": "2026-09-15T03:53:35.415Z"
+ },
+ "shirt/collar-large-cutaway-80": {
+  "key": "shirt/collar-large-cutaway-80",
+  "attempt": 1,
+  "verdict": "approved",
+  "decidedAt": "2026-09-15T03:57:10.647Z"
+ },
+ "shirt/collar-large-round-53": {
+  "key": "shirt/collar-large-round-53",
+  "attempt": 1,
+  "verdict": "approved",
+  "decidedAt": "2026-09-15T03:58:18.246Z"
+ },
+ "shirt/collar-mid-cutaway-70": {
+  "key": "shirt/collar-mid-cutaway-70",
+  "attempt": 1,
+  "verdict": "approved",
+  "decidedAt": "2026-09-15T04:02:40.744Z"
+ },
+ "shirt/collar-mid-cutaway-70-btn": {
+  "key": "shirt/collar-mid-cutaway-70-btn",
+  "attempt": 1,
+  "verdict": "approved",
+  "decidedAt": "2026-09-15T04:02:57.042Z"
+ },
+ "shirt/collar-one-piece-75-tab": {
+  "key": "shirt/collar-one-piece-75-tab",
+  "attempt": 1,
+  "verdict": "rejected",
+  "notes": "none are right — needs a new photo",
+  "tags": [
+   "Generic version, not this option"
+  ],
+  "decidedAt": "2026-09-15T04:07:04.425Z"
+ },
+ "shirt/collar-one-piece-80-tab": {
+  "key": "shirt/collar-one-piece-80-tab",
+  "attempt": 1,
+  "verdict": "rejected",
+  "notes": "none are right — needs a new photo",
+  "tags": [
+   "Generic version, not this option"
+  ],
+  "decidedAt": "2026-09-15T04:07:23.031Z"
+ },
+ "shirt/collar-one-piece-85-tab": {
+  "key": "shirt/collar-one-piece-85-tab",
+  "attempt": 1,
+  "verdict": "approved",
+  "decidedAt": "2026-09-15T04:07:53.997Z"
+ },
+ "shirt/collar-one-piece-90-tab": {
+  "key": "shirt/collar-one-piece-90-tab",
+  "attempt": 1,
+  "verdict": "approved",
+  "decidedAt": "2026-09-15T04:08:08.101Z"
+ },
+ "shirt/collar-point-75-tri": {
+  "key": "shirt/collar-point-75-tri",
+  "attempt": 1,
+  "verdict": "approved",
+  "decidedAt": "2026-09-15T04:47:47.525Z"
+ },
+ "shirt/collar-point-85-btn": {
+  "key": "shirt/collar-point-85-btn",
+  "attempt": 1,
+  "verdict": "approved",
+  "decidedAt": "2026-09-15T04:49:10.389Z"
+ },
+ "shirt/collar-regular-85-tab": {
+  "key": "shirt/collar-regular-85-tab",
+  "attempt": 1,
+  "verdict": "approved",
+  "decidedAt": "2026-09-15T04:53:35.707Z"
+ },
+ "shirt/collar-rolled-stand": {
+  "key": "shirt/collar-rolled-stand",
+  "attempt": 1,
+  "verdict": "approved",
+  "decidedAt": "2026-09-15T04:53:50.577Z"
+ },
+ "shirt/collar-round-53": {
+  "key": "shirt/collar-round-53",
+  "attempt": 1,
+  "verdict": "approved",
+  "decidedAt": "2026-09-15T04:54:04.906Z"
+ },
+ "shirt/collar-rounded-stand": {
+  "key": "shirt/collar-rounded-stand",
+  "attempt": 1,
+  "verdict": "approved",
+  "decidedAt": "2026-09-15T05:00:45.674Z"
+ },
+ "shirt/collar-small-sq-50-btn": {
+  "key": "shirt/collar-small-sq-50-btn",
+  "attempt": 1,
+  "verdict": "approved",
+  "decidedAt": "2026-09-15T05:04:26.226Z"
+ },
+ "shirt/collar-small-sq-50-zigzag": {
+  "key": "shirt/collar-small-sq-50-zigzag",
+  "attempt": 1,
+  "verdict": "approved",
+  "decidedAt": "2026-09-15T05:05:41.805Z"
+ },
+ "shirt/collar-squared-stand": {
+  "key": "shirt/collar-squared-stand",
+  "attempt": 1,
+  "verdict": "approved",
+  "decidedAt": "2026-09-15T05:08:15.103Z"
+ },
+ "shirt/collar-tuxedo": {
+  "key": "shirt/collar-tuxedo",
+  "attempt": 1,
+  "verdict": "approved",
+  "decidedAt": "2026-09-15T05:11:36.107Z"
  }
 }
