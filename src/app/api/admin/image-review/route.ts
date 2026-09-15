@@ -148,12 +148,27 @@ function displayPath(p: MapPhoto): string {
   return alias ?? p.path;
 }
 
+const skipSwatches = (() => {
+  const q = readJson<{ entries?: { craftId?: string; state?: string; why?: string }[] }>(
+    join(STORE, "generation-queue.json"),
+    {},
+  );
+  const skip = new Set<string>();
+  for (const e of q.entries ?? []) {
+    const why = e.why ?? "";
+    if (e.state === "X" && (why.includes("excluded: button") || why.includes("excluded: thread-color"))) {
+      if (e.craftId) skip.add(e.craftId);
+    }
+  }
+  return skip;
+})();
+
 export async function GET(req: NextRequest) {
   const product = req.nextUrl.searchParams.get("product") || "";
   const map = loadMap();
   const overlays = readJson<Record<string, Overlay>>(OVERLAY_FILE, {});
   const crafts = (map.crafts ?? [])
-    .filter((c) => c.inScope && (!product || c.product === product))
+    .filter((c) => c.inScope && !skipSwatches.has(c.craftId) && (!product || c.product === product))
     .map((c) => {
       const over = overlays[c.craftId];
       const removed = new Set(over?.removedSha1 ?? []);

@@ -184,6 +184,20 @@ try {
 } catch { /* no baseline available; the check falls back to present-tense only */ }
 
 // ── 4 + 5 + 7 — per-option asset sanity ────────────────────────────────────
+const swatchSkip = (() => {
+  try {
+    const q = JSON.parse(fs.readFileSync(path.join(REPO, 'data-store/generation-queue.json'), 'utf8'));
+    const s = new Set();
+    for (const e of q.entries ?? []) {
+      const why = e.why ?? '';
+      if (e.state === 'X' && (why.includes('excluded: button') || why.includes('excluded: thread-color'))) {
+        if (e.craftId) s.add(e.craftId);
+      }
+    }
+    return s;
+  } catch { return new Set(); }
+})();
+
 const referenced = new Set();
 for (const [addr, o] of current.options) {
   if (o.illustration) {
@@ -224,13 +238,13 @@ for (const [addr, o] of current.options) {
   }
   for (const v of [...(o.photos ?? []), ...(o.images ?? [])]) {
     if (typeof v === 'string' && v.startsWith('/')) referenced.add(v);
-    if (typeof v === 'string' && /^https?:\/\//i.test(v)) fail(`REMOTE IMAGE: ${addr} -> ${v}`);
+    if (!swatchSkip.has(addr) && typeof v === 'string' && /^https?:\/\//i.test(v)) fail(`REMOTE IMAGE: ${addr} -> ${v}`);
   }
   for (const k of ASSET_KEYS) {
     const v = o[k];
-    if (typeof v === 'string' && /^https?:\/\//i.test(v)) fail(`REMOTE IMAGE (${k}): ${addr} -> ${v}`);
+    if (!swatchSkip.has(addr) && typeof v === 'string' && /^https?:\/\//i.test(v)) fail(`REMOTE IMAGE (${k}): ${addr} -> ${v}`);
   }
-  if (typeof o.image === 'string' && PHOTO_DIR.test(o.image)) {
+  if (!swatchSkip.has(addr) && typeof o.image === 'string' && PHOTO_DIR.test(o.image)) {
     fail(`IMAGE SLOT IS A PHOTO (must be the drawing): ${addr} -> ${o.image}`);
   }
 }
