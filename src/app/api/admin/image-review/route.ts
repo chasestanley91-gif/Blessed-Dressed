@@ -157,6 +157,7 @@ export async function GET(req: NextRequest) {
     .map((c) => {
       const over = overlays[c.craftId];
       const removed = new Set(over?.removedSha1 ?? []);
+      const drawPath = over?.drawing?.path ?? c.drawing?.path ?? null;
       const photos = [...(c.photos ?? []), ...(over?.photos ?? [])]
         .filter((p) => p.verdict !== "rejected" && !removed.has(p.sha1))
         .map((p) => ({
@@ -166,7 +167,25 @@ export async function GET(req: NextRequest) {
           preTicked: p.preTicked,
           sources: p.sources,
         }))
-        .filter((p) => p.path.startsWith("/images/"));
+        .filter((p) => {
+          if (!p.path.startsWith("/images/")) return false;
+          if (drawPath && p.path === drawPath) return false;
+          if (/\/techpacks\//.test(p.path) || /\/blueprints\//.test(p.path)) return false;
+          return true;
+        });
+      const seenStem = new Set<string>();
+      const deduped = [];
+      for (const p of photos) {
+        const stem = p.path.replace(/\.(png|webp|jpg|jpeg)$/i, "");
+        if (seenStem.has(stem)) continue;
+        seenStem.add(stem);
+        if (p.path.endsWith(".png")) {
+          const webp = photos.find((x) => x.path === `${stem}.webp`);
+          deduped.push(webp ?? p);
+        } else {
+          deduped.push(p);
+        }
+      }
       return {
         craftId: c.craftId,
         product: c.product,
@@ -179,7 +198,7 @@ export async function GET(req: NextRequest) {
         flags: c.flags,
         inScope: c.inScope,
         drawing: over?.drawing ?? c.drawing,
-        photos,
+        photos: deduped,
         references: [...(Array.isArray(c.references) ? c.references : []), ...(over?.references ?? [])],
       };
     });

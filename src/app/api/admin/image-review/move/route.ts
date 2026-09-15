@@ -44,12 +44,17 @@ export async function POST(req: NextRequest) {
       toCraftId?: string;
       path?: string;
       sha1?: string;
+      removeOnly?: boolean;
     };
     const fromId = String(body.fromCraftId || "");
     const toId = String(body.toCraftId || "");
     const photoPath = String(body.path || "");
     const sha1 = String(body.sha1 || "");
-    if (!fromId.includes("|") || !toId.includes("|") || fromId === toId) {
+    const removeOnly = body.removeOnly === true || !toId;
+    if (!fromId.includes("|")) {
+      return NextResponse.json({ error: "Missing craft." }, { status: 400 });
+    }
+    if (!removeOnly && (!toId.includes("|") || fromId === toId)) {
       return NextResponse.json({ error: "Pick a different craft to move to." }, { status: 400 });
     }
     if (!photoPath.startsWith("/images/")) {
@@ -59,11 +64,13 @@ export async function POST(req: NextRequest) {
     patchOption(fromId, (o) => {
       o.photos = (Array.isArray(o.photos) ? o.photos : []).filter((p) => p !== photoPath);
     });
-    patchOption(toId, (o) => {
-      const photos = Array.isArray(o.photos) ? o.photos.filter((p) => typeof p === "string") : [];
-      if (!photos.includes(photoPath)) photos.push(photoPath);
-      o.photos = photos;
-    });
+    if (!removeOnly) {
+      patchOption(toId, (o) => {
+        const photos = Array.isArray(o.photos) ? o.photos.filter((p) => typeof p === "string") : [];
+        if (!photos.includes(photoPath)) photos.push(photoPath);
+        o.photos = photos;
+      });
+    }
 
     const overlays = readJson<Record<string, Record<string, unknown>>>(OVERLAY_FILE, {});
     const from = overlays[fromId] ?? {};
@@ -73,11 +80,13 @@ export async function POST(req: NextRequest) {
     from.photos = (Array.isArray(from.photos) ? from.photos : []).filter((p) => (p as { sha1?: string }).sha1 !== sha1);
     overlays[fromId] = from;
 
-    const to = overlays[toId] ?? {};
-    const photos = Array.isArray(to.photos) ? to.photos : [];
-    photos.push({ path: photoPath, sha1, sources: ["moved"], verdict: "unreviewed", preTicked: false });
-    to.photos = photos;
-    overlays[toId] = to;
+    if (!removeOnly) {
+      const to = overlays[toId] ?? {};
+      const photos = Array.isArray(to.photos) ? to.photos : [];
+      photos.push({ path: photoPath, sha1, sources: ["moved"], verdict: "unreviewed", preTicked: false });
+      to.photos = photos;
+      overlays[toId] = to;
+    }
     mkdirSync(STORE, { recursive: true });
     writeFileSync(OVERLAY_FILE, JSON.stringify(overlays, null, 1) + "\n", "utf8");
 

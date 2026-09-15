@@ -143,7 +143,10 @@ export default function ImageReviewPage() {
     if (formResetFor.current === current.craftId) return;
     formResetFor.current = current.craftId;
     const next: Record<string, "approved" | "rejected" | "unreviewed"> = {};
-    for (const p of current.photos) next[p.sha1] = p.preTicked || p.verdict === "approved" ? "approved" : "unreviewed";
+    for (const p of current.photos) {
+      const id = p.sha1 || p.path;
+      next[id] = p.preTicked || p.verdict === "approved" ? "approved" : "unreviewed";
+    }
     setPicked(next);
     setTags([]);
     setNotes("");
@@ -152,7 +155,7 @@ export default function ImageReviewPage() {
     setApplyJackets(false);
     setMoveFor(null);
     setMoveQuery("");
-  }, [current]);
+  }, [current?.craftId]);
 
   const goTo = useCallback((id: string | null) => {
     if (!id) return;
@@ -171,7 +174,7 @@ export default function ImageReviewPage() {
       const photos = current.photos.map((p) => ({
         path: p.path,
         sha1: p.sha1,
-        verdict: noneRight ? "rejected" : (picked[p.sha1] ?? "unreviewed"),
+        verdict: noneRight ? "rejected" : (picked[p.sha1 || p.path] ?? "unreviewed"),
       })).filter((p) => p.verdict === "approved" || p.verdict === "rejected");
       const r = await fetch("/api/admin/image-review", {
         method: "POST",
@@ -197,8 +200,8 @@ export default function ImageReviewPage() {
           ...c,
           photos: c.photos.map((p) => ({
             ...p,
-            verdict: noneRight ? "rejected" : (picked[p.sha1] ?? p.verdict),
-            preTicked: !noneRight && picked[p.sha1] === "approved",
+            verdict: noneRight ? "rejected" : (picked[p.sha1 || p.path] ?? p.verdict),
+            preTicked: !noneRight && picked[p.sha1 || p.path] === "approved",
           })),
         };
       }));
@@ -215,6 +218,39 @@ export default function ImageReviewPage() {
     const p = path.toLowerCase();
     const id = optionId.toLowerCase();
     return p.includes(`/${id}.`) || p.includes(`/${id}-`) || p.includes(`__${id}__`) || p.endsWith(`/${id}`);
+  }
+
+  async function removePhoto(p: Photo) {
+    if (!current || moving) return;
+    setMoving(true);
+    setError(null);
+    try {
+      const r = await fetch("/api/admin/image-review/move", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          fromCraftId: current.craftId,
+          removeOnly: true,
+          path: p.path,
+          sha1: p.sha1,
+        }),
+      });
+      const d = await r.json().catch(() => ({}));
+      if (!r.ok) throw new Error(d.error || "Could not remove");
+      setCrafts((prev) => prev.map((c) => {
+        if (c.craftId !== current.craftId) return c;
+        return { ...c, photos: c.photos.filter((x) => x.sha1 !== p.sha1 && x.path !== p.path) };
+      }));
+      setPicked((prev) => {
+        const next = { ...prev };
+        delete next[p.sha1 || p.path];
+        return next;
+      });
+    } catch (e) {
+      setError(e instanceof Error ? e.message : "Could not remove");
+    } finally {
+      setMoving(false);
+    }
   }
 
   async function movePhoto(toCraftId: string) {
@@ -347,7 +383,8 @@ export default function ImageReviewPage() {
               <p style={cap}>Photos for this craft — click to approve</p>
               <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(140px, 1fr))", gap: 8 }}>
                 {current.photos.map((p) => {
-                  const v = picked[p.sha1] ?? "unreviewed";
+                  const id = p.sha1 || p.path;
+                  const v = picked[id] ?? "unreviewed";
                   const hints = crafts.filter((c) => c.craftId !== current.craftId && pathLooksLike(p.path, c.optionId)).slice(0, 3);
                   return (
                     <div key={p.sha1 || p.path} style={{ border: v === "approved" ? "3px solid #b45309" : "1px solid #d6d3d1", borderRadius: 8, padding: 4, background: "#fff" }}>
@@ -357,7 +394,7 @@ export default function ImageReviewPage() {
                           setZoom(p.path);
                           setPicked((prev) => ({
                             ...prev,
-                            [p.sha1]: v === "approved" ? "unreviewed" : "approved",
+                            [id]: v === "approved" ? "unreviewed" : "approved",
                           }));
                         }}
                         style={{ border: 0, background: "transparent", padding: 0, cursor: "pointer", width: "100%" }}
@@ -368,6 +405,10 @@ export default function ImageReviewPage() {
                       <button type="button" onClick={() => { setMoveFor(p); setMoveQuery(""); setZoom(p.path); }}
                         style={{ display: "block", width: "100%", marginTop: 4, fontSize: 11, border: "1px solid #d6d3d1", borderRadius: 4, background: "#fafaf9", cursor: "pointer" }}>
                         Wrong craft — move
+                      </button>
+                      <button type="button" disabled={moving} onClick={() => void removePhoto(p)}
+                        style={{ display: "block", width: "100%", marginTop: 2, fontSize: 11, border: "1px solid #d6d3d1", borderRadius: 4, background: "#fff", color: "#b3261e", cursor: "pointer" }}>
+                        Don&apos;t use
                       </button>
                       {hints.map((h) => (
                         <button key={h.craftId} type="button" disabled={moving} onClick={() => { setMoveFor(p); void movePhoto(h.craftId); }}
