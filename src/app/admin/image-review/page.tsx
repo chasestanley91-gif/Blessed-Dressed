@@ -381,34 +381,34 @@ export default function ImageReviewPage() {
             </div>
             <div>
               <p style={cap}>Photos for this craft — click to approve</p>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(140px, 1fr))", gap: 8 }}>
-                {current.photos.map((p) => {
+              <div key={current.craftId} style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(160px, 1fr))", gap: 8 }}>
+                {current.photos.filter((p) => p.path !== current.drawing.path && !/\/techpacks\//.test(p.path) && !/\/blueprints\//.test(p.path)).map((p) => {
                   const id = p.sha1 || p.path;
                   const v = picked[id] ?? "unreviewed";
                   const hints = crafts.filter((c) => c.craftId !== current.craftId && pathLooksLike(p.path, c.optionId)).slice(0, 3);
                   return (
-                    <div key={p.sha1 || p.path} style={{ border: v === "approved" ? "3px solid #b45309" : "1px solid #d6d3d1", borderRadius: 8, padding: 4, background: "#fff" }}>
+                    <div key={`${current.craftId}:${id}`} style={{ border: v === "approved" ? "3px solid #b45309" : "1px solid #d6d3d1", borderRadius: 8, padding: 6, background: "#fff" }}>
                       <button
                         type="button"
-                        onClick={() => {
-                          setZoom(p.path);
-                          setPicked((prev) => ({
-                            ...prev,
-                            [id]: v === "approved" ? "unreviewed" : "approved",
-                          }));
-                        }}
-                        style={{ border: 0, background: "transparent", padding: 0, cursor: "pointer", width: "100%" }}
+                        onClick={() => setZoom(p.path)}
+                        style={{ border: 0, background: "transparent", padding: 0, cursor: "zoom-in", width: "100%" }}
                       >
-                        <img src={p.path} alt="" style={{ width: "100%", height: 110, objectFit: "contain" }} />
-                        <span style={{ fontSize: 11 }}>{v === "approved" ? "Use this" : "Waiting"}</span>
+                        <img src={p.path} alt="" style={{ width: "100%", height: 110, objectFit: "contain", background: "#fafaf9" }} />
                       </button>
+                      <div style={{ display: "flex", gap: 4, marginTop: 6 }}>
+                        <button type="button"
+                          onClick={() => setPicked((prev) => ({ ...prev, [id]: v === "approved" ? "unreviewed" : "approved" }))}
+                          style={{ flex: 1, fontSize: 11, padding: "4px 0", borderRadius: 4, border: 0, cursor: "pointer", background: v === "approved" ? "#b45309" : "#e7e5e4", color: v === "approved" ? "#fff" : "#1c1917" }}>
+                          {v === "approved" ? "Use this" : "Use"}
+                        </button>
+                        <button type="button" disabled={moving} onClick={() => void removePhoto(p)}
+                          style={{ flex: 1, fontSize: 11, padding: "4px 0", borderRadius: 4, border: "1px solid #d6d3d1", background: "#fff", color: "#b3261e", cursor: "pointer" }}>
+                          Don&apos;t use
+                        </button>
+                      </div>
                       <button type="button" onClick={() => { setMoveFor(p); setMoveQuery(""); setZoom(p.path); }}
                         style={{ display: "block", width: "100%", marginTop: 4, fontSize: 11, border: "1px solid #d6d3d1", borderRadius: 4, background: "#fafaf9", cursor: "pointer" }}>
                         Wrong craft — move
-                      </button>
-                      <button type="button" disabled={moving} onClick={() => void removePhoto(p)}
-                        style={{ display: "block", width: "100%", marginTop: 2, fontSize: 11, border: "1px solid #d6d3d1", borderRadius: 4, background: "#fff", color: "#b3261e", cursor: "pointer" }}>
-                        Don&apos;t use
                       </button>
                       {hints.map((h) => (
                         <button key={h.craftId} type="button" disabled={moving} onClick={() => { setMoveFor(p); void movePhoto(h.craftId); }}
