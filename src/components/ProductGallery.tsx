@@ -22,7 +22,7 @@ export default function ProductGallery({ images, alt }: ProductGalleryProps) {
   }
 
   return (
-    <div className="flex flex-col gap-3">
+    <div className="flex w-full min-w-0 flex-col gap-3">
       {/* Main image */}
       <div className="overflow-hidden rounded-[2rem] border border-border-accent bg-surface-strong shadow-[0_8px_36px_rgba(0,0,0,0.5)]">
         <div className="relative aspect-[4/3] overflow-hidden">
