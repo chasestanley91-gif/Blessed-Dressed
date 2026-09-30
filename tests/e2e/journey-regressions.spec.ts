@@ -29,14 +29,20 @@ test.describe("BD-JOURNEY-001 regressions", () => {
     await page.getByRole("button", { name: /^Continue$/ }).click(); // -> Design
     await page.getByRole("button", { name: /^Continue$/ }).click(); // -> Monogram
 
-    const priceBefore = await page.getByText(/^\$[\d,]+$/).last().textContent();
+    // Anchor to the "Est. Total" row specifically, not just the last "$…" on
+    // the page — that generic match can compare two unrelated dollar figures
+    // if the page's DOM order ever shifts, passing vacuously either way.
+    const estTotal = () =>
+      page.locator('span:text-is("Est. Total")').locator("xpath=following-sibling::span").first().textContent();
+
+    const priceBefore = await estTotal();
 
     const addMonogramBtn = page.getByRole("button", { name: /add.*monogram/i });
     await expect(addMonogramBtn).toBeVisible();
     await addMonogramBtn.click();
 
     // Leave the new monogram's text field empty — do not type anything.
-    const priceAfter = await page.getByText(/^\$[\d,]+$/).last().textContent();
+    const priceAfter = await estTotal();
 
     expect(
       priceAfter,
