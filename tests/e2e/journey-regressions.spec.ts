@@ -92,6 +92,36 @@ test.describe("BD-JOURNEY-001 regressions", () => {
   });
 
   /**
+   * Found during the fix-verification pass, not in the original hypothesis
+   * list — a real, customer-visible naming bug caught in this task's own
+   * evidence (cart/checkout snippets) but not filed in the first draft of
+   * the debug report. `src/data/builder.ts` already prefixes three of six
+   * product labels with "Bespoke" (Shirt, Trousers, Vest); the builder page
+   * unconditionally prepended another "Bespoke " when adding to cart, so
+   * those three showed as "Bespoke Bespoke Shirt" etc. in cart, checkout,
+   * and the persisted order name. Fixed in
+   * src/app/builder/[product]/page.tsx's handleAddToCart.
+   */
+  test('cart never shows a doubled "Bespoke Bespoke" product name', async ({
+    page,
+  }) => {
+    test.setTimeout(120_000);
+    await page.goto("/builder/shirt"); // "Bespoke Shirt" is one of the three already-prefixed labels
+    await page.getByRole("button", { name: /Show all fabrics/i }).click();
+    await page
+      .locator('button:has(p:text-is("Premium")), button:has(p:text-is("Classic"))')
+      .first()
+      .click();
+    for (let i = 0; i < 6; i++) {
+      await page.getByRole("button", { name: /^Continue$/ }).click();
+    }
+    await page.getByRole("button", { name: /add to cart/i }).click();
+    await page.goto("/cart");
+    await expect(page.getByText(/Bespoke Bespoke/i)).toHaveCount(0);
+    await expect(page.getByText("Bespoke Shirt", { exact: false }).first()).toBeVisible();
+  });
+
+  /**
    * Bug #4 — a product with 2+ photos overflowed the 375px mobile viewport by
    * ~73px because ProductGallery's outer flex wrapper had no width constraint,
    * so the thumbnail strip's intrinsic width forced the whole page wider. Fixed

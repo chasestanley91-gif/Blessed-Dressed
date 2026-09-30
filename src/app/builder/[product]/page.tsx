@@ -1402,7 +1402,7 @@ export default function BuilderProductPage({ params }: BuilderPageProps) {
   function handleAddToCart() {
     addItem({
       id: `bespoke-${productSlug}-${Date.now()}`,
-      name: `Bespoke ${product.label}`,
+      name: product.label.startsWith("Bespoke") ? product.label : `Bespoke ${product.label}`,
       price,
       image: product.image,
       type: "bespoke",
