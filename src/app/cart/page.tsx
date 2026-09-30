@@ -94,8 +94,10 @@ export default function CartPage() {
                   {item.config && (
                     <p className="font-sans text-xs text-muted-dark">
                       {item.config.fabricLabel}
-                      {item.config.measureMode === "standard" && item.config.standardSize
-                        ? ` · Size ${item.config.standardSize}`
+                      {item.config.measureMode === "standard"
+                        ? item.config.standardSize
+                          ? ` · Size ${item.config.standardSize}`
+                          : " · Size not selected"
                         : " · Custom measurements"}
                     </p>
                   )}
