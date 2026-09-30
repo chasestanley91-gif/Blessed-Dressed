@@ -95,9 +95,13 @@ function calcPrice(
 ): number {
   const base = BASE_PRICES[product] ?? 0;
   const fabric = fabricPremium ? FABRIC_PREMIUM : 0;
-  // NOTE: counts ALL monogram slots (server pricing counts filled ones only —
-  // a known divergence; do not change one side without the other).
-  const extra = monograms.length > 1 ? (monograms.length - 1) * MONOGRAM_EXTRA : 0;
+  // Only FILLED monogram slots are chargeable — mirrors src/lib/pricing.ts's
+  // server-side filledMonograms logic exactly, so the client price the
+  // customer sees always matches what checkout will actually charge.
+  const filledMonograms = monograms.filter(
+    (m) => typeof m.text === "string" && m.text.trim() !== ""
+  );
+  const extra = Math.max(0, filledMonograms.length - 1) * MONOGRAM_EXTRA;
 
   // Bundled catalog arrives via an async chunk (see loader.ts); until it
   // lands this is null and designExtra is 0 — the same as today's behavior
@@ -130,8 +134,8 @@ const emptyMonogram = (): Monogram => ({
 
 export const useBuilderStore = create<BuilderState>((set) => ({
   product: "shirt",
-  fabric: "navy-herringbone",
-  fabricPremium: true,
+  fabric: "",
+  fabricPremium: false,
   designSelections: {},
   monograms: [emptyMonogram()],
   measureMode: "standard",
@@ -143,7 +147,7 @@ export const useBuilderStore = create<BuilderState>((set) => ({
   postureAdjustments: {},
   styleQuiz: {},
   discoveryQuiz: {},
-  price: BASE_PRICES.shirt + FABRIC_PREMIUM,
+  price: BASE_PRICES.shirt,
 
   setProduct: (product) =>
     set((state) => ({
@@ -253,8 +257,8 @@ export const useBuilderStore = create<BuilderState>((set) => ({
   resetBuilder: () =>
     set({
       product: "shirt",
-      fabric: "navy-herringbone",
-      fabricPremium: true,
+      fabric: "",
+      fabricPremium: false,
       designSelections: {},
       monograms: [emptyMonogram()],
       measureMode: "standard",
@@ -266,6 +270,6 @@ export const useBuilderStore = create<BuilderState>((set) => ({
       postureAdjustments: {},
       styleQuiz: {},
       discoveryQuiz: {},
-      price: BASE_PRICES.shirt + FABRIC_PREMIUM,
+      price: BASE_PRICES.shirt,
     }),
 }));

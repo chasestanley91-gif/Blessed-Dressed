@@ -163,67 +163,75 @@ test.describe("public fabric catalog — guest access", () => {
 });
 
 /* ══════════════════════════════════════════════════════════════════════════
- * KNOWN DEFECT — the assertion is correct and currently FAILS. `test.fail()`
- * runs it at full strength; it is not weakened and not skipped.
+ * REGRESSION GUARD — BUG F1 is fixed (2026-09-29). This test used to run under
+ * `test.fail()`, pinned to the broken behavior; it now asserts the fix holds.
  * ══════════════════════════════════════════════════════════════════════════ */
 
-test.describe("known fabric-selection defect", () => {
+test.describe("fabric-selection gate", () => {
   /**
-   * BUG F1 — the builder starts with a phantom fabric already selected.
+   * BUG F1 (fixed) — the builder used to start with a phantom fabric already
+   * selected. `src/store/builderStore.ts` initialised `fabric: "navy-herringbone"`
+   * (and the reset matched) — an id from the *bundled fallback* list in
+   * src/data/builder.ts that does not exist in the admin-managed catalog served
+   * by /api/fabrics. That meant:
    *
-   * `src/store/builderStore.ts:123` (and the reset at :240) initialise
-   * `fabric: "navy-herringbone"` — an id from the *bundled fallback* list in
-   * src/data/builder.ts. It does not exist in the admin-managed catalog served
-   * by /api/fabrics, so:
+   *   - the step-2 gate `disabled={activeStep === 2 && !fabric}` never engaged,
+   *     and a customer could skip fabric selection entirely;
+   *   - review rendered the raw string "navy-herringbone" instead of a real
+   *     fabric label; and
+   *   - that same string reached /api/checkout/create-session, which 409'd with
+   *     "unknown fabric" and no customer-facing way to recover.
    *
-   *   - the step-2 gate `disabled={activeStep === 2 && !fabric}` never engages,
-   *     and a customer can skip fabric selection entirely;
-   *   - no fabric card is highlighted, so the UI shows "nothing chosen" while
-   *     the store says otherwise;
-   *   - review renders `activeFabrics.find(f => f.id === fabric)?.label ?? fabric`,
-   *     i.e. the raw string "navy-herringbone"; and
-   *   - that same string lands in the cart as `config.fabricLabel` and is sent
-   *     to /api/checkout/create-session — a real order naming a fabric the
-   *     atelier does not stock.
-   *
-   * This is the last residue of the /api/admin/fabrics regression: the default
-   * still points into the fallback list that customers were never meant to see.
-   * Fix by initialising `fabric: ""` so the Continue gate does its job.
+   * Fixed by initialising `fabric: ""` / `fabricPremium: false` in both the
+   * initial state and `resetBuilder`. This guard checks both halves: the gate
+   * blocks an empty selection, and picking a real fabric clears the gate and
+   * carries the real id all the way to review — never the phantom string.
    */
-  test.fail(
-    "[KNOWN BUG] no fabric is pre-selected, and Continue is gated until one is chosen",
-    async ({ page, request }) => {
-      test.setTimeout(120_000);
+  test("no fabric is pre-selected, and Continue is gated until one is chosen", async ({
+    page,
+    request,
+  }) => {
+    test.setTimeout(120_000);
 
-      const managed: { id: string; label: string }[] = await (
-        await request.get("/api/fabrics")
-      ).json();
+    const managed: { id: string; label: string }[] = await (
+      await request.get("/api/fabrics")
+    ).json();
 
-      await page.goto("/builder/shirt");
-      await page.getByRole("button", { name: /Show all fabrics/i }).click();
-      await expect(page.locator(FABRIC_CARD).first()).toBeVisible();
+    await page.goto("/builder/shirt");
+    await page.getByRole("button", { name: /Show all fabrics/i }).click();
+    await expect(page.locator(FABRIC_CARD).first()).toBeVisible();
 
-      // Nothing chosen yet, so the step must not be passable.
-      await expect(
-        page.getByRole("button", { name: /^Continue$/ }),
-        "a customer can advance past fabric selection without choosing a fabric"
-      ).toBeDisabled();
+    const continueButton = page.getByRole("button", { name: /^Continue$/ });
 
-      // Second proof, reachable only because the gate above is broken: walking
-      // straight to review surfaces a fabric the catalog does not offer.
-      const continueButton = page.getByRole("button", { name: /^Continue$/ });
-      for (let step = 2; step < 8; step++) await continueButton.click();
+    // Nothing chosen yet, so the step must not be passable.
+    await expect(
+      continueButton,
+      "a customer can advance past fabric selection without choosing a fabric"
+    ).toBeDisabled();
 
-      for (const phantom of ["navy-herringbone"]) {
-        expect(
-          managed.map((f) => f.id),
-          "sanity: the default fabric id should not be in the managed catalog"
-        ).not.toContain(phantom);
-        await expect(
-          page.getByText(phantom, { exact: true }),
-          `raw fabric id "${phantom}" leaked into the order review`
-        ).toHaveCount(0);
-      }
+    // Pick the first real, managed fabric. The gate must now release.
+    const firstCard = page.locator(FABRIC_CARD).first();
+    const chosenLabel = await firstCard.locator("h3").first().textContent();
+    await firstCard.click();
+    await expect(continueButton).toBeEnabled();
+
+    for (let step = 2; step < 8; step++) {
+      await page.getByRole("button", { name: /^Continue$/ }).click();
     }
-  );
+
+    await expect(
+      page.getByText("navy-herringbone", { exact: true }),
+      'the phantom fallback fabric id must never reach order review'
+    ).toHaveCount(0);
+    if (chosenLabel) {
+      await expect(
+        page.getByText(chosenLabel.trim(), { exact: true }).first(),
+        "the real chosen fabric's label should appear in order review"
+      ).toBeVisible();
+    }
+    expect(
+      managed.map((f) => f.id),
+      "sanity: the phantom id should still not be in the managed catalog"
+    ).not.toContain("navy-herringbone");
+  });
 });
