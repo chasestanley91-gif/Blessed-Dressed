@@ -185,7 +185,6 @@ export const SITE_DEFAULTS: SiteSettings = {
     ],
     col2Title: "Company",
     col2Links: [
-      { label: "About", href: "/about" },
       { label: "Admin", href: "/admin" },
       { label: "Cart", href: "/cart" },
       { label: "Checkout", href: "/checkout" },
