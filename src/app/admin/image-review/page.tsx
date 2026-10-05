@@ -2,6 +2,11 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
 
+function thumb(path: string, w: number) {
+  if (!path.startsWith("/images/")) return path;
+  return `/api/admin/image-review/thumb?path=${encodeURIComponent(path)}&w=${w}`;
+}
+
 type Photo = {
   path: string;
   sha1: string;
@@ -23,6 +28,7 @@ type Craft = {
   references: { path: string; bytes: number }[];
   flags: string[];
   inScope: boolean;
+  completed?: boolean;
 };
 
 const PROBLEM_TAGS = [
@@ -97,10 +103,12 @@ export default function ImageReviewPage() {
         setCrafts(list);
         const saved = sessionStorage.getItem(CURSOR_KEY);
         const resume = typeof d.resumeCraftId === "string" ? d.resumeCraftId : null;
+        const open = (id: string | null) =>
+          !!id && list.some((c) => c.craftId === id && !c.completed);
         const start =
-          (resume && list.some((c) => c.craftId === resume) ? resume : null)
-          || (saved && list.some((c) => c.craftId === saved) ? saved : null)
-          || list.find((c) => c.photos.some((p) => p.verdict === "unreviewed"))?.craftId
+          (open(resume) ? resume : null)
+          || (open(saved) ? saved : null)
+          || list.find((c) => !c.completed)?.craftId
           || list[0]?.craftId
           || null;
         setCursorId(start);
@@ -118,6 +126,13 @@ export default function ImageReviewPage() {
     if (cursorId) sessionStorage.setItem(CURSOR_KEY, cursorId);
   }, [cursorId]);
 
+  useEffect(() => {
+    if (!zoom) return;
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setZoom(null); };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [zoom]);
+
   const visible = useMemo(() => {
     return crafts.filter((c) => {
       if (garment !== "all" && c.product !== garment) return false;
@@ -125,12 +140,11 @@ export default function ImageReviewPage() {
         const hay = `${c.label} ${c.craftId} ${c.fieldLabel ?? ""}`.toLowerCase();
         if (!hay.includes(q.toLowerCase())) return false;
       }
-      const hasUnreviewed = c.photos.some((p) => p.verdict === "unreviewed");
-      const done = c.photos.length > 0 && !hasUnreviewed && c.photos.every((p) => p.verdict === "approved" || p.verdict === "rejected");
+      const done = !!c.completed;
       if (filter === "needs-review") {
+        if (c.completed && c.craftId !== cursorId) return false;
         if (c.craftId === cursorId) return true;
         if (done) return false;
-        if (!hasUnreviewed && c.photos.some((p) => p.preTicked) && c.photos.length > 0) return false;
       }
       if (filter === "done" && !done) return false;
       if (filter === "flagged" && !(c.flags ?? []).length) return false;
@@ -157,7 +171,7 @@ export default function ImageReviewPage() {
     setTags([]);
     setNotes("");
     setDrawingWrong(false);
-    setZoom(current.photos[0]?.path ?? current.drawing.path);
+    setZoom(null);
     setApplyJackets(false);
     setMoveFor(null);
     setMoveQuery("");
@@ -182,6 +196,8 @@ export default function ImageReviewPage() {
         sha1: p.sha1,
         verdict: noneRight ? "rejected" : (picked[p.sha1 || p.path] ?? "unreviewed"),
       })).filter((p) => p.verdict === "approved" || p.verdict === "rejected");
+      const ac = new AbortController();
+      const t = window.setTimeout(() => ac.abort(), 20000);
       const r = await fetch("/api/admin/image-review", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -194,7 +210,8 @@ export default function ImageReviewPage() {
           notes,
           applyToJackets: applyJackets,
         }),
-      });
+        signal: ac.signal,
+      }).finally(() => window.clearTimeout(t));
       if (!r.ok) {
         const d = await r.json().catch(() => ({}));
         throw new Error(d.error || "Save failed");
@@ -204,6 +221,7 @@ export default function ImageReviewPage() {
         if (c.craftId !== current.craftId) return c;
         return {
           ...c,
+          completed: true,
           photos: c.photos.map((p) => ({
             ...p,
             verdict: noneRight ? "rejected" : (picked[p.sha1 || p.path] ?? p.verdict),
@@ -211,7 +229,7 @@ export default function ImageReviewPage() {
           })),
         };
       }));
-      goTo(nextId);
+      if (nextId) goTo(nextId);
     } catch (e) {
       setError(e instanceof Error ? e.message : "Save failed");
     } finally {
@@ -338,13 +356,13 @@ export default function ImageReviewPage() {
 
   if (loading) return <div style={pageWrap}>Loading craft map…</div>;
 
-  const doneCount = crafts.filter((c) => c.photos.some((p) => p.verdict === "approved")).length;
+  const doneCount = crafts.filter((c) => c.completed).length;
 
   return (
     <div style={pageWrap}>
       <header style={{ display: "flex", flexWrap: "wrap", gap: 10, alignItems: "center", marginBottom: 14 }}>
         <h1 style={{ margin: 0, fontSize: 22 }}>Craft photo review</h1>
-        <span style={{ color: "#57534e", fontSize: 13 }}>{doneCount} / {crafts.length} on this garment have an approved photo · buttons and threads are hidden</span>
+        <span style={{ color: "#57534e", fontSize: 13 }}>{doneCount} / {crafts.length} finished on this garment · threads, fabrics, buttons, lapel buttonholes, and monograms are hidden</span>
         <select value={garment} onChange={(e) => { setGarment(e.target.value); setCursorId(null); }} style={sel}>
           {["shirt", "sport-coat", "suit-2pc", "suit-3pc", "trousers", "vest"].map((g) => (
             <option key={g} value={g}>{g}</option>
@@ -373,7 +391,13 @@ export default function ImageReviewPage() {
             <div>
               <p style={cap}>Tech-pack drawing</p>
               {current.drawing.path
-                ? <img src={current.drawing.path} alt="drawing" style={{ width: "100%", background: "#fff", borderRadius: 8 }} />
+                ? (
+                  <button type="button" onClick={() => setZoom(current.drawing.path)}
+                    style={{ border: 0, background: "transparent", padding: 0, cursor: "zoom-in", width: "100%" }}>
+                    <img src={thumb(current.drawing.path, 720)} alt="drawing" decoding="async"
+                      style={{ width: "100%", background: "#fff", borderRadius: 8 }} />
+                  </button>
+                )
                 : <div style={{ padding: 40, background: "#e7e5e4", borderRadius: 8 }}>NO DRAWING</div>}
               <label style={fileBtn}>
                 {uploading === "drawing" ? "Uploading drawing…" : "Replace drawing"}
@@ -399,7 +423,8 @@ export default function ImageReviewPage() {
                         onClick={() => setZoom(p.path)}
                         style={{ border: 0, background: "transparent", padding: 0, cursor: "zoom-in", width: "100%" }}
                       >
-                        <img src={p.path} alt="" style={{ width: "100%", height: 110, objectFit: "contain", background: "#fafaf9" }} />
+                        <img src={thumb(p.path, 320)} alt="" decoding="async" loading="lazy"
+                          style={{ width: "100%", height: 110, objectFit: "contain", background: "#fafaf9" }} />
                       </button>
                       <div style={{ display: "flex", gap: 4, marginTop: 6 }}>
                         <button type="button"
@@ -412,6 +437,9 @@ export default function ImageReviewPage() {
                           Don&apos;t use
                         </button>
                       </div>
+                      <p style={{ margin: "4px 0 0", fontSize: 10, color: "#78716c", textTransform: "uppercase", letterSpacing: "0.06em" }}>
+                        {(p.sources ?? []).length ? p.sources!.join(" · ") : "photo"}
+                      </p>
                       <button type="button" onClick={() => { setMoveFor(p); setMoveQuery(""); setZoom(p.path); }}
                         style={{ display: "block", width: "100%", marginTop: 4, fontSize: 11, border: "1px solid #d6d3d1", borderRadius: 4, background: "#fafaf9", cursor: "pointer" }}>
                         Wrong craft — move
@@ -431,7 +459,7 @@ export default function ImageReviewPage() {
                 <div style={{ marginTop: 12, padding: 12, background: "#fff", border: "1px solid #d6d3d1", borderRadius: 8 }}>
                   <p style={cap}>Move this photo to the right craft</p>
                   <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
-                    <img src={moveFor.path} alt="" style={{ height: 64, background: "#fafaf9" }} />
+                    <img src={thumb(moveFor.path, 160)} alt="" decoding="async" style={{ height: 64, background: "#fafaf9" }} />
                     <input value={moveQuery} onChange={(e) => setMoveQuery(e.target.value)} placeholder="Type the option name, e.g. point 7.0"
                       style={{ ...sel, flex: 1 }} autoFocus />
                     <button type="button" onClick={() => setMoveFor(null)} style={btn}>Cancel</button>
@@ -472,18 +500,16 @@ export default function ImageReviewPage() {
                     onChange={(e) => { const f = e.target.files?.[0]; e.target.value = ""; if (f) void upload("reference", f); }} />
                 </label>
               </div>
-              {zoom && (
-                <div style={{ marginTop: 12, background: "#fff", borderRadius: 8, padding: 8 }}>
-                  <p style={cap}>Enlarged</p>
-                  <img src={zoom} alt="" style={{ maxWidth: "100%", maxHeight: 360, objectFit: "contain" }} />
-                </div>
-              )}
+              <p style={{ marginTop: 8, fontSize: 12, color: "#78716c" }}>Click a photo to enlarge it. Esc or click the dark area to close.</p>
               {!!current.references.length && (
                 <div style={{ marginTop: 12 }}>
                   <p style={cap}>Reference uploads</p>
                   <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
                     {current.references.map((r) => (
-                      <img key={r.path} src={r.path} alt="" style={{ height: 72, background: "#fff", borderRadius: 4 }} />
+                      <button key={r.path} type="button" onClick={() => setZoom(r.path)}
+                        style={{ border: 0, background: "transparent", padding: 0, cursor: "zoom-in" }}>
+                        <img src={thumb(r.path, 200)} alt="" decoding="async" style={{ height: 72, background: "#fff", borderRadius: 4 }} />
+                      </button>
                     ))}
                   </div>
                 </div>
@@ -525,6 +551,27 @@ export default function ImageReviewPage() {
               None are right — needs a new photo
             </button>
           </div>
+        </div>
+      )}
+      {zoom && (
+        <div
+          role="dialog"
+          aria-label="Enlarged photo"
+          onClick={() => setZoom(null)}
+          style={{
+            position: "fixed", inset: 0, zIndex: 200,
+            background: "rgba(0,0,0,0.82)",
+            display: "flex", alignItems: "center", justifyContent: "center",
+            padding: 16, cursor: "zoom-out",
+          }}
+        >
+          <img
+            src={thumb(zoom, 1400)}
+            alt=""
+            decoding="async"
+            onClick={(e) => e.stopPropagation()}
+            style={{ maxWidth: "92vw", maxHeight: "92vh", objectFit: "contain", cursor: "default" }}
+          />
         </div>
       )}
     </div>

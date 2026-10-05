@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { readFileSync, writeFileSync, mkdirSync, existsSync, statSync } from "fs";
+import { readFileSync, writeFileSync, mkdirSync, existsSync, statSync, renameSync, unlinkSync } from "fs";
 import { createHash } from "crypto";
 import { join } from "path";
 
@@ -45,15 +45,28 @@ type DecisionMap = Record<string, ReviewDecision>;
 function readJson<T>(p: string, fallback: T): T {
   try {
     if (!existsSync(p)) return fallback;
-    return JSON.parse(readFileSync(p, "utf8")) as T;
+    const text = readFileSync(p, "utf8");
+    if (!text.trim()) return fallback;
+    return JSON.parse(text) as T;
   } catch {
     return fallback;
   }
 }
 
-function writeDecisions(d: DecisionMap) {
+function writeJsonAtomic(p: string, data: unknown) {
   mkdirSync(STORE, { recursive: true });
-  writeFileSync(DECISIONS_FILE, JSON.stringify(d, null, 1));
+  const tmp = `${p}.${process.pid}.tmp`;
+  writeFileSync(tmp, JSON.stringify(data, null, 1) + "\n");
+  try {
+    renameSync(tmp, p);
+  } catch {
+    writeFileSync(p, JSON.stringify(data, null, 1) + "\n");
+    try { unlinkSync(tmp); } catch { /* leftover tmp is harmless */ }
+  }
+}
+
+function writeDecisions(d: DecisionMap) {
+  writeJsonAtomic(DECISIONS_FILE, d);
 }
 
 type LogEntry = ReviewDecision & {
@@ -70,10 +83,21 @@ type LogEntry = ReviewDecision & {
 
 function appendLogs(entries: LogEntry[]) {
   if (!entries.length) return;
-  const log = readJson<LogEntry[]>(DECISIONS_LOG_FILE, []);
+  let log: LogEntry[] = [];
+  if (existsSync(DECISIONS_LOG_FILE)) {
+    const text = readFileSync(DECISIONS_LOG_FILE, "utf8");
+    if (text.trim()) {
+      try {
+        const parsed = JSON.parse(text) as LogEntry[];
+        if (!Array.isArray(parsed)) throw new Error("log is not an array");
+        log = parsed;
+      } catch {
+        throw new Error("Review log is busy. Click Save again.");
+      }
+    }
+  }
   log.push(...entries);
-  mkdirSync(STORE, { recursive: true });
-  writeFileSync(DECISIONS_LOG_FILE, JSON.stringify(log, null, 1));
+  writeJsonAtomic(DECISIONS_LOG_FILE, log);
 }
 function appendLog(entry: LogEntry) {
   appendLogs([entry]);
@@ -142,6 +166,62 @@ type Overlay = {
 };
 const OVERLAY_FILE = join(STORE, "image-review-overlays.json");
 const PROGRESS_FILE = join(STORE, "image-review-progress.json");
+const COMPLETED_FILE = join(STORE, "image-review-completed.json");
+
+/** Owner: threads, fabrics, button catalogues, lapel buttonhole styles, monograms stay as-is. */
+const SKIP_FIELD_IDS = new Set([
+  "buttonhole_thread_color_collar_band",
+  "buttonhole_thread_color_placket",
+  "buttonhole_thread_color_cuff",
+  "buttoning_thread_color",
+  "decoration_stitching_color_on_collar",
+  "decoration_stitching_color_placket",
+  "decoration_stitching_color_cuff",
+  "sleeve_vent_decoration_thread_color",
+  "button-thread",
+  "button-thread-color-vest",
+  "buttonhole-thread",
+  "buttonhole-thread-vest",
+  "contrast_fabric",
+  "cut_out_fabric",
+  "back-fabric-code",
+  "back-waist-belt-fabric",
+  "fabric_label_position",
+  "lining-color",
+  "vest-lining-color",
+  "sleeve-lining-color",
+  "button_on_collar_stand",
+  "placket_button",
+  "sewing_button_style",
+  "sewing-button-style",
+  "sewing-button-style-trouser",
+  "button-sewing-style-vest",
+  "button-choice-vest",
+  "covered-button-vest",
+  "lapel-bh-style",
+  "lapel-bh-position",
+  "lapel-hole-style",
+  "lapel-buttonhole-vest",
+  "monogram",
+  "monograms",
+  "embroidery-monogram",
+]);
+
+function loadCompleted() {
+  // Only Save & next writes this file. A photo-level decision in the
+  // history log is NOT "this craft is finished" — that is how 277 of 278
+  // shirt crafts vanished from the rematch queue.
+  const file = readJson<{ craftIds?: string[] }>(COMPLETED_FILE, {});
+  return new Set(file.craftIds ?? []);
+}
+
+function markCompleted(ids: string[]) {
+  const file = readJson<{ craftIds?: string[] }>(COMPLETED_FILE, { craftIds: [] });
+  const set = new Set(file.craftIds ?? []);
+  for (const id of ids) set.add(id);
+  mkdirSync(STORE, { recursive: true });
+  writeJsonAtomic(COMPLETED_FILE, { craftIds: [...set].sort(), updatedAt: new Date().toISOString() });
+}
 
 function addrToCraftId(addr?: string) {
   if (!addr || !addr.includes(">")) return "";
@@ -191,12 +271,14 @@ export async function GET(req: NextRequest) {
   const map = loadMap();
   const overlays = readJson<Record<string, Overlay>>(OVERLAY_FILE, {});
   const { by: verdicts, lastCraft } = latestPhotoVerdicts();
+  const completed = loadCompleted();
   const crafts = (map.crafts ?? [])
-    .filter((c) => c.inScope && !skipSwatches.has(c.craftId) && (!product || c.product === product))
+    .filter((c) => c.inScope && !skipSwatches.has(c.craftId) && !SKIP_FIELD_IDS.has(c.fieldId || "") && (!product || c.product === product))
     .map((c) => {
       const over = overlays[c.craftId];
       const removed = new Set(over?.removedSha1 ?? []);
       const drawPath = over?.drawing?.path ?? c.drawing?.path ?? null;
+      const locked = completed.has(c.craftId);
       const photos = [...(c.photos ?? []), ...(over?.photos ?? [])]
         .filter((p) => p.verdict !== "rejected" && !removed.has(p.sha1))
         .map((p) => ({
@@ -217,6 +299,7 @@ export async function GET(req: NextRequest) {
         })
         .filter((p) => {
           if (p.verdict === "rejected") return false;
+          if (locked && p.verdict === "unreviewed") return false;
           if (!p.path.startsWith("/images/")) return false;
           if (drawPath && p.path === drawPath) return false;
           if (/\/techpacks\//.test(p.path) || /\/blueprints\//.test(p.path)) return false;
@@ -246,19 +329,14 @@ export async function GET(req: NextRequest) {
         label: c.label,
         flags: c.flags,
         inScope: c.inScope,
+        completed: locked,
         drawing: over?.drawing ?? c.drawing,
         photos: deduped,
         references: [...(Array.isArray(c.references) ? c.references : []), ...(over?.references ?? [])],
       };
     });
   crafts.sort((a, b) => String(a.craftId).localeCompare(String(b.craftId)));
-  const doneIds = new Set(
-    crafts.filter((c) => {
-      const photos = c.photos ?? [];
-      if (!photos.length) return verdicts.has(`${c.craftId}|last`);
-      return photos.every((p) => p.verdict === "approved" || p.verdict === "rejected");
-    }).map((c) => c.craftId),
-  );
+  const doneIds = new Set(crafts.filter((c) => c.completed).map((c) => c.craftId));
   const idx = crafts.findIndex((c) => c.craftId === lastCraft);
   let resumeCraftId =
     (idx >= 0 ? crafts.slice(idx + 1).find((c) => !doneIds.has(c.craftId))?.craftId : null)
@@ -346,11 +424,12 @@ function saveCraftBatch(body: Record<string, unknown>) {
   }
   writeDecisions(decisions);
   appendLogs(logEntries);
-  writeFileSync(PROGRESS_FILE, JSON.stringify({
+  markCompleted(targets);
+  writeJsonAtomic(PROGRESS_FILE, {
     craftId,
     product: craftId.split("|")[0],
     at: now,
-  }, null, 1) + "\n");
+  });
   return NextResponse.json({ ok: true, wrote, targets });
 }
 

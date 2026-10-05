@@ -12,6 +12,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
+import { fieldIsSkipped, matchStemToOption, optionIdsLongestFirst } from './craft-review-scope.mjs';
 
 
 const REPO = path.resolve(path.dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1')), '..');
@@ -22,7 +23,7 @@ const LEDGER = path.join(REPO, 'data-store/image-decision-ledger.json');
 const MAP_OUT = path.join(REPO, 'data-store/craft-image-map.json');
 const CSV_OUT = path.join(REPO, 'reports/craft-image-map-flags.csv');
 
-const PHOTO_DIR = /^\/images\/(generated|ai|real|review|review-refs)\//i;
+const PHOTO_DIR = /^\/images\/(generated|ai|real|review|review-refs|web-refs)\//i;
 const GLYPH = /\.svg(\?|#|$)/i;
 const IMG_EXT = /\.(webp|png|jpg|jpeg|avif|jfif)$/i;
 const REJECT = new Set(['rejected', 'reject-file', 'remake', 'discard']);
@@ -91,11 +92,7 @@ if (!ledger?.crafts) {
 console.error('repo', REPO);
 
 function localExcluded(opt) {
-  const t = `${opt.fieldId} ${opt.fieldLabel || ''} ${opt.label} ${opt.description || ''}`.replace(/[-_]/g, ' ').toLowerCase();
-  if (/\bthread\b/.test(t) && /colou?r/.test(t)) return 'thread-color';
-  if (/\bbutton\b/.test(t) && /colou?r|catalogue|catalog|sewing style/.test(t)) return 'button';
-  if (/\bfabric\b/.test(t) && /swatch|book|lining fabric|cloth/.test(t)) return 'fabric';
-  if (/^btn[-_ ]|^thread[-_ ]|^fabric[-_ ]/.test(String(opt.fieldId).toLowerCase())) return 'swatch';
+  if (fieldIsSkipped(opt.fieldId, opt.fieldLabel || '', opt.label || '')) return 'skip-field';
   return null;
 }
 
@@ -205,6 +202,55 @@ for (const file of fs.readdirSync(OPTIONS_DIR).filter((f) => f.endsWith('.json')
   }
 }
 
+const allOptionIds = optionIdsLongestFirst(rows.map((r) => r.optionId));
+
+function invertIndex(indexMap) {
+  const byOpt = new Map();
+  for (const [base, files] of indexMap) {
+    const opt = matchStemToOption(base, allOptionIds);
+    if (!opt) continue;
+    if (!byOpt.has(opt)) byOpt.set(opt, []);
+    byOpt.get(opt).push(...files);
+  }
+  return byOpt;
+}
+
+const generatedByOption = new Map();
+for (const [dirName, idx] of generatedIndex) {
+  generatedByOption.set(dirName, invertIndex(idx));
+}
+const slotByOption = {
+  real: invertIndex(slotIndex.real),
+  ai: invertIndex(slotIndex.ai),
+};
+
+const webByOption = new Map();
+{
+  const webRoot = path.join(PUBLIC, 'images', 'web-refs');
+  if (fs.existsSync(webRoot)) {
+    for (const name of fs.readdirSync(webRoot)) {
+      const abs = path.join(webRoot, name);
+      try {
+        if (fs.statSync(abs).isDirectory()) {
+          const opt = matchStemToOption(name, allOptionIds) || (allOptionIds.includes(name) ? name : null);
+          if (!opt) continue;
+          for (const f of listFiles(abs).filter((p) => IMG_EXT.test(p))) {
+            if (!webByOption.has(opt)) webByOption.set(opt, []);
+            webByOption.get(opt).push(f);
+          }
+        } else if (fs.statSync(abs).isFile() && IMG_EXT.test(abs)) {
+          const opt = matchStemToOption(name, allOptionIds);
+          if (!opt) continue;
+          if (!webByOption.has(opt)) webByOption.set(opt, []);
+          webByOption.get(opt).push(abs);
+        }
+      } catch { /* */ }
+    }
+  }
+}
+
+const webManifest = readJson(path.join(REPO, 'data-store', 'web-craft-photos.json'), { attachments: [] });
+
 const drawingUsers = new Map();
 const crafts = [];
 
@@ -277,13 +323,7 @@ for (const row of rows) {
   }
 
   for (const dirName of GENERATED_DIRS[row.product] ?? [row.product]) {
-    const idx = generatedIndex.get(dirName);
-    if (!idx) continue;
-    for (const [base, files] of idx) {
-      if (base === row.optionId || base.startsWith(row.optionId + '-')) {
-        for (const f of files) addPhoto(f, 'generated');
-      }
-    }
+    for (const f of generatedByOption.get(dirName)?.get(row.optionId) ?? []) addPhoto(f, 'generated');
   }
 
   const rprefix = `${row.product}__${row.optionId}__`;
@@ -292,11 +332,14 @@ for (const row of rows) {
   for (const f of pipelineCandidates.get(`${row.product}/${row.optionId}`) ?? []) addPhoto(f, 'pipeline');
 
   for (const folder of ['real', 'ai']) {
-    for (const [base, files] of slotIndex[folder]) {
-      if (base === row.optionId || base.startsWith(row.optionId + '-')) {
-        for (const f of files) addPhoto(f, folder);
-      }
-    }
+    for (const f of slotByOption[folder].get(row.optionId) ?? []) addPhoto(f, folder);
+  }
+
+  for (const f of webByOption.get(row.optionId) ?? []) addPhoto(f, 'web');
+  for (const a of webManifest.attachments ?? []) {
+    if (!(a.optionIds || []).includes(row.optionId)) continue;
+    const abs = toAbs(a.path);
+    if (abs) addPhoto(abs, 'web');
   }
 
   const events = (lc?.events ?? []).filter((e) => !e.machine);
@@ -321,6 +364,11 @@ for (const row of rows) {
     const paths = [...new Set(rec.paths)];
     const verdict = verdictFor(rec.sha1, paths);
     rec.verdict = verdict;
+    // Drop files whose name belongs to a different option — unless the owner
+    // already approved this exact file on THIS craft (approvals stay put).
+    const stem = path.basename(paths[0] || '').replace(/\.(webp|png|jpe?g|avif|jfif)$/i, '');
+    const owner = matchStemToOption(stem, allOptionIds);
+    if (owner && owner !== row.optionId && verdict !== 'approved') continue;
     photos.push({
       sha1: rec.sha1,
       path: paths[0],

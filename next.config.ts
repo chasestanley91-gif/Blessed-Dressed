@@ -46,6 +46,26 @@ const nextConfig: NextConfig = {
       dynamic: 0,
     },
   },
+  // Saving a review writes JSON under data-store/. If webpack watches that,
+  // every Save rebuilds the page, the tab looks frozen, and overlapping
+  // reads can parse a half-written file.
+  webpack: (config, { dev }) => {
+    if (dev) {
+      config.watchOptions = {
+        ...config.watchOptions,
+        ignored: [
+          "**/node_modules/**",
+          "**/.git/**",
+          "**/.next/**",
+          "**/data-store/**",
+          "**/public/images/**",
+          "**/.craft-pipeline/**",
+          "**/factory-screenshots/**",
+        ],
+      };
+    }
+    return config;
+  },
 };
 
 export default nextConfig;

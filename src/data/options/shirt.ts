@@ -40,33 +40,38 @@ const yzColors = [
 ];
 
 const stitchingOptions = [
-  { id: "stitch-none",    label: "None",                            description: "No decorative stitching — clean edge.",            image: "/images/decoration_stitching_on_collar/none.jpg" },
-  { id: "stitch-01-top",  label: "Machine 0.1 cm Top Stitching",    description: "Very fine machine topstitch 0.1 cm from edge.",    image: "/images/decoration_stitching_on_collar/machine-01cm-top-stitching.jpg" },
-  { id: "stitch-03-top",  label: "Machine 0.3 cm Top Stitching",    description: "Fine machine topstitch 0.3 cm from edge.",         image: "/images/decoration_stitching_on_collar/machine-03cm-top-stitching.jpg" },
-  { id: "stitch-05-top",  label: "Machine 0.5 cm Top Stitching",    description: "Medium machine topstitch 0.5 cm from edge.",       image: "/images/decoration_stitching_on_collar/machine-05cm-top-stitching.jpg" },
-  { id: "stitch-06-top",  label: "Machine 0.6 cm Top Stitching",    description: "Standard decorative topstitch 0.6 cm.",            image: "/images/decoration_stitching_on_collar/machine-06cm-top-stitching.jpg" },
-  { id: "stitch-01-amf",  label: "Machine 0.1 cm AMF Stitching",    description: "AMF-style hand-imitation stitch 0.1 cm.",          image: "/images/decoration_stitching_on_collar/machine-01cm-amf-stitching.jpg" },
-  { id: "stitch-03-amf",  label: "Machine 0.3 cm AMF Stitching",    description: "AMF-style stitch 0.3 cm.",                         image: "/images/decoration_stitching_on_collar/machine-03cm-amf-stitching.jpg" },
-  { id: "stitch-05-amf",  label: "Machine 0.5 cm AMF Stitching",    description: "AMF-style stitch 0.5 cm.",                         image: "/images/decoration_stitching_on_collar/machine-05cm-amf-stitching.jpg" },
+  { id: "collar-stitch-none",    label: "None",                            description: "No decorative stitching — clean edge.",            image: "/images/decoration_stitching_on_collar/none.jpg" },
+  { id: "collar-stitch-01-top",  label: "Machine 0.1 cm Top Stitching",    description: "Very fine machine topstitch 0.1 cm from edge.",    image: "/images/decoration_stitching_on_collar/machine-01cm-top-stitching.jpg" },
+  { id: "collar-stitch-03-top",  label: "Machine 0.3 cm Top Stitching",    description: "Fine machine topstitch 0.3 cm from edge.",         image: "/images/decoration_stitching_on_collar/machine-03cm-top-stitching.jpg" },
+  { id: "collar-stitch-05-top",  label: "Machine 0.5 cm Top Stitching",    description: "Medium machine topstitch 0.5 cm from edge.",       image: "/images/decoration_stitching_on_collar/machine-05cm-top-stitching.jpg" },
+  { id: "collar-stitch-06-top",  label: "Machine 0.6 cm Top Stitching",    description: "Standard decorative topstitch 0.6 cm.",            image: "/images/decoration_stitching_on_collar/machine-06cm-top-stitching.jpg" },
+  { id: "collar-stitch-01-amf",  label: "Machine 0.1 cm AMF Stitching",    description: "AMF-style hand-imitation stitch 0.1 cm.",          image: "/images/decoration_stitching_on_collar/machine-01cm-amf-stitching.jpg" },
+  { id: "collar-stitch-03-amf",  label: "Machine 0.3 cm AMF Stitching",    description: "AMF-style stitch 0.3 cm.",                         image: "/images/decoration_stitching_on_collar/machine-03cm-amf-stitching.jpg" },
+  { id: "collar-stitch-05-amf",  label: "Machine 0.5 cm AMF Stitching",    description: "AMF-style stitch 0.5 cm.",                         image: "/images/decoration_stitching_on_collar/machine-05cm-amf-stitching.jpg" },
 ];
 
 const splicingOptions = [
-  { id: "splice-none",                 label: "None",                               description: "Single fabric throughout.",                          image: "/images/collar_splicing/none.jpg" },
-  { id: "splice-lower-top-collar",     label: "Lower Part of Top Collar",           description: "Contrast on lower area of top collar.",              image: "/images/collar_splicing/lower-part-of-top-collar.jpg" },
-  { id: "splice-upper-top-collar",     label: "Upper Part of Top Collar",           description: "Contrast on upper area of top collar.",              image: "/images/collar_splicing/upper-part-of-top-collar.jpg" },
-  { id: "splice-strip-mid-collar",     label: "Strip in Middle Top Collar",         description: "Contrast strip through center of top collar.",       image: "/images/collar_splicing/strip-in-middle-top-collar.jpg" },
-  { id: "splice-point-opening",        label: "Collar Point Opening Edge",          description: "Contrast on collar point opening edge.",             image: "/images/collar_splicing/collar-point-opening-edge.jpg" },
-  { id: "splice-4cm-from-point",       label: "4 cm to Collar Point Opening Edge",  description: "Contrast splicing 4 cm from collar point.",          image: "/images/collar_splicing/4cm-to-collar-point-opening-edge.jpg" },
-  { id: "splice-15cm-from-point",      label: "1.5 cm to Collar Point Opening Edge",description: "Contrast splicing 1.5 cm from collar point.",        image: "/images/collar_splicing/15cm-to-collar-point-opening-edge.jpg" },
-  { id: "splice-single-left-placket",  label: "Single Left Placket Edge",           description: "Contrast on single left placket edge.",              image: "/images/collar_splicing/single-left-placket-edge.jpg" },
-  { id: "splice-double-left-placket",  label: "Double Left Placket Edges",          description: "Contrast on both left placket edges.",               image: "/images/collar_splicing/double-left-placket-edges.jpg" },
-  { id: "splice-top-collar-edge",      label: "Top Collar Edge",                    description: "Contrast trim on top collar edge.",                  image: "/images/collar_splicing/top-collar-edge.jpg" },
-  { id: "splice-triangle-point",       label: "Triangle Collar Point",              description: "Triangle contrast at collar point.",                 image: "/images/collar_splicing/triangle-collar-point.jpg" },
-  { id: "splice-upper-cuff",           label: "Upper Sleeve Cuff",                  description: "Contrast on upper portion of sleeve cuff.",          image: "/images/collar_splicing/upper-sleeve-cuff.jpg" },
-  { id: "splice-lower-cuff",           label: "Lower Sleeve Cuff",                  description: "Contrast on lower portion of sleeve cuff.",          image: "/images/collar_splicing/lower-sleeve-cuff.jpg" },
-  { id: "splice-cuff-edge",            label: "Cuff Edge",                          description: "Contrast trim on cuff edge.",                        image: "/images/collar_splicing/cuff-edge.jpg" },
-  { id: "splice-strip-mid-cuff",       label: "Strip in Middle Cuff",               description: "Contrast strip through center of cuff.",             image: "/images/collar_splicing/strip-in-middle-cuff.jpg" },
+  { id: "collar-splice-none",                 label: "None",                               description: "Single fabric throughout.",                          image: "/images/collar_splicing/none.jpg" },
+  { id: "collar-splice-lower-top-collar",     label: "Lower Part of Top Collar",           description: "Contrast on lower area of top collar.",              image: "/images/collar_splicing/lower-part-of-top-collar.jpg" },
+  { id: "collar-splice-upper-top-collar",     label: "Upper Part of Top Collar",           description: "Contrast on upper area of top collar.",              image: "/images/collar_splicing/upper-part-of-top-collar.jpg" },
+  { id: "collar-splice-strip-mid-collar",     label: "Strip in Middle Top Collar",         description: "Contrast strip through center of top collar.",       image: "/images/collar_splicing/strip-in-middle-top-collar.jpg" },
+  { id: "collar-splice-point-opening",        label: "Collar Point Opening Edge",          description: "Contrast on collar point opening edge.",             image: "/images/collar_splicing/collar-point-opening-edge.jpg" },
+  { id: "collar-splice-4cm-from-point",       label: "4 cm to Collar Point Opening Edge",  description: "Contrast splicing 4 cm from collar point.",          image: "/images/collar_splicing/4cm-to-collar-point-opening-edge.jpg" },
+  { id: "collar-splice-15cm-from-point",      label: "1.5 cm to Collar Point Opening Edge",description: "Contrast splicing 1.5 cm from collar point.",        image: "/images/collar_splicing/15cm-to-collar-point-opening-edge.jpg" },
+  { id: "collar-splice-single-left-placket",  label: "Single Left Placket Edge",           description: "Contrast on single left placket edge.",              image: "/images/collar_splicing/single-left-placket-edge.jpg" },
+  { id: "collar-splice-double-left-placket",  label: "Double Left Placket Edges",          description: "Contrast on both left placket edges.",               image: "/images/collar_splicing/double-left-placket-edges.jpg" },
+  { id: "collar-splice-top-collar-edge",      label: "Top Collar Edge",                    description: "Contrast trim on top collar edge.",                  image: "/images/collar_splicing/top-collar-edge.jpg" },
+  { id: "collar-splice-triangle-point",       label: "Triangle Collar Point",              description: "Triangle contrast at collar point.",                 image: "/images/collar_splicing/triangle-collar-point.jpg" },
+  { id: "collar-splice-upper-cuff",           label: "Upper Sleeve Cuff",                  description: "Contrast on upper portion of sleeve cuff.",          image: "/images/collar_splicing/upper-sleeve-cuff.jpg" },
+  { id: "collar-splice-lower-cuff",           label: "Lower Sleeve Cuff",                  description: "Contrast on lower portion of sleeve cuff.",          image: "/images/collar_splicing/lower-sleeve-cuff.jpg" },
+  { id: "collar-splice-cuff-edge",            label: "Cuff Edge",                          description: "Contrast trim on cuff edge.",                        image: "/images/collar_splicing/cuff-edge.jpg" },
+  { id: "collar-splice-strip-mid-cuff",       label: "Strip in Middle Cuff",               description: "Contrast strip through center of cuff.",             image: "/images/collar_splicing/strip-in-middle-cuff.jpg" },
 ];
+
+const placketSplicingOptions = splicingOptions.map((o) => ({
+  ...o,
+  id: o.id.replace(/^collar-splice-/, "placket-splice-"),
+}));
 
 const cuffSplicingOptions = [
   { id: "csplice-none",        label: "None",              description: "Single fabric throughout.",                   image: "/images/cuff_splicing/none.jpg" },
@@ -377,7 +382,7 @@ export const shirtDesign: ProductDesignConfig = {
         {
           id: "decoration_stitching_on_collar",
           label: "Collar Decoration Stitching",
-          defaultValue: "stitch-none",
+          defaultValue: "collar-stitch-none",
           advanced: true,
           options: stitchingOptions,
         },
@@ -391,7 +396,7 @@ export const shirtDesign: ProductDesignConfig = {
         {
           id: "collar_splicing",
           label: "Collar Splicing",
-          defaultValue: "splice-none",
+          defaultValue: "collar-splice-none",
           advanced: true,
           options: splicingOptions,
         },
@@ -555,13 +560,13 @@ export const shirtDesign: ProductDesignConfig = {
         {
           id: "decoration_stitching_on_placket",
           label: "Placket Decoration Stitching",
-          defaultValue: "stitch-none",
+          defaultValue: "placket-stitch-none",
           advanced: true,
           options: [
-            { id: "stitch-none",           label: "None",                                         description: "Clean placket edge — no stitching.",               image: "/images/decoration_stitching_on_placket/none.jpg" },
-            { id: "stitch-01-top",         label: "Machine 0.1 cm Top Stitching",                 description: "Very fine machine topstitch 0.1 cm.",              image: "/images/decoration_stitching_on_placket/machine-01cm-top-stitching.jpg" },
-            { id: "stitch-03-top",         label: "Machine 0.3 cm Top Stitching",                 description: "Fine machine topstitch 0.3 cm.",                   image: "/images/decoration_stitching_on_placket/machine-03cm-top-stitching.jpg" },
-            { id: "stitch-05-top",         label: "Machine 0.5 cm Top Stitching",                 description: "Medium machine topstitch 0.5 cm.",                 image: "/images/decoration_stitching_on_placket/machine-05cm-top-stitching.jpg" },
+            { id: "placket-stitch-none",           label: "None",                                         description: "Clean placket edge — no stitching.",               image: "/images/decoration_stitching_on_placket/none.jpg" },
+            { id: "placket-stitch-01-top",         label: "Machine 0.1 cm Top Stitching",                 description: "Very fine machine topstitch 0.1 cm.",              image: "/images/decoration_stitching_on_placket/machine-01cm-top-stitching.jpg" },
+            { id: "placket-stitch-03-top",         label: "Machine 0.3 cm Top Stitching",                 description: "Fine machine topstitch 0.3 cm.",                   image: "/images/decoration_stitching_on_placket/machine-03cm-top-stitching.jpg" },
+            { id: "placket-stitch-05-top",         label: "Machine 0.5 cm Top Stitching",                 description: "Medium machine topstitch 0.5 cm.",                 image: "/images/decoration_stitching_on_placket/machine-05cm-top-stitching.jpg" },
             { id: "stitch-01-inner-plain", label: "0.1 cm Topstitch (Inner Plain Placket)",       description: "Fine stitch on inner hidden placket edge.",        image: "/images/decoration_stitching_on_placket/machine-01cm-top-stitching-on-inner-plain-placket.jpg" },
           ],
         },
@@ -610,9 +615,9 @@ export const shirtDesign: ProductDesignConfig = {
         {
           id: "placket_splicing",
           label: "Placket Splicing",
-          defaultValue: "splice-none",
+          defaultValue: "placket-splice-none",
           advanced: true,
-          options: splicingOptions,
+          options: placketSplicingOptions,
         },
         {
           id: "first_button_distance",
@@ -803,17 +808,17 @@ export const shirtDesign: ProductDesignConfig = {
         {
           id: "decoration_stitching_on_cuff",
           label: "Cuff Decoration Stitching",
-          defaultValue: "stitch-none",
+          defaultValue: "cuff-stitch-none",
           advanced: true,
           options: [
-            { id: "stitch-none",    label: "None",                           description: "No decorative stitching — clean edge.",       image: "/images/decoration_stitching_on_collar/none.jpg" },
-            { id: "stitch-01-top",  label: "Machine 0.1 cm Top Stitching",   description: "Very fine machine topstitch 0.1 cm.",         image: "/images/decoration_stitching_on_cuff/machine-01cm-top-stitching.jpg" },
-            { id: "stitch-03-top",  label: "Machine 0.3 cm Top Stitching",   description: "Fine machine topstitch 0.3 cm.",              image: "/images/decoration_stitching_on_cuff/machine-03cm-top-stitching.jpg" },
-            { id: "stitch-05-top",  label: "Machine 0.5 cm Top Stitching",   description: "Medium machine topstitch 0.5 cm.",            image: "/images/decoration_stitching_on_cuff/machine-05cm-top-stitching.jpg" },
-            { id: "stitch-06-top",  label: "Machine 0.6 cm Top Stitching",   description: "Standard decorative topstitch 0.6 cm.",       image: "/images/decoration_stitching_on_cuff/machine-06cm-top-stitching.jpg" },
-            { id: "stitch-01-amf",  label: "Machine 0.1 cm AMF Stitching",   description: "AMF-style stitch 0.1 cm.",                    image: "/images/decoration_stitching_on_cuff/machine-01cm-amf-stitching.jpg" },
-            { id: "stitch-03-amf",  label: "Machine 0.3 cm AMF Stitching",   description: "AMF-style stitch 0.3 cm.",                    image: "/images/decoration_stitching_on_cuff/machine-03cm-amf-stitching.jpg" },
-            { id: "stitch-05-amf",  label: "Machine 0.5 cm AMF Stitching",   description: "AMF-style stitch 0.5 cm.",                    image: "/images/decoration_stitching_on_cuff/machine-05cm-amf-stitching.jpg" },
+            { id: "cuff-stitch-none",    label: "None",                           description: "No decorative stitching — clean edge.",       image: "/images/decoration_stitching_on_collar/none.jpg" },
+            { id: "cuff-stitch-01-top",  label: "Machine 0.1 cm Top Stitching",   description: "Very fine machine topstitch 0.1 cm.",         image: "/images/decoration_stitching_on_cuff/machine-01cm-top-stitching.jpg" },
+            { id: "cuff-stitch-03-top",  label: "Machine 0.3 cm Top Stitching",   description: "Fine machine topstitch 0.3 cm.",              image: "/images/decoration_stitching_on_cuff/machine-03cm-top-stitching.jpg" },
+            { id: "cuff-stitch-05-top",  label: "Machine 0.5 cm Top Stitching",   description: "Medium machine topstitch 0.5 cm.",            image: "/images/decoration_stitching_on_cuff/machine-05cm-top-stitching.jpg" },
+            { id: "cuff-stitch-06-top",  label: "Machine 0.6 cm Top Stitching",   description: "Standard decorative topstitch 0.6 cm.",       image: "/images/decoration_stitching_on_cuff/machine-06cm-top-stitching.jpg" },
+            { id: "cuff-stitch-01-amf",  label: "Machine 0.1 cm AMF Stitching",   description: "AMF-style stitch 0.1 cm.",                    image: "/images/decoration_stitching_on_cuff/machine-01cm-amf-stitching.jpg" },
+            { id: "cuff-stitch-03-amf",  label: "Machine 0.3 cm AMF Stitching",   description: "AMF-style stitch 0.3 cm.",                    image: "/images/decoration_stitching_on_cuff/machine-03cm-amf-stitching.jpg" },
+            { id: "cuff-stitch-05-amf",  label: "Machine 0.5 cm AMF Stitching",   description: "AMF-style stitch 0.5 cm.",                    image: "/images/decoration_stitching_on_cuff/machine-05cm-amf-stitching.jpg" },
           ],
         },
         {

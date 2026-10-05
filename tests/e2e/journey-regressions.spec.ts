@@ -98,6 +98,41 @@ test.describe("BD-JOURNEY-001 regressions", () => {
   });
 
   /**
+   * Bug #3, full gate (added after Dustin authorized closing the gap the
+   * copy-only fix left open) — Continue at the Measurements step used to
+   * never be disabled, so a customer could reach Add to Cart with no
+   * standard size and no custom measurements at all. Fixed with the same
+   * gate pattern as the fabric step (Bug #1): Continue is now disabled at
+   * step 6 until a real size or a real custom measurement is provided.
+   */
+  test("Continue is gated at the Measurements step until a size is chosen", async ({
+    page,
+  }) => {
+    test.setTimeout(120_000);
+    await page.goto("/builder/shirt");
+    await page.getByRole("button", { name: /Show all fabrics/i }).click();
+    await page
+      .locator('button:has(p:text-is("Premium")), button:has(p:text-is("Classic"))')
+      .first()
+      .click();
+    for (let i = 0; i < 3; i++) {
+      await page.getByRole("button", { name: /^Continue$/ }).click(); // -> Style -> Design -> Monogram
+    }
+    await page.getByRole("button", { name: /^Continue$/ }).click(); // -> Measurements
+
+    const continueButton = page.getByRole("button", { name: /^Continue$/ });
+    await expect(
+      continueButton,
+      "a customer can advance past Measurements with nothing selected"
+    ).toBeDisabled();
+
+    const sizeButtons = page.locator("main button").filter({ hasText: /^\d/ });
+    await expect(sizeButtons.first()).toBeVisible();
+    await sizeButtons.first().click();
+    await expect(continueButton).toBeEnabled();
+  });
+
+  /**
    * Found during the fix-verification pass, not in the original hypothesis
    * list — a real, customer-visible naming bug caught in this task's own
    * evidence (cart/checkout snippets) but not filed in the first draft of
@@ -125,6 +160,57 @@ test.describe("BD-JOURNEY-001 regressions", () => {
     await page.goto("/cart");
     await expect(page.getByText(/Bespoke Bespoke/i)).toHaveCount(0);
     await expect(page.getByText("Bespoke Shirt", { exact: false }).first()).toBeVisible();
+  });
+
+  /**
+   * UX Friction #1, now fixed (was previously documented, not fixed) —
+   * /checkout/confirmation used to show "Payment Confirmed" unconditionally,
+   * including a bare visit with no query params at all. Fixed to verify a
+   * real Stripe session (payment_status === "paid") before claiming success;
+   * anything else — no session_id, an invalid/expired one, or the legacy
+   * `order=` reference (dead code, nothing generates it anymore) — shows an
+   * honest "we couldn't confirm a payment" state instead.
+   */
+  test("checkout confirmation never claims success without a verified Stripe session", async ({
+    page,
+  }) => {
+    await page.goto("/checkout/confirmation");
+    await expect(page.getByText(/Payment Confirmed/i)).toHaveCount(0);
+    await expect(page.getByRole("heading", { name: /couldn.t confirm a payment/i })).toBeVisible();
+
+    await page.goto("/checkout/confirmation?order=TEST-123");
+    await expect(page.getByText(/Payment Confirmed/i)).toHaveCount(0);
+    await expect(page.getByRole("heading", { name: /couldn.t confirm a payment/i })).toBeVisible();
+
+    await page.goto("/checkout/confirmation?session_id=cs_test_definitely_not_real");
+    await expect(page.getByText(/Payment Confirmed/i)).toHaveCount(0);
+    await expect(page.getByRole("heading", { name: /couldn.t confirm a payment/i })).toBeVisible();
+  });
+
+  /**
+   * UX Friction #2, now fixed (was previously documented, not fixed) —
+   * accessory cards on /accessories link to /products/[id], but that route
+   * only ever looked up the `readyToWear` catalog, so every accessory link
+   * 404'd and there was no way to add one to cart at all. Fixed by having
+   * that route also check the accessories catalog and render a simpler
+   * detail view (no sizes/stock — accessories don't have them) with a real
+   * Add to Cart button.
+   */
+  test("an accessory can be opened and added to cart", async ({ page }) => {
+    await page.goto("/accessories");
+    const firstCard = page.locator('a[href^="/products/"]').first();
+    await expect(firstCard).toBeVisible();
+    const href = await firstCard.getAttribute("href");
+    await firstCard.click();
+
+    await expect(page).toHaveURL(new RegExp(href!.replace(/[/]/g, "\\/") + "$"));
+    const addToCart = page.getByRole("button", { name: /add to cart/i });
+    await expect(addToCart, "accessory detail page must not 404 and must offer Add to Cart").toBeVisible();
+    await addToCart.click();
+
+    await page.goto("/cart");
+    await expect(page.getByRole("heading", { name: /Your atelier cart/i })).toBeVisible();
+    await expect(page.getByText(/your cart is empty/i)).toHaveCount(0);
   });
 
   /**

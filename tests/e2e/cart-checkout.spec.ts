@@ -116,8 +116,10 @@ test.describe("cart → checkout", () => {
     expect(chosenFabric, "no fabric label to select").toBeTruthy();
     await fabricCards.first().click();
 
-    // Steps 3 → 8. Defaults are valid for every step after fabric, so Continue
-    // is the whole journey.
+    // Steps 3 → 8. Defaults are valid for every step after fabric, except
+    // Measurements (6): Continue is gated there until a size is chosen (the
+    // fix for the "no measurements, ships anyway" defect), so pick the first
+    // standard size on that step before continuing.
     const continueButton = page.getByRole("button", { name: /^Continue$/ });
     await expect(continueButton).toBeEnabled();
     for (let step = 2; step < 8; step++) {
@@ -125,6 +127,12 @@ test.describe("cart → checkout", () => {
         page.getByText(new RegExp(`Step ${step} of 8`, "i")),
         `expected to be on step ${step}`
       ).toBeVisible();
+      if (step === 6) {
+        const sizeButtons = page.locator("main button").filter({ hasText: /^\d/ });
+        await expect(sizeButtons.first(), "no standard size option to select").toBeVisible();
+        await sizeButtons.first().click();
+        await expect(continueButton).toBeEnabled();
+      }
       await continueButton.click();
     }
 

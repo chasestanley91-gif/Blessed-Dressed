@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Montserrat } from "next/font/google";
-import Nav from "@/components/Nav";
+import SiteChrome from "@/components/SiteChrome";
 import Footer from "@/components/Footer";
 import { CartProvider } from "@/context/CartContext";
 import { loadDataAsync } from "@/lib/admin-data";
@@ -131,14 +131,14 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
           >
             Skip to content
           </a>
-          <Nav nav={settings.nav} />
-          {/* Deliberately a <div>, not a <main>. 21 page components open their
-              own <main>, so wrapping here emitted <main><main>…</main></main> on
-              every route — two landmarks, which is what
-              tests/e2e/public-routes.spec.ts documents. The id is the skip-link
-              target, which the app previously had no way to provide. */}
-          <div id="content">{children}</div>
-          <Footer />
+          <SiteChrome nav={settings.nav} footer={<Footer />}>
+            {/* Deliberately a <div>, not a <main>. 21 page components open their
+                own <main>, so wrapping here emitted <main><main>…</main></main> on
+                every route — two landmarks, which is what
+                tests/e2e/public-routes.spec.ts documents. The id is the skip-link
+                target, which the app previously had no way to provide. */}
+            {children}
+          </SiteChrome>
         </CartProvider>
       </body>
     </html>

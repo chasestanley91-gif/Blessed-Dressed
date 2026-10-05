@@ -58,6 +58,14 @@ export type DesignOption = {
   /** Factory SKU mapping (Baoxiniao field/value) — an order attribute, not an image. */
   bxn?: { field: string; value: string; desc: string };
 
+  /**
+   * Location-tied identity. `decoration_stitching_on_collar__collar-stitch-06-top`.
+   * Never match photos by the short `id` alone.
+   */
+  stableId?: string;
+  /** Previous short ids after a collision rename. Kept so old files still resolve. */
+  formerIds?: string[];
+
   /** Cluster key used by the dynamic quiz engine, e.g. "notch" | "peak" | "shawl". */
   group?: string;
   /** Optional style tags for secondary relevance, e.g. ["formal","italian"]. */

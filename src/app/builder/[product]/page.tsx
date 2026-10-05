@@ -1846,7 +1846,15 @@ export default function BuilderProductPage({ params }: BuilderPageProps) {
                 <button
                   type="button"
                   onClick={goNext}
-                  disabled={activeStep === 2 && !fabric}
+                  disabled={
+                    (activeStep === 2 && !fabric) ||
+                    (activeStep === 6 &&
+                      !(
+                        (measureMode === "standard" && !!standardSize) ||
+                        ((measureMode === "body" || measureMode === "finished") &&
+                          Object.values(customMeasurements ?? {}).filter(Boolean).length > 0)
+                      ))
+                  }
                   className="font-sans inline-flex items-center gap-2 rounded-full bg-gold px-7 py-3 text-sm font-semibold text-background transition-[opacity,transform] hover:opacity-90 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:opacity-40 disabled:cursor-not-allowed"
                 >
                   Continue
