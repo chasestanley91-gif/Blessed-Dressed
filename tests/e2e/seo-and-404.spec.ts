@@ -73,7 +73,7 @@ test.describe("crawler directives", () => {
     const xml = await res.text();
 
     // Present: the pages worth finding.
-    for (const path of ["/builder", "/products", "/collections", "/fabric-book"]) {
+    for (const path of ["/builder", "/products", "/collections", "/fabric-book", "/privacy", "/terms", "/shipping", "/returns"]) {
       expect(xml, `sitemap must list ${path}`).toContain(`${path}<`);
     }
     // Every builder product is a real landing page and must be listed.
