@@ -21,7 +21,7 @@ export const PRICE_EPSILON = 0.005;
 
 export const BASE_PRICES: Record<string, number> = {
   shirt: 85,
-  trousers: 495,
+  trousers: 225,
   "suit-2pc": 599.99,
   "suit-3pc": 799.99,
   vest: 395,

@@ -2,7 +2,7 @@ import type { ProductDesignConfig } from "./types";
 
 export const trousersDesign: ProductDesignConfig = {
   productId: "trousers",
-  basePrice: 495,
+  basePrice: 225,
   sections: [
     {
       id: "front-pockets",
